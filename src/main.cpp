@@ -23,10 +23,36 @@
 #include "SPCommon.h"
 #include "SPFilesystem.h"
 #include "SPData.h"
+#include "Serialize.h"
 
 #include <cppast/code_generator.hpp> // code_generator, generate_code()
 #include <cppast/visitor.hpp>        // visit()
 #include <cppast/libclang_parser.hpp>
+#include <cppast/cpp_alias_template.hpp>
+#include <cppast/cpp_class.hpp>
+#include <cppast/cpp_class_template.hpp>
+#include <cppast/cpp_concept.hpp>
+#include <cppast/cpp_entity_kind.hpp>
+#include <cppast/cpp_enum.hpp>
+#include <cppast/cpp_file.hpp>
+#include <cppast/cpp_friend.hpp>
+#include <cppast/cpp_function.hpp>
+#include <cppast/cpp_function_template.hpp>
+#include <cppast/cpp_language_linkage.hpp>
+#include <cppast/cpp_member_function.hpp>
+#include <cppast/cpp_member_variable.hpp>
+#include <cppast/cpp_namespace.hpp>
+#include <cppast/cpp_preprocessor.hpp>
+#include <cppast/cpp_static_assert.hpp>
+#include <cppast/cpp_template_parameter.hpp>
+#include <cppast/cpp_token.hpp>
+#include <cppast/cpp_type_alias.hpp>
+#include <cppast/cpp_variable.hpp>
+#include <cppast/cpp_variable_template.hpp>
+#include <cppast/cpp_decltype_type.hpp>
+#include <cppast/cpp_array_type.hpp>
+#include <cppast/cpp_function_type.hpp>
+#include <cppast/cpp_decltype_type.hpp>
 
 // don't show in code generation
 bool is_excluded_synopsis(const cppast::cpp_entity &e, cppast::cpp_access_specifier_kind access) {
@@ -122,8 +148,6 @@ std::string generate_synopsis(const cppast::cpp_entity &e) {
 
 namespace stappler::doc {
 
-using namespace mem_std;
-
 constexpr auto HELP_STRING =
 	"Stappler Documentation tool\n"\
 	"  Usage: libstappler-doc $TREE_ROOT $ACTION\n";
@@ -148,29 +172,110 @@ static int parseOptionString(Value &ret, StringView str, int argc, const char * 
 	return 1;
 }
 
-static void parseFile(const cppast::cpp_file &file) {
-    std::string prefix;
-    // visit each entity in the file
-    cppast::visit(file, [&](const cppast::cpp_entity& e, cppast::visitor_info info) {
-        if (info.event == cppast::visitor_info::container_entity_exit) // exiting an old container
-            prefix.pop_back();
-        else if (info.event == cppast::visitor_info::container_entity_enter)
-        // entering a new container
-        {
-            std::cout << prefix << "'" << e.name() << "' - " << cppast::to_string(e.kind()) << '\n';
-            prefix += "\t";
-        }
-        else // if (info.event == cppast::visitor_info::leaf_entity) // a non-container entity
-            std::cout << prefix << "'" << e.name() << "' - " << cppast::to_string(e.kind()) << '\n';
-    });
-}
-
 struct ParserStruct {
 	cppast::libclang_compilation_database database;
 	cppast::simple_file_parser<cppast::libclang_parser> parser;
+	cppast::cpp_entity_index index;
 	String libraryRoot;
+	String outdir;
 
 	Set<String> parsedFiles;
+
+	Value serializeFile(const cppast::cpp_file &file) {
+		Value ret;
+		Vector<Value *> target;
+
+		// visit each entity in the file
+		cppast::visit(file, [&](const cppast::cpp_entity &e, cppast::visitor_info info) {
+			if (info.event == cppast::visitor_info::container_entity_exit) // exiting an old container
+				target.pop_back();
+			else if (info.event == cppast::visitor_info::container_entity_enter) {
+				auto val = serializeEntity(index, e);
+				if (target.empty()) {
+					ret = val;
+					target.emplace_back(&ret.emplace("childs"));
+				} else {
+					auto &v = target.back()->addValue(move(val));
+					target.emplace_back(&v.emplace("childs"));
+				}
+			} else {
+				auto val = serializeEntity(index, e);
+				if (target.empty()) {
+					ret = val;
+				} else {
+					target.back()->addValue(move(val));
+				}
+			}
+		});
+
+		return ret;
+	}
+
+	void parseFile(const cppast::cpp_file &file) {
+	    // visit each entity
+
+		std::string prefix;
+		// visit each entity in the file
+		cppast::visit(file, [&](const cppast::cpp_entity &e, cppast::visitor_info info) {
+			if (info.event == cppast::visitor_info::container_entity_exit) // exiting an old container
+				prefix.pop_back();
+			else if (info.event == cppast::visitor_info::container_entity_enter)
+			// entering a new container
+					{
+				std::cout << prefix << "'" << e.name() << "' - " << cppast::to_string(e.kind()) << '\n';
+				prefix += "\t";
+			} else
+				// if (info.event == cppast::visitor_info::leaf_entity) // a non-container entity
+				std::cout << prefix << "'" << e.name() << "' - " << cppast::to_string(e.kind()) << '\n';
+		});
+
+	    /*cppast::visit(
+	        file,
+	        [](const cppast::cpp_entity& e, cppast::cpp_access_specifier_kind access) {
+	            if (is_excluded_documentation(e, access))
+	                // exclude this and all children
+	                return cppast::visit_filter::exclude_and_children;
+	            else if (cppast::is_templated(e) || cppast::is_friended(e))
+	                // continue on with children for a dummy entity
+	                return cppast::visit_filter::exclude;
+	            else
+	                return cppast::visit_filter::include;
+	        },
+	        [](const cppast::cpp_entity& e, const cppast::visitor_info& info) {
+	            if (info.is_old_entity())
+	                // already done
+	                return;
+
+	            // print name
+	            std::cout << "## " << cppast::to_string(e.kind()) << " '" << e.name() << "'\n";
+	            std::cout << '\n';
+
+	            // print synopsis
+	            std::cout << "```\n";
+	            std::cout << generate_synopsis(e);
+	            std::cout << "```\n\n";
+
+	            // print documentation comment
+	            if (e.comment())
+	                std::cout << e.comment().value() << '\n';
+
+	            // print separator
+	            std::cout << "\n---\n\n";
+	        });
+	    std::cout << "\n\n";*/
+	}
+
+	bool shouldParseHeader(StringView fullpath) {
+		auto ext = filepath::lastExtension(fullpath);
+		if (ext == "h" || ext == "hpp") {
+			auto subpath = StringView(fullpath).sub(libraryRoot.size());
+			// todo: this should be toolkit profile
+			if (subpath.starts_with("/common") || subpath.starts_with("/modules")) {
+				return true;
+			}
+		}
+		return false;
+	}
 
 	void processIncludes(const cppast::libclang_compile_config &config, const cppast::cpp_file &file) {
 		if (filepath::lastExtension(file.name()) == "cpp" || filepath::lastExtension(file.name()) == "cc") {
@@ -186,7 +291,22 @@ struct ParserStruct {
 								processIncludes(config, file.value());
 							}
 						} else if (filepath::lastExtension(fullPath) == "h" || filepath::lastExtension(fullPath) == "hpp") {
-							parsedFiles.emplace(fullPath);
+							if (shouldParseHeader(fullPath)) {
+								cppast::libclang_compile_config headerConfig(config);
+								headerConfig.set_language("-xc++-header");
+								auto file = parser.parse(fullPath, config);
+								if (file) {
+									parsedFiles.emplace(fullPath);
+									processIncludes(config, file.value());
+									auto data = serializeFile(file.value());
+									auto name = filepath::name(fullPath);
+									String path = filepath::merge<Interface>(outdir, toString(name, ".json"));
+									filesystem::remove(path);
+									data::save(data, path, data::EncodeFormat::Pretty);
+								}
+							} else {
+								parsedFiles.emplace(fullPath);
+							}
 						}
 					}
 				}
@@ -194,10 +314,11 @@ struct ParserStruct {
 		}
 	}
 
-	ParserStruct(StringView outroot, const cppast::cpp_entity_index& index, StringView libraryRoot)
+	ParserStruct(StringView outroot, StringView libraryRoot)
 	: database(outroot.str<Interface>())
 	, parser((type_safe::ref(index)))
-	, libraryRoot(libraryRoot.str<Interface>()) {
+	, libraryRoot(libraryRoot.str<Interface>())
+	, outdir(outroot.str<Interface>()) {
 		try {
 			cppast::parse_database(parser, database); // parse all files in the database
 		} catch (cppast::libclang_error &ex) {
@@ -281,7 +402,7 @@ SP_EXTERN_C int main(int argc, const char * argv[]) {
 
 		data::save(val, dbFile, data::EncodeFormat::Pretty);
 
-		ParserStruct parser(outdir, {}, compilationRoot);
+		ParserStruct parser(outdir, compilationRoot);
 
 		return 0;
 	} else {
