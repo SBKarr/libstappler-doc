@@ -184,7 +184,7 @@ Value serializeExpression(const index_t &index, const cppast::cpp_expression &ex
 Value serializeReference(const index_t &index, const cppast::cpp_namespace_ref &ref) {
 	Value ret;
 	ret.setString(ref.name(), "name");
-	for (auto &it : ref.get(index)) {
+	for (auto &it : ref.get(index.index)) {
 		ret.emplace("objects").addValue(serializeEntity(index, it.get()));
 	}
 	return ret;
@@ -193,7 +193,7 @@ Value serializeReference(const index_t &index, const cppast::cpp_namespace_ref &
 Value serializeReference(const index_t &index, const cppast::cpp_entity_ref &ref) {
 	Value ret;
 	ret.setString(ref.name(), "name");
-	for (auto &it : ref.get(index)) {
+	for (auto &it : ref.get(index.index)) {
 		ret.emplace("objects").addValue(serializeEntity(index, it.get()));
 	}
 	return ret;
@@ -202,7 +202,7 @@ Value serializeReference(const index_t &index, const cppast::cpp_entity_ref &ref
 Value serializeReference(const index_t &index, const cppast::cpp_template_type_parameter_ref &ref) {
 	Value ret;
 	ret.setString(ref.name(), "name");
-	for (auto &it : ref.get(index)) {
+	for (auto &it : ref.get(index.index)) {
 		ret.emplace("objects").addValue(serializeEntity(index, it.get()));
 	}
 	return ret;
@@ -211,7 +211,7 @@ Value serializeReference(const index_t &index, const cppast::cpp_template_type_p
 Value serializeReference(const index_t &index, const cppast::cpp_template_ref &ref) {
 	Value ret;
 	ret.setString(ref.name(), "name");
-	for (auto &it : ref.get(index)) {
+	for (auto &it : ref.get(index.index)) {
 		ret.emplace("objects").addValue(serializeEntity(index, it.get()));
 	}
 	return ret;
@@ -220,7 +220,7 @@ Value serializeReference(const index_t &index, const cppast::cpp_template_ref &r
 Value serializeReference(const index_t &index, const cppast::cpp_type_ref &ref) {
 	Value ret;
 	ret.setString(ref.name(), "name");
-	for (auto &it : ref.get(index)) {
+	for (auto &it : ref.get(index.index)) {
 		ret.emplace("objects").addValue(serializeEntity(index, it.get()));
 	}
 	return ret;
@@ -713,6 +713,45 @@ Value serializeEntity(const index_t &index, const cppast::cpp_entity &e) {
 	Value ret;
 	ret.setString(e.name(), "name");
 	ret.setString(cppast::to_string(e.kind()), "kind");
+	ret.setInteger(uintptr_t(&e), "id");
+
+	using namespace cppast;
+
+	auto target = &e;
+	String fullName;
+	switch (e.kind()) {
+	case cpp_entity_kind::variable_template_t:
+		fullName = index.getFullName(static_cast<const cpp_variable_template &>(e).variable());
+		target = &static_cast<const cpp_variable_template &>(e).variable();
+		break;
+	case cpp_entity_kind::function_template_t:
+		fullName = index.getFullName(static_cast<const cpp_function_template &>(e).function());
+		target = &static_cast<const cpp_function_template &>(e).function();
+		break;
+	case cpp_entity_kind::class_template_t:
+		fullName = index.getFullName(static_cast<const cpp_class_template &>(e).class_());
+		target = &static_cast<const cpp_class_template &>(e).class_();
+		break;
+	case cpp_entity_kind::class_template_specialization_t:
+		fullName = index.getFullName(static_cast<const cpp_class_template_specialization &>(e).class_());
+		target = &static_cast<const cpp_class_template_specialization &>(e).class_();
+		break;
+	case cpp_entity_kind::alias_template_t:
+		fullName = index.getFullName(static_cast<const cpp_alias_template &>(e).type_alias());
+		target = &static_cast<const cpp_alias_template &>(e).type_alias();
+		break;
+	default:
+		fullName = index.getFullName(e);
+		break;
+	}
+
+	if (!fullName.empty()) {
+		ret.setString(fullName, "_fullName");
+		auto it = index.names.find(fullName);
+		if (it == index.names.end()) {
+			index.names.emplace(fullName, target);
+		}
+	}
 
 	// extra field for human readability
 	ret.setString(e.name(), "_name");
@@ -730,8 +769,6 @@ Value serializeEntity(const index_t &index, const cppast::cpp_entity &e) {
 		ret.emplace("attributes").addValue(serializeAttribute(it));
 	}
 
-	using namespace cppast;
-
 	switch (e.kind()) {
 	case cpp_entity_kind::file_t: serializeCppFile(ret, static_cast<const cpp_file&>(e)); break;
 	case cpp_entity_kind::macro_parameter_t: serializeMacroParameter(ret, static_cast<const cpp_macro_parameter&>(e)); break;
@@ -740,53 +777,449 @@ Value serializeEntity(const index_t &index, const cppast::cpp_entity &e) {
 
 	case cpp_entity_kind::language_linkage_t: serializeLanguageLinkage(ret, static_cast<const cpp_language_linkage&>(e)); break;
 
-	case cppast::cpp_entity_kind::namespace_t: serializeNamespace(ret, static_cast<const cpp_namespace&>(e)); break;
-	case cppast::cpp_entity_kind::namespace_alias_t: serializeNamespaceAlias(index, ret, static_cast<const cpp_namespace_alias&>(e)); break;
-	case cppast::cpp_entity_kind::using_directive_t: serializeUsingDirective(index, ret, static_cast<const cpp_using_directive&>(e)); break;
-	case cppast::cpp_entity_kind::using_declaration_t: serializeUsingDeclaration(index, ret, static_cast<const cpp_using_declaration&>(e)); break;
+	case cpp_entity_kind::namespace_t: serializeNamespace(ret, static_cast<const cpp_namespace&>(e)); break;
+	case cpp_entity_kind::namespace_alias_t: serializeNamespaceAlias(index, ret, static_cast<const cpp_namespace_alias&>(e)); break;
+	case cpp_entity_kind::using_directive_t: serializeUsingDirective(index, ret, static_cast<const cpp_using_directive&>(e)); break;
+	case cpp_entity_kind::using_declaration_t: serializeUsingDeclaration(index, ret, static_cast<const cpp_using_declaration&>(e)); break;
 
-	case cppast::cpp_entity_kind::type_alias_t: serializeTypeAlias(index, ret, static_cast<const cpp_type_alias&>(e)); break;
+	case cpp_entity_kind::type_alias_t: serializeTypeAlias(index, ret, static_cast<const cpp_type_alias&>(e)); break;
 
-	case cppast::cpp_entity_kind::enum_t: serializeEnum(index, ret, static_cast<const cpp_enum&>(e)); break;
-	case cppast::cpp_entity_kind::enum_value_t: serializeEnumValue(index, ret, static_cast<const cpp_enum_value&>(e)); break;
+	case cpp_entity_kind::enum_t: serializeEnum(index, ret, static_cast<const cpp_enum&>(e)); break;
+	case cpp_entity_kind::enum_value_t: serializeEnumValue(index, ret, static_cast<const cpp_enum_value&>(e)); break;
 
-	case cppast::cpp_entity_kind::class_t: serializeClass(index, ret, static_cast<const cpp_class&>(e)); break;
-	case cppast::cpp_entity_kind::access_specifier_t: serializeAccessSpecifier(ret, static_cast<const cpp_access_specifier&>(e)); break;
-	case cppast::cpp_entity_kind::base_class_t: serializeBaseClass(index, ret, static_cast<const cpp_base_class&>(e)); break;
+	case cpp_entity_kind::class_t: serializeClass(index, ret, static_cast<const cpp_class&>(e)); break;
+	case cpp_entity_kind::access_specifier_t: serializeAccessSpecifier(ret, static_cast<const cpp_access_specifier&>(e)); break;
+	case cpp_entity_kind::base_class_t: serializeBaseClass(index, ret, static_cast<const cpp_base_class&>(e)); break;
 
-	case cppast::cpp_entity_kind::variable_t: serializeVariable(index, ret, static_cast<const cpp_variable&>(e)); break;
-	case cppast::cpp_entity_kind::member_variable_t: serializeMemberVariable(index, ret, static_cast<const cpp_member_variable&>(e)); break;
-	case cppast::cpp_entity_kind::bitfield_t: serializeBitfield(index, ret, static_cast<const cpp_bitfield&>(e)); break;
+	case cpp_entity_kind::variable_t: serializeVariable(index, ret, static_cast<const cpp_variable&>(e)); break;
+	case cpp_entity_kind::member_variable_t: serializeMemberVariable(index, ret, static_cast<const cpp_member_variable&>(e)); break;
+	case cpp_entity_kind::bitfield_t: serializeBitfield(index, ret, static_cast<const cpp_bitfield&>(e)); break;
 
-	case cppast::cpp_entity_kind::function_parameter_t: serializeFunctionParameter(index, ret, static_cast<const cpp_function_parameter&>(e)); break;
-	case cppast::cpp_entity_kind::function_t: serializeFunction(index, ret, static_cast<const cpp_function&>(e)); break;
-	case cppast::cpp_entity_kind::member_function_t: serializeMemberFunction(index, ret, static_cast<const cpp_member_function&>(e)); break;
-	case cppast::cpp_entity_kind::conversion_op_t: serializeConversionOp(index, ret, static_cast<const cpp_conversion_op&>(e)); break;
-	case cppast::cpp_entity_kind::constructor_t: serializeConstructor(index, ret, static_cast<const cpp_constructor&>(e)); break;
-	case cppast::cpp_entity_kind::destructor_t: serializeDestructor(index, ret, static_cast<const cpp_destructor&>(e)); break;
+	case cpp_entity_kind::function_parameter_t: serializeFunctionParameter(index, ret, static_cast<const cpp_function_parameter&>(e)); break;
+	case cpp_entity_kind::function_t: serializeFunction(index, ret, static_cast<const cpp_function&>(e)); break;
+	case cpp_entity_kind::member_function_t: serializeMemberFunction(index, ret, static_cast<const cpp_member_function&>(e)); break;
+	case cpp_entity_kind::conversion_op_t: serializeConversionOp(index, ret, static_cast<const cpp_conversion_op&>(e)); break;
+	case cpp_entity_kind::constructor_t: serializeConstructor(index, ret, static_cast<const cpp_constructor&>(e)); break;
+	case cpp_entity_kind::destructor_t: serializeDestructor(index, ret, static_cast<const cpp_destructor&>(e)); break;
 
-	case cppast::cpp_entity_kind::friend_t: serializeFriend(index, ret, static_cast<const cpp_friend&>(e)); break;
+	case cpp_entity_kind::friend_t: serializeFriend(index, ret, static_cast<const cpp_friend&>(e)); break;
 
-	case cppast::cpp_entity_kind::template_type_parameter_t: serializeTemplateTypeParameter(index, ret, static_cast<const cpp_template_type_parameter&>(e)); break;
-	case cppast::cpp_entity_kind::non_type_template_parameter_t: serializeNonTypeTemplateParameter(index, ret, static_cast<const cpp_non_type_template_parameter&>(e)); break;
-	case cppast::cpp_entity_kind::template_template_parameter_t: serializeTemplateTemplateParameter(index, ret, static_cast<const cpp_template_template_parameter&>(e)); break;
+	case cpp_entity_kind::template_type_parameter_t: serializeTemplateTypeParameter(index, ret, static_cast<const cpp_template_type_parameter&>(e)); break;
+	case cpp_entity_kind::non_type_template_parameter_t: serializeNonTypeTemplateParameter(index, ret, static_cast<const cpp_non_type_template_parameter&>(e)); break;
+	case cpp_entity_kind::template_template_parameter_t: serializeTemplateTemplateParameter(index, ret, static_cast<const cpp_template_template_parameter&>(e)); break;
 
-	case cppast::cpp_entity_kind::alias_template_t: serializeAliasTemplate(index, ret, static_cast<const cpp_alias_template&>(e)); break;
-	case cppast::cpp_entity_kind::variable_template_t: serializeVariableTemplate(index, ret, static_cast<const cpp_variable_template&>(e)); break;
-	case cppast::cpp_entity_kind::function_template_t: serializeFunctionTemplate(index, ret, static_cast<const cpp_function_template&>(e)); break;
-	case cppast::cpp_entity_kind::function_template_specialization_t: serializeFunctionTemplateSpecialization(index, ret, static_cast<const cpp_function_template_specialization&>(e)); break;
-	case cppast::cpp_entity_kind::class_template_t: serializeClassTemplate(index, ret, static_cast<const cpp_class_template&>(e)); break;
-	case cppast::cpp_entity_kind::class_template_specialization_t: serializeClassTemplateSpecialization(index, ret, static_cast<const cpp_class_template_specialization&>(e)); break;
-	case cppast::cpp_entity_kind::concept_t: serializeConcept(index, ret, static_cast<const cpp_concept&>(e)); break;
+	case cpp_entity_kind::alias_template_t: serializeAliasTemplate(index, ret, static_cast<const cpp_alias_template&>(e)); break;
+	case cpp_entity_kind::variable_template_t: serializeVariableTemplate(index, ret, static_cast<const cpp_variable_template&>(e)); break;
+	case cpp_entity_kind::function_template_t: serializeFunctionTemplate(index, ret, static_cast<const cpp_function_template&>(e)); break;
+	case cpp_entity_kind::function_template_specialization_t: serializeFunctionTemplateSpecialization(index, ret, static_cast<const cpp_function_template_specialization&>(e)); break;
+	case cpp_entity_kind::class_template_t: serializeClassTemplate(index, ret, static_cast<const cpp_class_template&>(e)); break;
+	case cpp_entity_kind::class_template_specialization_t: serializeClassTemplateSpecialization(index, ret, static_cast<const cpp_class_template_specialization&>(e)); break;
+	case cpp_entity_kind::concept_t: serializeConcept(index, ret, static_cast<const cpp_concept&>(e)); break;
 
-	case cppast::cpp_entity_kind::static_assert_t: serializeStaticAssert(index, ret, static_cast<const cpp_static_assert&>(e)); break;
+	case cpp_entity_kind::static_assert_t: serializeStaticAssert(index, ret, static_cast<const cpp_static_assert&>(e)); break;
 
-	case cppast::cpp_entity_kind::unexposed_t: serializeUnexposed(ret, static_cast<const cpp_unexposed_entity&>(e)); break;
+	case cpp_entity_kind::unexposed_t: serializeUnexposed(ret, static_cast<const cpp_unexposed_entity&>(e)); break;
 
-	case cppast::cpp_entity_kind::count: serializeCount(ret, e); break;
+	case cpp_entity_kind::count: serializeCount(ret, e); break;
 	}
 
 	return ret;
+}
+
+static String getTemplateScopeName(const cppast::cpp_template_type_parameter &param) {
+	switch (param.keyword()) {
+	case cppast::cpp_template_keyword::concept_contraint:
+		if (auto concept_ = param.concept_constraint()) {
+			StringStream str;
+			for (auto &it : concept_.value()) {
+				str << it.spelling;
+			}
+			return str.str();
+		}
+		break;
+	case cppast::cpp_template_keyword::keyword_typename:
+		return "typename";
+		break;
+	case cppast::cpp_template_keyword::keyword_class:
+		return "class";
+		break;
+	}
+	return String();
+}
+
+static String getTemplateScopeName(const cppast::cpp_non_type_template_parameter &param) {
+	StringStream str;
+	writeType(str, param.type(), param.is_variadic());
+	return str.str();
+}
+
+static String getTemplateScopeName(const cppast::cpp_template_template_parameter &param) {
+	StringStream str;
+	str << "template<";
+	bool started = false;
+	for (auto &it : param.parameters()) {
+		if (started) { str << ","; } else { started = true; }
+		using namespace cppast;
+		switch (it.kind()) {
+		case cpp_entity_kind::template_type_parameter_t:
+			str << getTemplateScopeName(static_cast<const cpp_template_type_parameter &>(it));
+			break;
+		case cpp_entity_kind::non_type_template_parameter_t:
+			str << getTemplateScopeName(static_cast<const cpp_non_type_template_parameter &>(it));
+			break;
+		case cpp_entity_kind::template_template_parameter_t:
+			str << getTemplateScopeName(static_cast<const cpp_template_template_parameter &>(it));
+			break;
+		default:
+			break;
+		}
+	}
+	str << ">";
+	switch (param.keyword()) {
+	case cppast::cpp_template_keyword::concept_contraint:
+		return "Concept";
+		break;
+	case cppast::cpp_template_keyword::keyword_typename:
+		return "typename";
+		break;
+	case cppast::cpp_template_keyword::keyword_class:
+		return "class";
+		break;
+	}
+	return str.str();
+}
+
+template <typename T>
+static String getTemplateScope(const T &tpl) {
+	StringStream str;
+	str << "<";
+	bool started = false;
+	for (auto &it : tpl.parameters()) {
+		if (started) { str << ","; } else { started = true; }
+		using namespace cppast;
+		switch (it.kind()) {
+		case cpp_entity_kind::template_type_parameter_t:
+			str << getTemplateScopeName(static_cast<const cpp_template_type_parameter &>(it));
+			break;
+		case cpp_entity_kind::non_type_template_parameter_t:
+			str << getTemplateScopeName(static_cast<const cpp_non_type_template_parameter &>(it));
+			break;
+		case cpp_entity_kind::template_template_parameter_t:
+			str << getTemplateScopeName(static_cast<const cpp_template_template_parameter &>(it));
+			break;
+		default:
+			break;
+		}
+	}
+	str << ">";
+	return str.str();
+}
+
+static String getTemplateScope(const cppast::cpp_class_template_specialization &tpl) {
+	StringStream str;
+	str << "<";
+	if (tpl.arguments_exposed()) {
+		bool started = false;
+		for (auto &it : tpl.arguments()) {
+			if (it.type()) {
+				if (started) { str << ","; } else { started = true; }
+				writeType(str, it.type().value(), false);
+			}
+			if (it.expression()) {
+				if (started) { str << ","; } else { started = true; }
+				writeExpression(str, it.expression().value());
+			}
+			if (it.template_ref()) {
+				if (started) { str << ","; } else { started = true; }
+				str << it.template_ref().value().name();
+			}
+		}
+	} else {
+		for (auto &it : tpl.unexposed_arguments()) {
+			str << it.spelling;
+		}
+	}
+
+	str << ">";
+	return str.str();
+}
+
+static String getScopeName(const cppast::cpp_entity &e, const cppast::cpp_entity *parent = nullptr) {
+	using namespace cppast;
+	switch (e.kind()) {
+	case cpp_entity_kind::file_t:
+	case cpp_entity_kind::macro_parameter_t:
+	case cpp_entity_kind::include_directive_t:
+	case cpp_entity_kind::language_linkage_t:
+	case cpp_entity_kind::namespace_alias_t:
+	case cpp_entity_kind::using_directive_t:
+	case cpp_entity_kind::using_declaration_t:
+	case cpp_entity_kind::access_specifier_t:
+	case cpp_entity_kind::base_class_t:
+	case cpp_entity_kind::function_parameter_t:
+	case cpp_entity_kind::friend_t:
+	case cpp_entity_kind::template_type_parameter_t:
+	case cpp_entity_kind::non_type_template_parameter_t:
+	case cpp_entity_kind::template_template_parameter_t:
+	case cpp_entity_kind::function_template_specialization_t:
+	case cpp_entity_kind::static_assert_t:
+	case cpp_entity_kind::unexposed_t:
+	case cpp_entity_kind::count:
+		return String();
+
+	case cpp_entity_kind::macro_definition_t:
+		return String(e.name());
+		break;
+
+	case cpp_entity_kind::namespace_t:
+	case cpp_entity_kind::enum_t:
+	case cpp_entity_kind::enum_value_t:
+	case cpp_entity_kind::concept_t:
+		return e.name();
+		break;
+
+	case cpp_entity_kind::member_variable_t:
+	case cpp_entity_kind::bitfield_t:
+	case cpp_entity_kind::variable_t:
+		if (parent && parent->kind() == cpp_entity_kind::variable_template_t) {
+			return toString(e.name(),
+					getTemplateScope(static_cast<const cpp_variable_template &>(*parent)));
+		} else if (auto p = e.parent()) {
+			if (p.value().kind() == cpp_entity_kind::variable_template_t) {
+				return toString(e.name(),
+						getTemplateScope(static_cast<const cpp_variable_template &>(p.value())));
+			}
+		}
+		return e.name();
+		break;
+
+	case cpp_entity_kind::class_t:
+		if (parent) {
+			if (parent->kind() == cpp_entity_kind::class_template_t) {
+				return toString(e.name(),
+						getTemplateScope(static_cast<const cpp_class_template &>(*parent)));
+			} else if (parent->kind() == cpp_entity_kind::class_template_specialization_t) {
+				return toString(e.name(),
+						getTemplateScope(static_cast<const cpp_class_template_specialization &>(*parent)));
+			}
+		} else if (auto p = e.parent()) {
+			if (p.value().kind() == cpp_entity_kind::class_template_t) {
+				return toString(e.name(),
+						getTemplateScope(static_cast<const cpp_class_template &>(p.value())));
+			} else if (p.value().kind() == cpp_entity_kind::class_template_specialization_t) {
+				return toString(e.name(),
+						getTemplateScope(static_cast<const cpp_class_template_specialization &>(p.value())));
+			}
+		}
+		return e.name();
+		break;
+
+	case cpp_entity_kind::function_t:
+	case cpp_entity_kind::member_function_t:
+	case cpp_entity_kind::conversion_op_t:
+	case cpp_entity_kind::constructor_t:
+	case cpp_entity_kind::destructor_t:
+		if (parent && parent->kind() == cpp_entity_kind::function_template_t) {
+			return toString(e.name(),
+					getTemplateScope(static_cast<const cpp_function_template &>(*parent)),
+					static_cast<const cpp_function&>(e).signature());
+		} else if (auto p = e.parent()) {
+			if (p.value().kind() == cpp_entity_kind::function_template_t) {
+				return toString(e.name(),
+						getTemplateScope(static_cast<const cpp_function_template &>(p.value())),
+						static_cast<const cpp_function&>(e).signature());
+			}
+		}
+		return toString(e.name(), static_cast<const cpp_function&>(e).signature());
+		break;
+
+	case cpp_entity_kind::type_alias_t:
+		if (parent && parent->kind() == cpp_entity_kind::alias_template_t) {
+			return toString(e.name(),
+					getTemplateScope(static_cast<const cpp_alias_template &>(*parent)));
+		} else if (auto p = e.parent()) {
+			if (p.value().kind() == cpp_entity_kind::alias_template_t) {
+				return toString(e.name(),
+						getTemplateScope(static_cast<const cpp_alias_template &>(p.value())));
+			}
+		}
+		return e.name();
+		break;
+
+	case cpp_entity_kind::function_template_t:
+		return getScopeName(static_cast<const cpp_function_template&>(e).function(), &e);
+		break;
+	case cpp_entity_kind::class_template_t:
+		return getScopeName(static_cast<const cpp_class_template&>(e).class_(), &e);
+		break;
+	case cpp_entity_kind::variable_template_t:
+		return getScopeName(static_cast<const cpp_variable_template&>(e).variable(), &e);
+		break;
+	case cpp_entity_kind::class_template_specialization_t:
+		return getScopeName(static_cast<const cpp_class_template_specialization&>(e).class_(), &e);
+		break;
+	case cpp_entity_kind::alias_template_t:
+		return getScopeName(static_cast<const cpp_alias_template&>(e).type_alias(), &e);
+		break;
+	}
+
+	return String();
+}
+
+String IndexData::getFullName(const cppast::cpp_entity &e) const {
+	using namespace cppast;
+
+	Vector<const cpp_entity *> xpath;
+
+	auto p = e.parent();
+	while (p) {
+		xpath.emplace_back(&p.value());
+		if (auto nextParent = p.value().parent()) {
+			switch (nextParent.value().kind()) {
+			case cpp_entity_kind::variable_template_t:
+				if (static_cast<const cpp_variable_template&>(nextParent.value()).variable().name() == p.value().name()) {
+					p = nextParent.value().parent();
+				}
+				break;
+			case cpp_entity_kind::function_template_t:
+				if (static_cast<const cpp_function_template&>(nextParent.value()).function().name() == p.value().name()) {
+					p = nextParent.value().parent();
+				}
+				break;
+			case cpp_entity_kind::class_template_t:
+				if (static_cast<const cpp_class_template&>(nextParent.value()).class_().name() == p.value().name()) {
+					p = nextParent.value().parent();
+				}
+				break;
+			case cpp_entity_kind::class_template_specialization_t:
+				if (static_cast<const cpp_class_template_specialization&>(nextParent.value()).class_().name() == p.value().name()) {
+					p = nextParent.value().parent();
+				}
+				break;
+			case cpp_entity_kind::alias_template_t:
+				if (static_cast<const cpp_alias_template&>(nextParent.value()).type_alias().name() == p.value().name()) {
+					p = nextParent.value().parent();
+				}
+				break;
+			default:
+				p = nextParent;
+				break;
+			}
+		} else {
+			p = p.value().parent();
+		}
+	}
+
+	std::reverse(xpath.begin(), xpath.end());
+
+	StringStream scopedName;
+	for (auto &it : xpath) {
+		auto name = getScopeName(*it);
+		if (!name.empty()) {
+			scopedName << "::" << name;
+		}
+	}
+
+	switch (e.kind()) {
+	case cpp_entity_kind::file_t:
+	case cpp_entity_kind::macro_parameter_t:
+	case cpp_entity_kind::include_directive_t:
+	case cpp_entity_kind::language_linkage_t:
+	case cpp_entity_kind::namespace_alias_t:
+	case cpp_entity_kind::using_directive_t:
+	case cpp_entity_kind::using_declaration_t:
+	case cpp_entity_kind::access_specifier_t:
+	case cpp_entity_kind::base_class_t:
+	case cpp_entity_kind::function_parameter_t:
+	case cpp_entity_kind::friend_t:
+	case cpp_entity_kind::template_type_parameter_t:
+	case cpp_entity_kind::non_type_template_parameter_t:
+	case cpp_entity_kind::template_template_parameter_t:
+	case cpp_entity_kind::function_template_specialization_t:
+	case cpp_entity_kind::alias_template_t:
+	case cpp_entity_kind::static_assert_t:
+	case cpp_entity_kind::unexposed_t:
+	case cpp_entity_kind::count:
+		return String();
+
+	case cpp_entity_kind::macro_definition_t:
+		if (static_cast<const cpp_macro_definition &>(e).is_function_like()) {
+			StringStream str;
+			str << e.name() << "(";
+			bool started = false;
+			for (auto &it : static_cast<const cpp_macro_definition &>(e).parameters()) {
+				if (started) { str << ","; } else { started = true; }
+				str << it.name();
+			}
+			if (static_cast<const cpp_macro_definition &>(e).is_variadic()) {
+				if (started) { str << ","; } else { started = true; }
+				str << "...";
+			}
+			str << ")";
+		} else {
+			return String(e.name());
+		}
+		break;
+
+	case cpp_entity_kind::namespace_t:
+	case cpp_entity_kind::enum_t:
+	case cpp_entity_kind::enum_value_t:
+	case cpp_entity_kind::concept_t:
+		scopedName << "::" << getScopeName(e);
+		break;
+
+	case cpp_entity_kind::class_t:
+		if (auto p = e.parent()) {
+			if (p.value().kind() == cpp_entity_kind::class_template_t) {
+				return scopedName.str(); // name is already on scope
+			}
+		}
+		scopedName << "::" << getScopeName(e);
+		break;
+
+	case cpp_entity_kind::member_variable_t:
+	case cpp_entity_kind::bitfield_t:
+	case cpp_entity_kind::variable_t:
+		if (auto p = e.parent()) {
+			if (p.value().kind() == cpp_entity_kind::variable_template_t) {
+				return scopedName.str(); // name is already on scope
+			}
+		}
+		scopedName << "::" << getScopeName(e);
+		break;
+
+	case cpp_entity_kind::function_t:
+	case cpp_entity_kind::member_function_t:
+	case cpp_entity_kind::conversion_op_t:
+	case cpp_entity_kind::constructor_t:
+	case cpp_entity_kind::destructor_t:
+		if (auto p = e.parent()) {
+			if (p.value().kind() == cpp_entity_kind::function_template_t) {
+				return scopedName.str(); // name is already on scope
+			}
+		}
+		scopedName << "::" << getScopeName(e);
+		break;
+
+	case cpp_entity_kind::type_alias_t:
+		if (auto p = e.parent()) {
+			if (p.value().kind() == cpp_entity_kind::alias_template_t) {
+				return scopedName.str(); // name is already on scope
+			}
+		}
+		scopedName << "::" << getScopeName(e);
+		break;
+		break;
+
+	case cpp_entity_kind::variable_template_t:
+	case cpp_entity_kind::function_template_t:
+	case cpp_entity_kind::class_template_t:
+	case cpp_entity_kind::class_template_specialization_t:
+		scopedName << "::" << getScopeName(e);
+		break;
+	}
+
+	return scopedName.str();
 }
 
 }

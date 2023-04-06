@@ -175,7 +175,7 @@ static int parseOptionString(Value &ret, StringView str, int argc, const char * 
 struct ParserStruct {
 	cppast::libclang_compilation_database database;
 	cppast::simple_file_parser<cppast::libclang_parser> parser;
-	cppast::cpp_entity_index index;
+	IndexData index;
 	String libraryRoot;
 	String outdir;
 
@@ -278,7 +278,7 @@ struct ParserStruct {
 	}
 
 	void processIncludes(const cppast::libclang_compile_config &config, const cppast::cpp_file &file) {
-		if (filepath::lastExtension(file.name()) == "cpp" || filepath::lastExtension(file.name()) == "cc") {
+		if (filepath::lastExtension(file.name()) == "cpp" || filepath::lastExtension(file.name()) == "cc" || filepath::lastExtension(file.name()) == "h") {
 			for (auto &entity : file) {
 				if (entity.kind() == cppast::cpp_include_directive::kind()) {
 					auto &include = static_cast<const cppast::cpp_include_directive&>(entity);
@@ -316,7 +316,7 @@ struct ParserStruct {
 
 	ParserStruct(StringView outroot, StringView libraryRoot)
 	: database(outroot.str<Interface>())
-	, parser((type_safe::ref(index)))
+	, parser((type_safe::ref(index.index)))
 	, libraryRoot(libraryRoot.str<Interface>())
 	, outdir(outroot.str<Interface>()) {
 		try {
@@ -339,6 +339,16 @@ struct ParserStruct {
 			cppast::libclang_compile_config config(database, file.name());
 			processIncludes(config, file);
 		}
+
+		auto namesPath = filepath::merge<Interface>(outdir, "names.txt");
+		filesystem::remove(namesPath);
+
+		StringStream namesOut;
+		for (auto &it : index.names) {
+			namesOut << it.first << "; " << cppast::to_string(it.second->kind()) << "\n";
+		}
+		auto namesStr = namesOut.str();
+		filesystem::write(namesPath, (const uint8_t *)namesStr.data(), namesStr.size());
 	}
 };
 

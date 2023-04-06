@@ -59,7 +59,16 @@ namespace stappler::doc {
 
 using namespace mem_std;
 
-using index_t = cppast::cpp_entity_index;
+struct IndexData {
+	Vector<String> context;
+	cppast::cpp_entity_index index;
+
+	mutable Map<String, const cppast::cpp_entity *> names;
+
+	String getFullName(const cppast::cpp_entity &) const;
+};
+
+using index_t = IndexData;
 
 Value serializeToken(const cppast::cpp_token &);
 Value serializeExpression(const index_t &index, const cppast::cpp_expression &);
@@ -77,6 +86,9 @@ Value serializeAttribute(const cppast::cpp_attribute &attr);
 Value serializeScope(const index_t &index, const cppast::cpp_scope_name &scope);
 
 Value serializeEntity(const index_t &index, const cppast::cpp_entity &);
+
+void writeExpression(StringStream &output, const cppast::cpp_expression& expr);
+void writeType(StringStream& output, const cppast::cpp_type &type, bool is_variadic = false);
 
 }
 
