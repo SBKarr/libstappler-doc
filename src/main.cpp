@@ -345,7 +345,7 @@ struct ParserStruct {
 
 		StringStream namesOut;
 		for (auto &it : index.names) {
-			namesOut << it.first << "; " << cppast::to_string(it.second->kind()) << "\n";
+			namesOut << it.first << "; " << cppast::to_string(it.second->kind()) << "; " << cppast::to_string(it.second->parent().value().kind()) << "\n";
 		}
 		auto namesStr = namesOut.str();
 		filesystem::write(namesPath, (const uint8_t *)namesStr.data(), namesStr.size());

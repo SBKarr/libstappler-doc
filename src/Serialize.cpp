@@ -56,6 +56,16 @@ static String serializeCV(cppast::cpp_cv cv) {
 	return String();
 }
 
+static String serializeReferenceKind(cppast::cpp_reference ref) {
+	using namespace cppast;
+	switch (ref) {
+	case cpp_reference::cpp_ref_none: return "none"; break;
+	case cpp_reference::cpp_ref_lvalue: return "lvalue"; break;
+	case cpp_reference::cpp_ref_rvalue: return "rvalue"; break;
+	}
+	return String();
+}
+
 static void serializeType(const index_t &index, Value &val, const cppast::cpp_cv_qualified_type &t) {
 	val.setValue(serializeType(index, t.type()), "type");
 	val.setString(serializeCV(t.cv_qualifier()), "cv_qualifier");
@@ -67,6 +77,7 @@ static void serializeType(const index_t &index, Value &val, const cppast::cpp_po
 
 static void serializeType(const index_t &index, Value &val, const cppast::cpp_reference_type &t) {
 	val.setValue(serializeType(index, t.referee()), "referee");
+	val.setString(serializeReferenceKind(t.reference_kind()), "reference_kind");
 }
 
 static void serializeType(const index_t &index, Value &val, const cppast::cpp_array_type &t) {
@@ -944,7 +955,7 @@ static String getTemplateScope(const cppast::cpp_class_template_specialization &
 	return str.str();
 }
 
-static String getScopeName(const cppast::cpp_entity &e, const cppast::cpp_entity *parent = nullptr) {
+static String getScopeName(const index_t &index, const cppast::cpp_entity &e, const cppast::cpp_entity *parent = nullptr) {
 	using namespace cppast;
 	switch (e.kind()) {
 	case cpp_entity_kind::file_t:
@@ -1018,20 +1029,27 @@ static String getScopeName(const cppast::cpp_entity &e, const cppast::cpp_entity
 	case cpp_entity_kind::member_function_t:
 	case cpp_entity_kind::conversion_op_t:
 	case cpp_entity_kind::constructor_t:
-	case cpp_entity_kind::destructor_t:
-		if (parent && parent->kind() == cpp_entity_kind::function_template_t) {
-			return toString(e.name(),
-					getTemplateScope(static_cast<const cpp_function_template &>(*parent)),
-					static_cast<const cpp_function&>(e).signature());
-		} else if (auto p = e.parent()) {
-			if (p.value().kind() == cpp_entity_kind::function_template_t) {
-				return toString(e.name(),
-						getTemplateScope(static_cast<const cpp_function_template &>(p.value())),
-						static_cast<const cpp_function&>(e).signature());
+	case cpp_entity_kind::destructor_t: {
+		auto &fn = static_cast<const cpp_function_base &>(e);
+		StringStream out;
+		if (auto sp = fn.semantic_parent()) {
+			auto candidates = sp.value().get(index.index);
+			if (candidates.size() == 1) {
+				out << getScopeName(index, candidates.front().get()) << "::";
 			}
 		}
-		return toString(e.name(), static_cast<const cpp_function&>(e).signature());
+		out << e.name();
+		if (parent && parent->kind() == cpp_entity_kind::function_template_t) {
+			out << getTemplateScope(static_cast<const cpp_function_template &>(*parent));
+		} else if (auto p = e.parent()) {
+			if (p.value().kind() == cpp_entity_kind::function_template_t) {
+				out << getTemplateScope(static_cast<const cpp_function_template &>(p.value()));
+			}
+		}
+		out << fn.signature();
+		return out.str();
 		break;
+	}
 
 	case cpp_entity_kind::type_alias_t:
 		if (parent && parent->kind() == cpp_entity_kind::alias_template_t) {
@@ -1047,19 +1065,19 @@ static String getScopeName(const cppast::cpp_entity &e, const cppast::cpp_entity
 		break;
 
 	case cpp_entity_kind::function_template_t:
-		return getScopeName(static_cast<const cpp_function_template&>(e).function(), &e);
+		return getScopeName(index, static_cast<const cpp_function_template&>(e).function(), &e);
 		break;
 	case cpp_entity_kind::class_template_t:
-		return getScopeName(static_cast<const cpp_class_template&>(e).class_(), &e);
+		return getScopeName(index, static_cast<const cpp_class_template&>(e).class_(), &e);
 		break;
 	case cpp_entity_kind::variable_template_t:
-		return getScopeName(static_cast<const cpp_variable_template&>(e).variable(), &e);
+		return getScopeName(index, static_cast<const cpp_variable_template&>(e).variable(), &e);
 		break;
 	case cpp_entity_kind::class_template_specialization_t:
-		return getScopeName(static_cast<const cpp_class_template_specialization&>(e).class_(), &e);
+		return getScopeName(index, static_cast<const cpp_class_template_specialization&>(e).class_(), &e);
 		break;
 	case cpp_entity_kind::alias_template_t:
-		return getScopeName(static_cast<const cpp_alias_template&>(e).type_alias(), &e);
+		return getScopeName(index, static_cast<const cpp_alias_template&>(e).type_alias(), &e);
 		break;
 	}
 
@@ -1114,7 +1132,7 @@ String IndexData::getFullName(const cppast::cpp_entity &e) const {
 
 	StringStream scopedName;
 	for (auto &it : xpath) {
-		auto name = getScopeName(*it);
+		auto name = getScopeName(*this, *it);
 		if (!name.empty()) {
 			scopedName << "::" << name;
 		}
@@ -1165,7 +1183,7 @@ String IndexData::getFullName(const cppast::cpp_entity &e) const {
 	case cpp_entity_kind::enum_t:
 	case cpp_entity_kind::enum_value_t:
 	case cpp_entity_kind::concept_t:
-		scopedName << "::" << getScopeName(e);
+		scopedName << "::" << getScopeName(*this, e);
 		break;
 
 	case cpp_entity_kind::class_t:
@@ -1174,7 +1192,7 @@ String IndexData::getFullName(const cppast::cpp_entity &e) const {
 				return scopedName.str(); // name is already on scope
 			}
 		}
-		scopedName << "::" << getScopeName(e);
+		scopedName << "::" << getScopeName(*this, e);
 		break;
 
 	case cpp_entity_kind::member_variable_t:
@@ -1185,7 +1203,7 @@ String IndexData::getFullName(const cppast::cpp_entity &e) const {
 				return scopedName.str(); // name is already on scope
 			}
 		}
-		scopedName << "::" << getScopeName(e);
+		scopedName << "::" << getScopeName(*this, e);
 		break;
 
 	case cpp_entity_kind::function_t:
@@ -1198,7 +1216,7 @@ String IndexData::getFullName(const cppast::cpp_entity &e) const {
 				return scopedName.str(); // name is already on scope
 			}
 		}
-		scopedName << "::" << getScopeName(e);
+		scopedName << "::" << getScopeName(*this, e);
 		break;
 
 	case cpp_entity_kind::type_alias_t:
@@ -1207,7 +1225,7 @@ String IndexData::getFullName(const cppast::cpp_entity &e) const {
 				return scopedName.str(); // name is already on scope
 			}
 		}
-		scopedName << "::" << getScopeName(e);
+		scopedName << "::" << getScopeName(*this, e);
 		break;
 		break;
 
@@ -1215,7 +1233,7 @@ String IndexData::getFullName(const cppast::cpp_entity &e) const {
 	case cpp_entity_kind::function_template_t:
 	case cpp_entity_kind::class_template_t:
 	case cpp_entity_kind::class_template_specialization_t:
-		scopedName << "::" << getScopeName(e);
+		scopedName << "::" << getScopeName(*this, e);
 		break;
 	}
 
