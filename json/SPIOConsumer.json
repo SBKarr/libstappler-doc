@@ -1,0 +1,1827 @@
+{
+	"_kind": "file",
+	"_name": "/home/sbkarr/stappler/xenolith/libstappler/common/io/SPIOConsumer.h",
+	"childs": [{
+		"_kind": "include directive",
+		"_name": "SPIOCommon.h",
+		"id": 140737141820432,
+		"include": "/home/sbkarr/stappler/xenolith/libstappler/common/io/SPIOCommon.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "SPIOCommon.h"
+	}, {
+		"_fullName": "LIBSTAPPLER_COMMON_IO_SPIOCONSUMER_H_",
+		"_kind": "macro definition",
+		"_name": "LIBSTAPPLER_COMMON_IO_SPIOCONSUMER_H_",
+		"id": 140737111376528,
+		"is_function_like": false,
+		"is_object_like": true,
+		"is_variadic": false,
+		"kind": "macro definition",
+		"name": "LIBSTAPPLER_COMMON_IO_SPIOCONSUMER_H_",
+		"replacement": ""
+	}, {
+		"_fullName": "::stappler",
+		"_kind": "namespace",
+		"_name": "stappler",
+		"childs": [{
+			"_fullName": "::stappler::io",
+			"_kind": "namespace",
+			"_name": "io",
+			"childs": [{
+				"_fullName": "::stappler::io::ConsumerTraitsStream",
+				"_kind": "class",
+				"_name": "ConsumerTraitsStream",
+				"childs": [{
+					"_fullName": "::stappler::io::ConsumerTraitsStream::stream_type",
+					"_kind": "type alias",
+					"_name": "stream_type",
+					"id": 140737140739616,
+					"kind": "type alias",
+					"name": "stream_type",
+					"underlying_type": {
+						"_typeName": "std::basic_ostream<char>",
+						"arguments_exposed": false,
+						"kind": "template_instantiation",
+						"primary_template": {
+							"name": "std::basic_ostream"
+						},
+						"unexposed_arguments": "char"
+					}
+				}, {
+					"_fullName": "::stappler::io::ConsumerTraitsStream::WriteFn(void*,uint8_t const*,size_t)",
+					"_kind": "function",
+					"_name": "WriteFn",
+					"body_kind": "definition",
+					"id": 140737121037680,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "WriteFn",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "ptr",
+						"id": 140737059900160,
+						"kind": "function parameter",
+						"name": "ptr",
+						"type": {
+							"_typeName": "void*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "void",
+								"builtin_type_kind": "void",
+								"kind": "builtin"
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "buf",
+						"id": 140737115384064,
+						"kind": "function parameter",
+						"name": "buf",
+						"type": {
+							"_typeName": "uint8_t const*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "uint8_t const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "uint8_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "uint8_t"
+									}
+								}
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "nbytes",
+						"id": 140737135493248,
+						"kind": "function parameter",
+						"name": "nbytes",
+						"type": {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "size_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "size_t"
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(void*,uint8_t const*,size_t)",
+					"storage_class": [
+						"static"
+					]
+				}, {
+					"_fullName": "::stappler::io::ConsumerTraitsStream::FlushFn(void*)",
+					"_kind": "function",
+					"_name": "FlushFn",
+					"body_kind": "definition",
+					"id": 140737141666480,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "FlushFn",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "ptr",
+						"id": 140737121636848,
+						"kind": "function parameter",
+						"name": "ptr",
+						"type": {
+							"_typeName": "void*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "void",
+								"builtin_type_kind": "void",
+								"kind": "builtin"
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(void*)",
+					"storage_class": [
+						"static"
+					]
+				}],
+				"class_kind": "struct",
+				"id": 140737090516080,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_final": false,
+				"kind": "class",
+				"name": "ConsumerTraitsStream",
+				"scope": {
+					"name": "ConsumerTraitsStream"
+				},
+				"semantic_scope": ""
+			}, {
+				"_fullName": "::stappler::io::WriteFunction<typename>(T&,uint8_t const*,size_t)",
+				"_kind": "function template",
+				"_name": "WriteFunction",
+				"childs": [{
+					"_fullName": "::stappler::io::WriteFunction<typename>(T&,uint8_t const*,size_t)",
+					"_kind": "function",
+					"_name": "WriteFunction",
+					"body_kind": "declaration",
+					"id": 140737090926032,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "WriteFunction",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 140737115548944,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "T&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "T",
+								"entity": {
+									"name": "T",
+									"objects": [{
+										"_kind": "template type parameter",
+										"_name": "T",
+										"id": 140737087617872,
+										"is_variadic": false,
+										"keyword": "typename",
+										"kind": "template type parameter",
+										"name": "T"
+									}]
+								},
+								"kind": "template_parameter"
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "buf",
+						"id": 93825004335376,
+						"kind": "function parameter",
+						"name": "buf",
+						"type": {
+							"_typeName": "uint8_t const*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "uint8_t const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "uint8_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "uint8_t"
+									}
+								}
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "nbytes",
+						"id": 93824998988000,
+						"kind": "function parameter",
+						"name": "nbytes",
+						"type": {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "size_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "size_t"
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(T&,uint8_t const*,size_t)"
+				}],
+				"function":  {
+					"_fullName": "::stappler::io::WriteFunction<typename>(T&,uint8_t const*,size_t)",
+					"_kind": "function",
+					"_name": "WriteFunction",
+					"body_kind": "declaration",
+					"id": 140737090926032,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "WriteFunction",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 140737115548944,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "T&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "T",
+								"entity": {
+									"name": "T",
+									"objects": [{
+										"_kind": "template type parameter",
+										"_name": "T",
+										"id": 140737087617872,
+										"is_variadic": false,
+										"keyword": "typename",
+										"kind": "template type parameter",
+										"name": "T"
+									}]
+								},
+								"kind": "template_parameter"
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "buf",
+						"id": 93825004335376,
+						"kind": "function parameter",
+						"name": "buf",
+						"type": {
+							"_typeName": "uint8_t const*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "uint8_t const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "uint8_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "uint8_t"
+									}
+								}
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "nbytes",
+						"id": 93824998988000,
+						"kind": "function parameter",
+						"name": "nbytes",
+						"type": {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "size_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "size_t"
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(T&,uint8_t const*,size_t)"
+				},
+				"id": 140737103129584,
+				"kind": "function template",
+				"name": "WriteFunction",
+				"parameters": [{
+					"_kind": "template type parameter",
+					"_name": "T",
+					"id": 140737087617872,
+					"is_variadic": false,
+					"keyword": "typename",
+					"kind": "template type parameter",
+					"name": "T"
+				}]
+			}, {
+				"_fullName": "::stappler::io::FlushFunction<typename>(T&)",
+				"_kind": "function template",
+				"_name": "FlushFunction",
+				"childs": [{
+					"_fullName": "::stappler::io::FlushFunction<typename>(T&)",
+					"_kind": "function",
+					"_name": "FlushFunction",
+					"body_kind": "declaration",
+					"id": 140737135360080,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "FlushFunction",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93825002481008,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "T&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "T",
+								"entity": {
+									"name": "T",
+									"objects": [{
+										"_kind": "template type parameter",
+										"_name": "T",
+										"id": 140737099602848,
+										"is_variadic": false,
+										"keyword": "typename",
+										"kind": "template type parameter",
+										"name": "T"
+									}]
+								},
+								"kind": "template_parameter"
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(T&)"
+				}],
+				"function":  {
+					"_fullName": "::stappler::io::FlushFunction<typename>(T&)",
+					"_kind": "function",
+					"_name": "FlushFunction",
+					"body_kind": "declaration",
+					"id": 140737135360080,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "FlushFunction",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93825002481008,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "T&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "T",
+								"entity": {
+									"name": "T",
+									"objects": [{
+										"_kind": "template type parameter",
+										"_name": "T",
+										"id": 140737099602848,
+										"is_variadic": false,
+										"keyword": "typename",
+										"kind": "template type parameter",
+										"name": "T"
+									}]
+								},
+								"kind": "template_parameter"
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(T&)"
+				},
+				"id": 140736987024320,
+				"kind": "function template",
+				"name": "FlushFunction",
+				"parameters": [{
+					"_kind": "template type parameter",
+					"_name": "T",
+					"id": 140737099602848,
+					"is_variadic": false,
+					"keyword": "typename",
+					"kind": "template type parameter",
+					"name": "T"
+				}]
+			}, {
+				"_fullName": "::stappler::io::ConsumerTraitsOverload<class>",
+				"_kind": "class template",
+				"_name": "ConsumerTraitsOverload",
+				"childs": [{
+					"_fullName": "::stappler::io::ConsumerTraitsOverload<class>",
+					"_kind": "class",
+					"_name": "ConsumerTraitsOverload",
+					"childs": [{
+						"_fullName": "::stappler::io::ConsumerTraitsOverload<class>::WriteFn(void*,uint8_t const*,size_t)",
+						"_kind": "function",
+						"_name": "WriteFn",
+						"body_kind": "definition",
+						"id": 140737144502512,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "WriteFn",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "ptr",
+							"id": 93825004983984,
+							"kind": "function parameter",
+							"name": "ptr",
+							"type": {
+								"_typeName": "void*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "void",
+									"builtin_type_kind": "void",
+									"kind": "builtin"
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "buf",
+							"id": 93825002725472,
+							"kind": "function parameter",
+							"name": "buf",
+							"type": {
+								"_typeName": "uint8_t const*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "uint8_t const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "uint8_t",
+										"kind": "user_defined",
+										"target": {
+											"name": "uint8_t"
+										}
+									}
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "nbytes",
+							"id": 93825002141328,
+							"kind": "function parameter",
+							"name": "nbytes",
+							"type": {
+								"_typeName": "size_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "size_t"
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						},
+						"semantic_scope": "",
+						"signature": "(void*,uint8_t const*,size_t)",
+						"storage_class": [
+							"static"
+						]
+					}, {
+						"_fullName": "::stappler::io::ConsumerTraitsOverload<class>::FlushFn(void*)",
+						"_kind": "function",
+						"_name": "FlushFn",
+						"body_kind": "definition",
+						"id": 140737121038128,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "FlushFn",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "ptr",
+							"id": 93825011837584,
+							"kind": "function parameter",
+							"name": "ptr",
+							"type": {
+								"_typeName": "void*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "void",
+									"builtin_type_kind": "void",
+									"kind": "builtin"
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(void*)",
+						"storage_class": [
+							"static"
+						]
+					}],
+					"class_kind": "struct",
+					"id": 140737095635392,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_final": false,
+					"kind": "class",
+					"name": "ConsumerTraitsOverload",
+					"scope": {
+						"is_templated": true,
+						"name": "ConsumerTraitsOverload",
+						"template_parameters": [{
+							"_kind": "template type parameter",
+							"_name": "T",
+							"id": 140737148798096,
+							"is_variadic": false,
+							"keyword": "class",
+							"kind": "template type parameter",
+							"name": "T"
+						}]
+					},
+					"semantic_scope": ""
+				}],
+				"class":  {
+					"_fullName": "::stappler::io::ConsumerTraitsOverload<class>",
+					"_kind": "class",
+					"_name": "ConsumerTraitsOverload",
+					"class_kind": "struct",
+					"id": 140737095635392,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_final": false,
+					"kind": "class",
+					"name": "ConsumerTraitsOverload",
+					"scope": {
+						"is_templated": true,
+						"name": "ConsumerTraitsOverload",
+						"template_parameters": [{
+							"_kind": "template type parameter",
+							"_name": "T",
+							"id": 140737148798096,
+							"is_variadic": false,
+							"keyword": "class",
+							"kind": "template type parameter",
+							"name": "T"
+						}]
+					},
+					"semantic_scope": ""
+				},
+				"id": 140737117699632,
+				"kind": "class template",
+				"name": "ConsumerTraitsOverload",
+				"parameters": [{
+					"_kind": "template type parameter",
+					"_name": "T",
+					"id": 140737148798096,
+					"is_variadic": false,
+					"keyword": "class",
+					"kind": "template type parameter",
+					"name": "T"
+				}],
+				"scope":  {
+					"is_templated": true,
+					"name": "ConsumerTraitsOverload",
+					"template_parameters": [{
+						"_kind": "template type parameter",
+						"_name": "T",
+						"id": 140737148798096,
+						"is_variadic": false,
+						"keyword": "class",
+						"kind": "template type parameter",
+						"name": "T"
+					}]
+				}
+			}, {
+				"_fullName": "::stappler::io::ConsumerTraitsReolution<typename>",
+				"_kind": "class template",
+				"_name": "ConsumerTraitsReolution",
+				"childs": [{
+					"_fullName": "::stappler::io::ConsumerTraitsReolution<typename>",
+					"_kind": "class",
+					"_name": "ConsumerTraitsReolution",
+					"childs": [{
+						"_fullName": "::stappler::io::ConsumerTraitsReolution<typename>::type",
+						"_kind": "type alias",
+						"_name": "type",
+						"id": 93825002720304,
+						"kind": "type alias",
+						"name": "type",
+						"underlying_type": {
+							"_typeName": "typename std::conditional<std::is_base_of<std::basic_ostream<char>, T>::value, ConsumerTraitsStream, ConsumerTraitsOverload<T>>::type",
+							"kind": "unexposed",
+							"name": "typename std::conditional<std::is_base_of<std::basic_ostream<char>, T>::value, ConsumerTraitsStream, ConsumerTraitsOverload<T>>::type"
+						}
+					}],
+					"class_kind": "struct",
+					"id": 140737144502128,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_final": false,
+					"kind": "class",
+					"name": "ConsumerTraitsReolution",
+					"scope": {
+						"is_templated": true,
+						"name": "ConsumerTraitsReolution",
+						"template_parameters": [{
+							"_kind": "template type parameter",
+							"_name": "T",
+							"id": 140737148820192,
+							"is_variadic": false,
+							"keyword": "typename",
+							"kind": "template type parameter",
+							"name": "T"
+						}]
+					},
+					"semantic_scope": ""
+				}],
+				"class":  {
+					"_fullName": "::stappler::io::ConsumerTraitsReolution<typename>",
+					"_kind": "class",
+					"_name": "ConsumerTraitsReolution",
+					"class_kind": "struct",
+					"id": 140737144502128,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_final": false,
+					"kind": "class",
+					"name": "ConsumerTraitsReolution",
+					"scope": {
+						"is_templated": true,
+						"name": "ConsumerTraitsReolution",
+						"template_parameters": [{
+							"_kind": "template type parameter",
+							"_name": "T",
+							"id": 140737148820192,
+							"is_variadic": false,
+							"keyword": "typename",
+							"kind": "template type parameter",
+							"name": "T"
+						}]
+					},
+					"semantic_scope": ""
+				},
+				"id": 140737108134048,
+				"kind": "class template",
+				"name": "ConsumerTraitsReolution",
+				"parameters": [{
+					"_kind": "template type parameter",
+					"_name": "T",
+					"id": 140737148820192,
+					"is_variadic": false,
+					"keyword": "typename",
+					"kind": "template type parameter",
+					"name": "T"
+				}],
+				"scope":  {
+					"is_templated": true,
+					"name": "ConsumerTraitsReolution",
+					"template_parameters": [{
+						"_kind": "template type parameter",
+						"_name": "T",
+						"id": 140737148820192,
+						"is_variadic": false,
+						"keyword": "typename",
+						"kind": "template type parameter",
+						"name": "T"
+					}]
+				}
+			}, {
+				"_fullName": "::stappler::io::ConsumerTraits<typename>",
+				"_kind": "class template",
+				"_name": "ConsumerTraits",
+				"childs": [{
+					"_fullName": "::stappler::io::ConsumerTraits<typename>",
+					"_kind": "class",
+					"_name": "ConsumerTraits",
+					"childs": [{
+						"_fullName": "::stappler::io::ConsumerTraits<typename>::traits_type",
+						"_kind": "type alias",
+						"_name": "traits_type",
+						"id": 93824999859920,
+						"kind": "type alias",
+						"name": "traits_type",
+						"underlying_type": {
+							"_typeName": "typename ConsumerTraitsReolution<T>::type",
+							"kind": "unexposed",
+							"name": "typename ConsumerTraitsReolution<T>::type"
+						}
+					}, {
+						"_fullName": "::stappler::io::ConsumerTraits<typename>::WriteFn(void*,uint8_t const*,size_t)",
+						"_kind": "function",
+						"_name": "WriteFn",
+						"body_kind": "definition",
+						"id": 93824997730448,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "WriteFn",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "ptr",
+							"id": 93825000754976,
+							"kind": "function parameter",
+							"name": "ptr",
+							"type": {
+								"_typeName": "void*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "void",
+									"builtin_type_kind": "void",
+									"kind": "builtin"
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "buf",
+							"id": 93824997665376,
+							"kind": "function parameter",
+							"name": "buf",
+							"type": {
+								"_typeName": "uint8_t const*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "uint8_t const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "uint8_t",
+										"kind": "user_defined",
+										"target": {
+											"name": "uint8_t"
+										}
+									}
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "nbytes",
+							"id": 93825001898768,
+							"kind": "function parameter",
+							"name": "nbytes",
+							"type": {
+								"_typeName": "size_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "size_t"
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						},
+						"semantic_scope": "",
+						"signature": "(void*,uint8_t const*,size_t)",
+						"storage_class": [
+							"static"
+						]
+					}, {
+						"_fullName": "::stappler::io::ConsumerTraits<typename>::FlushFn(void*)",
+						"_kind": "function",
+						"_name": "FlushFn",
+						"body_kind": "definition",
+						"id": 93825002836064,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "FlushFn",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "ptr",
+							"id": 93824999274064,
+							"kind": "function parameter",
+							"name": "ptr",
+							"type": {
+								"_typeName": "void*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "void",
+									"builtin_type_kind": "void",
+									"kind": "builtin"
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(void*)",
+						"storage_class": [
+							"static"
+						]
+					}],
+					"class_kind": "struct",
+					"id": 93825004334960,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_final": false,
+					"kind": "class",
+					"name": "ConsumerTraits",
+					"scope": {
+						"is_templated": true,
+						"name": "ConsumerTraits",
+						"template_parameters": [{
+							"_kind": "template type parameter",
+							"_name": "T",
+							"id": 140736972910000,
+							"is_variadic": false,
+							"keyword": "typename",
+							"kind": "template type parameter",
+							"name": "T"
+						}]
+					},
+					"semantic_scope": ""
+				}],
+				"class":  {
+					"_fullName": "::stappler::io::ConsumerTraits<typename>",
+					"_kind": "class",
+					"_name": "ConsumerTraits",
+					"class_kind": "struct",
+					"id": 93825004334960,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_final": false,
+					"kind": "class",
+					"name": "ConsumerTraits",
+					"scope": {
+						"is_templated": true,
+						"name": "ConsumerTraits",
+						"template_parameters": [{
+							"_kind": "template type parameter",
+							"_name": "T",
+							"id": 140736972910000,
+							"is_variadic": false,
+							"keyword": "typename",
+							"kind": "template type parameter",
+							"name": "T"
+						}]
+					},
+					"semantic_scope": ""
+				},
+				"id": 93825001413664,
+				"kind": "class template",
+				"name": "ConsumerTraits",
+				"parameters": [{
+					"_kind": "template type parameter",
+					"_name": "T",
+					"id": 140736972910000,
+					"is_variadic": false,
+					"keyword": "typename",
+					"kind": "template type parameter",
+					"name": "T"
+				}],
+				"scope":  {
+					"is_templated": true,
+					"name": "ConsumerTraits",
+					"template_parameters": [{
+						"_kind": "template type parameter",
+						"_name": "T",
+						"id": 140736972910000,
+						"is_variadic": false,
+						"keyword": "typename",
+						"kind": "template type parameter",
+						"name": "T"
+					}]
+				}
+			}, {
+				"_fullName": "::stappler::io::Consumer",
+				"_kind": "class",
+				"_name": "Consumer",
+				"childs": [{
+					"_fullName": "::stappler::io::Consumer::Consumer<typename,typename>(T&)",
+					"_kind": "function template",
+					"_name": "Consumer",
+					"childs": [{
+						"_fullName": "::stappler::io::Consumer::Consumer<typename,typename>(T&)",
+						"_kind": "constructor",
+						"_name": "Consumer",
+						"body_kind": "declaration",
+						"id": 93825001999840,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_explicit": false,
+						"is_variadic": false,
+						"kind": "constructor",
+						"name": "Consumer",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "t",
+							"id": 93824998987568,
+							"kind": "function parameter",
+							"name": "t",
+							"type": {
+								"_typeName": "T&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "T",
+									"entity": {
+										"name": "T",
+										"objects": [{
+											"_kind": "template type parameter",
+											"_name": "T",
+											"id": 140737134669824,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "T"
+										}]
+									},
+									"kind": "template_parameter"
+								},
+								"reference_kind": "lvalue"
+							}
+						}],
+						"semantic_scope": "",
+						"signature": "(T&)"
+					}],
+					"function":  {
+						"_fullName": "::stappler::io::Consumer::Consumer<typename,typename>(T&)",
+						"_kind": "constructor",
+						"_name": "Consumer",
+						"body_kind": "declaration",
+						"id": 93825001999840,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_explicit": false,
+						"is_variadic": false,
+						"kind": "constructor",
+						"name": "Consumer",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "t",
+							"id": 93824998987568,
+							"kind": "function parameter",
+							"name": "t",
+							"type": {
+								"_typeName": "T&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "T",
+									"entity": {
+										"name": "T",
+										"objects": [{
+											"_kind": "template type parameter",
+											"_name": "T",
+											"id": 140737134669824,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "T"
+										}]
+									},
+									"kind": "template_parameter"
+								},
+								"reference_kind": "lvalue"
+							}
+						}],
+						"semantic_scope": "",
+						"signature": "(T&)"
+					},
+					"id": 93825000176976,
+					"kind": "function template",
+					"name": "Consumer",
+					"parameters": [{
+						"_kind": "template type parameter",
+						"_name": "T",
+						"id": 140737134669824,
+						"is_variadic": false,
+						"keyword": "typename",
+						"kind": "template type parameter",
+						"name": "T"
+					}, {
+						"_kind": "template type parameter",
+						"_name": "Traits",
+						"default_type": {
+							"_typeName": "ConsumerTraits<typename std::decay<T>::type>>",
+							"kind": "unexposed",
+							"name": "ConsumerTraits<typename std::decay<T>::type>>"
+						},
+						"id": 93825002719424,
+						"is_variadic": false,
+						"keyword": "typename",
+						"kind": "template type parameter",
+						"name": "Traits"
+					}]
+				}, {
+					"_fullName": "::stappler::io::Consumer::write(uint8_t const*,size_t) const",
+					"_kind": "member function",
+					"_name": "write",
+					"body_kind": "declaration",
+					"cv_qualifier": "const",
+					"id": 93825001481968,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "write",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "buf",
+						"id": 93825002719664,
+						"kind": "function parameter",
+						"name": "buf",
+						"type": {
+							"_typeName": "uint8_t const*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "uint8_t const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "uint8_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "uint8_t"
+									}
+								}
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "nbytes",
+						"id": 93825001921040,
+						"kind": "function parameter",
+						"name": "nbytes",
+						"type": {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "size_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "size_t"
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(uint8_t const*,size_t) const"
+				}, {
+					"_fullName": "::stappler::io::Consumer::write(stappler::io::Buffer const&) const",
+					"_kind": "member function",
+					"_name": "write",
+					"body_kind": "declaration",
+					"cv_qualifier": "const",
+					"id": 93825007955104,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "write",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93825000176320,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::io::Buffer const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::io::Buffer const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::io::Buffer",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::io::Buffer",
+										"objects": [{
+											"_fullName": "::stappler::io::Buffer",
+											"_kind": "class",
+											"_name": "Buffer",
+											"class_kind": "struct",
+											"id": 140737108409440,
+											"is_declaration": true,
+											"is_definition": false,
+											"is_final": false,
+											"kind": "class",
+											"name": "Buffer",
+											"scope": {
+												"name": "Buffer"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "size_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "size_t"
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::io::Buffer const&) const"
+				}, {
+					"_fullName": "::stappler::io::Consumer::flush() const",
+					"_kind": "member function",
+					"_name": "flush",
+					"body_kind": "declaration",
+					"cv_qualifier": "const",
+					"id": 93825007954432,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "flush",
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "() const"
+				}, {
+					"_fullName": "::stappler::io::Consumer::ptr",
+					"_kind": "member variable",
+					"_name": "ptr",
+					"default_value": {
+						"expression": [{
+							"kind": "keyword",
+							"spelling": "nullptr"
+						}],
+						"kind": "unexposed",
+						"type": {
+							"_typeName": "void*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "void",
+								"builtin_type_kind": "void",
+								"kind": "builtin"
+							}
+						}
+					},
+					"id": 93825002347216,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "ptr",
+					"type": {
+						"_typeName": "void*",
+						"kind": "pointer",
+						"pointee": {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						}
+					}
+				}, {
+					"_fullName": "::stappler::io::Consumer::write_ptr",
+					"_kind": "member variable",
+					"_name": "write_ptr",
+					"default_value": {
+						"expression": [{
+							"kind": "keyword",
+							"spelling": "nullptr"
+						}],
+						"kind": "unexposed",
+						"type": {
+							"_typeName": "stappler::io::write_fn",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::io::write_fn",
+								"objects": [{
+									"_fullName": "::stappler::io::write_fn",
+									"_kind": "type alias",
+									"_name": "write_fn",
+									"id": 93824997729952,
+									"kind": "type alias",
+									"name": "write_fn",
+									"underlying_type": {
+										"_typeName": "size_t(*)(void*,uint8_t const*,size_t)",
+										"kind": "pointer",
+										"pointee": {
+											"_typeName": "size_t(void*,uint8_t const*,size_t)",
+											"is_variadic": false,
+											"kind": "function",
+											"parameter_types": [{
+												"_typeName": "void*",
+												"kind": "pointer",
+												"pointee": {
+													"_typeName": "void",
+													"builtin_type_kind": "void",
+													"kind": "builtin"
+												}
+											}, {
+												"_typeName": "uint8_t const*",
+												"kind": "pointer",
+												"pointee": {
+													"_typeName": "uint8_t const",
+													"cv_qualifier": "const",
+													"kind": "cv_qualified",
+													"type": {
+														"_typeName": "uint8_t",
+														"kind": "user_defined",
+														"target": {
+															"name": "uint8_t"
+														}
+													}
+												}
+											}, {
+												"_typeName": "size_t",
+												"kind": "user_defined",
+												"target": {
+													"name": "size_t"
+												}
+											}],
+											"return_type":  {
+												"_typeName": "size_t",
+												"kind": "user_defined",
+												"target": {
+													"name": "size_t"
+												}
+											}
+										}
+									}
+								}]
+							}
+						}
+					},
+					"id": 93825001921456,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "write_ptr",
+					"type": {
+						"_typeName": "stappler::io::write_fn",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::io::write_fn",
+							"objects": [{
+								"_fullName": "::stappler::io::write_fn",
+								"_kind": "type alias",
+								"_name": "write_fn",
+								"id": 93824997729952,
+								"kind": "type alias",
+								"name": "write_fn",
+								"underlying_type": {
+									"_typeName": "size_t(*)(void*,uint8_t const*,size_t)",
+									"kind": "pointer",
+									"pointee": {
+										"_typeName": "size_t(void*,uint8_t const*,size_t)",
+										"is_variadic": false,
+										"kind": "function",
+										"parameter_types": [{
+											"_typeName": "void*",
+											"kind": "pointer",
+											"pointee": {
+												"_typeName": "void",
+												"builtin_type_kind": "void",
+												"kind": "builtin"
+											}
+										}, {
+											"_typeName": "uint8_t const*",
+											"kind": "pointer",
+											"pointee": {
+												"_typeName": "uint8_t const",
+												"cv_qualifier": "const",
+												"kind": "cv_qualified",
+												"type": {
+													"_typeName": "uint8_t",
+													"kind": "user_defined",
+													"target": {
+														"name": "uint8_t"
+													}
+												}
+											}
+										}, {
+											"_typeName": "size_t",
+											"kind": "user_defined",
+											"target": {
+												"name": "size_t"
+											}
+										}],
+										"return_type":  {
+											"_typeName": "size_t",
+											"kind": "user_defined",
+											"target": {
+												"name": "size_t"
+											}
+										}
+									}
+								}
+							}]
+						}
+					}
+				}, {
+					"_fullName": "::stappler::io::Consumer::flush_ptr",
+					"_kind": "member variable",
+					"_name": "flush_ptr",
+					"default_value": {
+						"expression": [{
+							"kind": "keyword",
+							"spelling": "nullptr"
+						}],
+						"kind": "unexposed",
+						"type": {
+							"_typeName": "stappler::io::flush_fn",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::io::flush_fn",
+								"objects": [{
+									"_fullName": "::stappler::io::flush_fn",
+									"_kind": "type alias",
+									"_name": "flush_fn",
+									"id": 93824997666752,
+									"kind": "type alias",
+									"name": "flush_fn",
+									"underlying_type": {
+										"_typeName": "void(*)(void*)",
+										"kind": "pointer",
+										"pointee": {
+											"_typeName": "void(void*)",
+											"is_variadic": false,
+											"kind": "function",
+											"parameter_types": [{
+												"_typeName": "void*",
+												"kind": "pointer",
+												"pointee": {
+													"_typeName": "void",
+													"builtin_type_kind": "void",
+													"kind": "builtin"
+												}
+											}],
+											"return_type":  {
+												"_typeName": "void",
+												"builtin_type_kind": "void",
+												"kind": "builtin"
+											}
+										}
+									}
+								}]
+							}
+						}
+					},
+					"id": 93825000248192,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "flush_ptr",
+					"type": {
+						"_typeName": "stappler::io::flush_fn",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::io::flush_fn",
+							"objects": [{
+								"_fullName": "::stappler::io::flush_fn",
+								"_kind": "type alias",
+								"_name": "flush_fn",
+								"id": 93824997666752,
+								"kind": "type alias",
+								"name": "flush_fn",
+								"underlying_type": {
+									"_typeName": "void(*)(void*)",
+									"kind": "pointer",
+									"pointee": {
+										"_typeName": "void(void*)",
+										"is_variadic": false,
+										"kind": "function",
+										"parameter_types": [{
+											"_typeName": "void*",
+											"kind": "pointer",
+											"pointee": {
+												"_typeName": "void",
+												"builtin_type_kind": "void",
+												"kind": "builtin"
+											}
+										}],
+										"return_type":  {
+											"_typeName": "void",
+											"builtin_type_kind": "void",
+											"kind": "builtin"
+										}
+									}
+								}
+							}]
+						}
+					}
+				}],
+				"class_kind": "struct",
+				"id": 93825002719936,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_final": false,
+				"kind": "class",
+				"name": "Consumer",
+				"scope": {
+					"name": "Consumer"
+				},
+				"semantic_scope": ""
+			}, {
+				"_fullName": "::stappler::io::Consumer::Consumer<typename,typename>(T&)",
+				"_kind": "function template",
+				"_name": "Consumer",
+				"childs": [{
+					"_fullName": "::stappler::io::Consumer::Consumer<typename,typename>(T&)",
+					"_kind": "constructor",
+					"_name": "Consumer",
+					"body_kind": "definition",
+					"id": 93825002725904,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_explicit": false,
+					"is_variadic": false,
+					"kind": "constructor",
+					"name": "Consumer",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "t",
+						"id": 93825011540944,
+						"kind": "function parameter",
+						"name": "t",
+						"type": {
+							"_typeName": "T&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "T",
+								"entity": {
+									"name": "T",
+									"objects": [{
+										"_kind": "template type parameter",
+										"_name": "T",
+										"id": 93825000250512,
+										"is_variadic": false,
+										"keyword": "typename",
+										"kind": "template type parameter",
+										"name": "T"
+									}]
+								},
+								"kind": "template_parameter"
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"semantic_parent":  {
+						"name": "Consumer::",
+						"objects": [{
+							"_fullName": "::stappler::io::Consumer",
+							"_kind": "class",
+							"_name": "Consumer",
+							"class_kind": "struct",
+							"id": 93825002719936,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_final": false,
+							"kind": "class",
+							"name": "Consumer",
+							"scope": {
+								"name": "Consumer"
+							},
+							"semantic_scope": ""
+						}]
+					},
+					"semantic_scope": "Consumer::",
+					"signature": "(T&)"
+				}],
+				"function":  {
+					"_fullName": "::stappler::io::Consumer::Consumer<typename,typename>(T&)",
+					"_kind": "constructor",
+					"_name": "Consumer",
+					"body_kind": "definition",
+					"id": 93825002725904,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_explicit": false,
+					"is_variadic": false,
+					"kind": "constructor",
+					"name": "Consumer",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "t",
+						"id": 93825011540944,
+						"kind": "function parameter",
+						"name": "t",
+						"type": {
+							"_typeName": "T&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "T",
+								"entity": {
+									"name": "T",
+									"objects": [{
+										"_kind": "template type parameter",
+										"_name": "T",
+										"id": 93825000250512,
+										"is_variadic": false,
+										"keyword": "typename",
+										"kind": "template type parameter",
+										"name": "T"
+									}]
+								},
+								"kind": "template_parameter"
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"semantic_parent":  {
+						"name": "Consumer::",
+						"objects": [{
+							"_fullName": "::stappler::io::Consumer",
+							"_kind": "class",
+							"_name": "Consumer",
+							"class_kind": "struct",
+							"id": 93825002719936,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_final": false,
+							"kind": "class",
+							"name": "Consumer",
+							"scope": {
+								"name": "Consumer"
+							},
+							"semantic_scope": ""
+						}]
+					},
+					"semantic_scope": "Consumer::",
+					"signature": "(T&)"
+				},
+				"id": 93825011540784,
+				"kind": "function template",
+				"name": "Consumer",
+				"parameters": [{
+					"_kind": "template type parameter",
+					"_name": "T",
+					"id": 93825000250512,
+					"is_variadic": false,
+					"keyword": "typename",
+					"kind": "template type parameter",
+					"name": "T"
+				}, {
+					"_kind": "template type parameter",
+					"_name": "Traits",
+					"id": 93825000250752,
+					"is_variadic": false,
+					"keyword": "typename",
+					"kind": "template type parameter",
+					"name": "Traits"
+				}]
+			}, {
+				"_fullName": "::stappler::io::Consumer::write(uint8_t const*,size_t) const",
+				"_kind": "member function",
+				"_name": "write",
+				"body_kind": "definition",
+				"cv_qualifier": "const",
+				"id": 93824999295040,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"is_virtual": false,
+				"kind": "member function",
+				"name": "write",
+				"parameters": [{
+					"_kind": "function parameter",
+					"_name": "buf",
+					"id": 93825004334288,
+					"kind": "function parameter",
+					"name": "buf",
+					"type": {
+						"_typeName": "uint8_t const*",
+						"kind": "pointer",
+						"pointee": {
+							"_typeName": "uint8_t const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "uint8_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "uint8_t"
+								}
+							}
+						}
+					}
+				}, {
+					"_kind": "function parameter",
+					"_name": "nbytes",
+					"id": 93825004334576,
+					"kind": "function parameter",
+					"name": "nbytes",
+					"type": {
+						"_typeName": "size_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "size_t"
+						}
+					}
+				}],
+				"ref_qualifier": "none",
+				"return_type": {
+					"_typeName": "size_t",
+					"kind": "user_defined",
+					"target": {
+						"name": "size_t"
+					}
+				},
+				"semantic_parent":  {
+					"name": "Consumer::",
+					"objects": [{
+						"_fullName": "::stappler::io::Consumer",
+						"_kind": "class",
+						"_name": "Consumer",
+						"class_kind": "struct",
+						"id": 93825002719936,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_final": false,
+						"kind": "class",
+						"name": "Consumer",
+						"scope": {
+							"name": "Consumer"
+						},
+						"semantic_scope": ""
+					}]
+				},
+				"semantic_scope": "Consumer::",
+				"signature": "(uint8_t const*,size_t) const"
+			}, {
+				"_fullName": "::stappler::io::Consumer::flush() const",
+				"_kind": "member function",
+				"_name": "flush",
+				"body_kind": "definition",
+				"cv_qualifier": "const",
+				"id": 93825000521952,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"is_virtual": false,
+				"kind": "member function",
+				"name": "flush",
+				"ref_qualifier": "none",
+				"return_type": {
+					"_typeName": "void",
+					"builtin_type_kind": "void",
+					"kind": "builtin"
+				},
+				"semantic_parent":  {
+					"name": "Consumer::",
+					"objects": [{
+						"_fullName": "::stappler::io::Consumer",
+						"_kind": "class",
+						"_name": "Consumer",
+						"class_kind": "struct",
+						"id": 93825002719936,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_final": false,
+						"kind": "class",
+						"name": "Consumer",
+						"scope": {
+							"name": "Consumer"
+						},
+						"semantic_scope": ""
+					}]
+				},
+				"semantic_scope": "Consumer::",
+				"signature": "() const"
+			}],
+			"id": 140737103129424,
+			"is_anonymous": false,
+			"is_inline": false,
+			"is_nested": true,
+			"kind": "namespace",
+			"name": "io",
+			"scope": {
+				"name": "io"
+			}
+		}],
+		"id": 140737103129264,
+		"is_anonymous": false,
+		"is_inline": false,
+		"is_nested": false,
+		"kind": "namespace",
+		"name": "stappler",
+		"scope": {
+			"name": "stappler"
+		}
+	}],
+	"id": 140737109166240,
+	"kind": "file",
+	"name": "/home/sbkarr/stappler/xenolith/libstappler/common/io/SPIOConsumer.h",
+	"unmatched_comments": [{
+		"line": 21,
+		"text": "\nCopyright (c) 2016-2022 Roman Katuntsev <sbkarr@stappler.org>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n"
+	}]
+}

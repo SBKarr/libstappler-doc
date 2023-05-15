@@ -1,0 +1,3720 @@
+{
+	"_kind": "file",
+	"_name": "/home/sbkarr/stappler/xenolith/libstappler/common/utils/SPUrl.h",
+	"childs": [{
+		"_kind": "include directive",
+		"_name": "SPStringView.h",
+		"id": 140737147604656,
+		"include": "/home/sbkarr/stappler/xenolith/libstappler/common/string/SPStringView.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "SPStringView.h"
+	}, {
+		"_kind": "include directive",
+		"_name": "SPData.h",
+		"id": 140737088656864,
+		"include": "/home/sbkarr/stappler/xenolith/libstappler/modules/data/SPData.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "SPData.h"
+	}, {
+		"_fullName": "LIBSTAPPLER_COMMON_UTILS_SPURL_H_",
+		"_kind": "macro definition",
+		"_name": "LIBSTAPPLER_COMMON_UTILS_SPURL_H_",
+		"id": 140737122615744,
+		"is_function_like": false,
+		"is_object_like": true,
+		"is_variadic": false,
+		"kind": "macro definition",
+		"name": "LIBSTAPPLER_COMMON_UTILS_SPURL_H_",
+		"replacement": ""
+	}, {
+		"_fullName": "::stappler",
+		"_kind": "namespace",
+		"_name": "stappler",
+		"childs": [{
+			"_fullName": "::stappler::UrlView",
+			"_kind": "class",
+			"_name": "UrlView",
+			"childs": [{
+				"_fullName": "::stappler::UrlView::UrlToken",
+				"_kind": "enum",
+				"_name": "UrlToken",
+				"childs": [{
+					"_fullName": "::stappler::UrlView::UrlToken::Scheme",
+					"_kind": "enum value",
+					"_name": "Scheme",
+					"id": 93825006205376,
+					"kind": "enum value",
+					"name": "Scheme"
+				}, {
+					"_fullName": "::stappler::UrlView::UrlToken::User",
+					"_kind": "enum value",
+					"_name": "User",
+					"id": 93825002510928,
+					"kind": "enum value",
+					"name": "User"
+				}, {
+					"_fullName": "::stappler::UrlView::UrlToken::Password",
+					"_kind": "enum value",
+					"_name": "Password",
+					"id": 140737094282256,
+					"kind": "enum value",
+					"name": "Password"
+				}, {
+					"_fullName": "::stappler::UrlView::UrlToken::Host",
+					"_kind": "enum value",
+					"_name": "Host",
+					"id": 140737143942336,
+					"kind": "enum value",
+					"name": "Host"
+				}, {
+					"_fullName": "::stappler::UrlView::UrlToken::Port",
+					"_kind": "enum value",
+					"_name": "Port",
+					"id": 140737087781552,
+					"kind": "enum value",
+					"name": "Port"
+				}, {
+					"_fullName": "::stappler::UrlView::UrlToken::Path",
+					"_kind": "enum value",
+					"_name": "Path",
+					"id": 93824999064128,
+					"kind": "enum value",
+					"name": "Path"
+				}, {
+					"_fullName": "::stappler::UrlView::UrlToken::Query",
+					"_kind": "enum value",
+					"_name": "Query",
+					"id": 93825002269760,
+					"kind": "enum value",
+					"name": "Query"
+				}, {
+					"_fullName": "::stappler::UrlView::UrlToken::Fragment",
+					"_kind": "enum value",
+					"_name": "Fragment",
+					"id": 93825003930864,
+					"kind": "enum value",
+					"name": "Fragment"
+				}, {
+					"_fullName": "::stappler::UrlView::UrlToken::Blank",
+					"_kind": "enum value",
+					"_name": "Blank",
+					"id": 93825004979328,
+					"kind": "enum value",
+					"name": "Blank"
+				}],
+				"has_explicit_type": false,
+				"id": 93825005726880,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_scoped": true,
+				"kind": "enum",
+				"name": "UrlToken",
+				"scope": {
+					"name": "UrlToken"
+				},
+				"semantic_scope": "",
+				"underlying_type": {
+					"_typeName": "int",
+					"builtin_type_kind": "int",
+					"kind": "builtin"
+				}
+			}, {
+				"_fullName": "::stappler::UrlView::scheme",
+				"_kind": "member variable",
+				"_name": "scheme",
+				"id": 140736954309184,
+				"is_mutable": false,
+				"kind": "member variable",
+				"name": "scheme",
+				"type": {
+					"_typeName": "stappler::StringView",
+					"kind": "user_defined",
+					"target": {
+						"name": "stappler::StringView",
+						"objects": [{
+							"_fullName": "::stappler::StringView",
+							"_kind": "type alias",
+							"_name": "StringView",
+							"id": 93824997448656,
+							"kind": "type alias",
+							"name": "StringView",
+							"underlying_type": {
+								"_typeName": "StringViewBase<char>",
+								"arguments_exposed": false,
+								"kind": "template_instantiation",
+								"primary_template": {
+									"name": "StringViewBase",
+									"objects": [{
+										"_fullName": "::stappler::StringViewBase<typename>",
+										"_kind": "class template",
+										"_name": "StringViewBase",
+										"class": {
+											"_fullName": "::stappler::StringViewBase<typename>",
+											"_kind": "class",
+											"_name": "StringViewBase",
+											"bases": [{
+												"_kind": "base class specifier",
+												"_name": "BytesReader<_CharType>",
+												"access_specifier": "public",
+												"id": 93824998090352,
+												"is_virtual": false,
+												"kind": "base class specifier",
+												"name": "BytesReader<_CharType>",
+												"type": {
+													"_typeName": "BytesReader<_CharType>",
+													"arguments_exposed": false,
+													"kind": "template_instantiation",
+													"primary_template": {
+														"name": "BytesReader",
+														"objects": [{
+															"_fullName": "::stappler::BytesReader<typename>",
+															"_kind": "class template",
+															"_name": "BytesReader",
+															"class": {
+																"_fullName": "::stappler::BytesReader<typename>",
+																"_kind": "class",
+																"_name": "BytesReader",
+																"class_kind": "class",
+																"id": 140736954953792,
+																"is_declaration": false,
+																"is_definition": true,
+																"is_final": false,
+																"kind": "class",
+																"name": "BytesReader",
+																"scope": {
+																	"is_templated": true,
+																	"name": "BytesReader",
+																	"template_parameters": [{
+																		"_kind": "template type parameter",
+																		"_name": "_CharType",
+																		"id": 140737098599232,
+																		"is_variadic": false,
+																		"keyword": "typename",
+																		"kind": "template type parameter",
+																		"name": "_CharType"
+																	}]
+																},
+																"semantic_scope": ""
+															},
+															"id": 93824998648144,
+															"kind": "class template",
+															"name": "BytesReader",
+															"parameters": [{
+																"_kind": "template type parameter",
+																"_name": "_CharType",
+																"id": 140737098599232,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "_CharType"
+															}],
+															"scope":  {
+																"is_templated": true,
+																"name": "BytesReader",
+																"template_parameters": [{
+																	"_kind": "template type parameter",
+																	"_name": "_CharType",
+																	"id": 140737098599232,
+																	"is_variadic": false,
+																	"keyword": "typename",
+																	"kind": "template type parameter",
+																	"name": "_CharType"
+																}]
+															}
+														}]
+													},
+													"unexposed_arguments": "_CharType"
+												}
+											}],
+											"class_kind": "class",
+											"id": 140737094580320,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "StringViewBase",
+											"scope": {
+												"is_templated": true,
+												"name": "StringViewBase",
+												"template_parameters": [{
+													"_kind": "template type parameter",
+													"_name": "_CharType",
+													"id": 93824999493712,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "_CharType"
+												}]
+											},
+											"semantic_scope": ""
+										},
+										"id": 93824999493216,
+										"kind": "class template",
+										"name": "StringViewBase",
+										"parameters": [{
+											"_kind": "template type parameter",
+											"_name": "_CharType",
+											"id": 93824999493712,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "_CharType"
+										}],
+										"scope":  {
+											"is_templated": true,
+											"name": "StringViewBase",
+											"template_parameters": [{
+												"_kind": "template type parameter",
+												"_name": "_CharType",
+												"id": 93824999493712,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "_CharType"
+											}]
+										}
+									}]
+								},
+								"unexposed_arguments": "char"
+							}
+						}]
+					}
+				}
+			}, {
+				"_fullName": "::stappler::UrlView::user",
+				"_kind": "member variable",
+				"_name": "user",
+				"id": 140737102113328,
+				"is_mutable": false,
+				"kind": "member variable",
+				"name": "user",
+				"type": {
+					"_typeName": "stappler::StringView",
+					"kind": "user_defined",
+					"target": {
+						"name": "stappler::StringView",
+						"objects": [{
+							"_fullName": "::stappler::StringView",
+							"_kind": "type alias",
+							"_name": "StringView",
+							"id": 93824997448656,
+							"kind": "type alias",
+							"name": "StringView",
+							"underlying_type": {
+								"_typeName": "StringViewBase<char>",
+								"arguments_exposed": false,
+								"kind": "template_instantiation",
+								"primary_template": {
+									"name": "StringViewBase",
+									"objects": [{
+										"_fullName": "::stappler::StringViewBase<typename>",
+										"_kind": "class template",
+										"_name": "StringViewBase",
+										"class": {
+											"_fullName": "::stappler::StringViewBase<typename>",
+											"_kind": "class",
+											"_name": "StringViewBase",
+											"bases": [{
+												"_kind": "base class specifier",
+												"_name": "BytesReader<_CharType>",
+												"access_specifier": "public",
+												"id": 93824998090352,
+												"is_virtual": false,
+												"kind": "base class specifier",
+												"name": "BytesReader<_CharType>",
+												"type": {
+													"_typeName": "BytesReader<_CharType>",
+													"arguments_exposed": false,
+													"kind": "template_instantiation",
+													"primary_template": {
+														"name": "BytesReader",
+														"objects": [{
+															"_fullName": "::stappler::BytesReader<typename>",
+															"_kind": "class template",
+															"_name": "BytesReader",
+															"class": {
+																"_fullName": "::stappler::BytesReader<typename>",
+																"_kind": "class",
+																"_name": "BytesReader",
+																"class_kind": "class",
+																"id": 140736954953792,
+																"is_declaration": false,
+																"is_definition": true,
+																"is_final": false,
+																"kind": "class",
+																"name": "BytesReader",
+																"scope": {
+																	"is_templated": true,
+																	"name": "BytesReader",
+																	"template_parameters": [{
+																		"_kind": "template type parameter",
+																		"_name": "_CharType",
+																		"id": 140737098599232,
+																		"is_variadic": false,
+																		"keyword": "typename",
+																		"kind": "template type parameter",
+																		"name": "_CharType"
+																	}]
+																},
+																"semantic_scope": ""
+															},
+															"id": 93824998648144,
+															"kind": "class template",
+															"name": "BytesReader",
+															"parameters": [{
+																"_kind": "template type parameter",
+																"_name": "_CharType",
+																"id": 140737098599232,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "_CharType"
+															}],
+															"scope":  {
+																"is_templated": true,
+																"name": "BytesReader",
+																"template_parameters": [{
+																	"_kind": "template type parameter",
+																	"_name": "_CharType",
+																	"id": 140737098599232,
+																	"is_variadic": false,
+																	"keyword": "typename",
+																	"kind": "template type parameter",
+																	"name": "_CharType"
+																}]
+															}
+														}]
+													},
+													"unexposed_arguments": "_CharType"
+												}
+											}],
+											"class_kind": "class",
+											"id": 140737094580320,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "StringViewBase",
+											"scope": {
+												"is_templated": true,
+												"name": "StringViewBase",
+												"template_parameters": [{
+													"_kind": "template type parameter",
+													"_name": "_CharType",
+													"id": 93824999493712,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "_CharType"
+												}]
+											},
+											"semantic_scope": ""
+										},
+										"id": 93824999493216,
+										"kind": "class template",
+										"name": "StringViewBase",
+										"parameters": [{
+											"_kind": "template type parameter",
+											"_name": "_CharType",
+											"id": 93824999493712,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "_CharType"
+										}],
+										"scope":  {
+											"is_templated": true,
+											"name": "StringViewBase",
+											"template_parameters": [{
+												"_kind": "template type parameter",
+												"_name": "_CharType",
+												"id": 93824999493712,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "_CharType"
+											}]
+										}
+									}]
+								},
+								"unexposed_arguments": "char"
+							}
+						}]
+					}
+				}
+			}, {
+				"_fullName": "::stappler::UrlView::password",
+				"_kind": "member variable",
+				"_name": "password",
+				"id": 140736986530224,
+				"is_mutable": false,
+				"kind": "member variable",
+				"name": "password",
+				"type": {
+					"_typeName": "stappler::StringView",
+					"kind": "user_defined",
+					"target": {
+						"name": "stappler::StringView",
+						"objects": [{
+							"_fullName": "::stappler::StringView",
+							"_kind": "type alias",
+							"_name": "StringView",
+							"id": 93824997448656,
+							"kind": "type alias",
+							"name": "StringView",
+							"underlying_type": {
+								"_typeName": "StringViewBase<char>",
+								"arguments_exposed": false,
+								"kind": "template_instantiation",
+								"primary_template": {
+									"name": "StringViewBase",
+									"objects": [{
+										"_fullName": "::stappler::StringViewBase<typename>",
+										"_kind": "class template",
+										"_name": "StringViewBase",
+										"class": {
+											"_fullName": "::stappler::StringViewBase<typename>",
+											"_kind": "class",
+											"_name": "StringViewBase",
+											"bases": [{
+												"_kind": "base class specifier",
+												"_name": "BytesReader<_CharType>",
+												"access_specifier": "public",
+												"id": 93824998090352,
+												"is_virtual": false,
+												"kind": "base class specifier",
+												"name": "BytesReader<_CharType>",
+												"type": {
+													"_typeName": "BytesReader<_CharType>",
+													"arguments_exposed": false,
+													"kind": "template_instantiation",
+													"primary_template": {
+														"name": "BytesReader",
+														"objects": [{
+															"_fullName": "::stappler::BytesReader<typename>",
+															"_kind": "class template",
+															"_name": "BytesReader",
+															"class": {
+																"_fullName": "::stappler::BytesReader<typename>",
+																"_kind": "class",
+																"_name": "BytesReader",
+																"class_kind": "class",
+																"id": 140736954953792,
+																"is_declaration": false,
+																"is_definition": true,
+																"is_final": false,
+																"kind": "class",
+																"name": "BytesReader",
+																"scope": {
+																	"is_templated": true,
+																	"name": "BytesReader",
+																	"template_parameters": [{
+																		"_kind": "template type parameter",
+																		"_name": "_CharType",
+																		"id": 140737098599232,
+																		"is_variadic": false,
+																		"keyword": "typename",
+																		"kind": "template type parameter",
+																		"name": "_CharType"
+																	}]
+																},
+																"semantic_scope": ""
+															},
+															"id": 93824998648144,
+															"kind": "class template",
+															"name": "BytesReader",
+															"parameters": [{
+																"_kind": "template type parameter",
+																"_name": "_CharType",
+																"id": 140737098599232,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "_CharType"
+															}],
+															"scope":  {
+																"is_templated": true,
+																"name": "BytesReader",
+																"template_parameters": [{
+																	"_kind": "template type parameter",
+																	"_name": "_CharType",
+																	"id": 140737098599232,
+																	"is_variadic": false,
+																	"keyword": "typename",
+																	"kind": "template type parameter",
+																	"name": "_CharType"
+																}]
+															}
+														}]
+													},
+													"unexposed_arguments": "_CharType"
+												}
+											}],
+											"class_kind": "class",
+											"id": 140737094580320,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "StringViewBase",
+											"scope": {
+												"is_templated": true,
+												"name": "StringViewBase",
+												"template_parameters": [{
+													"_kind": "template type parameter",
+													"_name": "_CharType",
+													"id": 93824999493712,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "_CharType"
+												}]
+											},
+											"semantic_scope": ""
+										},
+										"id": 93824999493216,
+										"kind": "class template",
+										"name": "StringViewBase",
+										"parameters": [{
+											"_kind": "template type parameter",
+											"_name": "_CharType",
+											"id": 93824999493712,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "_CharType"
+										}],
+										"scope":  {
+											"is_templated": true,
+											"name": "StringViewBase",
+											"template_parameters": [{
+												"_kind": "template type parameter",
+												"_name": "_CharType",
+												"id": 93824999493712,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "_CharType"
+											}]
+										}
+									}]
+								},
+								"unexposed_arguments": "char"
+							}
+						}]
+					}
+				}
+			}, {
+				"_fullName": "::stappler::UrlView::host",
+				"_kind": "member variable",
+				"_name": "host",
+				"id": 93825002611136,
+				"is_mutable": false,
+				"kind": "member variable",
+				"name": "host",
+				"type": {
+					"_typeName": "stappler::StringView",
+					"kind": "user_defined",
+					"target": {
+						"name": "stappler::StringView",
+						"objects": [{
+							"_fullName": "::stappler::StringView",
+							"_kind": "type alias",
+							"_name": "StringView",
+							"id": 93824997448656,
+							"kind": "type alias",
+							"name": "StringView",
+							"underlying_type": {
+								"_typeName": "StringViewBase<char>",
+								"arguments_exposed": false,
+								"kind": "template_instantiation",
+								"primary_template": {
+									"name": "StringViewBase",
+									"objects": [{
+										"_fullName": "::stappler::StringViewBase<typename>",
+										"_kind": "class template",
+										"_name": "StringViewBase",
+										"class": {
+											"_fullName": "::stappler::StringViewBase<typename>",
+											"_kind": "class",
+											"_name": "StringViewBase",
+											"bases": [{
+												"_kind": "base class specifier",
+												"_name": "BytesReader<_CharType>",
+												"access_specifier": "public",
+												"id": 93824998090352,
+												"is_virtual": false,
+												"kind": "base class specifier",
+												"name": "BytesReader<_CharType>",
+												"type": {
+													"_typeName": "BytesReader<_CharType>",
+													"arguments_exposed": false,
+													"kind": "template_instantiation",
+													"primary_template": {
+														"name": "BytesReader",
+														"objects": [{
+															"_fullName": "::stappler::BytesReader<typename>",
+															"_kind": "class template",
+															"_name": "BytesReader",
+															"class": {
+																"_fullName": "::stappler::BytesReader<typename>",
+																"_kind": "class",
+																"_name": "BytesReader",
+																"class_kind": "class",
+																"id": 140736954953792,
+																"is_declaration": false,
+																"is_definition": true,
+																"is_final": false,
+																"kind": "class",
+																"name": "BytesReader",
+																"scope": {
+																	"is_templated": true,
+																	"name": "BytesReader",
+																	"template_parameters": [{
+																		"_kind": "template type parameter",
+																		"_name": "_CharType",
+																		"id": 140737098599232,
+																		"is_variadic": false,
+																		"keyword": "typename",
+																		"kind": "template type parameter",
+																		"name": "_CharType"
+																	}]
+																},
+																"semantic_scope": ""
+															},
+															"id": 93824998648144,
+															"kind": "class template",
+															"name": "BytesReader",
+															"parameters": [{
+																"_kind": "template type parameter",
+																"_name": "_CharType",
+																"id": 140737098599232,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "_CharType"
+															}],
+															"scope":  {
+																"is_templated": true,
+																"name": "BytesReader",
+																"template_parameters": [{
+																	"_kind": "template type parameter",
+																	"_name": "_CharType",
+																	"id": 140737098599232,
+																	"is_variadic": false,
+																	"keyword": "typename",
+																	"kind": "template type parameter",
+																	"name": "_CharType"
+																}]
+															}
+														}]
+													},
+													"unexposed_arguments": "_CharType"
+												}
+											}],
+											"class_kind": "class",
+											"id": 140737094580320,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "StringViewBase",
+											"scope": {
+												"is_templated": true,
+												"name": "StringViewBase",
+												"template_parameters": [{
+													"_kind": "template type parameter",
+													"_name": "_CharType",
+													"id": 93824999493712,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "_CharType"
+												}]
+											},
+											"semantic_scope": ""
+										},
+										"id": 93824999493216,
+										"kind": "class template",
+										"name": "StringViewBase",
+										"parameters": [{
+											"_kind": "template type parameter",
+											"_name": "_CharType",
+											"id": 93824999493712,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "_CharType"
+										}],
+										"scope":  {
+											"is_templated": true,
+											"name": "StringViewBase",
+											"template_parameters": [{
+												"_kind": "template type parameter",
+												"_name": "_CharType",
+												"id": 93824999493712,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "_CharType"
+											}]
+										}
+									}]
+								},
+								"unexposed_arguments": "char"
+							}
+						}]
+					}
+				}
+			}, {
+				"_fullName": "::stappler::UrlView::port",
+				"_kind": "member variable",
+				"_name": "port",
+				"id": 93825000622096,
+				"is_mutable": false,
+				"kind": "member variable",
+				"name": "port",
+				"type": {
+					"_typeName": "stappler::StringView",
+					"kind": "user_defined",
+					"target": {
+						"name": "stappler::StringView",
+						"objects": [{
+							"_fullName": "::stappler::StringView",
+							"_kind": "type alias",
+							"_name": "StringView",
+							"id": 93824997448656,
+							"kind": "type alias",
+							"name": "StringView",
+							"underlying_type": {
+								"_typeName": "StringViewBase<char>",
+								"arguments_exposed": false,
+								"kind": "template_instantiation",
+								"primary_template": {
+									"name": "StringViewBase",
+									"objects": [{
+										"_fullName": "::stappler::StringViewBase<typename>",
+										"_kind": "class template",
+										"_name": "StringViewBase",
+										"class": {
+											"_fullName": "::stappler::StringViewBase<typename>",
+											"_kind": "class",
+											"_name": "StringViewBase",
+											"bases": [{
+												"_kind": "base class specifier",
+												"_name": "BytesReader<_CharType>",
+												"access_specifier": "public",
+												"id": 93824998090352,
+												"is_virtual": false,
+												"kind": "base class specifier",
+												"name": "BytesReader<_CharType>",
+												"type": {
+													"_typeName": "BytesReader<_CharType>",
+													"arguments_exposed": false,
+													"kind": "template_instantiation",
+													"primary_template": {
+														"name": "BytesReader",
+														"objects": [{
+															"_fullName": "::stappler::BytesReader<typename>",
+															"_kind": "class template",
+															"_name": "BytesReader",
+															"class": {
+																"_fullName": "::stappler::BytesReader<typename>",
+																"_kind": "class",
+																"_name": "BytesReader",
+																"class_kind": "class",
+																"id": 140736954953792,
+																"is_declaration": false,
+																"is_definition": true,
+																"is_final": false,
+																"kind": "class",
+																"name": "BytesReader",
+																"scope": {
+																	"is_templated": true,
+																	"name": "BytesReader",
+																	"template_parameters": [{
+																		"_kind": "template type parameter",
+																		"_name": "_CharType",
+																		"id": 140737098599232,
+																		"is_variadic": false,
+																		"keyword": "typename",
+																		"kind": "template type parameter",
+																		"name": "_CharType"
+																	}]
+																},
+																"semantic_scope": ""
+															},
+															"id": 93824998648144,
+															"kind": "class template",
+															"name": "BytesReader",
+															"parameters": [{
+																"_kind": "template type parameter",
+																"_name": "_CharType",
+																"id": 140737098599232,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "_CharType"
+															}],
+															"scope":  {
+																"is_templated": true,
+																"name": "BytesReader",
+																"template_parameters": [{
+																	"_kind": "template type parameter",
+																	"_name": "_CharType",
+																	"id": 140737098599232,
+																	"is_variadic": false,
+																	"keyword": "typename",
+																	"kind": "template type parameter",
+																	"name": "_CharType"
+																}]
+															}
+														}]
+													},
+													"unexposed_arguments": "_CharType"
+												}
+											}],
+											"class_kind": "class",
+											"id": 140737094580320,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "StringViewBase",
+											"scope": {
+												"is_templated": true,
+												"name": "StringViewBase",
+												"template_parameters": [{
+													"_kind": "template type parameter",
+													"_name": "_CharType",
+													"id": 93824999493712,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "_CharType"
+												}]
+											},
+											"semantic_scope": ""
+										},
+										"id": 93824999493216,
+										"kind": "class template",
+										"name": "StringViewBase",
+										"parameters": [{
+											"_kind": "template type parameter",
+											"_name": "_CharType",
+											"id": 93824999493712,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "_CharType"
+										}],
+										"scope":  {
+											"is_templated": true,
+											"name": "StringViewBase",
+											"template_parameters": [{
+												"_kind": "template type parameter",
+												"_name": "_CharType",
+												"id": 93824999493712,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "_CharType"
+											}]
+										}
+									}]
+								},
+								"unexposed_arguments": "char"
+							}
+						}]
+					}
+				}
+			}, {
+				"_fullName": "::stappler::UrlView::path",
+				"_kind": "member variable",
+				"_name": "path",
+				"id": 93825007934768,
+				"is_mutable": false,
+				"kind": "member variable",
+				"name": "path",
+				"type": {
+					"_typeName": "stappler::StringView",
+					"kind": "user_defined",
+					"target": {
+						"name": "stappler::StringView",
+						"objects": [{
+							"_fullName": "::stappler::StringView",
+							"_kind": "type alias",
+							"_name": "StringView",
+							"id": 93824997448656,
+							"kind": "type alias",
+							"name": "StringView",
+							"underlying_type": {
+								"_typeName": "StringViewBase<char>",
+								"arguments_exposed": false,
+								"kind": "template_instantiation",
+								"primary_template": {
+									"name": "StringViewBase",
+									"objects": [{
+										"_fullName": "::stappler::StringViewBase<typename>",
+										"_kind": "class template",
+										"_name": "StringViewBase",
+										"class": {
+											"_fullName": "::stappler::StringViewBase<typename>",
+											"_kind": "class",
+											"_name": "StringViewBase",
+											"bases": [{
+												"_kind": "base class specifier",
+												"_name": "BytesReader<_CharType>",
+												"access_specifier": "public",
+												"id": 93824998090352,
+												"is_virtual": false,
+												"kind": "base class specifier",
+												"name": "BytesReader<_CharType>",
+												"type": {
+													"_typeName": "BytesReader<_CharType>",
+													"arguments_exposed": false,
+													"kind": "template_instantiation",
+													"primary_template": {
+														"name": "BytesReader",
+														"objects": [{
+															"_fullName": "::stappler::BytesReader<typename>",
+															"_kind": "class template",
+															"_name": "BytesReader",
+															"class": {
+																"_fullName": "::stappler::BytesReader<typename>",
+																"_kind": "class",
+																"_name": "BytesReader",
+																"class_kind": "class",
+																"id": 140736954953792,
+																"is_declaration": false,
+																"is_definition": true,
+																"is_final": false,
+																"kind": "class",
+																"name": "BytesReader",
+																"scope": {
+																	"is_templated": true,
+																	"name": "BytesReader",
+																	"template_parameters": [{
+																		"_kind": "template type parameter",
+																		"_name": "_CharType",
+																		"id": 140737098599232,
+																		"is_variadic": false,
+																		"keyword": "typename",
+																		"kind": "template type parameter",
+																		"name": "_CharType"
+																	}]
+																},
+																"semantic_scope": ""
+															},
+															"id": 93824998648144,
+															"kind": "class template",
+															"name": "BytesReader",
+															"parameters": [{
+																"_kind": "template type parameter",
+																"_name": "_CharType",
+																"id": 140737098599232,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "_CharType"
+															}],
+															"scope":  {
+																"is_templated": true,
+																"name": "BytesReader",
+																"template_parameters": [{
+																	"_kind": "template type parameter",
+																	"_name": "_CharType",
+																	"id": 140737098599232,
+																	"is_variadic": false,
+																	"keyword": "typename",
+																	"kind": "template type parameter",
+																	"name": "_CharType"
+																}]
+															}
+														}]
+													},
+													"unexposed_arguments": "_CharType"
+												}
+											}],
+											"class_kind": "class",
+											"id": 140737094580320,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "StringViewBase",
+											"scope": {
+												"is_templated": true,
+												"name": "StringViewBase",
+												"template_parameters": [{
+													"_kind": "template type parameter",
+													"_name": "_CharType",
+													"id": 93824999493712,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "_CharType"
+												}]
+											},
+											"semantic_scope": ""
+										},
+										"id": 93824999493216,
+										"kind": "class template",
+										"name": "StringViewBase",
+										"parameters": [{
+											"_kind": "template type parameter",
+											"_name": "_CharType",
+											"id": 93824999493712,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "_CharType"
+										}],
+										"scope":  {
+											"is_templated": true,
+											"name": "StringViewBase",
+											"template_parameters": [{
+												"_kind": "template type parameter",
+												"_name": "_CharType",
+												"id": 93824999493712,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "_CharType"
+											}]
+										}
+									}]
+								},
+								"unexposed_arguments": "char"
+							}
+						}]
+					}
+				}
+			}, {
+				"_fullName": "::stappler::UrlView::query",
+				"_kind": "member variable",
+				"_name": "query",
+				"id": 93825000089344,
+				"is_mutable": false,
+				"kind": "member variable",
+				"name": "query",
+				"type": {
+					"_typeName": "stappler::StringView",
+					"kind": "user_defined",
+					"target": {
+						"name": "stappler::StringView",
+						"objects": [{
+							"_fullName": "::stappler::StringView",
+							"_kind": "type alias",
+							"_name": "StringView",
+							"id": 93824997448656,
+							"kind": "type alias",
+							"name": "StringView",
+							"underlying_type": {
+								"_typeName": "StringViewBase<char>",
+								"arguments_exposed": false,
+								"kind": "template_instantiation",
+								"primary_template": {
+									"name": "StringViewBase",
+									"objects": [{
+										"_fullName": "::stappler::StringViewBase<typename>",
+										"_kind": "class template",
+										"_name": "StringViewBase",
+										"class": {
+											"_fullName": "::stappler::StringViewBase<typename>",
+											"_kind": "class",
+											"_name": "StringViewBase",
+											"bases": [{
+												"_kind": "base class specifier",
+												"_name": "BytesReader<_CharType>",
+												"access_specifier": "public",
+												"id": 93824998090352,
+												"is_virtual": false,
+												"kind": "base class specifier",
+												"name": "BytesReader<_CharType>",
+												"type": {
+													"_typeName": "BytesReader<_CharType>",
+													"arguments_exposed": false,
+													"kind": "template_instantiation",
+													"primary_template": {
+														"name": "BytesReader",
+														"objects": [{
+															"_fullName": "::stappler::BytesReader<typename>",
+															"_kind": "class template",
+															"_name": "BytesReader",
+															"class": {
+																"_fullName": "::stappler::BytesReader<typename>",
+																"_kind": "class",
+																"_name": "BytesReader",
+																"class_kind": "class",
+																"id": 140736954953792,
+																"is_declaration": false,
+																"is_definition": true,
+																"is_final": false,
+																"kind": "class",
+																"name": "BytesReader",
+																"scope": {
+																	"is_templated": true,
+																	"name": "BytesReader",
+																	"template_parameters": [{
+																		"_kind": "template type parameter",
+																		"_name": "_CharType",
+																		"id": 140737098599232,
+																		"is_variadic": false,
+																		"keyword": "typename",
+																		"kind": "template type parameter",
+																		"name": "_CharType"
+																	}]
+																},
+																"semantic_scope": ""
+															},
+															"id": 93824998648144,
+															"kind": "class template",
+															"name": "BytesReader",
+															"parameters": [{
+																"_kind": "template type parameter",
+																"_name": "_CharType",
+																"id": 140737098599232,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "_CharType"
+															}],
+															"scope":  {
+																"is_templated": true,
+																"name": "BytesReader",
+																"template_parameters": [{
+																	"_kind": "template type parameter",
+																	"_name": "_CharType",
+																	"id": 140737098599232,
+																	"is_variadic": false,
+																	"keyword": "typename",
+																	"kind": "template type parameter",
+																	"name": "_CharType"
+																}]
+															}
+														}]
+													},
+													"unexposed_arguments": "_CharType"
+												}
+											}],
+											"class_kind": "class",
+											"id": 140737094580320,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "StringViewBase",
+											"scope": {
+												"is_templated": true,
+												"name": "StringViewBase",
+												"template_parameters": [{
+													"_kind": "template type parameter",
+													"_name": "_CharType",
+													"id": 93824999493712,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "_CharType"
+												}]
+											},
+											"semantic_scope": ""
+										},
+										"id": 93824999493216,
+										"kind": "class template",
+										"name": "StringViewBase",
+										"parameters": [{
+											"_kind": "template type parameter",
+											"_name": "_CharType",
+											"id": 93824999493712,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "_CharType"
+										}],
+										"scope":  {
+											"is_templated": true,
+											"name": "StringViewBase",
+											"template_parameters": [{
+												"_kind": "template type parameter",
+												"_name": "_CharType",
+												"id": 93824999493712,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "_CharType"
+											}]
+										}
+									}]
+								},
+								"unexposed_arguments": "char"
+							}
+						}]
+					}
+				}
+			}, {
+				"_fullName": "::stappler::UrlView::fragment",
+				"_kind": "member variable",
+				"_name": "fragment",
+				"id": 93825006539984,
+				"is_mutable": false,
+				"kind": "member variable",
+				"name": "fragment",
+				"type": {
+					"_typeName": "stappler::StringView",
+					"kind": "user_defined",
+					"target": {
+						"name": "stappler::StringView",
+						"objects": [{
+							"_fullName": "::stappler::StringView",
+							"_kind": "type alias",
+							"_name": "StringView",
+							"id": 93824997448656,
+							"kind": "type alias",
+							"name": "StringView",
+							"underlying_type": {
+								"_typeName": "StringViewBase<char>",
+								"arguments_exposed": false,
+								"kind": "template_instantiation",
+								"primary_template": {
+									"name": "StringViewBase",
+									"objects": [{
+										"_fullName": "::stappler::StringViewBase<typename>",
+										"_kind": "class template",
+										"_name": "StringViewBase",
+										"class": {
+											"_fullName": "::stappler::StringViewBase<typename>",
+											"_kind": "class",
+											"_name": "StringViewBase",
+											"bases": [{
+												"_kind": "base class specifier",
+												"_name": "BytesReader<_CharType>",
+												"access_specifier": "public",
+												"id": 93824998090352,
+												"is_virtual": false,
+												"kind": "base class specifier",
+												"name": "BytesReader<_CharType>",
+												"type": {
+													"_typeName": "BytesReader<_CharType>",
+													"arguments_exposed": false,
+													"kind": "template_instantiation",
+													"primary_template": {
+														"name": "BytesReader",
+														"objects": [{
+															"_fullName": "::stappler::BytesReader<typename>",
+															"_kind": "class template",
+															"_name": "BytesReader",
+															"class": {
+																"_fullName": "::stappler::BytesReader<typename>",
+																"_kind": "class",
+																"_name": "BytesReader",
+																"class_kind": "class",
+																"id": 140736954953792,
+																"is_declaration": false,
+																"is_definition": true,
+																"is_final": false,
+																"kind": "class",
+																"name": "BytesReader",
+																"scope": {
+																	"is_templated": true,
+																	"name": "BytesReader",
+																	"template_parameters": [{
+																		"_kind": "template type parameter",
+																		"_name": "_CharType",
+																		"id": 140737098599232,
+																		"is_variadic": false,
+																		"keyword": "typename",
+																		"kind": "template type parameter",
+																		"name": "_CharType"
+																	}]
+																},
+																"semantic_scope": ""
+															},
+															"id": 93824998648144,
+															"kind": "class template",
+															"name": "BytesReader",
+															"parameters": [{
+																"_kind": "template type parameter",
+																"_name": "_CharType",
+																"id": 140737098599232,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "_CharType"
+															}],
+															"scope":  {
+																"is_templated": true,
+																"name": "BytesReader",
+																"template_parameters": [{
+																	"_kind": "template type parameter",
+																	"_name": "_CharType",
+																	"id": 140737098599232,
+																	"is_variadic": false,
+																	"keyword": "typename",
+																	"kind": "template type parameter",
+																	"name": "_CharType"
+																}]
+															}
+														}]
+													},
+													"unexposed_arguments": "_CharType"
+												}
+											}],
+											"class_kind": "class",
+											"id": 140737094580320,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "StringViewBase",
+											"scope": {
+												"is_templated": true,
+												"name": "StringViewBase",
+												"template_parameters": [{
+													"_kind": "template type parameter",
+													"_name": "_CharType",
+													"id": 93824999493712,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "_CharType"
+												}]
+											},
+											"semantic_scope": ""
+										},
+										"id": 93824999493216,
+										"kind": "class template",
+										"name": "StringViewBase",
+										"parameters": [{
+											"_kind": "template type parameter",
+											"_name": "_CharType",
+											"id": 93824999493712,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "_CharType"
+										}],
+										"scope":  {
+											"is_templated": true,
+											"name": "StringViewBase",
+											"template_parameters": [{
+												"_kind": "template type parameter",
+												"_name": "_CharType",
+												"id": 93824999493712,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "_CharType"
+											}]
+										}
+									}]
+								},
+								"unexposed_arguments": "char"
+							}
+						}]
+					}
+				}
+			}, {
+				"_fullName": "::stappler::UrlView::url",
+				"_kind": "member variable",
+				"_name": "url",
+				"id": 93825006351760,
+				"is_mutable": false,
+				"kind": "member variable",
+				"name": "url",
+				"type": {
+					"_typeName": "stappler::StringView",
+					"kind": "user_defined",
+					"target": {
+						"name": "stappler::StringView",
+						"objects": [{
+							"_fullName": "::stappler::StringView",
+							"_kind": "type alias",
+							"_name": "StringView",
+							"id": 93824997448656,
+							"kind": "type alias",
+							"name": "StringView",
+							"underlying_type": {
+								"_typeName": "StringViewBase<char>",
+								"arguments_exposed": false,
+								"kind": "template_instantiation",
+								"primary_template": {
+									"name": "StringViewBase",
+									"objects": [{
+										"_fullName": "::stappler::StringViewBase<typename>",
+										"_kind": "class template",
+										"_name": "StringViewBase",
+										"class": {
+											"_fullName": "::stappler::StringViewBase<typename>",
+											"_kind": "class",
+											"_name": "StringViewBase",
+											"bases": [{
+												"_kind": "base class specifier",
+												"_name": "BytesReader<_CharType>",
+												"access_specifier": "public",
+												"id": 93824998090352,
+												"is_virtual": false,
+												"kind": "base class specifier",
+												"name": "BytesReader<_CharType>",
+												"type": {
+													"_typeName": "BytesReader<_CharType>",
+													"arguments_exposed": false,
+													"kind": "template_instantiation",
+													"primary_template": {
+														"name": "BytesReader",
+														"objects": [{
+															"_fullName": "::stappler::BytesReader<typename>",
+															"_kind": "class template",
+															"_name": "BytesReader",
+															"class": {
+																"_fullName": "::stappler::BytesReader<typename>",
+																"_kind": "class",
+																"_name": "BytesReader",
+																"class_kind": "class",
+																"id": 140736954953792,
+																"is_declaration": false,
+																"is_definition": true,
+																"is_final": false,
+																"kind": "class",
+																"name": "BytesReader",
+																"scope": {
+																	"is_templated": true,
+																	"name": "BytesReader",
+																	"template_parameters": [{
+																		"_kind": "template type parameter",
+																		"_name": "_CharType",
+																		"id": 140737098599232,
+																		"is_variadic": false,
+																		"keyword": "typename",
+																		"kind": "template type parameter",
+																		"name": "_CharType"
+																	}]
+																},
+																"semantic_scope": ""
+															},
+															"id": 93824998648144,
+															"kind": "class template",
+															"name": "BytesReader",
+															"parameters": [{
+																"_kind": "template type parameter",
+																"_name": "_CharType",
+																"id": 140737098599232,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "_CharType"
+															}],
+															"scope":  {
+																"is_templated": true,
+																"name": "BytesReader",
+																"template_parameters": [{
+																	"_kind": "template type parameter",
+																	"_name": "_CharType",
+																	"id": 140737098599232,
+																	"is_variadic": false,
+																	"keyword": "typename",
+																	"kind": "template type parameter",
+																	"name": "_CharType"
+																}]
+															}
+														}]
+													},
+													"unexposed_arguments": "_CharType"
+												}
+											}],
+											"class_kind": "class",
+											"id": 140737094580320,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "StringViewBase",
+											"scope": {
+												"is_templated": true,
+												"name": "StringViewBase",
+												"template_parameters": [{
+													"_kind": "template type parameter",
+													"_name": "_CharType",
+													"id": 93824999493712,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "_CharType"
+												}]
+											},
+											"semantic_scope": ""
+										},
+										"id": 93824999493216,
+										"kind": "class template",
+										"name": "StringViewBase",
+										"parameters": [{
+											"_kind": "template type parameter",
+											"_name": "_CharType",
+											"id": 93824999493712,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "_CharType"
+										}],
+										"scope":  {
+											"is_templated": true,
+											"name": "StringViewBase",
+											"template_parameters": [{
+												"_kind": "template type parameter",
+												"_name": "_CharType",
+												"id": 93824999493712,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "_CharType"
+											}]
+										}
+									}]
+								},
+								"unexposed_arguments": "char"
+							}
+						}]
+					}
+				}
+			}, {
+				"_fullName": "::stappler::UrlView::isValidIdnTld(stappler::StringView)",
+				"_kind": "function",
+				"_name": "isValidIdnTld",
+				"body_kind": "declaration",
+				"id": 140737085761616,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": true,
+				"is_definition": false,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "isValidIdnTld",
+				"parameters": [{
+					"_kind": "function parameter",
+					"_name": "",
+					"id": 93825004125440,
+					"kind": "function parameter",
+					"name": "",
+					"type": {
+						"_typeName": "stappler::StringView",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::StringView",
+							"objects": [{
+								"_fullName": "::stappler::StringView",
+								"_kind": "type alias",
+								"_name": "StringView",
+								"id": 93824997448656,
+								"kind": "type alias",
+								"name": "StringView",
+								"underlying_type": {
+									"_typeName": "StringViewBase<char>",
+									"arguments_exposed": false,
+									"kind": "template_instantiation",
+									"primary_template": {
+										"name": "StringViewBase",
+										"objects": [{
+											"_fullName": "::stappler::StringViewBase<typename>",
+											"_kind": "class template",
+											"_name": "StringViewBase",
+											"class": {
+												"_fullName": "::stappler::StringViewBase<typename>",
+												"_kind": "class",
+												"_name": "StringViewBase",
+												"bases": [{
+													"_kind": "base class specifier",
+													"_name": "BytesReader<_CharType>",
+													"access_specifier": "public",
+													"id": 93824998090352,
+													"is_virtual": false,
+													"kind": "base class specifier",
+													"name": "BytesReader<_CharType>",
+													"type": {
+														"_typeName": "BytesReader<_CharType>",
+														"arguments_exposed": false,
+														"kind": "template_instantiation",
+														"primary_template": {
+															"name": "BytesReader",
+															"objects": [{
+																"_fullName": "::stappler::BytesReader<typename>",
+																"_kind": "class template",
+																"_name": "BytesReader",
+																"class": {
+																	"_fullName": "::stappler::BytesReader<typename>",
+																	"_kind": "class",
+																	"_name": "BytesReader",
+																	"class_kind": "class",
+																	"id": 140736954953792,
+																	"is_declaration": false,
+																	"is_definition": true,
+																	"is_final": false,
+																	"kind": "class",
+																	"name": "BytesReader",
+																	"scope": {
+																		"is_templated": true,
+																		"name": "BytesReader",
+																		"template_parameters": [{
+																			"_kind": "template type parameter",
+																			"_name": "_CharType",
+																			"id": 140737098599232,
+																			"is_variadic": false,
+																			"keyword": "typename",
+																			"kind": "template type parameter",
+																			"name": "_CharType"
+																		}]
+																	},
+																	"semantic_scope": ""
+																},
+																"id": 93824998648144,
+																"kind": "class template",
+																"name": "BytesReader",
+																"parameters": [{
+																	"_kind": "template type parameter",
+																	"_name": "_CharType",
+																	"id": 140737098599232,
+																	"is_variadic": false,
+																	"keyword": "typename",
+																	"kind": "template type parameter",
+																	"name": "_CharType"
+																}],
+																"scope":  {
+																	"is_templated": true,
+																	"name": "BytesReader",
+																	"template_parameters": [{
+																		"_kind": "template type parameter",
+																		"_name": "_CharType",
+																		"id": 140737098599232,
+																		"is_variadic": false,
+																		"keyword": "typename",
+																		"kind": "template type parameter",
+																		"name": "_CharType"
+																	}]
+																}
+															}]
+														},
+														"unexposed_arguments": "_CharType"
+													}
+												}],
+												"class_kind": "class",
+												"id": 140737094580320,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "StringViewBase",
+												"scope": {
+													"is_templated": true,
+													"name": "StringViewBase",
+													"template_parameters": [{
+														"_kind": "template type parameter",
+														"_name": "_CharType",
+														"id": 93824999493712,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "_CharType"
+													}]
+												},
+												"semantic_scope": ""
+											},
+											"id": 93824999493216,
+											"kind": "class template",
+											"name": "StringViewBase",
+											"parameters": [{
+												"_kind": "template type parameter",
+												"_name": "_CharType",
+												"id": 93824999493712,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "_CharType"
+											}],
+											"scope":  {
+												"is_templated": true,
+												"name": "StringViewBase",
+												"template_parameters": [{
+													"_kind": "template type parameter",
+													"_name": "_CharType",
+													"id": 93824999493712,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "_CharType"
+												}]
+											}
+										}]
+									},
+									"unexposed_arguments": "char"
+								}
+							}]
+						}
+					}
+				}],
+				"return_type":  {
+					"_typeName": "bool",
+					"builtin_type_kind": "bool",
+					"kind": "builtin"
+				},
+				"semantic_scope": "",
+				"signature": "(stappler::StringView)",
+				"storage_class": [
+					"static"
+				]
+			}, {
+				"_fullName": "::stappler::UrlView::parseUrl(stappler::StringView&,Callback<void (stappler::StringViewUtf8, UrlView::UrlToken)> const&)",
+				"_kind": "function",
+				"_name": "parseUrl",
+				"body_kind": "declaration",
+				"id": 140737091224592,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": true,
+				"is_definition": false,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "parseUrl",
+				"parameters": [{
+					"_kind": "function parameter",
+					"_name": "s",
+					"id": 93825005968672,
+					"kind": "function parameter",
+					"name": "s",
+					"type": {
+						"_typeName": "stappler::StringView&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::StringView",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::StringView",
+								"objects": [{
+									"_fullName": "::stappler::StringView",
+									"_kind": "type alias",
+									"_name": "StringView",
+									"id": 93824997448656,
+									"kind": "type alias",
+									"name": "StringView",
+									"underlying_type": {
+										"_typeName": "StringViewBase<char>",
+										"arguments_exposed": false,
+										"kind": "template_instantiation",
+										"primary_template": {
+											"name": "StringViewBase",
+											"objects": [{
+												"_fullName": "::stappler::StringViewBase<typename>",
+												"_kind": "class template",
+												"_name": "StringViewBase",
+												"class": {
+													"_fullName": "::stappler::StringViewBase<typename>",
+													"_kind": "class",
+													"_name": "StringViewBase",
+													"bases": [{
+														"_kind": "base class specifier",
+														"_name": "BytesReader<_CharType>",
+														"access_specifier": "public",
+														"id": 93824998090352,
+														"is_virtual": false,
+														"kind": "base class specifier",
+														"name": "BytesReader<_CharType>",
+														"type": {
+															"_typeName": "BytesReader<_CharType>",
+															"arguments_exposed": false,
+															"kind": "template_instantiation",
+															"primary_template": {
+																"name": "BytesReader",
+																"objects": [{
+																	"_fullName": "::stappler::BytesReader<typename>",
+																	"_kind": "class template",
+																	"_name": "BytesReader",
+																	"class": {
+																		"_fullName": "::stappler::BytesReader<typename>",
+																		"_kind": "class",
+																		"_name": "BytesReader",
+																		"class_kind": "class",
+																		"id": 140736954953792,
+																		"is_declaration": false,
+																		"is_definition": true,
+																		"is_final": false,
+																		"kind": "class",
+																		"name": "BytesReader",
+																		"scope": {
+																			"is_templated": true,
+																			"name": "BytesReader",
+																			"template_parameters": [{
+																				"_kind": "template type parameter",
+																				"_name": "_CharType",
+																				"id": 140737098599232,
+																				"is_variadic": false,
+																				"keyword": "typename",
+																				"kind": "template type parameter",
+																				"name": "_CharType"
+																			}]
+																		},
+																		"semantic_scope": ""
+																	},
+																	"id": 93824998648144,
+																	"kind": "class template",
+																	"name": "BytesReader",
+																	"parameters": [{
+																		"_kind": "template type parameter",
+																		"_name": "_CharType",
+																		"id": 140737098599232,
+																		"is_variadic": false,
+																		"keyword": "typename",
+																		"kind": "template type parameter",
+																		"name": "_CharType"
+																	}],
+																	"scope":  {
+																		"is_templated": true,
+																		"name": "BytesReader",
+																		"template_parameters": [{
+																			"_kind": "template type parameter",
+																			"_name": "_CharType",
+																			"id": 140737098599232,
+																			"is_variadic": false,
+																			"keyword": "typename",
+																			"kind": "template type parameter",
+																			"name": "_CharType"
+																		}]
+																	}
+																}]
+															},
+															"unexposed_arguments": "_CharType"
+														}
+													}],
+													"class_kind": "class",
+													"id": 140737094580320,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "StringViewBase",
+													"scope": {
+														"is_templated": true,
+														"name": "StringViewBase",
+														"template_parameters": [{
+															"_kind": "template type parameter",
+															"_name": "_CharType",
+															"id": 93824999493712,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "_CharType"
+														}]
+													},
+													"semantic_scope": ""
+												},
+												"id": 93824999493216,
+												"kind": "class template",
+												"name": "StringViewBase",
+												"parameters": [{
+													"_kind": "template type parameter",
+													"_name": "_CharType",
+													"id": 93824999493712,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "_CharType"
+												}],
+												"scope":  {
+													"is_templated": true,
+													"name": "StringViewBase",
+													"template_parameters": [{
+														"_kind": "template type parameter",
+														"_name": "_CharType",
+														"id": 93824999493712,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "_CharType"
+													}]
+												}
+											}]
+										},
+										"unexposed_arguments": "char"
+									}
+								}]
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_kind": "function parameter",
+					"_name": "cb",
+					"id": 93825004747664,
+					"kind": "function parameter",
+					"name": "cb",
+					"type": {
+						"_typeName": "Callback<void (stappler::StringViewUtf8, UrlView::UrlToken)> const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "Callback<void (stappler::StringViewUtf8, UrlView::UrlToken)> const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "Callback<void (stappler::StringViewUtf8, UrlView::UrlToken)>",
+								"arguments_exposed": false,
+								"kind": "template_instantiation",
+								"primary_template": {
+									"name": "Callback",
+									"objects": [{
+										"_fullName": "::stappler::memory::callback<typename>",
+										"_kind": "class template",
+										"_name": "callback",
+										"class": {
+											"_fullName": "::stappler::memory::callback<typename>",
+											"_kind": "class",
+											"_name": "callback",
+											"class_kind": "class",
+											"id": 93824997040048,
+											"is_declaration": true,
+											"is_definition": false,
+											"is_final": false,
+											"kind": "class",
+											"name": "callback",
+											"scope": {
+												"is_templated": true,
+												"name": "callback",
+												"template_parameters": [{
+													"_kind": "template type parameter",
+													"_name": "UnusedType",
+													"id": 93824997058880,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "UnusedType"
+												}]
+											},
+											"semantic_scope": ""
+										},
+										"id": 93824997058480,
+										"kind": "class template",
+										"name": "callback",
+										"parameters": [{
+											"_kind": "template type parameter",
+											"_name": "UnusedType",
+											"id": 93824997058880,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "UnusedType"
+										}],
+										"scope":  {
+											"is_templated": true,
+											"name": "callback",
+											"template_parameters": [{
+												"_kind": "template type parameter",
+												"_name": "UnusedType",
+												"id": 93824997058880,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "UnusedType"
+											}]
+										}
+									}]
+								},
+								"unexposed_arguments": "void (stappler::StringViewUtf8, UrlView::UrlToken)"
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "bool",
+					"builtin_type_kind": "bool",
+					"kind": "builtin"
+				},
+				"semantic_scope": "",
+				"signature": "(stappler::StringView&,Callback<void (stappler::StringViewUtf8, UrlView::UrlToken)> const&)",
+				"storage_class": [
+					"static"
+				]
+			}, {
+				"_fullName": "::stappler::UrlView::parsePath<typename>(stappler::StringView)",
+				"_kind": "function template",
+				"_name": "parsePath",
+				"childs": [{
+					"_fullName": "::stappler::UrlView::parsePath<typename>(stappler::StringView)",
+					"_kind": "function",
+					"_name": "parsePath",
+					"body_kind": "declaration",
+					"id": 93825000688448,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "parsePath",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93824997564784,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::StringView",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::StringView",
+								"objects": [{
+									"_fullName": "::stappler::StringView",
+									"_kind": "type alias",
+									"_name": "StringView",
+									"id": 93824997448656,
+									"kind": "type alias",
+									"name": "StringView",
+									"underlying_type": {
+										"_typeName": "StringViewBase<char>",
+										"arguments_exposed": false,
+										"kind": "template_instantiation",
+										"primary_template": {
+											"name": "StringViewBase",
+											"objects": [{
+												"_fullName": "::stappler::StringViewBase<typename>",
+												"_kind": "class template",
+												"_name": "StringViewBase",
+												"class": {
+													"_fullName": "::stappler::StringViewBase<typename>",
+													"_kind": "class",
+													"_name": "StringViewBase",
+													"bases": [{
+														"_kind": "base class specifier",
+														"_name": "BytesReader<_CharType>",
+														"access_specifier": "public",
+														"id": 93824998090352,
+														"is_virtual": false,
+														"kind": "base class specifier",
+														"name": "BytesReader<_CharType>",
+														"type": {
+															"_typeName": "BytesReader<_CharType>",
+															"arguments_exposed": false,
+															"kind": "template_instantiation",
+															"primary_template": {
+																"name": "BytesReader",
+																"objects": [{
+																	"_fullName": "::stappler::BytesReader<typename>",
+																	"_kind": "class template",
+																	"_name": "BytesReader",
+																	"class": {
+																		"_fullName": "::stappler::BytesReader<typename>",
+																		"_kind": "class",
+																		"_name": "BytesReader",
+																		"class_kind": "class",
+																		"id": 140736954953792,
+																		"is_declaration": false,
+																		"is_definition": true,
+																		"is_final": false,
+																		"kind": "class",
+																		"name": "BytesReader",
+																		"scope": {
+																			"is_templated": true,
+																			"name": "BytesReader",
+																			"template_parameters": [{
+																				"_kind": "template type parameter",
+																				"_name": "_CharType",
+																				"id": 140737098599232,
+																				"is_variadic": false,
+																				"keyword": "typename",
+																				"kind": "template type parameter",
+																				"name": "_CharType"
+																			}]
+																		},
+																		"semantic_scope": ""
+																	},
+																	"id": 93824998648144,
+																	"kind": "class template",
+																	"name": "BytesReader",
+																	"parameters": [{
+																		"_kind": "template type parameter",
+																		"_name": "_CharType",
+																		"id": 140737098599232,
+																		"is_variadic": false,
+																		"keyword": "typename",
+																		"kind": "template type parameter",
+																		"name": "_CharType"
+																	}],
+																	"scope":  {
+																		"is_templated": true,
+																		"name": "BytesReader",
+																		"template_parameters": [{
+																			"_kind": "template type parameter",
+																			"_name": "_CharType",
+																			"id": 140737098599232,
+																			"is_variadic": false,
+																			"keyword": "typename",
+																			"kind": "template type parameter",
+																			"name": "_CharType"
+																		}]
+																	}
+																}]
+															},
+															"unexposed_arguments": "_CharType"
+														}
+													}],
+													"class_kind": "class",
+													"id": 140737094580320,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "StringViewBase",
+													"scope": {
+														"is_templated": true,
+														"name": "StringViewBase",
+														"template_parameters": [{
+															"_kind": "template type parameter",
+															"_name": "_CharType",
+															"id": 93824999493712,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "_CharType"
+														}]
+													},
+													"semantic_scope": ""
+												},
+												"id": 93824999493216,
+												"kind": "class template",
+												"name": "StringViewBase",
+												"parameters": [{
+													"_kind": "template type parameter",
+													"_name": "_CharType",
+													"id": 93824999493712,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "_CharType"
+												}],
+												"scope":  {
+													"is_templated": true,
+													"name": "StringViewBase",
+													"template_parameters": [{
+														"_kind": "template type parameter",
+														"_name": "_CharType",
+														"id": 93824999493712,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "_CharType"
+													}]
+												}
+											}]
+										},
+										"unexposed_arguments": "char"
+									}
+								}]
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "typename Interface::template VectorType<stappler::StringView>",
+						"kind": "unexposed",
+						"name": "typename Interface::template VectorType<stappler::StringView>"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::StringView)",
+					"storage_class": [
+						"static"
+					]
+				}],
+				"function":  {
+					"_fullName": "::stappler::UrlView::parsePath<typename>(stappler::StringView)",
+					"_kind": "function",
+					"_name": "parsePath",
+					"body_kind": "declaration",
+					"id": 93825000688448,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "parsePath",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93824997564784,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::StringView",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::StringView",
+								"objects": [{
+									"_fullName": "::stappler::StringView",
+									"_kind": "type alias",
+									"_name": "StringView",
+									"id": 93824997448656,
+									"kind": "type alias",
+									"name": "StringView",
+									"underlying_type": {
+										"_typeName": "StringViewBase<char>",
+										"arguments_exposed": false,
+										"kind": "template_instantiation",
+										"primary_template": {
+											"name": "StringViewBase",
+											"objects": [{
+												"_fullName": "::stappler::StringViewBase<typename>",
+												"_kind": "class template",
+												"_name": "StringViewBase",
+												"class": {
+													"_fullName": "::stappler::StringViewBase<typename>",
+													"_kind": "class",
+													"_name": "StringViewBase",
+													"bases": [{
+														"_kind": "base class specifier",
+														"_name": "BytesReader<_CharType>",
+														"access_specifier": "public",
+														"id": 93824998090352,
+														"is_virtual": false,
+														"kind": "base class specifier",
+														"name": "BytesReader<_CharType>",
+														"type": {
+															"_typeName": "BytesReader<_CharType>",
+															"arguments_exposed": false,
+															"kind": "template_instantiation",
+															"primary_template": {
+																"name": "BytesReader",
+																"objects": [{
+																	"_fullName": "::stappler::BytesReader<typename>",
+																	"_kind": "class template",
+																	"_name": "BytesReader",
+																	"class": {
+																		"_fullName": "::stappler::BytesReader<typename>",
+																		"_kind": "class",
+																		"_name": "BytesReader",
+																		"class_kind": "class",
+																		"id": 140736954953792,
+																		"is_declaration": false,
+																		"is_definition": true,
+																		"is_final": false,
+																		"kind": "class",
+																		"name": "BytesReader",
+																		"scope": {
+																			"is_templated": true,
+																			"name": "BytesReader",
+																			"template_parameters": [{
+																				"_kind": "template type parameter",
+																				"_name": "_CharType",
+																				"id": 140737098599232,
+																				"is_variadic": false,
+																				"keyword": "typename",
+																				"kind": "template type parameter",
+																				"name": "_CharType"
+																			}]
+																		},
+																		"semantic_scope": ""
+																	},
+																	"id": 93824998648144,
+																	"kind": "class template",
+																	"name": "BytesReader",
+																	"parameters": [{
+																		"_kind": "template type parameter",
+																		"_name": "_CharType",
+																		"id": 140737098599232,
+																		"is_variadic": false,
+																		"keyword": "typename",
+																		"kind": "template type parameter",
+																		"name": "_CharType"
+																	}],
+																	"scope":  {
+																		"is_templated": true,
+																		"name": "BytesReader",
+																		"template_parameters": [{
+																			"_kind": "template type parameter",
+																			"_name": "_CharType",
+																			"id": 140737098599232,
+																			"is_variadic": false,
+																			"keyword": "typename",
+																			"kind": "template type parameter",
+																			"name": "_CharType"
+																		}]
+																	}
+																}]
+															},
+															"unexposed_arguments": "_CharType"
+														}
+													}],
+													"class_kind": "class",
+													"id": 140737094580320,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "StringViewBase",
+													"scope": {
+														"is_templated": true,
+														"name": "StringViewBase",
+														"template_parameters": [{
+															"_kind": "template type parameter",
+															"_name": "_CharType",
+															"id": 93824999493712,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "_CharType"
+														}]
+													},
+													"semantic_scope": ""
+												},
+												"id": 93824999493216,
+												"kind": "class template",
+												"name": "StringViewBase",
+												"parameters": [{
+													"_kind": "template type parameter",
+													"_name": "_CharType",
+													"id": 93824999493712,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "_CharType"
+												}],
+												"scope":  {
+													"is_templated": true,
+													"name": "StringViewBase",
+													"template_parameters": [{
+														"_kind": "template type parameter",
+														"_name": "_CharType",
+														"id": 93824999493712,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "_CharType"
+													}]
+												}
+											}]
+										},
+										"unexposed_arguments": "char"
+									}
+								}]
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "typename Interface::template VectorType<stappler::StringView>",
+						"kind": "unexposed",
+						"name": "typename Interface::template VectorType<stappler::StringView>"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::StringView)",
+					"storage_class": [
+						"static"
+					]
+				},
+				"id": 93825005943488,
+				"kind": "function template",
+				"name": "parsePath",
+				"parameters": [{
+					"_kind": "template type parameter",
+					"_name": "Interface",
+					"id": 140737107590096,
+					"is_variadic": false,
+					"keyword": "typename",
+					"kind": "template type parameter",
+					"name": "Interface"
+				}]
+			}, {
+				"_fullName": "::stappler::UrlView::parseArgs<typename>(stappler::StringView,size_t)",
+				"_kind": "function template",
+				"_name": "parseArgs",
+				"childs": [{
+					"_fullName": "::stappler::UrlView::parseArgs<typename>(stappler::StringView,size_t)",
+					"_kind": "function",
+					"_name": "parseArgs",
+					"body_kind": "declaration",
+					"id": 93825006123728,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "parseArgs",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93824999334768,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::StringView",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::StringView",
+								"objects": [{
+									"_fullName": "::stappler::StringView",
+									"_kind": "type alias",
+									"_name": "StringView",
+									"id": 93824997448656,
+									"kind": "type alias",
+									"name": "StringView",
+									"underlying_type": {
+										"_typeName": "StringViewBase<char>",
+										"arguments_exposed": false,
+										"kind": "template_instantiation",
+										"primary_template": {
+											"name": "StringViewBase",
+											"objects": [{
+												"_fullName": "::stappler::StringViewBase<typename>",
+												"_kind": "class template",
+												"_name": "StringViewBase",
+												"class": {
+													"_fullName": "::stappler::StringViewBase<typename>",
+													"_kind": "class",
+													"_name": "StringViewBase",
+													"bases": [{
+														"_kind": "base class specifier",
+														"_name": "BytesReader<_CharType>",
+														"access_specifier": "public",
+														"id": 93824998090352,
+														"is_virtual": false,
+														"kind": "base class specifier",
+														"name": "BytesReader<_CharType>",
+														"type": {
+															"_typeName": "BytesReader<_CharType>",
+															"arguments_exposed": false,
+															"kind": "template_instantiation",
+															"primary_template": {
+																"name": "BytesReader",
+																"objects": [{
+																	"_fullName": "::stappler::BytesReader<typename>",
+																	"_kind": "class template",
+																	"_name": "BytesReader",
+																	"class": {
+																		"_fullName": "::stappler::BytesReader<typename>",
+																		"_kind": "class",
+																		"_name": "BytesReader",
+																		"class_kind": "class",
+																		"id": 140736954953792,
+																		"is_declaration": false,
+																		"is_definition": true,
+																		"is_final": false,
+																		"kind": "class",
+																		"name": "BytesReader",
+																		"scope": {
+																			"is_templated": true,
+																			"name": "BytesReader",
+																			"template_parameters": [{
+																				"_kind": "template type parameter",
+																				"_name": "_CharType",
+																				"id": 140737098599232,
+																				"is_variadic": false,
+																				"keyword": "typename",
+																				"kind": "template type parameter",
+																				"name": "_CharType"
+																			}]
+																		},
+																		"semantic_scope": ""
+																	},
+																	"id": 93824998648144,
+																	"kind": "class template",
+																	"name": "BytesReader",
+																	"parameters": [{
+																		"_kind": "template type parameter",
+																		"_name": "_CharType",
+																		"id": 140737098599232,
+																		"is_variadic": false,
+																		"keyword": "typename",
+																		"kind": "template type parameter",
+																		"name": "_CharType"
+																	}],
+																	"scope":  {
+																		"is_templated": true,
+																		"name": "BytesReader",
+																		"template_parameters": [{
+																			"_kind": "template type parameter",
+																			"_name": "_CharType",
+																			"id": 140737098599232,
+																			"is_variadic": false,
+																			"keyword": "typename",
+																			"kind": "template type parameter",
+																			"name": "_CharType"
+																		}]
+																	}
+																}]
+															},
+															"unexposed_arguments": "_CharType"
+														}
+													}],
+													"class_kind": "class",
+													"id": 140737094580320,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "StringViewBase",
+													"scope": {
+														"is_templated": true,
+														"name": "StringViewBase",
+														"template_parameters": [{
+															"_kind": "template type parameter",
+															"_name": "_CharType",
+															"id": 93824999493712,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "_CharType"
+														}]
+													},
+													"semantic_scope": ""
+												},
+												"id": 93824999493216,
+												"kind": "class template",
+												"name": "StringViewBase",
+												"parameters": [{
+													"_kind": "template type parameter",
+													"_name": "_CharType",
+													"id": 93824999493712,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "_CharType"
+												}],
+												"scope":  {
+													"is_templated": true,
+													"name": "StringViewBase",
+													"template_parameters": [{
+														"_kind": "template type parameter",
+														"_name": "_CharType",
+														"id": 93824999493712,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "_CharType"
+													}]
+												}
+											}]
+										},
+										"unexposed_arguments": "char"
+									}
+								}]
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "max",
+						"id": 93825004979552,
+						"kind": "function parameter",
+						"name": "max",
+						"type": {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "data::ValueTemplate<Interface>",
+						"arguments_exposed": false,
+						"kind": "template_instantiation",
+						"primary_template": {
+							"name": "data::ValueTemplate",
+							"objects": [{
+								"_fullName": "::stappler::data::ValueTemplate<typename>",
+								"_kind": "class template",
+								"_name": "ValueTemplate",
+								"class": {
+									"_fullName": "::stappler::data::ValueTemplate<typename>",
+									"_kind": "class",
+									"_name": "ValueTemplate",
+									"bases": [{
+										"_kind": "base class specifier",
+										"_name": "Interface::AllocBaseType",
+										"access_specifier": "public",
+										"id": 140737091294512,
+										"is_virtual": false,
+										"kind": "base class specifier",
+										"name": "Interface::AllocBaseType",
+										"type": {
+											"_typeName": "Interface::AllocBaseType",
+											"kind": "unexposed",
+											"name": "Interface::AllocBaseType"
+										}
+									}],
+									"class_kind": "class",
+									"id": 93825001914496,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "ValueTemplate",
+									"scope": {
+										"is_templated": true,
+										"name": "ValueTemplate",
+										"template_parameters": [{
+											"_kind": "template type parameter",
+											"_name": "Interface",
+											"id": 93825003299248,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "Interface"
+										}]
+									},
+									"semantic_scope": ""
+								},
+								"id": 93825003299040,
+								"kind": "class template",
+								"name": "ValueTemplate",
+								"parameters": [{
+									"_kind": "template type parameter",
+									"_name": "Interface",
+									"id": 93825003299248,
+									"is_variadic": false,
+									"keyword": "typename",
+									"kind": "template type parameter",
+									"name": "Interface"
+								}],
+								"scope":  {
+									"is_templated": true,
+									"name": "ValueTemplate",
+									"template_parameters": [{
+										"_kind": "template type parameter",
+										"_name": "Interface",
+										"id": 93825003299248,
+										"is_variadic": false,
+										"keyword": "typename",
+										"kind": "template type parameter",
+										"name": "Interface"
+									}]
+								}
+							}]
+						},
+						"unexposed_arguments": "Interface"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::StringView,size_t)",
+					"storage_class": [
+						"static"
+					]
+				}],
+				"function":  {
+					"_fullName": "::stappler::UrlView::parseArgs<typename>(stappler::StringView,size_t)",
+					"_kind": "function",
+					"_name": "parseArgs",
+					"body_kind": "declaration",
+					"id": 93825006123728,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "parseArgs",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93824999334768,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::StringView",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::StringView",
+								"objects": [{
+									"_fullName": "::stappler::StringView",
+									"_kind": "type alias",
+									"_name": "StringView",
+									"id": 93824997448656,
+									"kind": "type alias",
+									"name": "StringView",
+									"underlying_type": {
+										"_typeName": "StringViewBase<char>",
+										"arguments_exposed": false,
+										"kind": "template_instantiation",
+										"primary_template": {
+											"name": "StringViewBase",
+											"objects": [{
+												"_fullName": "::stappler::StringViewBase<typename>",
+												"_kind": "class template",
+												"_name": "StringViewBase",
+												"class": {
+													"_fullName": "::stappler::StringViewBase<typename>",
+													"_kind": "class",
+													"_name": "StringViewBase",
+													"bases": [{
+														"_kind": "base class specifier",
+														"_name": "BytesReader<_CharType>",
+														"access_specifier": "public",
+														"id": 93824998090352,
+														"is_virtual": false,
+														"kind": "base class specifier",
+														"name": "BytesReader<_CharType>",
+														"type": {
+															"_typeName": "BytesReader<_CharType>",
+															"arguments_exposed": false,
+															"kind": "template_instantiation",
+															"primary_template": {
+																"name": "BytesReader",
+																"objects": [{
+																	"_fullName": "::stappler::BytesReader<typename>",
+																	"_kind": "class template",
+																	"_name": "BytesReader",
+																	"class": {
+																		"_fullName": "::stappler::BytesReader<typename>",
+																		"_kind": "class",
+																		"_name": "BytesReader",
+																		"class_kind": "class",
+																		"id": 140736954953792,
+																		"is_declaration": false,
+																		"is_definition": true,
+																		"is_final": false,
+																		"kind": "class",
+																		"name": "BytesReader",
+																		"scope": {
+																			"is_templated": true,
+																			"name": "BytesReader",
+																			"template_parameters": [{
+																				"_kind": "template type parameter",
+																				"_name": "_CharType",
+																				"id": 140737098599232,
+																				"is_variadic": false,
+																				"keyword": "typename",
+																				"kind": "template type parameter",
+																				"name": "_CharType"
+																			}]
+																		},
+																		"semantic_scope": ""
+																	},
+																	"id": 93824998648144,
+																	"kind": "class template",
+																	"name": "BytesReader",
+																	"parameters": [{
+																		"_kind": "template type parameter",
+																		"_name": "_CharType",
+																		"id": 140737098599232,
+																		"is_variadic": false,
+																		"keyword": "typename",
+																		"kind": "template type parameter",
+																		"name": "_CharType"
+																	}],
+																	"scope":  {
+																		"is_templated": true,
+																		"name": "BytesReader",
+																		"template_parameters": [{
+																			"_kind": "template type parameter",
+																			"_name": "_CharType",
+																			"id": 140737098599232,
+																			"is_variadic": false,
+																			"keyword": "typename",
+																			"kind": "template type parameter",
+																			"name": "_CharType"
+																		}]
+																	}
+																}]
+															},
+															"unexposed_arguments": "_CharType"
+														}
+													}],
+													"class_kind": "class",
+													"id": 140737094580320,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "StringViewBase",
+													"scope": {
+														"is_templated": true,
+														"name": "StringViewBase",
+														"template_parameters": [{
+															"_kind": "template type parameter",
+															"_name": "_CharType",
+															"id": 93824999493712,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "_CharType"
+														}]
+													},
+													"semantic_scope": ""
+												},
+												"id": 93824999493216,
+												"kind": "class template",
+												"name": "StringViewBase",
+												"parameters": [{
+													"_kind": "template type parameter",
+													"_name": "_CharType",
+													"id": 93824999493712,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "_CharType"
+												}],
+												"scope":  {
+													"is_templated": true,
+													"name": "StringViewBase",
+													"template_parameters": [{
+														"_kind": "template type parameter",
+														"_name": "_CharType",
+														"id": 93824999493712,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "_CharType"
+													}]
+												}
+											}]
+										},
+										"unexposed_arguments": "char"
+									}
+								}]
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "max",
+						"id": 93825004979552,
+						"kind": "function parameter",
+						"name": "max",
+						"type": {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "data::ValueTemplate<Interface>",
+						"arguments_exposed": false,
+						"kind": "template_instantiation",
+						"primary_template": {
+							"name": "data::ValueTemplate",
+							"objects": [{
+								"_fullName": "::stappler::data::ValueTemplate<typename>",
+								"_kind": "class template",
+								"_name": "ValueTemplate",
+								"class": {
+									"_fullName": "::stappler::data::ValueTemplate<typename>",
+									"_kind": "class",
+									"_name": "ValueTemplate",
+									"bases": [{
+										"_kind": "base class specifier",
+										"_name": "Interface::AllocBaseType",
+										"access_specifier": "public",
+										"id": 140737091294512,
+										"is_virtual": false,
+										"kind": "base class specifier",
+										"name": "Interface::AllocBaseType",
+										"type": {
+											"_typeName": "Interface::AllocBaseType",
+											"kind": "unexposed",
+											"name": "Interface::AllocBaseType"
+										}
+									}],
+									"class_kind": "class",
+									"id": 93825001914496,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "ValueTemplate",
+									"scope": {
+										"is_templated": true,
+										"name": "ValueTemplate",
+										"template_parameters": [{
+											"_kind": "template type parameter",
+											"_name": "Interface",
+											"id": 93825003299248,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "Interface"
+										}]
+									},
+									"semantic_scope": ""
+								},
+								"id": 93825003299040,
+								"kind": "class template",
+								"name": "ValueTemplate",
+								"parameters": [{
+									"_kind": "template type parameter",
+									"_name": "Interface",
+									"id": 93825003299248,
+									"is_variadic": false,
+									"keyword": "typename",
+									"kind": "template type parameter",
+									"name": "Interface"
+								}],
+								"scope":  {
+									"is_templated": true,
+									"name": "ValueTemplate",
+									"template_parameters": [{
+										"_kind": "template type parameter",
+										"_name": "Interface",
+										"id": 93825003299248,
+										"is_variadic": false,
+										"keyword": "typename",
+										"kind": "template type parameter",
+										"name": "Interface"
+									}]
+								}
+							}]
+						},
+						"unexposed_arguments": "Interface"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::StringView,size_t)",
+					"storage_class": [
+						"static"
+					]
+				},
+				"id": 93825006209152,
+				"kind": "function template",
+				"name": "parseArgs",
+				"parameters": [{
+					"_kind": "template type parameter",
+					"_name": "Interface",
+					"id": 140737145383392,
+					"is_variadic": false,
+					"keyword": "typename",
+					"kind": "template type parameter",
+					"name": "Interface"
+				}]
+			}, {
+				"_fullName": "::stappler::UrlView::UrlView()",
+				"_kind": "constructor",
+				"_name": "UrlView",
+				"body_kind": "declaration",
+				"id": 93825005727136,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": true,
+				"is_definition": false,
+				"is_explicit": false,
+				"is_variadic": false,
+				"kind": "constructor",
+				"name": "UrlView",
+				"semantic_scope": "",
+				"signature": "()"
+			}, {
+				"_fullName": "::stappler::UrlView::UrlView(stappler::StringView)",
+				"_kind": "constructor",
+				"_name": "UrlView",
+				"body_kind": "declaration",
+				"id": 140736987701664,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": true,
+				"is_definition": false,
+				"is_explicit": false,
+				"is_variadic": false,
+				"kind": "constructor",
+				"name": "UrlView",
+				"parameters": [{
+					"_kind": "function parameter",
+					"_name": "",
+					"id": 93825000194000,
+					"kind": "function parameter",
+					"name": "",
+					"type": {
+						"_typeName": "stappler::StringView",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::StringView",
+							"objects": [{
+								"_fullName": "::stappler::StringView",
+								"_kind": "type alias",
+								"_name": "StringView",
+								"id": 93824997448656,
+								"kind": "type alias",
+								"name": "StringView",
+								"underlying_type": {
+									"_typeName": "StringViewBase<char>",
+									"arguments_exposed": false,
+									"kind": "template_instantiation",
+									"primary_template": {
+										"name": "StringViewBase",
+										"objects": [{
+											"_fullName": "::stappler::StringViewBase<typename>",
+											"_kind": "class template",
+											"_name": "StringViewBase",
+											"class": {
+												"_fullName": "::stappler::StringViewBase<typename>",
+												"_kind": "class",
+												"_name": "StringViewBase",
+												"bases": [{
+													"_kind": "base class specifier",
+													"_name": "BytesReader<_CharType>",
+													"access_specifier": "public",
+													"id": 93824998090352,
+													"is_virtual": false,
+													"kind": "base class specifier",
+													"name": "BytesReader<_CharType>",
+													"type": {
+														"_typeName": "BytesReader<_CharType>",
+														"arguments_exposed": false,
+														"kind": "template_instantiation",
+														"primary_template": {
+															"name": "BytesReader",
+															"objects": [{
+																"_fullName": "::stappler::BytesReader<typename>",
+																"_kind": "class template",
+																"_name": "BytesReader",
+																"class": {
+																	"_fullName": "::stappler::BytesReader<typename>",
+																	"_kind": "class",
+																	"_name": "BytesReader",
+																	"class_kind": "class",
+																	"id": 140736954953792,
+																	"is_declaration": false,
+																	"is_definition": true,
+																	"is_final": false,
+																	"kind": "class",
+																	"name": "BytesReader",
+																	"scope": {
+																		"is_templated": true,
+																		"name": "BytesReader",
+																		"template_parameters": [{
+																			"_kind": "template type parameter",
+																			"_name": "_CharType",
+																			"id": 140737098599232,
+																			"is_variadic": false,
+																			"keyword": "typename",
+																			"kind": "template type parameter",
+																			"name": "_CharType"
+																		}]
+																	},
+																	"semantic_scope": ""
+																},
+																"id": 93824998648144,
+																"kind": "class template",
+																"name": "BytesReader",
+																"parameters": [{
+																	"_kind": "template type parameter",
+																	"_name": "_CharType",
+																	"id": 140737098599232,
+																	"is_variadic": false,
+																	"keyword": "typename",
+																	"kind": "template type parameter",
+																	"name": "_CharType"
+																}],
+																"scope":  {
+																	"is_templated": true,
+																	"name": "BytesReader",
+																	"template_parameters": [{
+																		"_kind": "template type parameter",
+																		"_name": "_CharType",
+																		"id": 140737098599232,
+																		"is_variadic": false,
+																		"keyword": "typename",
+																		"kind": "template type parameter",
+																		"name": "_CharType"
+																	}]
+																}
+															}]
+														},
+														"unexposed_arguments": "_CharType"
+													}
+												}],
+												"class_kind": "class",
+												"id": 140737094580320,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "StringViewBase",
+												"scope": {
+													"is_templated": true,
+													"name": "StringViewBase",
+													"template_parameters": [{
+														"_kind": "template type parameter",
+														"_name": "_CharType",
+														"id": 93824999493712,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "_CharType"
+													}]
+												},
+												"semantic_scope": ""
+											},
+											"id": 93824999493216,
+											"kind": "class template",
+											"name": "StringViewBase",
+											"parameters": [{
+												"_kind": "template type parameter",
+												"_name": "_CharType",
+												"id": 93824999493712,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "_CharType"
+											}],
+											"scope":  {
+												"is_templated": true,
+												"name": "StringViewBase",
+												"template_parameters": [{
+													"_kind": "template type parameter",
+													"_name": "_CharType",
+													"id": 93824999493712,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "_CharType"
+												}]
+											}
+										}]
+									},
+									"unexposed_arguments": "char"
+								}
+							}]
+						}
+					}
+				}],
+				"semantic_scope": "",
+				"signature": "(stappler::StringView)"
+			}, {
+				"_fullName": "::stappler::UrlView::clear()",
+				"_kind": "member function",
+				"_name": "clear",
+				"body_kind": "declaration",
+				"cv_qualifier": "none",
+				"id": 93825004003360,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": true,
+				"is_definition": false,
+				"is_variadic": false,
+				"is_virtual": false,
+				"kind": "member function",
+				"name": "clear",
+				"ref_qualifier": "none",
+				"return_type": {
+					"_typeName": "void",
+					"builtin_type_kind": "void",
+					"kind": "builtin"
+				},
+				"semantic_scope": "",
+				"signature": "()"
+			}, {
+				"_fullName": "::stappler::UrlView::parse(stappler::StringView const&)",
+				"_kind": "member function",
+				"_name": "parse",
+				"body_kind": "declaration",
+				"cv_qualifier": "none",
+				"id": 93825001206688,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": true,
+				"is_definition": false,
+				"is_variadic": false,
+				"is_virtual": false,
+				"kind": "member function",
+				"name": "parse",
+				"parameters": [{
+					"_kind": "function parameter",
+					"_name": "",
+					"id": 93825006541296,
+					"kind": "function parameter",
+					"name": "",
+					"type": {
+						"_typeName": "stappler::StringView const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::StringView const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::StringView",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::StringView",
+									"objects": [{
+										"_fullName": "::stappler::StringView",
+										"_kind": "type alias",
+										"_name": "StringView",
+										"id": 93824997448656,
+										"kind": "type alias",
+										"name": "StringView",
+										"underlying_type": {
+											"_typeName": "StringViewBase<char>",
+											"arguments_exposed": false,
+											"kind": "template_instantiation",
+											"primary_template": {
+												"name": "StringViewBase",
+												"objects": [{
+													"_fullName": "::stappler::StringViewBase<typename>",
+													"_kind": "class template",
+													"_name": "StringViewBase",
+													"class": {
+														"_fullName": "::stappler::StringViewBase<typename>",
+														"_kind": "class",
+														"_name": "StringViewBase",
+														"bases": [{
+															"_kind": "base class specifier",
+															"_name": "BytesReader<_CharType>",
+															"access_specifier": "public",
+															"id": 93824998090352,
+															"is_virtual": false,
+															"kind": "base class specifier",
+															"name": "BytesReader<_CharType>",
+															"type": {
+																"_typeName": "BytesReader<_CharType>",
+																"arguments_exposed": false,
+																"kind": "template_instantiation",
+																"primary_template": {
+																	"name": "BytesReader",
+																	"objects": [{
+																		"_fullName": "::stappler::BytesReader<typename>",
+																		"_kind": "class template",
+																		"_name": "BytesReader",
+																		"class": {
+																			"_fullName": "::stappler::BytesReader<typename>",
+																			"_kind": "class",
+																			"_name": "BytesReader",
+																			"class_kind": "class",
+																			"id": 140736954953792,
+																			"is_declaration": false,
+																			"is_definition": true,
+																			"is_final": false,
+																			"kind": "class",
+																			"name": "BytesReader",
+																			"scope": {
+																				"is_templated": true,
+																				"name": "BytesReader",
+																				"template_parameters": [{
+																					"_kind": "template type parameter",
+																					"_name": "_CharType",
+																					"id": 140737098599232,
+																					"is_variadic": false,
+																					"keyword": "typename",
+																					"kind": "template type parameter",
+																					"name": "_CharType"
+																				}]
+																			},
+																			"semantic_scope": ""
+																		},
+																		"id": 93824998648144,
+																		"kind": "class template",
+																		"name": "BytesReader",
+																		"parameters": [{
+																			"_kind": "template type parameter",
+																			"_name": "_CharType",
+																			"id": 140737098599232,
+																			"is_variadic": false,
+																			"keyword": "typename",
+																			"kind": "template type parameter",
+																			"name": "_CharType"
+																		}],
+																		"scope":  {
+																			"is_templated": true,
+																			"name": "BytesReader",
+																			"template_parameters": [{
+																				"_kind": "template type parameter",
+																				"_name": "_CharType",
+																				"id": 140737098599232,
+																				"is_variadic": false,
+																				"keyword": "typename",
+																				"kind": "template type parameter",
+																				"name": "_CharType"
+																			}]
+																		}
+																	}]
+																},
+																"unexposed_arguments": "_CharType"
+															}
+														}],
+														"class_kind": "class",
+														"id": 140737094580320,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "StringViewBase",
+														"scope": {
+															"is_templated": true,
+															"name": "StringViewBase",
+															"template_parameters": [{
+																"_kind": "template type parameter",
+																"_name": "_CharType",
+																"id": 93824999493712,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "_CharType"
+															}]
+														},
+														"semantic_scope": ""
+													},
+													"id": 93824999493216,
+													"kind": "class template",
+													"name": "StringViewBase",
+													"parameters": [{
+														"_kind": "template type parameter",
+														"_name": "_CharType",
+														"id": 93824999493712,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "_CharType"
+													}],
+													"scope":  {
+														"is_templated": true,
+														"name": "StringViewBase",
+														"template_parameters": [{
+															"_kind": "template type parameter",
+															"_name": "_CharType",
+															"id": 93824999493712,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "_CharType"
+														}]
+													}
+												}]
+											},
+											"unexposed_arguments": "char"
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"ref_qualifier": "none",
+				"return_type": {
+					"_typeName": "bool",
+					"builtin_type_kind": "bool",
+					"kind": "builtin"
+				},
+				"semantic_scope": "",
+				"signature": "(stappler::StringView const&)"
+			}, {
+				"_fullName": "::stappler::UrlView::parse(stappler::StringView&)",
+				"_kind": "member function",
+				"_name": "parse",
+				"body_kind": "declaration",
+				"cv_qualifier": "none",
+				"id": 93825005953856,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": true,
+				"is_definition": false,
+				"is_variadic": false,
+				"is_virtual": false,
+				"kind": "member function",
+				"name": "parse",
+				"parameters": [{
+					"_kind": "function parameter",
+					"_name": "",
+					"id": 93825005146800,
+					"kind": "function parameter",
+					"name": "",
+					"type": {
+						"_typeName": "stappler::StringView&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::StringView",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::StringView",
+								"objects": [{
+									"_fullName": "::stappler::StringView",
+									"_kind": "type alias",
+									"_name": "StringView",
+									"id": 93824997448656,
+									"kind": "type alias",
+									"name": "StringView",
+									"underlying_type": {
+										"_typeName": "StringViewBase<char>",
+										"arguments_exposed": false,
+										"kind": "template_instantiation",
+										"primary_template": {
+											"name": "StringViewBase",
+											"objects": [{
+												"_fullName": "::stappler::StringViewBase<typename>",
+												"_kind": "class template",
+												"_name": "StringViewBase",
+												"class": {
+													"_fullName": "::stappler::StringViewBase<typename>",
+													"_kind": "class",
+													"_name": "StringViewBase",
+													"bases": [{
+														"_kind": "base class specifier",
+														"_name": "BytesReader<_CharType>",
+														"access_specifier": "public",
+														"id": 93824998090352,
+														"is_virtual": false,
+														"kind": "base class specifier",
+														"name": "BytesReader<_CharType>",
+														"type": {
+															"_typeName": "BytesReader<_CharType>",
+															"arguments_exposed": false,
+															"kind": "template_instantiation",
+															"primary_template": {
+																"name": "BytesReader",
+																"objects": [{
+																	"_fullName": "::stappler::BytesReader<typename>",
+																	"_kind": "class template",
+																	"_name": "BytesReader",
+																	"class": {
+																		"_fullName": "::stappler::BytesReader<typename>",
+																		"_kind": "class",
+																		"_name": "BytesReader",
+																		"class_kind": "class",
+																		"id": 140736954953792,
+																		"is_declaration": false,
+																		"is_definition": true,
+																		"is_final": false,
+																		"kind": "class",
+																		"name": "BytesReader",
+																		"scope": {
+																			"is_templated": true,
+																			"name": "BytesReader",
+																			"template_parameters": [{
+																				"_kind": "template type parameter",
+																				"_name": "_CharType",
+																				"id": 140737098599232,
+																				"is_variadic": false,
+																				"keyword": "typename",
+																				"kind": "template type parameter",
+																				"name": "_CharType"
+																			}]
+																		},
+																		"semantic_scope": ""
+																	},
+																	"id": 93824998648144,
+																	"kind": "class template",
+																	"name": "BytesReader",
+																	"parameters": [{
+																		"_kind": "template type parameter",
+																		"_name": "_CharType",
+																		"id": 140737098599232,
+																		"is_variadic": false,
+																		"keyword": "typename",
+																		"kind": "template type parameter",
+																		"name": "_CharType"
+																	}],
+																	"scope":  {
+																		"is_templated": true,
+																		"name": "BytesReader",
+																		"template_parameters": [{
+																			"_kind": "template type parameter",
+																			"_name": "_CharType",
+																			"id": 140737098599232,
+																			"is_variadic": false,
+																			"keyword": "typename",
+																			"kind": "template type parameter",
+																			"name": "_CharType"
+																		}]
+																	}
+																}]
+															},
+															"unexposed_arguments": "_CharType"
+														}
+													}],
+													"class_kind": "class",
+													"id": 140737094580320,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "StringViewBase",
+													"scope": {
+														"is_templated": true,
+														"name": "StringViewBase",
+														"template_parameters": [{
+															"_kind": "template type parameter",
+															"_name": "_CharType",
+															"id": 93824999493712,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "_CharType"
+														}]
+													},
+													"semantic_scope": ""
+												},
+												"id": 93824999493216,
+												"kind": "class template",
+												"name": "StringViewBase",
+												"parameters": [{
+													"_kind": "template type parameter",
+													"_name": "_CharType",
+													"id": 93824999493712,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "_CharType"
+												}],
+												"scope":  {
+													"is_templated": true,
+													"name": "StringViewBase",
+													"template_parameters": [{
+														"_kind": "template type parameter",
+														"_name": "_CharType",
+														"id": 93824999493712,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "_CharType"
+													}]
+												}
+											}]
+										},
+										"unexposed_arguments": "char"
+									}
+								}]
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"ref_qualifier": "none",
+				"return_type": {
+					"_typeName": "bool",
+					"builtin_type_kind": "bool",
+					"kind": "builtin"
+				},
+				"semantic_scope": "",
+				"signature": "(stappler::StringView&)"
+			}, {
+				"_fullName": "::stappler::UrlView::get<typename>() const",
+				"_kind": "function template",
+				"_name": "get",
+				"childs": [{
+					"_fullName": "::stappler::UrlView::get<typename>() const",
+					"_kind": "member function",
+					"_name": "get",
+					"body_kind": "declaration",
+					"cv_qualifier": "const",
+					"id": 93825012506160,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "get",
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "typename Interface::StringType",
+						"kind": "unexposed",
+						"name": "typename Interface::StringType"
+					},
+					"semantic_scope": "",
+					"signature": "() const"
+				}],
+				"function":  {
+					"_fullName": "::stappler::UrlView::get<typename>() const",
+					"_kind": "member function",
+					"_name": "get",
+					"body_kind": "declaration",
+					"cv_qualifier": "const",
+					"id": 93825012506160,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "get",
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "typename Interface::StringType",
+						"kind": "unexposed",
+						"name": "typename Interface::StringType"
+					},
+					"semantic_scope": "",
+					"signature": "() const"
+				},
+				"id": 93825004751760,
+				"kind": "function template",
+				"name": "get",
+				"parameters": [{
+					"_kind": "template type parameter",
+					"_name": "Interface",
+					"id": 140737114930784,
+					"is_variadic": false,
+					"keyword": "typename",
+					"kind": "template type parameter",
+					"name": "Interface"
+				}]
+			}, {
+				"_fullName": "::stappler::UrlView::isEmail() const",
+				"_kind": "member function",
+				"_name": "isEmail",
+				"body_kind": "declaration",
+				"cv_qualifier": "const",
+				"id": 93825002352416,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": true,
+				"is_definition": false,
+				"is_variadic": false,
+				"is_virtual": false,
+				"kind": "member function",
+				"name": "isEmail",
+				"ref_qualifier": "none",
+				"return_type": {
+					"_typeName": "bool",
+					"builtin_type_kind": "bool",
+					"kind": "builtin"
+				},
+				"semantic_scope": "",
+				"signature": "() const"
+			}, {
+				"_fullName": "::stappler::UrlView::isPath() const",
+				"_kind": "member function",
+				"_name": "isPath",
+				"body_kind": "declaration",
+				"cv_qualifier": "const",
+				"id": 93825011556192,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": true,
+				"is_definition": false,
+				"is_variadic": false,
+				"is_virtual": false,
+				"kind": "member function",
+				"name": "isPath",
+				"ref_qualifier": "none",
+				"return_type": {
+					"_typeName": "bool",
+					"builtin_type_kind": "bool",
+					"kind": "builtin"
+				},
+				"semantic_scope": "",
+				"signature": "() const"
+			}],
+			"class_kind": "struct",
+			"id": 140736954905584,
+			"is_declaration": false,
+			"is_definition": true,
+			"is_final": false,
+			"kind": "class",
+			"name": "UrlView",
+			"scope": {
+				"name": "UrlView"
+			},
+			"semantic_scope": ""
+		}],
+		"id": 140737114086512,
+		"is_anonymous": false,
+		"is_inline": false,
+		"is_nested": false,
+		"kind": "namespace",
+		"name": "stappler",
+		"scope": {
+			"name": "stappler"
+		}
+	}],
+	"id": 140737135828224,
+	"kind": "file",
+	"name": "/home/sbkarr/stappler/xenolith/libstappler/common/utils/SPUrl.h",
+	"unmatched_comments": [{
+		"line": 21,
+		"text": "\nCopyright (c) 2016-2019 Roman Katuntsev <sbkarr@stappler.org>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n"
+	}]
+}

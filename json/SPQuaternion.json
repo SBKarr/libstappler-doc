@@ -1,0 +1,2137 @@
+{
+	"_kind": "file",
+	"_name": "/home/sbkarr/stappler/xenolith/libstappler/modules/geom/SPQuaternion.h",
+	"childs": [{
+		"_kind": "include directive",
+		"_name": "SPVec3.h",
+		"id": 140737107731808,
+		"include": "/home/sbkarr/stappler/xenolith/libstappler/modules/geom/SPVec3.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "SPVec3.h"
+	}, {
+		"_fullName": "LIBSTAPPLER_MODULE_GEOM_SPQUATERNION_H_",
+		"_kind": "macro definition",
+		"_name": "LIBSTAPPLER_MODULE_GEOM_SPQUATERNION_H_",
+		"id": 140737124287536,
+		"is_function_like": false,
+		"is_object_like": true,
+		"is_variadic": false,
+		"kind": "macro definition",
+		"name": "LIBSTAPPLER_MODULE_GEOM_SPQUATERNION_H_",
+		"replacement": ""
+	}, {
+		"_fullName": "::stappler",
+		"_kind": "namespace",
+		"_name": "stappler",
+		"childs": [{
+			"_fullName": "::stappler::geom",
+			"_kind": "namespace",
+			"_name": "geom",
+			"childs": [{
+				"_fullName": "::stappler::geom::Mat4",
+				"_kind": "class",
+				"_name": "Mat4",
+				"childs": null,
+				"class_kind": "class",
+				"id": 140737096408528,
+				"is_declaration": true,
+				"is_definition": false,
+				"is_final": false,
+				"kind": "class",
+				"name": "Mat4",
+				"scope": {
+					"name": "Mat4"
+				},
+				"semantic_scope": ""
+			}, {
+				"_fullName": "::stappler::geom::Quaternion",
+				"_kind": "class",
+				"_name": "Quaternion",
+				"childs": [{
+					"_kind": "access specifier",
+					"_name": "public",
+					"access_specifier": "public",
+					"id": 140737150912240,
+					"kind": "access specifier",
+					"name": "public"
+				}, {
+					"_fullName": "::stappler::geom::Quaternion::multiply(stappler::geom::Quaternion const&,stappler::geom::Quaternion const&,stappler::geom::Quaternion*)",
+					"_kind": "function",
+					"_name": "multiply",
+					"body_kind": "declaration",
+					"id": 140737086782656,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "multiply",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "q1",
+						"id": 140737132072576,
+						"kind": "function parameter",
+						"name": "q1",
+						"type": {
+							"_typeName": "stappler::geom::Quaternion const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::Quaternion const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::geom::Quaternion",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::geom::Quaternion",
+										"objects": [{
+											"_fullName": "::stappler::geom::Quaternion",
+											"_kind": "class",
+											"_name": "Quaternion",
+											"class_kind": "class",
+											"comment": "\nDefines a 4-element quaternion that represents the orientation of an object in space.\n\nQuaternions are typically used as a replacement for euler angles and rotation matrices\nas a way to achieve smooth interpolation and avoid gimbal lock.\n\nNote that this quaternion class does not automatically keep the quaternion normalized.\nTherefore, care must be taken to normalize the quaternion when necessary, by calling\nthe normalize method.\nThis class provides three methods for doing quaternion interpolation: lerp, slerp, and squad.\n\nlerp (linear interpolation): the interpolation curve gives a straight line in quaternion\nspace. It is simple and fast to compute. The only problem is that it does not provide\nconstant angular velocity. Note that a constant velocity is not necessarily a requirement\nfor a curve;\nslerp (spherical linear interpolation): the interpolation curve forms a great arc on the\nquaternion unit sphere. Slerp provides constant angular velocity;\nsquad (spherical spline interpolation): interpolating between a series of rotations using\nslerp leads to the following problems:\n- the curve is not smooth at the control points;\n- the angular velocity is not constant;\n- the angular velocity is not continuous at the control points.\n\nSince squad is continuously differentiable, it remedies the first and third problems\nmentioned above.\nThe slerp method provided here is intended for interpolation of principal rotations.\nIt treats +q and -q as the same principal rotation and is at liberty to use the negative\nof either input. The resulting path is always the shorter arc.\n\nThe lerp method provided here interpolates strictly in quaternion space. Note that the\nresulting path may pass through the origin if interpolating between a quaternion and its\nexact negative.\n\nAs an example, consider the following quaternions:\n\nq1 = (0.6, 0.8, 0.0, 0.0),\nq2 = (0.0, 0.6, 0.8, 0.0),\nq3 = (0.6, 0.0, 0.8, 0.0), and\nq4 = (-0.8, 0.0, -0.6, 0.0).\nFor the point p = (1.0, 1.0, 1.0), the following figures show the trajectories of p\nusing lerp, slerp, and squad.\n",
+											"id": 140736987699360,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Quaternion",
+											"scope": {
+												"name": "Quaternion"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "q2",
+						"id": 140737095477216,
+						"kind": "function parameter",
+						"name": "q2",
+						"type": {
+							"_typeName": "stappler::geom::Quaternion const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::Quaternion const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::geom::Quaternion",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::geom::Quaternion",
+										"objects": [{
+											"_fullName": "::stappler::geom::Quaternion",
+											"_kind": "class",
+											"_name": "Quaternion",
+											"class_kind": "class",
+											"comment": "\nDefines a 4-element quaternion that represents the orientation of an object in space.\n\nQuaternions are typically used as a replacement for euler angles and rotation matrices\nas a way to achieve smooth interpolation and avoid gimbal lock.\n\nNote that this quaternion class does not automatically keep the quaternion normalized.\nTherefore, care must be taken to normalize the quaternion when necessary, by calling\nthe normalize method.\nThis class provides three methods for doing quaternion interpolation: lerp, slerp, and squad.\n\nlerp (linear interpolation): the interpolation curve gives a straight line in quaternion\nspace. It is simple and fast to compute. The only problem is that it does not provide\nconstant angular velocity. Note that a constant velocity is not necessarily a requirement\nfor a curve;\nslerp (spherical linear interpolation): the interpolation curve forms a great arc on the\nquaternion unit sphere. Slerp provides constant angular velocity;\nsquad (spherical spline interpolation): interpolating between a series of rotations using\nslerp leads to the following problems:\n- the curve is not smooth at the control points;\n- the angular velocity is not constant;\n- the angular velocity is not continuous at the control points.\n\nSince squad is continuously differentiable, it remedies the first and third problems\nmentioned above.\nThe slerp method provided here is intended for interpolation of principal rotations.\nIt treats +q and -q as the same principal rotation and is at liberty to use the negative\nof either input. The resulting path is always the shorter arc.\n\nThe lerp method provided here interpolates strictly in quaternion space. Note that the\nresulting path may pass through the origin if interpolating between a quaternion and its\nexact negative.\n\nAs an example, consider the following quaternions:\n\nq1 = (0.6, 0.8, 0.0, 0.0),\nq2 = (0.0, 0.6, 0.8, 0.0),\nq3 = (0.6, 0.0, 0.8, 0.0), and\nq4 = (-0.8, 0.0, -0.6, 0.0).\nFor the point p = (1.0, 1.0, 1.0), the following figures show the trajectories of p\nusing lerp, slerp, and squad.\n",
+											"id": 140736987699360,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Quaternion",
+											"scope": {
+												"name": "Quaternion"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "dst",
+						"id": 140736987324848,
+						"kind": "function parameter",
+						"name": "dst",
+						"type": {
+							"_typeName": "stappler::geom::Quaternion*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::geom::Quaternion",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::Quaternion",
+									"objects": [{
+										"_fullName": "::stappler::geom::Quaternion",
+										"_kind": "class",
+										"_name": "Quaternion",
+										"class_kind": "class",
+										"comment": "\nDefines a 4-element quaternion that represents the orientation of an object in space.\n\nQuaternions are typically used as a replacement for euler angles and rotation matrices\nas a way to achieve smooth interpolation and avoid gimbal lock.\n\nNote that this quaternion class does not automatically keep the quaternion normalized.\nTherefore, care must be taken to normalize the quaternion when necessary, by calling\nthe normalize method.\nThis class provides three methods for doing quaternion interpolation: lerp, slerp, and squad.\n\nlerp (linear interpolation): the interpolation curve gives a straight line in quaternion\nspace. It is simple and fast to compute. The only problem is that it does not provide\nconstant angular velocity. Note that a constant velocity is not necessarily a requirement\nfor a curve;\nslerp (spherical linear interpolation): the interpolation curve forms a great arc on the\nquaternion unit sphere. Slerp provides constant angular velocity;\nsquad (spherical spline interpolation): interpolating between a series of rotations using\nslerp leads to the following problems:\n- the curve is not smooth at the control points;\n- the angular velocity is not constant;\n- the angular velocity is not continuous at the control points.\n\nSince squad is continuously differentiable, it remedies the first and third problems\nmentioned above.\nThe slerp method provided here is intended for interpolation of principal rotations.\nIt treats +q and -q as the same principal rotation and is at liberty to use the negative\nof either input. The resulting path is always the shorter arc.\n\nThe lerp method provided here interpolates strictly in quaternion space. Note that the\nresulting path may pass through the origin if interpolating between a quaternion and its\nexact negative.\n\nAs an example, consider the following quaternions:\n\nq1 = (0.6, 0.8, 0.0, 0.0),\nq2 = (0.0, 0.6, 0.8, 0.0),\nq3 = (0.6, 0.0, 0.8, 0.0), and\nq4 = (-0.8, 0.0, -0.6, 0.0).\nFor the point p = (1.0, 1.0, 1.0), the following figures show the trajectories of p\nusing lerp, slerp, and squad.\n",
+										"id": 140736987699360,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Quaternion",
+										"scope": {
+											"name": "Quaternion"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::geom::Quaternion const&,stappler::geom::Quaternion const&,stappler::geom::Quaternion*)",
+					"storage_class": [
+						"static"
+					]
+				}, {
+					"_fullName": "::stappler::geom::Quaternion::lerp(stappler::geom::Quaternion const&,stappler::geom::Quaternion const&,float,stappler::geom::Quaternion*)",
+					"_kind": "function",
+					"_name": "lerp",
+					"body_kind": "declaration",
+					"id": 140737097459712,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "lerp",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "q1",
+						"id": 140737097357472,
+						"kind": "function parameter",
+						"name": "q1",
+						"type": {
+							"_typeName": "stappler::geom::Quaternion const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::Quaternion const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::geom::Quaternion",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::geom::Quaternion",
+										"objects": [{
+											"_fullName": "::stappler::geom::Quaternion",
+											"_kind": "class",
+											"_name": "Quaternion",
+											"class_kind": "class",
+											"comment": "\nDefines a 4-element quaternion that represents the orientation of an object in space.\n\nQuaternions are typically used as a replacement for euler angles and rotation matrices\nas a way to achieve smooth interpolation and avoid gimbal lock.\n\nNote that this quaternion class does not automatically keep the quaternion normalized.\nTherefore, care must be taken to normalize the quaternion when necessary, by calling\nthe normalize method.\nThis class provides three methods for doing quaternion interpolation: lerp, slerp, and squad.\n\nlerp (linear interpolation): the interpolation curve gives a straight line in quaternion\nspace. It is simple and fast to compute. The only problem is that it does not provide\nconstant angular velocity. Note that a constant velocity is not necessarily a requirement\nfor a curve;\nslerp (spherical linear interpolation): the interpolation curve forms a great arc on the\nquaternion unit sphere. Slerp provides constant angular velocity;\nsquad (spherical spline interpolation): interpolating between a series of rotations using\nslerp leads to the following problems:\n- the curve is not smooth at the control points;\n- the angular velocity is not constant;\n- the angular velocity is not continuous at the control points.\n\nSince squad is continuously differentiable, it remedies the first and third problems\nmentioned above.\nThe slerp method provided here is intended for interpolation of principal rotations.\nIt treats +q and -q as the same principal rotation and is at liberty to use the negative\nof either input. The resulting path is always the shorter arc.\n\nThe lerp method provided here interpolates strictly in quaternion space. Note that the\nresulting path may pass through the origin if interpolating between a quaternion and its\nexact negative.\n\nAs an example, consider the following quaternions:\n\nq1 = (0.6, 0.8, 0.0, 0.0),\nq2 = (0.0, 0.6, 0.8, 0.0),\nq3 = (0.6, 0.0, 0.8, 0.0), and\nq4 = (-0.8, 0.0, -0.6, 0.0).\nFor the point p = (1.0, 1.0, 1.0), the following figures show the trajectories of p\nusing lerp, slerp, and squad.\n",
+											"id": 140736987699360,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Quaternion",
+											"scope": {
+												"name": "Quaternion"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "q2",
+						"id": 93824997692336,
+						"kind": "function parameter",
+						"name": "q2",
+						"type": {
+							"_typeName": "stappler::geom::Quaternion const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::Quaternion const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::geom::Quaternion",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::geom::Quaternion",
+										"objects": [{
+											"_fullName": "::stappler::geom::Quaternion",
+											"_kind": "class",
+											"_name": "Quaternion",
+											"class_kind": "class",
+											"comment": "\nDefines a 4-element quaternion that represents the orientation of an object in space.\n\nQuaternions are typically used as a replacement for euler angles and rotation matrices\nas a way to achieve smooth interpolation and avoid gimbal lock.\n\nNote that this quaternion class does not automatically keep the quaternion normalized.\nTherefore, care must be taken to normalize the quaternion when necessary, by calling\nthe normalize method.\nThis class provides three methods for doing quaternion interpolation: lerp, slerp, and squad.\n\nlerp (linear interpolation): the interpolation curve gives a straight line in quaternion\nspace. It is simple and fast to compute. The only problem is that it does not provide\nconstant angular velocity. Note that a constant velocity is not necessarily a requirement\nfor a curve;\nslerp (spherical linear interpolation): the interpolation curve forms a great arc on the\nquaternion unit sphere. Slerp provides constant angular velocity;\nsquad (spherical spline interpolation): interpolating between a series of rotations using\nslerp leads to the following problems:\n- the curve is not smooth at the control points;\n- the angular velocity is not constant;\n- the angular velocity is not continuous at the control points.\n\nSince squad is continuously differentiable, it remedies the first and third problems\nmentioned above.\nThe slerp method provided here is intended for interpolation of principal rotations.\nIt treats +q and -q as the same principal rotation and is at liberty to use the negative\nof either input. The resulting path is always the shorter arc.\n\nThe lerp method provided here interpolates strictly in quaternion space. Note that the\nresulting path may pass through the origin if interpolating between a quaternion and its\nexact negative.\n\nAs an example, consider the following quaternions:\n\nq1 = (0.6, 0.8, 0.0, 0.0),\nq2 = (0.0, 0.6, 0.8, 0.0),\nq3 = (0.6, 0.0, 0.8, 0.0), and\nq4 = (-0.8, 0.0, -0.6, 0.0).\nFor the point p = (1.0, 1.0, 1.0), the following figures show the trajectories of p\nusing lerp, slerp, and squad.\n",
+											"id": 140736987699360,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Quaternion",
+											"scope": {
+												"name": "Quaternion"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "t",
+						"id": 93825002186240,
+						"kind": "function parameter",
+						"name": "t",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "dst",
+						"id": 93825001115936,
+						"kind": "function parameter",
+						"name": "dst",
+						"type": {
+							"_typeName": "stappler::geom::Quaternion*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::geom::Quaternion",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::Quaternion",
+									"objects": [{
+										"_fullName": "::stappler::geom::Quaternion",
+										"_kind": "class",
+										"_name": "Quaternion",
+										"class_kind": "class",
+										"comment": "\nDefines a 4-element quaternion that represents the orientation of an object in space.\n\nQuaternions are typically used as a replacement for euler angles and rotation matrices\nas a way to achieve smooth interpolation and avoid gimbal lock.\n\nNote that this quaternion class does not automatically keep the quaternion normalized.\nTherefore, care must be taken to normalize the quaternion when necessary, by calling\nthe normalize method.\nThis class provides three methods for doing quaternion interpolation: lerp, slerp, and squad.\n\nlerp (linear interpolation): the interpolation curve gives a straight line in quaternion\nspace. It is simple and fast to compute. The only problem is that it does not provide\nconstant angular velocity. Note that a constant velocity is not necessarily a requirement\nfor a curve;\nslerp (spherical linear interpolation): the interpolation curve forms a great arc on the\nquaternion unit sphere. Slerp provides constant angular velocity;\nsquad (spherical spline interpolation): interpolating between a series of rotations using\nslerp leads to the following problems:\n- the curve is not smooth at the control points;\n- the angular velocity is not constant;\n- the angular velocity is not continuous at the control points.\n\nSince squad is continuously differentiable, it remedies the first and third problems\nmentioned above.\nThe slerp method provided here is intended for interpolation of principal rotations.\nIt treats +q and -q as the same principal rotation and is at liberty to use the negative\nof either input. The resulting path is always the shorter arc.\n\nThe lerp method provided here interpolates strictly in quaternion space. Note that the\nresulting path may pass through the origin if interpolating between a quaternion and its\nexact negative.\n\nAs an example, consider the following quaternions:\n\nq1 = (0.6, 0.8, 0.0, 0.0),\nq2 = (0.0, 0.6, 0.8, 0.0),\nq3 = (0.6, 0.0, 0.8, 0.0), and\nq4 = (-0.8, 0.0, -0.6, 0.0).\nFor the point p = (1.0, 1.0, 1.0), the following figures show the trajectories of p\nusing lerp, slerp, and squad.\n",
+										"id": 140736987699360,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Quaternion",
+										"scope": {
+											"name": "Quaternion"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::geom::Quaternion const&,stappler::geom::Quaternion const&,float,stappler::geom::Quaternion*)",
+					"storage_class": [
+						"static"
+					]
+				}, {
+					"_fullName": "::stappler::geom::Quaternion::slerp(stappler::geom::Quaternion const&,stappler::geom::Quaternion const&,float,stappler::geom::Quaternion*)",
+					"_kind": "function",
+					"_name": "slerp",
+					"body_kind": "declaration",
+					"comment": "\nInterpolates between two quaternions using spherical linear interpolation.\n\nSpherical linear interpolation provides smooth transitions between different\norientations and is often useful for animating models or cameras in 3D.\n\nNote: For accurate interpolation, the input quaternions must be at (or close to) unit length.\nThis method does not automatically normalize the input quaternions, so it is up to the\ncaller to ensure they call normalize beforehand, if necessary.\n\n@param q1 The first quaternion.\n@param q2 The second quaternion.\n@param t The interpolation coefficient.\n@param dst A quaternion to store the result in.\n",
+					"id": 140737089873376,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "slerp",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "q1",
+						"id": 93825002664016,
+						"kind": "function parameter",
+						"name": "q1",
+						"type": {
+							"_typeName": "stappler::geom::Quaternion const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::Quaternion const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::geom::Quaternion",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::geom::Quaternion",
+										"objects": [{
+											"_fullName": "::stappler::geom::Quaternion",
+											"_kind": "class",
+											"_name": "Quaternion",
+											"class_kind": "class",
+											"comment": "\nDefines a 4-element quaternion that represents the orientation of an object in space.\n\nQuaternions are typically used as a replacement for euler angles and rotation matrices\nas a way to achieve smooth interpolation and avoid gimbal lock.\n\nNote that this quaternion class does not automatically keep the quaternion normalized.\nTherefore, care must be taken to normalize the quaternion when necessary, by calling\nthe normalize method.\nThis class provides three methods for doing quaternion interpolation: lerp, slerp, and squad.\n\nlerp (linear interpolation): the interpolation curve gives a straight line in quaternion\nspace. It is simple and fast to compute. The only problem is that it does not provide\nconstant angular velocity. Note that a constant velocity is not necessarily a requirement\nfor a curve;\nslerp (spherical linear interpolation): the interpolation curve forms a great arc on the\nquaternion unit sphere. Slerp provides constant angular velocity;\nsquad (spherical spline interpolation): interpolating between a series of rotations using\nslerp leads to the following problems:\n- the curve is not smooth at the control points;\n- the angular velocity is not constant;\n- the angular velocity is not continuous at the control points.\n\nSince squad is continuously differentiable, it remedies the first and third problems\nmentioned above.\nThe slerp method provided here is intended for interpolation of principal rotations.\nIt treats +q and -q as the same principal rotation and is at liberty to use the negative\nof either input. The resulting path is always the shorter arc.\n\nThe lerp method provided here interpolates strictly in quaternion space. Note that the\nresulting path may pass through the origin if interpolating between a quaternion and its\nexact negative.\n\nAs an example, consider the following quaternions:\n\nq1 = (0.6, 0.8, 0.0, 0.0),\nq2 = (0.0, 0.6, 0.8, 0.0),\nq3 = (0.6, 0.0, 0.8, 0.0), and\nq4 = (-0.8, 0.0, -0.6, 0.0).\nFor the point p = (1.0, 1.0, 1.0), the following figures show the trajectories of p\nusing lerp, slerp, and squad.\n",
+											"id": 140736987699360,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Quaternion",
+											"scope": {
+												"name": "Quaternion"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "q2",
+						"id": 93825012143824,
+						"kind": "function parameter",
+						"name": "q2",
+						"type": {
+							"_typeName": "stappler::geom::Quaternion const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::Quaternion const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::geom::Quaternion",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::geom::Quaternion",
+										"objects": [{
+											"_fullName": "::stappler::geom::Quaternion",
+											"_kind": "class",
+											"_name": "Quaternion",
+											"class_kind": "class",
+											"comment": "\nDefines a 4-element quaternion that represents the orientation of an object in space.\n\nQuaternions are typically used as a replacement for euler angles and rotation matrices\nas a way to achieve smooth interpolation and avoid gimbal lock.\n\nNote that this quaternion class does not automatically keep the quaternion normalized.\nTherefore, care must be taken to normalize the quaternion when necessary, by calling\nthe normalize method.\nThis class provides three methods for doing quaternion interpolation: lerp, slerp, and squad.\n\nlerp (linear interpolation): the interpolation curve gives a straight line in quaternion\nspace. It is simple and fast to compute. The only problem is that it does not provide\nconstant angular velocity. Note that a constant velocity is not necessarily a requirement\nfor a curve;\nslerp (spherical linear interpolation): the interpolation curve forms a great arc on the\nquaternion unit sphere. Slerp provides constant angular velocity;\nsquad (spherical spline interpolation): interpolating between a series of rotations using\nslerp leads to the following problems:\n- the curve is not smooth at the control points;\n- the angular velocity is not constant;\n- the angular velocity is not continuous at the control points.\n\nSince squad is continuously differentiable, it remedies the first and third problems\nmentioned above.\nThe slerp method provided here is intended for interpolation of principal rotations.\nIt treats +q and -q as the same principal rotation and is at liberty to use the negative\nof either input. The resulting path is always the shorter arc.\n\nThe lerp method provided here interpolates strictly in quaternion space. Note that the\nresulting path may pass through the origin if interpolating between a quaternion and its\nexact negative.\n\nAs an example, consider the following quaternions:\n\nq1 = (0.6, 0.8, 0.0, 0.0),\nq2 = (0.0, 0.6, 0.8, 0.0),\nq3 = (0.6, 0.0, 0.8, 0.0), and\nq4 = (-0.8, 0.0, -0.6, 0.0).\nFor the point p = (1.0, 1.0, 1.0), the following figures show the trajectories of p\nusing lerp, slerp, and squad.\n",
+											"id": 140736987699360,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Quaternion",
+											"scope": {
+												"name": "Quaternion"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "t",
+						"id": 93825002474352,
+						"kind": "function parameter",
+						"name": "t",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "dst",
+						"id": 93825002183760,
+						"kind": "function parameter",
+						"name": "dst",
+						"type": {
+							"_typeName": "stappler::geom::Quaternion*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::geom::Quaternion",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::Quaternion",
+									"objects": [{
+										"_fullName": "::stappler::geom::Quaternion",
+										"_kind": "class",
+										"_name": "Quaternion",
+										"class_kind": "class",
+										"comment": "\nDefines a 4-element quaternion that represents the orientation of an object in space.\n\nQuaternions are typically used as a replacement for euler angles and rotation matrices\nas a way to achieve smooth interpolation and avoid gimbal lock.\n\nNote that this quaternion class does not automatically keep the quaternion normalized.\nTherefore, care must be taken to normalize the quaternion when necessary, by calling\nthe normalize method.\nThis class provides three methods for doing quaternion interpolation: lerp, slerp, and squad.\n\nlerp (linear interpolation): the interpolation curve gives a straight line in quaternion\nspace. It is simple and fast to compute. The only problem is that it does not provide\nconstant angular velocity. Note that a constant velocity is not necessarily a requirement\nfor a curve;\nslerp (spherical linear interpolation): the interpolation curve forms a great arc on the\nquaternion unit sphere. Slerp provides constant angular velocity;\nsquad (spherical spline interpolation): interpolating between a series of rotations using\nslerp leads to the following problems:\n- the curve is not smooth at the control points;\n- the angular velocity is not constant;\n- the angular velocity is not continuous at the control points.\n\nSince squad is continuously differentiable, it remedies the first and third problems\nmentioned above.\nThe slerp method provided here is intended for interpolation of principal rotations.\nIt treats +q and -q as the same principal rotation and is at liberty to use the negative\nof either input. The resulting path is always the shorter arc.\n\nThe lerp method provided here interpolates strictly in quaternion space. Note that the\nresulting path may pass through the origin if interpolating between a quaternion and its\nexact negative.\n\nAs an example, consider the following quaternions:\n\nq1 = (0.6, 0.8, 0.0, 0.0),\nq2 = (0.0, 0.6, 0.8, 0.0),\nq3 = (0.6, 0.0, 0.8, 0.0), and\nq4 = (-0.8, 0.0, -0.6, 0.0).\nFor the point p = (1.0, 1.0, 1.0), the following figures show the trajectories of p\nusing lerp, slerp, and squad.\n",
+										"id": 140736987699360,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Quaternion",
+										"scope": {
+											"name": "Quaternion"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::geom::Quaternion const&,stappler::geom::Quaternion const&,float,stappler::geom::Quaternion*)",
+					"storage_class": [
+						"static"
+					]
+				}, {
+					"_fullName": "::stappler::geom::Quaternion::squad(stappler::geom::Quaternion const&,stappler::geom::Quaternion const&,stappler::geom::Quaternion const&,stappler::geom::Quaternion const&,float,stappler::geom::Quaternion*)",
+					"_kind": "function",
+					"_name": "squad",
+					"body_kind": "declaration",
+					"comment": "\nInterpolates over a series of quaternions using spherical spline interpolation.\n\nSpherical spline interpolation provides smooth transitions between different\norientations and is often useful for animating models or cameras in 3D.\n\nNote: For accurate interpolation, the input quaternions must be unit.\nThis method does not automatically normalize the input quaternions,\nso it is up to the caller to ensure they call normalize beforehand, if necessary.\n\n@param q1 The first quaternion.\n@param q2 The second quaternion.\n@param s1 The first control point.\n@param s2 The second control point.\n@param t The interpolation coefficient.\n@param dst A quaternion to store the result in.\n",
+					"id": 93824997692560,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "squad",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "q1",
+						"id": 93825000278976,
+						"kind": "function parameter",
+						"name": "q1",
+						"type": {
+							"_typeName": "stappler::geom::Quaternion const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::Quaternion const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::geom::Quaternion",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::geom::Quaternion",
+										"objects": [{
+											"_fullName": "::stappler::geom::Quaternion",
+											"_kind": "class",
+											"_name": "Quaternion",
+											"class_kind": "class",
+											"comment": "\nDefines a 4-element quaternion that represents the orientation of an object in space.\n\nQuaternions are typically used as a replacement for euler angles and rotation matrices\nas a way to achieve smooth interpolation and avoid gimbal lock.\n\nNote that this quaternion class does not automatically keep the quaternion normalized.\nTherefore, care must be taken to normalize the quaternion when necessary, by calling\nthe normalize method.\nThis class provides three methods for doing quaternion interpolation: lerp, slerp, and squad.\n\nlerp (linear interpolation): the interpolation curve gives a straight line in quaternion\nspace. It is simple and fast to compute. The only problem is that it does not provide\nconstant angular velocity. Note that a constant velocity is not necessarily a requirement\nfor a curve;\nslerp (spherical linear interpolation): the interpolation curve forms a great arc on the\nquaternion unit sphere. Slerp provides constant angular velocity;\nsquad (spherical spline interpolation): interpolating between a series of rotations using\nslerp leads to the following problems:\n- the curve is not smooth at the control points;\n- the angular velocity is not constant;\n- the angular velocity is not continuous at the control points.\n\nSince squad is continuously differentiable, it remedies the first and third problems\nmentioned above.\nThe slerp method provided here is intended for interpolation of principal rotations.\nIt treats +q and -q as the same principal rotation and is at liberty to use the negative\nof either input. The resulting path is always the shorter arc.\n\nThe lerp method provided here interpolates strictly in quaternion space. Note that the\nresulting path may pass through the origin if interpolating between a quaternion and its\nexact negative.\n\nAs an example, consider the following quaternions:\n\nq1 = (0.6, 0.8, 0.0, 0.0),\nq2 = (0.0, 0.6, 0.8, 0.0),\nq3 = (0.6, 0.0, 0.8, 0.0), and\nq4 = (-0.8, 0.0, -0.6, 0.0).\nFor the point p = (1.0, 1.0, 1.0), the following figures show the trajectories of p\nusing lerp, slerp, and squad.\n",
+											"id": 140736987699360,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Quaternion",
+											"scope": {
+												"name": "Quaternion"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "q2",
+						"id": 93825002864752,
+						"kind": "function parameter",
+						"name": "q2",
+						"type": {
+							"_typeName": "stappler::geom::Quaternion const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::Quaternion const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::geom::Quaternion",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::geom::Quaternion",
+										"objects": [{
+											"_fullName": "::stappler::geom::Quaternion",
+											"_kind": "class",
+											"_name": "Quaternion",
+											"class_kind": "class",
+											"comment": "\nDefines a 4-element quaternion that represents the orientation of an object in space.\n\nQuaternions are typically used as a replacement for euler angles and rotation matrices\nas a way to achieve smooth interpolation and avoid gimbal lock.\n\nNote that this quaternion class does not automatically keep the quaternion normalized.\nTherefore, care must be taken to normalize the quaternion when necessary, by calling\nthe normalize method.\nThis class provides three methods for doing quaternion interpolation: lerp, slerp, and squad.\n\nlerp (linear interpolation): the interpolation curve gives a straight line in quaternion\nspace. It is simple and fast to compute. The only problem is that it does not provide\nconstant angular velocity. Note that a constant velocity is not necessarily a requirement\nfor a curve;\nslerp (spherical linear interpolation): the interpolation curve forms a great arc on the\nquaternion unit sphere. Slerp provides constant angular velocity;\nsquad (spherical spline interpolation): interpolating between a series of rotations using\nslerp leads to the following problems:\n- the curve is not smooth at the control points;\n- the angular velocity is not constant;\n- the angular velocity is not continuous at the control points.\n\nSince squad is continuously differentiable, it remedies the first and third problems\nmentioned above.\nThe slerp method provided here is intended for interpolation of principal rotations.\nIt treats +q and -q as the same principal rotation and is at liberty to use the negative\nof either input. The resulting path is always the shorter arc.\n\nThe lerp method provided here interpolates strictly in quaternion space. Note that the\nresulting path may pass through the origin if interpolating between a quaternion and its\nexact negative.\n\nAs an example, consider the following quaternions:\n\nq1 = (0.6, 0.8, 0.0, 0.0),\nq2 = (0.0, 0.6, 0.8, 0.0),\nq3 = (0.6, 0.0, 0.8, 0.0), and\nq4 = (-0.8, 0.0, -0.6, 0.0).\nFor the point p = (1.0, 1.0, 1.0), the following figures show the trajectories of p\nusing lerp, slerp, and squad.\n",
+											"id": 140736987699360,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Quaternion",
+											"scope": {
+												"name": "Quaternion"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "s1",
+						"id": 93824997545184,
+						"kind": "function parameter",
+						"name": "s1",
+						"type": {
+							"_typeName": "stappler::geom::Quaternion const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::Quaternion const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::geom::Quaternion",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::geom::Quaternion",
+										"objects": [{
+											"_fullName": "::stappler::geom::Quaternion",
+											"_kind": "class",
+											"_name": "Quaternion",
+											"class_kind": "class",
+											"comment": "\nDefines a 4-element quaternion that represents the orientation of an object in space.\n\nQuaternions are typically used as a replacement for euler angles and rotation matrices\nas a way to achieve smooth interpolation and avoid gimbal lock.\n\nNote that this quaternion class does not automatically keep the quaternion normalized.\nTherefore, care must be taken to normalize the quaternion when necessary, by calling\nthe normalize method.\nThis class provides three methods for doing quaternion interpolation: lerp, slerp, and squad.\n\nlerp (linear interpolation): the interpolation curve gives a straight line in quaternion\nspace. It is simple and fast to compute. The only problem is that it does not provide\nconstant angular velocity. Note that a constant velocity is not necessarily a requirement\nfor a curve;\nslerp (spherical linear interpolation): the interpolation curve forms a great arc on the\nquaternion unit sphere. Slerp provides constant angular velocity;\nsquad (spherical spline interpolation): interpolating between a series of rotations using\nslerp leads to the following problems:\n- the curve is not smooth at the control points;\n- the angular velocity is not constant;\n- the angular velocity is not continuous at the control points.\n\nSince squad is continuously differentiable, it remedies the first and third problems\nmentioned above.\nThe slerp method provided here is intended for interpolation of principal rotations.\nIt treats +q and -q as the same principal rotation and is at liberty to use the negative\nof either input. The resulting path is always the shorter arc.\n\nThe lerp method provided here interpolates strictly in quaternion space. Note that the\nresulting path may pass through the origin if interpolating between a quaternion and its\nexact negative.\n\nAs an example, consider the following quaternions:\n\nq1 = (0.6, 0.8, 0.0, 0.0),\nq2 = (0.0, 0.6, 0.8, 0.0),\nq3 = (0.6, 0.0, 0.8, 0.0), and\nq4 = (-0.8, 0.0, -0.6, 0.0).\nFor the point p = (1.0, 1.0, 1.0), the following figures show the trajectories of p\nusing lerp, slerp, and squad.\n",
+											"id": 140736987699360,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Quaternion",
+											"scope": {
+												"name": "Quaternion"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "s2",
+						"id": 93825000190976,
+						"kind": "function parameter",
+						"name": "s2",
+						"type": {
+							"_typeName": "stappler::geom::Quaternion const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::Quaternion const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::geom::Quaternion",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::geom::Quaternion",
+										"objects": [{
+											"_fullName": "::stappler::geom::Quaternion",
+											"_kind": "class",
+											"_name": "Quaternion",
+											"class_kind": "class",
+											"comment": "\nDefines a 4-element quaternion that represents the orientation of an object in space.\n\nQuaternions are typically used as a replacement for euler angles and rotation matrices\nas a way to achieve smooth interpolation and avoid gimbal lock.\n\nNote that this quaternion class does not automatically keep the quaternion normalized.\nTherefore, care must be taken to normalize the quaternion when necessary, by calling\nthe normalize method.\nThis class provides three methods for doing quaternion interpolation: lerp, slerp, and squad.\n\nlerp (linear interpolation): the interpolation curve gives a straight line in quaternion\nspace. It is simple and fast to compute. The only problem is that it does not provide\nconstant angular velocity. Note that a constant velocity is not necessarily a requirement\nfor a curve;\nslerp (spherical linear interpolation): the interpolation curve forms a great arc on the\nquaternion unit sphere. Slerp provides constant angular velocity;\nsquad (spherical spline interpolation): interpolating between a series of rotations using\nslerp leads to the following problems:\n- the curve is not smooth at the control points;\n- the angular velocity is not constant;\n- the angular velocity is not continuous at the control points.\n\nSince squad is continuously differentiable, it remedies the first and third problems\nmentioned above.\nThe slerp method provided here is intended for interpolation of principal rotations.\nIt treats +q and -q as the same principal rotation and is at liberty to use the negative\nof either input. The resulting path is always the shorter arc.\n\nThe lerp method provided here interpolates strictly in quaternion space. Note that the\nresulting path may pass through the origin if interpolating between a quaternion and its\nexact negative.\n\nAs an example, consider the following quaternions:\n\nq1 = (0.6, 0.8, 0.0, 0.0),\nq2 = (0.0, 0.6, 0.8, 0.0),\nq3 = (0.6, 0.0, 0.8, 0.0), and\nq4 = (-0.8, 0.0, -0.6, 0.0).\nFor the point p = (1.0, 1.0, 1.0), the following figures show the trajectories of p\nusing lerp, slerp, and squad.\n",
+											"id": 140736987699360,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Quaternion",
+											"scope": {
+												"name": "Quaternion"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "t",
+						"id": 93825000796624,
+						"kind": "function parameter",
+						"name": "t",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "dst",
+						"id": 93825001286608,
+						"kind": "function parameter",
+						"name": "dst",
+						"type": {
+							"_typeName": "stappler::geom::Quaternion*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::geom::Quaternion",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::Quaternion",
+									"objects": [{
+										"_fullName": "::stappler::geom::Quaternion",
+										"_kind": "class",
+										"_name": "Quaternion",
+										"class_kind": "class",
+										"comment": "\nDefines a 4-element quaternion that represents the orientation of an object in space.\n\nQuaternions are typically used as a replacement for euler angles and rotation matrices\nas a way to achieve smooth interpolation and avoid gimbal lock.\n\nNote that this quaternion class does not automatically keep the quaternion normalized.\nTherefore, care must be taken to normalize the quaternion when necessary, by calling\nthe normalize method.\nThis class provides three methods for doing quaternion interpolation: lerp, slerp, and squad.\n\nlerp (linear interpolation): the interpolation curve gives a straight line in quaternion\nspace. It is simple and fast to compute. The only problem is that it does not provide\nconstant angular velocity. Note that a constant velocity is not necessarily a requirement\nfor a curve;\nslerp (spherical linear interpolation): the interpolation curve forms a great arc on the\nquaternion unit sphere. Slerp provides constant angular velocity;\nsquad (spherical spline interpolation): interpolating between a series of rotations using\nslerp leads to the following problems:\n- the curve is not smooth at the control points;\n- the angular velocity is not constant;\n- the angular velocity is not continuous at the control points.\n\nSince squad is continuously differentiable, it remedies the first and third problems\nmentioned above.\nThe slerp method provided here is intended for interpolation of principal rotations.\nIt treats +q and -q as the same principal rotation and is at liberty to use the negative\nof either input. The resulting path is always the shorter arc.\n\nThe lerp method provided here interpolates strictly in quaternion space. Note that the\nresulting path may pass through the origin if interpolating between a quaternion and its\nexact negative.\n\nAs an example, consider the following quaternions:\n\nq1 = (0.6, 0.8, 0.0, 0.0),\nq2 = (0.0, 0.6, 0.8, 0.0),\nq3 = (0.6, 0.0, 0.8, 0.0), and\nq4 = (-0.8, 0.0, -0.6, 0.0).\nFor the point p = (1.0, 1.0, 1.0), the following figures show the trajectories of p\nusing lerp, slerp, and squad.\n",
+										"id": 140736987699360,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Quaternion",
+										"scope": {
+											"name": "Quaternion"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::geom::Quaternion const&,stappler::geom::Quaternion const&,stappler::geom::Quaternion const&,stappler::geom::Quaternion const&,float,stappler::geom::Quaternion*)",
+					"storage_class": [
+						"static"
+					]
+				}, {
+					"_fullName": "::stappler::geom::Quaternion::x",
+					"_kind": "member variable",
+					"_name": "x",
+					"id": 140736956242048,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "x",
+					"type": {
+						"_typeName": "float",
+						"builtin_type_kind": "float",
+						"kind": "builtin"
+					}
+				}, {
+					"_fullName": "::stappler::geom::Quaternion::y",
+					"_kind": "member variable",
+					"_name": "y",
+					"id": 140737123269808,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "y",
+					"type": {
+						"_typeName": "float",
+						"builtin_type_kind": "float",
+						"kind": "builtin"
+					}
+				}, {
+					"_fullName": "::stappler::geom::Quaternion::z",
+					"_kind": "member variable",
+					"_name": "z",
+					"id": 140736986464528,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "z",
+					"type": {
+						"_typeName": "float",
+						"builtin_type_kind": "float",
+						"kind": "builtin"
+					}
+				}, {
+					"_fullName": "::stappler::geom::Quaternion::w",
+					"_kind": "member variable",
+					"_name": "w",
+					"id": 93824997526976,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "w",
+					"type": {
+						"_typeName": "float",
+						"builtin_type_kind": "float",
+						"kind": "builtin"
+					}
+				}, {
+					"_fullName": "::stappler::geom::Quaternion::Quaternion()",
+					"_kind": "constructor",
+					"_name": "Quaternion",
+					"body_kind": "definition",
+					"id": 140736994996016,
+					"is_consteval": false,
+					"is_constexpr": true,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_explicit": false,
+					"is_variadic": false,
+					"kind": "constructor",
+					"name": "Quaternion",
+					"semantic_scope": "",
+					"signature": "()"
+				}, {
+					"_fullName": "::stappler::geom::Quaternion::Quaternion(float,float,float,float)",
+					"_kind": "constructor",
+					"_name": "Quaternion",
+					"body_kind": "definition",
+					"id": 140737108366560,
+					"is_consteval": false,
+					"is_constexpr": true,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_explicit": false,
+					"is_variadic": false,
+					"kind": "constructor",
+					"name": "Quaternion",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "xx",
+						"id": 93824999048432,
+						"kind": "function parameter",
+						"name": "xx",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "yy",
+						"id": 93825002665120,
+						"kind": "function parameter",
+						"name": "yy",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "zz",
+						"id": 93824997685328,
+						"kind": "function parameter",
+						"name": "zz",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "ww",
+						"id": 93824997685568,
+						"kind": "function parameter",
+						"name": "ww",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}],
+					"semantic_scope": "",
+					"signature": "(float,float,float,float)"
+				}, {
+					"_fullName": "::stappler::geom::Quaternion::Quaternion(stappler::geom::Mat4 const&)",
+					"_kind": "constructor",
+					"_name": "Quaternion",
+					"body_kind": "declaration",
+					"comment": "Constructs a quaternion equal to the rotational part of the specified matrix",
+					"id": 140737089873120,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_explicit": false,
+					"is_variadic": false,
+					"kind": "constructor",
+					"name": "Quaternion",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "m",
+						"id": 140737119669600,
+						"kind": "function parameter",
+						"name": "m",
+						"type": {
+							"_typeName": "stappler::geom::Mat4 const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::Mat4 const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::geom::Mat4",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::geom::Mat4",
+										"objects": [{
+											"_fullName": "::stappler::geom::Mat4",
+											"_kind": "class",
+											"_name": "Mat4",
+											"attributes": [{
+												"arguments": [{
+													"kind": "int_literal",
+													"spelling": "16"
+												}],
+												"is_variadic": false,
+												"kind": "alignas_",
+												"name": "alignas"
+											}],
+											"class_kind": "class",
+											"comment": "\nDefines a 4 x 4 floating point matrix representing a 3D transformation.\n\nVectors are treated as columns, resulting in a matrix that is represented as follows,\nwhere x, y and z are the translation components of the matrix:\n\n    1  0  0  x\n    0  1  0  y\n    0  0  1  z\n    0  0  0  1\n\nThis matrix class is directly compatible with OpenGL since its elements are\nlaid out in memory exactly as they are expected by OpenGL.\nThe matrix uses column-major format such that array indices increase down column first.\nSince matrix multiplication is not commutative, multiplication must be done in the\ncorrect order when combining transformations. Suppose we have a translation\nmatrix T and a rotation matrix R. To first rotate an object around the origin\nand then translate it, you would multiply the two matrices as TR.\n\nLikewise, to first translate the object and then rotate it, you would do RT.\nSo generally, matrices must be multiplied in the reverse order in which you\nwant the transformations to take place (this also applies to\nthe scale, rotate, and translate methods below; these methods are convenience\nmethods for post-multiplying by a matrix representing a scale, rotation, or translation).\n\nIn the case of repeated local transformations (i.e. rotate around the Z-axis by 0.76 radians,\nthen translate by 2.1 along the X-axis, then ...), it is better to use the Transform class\n(which is optimized for that kind of usage).\n\n@see Transform\n",
+											"id": 140737145718368,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Mat4",
+											"scope": {
+												"name": "Mat4"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"semantic_scope": "",
+					"signature": "(stappler::geom::Mat4 const&)"
+				}, {
+					"_fullName": "::stappler::geom::Quaternion::Quaternion(stappler::geom::Vec3 const&)",
+					"_kind": "constructor",
+					"_name": "Quaternion",
+					"body_kind": "definition",
+					"id": 140737146620192,
+					"is_consteval": false,
+					"is_constexpr": true,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_explicit": false,
+					"is_variadic": false,
+					"kind": "constructor",
+					"name": "Quaternion",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "eulerAngles",
+						"id": 93825010896224,
+						"kind": "function parameter",
+						"name": "eulerAngles",
+						"type": {
+							"_typeName": "stappler::geom::Vec3 const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::Vec3 const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::geom::Vec3",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::geom::Vec3",
+										"objects": [{
+											"_fullName": "::stappler::geom::Vec3",
+											"_kind": "class",
+											"_name": "Vec3",
+											"class_kind": "class",
+											"id": 140737121911296,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Vec3",
+											"scope": {
+												"name": "Vec3"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"semantic_scope": "",
+					"signature": "(stappler::geom::Vec3 const&)"
+				}, {
+					"_fullName": "::stappler::geom::Quaternion::Quaternion(stappler::geom::Vec3 const&,float)",
+					"_kind": "constructor",
+					"_name": "Quaternion",
+					"body_kind": "definition",
+					"comment": "Constructs a quaternion equal to the rotation from the specified axis and angle.",
+					"id": 93825012195664,
+					"is_consteval": false,
+					"is_constexpr": true,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_explicit": false,
+					"is_variadic": false,
+					"kind": "constructor",
+					"name": "Quaternion",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "axis",
+						"id": 140737144240224,
+						"kind": "function parameter",
+						"name": "axis",
+						"type": {
+							"_typeName": "stappler::geom::Vec3 const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::Vec3 const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::geom::Vec3",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::geom::Vec3",
+										"objects": [{
+											"_fullName": "::stappler::geom::Vec3",
+											"_kind": "class",
+											"_name": "Vec3",
+											"class_kind": "class",
+											"id": 140737121911296,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Vec3",
+											"scope": {
+												"name": "Vec3"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "angle",
+						"id": 93825002143184,
+						"kind": "function parameter",
+						"name": "angle",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}],
+					"semantic_scope": "",
+					"signature": "(stappler::geom::Vec3 const&,float)"
+				}, {
+					"_fullName": "::stappler::geom::Quaternion::Quaternion(stappler::geom::Quaternion const&)",
+					"_kind": "constructor",
+					"_name": "Quaternion",
+					"body_kind": "defaulted",
+					"id": 93825000777264,
+					"is_consteval": false,
+					"is_constexpr": true,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_explicit": false,
+					"is_variadic": false,
+					"kind": "constructor",
+					"name": "Quaternion",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "copy",
+						"id": 93825002143424,
+						"kind": "function parameter",
+						"name": "copy",
+						"type": {
+							"_typeName": "stappler::geom::Quaternion const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::Quaternion const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::geom::Quaternion",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::geom::Quaternion",
+										"objects": [{
+											"_fullName": "::stappler::geom::Quaternion",
+											"_kind": "class",
+											"_name": "Quaternion",
+											"class_kind": "class",
+											"comment": "\nDefines a 4-element quaternion that represents the orientation of an object in space.\n\nQuaternions are typically used as a replacement for euler angles and rotation matrices\nas a way to achieve smooth interpolation and avoid gimbal lock.\n\nNote that this quaternion class does not automatically keep the quaternion normalized.\nTherefore, care must be taken to normalize the quaternion when necessary, by calling\nthe normalize method.\nThis class provides three methods for doing quaternion interpolation: lerp, slerp, and squad.\n\nlerp (linear interpolation): the interpolation curve gives a straight line in quaternion\nspace. It is simple and fast to compute. The only problem is that it does not provide\nconstant angular velocity. Note that a constant velocity is not necessarily a requirement\nfor a curve;\nslerp (spherical linear interpolation): the interpolation curve forms a great arc on the\nquaternion unit sphere. Slerp provides constant angular velocity;\nsquad (spherical spline interpolation): interpolating between a series of rotations using\nslerp leads to the following problems:\n- the curve is not smooth at the control points;\n- the angular velocity is not constant;\n- the angular velocity is not continuous at the control points.\n\nSince squad is continuously differentiable, it remedies the first and third problems\nmentioned above.\nThe slerp method provided here is intended for interpolation of principal rotations.\nIt treats +q and -q as the same principal rotation and is at liberty to use the negative\nof either input. The resulting path is always the shorter arc.\n\nThe lerp method provided here interpolates strictly in quaternion space. Note that the\nresulting path may pass through the origin if interpolating between a quaternion and its\nexact negative.\n\nAs an example, consider the following quaternions:\n\nq1 = (0.6, 0.8, 0.0, 0.0),\nq2 = (0.0, 0.6, 0.8, 0.0),\nq3 = (0.6, 0.0, 0.8, 0.0), and\nq4 = (-0.8, 0.0, -0.6, 0.0).\nFor the point p = (1.0, 1.0, 1.0), the following figures show the trajectories of p\nusing lerp, slerp, and squad.\n",
+											"id": 140736987699360,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Quaternion",
+											"scope": {
+												"name": "Quaternion"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"semantic_scope": "",
+					"signature": "(stappler::geom::Quaternion const&)"
+				}, {
+					"_fullName": "::stappler::geom::Quaternion::operator==(stappler::geom::Quaternion const&) const",
+					"_kind": "member function",
+					"_name": "operator==",
+					"body_kind": "definition",
+					"cv_qualifier": "const",
+					"id": 93825002185024,
+					"is_consteval": false,
+					"is_constexpr": true,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "operator==",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "q",
+						"id": 93825001906640,
+						"kind": "function parameter",
+						"name": "q",
+						"type": {
+							"_typeName": "stappler::geom::Quaternion const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::Quaternion const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::geom::Quaternion",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::geom::Quaternion",
+										"objects": [{
+											"_fullName": "::stappler::geom::Quaternion",
+											"_kind": "class",
+											"_name": "Quaternion",
+											"class_kind": "class",
+											"comment": "\nDefines a 4-element quaternion that represents the orientation of an object in space.\n\nQuaternions are typically used as a replacement for euler angles and rotation matrices\nas a way to achieve smooth interpolation and avoid gimbal lock.\n\nNote that this quaternion class does not automatically keep the quaternion normalized.\nTherefore, care must be taken to normalize the quaternion when necessary, by calling\nthe normalize method.\nThis class provides three methods for doing quaternion interpolation: lerp, slerp, and squad.\n\nlerp (linear interpolation): the interpolation curve gives a straight line in quaternion\nspace. It is simple and fast to compute. The only problem is that it does not provide\nconstant angular velocity. Note that a constant velocity is not necessarily a requirement\nfor a curve;\nslerp (spherical linear interpolation): the interpolation curve forms a great arc on the\nquaternion unit sphere. Slerp provides constant angular velocity;\nsquad (spherical spline interpolation): interpolating between a series of rotations using\nslerp leads to the following problems:\n- the curve is not smooth at the control points;\n- the angular velocity is not constant;\n- the angular velocity is not continuous at the control points.\n\nSince squad is continuously differentiable, it remedies the first and third problems\nmentioned above.\nThe slerp method provided here is intended for interpolation of principal rotations.\nIt treats +q and -q as the same principal rotation and is at liberty to use the negative\nof either input. The resulting path is always the shorter arc.\n\nThe lerp method provided here interpolates strictly in quaternion space. Note that the\nresulting path may pass through the origin if interpolating between a quaternion and its\nexact negative.\n\nAs an example, consider the following quaternions:\n\nq1 = (0.6, 0.8, 0.0, 0.0),\nq2 = (0.0, 0.6, 0.8, 0.0),\nq3 = (0.6, 0.0, 0.8, 0.0), and\nq4 = (-0.8, 0.0, -0.6, 0.0).\nFor the point p = (1.0, 1.0, 1.0), the following figures show the trajectories of p\nusing lerp, slerp, and squad.\n",
+											"id": 140736987699360,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Quaternion",
+											"scope": {
+												"name": "Quaternion"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::geom::Quaternion const&) const"
+				}, {
+					"_fullName": "::stappler::geom::Quaternion::operator!=(stappler::geom::Quaternion const&) const",
+					"_kind": "member function",
+					"_name": "operator!=",
+					"body_kind": "definition",
+					"cv_qualifier": "const",
+					"id": 93824999374688,
+					"is_consteval": false,
+					"is_constexpr": true,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "operator!=",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "q",
+						"id": 93824999374192,
+						"kind": "function parameter",
+						"name": "q",
+						"type": {
+							"_typeName": "stappler::geom::Quaternion const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::Quaternion const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::geom::Quaternion",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::geom::Quaternion",
+										"objects": [{
+											"_fullName": "::stappler::geom::Quaternion",
+											"_kind": "class",
+											"_name": "Quaternion",
+											"class_kind": "class",
+											"comment": "\nDefines a 4-element quaternion that represents the orientation of an object in space.\n\nQuaternions are typically used as a replacement for euler angles and rotation matrices\nas a way to achieve smooth interpolation and avoid gimbal lock.\n\nNote that this quaternion class does not automatically keep the quaternion normalized.\nTherefore, care must be taken to normalize the quaternion when necessary, by calling\nthe normalize method.\nThis class provides three methods for doing quaternion interpolation: lerp, slerp, and squad.\n\nlerp (linear interpolation): the interpolation curve gives a straight line in quaternion\nspace. It is simple and fast to compute. The only problem is that it does not provide\nconstant angular velocity. Note that a constant velocity is not necessarily a requirement\nfor a curve;\nslerp (spherical linear interpolation): the interpolation curve forms a great arc on the\nquaternion unit sphere. Slerp provides constant angular velocity;\nsquad (spherical spline interpolation): interpolating between a series of rotations using\nslerp leads to the following problems:\n- the curve is not smooth at the control points;\n- the angular velocity is not constant;\n- the angular velocity is not continuous at the control points.\n\nSince squad is continuously differentiable, it remedies the first and third problems\nmentioned above.\nThe slerp method provided here is intended for interpolation of principal rotations.\nIt treats +q and -q as the same principal rotation and is at liberty to use the negative\nof either input. The resulting path is always the shorter arc.\n\nThe lerp method provided here interpolates strictly in quaternion space. Note that the\nresulting path may pass through the origin if interpolating between a quaternion and its\nexact negative.\n\nAs an example, consider the following quaternions:\n\nq1 = (0.6, 0.8, 0.0, 0.0),\nq2 = (0.0, 0.6, 0.8, 0.0),\nq3 = (0.6, 0.0, 0.8, 0.0), and\nq4 = (-0.8, 0.0, -0.6, 0.0).\nFor the point p = (1.0, 1.0, 1.0), the following figures show the trajectories of p\nusing lerp, slerp, and squad.\n",
+											"id": 140736987699360,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Quaternion",
+											"scope": {
+												"name": "Quaternion"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::geom::Quaternion const&) const"
+				}, {
+					"_fullName": "::stappler::geom::Quaternion::toEulerAngles() const",
+					"_kind": "member function",
+					"_name": "toEulerAngles",
+					"body_kind": "definition",
+					"cv_qualifier": "const",
+					"id": 93825001966592,
+					"is_consteval": false,
+					"is_constexpr": true,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "toEulerAngles",
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "stappler::geom::Vec3",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::geom::Vec3",
+							"objects": [{
+								"_fullName": "::stappler::geom::Vec3",
+								"_kind": "class",
+								"_name": "Vec3",
+								"class_kind": "class",
+								"id": 140737121911296,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_final": false,
+								"kind": "class",
+								"name": "Vec3",
+								"scope": {
+									"name": "Vec3"
+								},
+								"semantic_scope": ""
+							}]
+						}
+					},
+					"semantic_scope": "",
+					"signature": "() const"
+				}, {
+					"_fullName": "::stappler::geom::Quaternion::isIdentity() const",
+					"_kind": "member function",
+					"_name": "isIdentity",
+					"body_kind": "definition",
+					"cv_qualifier": "const",
+					"id": 93824997592208,
+					"is_consteval": false,
+					"is_constexpr": true,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "isIdentity",
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "() const"
+				}, {
+					"_fullName": "::stappler::geom::Quaternion::isZero() const",
+					"_kind": "member function",
+					"_name": "isZero",
+					"body_kind": "definition",
+					"cv_qualifier": "const",
+					"id": 93825000412512,
+					"is_consteval": false,
+					"is_constexpr": true,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "isZero",
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "() const"
+				}, {
+					"_fullName": "::stappler::geom::Quaternion::conjugate()",
+					"_kind": "member function",
+					"_name": "conjugate",
+					"body_kind": "definition",
+					"cv_qualifier": "none",
+					"id": 93825002184176,
+					"is_consteval": false,
+					"is_constexpr": true,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "conjugate",
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "()"
+				}, {
+					"_fullName": "::stappler::geom::Quaternion::getConjugated() const",
+					"_kind": "member function",
+					"_name": "getConjugated",
+					"body_kind": "definition",
+					"cv_qualifier": "const",
+					"id": 93824999047584,
+					"is_consteval": false,
+					"is_constexpr": true,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "getConjugated",
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "stappler::geom::Quaternion",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::geom::Quaternion",
+							"objects": [{
+								"_fullName": "::stappler::geom::Quaternion",
+								"_kind": "class",
+								"_name": "Quaternion",
+								"class_kind": "class",
+								"comment": "\nDefines a 4-element quaternion that represents the orientation of an object in space.\n\nQuaternions are typically used as a replacement for euler angles and rotation matrices\nas a way to achieve smooth interpolation and avoid gimbal lock.\n\nNote that this quaternion class does not automatically keep the quaternion normalized.\nTherefore, care must be taken to normalize the quaternion when necessary, by calling\nthe normalize method.\nThis class provides three methods for doing quaternion interpolation: lerp, slerp, and squad.\n\nlerp (linear interpolation): the interpolation curve gives a straight line in quaternion\nspace. It is simple and fast to compute. The only problem is that it does not provide\nconstant angular velocity. Note that a constant velocity is not necessarily a requirement\nfor a curve;\nslerp (spherical linear interpolation): the interpolation curve forms a great arc on the\nquaternion unit sphere. Slerp provides constant angular velocity;\nsquad (spherical spline interpolation): interpolating between a series of rotations using\nslerp leads to the following problems:\n- the curve is not smooth at the control points;\n- the angular velocity is not constant;\n- the angular velocity is not continuous at the control points.\n\nSince squad is continuously differentiable, it remedies the first and third problems\nmentioned above.\nThe slerp method provided here is intended for interpolation of principal rotations.\nIt treats +q and -q as the same principal rotation and is at liberty to use the negative\nof either input. The resulting path is always the shorter arc.\n\nThe lerp method provided here interpolates strictly in quaternion space. Note that the\nresulting path may pass through the origin if interpolating between a quaternion and its\nexact negative.\n\nAs an example, consider the following quaternions:\n\nq1 = (0.6, 0.8, 0.0, 0.0),\nq2 = (0.0, 0.6, 0.8, 0.0),\nq3 = (0.6, 0.0, 0.8, 0.0), and\nq4 = (-0.8, 0.0, -0.6, 0.0).\nFor the point p = (1.0, 1.0, 1.0), the following figures show the trajectories of p\nusing lerp, slerp, and squad.\n",
+								"id": 140736987699360,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_final": false,
+								"kind": "class",
+								"name": "Quaternion",
+								"scope": {
+									"name": "Quaternion"
+								},
+								"semantic_scope": ""
+							}]
+						}
+					},
+					"semantic_scope": "",
+					"signature": "() const"
+				}, {
+					"_fullName": "::stappler::geom::Quaternion::inverse()",
+					"_kind": "member function",
+					"_name": "inverse",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 93824999899376,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "inverse",
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "()"
+				}, {
+					"_fullName": "::stappler::geom::Quaternion::multiply(stappler::geom::Quaternion const&)",
+					"_kind": "member function",
+					"_name": "multiply",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 93825012199408,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "multiply",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "q",
+						"id": 93824999047904,
+						"kind": "function parameter",
+						"name": "q",
+						"type": {
+							"_typeName": "stappler::geom::Quaternion const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::Quaternion const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::geom::Quaternion",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::geom::Quaternion",
+										"objects": [{
+											"_fullName": "::stappler::geom::Quaternion",
+											"_kind": "class",
+											"_name": "Quaternion",
+											"class_kind": "class",
+											"comment": "\nDefines a 4-element quaternion that represents the orientation of an object in space.\n\nQuaternions are typically used as a replacement for euler angles and rotation matrices\nas a way to achieve smooth interpolation and avoid gimbal lock.\n\nNote that this quaternion class does not automatically keep the quaternion normalized.\nTherefore, care must be taken to normalize the quaternion when necessary, by calling\nthe normalize method.\nThis class provides three methods for doing quaternion interpolation: lerp, slerp, and squad.\n\nlerp (linear interpolation): the interpolation curve gives a straight line in quaternion\nspace. It is simple and fast to compute. The only problem is that it does not provide\nconstant angular velocity. Note that a constant velocity is not necessarily a requirement\nfor a curve;\nslerp (spherical linear interpolation): the interpolation curve forms a great arc on the\nquaternion unit sphere. Slerp provides constant angular velocity;\nsquad (spherical spline interpolation): interpolating between a series of rotations using\nslerp leads to the following problems:\n- the curve is not smooth at the control points;\n- the angular velocity is not constant;\n- the angular velocity is not continuous at the control points.\n\nSince squad is continuously differentiable, it remedies the first and third problems\nmentioned above.\nThe slerp method provided here is intended for interpolation of principal rotations.\nIt treats +q and -q as the same principal rotation and is at liberty to use the negative\nof either input. The resulting path is always the shorter arc.\n\nThe lerp method provided here interpolates strictly in quaternion space. Note that the\nresulting path may pass through the origin if interpolating between a quaternion and its\nexact negative.\n\nAs an example, consider the following quaternions:\n\nq1 = (0.6, 0.8, 0.0, 0.0),\nq2 = (0.0, 0.6, 0.8, 0.0),\nq3 = (0.6, 0.0, 0.8, 0.0), and\nq4 = (-0.8, 0.0, -0.6, 0.0).\nFor the point p = (1.0, 1.0, 1.0), the following figures show the trajectories of p\nusing lerp, slerp, and squad.\n",
+											"id": 140736987699360,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Quaternion",
+											"scope": {
+												"name": "Quaternion"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::geom::Quaternion const&)"
+				}, {
+					"_fullName": "::stappler::geom::Quaternion::normalize()",
+					"_kind": "member function",
+					"_name": "normalize",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 93825007955760,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "normalize",
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "()"
+				}, {
+					"_fullName": "::stappler::geom::Quaternion::getInversed() const",
+					"_kind": "member function",
+					"_name": "getInversed",
+					"body_kind": "declaration",
+					"cv_qualifier": "const",
+					"id": 93825000320976,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "getInversed",
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "stappler::geom::Quaternion",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::geom::Quaternion",
+							"objects": [{
+								"_fullName": "::stappler::geom::Quaternion",
+								"_kind": "class",
+								"_name": "Quaternion",
+								"class_kind": "class",
+								"comment": "\nDefines a 4-element quaternion that represents the orientation of an object in space.\n\nQuaternions are typically used as a replacement for euler angles and rotation matrices\nas a way to achieve smooth interpolation and avoid gimbal lock.\n\nNote that this quaternion class does not automatically keep the quaternion normalized.\nTherefore, care must be taken to normalize the quaternion when necessary, by calling\nthe normalize method.\nThis class provides three methods for doing quaternion interpolation: lerp, slerp, and squad.\n\nlerp (linear interpolation): the interpolation curve gives a straight line in quaternion\nspace. It is simple and fast to compute. The only problem is that it does not provide\nconstant angular velocity. Note that a constant velocity is not necessarily a requirement\nfor a curve;\nslerp (spherical linear interpolation): the interpolation curve forms a great arc on the\nquaternion unit sphere. Slerp provides constant angular velocity;\nsquad (spherical spline interpolation): interpolating between a series of rotations using\nslerp leads to the following problems:\n- the curve is not smooth at the control points;\n- the angular velocity is not constant;\n- the angular velocity is not continuous at the control points.\n\nSince squad is continuously differentiable, it remedies the first and third problems\nmentioned above.\nThe slerp method provided here is intended for interpolation of principal rotations.\nIt treats +q and -q as the same principal rotation and is at liberty to use the negative\nof either input. The resulting path is always the shorter arc.\n\nThe lerp method provided here interpolates strictly in quaternion space. Note that the\nresulting path may pass through the origin if interpolating between a quaternion and its\nexact negative.\n\nAs an example, consider the following quaternions:\n\nq1 = (0.6, 0.8, 0.0, 0.0),\nq2 = (0.0, 0.6, 0.8, 0.0),\nq3 = (0.6, 0.0, 0.8, 0.0), and\nq4 = (-0.8, 0.0, -0.6, 0.0).\nFor the point p = (1.0, 1.0, 1.0), the following figures show the trajectories of p\nusing lerp, slerp, and squad.\n",
+								"id": 140736987699360,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_final": false,
+								"kind": "class",
+								"name": "Quaternion",
+								"scope": {
+									"name": "Quaternion"
+								},
+								"semantic_scope": ""
+							}]
+						}
+					},
+					"semantic_scope": "",
+					"signature": "() const"
+				}, {
+					"_fullName": "::stappler::geom::Quaternion::getNormalized() const",
+					"_kind": "member function",
+					"_name": "getNormalized",
+					"body_kind": "declaration",
+					"cv_qualifier": "const",
+					"id": 93824997498752,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "getNormalized",
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "stappler::geom::Quaternion",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::geom::Quaternion",
+							"objects": [{
+								"_fullName": "::stappler::geom::Quaternion",
+								"_kind": "class",
+								"_name": "Quaternion",
+								"class_kind": "class",
+								"comment": "\nDefines a 4-element quaternion that represents the orientation of an object in space.\n\nQuaternions are typically used as a replacement for euler angles and rotation matrices\nas a way to achieve smooth interpolation and avoid gimbal lock.\n\nNote that this quaternion class does not automatically keep the quaternion normalized.\nTherefore, care must be taken to normalize the quaternion when necessary, by calling\nthe normalize method.\nThis class provides three methods for doing quaternion interpolation: lerp, slerp, and squad.\n\nlerp (linear interpolation): the interpolation curve gives a straight line in quaternion\nspace. It is simple and fast to compute. The only problem is that it does not provide\nconstant angular velocity. Note that a constant velocity is not necessarily a requirement\nfor a curve;\nslerp (spherical linear interpolation): the interpolation curve forms a great arc on the\nquaternion unit sphere. Slerp provides constant angular velocity;\nsquad (spherical spline interpolation): interpolating between a series of rotations using\nslerp leads to the following problems:\n- the curve is not smooth at the control points;\n- the angular velocity is not constant;\n- the angular velocity is not continuous at the control points.\n\nSince squad is continuously differentiable, it remedies the first and third problems\nmentioned above.\nThe slerp method provided here is intended for interpolation of principal rotations.\nIt treats +q and -q as the same principal rotation and is at liberty to use the negative\nof either input. The resulting path is always the shorter arc.\n\nThe lerp method provided here interpolates strictly in quaternion space. Note that the\nresulting path may pass through the origin if interpolating between a quaternion and its\nexact negative.\n\nAs an example, consider the following quaternions:\n\nq1 = (0.6, 0.8, 0.0, 0.0),\nq2 = (0.0, 0.6, 0.8, 0.0),\nq3 = (0.6, 0.0, 0.8, 0.0), and\nq4 = (-0.8, 0.0, -0.6, 0.0).\nFor the point p = (1.0, 1.0, 1.0), the following figures show the trajectories of p\nusing lerp, slerp, and squad.\n",
+								"id": 140736987699360,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_final": false,
+								"kind": "class",
+								"name": "Quaternion",
+								"scope": {
+									"name": "Quaternion"
+								},
+								"semantic_scope": ""
+							}]
+						}
+					},
+					"semantic_scope": "",
+					"signature": "() const"
+				}, {
+					"_fullName": "::stappler::geom::Quaternion::toAxisAngle(stappler::geom::Vec3*) const",
+					"_kind": "member function",
+					"_name": "toAxisAngle",
+					"body_kind": "declaration",
+					"cv_qualifier": "const",
+					"id": 93824997499024,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "toAxisAngle",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "e",
+						"id": 93825001980288,
+						"kind": "function parameter",
+						"name": "e",
+						"type": {
+							"_typeName": "stappler::geom::Vec3*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::geom::Vec3",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::Vec3",
+									"objects": [{
+										"_fullName": "::stappler::geom::Vec3",
+										"_kind": "class",
+										"_name": "Vec3",
+										"class_kind": "class",
+										"id": 140737121911296,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Vec3",
+										"scope": {
+											"name": "Vec3"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "float",
+						"builtin_type_kind": "float",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::geom::Vec3*) const"
+				}, {
+					"_fullName": "::stappler::geom::Quaternion::operator*(stappler::geom::Quaternion const&) const",
+					"_kind": "member function",
+					"_name": "operator*",
+					"body_kind": "definition",
+					"cv_qualifier": "const",
+					"id": 93825002288512,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "operator*",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "q",
+						"id": 93825001905856,
+						"kind": "function parameter",
+						"name": "q",
+						"type": {
+							"_typeName": "stappler::geom::Quaternion const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::Quaternion const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::geom::Quaternion",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::geom::Quaternion",
+										"objects": [{
+											"_fullName": "::stappler::geom::Quaternion",
+											"_kind": "class",
+											"_name": "Quaternion",
+											"class_kind": "class",
+											"comment": "\nDefines a 4-element quaternion that represents the orientation of an object in space.\n\nQuaternions are typically used as a replacement for euler angles and rotation matrices\nas a way to achieve smooth interpolation and avoid gimbal lock.\n\nNote that this quaternion class does not automatically keep the quaternion normalized.\nTherefore, care must be taken to normalize the quaternion when necessary, by calling\nthe normalize method.\nThis class provides three methods for doing quaternion interpolation: lerp, slerp, and squad.\n\nlerp (linear interpolation): the interpolation curve gives a straight line in quaternion\nspace. It is simple and fast to compute. The only problem is that it does not provide\nconstant angular velocity. Note that a constant velocity is not necessarily a requirement\nfor a curve;\nslerp (spherical linear interpolation): the interpolation curve forms a great arc on the\nquaternion unit sphere. Slerp provides constant angular velocity;\nsquad (spherical spline interpolation): interpolating between a series of rotations using\nslerp leads to the following problems:\n- the curve is not smooth at the control points;\n- the angular velocity is not constant;\n- the angular velocity is not continuous at the control points.\n\nSince squad is continuously differentiable, it remedies the first and third problems\nmentioned above.\nThe slerp method provided here is intended for interpolation of principal rotations.\nIt treats +q and -q as the same principal rotation and is at liberty to use the negative\nof either input. The resulting path is always the shorter arc.\n\nThe lerp method provided here interpolates strictly in quaternion space. Note that the\nresulting path may pass through the origin if interpolating between a quaternion and its\nexact negative.\n\nAs an example, consider the following quaternions:\n\nq1 = (0.6, 0.8, 0.0, 0.0),\nq2 = (0.0, 0.6, 0.8, 0.0),\nq3 = (0.6, 0.0, 0.8, 0.0), and\nq4 = (-0.8, 0.0, -0.6, 0.0).\nFor the point p = (1.0, 1.0, 1.0), the following figures show the trajectories of p\nusing lerp, slerp, and squad.\n",
+											"id": 140736987699360,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Quaternion",
+											"scope": {
+												"name": "Quaternion"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "stappler::geom::Quaternion const",
+						"cv_qualifier": "const",
+						"kind": "cv_qualified",
+						"type": {
+							"_typeName": "stappler::geom::Quaternion",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::geom::Quaternion",
+								"objects": [{
+									"_fullName": "::stappler::geom::Quaternion",
+									"_kind": "class",
+									"_name": "Quaternion",
+									"class_kind": "class",
+									"comment": "\nDefines a 4-element quaternion that represents the orientation of an object in space.\n\nQuaternions are typically used as a replacement for euler angles and rotation matrices\nas a way to achieve smooth interpolation and avoid gimbal lock.\n\nNote that this quaternion class does not automatically keep the quaternion normalized.\nTherefore, care must be taken to normalize the quaternion when necessary, by calling\nthe normalize method.\nThis class provides three methods for doing quaternion interpolation: lerp, slerp, and squad.\n\nlerp (linear interpolation): the interpolation curve gives a straight line in quaternion\nspace. It is simple and fast to compute. The only problem is that it does not provide\nconstant angular velocity. Note that a constant velocity is not necessarily a requirement\nfor a curve;\nslerp (spherical linear interpolation): the interpolation curve forms a great arc on the\nquaternion unit sphere. Slerp provides constant angular velocity;\nsquad (spherical spline interpolation): interpolating between a series of rotations using\nslerp leads to the following problems:\n- the curve is not smooth at the control points;\n- the angular velocity is not constant;\n- the angular velocity is not continuous at the control points.\n\nSince squad is continuously differentiable, it remedies the first and third problems\nmentioned above.\nThe slerp method provided here is intended for interpolation of principal rotations.\nIt treats +q and -q as the same principal rotation and is at liberty to use the negative\nof either input. The resulting path is always the shorter arc.\n\nThe lerp method provided here interpolates strictly in quaternion space. Note that the\nresulting path may pass through the origin if interpolating between a quaternion and its\nexact negative.\n\nAs an example, consider the following quaternions:\n\nq1 = (0.6, 0.8, 0.0, 0.0),\nq2 = (0.0, 0.6, 0.8, 0.0),\nq3 = (0.6, 0.0, 0.8, 0.0), and\nq4 = (-0.8, 0.0, -0.6, 0.0).\nFor the point p = (1.0, 1.0, 1.0), the following figures show the trajectories of p\nusing lerp, slerp, and squad.\n",
+									"id": 140736987699360,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "Quaternion",
+									"scope": {
+										"name": "Quaternion"
+									},
+									"semantic_scope": ""
+								}]
+							}
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::geom::Quaternion const&) const"
+				}, {
+					"_fullName": "::stappler::geom::Quaternion::operator*(stappler::geom::Vec3 const&) const",
+					"_kind": "member function",
+					"_name": "operator*",
+					"body_kind": "definition",
+					"cv_qualifier": "const",
+					"id": 93825001906096,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "operator*",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "v",
+						"id": 93825000279520,
+						"kind": "function parameter",
+						"name": "v",
+						"type": {
+							"_typeName": "stappler::geom::Vec3 const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::Vec3 const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::geom::Vec3",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::geom::Vec3",
+										"objects": [{
+											"_fullName": "::stappler::geom::Vec3",
+											"_kind": "class",
+											"_name": "Vec3",
+											"class_kind": "class",
+											"id": 140737121911296,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Vec3",
+											"scope": {
+												"name": "Vec3"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "stappler::geom::Vec3",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::geom::Vec3",
+							"objects": [{
+								"_fullName": "::stappler::geom::Vec3",
+								"_kind": "class",
+								"_name": "Vec3",
+								"class_kind": "class",
+								"id": 140737121911296,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_final": false,
+								"kind": "class",
+								"name": "Vec3",
+								"scope": {
+									"name": "Vec3"
+								},
+								"semantic_scope": ""
+							}]
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::geom::Vec3 const&) const"
+				}, {
+					"_fullName": "::stappler::geom::Quaternion::operator*=(stappler::geom::Quaternion const&)",
+					"_kind": "member function",
+					"_name": "operator*=",
+					"body_kind": "definition",
+					"cv_qualifier": "none",
+					"id": 93825012480272,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "operator*=",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "q",
+						"id": 93824999450592,
+						"kind": "function parameter",
+						"name": "q",
+						"type": {
+							"_typeName": "stappler::geom::Quaternion const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::Quaternion const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::geom::Quaternion",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::geom::Quaternion",
+										"objects": [{
+											"_fullName": "::stappler::geom::Quaternion",
+											"_kind": "class",
+											"_name": "Quaternion",
+											"class_kind": "class",
+											"comment": "\nDefines a 4-element quaternion that represents the orientation of an object in space.\n\nQuaternions are typically used as a replacement for euler angles and rotation matrices\nas a way to achieve smooth interpolation and avoid gimbal lock.\n\nNote that this quaternion class does not automatically keep the quaternion normalized.\nTherefore, care must be taken to normalize the quaternion when necessary, by calling\nthe normalize method.\nThis class provides three methods for doing quaternion interpolation: lerp, slerp, and squad.\n\nlerp (linear interpolation): the interpolation curve gives a straight line in quaternion\nspace. It is simple and fast to compute. The only problem is that it does not provide\nconstant angular velocity. Note that a constant velocity is not necessarily a requirement\nfor a curve;\nslerp (spherical linear interpolation): the interpolation curve forms a great arc on the\nquaternion unit sphere. Slerp provides constant angular velocity;\nsquad (spherical spline interpolation): interpolating between a series of rotations using\nslerp leads to the following problems:\n- the curve is not smooth at the control points;\n- the angular velocity is not constant;\n- the angular velocity is not continuous at the control points.\n\nSince squad is continuously differentiable, it remedies the first and third problems\nmentioned above.\nThe slerp method provided here is intended for interpolation of principal rotations.\nIt treats +q and -q as the same principal rotation and is at liberty to use the negative\nof either input. The resulting path is always the shorter arc.\n\nThe lerp method provided here interpolates strictly in quaternion space. Note that the\nresulting path may pass through the origin if interpolating between a quaternion and its\nexact negative.\n\nAs an example, consider the following quaternions:\n\nq1 = (0.6, 0.8, 0.0, 0.0),\nq2 = (0.0, 0.6, 0.8, 0.0),\nq3 = (0.6, 0.0, 0.8, 0.0), and\nq4 = (-0.8, 0.0, -0.6, 0.0).\nFor the point p = (1.0, 1.0, 1.0), the following figures show the trajectories of p\nusing lerp, slerp, and squad.\n",
+											"id": 140736987699360,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Quaternion",
+											"scope": {
+												"name": "Quaternion"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "stappler::geom::Quaternion&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::geom::Quaternion",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::geom::Quaternion",
+								"objects": [{
+									"_fullName": "::stappler::geom::Quaternion",
+									"_kind": "class",
+									"_name": "Quaternion",
+									"class_kind": "class",
+									"comment": "\nDefines a 4-element quaternion that represents the orientation of an object in space.\n\nQuaternions are typically used as a replacement for euler angles and rotation matrices\nas a way to achieve smooth interpolation and avoid gimbal lock.\n\nNote that this quaternion class does not automatically keep the quaternion normalized.\nTherefore, care must be taken to normalize the quaternion when necessary, by calling\nthe normalize method.\nThis class provides three methods for doing quaternion interpolation: lerp, slerp, and squad.\n\nlerp (linear interpolation): the interpolation curve gives a straight line in quaternion\nspace. It is simple and fast to compute. The only problem is that it does not provide\nconstant angular velocity. Note that a constant velocity is not necessarily a requirement\nfor a curve;\nslerp (spherical linear interpolation): the interpolation curve forms a great arc on the\nquaternion unit sphere. Slerp provides constant angular velocity;\nsquad (spherical spline interpolation): interpolating between a series of rotations using\nslerp leads to the following problems:\n- the curve is not smooth at the control points;\n- the angular velocity is not constant;\n- the angular velocity is not continuous at the control points.\n\nSince squad is continuously differentiable, it remedies the first and third problems\nmentioned above.\nThe slerp method provided here is intended for interpolation of principal rotations.\nIt treats +q and -q as the same principal rotation and is at liberty to use the negative\nof either input. The resulting path is always the shorter arc.\n\nThe lerp method provided here interpolates strictly in quaternion space. Note that the\nresulting path may pass through the origin if interpolating between a quaternion and its\nexact negative.\n\nAs an example, consider the following quaternions:\n\nq1 = (0.6, 0.8, 0.0, 0.0),\nq2 = (0.0, 0.6, 0.8, 0.0),\nq3 = (0.6, 0.0, 0.8, 0.0), and\nq4 = (-0.8, 0.0, -0.6, 0.0).\nFor the point p = (1.0, 1.0, 1.0), the following figures show the trajectories of p\nusing lerp, slerp, and squad.\n",
+									"id": 140736987699360,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "Quaternion",
+									"scope": {
+										"name": "Quaternion"
+									},
+									"semantic_scope": ""
+								}]
+							}
+						},
+						"reference_kind": "lvalue"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::geom::Quaternion const&)"
+				}, {
+					"_fullName": "::stappler::geom::Quaternion::IDENTITY",
+					"_kind": "variable",
+					"_name": "IDENTITY",
+					"id": 140737107742784,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"kind": "variable",
+					"name": "IDENTITY",
+					"semantic_scope": "",
+					"storage_class": [
+						"static"
+					],
+					"type":  {
+						"_typeName": "stappler::geom::Quaternion const",
+						"cv_qualifier": "const",
+						"kind": "cv_qualified",
+						"type": {
+							"_typeName": "stappler::geom::Quaternion",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::geom::Quaternion",
+								"objects": [{
+									"_fullName": "::stappler::geom::Quaternion",
+									"_kind": "class",
+									"_name": "Quaternion",
+									"class_kind": "class",
+									"comment": "\nDefines a 4-element quaternion that represents the orientation of an object in space.\n\nQuaternions are typically used as a replacement for euler angles and rotation matrices\nas a way to achieve smooth interpolation and avoid gimbal lock.\n\nNote that this quaternion class does not automatically keep the quaternion normalized.\nTherefore, care must be taken to normalize the quaternion when necessary, by calling\nthe normalize method.\nThis class provides three methods for doing quaternion interpolation: lerp, slerp, and squad.\n\nlerp (linear interpolation): the interpolation curve gives a straight line in quaternion\nspace. It is simple and fast to compute. The only problem is that it does not provide\nconstant angular velocity. Note that a constant velocity is not necessarily a requirement\nfor a curve;\nslerp (spherical linear interpolation): the interpolation curve forms a great arc on the\nquaternion unit sphere. Slerp provides constant angular velocity;\nsquad (spherical spline interpolation): interpolating between a series of rotations using\nslerp leads to the following problems:\n- the curve is not smooth at the control points;\n- the angular velocity is not constant;\n- the angular velocity is not continuous at the control points.\n\nSince squad is continuously differentiable, it remedies the first and third problems\nmentioned above.\nThe slerp method provided here is intended for interpolation of principal rotations.\nIt treats +q and -q as the same principal rotation and is at liberty to use the negative\nof either input. The resulting path is always the shorter arc.\n\nThe lerp method provided here interpolates strictly in quaternion space. Note that the\nresulting path may pass through the origin if interpolating between a quaternion and its\nexact negative.\n\nAs an example, consider the following quaternions:\n\nq1 = (0.6, 0.8, 0.0, 0.0),\nq2 = (0.0, 0.6, 0.8, 0.0),\nq3 = (0.6, 0.0, 0.8, 0.0), and\nq4 = (-0.8, 0.0, -0.6, 0.0).\nFor the point p = (1.0, 1.0, 1.0), the following figures show the trajectories of p\nusing lerp, slerp, and squad.\n",
+									"id": 140736987699360,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "Quaternion",
+									"scope": {
+										"name": "Quaternion"
+									},
+									"semantic_scope": ""
+								}]
+							}
+						}
+					}
+				}, {
+					"_fullName": "::stappler::geom::Quaternion::ZERO",
+					"_kind": "variable",
+					"_name": "ZERO",
+					"id": 140737088626576,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"kind": "variable",
+					"name": "ZERO",
+					"semantic_scope": "",
+					"storage_class": [
+						"static"
+					],
+					"type":  {
+						"_typeName": "stappler::geom::Quaternion const",
+						"cv_qualifier": "const",
+						"kind": "cv_qualified",
+						"type": {
+							"_typeName": "stappler::geom::Quaternion",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::geom::Quaternion",
+								"objects": [{
+									"_fullName": "::stappler::geom::Quaternion",
+									"_kind": "class",
+									"_name": "Quaternion",
+									"class_kind": "class",
+									"comment": "\nDefines a 4-element quaternion that represents the orientation of an object in space.\n\nQuaternions are typically used as a replacement for euler angles and rotation matrices\nas a way to achieve smooth interpolation and avoid gimbal lock.\n\nNote that this quaternion class does not automatically keep the quaternion normalized.\nTherefore, care must be taken to normalize the quaternion when necessary, by calling\nthe normalize method.\nThis class provides three methods for doing quaternion interpolation: lerp, slerp, and squad.\n\nlerp (linear interpolation): the interpolation curve gives a straight line in quaternion\nspace. It is simple and fast to compute. The only problem is that it does not provide\nconstant angular velocity. Note that a constant velocity is not necessarily a requirement\nfor a curve;\nslerp (spherical linear interpolation): the interpolation curve forms a great arc on the\nquaternion unit sphere. Slerp provides constant angular velocity;\nsquad (spherical spline interpolation): interpolating between a series of rotations using\nslerp leads to the following problems:\n- the curve is not smooth at the control points;\n- the angular velocity is not constant;\n- the angular velocity is not continuous at the control points.\n\nSince squad is continuously differentiable, it remedies the first and third problems\nmentioned above.\nThe slerp method provided here is intended for interpolation of principal rotations.\nIt treats +q and -q as the same principal rotation and is at liberty to use the negative\nof either input. The resulting path is always the shorter arc.\n\nThe lerp method provided here interpolates strictly in quaternion space. Note that the\nresulting path may pass through the origin if interpolating between a quaternion and its\nexact negative.\n\nAs an example, consider the following quaternions:\n\nq1 = (0.6, 0.8, 0.0, 0.0),\nq2 = (0.0, 0.6, 0.8, 0.0),\nq3 = (0.6, 0.0, 0.8, 0.0), and\nq4 = (-0.8, 0.0, -0.6, 0.0).\nFor the point p = (1.0, 1.0, 1.0), the following figures show the trajectories of p\nusing lerp, slerp, and squad.\n",
+									"id": 140736987699360,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "Quaternion",
+									"scope": {
+										"name": "Quaternion"
+									},
+									"semantic_scope": ""
+								}]
+							}
+						}
+					}
+				}],
+				"class_kind": "class",
+				"comment": "\nDefines a 4-element quaternion that represents the orientation of an object in space.\n\nQuaternions are typically used as a replacement for euler angles and rotation matrices\nas a way to achieve smooth interpolation and avoid gimbal lock.\n\nNote that this quaternion class does not automatically keep the quaternion normalized.\nTherefore, care must be taken to normalize the quaternion when necessary, by calling\nthe normalize method.\nThis class provides three methods for doing quaternion interpolation: lerp, slerp, and squad.\n\nlerp (linear interpolation): the interpolation curve gives a straight line in quaternion\nspace. It is simple and fast to compute. The only problem is that it does not provide\nconstant angular velocity. Note that a constant velocity is not necessarily a requirement\nfor a curve;\nslerp (spherical linear interpolation): the interpolation curve forms a great arc on the\nquaternion unit sphere. Slerp provides constant angular velocity;\nsquad (spherical spline interpolation): interpolating between a series of rotations using\nslerp leads to the following problems:\n- the curve is not smooth at the control points;\n- the angular velocity is not constant;\n- the angular velocity is not continuous at the control points.\n\nSince squad is continuously differentiable, it remedies the first and third problems\nmentioned above.\nThe slerp method provided here is intended for interpolation of principal rotations.\nIt treats +q and -q as the same principal rotation and is at liberty to use the negative\nof either input. The resulting path is always the shorter arc.\n\nThe lerp method provided here interpolates strictly in quaternion space. Note that the\nresulting path may pass through the origin if interpolating between a quaternion and its\nexact negative.\n\nAs an example, consider the following quaternions:\n\nq1 = (0.6, 0.8, 0.0, 0.0),\nq2 = (0.0, 0.6, 0.8, 0.0),\nq3 = (0.6, 0.0, 0.8, 0.0), and\nq4 = (-0.8, 0.0, -0.6, 0.0).\nFor the point p = (1.0, 1.0, 1.0), the following figures show the trajectories of p\nusing lerp, slerp, and squad.\n",
+				"id": 140736987699360,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_final": false,
+				"kind": "class",
+				"name": "Quaternion",
+				"scope": {
+					"name": "Quaternion"
+				},
+				"semantic_scope": ""
+			}, {
+				"_fullName": "::stappler::geom::IDENTITY",
+				"_kind": "variable",
+				"_name": "IDENTITY",
+				"id": 140737095614416,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"kind": "variable",
+				"name": "IDENTITY",
+				"semantic_parent": {
+					"name": "Quaternion::",
+					"objects": [{
+						"_fullName": "::stappler::geom::Quaternion",
+						"_kind": "class",
+						"_name": "Quaternion",
+						"class_kind": "class",
+						"comment": "\nDefines a 4-element quaternion that represents the orientation of an object in space.\n\nQuaternions are typically used as a replacement for euler angles and rotation matrices\nas a way to achieve smooth interpolation and avoid gimbal lock.\n\nNote that this quaternion class does not automatically keep the quaternion normalized.\nTherefore, care must be taken to normalize the quaternion when necessary, by calling\nthe normalize method.\nThis class provides three methods for doing quaternion interpolation: lerp, slerp, and squad.\n\nlerp (linear interpolation): the interpolation curve gives a straight line in quaternion\nspace. It is simple and fast to compute. The only problem is that it does not provide\nconstant angular velocity. Note that a constant velocity is not necessarily a requirement\nfor a curve;\nslerp (spherical linear interpolation): the interpolation curve forms a great arc on the\nquaternion unit sphere. Slerp provides constant angular velocity;\nsquad (spherical spline interpolation): interpolating between a series of rotations using\nslerp leads to the following problems:\n- the curve is not smooth at the control points;\n- the angular velocity is not constant;\n- the angular velocity is not continuous at the control points.\n\nSince squad is continuously differentiable, it remedies the first and third problems\nmentioned above.\nThe slerp method provided here is intended for interpolation of principal rotations.\nIt treats +q and -q as the same principal rotation and is at liberty to use the negative\nof either input. The resulting path is always the shorter arc.\n\nThe lerp method provided here interpolates strictly in quaternion space. Note that the\nresulting path may pass through the origin if interpolating between a quaternion and its\nexact negative.\n\nAs an example, consider the following quaternions:\n\nq1 = (0.6, 0.8, 0.0, 0.0),\nq2 = (0.0, 0.6, 0.8, 0.0),\nq3 = (0.6, 0.0, 0.8, 0.0), and\nq4 = (-0.8, 0.0, -0.6, 0.0).\nFor the point p = (1.0, 1.0, 1.0), the following figures show the trajectories of p\nusing lerp, slerp, and squad.\n",
+						"id": 140736987699360,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_final": false,
+						"kind": "class",
+						"name": "Quaternion",
+						"scope": {
+							"name": "Quaternion"
+						},
+						"semantic_scope": ""
+					}]
+				},
+				"semantic_scope": "Quaternion::",
+				"type": {
+					"_typeName": "stappler::geom::Quaternion const",
+					"cv_qualifier": "const",
+					"kind": "cv_qualified",
+					"type": {
+						"_typeName": "stappler::geom::Quaternion",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::geom::Quaternion",
+							"objects": [{
+								"_fullName": "::stappler::geom::Quaternion",
+								"_kind": "class",
+								"_name": "Quaternion",
+								"class_kind": "class",
+								"comment": "\nDefines a 4-element quaternion that represents the orientation of an object in space.\n\nQuaternions are typically used as a replacement for euler angles and rotation matrices\nas a way to achieve smooth interpolation and avoid gimbal lock.\n\nNote that this quaternion class does not automatically keep the quaternion normalized.\nTherefore, care must be taken to normalize the quaternion when necessary, by calling\nthe normalize method.\nThis class provides three methods for doing quaternion interpolation: lerp, slerp, and squad.\n\nlerp (linear interpolation): the interpolation curve gives a straight line in quaternion\nspace. It is simple and fast to compute. The only problem is that it does not provide\nconstant angular velocity. Note that a constant velocity is not necessarily a requirement\nfor a curve;\nslerp (spherical linear interpolation): the interpolation curve forms a great arc on the\nquaternion unit sphere. Slerp provides constant angular velocity;\nsquad (spherical spline interpolation): interpolating between a series of rotations using\nslerp leads to the following problems:\n- the curve is not smooth at the control points;\n- the angular velocity is not constant;\n- the angular velocity is not continuous at the control points.\n\nSince squad is continuously differentiable, it remedies the first and third problems\nmentioned above.\nThe slerp method provided here is intended for interpolation of principal rotations.\nIt treats +q and -q as the same principal rotation and is at liberty to use the negative\nof either input. The resulting path is always the shorter arc.\n\nThe lerp method provided here interpolates strictly in quaternion space. Note that the\nresulting path may pass through the origin if interpolating between a quaternion and its\nexact negative.\n\nAs an example, consider the following quaternions:\n\nq1 = (0.6, 0.8, 0.0, 0.0),\nq2 = (0.0, 0.6, 0.8, 0.0),\nq3 = (0.6, 0.0, 0.8, 0.0), and\nq4 = (-0.8, 0.0, -0.6, 0.0).\nFor the point p = (1.0, 1.0, 1.0), the following figures show the trajectories of p\nusing lerp, slerp, and squad.\n",
+								"id": 140736987699360,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_final": false,
+								"kind": "class",
+								"name": "Quaternion",
+								"scope": {
+									"name": "Quaternion"
+								},
+								"semantic_scope": ""
+							}]
+						}
+					}
+				}
+			}, {
+				"_fullName": "::stappler::geom::ZERO",
+				"_kind": "variable",
+				"_name": "ZERO",
+				"id": 140737107046912,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"kind": "variable",
+				"name": "ZERO",
+				"semantic_parent": {
+					"name": "Quaternion::",
+					"objects": [{
+						"_fullName": "::stappler::geom::Quaternion",
+						"_kind": "class",
+						"_name": "Quaternion",
+						"class_kind": "class",
+						"comment": "\nDefines a 4-element quaternion that represents the orientation of an object in space.\n\nQuaternions are typically used as a replacement for euler angles and rotation matrices\nas a way to achieve smooth interpolation and avoid gimbal lock.\n\nNote that this quaternion class does not automatically keep the quaternion normalized.\nTherefore, care must be taken to normalize the quaternion when necessary, by calling\nthe normalize method.\nThis class provides three methods for doing quaternion interpolation: lerp, slerp, and squad.\n\nlerp (linear interpolation): the interpolation curve gives a straight line in quaternion\nspace. It is simple and fast to compute. The only problem is that it does not provide\nconstant angular velocity. Note that a constant velocity is not necessarily a requirement\nfor a curve;\nslerp (spherical linear interpolation): the interpolation curve forms a great arc on the\nquaternion unit sphere. Slerp provides constant angular velocity;\nsquad (spherical spline interpolation): interpolating between a series of rotations using\nslerp leads to the following problems:\n- the curve is not smooth at the control points;\n- the angular velocity is not constant;\n- the angular velocity is not continuous at the control points.\n\nSince squad is continuously differentiable, it remedies the first and third problems\nmentioned above.\nThe slerp method provided here is intended for interpolation of principal rotations.\nIt treats +q and -q as the same principal rotation and is at liberty to use the negative\nof either input. The resulting path is always the shorter arc.\n\nThe lerp method provided here interpolates strictly in quaternion space. Note that the\nresulting path may pass through the origin if interpolating between a quaternion and its\nexact negative.\n\nAs an example, consider the following quaternions:\n\nq1 = (0.6, 0.8, 0.0, 0.0),\nq2 = (0.0, 0.6, 0.8, 0.0),\nq3 = (0.6, 0.0, 0.8, 0.0), and\nq4 = (-0.8, 0.0, -0.6, 0.0).\nFor the point p = (1.0, 1.0, 1.0), the following figures show the trajectories of p\nusing lerp, slerp, and squad.\n",
+						"id": 140736987699360,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_final": false,
+						"kind": "class",
+						"name": "Quaternion",
+						"scope": {
+							"name": "Quaternion"
+						},
+						"semantic_scope": ""
+					}]
+				},
+				"semantic_scope": "Quaternion::",
+				"type": {
+					"_typeName": "stappler::geom::Quaternion const",
+					"cv_qualifier": "const",
+					"kind": "cv_qualified",
+					"type": {
+						"_typeName": "stappler::geom::Quaternion",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::geom::Quaternion",
+							"objects": [{
+								"_fullName": "::stappler::geom::Quaternion",
+								"_kind": "class",
+								"_name": "Quaternion",
+								"class_kind": "class",
+								"comment": "\nDefines a 4-element quaternion that represents the orientation of an object in space.\n\nQuaternions are typically used as a replacement for euler angles and rotation matrices\nas a way to achieve smooth interpolation and avoid gimbal lock.\n\nNote that this quaternion class does not automatically keep the quaternion normalized.\nTherefore, care must be taken to normalize the quaternion when necessary, by calling\nthe normalize method.\nThis class provides three methods for doing quaternion interpolation: lerp, slerp, and squad.\n\nlerp (linear interpolation): the interpolation curve gives a straight line in quaternion\nspace. It is simple and fast to compute. The only problem is that it does not provide\nconstant angular velocity. Note that a constant velocity is not necessarily a requirement\nfor a curve;\nslerp (spherical linear interpolation): the interpolation curve forms a great arc on the\nquaternion unit sphere. Slerp provides constant angular velocity;\nsquad (spherical spline interpolation): interpolating between a series of rotations using\nslerp leads to the following problems:\n- the curve is not smooth at the control points;\n- the angular velocity is not constant;\n- the angular velocity is not continuous at the control points.\n\nSince squad is continuously differentiable, it remedies the first and third problems\nmentioned above.\nThe slerp method provided here is intended for interpolation of principal rotations.\nIt treats +q and -q as the same principal rotation and is at liberty to use the negative\nof either input. The resulting path is always the shorter arc.\n\nThe lerp method provided here interpolates strictly in quaternion space. Note that the\nresulting path may pass through the origin if interpolating between a quaternion and its\nexact negative.\n\nAs an example, consider the following quaternions:\n\nq1 = (0.6, 0.8, 0.0, 0.0),\nq2 = (0.0, 0.6, 0.8, 0.0),\nq3 = (0.6, 0.0, 0.8, 0.0), and\nq4 = (-0.8, 0.0, -0.6, 0.0).\nFor the point p = (1.0, 1.0, 1.0), the following figures show the trajectories of p\nusing lerp, slerp, and squad.\n",
+								"id": 140736987699360,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_final": false,
+								"kind": "class",
+								"name": "Quaternion",
+								"scope": {
+									"name": "Quaternion"
+								},
+								"semantic_scope": ""
+							}]
+						}
+					}
+				}
+			}],
+			"id": 140737095477712,
+			"is_anonymous": false,
+			"is_inline": false,
+			"is_nested": true,
+			"kind": "namespace",
+			"name": "geom",
+			"scope": {
+				"name": "geom"
+			}
+		}],
+		"id": 140737128815504,
+		"is_anonymous": false,
+		"is_inline": false,
+		"is_nested": false,
+		"kind": "namespace",
+		"name": "stappler",
+		"scope": {
+			"name": "stappler"
+		}
+	}],
+	"id": 140737092238240,
+	"kind": "file",
+	"name": "/home/sbkarr/stappler/xenolith/libstappler/modules/geom/SPQuaternion.h",
+	"unmatched_comments": [{
+		"line": 21,
+		"text": "\nCopyright 2013 BlackBerry Inc.\nCopyright (c) 2014-2015 Chukong Technologies\nCopyright (c) 2017-2022 Roman Katuntsev <sbkarr@stappler.org>\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\nhttp://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n\nOriginal file from GamePlay3D: http://gameplay3d.org\n\nThis file was modified to fit the cocos2d-x project\n"
+	}]
+}

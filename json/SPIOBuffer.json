@@ -1,0 +1,1571 @@
+{
+	"_kind": "file",
+	"_name": "/home/sbkarr/stappler/xenolith/libstappler/common/io/SPIOBuffer.h",
+	"childs": [{
+		"_kind": "include directive",
+		"_name": "SPIOCommon.h",
+		"id": 140737110618944,
+		"include": "/home/sbkarr/stappler/xenolith/libstappler/common/io/SPIOCommon.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "SPIOCommon.h"
+	}, {
+		"_fullName": "LIBSTAPPLER_COMMON_IO_SPIOBUFFER_H_",
+		"_kind": "macro definition",
+		"_name": "LIBSTAPPLER_COMMON_IO_SPIOBUFFER_H_",
+		"id": 140737108029552,
+		"is_function_like": false,
+		"is_object_like": true,
+		"is_variadic": false,
+		"kind": "macro definition",
+		"name": "LIBSTAPPLER_COMMON_IO_SPIOBUFFER_H_",
+		"replacement": ""
+	}, {
+		"_fullName": "::stappler",
+		"_kind": "namespace",
+		"_name": "stappler",
+		"childs": [{
+			"_fullName": "::stappler::io",
+			"_kind": "namespace",
+			"_name": "io",
+			"childs": [{
+				"_fullName": "::stappler::io::Buffer",
+				"_kind": "class",
+				"_name": "Buffer",
+				"childs": [{
+					"_fullName": "::stappler::io::Buffer::Buffer<typename,typename>(T&)",
+					"_kind": "function template",
+					"_name": "Buffer",
+					"childs": [{
+						"_fullName": "::stappler::io::Buffer::Buffer<typename,typename>(T&)",
+						"_kind": "constructor",
+						"_name": "Buffer",
+						"body_kind": "declaration",
+						"id": 140737115384832,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_explicit": false,
+						"is_variadic": false,
+						"kind": "constructor",
+						"name": "Buffer",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "t",
+							"id": 140737122424112,
+							"kind": "function parameter",
+							"name": "t",
+							"type": {
+								"_typeName": "T&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "T",
+									"entity": {
+										"name": "T",
+										"objects": [{
+											"_kind": "template type parameter",
+											"_name": "T",
+											"id": 140737123604464,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "T"
+										}]
+									},
+									"kind": "template_parameter"
+								},
+								"reference_kind": "lvalue"
+							}
+						}],
+						"semantic_scope": "",
+						"signature": "(T&)"
+					}],
+					"function":  {
+						"_fullName": "::stappler::io::Buffer::Buffer<typename,typename>(T&)",
+						"_kind": "constructor",
+						"_name": "Buffer",
+						"body_kind": "declaration",
+						"id": 140737115384832,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_explicit": false,
+						"is_variadic": false,
+						"kind": "constructor",
+						"name": "Buffer",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "t",
+							"id": 140737122424112,
+							"kind": "function parameter",
+							"name": "t",
+							"type": {
+								"_typeName": "T&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "T",
+									"entity": {
+										"name": "T",
+										"objects": [{
+											"_kind": "template type parameter",
+											"_name": "T",
+											"id": 140737123604464,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "T"
+										}]
+									},
+									"kind": "template_parameter"
+								},
+								"reference_kind": "lvalue"
+							}
+						}],
+						"semantic_scope": "",
+						"signature": "(T&)"
+					},
+					"id": 140737148062592,
+					"kind": "function template",
+					"name": "Buffer",
+					"parameters": [{
+						"_kind": "template type parameter",
+						"_name": "T",
+						"id": 140737123604464,
+						"is_variadic": false,
+						"keyword": "typename",
+						"kind": "template type parameter",
+						"name": "T"
+					}, {
+						"_kind": "template type parameter",
+						"_name": "Traits",
+						"default_type": {
+							"_typeName": "BufferTraits<T>>",
+							"kind": "unexposed",
+							"name": "BufferTraits<T>>"
+						},
+						"id": 140737099308704,
+						"is_variadic": false,
+						"keyword": "typename",
+						"kind": "template type parameter",
+						"name": "Traits"
+					}]
+				}, {
+					"_fullName": "::stappler::io::Buffer::prepare(size_t&) const",
+					"_kind": "member function",
+					"_name": "prepare",
+					"body_kind": "declaration",
+					"cv_qualifier": "const",
+					"id": 140737107046192,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "prepare",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "size",
+						"id": 140737115536624,
+						"kind": "function parameter",
+						"name": "size",
+						"type": {
+							"_typeName": "size_t&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "size_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "size_t"
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "uint8_t*",
+						"kind": "pointer",
+						"pointee": {
+							"_typeName": "uint8_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "uint8_t"
+							}
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(size_t&) const"
+				}, {
+					"_fullName": "::stappler::io::Buffer::save(uint8_t*,size_t,size_t) const",
+					"_kind": "member function",
+					"_name": "save",
+					"body_kind": "declaration",
+					"cv_qualifier": "const",
+					"id": 140737132052752,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "save",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 140737107090480,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "uint8_t*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "uint8_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "uint8_t"
+								}
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "source",
+						"id": 140737098017936,
+						"kind": "function parameter",
+						"name": "source",
+						"type": {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "nbytes",
+						"id": 140736985619072,
+						"kind": "function parameter",
+						"name": "nbytes",
+						"type": {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(uint8_t*,size_t,size_t) const"
+				}, {
+					"_fullName": "::stappler::io::Buffer::capacity() const",
+					"_kind": "member function",
+					"_name": "capacity",
+					"body_kind": "declaration",
+					"cv_qualifier": "const",
+					"id": 140737095635648,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "capacity",
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "size_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "size_t"
+						}
+					},
+					"semantic_scope": "",
+					"signature": "() const"
+				}, {
+					"_fullName": "::stappler::io::Buffer::size() const",
+					"_kind": "member function",
+					"_name": "size",
+					"body_kind": "declaration",
+					"cv_qualifier": "const",
+					"id": 140737101975952,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "size",
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "size_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "size_t"
+						}
+					},
+					"semantic_scope": "",
+					"signature": "() const"
+				}, {
+					"_fullName": "::stappler::io::Buffer::data() const",
+					"_kind": "member function",
+					"_name": "data",
+					"body_kind": "declaration",
+					"cv_qualifier": "const",
+					"id": 93824997665824,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "data",
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "uint8_t*",
+						"kind": "pointer",
+						"pointee": {
+							"_typeName": "uint8_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "uint8_t"
+							}
+						}
+					},
+					"semantic_scope": "",
+					"signature": "() const"
+				}, {
+					"_fullName": "::stappler::io::Buffer::clear() const",
+					"_kind": "member function",
+					"_name": "clear",
+					"body_kind": "declaration",
+					"cv_qualifier": "const",
+					"id": 93824999489136,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "clear",
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "() const"
+				}, {
+					"_fullName": "::stappler::io::Buffer::ptr",
+					"_kind": "member variable",
+					"_name": "ptr",
+					"default_value": {
+						"expression": [{
+							"kind": "keyword",
+							"spelling": "nullptr"
+						}],
+						"kind": "unexposed",
+						"type": {
+							"_typeName": "void*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "void",
+								"builtin_type_kind": "void",
+								"kind": "builtin"
+							}
+						}
+					},
+					"id": 140737148062752,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "ptr",
+					"type": {
+						"_typeName": "void*",
+						"kind": "pointer",
+						"pointee": {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						}
+					}
+				}, {
+					"_fullName": "::stappler::io::Buffer::prepare_ptr",
+					"_kind": "member variable",
+					"_name": "prepare_ptr",
+					"default_value": {
+						"expression": [{
+							"kind": "keyword",
+							"spelling": "nullptr"
+						}],
+						"kind": "unexposed",
+						"type": {
+							"_typeName": "stappler::io::prepare_fn",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::io::prepare_fn",
+								"objects": [{
+									"_fullName": "::stappler::io::prepare_fn",
+									"_kind": "type alias",
+									"_name": "prepare_fn",
+									"id": 93825000248848,
+									"kind": "type alias",
+									"name": "prepare_fn",
+									"underlying_type": {
+										"_typeName": "uint8_t*(*)(void*,size_t&)",
+										"kind": "pointer",
+										"pointee": {
+											"_typeName": "uint8_t*(void*,size_t&)",
+											"is_variadic": false,
+											"kind": "function",
+											"parameter_types": [{
+												"_typeName": "void*",
+												"kind": "pointer",
+												"pointee": {
+													"_typeName": "void",
+													"builtin_type_kind": "void",
+													"kind": "builtin"
+												}
+											}, {
+												"_typeName": "size_t&",
+												"kind": "reference",
+												"referee": {
+													"_typeName": "size_t",
+													"kind": "user_defined",
+													"target": {
+														"name": "size_t"
+													}
+												},
+												"reference_kind": "lvalue"
+											}],
+											"return_type":  {
+												"_typeName": "uint8_t*",
+												"kind": "pointer",
+												"pointee": {
+													"_typeName": "uint8_t",
+													"kind": "user_defined",
+													"target": {
+														"name": "uint8_t"
+													}
+												}
+											}
+										}
+									}
+								}]
+							}
+						}
+					},
+					"id": 140737098018176,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "prepare_ptr",
+					"type": {
+						"_typeName": "stappler::io::prepare_fn",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::io::prepare_fn",
+							"objects": [{
+								"_fullName": "::stappler::io::prepare_fn",
+								"_kind": "type alias",
+								"_name": "prepare_fn",
+								"id": 93825000248848,
+								"kind": "type alias",
+								"name": "prepare_fn",
+								"underlying_type": {
+									"_typeName": "uint8_t*(*)(void*,size_t&)",
+									"kind": "pointer",
+									"pointee": {
+										"_typeName": "uint8_t*(void*,size_t&)",
+										"is_variadic": false,
+										"kind": "function",
+										"parameter_types": [{
+											"_typeName": "void*",
+											"kind": "pointer",
+											"pointee": {
+												"_typeName": "void",
+												"builtin_type_kind": "void",
+												"kind": "builtin"
+											}
+										}, {
+											"_typeName": "size_t&",
+											"kind": "reference",
+											"referee": {
+												"_typeName": "size_t",
+												"kind": "user_defined",
+												"target": {
+													"name": "size_t"
+												}
+											},
+											"reference_kind": "lvalue"
+										}],
+										"return_type":  {
+											"_typeName": "uint8_t*",
+											"kind": "pointer",
+											"pointee": {
+												"_typeName": "uint8_t",
+												"kind": "user_defined",
+												"target": {
+													"name": "uint8_t"
+												}
+											}
+										}
+									}
+								}
+							}]
+						}
+					}
+				}, {
+					"_fullName": "::stappler::io::Buffer::save_ptr",
+					"_kind": "member variable",
+					"_name": "save_ptr",
+					"default_value": {
+						"expression": [{
+							"kind": "keyword",
+							"spelling": "nullptr"
+						}],
+						"kind": "unexposed",
+						"type": {
+							"_typeName": "stappler::io::save_fn",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::io::save_fn",
+								"objects": [{
+									"_fullName": "::stappler::io::save_fn",
+									"_kind": "type alias",
+									"_name": "save_fn",
+									"id": 93825004984384,
+									"kind": "type alias",
+									"name": "save_fn",
+									"underlying_type": {
+										"_typeName": "void(*)(void*,uint8_t*,size_t,size_t)",
+										"kind": "pointer",
+										"pointee": {
+											"_typeName": "void(void*,uint8_t*,size_t,size_t)",
+											"is_variadic": false,
+											"kind": "function",
+											"parameter_types": [{
+												"_typeName": "void*",
+												"kind": "pointer",
+												"pointee": {
+													"_typeName": "void",
+													"builtin_type_kind": "void",
+													"kind": "builtin"
+												}
+											}, {
+												"_typeName": "uint8_t*",
+												"kind": "pointer",
+												"pointee": {
+													"_typeName": "uint8_t",
+													"kind": "user_defined",
+													"target": {
+														"name": "uint8_t"
+													}
+												}
+											}, {
+												"_typeName": "size_t",
+												"kind": "user_defined",
+												"target": {
+													"name": "size_t"
+												}
+											}, {
+												"_typeName": "size_t",
+												"kind": "user_defined",
+												"target": {
+													"name": "size_t"
+												}
+											}],
+											"return_type":  {
+												"_typeName": "void",
+												"builtin_type_kind": "void",
+												"kind": "builtin"
+											}
+										}
+									}
+								}]
+							}
+						}
+					},
+					"id": 140737110905616,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "save_ptr",
+					"type": {
+						"_typeName": "stappler::io::save_fn",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::io::save_fn",
+							"objects": [{
+								"_fullName": "::stappler::io::save_fn",
+								"_kind": "type alias",
+								"_name": "save_fn",
+								"id": 93825004984384,
+								"kind": "type alias",
+								"name": "save_fn",
+								"underlying_type": {
+									"_typeName": "void(*)(void*,uint8_t*,size_t,size_t)",
+									"kind": "pointer",
+									"pointee": {
+										"_typeName": "void(void*,uint8_t*,size_t,size_t)",
+										"is_variadic": false,
+										"kind": "function",
+										"parameter_types": [{
+											"_typeName": "void*",
+											"kind": "pointer",
+											"pointee": {
+												"_typeName": "void",
+												"builtin_type_kind": "void",
+												"kind": "builtin"
+											}
+										}, {
+											"_typeName": "uint8_t*",
+											"kind": "pointer",
+											"pointee": {
+												"_typeName": "uint8_t",
+												"kind": "user_defined",
+												"target": {
+													"name": "uint8_t"
+												}
+											}
+										}, {
+											"_typeName": "size_t",
+											"kind": "user_defined",
+											"target": {
+												"name": "size_t"
+											}
+										}, {
+											"_typeName": "size_t",
+											"kind": "user_defined",
+											"target": {
+												"name": "size_t"
+											}
+										}],
+										"return_type":  {
+											"_typeName": "void",
+											"builtin_type_kind": "void",
+											"kind": "builtin"
+										}
+									}
+								}
+							}]
+						}
+					}
+				}, {
+					"_fullName": "::stappler::io::Buffer::size_ptr",
+					"_kind": "member variable",
+					"_name": "size_ptr",
+					"default_value": {
+						"expression": [{
+							"kind": "keyword",
+							"spelling": "nullptr"
+						}],
+						"kind": "unexposed",
+						"type": {
+							"_typeName": "stappler::io::size_fn",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::io::size_fn",
+								"objects": [{
+									"_fullName": "::stappler::io::size_fn",
+									"_kind": "type alias",
+									"_name": "size_fn",
+									"id": 140737141796432,
+									"kind": "type alias",
+									"name": "size_fn",
+									"underlying_type": {
+										"_typeName": "size_t(*)(void*)",
+										"kind": "pointer",
+										"pointee": {
+											"_typeName": "size_t(void*)",
+											"is_variadic": false,
+											"kind": "function",
+											"parameter_types": [{
+												"_typeName": "void*",
+												"kind": "pointer",
+												"pointee": {
+													"_typeName": "void",
+													"builtin_type_kind": "void",
+													"kind": "builtin"
+												}
+											}],
+											"return_type":  {
+												"_typeName": "size_t",
+												"kind": "user_defined",
+												"target": {
+													"name": "size_t"
+												}
+											}
+										}
+									}
+								}]
+							}
+						}
+					},
+					"id": 93824999862336,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "size_ptr",
+					"type": {
+						"_typeName": "stappler::io::size_fn",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::io::size_fn",
+							"objects": [{
+								"_fullName": "::stappler::io::size_fn",
+								"_kind": "type alias",
+								"_name": "size_fn",
+								"id": 140737141796432,
+								"kind": "type alias",
+								"name": "size_fn",
+								"underlying_type": {
+									"_typeName": "size_t(*)(void*)",
+									"kind": "pointer",
+									"pointee": {
+										"_typeName": "size_t(void*)",
+										"is_variadic": false,
+										"kind": "function",
+										"parameter_types": [{
+											"_typeName": "void*",
+											"kind": "pointer",
+											"pointee": {
+												"_typeName": "void",
+												"builtin_type_kind": "void",
+												"kind": "builtin"
+											}
+										}],
+										"return_type":  {
+											"_typeName": "size_t",
+											"kind": "user_defined",
+											"target": {
+												"name": "size_t"
+											}
+										}
+									}
+								}
+							}]
+						}
+					}
+				}, {
+					"_fullName": "::stappler::io::Buffer::capacity_ptr",
+					"_kind": "member variable",
+					"_name": "capacity_ptr",
+					"default_value": {
+						"expression": [{
+							"kind": "keyword",
+							"spelling": "nullptr"
+						}],
+						"kind": "unexposed",
+						"type": {
+							"_typeName": "stappler::io::size_fn",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::io::size_fn",
+								"objects": [{
+									"_fullName": "::stappler::io::size_fn",
+									"_kind": "type alias",
+									"_name": "size_fn",
+									"id": 140737141796432,
+									"kind": "type alias",
+									"name": "size_fn",
+									"underlying_type": {
+										"_typeName": "size_t(*)(void*)",
+										"kind": "pointer",
+										"pointee": {
+											"_typeName": "size_t(void*)",
+											"is_variadic": false,
+											"kind": "function",
+											"parameter_types": [{
+												"_typeName": "void*",
+												"kind": "pointer",
+												"pointee": {
+													"_typeName": "void",
+													"builtin_type_kind": "void",
+													"kind": "builtin"
+												}
+											}],
+											"return_type":  {
+												"_typeName": "size_t",
+												"kind": "user_defined",
+												"target": {
+													"name": "size_t"
+												}
+											}
+										}
+									}
+								}]
+							}
+						}
+					},
+					"id": 93824998687984,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "capacity_ptr",
+					"type": {
+						"_typeName": "stappler::io::size_fn",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::io::size_fn",
+							"objects": [{
+								"_fullName": "::stappler::io::size_fn",
+								"_kind": "type alias",
+								"_name": "size_fn",
+								"id": 140737141796432,
+								"kind": "type alias",
+								"name": "size_fn",
+								"underlying_type": {
+									"_typeName": "size_t(*)(void*)",
+									"kind": "pointer",
+									"pointee": {
+										"_typeName": "size_t(void*)",
+										"is_variadic": false,
+										"kind": "function",
+										"parameter_types": [{
+											"_typeName": "void*",
+											"kind": "pointer",
+											"pointee": {
+												"_typeName": "void",
+												"builtin_type_kind": "void",
+												"kind": "builtin"
+											}
+										}],
+										"return_type":  {
+											"_typeName": "size_t",
+											"kind": "user_defined",
+											"target": {
+												"name": "size_t"
+											}
+										}
+									}
+								}
+							}]
+						}
+					}
+				}, {
+					"_fullName": "::stappler::io::Buffer::data_ptr",
+					"_kind": "member variable",
+					"_name": "data_ptr",
+					"default_value": {
+						"expression": [{
+							"kind": "keyword",
+							"spelling": "nullptr"
+						}],
+						"kind": "unexposed",
+						"type": {
+							"_typeName": "stappler::io::data_fn",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::io::data_fn",
+								"objects": [{
+									"_fullName": "::stappler::io::data_fn",
+									"_kind": "type alias",
+									"_name": "data_fn",
+									"id": 93824998951568,
+									"kind": "type alias",
+									"name": "data_fn",
+									"underlying_type": {
+										"_typeName": "uint8_t*(*)(void*)",
+										"kind": "pointer",
+										"pointee": {
+											"_typeName": "uint8_t*(void*)",
+											"is_variadic": false,
+											"kind": "function",
+											"parameter_types": [{
+												"_typeName": "void*",
+												"kind": "pointer",
+												"pointee": {
+													"_typeName": "void",
+													"builtin_type_kind": "void",
+													"kind": "builtin"
+												}
+											}],
+											"return_type":  {
+												"_typeName": "uint8_t*",
+												"kind": "pointer",
+												"pointee": {
+													"_typeName": "uint8_t",
+													"kind": "user_defined",
+													"target": {
+														"name": "uint8_t"
+													}
+												}
+											}
+										}
+									}
+								}]
+							}
+						}
+					},
+					"id": 93825004533520,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "data_ptr",
+					"type": {
+						"_typeName": "stappler::io::data_fn",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::io::data_fn",
+							"objects": [{
+								"_fullName": "::stappler::io::data_fn",
+								"_kind": "type alias",
+								"_name": "data_fn",
+								"id": 93824998951568,
+								"kind": "type alias",
+								"name": "data_fn",
+								"underlying_type": {
+									"_typeName": "uint8_t*(*)(void*)",
+									"kind": "pointer",
+									"pointee": {
+										"_typeName": "uint8_t*(void*)",
+										"is_variadic": false,
+										"kind": "function",
+										"parameter_types": [{
+											"_typeName": "void*",
+											"kind": "pointer",
+											"pointee": {
+												"_typeName": "void",
+												"builtin_type_kind": "void",
+												"kind": "builtin"
+											}
+										}],
+										"return_type":  {
+											"_typeName": "uint8_t*",
+											"kind": "pointer",
+											"pointee": {
+												"_typeName": "uint8_t",
+												"kind": "user_defined",
+												"target": {
+													"name": "uint8_t"
+												}
+											}
+										}
+									}
+								}
+							}]
+						}
+					}
+				}, {
+					"_fullName": "::stappler::io::Buffer::clear_ptr",
+					"_kind": "member variable",
+					"_name": "clear_ptr",
+					"default_value": {
+						"expression": [{
+							"kind": "keyword",
+							"spelling": "nullptr"
+						}],
+						"kind": "unexposed",
+						"type": {
+							"_typeName": "stappler::io::clear_fn",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::io::clear_fn",
+								"objects": [{
+									"_fullName": "::stappler::io::clear_fn",
+									"_kind": "type alias",
+									"_name": "clear_fn",
+									"id": 93825002875248,
+									"kind": "type alias",
+									"name": "clear_fn",
+									"underlying_type": {
+										"_typeName": "void(*)(void*)",
+										"kind": "pointer",
+										"pointee": {
+											"_typeName": "void(void*)",
+											"is_variadic": false,
+											"kind": "function",
+											"parameter_types": [{
+												"_typeName": "void*",
+												"kind": "pointer",
+												"pointee": {
+													"_typeName": "void",
+													"builtin_type_kind": "void",
+													"kind": "builtin"
+												}
+											}],
+											"return_type":  {
+												"_typeName": "void",
+												"builtin_type_kind": "void",
+												"kind": "builtin"
+											}
+										}
+									}
+								}]
+							}
+						}
+					},
+					"id": 93824999989024,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "clear_ptr",
+					"type": {
+						"_typeName": "stappler::io::clear_fn",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::io::clear_fn",
+							"objects": [{
+								"_fullName": "::stappler::io::clear_fn",
+								"_kind": "type alias",
+								"_name": "clear_fn",
+								"id": 93825002875248,
+								"kind": "type alias",
+								"name": "clear_fn",
+								"underlying_type": {
+									"_typeName": "void(*)(void*)",
+									"kind": "pointer",
+									"pointee": {
+										"_typeName": "void(void*)",
+										"is_variadic": false,
+										"kind": "function",
+										"parameter_types": [{
+											"_typeName": "void*",
+											"kind": "pointer",
+											"pointee": {
+												"_typeName": "void",
+												"builtin_type_kind": "void",
+												"kind": "builtin"
+											}
+										}],
+										"return_type":  {
+											"_typeName": "void",
+											"builtin_type_kind": "void",
+											"kind": "builtin"
+										}
+									}
+								}
+							}]
+						}
+					}
+				}],
+				"class_kind": "struct",
+				"id": 140737093984144,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_final": false,
+				"kind": "class",
+				"name": "Buffer",
+				"scope": {
+					"name": "Buffer"
+				},
+				"semantic_scope": ""
+			}, {
+				"_fullName": "::stappler::io::Buffer::Buffer<typename,typename>(T&)",
+				"_kind": "function template",
+				"_name": "Buffer",
+				"childs": [{
+					"_fullName": "::stappler::io::Buffer::Buffer<typename,typename>(T&)",
+					"_kind": "constructor",
+					"_name": "Buffer",
+					"body_kind": "definition",
+					"id": 140736954885424,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_explicit": false,
+					"is_variadic": false,
+					"kind": "constructor",
+					"name": "Buffer",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "t",
+						"id": 140737094580032,
+						"kind": "function parameter",
+						"name": "t",
+						"type": {
+							"_typeName": "T&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "T",
+								"entity": {
+									"name": "T",
+									"objects": [{
+										"_kind": "template type parameter",
+										"_name": "T",
+										"id": 140737122428448,
+										"is_variadic": false,
+										"keyword": "typename",
+										"kind": "template type parameter",
+										"name": "T"
+									}]
+								},
+								"kind": "template_parameter"
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"semantic_parent":  {
+						"name": "Buffer::",
+						"objects": [{
+							"_fullName": "::stappler::io::Buffer",
+							"_kind": "class",
+							"_name": "Buffer",
+							"class_kind": "struct",
+							"id": 140737093984144,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_final": false,
+							"kind": "class",
+							"name": "Buffer",
+							"scope": {
+								"name": "Buffer"
+							},
+							"semantic_scope": ""
+						}]
+					},
+					"semantic_scope": "Buffer::",
+					"signature": "(T&)"
+				}],
+				"function":  {
+					"_fullName": "::stappler::io::Buffer::Buffer<typename,typename>(T&)",
+					"_kind": "constructor",
+					"_name": "Buffer",
+					"body_kind": "definition",
+					"id": 140736954885424,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_explicit": false,
+					"is_variadic": false,
+					"kind": "constructor",
+					"name": "Buffer",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "t",
+						"id": 140737094580032,
+						"kind": "function parameter",
+						"name": "t",
+						"type": {
+							"_typeName": "T&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "T",
+								"entity": {
+									"name": "T",
+									"objects": [{
+										"_kind": "template type parameter",
+										"_name": "T",
+										"id": 140737122428448,
+										"is_variadic": false,
+										"keyword": "typename",
+										"kind": "template type parameter",
+										"name": "T"
+									}]
+								},
+								"kind": "template_parameter"
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"semantic_parent":  {
+						"name": "Buffer::",
+						"objects": [{
+							"_fullName": "::stappler::io::Buffer",
+							"_kind": "class",
+							"_name": "Buffer",
+							"class_kind": "struct",
+							"id": 140737093984144,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_final": false,
+							"kind": "class",
+							"name": "Buffer",
+							"scope": {
+								"name": "Buffer"
+							},
+							"semantic_scope": ""
+						}]
+					},
+					"semantic_scope": "Buffer::",
+					"signature": "(T&)"
+				},
+				"id": 93824997666096,
+				"kind": "function template",
+				"name": "Buffer",
+				"parameters": [{
+					"_kind": "template type parameter",
+					"_name": "T",
+					"id": 140737122428448,
+					"is_variadic": false,
+					"keyword": "typename",
+					"kind": "template type parameter",
+					"name": "T"
+				}, {
+					"_kind": "template type parameter",
+					"_name": "Traits",
+					"id": 140737145248832,
+					"is_variadic": false,
+					"keyword": "typename",
+					"kind": "template type parameter",
+					"name": "Traits"
+				}]
+			}, {
+				"_fullName": "::stappler::io::Buffer::prepare(size_t&) const",
+				"_kind": "member function",
+				"_name": "prepare",
+				"body_kind": "definition",
+				"cv_qualifier": "const",
+				"id": 93825004341440,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"is_virtual": false,
+				"kind": "member function",
+				"name": "prepare",
+				"parameters": [{
+					"_kind": "function parameter",
+					"_name": "size",
+					"id": 93824999316112,
+					"kind": "function parameter",
+					"name": "size",
+					"type": {
+						"_typeName": "size_t&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"ref_qualifier": "none",
+				"return_type": {
+					"_typeName": "uint8_t*",
+					"kind": "pointer",
+					"pointee": {
+						"_typeName": "uint8_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "uint8_t"
+						}
+					}
+				},
+				"semantic_parent":  {
+					"name": "Buffer::",
+					"objects": [{
+						"_fullName": "::stappler::io::Buffer",
+						"_kind": "class",
+						"_name": "Buffer",
+						"class_kind": "struct",
+						"id": 140737093984144,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_final": false,
+						"kind": "class",
+						"name": "Buffer",
+						"scope": {
+							"name": "Buffer"
+						},
+						"semantic_scope": ""
+					}]
+				},
+				"semantic_scope": "Buffer::",
+				"signature": "(size_t&) const"
+			}, {
+				"_fullName": "::stappler::io::Buffer::save(uint8_t*,size_t,size_t) const",
+				"_kind": "member function",
+				"_name": "save",
+				"body_kind": "definition",
+				"cv_qualifier": "const",
+				"id": 93825000980064,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"is_virtual": false,
+				"kind": "member function",
+				"name": "save",
+				"parameters": [{
+					"_kind": "function parameter",
+					"_name": "buf",
+					"id": 93824999663520,
+					"kind": "function parameter",
+					"name": "buf",
+					"type": {
+						"_typeName": "uint8_t*",
+						"kind": "pointer",
+						"pointee": {
+							"_typeName": "uint8_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "uint8_t"
+							}
+						}
+					}
+				}, {
+					"_kind": "function parameter",
+					"_name": "source",
+					"id": 93824999510592,
+					"kind": "function parameter",
+					"name": "source",
+					"type": {
+						"_typeName": "size_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "size_t"
+						}
+					}
+				}, {
+					"_kind": "function parameter",
+					"_name": "nbytes",
+					"id": 93825000709776,
+					"kind": "function parameter",
+					"name": "nbytes",
+					"type": {
+						"_typeName": "size_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "size_t"
+						}
+					}
+				}],
+				"ref_qualifier": "none",
+				"return_type": {
+					"_typeName": "void",
+					"builtin_type_kind": "void",
+					"kind": "builtin"
+				},
+				"semantic_parent":  {
+					"name": "Buffer::",
+					"objects": [{
+						"_fullName": "::stappler::io::Buffer",
+						"_kind": "class",
+						"_name": "Buffer",
+						"class_kind": "struct",
+						"id": 140737093984144,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_final": false,
+						"kind": "class",
+						"name": "Buffer",
+						"scope": {
+							"name": "Buffer"
+						},
+						"semantic_scope": ""
+					}]
+				},
+				"semantic_scope": "Buffer::",
+				"signature": "(uint8_t*,size_t,size_t) const"
+			}, {
+				"_fullName": "::stappler::io::Buffer::capacity() const",
+				"_kind": "member function",
+				"_name": "capacity",
+				"body_kind": "definition",
+				"cv_qualifier": "const",
+				"id": 93824999537936,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"is_virtual": false,
+				"kind": "member function",
+				"name": "capacity",
+				"ref_qualifier": "none",
+				"return_type": {
+					"_typeName": "size_t",
+					"kind": "user_defined",
+					"target": {
+						"name": "size_t"
+					}
+				},
+				"semantic_parent":  {
+					"name": "Buffer::",
+					"objects": [{
+						"_fullName": "::stappler::io::Buffer",
+						"_kind": "class",
+						"_name": "Buffer",
+						"class_kind": "struct",
+						"id": 140737093984144,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_final": false,
+						"kind": "class",
+						"name": "Buffer",
+						"scope": {
+							"name": "Buffer"
+						},
+						"semantic_scope": ""
+					}]
+				},
+				"semantic_scope": "Buffer::",
+				"signature": "() const"
+			}, {
+				"_fullName": "::stappler::io::Buffer::size() const",
+				"_kind": "member function",
+				"_name": "size",
+				"body_kind": "definition",
+				"cv_qualifier": "const",
+				"id": 93825001679856,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"is_virtual": false,
+				"kind": "member function",
+				"name": "size",
+				"ref_qualifier": "none",
+				"return_type": {
+					"_typeName": "size_t",
+					"kind": "user_defined",
+					"target": {
+						"name": "size_t"
+					}
+				},
+				"semantic_parent":  {
+					"name": "Buffer::",
+					"objects": [{
+						"_fullName": "::stappler::io::Buffer",
+						"_kind": "class",
+						"_name": "Buffer",
+						"class_kind": "struct",
+						"id": 140737093984144,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_final": false,
+						"kind": "class",
+						"name": "Buffer",
+						"scope": {
+							"name": "Buffer"
+						},
+						"semantic_scope": ""
+					}]
+				},
+				"semantic_scope": "Buffer::",
+				"signature": "() const"
+			}, {
+				"_fullName": "::stappler::io::Buffer::data() const",
+				"_kind": "member function",
+				"_name": "data",
+				"body_kind": "definition",
+				"cv_qualifier": "const",
+				"id": 93825002480448,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"is_virtual": false,
+				"kind": "member function",
+				"name": "data",
+				"ref_qualifier": "none",
+				"return_type": {
+					"_typeName": "uint8_t*",
+					"kind": "pointer",
+					"pointee": {
+						"_typeName": "uint8_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "uint8_t"
+						}
+					}
+				},
+				"semantic_parent":  {
+					"name": "Buffer::",
+					"objects": [{
+						"_fullName": "::stappler::io::Buffer",
+						"_kind": "class",
+						"_name": "Buffer",
+						"class_kind": "struct",
+						"id": 140737093984144,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_final": false,
+						"kind": "class",
+						"name": "Buffer",
+						"scope": {
+							"name": "Buffer"
+						},
+						"semantic_scope": ""
+					}]
+				},
+				"semantic_scope": "Buffer::",
+				"signature": "() const"
+			}, {
+				"_fullName": "::stappler::io::Buffer::clear() const",
+				"_kind": "member function",
+				"_name": "clear",
+				"body_kind": "definition",
+				"cv_qualifier": "const",
+				"id": 93825001918112,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"is_virtual": false,
+				"kind": "member function",
+				"name": "clear",
+				"ref_qualifier": "none",
+				"return_type": {
+					"_typeName": "void",
+					"builtin_type_kind": "void",
+					"kind": "builtin"
+				},
+				"semantic_parent":  {
+					"name": "Buffer::",
+					"objects": [{
+						"_fullName": "::stappler::io::Buffer",
+						"_kind": "class",
+						"_name": "Buffer",
+						"class_kind": "struct",
+						"id": 140737093984144,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_final": false,
+						"kind": "class",
+						"name": "Buffer",
+						"scope": {
+							"name": "Buffer"
+						},
+						"semantic_scope": ""
+					}]
+				},
+				"semantic_scope": "Buffer::",
+				"signature": "() const"
+			}],
+			"id": 140737148062432,
+			"is_anonymous": false,
+			"is_inline": false,
+			"is_nested": true,
+			"kind": "namespace",
+			"name": "io",
+			"scope": {
+				"name": "io"
+			}
+		}],
+		"id": 140737148062272,
+		"is_anonymous": false,
+		"is_inline": false,
+		"is_nested": false,
+		"kind": "namespace",
+		"name": "stappler",
+		"scope": {
+			"name": "stappler"
+		}
+	}],
+	"id": 140737118384512,
+	"kind": "file",
+	"name": "/home/sbkarr/stappler/xenolith/libstappler/common/io/SPIOBuffer.h",
+	"unmatched_comments": [{
+		"line": 21,
+		"text": "\nCopyright (c) 2016-2022 Roman Katuntsev <sbkarr@stappler.org>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n"
+	}]
+}

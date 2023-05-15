@@ -1,0 +1,5654 @@
+{
+	"_kind": "file",
+	"_name": "/home/sbkarr/stappler/xenolith/libstappler/modules/data/SPDataEncode.h",
+	"childs": [{
+		"_kind": "include directive",
+		"_name": "SPDataEncodeCbor.h",
+		"id": 140737095127808,
+		"include": "/home/sbkarr/stappler/xenolith/libstappler/modules/data/SPDataEncodeCbor.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "SPDataEncodeCbor.h"
+	}, {
+		"_kind": "include directive",
+		"_name": "SPDataEncodeJson.h",
+		"id": 140737095876384,
+		"include": "/home/sbkarr/stappler/xenolith/libstappler/modules/data/SPDataEncodeJson.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "SPDataEncodeJson.h"
+	}, {
+		"_kind": "include directive",
+		"_name": "SPDataEncodeSerenity.h",
+		"id": 140737086146160,
+		"include": "/home/sbkarr/stappler/xenolith/libstappler/modules/data/SPDataEncodeSerenity.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "SPDataEncodeSerenity.h"
+	}, {
+		"_kind": "include directive",
+		"_name": "SPFilesystem.h",
+		"id": 140736987559424,
+		"include": "/home/sbkarr/stappler/xenolith/libstappler/modules/filesystem/SPFilesystem.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "SPFilesystem.h"
+	}, {
+		"_fullName": "MODULES_DATA_SPDATAENCODE_H_",
+		"_kind": "macro definition",
+		"_name": "MODULES_DATA_SPDATAENCODE_H_",
+		"id": 140736954093408,
+		"is_function_like": false,
+		"is_object_like": true,
+		"is_variadic": false,
+		"kind": "macro definition",
+		"name": "MODULES_DATA_SPDATAENCODE_H_",
+		"replacement": ""
+	}, {
+		"_fullName": "::stappler",
+		"_kind": "namespace",
+		"_name": "stappler",
+		"childs": [{
+			"_fullName": "::stappler::data",
+			"_kind": "namespace",
+			"_name": "data",
+			"childs": [{
+				"_fullName": "::stappler::data::EncodeFormat",
+				"_kind": "class",
+				"_name": "EncodeFormat",
+				"childs": [{
+					"_fullName": "::stappler::data::EncodeFormat::EncodeStreamIndex",
+					"_kind": "variable",
+					"_name": "EncodeStreamIndex",
+					"id": 140737149798304,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"kind": "variable",
+					"name": "EncodeStreamIndex",
+					"semantic_scope": "",
+					"storage_class": [
+						"static"
+					],
+					"type":  {
+						"_typeName": "int",
+						"builtin_type_kind": "int",
+						"kind": "builtin"
+					}
+				}, {
+					"_fullName": "::stappler::data::EncodeFormat::Format",
+					"_kind": "enum",
+					"_name": "Format",
+					"childs": [{
+						"_fullName": "::stappler::data::EncodeFormat::Format::Json",
+						"_kind": "enum value",
+						"_name": "Json",
+						"id": 140736973690784,
+						"kind": "enum value",
+						"name": "Json",
+						"value": {
+							"expression": [{
+								"kind": "int_literal",
+								"spelling": "0b0000"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "unsigned int",
+								"builtin_type_kind": "unsigned int",
+								"kind": "builtin"
+							}
+						}
+					}, {
+						"_fullName": "::stappler::data::EncodeFormat::Format::Pretty",
+						"_kind": "enum value",
+						"_name": "Pretty",
+						"id": 140737118377264,
+						"kind": "enum value",
+						"name": "Pretty",
+						"value": {
+							"expression": [{
+								"kind": "int_literal",
+								"spelling": "0b0001"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "unsigned int",
+								"builtin_type_kind": "unsigned int",
+								"kind": "builtin"
+							}
+						}
+					}, {
+						"_fullName": "::stappler::data::EncodeFormat::Format::Cbor",
+						"_kind": "enum value",
+						"_name": "Cbor",
+						"id": 140737139882112,
+						"kind": "enum value",
+						"name": "Cbor",
+						"value": {
+							"expression": [{
+								"kind": "int_literal",
+								"spelling": "0b0010"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "unsigned int",
+								"builtin_type_kind": "unsigned int",
+								"kind": "builtin"
+							}
+						}
+					}, {
+						"_fullName": "::stappler::data::EncodeFormat::Format::DefaultFormat",
+						"_kind": "enum value",
+						"_name": "DefaultFormat",
+						"id": 140737130850512,
+						"kind": "enum value",
+						"name": "DefaultFormat",
+						"value": {
+							"expression": [{
+								"kind": "int_literal",
+								"spelling": "0b0011"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "unsigned int",
+								"builtin_type_kind": "unsigned int",
+								"kind": "builtin"
+							}
+						}
+					}, {
+						"_fullName": "::stappler::data::EncodeFormat::Format::Serenity",
+						"_kind": "enum value",
+						"_name": "Serenity",
+						"id": 140737135308944,
+						"kind": "enum value",
+						"name": "Serenity",
+						"value": {
+							"expression": [{
+								"kind": "int_literal",
+								"spelling": "0b0100"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "unsigned int",
+								"builtin_type_kind": "unsigned int",
+								"kind": "builtin"
+							}
+						}
+					}, {
+						"_fullName": "::stappler::data::EncodeFormat::Format::SerenityPretty",
+						"_kind": "enum value",
+						"_name": "SerenityPretty",
+						"id": 140737108408896,
+						"kind": "enum value",
+						"name": "SerenityPretty",
+						"value": {
+							"expression": [{
+								"kind": "int_literal",
+								"spelling": "0b0101"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "unsigned int",
+								"builtin_type_kind": "unsigned int",
+								"kind": "builtin"
+							}
+						}
+					}, {
+						"_fullName": "::stappler::data::EncodeFormat::Format::PrettyTime",
+						"_kind": "enum value",
+						"_name": "PrettyTime",
+						"id": 140737097509152,
+						"kind": "enum value",
+						"name": "PrettyTime",
+						"value": {
+							"expression": [{
+								"kind": "int_literal",
+								"spelling": "0b1001"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "unsigned int",
+								"builtin_type_kind": "unsigned int",
+								"kind": "builtin"
+							}
+						}
+					}],
+					"has_explicit_type": false,
+					"id": 140737122100496,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_scoped": false,
+					"kind": "enum",
+					"name": "Format",
+					"semantic_scope": "",
+					"underlying_type": {
+						"_typeName": "unsigned int",
+						"builtin_type_kind": "unsigned int",
+						"kind": "builtin"
+					}
+				}, {
+					"_fullName": "::stappler::data::EncodeFormat::Compression",
+					"_kind": "enum",
+					"_name": "Compression",
+					"childs": [{
+						"_fullName": "::stappler::data::EncodeFormat::Compression::NoCompression",
+						"_kind": "enum value",
+						"_name": "NoCompression",
+						"id": 93825002702976,
+						"kind": "enum value",
+						"name": "NoCompression",
+						"value": {
+							"expression": [{
+								"kind": "int_literal",
+								"spelling": "0b0000"
+							}, {
+								"kind": "punctuation",
+								"spelling": "<<"
+							}, {
+								"kind": "int_literal",
+								"spelling": "4"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "unsigned int",
+								"builtin_type_kind": "unsigned int",
+								"kind": "builtin"
+							}
+						}
+					}, {
+						"_fullName": "::stappler::data::EncodeFormat::Compression::LZ4Compression",
+						"_kind": "enum value",
+						"_name": "LZ4Compression",
+						"id": 93825001517664,
+						"kind": "enum value",
+						"name": "LZ4Compression",
+						"value": {
+							"expression": [{
+								"kind": "int_literal",
+								"spelling": "0b0001"
+							}, {
+								"kind": "punctuation",
+								"spelling": "<<"
+							}, {
+								"kind": "int_literal",
+								"spelling": "4"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "unsigned int",
+								"builtin_type_kind": "unsigned int",
+								"kind": "builtin"
+							}
+						}
+					}, {
+						"_fullName": "::stappler::data::EncodeFormat::Compression::LZ4HCCompression",
+						"_kind": "enum value",
+						"_name": "LZ4HCCompression",
+						"id": 93825000372944,
+						"kind": "enum value",
+						"name": "LZ4HCCompression",
+						"value": {
+							"expression": [{
+								"kind": "int_literal",
+								"spelling": "0b0011"
+							}, {
+								"kind": "punctuation",
+								"spelling": "<<"
+							}, {
+								"kind": "int_literal",
+								"spelling": "4"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "unsigned int",
+								"builtin_type_kind": "unsigned int",
+								"kind": "builtin"
+							}
+						}
+					}, {
+						"_fullName": "::stappler::data::EncodeFormat::Compression::Brotli",
+						"_kind": "enum value",
+						"_name": "Brotli",
+						"id": 93825000429888,
+						"kind": "enum value",
+						"name": "Brotli",
+						"value": {
+							"expression": [{
+								"kind": "int_literal",
+								"spelling": "0b0100"
+							}, {
+								"kind": "punctuation",
+								"spelling": "<<"
+							}, {
+								"kind": "int_literal",
+								"spelling": "4"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "unsigned int",
+								"builtin_type_kind": "unsigned int",
+								"kind": "builtin"
+							}
+						}
+					}, {
+						"_fullName": "::stappler::data::EncodeFormat::Compression::DefaultCompress",
+						"_kind": "enum value",
+						"_name": "DefaultCompress",
+						"id": 93824999710976,
+						"kind": "enum value",
+						"name": "DefaultCompress",
+						"value": {
+							"expression": [{
+								"kind": "identifier",
+								"spelling": "NoCompression"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "unsigned int",
+								"builtin_type_kind": "unsigned int",
+								"kind": "builtin"
+							}
+						}
+					}],
+					"has_explicit_type": false,
+					"id": 140736987299280,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_scoped": false,
+					"kind": "enum",
+					"name": "Compression",
+					"semantic_scope": "",
+					"underlying_type": {
+						"_typeName": "unsigned int",
+						"builtin_type_kind": "unsigned int",
+						"kind": "builtin"
+					}
+				}, {
+					"_fullName": "::stappler::data::EncodeFormat::Encryption",
+					"_kind": "enum",
+					"_name": "Encryption",
+					"childs": [{
+						"_fullName": "::stappler::data::EncodeFormat::Encryption::Unencrypted",
+						"_kind": "enum value",
+						"_name": "Unencrypted",
+						"id": 93825002803296,
+						"kind": "enum value",
+						"name": "Unencrypted",
+						"value": {
+							"expression": [{
+								"kind": "int_literal",
+								"spelling": "0b0000"
+							}, {
+								"kind": "punctuation",
+								"spelling": "<<"
+							}, {
+								"kind": "int_literal",
+								"spelling": "8"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "unsigned int",
+								"builtin_type_kind": "unsigned int",
+								"kind": "builtin"
+							}
+						}
+					}, {
+						"_fullName": "::stappler::data::EncodeFormat::Encryption::Encrypted",
+						"_kind": "enum value",
+						"_name": "Encrypted",
+						"id": 93824999651648,
+						"kind": "enum value",
+						"name": "Encrypted",
+						"value": {
+							"expression": [{
+								"kind": "int_literal",
+								"spelling": "0b0001"
+							}, {
+								"kind": "punctuation",
+								"spelling": "<<"
+							}, {
+								"kind": "int_literal",
+								"spelling": "8"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "unsigned int",
+								"builtin_type_kind": "unsigned int",
+								"kind": "builtin"
+							}
+						}
+					}],
+					"has_explicit_type": false,
+					"id": 140736986627536,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_scoped": false,
+					"kind": "enum",
+					"name": "Encryption",
+					"semantic_scope": "",
+					"underlying_type": {
+						"_typeName": "unsigned int",
+						"builtin_type_kind": "unsigned int",
+						"kind": "builtin"
+					}
+				}, {
+					"_fullName": "::stappler::data::EncodeFormat::CborCompressed",
+					"_kind": "variable",
+					"_name": "CborCompressed",
+					"id": 140737116470592,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"kind": "variable",
+					"name": "CborCompressed",
+					"semantic_scope": "",
+					"storage_class": [
+						"static"
+					],
+					"type":  {
+						"_typeName": "stappler::data::EncodeFormat",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::data::EncodeFormat",
+							"objects": [{
+								"_fullName": "::stappler::data::EncodeFormat",
+								"_kind": "class",
+								"_name": "EncodeFormat",
+								"class_kind": "struct",
+								"id": 140736986627280,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_final": false,
+								"kind": "class",
+								"name": "EncodeFormat",
+								"scope": {
+									"name": "EncodeFormat"
+								},
+								"semantic_scope": ""
+							}]
+						}
+					}
+				}, {
+					"_fullName": "::stappler::data::EncodeFormat::JsonCompressed",
+					"_kind": "variable",
+					"_name": "JsonCompressed",
+					"id": 140737086289712,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"kind": "variable",
+					"name": "JsonCompressed",
+					"semantic_scope": "",
+					"storage_class": [
+						"static"
+					],
+					"type":  {
+						"_typeName": "stappler::data::EncodeFormat",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::data::EncodeFormat",
+							"objects": [{
+								"_fullName": "::stappler::data::EncodeFormat",
+								"_kind": "class",
+								"_name": "EncodeFormat",
+								"class_kind": "struct",
+								"id": 140736986627280,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_final": false,
+								"kind": "class",
+								"name": "EncodeFormat",
+								"scope": {
+									"name": "EncodeFormat"
+								},
+								"semantic_scope": ""
+							}]
+						}
+					}
+				}, {
+					"_fullName": "::stappler::data::EncodeFormat::EncodeFormat(stappler::data::EncodeFormat::Format,stappler::data::EncodeFormat::Compression,stappler::data::EncodeFormat::Encryption,stappler::StringView)",
+					"_kind": "constructor",
+					"_name": "EncodeFormat",
+					"body_kind": "definition",
+					"id": 140737131628304,
+					"is_consteval": false,
+					"is_constexpr": true,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_explicit": false,
+					"is_variadic": false,
+					"kind": "constructor",
+					"name": "EncodeFormat",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "fmt",
+						"default_value": {
+							"expression": [{
+								"kind": "identifier",
+								"spelling": "DefaultFormat"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "stappler::data::EncodeFormat::Format",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::data::EncodeFormat::Format",
+									"objects": [{
+										"_fullName": "::stappler::data::EncodeFormat::Format",
+										"_kind": "enum",
+										"_name": "Format",
+										"has_explicit_type": false,
+										"id": 140737122100496,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": false,
+										"kind": "enum",
+										"name": "Format",
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "unsigned int",
+											"builtin_type_kind": "unsigned int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
+						},
+						"id": 93825002188080,
+						"kind": "function parameter",
+						"name": "fmt",
+						"type": {
+							"_typeName": "stappler::data::EncodeFormat::Format",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::data::EncodeFormat::Format",
+								"objects": [{
+									"_fullName": "::stappler::data::EncodeFormat::Format",
+									"_kind": "enum",
+									"_name": "Format",
+									"has_explicit_type": false,
+									"id": 140737122100496,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_scoped": false,
+									"kind": "enum",
+									"name": "Format",
+									"semantic_scope": "",
+									"underlying_type": {
+										"_typeName": "unsigned int",
+										"builtin_type_kind": "unsigned int",
+										"kind": "builtin"
+									}
+								}]
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "cmp",
+						"default_value": {
+							"expression": [{
+								"kind": "identifier",
+								"spelling": "DefaultCompress"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "stappler::data::EncodeFormat::Compression",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::data::EncodeFormat::Compression",
+									"objects": [{
+										"_fullName": "::stappler::data::EncodeFormat::Compression",
+										"_kind": "enum",
+										"_name": "Compression",
+										"has_explicit_type": false,
+										"id": 140736987299280,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": false,
+										"kind": "enum",
+										"name": "Compression",
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "unsigned int",
+											"builtin_type_kind": "unsigned int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
+						},
+						"id": 93825002620672,
+						"kind": "function parameter",
+						"name": "cmp",
+						"type": {
+							"_typeName": "stappler::data::EncodeFormat::Compression",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::data::EncodeFormat::Compression",
+								"objects": [{
+									"_fullName": "::stappler::data::EncodeFormat::Compression",
+									"_kind": "enum",
+									"_name": "Compression",
+									"has_explicit_type": false,
+									"id": 140736987299280,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_scoped": false,
+									"kind": "enum",
+									"name": "Compression",
+									"semantic_scope": "",
+									"underlying_type": {
+										"_typeName": "unsigned int",
+										"builtin_type_kind": "unsigned int",
+										"kind": "builtin"
+									}
+								}]
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "enc",
+						"default_value": {
+							"expression": [{
+								"kind": "identifier",
+								"spelling": "Unencrypted"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "stappler::data::EncodeFormat::Encryption",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::data::EncodeFormat::Encryption",
+									"objects": [{
+										"_fullName": "::stappler::data::EncodeFormat::Encryption",
+										"_kind": "enum",
+										"_name": "Encryption",
+										"has_explicit_type": false,
+										"id": 140736986627536,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": false,
+										"kind": "enum",
+										"name": "Encryption",
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "unsigned int",
+											"builtin_type_kind": "unsigned int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
+						},
+						"id": 93825011436368,
+						"kind": "function parameter",
+						"name": "enc",
+						"type": {
+							"_typeName": "stappler::data::EncodeFormat::Encryption",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::data::EncodeFormat::Encryption",
+								"objects": [{
+									"_fullName": "::stappler::data::EncodeFormat::Encryption",
+									"_kind": "enum",
+									"_name": "Encryption",
+									"has_explicit_type": false,
+									"id": 140736986627536,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_scoped": false,
+									"kind": "enum",
+									"name": "Encryption",
+									"semantic_scope": "",
+									"underlying_type": {
+										"_typeName": "unsigned int",
+										"builtin_type_kind": "unsigned int",
+										"kind": "builtin"
+									}
+								}]
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "",
+						"default_value": {
+							"expression": [{
+								"kind": "identifier",
+								"spelling": "StringView"
+							}, {
+								"kind": "punctuation",
+								"spelling": "("
+							}, {
+								"kind": "punctuation",
+								"spelling": ")"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "stappler::StringView",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::StringView",
+									"objects": [{
+										"_fullName": "::stappler::StringView",
+										"_kind": "type alias",
+										"_name": "StringView",
+										"id": 93824997448656,
+										"kind": "type alias",
+										"name": "StringView",
+										"underlying_type": {
+											"_typeName": "StringViewBase<char>",
+											"arguments_exposed": false,
+											"kind": "template_instantiation",
+											"primary_template": {
+												"name": "StringViewBase",
+												"objects": [{
+													"_fullName": "::stappler::StringViewBase<typename>",
+													"_kind": "class template",
+													"_name": "StringViewBase",
+													"class": {
+														"_fullName": "::stappler::StringViewBase<typename>",
+														"_kind": "class",
+														"_name": "StringViewBase",
+														"bases": [{
+															"_kind": "base class specifier",
+															"_name": "BytesReader<_CharType>",
+															"access_specifier": "public",
+															"id": 93824998090352,
+															"is_virtual": false,
+															"kind": "base class specifier",
+															"name": "BytesReader<_CharType>",
+															"type": {
+																"_typeName": "BytesReader<_CharType>",
+																"arguments_exposed": false,
+																"kind": "template_instantiation",
+																"primary_template": {
+																	"name": "BytesReader",
+																	"objects": [{
+																		"_fullName": "::stappler::BytesReader<typename>",
+																		"_kind": "class template",
+																		"_name": "BytesReader",
+																		"class": {
+																			"_fullName": "::stappler::BytesReader<typename>",
+																			"_kind": "class",
+																			"_name": "BytesReader",
+																			"class_kind": "class",
+																			"id": 140736954953792,
+																			"is_declaration": false,
+																			"is_definition": true,
+																			"is_final": false,
+																			"kind": "class",
+																			"name": "BytesReader",
+																			"scope": {
+																				"is_templated": true,
+																				"name": "BytesReader",
+																				"template_parameters": [{
+																					"_kind": "template type parameter",
+																					"_name": "_CharType",
+																					"id": 140737098599232,
+																					"is_variadic": false,
+																					"keyword": "typename",
+																					"kind": "template type parameter",
+																					"name": "_CharType"
+																				}]
+																			},
+																			"semantic_scope": ""
+																		},
+																		"id": 93824998648144,
+																		"kind": "class template",
+																		"name": "BytesReader",
+																		"parameters": [{
+																			"_kind": "template type parameter",
+																			"_name": "_CharType",
+																			"id": 140737098599232,
+																			"is_variadic": false,
+																			"keyword": "typename",
+																			"kind": "template type parameter",
+																			"name": "_CharType"
+																		}],
+																		"scope":  {
+																			"is_templated": true,
+																			"name": "BytesReader",
+																			"template_parameters": [{
+																				"_kind": "template type parameter",
+																				"_name": "_CharType",
+																				"id": 140737098599232,
+																				"is_variadic": false,
+																				"keyword": "typename",
+																				"kind": "template type parameter",
+																				"name": "_CharType"
+																			}]
+																		}
+																	}]
+																},
+																"unexposed_arguments": "_CharType"
+															}
+														}],
+														"class_kind": "class",
+														"id": 140737094580320,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "StringViewBase",
+														"scope": {
+															"is_templated": true,
+															"name": "StringViewBase",
+															"template_parameters": [{
+																"_kind": "template type parameter",
+																"_name": "_CharType",
+																"id": 93824999493712,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "_CharType"
+															}]
+														},
+														"semantic_scope": ""
+													},
+													"id": 93824999493216,
+													"kind": "class template",
+													"name": "StringViewBase",
+													"parameters": [{
+														"_kind": "template type parameter",
+														"_name": "_CharType",
+														"id": 93824999493712,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "_CharType"
+													}],
+													"scope":  {
+														"is_templated": true,
+														"name": "StringViewBase",
+														"template_parameters": [{
+															"_kind": "template type parameter",
+															"_name": "_CharType",
+															"id": 93824999493712,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "_CharType"
+														}]
+													}
+												}]
+											},
+											"unexposed_arguments": "char"
+										}
+									}]
+								}
+							}
+						},
+						"id": 93825012510176,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::StringView",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::StringView",
+								"objects": [{
+									"_fullName": "::stappler::StringView",
+									"_kind": "type alias",
+									"_name": "StringView",
+									"id": 93824997448656,
+									"kind": "type alias",
+									"name": "StringView",
+									"underlying_type": {
+										"_typeName": "StringViewBase<char>",
+										"arguments_exposed": false,
+										"kind": "template_instantiation",
+										"primary_template": {
+											"name": "StringViewBase",
+											"objects": [{
+												"_fullName": "::stappler::StringViewBase<typename>",
+												"_kind": "class template",
+												"_name": "StringViewBase",
+												"class": {
+													"_fullName": "::stappler::StringViewBase<typename>",
+													"_kind": "class",
+													"_name": "StringViewBase",
+													"bases": [{
+														"_kind": "base class specifier",
+														"_name": "BytesReader<_CharType>",
+														"access_specifier": "public",
+														"id": 93824998090352,
+														"is_virtual": false,
+														"kind": "base class specifier",
+														"name": "BytesReader<_CharType>",
+														"type": {
+															"_typeName": "BytesReader<_CharType>",
+															"arguments_exposed": false,
+															"kind": "template_instantiation",
+															"primary_template": {
+																"name": "BytesReader",
+																"objects": [{
+																	"_fullName": "::stappler::BytesReader<typename>",
+																	"_kind": "class template",
+																	"_name": "BytesReader",
+																	"class": {
+																		"_fullName": "::stappler::BytesReader<typename>",
+																		"_kind": "class",
+																		"_name": "BytesReader",
+																		"class_kind": "class",
+																		"id": 140736954953792,
+																		"is_declaration": false,
+																		"is_definition": true,
+																		"is_final": false,
+																		"kind": "class",
+																		"name": "BytesReader",
+																		"scope": {
+																			"is_templated": true,
+																			"name": "BytesReader",
+																			"template_parameters": [{
+																				"_kind": "template type parameter",
+																				"_name": "_CharType",
+																				"id": 140737098599232,
+																				"is_variadic": false,
+																				"keyword": "typename",
+																				"kind": "template type parameter",
+																				"name": "_CharType"
+																			}]
+																		},
+																		"semantic_scope": ""
+																	},
+																	"id": 93824998648144,
+																	"kind": "class template",
+																	"name": "BytesReader",
+																	"parameters": [{
+																		"_kind": "template type parameter",
+																		"_name": "_CharType",
+																		"id": 140737098599232,
+																		"is_variadic": false,
+																		"keyword": "typename",
+																		"kind": "template type parameter",
+																		"name": "_CharType"
+																	}],
+																	"scope":  {
+																		"is_templated": true,
+																		"name": "BytesReader",
+																		"template_parameters": [{
+																			"_kind": "template type parameter",
+																			"_name": "_CharType",
+																			"id": 140737098599232,
+																			"is_variadic": false,
+																			"keyword": "typename",
+																			"kind": "template type parameter",
+																			"name": "_CharType"
+																		}]
+																	}
+																}]
+															},
+															"unexposed_arguments": "_CharType"
+														}
+													}],
+													"class_kind": "class",
+													"id": 140737094580320,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "StringViewBase",
+													"scope": {
+														"is_templated": true,
+														"name": "StringViewBase",
+														"template_parameters": [{
+															"_kind": "template type parameter",
+															"_name": "_CharType",
+															"id": 93824999493712,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "_CharType"
+														}]
+													},
+													"semantic_scope": ""
+												},
+												"id": 93824999493216,
+												"kind": "class template",
+												"name": "StringViewBase",
+												"parameters": [{
+													"_kind": "template type parameter",
+													"_name": "_CharType",
+													"id": 93824999493712,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "_CharType"
+												}],
+												"scope":  {
+													"is_templated": true,
+													"name": "StringViewBase",
+													"template_parameters": [{
+														"_kind": "template type parameter",
+														"_name": "_CharType",
+														"id": 93824999493712,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "_CharType"
+													}]
+												}
+											}]
+										},
+										"unexposed_arguments": "char"
+									}
+								}]
+							}
+						}
+					}],
+					"semantic_scope": "",
+					"signature": "(stappler::data::EncodeFormat::Format,stappler::data::EncodeFormat::Compression,stappler::data::EncodeFormat::Encryption,stappler::StringView)"
+				}, {
+					"_fullName": "::stappler::data::EncodeFormat::EncodeFormat(long)",
+					"_kind": "constructor",
+					"_name": "EncodeFormat",
+					"body_kind": "definition",
+					"id": 140736955881760,
+					"is_consteval": false,
+					"is_constexpr": true,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_explicit": false,
+					"is_variadic": false,
+					"kind": "constructor",
+					"name": "EncodeFormat",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "flag",
+						"id": 93825011544528,
+						"kind": "function parameter",
+						"name": "flag",
+						"type": {
+							"_typeName": "long",
+							"builtin_type_kind": "long",
+							"kind": "builtin"
+						}
+					}],
+					"semantic_scope": "",
+					"signature": "(long)"
+				}, {
+					"_fullName": "::stappler::data::EncodeFormat::EncodeFormat(stappler::data::EncodeFormat const&)",
+					"_kind": "constructor",
+					"_name": "EncodeFormat",
+					"body_kind": "definition",
+					"id": 93824997523360,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_explicit": false,
+					"is_variadic": false,
+					"kind": "constructor",
+					"name": "EncodeFormat",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "other",
+						"id": 93825001286960,
+						"kind": "function parameter",
+						"name": "other",
+						"type": {
+							"_typeName": "stappler::data::EncodeFormat const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::data::EncodeFormat const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::data::EncodeFormat",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::data::EncodeFormat",
+										"objects": [{
+											"_fullName": "::stappler::data::EncodeFormat",
+											"_kind": "class",
+											"_name": "EncodeFormat",
+											"class_kind": "struct",
+											"id": 140736986627280,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "EncodeFormat",
+											"scope": {
+												"name": "EncodeFormat"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"semantic_scope": "",
+					"signature": "(stappler::data::EncodeFormat const&)"
+				}, {
+					"_fullName": "::stappler::data::EncodeFormat::operator=(stappler::data::EncodeFormat const&)",
+					"_kind": "member function",
+					"_name": "operator=",
+					"body_kind": "definition",
+					"cv_qualifier": "none",
+					"id": 140737119671424,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "operator=",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "other",
+						"id": 93825000911920,
+						"kind": "function parameter",
+						"name": "other",
+						"type": {
+							"_typeName": "stappler::data::EncodeFormat const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::data::EncodeFormat const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::data::EncodeFormat",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::data::EncodeFormat",
+										"objects": [{
+											"_fullName": "::stappler::data::EncodeFormat",
+											"_kind": "class",
+											"_name": "EncodeFormat",
+											"class_kind": "struct",
+											"id": 140736986627280,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "EncodeFormat",
+											"scope": {
+												"name": "EncodeFormat"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "stappler::data::EncodeFormat&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::data::EncodeFormat",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::data::EncodeFormat",
+								"objects": [{
+									"_fullName": "::stappler::data::EncodeFormat",
+									"_kind": "class",
+									"_name": "EncodeFormat",
+									"class_kind": "struct",
+									"id": 140736986627280,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "EncodeFormat",
+									"scope": {
+										"name": "EncodeFormat"
+									},
+									"semantic_scope": ""
+								}]
+							}
+						},
+						"reference_kind": "lvalue"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::data::EncodeFormat const&)"
+				}, {
+					"_fullName": "::stappler::data::EncodeFormat::isRaw() const",
+					"_kind": "member function",
+					"_name": "isRaw",
+					"body_kind": "definition",
+					"cv_qualifier": "const",
+					"id": 140736986300576,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "isRaw",
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "() const"
+				}, {
+					"_fullName": "::stappler::data::EncodeFormat::isTextual() const",
+					"_kind": "member function",
+					"_name": "isTextual",
+					"body_kind": "definition",
+					"cv_qualifier": "const",
+					"id": 93825011435568,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "isTextual",
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "() const"
+				}, {
+					"_fullName": "::stappler::data::EncodeFormat::flag() const",
+					"_kind": "member function",
+					"_name": "flag",
+					"body_kind": "definition",
+					"cv_qualifier": "const",
+					"id": 93825011518736,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "flag",
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "int",
+						"builtin_type_kind": "int",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "() const"
+				}, {
+					"_fullName": "::stappler::data::EncodeFormat::format",
+					"_kind": "member variable",
+					"_name": "format",
+					"id": 140737139135872,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "format",
+					"type": {
+						"_typeName": "stappler::data::EncodeFormat::Format",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::data::EncodeFormat::Format",
+							"objects": [{
+								"_fullName": "::stappler::data::EncodeFormat::Format",
+								"_kind": "enum",
+								"_name": "Format",
+								"has_explicit_type": false,
+								"id": 140737122100496,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_scoped": false,
+								"kind": "enum",
+								"name": "Format",
+								"semantic_scope": "",
+								"underlying_type": {
+									"_typeName": "unsigned int",
+									"builtin_type_kind": "unsigned int",
+									"kind": "builtin"
+								}
+							}]
+						}
+					}
+				}, {
+					"_fullName": "::stappler::data::EncodeFormat::compression",
+					"_kind": "member variable",
+					"_name": "compression",
+					"id": 140737115269712,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "compression",
+					"type": {
+						"_typeName": "stappler::data::EncodeFormat::Compression",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::data::EncodeFormat::Compression",
+							"objects": [{
+								"_fullName": "::stappler::data::EncodeFormat::Compression",
+								"_kind": "enum",
+								"_name": "Compression",
+								"has_explicit_type": false,
+								"id": 140736987299280,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_scoped": false,
+								"kind": "enum",
+								"name": "Compression",
+								"semantic_scope": "",
+								"underlying_type": {
+									"_typeName": "unsigned int",
+									"builtin_type_kind": "unsigned int",
+									"kind": "builtin"
+								}
+							}]
+						}
+					}
+				}, {
+					"_fullName": "::stappler::data::EncodeFormat::encryption",
+					"_kind": "member variable",
+					"_name": "encryption",
+					"id": 140737145284512,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "encryption",
+					"type": {
+						"_typeName": "stappler::data::EncodeFormat::Encryption",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::data::EncodeFormat::Encryption",
+							"objects": [{
+								"_fullName": "::stappler::data::EncodeFormat::Encryption",
+								"_kind": "enum",
+								"_name": "Encryption",
+								"has_explicit_type": false,
+								"id": 140736986627536,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_scoped": false,
+								"kind": "enum",
+								"name": "Encryption",
+								"semantic_scope": "",
+								"underlying_type": {
+									"_typeName": "unsigned int",
+									"builtin_type_kind": "unsigned int",
+									"kind": "builtin"
+								}
+							}]
+						}
+					}
+				}],
+				"class_kind": "struct",
+				"id": 140736986627280,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_final": false,
+				"kind": "class",
+				"name": "EncodeFormat",
+				"scope": {
+					"name": "EncodeFormat"
+				},
+				"semantic_scope": ""
+			}, {
+				"_fullName": "::stappler::data::getLZ4EncodeState()",
+				"_kind": "function",
+				"_name": "getLZ4EncodeState",
+				"body_kind": "declaration",
+				"id": 93824999631456,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": true,
+				"is_definition": false,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "getLZ4EncodeState",
+				"return_type": {
+					"_typeName": "uint8_t*",
+					"kind": "pointer",
+					"pointee": {
+						"_typeName": "uint8_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "uint8_t"
+						}
+					}
+				},
+				"semantic_scope": "",
+				"signature": "()"
+			}, {
+				"_fullName": "::stappler::data::compressData(uint8_t const*,size_t,uint8_t*,size_t,EncodeFormat::Compression)",
+				"_kind": "function",
+				"_name": "compressData",
+				"body_kind": "declaration",
+				"id": 93825000470192,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": true,
+				"is_definition": false,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "compressData",
+				"parameters": [{
+					"_kind": "function parameter",
+					"_name": "src",
+					"id": 93825003169680,
+					"kind": "function parameter",
+					"name": "src",
+					"type": {
+						"_typeName": "uint8_t const*",
+						"kind": "pointer",
+						"pointee": {
+							"_typeName": "uint8_t const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "uint8_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "uint8_t"
+								}
+							}
+						}
+					}
+				}, {
+					"_kind": "function parameter",
+					"_name": "srcSize",
+					"id": 93825002569248,
+					"kind": "function parameter",
+					"name": "srcSize",
+					"type": {
+						"_typeName": "size_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "size_t"
+						}
+					}
+				}, {
+					"_kind": "function parameter",
+					"_name": "dest",
+					"id": 93825002569488,
+					"kind": "function parameter",
+					"name": "dest",
+					"type": {
+						"_typeName": "uint8_t*",
+						"kind": "pointer",
+						"pointee": {
+							"_typeName": "uint8_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "uint8_t"
+							}
+						}
+					}
+				}, {
+					"_kind": "function parameter",
+					"_name": "destSize",
+					"id": 93825000576032,
+					"kind": "function parameter",
+					"name": "destSize",
+					"type": {
+						"_typeName": "size_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "size_t"
+						}
+					}
+				}, {
+					"_kind": "function parameter",
+					"_name": "c",
+					"id": 93824999461232,
+					"kind": "function parameter",
+					"name": "c",
+					"type": {
+						"_typeName": "EncodeFormat::Compression",
+						"kind": "user_defined",
+						"target": {
+							"name": "EncodeFormat::Compression",
+							"objects": [{
+								"_fullName": "::stappler::data::EncodeFormat::Compression",
+								"_kind": "enum",
+								"_name": "Compression",
+								"has_explicit_type": false,
+								"id": 140736987299280,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_scoped": false,
+								"kind": "enum",
+								"name": "Compression",
+								"semantic_scope": "",
+								"underlying_type": {
+									"_typeName": "unsigned int",
+									"builtin_type_kind": "unsigned int",
+									"kind": "builtin"
+								}
+							}]
+						}
+					}
+				}],
+				"return_type":  {
+					"_typeName": "size_t",
+					"kind": "user_defined",
+					"target": {
+						"name": "size_t"
+					}
+				},
+				"semantic_scope": "",
+				"signature": "(uint8_t const*,size_t,uint8_t*,size_t,EncodeFormat::Compression)"
+			}, {
+				"_fullName": "::stappler::data::writeCompressionMark(uint8_t*,size_t,EncodeFormat::Compression)",
+				"_kind": "function",
+				"_name": "writeCompressionMark",
+				"body_kind": "declaration",
+				"id": 93825001737648,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": true,
+				"is_definition": false,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "writeCompressionMark",
+				"parameters": [{
+					"_kind": "function parameter",
+					"_name": "data",
+					"id": 93825000832240,
+					"kind": "function parameter",
+					"name": "data",
+					"type": {
+						"_typeName": "uint8_t*",
+						"kind": "pointer",
+						"pointee": {
+							"_typeName": "uint8_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "uint8_t"
+							}
+						}
+					}
+				}, {
+					"_kind": "function parameter",
+					"_name": "sourceSize",
+					"id": 93824999837648,
+					"kind": "function parameter",
+					"name": "sourceSize",
+					"type": {
+						"_typeName": "size_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "size_t"
+						}
+					}
+				}, {
+					"_kind": "function parameter",
+					"_name": "c",
+					"id": 93824997452800,
+					"kind": "function parameter",
+					"name": "c",
+					"type": {
+						"_typeName": "EncodeFormat::Compression",
+						"kind": "user_defined",
+						"target": {
+							"name": "EncodeFormat::Compression",
+							"objects": [{
+								"_fullName": "::stappler::data::EncodeFormat::Compression",
+								"_kind": "enum",
+								"_name": "Compression",
+								"has_explicit_type": false,
+								"id": 140736987299280,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_scoped": false,
+								"kind": "enum",
+								"name": "Compression",
+								"semantic_scope": "",
+								"underlying_type": {
+									"_typeName": "unsigned int",
+									"builtin_type_kind": "unsigned int",
+									"kind": "builtin"
+								}
+							}]
+						}
+					}
+				}],
+				"return_type":  {
+					"_typeName": "void",
+					"builtin_type_kind": "void",
+					"kind": "builtin"
+				},
+				"semantic_scope": "",
+				"signature": "(uint8_t*,size_t,EncodeFormat::Compression)"
+			}, {
+				"_fullName": "::stappler::data::compress<typename>(uint8_t const*,size_t,EncodeFormat::Compression,bool)",
+				"_kind": "function template",
+				"_name": "compress",
+				"childs": [{
+					"_fullName": "::stappler::data::compress<typename>(uint8_t const*,size_t,EncodeFormat::Compression,bool)",
+					"_kind": "function",
+					"_name": "compress",
+					"body_kind": "declaration",
+					"id": 93825001560064,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "compress",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93824997452944,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "uint8_t const*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "uint8_t const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "uint8_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "uint8_t"
+									}
+								}
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93825010898800,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93825002213776,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "EncodeFormat::Compression",
+							"kind": "user_defined",
+							"target": {
+								"name": "EncodeFormat::Compression",
+								"objects": [{
+									"_fullName": "::stappler::data::EncodeFormat::Compression",
+									"_kind": "enum",
+									"_name": "Compression",
+									"has_explicit_type": false,
+									"id": 140736987299280,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_scoped": false,
+									"kind": "enum",
+									"name": "Compression",
+									"semantic_scope": "",
+									"underlying_type": {
+										"_typeName": "unsigned int",
+										"builtin_type_kind": "unsigned int",
+										"kind": "builtin"
+									}
+								}]
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "conditional",
+						"id": 93825002213920,
+						"kind": "function parameter",
+						"name": "conditional",
+						"type": {
+							"_typeName": "bool",
+							"builtin_type_kind": "bool",
+							"kind": "builtin"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "typename Interface::BytesType",
+						"kind": "unexposed",
+						"name": "typename Interface::BytesType"
+					},
+					"semantic_scope": "",
+					"signature": "(uint8_t const*,size_t,EncodeFormat::Compression,bool)"
+				}],
+				"function":  {
+					"_fullName": "::stappler::data::compress<typename>(uint8_t const*,size_t,EncodeFormat::Compression,bool)",
+					"_kind": "function",
+					"_name": "compress",
+					"body_kind": "declaration",
+					"id": 93825001560064,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "compress",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93824997452944,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "uint8_t const*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "uint8_t const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "uint8_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "uint8_t"
+									}
+								}
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93825010898800,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93825002213776,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "EncodeFormat::Compression",
+							"kind": "user_defined",
+							"target": {
+								"name": "EncodeFormat::Compression",
+								"objects": [{
+									"_fullName": "::stappler::data::EncodeFormat::Compression",
+									"_kind": "enum",
+									"_name": "Compression",
+									"has_explicit_type": false,
+									"id": 140736987299280,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_scoped": false,
+									"kind": "enum",
+									"name": "Compression",
+									"semantic_scope": "",
+									"underlying_type": {
+										"_typeName": "unsigned int",
+										"builtin_type_kind": "unsigned int",
+										"kind": "builtin"
+									}
+								}]
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "conditional",
+						"id": 93825002213920,
+						"kind": "function parameter",
+						"name": "conditional",
+						"type": {
+							"_typeName": "bool",
+							"builtin_type_kind": "bool",
+							"kind": "builtin"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "typename Interface::BytesType",
+						"kind": "unexposed",
+						"name": "typename Interface::BytesType"
+					},
+					"semantic_scope": "",
+					"signature": "(uint8_t const*,size_t,EncodeFormat::Compression,bool)"
+				},
+				"id": 140737114378496,
+				"kind": "function template",
+				"name": "compress",
+				"parameters": [{
+					"_kind": "template type parameter",
+					"_name": "Interface",
+					"id": 140737143577136,
+					"is_variadic": false,
+					"keyword": "typename",
+					"kind": "template type parameter",
+					"name": "Interface"
+				}]
+			}, {
+				"_fullName": "::stappler::data::getCompressBounds(size_t,EncodeFormat::Compression)",
+				"_kind": "function",
+				"_name": "getCompressBounds",
+				"body_kind": "declaration",
+				"id": 93824999998592,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": true,
+				"is_definition": false,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "getCompressBounds",
+				"parameters": [{
+					"_kind": "function parameter",
+					"_name": "",
+					"id": 93824999998448,
+					"kind": "function parameter",
+					"name": "",
+					"type": {
+						"_typeName": "size_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "size_t"
+						}
+					}
+				}, {
+					"_kind": "function parameter",
+					"_name": "",
+					"id": 93825001738112,
+					"kind": "function parameter",
+					"name": "",
+					"type": {
+						"_typeName": "EncodeFormat::Compression",
+						"kind": "user_defined",
+						"target": {
+							"name": "EncodeFormat::Compression",
+							"objects": [{
+								"_fullName": "::stappler::data::EncodeFormat::Compression",
+								"_kind": "enum",
+								"_name": "Compression",
+								"has_explicit_type": false,
+								"id": 140736987299280,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_scoped": false,
+								"kind": "enum",
+								"name": "Compression",
+								"semantic_scope": "",
+								"underlying_type": {
+									"_typeName": "unsigned int",
+									"builtin_type_kind": "unsigned int",
+									"kind": "builtin"
+								}
+							}]
+						}
+					}
+				}],
+				"return_type":  {
+					"_typeName": "size_t",
+					"kind": "user_defined",
+					"target": {
+						"name": "size_t"
+					}
+				},
+				"semantic_scope": "",
+				"signature": "(size_t,EncodeFormat::Compression)"
+			}, {
+				"_fullName": "::stappler::data::EncodeTraits<typename>",
+				"_kind": "class template",
+				"_name": "EncodeTraits",
+				"childs": [{
+					"_fullName": "::stappler::data::EncodeTraits<typename>",
+					"_kind": "class",
+					"_name": "EncodeTraits",
+					"childs": [{
+						"_fullName": "::stappler::data::EncodeTraits<typename>::InterfaceType",
+						"_kind": "type alias",
+						"_name": "InterfaceType",
+						"id": 93825004337664,
+						"kind": "type alias",
+						"name": "InterfaceType",
+						"underlying_type": {
+							"_typeName": "Interface",
+							"entity": {
+								"name": "Interface",
+								"objects": [{
+									"_kind": "template type parameter",
+									"_name": "Interface",
+									"id": 140737119477232,
+									"is_variadic": false,
+									"keyword": "typename",
+									"kind": "template type parameter",
+									"name": "Interface"
+								}]
+							},
+							"kind": "template_parameter"
+						}
+					}, {
+						"_fullName": "::stappler::data::EncodeTraits<typename>::ValueType",
+						"_kind": "type alias",
+						"_name": "ValueType",
+						"id": 93825004820528,
+						"kind": "type alias",
+						"name": "ValueType",
+						"underlying_type": {
+							"_typeName": "ValueTemplate<Interface>",
+							"arguments_exposed": false,
+							"kind": "template_instantiation",
+							"primary_template": {
+								"name": "ValueTemplate",
+								"objects": [{
+									"_fullName": "::stappler::data::ValueTemplate<typename>",
+									"_kind": "class template",
+									"_name": "ValueTemplate",
+									"class": {
+										"_fullName": "::stappler::data::ValueTemplate<typename>",
+										"_kind": "class",
+										"_name": "ValueTemplate",
+										"bases": [{
+											"_kind": "base class specifier",
+											"_name": "Interface::AllocBaseType",
+											"access_specifier": "public",
+											"id": 140737091294512,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "Interface::AllocBaseType",
+											"type": {
+												"_typeName": "Interface::AllocBaseType",
+												"kind": "unexposed",
+												"name": "Interface::AllocBaseType"
+											}
+										}],
+										"class_kind": "class",
+										"id": 93825001914496,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "ValueTemplate",
+										"scope": {
+											"is_templated": true,
+											"name": "ValueTemplate",
+											"template_parameters": [{
+												"_kind": "template type parameter",
+												"_name": "Interface",
+												"id": 93825003299248,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Interface"
+											}]
+										},
+										"semantic_scope": ""
+									},
+									"id": 93825003299040,
+									"kind": "class template",
+									"name": "ValueTemplate",
+									"parameters": [{
+										"_kind": "template type parameter",
+										"_name": "Interface",
+										"id": 93825003299248,
+										"is_variadic": false,
+										"keyword": "typename",
+										"kind": "template type parameter",
+										"name": "Interface"
+									}],
+									"scope":  {
+										"is_templated": true,
+										"name": "ValueTemplate",
+										"template_parameters": [{
+											"_kind": "template type parameter",
+											"_name": "Interface",
+											"id": 93825003299248,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "Interface"
+										}]
+									}
+								}]
+							},
+							"unexposed_arguments": "Interface"
+						}
+					}, {
+						"_fullName": "::stappler::data::EncodeTraits<typename>::BytesType",
+						"_kind": "type alias",
+						"_name": "BytesType",
+						"id": 93825000029904,
+						"kind": "type alias",
+						"name": "BytesType",
+						"underlying_type": {
+							"_typeName": "typename ValueType::BytesType",
+							"kind": "unexposed",
+							"name": "typename ValueType::BytesType"
+						}
+					}, {
+						"_fullName": "::stappler::data::EncodeTraits<typename>::StringType",
+						"_kind": "type alias",
+						"_name": "StringType",
+						"id": 93825000030048,
+						"kind": "type alias",
+						"name": "StringType",
+						"underlying_type": {
+							"_typeName": "typename ValueType::StringType",
+							"kind": "unexposed",
+							"name": "typename ValueType::StringType"
+						}
+					}, {
+						"_fullName": "::stappler::data::EncodeTraits<typename>::write(stappler::data::EncodeTraits::ValueType const&,stappler::data::EncodeFormat)",
+						"_kind": "function",
+						"_name": "write",
+						"body_kind": "definition",
+						"id": 93825000762032,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "write",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "data",
+							"id": 93825000451936,
+							"kind": "function parameter",
+							"name": "data",
+							"type": {
+								"_typeName": "stappler::data::EncodeTraits::ValueType const&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "stappler::data::EncodeTraits::ValueType const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "stappler::data::EncodeTraits::ValueType",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::data::EncodeTraits::ValueType",
+											"objects": [{
+												"_fullName": "::stappler::data::EncodeTraits<typename>::ValueType",
+												"_kind": "type alias",
+												"_name": "ValueType",
+												"id": 93825004820528,
+												"kind": "type alias",
+												"name": "ValueType",
+												"underlying_type": {
+													"_typeName": "ValueTemplate<Interface>",
+													"arguments_exposed": false,
+													"kind": "template_instantiation",
+													"primary_template": {
+														"name": "ValueTemplate",
+														"objects": [{
+															"_fullName": "::stappler::data::ValueTemplate<typename>",
+															"_kind": "class template",
+															"_name": "ValueTemplate",
+															"class": {
+																"_fullName": "::stappler::data::ValueTemplate<typename>",
+																"_kind": "class",
+																"_name": "ValueTemplate",
+																"bases": [{
+																	"_kind": "base class specifier",
+																	"_name": "Interface::AllocBaseType",
+																	"access_specifier": "public",
+																	"id": 140737091294512,
+																	"is_virtual": false,
+																	"kind": "base class specifier",
+																	"name": "Interface::AllocBaseType",
+																	"type": {
+																		"_typeName": "Interface::AllocBaseType",
+																		"kind": "unexposed",
+																		"name": "Interface::AllocBaseType"
+																	}
+																}],
+																"class_kind": "class",
+																"id": 93825001914496,
+																"is_declaration": false,
+																"is_definition": true,
+																"is_final": false,
+																"kind": "class",
+																"name": "ValueTemplate",
+																"scope": {
+																	"is_templated": true,
+																	"name": "ValueTemplate",
+																	"template_parameters": [{
+																		"_kind": "template type parameter",
+																		"_name": "Interface",
+																		"id": 93825003299248,
+																		"is_variadic": false,
+																		"keyword": "typename",
+																		"kind": "template type parameter",
+																		"name": "Interface"
+																	}]
+																},
+																"semantic_scope": ""
+															},
+															"id": 93825003299040,
+															"kind": "class template",
+															"name": "ValueTemplate",
+															"parameters": [{
+																"_kind": "template type parameter",
+																"_name": "Interface",
+																"id": 93825003299248,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "Interface"
+															}],
+															"scope":  {
+																"is_templated": true,
+																"name": "ValueTemplate",
+																"template_parameters": [{
+																	"_kind": "template type parameter",
+																	"_name": "Interface",
+																	"id": 93825003299248,
+																	"is_variadic": false,
+																	"keyword": "typename",
+																	"kind": "template type parameter",
+																	"name": "Interface"
+																}]
+															}
+														}]
+													},
+													"unexposed_arguments": "Interface"
+												}
+											}]
+										}
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "fmt",
+							"id": 93825000452320,
+							"kind": "function parameter",
+							"name": "fmt",
+							"type": {
+								"_typeName": "stappler::data::EncodeFormat",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::data::EncodeFormat",
+									"objects": [{
+										"_fullName": "::stappler::data::EncodeFormat",
+										"_kind": "class",
+										"_name": "EncodeFormat",
+										"class_kind": "struct",
+										"id": 140736986627280,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "EncodeFormat",
+										"scope": {
+											"name": "EncodeFormat"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "BytesType",
+							"kind": "user_defined",
+							"target": {
+								"name": "BytesType",
+								"objects": [{
+									"_fullName": "::stappler::data::EncodeTraits<typename>::BytesType",
+									"_kind": "type alias",
+									"_name": "BytesType",
+									"id": 93825000029904,
+									"kind": "type alias",
+									"name": "BytesType",
+									"underlying_type": {
+										"_typeName": "typename ValueType::BytesType",
+										"kind": "unexposed",
+										"name": "typename ValueType::BytesType"
+									}
+								}]
+							}
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::data::EncodeTraits::ValueType const&,stappler::data::EncodeFormat)",
+						"storage_class": [
+							"static"
+						]
+					}, {
+						"_fullName": "::stappler::data::EncodeTraits<typename>::write(std::ostream&,stappler::data::EncodeTraits::ValueType const&,stappler::data::EncodeFormat)",
+						"_kind": "function",
+						"_name": "write",
+						"body_kind": "definition",
+						"id": 93825000920352,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "write",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "stream",
+							"id": 93825004338560,
+							"kind": "function parameter",
+							"name": "stream",
+							"type": {
+								"_typeName": "std::ostream&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "std::ostream",
+									"kind": "user_defined",
+									"target": {
+										"name": "std::ostream"
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "data",
+							"id": 93824998205824,
+							"kind": "function parameter",
+							"name": "data",
+							"type": {
+								"_typeName": "stappler::data::EncodeTraits::ValueType const&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "stappler::data::EncodeTraits::ValueType const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "stappler::data::EncodeTraits::ValueType",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::data::EncodeTraits::ValueType",
+											"objects": [{
+												"_fullName": "::stappler::data::EncodeTraits<typename>::ValueType",
+												"_kind": "type alias",
+												"_name": "ValueType",
+												"id": 93825004820528,
+												"kind": "type alias",
+												"name": "ValueType",
+												"underlying_type": {
+													"_typeName": "ValueTemplate<Interface>",
+													"arguments_exposed": false,
+													"kind": "template_instantiation",
+													"primary_template": {
+														"name": "ValueTemplate",
+														"objects": [{
+															"_fullName": "::stappler::data::ValueTemplate<typename>",
+															"_kind": "class template",
+															"_name": "ValueTemplate",
+															"class": {
+																"_fullName": "::stappler::data::ValueTemplate<typename>",
+																"_kind": "class",
+																"_name": "ValueTemplate",
+																"bases": [{
+																	"_kind": "base class specifier",
+																	"_name": "Interface::AllocBaseType",
+																	"access_specifier": "public",
+																	"id": 140737091294512,
+																	"is_virtual": false,
+																	"kind": "base class specifier",
+																	"name": "Interface::AllocBaseType",
+																	"type": {
+																		"_typeName": "Interface::AllocBaseType",
+																		"kind": "unexposed",
+																		"name": "Interface::AllocBaseType"
+																	}
+																}],
+																"class_kind": "class",
+																"id": 93825001914496,
+																"is_declaration": false,
+																"is_definition": true,
+																"is_final": false,
+																"kind": "class",
+																"name": "ValueTemplate",
+																"scope": {
+																	"is_templated": true,
+																	"name": "ValueTemplate",
+																	"template_parameters": [{
+																		"_kind": "template type parameter",
+																		"_name": "Interface",
+																		"id": 93825003299248,
+																		"is_variadic": false,
+																		"keyword": "typename",
+																		"kind": "template type parameter",
+																		"name": "Interface"
+																	}]
+																},
+																"semantic_scope": ""
+															},
+															"id": 93825003299040,
+															"kind": "class template",
+															"name": "ValueTemplate",
+															"parameters": [{
+																"_kind": "template type parameter",
+																"_name": "Interface",
+																"id": 93825003299248,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "Interface"
+															}],
+															"scope":  {
+																"is_templated": true,
+																"name": "ValueTemplate",
+																"template_parameters": [{
+																	"_kind": "template type parameter",
+																	"_name": "Interface",
+																	"id": 93825003299248,
+																	"is_variadic": false,
+																	"keyword": "typename",
+																	"kind": "template type parameter",
+																	"name": "Interface"
+																}]
+															}
+														}]
+													},
+													"unexposed_arguments": "Interface"
+												}
+											}]
+										}
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "fmt",
+							"id": 93824998206208,
+							"kind": "function parameter",
+							"name": "fmt",
+							"type": {
+								"_typeName": "stappler::data::EncodeFormat",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::data::EncodeFormat",
+									"objects": [{
+										"_fullName": "::stappler::data::EncodeFormat",
+										"_kind": "class",
+										"_name": "EncodeFormat",
+										"class_kind": "struct",
+										"id": 140736986627280,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "EncodeFormat",
+										"scope": {
+											"name": "EncodeFormat"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "bool",
+							"builtin_type_kind": "bool",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(std::ostream&,stappler::data::EncodeTraits::ValueType const&,stappler::data::EncodeFormat)",
+						"storage_class": [
+							"static"
+						]
+					}, {
+						"_fullName": "::stappler::data::EncodeTraits<typename>::save(stappler::data::EncodeTraits::ValueType const&,stappler::StringView const&,stappler::data::EncodeFormat)",
+						"_kind": "function",
+						"_name": "save",
+						"body_kind": "definition",
+						"id": 93825011436912,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "save",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "data",
+							"id": 93825002016080,
+							"kind": "function parameter",
+							"name": "data",
+							"type": {
+								"_typeName": "stappler::data::EncodeTraits::ValueType const&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "stappler::data::EncodeTraits::ValueType const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "stappler::data::EncodeTraits::ValueType",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::data::EncodeTraits::ValueType",
+											"objects": [{
+												"_fullName": "::stappler::data::EncodeTraits<typename>::ValueType",
+												"_kind": "type alias",
+												"_name": "ValueType",
+												"id": 93825004820528,
+												"kind": "type alias",
+												"name": "ValueType",
+												"underlying_type": {
+													"_typeName": "ValueTemplate<Interface>",
+													"arguments_exposed": false,
+													"kind": "template_instantiation",
+													"primary_template": {
+														"name": "ValueTemplate",
+														"objects": [{
+															"_fullName": "::stappler::data::ValueTemplate<typename>",
+															"_kind": "class template",
+															"_name": "ValueTemplate",
+															"class": {
+																"_fullName": "::stappler::data::ValueTemplate<typename>",
+																"_kind": "class",
+																"_name": "ValueTemplate",
+																"bases": [{
+																	"_kind": "base class specifier",
+																	"_name": "Interface::AllocBaseType",
+																	"access_specifier": "public",
+																	"id": 140737091294512,
+																	"is_virtual": false,
+																	"kind": "base class specifier",
+																	"name": "Interface::AllocBaseType",
+																	"type": {
+																		"_typeName": "Interface::AllocBaseType",
+																		"kind": "unexposed",
+																		"name": "Interface::AllocBaseType"
+																	}
+																}],
+																"class_kind": "class",
+																"id": 93825001914496,
+																"is_declaration": false,
+																"is_definition": true,
+																"is_final": false,
+																"kind": "class",
+																"name": "ValueTemplate",
+																"scope": {
+																	"is_templated": true,
+																	"name": "ValueTemplate",
+																	"template_parameters": [{
+																		"_kind": "template type parameter",
+																		"_name": "Interface",
+																		"id": 93825003299248,
+																		"is_variadic": false,
+																		"keyword": "typename",
+																		"kind": "template type parameter",
+																		"name": "Interface"
+																	}]
+																},
+																"semantic_scope": ""
+															},
+															"id": 93825003299040,
+															"kind": "class template",
+															"name": "ValueTemplate",
+															"parameters": [{
+																"_kind": "template type parameter",
+																"_name": "Interface",
+																"id": 93825003299248,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "Interface"
+															}],
+															"scope":  {
+																"is_templated": true,
+																"name": "ValueTemplate",
+																"template_parameters": [{
+																	"_kind": "template type parameter",
+																	"_name": "Interface",
+																	"id": 93825003299248,
+																	"is_variadic": false,
+																	"keyword": "typename",
+																	"kind": "template type parameter",
+																	"name": "Interface"
+																}]
+															}
+														}]
+													},
+													"unexposed_arguments": "Interface"
+												}
+											}]
+										}
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "file",
+							"id": 93825002016512,
+							"kind": "function parameter",
+							"name": "file",
+							"type": {
+								"_typeName": "stappler::StringView const&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "stappler::StringView const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "stappler::StringView",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::StringView",
+											"objects": [{
+												"_fullName": "::stappler::StringView",
+												"_kind": "type alias",
+												"_name": "StringView",
+												"id": 93824997448656,
+												"kind": "type alias",
+												"name": "StringView",
+												"underlying_type": {
+													"_typeName": "StringViewBase<char>",
+													"arguments_exposed": false,
+													"kind": "template_instantiation",
+													"primary_template": {
+														"name": "StringViewBase",
+														"objects": [{
+															"_fullName": "::stappler::StringViewBase<typename>",
+															"_kind": "class template",
+															"_name": "StringViewBase",
+															"class": {
+																"_fullName": "::stappler::StringViewBase<typename>",
+																"_kind": "class",
+																"_name": "StringViewBase",
+																"bases": [{
+																	"_kind": "base class specifier",
+																	"_name": "BytesReader<_CharType>",
+																	"access_specifier": "public",
+																	"id": 93824998090352,
+																	"is_virtual": false,
+																	"kind": "base class specifier",
+																	"name": "BytesReader<_CharType>",
+																	"type": {
+																		"_typeName": "BytesReader<_CharType>",
+																		"arguments_exposed": false,
+																		"kind": "template_instantiation",
+																		"primary_template": {
+																			"name": "BytesReader",
+																			"objects": [{
+																				"_fullName": "::stappler::BytesReader<typename>",
+																				"_kind": "class template",
+																				"_name": "BytesReader",
+																				"class": {
+																					"_fullName": "::stappler::BytesReader<typename>",
+																					"_kind": "class",
+																					"_name": "BytesReader",
+																					"class_kind": "class",
+																					"id": 140736954953792,
+																					"is_declaration": false,
+																					"is_definition": true,
+																					"is_final": false,
+																					"kind": "class",
+																					"name": "BytesReader",
+																					"scope": {
+																						"is_templated": true,
+																						"name": "BytesReader",
+																						"template_parameters": [{
+																							"_kind": "template type parameter",
+																							"_name": "_CharType",
+																							"id": 140737098599232,
+																							"is_variadic": false,
+																							"keyword": "typename",
+																							"kind": "template type parameter",
+																							"name": "_CharType"
+																						}]
+																					},
+																					"semantic_scope": ""
+																				},
+																				"id": 93824998648144,
+																				"kind": "class template",
+																				"name": "BytesReader",
+																				"parameters": [{
+																					"_kind": "template type parameter",
+																					"_name": "_CharType",
+																					"id": 140737098599232,
+																					"is_variadic": false,
+																					"keyword": "typename",
+																					"kind": "template type parameter",
+																					"name": "_CharType"
+																				}],
+																				"scope":  {
+																					"is_templated": true,
+																					"name": "BytesReader",
+																					"template_parameters": [{
+																						"_kind": "template type parameter",
+																						"_name": "_CharType",
+																						"id": 140737098599232,
+																						"is_variadic": false,
+																						"keyword": "typename",
+																						"kind": "template type parameter",
+																						"name": "_CharType"
+																					}]
+																				}
+																			}]
+																		},
+																		"unexposed_arguments": "_CharType"
+																	}
+																}],
+																"class_kind": "class",
+																"id": 140737094580320,
+																"is_declaration": false,
+																"is_definition": true,
+																"is_final": false,
+																"kind": "class",
+																"name": "StringViewBase",
+																"scope": {
+																	"is_templated": true,
+																	"name": "StringViewBase",
+																	"template_parameters": [{
+																		"_kind": "template type parameter",
+																		"_name": "_CharType",
+																		"id": 93824999493712,
+																		"is_variadic": false,
+																		"keyword": "typename",
+																		"kind": "template type parameter",
+																		"name": "_CharType"
+																	}]
+																},
+																"semantic_scope": ""
+															},
+															"id": 93824999493216,
+															"kind": "class template",
+															"name": "StringViewBase",
+															"parameters": [{
+																"_kind": "template type parameter",
+																"_name": "_CharType",
+																"id": 93824999493712,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "_CharType"
+															}],
+															"scope":  {
+																"is_templated": true,
+																"name": "StringViewBase",
+																"template_parameters": [{
+																	"_kind": "template type parameter",
+																	"_name": "_CharType",
+																	"id": 93824999493712,
+																	"is_variadic": false,
+																	"keyword": "typename",
+																	"kind": "template type parameter",
+																	"name": "_CharType"
+																}]
+															}
+														}]
+													},
+													"unexposed_arguments": "char"
+												}
+											}]
+										}
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "fmt",
+							"id": 93825001433568,
+							"kind": "function parameter",
+							"name": "fmt",
+							"type": {
+								"_typeName": "stappler::data::EncodeFormat",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::data::EncodeFormat",
+									"objects": [{
+										"_fullName": "::stappler::data::EncodeFormat",
+										"_kind": "class",
+										"_name": "EncodeFormat",
+										"class_kind": "struct",
+										"id": 140736986627280,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "EncodeFormat",
+										"scope": {
+											"name": "EncodeFormat"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "bool",
+							"builtin_type_kind": "bool",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::data::EncodeTraits::ValueType const&,stappler::StringView const&,stappler::data::EncodeFormat)",
+						"storage_class": [
+							"static"
+						]
+					}],
+					"class_kind": "struct",
+					"id": 93825000416256,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_final": false,
+					"kind": "class",
+					"name": "EncodeTraits",
+					"scope": {
+						"is_templated": true,
+						"name": "EncodeTraits",
+						"template_parameters": [{
+							"_kind": "template type parameter",
+							"_name": "Interface",
+							"id": 140737119477232,
+							"is_variadic": false,
+							"keyword": "typename",
+							"kind": "template type parameter",
+							"name": "Interface"
+						}]
+					},
+					"semantic_scope": ""
+				}],
+				"class":  {
+					"_fullName": "::stappler::data::EncodeTraits<typename>",
+					"_kind": "class",
+					"_name": "EncodeTraits",
+					"class_kind": "struct",
+					"id": 93825000416256,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_final": false,
+					"kind": "class",
+					"name": "EncodeTraits",
+					"scope": {
+						"is_templated": true,
+						"name": "EncodeTraits",
+						"template_parameters": [{
+							"_kind": "template type parameter",
+							"_name": "Interface",
+							"id": 140737119477232,
+							"is_variadic": false,
+							"keyword": "typename",
+							"kind": "template type parameter",
+							"name": "Interface"
+						}]
+					},
+					"semantic_scope": ""
+				},
+				"id": 93825000273488,
+				"kind": "class template",
+				"name": "EncodeTraits",
+				"parameters": [{
+					"_kind": "template type parameter",
+					"_name": "Interface",
+					"id": 140737119477232,
+					"is_variadic": false,
+					"keyword": "typename",
+					"kind": "template type parameter",
+					"name": "Interface"
+				}],
+				"scope":  {
+					"is_templated": true,
+					"name": "EncodeTraits",
+					"template_parameters": [{
+						"_kind": "template type parameter",
+						"_name": "Interface",
+						"id": 140737119477232,
+						"is_variadic": false,
+						"keyword": "typename",
+						"kind": "template type parameter",
+						"name": "Interface"
+					}]
+				}
+			}, {
+				"_fullName": "::stappler::data::write<typename>(ValueTemplate<Interface> const&,stappler::data::EncodeFormat)",
+				"_kind": "function template",
+				"_name": "write",
+				"childs": [{
+					"_fullName": "::stappler::data::write<typename>(ValueTemplate<Interface> const&,stappler::data::EncodeFormat)",
+					"_kind": "function",
+					"_name": "write",
+					"body_kind": "definition",
+					"id": 93825001504864,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "write",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "data",
+						"id": 93825004541888,
+						"kind": "function parameter",
+						"name": "data",
+						"type": {
+							"_typeName": "ValueTemplate<Interface> const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "ValueTemplate<Interface> const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "ValueTemplate<Interface>",
+									"arguments_exposed": false,
+									"kind": "template_instantiation",
+									"primary_template": {
+										"name": "ValueTemplate",
+										"objects": [{
+											"_fullName": "::stappler::data::ValueTemplate<typename>",
+											"_kind": "class template",
+											"_name": "ValueTemplate",
+											"class": {
+												"_fullName": "::stappler::data::ValueTemplate<typename>",
+												"_kind": "class",
+												"_name": "ValueTemplate",
+												"bases": [{
+													"_kind": "base class specifier",
+													"_name": "Interface::AllocBaseType",
+													"access_specifier": "public",
+													"id": 140737091294512,
+													"is_virtual": false,
+													"kind": "base class specifier",
+													"name": "Interface::AllocBaseType",
+													"type": {
+														"_typeName": "Interface::AllocBaseType",
+														"kind": "unexposed",
+														"name": "Interface::AllocBaseType"
+													}
+												}],
+												"class_kind": "class",
+												"id": 93825001914496,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "ValueTemplate",
+												"scope": {
+													"is_templated": true,
+													"name": "ValueTemplate",
+													"template_parameters": [{
+														"_kind": "template type parameter",
+														"_name": "Interface",
+														"id": 93825003299248,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "Interface"
+													}]
+												},
+												"semantic_scope": ""
+											},
+											"id": 93825003299040,
+											"kind": "class template",
+											"name": "ValueTemplate",
+											"parameters": [{
+												"_kind": "template type parameter",
+												"_name": "Interface",
+												"id": 93825003299248,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Interface"
+											}],
+											"scope":  {
+												"is_templated": true,
+												"name": "ValueTemplate",
+												"template_parameters": [{
+													"_kind": "template type parameter",
+													"_name": "Interface",
+													"id": 93825003299248,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "Interface"
+												}]
+											}
+										}]
+									},
+									"unexposed_arguments": "Interface"
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "fmt",
+						"default_value": {
+							"expression": [{
+								"kind": "identifier",
+								"spelling": "EncodeFormat"
+							}, {
+								"kind": "punctuation",
+								"spelling": "("
+							}, {
+								"kind": "punctuation",
+								"spelling": ")"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "stappler::data::EncodeFormat",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::data::EncodeFormat",
+									"objects": [{
+										"_fullName": "::stappler::data::EncodeFormat",
+										"_kind": "class",
+										"_name": "EncodeFormat",
+										"class_kind": "struct",
+										"id": 140736986627280,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "EncodeFormat",
+										"scope": {
+											"name": "EncodeFormat"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						},
+						"id": 93825001558992,
+						"kind": "function parameter",
+						"name": "fmt",
+						"type": {
+							"_typeName": "stappler::data::EncodeFormat",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::data::EncodeFormat",
+								"objects": [{
+									"_fullName": "::stappler::data::EncodeFormat",
+									"_kind": "class",
+									"_name": "EncodeFormat",
+									"class_kind": "struct",
+									"id": 140736986627280,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "EncodeFormat",
+									"scope": {
+										"name": "EncodeFormat"
+									},
+									"semantic_scope": ""
+								}]
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "typename ValueTemplate<Interface>::BytesType",
+						"kind": "unexposed",
+						"name": "typename ValueTemplate<Interface>::BytesType"
+					},
+					"semantic_scope": "",
+					"signature": "(ValueTemplate<Interface> const&,stappler::data::EncodeFormat)"
+				}],
+				"function":  {
+					"_fullName": "::stappler::data::write<typename>(ValueTemplate<Interface> const&,stappler::data::EncodeFormat)",
+					"_kind": "function",
+					"_name": "write",
+					"body_kind": "definition",
+					"id": 93825001504864,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "write",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "data",
+						"id": 93825004541888,
+						"kind": "function parameter",
+						"name": "data",
+						"type": {
+							"_typeName": "ValueTemplate<Interface> const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "ValueTemplate<Interface> const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "ValueTemplate<Interface>",
+									"arguments_exposed": false,
+									"kind": "template_instantiation",
+									"primary_template": {
+										"name": "ValueTemplate",
+										"objects": [{
+											"_fullName": "::stappler::data::ValueTemplate<typename>",
+											"_kind": "class template",
+											"_name": "ValueTemplate",
+											"class": {
+												"_fullName": "::stappler::data::ValueTemplate<typename>",
+												"_kind": "class",
+												"_name": "ValueTemplate",
+												"bases": [{
+													"_kind": "base class specifier",
+													"_name": "Interface::AllocBaseType",
+													"access_specifier": "public",
+													"id": 140737091294512,
+													"is_virtual": false,
+													"kind": "base class specifier",
+													"name": "Interface::AllocBaseType",
+													"type": {
+														"_typeName": "Interface::AllocBaseType",
+														"kind": "unexposed",
+														"name": "Interface::AllocBaseType"
+													}
+												}],
+												"class_kind": "class",
+												"id": 93825001914496,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "ValueTemplate",
+												"scope": {
+													"is_templated": true,
+													"name": "ValueTemplate",
+													"template_parameters": [{
+														"_kind": "template type parameter",
+														"_name": "Interface",
+														"id": 93825003299248,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "Interface"
+													}]
+												},
+												"semantic_scope": ""
+											},
+											"id": 93825003299040,
+											"kind": "class template",
+											"name": "ValueTemplate",
+											"parameters": [{
+												"_kind": "template type parameter",
+												"_name": "Interface",
+												"id": 93825003299248,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Interface"
+											}],
+											"scope":  {
+												"is_templated": true,
+												"name": "ValueTemplate",
+												"template_parameters": [{
+													"_kind": "template type parameter",
+													"_name": "Interface",
+													"id": 93825003299248,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "Interface"
+												}]
+											}
+										}]
+									},
+									"unexposed_arguments": "Interface"
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "fmt",
+						"default_value": {
+							"expression": [{
+								"kind": "identifier",
+								"spelling": "EncodeFormat"
+							}, {
+								"kind": "punctuation",
+								"spelling": "("
+							}, {
+								"kind": "punctuation",
+								"spelling": ")"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "stappler::data::EncodeFormat",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::data::EncodeFormat",
+									"objects": [{
+										"_fullName": "::stappler::data::EncodeFormat",
+										"_kind": "class",
+										"_name": "EncodeFormat",
+										"class_kind": "struct",
+										"id": 140736986627280,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "EncodeFormat",
+										"scope": {
+											"name": "EncodeFormat"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						},
+						"id": 93825001558992,
+						"kind": "function parameter",
+						"name": "fmt",
+						"type": {
+							"_typeName": "stappler::data::EncodeFormat",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::data::EncodeFormat",
+								"objects": [{
+									"_fullName": "::stappler::data::EncodeFormat",
+									"_kind": "class",
+									"_name": "EncodeFormat",
+									"class_kind": "struct",
+									"id": 140736986627280,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "EncodeFormat",
+									"scope": {
+										"name": "EncodeFormat"
+									},
+									"semantic_scope": ""
+								}]
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "typename ValueTemplate<Interface>::BytesType",
+						"kind": "unexposed",
+						"name": "typename ValueTemplate<Interface>::BytesType"
+					},
+					"semantic_scope": "",
+					"signature": "(ValueTemplate<Interface> const&,stappler::data::EncodeFormat)"
+				},
+				"id": 93825002068000,
+				"kind": "function template",
+				"name": "write",
+				"parameters": [{
+					"_kind": "template type parameter",
+					"_name": "Interface",
+					"id": 140736973640048,
+					"is_variadic": false,
+					"keyword": "typename",
+					"kind": "template type parameter",
+					"name": "Interface"
+				}]
+			}, {
+				"_fullName": "::stappler::data::write<typename>(std::ostream&,ValueTemplate<Interface> const&,stappler::data::EncodeFormat)",
+				"_kind": "function template",
+				"_name": "write",
+				"childs": [{
+					"_fullName": "::stappler::data::write<typename>(std::ostream&,ValueTemplate<Interface> const&,stappler::data::EncodeFormat)",
+					"_kind": "function",
+					"_name": "write",
+					"body_kind": "definition",
+					"id": 93825000912688,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "write",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "stream",
+						"id": 93825000913008,
+						"kind": "function parameter",
+						"name": "stream",
+						"type": {
+							"_typeName": "std::ostream&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "std::ostream",
+								"kind": "user_defined",
+								"target": {
+									"name": "std::ostream"
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "data",
+						"id": 93824998217248,
+						"kind": "function parameter",
+						"name": "data",
+						"type": {
+							"_typeName": "ValueTemplate<Interface> const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "ValueTemplate<Interface> const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "ValueTemplate<Interface>",
+									"arguments_exposed": false,
+									"kind": "template_instantiation",
+									"primary_template": {
+										"name": "ValueTemplate",
+										"objects": [{
+											"_fullName": "::stappler::data::ValueTemplate<typename>",
+											"_kind": "class template",
+											"_name": "ValueTemplate",
+											"class": {
+												"_fullName": "::stappler::data::ValueTemplate<typename>",
+												"_kind": "class",
+												"_name": "ValueTemplate",
+												"bases": [{
+													"_kind": "base class specifier",
+													"_name": "Interface::AllocBaseType",
+													"access_specifier": "public",
+													"id": 140737091294512,
+													"is_virtual": false,
+													"kind": "base class specifier",
+													"name": "Interface::AllocBaseType",
+													"type": {
+														"_typeName": "Interface::AllocBaseType",
+														"kind": "unexposed",
+														"name": "Interface::AllocBaseType"
+													}
+												}],
+												"class_kind": "class",
+												"id": 93825001914496,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "ValueTemplate",
+												"scope": {
+													"is_templated": true,
+													"name": "ValueTemplate",
+													"template_parameters": [{
+														"_kind": "template type parameter",
+														"_name": "Interface",
+														"id": 93825003299248,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "Interface"
+													}]
+												},
+												"semantic_scope": ""
+											},
+											"id": 93825003299040,
+											"kind": "class template",
+											"name": "ValueTemplate",
+											"parameters": [{
+												"_kind": "template type parameter",
+												"_name": "Interface",
+												"id": 93825003299248,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Interface"
+											}],
+											"scope":  {
+												"is_templated": true,
+												"name": "ValueTemplate",
+												"template_parameters": [{
+													"_kind": "template type parameter",
+													"_name": "Interface",
+													"id": 93825003299248,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "Interface"
+												}]
+											}
+										}]
+									},
+									"unexposed_arguments": "Interface"
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "fmt",
+						"default_value": {
+							"expression": [{
+								"kind": "identifier",
+								"spelling": "EncodeFormat"
+							}, {
+								"kind": "punctuation",
+								"spelling": "("
+							}, {
+								"kind": "punctuation",
+								"spelling": ")"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "stappler::data::EncodeFormat",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::data::EncodeFormat",
+									"objects": [{
+										"_fullName": "::stappler::data::EncodeFormat",
+										"_kind": "class",
+										"_name": "EncodeFormat",
+										"class_kind": "struct",
+										"id": 140736986627280,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "EncodeFormat",
+										"scope": {
+											"name": "EncodeFormat"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						},
+						"id": 93825001556544,
+						"kind": "function parameter",
+						"name": "fmt",
+						"type": {
+							"_typeName": "stappler::data::EncodeFormat",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::data::EncodeFormat",
+								"objects": [{
+									"_fullName": "::stappler::data::EncodeFormat",
+									"_kind": "class",
+									"_name": "EncodeFormat",
+									"class_kind": "struct",
+									"id": 140736986627280,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "EncodeFormat",
+									"scope": {
+										"name": "EncodeFormat"
+									},
+									"semantic_scope": ""
+								}]
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(std::ostream&,ValueTemplate<Interface> const&,stappler::data::EncodeFormat)"
+				}],
+				"function":  {
+					"_fullName": "::stappler::data::write<typename>(std::ostream&,ValueTemplate<Interface> const&,stappler::data::EncodeFormat)",
+					"_kind": "function",
+					"_name": "write",
+					"body_kind": "definition",
+					"id": 93825000912688,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "write",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "stream",
+						"id": 93825000913008,
+						"kind": "function parameter",
+						"name": "stream",
+						"type": {
+							"_typeName": "std::ostream&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "std::ostream",
+								"kind": "user_defined",
+								"target": {
+									"name": "std::ostream"
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "data",
+						"id": 93824998217248,
+						"kind": "function parameter",
+						"name": "data",
+						"type": {
+							"_typeName": "ValueTemplate<Interface> const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "ValueTemplate<Interface> const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "ValueTemplate<Interface>",
+									"arguments_exposed": false,
+									"kind": "template_instantiation",
+									"primary_template": {
+										"name": "ValueTemplate",
+										"objects": [{
+											"_fullName": "::stappler::data::ValueTemplate<typename>",
+											"_kind": "class template",
+											"_name": "ValueTemplate",
+											"class": {
+												"_fullName": "::stappler::data::ValueTemplate<typename>",
+												"_kind": "class",
+												"_name": "ValueTemplate",
+												"bases": [{
+													"_kind": "base class specifier",
+													"_name": "Interface::AllocBaseType",
+													"access_specifier": "public",
+													"id": 140737091294512,
+													"is_virtual": false,
+													"kind": "base class specifier",
+													"name": "Interface::AllocBaseType",
+													"type": {
+														"_typeName": "Interface::AllocBaseType",
+														"kind": "unexposed",
+														"name": "Interface::AllocBaseType"
+													}
+												}],
+												"class_kind": "class",
+												"id": 93825001914496,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "ValueTemplate",
+												"scope": {
+													"is_templated": true,
+													"name": "ValueTemplate",
+													"template_parameters": [{
+														"_kind": "template type parameter",
+														"_name": "Interface",
+														"id": 93825003299248,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "Interface"
+													}]
+												},
+												"semantic_scope": ""
+											},
+											"id": 93825003299040,
+											"kind": "class template",
+											"name": "ValueTemplate",
+											"parameters": [{
+												"_kind": "template type parameter",
+												"_name": "Interface",
+												"id": 93825003299248,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Interface"
+											}],
+											"scope":  {
+												"is_templated": true,
+												"name": "ValueTemplate",
+												"template_parameters": [{
+													"_kind": "template type parameter",
+													"_name": "Interface",
+													"id": 93825003299248,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "Interface"
+												}]
+											}
+										}]
+									},
+									"unexposed_arguments": "Interface"
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "fmt",
+						"default_value": {
+							"expression": [{
+								"kind": "identifier",
+								"spelling": "EncodeFormat"
+							}, {
+								"kind": "punctuation",
+								"spelling": "("
+							}, {
+								"kind": "punctuation",
+								"spelling": ")"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "stappler::data::EncodeFormat",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::data::EncodeFormat",
+									"objects": [{
+										"_fullName": "::stappler::data::EncodeFormat",
+										"_kind": "class",
+										"_name": "EncodeFormat",
+										"class_kind": "struct",
+										"id": 140736986627280,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "EncodeFormat",
+										"scope": {
+											"name": "EncodeFormat"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						},
+						"id": 93825001556544,
+						"kind": "function parameter",
+						"name": "fmt",
+						"type": {
+							"_typeName": "stappler::data::EncodeFormat",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::data::EncodeFormat",
+								"objects": [{
+									"_fullName": "::stappler::data::EncodeFormat",
+									"_kind": "class",
+									"_name": "EncodeFormat",
+									"class_kind": "struct",
+									"id": 140736986627280,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "EncodeFormat",
+									"scope": {
+										"name": "EncodeFormat"
+									},
+									"semantic_scope": ""
+								}]
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(std::ostream&,ValueTemplate<Interface> const&,stappler::data::EncodeFormat)"
+				},
+				"id": 93825002052816,
+				"kind": "function template",
+				"name": "write",
+				"parameters": [{
+					"_kind": "template type parameter",
+					"_name": "Interface",
+					"id": 140737129393088,
+					"is_variadic": false,
+					"keyword": "typename",
+					"kind": "template type parameter",
+					"name": "Interface"
+				}]
+			}, {
+				"_fullName": "::stappler::data::save<typename>(ValueTemplate<Interface> const&,stappler::StringView const&,stappler::data::EncodeFormat)",
+				"_kind": "function template",
+				"_name": "save",
+				"childs": [{
+					"_fullName": "::stappler::data::save<typename>(ValueTemplate<Interface> const&,stappler::StringView const&,stappler::data::EncodeFormat)",
+					"_kind": "function",
+					"_name": "save",
+					"body_kind": "definition",
+					"id": 93825011449936,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "save",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "data",
+						"id": 93825002569696,
+						"kind": "function parameter",
+						"name": "data",
+						"type": {
+							"_typeName": "ValueTemplate<Interface> const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "ValueTemplate<Interface> const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "ValueTemplate<Interface>",
+									"arguments_exposed": false,
+									"kind": "template_instantiation",
+									"primary_template": {
+										"name": "ValueTemplate",
+										"objects": [{
+											"_fullName": "::stappler::data::ValueTemplate<typename>",
+											"_kind": "class template",
+											"_name": "ValueTemplate",
+											"class": {
+												"_fullName": "::stappler::data::ValueTemplate<typename>",
+												"_kind": "class",
+												"_name": "ValueTemplate",
+												"bases": [{
+													"_kind": "base class specifier",
+													"_name": "Interface::AllocBaseType",
+													"access_specifier": "public",
+													"id": 140737091294512,
+													"is_virtual": false,
+													"kind": "base class specifier",
+													"name": "Interface::AllocBaseType",
+													"type": {
+														"_typeName": "Interface::AllocBaseType",
+														"kind": "unexposed",
+														"name": "Interface::AllocBaseType"
+													}
+												}],
+												"class_kind": "class",
+												"id": 93825001914496,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "ValueTemplate",
+												"scope": {
+													"is_templated": true,
+													"name": "ValueTemplate",
+													"template_parameters": [{
+														"_kind": "template type parameter",
+														"_name": "Interface",
+														"id": 93825003299248,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "Interface"
+													}]
+												},
+												"semantic_scope": ""
+											},
+											"id": 93825003299040,
+											"kind": "class template",
+											"name": "ValueTemplate",
+											"parameters": [{
+												"_kind": "template type parameter",
+												"_name": "Interface",
+												"id": 93825003299248,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Interface"
+											}],
+											"scope":  {
+												"is_templated": true,
+												"name": "ValueTemplate",
+												"template_parameters": [{
+													"_kind": "template type parameter",
+													"_name": "Interface",
+													"id": 93825003299248,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "Interface"
+												}]
+											}
+										}]
+									},
+									"unexposed_arguments": "Interface"
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "file",
+						"id": 93825002570032,
+						"kind": "function parameter",
+						"name": "file",
+						"type": {
+							"_typeName": "stappler::StringView const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::StringView const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::StringView",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::StringView",
+										"objects": [{
+											"_fullName": "::stappler::StringView",
+											"_kind": "type alias",
+											"_name": "StringView",
+											"id": 93824997448656,
+											"kind": "type alias",
+											"name": "StringView",
+											"underlying_type": {
+												"_typeName": "StringViewBase<char>",
+												"arguments_exposed": false,
+												"kind": "template_instantiation",
+												"primary_template": {
+													"name": "StringViewBase",
+													"objects": [{
+														"_fullName": "::stappler::StringViewBase<typename>",
+														"_kind": "class template",
+														"_name": "StringViewBase",
+														"class": {
+															"_fullName": "::stappler::StringViewBase<typename>",
+															"_kind": "class",
+															"_name": "StringViewBase",
+															"bases": [{
+																"_kind": "base class specifier",
+																"_name": "BytesReader<_CharType>",
+																"access_specifier": "public",
+																"id": 93824998090352,
+																"is_virtual": false,
+																"kind": "base class specifier",
+																"name": "BytesReader<_CharType>",
+																"type": {
+																	"_typeName": "BytesReader<_CharType>",
+																	"arguments_exposed": false,
+																	"kind": "template_instantiation",
+																	"primary_template": {
+																		"name": "BytesReader",
+																		"objects": [{
+																			"_fullName": "::stappler::BytesReader<typename>",
+																			"_kind": "class template",
+																			"_name": "BytesReader",
+																			"class": {
+																				"_fullName": "::stappler::BytesReader<typename>",
+																				"_kind": "class",
+																				"_name": "BytesReader",
+																				"class_kind": "class",
+																				"id": 140736954953792,
+																				"is_declaration": false,
+																				"is_definition": true,
+																				"is_final": false,
+																				"kind": "class",
+																				"name": "BytesReader",
+																				"scope": {
+																					"is_templated": true,
+																					"name": "BytesReader",
+																					"template_parameters": [{
+																						"_kind": "template type parameter",
+																						"_name": "_CharType",
+																						"id": 140737098599232,
+																						"is_variadic": false,
+																						"keyword": "typename",
+																						"kind": "template type parameter",
+																						"name": "_CharType"
+																					}]
+																				},
+																				"semantic_scope": ""
+																			},
+																			"id": 93824998648144,
+																			"kind": "class template",
+																			"name": "BytesReader",
+																			"parameters": [{
+																				"_kind": "template type parameter",
+																				"_name": "_CharType",
+																				"id": 140737098599232,
+																				"is_variadic": false,
+																				"keyword": "typename",
+																				"kind": "template type parameter",
+																				"name": "_CharType"
+																			}],
+																			"scope":  {
+																				"is_templated": true,
+																				"name": "BytesReader",
+																				"template_parameters": [{
+																					"_kind": "template type parameter",
+																					"_name": "_CharType",
+																					"id": 140737098599232,
+																					"is_variadic": false,
+																					"keyword": "typename",
+																					"kind": "template type parameter",
+																					"name": "_CharType"
+																				}]
+																			}
+																		}]
+																	},
+																	"unexposed_arguments": "_CharType"
+																}
+															}],
+															"class_kind": "class",
+															"id": 140737094580320,
+															"is_declaration": false,
+															"is_definition": true,
+															"is_final": false,
+															"kind": "class",
+															"name": "StringViewBase",
+															"scope": {
+																"is_templated": true,
+																"name": "StringViewBase",
+																"template_parameters": [{
+																	"_kind": "template type parameter",
+																	"_name": "_CharType",
+																	"id": 93824999493712,
+																	"is_variadic": false,
+																	"keyword": "typename",
+																	"kind": "template type parameter",
+																	"name": "_CharType"
+																}]
+															},
+															"semantic_scope": ""
+														},
+														"id": 93824999493216,
+														"kind": "class template",
+														"name": "StringViewBase",
+														"parameters": [{
+															"_kind": "template type parameter",
+															"_name": "_CharType",
+															"id": 93824999493712,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "_CharType"
+														}],
+														"scope":  {
+															"is_templated": true,
+															"name": "StringViewBase",
+															"template_parameters": [{
+																"_kind": "template type parameter",
+																"_name": "_CharType",
+																"id": 93824999493712,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "_CharType"
+															}]
+														}
+													}]
+												},
+												"unexposed_arguments": "char"
+											}
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "fmt",
+						"default_value": {
+							"expression": [{
+								"kind": "identifier",
+								"spelling": "EncodeFormat"
+							}, {
+								"kind": "punctuation",
+								"spelling": "("
+							}, {
+								"kind": "punctuation",
+								"spelling": ")"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "stappler::data::EncodeFormat",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::data::EncodeFormat",
+									"objects": [{
+										"_fullName": "::stappler::data::EncodeFormat",
+										"_kind": "class",
+										"_name": "EncodeFormat",
+										"class_kind": "struct",
+										"id": 140736986627280,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "EncodeFormat",
+										"scope": {
+											"name": "EncodeFormat"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						},
+						"id": 93824997658208,
+						"kind": "function parameter",
+						"name": "fmt",
+						"type": {
+							"_typeName": "stappler::data::EncodeFormat",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::data::EncodeFormat",
+								"objects": [{
+									"_fullName": "::stappler::data::EncodeFormat",
+									"_kind": "class",
+									"_name": "EncodeFormat",
+									"class_kind": "struct",
+									"id": 140736986627280,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "EncodeFormat",
+									"scope": {
+										"name": "EncodeFormat"
+									},
+									"semantic_scope": ""
+								}]
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(ValueTemplate<Interface> const&,stappler::StringView const&,stappler::data::EncodeFormat)"
+				}],
+				"function":  {
+					"_fullName": "::stappler::data::save<typename>(ValueTemplate<Interface> const&,stappler::StringView const&,stappler::data::EncodeFormat)",
+					"_kind": "function",
+					"_name": "save",
+					"body_kind": "definition",
+					"id": 93825011449936,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "save",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "data",
+						"id": 93825002569696,
+						"kind": "function parameter",
+						"name": "data",
+						"type": {
+							"_typeName": "ValueTemplate<Interface> const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "ValueTemplate<Interface> const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "ValueTemplate<Interface>",
+									"arguments_exposed": false,
+									"kind": "template_instantiation",
+									"primary_template": {
+										"name": "ValueTemplate",
+										"objects": [{
+											"_fullName": "::stappler::data::ValueTemplate<typename>",
+											"_kind": "class template",
+											"_name": "ValueTemplate",
+											"class": {
+												"_fullName": "::stappler::data::ValueTemplate<typename>",
+												"_kind": "class",
+												"_name": "ValueTemplate",
+												"bases": [{
+													"_kind": "base class specifier",
+													"_name": "Interface::AllocBaseType",
+													"access_specifier": "public",
+													"id": 140737091294512,
+													"is_virtual": false,
+													"kind": "base class specifier",
+													"name": "Interface::AllocBaseType",
+													"type": {
+														"_typeName": "Interface::AllocBaseType",
+														"kind": "unexposed",
+														"name": "Interface::AllocBaseType"
+													}
+												}],
+												"class_kind": "class",
+												"id": 93825001914496,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "ValueTemplate",
+												"scope": {
+													"is_templated": true,
+													"name": "ValueTemplate",
+													"template_parameters": [{
+														"_kind": "template type parameter",
+														"_name": "Interface",
+														"id": 93825003299248,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "Interface"
+													}]
+												},
+												"semantic_scope": ""
+											},
+											"id": 93825003299040,
+											"kind": "class template",
+											"name": "ValueTemplate",
+											"parameters": [{
+												"_kind": "template type parameter",
+												"_name": "Interface",
+												"id": 93825003299248,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Interface"
+											}],
+											"scope":  {
+												"is_templated": true,
+												"name": "ValueTemplate",
+												"template_parameters": [{
+													"_kind": "template type parameter",
+													"_name": "Interface",
+													"id": 93825003299248,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "Interface"
+												}]
+											}
+										}]
+									},
+									"unexposed_arguments": "Interface"
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "file",
+						"id": 93825002570032,
+						"kind": "function parameter",
+						"name": "file",
+						"type": {
+							"_typeName": "stappler::StringView const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::StringView const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::StringView",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::StringView",
+										"objects": [{
+											"_fullName": "::stappler::StringView",
+											"_kind": "type alias",
+											"_name": "StringView",
+											"id": 93824997448656,
+											"kind": "type alias",
+											"name": "StringView",
+											"underlying_type": {
+												"_typeName": "StringViewBase<char>",
+												"arguments_exposed": false,
+												"kind": "template_instantiation",
+												"primary_template": {
+													"name": "StringViewBase",
+													"objects": [{
+														"_fullName": "::stappler::StringViewBase<typename>",
+														"_kind": "class template",
+														"_name": "StringViewBase",
+														"class": {
+															"_fullName": "::stappler::StringViewBase<typename>",
+															"_kind": "class",
+															"_name": "StringViewBase",
+															"bases": [{
+																"_kind": "base class specifier",
+																"_name": "BytesReader<_CharType>",
+																"access_specifier": "public",
+																"id": 93824998090352,
+																"is_virtual": false,
+																"kind": "base class specifier",
+																"name": "BytesReader<_CharType>",
+																"type": {
+																	"_typeName": "BytesReader<_CharType>",
+																	"arguments_exposed": false,
+																	"kind": "template_instantiation",
+																	"primary_template": {
+																		"name": "BytesReader",
+																		"objects": [{
+																			"_fullName": "::stappler::BytesReader<typename>",
+																			"_kind": "class template",
+																			"_name": "BytesReader",
+																			"class": {
+																				"_fullName": "::stappler::BytesReader<typename>",
+																				"_kind": "class",
+																				"_name": "BytesReader",
+																				"class_kind": "class",
+																				"id": 140736954953792,
+																				"is_declaration": false,
+																				"is_definition": true,
+																				"is_final": false,
+																				"kind": "class",
+																				"name": "BytesReader",
+																				"scope": {
+																					"is_templated": true,
+																					"name": "BytesReader",
+																					"template_parameters": [{
+																						"_kind": "template type parameter",
+																						"_name": "_CharType",
+																						"id": 140737098599232,
+																						"is_variadic": false,
+																						"keyword": "typename",
+																						"kind": "template type parameter",
+																						"name": "_CharType"
+																					}]
+																				},
+																				"semantic_scope": ""
+																			},
+																			"id": 93824998648144,
+																			"kind": "class template",
+																			"name": "BytesReader",
+																			"parameters": [{
+																				"_kind": "template type parameter",
+																				"_name": "_CharType",
+																				"id": 140737098599232,
+																				"is_variadic": false,
+																				"keyword": "typename",
+																				"kind": "template type parameter",
+																				"name": "_CharType"
+																			}],
+																			"scope":  {
+																				"is_templated": true,
+																				"name": "BytesReader",
+																				"template_parameters": [{
+																					"_kind": "template type parameter",
+																					"_name": "_CharType",
+																					"id": 140737098599232,
+																					"is_variadic": false,
+																					"keyword": "typename",
+																					"kind": "template type parameter",
+																					"name": "_CharType"
+																				}]
+																			}
+																		}]
+																	},
+																	"unexposed_arguments": "_CharType"
+																}
+															}],
+															"class_kind": "class",
+															"id": 140737094580320,
+															"is_declaration": false,
+															"is_definition": true,
+															"is_final": false,
+															"kind": "class",
+															"name": "StringViewBase",
+															"scope": {
+																"is_templated": true,
+																"name": "StringViewBase",
+																"template_parameters": [{
+																	"_kind": "template type parameter",
+																	"_name": "_CharType",
+																	"id": 93824999493712,
+																	"is_variadic": false,
+																	"keyword": "typename",
+																	"kind": "template type parameter",
+																	"name": "_CharType"
+																}]
+															},
+															"semantic_scope": ""
+														},
+														"id": 93824999493216,
+														"kind": "class template",
+														"name": "StringViewBase",
+														"parameters": [{
+															"_kind": "template type parameter",
+															"_name": "_CharType",
+															"id": 93824999493712,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "_CharType"
+														}],
+														"scope":  {
+															"is_templated": true,
+															"name": "StringViewBase",
+															"template_parameters": [{
+																"_kind": "template type parameter",
+																"_name": "_CharType",
+																"id": 93824999493712,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "_CharType"
+															}]
+														}
+													}]
+												},
+												"unexposed_arguments": "char"
+											}
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "fmt",
+						"default_value": {
+							"expression": [{
+								"kind": "identifier",
+								"spelling": "EncodeFormat"
+							}, {
+								"kind": "punctuation",
+								"spelling": "("
+							}, {
+								"kind": "punctuation",
+								"spelling": ")"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "stappler::data::EncodeFormat",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::data::EncodeFormat",
+									"objects": [{
+										"_fullName": "::stappler::data::EncodeFormat",
+										"_kind": "class",
+										"_name": "EncodeFormat",
+										"class_kind": "struct",
+										"id": 140736986627280,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "EncodeFormat",
+										"scope": {
+											"name": "EncodeFormat"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						},
+						"id": 93824997658208,
+						"kind": "function parameter",
+						"name": "fmt",
+						"type": {
+							"_typeName": "stappler::data::EncodeFormat",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::data::EncodeFormat",
+								"objects": [{
+									"_fullName": "::stappler::data::EncodeFormat",
+									"_kind": "class",
+									"_name": "EncodeFormat",
+									"class_kind": "struct",
+									"id": 140736986627280,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "EncodeFormat",
+									"scope": {
+										"name": "EncodeFormat"
+									},
+									"semantic_scope": ""
+								}]
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(ValueTemplate<Interface> const&,stappler::StringView const&,stappler::data::EncodeFormat)"
+				},
+				"id": 93825002358416,
+				"kind": "function template",
+				"name": "save",
+				"parameters": [{
+					"_kind": "template type parameter",
+					"_name": "Interface",
+					"id": 140737119422944,
+					"is_variadic": false,
+					"keyword": "typename",
+					"kind": "template type parameter",
+					"name": "Interface"
+				}]
+			}, {
+				"_fullName": "::stappler::data::toString<typename>(ValueTemplate<Interface> const&,bool)",
+				"_kind": "function template",
+				"_name": "toString",
+				"childs": [{
+					"_fullName": "::stappler::data::toString<typename>(ValueTemplate<Interface> const&,bool)",
+					"_kind": "function",
+					"_name": "toString",
+					"body_kind": "definition",
+					"id": 93825011022144,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "toString",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "data",
+						"id": 93825000301552,
+						"kind": "function parameter",
+						"name": "data",
+						"type": {
+							"_typeName": "ValueTemplate<Interface> const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "ValueTemplate<Interface> const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "ValueTemplate<Interface>",
+									"arguments_exposed": false,
+									"kind": "template_instantiation",
+									"primary_template": {
+										"name": "ValueTemplate",
+										"objects": [{
+											"_fullName": "::stappler::data::ValueTemplate<typename>",
+											"_kind": "class template",
+											"_name": "ValueTemplate",
+											"class": {
+												"_fullName": "::stappler::data::ValueTemplate<typename>",
+												"_kind": "class",
+												"_name": "ValueTemplate",
+												"bases": [{
+													"_kind": "base class specifier",
+													"_name": "Interface::AllocBaseType",
+													"access_specifier": "public",
+													"id": 140737091294512,
+													"is_virtual": false,
+													"kind": "base class specifier",
+													"name": "Interface::AllocBaseType",
+													"type": {
+														"_typeName": "Interface::AllocBaseType",
+														"kind": "unexposed",
+														"name": "Interface::AllocBaseType"
+													}
+												}],
+												"class_kind": "class",
+												"id": 93825001914496,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "ValueTemplate",
+												"scope": {
+													"is_templated": true,
+													"name": "ValueTemplate",
+													"template_parameters": [{
+														"_kind": "template type parameter",
+														"_name": "Interface",
+														"id": 93825003299248,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "Interface"
+													}]
+												},
+												"semantic_scope": ""
+											},
+											"id": 93825003299040,
+											"kind": "class template",
+											"name": "ValueTemplate",
+											"parameters": [{
+												"_kind": "template type parameter",
+												"_name": "Interface",
+												"id": 93825003299248,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Interface"
+											}],
+											"scope":  {
+												"is_templated": true,
+												"name": "ValueTemplate",
+												"template_parameters": [{
+													"_kind": "template type parameter",
+													"_name": "Interface",
+													"id": 93825003299248,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "Interface"
+												}]
+											}
+										}]
+									},
+									"unexposed_arguments": "Interface"
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "pretty",
+						"default_value": {
+							"expression": [{
+								"kind": "keyword",
+								"spelling": "false"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "bool",
+								"builtin_type_kind": "bool",
+								"kind": "builtin"
+							}
+						},
+						"id": 93825000301888,
+						"kind": "function parameter",
+						"name": "pretty",
+						"type": {
+							"_typeName": "bool",
+							"builtin_type_kind": "bool",
+							"kind": "builtin"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "typename ValueTemplate<Interface>::StringType",
+						"kind": "unexposed",
+						"name": "typename ValueTemplate<Interface>::StringType"
+					},
+					"semantic_scope": "",
+					"signature": "(ValueTemplate<Interface> const&,bool)"
+				}],
+				"function":  {
+					"_fullName": "::stappler::data::toString<typename>(ValueTemplate<Interface> const&,bool)",
+					"_kind": "function",
+					"_name": "toString",
+					"body_kind": "definition",
+					"id": 93825011022144,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "toString",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "data",
+						"id": 93825000301552,
+						"kind": "function parameter",
+						"name": "data",
+						"type": {
+							"_typeName": "ValueTemplate<Interface> const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "ValueTemplate<Interface> const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "ValueTemplate<Interface>",
+									"arguments_exposed": false,
+									"kind": "template_instantiation",
+									"primary_template": {
+										"name": "ValueTemplate",
+										"objects": [{
+											"_fullName": "::stappler::data::ValueTemplate<typename>",
+											"_kind": "class template",
+											"_name": "ValueTemplate",
+											"class": {
+												"_fullName": "::stappler::data::ValueTemplate<typename>",
+												"_kind": "class",
+												"_name": "ValueTemplate",
+												"bases": [{
+													"_kind": "base class specifier",
+													"_name": "Interface::AllocBaseType",
+													"access_specifier": "public",
+													"id": 140737091294512,
+													"is_virtual": false,
+													"kind": "base class specifier",
+													"name": "Interface::AllocBaseType",
+													"type": {
+														"_typeName": "Interface::AllocBaseType",
+														"kind": "unexposed",
+														"name": "Interface::AllocBaseType"
+													}
+												}],
+												"class_kind": "class",
+												"id": 93825001914496,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "ValueTemplate",
+												"scope": {
+													"is_templated": true,
+													"name": "ValueTemplate",
+													"template_parameters": [{
+														"_kind": "template type parameter",
+														"_name": "Interface",
+														"id": 93825003299248,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "Interface"
+													}]
+												},
+												"semantic_scope": ""
+											},
+											"id": 93825003299040,
+											"kind": "class template",
+											"name": "ValueTemplate",
+											"parameters": [{
+												"_kind": "template type parameter",
+												"_name": "Interface",
+												"id": 93825003299248,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Interface"
+											}],
+											"scope":  {
+												"is_templated": true,
+												"name": "ValueTemplate",
+												"template_parameters": [{
+													"_kind": "template type parameter",
+													"_name": "Interface",
+													"id": 93825003299248,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "Interface"
+												}]
+											}
+										}]
+									},
+									"unexposed_arguments": "Interface"
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "pretty",
+						"default_value": {
+							"expression": [{
+								"kind": "keyword",
+								"spelling": "false"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "bool",
+								"builtin_type_kind": "bool",
+								"kind": "builtin"
+							}
+						},
+						"id": 93825000301888,
+						"kind": "function parameter",
+						"name": "pretty",
+						"type": {
+							"_typeName": "bool",
+							"builtin_type_kind": "bool",
+							"kind": "builtin"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "typename ValueTemplate<Interface>::StringType",
+						"kind": "unexposed",
+						"name": "typename ValueTemplate<Interface>::StringType"
+					},
+					"semantic_scope": "",
+					"signature": "(ValueTemplate<Interface> const&,bool)"
+				},
+				"id": 93825000000832,
+				"kind": "function template",
+				"name": "toString",
+				"parameters": [{
+					"_kind": "template type parameter",
+					"_name": "Interface",
+					"id": 140737148501344,
+					"is_variadic": false,
+					"keyword": "typename",
+					"kind": "template type parameter",
+					"name": "Interface"
+				}]
+			}, {
+				"_fullName": "::stappler::data::toString<typename>(ValueTemplate<Interface> const&,EncodeFormat::Format)",
+				"_kind": "function template",
+				"_name": "toString",
+				"childs": [{
+					"_fullName": "::stappler::data::toString<typename>(ValueTemplate<Interface> const&,EncodeFormat::Format)",
+					"_kind": "function",
+					"_name": "toString",
+					"body_kind": "definition",
+					"id": 93825000630480,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "toString",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "data",
+						"id": 93825000630816,
+						"kind": "function parameter",
+						"name": "data",
+						"type": {
+							"_typeName": "ValueTemplate<Interface> const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "ValueTemplate<Interface> const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "ValueTemplate<Interface>",
+									"arguments_exposed": false,
+									"kind": "template_instantiation",
+									"primary_template": {
+										"name": "ValueTemplate",
+										"objects": [{
+											"_fullName": "::stappler::data::ValueTemplate<typename>",
+											"_kind": "class template",
+											"_name": "ValueTemplate",
+											"class": {
+												"_fullName": "::stappler::data::ValueTemplate<typename>",
+												"_kind": "class",
+												"_name": "ValueTemplate",
+												"bases": [{
+													"_kind": "base class specifier",
+													"_name": "Interface::AllocBaseType",
+													"access_specifier": "public",
+													"id": 140737091294512,
+													"is_virtual": false,
+													"kind": "base class specifier",
+													"name": "Interface::AllocBaseType",
+													"type": {
+														"_typeName": "Interface::AllocBaseType",
+														"kind": "unexposed",
+														"name": "Interface::AllocBaseType"
+													}
+												}],
+												"class_kind": "class",
+												"id": 93825001914496,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "ValueTemplate",
+												"scope": {
+													"is_templated": true,
+													"name": "ValueTemplate",
+													"template_parameters": [{
+														"_kind": "template type parameter",
+														"_name": "Interface",
+														"id": 93825003299248,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "Interface"
+													}]
+												},
+												"semantic_scope": ""
+											},
+											"id": 93825003299040,
+											"kind": "class template",
+											"name": "ValueTemplate",
+											"parameters": [{
+												"_kind": "template type parameter",
+												"_name": "Interface",
+												"id": 93825003299248,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Interface"
+											}],
+											"scope":  {
+												"is_templated": true,
+												"name": "ValueTemplate",
+												"template_parameters": [{
+													"_kind": "template type parameter",
+													"_name": "Interface",
+													"id": 93825003299248,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "Interface"
+												}]
+											}
+										}]
+									},
+									"unexposed_arguments": "Interface"
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "fmt",
+						"id": 93825000001088,
+						"kind": "function parameter",
+						"name": "fmt",
+						"type": {
+							"_typeName": "EncodeFormat::Format",
+							"kind": "user_defined",
+							"target": {
+								"name": "EncodeFormat::Format",
+								"objects": [{
+									"_fullName": "::stappler::data::EncodeFormat::Format",
+									"_kind": "enum",
+									"_name": "Format",
+									"has_explicit_type": false,
+									"id": 140737122100496,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_scoped": false,
+									"kind": "enum",
+									"name": "Format",
+									"semantic_scope": "",
+									"underlying_type": {
+										"_typeName": "unsigned int",
+										"builtin_type_kind": "unsigned int",
+										"kind": "builtin"
+									}
+								}]
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "typename ValueTemplate<Interface>::StringType",
+						"kind": "unexposed",
+						"name": "typename ValueTemplate<Interface>::StringType"
+					},
+					"semantic_scope": "",
+					"signature": "(ValueTemplate<Interface> const&,EncodeFormat::Format)"
+				}],
+				"function":  {
+					"_fullName": "::stappler::data::toString<typename>(ValueTemplate<Interface> const&,EncodeFormat::Format)",
+					"_kind": "function",
+					"_name": "toString",
+					"body_kind": "definition",
+					"id": 93825000630480,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "toString",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "data",
+						"id": 93825000630816,
+						"kind": "function parameter",
+						"name": "data",
+						"type": {
+							"_typeName": "ValueTemplate<Interface> const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "ValueTemplate<Interface> const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "ValueTemplate<Interface>",
+									"arguments_exposed": false,
+									"kind": "template_instantiation",
+									"primary_template": {
+										"name": "ValueTemplate",
+										"objects": [{
+											"_fullName": "::stappler::data::ValueTemplate<typename>",
+											"_kind": "class template",
+											"_name": "ValueTemplate",
+											"class": {
+												"_fullName": "::stappler::data::ValueTemplate<typename>",
+												"_kind": "class",
+												"_name": "ValueTemplate",
+												"bases": [{
+													"_kind": "base class specifier",
+													"_name": "Interface::AllocBaseType",
+													"access_specifier": "public",
+													"id": 140737091294512,
+													"is_virtual": false,
+													"kind": "base class specifier",
+													"name": "Interface::AllocBaseType",
+													"type": {
+														"_typeName": "Interface::AllocBaseType",
+														"kind": "unexposed",
+														"name": "Interface::AllocBaseType"
+													}
+												}],
+												"class_kind": "class",
+												"id": 93825001914496,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "ValueTemplate",
+												"scope": {
+													"is_templated": true,
+													"name": "ValueTemplate",
+													"template_parameters": [{
+														"_kind": "template type parameter",
+														"_name": "Interface",
+														"id": 93825003299248,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "Interface"
+													}]
+												},
+												"semantic_scope": ""
+											},
+											"id": 93825003299040,
+											"kind": "class template",
+											"name": "ValueTemplate",
+											"parameters": [{
+												"_kind": "template type parameter",
+												"_name": "Interface",
+												"id": 93825003299248,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Interface"
+											}],
+											"scope":  {
+												"is_templated": true,
+												"name": "ValueTemplate",
+												"template_parameters": [{
+													"_kind": "template type parameter",
+													"_name": "Interface",
+													"id": 93825003299248,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "Interface"
+												}]
+											}
+										}]
+									},
+									"unexposed_arguments": "Interface"
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "fmt",
+						"id": 93825000001088,
+						"kind": "function parameter",
+						"name": "fmt",
+						"type": {
+							"_typeName": "EncodeFormat::Format",
+							"kind": "user_defined",
+							"target": {
+								"name": "EncodeFormat::Format",
+								"objects": [{
+									"_fullName": "::stappler::data::EncodeFormat::Format",
+									"_kind": "enum",
+									"_name": "Format",
+									"has_explicit_type": false,
+									"id": 140737122100496,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_scoped": false,
+									"kind": "enum",
+									"name": "Format",
+									"semantic_scope": "",
+									"underlying_type": {
+										"_typeName": "unsigned int",
+										"builtin_type_kind": "unsigned int",
+										"kind": "builtin"
+									}
+								}]
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "typename ValueTemplate<Interface>::StringType",
+						"kind": "unexposed",
+						"name": "typename ValueTemplate<Interface>::StringType"
+					},
+					"semantic_scope": "",
+					"signature": "(ValueTemplate<Interface> const&,EncodeFormat::Format)"
+				},
+				"id": 93825000904320,
+				"kind": "function template",
+				"name": "toString",
+				"parameters": [{
+					"_kind": "template type parameter",
+					"_name": "Interface",
+					"id": 93825000904128,
+					"is_variadic": false,
+					"keyword": "typename",
+					"kind": "template type parameter",
+					"name": "Interface"
+				}]
+			}, {
+				"_fullName": "::stappler::data::operator<<<typename,typename>(std::basic_ostream<CharT, Traits>&,stappler::data::EncodeFormat)",
+				"_kind": "function template",
+				"_name": "operator<<",
+				"childs": [{
+					"_fullName": "::stappler::data::operator<<<typename,typename>(std::basic_ostream<CharT, Traits>&,stappler::data::EncodeFormat)",
+					"_kind": "function",
+					"_name": "operator<<",
+					"body_kind": "definition",
+					"id": 93825001356848,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "operator<<",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "stream",
+						"id": 93825000513872,
+						"kind": "function parameter",
+						"name": "stream",
+						"type": {
+							"_typeName": "std::basic_ostream<CharT, Traits>&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "std::basic_ostream<CharT, Traits>",
+								"arguments_exposed": false,
+								"kind": "template_instantiation",
+								"primary_template": {
+									"name": "std::basic_ostream"
+								},
+								"unexposed_arguments": "CharT, Traits"
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "f",
+						"id": 93825000514256,
+						"kind": "function parameter",
+						"name": "f",
+						"type": {
+							"_typeName": "stappler::data::EncodeFormat",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::data::EncodeFormat",
+								"objects": [{
+									"_fullName": "::stappler::data::EncodeFormat",
+									"_kind": "class",
+									"_name": "EncodeFormat",
+									"class_kind": "struct",
+									"id": 140736986627280,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "EncodeFormat",
+									"scope": {
+										"name": "EncodeFormat"
+									},
+									"semantic_scope": ""
+								}]
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "std::basic_ostream<CharT, Traits>&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "std::basic_ostream<CharT, Traits>",
+							"arguments_exposed": false,
+							"kind": "template_instantiation",
+							"primary_template": {
+								"name": "std::basic_ostream"
+							},
+							"unexposed_arguments": "CharT, Traits"
+						},
+						"reference_kind": "lvalue"
+					},
+					"semantic_scope": "",
+					"signature": "(std::basic_ostream<CharT, Traits>&,stappler::data::EncodeFormat)"
+				}],
+				"function":  {
+					"_fullName": "::stappler::data::operator<<<typename,typename>(std::basic_ostream<CharT, Traits>&,stappler::data::EncodeFormat)",
+					"_kind": "function",
+					"_name": "operator<<",
+					"body_kind": "definition",
+					"id": 93825001356848,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "operator<<",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "stream",
+						"id": 93825000513872,
+						"kind": "function parameter",
+						"name": "stream",
+						"type": {
+							"_typeName": "std::basic_ostream<CharT, Traits>&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "std::basic_ostream<CharT, Traits>",
+								"arguments_exposed": false,
+								"kind": "template_instantiation",
+								"primary_template": {
+									"name": "std::basic_ostream"
+								},
+								"unexposed_arguments": "CharT, Traits"
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "f",
+						"id": 93825000514256,
+						"kind": "function parameter",
+						"name": "f",
+						"type": {
+							"_typeName": "stappler::data::EncodeFormat",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::data::EncodeFormat",
+								"objects": [{
+									"_fullName": "::stappler::data::EncodeFormat",
+									"_kind": "class",
+									"_name": "EncodeFormat",
+									"class_kind": "struct",
+									"id": 140736986627280,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "EncodeFormat",
+									"scope": {
+										"name": "EncodeFormat"
+									},
+									"semantic_scope": ""
+								}]
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "std::basic_ostream<CharT, Traits>&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "std::basic_ostream<CharT, Traits>",
+							"arguments_exposed": false,
+							"kind": "template_instantiation",
+							"primary_template": {
+								"name": "std::basic_ostream"
+							},
+							"unexposed_arguments": "CharT, Traits"
+						},
+						"reference_kind": "lvalue"
+					},
+					"semantic_scope": "",
+					"signature": "(std::basic_ostream<CharT, Traits>&,stappler::data::EncodeFormat)"
+				},
+				"id": 93825000921200,
+				"kind": "function template",
+				"name": "operator<<",
+				"parameters": [{
+					"_kind": "template type parameter",
+					"_name": "CharT",
+					"id": 93825000904528,
+					"is_variadic": false,
+					"keyword": "typename",
+					"kind": "template type parameter",
+					"name": "CharT"
+				}, {
+					"_kind": "template type parameter",
+					"_name": "Traits",
+					"id": 93825000921408,
+					"is_variadic": false,
+					"keyword": "typename",
+					"kind": "template type parameter",
+					"name": "Traits"
+				}]
+			}, {
+				"_fullName": "::stappler::data::operator<<<typename,typename>(std::basic_ostream<CharT, Traits>&,EncodeFormat::Format)",
+				"_kind": "function template",
+				"_name": "operator<<",
+				"childs": [{
+					"_fullName": "::stappler::data::operator<<<typename,typename>(std::basic_ostream<CharT, Traits>&,EncodeFormat::Format)",
+					"_kind": "function",
+					"_name": "operator<<",
+					"body_kind": "definition",
+					"id": 93825001349744,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "operator<<",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "stream",
+						"id": 93825001350256,
+						"kind": "function parameter",
+						"name": "stream",
+						"type": {
+							"_typeName": "std::basic_ostream<CharT, Traits>&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "std::basic_ostream<CharT, Traits>",
+								"arguments_exposed": false,
+								"kind": "template_instantiation",
+								"primary_template": {
+									"name": "std::basic_ostream"
+								},
+								"unexposed_arguments": "CharT, Traits"
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "f",
+						"id": 93824999650816,
+						"kind": "function parameter",
+						"name": "f",
+						"type": {
+							"_typeName": "EncodeFormat::Format",
+							"kind": "user_defined",
+							"target": {
+								"name": "EncodeFormat::Format",
+								"objects": [{
+									"_fullName": "::stappler::data::EncodeFormat::Format",
+									"_kind": "enum",
+									"_name": "Format",
+									"has_explicit_type": false,
+									"id": 140737122100496,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_scoped": false,
+									"kind": "enum",
+									"name": "Format",
+									"semantic_scope": "",
+									"underlying_type": {
+										"_typeName": "unsigned int",
+										"builtin_type_kind": "unsigned int",
+										"kind": "builtin"
+									}
+								}]
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "std::basic_ostream<CharT, Traits>&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "std::basic_ostream<CharT, Traits>",
+							"arguments_exposed": false,
+							"kind": "template_instantiation",
+							"primary_template": {
+								"name": "std::basic_ostream"
+							},
+							"unexposed_arguments": "CharT, Traits"
+						},
+						"reference_kind": "lvalue"
+					},
+					"semantic_scope": "",
+					"signature": "(std::basic_ostream<CharT, Traits>&,EncodeFormat::Format)"
+				}],
+				"function":  {
+					"_fullName": "::stappler::data::operator<<<typename,typename>(std::basic_ostream<CharT, Traits>&,EncodeFormat::Format)",
+					"_kind": "function",
+					"_name": "operator<<",
+					"body_kind": "definition",
+					"id": 93825001349744,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "operator<<",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "stream",
+						"id": 93825001350256,
+						"kind": "function parameter",
+						"name": "stream",
+						"type": {
+							"_typeName": "std::basic_ostream<CharT, Traits>&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "std::basic_ostream<CharT, Traits>",
+								"arguments_exposed": false,
+								"kind": "template_instantiation",
+								"primary_template": {
+									"name": "std::basic_ostream"
+								},
+								"unexposed_arguments": "CharT, Traits"
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "f",
+						"id": 93824999650816,
+						"kind": "function parameter",
+						"name": "f",
+						"type": {
+							"_typeName": "EncodeFormat::Format",
+							"kind": "user_defined",
+							"target": {
+								"name": "EncodeFormat::Format",
+								"objects": [{
+									"_fullName": "::stappler::data::EncodeFormat::Format",
+									"_kind": "enum",
+									"_name": "Format",
+									"has_explicit_type": false,
+									"id": 140737122100496,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_scoped": false,
+									"kind": "enum",
+									"name": "Format",
+									"semantic_scope": "",
+									"underlying_type": {
+										"_typeName": "unsigned int",
+										"builtin_type_kind": "unsigned int",
+										"kind": "builtin"
+									}
+								}]
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "std::basic_ostream<CharT, Traits>&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "std::basic_ostream<CharT, Traits>",
+							"arguments_exposed": false,
+							"kind": "template_instantiation",
+							"primary_template": {
+								"name": "std::basic_ostream"
+							},
+							"unexposed_arguments": "CharT, Traits"
+						},
+						"reference_kind": "lvalue"
+					},
+					"semantic_scope": "",
+					"signature": "(std::basic_ostream<CharT, Traits>&,EncodeFormat::Format)"
+				},
+				"id": 93825001211184,
+				"kind": "function template",
+				"name": "operator<<",
+				"parameters": [{
+					"_kind": "template type parameter",
+					"_name": "CharT",
+					"id": 93825001211344,
+					"is_variadic": false,
+					"keyword": "typename",
+					"kind": "template type parameter",
+					"name": "CharT"
+				}, {
+					"_kind": "template type parameter",
+					"_name": "Traits",
+					"id": 93825001211536,
+					"is_variadic": false,
+					"keyword": "typename",
+					"kind": "template type parameter",
+					"name": "Traits"
+				}]
+			}, {
+				"_fullName": "::stappler::data::operator<<<typename,typename,typename>(std::basic_ostream<CharT, Traits>&,ValueTemplate<Interface> const&)",
+				"_kind": "function template",
+				"_name": "operator<<",
+				"childs": [{
+					"_fullName": "::stappler::data::operator<<<typename,typename,typename>(std::basic_ostream<CharT, Traits>&,ValueTemplate<Interface> const&)",
+					"_kind": "function",
+					"_name": "operator<<",
+					"body_kind": "definition",
+					"id": 93824999651200,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "operator<<",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "stream",
+						"id": 93824999962480,
+						"kind": "function parameter",
+						"name": "stream",
+						"type": {
+							"_typeName": "std::basic_ostream<CharT, Traits>&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "std::basic_ostream<CharT, Traits>",
+								"arguments_exposed": false,
+								"kind": "template_instantiation",
+								"primary_template": {
+									"name": "std::basic_ostream"
+								},
+								"unexposed_arguments": "CharT, Traits"
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "val",
+						"id": 93824999962912,
+						"kind": "function parameter",
+						"name": "val",
+						"type": {
+							"_typeName": "ValueTemplate<Interface> const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "ValueTemplate<Interface> const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "ValueTemplate<Interface>",
+									"arguments_exposed": false,
+									"kind": "template_instantiation",
+									"primary_template": {
+										"name": "ValueTemplate",
+										"objects": [{
+											"_fullName": "::stappler::data::ValueTemplate<typename>",
+											"_kind": "class template",
+											"_name": "ValueTemplate",
+											"class": {
+												"_fullName": "::stappler::data::ValueTemplate<typename>",
+												"_kind": "class",
+												"_name": "ValueTemplate",
+												"bases": [{
+													"_kind": "base class specifier",
+													"_name": "Interface::AllocBaseType",
+													"access_specifier": "public",
+													"id": 140737091294512,
+													"is_virtual": false,
+													"kind": "base class specifier",
+													"name": "Interface::AllocBaseType",
+													"type": {
+														"_typeName": "Interface::AllocBaseType",
+														"kind": "unexposed",
+														"name": "Interface::AllocBaseType"
+													}
+												}],
+												"class_kind": "class",
+												"id": 93825001914496,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "ValueTemplate",
+												"scope": {
+													"is_templated": true,
+													"name": "ValueTemplate",
+													"template_parameters": [{
+														"_kind": "template type parameter",
+														"_name": "Interface",
+														"id": 93825003299248,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "Interface"
+													}]
+												},
+												"semantic_scope": ""
+											},
+											"id": 93825003299040,
+											"kind": "class template",
+											"name": "ValueTemplate",
+											"parameters": [{
+												"_kind": "template type parameter",
+												"_name": "Interface",
+												"id": 93825003299248,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Interface"
+											}],
+											"scope":  {
+												"is_templated": true,
+												"name": "ValueTemplate",
+												"template_parameters": [{
+													"_kind": "template type parameter",
+													"_name": "Interface",
+													"id": 93825003299248,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "Interface"
+												}]
+											}
+										}]
+									},
+									"unexposed_arguments": "Interface"
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "std::basic_ostream<CharT, Traits>&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "std::basic_ostream<CharT, Traits>",
+							"arguments_exposed": false,
+							"kind": "template_instantiation",
+							"primary_template": {
+								"name": "std::basic_ostream"
+							},
+							"unexposed_arguments": "CharT, Traits"
+						},
+						"reference_kind": "lvalue"
+					},
+					"semantic_scope": "",
+					"signature": "(std::basic_ostream<CharT, Traits>&,ValueTemplate<Interface> const&)"
+				}],
+				"function":  {
+					"_fullName": "::stappler::data::operator<<<typename,typename,typename>(std::basic_ostream<CharT, Traits>&,ValueTemplate<Interface> const&)",
+					"_kind": "function",
+					"_name": "operator<<",
+					"body_kind": "definition",
+					"id": 93824999651200,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "operator<<",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "stream",
+						"id": 93824999962480,
+						"kind": "function parameter",
+						"name": "stream",
+						"type": {
+							"_typeName": "std::basic_ostream<CharT, Traits>&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "std::basic_ostream<CharT, Traits>",
+								"arguments_exposed": false,
+								"kind": "template_instantiation",
+								"primary_template": {
+									"name": "std::basic_ostream"
+								},
+								"unexposed_arguments": "CharT, Traits"
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "val",
+						"id": 93824999962912,
+						"kind": "function parameter",
+						"name": "val",
+						"type": {
+							"_typeName": "ValueTemplate<Interface> const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "ValueTemplate<Interface> const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "ValueTemplate<Interface>",
+									"arguments_exposed": false,
+									"kind": "template_instantiation",
+									"primary_template": {
+										"name": "ValueTemplate",
+										"objects": [{
+											"_fullName": "::stappler::data::ValueTemplate<typename>",
+											"_kind": "class template",
+											"_name": "ValueTemplate",
+											"class": {
+												"_fullName": "::stappler::data::ValueTemplate<typename>",
+												"_kind": "class",
+												"_name": "ValueTemplate",
+												"bases": [{
+													"_kind": "base class specifier",
+													"_name": "Interface::AllocBaseType",
+													"access_specifier": "public",
+													"id": 140737091294512,
+													"is_virtual": false,
+													"kind": "base class specifier",
+													"name": "Interface::AllocBaseType",
+													"type": {
+														"_typeName": "Interface::AllocBaseType",
+														"kind": "unexposed",
+														"name": "Interface::AllocBaseType"
+													}
+												}],
+												"class_kind": "class",
+												"id": 93825001914496,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "ValueTemplate",
+												"scope": {
+													"is_templated": true,
+													"name": "ValueTemplate",
+													"template_parameters": [{
+														"_kind": "template type parameter",
+														"_name": "Interface",
+														"id": 93825003299248,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "Interface"
+													}]
+												},
+												"semantic_scope": ""
+											},
+											"id": 93825003299040,
+											"kind": "class template",
+											"name": "ValueTemplate",
+											"parameters": [{
+												"_kind": "template type parameter",
+												"_name": "Interface",
+												"id": 93825003299248,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Interface"
+											}],
+											"scope":  {
+												"is_templated": true,
+												"name": "ValueTemplate",
+												"template_parameters": [{
+													"_kind": "template type parameter",
+													"_name": "Interface",
+													"id": 93825003299248,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "Interface"
+												}]
+											}
+										}]
+									},
+									"unexposed_arguments": "Interface"
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "std::basic_ostream<CharT, Traits>&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "std::basic_ostream<CharT, Traits>",
+							"arguments_exposed": false,
+							"kind": "template_instantiation",
+							"primary_template": {
+								"name": "std::basic_ostream"
+							},
+							"unexposed_arguments": "CharT, Traits"
+						},
+						"reference_kind": "lvalue"
+					},
+					"semantic_scope": "",
+					"signature": "(std::basic_ostream<CharT, Traits>&,ValueTemplate<Interface> const&)"
+				},
+				"id": 93825001112848,
+				"kind": "function template",
+				"name": "operator<<",
+				"parameters": [{
+					"_kind": "template type parameter",
+					"_name": "CharT",
+					"id": 93825001113008,
+					"is_variadic": false,
+					"keyword": "typename",
+					"kind": "template type parameter",
+					"name": "CharT"
+				}, {
+					"_kind": "template type parameter",
+					"_name": "Traits",
+					"id": 93825001113248,
+					"is_variadic": false,
+					"keyword": "typename",
+					"kind": "template type parameter",
+					"name": "Traits"
+				}, {
+					"_kind": "template type parameter",
+					"_name": "Interface",
+					"id": 93825002580640,
+					"is_variadic": false,
+					"keyword": "typename",
+					"kind": "template type parameter",
+					"name": "Interface"
+				}]
+			}],
+			"id": 140737139695488,
+			"is_anonymous": false,
+			"is_inline": false,
+			"is_nested": true,
+			"kind": "namespace",
+			"name": "data",
+			"scope": {
+				"name": "data"
+			}
+		}],
+		"id": 140737139685376,
+		"is_anonymous": false,
+		"is_inline": false,
+		"is_nested": false,
+		"kind": "namespace",
+		"name": "stappler",
+		"scope": {
+			"name": "stappler"
+		}
+	}],
+	"id": 140737088034384,
+	"kind": "file",
+	"name": "/home/sbkarr/stappler/xenolith/libstappler/modules/data/SPDataEncode.h",
+	"unmatched_comments": [{
+		"line": 21,
+		"text": "\nCopyright (c) 2017-2022 Roman Katuntsev <sbkarr@stappler.org>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n"
+	}]
+}

@@ -1,0 +1,788 @@
+{
+	"_kind": "file",
+	"_name": "/home/sbkarr/stappler/xenolith/libstappler/common/io/SPIOCommon.h",
+	"childs": [{
+		"_kind": "include directive",
+		"_name": "SPCore.h",
+		"id": 140737147546320,
+		"include": "/home/sbkarr/stappler/xenolith/libstappler/common/core/SPCore.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "SPCore.h"
+	}, {
+		"_fullName": "LIBSTAPPLER_COMMON_IO_SPIOCOMMON_H_",
+		"_kind": "macro definition",
+		"_name": "LIBSTAPPLER_COMMON_IO_SPIOCOMMON_H_",
+		"id": 140737141335776,
+		"is_function_like": false,
+		"is_object_like": true,
+		"is_variadic": false,
+		"kind": "macro definition",
+		"name": "LIBSTAPPLER_COMMON_IO_SPIOCOMMON_H_",
+		"replacement": ""
+	}, {
+		"_fullName": "::stappler",
+		"_kind": "namespace",
+		"_name": "stappler",
+		"childs": [{
+			"_fullName": "::stappler::io",
+			"_kind": "namespace",
+			"_name": "io",
+			"childs": [{
+				"_fullName": "::stappler::io::Seek",
+				"_kind": "enum",
+				"_name": "Seek",
+				"childs": [{
+					"_fullName": "::stappler::io::Seek::Set",
+					"_kind": "enum value",
+					"_name": "Set",
+					"id": 140737124662880,
+					"kind": "enum value",
+					"name": "Set"
+				}, {
+					"_fullName": "::stappler::io::Seek::Current",
+					"_kind": "enum value",
+					"_name": "Current",
+					"id": 140737098448496,
+					"kind": "enum value",
+					"name": "Current"
+				}, {
+					"_fullName": "::stappler::io::Seek::End",
+					"_kind": "enum value",
+					"_name": "End",
+					"id": 140737135359888,
+					"kind": "enum value",
+					"name": "End"
+				}],
+				"has_explicit_type": false,
+				"id": 140737145716560,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_scoped": true,
+				"kind": "enum",
+				"name": "Seek",
+				"scope": {
+					"name": "Seek"
+				},
+				"semantic_scope": "",
+				"underlying_type": {
+					"_typeName": "int",
+					"builtin_type_kind": "int",
+					"kind": "builtin"
+				}
+			}, {
+				"_fullName": "::stappler::io::read_fn",
+				"_kind": "type alias",
+				"_name": "read_fn",
+				"id": 140737088462000,
+				"kind": "type alias",
+				"name": "read_fn",
+				"underlying_type": {
+					"_typeName": "size_t(*)(void*,uint8_t*,size_t)",
+					"kind": "pointer",
+					"pointee": {
+						"_typeName": "size_t(void*,uint8_t*,size_t)",
+						"is_variadic": false,
+						"kind": "function",
+						"parameter_types": [{
+							"_typeName": "void*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "void",
+								"builtin_type_kind": "void",
+								"kind": "builtin"
+							}
+						}, {
+							"_typeName": "uint8_t*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "uint8_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "uint8_t"
+								}
+							}
+						}, {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						}],
+						"return_type":  {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						}
+					}
+				}
+			}, {
+				"_fullName": "::stappler::io::seek_fn",
+				"_kind": "type alias",
+				"_name": "seek_fn",
+				"id": 140737085704688,
+				"kind": "type alias",
+				"name": "seek_fn",
+				"underlying_type": {
+					"_typeName": "size_t(*)(void*,int64_t,stappler::io::Seek)",
+					"kind": "pointer",
+					"pointee": {
+						"_typeName": "size_t(void*,int64_t,stappler::io::Seek)",
+						"is_variadic": false,
+						"kind": "function",
+						"parameter_types": [{
+							"_typeName": "void*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "void",
+								"builtin_type_kind": "void",
+								"kind": "builtin"
+							}
+						}, {
+							"_typeName": "int64_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "int64_t"
+							}
+						}, {
+							"_typeName": "stappler::io::Seek",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::io::Seek",
+								"objects": [{
+									"_fullName": "::stappler::io::Seek",
+									"_kind": "enum",
+									"_name": "Seek",
+									"has_explicit_type": false,
+									"id": 140737145716560,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_scoped": true,
+									"kind": "enum",
+									"name": "Seek",
+									"scope": {
+										"name": "Seek"
+									},
+									"semantic_scope": "",
+									"underlying_type": {
+										"_typeName": "int",
+										"builtin_type_kind": "int",
+										"kind": "builtin"
+									}
+								}]
+							}
+						}],
+						"return_type":  {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						}
+					}
+				}
+			}, {
+				"_fullName": "::stappler::io::size_fn",
+				"_kind": "type alias",
+				"_name": "size_fn",
+				"id": 140737141796432,
+				"kind": "type alias",
+				"name": "size_fn",
+				"underlying_type": {
+					"_typeName": "size_t(*)(void*)",
+					"kind": "pointer",
+					"pointee": {
+						"_typeName": "size_t(void*)",
+						"is_variadic": false,
+						"kind": "function",
+						"parameter_types": [{
+							"_typeName": "void*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "void",
+								"builtin_type_kind": "void",
+								"kind": "builtin"
+							}
+						}],
+						"return_type":  {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						}
+					}
+				}
+			}, {
+				"_fullName": "::stappler::io::write_fn",
+				"_kind": "type alias",
+				"_name": "write_fn",
+				"id": 93824997729952,
+				"kind": "type alias",
+				"name": "write_fn",
+				"underlying_type": {
+					"_typeName": "size_t(*)(void*,uint8_t const*,size_t)",
+					"kind": "pointer",
+					"pointee": {
+						"_typeName": "size_t(void*,uint8_t const*,size_t)",
+						"is_variadic": false,
+						"kind": "function",
+						"parameter_types": [{
+							"_typeName": "void*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "void",
+								"builtin_type_kind": "void",
+								"kind": "builtin"
+							}
+						}, {
+							"_typeName": "uint8_t const*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "uint8_t const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "uint8_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "uint8_t"
+									}
+								}
+							}
+						}, {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						}],
+						"return_type":  {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						}
+					}
+				}
+			}, {
+				"_fullName": "::stappler::io::flush_fn",
+				"_kind": "type alias",
+				"_name": "flush_fn",
+				"id": 93824997666752,
+				"kind": "type alias",
+				"name": "flush_fn",
+				"underlying_type": {
+					"_typeName": "void(*)(void*)",
+					"kind": "pointer",
+					"pointee": {
+						"_typeName": "void(void*)",
+						"is_variadic": false,
+						"kind": "function",
+						"parameter_types": [{
+							"_typeName": "void*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "void",
+								"builtin_type_kind": "void",
+								"kind": "builtin"
+							}
+						}],
+						"return_type":  {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						}
+					}
+				}
+			}, {
+				"_fullName": "::stappler::io::clear_fn",
+				"_kind": "type alias",
+				"_name": "clear_fn",
+				"id": 93825002875248,
+				"kind": "type alias",
+				"name": "clear_fn",
+				"underlying_type": {
+					"_typeName": "void(*)(void*)",
+					"kind": "pointer",
+					"pointee": {
+						"_typeName": "void(void*)",
+						"is_variadic": false,
+						"kind": "function",
+						"parameter_types": [{
+							"_typeName": "void*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "void",
+								"builtin_type_kind": "void",
+								"kind": "builtin"
+							}
+						}],
+						"return_type":  {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						}
+					}
+				}
+			}, {
+				"_fullName": "::stappler::io::data_fn",
+				"_kind": "type alias",
+				"_name": "data_fn",
+				"id": 93824998951568,
+				"kind": "type alias",
+				"name": "data_fn",
+				"underlying_type": {
+					"_typeName": "uint8_t*(*)(void*)",
+					"kind": "pointer",
+					"pointee": {
+						"_typeName": "uint8_t*(void*)",
+						"is_variadic": false,
+						"kind": "function",
+						"parameter_types": [{
+							"_typeName": "void*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "void",
+								"builtin_type_kind": "void",
+								"kind": "builtin"
+							}
+						}],
+						"return_type":  {
+							"_typeName": "uint8_t*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "uint8_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "uint8_t"
+								}
+							}
+						}
+					}
+				}
+			}, {
+				"_fullName": "::stappler::io::prepare_fn",
+				"_kind": "type alias",
+				"_name": "prepare_fn",
+				"id": 93825000248848,
+				"kind": "type alias",
+				"name": "prepare_fn",
+				"underlying_type": {
+					"_typeName": "uint8_t*(*)(void*,size_t&)",
+					"kind": "pointer",
+					"pointee": {
+						"_typeName": "uint8_t*(void*,size_t&)",
+						"is_variadic": false,
+						"kind": "function",
+						"parameter_types": [{
+							"_typeName": "void*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "void",
+								"builtin_type_kind": "void",
+								"kind": "builtin"
+							}
+						}, {
+							"_typeName": "size_t&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "size_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "size_t"
+								}
+							},
+							"reference_kind": "lvalue"
+						}],
+						"return_type":  {
+							"_typeName": "uint8_t*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "uint8_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "uint8_t"
+								}
+							}
+						}
+					}
+				}
+			}, {
+				"_fullName": "::stappler::io::save_fn",
+				"_kind": "type alias",
+				"_name": "save_fn",
+				"id": 93825004984384,
+				"kind": "type alias",
+				"name": "save_fn",
+				"underlying_type": {
+					"_typeName": "void(*)(void*,uint8_t*,size_t,size_t)",
+					"kind": "pointer",
+					"pointee": {
+						"_typeName": "void(void*,uint8_t*,size_t,size_t)",
+						"is_variadic": false,
+						"kind": "function",
+						"parameter_types": [{
+							"_typeName": "void*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "void",
+								"builtin_type_kind": "void",
+								"kind": "builtin"
+							}
+						}, {
+							"_typeName": "uint8_t*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "uint8_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "uint8_t"
+								}
+							}
+						}, {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						}, {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						}],
+						"return_type":  {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						}
+					}
+				}
+			}, {
+				"_fullName": "::stappler::io::ProducerTraits<typename>",
+				"_kind": "class template",
+				"_name": "ProducerTraits",
+				"childs": [{
+					"_fullName": "::stappler::io::ProducerTraits<typename>",
+					"_kind": "class",
+					"_name": "ProducerTraits",
+					"childs": null,
+					"class_kind": "struct",
+					"id": 140737147565120,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_final": false,
+					"kind": "class",
+					"name": "ProducerTraits",
+					"scope": {
+						"is_templated": true,
+						"name": "ProducerTraits",
+						"template_parameters": [{
+							"_kind": "template type parameter",
+							"_name": "T",
+							"id": 140736989932912,
+							"is_variadic": false,
+							"keyword": "typename",
+							"kind": "template type parameter",
+							"name": "T"
+						}]
+					},
+					"semantic_scope": ""
+				}],
+				"class":  {
+					"_fullName": "::stappler::io::ProducerTraits<typename>",
+					"_kind": "class",
+					"_name": "ProducerTraits",
+					"class_kind": "struct",
+					"id": 140737147565120,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_final": false,
+					"kind": "class",
+					"name": "ProducerTraits",
+					"scope": {
+						"is_templated": true,
+						"name": "ProducerTraits",
+						"template_parameters": [{
+							"_kind": "template type parameter",
+							"_name": "T",
+							"id": 140736989932912,
+							"is_variadic": false,
+							"keyword": "typename",
+							"kind": "template type parameter",
+							"name": "T"
+						}]
+					},
+					"semantic_scope": ""
+				},
+				"id": 140737112898048,
+				"kind": "class template",
+				"name": "ProducerTraits",
+				"parameters": [{
+					"_kind": "template type parameter",
+					"_name": "T",
+					"id": 140736989932912,
+					"is_variadic": false,
+					"keyword": "typename",
+					"kind": "template type parameter",
+					"name": "T"
+				}],
+				"scope":  {
+					"is_templated": true,
+					"name": "ProducerTraits",
+					"template_parameters": [{
+						"_kind": "template type parameter",
+						"_name": "T",
+						"id": 140736989932912,
+						"is_variadic": false,
+						"keyword": "typename",
+						"kind": "template type parameter",
+						"name": "T"
+					}]
+				}
+			}, {
+				"_fullName": "::stappler::io::ConsumerTraits<typename>",
+				"_kind": "class template",
+				"_name": "ConsumerTraits",
+				"childs": [{
+					"_fullName": "::stappler::io::ConsumerTraits<typename>",
+					"_kind": "class",
+					"_name": "ConsumerTraits",
+					"childs": null,
+					"class_kind": "struct",
+					"id": 140737097510112,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_final": false,
+					"kind": "class",
+					"name": "ConsumerTraits",
+					"scope": {
+						"is_templated": true,
+						"name": "ConsumerTraits",
+						"template_parameters": [{
+							"_kind": "template type parameter",
+							"_name": "T",
+							"id": 140736954765456,
+							"is_variadic": false,
+							"keyword": "typename",
+							"kind": "template type parameter",
+							"name": "T"
+						}]
+					},
+					"semantic_scope": ""
+				}],
+				"class":  {
+					"_fullName": "::stappler::io::ConsumerTraits<typename>",
+					"_kind": "class",
+					"_name": "ConsumerTraits",
+					"class_kind": "struct",
+					"id": 140737097510112,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_final": false,
+					"kind": "class",
+					"name": "ConsumerTraits",
+					"scope": {
+						"is_templated": true,
+						"name": "ConsumerTraits",
+						"template_parameters": [{
+							"_kind": "template type parameter",
+							"_name": "T",
+							"id": 140736954765456,
+							"is_variadic": false,
+							"keyword": "typename",
+							"kind": "template type parameter",
+							"name": "T"
+						}]
+					},
+					"semantic_scope": ""
+				},
+				"id": 140737112898208,
+				"kind": "class template",
+				"name": "ConsumerTraits",
+				"parameters": [{
+					"_kind": "template type parameter",
+					"_name": "T",
+					"id": 140736954765456,
+					"is_variadic": false,
+					"keyword": "typename",
+					"kind": "template type parameter",
+					"name": "T"
+				}],
+				"scope":  {
+					"is_templated": true,
+					"name": "ConsumerTraits",
+					"template_parameters": [{
+						"_kind": "template type parameter",
+						"_name": "T",
+						"id": 140736954765456,
+						"is_variadic": false,
+						"keyword": "typename",
+						"kind": "template type parameter",
+						"name": "T"
+					}]
+				}
+			}, {
+				"_fullName": "::stappler::io::BufferTraits<typename>",
+				"_kind": "class template",
+				"_name": "BufferTraits",
+				"childs": [{
+					"_fullName": "::stappler::io::BufferTraits<typename>",
+					"_kind": "class",
+					"_name": "BufferTraits",
+					"childs": null,
+					"class_kind": "struct",
+					"id": 140737108407200,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_final": false,
+					"kind": "class",
+					"name": "BufferTraits",
+					"scope": {
+						"is_templated": true,
+						"name": "BufferTraits",
+						"template_parameters": [{
+							"_kind": "template type parameter",
+							"_name": "T",
+							"id": 140737143600160,
+							"is_variadic": false,
+							"keyword": "typename",
+							"kind": "template type parameter",
+							"name": "T"
+						}]
+					},
+					"semantic_scope": ""
+				}],
+				"class":  {
+					"_fullName": "::stappler::io::BufferTraits<typename>",
+					"_kind": "class",
+					"_name": "BufferTraits",
+					"class_kind": "struct",
+					"id": 140737108407200,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_final": false,
+					"kind": "class",
+					"name": "BufferTraits",
+					"scope": {
+						"is_templated": true,
+						"name": "BufferTraits",
+						"template_parameters": [{
+							"_kind": "template type parameter",
+							"_name": "T",
+							"id": 140737143600160,
+							"is_variadic": false,
+							"keyword": "typename",
+							"kind": "template type parameter",
+							"name": "T"
+						}]
+					},
+					"semantic_scope": ""
+				},
+				"id": 140737088462496,
+				"kind": "class template",
+				"name": "BufferTraits",
+				"parameters": [{
+					"_kind": "template type parameter",
+					"_name": "T",
+					"id": 140737143600160,
+					"is_variadic": false,
+					"keyword": "typename",
+					"kind": "template type parameter",
+					"name": "T"
+				}],
+				"scope":  {
+					"is_templated": true,
+					"name": "BufferTraits",
+					"template_parameters": [{
+						"_kind": "template type parameter",
+						"_name": "T",
+						"id": 140737143600160,
+						"is_variadic": false,
+						"keyword": "typename",
+						"kind": "template type parameter",
+						"name": "T"
+					}]
+				}
+			}, {
+				"_fullName": "::stappler::io::Producer",
+				"_kind": "class",
+				"_name": "Producer",
+				"childs": null,
+				"class_kind": "struct",
+				"id": 140737117962336,
+				"is_declaration": true,
+				"is_definition": false,
+				"is_final": false,
+				"kind": "class",
+				"name": "Producer",
+				"scope": {
+					"name": "Producer"
+				},
+				"semantic_scope": ""
+			}, {
+				"_fullName": "::stappler::io::Consumer",
+				"_kind": "class",
+				"_name": "Consumer",
+				"childs": null,
+				"class_kind": "struct",
+				"id": 140737088628032,
+				"is_declaration": true,
+				"is_definition": false,
+				"is_final": false,
+				"kind": "class",
+				"name": "Consumer",
+				"scope": {
+					"name": "Consumer"
+				},
+				"semantic_scope": ""
+			}, {
+				"_fullName": "::stappler::io::Buffer",
+				"_kind": "class",
+				"_name": "Buffer",
+				"childs": null,
+				"class_kind": "struct",
+				"id": 140737108409440,
+				"is_declaration": true,
+				"is_definition": false,
+				"is_final": false,
+				"kind": "class",
+				"name": "Buffer",
+				"scope": {
+					"name": "Buffer"
+				},
+				"semantic_scope": ""
+			}],
+			"id": 140737112897888,
+			"is_anonymous": false,
+			"is_inline": false,
+			"is_nested": true,
+			"kind": "namespace",
+			"name": "io",
+			"scope": {
+				"name": "io"
+			}
+		}],
+		"id": 140737112897728,
+		"is_anonymous": false,
+		"is_inline": false,
+		"is_nested": false,
+		"kind": "namespace",
+		"name": "stappler",
+		"scope": {
+			"name": "stappler"
+		}
+	}],
+	"id": 140737147548432,
+	"kind": "file",
+	"name": "/home/sbkarr/stappler/xenolith/libstappler/common/io/SPIOCommon.h",
+	"unmatched_comments": [{
+		"line": 21,
+		"text": "\nCopyright (c) 2016-2022 Roman Katuntsev <sbkarr@stappler.org>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n"
+	}]
+}

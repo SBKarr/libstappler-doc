@@ -1,0 +1,3005 @@
+{
+	"_kind": "file",
+	"_name": "/home/sbkarr/stappler/xenolith/libstappler/common/io/SPIOProducer.h",
+	"childs": [{
+		"_kind": "include directive",
+		"_name": "SPIOCommon.h",
+		"id": 140737097507856,
+		"include": "/home/sbkarr/stappler/xenolith/libstappler/common/io/SPIOCommon.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "SPIOCommon.h"
+	}, {
+		"_fullName": "LIBSTAPPLER_COMMON_IO_SPIOPRODUCER_H_",
+		"_kind": "macro definition",
+		"_name": "LIBSTAPPLER_COMMON_IO_SPIOPRODUCER_H_",
+		"id": 140737103126624,
+		"is_function_like": false,
+		"is_object_like": true,
+		"is_variadic": false,
+		"kind": "macro definition",
+		"name": "LIBSTAPPLER_COMMON_IO_SPIOPRODUCER_H_",
+		"replacement": ""
+	}, {
+		"_fullName": "::stappler",
+		"_kind": "namespace",
+		"_name": "stappler",
+		"childs": [{
+			"_fullName": "::stappler::io",
+			"_kind": "namespace",
+			"_name": "io",
+			"childs": [{
+				"_fullName": "::stappler::io::ProducerTraitsStream",
+				"_kind": "class",
+				"_name": "ProducerTraitsStream",
+				"childs": [{
+					"_fullName": "::stappler::io::ProducerTraitsStream::stream_type",
+					"_kind": "type alias",
+					"_name": "stream_type",
+					"id": 140737142684704,
+					"kind": "type alias",
+					"name": "stream_type",
+					"underlying_type": {
+						"_typeName": "std::basic_istream<char>",
+						"arguments_exposed": false,
+						"kind": "template_instantiation",
+						"primary_template": {
+							"name": "std::basic_istream"
+						},
+						"unexposed_arguments": "char"
+					}
+				}, {
+					"_fullName": "::stappler::io::ProducerTraitsStream::ReadFn(void*,uint8_t*,size_t)",
+					"_kind": "function",
+					"_name": "ReadFn",
+					"body_kind": "definition",
+					"id": 140737121637168,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "ReadFn",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "ptr",
+						"id": 140737093975200,
+						"kind": "function parameter",
+						"name": "ptr",
+						"type": {
+							"_typeName": "void*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "void",
+								"builtin_type_kind": "void",
+								"kind": "builtin"
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "buf",
+						"id": 140737135315728,
+						"kind": "function parameter",
+						"name": "buf",
+						"type": {
+							"_typeName": "uint8_t*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "uint8_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "uint8_t"
+								}
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "nbytes",
+						"id": 140737116620336,
+						"kind": "function parameter",
+						"name": "nbytes",
+						"type": {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "size_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "size_t"
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(void*,uint8_t*,size_t)",
+					"storage_class": [
+						"static"
+					]
+				}, {
+					"_fullName": "::stappler::io::ProducerTraitsStream::SeekFn(void*,int64_t,stappler::io::Seek)",
+					"_kind": "function",
+					"_name": "SeekFn",
+					"body_kind": "definition",
+					"id": 140737145686960,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "SeekFn",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "ptr",
+						"id": 140736986542928,
+						"kind": "function parameter",
+						"name": "ptr",
+						"type": {
+							"_typeName": "void*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "void",
+								"builtin_type_kind": "void",
+								"kind": "builtin"
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "offset",
+						"id": 140737085714224,
+						"kind": "function parameter",
+						"name": "offset",
+						"type": {
+							"_typeName": "int64_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "int64_t"
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "s",
+						"id": 93825007955376,
+						"kind": "function parameter",
+						"name": "s",
+						"type": {
+							"_typeName": "stappler::io::Seek",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::io::Seek",
+								"objects": [{
+									"_fullName": "::stappler::io::Seek",
+									"_kind": "enum",
+									"_name": "Seek",
+									"has_explicit_type": false,
+									"id": 140737145716560,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_scoped": true,
+									"kind": "enum",
+									"name": "Seek",
+									"scope": {
+										"name": "Seek"
+									},
+									"semantic_scope": "",
+									"underlying_type": {
+										"_typeName": "int",
+										"builtin_type_kind": "int",
+										"kind": "builtin"
+									}
+								}]
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "size_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "size_t"
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(void*,int64_t,stappler::io::Seek)",
+					"storage_class": [
+						"static"
+					]
+				}, {
+					"_fullName": "::stappler::io::ProducerTraitsStream::TellFn(void*)",
+					"_kind": "function",
+					"_name": "TellFn",
+					"body_kind": "definition",
+					"id": 140737085704416,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "TellFn",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "ptr",
+						"id": 93825000248592,
+						"kind": "function parameter",
+						"name": "ptr",
+						"type": {
+							"_typeName": "void*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "void",
+								"builtin_type_kind": "void",
+								"kind": "builtin"
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "size_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "size_t"
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(void*)",
+					"storage_class": [
+						"static"
+					]
+				}],
+				"class_kind": "struct",
+				"id": 140737145752032,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_final": false,
+				"kind": "class",
+				"name": "ProducerTraitsStream",
+				"scope": {
+					"name": "ProducerTraitsStream"
+				},
+				"semantic_scope": ""
+			}, {
+				"_fullName": "::stappler::io::ReadFunction<class>(T&,uint8_t*,size_t)",
+				"_kind": "function template",
+				"_name": "ReadFunction",
+				"childs": [{
+					"_fullName": "::stappler::io::ReadFunction<class>(T&,uint8_t*,size_t)",
+					"_kind": "function",
+					"_name": "ReadFunction",
+					"body_kind": "declaration",
+					"id": 140737118258272,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "ReadFunction",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93825006352592,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "T&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "T",
+								"entity": {
+									"name": "T",
+									"objects": [{
+										"_kind": "template type parameter",
+										"_name": "T",
+										"id": 140737132369344,
+										"is_variadic": false,
+										"keyword": "class",
+										"kind": "template type parameter",
+										"name": "T"
+									}]
+								},
+								"kind": "template_parameter"
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "buf",
+						"id": 93825000711552,
+						"kind": "function parameter",
+						"name": "buf",
+						"type": {
+							"_typeName": "uint8_t*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "uint8_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "uint8_t"
+								}
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "nbytes",
+						"id": 93825001812272,
+						"kind": "function parameter",
+						"name": "nbytes",
+						"type": {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "size_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "size_t"
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(T&,uint8_t*,size_t)"
+				}],
+				"function":  {
+					"_fullName": "::stappler::io::ReadFunction<class>(T&,uint8_t*,size_t)",
+					"_kind": "function",
+					"_name": "ReadFunction",
+					"body_kind": "declaration",
+					"id": 140737118258272,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "ReadFunction",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93825006352592,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "T&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "T",
+								"entity": {
+									"name": "T",
+									"objects": [{
+										"_kind": "template type parameter",
+										"_name": "T",
+										"id": 140737132369344,
+										"is_variadic": false,
+										"keyword": "class",
+										"kind": "template type parameter",
+										"name": "T"
+									}]
+								},
+								"kind": "template_parameter"
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "buf",
+						"id": 93825000711552,
+						"kind": "function parameter",
+						"name": "buf",
+						"type": {
+							"_typeName": "uint8_t*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "uint8_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "uint8_t"
+								}
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "nbytes",
+						"id": 93825001812272,
+						"kind": "function parameter",
+						"name": "nbytes",
+						"type": {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "size_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "size_t"
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(T&,uint8_t*,size_t)"
+				},
+				"id": 140737102153424,
+				"kind": "function template",
+				"name": "ReadFunction",
+				"parameters": [{
+					"_kind": "template type parameter",
+					"_name": "T",
+					"id": 140737132369344,
+					"is_variadic": false,
+					"keyword": "class",
+					"kind": "template type parameter",
+					"name": "T"
+				}]
+			}, {
+				"_fullName": "::stappler::io::SeekFunction<class>(T&,int64_t,stappler::io::Seek)",
+				"_kind": "function template",
+				"_name": "SeekFunction",
+				"childs": [{
+					"_fullName": "::stappler::io::SeekFunction<class>(T&,int64_t,stappler::io::Seek)",
+					"_kind": "function",
+					"_name": "SeekFunction",
+					"body_kind": "declaration",
+					"id": 93825002835440,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "SeekFunction",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93824999295728,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "T&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "T",
+								"entity": {
+									"name": "T",
+									"objects": [{
+										"_kind": "template type parameter",
+										"_name": "T",
+										"id": 140736974111136,
+										"is_variadic": false,
+										"keyword": "class",
+										"kind": "template type parameter",
+										"name": "T"
+									}]
+								},
+								"kind": "template_parameter"
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "offset",
+						"id": 93824997490800,
+						"kind": "function parameter",
+						"name": "offset",
+						"type": {
+							"_typeName": "int64_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "int64_t"
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "s",
+						"id": 93824998950640,
+						"kind": "function parameter",
+						"name": "s",
+						"type": {
+							"_typeName": "stappler::io::Seek",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::io::Seek",
+								"objects": [{
+									"_fullName": "::stappler::io::Seek",
+									"_kind": "enum",
+									"_name": "Seek",
+									"has_explicit_type": false,
+									"id": 140737145716560,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_scoped": true,
+									"kind": "enum",
+									"name": "Seek",
+									"scope": {
+										"name": "Seek"
+									},
+									"semantic_scope": "",
+									"underlying_type": {
+										"_typeName": "int",
+										"builtin_type_kind": "int",
+										"kind": "builtin"
+									}
+								}]
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "size_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "size_t"
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(T&,int64_t,stappler::io::Seek)"
+				}],
+				"function":  {
+					"_fullName": "::stappler::io::SeekFunction<class>(T&,int64_t,stappler::io::Seek)",
+					"_kind": "function",
+					"_name": "SeekFunction",
+					"body_kind": "declaration",
+					"id": 93825002835440,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "SeekFunction",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93824999295728,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "T&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "T",
+								"entity": {
+									"name": "T",
+									"objects": [{
+										"_kind": "template type parameter",
+										"_name": "T",
+										"id": 140736974111136,
+										"is_variadic": false,
+										"keyword": "class",
+										"kind": "template type parameter",
+										"name": "T"
+									}]
+								},
+								"kind": "template_parameter"
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "offset",
+						"id": 93824997490800,
+						"kind": "function parameter",
+						"name": "offset",
+						"type": {
+							"_typeName": "int64_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "int64_t"
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "s",
+						"id": 93824998950640,
+						"kind": "function parameter",
+						"name": "s",
+						"type": {
+							"_typeName": "stappler::io::Seek",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::io::Seek",
+								"objects": [{
+									"_fullName": "::stappler::io::Seek",
+									"_kind": "enum",
+									"_name": "Seek",
+									"has_explicit_type": false,
+									"id": 140737145716560,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_scoped": true,
+									"kind": "enum",
+									"name": "Seek",
+									"scope": {
+										"name": "Seek"
+									},
+									"semantic_scope": "",
+									"underlying_type": {
+										"_typeName": "int",
+										"builtin_type_kind": "int",
+										"kind": "builtin"
+									}
+								}]
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "size_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "size_t"
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(T&,int64_t,stappler::io::Seek)"
+				},
+				"id": 140737102153584,
+				"kind": "function template",
+				"name": "SeekFunction",
+				"parameters": [{
+					"_kind": "template type parameter",
+					"_name": "T",
+					"id": 140736974111136,
+					"is_variadic": false,
+					"keyword": "class",
+					"kind": "template type parameter",
+					"name": "T"
+				}]
+			}, {
+				"_fullName": "::stappler::io::TellFunction<class>(T&)",
+				"_kind": "function template",
+				"_name": "TellFunction",
+				"childs": [{
+					"_fullName": "::stappler::io::TellFunction<class>(T&)",
+					"_kind": "function",
+					"_name": "TellFunction",
+					"body_kind": "declaration",
+					"id": 93825000980528,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "TellFunction",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93824999618384,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "T&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "T",
+								"entity": {
+									"name": "T",
+									"objects": [{
+										"_kind": "template type parameter",
+										"_name": "T",
+										"id": 140737093972816,
+										"is_variadic": false,
+										"keyword": "class",
+										"kind": "template type parameter",
+										"name": "T"
+									}]
+								},
+								"kind": "template_parameter"
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "size_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "size_t"
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(T&)"
+				}],
+				"function":  {
+					"_fullName": "::stappler::io::TellFunction<class>(T&)",
+					"_kind": "function",
+					"_name": "TellFunction",
+					"body_kind": "declaration",
+					"id": 93825000980528,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "TellFunction",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93824999618384,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "T&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "T",
+								"entity": {
+									"name": "T",
+									"objects": [{
+										"_kind": "template type parameter",
+										"_name": "T",
+										"id": 140737093972816,
+										"is_variadic": false,
+										"keyword": "class",
+										"kind": "template type parameter",
+										"name": "T"
+									}]
+								},
+								"kind": "template_parameter"
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "size_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "size_t"
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(T&)"
+				},
+				"id": 140737102153744,
+				"kind": "function template",
+				"name": "TellFunction",
+				"parameters": [{
+					"_kind": "template type parameter",
+					"_name": "T",
+					"id": 140737093972816,
+					"is_variadic": false,
+					"keyword": "class",
+					"kind": "template type parameter",
+					"name": "T"
+				}]
+			}, {
+				"_fullName": "::stappler::io::ProducerTraitsOverload<class>",
+				"_kind": "class template",
+				"_name": "ProducerTraitsOverload",
+				"childs": [{
+					"_fullName": "::stappler::io::ProducerTraitsOverload<class>",
+					"_kind": "class",
+					"_name": "ProducerTraitsOverload",
+					"childs": [{
+						"_fullName": "::stappler::io::ProducerTraitsOverload<class>::ReadFn(void*,uint8_t*,size_t)",
+						"_kind": "function",
+						"_name": "ReadFn",
+						"body_kind": "definition",
+						"id": 93824999861296,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "ReadFn",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "ptr",
+							"id": 93824999664016,
+							"kind": "function parameter",
+							"name": "ptr",
+							"type": {
+								"_typeName": "void*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "void",
+									"builtin_type_kind": "void",
+									"kind": "builtin"
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "buf",
+							"id": 93825000711136,
+							"kind": "function parameter",
+							"name": "buf",
+							"type": {
+								"_typeName": "uint8_t*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "uint8_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "uint8_t"
+									}
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "nbytes",
+							"id": 93825004531296,
+							"kind": "function parameter",
+							"name": "nbytes",
+							"type": {
+								"_typeName": "size_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "size_t"
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						},
+						"semantic_scope": "",
+						"signature": "(void*,uint8_t*,size_t)",
+						"storage_class": [
+							"static"
+						]
+					}, {
+						"_fullName": "::stappler::io::ProducerTraitsOverload<class>::SeekFn(void*,int64_t,stappler::io::Seek)",
+						"_kind": "function",
+						"_name": "SeekFn",
+						"body_kind": "definition",
+						"id": 93825000249648,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "SeekFn",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "ptr",
+							"id": 93824998986704,
+							"kind": "function parameter",
+							"name": "ptr",
+							"type": {
+								"_typeName": "void*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "void",
+									"builtin_type_kind": "void",
+									"kind": "builtin"
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "offset",
+							"id": 93825002849072,
+							"kind": "function parameter",
+							"name": "offset",
+							"type": {
+								"_typeName": "int64_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "int64_t"
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "s",
+							"id": 93825004403232,
+							"kind": "function parameter",
+							"name": "s",
+							"type": {
+								"_typeName": "stappler::io::Seek",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::io::Seek",
+									"objects": [{
+										"_fullName": "::stappler::io::Seek",
+										"_kind": "enum",
+										"_name": "Seek",
+										"has_explicit_type": false,
+										"id": 140737145716560,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "Seek",
+										"scope": {
+											"name": "Seek"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						},
+						"semantic_scope": "",
+						"signature": "(void*,int64_t,stappler::io::Seek)",
+						"storage_class": [
+							"static"
+						]
+					}, {
+						"_fullName": "::stappler::io::ProducerTraitsOverload<class>::TellFn(void*)",
+						"_kind": "function",
+						"_name": "TellFn",
+						"body_kind": "definition",
+						"id": 93825002433792,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "TellFn",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "ptr",
+							"id": 93825000119776,
+							"kind": "function parameter",
+							"name": "ptr",
+							"type": {
+								"_typeName": "void*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "void",
+									"builtin_type_kind": "void",
+									"kind": "builtin"
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						},
+						"semantic_scope": "",
+						"signature": "(void*)",
+						"storage_class": [
+							"static"
+						]
+					}],
+					"class_kind": "struct",
+					"id": 140737103414000,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_final": false,
+					"kind": "class",
+					"name": "ProducerTraitsOverload",
+					"scope": {
+						"is_templated": true,
+						"name": "ProducerTraitsOverload",
+						"template_parameters": [{
+							"_kind": "template type parameter",
+							"_name": "T",
+							"id": 140737141295136,
+							"is_variadic": false,
+							"keyword": "class",
+							"kind": "template type parameter",
+							"name": "T"
+						}]
+					},
+					"semantic_scope": ""
+				}],
+				"class":  {
+					"_fullName": "::stappler::io::ProducerTraitsOverload<class>",
+					"_kind": "class",
+					"_name": "ProducerTraitsOverload",
+					"class_kind": "struct",
+					"id": 140737103414000,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_final": false,
+					"kind": "class",
+					"name": "ProducerTraitsOverload",
+					"scope": {
+						"is_templated": true,
+						"name": "ProducerTraitsOverload",
+						"template_parameters": [{
+							"_kind": "template type parameter",
+							"_name": "T",
+							"id": 140737141295136,
+							"is_variadic": false,
+							"keyword": "class",
+							"kind": "template type parameter",
+							"name": "T"
+						}]
+					},
+					"semantic_scope": ""
+				},
+				"id": 140737098518416,
+				"kind": "class template",
+				"name": "ProducerTraitsOverload",
+				"parameters": [{
+					"_kind": "template type parameter",
+					"_name": "T",
+					"id": 140737141295136,
+					"is_variadic": false,
+					"keyword": "class",
+					"kind": "template type parameter",
+					"name": "T"
+				}],
+				"scope":  {
+					"is_templated": true,
+					"name": "ProducerTraitsOverload",
+					"template_parameters": [{
+						"_kind": "template type parameter",
+						"_name": "T",
+						"id": 140737141295136,
+						"is_variadic": false,
+						"keyword": "class",
+						"kind": "template type parameter",
+						"name": "T"
+					}]
+				}
+			}, {
+				"_fullName": "::stappler::io::ProducerTraitsResolution<typename>",
+				"_kind": "class template",
+				"_name": "ProducerTraitsResolution",
+				"childs": [{
+					"_fullName": "::stappler::io::ProducerTraitsResolution<typename>",
+					"_kind": "class",
+					"_name": "ProducerTraitsResolution",
+					"childs": [{
+						"_fullName": "::stappler::io::ProducerTraitsResolution<typename>::type",
+						"_kind": "type alias",
+						"_name": "type",
+						"id": 93825002874480,
+						"kind": "type alias",
+						"name": "type",
+						"underlying_type": {
+							"_typeName": "typename std::conditional<std::is_base_of<std::basic_istream<char>, T>::value, ProducerTraitsStream, ProducerTraitsOverload<T>>::type",
+							"kind": "unexposed",
+							"name": "typename std::conditional<std::is_base_of<std::basic_istream<char>, T>::value, ProducerTraitsStream, ProducerTraitsOverload<T>>::type"
+						}
+					}],
+					"class_kind": "struct",
+					"id": 140737088602272,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_final": false,
+					"kind": "class",
+					"name": "ProducerTraitsResolution",
+					"scope": {
+						"is_templated": true,
+						"name": "ProducerTraitsResolution",
+						"template_parameters": [{
+							"_kind": "template type parameter",
+							"_name": "T",
+							"id": 140736980320752,
+							"is_variadic": false,
+							"keyword": "typename",
+							"kind": "template type parameter",
+							"name": "T"
+						}]
+					},
+					"semantic_scope": ""
+				}],
+				"class":  {
+					"_fullName": "::stappler::io::ProducerTraitsResolution<typename>",
+					"_kind": "class",
+					"_name": "ProducerTraitsResolution",
+					"class_kind": "struct",
+					"id": 140737088602272,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_final": false,
+					"kind": "class",
+					"name": "ProducerTraitsResolution",
+					"scope": {
+						"is_templated": true,
+						"name": "ProducerTraitsResolution",
+						"template_parameters": [{
+							"_kind": "template type parameter",
+							"_name": "T",
+							"id": 140736980320752,
+							"is_variadic": false,
+							"keyword": "typename",
+							"kind": "template type parameter",
+							"name": "T"
+						}]
+					},
+					"semantic_scope": ""
+				},
+				"id": 93825004408192,
+				"kind": "class template",
+				"name": "ProducerTraitsResolution",
+				"parameters": [{
+					"_kind": "template type parameter",
+					"_name": "T",
+					"id": 140736980320752,
+					"is_variadic": false,
+					"keyword": "typename",
+					"kind": "template type parameter",
+					"name": "T"
+				}],
+				"scope":  {
+					"is_templated": true,
+					"name": "ProducerTraitsResolution",
+					"template_parameters": [{
+						"_kind": "template type parameter",
+						"_name": "T",
+						"id": 140736980320752,
+						"is_variadic": false,
+						"keyword": "typename",
+						"kind": "template type parameter",
+						"name": "T"
+					}]
+				}
+			}, {
+				"_fullName": "::stappler::io::ProducerTraits<typename>",
+				"_kind": "class template",
+				"_name": "ProducerTraits",
+				"childs": [{
+					"_fullName": "::stappler::io::ProducerTraits<typename>",
+					"_kind": "class",
+					"_name": "ProducerTraits",
+					"childs": [{
+						"_fullName": "::stappler::io::ProducerTraits<typename>::traits_type",
+						"_kind": "type alias",
+						"_name": "traits_type",
+						"id": 93825000755664,
+						"kind": "type alias",
+						"name": "traits_type",
+						"underlying_type": {
+							"_typeName": "typename ProducerTraitsResolution<T>::type",
+							"kind": "unexposed",
+							"name": "typename ProducerTraitsResolution<T>::type"
+						}
+					}, {
+						"_fullName": "::stappler::io::ProducerTraits<typename>::ReadFn(void*,uint8_t*,size_t)",
+						"_kind": "function",
+						"_name": "ReadFn",
+						"body_kind": "definition",
+						"id": 93824998951008,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "ReadFn",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "ptr",
+							"id": 93825002848608,
+							"kind": "function parameter",
+							"name": "ptr",
+							"type": {
+								"_typeName": "void*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "void",
+									"builtin_type_kind": "void",
+									"kind": "builtin"
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "buf",
+							"id": 93824999046784,
+							"kind": "function parameter",
+							"name": "buf",
+							"type": {
+								"_typeName": "uint8_t*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "uint8_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "uint8_t"
+									}
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "nbytes",
+							"id": 93824999047072,
+							"kind": "function parameter",
+							"name": "nbytes",
+							"type": {
+								"_typeName": "size_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "size_t"
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						},
+						"semantic_scope": "",
+						"signature": "(void*,uint8_t*,size_t)",
+						"storage_class": [
+							"static"
+						]
+					}, {
+						"_fullName": "::stappler::io::ProducerTraits<typename>::SeekFn(void*,int64_t,stappler::io::Seek)",
+						"_kind": "function",
+						"_name": "SeekFn",
+						"body_kind": "definition",
+						"id": 93825001543504,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "SeekFn",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "ptr",
+							"id": 93825001509904,
+							"kind": "function parameter",
+							"name": "ptr",
+							"type": {
+								"_typeName": "void*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "void",
+									"builtin_type_kind": "void",
+									"kind": "builtin"
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "offset",
+							"id": 93825001813712,
+							"kind": "function parameter",
+							"name": "offset",
+							"type": {
+								"_typeName": "int64_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "int64_t"
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "s",
+							"id": 93825001814000,
+							"kind": "function parameter",
+							"name": "s",
+							"type": {
+								"_typeName": "stappler::io::Seek",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::io::Seek",
+									"objects": [{
+										"_fullName": "::stappler::io::Seek",
+										"_kind": "enum",
+										"_name": "Seek",
+										"has_explicit_type": false,
+										"id": 140737145716560,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "Seek",
+										"scope": {
+											"name": "Seek"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						},
+						"semantic_scope": "",
+						"signature": "(void*,int64_t,stappler::io::Seek)",
+						"storage_class": [
+							"static"
+						]
+					}, {
+						"_fullName": "::stappler::io::ProducerTraits<typename>::TellFn(void*)",
+						"_kind": "function",
+						"_name": "TellFn",
+						"body_kind": "definition",
+						"id": 93824999316464,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "TellFn",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "ptr",
+							"id": 93825005453520,
+							"kind": "function parameter",
+							"name": "ptr",
+							"type": {
+								"_typeName": "void*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "void",
+									"builtin_type_kind": "void",
+									"kind": "builtin"
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						},
+						"semantic_scope": "",
+						"signature": "(void*)",
+						"storage_class": [
+							"static"
+						]
+					}],
+					"class_kind": "struct",
+					"id": 93825000755408,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_final": false,
+					"kind": "class",
+					"name": "ProducerTraits",
+					"scope": {
+						"is_templated": true,
+						"name": "ProducerTraits",
+						"template_parameters": [{
+							"_kind": "template type parameter",
+							"_name": "T",
+							"id": 140736986963936,
+							"is_variadic": false,
+							"keyword": "typename",
+							"kind": "template type parameter",
+							"name": "T"
+						}]
+					},
+					"semantic_scope": ""
+				}],
+				"class":  {
+					"_fullName": "::stappler::io::ProducerTraits<typename>",
+					"_kind": "class",
+					"_name": "ProducerTraits",
+					"class_kind": "struct",
+					"id": 93825000755408,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_final": false,
+					"kind": "class",
+					"name": "ProducerTraits",
+					"scope": {
+						"is_templated": true,
+						"name": "ProducerTraits",
+						"template_parameters": [{
+							"_kind": "template type parameter",
+							"_name": "T",
+							"id": 140736986963936,
+							"is_variadic": false,
+							"keyword": "typename",
+							"kind": "template type parameter",
+							"name": "T"
+						}]
+					},
+					"semantic_scope": ""
+				},
+				"id": 93825002848448,
+				"kind": "class template",
+				"name": "ProducerTraits",
+				"parameters": [{
+					"_kind": "template type parameter",
+					"_name": "T",
+					"id": 140736986963936,
+					"is_variadic": false,
+					"keyword": "typename",
+					"kind": "template type parameter",
+					"name": "T"
+				}],
+				"scope":  {
+					"is_templated": true,
+					"name": "ProducerTraits",
+					"template_parameters": [{
+						"_kind": "template type parameter",
+						"_name": "T",
+						"id": 140736986963936,
+						"is_variadic": false,
+						"keyword": "typename",
+						"kind": "template type parameter",
+						"name": "T"
+					}]
+				}
+			}, {
+				"_fullName": "::stappler::io::Producer",
+				"_kind": "class",
+				"_name": "Producer",
+				"childs": [{
+					"_fullName": "::stappler::io::Producer::Producer<typename,typename>(T&)",
+					"_kind": "function template",
+					"_name": "Producer",
+					"childs": [{
+						"_fullName": "::stappler::io::Producer::Producer<typename,typename>(T&)",
+						"_kind": "constructor",
+						"_name": "Producer",
+						"body_kind": "declaration",
+						"id": 93824999600176,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_explicit": false,
+						"is_variadic": false,
+						"kind": "constructor",
+						"name": "Producer",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "t",
+							"id": 93825004402736,
+							"kind": "function parameter",
+							"name": "t",
+							"type": {
+								"_typeName": "T&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "T",
+									"entity": {
+										"name": "T",
+										"objects": [{
+											"_kind": "template type parameter",
+											"_name": "T",
+											"id": 93824999046176,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "T"
+										}]
+									},
+									"kind": "template_parameter"
+								},
+								"reference_kind": "lvalue"
+							}
+						}],
+						"semantic_scope": "",
+						"signature": "(T&)"
+					}],
+					"function":  {
+						"_fullName": "::stappler::io::Producer::Producer<typename,typename>(T&)",
+						"_kind": "constructor",
+						"_name": "Producer",
+						"body_kind": "declaration",
+						"id": 93824999600176,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_explicit": false,
+						"is_variadic": false,
+						"kind": "constructor",
+						"name": "Producer",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "t",
+							"id": 93825004402736,
+							"kind": "function parameter",
+							"name": "t",
+							"type": {
+								"_typeName": "T&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "T",
+									"entity": {
+										"name": "T",
+										"objects": [{
+											"_kind": "template type parameter",
+											"_name": "T",
+											"id": 93824999046176,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "T"
+										}]
+									},
+									"kind": "template_parameter"
+								},
+								"reference_kind": "lvalue"
+							}
+						}],
+						"semantic_scope": "",
+						"signature": "(T&)"
+					},
+					"id": 93825004402576,
+					"kind": "function template",
+					"name": "Producer",
+					"parameters": [{
+						"_kind": "template type parameter",
+						"_name": "T",
+						"id": 93824999046176,
+						"is_variadic": false,
+						"keyword": "typename",
+						"kind": "template type parameter",
+						"name": "T"
+					}, {
+						"_kind": "template type parameter",
+						"_name": "Traits",
+						"default_type": {
+							"_typeName": "ProducerTraits<typename std::decay<T>::type>>",
+							"kind": "unexposed",
+							"name": "ProducerTraits<typename std::decay<T>::type>>"
+						},
+						"id": 93825005454016,
+						"is_variadic": false,
+						"keyword": "typename",
+						"kind": "template type parameter",
+						"name": "Traits"
+					}]
+				}, {
+					"_fullName": "::stappler::io::Producer::read(uint8_t*,size_t) const",
+					"_kind": "member function",
+					"_name": "read",
+					"body_kind": "declaration",
+					"cv_qualifier": "const",
+					"id": 93824999726384,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "read",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "buf",
+						"id": 93825000724464,
+						"kind": "function parameter",
+						"name": "buf",
+						"type": {
+							"_typeName": "uint8_t*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "uint8_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "uint8_t"
+								}
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "nbytes",
+						"id": 93825000724752,
+						"kind": "function parameter",
+						"name": "nbytes",
+						"type": {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "size_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "size_t"
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(uint8_t*,size_t) const"
+				}, {
+					"_fullName": "::stappler::io::Producer::read(stappler::io::Buffer const&,size_t) const",
+					"_kind": "member function",
+					"_name": "read",
+					"body_kind": "declaration",
+					"cv_qualifier": "const",
+					"id": 93825000601856,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "read",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93825000602656,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::io::Buffer const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::io::Buffer const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::io::Buffer",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::io::Buffer",
+										"objects": [{
+											"_fullName": "::stappler::io::Buffer",
+											"_kind": "class",
+											"_name": "Buffer",
+											"class_kind": "struct",
+											"id": 140737108409440,
+											"is_declaration": true,
+											"is_definition": false,
+											"is_final": false,
+											"kind": "class",
+											"name": "Buffer",
+											"scope": {
+												"name": "Buffer"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "nbytes",
+						"id": 93825000602896,
+						"kind": "function parameter",
+						"name": "nbytes",
+						"type": {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "size_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "size_t"
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::io::Buffer const&,size_t) const"
+				}, {
+					"_fullName": "::stappler::io::Producer::seek(int64_t,stappler::io::Seek) const",
+					"_kind": "member function",
+					"_name": "seek",
+					"body_kind": "declaration",
+					"cv_qualifier": "const",
+					"id": 93825001988816,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "seek",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "offset",
+						"id": 93824999045520,
+						"kind": "function parameter",
+						"name": "offset",
+						"type": {
+							"_typeName": "int64_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "int64_t"
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "s",
+						"id": 93824999045760,
+						"kind": "function parameter",
+						"name": "s",
+						"type": {
+							"_typeName": "stappler::io::Seek",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::io::Seek",
+								"objects": [{
+									"_fullName": "::stappler::io::Seek",
+									"_kind": "enum",
+									"_name": "Seek",
+									"has_explicit_type": false,
+									"id": 140737145716560,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_scoped": true,
+									"kind": "enum",
+									"name": "Seek",
+									"scope": {
+										"name": "Seek"
+									},
+									"semantic_scope": "",
+									"underlying_type": {
+										"_typeName": "int",
+										"builtin_type_kind": "int",
+										"kind": "builtin"
+									}
+								}]
+							}
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "size_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "size_t"
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(int64_t,stappler::io::Seek) const"
+				}, {
+					"_fullName": "::stappler::io::Producer::seekAndRead<typename>(size_t,T&&,size_t) const",
+					"_kind": "function template",
+					"_name": "seekAndRead",
+					"childs": [{
+						"_fullName": "::stappler::io::Producer::seekAndRead<typename>(size_t,T&&,size_t) const",
+						"_kind": "member function",
+						"_name": "seekAndRead",
+						"body_kind": "declaration",
+						"cv_qualifier": "const",
+						"id": 93825002347536,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "seekAndRead",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "offset",
+							"id": 93825002347904,
+							"kind": "function parameter",
+							"name": "offset",
+							"type": {
+								"_typeName": "size_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "size_t"
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 93825004530640,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "T&&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "T",
+									"entity": {
+										"name": "T",
+										"objects": [{
+											"_kind": "template type parameter",
+											"_name": "T",
+											"id": 93824999861904,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "T"
+										}]
+									},
+									"kind": "template_parameter"
+								},
+								"reference_kind": "rvalue"
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "nbytes",
+							"id": 93825004530880,
+							"kind": "function parameter",
+							"name": "nbytes",
+							"type": {
+								"_typeName": "size_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "size_t"
+								}
+							}
+						}],
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						},
+						"semantic_scope": "",
+						"signature": "(size_t,T&&,size_t) const"
+					}],
+					"function":  {
+						"_fullName": "::stappler::io::Producer::seekAndRead<typename>(size_t,T&&,size_t) const",
+						"_kind": "member function",
+						"_name": "seekAndRead",
+						"body_kind": "declaration",
+						"cv_qualifier": "const",
+						"id": 93825002347536,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "seekAndRead",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "offset",
+							"id": 93825002347904,
+							"kind": "function parameter",
+							"name": "offset",
+							"type": {
+								"_typeName": "size_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "size_t"
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 93825004530640,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "T&&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "T",
+									"entity": {
+										"name": "T",
+										"objects": [{
+											"_kind": "template type parameter",
+											"_name": "T",
+											"id": 93824999861904,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "T"
+										}]
+									},
+									"kind": "template_parameter"
+								},
+								"reference_kind": "rvalue"
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "nbytes",
+							"id": 93825004530880,
+							"kind": "function parameter",
+							"name": "nbytes",
+							"type": {
+								"_typeName": "size_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "size_t"
+								}
+							}
+						}],
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						},
+						"semantic_scope": "",
+						"signature": "(size_t,T&&,size_t) const"
+					},
+					"id": 93824999046512,
+					"kind": "function template",
+					"name": "seekAndRead",
+					"parameters": [{
+						"_kind": "template type parameter",
+						"_name": "T",
+						"id": 93824999861904,
+						"is_variadic": false,
+						"keyword": "typename",
+						"kind": "template type parameter",
+						"name": "T"
+					}]
+				}, {
+					"_fullName": "::stappler::io::Producer::tell() const",
+					"_kind": "member function",
+					"_name": "tell",
+					"body_kind": "declaration",
+					"cv_qualifier": "const",
+					"id": 93825004408688,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "tell",
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "size_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "size_t"
+						}
+					},
+					"semantic_scope": "",
+					"signature": "() const"
+				}, {
+					"_fullName": "::stappler::io::Producer::ptr",
+					"_kind": "member variable",
+					"_name": "ptr",
+					"default_value": {
+						"expression": [{
+							"kind": "keyword",
+							"spelling": "nullptr"
+						}],
+						"kind": "unexposed",
+						"type": {
+							"_typeName": "void*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "void",
+								"builtin_type_kind": "void",
+								"kind": "builtin"
+							}
+						}
+					},
+					"id": 93824999670304,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "ptr",
+					"type": {
+						"_typeName": "void*",
+						"kind": "pointer",
+						"pointee": {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						}
+					}
+				}, {
+					"_fullName": "::stappler::io::Producer::read_ptr",
+					"_kind": "member variable",
+					"_name": "read_ptr",
+					"default_value": {
+						"expression": [{
+							"kind": "keyword",
+							"spelling": "nullptr"
+						}],
+						"kind": "unexposed",
+						"type": {
+							"_typeName": "stappler::io::read_fn",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::io::read_fn",
+								"objects": [{
+									"_fullName": "::stappler::io::read_fn",
+									"_kind": "type alias",
+									"_name": "read_fn",
+									"id": 140737088462000,
+									"kind": "type alias",
+									"name": "read_fn",
+									"underlying_type": {
+										"_typeName": "size_t(*)(void*,uint8_t*,size_t)",
+										"kind": "pointer",
+										"pointee": {
+											"_typeName": "size_t(void*,uint8_t*,size_t)",
+											"is_variadic": false,
+											"kind": "function",
+											"parameter_types": [{
+												"_typeName": "void*",
+												"kind": "pointer",
+												"pointee": {
+													"_typeName": "void",
+													"builtin_type_kind": "void",
+													"kind": "builtin"
+												}
+											}, {
+												"_typeName": "uint8_t*",
+												"kind": "pointer",
+												"pointee": {
+													"_typeName": "uint8_t",
+													"kind": "user_defined",
+													"target": {
+														"name": "uint8_t"
+													}
+												}
+											}, {
+												"_typeName": "size_t",
+												"kind": "user_defined",
+												"target": {
+													"name": "size_t"
+												}
+											}],
+											"return_type":  {
+												"_typeName": "size_t",
+												"kind": "user_defined",
+												"target": {
+													"name": "size_t"
+												}
+											}
+										}
+									}
+								}]
+							}
+						}
+					},
+					"id": 93824999670656,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "read_ptr",
+					"type": {
+						"_typeName": "stappler::io::read_fn",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::io::read_fn",
+							"objects": [{
+								"_fullName": "::stappler::io::read_fn",
+								"_kind": "type alias",
+								"_name": "read_fn",
+								"id": 140737088462000,
+								"kind": "type alias",
+								"name": "read_fn",
+								"underlying_type": {
+									"_typeName": "size_t(*)(void*,uint8_t*,size_t)",
+									"kind": "pointer",
+									"pointee": {
+										"_typeName": "size_t(void*,uint8_t*,size_t)",
+										"is_variadic": false,
+										"kind": "function",
+										"parameter_types": [{
+											"_typeName": "void*",
+											"kind": "pointer",
+											"pointee": {
+												"_typeName": "void",
+												"builtin_type_kind": "void",
+												"kind": "builtin"
+											}
+										}, {
+											"_typeName": "uint8_t*",
+											"kind": "pointer",
+											"pointee": {
+												"_typeName": "uint8_t",
+												"kind": "user_defined",
+												"target": {
+													"name": "uint8_t"
+												}
+											}
+										}, {
+											"_typeName": "size_t",
+											"kind": "user_defined",
+											"target": {
+												"name": "size_t"
+											}
+										}],
+										"return_type":  {
+											"_typeName": "size_t",
+											"kind": "user_defined",
+											"target": {
+												"name": "size_t"
+											}
+										}
+									}
+								}
+							}]
+						}
+					}
+				}, {
+					"_fullName": "::stappler::io::Producer::seek_ptr",
+					"_kind": "member variable",
+					"_name": "seek_ptr",
+					"default_value": {
+						"expression": [{
+							"kind": "keyword",
+							"spelling": "nullptr"
+						}],
+						"kind": "unexposed",
+						"type": {
+							"_typeName": "stappler::io::seek_fn",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::io::seek_fn",
+								"objects": [{
+									"_fullName": "::stappler::io::seek_fn",
+									"_kind": "type alias",
+									"_name": "seek_fn",
+									"id": 140737085704688,
+									"kind": "type alias",
+									"name": "seek_fn",
+									"underlying_type": {
+										"_typeName": "size_t(*)(void*,int64_t,stappler::io::Seek)",
+										"kind": "pointer",
+										"pointee": {
+											"_typeName": "size_t(void*,int64_t,stappler::io::Seek)",
+											"is_variadic": false,
+											"kind": "function",
+											"parameter_types": [{
+												"_typeName": "void*",
+												"kind": "pointer",
+												"pointee": {
+													"_typeName": "void",
+													"builtin_type_kind": "void",
+													"kind": "builtin"
+												}
+											}, {
+												"_typeName": "int64_t",
+												"kind": "user_defined",
+												"target": {
+													"name": "int64_t"
+												}
+											}, {
+												"_typeName": "stappler::io::Seek",
+												"kind": "user_defined",
+												"target": {
+													"name": "stappler::io::Seek",
+													"objects": [{
+														"_fullName": "::stappler::io::Seek",
+														"_kind": "enum",
+														"_name": "Seek",
+														"has_explicit_type": false,
+														"id": 140737145716560,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_scoped": true,
+														"kind": "enum",
+														"name": "Seek",
+														"scope": {
+															"name": "Seek"
+														},
+														"semantic_scope": "",
+														"underlying_type": {
+															"_typeName": "int",
+															"builtin_type_kind": "int",
+															"kind": "builtin"
+														}
+													}]
+												}
+											}],
+											"return_type":  {
+												"_typeName": "size_t",
+												"kind": "user_defined",
+												"target": {
+													"name": "size_t"
+												}
+											}
+										}
+									}
+								}]
+							}
+						}
+					},
+					"id": 93825002849632,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "seek_ptr",
+					"type": {
+						"_typeName": "stappler::io::seek_fn",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::io::seek_fn",
+							"objects": [{
+								"_fullName": "::stappler::io::seek_fn",
+								"_kind": "type alias",
+								"_name": "seek_fn",
+								"id": 140737085704688,
+								"kind": "type alias",
+								"name": "seek_fn",
+								"underlying_type": {
+									"_typeName": "size_t(*)(void*,int64_t,stappler::io::Seek)",
+									"kind": "pointer",
+									"pointee": {
+										"_typeName": "size_t(void*,int64_t,stappler::io::Seek)",
+										"is_variadic": false,
+										"kind": "function",
+										"parameter_types": [{
+											"_typeName": "void*",
+											"kind": "pointer",
+											"pointee": {
+												"_typeName": "void",
+												"builtin_type_kind": "void",
+												"kind": "builtin"
+											}
+										}, {
+											"_typeName": "int64_t",
+											"kind": "user_defined",
+											"target": {
+												"name": "int64_t"
+											}
+										}, {
+											"_typeName": "stappler::io::Seek",
+											"kind": "user_defined",
+											"target": {
+												"name": "stappler::io::Seek",
+												"objects": [{
+													"_fullName": "::stappler::io::Seek",
+													"_kind": "enum",
+													"_name": "Seek",
+													"has_explicit_type": false,
+													"id": 140737145716560,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_scoped": true,
+													"kind": "enum",
+													"name": "Seek",
+													"scope": {
+														"name": "Seek"
+													},
+													"semantic_scope": "",
+													"underlying_type": {
+														"_typeName": "int",
+														"builtin_type_kind": "int",
+														"kind": "builtin"
+													}
+												}]
+											}
+										}],
+										"return_type":  {
+											"_typeName": "size_t",
+											"kind": "user_defined",
+											"target": {
+												"name": "size_t"
+											}
+										}
+									}
+								}
+							}]
+						}
+					}
+				}, {
+					"_fullName": "::stappler::io::Producer::tell_ptr",
+					"_kind": "member variable",
+					"_name": "tell_ptr",
+					"default_value": {
+						"expression": [{
+							"kind": "keyword",
+							"spelling": "nullptr"
+						}],
+						"kind": "unexposed",
+						"type": {
+							"_typeName": "stappler::io::size_fn",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::io::size_fn",
+								"objects": [{
+									"_fullName": "::stappler::io::size_fn",
+									"_kind": "type alias",
+									"_name": "size_fn",
+									"id": 140737141796432,
+									"kind": "type alias",
+									"name": "size_fn",
+									"underlying_type": {
+										"_typeName": "size_t(*)(void*)",
+										"kind": "pointer",
+										"pointee": {
+											"_typeName": "size_t(void*)",
+											"is_variadic": false,
+											"kind": "function",
+											"parameter_types": [{
+												"_typeName": "void*",
+												"kind": "pointer",
+												"pointee": {
+													"_typeName": "void",
+													"builtin_type_kind": "void",
+													"kind": "builtin"
+												}
+											}],
+											"return_type":  {
+												"_typeName": "size_t",
+												"kind": "user_defined",
+												"target": {
+													"name": "size_t"
+												}
+											}
+										}
+									}
+								}]
+							}
+						}
+					},
+					"id": 93825000522544,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "tell_ptr",
+					"type": {
+						"_typeName": "stappler::io::size_fn",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::io::size_fn",
+							"objects": [{
+								"_fullName": "::stappler::io::size_fn",
+								"_kind": "type alias",
+								"_name": "size_fn",
+								"id": 140737141796432,
+								"kind": "type alias",
+								"name": "size_fn",
+								"underlying_type": {
+									"_typeName": "size_t(*)(void*)",
+									"kind": "pointer",
+									"pointee": {
+										"_typeName": "size_t(void*)",
+										"is_variadic": false,
+										"kind": "function",
+										"parameter_types": [{
+											"_typeName": "void*",
+											"kind": "pointer",
+											"pointee": {
+												"_typeName": "void",
+												"builtin_type_kind": "void",
+												"kind": "builtin"
+											}
+										}],
+										"return_type":  {
+											"_typeName": "size_t",
+											"kind": "user_defined",
+											"target": {
+												"name": "size_t"
+											}
+										}
+									}
+								}
+							}]
+						}
+					}
+				}],
+				"class_kind": "struct",
+				"id": 93824998987008,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_final": false,
+				"kind": "class",
+				"name": "Producer",
+				"scope": {
+					"name": "Producer"
+				},
+				"semantic_scope": ""
+			}, {
+				"_fullName": "::stappler::io::Producer::Producer<typename,typename>(T&)",
+				"_kind": "function template",
+				"_name": "Producer",
+				"childs": [{
+					"_fullName": "::stappler::io::Producer::Producer<typename,typename>(T&)",
+					"_kind": "constructor",
+					"_name": "Producer",
+					"body_kind": "definition",
+					"id": 93825001988560,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_explicit": false,
+					"is_variadic": false,
+					"kind": "constructor",
+					"name": "Producer",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "t",
+						"id": 93824999861712,
+						"kind": "function parameter",
+						"name": "t",
+						"type": {
+							"_typeName": "T&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "T",
+								"entity": {
+									"name": "T",
+									"objects": [{
+										"_kind": "template type parameter",
+										"_name": "T",
+										"id": 93825001589056,
+										"is_variadic": false,
+										"keyword": "typename",
+										"kind": "template type parameter",
+										"name": "T"
+									}]
+								},
+								"kind": "template_parameter"
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"semantic_parent":  {
+						"name": "Producer::",
+						"objects": [{
+							"_fullName": "::stappler::io::Producer",
+							"_kind": "class",
+							"_name": "Producer",
+							"class_kind": "struct",
+							"id": 93824998987008,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_final": false,
+							"kind": "class",
+							"name": "Producer",
+							"scope": {
+								"name": "Producer"
+							},
+							"semantic_scope": ""
+						}]
+					},
+					"semantic_scope": "Producer::",
+					"signature": "(T&)"
+				}],
+				"function":  {
+					"_fullName": "::stappler::io::Producer::Producer<typename,typename>(T&)",
+					"_kind": "constructor",
+					"_name": "Producer",
+					"body_kind": "definition",
+					"id": 93825001988560,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_explicit": false,
+					"is_variadic": false,
+					"kind": "constructor",
+					"name": "Producer",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "t",
+						"id": 93824999861712,
+						"kind": "function parameter",
+						"name": "t",
+						"type": {
+							"_typeName": "T&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "T",
+								"entity": {
+									"name": "T",
+									"objects": [{
+										"_kind": "template type parameter",
+										"_name": "T",
+										"id": 93825001589056,
+										"is_variadic": false,
+										"keyword": "typename",
+										"kind": "template type parameter",
+										"name": "T"
+									}]
+								},
+								"kind": "template_parameter"
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"semantic_parent":  {
+						"name": "Producer::",
+						"objects": [{
+							"_fullName": "::stappler::io::Producer",
+							"_kind": "class",
+							"_name": "Producer",
+							"class_kind": "struct",
+							"id": 93824998987008,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_final": false,
+							"kind": "class",
+							"name": "Producer",
+							"scope": {
+								"name": "Producer"
+							},
+							"semantic_scope": ""
+						}]
+					},
+					"semantic_scope": "Producer::",
+					"signature": "(T&)"
+				},
+				"id": 93825000522960,
+				"kind": "function template",
+				"name": "Producer",
+				"parameters": [{
+					"_kind": "template type parameter",
+					"_name": "T",
+					"id": 93825001589056,
+					"is_variadic": false,
+					"keyword": "typename",
+					"kind": "template type parameter",
+					"name": "T"
+				}, {
+					"_kind": "template type parameter",
+					"_name": "Traits",
+					"id": 93825001589296,
+					"is_variadic": false,
+					"keyword": "typename",
+					"kind": "template type parameter",
+					"name": "Traits"
+				}]
+			}, {
+				"_fullName": "::stappler::io::Producer::read(uint8_t*,size_t) const",
+				"_kind": "member function",
+				"_name": "read",
+				"body_kind": "definition",
+				"cv_qualifier": "const",
+				"id": 93825001482480,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"is_virtual": false,
+				"kind": "member function",
+				"name": "read",
+				"parameters": [{
+					"_kind": "function parameter",
+					"_name": "buf",
+					"id": 93825001483008,
+					"kind": "function parameter",
+					"name": "buf",
+					"type": {
+						"_typeName": "uint8_t*",
+						"kind": "pointer",
+						"pointee": {
+							"_typeName": "uint8_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "uint8_t"
+							}
+						}
+					}
+				}, {
+					"_kind": "function parameter",
+					"_name": "nbytes",
+					"id": 93824998602896,
+					"kind": "function parameter",
+					"name": "nbytes",
+					"type": {
+						"_typeName": "size_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "size_t"
+						}
+					}
+				}],
+				"ref_qualifier": "none",
+				"return_type": {
+					"_typeName": "size_t",
+					"kind": "user_defined",
+					"target": {
+						"name": "size_t"
+					}
+				},
+				"semantic_parent":  {
+					"name": "Producer::",
+					"objects": [{
+						"_fullName": "::stappler::io::Producer",
+						"_kind": "class",
+						"_name": "Producer",
+						"class_kind": "struct",
+						"id": 93824998987008,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_final": false,
+						"kind": "class",
+						"name": "Producer",
+						"scope": {
+							"name": "Producer"
+						},
+						"semantic_scope": ""
+					}]
+				},
+				"semantic_scope": "Producer::",
+				"signature": "(uint8_t*,size_t) const"
+			}, {
+				"_fullName": "::stappler::io::Producer::seek(int64_t,stappler::io::Seek) const",
+				"_kind": "member function",
+				"_name": "seek",
+				"body_kind": "definition",
+				"cv_qualifier": "const",
+				"id": 93824998603232,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"is_virtual": false,
+				"kind": "member function",
+				"name": "seek",
+				"parameters": [{
+					"_kind": "function parameter",
+					"_name": "offset",
+					"id": 93825000725184,
+					"kind": "function parameter",
+					"name": "offset",
+					"type": {
+						"_typeName": "int64_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "int64_t"
+						}
+					}
+				}, {
+					"_kind": "function parameter",
+					"_name": "s",
+					"id": 93825000725424,
+					"kind": "function parameter",
+					"name": "s",
+					"type": {
+						"_typeName": "stappler::io::Seek",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::io::Seek",
+							"objects": [{
+								"_fullName": "::stappler::io::Seek",
+								"_kind": "enum",
+								"_name": "Seek",
+								"has_explicit_type": false,
+								"id": 140737145716560,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_scoped": true,
+								"kind": "enum",
+								"name": "Seek",
+								"scope": {
+									"name": "Seek"
+								},
+								"semantic_scope": "",
+								"underlying_type": {
+									"_typeName": "int",
+									"builtin_type_kind": "int",
+									"kind": "builtin"
+								}
+							}]
+						}
+					}
+				}],
+				"ref_qualifier": "none",
+				"return_type": {
+					"_typeName": "size_t",
+					"kind": "user_defined",
+					"target": {
+						"name": "size_t"
+					}
+				},
+				"semantic_parent":  {
+					"name": "Producer::",
+					"objects": [{
+						"_fullName": "::stappler::io::Producer",
+						"_kind": "class",
+						"_name": "Producer",
+						"class_kind": "struct",
+						"id": 93824998987008,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_final": false,
+						"kind": "class",
+						"name": "Producer",
+						"scope": {
+							"name": "Producer"
+						},
+						"semantic_scope": ""
+					}]
+				},
+				"semantic_scope": "Producer::",
+				"signature": "(int64_t,stappler::io::Seek) const"
+			}, {
+				"_fullName": "::stappler::io::Producer::seekAndRead<typename>(size_t,T&&,size_t) const",
+				"_kind": "function template",
+				"_name": "seekAndRead",
+				"childs": [{
+					"_fullName": "::stappler::io::Producer::seekAndRead<typename>(size_t,T&&,size_t) const",
+					"_kind": "member function",
+					"_name": "seekAndRead",
+					"body_kind": "definition",
+					"cv_qualifier": "const",
+					"id": 93825000711888,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "seekAndRead",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "offset",
+						"id": 93825000712256,
+						"kind": "function parameter",
+						"name": "offset",
+						"type": {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "t",
+						"id": 93824999315632,
+						"kind": "function parameter",
+						"name": "t",
+						"type": {
+							"_typeName": "T&&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "T",
+								"entity": {
+									"name": "T",
+									"objects": [{
+										"_kind": "template type parameter",
+										"_name": "T",
+										"id": 93825002000304,
+										"is_variadic": false,
+										"keyword": "typename",
+										"kind": "template type parameter",
+										"name": "T"
+									}]
+								},
+								"kind": "template_parameter"
+							},
+							"reference_kind": "rvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "nbytes",
+						"id": 93824999315920,
+						"kind": "function parameter",
+						"name": "nbytes",
+						"type": {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "size_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "size_t"
+						}
+					},
+					"semantic_parent":  {
+						"name": "Producer::",
+						"objects": [{
+							"_fullName": "::stappler::io::Producer",
+							"_kind": "class",
+							"_name": "Producer",
+							"class_kind": "struct",
+							"id": 93824998987008,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_final": false,
+							"kind": "class",
+							"name": "Producer",
+							"scope": {
+								"name": "Producer"
+							},
+							"semantic_scope": ""
+						}]
+					},
+					"semantic_scope": "Producer::",
+					"signature": "(size_t,T&&,size_t) const"
+				}],
+				"function":  {
+					"_fullName": "::stappler::io::Producer::seekAndRead<typename>(size_t,T&&,size_t) const",
+					"_kind": "member function",
+					"_name": "seekAndRead",
+					"body_kind": "definition",
+					"cv_qualifier": "const",
+					"id": 93825000711888,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "seekAndRead",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "offset",
+						"id": 93825000712256,
+						"kind": "function parameter",
+						"name": "offset",
+						"type": {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "t",
+						"id": 93824999315632,
+						"kind": "function parameter",
+						"name": "t",
+						"type": {
+							"_typeName": "T&&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "T",
+								"entity": {
+									"name": "T",
+									"objects": [{
+										"_kind": "template type parameter",
+										"_name": "T",
+										"id": 93825002000304,
+										"is_variadic": false,
+										"keyword": "typename",
+										"kind": "template type parameter",
+										"name": "T"
+									}]
+								},
+								"kind": "template_parameter"
+							},
+							"reference_kind": "rvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "nbytes",
+						"id": 93824999315920,
+						"kind": "function parameter",
+						"name": "nbytes",
+						"type": {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "size_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "size_t"
+						}
+					},
+					"semantic_parent":  {
+						"name": "Producer::",
+						"objects": [{
+							"_fullName": "::stappler::io::Producer",
+							"_kind": "class",
+							"_name": "Producer",
+							"class_kind": "struct",
+							"id": 93824998987008,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_final": false,
+							"kind": "class",
+							"name": "Producer",
+							"scope": {
+								"name": "Producer"
+							},
+							"semantic_scope": ""
+						}]
+					},
+					"semantic_scope": "Producer::",
+					"signature": "(size_t,T&&,size_t) const"
+				},
+				"id": 93825001482848,
+				"kind": "function template",
+				"name": "seekAndRead",
+				"parameters": [{
+					"_kind": "template type parameter",
+					"_name": "T",
+					"id": 93825002000304,
+					"is_variadic": false,
+					"keyword": "typename",
+					"kind": "template type parameter",
+					"name": "T"
+				}]
+			}, {
+				"_fullName": "::stappler::io::Producer::tell() const",
+				"_kind": "member function",
+				"_name": "tell",
+				"body_kind": "definition",
+				"cv_qualifier": "const",
+				"id": 93825002000640,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"is_virtual": false,
+				"kind": "member function",
+				"name": "tell",
+				"ref_qualifier": "none",
+				"return_type": {
+					"_typeName": "size_t",
+					"kind": "user_defined",
+					"target": {
+						"name": "size_t"
+					}
+				},
+				"semantic_parent":  {
+					"name": "Producer::",
+					"objects": [{
+						"_fullName": "::stappler::io::Producer",
+						"_kind": "class",
+						"_name": "Producer",
+						"class_kind": "struct",
+						"id": 93824998987008,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_final": false,
+						"kind": "class",
+						"name": "Producer",
+						"scope": {
+							"name": "Producer"
+						},
+						"semantic_scope": ""
+					}]
+				},
+				"semantic_scope": "Producer::",
+				"signature": "() const"
+			}],
+			"id": 140736957097600,
+			"is_anonymous": false,
+			"is_inline": false,
+			"is_nested": true,
+			"kind": "namespace",
+			"name": "io",
+			"scope": {
+				"name": "io"
+			}
+		}],
+		"id": 140736957097440,
+		"is_anonymous": false,
+		"is_inline": false,
+		"is_nested": false,
+		"kind": "namespace",
+		"name": "stappler",
+		"scope": {
+			"name": "stappler"
+		}
+	}],
+	"id": 140737143692512,
+	"kind": "file",
+	"name": "/home/sbkarr/stappler/xenolith/libstappler/common/io/SPIOProducer.h",
+	"unmatched_comments": [{
+		"line": 21,
+		"text": "\nCopyright (c) 2016-2022 Roman Katuntsev <sbkarr@stappler.org>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n"
+	}]
+}

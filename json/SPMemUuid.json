@@ -1,0 +1,2232 @@
+{
+	"_kind": "file",
+	"_name": "/home/sbkarr/stappler/xenolith/libstappler/common/memory/SPMemUuid.h",
+	"childs": [{
+		"_kind": "include directive",
+		"_name": "SPMemString.h",
+		"id": 93824998163936,
+		"include": "/home/sbkarr/stappler/xenolith/libstappler/common/memory/SPMemString.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "SPMemString.h"
+	}, {
+		"_kind": "include directive",
+		"_name": "SPMemVector.h",
+		"id": 140737124701680,
+		"include": "/home/sbkarr/stappler/xenolith/libstappler/common/memory/SPMemVector.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "SPMemVector.h"
+	}, {
+		"_kind": "include directive",
+		"_name": "SPStringView.h",
+		"id": 140737096408352,
+		"include": "/home/sbkarr/stappler/xenolith/libstappler/common/string/SPStringView.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "SPStringView.h"
+	}, {
+		"_kind": "include directive",
+		"_name": "SPBytesView.h",
+		"id": 140737096409760,
+		"include": "/home/sbkarr/stappler/xenolith/libstappler/common/string/SPBytesView.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "SPBytesView.h"
+	}, {
+		"_fullName": "LIBSTAPPLER_COMMON_MEMORY_SPMEMUUID_H_",
+		"_kind": "macro definition",
+		"_name": "LIBSTAPPLER_COMMON_MEMORY_SPMEMUUID_H_",
+		"id": 93824998554288,
+		"is_function_like": false,
+		"is_object_like": true,
+		"is_variadic": false,
+		"kind": "macro definition",
+		"name": "LIBSTAPPLER_COMMON_MEMORY_SPMEMUUID_H_",
+		"replacement": ""
+	}, {
+		"_fullName": "::stappler",
+		"_kind": "namespace",
+		"_name": "stappler",
+		"childs": [{
+			"_fullName": "::stappler::memory",
+			"_kind": "namespace",
+			"_name": "memory",
+			"childs": [{
+				"_fullName": "::stappler::memory::uuid",
+				"_kind": "class",
+				"_name": "uuid",
+				"bases": [{
+					"_kind": "base class specifier",
+					"_name": "AllocPool",
+					"access_specifier": "public",
+					"id": 93824999021744,
+					"is_virtual": false,
+					"kind": "base class specifier",
+					"name": "AllocPool",
+					"type": {
+						"_typeName": "stappler::memory::AllocPool",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::memory::AllocPool",
+							"objects": [{
+								"_fullName": "::stappler::memory::AllocPool",
+								"_kind": "class",
+								"_name": "AllocPool",
+								"class_kind": "struct",
+								"id": 140737108514624,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_final": false,
+								"kind": "class",
+								"name": "AllocPool",
+								"scope": {
+									"name": "AllocPool"
+								},
+								"semantic_scope": ""
+							}]
+						}
+					}
+				}],
+				"childs":  [{
+					"_fullName": "::stappler::memory::uuid::FormattedLength",
+					"_kind": "variable",
+					"_name": "FormattedLength",
+					"default_value": {
+						"expression": [{
+							"kind": "int_literal",
+							"spelling": "36"
+						}],
+						"kind": "unexposed",
+						"type": {
+							"_typeName": "size_t const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "size_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "size_t"
+								}
+							}
+						}
+					},
+					"id": 140737142936480,
+					"is_constexpr": true,
+					"is_declaration": false,
+					"is_definition": true,
+					"kind": "variable",
+					"name": "FormattedLength",
+					"semantic_scope": "",
+					"storage_class": [
+						"static"
+					],
+					"type":  {
+						"_typeName": "size_t const",
+						"cv_qualifier": "const",
+						"kind": "cv_qualified",
+						"type": {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						}
+					}
+				}, {
+					"_fullName": "::stappler::memory::uuid::uuid_t",
+					"_kind": "type alias",
+					"_name": "uuid_t",
+					"id": 140737088735312,
+					"kind": "type alias",
+					"name": "uuid_t",
+					"underlying_type": {
+						"_typeName": "std::array<uint8_t, 16>",
+						"arguments_exposed": false,
+						"kind": "template_instantiation",
+						"primary_template": {
+							"name": "std::array"
+						},
+						"unexposed_arguments": "uint8_t, 16"
+					}
+				}, {
+					"_fullName": "::stappler::memory::uuid::parse(stappler::memory::uuid::uuid_t&,char const*)",
+					"_kind": "function",
+					"_name": "parse",
+					"body_kind": "declaration",
+					"id": 140736994564256,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "parse",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 140737098113408,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::memory::uuid::uuid_t&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::memory::uuid::uuid_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::memory::uuid::uuid_t",
+									"objects": [{
+										"_fullName": "::stappler::memory::uuid::uuid_t",
+										"_kind": "type alias",
+										"_name": "uuid_t",
+										"id": 140737088735312,
+										"kind": "type alias",
+										"name": "uuid_t",
+										"underlying_type": {
+											"_typeName": "std::array<uint8_t, 16>",
+											"arguments_exposed": false,
+											"kind": "template_instantiation",
+											"primary_template": {
+												"name": "std::array"
+											},
+											"unexposed_arguments": "uint8_t, 16"
+										}
+									}]
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 140737097850224,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "char const*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "char const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "char",
+									"builtin_type_kind": "char",
+									"kind": "builtin"
+								}
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::memory::uuid::uuid_t&,char const*)",
+					"storage_class": [
+						"static"
+					]
+				}, {
+					"_fullName": "::stappler::memory::uuid::format(char*,stappler::memory::uuid::uuid_t const&)",
+					"_kind": "function",
+					"_name": "format",
+					"body_kind": "declaration",
+					"id": 140736990208480,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "format",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 140737092977200,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "char*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "char",
+								"builtin_type_kind": "char",
+								"kind": "builtin"
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93824997629008,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::memory::uuid::uuid_t const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::memory::uuid::uuid_t const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::memory::uuid::uuid_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::memory::uuid::uuid_t",
+										"objects": [{
+											"_fullName": "::stappler::memory::uuid::uuid_t",
+											"_kind": "type alias",
+											"_name": "uuid_t",
+											"id": 140737088735312,
+											"kind": "type alias",
+											"name": "uuid_t",
+											"underlying_type": {
+												"_typeName": "std::array<uint8_t, 16>",
+												"arguments_exposed": false,
+												"kind": "template_instantiation",
+												"primary_template": {
+													"name": "std::array"
+												},
+												"unexposed_arguments": "uint8_t, 16"
+											}
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(char*,stappler::memory::uuid::uuid_t const&)",
+					"storage_class": [
+						"static"
+					]
+				}, {
+					"_fullName": "::stappler::memory::uuid::generate()",
+					"_kind": "function",
+					"_name": "generate",
+					"body_kind": "declaration",
+					"id": 140736994994688,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "generate",
+					"return_type": {
+						"_typeName": "stappler::memory::uuid",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::memory::uuid",
+							"objects": [{
+								"_fullName": "::stappler::memory::uuid",
+								"_kind": "class",
+								"_name": "uuid",
+								"bases": [{
+									"_kind": "base class specifier",
+									"_name": "AllocPool",
+									"access_specifier": "public",
+									"id": 93824999021744,
+									"is_virtual": false,
+									"kind": "base class specifier",
+									"name": "AllocPool",
+									"type": {
+										"_typeName": "stappler::memory::AllocPool",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::memory::AllocPool",
+											"objects": [{
+												"_fullName": "::stappler::memory::AllocPool",
+												"_kind": "class",
+												"_name": "AllocPool",
+												"class_kind": "struct",
+												"id": 140737108514624,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "AllocPool",
+												"scope": {
+													"name": "AllocPool"
+												},
+												"semantic_scope": ""
+											}]
+										}
+									}
+								}],
+								"class_kind": "struct",
+								"id": 140737060599776,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_final": false,
+								"kind": "class",
+								"name": "uuid",
+								"scope": {
+									"name": "uuid"
+								},
+								"semantic_scope": ""
+							}]
+						}
+					},
+					"semantic_scope": "",
+					"signature": "()",
+					"storage_class": [
+						"static"
+					]
+				}, {
+					"_fullName": "::stappler::memory::uuid::uuid()",
+					"_kind": "constructor",
+					"_name": "uuid",
+					"body_kind": "definition",
+					"id": 140737107045632,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_explicit": false,
+					"is_variadic": false,
+					"kind": "constructor",
+					"name": "uuid",
+					"semantic_scope": "",
+					"signature": "()"
+				}, {
+					"_fullName": "::stappler::memory::uuid::uuid(stappler::StringView)",
+					"_kind": "constructor",
+					"_name": "uuid",
+					"body_kind": "definition",
+					"id": 140737116563696,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_explicit": false,
+					"is_variadic": false,
+					"kind": "constructor",
+					"name": "uuid",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "str",
+						"id": 93824999143632,
+						"kind": "function parameter",
+						"name": "str",
+						"type": {
+							"_typeName": "stappler::StringView",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::StringView",
+								"objects": [{
+									"_fullName": "::stappler::StringView",
+									"_kind": "type alias",
+									"_name": "StringView",
+									"id": 93824997448656,
+									"kind": "type alias",
+									"name": "StringView",
+									"underlying_type": {
+										"_typeName": "StringViewBase<char>",
+										"arguments_exposed": false,
+										"kind": "template_instantiation",
+										"primary_template": {
+											"name": "StringViewBase",
+											"objects": [{
+												"_fullName": "::stappler::StringViewBase<typename>",
+												"_kind": "class template",
+												"_name": "StringViewBase",
+												"class": {
+													"_fullName": "::stappler::StringViewBase<typename>",
+													"_kind": "class",
+													"_name": "StringViewBase",
+													"bases": [{
+														"_kind": "base class specifier",
+														"_name": "BytesReader<_CharType>",
+														"access_specifier": "public",
+														"id": 93824998090352,
+														"is_virtual": false,
+														"kind": "base class specifier",
+														"name": "BytesReader<_CharType>",
+														"type": {
+															"_typeName": "BytesReader<_CharType>",
+															"arguments_exposed": false,
+															"kind": "template_instantiation",
+															"primary_template": {
+																"name": "BytesReader",
+																"objects": [{
+																	"_fullName": "::stappler::BytesReader<typename>",
+																	"_kind": "class template",
+																	"_name": "BytesReader",
+																	"class": {
+																		"_fullName": "::stappler::BytesReader<typename>",
+																		"_kind": "class",
+																		"_name": "BytesReader",
+																		"class_kind": "class",
+																		"id": 140736954953792,
+																		"is_declaration": false,
+																		"is_definition": true,
+																		"is_final": false,
+																		"kind": "class",
+																		"name": "BytesReader",
+																		"scope": {
+																			"is_templated": true,
+																			"name": "BytesReader",
+																			"template_parameters": [{
+																				"_kind": "template type parameter",
+																				"_name": "_CharType",
+																				"id": 140737098599232,
+																				"is_variadic": false,
+																				"keyword": "typename",
+																				"kind": "template type parameter",
+																				"name": "_CharType"
+																			}]
+																		},
+																		"semantic_scope": ""
+																	},
+																	"id": 93824998648144,
+																	"kind": "class template",
+																	"name": "BytesReader",
+																	"parameters": [{
+																		"_kind": "template type parameter",
+																		"_name": "_CharType",
+																		"id": 140737098599232,
+																		"is_variadic": false,
+																		"keyword": "typename",
+																		"kind": "template type parameter",
+																		"name": "_CharType"
+																	}],
+																	"scope":  {
+																		"is_templated": true,
+																		"name": "BytesReader",
+																		"template_parameters": [{
+																			"_kind": "template type parameter",
+																			"_name": "_CharType",
+																			"id": 140737098599232,
+																			"is_variadic": false,
+																			"keyword": "typename",
+																			"kind": "template type parameter",
+																			"name": "_CharType"
+																		}]
+																	}
+																}]
+															},
+															"unexposed_arguments": "_CharType"
+														}
+													}],
+													"class_kind": "class",
+													"id": 140737094580320,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "StringViewBase",
+													"scope": {
+														"is_templated": true,
+														"name": "StringViewBase",
+														"template_parameters": [{
+															"_kind": "template type parameter",
+															"_name": "_CharType",
+															"id": 93824999493712,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "_CharType"
+														}]
+													},
+													"semantic_scope": ""
+												},
+												"id": 93824999493216,
+												"kind": "class template",
+												"name": "StringViewBase",
+												"parameters": [{
+													"_kind": "template type parameter",
+													"_name": "_CharType",
+													"id": 93824999493712,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "_CharType"
+												}],
+												"scope":  {
+													"is_templated": true,
+													"name": "StringViewBase",
+													"template_parameters": [{
+														"_kind": "template type parameter",
+														"_name": "_CharType",
+														"id": 93824999493712,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "_CharType"
+													}]
+												}
+											}]
+										},
+										"unexposed_arguments": "char"
+									}
+								}]
+							}
+						}
+					}],
+					"semantic_scope": "",
+					"signature": "(stappler::StringView)"
+				}, {
+					"_fullName": "::stappler::memory::uuid::uuid(stappler::BytesView)",
+					"_kind": "constructor",
+					"_name": "uuid",
+					"body_kind": "definition",
+					"id": 93824998798320,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_explicit": false,
+					"is_variadic": false,
+					"kind": "constructor",
+					"name": "uuid",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "b",
+						"id": 93825001361824,
+						"kind": "function parameter",
+						"name": "b",
+						"type": {
+							"_typeName": "stappler::BytesView",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::BytesView",
+								"objects": [{
+									"_fullName": "::stappler::BytesView",
+									"_kind": "type alias",
+									"_name": "BytesView",
+									"id": 93825001903280,
+									"kind": "type alias",
+									"name": "BytesView",
+									"underlying_type": {
+										"_typeName": "BytesViewTemplate<Endian::Host>",
+										"arguments_exposed": false,
+										"kind": "template_instantiation",
+										"primary_template": {
+											"name": "BytesViewTemplate",
+											"objects": [{
+												"_fullName": "::stappler::BytesViewTemplate<stappler::Endian>",
+												"_kind": "class template",
+												"_name": "BytesViewTemplate",
+												"class": {
+													"_fullName": "::stappler::BytesViewTemplate<stappler::Endian>",
+													"_kind": "class",
+													"_name": "BytesViewTemplate",
+													"bases": [{
+														"_kind": "base class specifier",
+														"_name": "BytesReader<uint8_t>",
+														"access_specifier": "public",
+														"id": 93825002914448,
+														"is_virtual": false,
+														"kind": "base class specifier",
+														"name": "BytesReader<uint8_t>",
+														"type": {
+															"_typeName": "BytesReader<uint8_t>",
+															"arguments_exposed": false,
+															"kind": "template_instantiation",
+															"primary_template": {
+																"name": "BytesReader",
+																"objects": [{
+																	"_fullName": "::stappler::BytesReader<typename>",
+																	"_kind": "class template",
+																	"_name": "BytesReader",
+																	"class": {
+																		"_fullName": "::stappler::BytesReader<typename>",
+																		"_kind": "class",
+																		"_name": "BytesReader",
+																		"class_kind": "class",
+																		"id": 140736954953792,
+																		"is_declaration": false,
+																		"is_definition": true,
+																		"is_final": false,
+																		"kind": "class",
+																		"name": "BytesReader",
+																		"scope": {
+																			"is_templated": true,
+																			"name": "BytesReader",
+																			"template_parameters": [{
+																				"_kind": "template type parameter",
+																				"_name": "_CharType",
+																				"id": 140737098599232,
+																				"is_variadic": false,
+																				"keyword": "typename",
+																				"kind": "template type parameter",
+																				"name": "_CharType"
+																			}]
+																		},
+																		"semantic_scope": ""
+																	},
+																	"id": 93824998648144,
+																	"kind": "class template",
+																	"name": "BytesReader",
+																	"parameters": [{
+																		"_kind": "template type parameter",
+																		"_name": "_CharType",
+																		"id": 140737098599232,
+																		"is_variadic": false,
+																		"keyword": "typename",
+																		"kind": "template type parameter",
+																		"name": "_CharType"
+																	}],
+																	"scope":  {
+																		"is_templated": true,
+																		"name": "BytesReader",
+																		"template_parameters": [{
+																			"_kind": "template type parameter",
+																			"_name": "_CharType",
+																			"id": 140737098599232,
+																			"is_variadic": false,
+																			"keyword": "typename",
+																			"kind": "template type parameter",
+																			"name": "_CharType"
+																		}]
+																	}
+																}]
+															},
+															"unexposed_arguments": "uint8_t"
+														}
+													}],
+													"class_kind": "class",
+													"id": 140737089051072,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "BytesViewTemplate",
+													"scope": {
+														"is_templated": true,
+														"name": "BytesViewTemplate",
+														"template_parameters": [{
+															"_kind": "non type template parameter",
+															"_name": "Endianess",
+															"default_value": {
+																"expression": [{
+																	"kind": "identifier",
+																	"spelling": "Endian"
+																}, {
+																	"kind": "punctuation",
+																	"spelling": "::"
+																}, {
+																	"kind": "identifier",
+																	"spelling": "Network"
+																}],
+																"kind": "unexposed",
+																"type": {
+																	"_typeName": "stappler::Endian",
+																	"kind": "user_defined",
+																	"target": {
+																		"name": "stappler::Endian",
+																		"objects": [{
+																			"_fullName": "::stappler::Endian",
+																			"_kind": "enum",
+																			"_name": "Endian",
+																			"has_explicit_type": false,
+																			"id": 140737093474192,
+																			"is_declaration": false,
+																			"is_definition": true,
+																			"is_scoped": true,
+																			"kind": "enum",
+																			"name": "Endian",
+																			"scope": {
+																				"name": "Endian"
+																			},
+																			"semantic_scope": "",
+																			"underlying_type": {
+																				"_typeName": "int",
+																				"builtin_type_kind": "int",
+																				"kind": "builtin"
+																			}
+																		}]
+																	}
+																}
+															},
+															"id": 93825000831328,
+															"is_variadic": false,
+															"kind": "non type template parameter",
+															"name": "Endianess",
+															"type": {
+																"_typeName": "stappler::Endian",
+																"kind": "user_defined",
+																"target": {
+																	"name": "stappler::Endian",
+																	"objects": [{
+																		"_fullName": "::stappler::Endian",
+																		"_kind": "enum",
+																		"_name": "Endian",
+																		"has_explicit_type": false,
+																		"id": 140737093474192,
+																		"is_declaration": false,
+																		"is_definition": true,
+																		"is_scoped": true,
+																		"kind": "enum",
+																		"name": "Endian",
+																		"scope": {
+																			"name": "Endian"
+																		},
+																		"semantic_scope": "",
+																		"underlying_type": {
+																			"_typeName": "int",
+																			"builtin_type_kind": "int",
+																			"kind": "builtin"
+																		}
+																	}]
+																}
+															}
+														}]
+													},
+													"semantic_scope": ""
+												},
+												"id": 93825000831168,
+												"kind": "class template",
+												"name": "BytesViewTemplate",
+												"parameters": [{
+													"_kind": "non type template parameter",
+													"_name": "Endianess",
+													"default_value": {
+														"expression": [{
+															"kind": "identifier",
+															"spelling": "Endian"
+														}, {
+															"kind": "punctuation",
+															"spelling": "::"
+														}, {
+															"kind": "identifier",
+															"spelling": "Network"
+														}],
+														"kind": "unexposed",
+														"type": {
+															"_typeName": "stappler::Endian",
+															"kind": "user_defined",
+															"target": {
+																"name": "stappler::Endian",
+																"objects": [{
+																	"_fullName": "::stappler::Endian",
+																	"_kind": "enum",
+																	"_name": "Endian",
+																	"has_explicit_type": false,
+																	"id": 140737093474192,
+																	"is_declaration": false,
+																	"is_definition": true,
+																	"is_scoped": true,
+																	"kind": "enum",
+																	"name": "Endian",
+																	"scope": {
+																		"name": "Endian"
+																	},
+																	"semantic_scope": "",
+																	"underlying_type": {
+																		"_typeName": "int",
+																		"builtin_type_kind": "int",
+																		"kind": "builtin"
+																	}
+																}]
+															}
+														}
+													},
+													"id": 93825000831328,
+													"is_variadic": false,
+													"kind": "non type template parameter",
+													"name": "Endianess",
+													"type": {
+														"_typeName": "stappler::Endian",
+														"kind": "user_defined",
+														"target": {
+															"name": "stappler::Endian",
+															"objects": [{
+																"_fullName": "::stappler::Endian",
+																"_kind": "enum",
+																"_name": "Endian",
+																"has_explicit_type": false,
+																"id": 140737093474192,
+																"is_declaration": false,
+																"is_definition": true,
+																"is_scoped": true,
+																"kind": "enum",
+																"name": "Endian",
+																"scope": {
+																	"name": "Endian"
+																},
+																"semantic_scope": "",
+																"underlying_type": {
+																	"_typeName": "int",
+																	"builtin_type_kind": "int",
+																	"kind": "builtin"
+																}
+															}]
+														}
+													}
+												}],
+												"scope":  {
+													"is_templated": true,
+													"name": "BytesViewTemplate",
+													"template_parameters": [{
+														"_kind": "non type template parameter",
+														"_name": "Endianess",
+														"default_value": {
+															"expression": [{
+																"kind": "identifier",
+																"spelling": "Endian"
+															}, {
+																"kind": "punctuation",
+																"spelling": "::"
+															}, {
+																"kind": "identifier",
+																"spelling": "Network"
+															}],
+															"kind": "unexposed",
+															"type": {
+																"_typeName": "stappler::Endian",
+																"kind": "user_defined",
+																"target": {
+																	"name": "stappler::Endian",
+																	"objects": [{
+																		"_fullName": "::stappler::Endian",
+																		"_kind": "enum",
+																		"_name": "Endian",
+																		"has_explicit_type": false,
+																		"id": 140737093474192,
+																		"is_declaration": false,
+																		"is_definition": true,
+																		"is_scoped": true,
+																		"kind": "enum",
+																		"name": "Endian",
+																		"scope": {
+																			"name": "Endian"
+																		},
+																		"semantic_scope": "",
+																		"underlying_type": {
+																			"_typeName": "int",
+																			"builtin_type_kind": "int",
+																			"kind": "builtin"
+																		}
+																	}]
+																}
+															}
+														},
+														"id": 93825000831328,
+														"is_variadic": false,
+														"kind": "non type template parameter",
+														"name": "Endianess",
+														"type": {
+															"_typeName": "stappler::Endian",
+															"kind": "user_defined",
+															"target": {
+																"name": "stappler::Endian",
+																"objects": [{
+																	"_fullName": "::stappler::Endian",
+																	"_kind": "enum",
+																	"_name": "Endian",
+																	"has_explicit_type": false,
+																	"id": 140737093474192,
+																	"is_declaration": false,
+																	"is_definition": true,
+																	"is_scoped": true,
+																	"kind": "enum",
+																	"name": "Endian",
+																	"scope": {
+																		"name": "Endian"
+																	},
+																	"semantic_scope": "",
+																	"underlying_type": {
+																		"_typeName": "int",
+																		"builtin_type_kind": "int",
+																		"kind": "builtin"
+																	}
+																}]
+															}
+														}
+													}]
+												}
+											}]
+										},
+										"unexposed_arguments": "Endian::Host"
+									}
+								}]
+							}
+						}
+					}],
+					"semantic_scope": "",
+					"signature": "(stappler::BytesView)"
+				}, {
+					"_fullName": "::stappler::memory::uuid::uuid(stappler::memory::uuid::uuid_t const&)",
+					"_kind": "constructor",
+					"_name": "uuid",
+					"body_kind": "definition",
+					"id": 93824997443728,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_explicit": false,
+					"is_variadic": false,
+					"kind": "constructor",
+					"name": "uuid",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "u",
+						"id": 93824996952000,
+						"kind": "function parameter",
+						"name": "u",
+						"type": {
+							"_typeName": "stappler::memory::uuid::uuid_t const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::memory::uuid::uuid_t const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::memory::uuid::uuid_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::memory::uuid::uuid_t",
+										"objects": [{
+											"_fullName": "::stappler::memory::uuid::uuid_t",
+											"_kind": "type alias",
+											"_name": "uuid_t",
+											"id": 140737088735312,
+											"kind": "type alias",
+											"name": "uuid_t",
+											"underlying_type": {
+												"_typeName": "std::array<uint8_t, 16>",
+												"arguments_exposed": false,
+												"kind": "template_instantiation",
+												"primary_template": {
+													"name": "std::array"
+												},
+												"unexposed_arguments": "uint8_t, 16"
+											}
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"semantic_scope": "",
+					"signature": "(stappler::memory::uuid::uuid_t const&)"
+				}, {
+					"_fullName": "::stappler::memory::uuid::uuid(stappler::memory::uuid const&)",
+					"_kind": "constructor",
+					"_name": "uuid",
+					"body_kind": "definition",
+					"id": 93824999574000,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_explicit": false,
+					"is_variadic": false,
+					"kind": "constructor",
+					"name": "uuid",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "u",
+						"id": 93824998620192,
+						"kind": "function parameter",
+						"name": "u",
+						"type": {
+							"_typeName": "stappler::memory::uuid const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::memory::uuid const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::memory::uuid",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::memory::uuid",
+										"objects": [{
+											"_fullName": "::stappler::memory::uuid",
+											"_kind": "class",
+											"_name": "uuid",
+											"bases": [{
+												"_kind": "base class specifier",
+												"_name": "AllocPool",
+												"access_specifier": "public",
+												"id": 93824999021744,
+												"is_virtual": false,
+												"kind": "base class specifier",
+												"name": "AllocPool",
+												"type": {
+													"_typeName": "stappler::memory::AllocPool",
+													"kind": "user_defined",
+													"target": {
+														"name": "stappler::memory::AllocPool",
+														"objects": [{
+															"_fullName": "::stappler::memory::AllocPool",
+															"_kind": "class",
+															"_name": "AllocPool",
+															"class_kind": "struct",
+															"id": 140737108514624,
+															"is_declaration": false,
+															"is_definition": true,
+															"is_final": false,
+															"kind": "class",
+															"name": "AllocPool",
+															"scope": {
+																"name": "AllocPool"
+															},
+															"semantic_scope": ""
+														}]
+													}
+												}
+											}],
+											"class_kind": "struct",
+											"id": 140737060599776,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "uuid",
+											"scope": {
+												"name": "uuid"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"semantic_scope": "",
+					"signature": "(stappler::memory::uuid const&)"
+				}, {
+					"_fullName": "::stappler::memory::uuid::operator=(stappler::memory::uuid const&)",
+					"_kind": "member function",
+					"_name": "operator=",
+					"body_kind": "definition",
+					"cv_qualifier": "none",
+					"id": 140736955691744,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "operator=",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "u",
+						"id": 93824996982384,
+						"kind": "function parameter",
+						"name": "u",
+						"type": {
+							"_typeName": "stappler::memory::uuid const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::memory::uuid const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::memory::uuid",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::memory::uuid",
+										"objects": [{
+											"_fullName": "::stappler::memory::uuid",
+											"_kind": "class",
+											"_name": "uuid",
+											"bases": [{
+												"_kind": "base class specifier",
+												"_name": "AllocPool",
+												"access_specifier": "public",
+												"id": 93824999021744,
+												"is_virtual": false,
+												"kind": "base class specifier",
+												"name": "AllocPool",
+												"type": {
+													"_typeName": "stappler::memory::AllocPool",
+													"kind": "user_defined",
+													"target": {
+														"name": "stappler::memory::AllocPool",
+														"objects": [{
+															"_fullName": "::stappler::memory::AllocPool",
+															"_kind": "class",
+															"_name": "AllocPool",
+															"class_kind": "struct",
+															"id": 140737108514624,
+															"is_declaration": false,
+															"is_definition": true,
+															"is_final": false,
+															"kind": "class",
+															"name": "AllocPool",
+															"scope": {
+																"name": "AllocPool"
+															},
+															"semantic_scope": ""
+														}]
+													}
+												}
+											}],
+											"class_kind": "struct",
+											"id": 140737060599776,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "uuid",
+											"scope": {
+												"name": "uuid"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "stappler::memory::uuid&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::memory::uuid",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::memory::uuid",
+								"objects": [{
+									"_fullName": "::stappler::memory::uuid",
+									"_kind": "class",
+									"_name": "uuid",
+									"bases": [{
+										"_kind": "base class specifier",
+										"_name": "AllocPool",
+										"access_specifier": "public",
+										"id": 93824999021744,
+										"is_virtual": false,
+										"kind": "base class specifier",
+										"name": "AllocPool",
+										"type": {
+											"_typeName": "stappler::memory::AllocPool",
+											"kind": "user_defined",
+											"target": {
+												"name": "stappler::memory::AllocPool",
+												"objects": [{
+													"_fullName": "::stappler::memory::AllocPool",
+													"_kind": "class",
+													"_name": "AllocPool",
+													"class_kind": "struct",
+													"id": 140737108514624,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "AllocPool",
+													"scope": {
+														"name": "AllocPool"
+													},
+													"semantic_scope": ""
+												}]
+											}
+										}
+									}],
+									"class_kind": "struct",
+									"id": 140737060599776,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "uuid",
+									"scope": {
+										"name": "uuid"
+									},
+									"semantic_scope": ""
+								}]
+							}
+						},
+						"reference_kind": "lvalue"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::memory::uuid const&)"
+				}, {
+					"_fullName": "::stappler::memory::uuid::operator=(memory::string const&)",
+					"_kind": "member function",
+					"_name": "operator=",
+					"body_kind": "definition",
+					"cv_qualifier": "none",
+					"id": 93824996664112,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "operator=",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "str",
+						"id": 93824997996288,
+						"kind": "function parameter",
+						"name": "str",
+						"type": {
+							"_typeName": "memory::string const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "memory::string const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "memory::string",
+									"kind": "user_defined",
+									"target": {
+										"name": "memory::string",
+										"objects": [{
+											"_fullName": "::stappler::memory::string",
+											"_kind": "type alias",
+											"_name": "string",
+											"id": 93824998026096,
+											"kind": "type alias",
+											"name": "string",
+											"underlying_type": {
+												"_typeName": "basic_string<char>",
+												"arguments_exposed": false,
+												"kind": "template_instantiation",
+												"primary_template": {
+													"name": "basic_string",
+													"objects": [{
+														"_fullName": "::stappler::memory::basic_string<typename>",
+														"_kind": "class template",
+														"_name": "basic_string",
+														"class": {
+															"_fullName": "::stappler::memory::basic_string<typename>",
+															"_kind": "class",
+															"_name": "basic_string",
+															"bases": [{
+																"_kind": "base class specifier",
+																"_name": "AllocPool",
+																"access_specifier": "public",
+																"id": 93824998081728,
+																"is_virtual": false,
+																"kind": "base class specifier",
+																"name": "AllocPool",
+																"type": {
+																	"_typeName": "stappler::memory::AllocPool",
+																	"kind": "user_defined",
+																	"target": {
+																		"name": "stappler::memory::AllocPool",
+																		"objects": [{
+																			"_fullName": "::stappler::memory::AllocPool",
+																			"_kind": "class",
+																			"_name": "AllocPool",
+																			"class_kind": "struct",
+																			"id": 140737108514624,
+																			"is_declaration": false,
+																			"is_definition": true,
+																			"is_final": false,
+																			"kind": "class",
+																			"name": "AllocPool",
+																			"scope": {
+																				"name": "AllocPool"
+																			},
+																			"semantic_scope": ""
+																		}]
+																	}
+																}
+															}],
+															"class_kind": "class",
+															"id": 93824998462880,
+															"is_declaration": false,
+															"is_definition": true,
+															"is_final": false,
+															"kind": "class",
+															"name": "basic_string",
+															"scope": {
+																"is_templated": true,
+																"name": "basic_string",
+																"template_parameters": [{
+																	"_kind": "template type parameter",
+																	"_name": "CharType",
+																	"id": 93824997240640,
+																	"is_variadic": false,
+																	"keyword": "typename",
+																	"kind": "template type parameter",
+																	"name": "CharType"
+																}]
+															},
+															"semantic_scope": ""
+														},
+														"id": 93824997240432,
+														"kind": "class template",
+														"name": "basic_string",
+														"parameters": [{
+															"_kind": "template type parameter",
+															"_name": "CharType",
+															"id": 93824997240640,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "CharType"
+														}],
+														"scope":  {
+															"is_templated": true,
+															"name": "basic_string",
+															"template_parameters": [{
+																"_kind": "template type parameter",
+																"_name": "CharType",
+																"id": 93824997240640,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "CharType"
+															}]
+														}
+													}]
+												},
+												"unexposed_arguments": "char"
+											}
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "stappler::memory::uuid&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::memory::uuid",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::memory::uuid",
+								"objects": [{
+									"_fullName": "::stappler::memory::uuid",
+									"_kind": "class",
+									"_name": "uuid",
+									"bases": [{
+										"_kind": "base class specifier",
+										"_name": "AllocPool",
+										"access_specifier": "public",
+										"id": 93824999021744,
+										"is_virtual": false,
+										"kind": "base class specifier",
+										"name": "AllocPool",
+										"type": {
+											"_typeName": "stappler::memory::AllocPool",
+											"kind": "user_defined",
+											"target": {
+												"name": "stappler::memory::AllocPool",
+												"objects": [{
+													"_fullName": "::stappler::memory::AllocPool",
+													"_kind": "class",
+													"_name": "AllocPool",
+													"class_kind": "struct",
+													"id": 140737108514624,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "AllocPool",
+													"scope": {
+														"name": "AllocPool"
+													},
+													"semantic_scope": ""
+												}]
+											}
+										}
+									}],
+									"class_kind": "struct",
+									"id": 140737060599776,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "uuid",
+									"scope": {
+										"name": "uuid"
+									},
+									"semantic_scope": ""
+								}]
+							}
+						},
+						"reference_kind": "lvalue"
+					},
+					"semantic_scope": "",
+					"signature": "(memory::string const&)"
+				}, {
+					"_fullName": "::stappler::memory::uuid::operator=(std::string const&)",
+					"_kind": "member function",
+					"_name": "operator=",
+					"body_kind": "definition",
+					"cv_qualifier": "none",
+					"id": 93824998215136,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "operator=",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "str",
+						"id": 93824999143856,
+						"kind": "function parameter",
+						"name": "str",
+						"type": {
+							"_typeName": "std::string const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "std::string const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "std::string",
+									"kind": "user_defined",
+									"target": {
+										"name": "std::string"
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "stappler::memory::uuid&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::memory::uuid",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::memory::uuid",
+								"objects": [{
+									"_fullName": "::stappler::memory::uuid",
+									"_kind": "class",
+									"_name": "uuid",
+									"bases": [{
+										"_kind": "base class specifier",
+										"_name": "AllocPool",
+										"access_specifier": "public",
+										"id": 93824999021744,
+										"is_virtual": false,
+										"kind": "base class specifier",
+										"name": "AllocPool",
+										"type": {
+											"_typeName": "stappler::memory::AllocPool",
+											"kind": "user_defined",
+											"target": {
+												"name": "stappler::memory::AllocPool",
+												"objects": [{
+													"_fullName": "::stappler::memory::AllocPool",
+													"_kind": "class",
+													"_name": "AllocPool",
+													"class_kind": "struct",
+													"id": 140737108514624,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "AllocPool",
+													"scope": {
+														"name": "AllocPool"
+													},
+													"semantic_scope": ""
+												}]
+											}
+										}
+									}],
+									"class_kind": "struct",
+									"id": 140737060599776,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "uuid",
+									"scope": {
+										"name": "uuid"
+									},
+									"semantic_scope": ""
+								}]
+							}
+						},
+						"reference_kind": "lvalue"
+					},
+					"semantic_scope": "",
+					"signature": "(std::string const&)"
+				}, {
+					"_fullName": "::stappler::memory::uuid::operator=(memory::vector<uint8_t> const&)",
+					"_kind": "member function",
+					"_name": "operator=",
+					"body_kind": "definition",
+					"cv_qualifier": "none",
+					"id": 93825000070016,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "operator=",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "b",
+						"id": 93825000382624,
+						"kind": "function parameter",
+						"name": "b",
+						"type": {
+							"_typeName": "memory::vector<uint8_t> const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "memory::vector<uint8_t> const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "memory::vector<uint8_t>",
+									"arguments_exposed": false,
+									"kind": "template_instantiation",
+									"primary_template": {
+										"name": "memory::vector",
+										"objects": [{
+											"_fullName": "::stappler::memory::vector<typename>",
+											"_kind": "class template",
+											"_name": "vector",
+											"class": {
+												"_fullName": "::stappler::memory::vector<typename>",
+												"_kind": "class",
+												"_name": "vector",
+												"bases": [{
+													"_kind": "base class specifier",
+													"_name": "AllocPool",
+													"access_specifier": "public",
+													"id": 93824999875952,
+													"is_virtual": false,
+													"kind": "base class specifier",
+													"name": "AllocPool",
+													"type": {
+														"_typeName": "stappler::memory::AllocPool",
+														"kind": "user_defined",
+														"target": {
+															"name": "stappler::memory::AllocPool",
+															"objects": [{
+																"_fullName": "::stappler::memory::AllocPool",
+																"_kind": "class",
+																"_name": "AllocPool",
+																"class_kind": "struct",
+																"id": 140737108514624,
+																"is_declaration": false,
+																"is_definition": true,
+																"is_final": false,
+																"kind": "class",
+																"name": "AllocPool",
+																"scope": {
+																	"name": "AllocPool"
+																},
+																"semantic_scope": ""
+															}]
+														}
+													}
+												}],
+												"class_kind": "class",
+												"id": 93825000044464,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "vector",
+												"scope": {
+													"is_templated": true,
+													"name": "vector",
+													"template_parameters": [{
+														"_kind": "template type parameter",
+														"_name": "Type",
+														"id": 93824999601536,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "Type"
+													}]
+												},
+												"semantic_scope": ""
+											},
+											"id": 93824997895648,
+											"kind": "class template",
+											"name": "vector",
+											"parameters": [{
+												"_kind": "template type parameter",
+												"_name": "Type",
+												"id": 93824999601536,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Type"
+											}],
+											"scope":  {
+												"is_templated": true,
+												"name": "vector",
+												"template_parameters": [{
+													"_kind": "template type parameter",
+													"_name": "Type",
+													"id": 93824999601536,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "Type"
+												}]
+											}
+										}]
+									},
+									"unexposed_arguments": "uint8_t"
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "stappler::memory::uuid&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::memory::uuid",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::memory::uuid",
+								"objects": [{
+									"_fullName": "::stappler::memory::uuid",
+									"_kind": "class",
+									"_name": "uuid",
+									"bases": [{
+										"_kind": "base class specifier",
+										"_name": "AllocPool",
+										"access_specifier": "public",
+										"id": 93824999021744,
+										"is_virtual": false,
+										"kind": "base class specifier",
+										"name": "AllocPool",
+										"type": {
+											"_typeName": "stappler::memory::AllocPool",
+											"kind": "user_defined",
+											"target": {
+												"name": "stappler::memory::AllocPool",
+												"objects": [{
+													"_fullName": "::stappler::memory::AllocPool",
+													"_kind": "class",
+													"_name": "AllocPool",
+													"class_kind": "struct",
+													"id": 140737108514624,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "AllocPool",
+													"scope": {
+														"name": "AllocPool"
+													},
+													"semantic_scope": ""
+												}]
+											}
+										}
+									}],
+									"class_kind": "struct",
+									"id": 140737060599776,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "uuid",
+									"scope": {
+										"name": "uuid"
+									},
+									"semantic_scope": ""
+								}]
+							}
+						},
+						"reference_kind": "lvalue"
+					},
+					"semantic_scope": "",
+					"signature": "(memory::vector<uint8_t> const&)"
+				}, {
+					"_fullName": "::stappler::memory::uuid::operator=(std::vector<uint8_t> const&)",
+					"_kind": "member function",
+					"_name": "operator=",
+					"body_kind": "definition",
+					"cv_qualifier": "none",
+					"id": 93824999882640,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "operator=",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "b",
+						"id": 93824998392192,
+						"kind": "function parameter",
+						"name": "b",
+						"type": {
+							"_typeName": "std::vector<uint8_t> const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "std::vector<uint8_t> const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "std::vector<uint8_t>",
+									"arguments_exposed": false,
+									"kind": "template_instantiation",
+									"primary_template": {
+										"name": "std::vector"
+									},
+									"unexposed_arguments": "uint8_t"
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "stappler::memory::uuid&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::memory::uuid",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::memory::uuid",
+								"objects": [{
+									"_fullName": "::stappler::memory::uuid",
+									"_kind": "class",
+									"_name": "uuid",
+									"bases": [{
+										"_kind": "base class specifier",
+										"_name": "AllocPool",
+										"access_specifier": "public",
+										"id": 93824999021744,
+										"is_virtual": false,
+										"kind": "base class specifier",
+										"name": "AllocPool",
+										"type": {
+											"_typeName": "stappler::memory::AllocPool",
+											"kind": "user_defined",
+											"target": {
+												"name": "stappler::memory::AllocPool",
+												"objects": [{
+													"_fullName": "::stappler::memory::AllocPool",
+													"_kind": "class",
+													"_name": "AllocPool",
+													"class_kind": "struct",
+													"id": 140737108514624,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "AllocPool",
+													"scope": {
+														"name": "AllocPool"
+													},
+													"semantic_scope": ""
+												}]
+											}
+										}
+									}],
+									"class_kind": "struct",
+									"id": 140737060599776,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "uuid",
+									"scope": {
+										"name": "uuid"
+									},
+									"semantic_scope": ""
+								}]
+							}
+						},
+						"reference_kind": "lvalue"
+					},
+					"semantic_scope": "",
+					"signature": "(std::vector<uint8_t> const&)"
+				}, {
+					"_fullName": "::stappler::memory::uuid::str<typename>() const",
+					"_kind": "function template",
+					"_name": "str",
+					"childs": [{
+						"_fullName": "::stappler::memory::uuid::str<typename>() const",
+						"_kind": "member function",
+						"_name": "str",
+						"body_kind": "definition",
+						"cv_qualifier": "const",
+						"id": 93824999492832,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "str",
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "Str",
+							"entity": {
+								"name": "Str",
+								"objects": [{
+									"_kind": "template type parameter",
+									"_name": "Str",
+									"default_type": {
+										"_typeName": "string",
+										"kind": "unexposed",
+										"name": "string"
+									},
+									"id": 140736973580720,
+									"is_variadic": false,
+									"keyword": "typename",
+									"kind": "template type parameter",
+									"name": "Str"
+								}]
+							},
+							"kind": "template_parameter"
+						},
+						"semantic_scope": "",
+						"signature": "() const"
+					}],
+					"function":  {
+						"_fullName": "::stappler::memory::uuid::str<typename>() const",
+						"_kind": "member function",
+						"_name": "str",
+						"body_kind": "definition",
+						"cv_qualifier": "const",
+						"id": 93824999492832,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "str",
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "Str",
+							"entity": {
+								"name": "Str",
+								"objects": [{
+									"_kind": "template type parameter",
+									"_name": "Str",
+									"default_type": {
+										"_typeName": "string",
+										"kind": "unexposed",
+										"name": "string"
+									},
+									"id": 140736973580720,
+									"is_variadic": false,
+									"keyword": "typename",
+									"kind": "template type parameter",
+									"name": "Str"
+								}]
+							},
+							"kind": "template_parameter"
+						},
+						"semantic_scope": "",
+						"signature": "() const"
+					},
+					"id": 93825002871344,
+					"kind": "function template",
+					"name": "str",
+					"parameters": [{
+						"_kind": "template type parameter",
+						"_name": "Str",
+						"default_type": {
+							"_typeName": "string",
+							"kind": "unexposed",
+							"name": "string"
+						},
+						"id": 140736973580720,
+						"is_variadic": false,
+						"keyword": "typename",
+						"kind": "template type parameter",
+						"name": "Str"
+					}]
+				}, {
+					"_fullName": "::stappler::memory::uuid::bytes<typename>() const",
+					"_kind": "function template",
+					"_name": "bytes",
+					"childs": [{
+						"_fullName": "::stappler::memory::uuid::bytes<typename>() const",
+						"_kind": "member function",
+						"_name": "bytes",
+						"body_kind": "definition",
+						"cv_qualifier": "const",
+						"id": 93824998717344,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "bytes",
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "B",
+							"entity": {
+								"name": "B",
+								"objects": [{
+									"_kind": "template type parameter",
+									"_name": "B",
+									"default_type": {
+										"_typeName": "memory::vector<uint8_t>>",
+										"kind": "unexposed",
+										"name": "memory::vector<uint8_t>>"
+									},
+									"id": 140736986543408,
+									"is_variadic": false,
+									"keyword": "typename",
+									"kind": "template type parameter",
+									"name": "B"
+								}]
+							},
+							"kind": "template_parameter"
+						},
+						"semantic_scope": "",
+						"signature": "() const"
+					}],
+					"function":  {
+						"_fullName": "::stappler::memory::uuid::bytes<typename>() const",
+						"_kind": "member function",
+						"_name": "bytes",
+						"body_kind": "definition",
+						"cv_qualifier": "const",
+						"id": 93824998717344,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "bytes",
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "B",
+							"entity": {
+								"name": "B",
+								"objects": [{
+									"_kind": "template type parameter",
+									"_name": "B",
+									"default_type": {
+										"_typeName": "memory::vector<uint8_t>>",
+										"kind": "unexposed",
+										"name": "memory::vector<uint8_t>>"
+									},
+									"id": 140736986543408,
+									"is_variadic": false,
+									"keyword": "typename",
+									"kind": "template type parameter",
+									"name": "B"
+								}]
+							},
+							"kind": "template_parameter"
+						},
+						"semantic_scope": "",
+						"signature": "() const"
+					},
+					"id": 140737117835936,
+					"kind": "function template",
+					"name": "bytes",
+					"parameters": [{
+						"_kind": "template type parameter",
+						"_name": "B",
+						"default_type": {
+							"_typeName": "memory::vector<uint8_t>>",
+							"kind": "unexposed",
+							"name": "memory::vector<uint8_t>>"
+						},
+						"id": 140736986543408,
+						"is_variadic": false,
+						"keyword": "typename",
+						"kind": "template type parameter",
+						"name": "B"
+					}]
+				}, {
+					"_fullName": "::stappler::memory::uuid::array() const",
+					"_kind": "member function",
+					"_name": "array",
+					"body_kind": "definition",
+					"cv_qualifier": "const",
+					"id": 93825000567440,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "array",
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "uuid_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "uuid_t",
+							"objects": [{
+								"_fullName": "::stappler::memory::uuid::uuid_t",
+								"_kind": "type alias",
+								"_name": "uuid_t",
+								"id": 140737088735312,
+								"kind": "type alias",
+								"name": "uuid_t",
+								"underlying_type": {
+									"_typeName": "std::array<uint8_t, 16>",
+									"arguments_exposed": false,
+									"kind": "template_instantiation",
+									"primary_template": {
+										"name": "std::array"
+									},
+									"unexposed_arguments": "uint8_t, 16"
+								}
+							}]
+						}
+					},
+					"semantic_scope": "",
+					"signature": "() const"
+				}, {
+					"_fullName": "::stappler::memory::uuid::data() const",
+					"_kind": "member function",
+					"_name": "data",
+					"body_kind": "definition",
+					"cv_qualifier": "const",
+					"id": 93824998284976,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "data",
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "uint8_t const*",
+						"kind": "pointer",
+						"pointee": {
+							"_typeName": "uint8_t const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "uint8_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "uint8_t"
+								}
+							}
+						}
+					},
+					"semantic_scope": "",
+					"signature": "() const"
+				}, {
+					"_fullName": "::stappler::memory::uuid::size() const",
+					"_kind": "member function",
+					"_name": "size",
+					"body_kind": "definition",
+					"cv_qualifier": "const",
+					"id": 93825000471744,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "size",
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "size_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "size_t"
+						}
+					},
+					"semantic_scope": "",
+					"signature": "() const"
+				}, {
+					"_fullName": "::stappler::memory::uuid::_uuid",
+					"_kind": "member variable",
+					"_name": "_uuid",
+					"id": 140737117835616,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "_uuid",
+					"type": {
+						"_typeName": "uuid_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "uuid_t",
+							"objects": [{
+								"_fullName": "::stappler::memory::uuid::uuid_t",
+								"_kind": "type alias",
+								"_name": "uuid_t",
+								"id": 140737088735312,
+								"kind": "type alias",
+								"name": "uuid_t",
+								"underlying_type": {
+									"_typeName": "std::array<uint8_t, 16>",
+									"arguments_exposed": false,
+									"kind": "template_instantiation",
+									"primary_template": {
+										"name": "std::array"
+									},
+									"unexposed_arguments": "uint8_t, 16"
+								}
+							}]
+						}
+					}
+				}],
+				"class_kind": "struct",
+				"id": 140737060599776,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_final": false,
+				"kind": "class",
+				"name": "uuid",
+				"scope": {
+					"name": "uuid"
+				},
+				"semantic_scope": ""
+			}],
+			"id": 93825002871184,
+			"is_anonymous": false,
+			"is_inline": false,
+			"is_nested": true,
+			"kind": "namespace",
+			"name": "memory",
+			"scope": {
+				"name": "memory"
+			}
+		}],
+		"id": 140737117836256,
+		"is_anonymous": false,
+		"is_inline": false,
+		"is_nested": false,
+		"kind": "namespace",
+		"name": "stappler",
+		"scope": {
+			"name": "stappler"
+		}
+	}],
+	"id": 93824997963376,
+	"kind": "file",
+	"name": "/home/sbkarr/stappler/xenolith/libstappler/common/memory/SPMemUuid.h",
+	"unmatched_comments": [{
+		"line": 21,
+		"text": "\nCopyright (c) 2019-2022 Roman Katuntsev <sbkarr@stappler.org>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n"
+	}]
+}

@@ -1,0 +1,2584 @@
+{
+	"_kind": "file",
+	"_name": "/home/sbkarr/stappler/xenolith/libstappler/common/utils/SPLog.h",
+	"childs": [{
+		"_kind": "include directive",
+		"_name": "SPStringView.h",
+		"id": 93825002241088,
+		"include": "/home/sbkarr/stappler/xenolith/libstappler/common/string/SPStringView.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "SPStringView.h"
+	}, {
+		"_kind": "include directive",
+		"_name": "SPCommon.h",
+		"id": 93825008170480,
+		"include": "/home/sbkarr/stappler/xenolith/libstappler/build/host/clang/debug/common/include/home/sbkarr/stappler/xenolith/libstappler/common/core/SPCommon.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "SPCommon.h"
+	}, {
+		"_kind": "include directive",
+		"_name": "SPString.h",
+		"id": 140737116446256,
+		"include": "/home/sbkarr/stappler/xenolith/libstappler/common/string/SPString.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "SPString.h"
+	}, {
+		"_kind": "include directive",
+		"_name": "SPRef.h",
+		"id": 140737118273136,
+		"include": "/home/sbkarr/stappler/xenolith/libstappler/common/utils/SPRef.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "SPRef.h"
+	}, {
+		"_fullName": "LIBSTAPPLER_COMMON_UTILS_SPLOG_H_",
+		"_kind": "macro definition",
+		"_name": "LIBSTAPPLER_COMMON_UTILS_SPLOG_H_",
+		"id": 140737090817568,
+		"is_function_like": false,
+		"is_object_like": true,
+		"is_variadic": false,
+		"kind": "macro definition",
+		"name": "LIBSTAPPLER_COMMON_UTILS_SPLOG_H_",
+		"replacement": ""
+	}, {
+		"_fullName": "::stappler",
+		"_kind": "namespace",
+		"_name": "stappler",
+		"childs": [{
+			"_fullName": "::stappler::log",
+			"_kind": "namespace",
+			"_name": "log",
+			"childs": [{
+				"_fullName": "::stappler::log::CustomLog",
+				"_kind": "class",
+				"_name": "CustomLog",
+				"childs": [{
+					"_fullName": "::stappler::log::CustomLog::VA",
+					"_kind": "class",
+					"_name": "VA",
+					"childs": [{
+						"_fullName": "::stappler::log::CustomLog::VA::text",
+						"_kind": "member variable",
+						"_name": "text",
+						"id": 140737098101120,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "text",
+						"type": {
+							"_typeName": "stappler::StringView",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::StringView",
+								"objects": [{
+									"_fullName": "::stappler::StringView",
+									"_kind": "type alias",
+									"_name": "StringView",
+									"id": 93824997448656,
+									"kind": "type alias",
+									"name": "StringView",
+									"underlying_type": {
+										"_typeName": "StringViewBase<char>",
+										"arguments_exposed": false,
+										"kind": "template_instantiation",
+										"primary_template": {
+											"name": "StringViewBase",
+											"objects": [{
+												"_fullName": "::stappler::StringViewBase<typename>",
+												"_kind": "class template",
+												"_name": "StringViewBase",
+												"class": {
+													"_fullName": "::stappler::StringViewBase<typename>",
+													"_kind": "class",
+													"_name": "StringViewBase",
+													"bases": [{
+														"_kind": "base class specifier",
+														"_name": "BytesReader<_CharType>",
+														"access_specifier": "public",
+														"id": 93824998090352,
+														"is_virtual": false,
+														"kind": "base class specifier",
+														"name": "BytesReader<_CharType>",
+														"type": {
+															"_typeName": "BytesReader<_CharType>",
+															"arguments_exposed": false,
+															"kind": "template_instantiation",
+															"primary_template": {
+																"name": "BytesReader",
+																"objects": [{
+																	"_fullName": "::stappler::BytesReader<typename>",
+																	"_kind": "class template",
+																	"_name": "BytesReader",
+																	"class": {
+																		"_fullName": "::stappler::BytesReader<typename>",
+																		"_kind": "class",
+																		"_name": "BytesReader",
+																		"class_kind": "class",
+																		"id": 140736954953792,
+																		"is_declaration": false,
+																		"is_definition": true,
+																		"is_final": false,
+																		"kind": "class",
+																		"name": "BytesReader",
+																		"scope": {
+																			"is_templated": true,
+																			"name": "BytesReader",
+																			"template_parameters": [{
+																				"_kind": "template type parameter",
+																				"_name": "_CharType",
+																				"id": 140737098599232,
+																				"is_variadic": false,
+																				"keyword": "typename",
+																				"kind": "template type parameter",
+																				"name": "_CharType"
+																			}]
+																		},
+																		"semantic_scope": ""
+																	},
+																	"id": 93824998648144,
+																	"kind": "class template",
+																	"name": "BytesReader",
+																	"parameters": [{
+																		"_kind": "template type parameter",
+																		"_name": "_CharType",
+																		"id": 140737098599232,
+																		"is_variadic": false,
+																		"keyword": "typename",
+																		"kind": "template type parameter",
+																		"name": "_CharType"
+																	}],
+																	"scope":  {
+																		"is_templated": true,
+																		"name": "BytesReader",
+																		"template_parameters": [{
+																			"_kind": "template type parameter",
+																			"_name": "_CharType",
+																			"id": 140737098599232,
+																			"is_variadic": false,
+																			"keyword": "typename",
+																			"kind": "template type parameter",
+																			"name": "_CharType"
+																		}]
+																	}
+																}]
+															},
+															"unexposed_arguments": "_CharType"
+														}
+													}],
+													"class_kind": "class",
+													"id": 140737094580320,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "StringViewBase",
+													"scope": {
+														"is_templated": true,
+														"name": "StringViewBase",
+														"template_parameters": [{
+															"_kind": "template type parameter",
+															"_name": "_CharType",
+															"id": 93824999493712,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "_CharType"
+														}]
+													},
+													"semantic_scope": ""
+												},
+												"id": 93824999493216,
+												"kind": "class template",
+												"name": "StringViewBase",
+												"parameters": [{
+													"_kind": "template type parameter",
+													"_name": "_CharType",
+													"id": 93824999493712,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "_CharType"
+												}],
+												"scope":  {
+													"is_templated": true,
+													"name": "StringViewBase",
+													"template_parameters": [{
+														"_kind": "template type parameter",
+														"_name": "_CharType",
+														"id": 93824999493712,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "_CharType"
+													}]
+												}
+											}]
+										},
+										"unexposed_arguments": "char"
+									}
+								}]
+							}
+						}
+					}, {
+						"_fullName": "::stappler::log::CustomLog::VA::",
+						"_kind": "class",
+						"_name": "",
+						"childs": [{
+							"_fullName": "::stappler::log::CustomLog::VA::format",
+							"_kind": "member variable",
+							"_name": "format",
+							"default_value": {
+								"expression": [{
+									"kind": "keyword",
+									"spelling": "nullptr"
+								}],
+								"kind": "unexposed",
+								"type": {
+									"_typeName": "char const*",
+									"kind": "pointer",
+									"pointee": {
+										"_typeName": "char const",
+										"cv_qualifier": "const",
+										"kind": "cv_qualified",
+										"type": {
+											"_typeName": "char",
+											"builtin_type_kind": "char",
+											"kind": "builtin"
+										}
+									}
+								}
+							},
+							"id": 140737134714880,
+							"is_mutable": false,
+							"kind": "member variable",
+							"name": "format",
+							"type": {
+								"_typeName": "char const*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "char const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "char",
+										"builtin_type_kind": "char",
+										"kind": "builtin"
+									}
+								}
+							}
+						}, {
+							"_fullName": "::stappler::log::CustomLog::VA::args",
+							"_kind": "member variable",
+							"_name": "args",
+							"id": 93825002632480,
+							"is_mutable": false,
+							"kind": "member variable",
+							"name": "args",
+							"type": {
+								"_typeName": "va_list",
+								"kind": "user_defined",
+								"target": {
+									"name": "va_list"
+								}
+							}
+						}],
+						"class_kind": "struct",
+						"id": 140736987698960,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_final": false,
+						"kind": "class",
+						"name": "",
+						"scope": {
+							"name": ""
+						},
+						"semantic_scope": ""
+					}, {
+						"_fullName": "::stappler::log::CustomLog::VA::format",
+						"_kind": "member variable",
+						"_name": "format",
+						"id": 93825001958736,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "format",
+						"type": {
+							"_typeName": "",
+							"kind": "user_defined",
+							"target": {
+								"name": "",
+								"objects": [{
+									"_fullName": "::stappler::log::CustomLog::VA::",
+									"_kind": "class",
+									"_name": "",
+									"class_kind": "struct",
+									"id": 140736987698960,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "",
+									"scope": {
+										"name": ""
+									},
+									"semantic_scope": ""
+								}]
+							}
+						}
+					}, {
+						"_fullName": "::stappler::log::CustomLog::VA::VA()",
+						"_kind": "constructor",
+						"_name": "VA",
+						"body_kind": "definition",
+						"id": 140737131809920,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_explicit": false,
+						"is_variadic": false,
+						"kind": "constructor",
+						"name": "VA",
+						"semantic_scope": "",
+						"signature": "()"
+					}],
+					"class_kind": "union",
+					"id": 140737142683680,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_final": false,
+					"kind": "class",
+					"name": "VA",
+					"scope": {
+						"name": "VA"
+					},
+					"semantic_scope": ""
+				}, {
+					"_fullName": "::stappler::log::CustomLog::Type",
+					"_kind": "enum",
+					"_name": "Type",
+					"childs": [{
+						"_fullName": "::stappler::log::CustomLog::Type::Text",
+						"_kind": "enum value",
+						"_name": "Text",
+						"id": 140737131610992,
+						"kind": "enum value",
+						"name": "Text"
+					}, {
+						"_fullName": "::stappler::log::CustomLog::Type::Format",
+						"_kind": "enum value",
+						"_name": "Format",
+						"id": 140737126340544,
+						"kind": "enum value",
+						"name": "Format"
+					}],
+					"has_explicit_type": false,
+					"id": 140736986465744,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_scoped": false,
+					"kind": "enum",
+					"name": "Type",
+					"semantic_scope": "",
+					"underlying_type": {
+						"_typeName": "unsigned int",
+						"builtin_type_kind": "unsigned int",
+						"kind": "builtin"
+					}
+				}, {
+					"_fullName": "::stappler::log::CustomLog::log_fn",
+					"_kind": "type alias",
+					"_name": "log_fn",
+					"id": 140737096792848,
+					"kind": "type alias",
+					"name": "log_fn",
+					"underlying_type": {
+						"_typeName": "void(*)(stappler::StringView const&,stappler::log::CustomLog::Type,stappler::log::CustomLog::VA&)",
+						"kind": "pointer",
+						"pointee": {
+							"_typeName": "void(stappler::StringView const&,stappler::log::CustomLog::Type,stappler::log::CustomLog::VA&)",
+							"is_variadic": false,
+							"kind": "function",
+							"parameter_types": [{
+								"_typeName": "stappler::StringView const&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "stappler::StringView const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "stappler::StringView",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::StringView",
+											"objects": [{
+												"_fullName": "::stappler::StringView",
+												"_kind": "type alias",
+												"_name": "StringView",
+												"id": 93824997448656,
+												"kind": "type alias",
+												"name": "StringView",
+												"underlying_type": {
+													"_typeName": "StringViewBase<char>",
+													"arguments_exposed": false,
+													"kind": "template_instantiation",
+													"primary_template": {
+														"name": "StringViewBase",
+														"objects": [{
+															"_fullName": "::stappler::StringViewBase<typename>",
+															"_kind": "class template",
+															"_name": "StringViewBase",
+															"class": {
+																"_fullName": "::stappler::StringViewBase<typename>",
+																"_kind": "class",
+																"_name": "StringViewBase",
+																"bases": [{
+																	"_kind": "base class specifier",
+																	"_name": "BytesReader<_CharType>",
+																	"access_specifier": "public",
+																	"id": 93824998090352,
+																	"is_virtual": false,
+																	"kind": "base class specifier",
+																	"name": "BytesReader<_CharType>",
+																	"type": {
+																		"_typeName": "BytesReader<_CharType>",
+																		"arguments_exposed": false,
+																		"kind": "template_instantiation",
+																		"primary_template": {
+																			"name": "BytesReader",
+																			"objects": [{
+																				"_fullName": "::stappler::BytesReader<typename>",
+																				"_kind": "class template",
+																				"_name": "BytesReader",
+																				"class": {
+																					"_fullName": "::stappler::BytesReader<typename>",
+																					"_kind": "class",
+																					"_name": "BytesReader",
+																					"class_kind": "class",
+																					"id": 140736954953792,
+																					"is_declaration": false,
+																					"is_definition": true,
+																					"is_final": false,
+																					"kind": "class",
+																					"name": "BytesReader",
+																					"scope": {
+																						"is_templated": true,
+																						"name": "BytesReader",
+																						"template_parameters": [{
+																							"_kind": "template type parameter",
+																							"_name": "_CharType",
+																							"id": 140737098599232,
+																							"is_variadic": false,
+																							"keyword": "typename",
+																							"kind": "template type parameter",
+																							"name": "_CharType"
+																						}]
+																					},
+																					"semantic_scope": ""
+																				},
+																				"id": 93824998648144,
+																				"kind": "class template",
+																				"name": "BytesReader",
+																				"parameters": [{
+																					"_kind": "template type parameter",
+																					"_name": "_CharType",
+																					"id": 140737098599232,
+																					"is_variadic": false,
+																					"keyword": "typename",
+																					"kind": "template type parameter",
+																					"name": "_CharType"
+																				}],
+																				"scope":  {
+																					"is_templated": true,
+																					"name": "BytesReader",
+																					"template_parameters": [{
+																						"_kind": "template type parameter",
+																						"_name": "_CharType",
+																						"id": 140737098599232,
+																						"is_variadic": false,
+																						"keyword": "typename",
+																						"kind": "template type parameter",
+																						"name": "_CharType"
+																					}]
+																				}
+																			}]
+																		},
+																		"unexposed_arguments": "_CharType"
+																	}
+																}],
+																"class_kind": "class",
+																"id": 140737094580320,
+																"is_declaration": false,
+																"is_definition": true,
+																"is_final": false,
+																"kind": "class",
+																"name": "StringViewBase",
+																"scope": {
+																	"is_templated": true,
+																	"name": "StringViewBase",
+																	"template_parameters": [{
+																		"_kind": "template type parameter",
+																		"_name": "_CharType",
+																		"id": 93824999493712,
+																		"is_variadic": false,
+																		"keyword": "typename",
+																		"kind": "template type parameter",
+																		"name": "_CharType"
+																	}]
+																},
+																"semantic_scope": ""
+															},
+															"id": 93824999493216,
+															"kind": "class template",
+															"name": "StringViewBase",
+															"parameters": [{
+																"_kind": "template type parameter",
+																"_name": "_CharType",
+																"id": 93824999493712,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "_CharType"
+															}],
+															"scope":  {
+																"is_templated": true,
+																"name": "StringViewBase",
+																"template_parameters": [{
+																	"_kind": "template type parameter",
+																	"_name": "_CharType",
+																	"id": 93824999493712,
+																	"is_variadic": false,
+																	"keyword": "typename",
+																	"kind": "template type parameter",
+																	"name": "_CharType"
+																}]
+															}
+														}]
+													},
+													"unexposed_arguments": "char"
+												}
+											}]
+										}
+									}
+								},
+								"reference_kind": "lvalue"
+							}, {
+								"_typeName": "stappler::log::CustomLog::Type",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::log::CustomLog::Type",
+									"objects": [{
+										"_fullName": "::stappler::log::CustomLog::Type",
+										"_kind": "enum",
+										"_name": "Type",
+										"has_explicit_type": false,
+										"id": 140736986465744,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": false,
+										"kind": "enum",
+										"name": "Type",
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "unsigned int",
+											"builtin_type_kind": "unsigned int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}, {
+								"_typeName": "stappler::log::CustomLog::VA&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "stappler::log::CustomLog::VA",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::log::CustomLog::VA",
+										"objects": [{
+											"_fullName": "::stappler::log::CustomLog::VA",
+											"_kind": "class",
+											"_name": "VA",
+											"class_kind": "union",
+											"id": 140737142683680,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "VA",
+											"scope": {
+												"name": "VA"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								},
+								"reference_kind": "lvalue"
+							}],
+							"return_type":  {
+								"_typeName": "void",
+								"builtin_type_kind": "void",
+								"kind": "builtin"
+							}
+						}
+					}
+				}, {
+					"_fullName": "::stappler::log::CustomLog::CustomLog(stappler::log::CustomLog::log_fn)",
+					"_kind": "constructor",
+					"_name": "CustomLog",
+					"body_kind": "declaration",
+					"id": 93824999209776,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_explicit": false,
+					"is_variadic": false,
+					"kind": "constructor",
+					"name": "CustomLog",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "fn",
+						"id": 140737088303584,
+						"kind": "function parameter",
+						"name": "fn",
+						"type": {
+							"_typeName": "stappler::log::CustomLog::log_fn",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::log::CustomLog::log_fn",
+								"objects": [{
+									"_fullName": "::stappler::log::CustomLog::log_fn",
+									"_kind": "type alias",
+									"_name": "log_fn",
+									"id": 140737096792848,
+									"kind": "type alias",
+									"name": "log_fn",
+									"underlying_type": {
+										"_typeName": "void(*)(stappler::StringView const&,stappler::log::CustomLog::Type,stappler::log::CustomLog::VA&)",
+										"kind": "pointer",
+										"pointee": {
+											"_typeName": "void(stappler::StringView const&,stappler::log::CustomLog::Type,stappler::log::CustomLog::VA&)",
+											"is_variadic": false,
+											"kind": "function",
+											"parameter_types": [{
+												"_typeName": "stappler::StringView const&",
+												"kind": "reference",
+												"referee": {
+													"_typeName": "stappler::StringView const",
+													"cv_qualifier": "const",
+													"kind": "cv_qualified",
+													"type": {
+														"_typeName": "stappler::StringView",
+														"kind": "user_defined",
+														"target": {
+															"name": "stappler::StringView",
+															"objects": [{
+																"_fullName": "::stappler::StringView",
+																"_kind": "type alias",
+																"_name": "StringView",
+																"id": 93824997448656,
+																"kind": "type alias",
+																"name": "StringView",
+																"underlying_type": {
+																	"_typeName": "StringViewBase<char>",
+																	"arguments_exposed": false,
+																	"kind": "template_instantiation",
+																	"primary_template": {
+																		"name": "StringViewBase",
+																		"objects": [{
+																			"_fullName": "::stappler::StringViewBase<typename>",
+																			"_kind": "class template",
+																			"_name": "StringViewBase",
+																			"class": {
+																				"_fullName": "::stappler::StringViewBase<typename>",
+																				"_kind": "class",
+																				"_name": "StringViewBase",
+																				"bases": [{
+																					"_kind": "base class specifier",
+																					"_name": "BytesReader<_CharType>",
+																					"access_specifier": "public",
+																					"id": 93824998090352,
+																					"is_virtual": false,
+																					"kind": "base class specifier",
+																					"name": "BytesReader<_CharType>",
+																					"type": {
+																						"_typeName": "BytesReader<_CharType>",
+																						"arguments_exposed": false,
+																						"kind": "template_instantiation",
+																						"primary_template": {
+																							"name": "BytesReader",
+																							"objects": [{
+																								"_fullName": "::stappler::BytesReader<typename>",
+																								"_kind": "class template",
+																								"_name": "BytesReader",
+																								"class": {
+																									"_fullName": "::stappler::BytesReader<typename>",
+																									"_kind": "class",
+																									"_name": "BytesReader",
+																									"class_kind": "class",
+																									"id": 140736954953792,
+																									"is_declaration": false,
+																									"is_definition": true,
+																									"is_final": false,
+																									"kind": "class",
+																									"name": "BytesReader",
+																									"scope": {
+																										"is_templated": true,
+																										"name": "BytesReader",
+																										"template_parameters": [{
+																											"_kind": "template type parameter",
+																											"_name": "_CharType",
+																											"id": 140737098599232,
+																											"is_variadic": false,
+																											"keyword": "typename",
+																											"kind": "template type parameter",
+																											"name": "_CharType"
+																										}]
+																									},
+																									"semantic_scope": ""
+																								},
+																								"id": 93824998648144,
+																								"kind": "class template",
+																								"name": "BytesReader",
+																								"parameters": [{
+																									"_kind": "template type parameter",
+																									"_name": "_CharType",
+																									"id": 140737098599232,
+																									"is_variadic": false,
+																									"keyword": "typename",
+																									"kind": "template type parameter",
+																									"name": "_CharType"
+																								}],
+																								"scope":  {
+																									"is_templated": true,
+																									"name": "BytesReader",
+																									"template_parameters": [{
+																										"_kind": "template type parameter",
+																										"_name": "_CharType",
+																										"id": 140737098599232,
+																										"is_variadic": false,
+																										"keyword": "typename",
+																										"kind": "template type parameter",
+																										"name": "_CharType"
+																									}]
+																								}
+																							}]
+																						},
+																						"unexposed_arguments": "_CharType"
+																					}
+																				}],
+																				"class_kind": "class",
+																				"id": 140737094580320,
+																				"is_declaration": false,
+																				"is_definition": true,
+																				"is_final": false,
+																				"kind": "class",
+																				"name": "StringViewBase",
+																				"scope": {
+																					"is_templated": true,
+																					"name": "StringViewBase",
+																					"template_parameters": [{
+																						"_kind": "template type parameter",
+																						"_name": "_CharType",
+																						"id": 93824999493712,
+																						"is_variadic": false,
+																						"keyword": "typename",
+																						"kind": "template type parameter",
+																						"name": "_CharType"
+																					}]
+																				},
+																				"semantic_scope": ""
+																			},
+																			"id": 93824999493216,
+																			"kind": "class template",
+																			"name": "StringViewBase",
+																			"parameters": [{
+																				"_kind": "template type parameter",
+																				"_name": "_CharType",
+																				"id": 93824999493712,
+																				"is_variadic": false,
+																				"keyword": "typename",
+																				"kind": "template type parameter",
+																				"name": "_CharType"
+																			}],
+																			"scope":  {
+																				"is_templated": true,
+																				"name": "StringViewBase",
+																				"template_parameters": [{
+																					"_kind": "template type parameter",
+																					"_name": "_CharType",
+																					"id": 93824999493712,
+																					"is_variadic": false,
+																					"keyword": "typename",
+																					"kind": "template type parameter",
+																					"name": "_CharType"
+																				}]
+																			}
+																		}]
+																	},
+																	"unexposed_arguments": "char"
+																}
+															}]
+														}
+													}
+												},
+												"reference_kind": "lvalue"
+											}, {
+												"_typeName": "stappler::log::CustomLog::Type",
+												"kind": "user_defined",
+												"target": {
+													"name": "stappler::log::CustomLog::Type",
+													"objects": [{
+														"_fullName": "::stappler::log::CustomLog::Type",
+														"_kind": "enum",
+														"_name": "Type",
+														"has_explicit_type": false,
+														"id": 140736986465744,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_scoped": false,
+														"kind": "enum",
+														"name": "Type",
+														"semantic_scope": "",
+														"underlying_type": {
+															"_typeName": "unsigned int",
+															"builtin_type_kind": "unsigned int",
+															"kind": "builtin"
+														}
+													}]
+												}
+											}, {
+												"_typeName": "stappler::log::CustomLog::VA&",
+												"kind": "reference",
+												"referee": {
+													"_typeName": "stappler::log::CustomLog::VA",
+													"kind": "user_defined",
+													"target": {
+														"name": "stappler::log::CustomLog::VA",
+														"objects": [{
+															"_fullName": "::stappler::log::CustomLog::VA",
+															"_kind": "class",
+															"_name": "VA",
+															"class_kind": "union",
+															"id": 140737142683680,
+															"is_declaration": false,
+															"is_definition": true,
+															"is_final": false,
+															"kind": "class",
+															"name": "VA",
+															"scope": {
+																"name": "VA"
+															},
+															"semantic_scope": ""
+														}]
+													}
+												},
+												"reference_kind": "lvalue"
+											}],
+											"return_type":  {
+												"_typeName": "void",
+												"builtin_type_kind": "void",
+												"kind": "builtin"
+											}
+										}
+									}
+								}]
+							}
+						}
+					}],
+					"semantic_scope": "",
+					"signature": "(stappler::log::CustomLog::log_fn)"
+				}, {
+					"_fullName": "::stappler::log::CustomLog::~CustomLog()",
+					"_kind": "destructor",
+					"_name": "~CustomLog",
+					"body_kind": "declaration",
+					"id": 93825002851200,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "destructor",
+					"name": "~CustomLog",
+					"semantic_scope": "",
+					"signature": "()"
+				}, {
+					"_fullName": "::stappler::log::CustomLog::CustomLog(stappler::log::CustomLog const&)",
+					"_kind": "constructor",
+					"_name": "CustomLog",
+					"body_kind": "deleted",
+					"id": 93825002832720,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_explicit": false,
+					"is_variadic": false,
+					"kind": "constructor",
+					"name": "CustomLog",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 140737097357760,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::log::CustomLog const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::log::CustomLog const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::log::CustomLog",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::log::CustomLog",
+										"objects": [{
+											"_fullName": "::stappler::log::CustomLog",
+											"_kind": "class",
+											"_name": "CustomLog",
+											"class_kind": "struct",
+											"id": 140737144525712,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "CustomLog",
+											"scope": {
+												"name": "CustomLog"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"semantic_scope": "",
+					"signature": "(stappler::log::CustomLog const&)"
+				}, {
+					"_fullName": "::stappler::log::CustomLog::operator=(stappler::log::CustomLog const&)",
+					"_kind": "member function",
+					"_name": "operator=",
+					"body_kind": "deleted",
+					"cv_qualifier": "none",
+					"id": 93825002284048,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "operator=",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 140737131810176,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::log::CustomLog const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::log::CustomLog const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::log::CustomLog",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::log::CustomLog",
+										"objects": [{
+											"_fullName": "::stappler::log::CustomLog",
+											"_kind": "class",
+											"_name": "CustomLog",
+											"class_kind": "struct",
+											"id": 140737144525712,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "CustomLog",
+											"scope": {
+												"name": "CustomLog"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "stappler::log::CustomLog&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::log::CustomLog",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::log::CustomLog",
+								"objects": [{
+									"_fullName": "::stappler::log::CustomLog",
+									"_kind": "class",
+									"_name": "CustomLog",
+									"class_kind": "struct",
+									"id": 140737144525712,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "CustomLog",
+									"scope": {
+										"name": "CustomLog"
+									},
+									"semantic_scope": ""
+								}]
+							}
+						},
+						"reference_kind": "lvalue"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::log::CustomLog const&)"
+				}, {
+					"_fullName": "::stappler::log::CustomLog::CustomLog(stappler::log::CustomLog&&)",
+					"_kind": "constructor",
+					"_name": "CustomLog",
+					"body_kind": "declaration",
+					"id": 93824999065104,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_explicit": false,
+					"is_variadic": false,
+					"kind": "constructor",
+					"name": "CustomLog",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93824998623328,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::log::CustomLog&&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::log::CustomLog",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::log::CustomLog",
+									"objects": [{
+										"_fullName": "::stappler::log::CustomLog",
+										"_kind": "class",
+										"_name": "CustomLog",
+										"class_kind": "struct",
+										"id": 140737144525712,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "CustomLog",
+										"scope": {
+											"name": "CustomLog"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							},
+							"reference_kind": "rvalue"
+						}
+					}],
+					"semantic_scope": "",
+					"signature": "(stappler::log::CustomLog&&)"
+				}, {
+					"_fullName": "::stappler::log::CustomLog::operator=(stappler::log::CustomLog&&)",
+					"_kind": "member function",
+					"_name": "operator=",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 93825002361328,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "operator=",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93824999546096,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::log::CustomLog&&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::log::CustomLog",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::log::CustomLog",
+									"objects": [{
+										"_fullName": "::stappler::log::CustomLog",
+										"_kind": "class",
+										"_name": "CustomLog",
+										"class_kind": "struct",
+										"id": 140737144525712,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "CustomLog",
+										"scope": {
+											"name": "CustomLog"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							},
+							"reference_kind": "rvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "stappler::log::CustomLog&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::log::CustomLog",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::log::CustomLog",
+								"objects": [{
+									"_fullName": "::stappler::log::CustomLog",
+									"_kind": "class",
+									"_name": "CustomLog",
+									"class_kind": "struct",
+									"id": 140737144525712,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "CustomLog",
+									"scope": {
+										"name": "CustomLog"
+									},
+									"semantic_scope": ""
+								}]
+							}
+						},
+						"reference_kind": "lvalue"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::log::CustomLog&&)"
+				}, {
+					"_fullName": "::stappler::log::CustomLog::fn",
+					"_kind": "member variable",
+					"_name": "fn",
+					"id": 93824998794288,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "fn",
+					"type": {
+						"_typeName": "log_fn",
+						"kind": "user_defined",
+						"target": {
+							"name": "log_fn",
+							"objects": [{
+								"_fullName": "::stappler::log::CustomLog::log_fn",
+								"_kind": "type alias",
+								"_name": "log_fn",
+								"id": 140737096792848,
+								"kind": "type alias",
+								"name": "log_fn",
+								"underlying_type": {
+									"_typeName": "void(*)(stappler::StringView const&,stappler::log::CustomLog::Type,stappler::log::CustomLog::VA&)",
+									"kind": "pointer",
+									"pointee": {
+										"_typeName": "void(stappler::StringView const&,stappler::log::CustomLog::Type,stappler::log::CustomLog::VA&)",
+										"is_variadic": false,
+										"kind": "function",
+										"parameter_types": [{
+											"_typeName": "stappler::StringView const&",
+											"kind": "reference",
+											"referee": {
+												"_typeName": "stappler::StringView const",
+												"cv_qualifier": "const",
+												"kind": "cv_qualified",
+												"type": {
+													"_typeName": "stappler::StringView",
+													"kind": "user_defined",
+													"target": {
+														"name": "stappler::StringView",
+														"objects": [{
+															"_fullName": "::stappler::StringView",
+															"_kind": "type alias",
+															"_name": "StringView",
+															"id": 93824997448656,
+															"kind": "type alias",
+															"name": "StringView",
+															"underlying_type": {
+																"_typeName": "StringViewBase<char>",
+																"arguments_exposed": false,
+																"kind": "template_instantiation",
+																"primary_template": {
+																	"name": "StringViewBase",
+																	"objects": [{
+																		"_fullName": "::stappler::StringViewBase<typename>",
+																		"_kind": "class template",
+																		"_name": "StringViewBase",
+																		"class": {
+																			"_fullName": "::stappler::StringViewBase<typename>",
+																			"_kind": "class",
+																			"_name": "StringViewBase",
+																			"bases": [{
+																				"_kind": "base class specifier",
+																				"_name": "BytesReader<_CharType>",
+																				"access_specifier": "public",
+																				"id": 93824998090352,
+																				"is_virtual": false,
+																				"kind": "base class specifier",
+																				"name": "BytesReader<_CharType>",
+																				"type": {
+																					"_typeName": "BytesReader<_CharType>",
+																					"arguments_exposed": false,
+																					"kind": "template_instantiation",
+																					"primary_template": {
+																						"name": "BytesReader",
+																						"objects": [{
+																							"_fullName": "::stappler::BytesReader<typename>",
+																							"_kind": "class template",
+																							"_name": "BytesReader",
+																							"class": {
+																								"_fullName": "::stappler::BytesReader<typename>",
+																								"_kind": "class",
+																								"_name": "BytesReader",
+																								"class_kind": "class",
+																								"id": 140736954953792,
+																								"is_declaration": false,
+																								"is_definition": true,
+																								"is_final": false,
+																								"kind": "class",
+																								"name": "BytesReader",
+																								"scope": {
+																									"is_templated": true,
+																									"name": "BytesReader",
+																									"template_parameters": [{
+																										"_kind": "template type parameter",
+																										"_name": "_CharType",
+																										"id": 140737098599232,
+																										"is_variadic": false,
+																										"keyword": "typename",
+																										"kind": "template type parameter",
+																										"name": "_CharType"
+																									}]
+																								},
+																								"semantic_scope": ""
+																							},
+																							"id": 93824998648144,
+																							"kind": "class template",
+																							"name": "BytesReader",
+																							"parameters": [{
+																								"_kind": "template type parameter",
+																								"_name": "_CharType",
+																								"id": 140737098599232,
+																								"is_variadic": false,
+																								"keyword": "typename",
+																								"kind": "template type parameter",
+																								"name": "_CharType"
+																							}],
+																							"scope":  {
+																								"is_templated": true,
+																								"name": "BytesReader",
+																								"template_parameters": [{
+																									"_kind": "template type parameter",
+																									"_name": "_CharType",
+																									"id": 140737098599232,
+																									"is_variadic": false,
+																									"keyword": "typename",
+																									"kind": "template type parameter",
+																									"name": "_CharType"
+																								}]
+																							}
+																						}]
+																					},
+																					"unexposed_arguments": "_CharType"
+																				}
+																			}],
+																			"class_kind": "class",
+																			"id": 140737094580320,
+																			"is_declaration": false,
+																			"is_definition": true,
+																			"is_final": false,
+																			"kind": "class",
+																			"name": "StringViewBase",
+																			"scope": {
+																				"is_templated": true,
+																				"name": "StringViewBase",
+																				"template_parameters": [{
+																					"_kind": "template type parameter",
+																					"_name": "_CharType",
+																					"id": 93824999493712,
+																					"is_variadic": false,
+																					"keyword": "typename",
+																					"kind": "template type parameter",
+																					"name": "_CharType"
+																				}]
+																			},
+																			"semantic_scope": ""
+																		},
+																		"id": 93824999493216,
+																		"kind": "class template",
+																		"name": "StringViewBase",
+																		"parameters": [{
+																			"_kind": "template type parameter",
+																			"_name": "_CharType",
+																			"id": 93824999493712,
+																			"is_variadic": false,
+																			"keyword": "typename",
+																			"kind": "template type parameter",
+																			"name": "_CharType"
+																		}],
+																		"scope":  {
+																			"is_templated": true,
+																			"name": "StringViewBase",
+																			"template_parameters": [{
+																				"_kind": "template type parameter",
+																				"_name": "_CharType",
+																				"id": 93824999493712,
+																				"is_variadic": false,
+																				"keyword": "typename",
+																				"kind": "template type parameter",
+																				"name": "_CharType"
+																			}]
+																		}
+																	}]
+																},
+																"unexposed_arguments": "char"
+															}
+														}]
+													}
+												}
+											},
+											"reference_kind": "lvalue"
+										}, {
+											"_typeName": "stappler::log::CustomLog::Type",
+											"kind": "user_defined",
+											"target": {
+												"name": "stappler::log::CustomLog::Type",
+												"objects": [{
+													"_fullName": "::stappler::log::CustomLog::Type",
+													"_kind": "enum",
+													"_name": "Type",
+													"has_explicit_type": false,
+													"id": 140736986465744,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_scoped": false,
+													"kind": "enum",
+													"name": "Type",
+													"semantic_scope": "",
+													"underlying_type": {
+														"_typeName": "unsigned int",
+														"builtin_type_kind": "unsigned int",
+														"kind": "builtin"
+													}
+												}]
+											}
+										}, {
+											"_typeName": "stappler::log::CustomLog::VA&",
+											"kind": "reference",
+											"referee": {
+												"_typeName": "stappler::log::CustomLog::VA",
+												"kind": "user_defined",
+												"target": {
+													"name": "stappler::log::CustomLog::VA",
+													"objects": [{
+														"_fullName": "::stappler::log::CustomLog::VA",
+														"_kind": "class",
+														"_name": "VA",
+														"class_kind": "union",
+														"id": 140737142683680,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "VA",
+														"scope": {
+															"name": "VA"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											},
+											"reference_kind": "lvalue"
+										}],
+										"return_type":  {
+											"_typeName": "void",
+											"builtin_type_kind": "void",
+											"kind": "builtin"
+										}
+									}
+								}
+							}]
+						}
+					}
+				}, {
+					"_fullName": "::stappler::log::CustomLog::manager",
+					"_kind": "member variable",
+					"_name": "manager",
+					"id": 93825002662096,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "manager",
+					"type": {
+						"_typeName": "Rc<RefBase<memory::StandartInterface>>",
+						"arguments_exposed": false,
+						"kind": "template_instantiation",
+						"primary_template": {
+							"name": "Rc",
+							"objects": [{
+								"_fullName": "::stappler::RcBase<typename>",
+								"_kind": "class template",
+								"_name": "RcBase",
+								"class": {
+									"_fullName": "::stappler::RcBase<typename>",
+									"_kind": "class",
+									"_name": "RcBase",
+									"class_kind": "class",
+									"id": 93824999765056,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "RcBase",
+									"scope": {
+										"is_templated": true,
+										"name": "RcBase",
+										"template_parameters": [{
+											"_kind": "template type parameter",
+											"_name": "Base",
+											"id": 93825002831392,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "Base"
+										}]
+									},
+									"semantic_scope": ""
+								},
+								"id": 93825002831184,
+								"kind": "class template",
+								"name": "RcBase",
+								"parameters": [{
+									"_kind": "template type parameter",
+									"_name": "Base",
+									"id": 93825002831392,
+									"is_variadic": false,
+									"keyword": "typename",
+									"kind": "template type parameter",
+									"name": "Base"
+								}],
+								"scope":  {
+									"is_templated": true,
+									"name": "RcBase",
+									"template_parameters": [{
+										"_kind": "template type parameter",
+										"_name": "Base",
+										"id": 93825002831392,
+										"is_variadic": false,
+										"keyword": "typename",
+										"kind": "template type parameter",
+										"name": "Base"
+									}]
+								}
+							}]
+						},
+						"unexposed_arguments": "RefBase<memory::StandartInterface>"
+					}
+				}],
+				"class_kind": "struct",
+				"id": 140737144525712,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_final": false,
+				"kind": "class",
+				"name": "CustomLog",
+				"scope": {
+					"name": "CustomLog"
+				},
+				"semantic_scope": ""
+			}, {
+				"_fullName": "::stappler::log::format(stappler::StringView const&,char const*,...)",
+				"_kind": "function",
+				"_name": "format",
+				"attributes": [{
+					"arguments": [{
+						"kind": "identifier",
+						"spelling": "printf"
+					}, {
+						"kind": "punctuation",
+						"spelling": ","
+					}, {
+						"kind": "int_literal",
+						"spelling": "2"
+					}, {
+						"kind": "punctuation",
+						"spelling": ","
+					}, {
+						"kind": "int_literal",
+						"spelling": "3"
+					}],
+					"is_variadic": false,
+					"kind": "unknown",
+					"name": "__format__"
+				}],
+				"body_kind": "declaration",
+				"id": 140737121124464,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": true,
+				"is_definition": false,
+				"is_variadic": true,
+				"kind": "function",
+				"name": "format",
+				"parameters": [{
+					"_kind": "function parameter",
+					"_name": "tag",
+					"id": 93825002629104,
+					"kind": "function parameter",
+					"name": "tag",
+					"type": {
+						"_typeName": "stappler::StringView const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::StringView const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::StringView",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::StringView",
+									"objects": [{
+										"_fullName": "::stappler::StringView",
+										"_kind": "type alias",
+										"_name": "StringView",
+										"id": 93824997448656,
+										"kind": "type alias",
+										"name": "StringView",
+										"underlying_type": {
+											"_typeName": "StringViewBase<char>",
+											"arguments_exposed": false,
+											"kind": "template_instantiation",
+											"primary_template": {
+												"name": "StringViewBase",
+												"objects": [{
+													"_fullName": "::stappler::StringViewBase<typename>",
+													"_kind": "class template",
+													"_name": "StringViewBase",
+													"class": {
+														"_fullName": "::stappler::StringViewBase<typename>",
+														"_kind": "class",
+														"_name": "StringViewBase",
+														"bases": [{
+															"_kind": "base class specifier",
+															"_name": "BytesReader<_CharType>",
+															"access_specifier": "public",
+															"id": 93824998090352,
+															"is_virtual": false,
+															"kind": "base class specifier",
+															"name": "BytesReader<_CharType>",
+															"type": {
+																"_typeName": "BytesReader<_CharType>",
+																"arguments_exposed": false,
+																"kind": "template_instantiation",
+																"primary_template": {
+																	"name": "BytesReader",
+																	"objects": [{
+																		"_fullName": "::stappler::BytesReader<typename>",
+																		"_kind": "class template",
+																		"_name": "BytesReader",
+																		"class": {
+																			"_fullName": "::stappler::BytesReader<typename>",
+																			"_kind": "class",
+																			"_name": "BytesReader",
+																			"class_kind": "class",
+																			"id": 140736954953792,
+																			"is_declaration": false,
+																			"is_definition": true,
+																			"is_final": false,
+																			"kind": "class",
+																			"name": "BytesReader",
+																			"scope": {
+																				"is_templated": true,
+																				"name": "BytesReader",
+																				"template_parameters": [{
+																					"_kind": "template type parameter",
+																					"_name": "_CharType",
+																					"id": 140737098599232,
+																					"is_variadic": false,
+																					"keyword": "typename",
+																					"kind": "template type parameter",
+																					"name": "_CharType"
+																				}]
+																			},
+																			"semantic_scope": ""
+																		},
+																		"id": 93824998648144,
+																		"kind": "class template",
+																		"name": "BytesReader",
+																		"parameters": [{
+																			"_kind": "template type parameter",
+																			"_name": "_CharType",
+																			"id": 140737098599232,
+																			"is_variadic": false,
+																			"keyword": "typename",
+																			"kind": "template type parameter",
+																			"name": "_CharType"
+																		}],
+																		"scope":  {
+																			"is_templated": true,
+																			"name": "BytesReader",
+																			"template_parameters": [{
+																				"_kind": "template type parameter",
+																				"_name": "_CharType",
+																				"id": 140737098599232,
+																				"is_variadic": false,
+																				"keyword": "typename",
+																				"kind": "template type parameter",
+																				"name": "_CharType"
+																			}]
+																		}
+																	}]
+																},
+																"unexposed_arguments": "_CharType"
+															}
+														}],
+														"class_kind": "class",
+														"id": 140737094580320,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "StringViewBase",
+														"scope": {
+															"is_templated": true,
+															"name": "StringViewBase",
+															"template_parameters": [{
+																"_kind": "template type parameter",
+																"_name": "_CharType",
+																"id": 93824999493712,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "_CharType"
+															}]
+														},
+														"semantic_scope": ""
+													},
+													"id": 93824999493216,
+													"kind": "class template",
+													"name": "StringViewBase",
+													"parameters": [{
+														"_kind": "template type parameter",
+														"_name": "_CharType",
+														"id": 93824999493712,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "_CharType"
+													}],
+													"scope":  {
+														"is_templated": true,
+														"name": "StringViewBase",
+														"template_parameters": [{
+															"_kind": "template type parameter",
+															"_name": "_CharType",
+															"id": 93824999493712,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "_CharType"
+														}]
+													}
+												}]
+											},
+											"unexposed_arguments": "char"
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_kind": "function parameter",
+					"_name": "",
+					"id": 93825002830640,
+					"kind": "function parameter",
+					"name": "",
+					"type": {
+						"_typeName": "char const*",
+						"kind": "pointer",
+						"pointee": {
+							"_typeName": "char const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "char",
+								"builtin_type_kind": "char",
+								"kind": "builtin"
+							}
+						}
+					}
+				}],
+				"return_type":  {
+					"_typeName": "void",
+					"builtin_type_kind": "void",
+					"kind": "builtin"
+				},
+				"semantic_scope": "",
+				"signature": "(stappler::StringView const&,char const*,...)"
+			}, {
+				"_fullName": "::stappler::log::text(stappler::StringView const&,stappler::StringView const&)",
+				"_kind": "function",
+				"_name": "text",
+				"body_kind": "declaration",
+				"id": 93825001444544,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": true,
+				"is_definition": false,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "text",
+				"parameters": [{
+					"_kind": "function parameter",
+					"_name": "tag",
+					"id": 93825002146672,
+					"kind": "function parameter",
+					"name": "tag",
+					"type": {
+						"_typeName": "stappler::StringView const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::StringView const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::StringView",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::StringView",
+									"objects": [{
+										"_fullName": "::stappler::StringView",
+										"_kind": "type alias",
+										"_name": "StringView",
+										"id": 93824997448656,
+										"kind": "type alias",
+										"name": "StringView",
+										"underlying_type": {
+											"_typeName": "StringViewBase<char>",
+											"arguments_exposed": false,
+											"kind": "template_instantiation",
+											"primary_template": {
+												"name": "StringViewBase",
+												"objects": [{
+													"_fullName": "::stappler::StringViewBase<typename>",
+													"_kind": "class template",
+													"_name": "StringViewBase",
+													"class": {
+														"_fullName": "::stappler::StringViewBase<typename>",
+														"_kind": "class",
+														"_name": "StringViewBase",
+														"bases": [{
+															"_kind": "base class specifier",
+															"_name": "BytesReader<_CharType>",
+															"access_specifier": "public",
+															"id": 93824998090352,
+															"is_virtual": false,
+															"kind": "base class specifier",
+															"name": "BytesReader<_CharType>",
+															"type": {
+																"_typeName": "BytesReader<_CharType>",
+																"arguments_exposed": false,
+																"kind": "template_instantiation",
+																"primary_template": {
+																	"name": "BytesReader",
+																	"objects": [{
+																		"_fullName": "::stappler::BytesReader<typename>",
+																		"_kind": "class template",
+																		"_name": "BytesReader",
+																		"class": {
+																			"_fullName": "::stappler::BytesReader<typename>",
+																			"_kind": "class",
+																			"_name": "BytesReader",
+																			"class_kind": "class",
+																			"id": 140736954953792,
+																			"is_declaration": false,
+																			"is_definition": true,
+																			"is_final": false,
+																			"kind": "class",
+																			"name": "BytesReader",
+																			"scope": {
+																				"is_templated": true,
+																				"name": "BytesReader",
+																				"template_parameters": [{
+																					"_kind": "template type parameter",
+																					"_name": "_CharType",
+																					"id": 140737098599232,
+																					"is_variadic": false,
+																					"keyword": "typename",
+																					"kind": "template type parameter",
+																					"name": "_CharType"
+																				}]
+																			},
+																			"semantic_scope": ""
+																		},
+																		"id": 93824998648144,
+																		"kind": "class template",
+																		"name": "BytesReader",
+																		"parameters": [{
+																			"_kind": "template type parameter",
+																			"_name": "_CharType",
+																			"id": 140737098599232,
+																			"is_variadic": false,
+																			"keyword": "typename",
+																			"kind": "template type parameter",
+																			"name": "_CharType"
+																		}],
+																		"scope":  {
+																			"is_templated": true,
+																			"name": "BytesReader",
+																			"template_parameters": [{
+																				"_kind": "template type parameter",
+																				"_name": "_CharType",
+																				"id": 140737098599232,
+																				"is_variadic": false,
+																				"keyword": "typename",
+																				"kind": "template type parameter",
+																				"name": "_CharType"
+																			}]
+																		}
+																	}]
+																},
+																"unexposed_arguments": "_CharType"
+															}
+														}],
+														"class_kind": "class",
+														"id": 140737094580320,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "StringViewBase",
+														"scope": {
+															"is_templated": true,
+															"name": "StringViewBase",
+															"template_parameters": [{
+																"_kind": "template type parameter",
+																"_name": "_CharType",
+																"id": 93824999493712,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "_CharType"
+															}]
+														},
+														"semantic_scope": ""
+													},
+													"id": 93824999493216,
+													"kind": "class template",
+													"name": "StringViewBase",
+													"parameters": [{
+														"_kind": "template type parameter",
+														"_name": "_CharType",
+														"id": 93824999493712,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "_CharType"
+													}],
+													"scope":  {
+														"is_templated": true,
+														"name": "StringViewBase",
+														"template_parameters": [{
+															"_kind": "template type parameter",
+															"_name": "_CharType",
+															"id": 93824999493712,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "_CharType"
+														}]
+													}
+												}]
+											},
+											"unexposed_arguments": "char"
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_kind": "function parameter",
+					"_name": "",
+					"id": 93825001960384,
+					"kind": "function parameter",
+					"name": "",
+					"type": {
+						"_typeName": "stappler::StringView const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::StringView const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::StringView",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::StringView",
+									"objects": [{
+										"_fullName": "::stappler::StringView",
+										"_kind": "type alias",
+										"_name": "StringView",
+										"id": 93824997448656,
+										"kind": "type alias",
+										"name": "StringView",
+										"underlying_type": {
+											"_typeName": "StringViewBase<char>",
+											"arguments_exposed": false,
+											"kind": "template_instantiation",
+											"primary_template": {
+												"name": "StringViewBase",
+												"objects": [{
+													"_fullName": "::stappler::StringViewBase<typename>",
+													"_kind": "class template",
+													"_name": "StringViewBase",
+													"class": {
+														"_fullName": "::stappler::StringViewBase<typename>",
+														"_kind": "class",
+														"_name": "StringViewBase",
+														"bases": [{
+															"_kind": "base class specifier",
+															"_name": "BytesReader<_CharType>",
+															"access_specifier": "public",
+															"id": 93824998090352,
+															"is_virtual": false,
+															"kind": "base class specifier",
+															"name": "BytesReader<_CharType>",
+															"type": {
+																"_typeName": "BytesReader<_CharType>",
+																"arguments_exposed": false,
+																"kind": "template_instantiation",
+																"primary_template": {
+																	"name": "BytesReader",
+																	"objects": [{
+																		"_fullName": "::stappler::BytesReader<typename>",
+																		"_kind": "class template",
+																		"_name": "BytesReader",
+																		"class": {
+																			"_fullName": "::stappler::BytesReader<typename>",
+																			"_kind": "class",
+																			"_name": "BytesReader",
+																			"class_kind": "class",
+																			"id": 140736954953792,
+																			"is_declaration": false,
+																			"is_definition": true,
+																			"is_final": false,
+																			"kind": "class",
+																			"name": "BytesReader",
+																			"scope": {
+																				"is_templated": true,
+																				"name": "BytesReader",
+																				"template_parameters": [{
+																					"_kind": "template type parameter",
+																					"_name": "_CharType",
+																					"id": 140737098599232,
+																					"is_variadic": false,
+																					"keyword": "typename",
+																					"kind": "template type parameter",
+																					"name": "_CharType"
+																				}]
+																			},
+																			"semantic_scope": ""
+																		},
+																		"id": 93824998648144,
+																		"kind": "class template",
+																		"name": "BytesReader",
+																		"parameters": [{
+																			"_kind": "template type parameter",
+																			"_name": "_CharType",
+																			"id": 140737098599232,
+																			"is_variadic": false,
+																			"keyword": "typename",
+																			"kind": "template type parameter",
+																			"name": "_CharType"
+																		}],
+																		"scope":  {
+																			"is_templated": true,
+																			"name": "BytesReader",
+																			"template_parameters": [{
+																				"_kind": "template type parameter",
+																				"_name": "_CharType",
+																				"id": 140737098599232,
+																				"is_variadic": false,
+																				"keyword": "typename",
+																				"kind": "template type parameter",
+																				"name": "_CharType"
+																			}]
+																		}
+																	}]
+																},
+																"unexposed_arguments": "_CharType"
+															}
+														}],
+														"class_kind": "class",
+														"id": 140737094580320,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "StringViewBase",
+														"scope": {
+															"is_templated": true,
+															"name": "StringViewBase",
+															"template_parameters": [{
+																"_kind": "template type parameter",
+																"_name": "_CharType",
+																"id": 93824999493712,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "_CharType"
+															}]
+														},
+														"semantic_scope": ""
+													},
+													"id": 93824999493216,
+													"kind": "class template",
+													"name": "StringViewBase",
+													"parameters": [{
+														"_kind": "template type parameter",
+														"_name": "_CharType",
+														"id": 93824999493712,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "_CharType"
+													}],
+													"scope":  {
+														"is_templated": true,
+														"name": "StringViewBase",
+														"template_parameters": [{
+															"_kind": "template type parameter",
+															"_name": "_CharType",
+															"id": 93824999493712,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "_CharType"
+														}]
+													}
+												}]
+											},
+											"unexposed_arguments": "char"
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "void",
+					"builtin_type_kind": "void",
+					"kind": "builtin"
+				},
+				"semantic_scope": "",
+				"signature": "(stappler::StringView const&,stappler::StringView const&)"
+			}, {
+				"_fullName": "::stappler::log::vtext<typename>(stappler::StringView const&,Args &&...)",
+				"_kind": "function template",
+				"_name": "vtext",
+				"childs": [{
+					"_fullName": "::stappler::log::vtext<typename>(stappler::StringView const&,Args &&...)",
+					"_kind": "function",
+					"_name": "vtext",
+					"body_kind": "definition",
+					"id": 140737142684320,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "vtext",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "tag",
+						"id": 93825002661536,
+						"kind": "function parameter",
+						"name": "tag",
+						"type": {
+							"_typeName": "stappler::StringView const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::StringView const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::StringView",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::StringView",
+										"objects": [{
+											"_fullName": "::stappler::StringView",
+											"_kind": "type alias",
+											"_name": "StringView",
+											"id": 93824997448656,
+											"kind": "type alias",
+											"name": "StringView",
+											"underlying_type": {
+												"_typeName": "StringViewBase<char>",
+												"arguments_exposed": false,
+												"kind": "template_instantiation",
+												"primary_template": {
+													"name": "StringViewBase",
+													"objects": [{
+														"_fullName": "::stappler::StringViewBase<typename>",
+														"_kind": "class template",
+														"_name": "StringViewBase",
+														"class": {
+															"_fullName": "::stappler::StringViewBase<typename>",
+															"_kind": "class",
+															"_name": "StringViewBase",
+															"bases": [{
+																"_kind": "base class specifier",
+																"_name": "BytesReader<_CharType>",
+																"access_specifier": "public",
+																"id": 93824998090352,
+																"is_virtual": false,
+																"kind": "base class specifier",
+																"name": "BytesReader<_CharType>",
+																"type": {
+																	"_typeName": "BytesReader<_CharType>",
+																	"arguments_exposed": false,
+																	"kind": "template_instantiation",
+																	"primary_template": {
+																		"name": "BytesReader",
+																		"objects": [{
+																			"_fullName": "::stappler::BytesReader<typename>",
+																			"_kind": "class template",
+																			"_name": "BytesReader",
+																			"class": {
+																				"_fullName": "::stappler::BytesReader<typename>",
+																				"_kind": "class",
+																				"_name": "BytesReader",
+																				"class_kind": "class",
+																				"id": 140736954953792,
+																				"is_declaration": false,
+																				"is_definition": true,
+																				"is_final": false,
+																				"kind": "class",
+																				"name": "BytesReader",
+																				"scope": {
+																					"is_templated": true,
+																					"name": "BytesReader",
+																					"template_parameters": [{
+																						"_kind": "template type parameter",
+																						"_name": "_CharType",
+																						"id": 140737098599232,
+																						"is_variadic": false,
+																						"keyword": "typename",
+																						"kind": "template type parameter",
+																						"name": "_CharType"
+																					}]
+																				},
+																				"semantic_scope": ""
+																			},
+																			"id": 93824998648144,
+																			"kind": "class template",
+																			"name": "BytesReader",
+																			"parameters": [{
+																				"_kind": "template type parameter",
+																				"_name": "_CharType",
+																				"id": 140737098599232,
+																				"is_variadic": false,
+																				"keyword": "typename",
+																				"kind": "template type parameter",
+																				"name": "_CharType"
+																			}],
+																			"scope":  {
+																				"is_templated": true,
+																				"name": "BytesReader",
+																				"template_parameters": [{
+																					"_kind": "template type parameter",
+																					"_name": "_CharType",
+																					"id": 140737098599232,
+																					"is_variadic": false,
+																					"keyword": "typename",
+																					"kind": "template type parameter",
+																					"name": "_CharType"
+																				}]
+																			}
+																		}]
+																	},
+																	"unexposed_arguments": "_CharType"
+																}
+															}],
+															"class_kind": "class",
+															"id": 140737094580320,
+															"is_declaration": false,
+															"is_definition": true,
+															"is_final": false,
+															"kind": "class",
+															"name": "StringViewBase",
+															"scope": {
+																"is_templated": true,
+																"name": "StringViewBase",
+																"template_parameters": [{
+																	"_kind": "template type parameter",
+																	"_name": "_CharType",
+																	"id": 93824999493712,
+																	"is_variadic": false,
+																	"keyword": "typename",
+																	"kind": "template type parameter",
+																	"name": "_CharType"
+																}]
+															},
+															"semantic_scope": ""
+														},
+														"id": 93824999493216,
+														"kind": "class template",
+														"name": "StringViewBase",
+														"parameters": [{
+															"_kind": "template type parameter",
+															"_name": "_CharType",
+															"id": 93824999493712,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "_CharType"
+														}],
+														"scope":  {
+															"is_templated": true,
+															"name": "StringViewBase",
+															"template_parameters": [{
+																"_kind": "template type parameter",
+																"_name": "_CharType",
+																"id": 93824999493712,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "_CharType"
+															}]
+														}
+													}]
+												},
+												"unexposed_arguments": "char"
+											}
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "args",
+						"id": 93824997485808,
+						"kind": "function parameter",
+						"name": "args",
+						"type": {
+							"_typeName": "Args &&...",
+							"kind": "unexposed",
+							"name": "Args &&..."
+						}
+					}],
+					"return_type":  {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::StringView const&,Args &&...)"
+				}],
+				"function":  {
+					"_fullName": "::stappler::log::vtext<typename>(stappler::StringView const&,Args &&...)",
+					"_kind": "function",
+					"_name": "vtext",
+					"body_kind": "definition",
+					"id": 140737142684320,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "vtext",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "tag",
+						"id": 93825002661536,
+						"kind": "function parameter",
+						"name": "tag",
+						"type": {
+							"_typeName": "stappler::StringView const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::StringView const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::StringView",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::StringView",
+										"objects": [{
+											"_fullName": "::stappler::StringView",
+											"_kind": "type alias",
+											"_name": "StringView",
+											"id": 93824997448656,
+											"kind": "type alias",
+											"name": "StringView",
+											"underlying_type": {
+												"_typeName": "StringViewBase<char>",
+												"arguments_exposed": false,
+												"kind": "template_instantiation",
+												"primary_template": {
+													"name": "StringViewBase",
+													"objects": [{
+														"_fullName": "::stappler::StringViewBase<typename>",
+														"_kind": "class template",
+														"_name": "StringViewBase",
+														"class": {
+															"_fullName": "::stappler::StringViewBase<typename>",
+															"_kind": "class",
+															"_name": "StringViewBase",
+															"bases": [{
+																"_kind": "base class specifier",
+																"_name": "BytesReader<_CharType>",
+																"access_specifier": "public",
+																"id": 93824998090352,
+																"is_virtual": false,
+																"kind": "base class specifier",
+																"name": "BytesReader<_CharType>",
+																"type": {
+																	"_typeName": "BytesReader<_CharType>",
+																	"arguments_exposed": false,
+																	"kind": "template_instantiation",
+																	"primary_template": {
+																		"name": "BytesReader",
+																		"objects": [{
+																			"_fullName": "::stappler::BytesReader<typename>",
+																			"_kind": "class template",
+																			"_name": "BytesReader",
+																			"class": {
+																				"_fullName": "::stappler::BytesReader<typename>",
+																				"_kind": "class",
+																				"_name": "BytesReader",
+																				"class_kind": "class",
+																				"id": 140736954953792,
+																				"is_declaration": false,
+																				"is_definition": true,
+																				"is_final": false,
+																				"kind": "class",
+																				"name": "BytesReader",
+																				"scope": {
+																					"is_templated": true,
+																					"name": "BytesReader",
+																					"template_parameters": [{
+																						"_kind": "template type parameter",
+																						"_name": "_CharType",
+																						"id": 140737098599232,
+																						"is_variadic": false,
+																						"keyword": "typename",
+																						"kind": "template type parameter",
+																						"name": "_CharType"
+																					}]
+																				},
+																				"semantic_scope": ""
+																			},
+																			"id": 93824998648144,
+																			"kind": "class template",
+																			"name": "BytesReader",
+																			"parameters": [{
+																				"_kind": "template type parameter",
+																				"_name": "_CharType",
+																				"id": 140737098599232,
+																				"is_variadic": false,
+																				"keyword": "typename",
+																				"kind": "template type parameter",
+																				"name": "_CharType"
+																			}],
+																			"scope":  {
+																				"is_templated": true,
+																				"name": "BytesReader",
+																				"template_parameters": [{
+																					"_kind": "template type parameter",
+																					"_name": "_CharType",
+																					"id": 140737098599232,
+																					"is_variadic": false,
+																					"keyword": "typename",
+																					"kind": "template type parameter",
+																					"name": "_CharType"
+																				}]
+																			}
+																		}]
+																	},
+																	"unexposed_arguments": "_CharType"
+																}
+															}],
+															"class_kind": "class",
+															"id": 140737094580320,
+															"is_declaration": false,
+															"is_definition": true,
+															"is_final": false,
+															"kind": "class",
+															"name": "StringViewBase",
+															"scope": {
+																"is_templated": true,
+																"name": "StringViewBase",
+																"template_parameters": [{
+																	"_kind": "template type parameter",
+																	"_name": "_CharType",
+																	"id": 93824999493712,
+																	"is_variadic": false,
+																	"keyword": "typename",
+																	"kind": "template type parameter",
+																	"name": "_CharType"
+																}]
+															},
+															"semantic_scope": ""
+														},
+														"id": 93824999493216,
+														"kind": "class template",
+														"name": "StringViewBase",
+														"parameters": [{
+															"_kind": "template type parameter",
+															"_name": "_CharType",
+															"id": 93824999493712,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "_CharType"
+														}],
+														"scope":  {
+															"is_templated": true,
+															"name": "StringViewBase",
+															"template_parameters": [{
+																"_kind": "template type parameter",
+																"_name": "_CharType",
+																"id": 93824999493712,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "_CharType"
+															}]
+														}
+													}]
+												},
+												"unexposed_arguments": "char"
+											}
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "args",
+						"id": 93824997485808,
+						"kind": "function parameter",
+						"name": "args",
+						"type": {
+							"_typeName": "Args &&...",
+							"kind": "unexposed",
+							"name": "Args &&..."
+						}
+					}],
+					"return_type":  {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::StringView const&,Args &&...)"
+				},
+				"id": 93825002830480,
+				"kind": "function template",
+				"name": "vtext",
+				"parameters": [{
+					"_kind": "template type parameter",
+					"_name": "Args",
+					"id": 140737112677728,
+					"is_variadic": true,
+					"keyword": "typename",
+					"kind": "template type parameter",
+					"name": "Args"
+				}]
+			}],
+			"id": 140737093016480,
+			"is_anonymous": false,
+			"is_inline": false,
+			"is_nested": true,
+			"kind": "namespace",
+			"name": "log",
+			"scope": {
+				"name": "log"
+			}
+		}],
+		"id": 140737133779392,
+		"is_anonymous": false,
+		"is_inline": false,
+		"is_nested": false,
+		"kind": "namespace",
+		"name": "stappler",
+		"scope": {
+			"name": "stappler"
+		}
+	}, {
+		"_kind": "macro definition",
+		"_name": "SPASSERT",
+		"id": 140737098428080,
+		"is_function_like": true,
+		"is_object_like": false,
+		"is_variadic": false,
+		"kind": "macro definition",
+		"name": "SPASSERT",
+		"parameters": [{
+			"_kind": "macro parameter",
+			"_name": "cond",
+			"id": 93825000321520,
+			"kind": "macro parameter",
+			"name": "cond"
+		}, {
+			"_kind": "macro parameter",
+			"_name": "msg",
+			"id": 93825002321024,
+			"kind": "macro parameter",
+			"name": "msg"
+		}],
+		"replacement": "do { if (!(cond)) { if (strlen(msg)) { ::stappler::log::format(\"Assert\", \"%s\", msg);} assert(cond); } } while (0)"
+	}],
+	"id": 140737130944752,
+	"kind": "file",
+	"name": "/home/sbkarr/stappler/xenolith/libstappler/common/utils/SPLog.h",
+	"unmatched_comments": [{
+		"line": 21,
+		"text": "\nCopyright (c) 2016-2022 Roman Katuntsev <sbkarr@stappler.org>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n"
+	}]
+}

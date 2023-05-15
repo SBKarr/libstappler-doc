@@ -1,0 +1,2049 @@
+{
+	"_kind": "file",
+	"_name": "/home/sbkarr/stappler/xenolith/libstappler/modules/tess/SPTess.h",
+	"childs": [{
+		"_kind": "include directive",
+		"_name": "SPCommon.h",
+		"id": 140737118266080,
+		"include": "/home/sbkarr/stappler/xenolith/libstappler/build/host/clang/debug/common/include/home/sbkarr/stappler/xenolith/libstappler/common/core/SPCommon.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "SPCommon.h"
+	}, {
+		"_kind": "include directive",
+		"_name": "SPRef.h",
+		"id": 140737098746864,
+		"include": "/home/sbkarr/stappler/xenolith/libstappler/common/utils/SPRef.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "SPRef.h"
+	}, {
+		"_kind": "include directive",
+		"_name": "SPVec2.h",
+		"id": 140737130922880,
+		"include": "/home/sbkarr/stappler/xenolith/libstappler/modules/geom/SPVec2.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "SPVec2.h"
+	}, {
+		"_fullName": "MODULES_TESS_SPTESS_H_",
+		"_kind": "macro definition",
+		"_name": "MODULES_TESS_SPTESS_H_",
+		"id": 140737093657664,
+		"is_function_like": false,
+		"is_object_like": true,
+		"is_variadic": false,
+		"kind": "macro definition",
+		"name": "MODULES_TESS_SPTESS_H_",
+		"replacement": ""
+	}, {
+		"_fullName": "::stappler",
+		"_kind": "namespace",
+		"_name": "stappler",
+		"childs": [{
+			"_fullName": "::stappler::geom",
+			"_kind": "namespace",
+			"_name": "geom",
+			"childs": [{
+				"_fullName": "::stappler::geom::HalfEdge",
+				"_kind": "class",
+				"_name": "HalfEdge",
+				"childs": null,
+				"class_kind": "struct",
+				"id": 140737097495520,
+				"is_declaration": true,
+				"is_definition": false,
+				"is_final": false,
+				"kind": "class",
+				"name": "HalfEdge",
+				"scope": {
+					"name": "HalfEdge"
+				},
+				"semantic_scope": ""
+			}, {
+				"_fullName": "::stappler::geom::VerboseFlag",
+				"_kind": "enum",
+				"_name": "VerboseFlag",
+				"childs": [{
+					"_fullName": "::stappler::geom::VerboseFlag::None",
+					"_kind": "enum value",
+					"_name": "None",
+					"id": 140737060136816,
+					"kind": "enum value",
+					"name": "None"
+				}, {
+					"_fullName": "::stappler::geom::VerboseFlag::General",
+					"_kind": "enum value",
+					"_name": "General",
+					"id": 140737150795680,
+					"kind": "enum value",
+					"name": "General"
+				}, {
+					"_fullName": "::stappler::geom::VerboseFlag::Full",
+					"_kind": "enum value",
+					"_name": "Full",
+					"id": 140737144849936,
+					"kind": "enum value",
+					"name": "Full"
+				}],
+				"has_explicit_type": true,
+				"id": 140737147621872,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_scoped": true,
+				"kind": "enum",
+				"name": "VerboseFlag",
+				"scope": {
+					"name": "VerboseFlag"
+				},
+				"semantic_scope": "",
+				"underlying_type": {
+					"_typeName": "long",
+					"builtin_type_kind": "long",
+					"kind": "builtin"
+				}
+			}, {
+				"_fullName": "::stappler::geom::Winding",
+				"_kind": "enum",
+				"_name": "Winding",
+				"childs": [{
+					"_fullName": "::stappler::geom::Winding::EvenOdd",
+					"_kind": "enum value",
+					"_name": "EvenOdd",
+					"id": 140737107590896,
+					"kind": "enum value",
+					"name": "EvenOdd"
+				}, {
+					"_fullName": "::stappler::geom::Winding::NonZero",
+					"_kind": "enum value",
+					"_name": "NonZero",
+					"id": 93825007985440,
+					"kind": "enum value",
+					"name": "NonZero"
+				}, {
+					"_fullName": "::stappler::geom::Winding::Positive",
+					"_kind": "enum value",
+					"_name": "Positive",
+					"id": 93825004676768,
+					"kind": "enum value",
+					"name": "Positive"
+				}, {
+					"_fullName": "::stappler::geom::Winding::Negative",
+					"_kind": "enum value",
+					"_name": "Negative",
+					"id": 93825003937088,
+					"kind": "enum value",
+					"name": "Negative"
+				}, {
+					"_fullName": "::stappler::geom::Winding::AbsGeqTwo",
+					"_kind": "enum value",
+					"_name": "AbsGeqTwo",
+					"id": 93825006486912,
+					"kind": "enum value",
+					"name": "AbsGeqTwo"
+				}],
+				"has_explicit_type": false,
+				"id": 140737086301104,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_scoped": true,
+				"kind": "enum",
+				"name": "Winding",
+				"scope": {
+					"name": "Winding"
+				},
+				"semantic_scope": "",
+				"underlying_type": {
+					"_typeName": "int",
+					"builtin_type_kind": "int",
+					"kind": "builtin"
+				}
+			}, {
+				"_fullName": "::stappler::geom::TessResult",
+				"_kind": "class",
+				"_name": "TessResult",
+				"childs": [{
+					"_fullName": "::stappler::geom::TessResult::nvertexes",
+					"_kind": "member variable",
+					"_name": "nvertexes",
+					"default_value": {
+						"expression": [{
+							"kind": "int_literal",
+							"spelling": "0"
+						}],
+						"kind": "unexposed",
+						"type": {
+							"_typeName": "uint32_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "uint32_t"
+							}
+						}
+					},
+					"id": 93825004036304,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "nvertexes",
+					"type": {
+						"_typeName": "uint32_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "uint32_t"
+						}
+					}
+				}, {
+					"_fullName": "::stappler::geom::TessResult::nfaces",
+					"_kind": "member variable",
+					"_name": "nfaces",
+					"default_value": {
+						"expression": [{
+							"kind": "int_literal",
+							"spelling": "0"
+						}],
+						"kind": "unexposed",
+						"type": {
+							"_typeName": "uint32_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "uint32_t"
+							}
+						}
+					},
+					"id": 93825004677632,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "nfaces",
+					"type": {
+						"_typeName": "uint32_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "uint32_t"
+						}
+					}
+				}, {
+					"_fullName": "::stappler::geom::TessResult::target",
+					"_kind": "member variable",
+					"_name": "target",
+					"default_value": {
+						"expression": [{
+							"kind": "keyword",
+							"spelling": "nullptr"
+						}],
+						"kind": "unexposed",
+						"type": {
+							"_typeName": "void*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "void",
+								"builtin_type_kind": "void",
+								"kind": "builtin"
+							}
+						}
+					},
+					"id": 93825011569040,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "target",
+					"type": {
+						"_typeName": "void*",
+						"kind": "pointer",
+						"pointee": {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						}
+					}
+				}, {
+					"_fullName": "::stappler::geom::TessResult::pushVertex",
+					"_kind": "member variable",
+					"_name": "pushVertex",
+					"id": 93825011569568,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "pushVertex",
+					"type": {
+						"_typeName": "void(*)(void*,uint32_t,stappler::geom::Vec2 const&,float)",
+						"kind": "pointer",
+						"pointee": {
+							"_typeName": "void(void*,uint32_t,stappler::geom::Vec2 const&,float)",
+							"is_variadic": false,
+							"kind": "function",
+							"parameter_types": [{
+								"_typeName": "void*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "void",
+									"builtin_type_kind": "void",
+									"kind": "builtin"
+								}
+							}, {
+								"_typeName": "uint32_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "uint32_t"
+								}
+							}, {
+								"_typeName": "stappler::geom::Vec2 const&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "stappler::geom::Vec2 const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "stappler::geom::Vec2",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::geom::Vec2",
+											"objects": [{
+												"_fullName": "::stappler::geom::Vec2",
+												"_kind": "class",
+												"_name": "Vec2",
+												"class_kind": "class",
+												"id": 140737093477856,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "Vec2",
+												"scope": {
+													"name": "Vec2"
+												},
+												"semantic_scope": ""
+											}]
+										}
+									}
+								},
+								"reference_kind": "lvalue"
+							}, {
+								"_typeName": "float",
+								"builtin_type_kind": "float",
+								"kind": "builtin"
+							}],
+							"return_type":  {
+								"_typeName": "void",
+								"builtin_type_kind": "void",
+								"kind": "builtin"
+							}
+						}
+					}
+				}, {
+					"_fullName": "::stappler::geom::TessResult::pushTriangle",
+					"_kind": "member variable",
+					"_name": "pushTriangle",
+					"id": 93824999756528,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "pushTriangle",
+					"type": {
+						"_typeName": "void(*)(void*,uint32_t[3])",
+						"kind": "pointer",
+						"pointee": {
+							"_typeName": "void(void*,uint32_t[3])",
+							"is_variadic": false,
+							"kind": "function",
+							"parameter_types": [{
+								"_typeName": "void*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "void",
+									"builtin_type_kind": "void",
+									"kind": "builtin"
+								}
+							}, {
+								"_typeName": "uint32_t[3]",
+								"kind": "array",
+								"size": {
+									"kind": "literal",
+									"type": {
+										"_typeName": "unsigned long long",
+										"builtin_type_kind": "unsigned long long",
+										"kind": "builtin"
+									},
+									"value": "3"
+								},
+								"value_type":  {
+									"_typeName": "uint32_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "uint32_t"
+									}
+								}
+							}],
+							"return_type":  {
+								"_typeName": "void",
+								"builtin_type_kind": "void",
+								"kind": "builtin"
+							}
+						}
+					}
+				}],
+				"class_kind": "struct",
+				"id": 93825004560848,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_final": false,
+				"kind": "class",
+				"name": "TessResult",
+				"scope": {
+					"name": "TessResult"
+				},
+				"semantic_scope": ""
+			}, {
+				"_fullName": "::stappler::geom::Tesselator",
+				"_kind": "class",
+				"_name": "Tesselator",
+				"bases": [{
+					"_kind": "base class specifier",
+					"_name": "RefBase<memory::StandartInterface>",
+					"access_specifier": "public",
+					"id": 93825004677984,
+					"is_virtual": false,
+					"kind": "base class specifier",
+					"name": "RefBase<memory::StandartInterface>",
+					"type": {
+						"_typeName": "RefBase<memory::StandartInterface>",
+						"arguments_exposed": false,
+						"kind": "template_instantiation",
+						"primary_template": {
+							"name": "RefBase",
+							"objects": [{
+								"_fullName": "::stappler::RefBase<typename>",
+								"_kind": "class template",
+								"_name": "RefBase",
+								"class": {
+									"_fullName": "::stappler::RefBase<typename>",
+									"_kind": "class",
+									"_name": "RefBase",
+									"bases": [{
+										"_kind": "base class specifier",
+										"_name": "Interface::AllocBaseType",
+										"access_specifier": "public",
+										"id": 140737110671360,
+										"is_virtual": false,
+										"kind": "base class specifier",
+										"name": "Interface::AllocBaseType",
+										"type": {
+											"_typeName": "Interface::AllocBaseType",
+											"kind": "unexposed",
+											"name": "Interface::AllocBaseType"
+										}
+									}],
+									"class_kind": "class",
+									"id": 140736980257312,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "RefBase",
+									"scope": {
+										"is_templated": true,
+										"name": "RefBase",
+										"template_parameters": [{
+											"_kind": "template type parameter",
+											"_name": "Interface",
+											"id": 140737135446944,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "Interface"
+										}]
+									},
+									"semantic_scope": ""
+								},
+								"id": 93824997686736,
+								"kind": "class template",
+								"name": "RefBase",
+								"parameters": [{
+									"_kind": "template type parameter",
+									"_name": "Interface",
+									"id": 140737135446944,
+									"is_variadic": false,
+									"keyword": "typename",
+									"kind": "template type parameter",
+									"name": "Interface"
+								}],
+								"scope":  {
+									"is_templated": true,
+									"name": "RefBase",
+									"template_parameters": [{
+										"_kind": "template type parameter",
+										"_name": "Interface",
+										"id": 140737135446944,
+										"is_variadic": false,
+										"keyword": "typename",
+										"kind": "template type parameter",
+										"name": "Interface"
+									}]
+								}
+							}]
+						},
+						"unexposed_arguments": "memory::StandartInterface"
+					}
+				}],
+				"childs":  [{
+					"_kind": "access specifier",
+					"_name": "public",
+					"access_specifier": "public",
+					"id": 93825004678128,
+					"kind": "access specifier",
+					"name": "public"
+				}, {
+					"_fullName": "::stappler::geom::Tesselator::Cursor",
+					"_kind": "class",
+					"_name": "Cursor",
+					"childs": [{
+						"_fullName": "::stappler::geom::Tesselator::Cursor::edge",
+						"_kind": "member variable",
+						"_name": "edge",
+						"default_value": {
+							"expression": [{
+								"kind": "keyword",
+								"spelling": "nullptr"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "stappler::geom::HalfEdge*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::geom::HalfEdge",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::geom::HalfEdge",
+										"objects": [{
+											"_fullName": "::stappler::geom::HalfEdge",
+											"_kind": "class",
+											"_name": "HalfEdge",
+											"class_kind": "struct",
+											"id": 140737097495520,
+											"is_declaration": true,
+											"is_definition": false,
+											"is_final": false,
+											"kind": "class",
+											"name": "HalfEdge",
+											"scope": {
+												"name": "HalfEdge"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							}
+						},
+						"id": 93824999753792,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "edge",
+						"type": {
+							"_typeName": "stappler::geom::HalfEdge*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::geom::HalfEdge",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::HalfEdge",
+									"objects": [{
+										"_fullName": "::stappler::geom::HalfEdge",
+										"_kind": "class",
+										"_name": "HalfEdge",
+										"class_kind": "struct",
+										"id": 140737097495520,
+										"is_declaration": true,
+										"is_definition": false,
+										"is_final": false,
+										"kind": "class",
+										"name": "HalfEdge",
+										"scope": {
+											"name": "HalfEdge"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						}
+					}, {
+						"_fullName": "::stappler::geom::Tesselator::Cursor::root",
+						"_kind": "member variable",
+						"_name": "root",
+						"default_value": {
+							"expression": [{
+								"kind": "keyword",
+								"spelling": "nullptr"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "stappler::geom::HalfEdge*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::geom::HalfEdge",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::geom::HalfEdge",
+										"objects": [{
+											"_fullName": "::stappler::geom::HalfEdge",
+											"_kind": "class",
+											"_name": "HalfEdge",
+											"class_kind": "struct",
+											"id": 140737097495520,
+											"is_declaration": true,
+											"is_definition": false,
+											"is_final": false,
+											"kind": "class",
+											"name": "HalfEdge",
+											"scope": {
+												"name": "HalfEdge"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							}
+						},
+						"id": 93825008356576,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "root",
+						"type": {
+							"_typeName": "stappler::geom::HalfEdge*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::geom::HalfEdge",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::HalfEdge",
+									"objects": [{
+										"_fullName": "::stappler::geom::HalfEdge",
+										"_kind": "class",
+										"_name": "HalfEdge",
+										"class_kind": "struct",
+										"id": 140737097495520,
+										"is_declaration": true,
+										"is_definition": false,
+										"is_final": false,
+										"kind": "class",
+										"name": "HalfEdge",
+										"scope": {
+											"name": "HalfEdge"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						}
+					}, {
+						"_fullName": "::stappler::geom::Tesselator::Cursor::count",
+						"_kind": "member variable",
+						"_name": "count",
+						"default_value": {
+							"expression": [{
+								"kind": "int_literal",
+								"spelling": "0"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "uint32_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "uint32_t"
+								}
+							}
+						},
+						"id": 93825004678656,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "count",
+						"type": {
+							"_typeName": "uint32_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "uint32_t"
+							}
+						}
+					}, {
+						"_fullName": "::stappler::geom::Tesselator::Cursor::isClockwise",
+						"_kind": "member variable",
+						"_name": "isClockwise",
+						"default_value": {
+							"expression": [{
+								"kind": "keyword",
+								"spelling": "false"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "bool",
+								"builtin_type_kind": "bool",
+								"kind": "builtin"
+							}
+						},
+						"id": 93825004290352,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "isClockwise",
+						"type": {
+							"_typeName": "bool",
+							"builtin_type_kind": "bool",
+							"kind": "builtin"
+						}
+					}, {
+						"_fullName": "::stappler::geom::Tesselator::Cursor::closed",
+						"_kind": "member variable",
+						"_name": "closed",
+						"default_value": {
+							"expression": [{
+								"kind": "keyword",
+								"spelling": "false"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "bool",
+								"builtin_type_kind": "bool",
+								"kind": "builtin"
+							}
+						},
+						"id": 93824999855600,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "closed",
+						"type": {
+							"_typeName": "bool",
+							"builtin_type_kind": "bool",
+							"kind": "builtin"
+						}
+					}, {
+						"_fullName": "::stappler::geom::Tesselator::Cursor::origin",
+						"_kind": "member variable",
+						"_name": "origin",
+						"id": 93824999855920,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "origin",
+						"type": {
+							"_typeName": "stappler::geom::Vec2",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::geom::Vec2",
+								"objects": [{
+									"_fullName": "::stappler::geom::Vec2",
+									"_kind": "class",
+									"_name": "Vec2",
+									"class_kind": "class",
+									"id": 140737093477856,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "Vec2",
+									"scope": {
+										"name": "Vec2"
+									},
+									"semantic_scope": ""
+								}]
+							}
+						}
+					}],
+					"class_kind": "struct",
+					"id": 93825004289744,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_final": false,
+					"kind": "class",
+					"name": "Cursor",
+					"scope": {
+						"name": "Cursor"
+					},
+					"semantic_scope": ""
+				}, {
+					"_fullName": "::stappler::geom::Tesselator::~Tesselator()",
+					"_kind": "destructor",
+					"_name": "~Tesselator",
+					"body_kind": "declaration",
+					"id": 93825006199792,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_override": true,
+					"is_variadic": false,
+					"is_virtual": true,
+					"kind": "destructor",
+					"name": "~Tesselator",
+					"semantic_scope": "",
+					"signature": "()"
+				}, {
+					"_fullName": "::stappler::geom::Tesselator::init(memory::pool_t*)",
+					"_kind": "member function",
+					"_name": "init",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 140737101964672,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "init",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93825006200384,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "memory::pool_t*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "memory::pool_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "memory::pool_t",
+									"objects": [{
+										"_fullName": "::stappler::mempool::base::pool_t",
+										"_kind": "type alias",
+										"_name": "pool_t",
+										"id": 140737142936960,
+										"kind": "type alias",
+										"name": "pool_t",
+										"underlying_type": {
+											"_typeName": "custom::Pool",
+											"kind": "user_defined",
+											"target": {
+												"name": "custom::Pool",
+												"objects": [{
+													"_fullName": "::stappler::mempool::custom::Pool",
+													"_kind": "class",
+													"_name": "Pool",
+													"class_kind": "struct",
+													"id": 93824997822144,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "Pool",
+													"scope": {
+														"name": "Pool"
+													},
+													"semantic_scope": ""
+												}]
+											}
+										}
+									}]
+								}
+							}
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(memory::pool_t*)"
+				}, {
+					"_fullName": "::stappler::geom::Tesselator::setAntialiasValue(float)",
+					"_kind": "member function",
+					"_name": "setAntialiasValue",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 140737148500960,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "setAntialiasValue",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93824999755584,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(float)"
+				}, {
+					"_fullName": "::stappler::geom::Tesselator::getAntialiasValue() const",
+					"_kind": "member function",
+					"_name": "getAntialiasValue",
+					"body_kind": "declaration",
+					"cv_qualifier": "const",
+					"id": 140737113758000,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "getAntialiasValue",
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "float",
+						"builtin_type_kind": "float",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "() const"
+				}, {
+					"_fullName": "::stappler::geom::Tesselator::RelocateRule",
+					"_kind": "enum",
+					"_name": "RelocateRule",
+					"childs": [{
+						"_fullName": "::stappler::geom::Tesselator::RelocateRule::Never",
+						"_kind": "enum value",
+						"_name": "Never",
+						"id": 93824999755920,
+						"kind": "enum value",
+						"name": "Never"
+					}, {
+						"_fullName": "::stappler::geom::Tesselator::RelocateRule::Auto",
+						"_kind": "enum value",
+						"_name": "Auto",
+						"id": 93824999756112,
+						"kind": "enum value",
+						"name": "Auto"
+					}, {
+						"_fullName": "::stappler::geom::Tesselator::RelocateRule::Always",
+						"_kind": "enum value",
+						"_name": "Always",
+						"id": 93825006485952,
+						"kind": "enum value",
+						"name": "Always"
+					}, {
+						"_fullName": "::stappler::geom::Tesselator::RelocateRule::Monotonize",
+						"_kind": "enum value",
+						"_name": "Monotonize",
+						"id": 93825006486144,
+						"kind": "enum value",
+						"name": "Monotonize"
+					}],
+					"has_explicit_type": false,
+					"id": 93824999753264,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_scoped": true,
+					"kind": "enum",
+					"name": "RelocateRule",
+					"scope": {
+						"name": "RelocateRule"
+					},
+					"semantic_scope": "",
+					"underlying_type": {
+						"_typeName": "int",
+						"builtin_type_kind": "int",
+						"kind": "builtin"
+					}
+				}, {
+					"_fullName": "::stappler::geom::Tesselator::setRelocateRule(stappler::geom::Tesselator::RelocateRule)",
+					"_kind": "member function",
+					"_name": "setRelocateRule",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 140737149096416,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "setRelocateRule",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93825001749040,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::geom::Tesselator::RelocateRule",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::geom::Tesselator::RelocateRule",
+								"objects": [{
+									"_fullName": "::stappler::geom::Tesselator::RelocateRule",
+									"_kind": "enum",
+									"_name": "RelocateRule",
+									"has_explicit_type": false,
+									"id": 93824999753264,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_scoped": true,
+									"kind": "enum",
+									"name": "RelocateRule",
+									"scope": {
+										"name": "RelocateRule"
+									},
+									"semantic_scope": "",
+									"underlying_type": {
+										"_typeName": "int",
+										"builtin_type_kind": "int",
+										"kind": "builtin"
+									}
+								}]
+							}
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::geom::Tesselator::RelocateRule)"
+				}, {
+					"_fullName": "::stappler::geom::Tesselator::getRelocateRule() const",
+					"_kind": "member function",
+					"_name": "getRelocateRule",
+					"body_kind": "declaration",
+					"cv_qualifier": "const",
+					"id": 93825006587984,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "getRelocateRule",
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "stappler::geom::Tesselator::RelocateRule",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::geom::Tesselator::RelocateRule",
+							"objects": [{
+								"_fullName": "::stappler::geom::Tesselator::RelocateRule",
+								"_kind": "enum",
+								"_name": "RelocateRule",
+								"has_explicit_type": false,
+								"id": 93824999753264,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_scoped": true,
+								"kind": "enum",
+								"name": "RelocateRule",
+								"scope": {
+									"name": "RelocateRule"
+								},
+								"semantic_scope": "",
+								"underlying_type": {
+									"_typeName": "int",
+									"builtin_type_kind": "int",
+									"kind": "builtin"
+								}
+							}]
+						}
+					},
+					"semantic_scope": "",
+					"signature": "() const"
+				}, {
+					"_fullName": "::stappler::geom::Tesselator::setWindingRule(stappler::geom::Winding)",
+					"_kind": "member function",
+					"_name": "setWindingRule",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 93825001749440,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "setWindingRule",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93825005166128,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::geom::Winding",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::geom::Winding",
+								"objects": [{
+									"_fullName": "::stappler::geom::Winding",
+									"_kind": "enum",
+									"_name": "Winding",
+									"has_explicit_type": false,
+									"id": 140737086301104,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_scoped": true,
+									"kind": "enum",
+									"name": "Winding",
+									"scope": {
+										"name": "Winding"
+									},
+									"semantic_scope": "",
+									"underlying_type": {
+										"_typeName": "int",
+										"builtin_type_kind": "int",
+										"kind": "builtin"
+									}
+								}]
+							}
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::geom::Winding)"
+				}, {
+					"_fullName": "::stappler::geom::Tesselator::getWindingRule() const",
+					"_kind": "member function",
+					"_name": "getWindingRule",
+					"body_kind": "declaration",
+					"cv_qualifier": "const",
+					"id": 93825005166416,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "getWindingRule",
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "stappler::geom::Winding",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::geom::Winding",
+							"objects": [{
+								"_fullName": "::stappler::geom::Winding",
+								"_kind": "enum",
+								"_name": "Winding",
+								"has_explicit_type": false,
+								"id": 140737086301104,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_scoped": true,
+								"kind": "enum",
+								"name": "Winding",
+								"scope": {
+									"name": "Winding"
+								},
+								"semantic_scope": "",
+								"underlying_type": {
+									"_typeName": "int",
+									"builtin_type_kind": "int",
+									"kind": "builtin"
+								}
+							}]
+						}
+					},
+					"semantic_scope": "",
+					"signature": "() const"
+				}, {
+					"_fullName": "::stappler::geom::Tesselator::preallocate(uint32_t)",
+					"_kind": "member function",
+					"_name": "preallocate",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 93825003277824,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "preallocate",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "n",
+						"id": 93825003278192,
+						"kind": "function parameter",
+						"name": "n",
+						"type": {
+							"_typeName": "uint32_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "uint32_t"
+							}
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(uint32_t)"
+				}, {
+					"_fullName": "::stappler::geom::Tesselator::beginContour(bool)",
+					"_kind": "member function",
+					"_name": "beginContour",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 93824998782208,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "beginContour",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "clockwise",
+						"default_value": {
+							"expression": [{
+								"kind": "keyword",
+								"spelling": "false"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "bool",
+								"builtin_type_kind": "bool",
+								"kind": "builtin"
+							}
+						},
+						"id": 93825003278624,
+						"kind": "function parameter",
+						"name": "clockwise",
+						"type": {
+							"_typeName": "bool",
+							"builtin_type_kind": "bool",
+							"kind": "builtin"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "stappler::geom::Tesselator::Cursor",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::geom::Tesselator::Cursor",
+							"objects": [{
+								"_fullName": "::stappler::geom::Tesselator::Cursor",
+								"_kind": "class",
+								"_name": "Cursor",
+								"class_kind": "struct",
+								"id": 93825004289744,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_final": false,
+								"kind": "class",
+								"name": "Cursor",
+								"scope": {
+									"name": "Cursor"
+								},
+								"semantic_scope": ""
+							}]
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(bool)"
+				}, {
+					"_fullName": "::stappler::geom::Tesselator::pushVertex(stappler::geom::Tesselator::Cursor&,stappler::geom::Vec2 const&)",
+					"_kind": "member function",
+					"_name": "pushVertex",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 93824998782784,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "pushVertex",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93825011564768,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::geom::Tesselator::Cursor&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::Tesselator::Cursor",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::Tesselator::Cursor",
+									"objects": [{
+										"_fullName": "::stappler::geom::Tesselator::Cursor",
+										"_kind": "class",
+										"_name": "Cursor",
+										"class_kind": "struct",
+										"id": 93825004289744,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Cursor",
+										"scope": {
+											"name": "Cursor"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93825011565104,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::geom::Vec2 const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::Vec2 const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::geom::Vec2",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::geom::Vec2",
+										"objects": [{
+											"_fullName": "::stappler::geom::Vec2",
+											"_kind": "class",
+											"_name": "Vec2",
+											"class_kind": "class",
+											"id": 140737093477856,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Vec2",
+											"scope": {
+												"name": "Vec2"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::geom::Tesselator::Cursor&,stappler::geom::Vec2 const&)"
+				}, {
+					"_fullName": "::stappler::geom::Tesselator::pushStrokeVertex(stappler::geom::Tesselator::Cursor&,stappler::geom::Vec2 const&,stappler::geom::Vec2 const&)",
+					"_kind": "member function",
+					"_name": "pushStrokeVertex",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 93825011565344,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "pushStrokeVertex",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93825005635648,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::geom::Tesselator::Cursor&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::Tesselator::Cursor",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::Tesselator::Cursor",
+									"objects": [{
+										"_fullName": "::stappler::geom::Tesselator::Cursor",
+										"_kind": "class",
+										"_name": "Cursor",
+										"class_kind": "struct",
+										"id": 93825004289744,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Cursor",
+										"scope": {
+											"name": "Cursor"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "pt",
+						"id": 93825005636304,
+						"kind": "function parameter",
+						"name": "pt",
+						"type": {
+							"_typeName": "stappler::geom::Vec2 const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::Vec2 const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::geom::Vec2",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::geom::Vec2",
+										"objects": [{
+											"_fullName": "::stappler::geom::Vec2",
+											"_kind": "class",
+											"_name": "Vec2",
+											"class_kind": "class",
+											"id": 140737093477856,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Vec2",
+											"scope": {
+												"name": "Vec2"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "offset",
+						"id": 93825004528624,
+						"kind": "function parameter",
+						"name": "offset",
+						"type": {
+							"_typeName": "stappler::geom::Vec2 const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::Vec2 const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::geom::Vec2",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::geom::Vec2",
+										"objects": [{
+											"_fullName": "::stappler::geom::Vec2",
+											"_kind": "class",
+											"_name": "Vec2",
+											"class_kind": "class",
+											"id": 140737093477856,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Vec2",
+											"scope": {
+												"name": "Vec2"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::geom::Tesselator::Cursor&,stappler::geom::Vec2 const&,stappler::geom::Vec2 const&)"
+				}, {
+					"_fullName": "::stappler::geom::Tesselator::pushStrokeTop(stappler::geom::Tesselator::Cursor&,stappler::geom::Vec2 const&)",
+					"_kind": "member function",
+					"_name": "pushStrokeTop",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 93825004528864,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "pushStrokeTop",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93825005458336,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::geom::Tesselator::Cursor&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::Tesselator::Cursor",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::Tesselator::Cursor",
+									"objects": [{
+										"_fullName": "::stappler::geom::Tesselator::Cursor",
+										"_kind": "class",
+										"_name": "Cursor",
+										"class_kind": "struct",
+										"id": 93825004289744,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Cursor",
+										"scope": {
+											"name": "Cursor"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "pt",
+						"id": 93825005458720,
+						"kind": "function parameter",
+						"name": "pt",
+						"type": {
+							"_typeName": "stappler::geom::Vec2 const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::Vec2 const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::geom::Vec2",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::geom::Vec2",
+										"objects": [{
+											"_fullName": "::stappler::geom::Vec2",
+											"_kind": "class",
+											"_name": "Vec2",
+											"class_kind": "class",
+											"id": 140737093477856,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Vec2",
+											"scope": {
+												"name": "Vec2"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::geom::Tesselator::Cursor&,stappler::geom::Vec2 const&)"
+				}, {
+					"_fullName": "::stappler::geom::Tesselator::pushStrokeBottom(stappler::geom::Tesselator::Cursor&,stappler::geom::Vec2 const&)",
+					"_kind": "member function",
+					"_name": "pushStrokeBottom",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 93825005458960,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "pushStrokeBottom",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93825005641696,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::geom::Tesselator::Cursor&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::Tesselator::Cursor",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::Tesselator::Cursor",
+									"objects": [{
+										"_fullName": "::stappler::geom::Tesselator::Cursor",
+										"_kind": "class",
+										"_name": "Cursor",
+										"class_kind": "struct",
+										"id": 93825004289744,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Cursor",
+										"scope": {
+											"name": "Cursor"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "pt",
+						"id": 93825005642080,
+						"kind": "function parameter",
+						"name": "pt",
+						"type": {
+							"_typeName": "stappler::geom::Vec2 const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::Vec2 const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::geom::Vec2",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::geom::Vec2",
+										"objects": [{
+											"_fullName": "::stappler::geom::Vec2",
+											"_kind": "class",
+											"_name": "Vec2",
+											"class_kind": "class",
+											"id": 140737093477856,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Vec2",
+											"scope": {
+												"name": "Vec2"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::geom::Tesselator::Cursor&,stappler::geom::Vec2 const&)"
+				}, {
+					"_fullName": "::stappler::geom::Tesselator::closeContour(stappler::geom::Tesselator::Cursor&)",
+					"_kind": "member function",
+					"_name": "closeContour",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 93825000999680,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "closeContour",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93825001000144,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::geom::Tesselator::Cursor&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::Tesselator::Cursor",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::Tesselator::Cursor",
+									"objects": [{
+										"_fullName": "::stappler::geom::Tesselator::Cursor",
+										"_kind": "class",
+										"_name": "Cursor",
+										"class_kind": "struct",
+										"id": 93825004289744,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Cursor",
+										"scope": {
+											"name": "Cursor"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::geom::Tesselator::Cursor&)"
+				}, {
+					"_fullName": "::stappler::geom::Tesselator::closeStrokeContour(stappler::geom::Tesselator::Cursor&)",
+					"_kind": "member function",
+					"_name": "closeStrokeContour",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 93825001000384,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "closeStrokeContour",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93825004525488,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::geom::Tesselator::Cursor&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::Tesselator::Cursor",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::Tesselator::Cursor",
+									"objects": [{
+										"_fullName": "::stappler::geom::Tesselator::Cursor",
+										"_kind": "class",
+										"_name": "Cursor",
+										"class_kind": "struct",
+										"id": 93825004289744,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Cursor",
+										"scope": {
+											"name": "Cursor"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::geom::Tesselator::Cursor&)"
+				}, {
+					"_fullName": "::stappler::geom::Tesselator::prepare(stappler::geom::TessResult&)",
+					"_kind": "member function",
+					"_name": "prepare",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 93825004525728,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "prepare",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93825004526192,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::geom::TessResult&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::TessResult",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::TessResult",
+									"objects": [{
+										"_fullName": "::stappler::geom::TessResult",
+										"_kind": "class",
+										"_name": "TessResult",
+										"class_kind": "struct",
+										"id": 93825004560848,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "TessResult",
+										"scope": {
+											"name": "TessResult"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::geom::TessResult&)"
+				}, {
+					"_fullName": "::stappler::geom::Tesselator::write(stappler::geom::TessResult&)",
+					"_kind": "member function",
+					"_name": "write",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 93825004190640,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "write",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93825004191104,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::geom::TessResult&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::TessResult",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::TessResult",
+									"objects": [{
+										"_fullName": "::stappler::geom::TessResult",
+										"_kind": "class",
+										"_name": "TessResult",
+										"class_kind": "struct",
+										"id": 93825004560848,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "TessResult",
+										"scope": {
+											"name": "TessResult"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::geom::TessResult&)"
+				}, {
+					"_kind": "access specifier",
+					"_name": "protected",
+					"access_specifier": "protected",
+					"id": 93825004191296,
+					"kind": "access specifier",
+					"name": "protected"
+				}, {
+					"_fullName": "::stappler::geom::Tesselator::Data",
+					"_kind": "class",
+					"_name": "Data",
+					"childs": null,
+					"class_kind": "struct",
+					"id": 93825006486384,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_final": false,
+					"kind": "class",
+					"name": "Data",
+					"scope": {
+						"name": "Data"
+					},
+					"semantic_scope": ""
+				}, {
+					"_fullName": "::stappler::geom::Tesselator::_data",
+					"_kind": "member variable",
+					"_name": "_data",
+					"default_value": {
+						"expression": [{
+							"kind": "keyword",
+							"spelling": "nullptr"
+						}],
+						"kind": "unexposed",
+						"type": {
+							"_typeName": "stappler::geom::Tesselator::Data*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::geom::Tesselator::Data",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::Tesselator::Data",
+									"objects": [{
+										"_fullName": "::stappler::geom::Tesselator::Data",
+										"_kind": "class",
+										"_name": "Data",
+										"class_kind": "struct",
+										"id": 93825006486384,
+										"is_declaration": true,
+										"is_definition": false,
+										"is_final": false,
+										"kind": "class",
+										"name": "Data",
+										"scope": {
+											"name": "Data"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						}
+					},
+					"id": 93825005166736,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "_data",
+					"type": {
+						"_typeName": "stappler::geom::Tesselator::Data*",
+						"kind": "pointer",
+						"pointee": {
+							"_typeName": "stappler::geom::Tesselator::Data",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::geom::Tesselator::Data",
+								"objects": [{
+									"_fullName": "::stappler::geom::Tesselator::Data",
+									"_kind": "class",
+									"_name": "Data",
+									"class_kind": "struct",
+									"id": 93825006486384,
+									"is_declaration": true,
+									"is_definition": false,
+									"is_final": false,
+									"kind": "class",
+									"name": "Data",
+									"scope": {
+										"name": "Data"
+									},
+									"semantic_scope": ""
+								}]
+							}
+						}
+					}
+				}],
+				"class_kind": "class",
+				"id": 93825006199392,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_final": false,
+				"kind": "class",
+				"name": "Tesselator",
+				"scope": {
+					"name": "Tesselator"
+				},
+				"semantic_scope": ""
+			}],
+			"id": 140737107757872,
+			"is_anonymous": false,
+			"is_inline": false,
+			"is_nested": true,
+			"kind": "namespace",
+			"name": "geom",
+			"scope": {
+				"name": "geom"
+			}
+		}],
+		"id": 140737095040496,
+		"is_anonymous": false,
+		"is_inline": false,
+		"is_nested": false,
+		"kind": "namespace",
+		"name": "stappler",
+		"scope": {
+			"name": "stappler"
+		}
+	}],
+	"id": 140736957320736,
+	"kind": "file",
+	"name": "/home/sbkarr/stappler/xenolith/libstappler/modules/tess/SPTess.h",
+	"unmatched_comments": [{
+		"line": 21,
+		"text": "\nCopyright (c) 2022 Roman Katuntsev <sbkarr@stappler.org>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n"
+	}]
+}

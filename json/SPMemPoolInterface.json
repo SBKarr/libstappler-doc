@@ -1,0 +1,5379 @@
+{
+	"_kind": "file",
+	"_name": "/home/sbkarr/stappler/xenolith/libstappler/common/memory/pool/SPMemPoolInterface.h",
+	"childs": [{
+		"_kind": "include directive",
+		"_name": "SPMemPoolStruct.h",
+		"id": 140737136908816,
+		"include": "/home/sbkarr/stappler/xenolith/libstappler/common/memory/pool/SPMemPoolStruct.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "SPMemPoolStruct.h"
+	}, {
+		"_fullName": "LIBSTAPPLER_COMMON_MEMORY_POOL_SPMEMPOOLINTERFACE_H_",
+		"_kind": "macro definition",
+		"_name": "LIBSTAPPLER_COMMON_MEMORY_POOL_SPMEMPOOLINTERFACE_H_",
+		"id": 140737113792768,
+		"is_function_like": false,
+		"is_object_like": true,
+		"is_variadic": false,
+		"kind": "macro definition",
+		"name": "LIBSTAPPLER_COMMON_MEMORY_POOL_SPMEMPOOLINTERFACE_H_",
+		"replacement": ""
+	}, {
+		"_fullName": "::stappler",
+		"_kind": "namespace",
+		"_name": "stappler",
+		"childs": [{
+			"_fullName": "::stappler::mempool",
+			"_kind": "namespace",
+			"_name": "mempool",
+			"childs": [{
+				"_fullName": "::stappler::mempool::base",
+				"_kind": "namespace",
+				"_name": "base",
+				"childs": [{
+					"_fullName": "::stappler::mempool::base::pool_t",
+					"_kind": "type alias",
+					"_name": "pool_t",
+					"id": 140737142936960,
+					"kind": "type alias",
+					"name": "pool_t",
+					"underlying_type": {
+						"_typeName": "custom::Pool",
+						"kind": "user_defined",
+						"target": {
+							"name": "custom::Pool",
+							"objects": [{
+								"_fullName": "::stappler::mempool::custom::Pool",
+								"_kind": "class",
+								"_name": "Pool",
+								"class_kind": "struct",
+								"id": 93824997822144,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_final": false,
+								"kind": "class",
+								"name": "Pool",
+								"scope": {
+									"name": "Pool"
+								},
+								"semantic_scope": ""
+							}]
+						}
+					}
+				}, {
+					"_fullName": "::stappler::mempool::base::status_t",
+					"_kind": "type alias",
+					"_name": "status_t",
+					"id": 140737089774080,
+					"kind": "type alias",
+					"name": "status_t",
+					"underlying_type": {
+						"_typeName": "custom::Status",
+						"kind": "user_defined",
+						"target": {
+							"name": "custom::Status",
+							"objects": [{
+								"_fullName": "::stappler::mempool::custom::Status",
+								"_kind": "type alias",
+								"_name": "Status",
+								"id": 140737096943696,
+								"kind": "type alias",
+								"name": "Status",
+								"underlying_type": {
+									"_typeName": "int",
+									"builtin_type_kind": "int",
+									"kind": "builtin"
+								}
+							}]
+						}
+					}
+				}, {
+					"_fullName": "::stappler::mempool::base::allocator_t",
+					"_kind": "type alias",
+					"_name": "allocator_t",
+					"id": 140737141796640,
+					"kind": "type alias",
+					"name": "allocator_t",
+					"underlying_type": {
+						"_typeName": "custom::Allocator",
+						"kind": "user_defined",
+						"target": {
+							"name": "custom::Allocator",
+							"objects": [{
+								"_fullName": "::stappler::mempool::custom::Allocator",
+								"_kind": "class",
+								"_name": "Allocator",
+								"class_kind": "struct",
+								"id": 93824998908352,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_final": false,
+								"kind": "class",
+								"name": "Allocator",
+								"scope": {
+									"name": "Allocator"
+								},
+								"semantic_scope": ""
+							}]
+						}
+					}
+				}, {
+					"_fullName": "::stappler::mempool::base::cleanup_fn",
+					"_kind": "type alias",
+					"_name": "cleanup_fn",
+					"id": 140737139835056,
+					"kind": "type alias",
+					"name": "cleanup_fn",
+					"underlying_type": {
+						"_typeName": "status_t(*)(void*)",
+						"kind": "pointer",
+						"pointee": {
+							"_typeName": "status_t(void*)",
+							"is_variadic": false,
+							"kind": "function",
+							"parameter_types": [{
+								"_typeName": "void*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "void",
+									"builtin_type_kind": "void",
+									"kind": "builtin"
+								}
+							}],
+							"return_type":  {
+								"_typeName": "status_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "status_t",
+									"objects": [{
+										"_fullName": "::stappler::mempool::base::status_t",
+										"_kind": "type alias",
+										"_name": "status_t",
+										"id": 140737089774080,
+										"kind": "type alias",
+										"name": "status_t",
+										"underlying_type": {
+											"_typeName": "custom::Status",
+											"kind": "user_defined",
+											"target": {
+												"name": "custom::Status",
+												"objects": [{
+													"_fullName": "::stappler::mempool::custom::Status",
+													"_kind": "type alias",
+													"_name": "Status",
+													"id": 140737096943696,
+													"kind": "type alias",
+													"name": "Status",
+													"underlying_type": {
+														"_typeName": "int",
+														"builtin_type_kind": "int",
+														"kind": "builtin"
+													}
+												}]
+											}
+										}
+									}]
+								}
+							}
+						}
+					}
+				}, {
+					"_fullName": "::stappler::mempool::base::PoolFlags",
+					"_kind": "type alias",
+					"_name": "PoolFlags",
+					"id": 140737088316080,
+					"kind": "type alias",
+					"name": "PoolFlags",
+					"underlying_type": {
+						"_typeName": "mempool::custom::PoolFlags",
+						"kind": "user_defined",
+						"target": {
+							"name": "mempool::custom::PoolFlags",
+							"objects": [{
+								"_fullName": "::stappler::mempool::custom::PoolFlags",
+								"_kind": "enum",
+								"_name": "PoolFlags",
+								"has_explicit_type": false,
+								"id": 140737151094448,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_scoped": true,
+								"kind": "enum",
+								"name": "PoolFlags",
+								"scope": {
+									"name": "PoolFlags"
+								},
+								"semantic_scope": "",
+								"underlying_type": {
+									"_typeName": "int",
+									"builtin_type_kind": "int",
+									"kind": "builtin"
+								}
+							}]
+						}
+					}
+				}, {
+					"_fullName": "::stappler::mempool::base::get_mapped_regions_count()",
+					"_kind": "function",
+					"_name": "get_mapped_regions_count",
+					"body_kind": "declaration",
+					"id": 140737142745392,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "get_mapped_regions_count",
+					"return_type": {
+						"_typeName": "size_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "size_t"
+						}
+					},
+					"semantic_scope": "",
+					"signature": "()"
+				}, {
+					"_fullName": "::stappler::mempool::base::sp_mmap(void*,size_t,int,int,int,off_t)",
+					"_kind": "function",
+					"_name": "sp_mmap",
+					"body_kind": "declaration",
+					"id": 140737098747968,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "sp_mmap",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "addr",
+						"id": 140737091383072,
+						"kind": "function parameter",
+						"name": "addr",
+						"type": {
+							"_typeName": "void*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "void",
+								"builtin_type_kind": "void",
+								"kind": "builtin"
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "length",
+						"id": 140737097459568,
+						"kind": "function parameter",
+						"name": "length",
+						"type": {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "prot",
+						"id": 93824997925664,
+						"kind": "function parameter",
+						"name": "prot",
+						"type": {
+							"_typeName": "int",
+							"builtin_type_kind": "int",
+							"kind": "builtin"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "flags",
+						"id": 93824997004064,
+						"kind": "function parameter",
+						"name": "flags",
+						"type": {
+							"_typeName": "int",
+							"builtin_type_kind": "int",
+							"kind": "builtin"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "fd",
+						"id": 93824997179888,
+						"kind": "function parameter",
+						"name": "fd",
+						"type": {
+							"_typeName": "int",
+							"builtin_type_kind": "int",
+							"kind": "builtin"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "offset",
+						"id": 93824997736384,
+						"kind": "function parameter",
+						"name": "offset",
+						"type": {
+							"_typeName": "off_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "off_t"
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "void*",
+						"kind": "pointer",
+						"pointee": {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(void*,size_t,int,int,int,off_t)"
+				}, {
+					"_fullName": "::stappler::mempool::base::sp_munmap(void*,size_t)",
+					"_kind": "function",
+					"_name": "sp_munmap",
+					"body_kind": "declaration",
+					"id": 140737109548560,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "sp_munmap",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "addr",
+						"id": 93824996958128,
+						"kind": "function parameter",
+						"name": "addr",
+						"type": {
+							"_typeName": "void*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "void",
+								"builtin_type_kind": "void",
+								"kind": "builtin"
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "length",
+						"id": 93824997179104,
+						"kind": "function parameter",
+						"name": "length",
+						"type": {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "int",
+						"builtin_type_kind": "int",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(void*,size_t)"
+				}],
+				"id": 140737146330112,
+				"is_anonymous": false,
+				"is_inline": false,
+				"is_nested": true,
+				"kind": "namespace",
+				"name": "base",
+				"scope": {
+					"name": "base"
+				}
+			}],
+			"id": 140737146329952,
+			"is_anonymous": false,
+			"is_inline": false,
+			"is_nested": true,
+			"kind": "namespace",
+			"name": "mempool",
+			"scope": {
+				"name": "mempool"
+			}
+		}],
+		"id": 140737146329792,
+		"is_anonymous": false,
+		"is_inline": false,
+		"is_nested": false,
+		"kind": "namespace",
+		"name": "stappler",
+		"scope": {
+			"name": "stappler"
+		}
+	}, {
+		"_fullName": "::stappler",
+		"_kind": "namespace",
+		"_name": "stappler",
+		"childs": [{
+			"_fullName": "::stappler::mempool",
+			"_kind": "namespace",
+			"_name": "mempool",
+			"childs": [{
+				"_fullName": "::stappler::mempool::base",
+				"_kind": "namespace",
+				"_name": "base",
+				"childs": [{
+					"_fullName": "::stappler::mempool::base::pool",
+					"_kind": "namespace",
+					"_name": "pool",
+					"childs": [{
+						"_fullName": "::stappler::mempool::base::pool::acquire()",
+						"_kind": "function",
+						"_name": "acquire",
+						"body_kind": "declaration",
+						"id": 140737142801744,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "acquire",
+						"return_type": {
+							"_typeName": "stappler::mempool::base::pool_t*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::mempool::base::pool_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::mempool::base::pool_t",
+									"objects": [{
+										"_fullName": "::stappler::mempool::base::pool_t",
+										"_kind": "type alias",
+										"_name": "pool_t",
+										"id": 140737142936960,
+										"kind": "type alias",
+										"name": "pool_t",
+										"underlying_type": {
+											"_typeName": "custom::Pool",
+											"kind": "user_defined",
+											"target": {
+												"name": "custom::Pool",
+												"objects": [{
+													"_fullName": "::stappler::mempool::custom::Pool",
+													"_kind": "class",
+													"_name": "Pool",
+													"class_kind": "struct",
+													"id": 93824997822144,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "Pool",
+													"scope": {
+														"name": "Pool"
+													},
+													"semantic_scope": ""
+												}]
+											}
+										}
+									}]
+								}
+							}
+						},
+						"semantic_scope": "",
+						"signature": "()"
+					}, {
+						"_fullName": "::stappler::mempool::base::pool::info()",
+						"_kind": "function",
+						"_name": "info",
+						"body_kind": "declaration",
+						"id": 140737118273680,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "info",
+						"return_type": {
+							"_typeName": "Pair<uint32_t, const void *>",
+							"arguments_exposed": false,
+							"kind": "template_instantiation",
+							"primary_template": {
+								"name": "Pair"
+							},
+							"unexposed_arguments": "uint32_t, const void *"
+						},
+						"semantic_scope": "",
+						"signature": "()"
+					}, {
+						"_fullName": "::stappler::mempool::base::pool::push(stappler::mempool::base::pool_t*)",
+						"_kind": "function",
+						"_name": "push",
+						"body_kind": "declaration",
+						"id": 93824998614992,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "push",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 93824997178432,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::mempool::base::pool_t*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::mempool::base::pool_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::mempool::base::pool_t",
+										"objects": [{
+											"_fullName": "::stappler::mempool::base::pool_t",
+											"_kind": "type alias",
+											"_name": "pool_t",
+											"id": 140737142936960,
+											"kind": "type alias",
+											"name": "pool_t",
+											"underlying_type": {
+												"_typeName": "custom::Pool",
+												"kind": "user_defined",
+												"target": {
+													"name": "custom::Pool",
+													"objects": [{
+														"_fullName": "::stappler::mempool::custom::Pool",
+														"_kind": "class",
+														"_name": "Pool",
+														"class_kind": "struct",
+														"id": 93824997822144,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "Pool",
+														"scope": {
+															"name": "Pool"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}]
+									}
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::mempool::base::pool_t*)"
+					}, {
+						"_fullName": "::stappler::mempool::base::pool::push(stappler::mempool::base::pool_t*,uint32_t,void const*)",
+						"_kind": "function",
+						"_name": "push",
+						"body_kind": "declaration",
+						"id": 93824998617152,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "push",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 93824997043408,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::mempool::base::pool_t*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::mempool::base::pool_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::mempool::base::pool_t",
+										"objects": [{
+											"_fullName": "::stappler::mempool::base::pool_t",
+											"_kind": "type alias",
+											"_name": "pool_t",
+											"id": 140737142936960,
+											"kind": "type alias",
+											"name": "pool_t",
+											"underlying_type": {
+												"_typeName": "custom::Pool",
+												"kind": "user_defined",
+												"target": {
+													"name": "custom::Pool",
+													"objects": [{
+														"_fullName": "::stappler::mempool::custom::Pool",
+														"_kind": "class",
+														"_name": "Pool",
+														"class_kind": "struct",
+														"id": 93824997822144,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "Pool",
+														"scope": {
+															"name": "Pool"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}]
+									}
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 93824997043648,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "uint32_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "uint32_t"
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "",
+							"default_value": {
+								"expression": [{
+									"kind": "keyword",
+									"spelling": "nullptr"
+								}],
+								"kind": "unexposed",
+								"type": {
+									"_typeName": "void const*",
+									"kind": "pointer",
+									"pointee": {
+										"_typeName": "void const",
+										"cv_qualifier": "const",
+										"kind": "cv_qualified",
+										"type": {
+											"_typeName": "void",
+											"builtin_type_kind": "void",
+											"kind": "builtin"
+										}
+									}
+								}
+							},
+							"id": 93824996956176,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "void const*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "void const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "void",
+										"builtin_type_kind": "void",
+										"kind": "builtin"
+									}
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::mempool::base::pool_t*,uint32_t,void const*)"
+					}, {
+						"_fullName": "::stappler::mempool::base::pool::pop()",
+						"_kind": "function",
+						"_name": "pop",
+						"body_kind": "declaration",
+						"id": 93824996956672,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "pop",
+						"return_type": {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "()"
+					}, {
+						"_fullName": "::stappler::mempool::base::pool::foreach_info(void*,bool(*)(void*,stappler::mempool::base::pool_t*,uint32_t,void const*))",
+						"_kind": "function",
+						"_name": "foreach_info",
+						"body_kind": "declaration",
+						"id": 93824997148672,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "foreach_info",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 93824997149040,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "void*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "void",
+									"builtin_type_kind": "void",
+									"kind": "builtin"
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 93824996955424,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "bool(*)(void*,stappler::mempool::base::pool_t*,uint32_t,void const*)",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "bool(void*,stappler::mempool::base::pool_t*,uint32_t,void const*)",
+									"is_variadic": false,
+									"kind": "function",
+									"parameter_types": [{
+										"_typeName": "void*",
+										"kind": "pointer",
+										"pointee": {
+											"_typeName": "void",
+											"builtin_type_kind": "void",
+											"kind": "builtin"
+										}
+									}, {
+										"_typeName": "stappler::mempool::base::pool_t*",
+										"kind": "pointer",
+										"pointee": {
+											"_typeName": "stappler::mempool::base::pool_t",
+											"kind": "user_defined",
+											"target": {
+												"name": "stappler::mempool::base::pool_t",
+												"objects": [{
+													"_fullName": "::stappler::mempool::base::pool_t",
+													"_kind": "type alias",
+													"_name": "pool_t",
+													"id": 140737142936960,
+													"kind": "type alias",
+													"name": "pool_t",
+													"underlying_type": {
+														"_typeName": "custom::Pool",
+														"kind": "user_defined",
+														"target": {
+															"name": "custom::Pool",
+															"objects": [{
+																"_fullName": "::stappler::mempool::custom::Pool",
+																"_kind": "class",
+																"_name": "Pool",
+																"class_kind": "struct",
+																"id": 93824997822144,
+																"is_declaration": false,
+																"is_definition": true,
+																"is_final": false,
+																"kind": "class",
+																"name": "Pool",
+																"scope": {
+																	"name": "Pool"
+																},
+																"semantic_scope": ""
+															}]
+														}
+													}
+												}]
+											}
+										}
+									}, {
+										"_typeName": "uint32_t",
+										"kind": "user_defined",
+										"target": {
+											"name": "uint32_t"
+										}
+									}, {
+										"_typeName": "void const*",
+										"kind": "pointer",
+										"pointee": {
+											"_typeName": "void const",
+											"cv_qualifier": "const",
+											"kind": "cv_qualified",
+											"type": {
+												"_typeName": "void",
+												"builtin_type_kind": "void",
+												"kind": "builtin"
+											}
+										}
+									}],
+									"return_type":  {
+										"_typeName": "bool",
+										"builtin_type_kind": "bool",
+										"kind": "builtin"
+									}
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(void*,bool(*)(void*,stappler::mempool::base::pool_t*,uint32_t,void const*))"
+					}],
+					"id": 93824997922800,
+					"is_anonymous": false,
+					"is_inline": false,
+					"is_nested": true,
+					"kind": "namespace",
+					"name": "pool",
+					"scope": {
+						"name": "pool"
+					}
+				}],
+				"id": 140737088316640,
+				"is_anonymous": false,
+				"is_inline": false,
+				"is_nested": true,
+				"kind": "namespace",
+				"name": "base",
+				"scope": {
+					"name": "base"
+				}
+			}],
+			"id": 140737146330432,
+			"is_anonymous": false,
+			"is_inline": false,
+			"is_nested": true,
+			"kind": "namespace",
+			"name": "mempool",
+			"scope": {
+				"name": "mempool"
+			}
+		}],
+		"id": 140737146330272,
+		"is_anonymous": false,
+		"is_inline": false,
+		"is_nested": false,
+		"kind": "namespace",
+		"name": "stappler",
+		"scope": {
+			"name": "stappler"
+		}
+	}, {
+		"_fullName": "::stappler",
+		"_kind": "namespace",
+		"_name": "stappler",
+		"childs": [{
+			"_fullName": "::stappler::mempool",
+			"_kind": "namespace",
+			"_name": "mempool",
+			"childs": [{
+				"_fullName": "::stappler::mempool::base",
+				"_kind": "namespace",
+				"_name": "base",
+				"childs": [{
+					"_fullName": "::stappler::mempool::base::allocator",
+					"_kind": "namespace",
+					"_name": "allocator",
+					"childs": [{
+						"_fullName": "::stappler::mempool::base::allocator::create(bool)",
+						"_kind": "function",
+						"_name": "create",
+						"body_kind": "declaration",
+						"id": 93824997361680,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "create",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "custom",
+							"default_value": {
+								"expression": [{
+									"kind": "keyword",
+									"spelling": "false"
+								}],
+								"kind": "unexposed",
+								"type": {
+									"_typeName": "bool",
+									"builtin_type_kind": "bool",
+									"kind": "builtin"
+								}
+							},
+							"id": 93824997146848,
+							"kind": "function parameter",
+							"name": "custom",
+							"type": {
+								"_typeName": "bool",
+								"builtin_type_kind": "bool",
+								"kind": "builtin"
+							}
+						}],
+						"return_type":  {
+							"_typeName": "stappler::mempool::base::allocator_t*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::mempool::base::allocator_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::mempool::base::allocator_t",
+									"objects": [{
+										"_fullName": "::stappler::mempool::base::allocator_t",
+										"_kind": "type alias",
+										"_name": "allocator_t",
+										"id": 140737141796640,
+										"kind": "type alias",
+										"name": "allocator_t",
+										"underlying_type": {
+											"_typeName": "custom::Allocator",
+											"kind": "user_defined",
+											"target": {
+												"name": "custom::Allocator",
+												"objects": [{
+													"_fullName": "::stappler::mempool::custom::Allocator",
+													"_kind": "class",
+													"_name": "Allocator",
+													"class_kind": "struct",
+													"id": 93824998908352,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "Allocator",
+													"scope": {
+														"name": "Allocator"
+													},
+													"semantic_scope": ""
+												}]
+											}
+										}
+									}]
+								}
+							}
+						},
+						"semantic_scope": "",
+						"signature": "(bool)"
+					}, {
+						"_fullName": "::stappler::mempool::base::allocator::create(void*)",
+						"_kind": "function",
+						"_name": "create",
+						"body_kind": "declaration",
+						"id": 93824996957232,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "create",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "mutex",
+							"id": 93824996957664,
+							"kind": "function parameter",
+							"name": "mutex",
+							"type": {
+								"_typeName": "void*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "void",
+									"builtin_type_kind": "void",
+									"kind": "builtin"
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "stappler::mempool::base::allocator_t*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::mempool::base::allocator_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::mempool::base::allocator_t",
+									"objects": [{
+										"_fullName": "::stappler::mempool::base::allocator_t",
+										"_kind": "type alias",
+										"_name": "allocator_t",
+										"id": 140737141796640,
+										"kind": "type alias",
+										"name": "allocator_t",
+										"underlying_type": {
+											"_typeName": "custom::Allocator",
+											"kind": "user_defined",
+											"target": {
+												"name": "custom::Allocator",
+												"objects": [{
+													"_fullName": "::stappler::mempool::custom::Allocator",
+													"_kind": "class",
+													"_name": "Allocator",
+													"class_kind": "struct",
+													"id": 93824998908352,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "Allocator",
+													"scope": {
+														"name": "Allocator"
+													},
+													"semantic_scope": ""
+												}]
+											}
+										}
+									}]
+								}
+							}
+						},
+						"semantic_scope": "",
+						"signature": "(void*)"
+					}, {
+						"_fullName": "::stappler::mempool::base::allocator::createWithMmap(uint32_t)",
+						"_kind": "function",
+						"_name": "createWithMmap",
+						"body_kind": "declaration",
+						"id": 93824996855536,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "createWithMmap",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "initialPages",
+							"default_value": {
+								"expression": [{
+									"kind": "int_literal",
+									"spelling": "0"
+								}],
+								"kind": "unexposed",
+								"type": {
+									"_typeName": "uint32_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "uint32_t"
+									}
+								}
+							},
+							"id": 93824996856000,
+							"kind": "function parameter",
+							"name": "initialPages",
+							"type": {
+								"_typeName": "uint32_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "uint32_t"
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "stappler::mempool::base::allocator_t*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::mempool::base::allocator_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::mempool::base::allocator_t",
+									"objects": [{
+										"_fullName": "::stappler::mempool::base::allocator_t",
+										"_kind": "type alias",
+										"_name": "allocator_t",
+										"id": 140737141796640,
+										"kind": "type alias",
+										"name": "allocator_t",
+										"underlying_type": {
+											"_typeName": "custom::Allocator",
+											"kind": "user_defined",
+											"target": {
+												"name": "custom::Allocator",
+												"objects": [{
+													"_fullName": "::stappler::mempool::custom::Allocator",
+													"_kind": "class",
+													"_name": "Allocator",
+													"class_kind": "struct",
+													"id": 93824998908352,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "Allocator",
+													"scope": {
+														"name": "Allocator"
+													},
+													"semantic_scope": ""
+												}]
+											}
+										}
+									}]
+								}
+							}
+						},
+						"semantic_scope": "",
+						"signature": "(uint32_t)"
+					}, {
+						"_fullName": "::stappler::mempool::base::allocator::owner_set(stappler::mempool::base::allocator_t*,stappler::mempool::base::pool_t*)",
+						"_kind": "function",
+						"_name": "owner_set",
+						"body_kind": "declaration",
+						"id": 93824998616128,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "owner_set",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "alloc",
+							"id": 93824996856192,
+							"kind": "function parameter",
+							"name": "alloc",
+							"type": {
+								"_typeName": "stappler::mempool::base::allocator_t*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::mempool::base::allocator_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::mempool::base::allocator_t",
+										"objects": [{
+											"_fullName": "::stappler::mempool::base::allocator_t",
+											"_kind": "type alias",
+											"_name": "allocator_t",
+											"id": 140737141796640,
+											"kind": "type alias",
+											"name": "allocator_t",
+											"underlying_type": {
+												"_typeName": "custom::Allocator",
+												"kind": "user_defined",
+												"target": {
+													"name": "custom::Allocator",
+													"objects": [{
+														"_fullName": "::stappler::mempool::custom::Allocator",
+														"_kind": "class",
+														"_name": "Allocator",
+														"class_kind": "struct",
+														"id": 93824998908352,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "Allocator",
+														"scope": {
+															"name": "Allocator"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}]
+									}
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "pool",
+							"id": 93824998561184,
+							"kind": "function parameter",
+							"name": "pool",
+							"type": {
+								"_typeName": "stappler::mempool::base::pool_t*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::mempool::base::pool_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::mempool::base::pool_t",
+										"objects": [{
+											"_fullName": "::stappler::mempool::base::pool_t",
+											"_kind": "type alias",
+											"_name": "pool_t",
+											"id": 140737142936960,
+											"kind": "type alias",
+											"name": "pool_t",
+											"underlying_type": {
+												"_typeName": "custom::Pool",
+												"kind": "user_defined",
+												"target": {
+													"name": "custom::Pool",
+													"objects": [{
+														"_fullName": "::stappler::mempool::custom::Pool",
+														"_kind": "class",
+														"_name": "Pool",
+														"class_kind": "struct",
+														"id": 93824997822144,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "Pool",
+														"scope": {
+															"name": "Pool"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}]
+									}
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::mempool::base::allocator_t*,stappler::mempool::base::pool_t*)"
+					}, {
+						"_fullName": "::stappler::mempool::base::allocator::owner_get(stappler::mempool::base::allocator_t*)",
+						"_kind": "function",
+						"_name": "owner_get",
+						"body_kind": "declaration",
+						"id": 93824998561616,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "owner_get",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "alloc",
+							"id": 93824996662208,
+							"kind": "function parameter",
+							"name": "alloc",
+							"type": {
+								"_typeName": "stappler::mempool::base::allocator_t*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::mempool::base::allocator_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::mempool::base::allocator_t",
+										"objects": [{
+											"_fullName": "::stappler::mempool::base::allocator_t",
+											"_kind": "type alias",
+											"_name": "allocator_t",
+											"id": 140737141796640,
+											"kind": "type alias",
+											"name": "allocator_t",
+											"underlying_type": {
+												"_typeName": "custom::Allocator",
+												"kind": "user_defined",
+												"target": {
+													"name": "custom::Allocator",
+													"objects": [{
+														"_fullName": "::stappler::mempool::custom::Allocator",
+														"_kind": "class",
+														"_name": "Allocator",
+														"class_kind": "struct",
+														"id": 93824998908352,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "Allocator",
+														"scope": {
+															"name": "Allocator"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}]
+									}
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "stappler::mempool::base::pool_t*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::mempool::base::pool_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::mempool::base::pool_t",
+									"objects": [{
+										"_fullName": "::stappler::mempool::base::pool_t",
+										"_kind": "type alias",
+										"_name": "pool_t",
+										"id": 140737142936960,
+										"kind": "type alias",
+										"name": "pool_t",
+										"underlying_type": {
+											"_typeName": "custom::Pool",
+											"kind": "user_defined",
+											"target": {
+												"name": "custom::Pool",
+												"objects": [{
+													"_fullName": "::stappler::mempool::custom::Pool",
+													"_kind": "class",
+													"_name": "Pool",
+													"class_kind": "struct",
+													"id": 93824997822144,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "Pool",
+													"scope": {
+														"name": "Pool"
+													},
+													"semantic_scope": ""
+												}]
+											}
+										}
+									}]
+								}
+							}
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::mempool::base::allocator_t*)"
+					}, {
+						"_fullName": "::stappler::mempool::base::allocator::max_free_set(stappler::mempool::base::allocator_t*,size_t)",
+						"_kind": "function",
+						"_name": "max_free_set",
+						"body_kind": "declaration",
+						"id": 93824996662400,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "max_free_set",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "alloc",
+							"id": 93824996662960,
+							"kind": "function parameter",
+							"name": "alloc",
+							"type": {
+								"_typeName": "stappler::mempool::base::allocator_t*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::mempool::base::allocator_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::mempool::base::allocator_t",
+										"objects": [{
+											"_fullName": "::stappler::mempool::base::allocator_t",
+											"_kind": "type alias",
+											"_name": "allocator_t",
+											"id": 140737141796640,
+											"kind": "type alias",
+											"name": "allocator_t",
+											"underlying_type": {
+												"_typeName": "custom::Allocator",
+												"kind": "user_defined",
+												"target": {
+													"name": "custom::Allocator",
+													"objects": [{
+														"_fullName": "::stappler::mempool::custom::Allocator",
+														"_kind": "class",
+														"_name": "Allocator",
+														"class_kind": "struct",
+														"id": 93824998908352,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "Allocator",
+														"scope": {
+															"name": "Allocator"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}]
+									}
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "size",
+							"id": 93824996854176,
+							"kind": "function parameter",
+							"name": "size",
+							"type": {
+								"_typeName": "size_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "size_t"
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::mempool::base::allocator_t*,size_t)"
+					}, {
+						"_fullName": "::stappler::mempool::base::allocator::destroy(stappler::mempool::base::allocator_t*)",
+						"_kind": "function",
+						"_name": "destroy",
+						"body_kind": "declaration",
+						"id": 93824996854416,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "destroy",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 93824996854976,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::mempool::base::allocator_t*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::mempool::base::allocator_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::mempool::base::allocator_t",
+										"objects": [{
+											"_fullName": "::stappler::mempool::base::allocator_t",
+											"_kind": "type alias",
+											"_name": "allocator_t",
+											"id": 140737141796640,
+											"kind": "type alias",
+											"name": "allocator_t",
+											"underlying_type": {
+												"_typeName": "custom::Allocator",
+												"kind": "user_defined",
+												"target": {
+													"name": "custom::Allocator",
+													"objects": [{
+														"_fullName": "::stappler::mempool::custom::Allocator",
+														"_kind": "class",
+														"_name": "Allocator",
+														"class_kind": "struct",
+														"id": 93824998908352,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "Allocator",
+														"scope": {
+															"name": "Allocator"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}]
+									}
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::mempool::base::allocator_t*)"
+					}],
+					"id": 93824996664688,
+					"is_anonymous": false,
+					"is_inline": false,
+					"is_nested": true,
+					"kind": "namespace",
+					"name": "allocator",
+					"scope": {
+						"name": "allocator"
+					}
+				}],
+				"id": 93824997052016,
+				"is_anonymous": false,
+				"is_inline": false,
+				"is_nested": true,
+				"kind": "namespace",
+				"name": "base",
+				"scope": {
+					"name": "base"
+				}
+			}],
+			"id": 93824996664528,
+			"is_anonymous": false,
+			"is_inline": false,
+			"is_nested": true,
+			"kind": "namespace",
+			"name": "mempool",
+			"scope": {
+				"name": "mempool"
+			}
+		}],
+		"id": 93824996663648,
+		"is_anonymous": false,
+		"is_inline": false,
+		"is_nested": false,
+		"kind": "namespace",
+		"name": "stappler",
+		"scope": {
+			"name": "stappler"
+		}
+	}, {
+		"_fullName": "::stappler",
+		"_kind": "namespace",
+		"_name": "stappler",
+		"childs": [{
+			"_fullName": "::stappler::mempool",
+			"_kind": "namespace",
+			"_name": "mempool",
+			"childs": [{
+				"_fullName": "::stappler::mempool::base",
+				"_kind": "namespace",
+				"_name": "base",
+				"childs": [{
+					"_fullName": "::stappler::mempool::base::pool",
+					"_kind": "namespace",
+					"_name": "pool",
+					"childs": [{
+						"_fullName": "::stappler::mempool::base::pool::PoolFlags",
+						"_kind": "type alias",
+						"_name": "PoolFlags",
+						"id": 93824997177760,
+						"kind": "type alias",
+						"name": "PoolFlags",
+						"underlying_type": {
+							"_typeName": "custom::PoolFlags",
+							"kind": "user_defined",
+							"target": {
+								"name": "custom::PoolFlags",
+								"objects": [{
+									"_fullName": "::stappler::mempool::custom::PoolFlags",
+									"_kind": "enum",
+									"_name": "PoolFlags",
+									"has_explicit_type": false,
+									"id": 140737151094448,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_scoped": true,
+									"kind": "enum",
+									"name": "PoolFlags",
+									"scope": {
+										"name": "PoolFlags"
+									},
+									"semantic_scope": "",
+									"underlying_type": {
+										"_typeName": "int",
+										"builtin_type_kind": "int",
+										"kind": "builtin"
+									}
+								}]
+							}
+						}
+					}, {
+						"_fullName": "::stappler::mempool::base::pool::Info",
+						"_kind": "enum",
+						"_name": "Info",
+						"childs": [{
+							"_fullName": "::stappler::mempool::base::pool::Info::Pool",
+							"_kind": "enum value",
+							"_name": "Pool",
+							"id": 93824997178064,
+							"kind": "enum value",
+							"name": "Pool",
+							"value": {
+								"expression": [{
+									"kind": "int_literal",
+									"spelling": "0"
+								}],
+								"kind": "unexposed",
+								"type": {
+									"_typeName": "uint32_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "uint32_t"
+									}
+								}
+							}
+						}, {
+							"_fullName": "::stappler::mempool::base::pool::Info::Request",
+							"_kind": "enum value",
+							"_name": "Request",
+							"id": 93824997387360,
+							"kind": "enum value",
+							"name": "Request",
+							"value": {
+								"expression": [{
+									"kind": "int_literal",
+									"spelling": "1"
+								}],
+								"kind": "unexposed",
+								"type": {
+									"_typeName": "uint32_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "uint32_t"
+									}
+								}
+							}
+						}, {
+							"_fullName": "::stappler::mempool::base::pool::Info::Connection",
+							"_kind": "enum value",
+							"_name": "Connection",
+							"id": 93824997387648,
+							"kind": "enum value",
+							"name": "Connection",
+							"value": {
+								"expression": [{
+									"kind": "int_literal",
+									"spelling": "2"
+								}],
+								"kind": "unexposed",
+								"type": {
+									"_typeName": "uint32_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "uint32_t"
+									}
+								}
+							}
+						}, {
+							"_fullName": "::stappler::mempool::base::pool::Info::Server",
+							"_kind": "enum value",
+							"_name": "Server",
+							"id": 93824997150448,
+							"kind": "enum value",
+							"name": "Server",
+							"value": {
+								"expression": [{
+									"kind": "int_literal",
+									"spelling": "3"
+								}],
+								"kind": "unexposed",
+								"type": {
+									"_typeName": "uint32_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "uint32_t"
+									}
+								}
+							}
+						}, {
+							"_fullName": "::stappler::mempool::base::pool::Info::Template",
+							"_kind": "enum value",
+							"_name": "Template",
+							"id": 93824997150640,
+							"kind": "enum value",
+							"name": "Template"
+						}, {
+							"_fullName": "::stappler::mempool::base::pool::Info::Config",
+							"_kind": "enum value",
+							"_name": "Config",
+							"id": 93824997176704,
+							"kind": "enum value",
+							"name": "Config"
+						}, {
+							"_fullName": "::stappler::mempool::base::pool::Info::Task",
+							"_kind": "enum value",
+							"_name": "Task",
+							"id": 93824997176896,
+							"kind": "enum value",
+							"name": "Task"
+						}, {
+							"_fullName": "::stappler::mempool::base::pool::Info::SharedObject",
+							"_kind": "enum value",
+							"_name": "SharedObject",
+							"id": 93824997177088,
+							"kind": "enum value",
+							"name": "SharedObject"
+						}, {
+							"_fullName": "::stappler::mempool::base::pool::Info::Socket",
+							"_kind": "enum value",
+							"_name": "Socket",
+							"id": 93824997177280,
+							"kind": "enum value",
+							"name": "Socket"
+						}, {
+							"_fullName": "::stappler::mempool::base::pool::Info::Broadcast",
+							"_kind": "enum value",
+							"_name": "Broadcast",
+							"id": 93824997149344,
+							"kind": "enum value",
+							"name": "Broadcast"
+						}],
+						"has_explicit_type": true,
+						"id": 140737115547504,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_scoped": false,
+						"kind": "enum",
+						"name": "Info",
+						"semantic_scope": "",
+						"underlying_type": {
+							"_typeName": "uint32_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "uint32_t"
+							}
+						}
+					}, {
+						"_fullName": "::stappler::mempool::base::pool::initialize()",
+						"_kind": "function",
+						"_name": "initialize",
+						"body_kind": "declaration",
+						"id": 93824997149632,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "initialize",
+						"return_type": {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "()"
+					}, {
+						"_fullName": "::stappler::mempool::base::pool::terminate()",
+						"_kind": "function",
+						"_name": "terminate",
+						"body_kind": "declaration",
+						"id": 93824997393600,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "terminate",
+						"return_type": {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "()"
+					}, {
+						"_fullName": "::stappler::mempool::base::pool::create(stappler::mempool::base::pool::PoolFlags)",
+						"_kind": "function",
+						"_name": "create",
+						"body_kind": "declaration",
+						"id": 93824997394208,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "create",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "",
+							"default_value": {
+								"expression": [{
+									"kind": "identifier",
+									"spelling": "PoolFlags"
+								}, {
+									"kind": "punctuation",
+									"spelling": "::"
+								}, {
+									"kind": "identifier",
+									"spelling": "Default"
+								}],
+								"kind": "unexposed",
+								"type": {
+									"_typeName": "stappler::mempool::base::pool::PoolFlags",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::mempool::base::pool::PoolFlags",
+										"objects": [{
+											"_fullName": "::stappler::mempool::base::pool::PoolFlags",
+											"_kind": "type alias",
+											"_name": "PoolFlags",
+											"id": 93824997177760,
+											"kind": "type alias",
+											"name": "PoolFlags",
+											"underlying_type": {
+												"_typeName": "custom::PoolFlags",
+												"kind": "user_defined",
+												"target": {
+													"name": "custom::PoolFlags",
+													"objects": [{
+														"_fullName": "::stappler::mempool::custom::PoolFlags",
+														"_kind": "enum",
+														"_name": "PoolFlags",
+														"has_explicit_type": false,
+														"id": 140737151094448,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_scoped": true,
+														"kind": "enum",
+														"name": "PoolFlags",
+														"scope": {
+															"name": "PoolFlags"
+														},
+														"semantic_scope": "",
+														"underlying_type": {
+															"_typeName": "int",
+															"builtin_type_kind": "int",
+															"kind": "builtin"
+														}
+													}]
+												}
+											}
+										}]
+									}
+								}
+							},
+							"id": 93824997150000,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::mempool::base::pool::PoolFlags",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::mempool::base::pool::PoolFlags",
+									"objects": [{
+										"_fullName": "::stappler::mempool::base::pool::PoolFlags",
+										"_kind": "type alias",
+										"_name": "PoolFlags",
+										"id": 93824997177760,
+										"kind": "type alias",
+										"name": "PoolFlags",
+										"underlying_type": {
+											"_typeName": "custom::PoolFlags",
+											"kind": "user_defined",
+											"target": {
+												"name": "custom::PoolFlags",
+												"objects": [{
+													"_fullName": "::stappler::mempool::custom::PoolFlags",
+													"_kind": "enum",
+													"_name": "PoolFlags",
+													"has_explicit_type": false,
+													"id": 140737151094448,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_scoped": true,
+													"kind": "enum",
+													"name": "PoolFlags",
+													"scope": {
+														"name": "PoolFlags"
+													},
+													"semantic_scope": "",
+													"underlying_type": {
+														"_typeName": "int",
+														"builtin_type_kind": "int",
+														"kind": "builtin"
+													}
+												}]
+											}
+										}
+									}]
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "stappler::mempool::base::pool_t*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::mempool::base::pool_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::mempool::base::pool_t",
+									"objects": [{
+										"_fullName": "::stappler::mempool::base::pool_t",
+										"_kind": "type alias",
+										"_name": "pool_t",
+										"id": 140737142936960,
+										"kind": "type alias",
+										"name": "pool_t",
+										"underlying_type": {
+											"_typeName": "custom::Pool",
+											"kind": "user_defined",
+											"target": {
+												"name": "custom::Pool",
+												"objects": [{
+													"_fullName": "::stappler::mempool::custom::Pool",
+													"_kind": "class",
+													"_name": "Pool",
+													"class_kind": "struct",
+													"id": 93824997822144,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "Pool",
+													"scope": {
+														"name": "Pool"
+													},
+													"semantic_scope": ""
+												}]
+											}
+										}
+									}]
+								}
+							}
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::mempool::base::pool::PoolFlags)"
+					}, {
+						"_fullName": "::stappler::mempool::base::pool::create(stappler::mempool::base::allocator_t*,stappler::mempool::base::pool::PoolFlags)",
+						"_kind": "function",
+						"_name": "create",
+						"body_kind": "declaration",
+						"id": 93824998463952,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "create",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 93824998464464,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::mempool::base::allocator_t*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::mempool::base::allocator_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::mempool::base::allocator_t",
+										"objects": [{
+											"_fullName": "::stappler::mempool::base::allocator_t",
+											"_kind": "type alias",
+											"_name": "allocator_t",
+											"id": 140737141796640,
+											"kind": "type alias",
+											"name": "allocator_t",
+											"underlying_type": {
+												"_typeName": "custom::Allocator",
+												"kind": "user_defined",
+												"target": {
+													"name": "custom::Allocator",
+													"objects": [{
+														"_fullName": "::stappler::mempool::custom::Allocator",
+														"_kind": "class",
+														"_name": "Allocator",
+														"class_kind": "struct",
+														"id": 93824998908352,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "Allocator",
+														"scope": {
+															"name": "Allocator"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}]
+									}
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "",
+							"default_value": {
+								"expression": [{
+									"kind": "identifier",
+									"spelling": "PoolFlags"
+								}, {
+									"kind": "punctuation",
+									"spelling": "::"
+								}, {
+									"kind": "identifier",
+									"spelling": "Default"
+								}],
+								"kind": "unexposed",
+								"type": {
+									"_typeName": "stappler::mempool::base::pool::PoolFlags",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::mempool::base::pool::PoolFlags",
+										"objects": [{
+											"_fullName": "::stappler::mempool::base::pool::PoolFlags",
+											"_kind": "type alias",
+											"_name": "PoolFlags",
+											"id": 93824997177760,
+											"kind": "type alias",
+											"name": "PoolFlags",
+											"underlying_type": {
+												"_typeName": "custom::PoolFlags",
+												"kind": "user_defined",
+												"target": {
+													"name": "custom::PoolFlags",
+													"objects": [{
+														"_fullName": "::stappler::mempool::custom::PoolFlags",
+														"_kind": "enum",
+														"_name": "PoolFlags",
+														"has_explicit_type": false,
+														"id": 140737151094448,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_scoped": true,
+														"kind": "enum",
+														"name": "PoolFlags",
+														"scope": {
+															"name": "PoolFlags"
+														},
+														"semantic_scope": "",
+														"underlying_type": {
+															"_typeName": "int",
+															"builtin_type_kind": "int",
+															"kind": "builtin"
+														}
+													}]
+												}
+											}
+										}]
+									}
+								}
+							},
+							"id": 93824998464960,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::mempool::base::pool::PoolFlags",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::mempool::base::pool::PoolFlags",
+									"objects": [{
+										"_fullName": "::stappler::mempool::base::pool::PoolFlags",
+										"_kind": "type alias",
+										"_name": "PoolFlags",
+										"id": 93824997177760,
+										"kind": "type alias",
+										"name": "PoolFlags",
+										"underlying_type": {
+											"_typeName": "custom::PoolFlags",
+											"kind": "user_defined",
+											"target": {
+												"name": "custom::PoolFlags",
+												"objects": [{
+													"_fullName": "::stappler::mempool::custom::PoolFlags",
+													"_kind": "enum",
+													"_name": "PoolFlags",
+													"has_explicit_type": false,
+													"id": 140737151094448,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_scoped": true,
+													"kind": "enum",
+													"name": "PoolFlags",
+													"scope": {
+														"name": "PoolFlags"
+													},
+													"semantic_scope": "",
+													"underlying_type": {
+														"_typeName": "int",
+														"builtin_type_kind": "int",
+														"kind": "builtin"
+													}
+												}]
+											}
+										}
+									}]
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "stappler::mempool::base::pool_t*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::mempool::base::pool_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::mempool::base::pool_t",
+									"objects": [{
+										"_fullName": "::stappler::mempool::base::pool_t",
+										"_kind": "type alias",
+										"_name": "pool_t",
+										"id": 140737142936960,
+										"kind": "type alias",
+										"name": "pool_t",
+										"underlying_type": {
+											"_typeName": "custom::Pool",
+											"kind": "user_defined",
+											"target": {
+												"name": "custom::Pool",
+												"objects": [{
+													"_fullName": "::stappler::mempool::custom::Pool",
+													"_kind": "class",
+													"_name": "Pool",
+													"class_kind": "struct",
+													"id": 93824997822144,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "Pool",
+													"scope": {
+														"name": "Pool"
+													},
+													"semantic_scope": ""
+												}]
+											}
+										}
+									}]
+								}
+							}
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::mempool::base::allocator_t*,stappler::mempool::base::pool::PoolFlags)"
+					}, {
+						"_fullName": "::stappler::mempool::base::pool::create(stappler::mempool::base::pool_t*)",
+						"_kind": "function",
+						"_name": "create",
+						"body_kind": "declaration",
+						"id": 93824998465312,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "create",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 93824997044784,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::mempool::base::pool_t*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::mempool::base::pool_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::mempool::base::pool_t",
+										"objects": [{
+											"_fullName": "::stappler::mempool::base::pool_t",
+											"_kind": "type alias",
+											"_name": "pool_t",
+											"id": 140737142936960,
+											"kind": "type alias",
+											"name": "pool_t",
+											"underlying_type": {
+												"_typeName": "custom::Pool",
+												"kind": "user_defined",
+												"target": {
+													"name": "custom::Pool",
+													"objects": [{
+														"_fullName": "::stappler::mempool::custom::Pool",
+														"_kind": "class",
+														"_name": "Pool",
+														"class_kind": "struct",
+														"id": 93824997822144,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "Pool",
+														"scope": {
+															"name": "Pool"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}]
+									}
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "stappler::mempool::base::pool_t*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::mempool::base::pool_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::mempool::base::pool_t",
+									"objects": [{
+										"_fullName": "::stappler::mempool::base::pool_t",
+										"_kind": "type alias",
+										"_name": "pool_t",
+										"id": 140737142936960,
+										"kind": "type alias",
+										"name": "pool_t",
+										"underlying_type": {
+											"_typeName": "custom::Pool",
+											"kind": "user_defined",
+											"target": {
+												"name": "custom::Pool",
+												"objects": [{
+													"_fullName": "::stappler::mempool::custom::Pool",
+													"_kind": "class",
+													"_name": "Pool",
+													"class_kind": "struct",
+													"id": 93824997822144,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "Pool",
+													"scope": {
+														"name": "Pool"
+													},
+													"semantic_scope": ""
+												}]
+											}
+										}
+									}]
+								}
+							}
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::mempool::base::pool_t*)"
+					}, {
+						"_fullName": "::stappler::mempool::base::pool::createTagged(char const*,stappler::mempool::base::pool::PoolFlags)",
+						"_kind": "function",
+						"_name": "createTagged",
+						"body_kind": "declaration",
+						"id": 93824997045168,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "createTagged",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 93824997045488,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "char const*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "char const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "char",
+										"builtin_type_kind": "char",
+										"kind": "builtin"
+									}
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "",
+							"default_value": {
+								"expression": [{
+									"kind": "identifier",
+									"spelling": "PoolFlags"
+								}, {
+									"kind": "punctuation",
+									"spelling": "::"
+								}, {
+									"kind": "identifier",
+									"spelling": "Default"
+								}],
+								"kind": "unexposed",
+								"type": {
+									"_typeName": "stappler::mempool::base::pool::PoolFlags",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::mempool::base::pool::PoolFlags",
+										"objects": [{
+											"_fullName": "::stappler::mempool::base::pool::PoolFlags",
+											"_kind": "type alias",
+											"_name": "PoolFlags",
+											"id": 93824997177760,
+											"kind": "type alias",
+											"name": "PoolFlags",
+											"underlying_type": {
+												"_typeName": "custom::PoolFlags",
+												"kind": "user_defined",
+												"target": {
+													"name": "custom::PoolFlags",
+													"objects": [{
+														"_fullName": "::stappler::mempool::custom::PoolFlags",
+														"_kind": "enum",
+														"_name": "PoolFlags",
+														"has_explicit_type": false,
+														"id": 140737151094448,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_scoped": true,
+														"kind": "enum",
+														"name": "PoolFlags",
+														"scope": {
+															"name": "PoolFlags"
+														},
+														"semantic_scope": "",
+														"underlying_type": {
+															"_typeName": "int",
+															"builtin_type_kind": "int",
+															"kind": "builtin"
+														}
+													}]
+												}
+											}
+										}]
+									}
+								}
+							},
+							"id": 93824997046096,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::mempool::base::pool::PoolFlags",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::mempool::base::pool::PoolFlags",
+									"objects": [{
+										"_fullName": "::stappler::mempool::base::pool::PoolFlags",
+										"_kind": "type alias",
+										"_name": "PoolFlags",
+										"id": 93824997177760,
+										"kind": "type alias",
+										"name": "PoolFlags",
+										"underlying_type": {
+											"_typeName": "custom::PoolFlags",
+											"kind": "user_defined",
+											"target": {
+												"name": "custom::PoolFlags",
+												"objects": [{
+													"_fullName": "::stappler::mempool::custom::PoolFlags",
+													"_kind": "enum",
+													"_name": "PoolFlags",
+													"has_explicit_type": false,
+													"id": 140737151094448,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_scoped": true,
+													"kind": "enum",
+													"name": "PoolFlags",
+													"scope": {
+														"name": "PoolFlags"
+													},
+													"semantic_scope": "",
+													"underlying_type": {
+														"_typeName": "int",
+														"builtin_type_kind": "int",
+														"kind": "builtin"
+													}
+												}]
+											}
+										}
+									}]
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "stappler::mempool::base::pool_t*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::mempool::base::pool_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::mempool::base::pool_t",
+									"objects": [{
+										"_fullName": "::stappler::mempool::base::pool_t",
+										"_kind": "type alias",
+										"_name": "pool_t",
+										"id": 140737142936960,
+										"kind": "type alias",
+										"name": "pool_t",
+										"underlying_type": {
+											"_typeName": "custom::Pool",
+											"kind": "user_defined",
+											"target": {
+												"name": "custom::Pool",
+												"objects": [{
+													"_fullName": "::stappler::mempool::custom::Pool",
+													"_kind": "class",
+													"_name": "Pool",
+													"class_kind": "struct",
+													"id": 93824997822144,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "Pool",
+													"scope": {
+														"name": "Pool"
+													},
+													"semantic_scope": ""
+												}]
+											}
+										}
+									}]
+								}
+							}
+						},
+						"semantic_scope": "",
+						"signature": "(char const*,stappler::mempool::base::pool::PoolFlags)"
+					}, {
+						"_fullName": "::stappler::mempool::base::pool::createTagged(stappler::mempool::base::pool_t*,char const*)",
+						"_kind": "function",
+						"_name": "createTagged",
+						"body_kind": "declaration",
+						"id": 93824997920512,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "createTagged",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 93824997921120,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::mempool::base::pool_t*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::mempool::base::pool_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::mempool::base::pool_t",
+										"objects": [{
+											"_fullName": "::stappler::mempool::base::pool_t",
+											"_kind": "type alias",
+											"_name": "pool_t",
+											"id": 140737142936960,
+											"kind": "type alias",
+											"name": "pool_t",
+											"underlying_type": {
+												"_typeName": "custom::Pool",
+												"kind": "user_defined",
+												"target": {
+													"name": "custom::Pool",
+													"objects": [{
+														"_fullName": "::stappler::mempool::custom::Pool",
+														"_kind": "class",
+														"_name": "Pool",
+														"class_kind": "struct",
+														"id": 93824997822144,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "Pool",
+														"scope": {
+															"name": "Pool"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}]
+									}
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 93824997921312,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "char const*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "char const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "char",
+										"builtin_type_kind": "char",
+										"kind": "builtin"
+									}
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "stappler::mempool::base::pool_t*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::mempool::base::pool_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::mempool::base::pool_t",
+									"objects": [{
+										"_fullName": "::stappler::mempool::base::pool_t",
+										"_kind": "type alias",
+										"_name": "pool_t",
+										"id": 140737142936960,
+										"kind": "type alias",
+										"name": "pool_t",
+										"underlying_type": {
+											"_typeName": "custom::Pool",
+											"kind": "user_defined",
+											"target": {
+												"name": "custom::Pool",
+												"objects": [{
+													"_fullName": "::stappler::mempool::custom::Pool",
+													"_kind": "class",
+													"_name": "Pool",
+													"class_kind": "struct",
+													"id": 93824997822144,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "Pool",
+													"scope": {
+														"name": "Pool"
+													},
+													"semantic_scope": ""
+												}]
+											}
+										}
+									}]
+								}
+							}
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::mempool::base::pool_t*,char const*)"
+					}, {
+						"_fullName": "::stappler::mempool::base::pool::destroy(stappler::mempool::base::pool_t*)",
+						"_kind": "function",
+						"_name": "destroy",
+						"body_kind": "declaration",
+						"id": 93824997921552,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "destroy",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 93824997922112,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::mempool::base::pool_t*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::mempool::base::pool_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::mempool::base::pool_t",
+										"objects": [{
+											"_fullName": "::stappler::mempool::base::pool_t",
+											"_kind": "type alias",
+											"_name": "pool_t",
+											"id": 140737142936960,
+											"kind": "type alias",
+											"name": "pool_t",
+											"underlying_type": {
+												"_typeName": "custom::Pool",
+												"kind": "user_defined",
+												"target": {
+													"name": "custom::Pool",
+													"objects": [{
+														"_fullName": "::stappler::mempool::custom::Pool",
+														"_kind": "class",
+														"_name": "Pool",
+														"class_kind": "struct",
+														"id": 93824997822144,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "Pool",
+														"scope": {
+															"name": "Pool"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}]
+									}
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::mempool::base::pool_t*)"
+					}, {
+						"_fullName": "::stappler::mempool::base::pool::clear(stappler::mempool::base::pool_t*)",
+						"_kind": "function",
+						"_name": "clear",
+						"body_kind": "declaration",
+						"id": 93824996652976,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "clear",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 93824996653488,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::mempool::base::pool_t*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::mempool::base::pool_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::mempool::base::pool_t",
+										"objects": [{
+											"_fullName": "::stappler::mempool::base::pool_t",
+											"_kind": "type alias",
+											"_name": "pool_t",
+											"id": 140737142936960,
+											"kind": "type alias",
+											"name": "pool_t",
+											"underlying_type": {
+												"_typeName": "custom::Pool",
+												"kind": "user_defined",
+												"target": {
+													"name": "custom::Pool",
+													"objects": [{
+														"_fullName": "::stappler::mempool::custom::Pool",
+														"_kind": "class",
+														"_name": "Pool",
+														"class_kind": "struct",
+														"id": 93824997822144,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "Pool",
+														"scope": {
+															"name": "Pool"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}]
+									}
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::mempool::base::pool_t*)"
+					}, {
+						"_fullName": "::stappler::mempool::base::pool::alloc(stappler::mempool::base::pool_t*,size_t&)",
+						"_kind": "function",
+						"_name": "alloc",
+						"body_kind": "declaration",
+						"id": 93824996653680,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "alloc",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 93824996654240,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::mempool::base::pool_t*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::mempool::base::pool_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::mempool::base::pool_t",
+										"objects": [{
+											"_fullName": "::stappler::mempool::base::pool_t",
+											"_kind": "type alias",
+											"_name": "pool_t",
+											"id": 140737142936960,
+											"kind": "type alias",
+											"name": "pool_t",
+											"underlying_type": {
+												"_typeName": "custom::Pool",
+												"kind": "user_defined",
+												"target": {
+													"name": "custom::Pool",
+													"objects": [{
+														"_fullName": "::stappler::mempool::custom::Pool",
+														"_kind": "class",
+														"_name": "Pool",
+														"class_kind": "struct",
+														"id": 93824997822144,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "Pool",
+														"scope": {
+															"name": "Pool"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}]
+									}
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 93824996654480,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "size_t&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "size_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "size_t"
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}],
+						"return_type":  {
+							"_typeName": "void*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "void",
+								"builtin_type_kind": "void",
+								"kind": "builtin"
+							}
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::mempool::base::pool_t*,size_t&)"
+					}, {
+						"_fullName": "::stappler::mempool::base::pool::palloc(stappler::mempool::base::pool_t*,size_t)",
+						"_kind": "function",
+						"_name": "palloc",
+						"body_kind": "declaration",
+						"id": 93824997736688,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "palloc",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 93824997737248,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::mempool::base::pool_t*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::mempool::base::pool_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::mempool::base::pool_t",
+										"objects": [{
+											"_fullName": "::stappler::mempool::base::pool_t",
+											"_kind": "type alias",
+											"_name": "pool_t",
+											"id": 140737142936960,
+											"kind": "type alias",
+											"name": "pool_t",
+											"underlying_type": {
+												"_typeName": "custom::Pool",
+												"kind": "user_defined",
+												"target": {
+													"name": "custom::Pool",
+													"objects": [{
+														"_fullName": "::stappler::mempool::custom::Pool",
+														"_kind": "class",
+														"_name": "Pool",
+														"class_kind": "struct",
+														"id": 93824997822144,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "Pool",
+														"scope": {
+															"name": "Pool"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}]
+									}
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 93824997737488,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "size_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "size_t"
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "void*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "void",
+								"builtin_type_kind": "void",
+								"kind": "builtin"
+							}
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::mempool::base::pool_t*,size_t)"
+					}, {
+						"_fullName": "::stappler::mempool::base::pool::calloc(stappler::mempool::base::pool_t*,size_t,size_t)",
+						"_kind": "function",
+						"_name": "calloc",
+						"body_kind": "declaration",
+						"id": 93824997737680,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "calloc",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 93824997738240,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::mempool::base::pool_t*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::mempool::base::pool_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::mempool::base::pool_t",
+										"objects": [{
+											"_fullName": "::stappler::mempool::base::pool_t",
+											"_kind": "type alias",
+											"_name": "pool_t",
+											"id": 140737142936960,
+											"kind": "type alias",
+											"name": "pool_t",
+											"underlying_type": {
+												"_typeName": "custom::Pool",
+												"kind": "user_defined",
+												"target": {
+													"name": "custom::Pool",
+													"objects": [{
+														"_fullName": "::stappler::mempool::custom::Pool",
+														"_kind": "class",
+														"_name": "Pool",
+														"class_kind": "struct",
+														"id": 93824997822144,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "Pool",
+														"scope": {
+															"name": "Pool"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}]
+									}
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "count",
+							"id": 93824997738480,
+							"kind": "function parameter",
+							"name": "count",
+							"type": {
+								"_typeName": "size_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "size_t"
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "eltsize",
+							"id": 93824998854864,
+							"kind": "function parameter",
+							"name": "eltsize",
+							"type": {
+								"_typeName": "size_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "size_t"
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "void*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "void",
+								"builtin_type_kind": "void",
+								"kind": "builtin"
+							}
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::mempool::base::pool_t*,size_t,size_t)"
+					}, {
+						"_fullName": "::stappler::mempool::base::pool::free(stappler::mempool::base::pool_t*,void*,size_t)",
+						"_kind": "function",
+						"_name": "free",
+						"body_kind": "declaration",
+						"id": 93824998855104,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "free",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 93824998855664,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::mempool::base::pool_t*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::mempool::base::pool_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::mempool::base::pool_t",
+										"objects": [{
+											"_fullName": "::stappler::mempool::base::pool_t",
+											"_kind": "type alias",
+											"_name": "pool_t",
+											"id": 140737142936960,
+											"kind": "type alias",
+											"name": "pool_t",
+											"underlying_type": {
+												"_typeName": "custom::Pool",
+												"kind": "user_defined",
+												"target": {
+													"name": "custom::Pool",
+													"objects": [{
+														"_fullName": "::stappler::mempool::custom::Pool",
+														"_kind": "class",
+														"_name": "Pool",
+														"class_kind": "struct",
+														"id": 93824997822144,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "Pool",
+														"scope": {
+															"name": "Pool"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}]
+									}
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "ptr",
+							"id": 93824998855808,
+							"kind": "function parameter",
+							"name": "ptr",
+							"type": {
+								"_typeName": "void*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "void",
+									"builtin_type_kind": "void",
+									"kind": "builtin"
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "size",
+							"id": 93824998856096,
+							"kind": "function parameter",
+							"name": "size",
+							"type": {
+								"_typeName": "size_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "size_t"
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::mempool::base::pool_t*,void*,size_t)"
+					}, {
+						"_fullName": "::stappler::mempool::base::pool::cleanup_kill(stappler::mempool::base::pool_t*,void*,stappler::mempool::base::cleanup_fn)",
+						"_kind": "function",
+						"_name": "cleanup_kill",
+						"body_kind": "declaration",
+						"id": 93824998856336,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "cleanup_kill",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 93824998535776,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::mempool::base::pool_t*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::mempool::base::pool_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::mempool::base::pool_t",
+										"objects": [{
+											"_fullName": "::stappler::mempool::base::pool_t",
+											"_kind": "type alias",
+											"_name": "pool_t",
+											"id": 140737142936960,
+											"kind": "type alias",
+											"name": "pool_t",
+											"underlying_type": {
+												"_typeName": "custom::Pool",
+												"kind": "user_defined",
+												"target": {
+													"name": "custom::Pool",
+													"objects": [{
+														"_fullName": "::stappler::mempool::custom::Pool",
+														"_kind": "class",
+														"_name": "Pool",
+														"class_kind": "struct",
+														"id": 93824997822144,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "Pool",
+														"scope": {
+															"name": "Pool"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}]
+									}
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 93824998535920,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "void*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "void",
+									"builtin_type_kind": "void",
+									"kind": "builtin"
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 93824998536256,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::mempool::base::cleanup_fn",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::mempool::base::cleanup_fn",
+									"objects": [{
+										"_fullName": "::stappler::mempool::base::cleanup_fn",
+										"_kind": "type alias",
+										"_name": "cleanup_fn",
+										"id": 140737139835056,
+										"kind": "type alias",
+										"name": "cleanup_fn",
+										"underlying_type": {
+											"_typeName": "status_t(*)(void*)",
+											"kind": "pointer",
+											"pointee": {
+												"_typeName": "status_t(void*)",
+												"is_variadic": false,
+												"kind": "function",
+												"parameter_types": [{
+													"_typeName": "void*",
+													"kind": "pointer",
+													"pointee": {
+														"_typeName": "void",
+														"builtin_type_kind": "void",
+														"kind": "builtin"
+													}
+												}],
+												"return_type":  {
+													"_typeName": "status_t",
+													"kind": "user_defined",
+													"target": {
+														"name": "status_t",
+														"objects": [{
+															"_fullName": "::stappler::mempool::base::status_t",
+															"_kind": "type alias",
+															"_name": "status_t",
+															"id": 140737089774080,
+															"kind": "type alias",
+															"name": "status_t",
+															"underlying_type": {
+																"_typeName": "custom::Status",
+																"kind": "user_defined",
+																"target": {
+																	"name": "custom::Status",
+																	"objects": [{
+																		"_fullName": "::stappler::mempool::custom::Status",
+																		"_kind": "type alias",
+																		"_name": "Status",
+																		"id": 140737096943696,
+																		"kind": "type alias",
+																		"name": "Status",
+																		"underlying_type": {
+																			"_typeName": "int",
+																			"builtin_type_kind": "int",
+																			"kind": "builtin"
+																		}
+																	}]
+																}
+															}
+														}]
+													}
+												}
+											}
+										}
+									}]
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::mempool::base::pool_t*,void*,stappler::mempool::base::cleanup_fn)"
+					}, {
+						"_fullName": "::stappler::mempool::base::pool::cleanup_register(stappler::mempool::base::pool_t*,void*,stappler::mempool::base::cleanup_fn)",
+						"_kind": "function",
+						"_name": "cleanup_register",
+						"body_kind": "declaration",
+						"id": 93824998536400,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "cleanup_register",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 93824998537008,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::mempool::base::pool_t*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::mempool::base::pool_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::mempool::base::pool_t",
+										"objects": [{
+											"_fullName": "::stappler::mempool::base::pool_t",
+											"_kind": "type alias",
+											"_name": "pool_t",
+											"id": 140737142936960,
+											"kind": "type alias",
+											"name": "pool_t",
+											"underlying_type": {
+												"_typeName": "custom::Pool",
+												"kind": "user_defined",
+												"target": {
+													"name": "custom::Pool",
+													"objects": [{
+														"_fullName": "::stappler::mempool::custom::Pool",
+														"_kind": "class",
+														"_name": "Pool",
+														"class_kind": "struct",
+														"id": 93824997822144,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "Pool",
+														"scope": {
+															"name": "Pool"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}]
+									}
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 93824998537152,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "void*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "void",
+									"builtin_type_kind": "void",
+									"kind": "builtin"
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 93824998537488,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::mempool::base::cleanup_fn",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::mempool::base::cleanup_fn",
+									"objects": [{
+										"_fullName": "::stappler::mempool::base::cleanup_fn",
+										"_kind": "type alias",
+										"_name": "cleanup_fn",
+										"id": 140737139835056,
+										"kind": "type alias",
+										"name": "cleanup_fn",
+										"underlying_type": {
+											"_typeName": "status_t(*)(void*)",
+											"kind": "pointer",
+											"pointee": {
+												"_typeName": "status_t(void*)",
+												"is_variadic": false,
+												"kind": "function",
+												"parameter_types": [{
+													"_typeName": "void*",
+													"kind": "pointer",
+													"pointee": {
+														"_typeName": "void",
+														"builtin_type_kind": "void",
+														"kind": "builtin"
+													}
+												}],
+												"return_type":  {
+													"_typeName": "status_t",
+													"kind": "user_defined",
+													"target": {
+														"name": "status_t",
+														"objects": [{
+															"_fullName": "::stappler::mempool::base::status_t",
+															"_kind": "type alias",
+															"_name": "status_t",
+															"id": 140737089774080,
+															"kind": "type alias",
+															"name": "status_t",
+															"underlying_type": {
+																"_typeName": "custom::Status",
+																"kind": "user_defined",
+																"target": {
+																	"name": "custom::Status",
+																	"objects": [{
+																		"_fullName": "::stappler::mempool::custom::Status",
+																		"_kind": "type alias",
+																		"_name": "Status",
+																		"id": 140737096943696,
+																		"kind": "type alias",
+																		"name": "Status",
+																		"underlying_type": {
+																			"_typeName": "int",
+																			"builtin_type_kind": "int",
+																			"kind": "builtin"
+																		}
+																	}]
+																}
+															}
+														}]
+													}
+												}
+											}
+										}
+									}]
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::mempool::base::pool_t*,void*,stappler::mempool::base::cleanup_fn)"
+					}, {
+						"_fullName": "::stappler::mempool::base::pool::cleanup_register(stappler::mempool::base::pool_t*,memory::function<void ()>&&)",
+						"_kind": "function",
+						"_name": "cleanup_register",
+						"body_kind": "declaration",
+						"id": 93824998558848,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "cleanup_register",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "p",
+							"id": 93824998559408,
+							"kind": "function parameter",
+							"name": "p",
+							"type": {
+								"_typeName": "stappler::mempool::base::pool_t*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::mempool::base::pool_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::mempool::base::pool_t",
+										"objects": [{
+											"_fullName": "::stappler::mempool::base::pool_t",
+											"_kind": "type alias",
+											"_name": "pool_t",
+											"id": 140737142936960,
+											"kind": "type alias",
+											"name": "pool_t",
+											"underlying_type": {
+												"_typeName": "custom::Pool",
+												"kind": "user_defined",
+												"target": {
+													"name": "custom::Pool",
+													"objects": [{
+														"_fullName": "::stappler::mempool::custom::Pool",
+														"_kind": "class",
+														"_name": "Pool",
+														"class_kind": "struct",
+														"id": 93824997822144,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "Pool",
+														"scope": {
+															"name": "Pool"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}]
+									}
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "cb",
+							"id": 93824998559744,
+							"kind": "function parameter",
+							"name": "cb",
+							"type": {
+								"_typeName": "memory::function<void ()>&&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "memory::function<void ()>",
+									"arguments_exposed": false,
+									"kind": "template_instantiation",
+									"primary_template": {
+										"name": "memory::function",
+										"objects": [{
+											"_fullName": "::stappler::memory::function<typename>",
+											"_kind": "class template",
+											"_name": "function",
+											"class": {
+												"_fullName": "::stappler::memory::function<typename>",
+												"_kind": "class",
+												"_name": "function",
+												"class_kind": "class",
+												"id": 140736995067040,
+												"is_declaration": true,
+												"is_definition": false,
+												"is_final": false,
+												"kind": "class",
+												"name": "function",
+												"scope": {
+													"is_templated": true,
+													"name": "function",
+													"template_parameters": [{
+														"_kind": "template type parameter",
+														"_name": "UnusedType",
+														"id": 93824998911424,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "UnusedType"
+													}]
+												},
+												"semantic_scope": ""
+											},
+											"id": 140736955555952,
+											"kind": "class template",
+											"name": "function",
+											"parameters": [{
+												"_kind": "template type parameter",
+												"_name": "UnusedType",
+												"id": 93824998911424,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "UnusedType"
+											}],
+											"scope":  {
+												"is_templated": true,
+												"name": "function",
+												"template_parameters": [{
+													"_kind": "template type parameter",
+													"_name": "UnusedType",
+													"id": 93824998911424,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "UnusedType"
+												}]
+											}
+										}]
+									},
+									"unexposed_arguments": "void ()"
+								},
+								"reference_kind": "rvalue"
+							}
+						}],
+						"return_type":  {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::mempool::base::pool_t*,memory::function<void ()>&&)"
+					}, {
+						"_fullName": "::stappler::mempool::base::pool::foreach_info(void*,bool(*)(void*,stappler::mempool::base::pool_t*,uint32_t,void const*))",
+						"_kind": "function",
+						"_name": "foreach_info",
+						"body_kind": "declaration",
+						"id": 93824997133808,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "foreach_info",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 93824997134176,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "void*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "void",
+									"builtin_type_kind": "void",
+									"kind": "builtin"
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 93824998559984,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "bool(*)(void*,stappler::mempool::base::pool_t*,uint32_t,void const*)",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "bool(void*,stappler::mempool::base::pool_t*,uint32_t,void const*)",
+									"is_variadic": false,
+									"kind": "function",
+									"parameter_types": [{
+										"_typeName": "void*",
+										"kind": "pointer",
+										"pointee": {
+											"_typeName": "void",
+											"builtin_type_kind": "void",
+											"kind": "builtin"
+										}
+									}, {
+										"_typeName": "stappler::mempool::base::pool_t*",
+										"kind": "pointer",
+										"pointee": {
+											"_typeName": "stappler::mempool::base::pool_t",
+											"kind": "user_defined",
+											"target": {
+												"name": "stappler::mempool::base::pool_t",
+												"objects": [{
+													"_fullName": "::stappler::mempool::base::pool_t",
+													"_kind": "type alias",
+													"_name": "pool_t",
+													"id": 140737142936960,
+													"kind": "type alias",
+													"name": "pool_t",
+													"underlying_type": {
+														"_typeName": "custom::Pool",
+														"kind": "user_defined",
+														"target": {
+															"name": "custom::Pool",
+															"objects": [{
+																"_fullName": "::stappler::mempool::custom::Pool",
+																"_kind": "class",
+																"_name": "Pool",
+																"class_kind": "struct",
+																"id": 93824997822144,
+																"is_declaration": false,
+																"is_definition": true,
+																"is_final": false,
+																"kind": "class",
+																"name": "Pool",
+																"scope": {
+																	"name": "Pool"
+																},
+																"semantic_scope": ""
+															}]
+														}
+													}
+												}]
+											}
+										}
+									}, {
+										"_typeName": "uint32_t",
+										"kind": "user_defined",
+										"target": {
+											"name": "uint32_t"
+										}
+									}, {
+										"_typeName": "void const*",
+										"kind": "pointer",
+										"pointee": {
+											"_typeName": "void const",
+											"cv_qualifier": "const",
+											"kind": "cv_qualified",
+											"type": {
+												"_typeName": "void",
+												"builtin_type_kind": "void",
+												"kind": "builtin"
+											}
+										}
+									}],
+									"return_type":  {
+										"_typeName": "bool",
+										"builtin_type_kind": "bool",
+										"kind": "builtin"
+									}
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(void*,bool(*)(void*,stappler::mempool::base::pool_t*,uint32_t,void const*))"
+					}, {
+						"_fullName": "::stappler::mempool::base::pool::userdata_set(void const*,char const*,stappler::mempool::base::cleanup_fn,stappler::mempool::base::pool_t*)",
+						"_kind": "function",
+						"_name": "userdata_set",
+						"body_kind": "declaration",
+						"id": 93824998560480,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "userdata_set",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "data",
+							"id": 93824997132640,
+							"kind": "function parameter",
+							"name": "data",
+							"type": {
+								"_typeName": "void const*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "void const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "void",
+										"builtin_type_kind": "void",
+										"kind": "builtin"
+									}
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "key",
+							"id": 93824997132976,
+							"kind": "function parameter",
+							"name": "key",
+							"type": {
+								"_typeName": "char const*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "char const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "char",
+										"builtin_type_kind": "char",
+										"kind": "builtin"
+									}
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 93824997133264,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::mempool::base::cleanup_fn",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::mempool::base::cleanup_fn",
+									"objects": [{
+										"_fullName": "::stappler::mempool::base::cleanup_fn",
+										"_kind": "type alias",
+										"_name": "cleanup_fn",
+										"id": 140737139835056,
+										"kind": "type alias",
+										"name": "cleanup_fn",
+										"underlying_type": {
+											"_typeName": "status_t(*)(void*)",
+											"kind": "pointer",
+											"pointee": {
+												"_typeName": "status_t(void*)",
+												"is_variadic": false,
+												"kind": "function",
+												"parameter_types": [{
+													"_typeName": "void*",
+													"kind": "pointer",
+													"pointee": {
+														"_typeName": "void",
+														"builtin_type_kind": "void",
+														"kind": "builtin"
+													}
+												}],
+												"return_type":  {
+													"_typeName": "status_t",
+													"kind": "user_defined",
+													"target": {
+														"name": "status_t",
+														"objects": [{
+															"_fullName": "::stappler::mempool::base::status_t",
+															"_kind": "type alias",
+															"_name": "status_t",
+															"id": 140737089774080,
+															"kind": "type alias",
+															"name": "status_t",
+															"underlying_type": {
+																"_typeName": "custom::Status",
+																"kind": "user_defined",
+																"target": {
+																	"name": "custom::Status",
+																	"objects": [{
+																		"_fullName": "::stappler::mempool::custom::Status",
+																		"_kind": "type alias",
+																		"_name": "Status",
+																		"id": 140737096943696,
+																		"kind": "type alias",
+																		"name": "Status",
+																		"underlying_type": {
+																			"_typeName": "int",
+																			"builtin_type_kind": "int",
+																			"kind": "builtin"
+																		}
+																	}]
+																}
+															}
+														}]
+													}
+												}
+											}
+										}
+									}]
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 93824997133648,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::mempool::base::pool_t*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::mempool::base::pool_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::mempool::base::pool_t",
+										"objects": [{
+											"_fullName": "::stappler::mempool::base::pool_t",
+											"_kind": "type alias",
+											"_name": "pool_t",
+											"id": 140737142936960,
+											"kind": "type alias",
+											"name": "pool_t",
+											"underlying_type": {
+												"_typeName": "custom::Pool",
+												"kind": "user_defined",
+												"target": {
+													"name": "custom::Pool",
+													"objects": [{
+														"_fullName": "::stappler::mempool::custom::Pool",
+														"_kind": "class",
+														"_name": "Pool",
+														"class_kind": "struct",
+														"id": 93824997822144,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "Pool",
+														"scope": {
+															"name": "Pool"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}]
+									}
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "stappler::mempool::base::status_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::mempool::base::status_t",
+								"objects": [{
+									"_fullName": "::stappler::mempool::base::status_t",
+									"_kind": "type alias",
+									"_name": "status_t",
+									"id": 140737089774080,
+									"kind": "type alias",
+									"name": "status_t",
+									"underlying_type": {
+										"_typeName": "custom::Status",
+										"kind": "user_defined",
+										"target": {
+											"name": "custom::Status",
+											"objects": [{
+												"_fullName": "::stappler::mempool::custom::Status",
+												"_kind": "type alias",
+												"_name": "Status",
+												"id": 140737096943696,
+												"kind": "type alias",
+												"name": "Status",
+												"underlying_type": {
+													"_typeName": "int",
+													"builtin_type_kind": "int",
+													"kind": "builtin"
+												}
+											}]
+										}
+									}
+								}]
+							}
+						},
+						"semantic_scope": "",
+						"signature": "(void const*,char const*,stappler::mempool::base::cleanup_fn,stappler::mempool::base::pool_t*)"
+					}, {
+						"_fullName": "::stappler::mempool::base::pool::userdata_setn(void const*,char const*,stappler::mempool::base::cleanup_fn,stappler::mempool::base::pool_t*)",
+						"_kind": "function",
+						"_name": "userdata_setn",
+						"body_kind": "declaration",
+						"id": 93824997246544,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "userdata_setn",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "data",
+							"id": 93824997246912,
+							"kind": "function parameter",
+							"name": "data",
+							"type": {
+								"_typeName": "void const*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "void const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "void",
+										"builtin_type_kind": "void",
+										"kind": "builtin"
+									}
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "key",
+							"id": 93824997247248,
+							"kind": "function parameter",
+							"name": "key",
+							"type": {
+								"_typeName": "char const*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "char const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "char",
+										"builtin_type_kind": "char",
+										"kind": "builtin"
+									}
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 93824997247632,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::mempool::base::cleanup_fn",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::mempool::base::cleanup_fn",
+									"objects": [{
+										"_fullName": "::stappler::mempool::base::cleanup_fn",
+										"_kind": "type alias",
+										"_name": "cleanup_fn",
+										"id": 140737139835056,
+										"kind": "type alias",
+										"name": "cleanup_fn",
+										"underlying_type": {
+											"_typeName": "status_t(*)(void*)",
+											"kind": "pointer",
+											"pointee": {
+												"_typeName": "status_t(void*)",
+												"is_variadic": false,
+												"kind": "function",
+												"parameter_types": [{
+													"_typeName": "void*",
+													"kind": "pointer",
+													"pointee": {
+														"_typeName": "void",
+														"builtin_type_kind": "void",
+														"kind": "builtin"
+													}
+												}],
+												"return_type":  {
+													"_typeName": "status_t",
+													"kind": "user_defined",
+													"target": {
+														"name": "status_t",
+														"objects": [{
+															"_fullName": "::stappler::mempool::base::status_t",
+															"_kind": "type alias",
+															"_name": "status_t",
+															"id": 140737089774080,
+															"kind": "type alias",
+															"name": "status_t",
+															"underlying_type": {
+																"_typeName": "custom::Status",
+																"kind": "user_defined",
+																"target": {
+																	"name": "custom::Status",
+																	"objects": [{
+																		"_fullName": "::stappler::mempool::custom::Status",
+																		"_kind": "type alias",
+																		"_name": "Status",
+																		"id": 140737096943696,
+																		"kind": "type alias",
+																		"name": "Status",
+																		"underlying_type": {
+																			"_typeName": "int",
+																			"builtin_type_kind": "int",
+																			"kind": "builtin"
+																		}
+																	}]
+																}
+															}
+														}]
+													}
+												}
+											}
+										}
+									}]
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 93824997248016,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::mempool::base::pool_t*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::mempool::base::pool_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::mempool::base::pool_t",
+										"objects": [{
+											"_fullName": "::stappler::mempool::base::pool_t",
+											"_kind": "type alias",
+											"_name": "pool_t",
+											"id": 140737142936960,
+											"kind": "type alias",
+											"name": "pool_t",
+											"underlying_type": {
+												"_typeName": "custom::Pool",
+												"kind": "user_defined",
+												"target": {
+													"name": "custom::Pool",
+													"objects": [{
+														"_fullName": "::stappler::mempool::custom::Pool",
+														"_kind": "class",
+														"_name": "Pool",
+														"class_kind": "struct",
+														"id": 93824997822144,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "Pool",
+														"scope": {
+															"name": "Pool"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}]
+									}
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "stappler::mempool::base::status_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::mempool::base::status_t",
+								"objects": [{
+									"_fullName": "::stappler::mempool::base::status_t",
+									"_kind": "type alias",
+									"_name": "status_t",
+									"id": 140737089774080,
+									"kind": "type alias",
+									"name": "status_t",
+									"underlying_type": {
+										"_typeName": "custom::Status",
+										"kind": "user_defined",
+										"target": {
+											"name": "custom::Status",
+											"objects": [{
+												"_fullName": "::stappler::mempool::custom::Status",
+												"_kind": "type alias",
+												"_name": "Status",
+												"id": 140737096943696,
+												"kind": "type alias",
+												"name": "Status",
+												"underlying_type": {
+													"_typeName": "int",
+													"builtin_type_kind": "int",
+													"kind": "builtin"
+												}
+											}]
+										}
+									}
+								}]
+							}
+						},
+						"semantic_scope": "",
+						"signature": "(void const*,char const*,stappler::mempool::base::cleanup_fn,stappler::mempool::base::pool_t*)"
+					}, {
+						"_fullName": "::stappler::mempool::base::pool::userdata_get(void**,char const*,stappler::mempool::base::pool_t*)",
+						"_kind": "function",
+						"_name": "userdata_get",
+						"body_kind": "declaration",
+						"id": 93824997248304,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "userdata_get",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "data",
+							"id": 93824997901008,
+							"kind": "function parameter",
+							"name": "data",
+							"type": {
+								"_typeName": "void**",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "void*",
+									"kind": "pointer",
+									"pointee": {
+										"_typeName": "void",
+										"builtin_type_kind": "void",
+										"kind": "builtin"
+									}
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "key",
+							"id": 93824997901344,
+							"kind": "function parameter",
+							"name": "key",
+							"type": {
+								"_typeName": "char const*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "char const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "char",
+										"builtin_type_kind": "char",
+										"kind": "builtin"
+									}
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 93824997901824,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::mempool::base::pool_t*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::mempool::base::pool_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::mempool::base::pool_t",
+										"objects": [{
+											"_fullName": "::stappler::mempool::base::pool_t",
+											"_kind": "type alias",
+											"_name": "pool_t",
+											"id": 140737142936960,
+											"kind": "type alias",
+											"name": "pool_t",
+											"underlying_type": {
+												"_typeName": "custom::Pool",
+												"kind": "user_defined",
+												"target": {
+													"name": "custom::Pool",
+													"objects": [{
+														"_fullName": "::stappler::mempool::custom::Pool",
+														"_kind": "class",
+														"_name": "Pool",
+														"class_kind": "struct",
+														"id": 93824997822144,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "Pool",
+														"scope": {
+															"name": "Pool"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}]
+									}
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "stappler::mempool::base::status_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::mempool::base::status_t",
+								"objects": [{
+									"_fullName": "::stappler::mempool::base::status_t",
+									"_kind": "type alias",
+									"_name": "status_t",
+									"id": 140737089774080,
+									"kind": "type alias",
+									"name": "status_t",
+									"underlying_type": {
+										"_typeName": "custom::Status",
+										"kind": "user_defined",
+										"target": {
+											"name": "custom::Status",
+											"objects": [{
+												"_fullName": "::stappler::mempool::custom::Status",
+												"_kind": "type alias",
+												"_name": "Status",
+												"id": 140737096943696,
+												"kind": "type alias",
+												"name": "Status",
+												"underlying_type": {
+													"_typeName": "int",
+													"builtin_type_kind": "int",
+													"kind": "builtin"
+												}
+											}]
+										}
+									}
+								}]
+							}
+						},
+						"semantic_scope": "",
+						"signature": "(void**,char const*,stappler::mempool::base::pool_t*)"
+					}, {
+						"_fullName": "::stappler::mempool::base::pool::userdata_get(void**,char const*,size_t,stappler::mempool::base::pool_t*)",
+						"_kind": "function",
+						"_name": "userdata_get",
+						"body_kind": "declaration",
+						"id": 93824997902112,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "userdata_get",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "data",
+							"id": 93824997902480,
+							"kind": "function parameter",
+							"name": "data",
+							"type": {
+								"_typeName": "void**",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "void*",
+									"kind": "pointer",
+									"pointee": {
+										"_typeName": "void",
+										"builtin_type_kind": "void",
+										"kind": "builtin"
+									}
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "key",
+							"id": 93824997902816,
+							"kind": "function parameter",
+							"name": "key",
+							"type": {
+								"_typeName": "char const*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "char const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "char",
+										"builtin_type_kind": "char",
+										"kind": "builtin"
+									}
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 93824997903104,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "size_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "size_t"
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 93824996864752,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::mempool::base::pool_t*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::mempool::base::pool_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::mempool::base::pool_t",
+										"objects": [{
+											"_fullName": "::stappler::mempool::base::pool_t",
+											"_kind": "type alias",
+											"_name": "pool_t",
+											"id": 140737142936960,
+											"kind": "type alias",
+											"name": "pool_t",
+											"underlying_type": {
+												"_typeName": "custom::Pool",
+												"kind": "user_defined",
+												"target": {
+													"name": "custom::Pool",
+													"objects": [{
+														"_fullName": "::stappler::mempool::custom::Pool",
+														"_kind": "class",
+														"_name": "Pool",
+														"class_kind": "struct",
+														"id": 93824997822144,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "Pool",
+														"scope": {
+															"name": "Pool"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}]
+									}
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "stappler::mempool::base::status_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::mempool::base::status_t",
+								"objects": [{
+									"_fullName": "::stappler::mempool::base::status_t",
+									"_kind": "type alias",
+									"_name": "status_t",
+									"id": 140737089774080,
+									"kind": "type alias",
+									"name": "status_t",
+									"underlying_type": {
+										"_typeName": "custom::Status",
+										"kind": "user_defined",
+										"target": {
+											"name": "custom::Status",
+											"objects": [{
+												"_fullName": "::stappler::mempool::custom::Status",
+												"_kind": "type alias",
+												"_name": "Status",
+												"id": 140737096943696,
+												"kind": "type alias",
+												"name": "Status",
+												"underlying_type": {
+													"_typeName": "int",
+													"builtin_type_kind": "int",
+													"kind": "builtin"
+												}
+											}]
+										}
+									}
+								}]
+							}
+						},
+						"semantic_scope": "",
+						"signature": "(void**,char const*,size_t,stappler::mempool::base::pool_t*)"
+					}, {
+						"_fullName": "::stappler::mempool::base::pool::get_allocator(stappler::mempool::base::pool_t*)",
+						"_kind": "function",
+						"_name": "get_allocator",
+						"body_kind": "declaration",
+						"id": 93824996865312,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "get_allocator",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 93824996865776,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::mempool::base::pool_t*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::mempool::base::pool_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::mempool::base::pool_t",
+										"objects": [{
+											"_fullName": "::stappler::mempool::base::pool_t",
+											"_kind": "type alias",
+											"_name": "pool_t",
+											"id": 140737142936960,
+											"kind": "type alias",
+											"name": "pool_t",
+											"underlying_type": {
+												"_typeName": "custom::Pool",
+												"kind": "user_defined",
+												"target": {
+													"name": "custom::Pool",
+													"objects": [{
+														"_fullName": "::stappler::mempool::custom::Pool",
+														"_kind": "class",
+														"_name": "Pool",
+														"class_kind": "struct",
+														"id": 93824997822144,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "Pool",
+														"scope": {
+															"name": "Pool"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}]
+									}
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "stappler::mempool::base::allocator_t*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::mempool::base::allocator_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::mempool::base::allocator_t",
+									"objects": [{
+										"_fullName": "::stappler::mempool::base::allocator_t",
+										"_kind": "type alias",
+										"_name": "allocator_t",
+										"id": 140737141796640,
+										"kind": "type alias",
+										"name": "allocator_t",
+										"underlying_type": {
+											"_typeName": "custom::Allocator",
+											"kind": "user_defined",
+											"target": {
+												"name": "custom::Allocator",
+												"objects": [{
+													"_fullName": "::stappler::mempool::custom::Allocator",
+													"_kind": "class",
+													"_name": "Allocator",
+													"class_kind": "struct",
+													"id": 93824998908352,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "Allocator",
+													"scope": {
+														"name": "Allocator"
+													},
+													"semantic_scope": ""
+												}]
+											}
+										}
+									}]
+								}
+							}
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::mempool::base::pool_t*)"
+					}, {
+						"_fullName": "::stappler::mempool::base::pool::pmemdup(stappler::mempool::base::pool_t*,void const*,size_t)",
+						"_kind": "function",
+						"_name": "pmemdup",
+						"body_kind": "declaration",
+						"id": 93824996865968,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "pmemdup",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "a",
+							"id": 93824996866528,
+							"kind": "function parameter",
+							"name": "a",
+							"type": {
+								"_typeName": "stappler::mempool::base::pool_t*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::mempool::base::pool_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::mempool::base::pool_t",
+										"objects": [{
+											"_fullName": "::stappler::mempool::base::pool_t",
+											"_kind": "type alias",
+											"_name": "pool_t",
+											"id": 140737142936960,
+											"kind": "type alias",
+											"name": "pool_t",
+											"underlying_type": {
+												"_typeName": "custom::Pool",
+												"kind": "user_defined",
+												"target": {
+													"name": "custom::Pool",
+													"objects": [{
+														"_fullName": "::stappler::mempool::custom::Pool",
+														"_kind": "class",
+														"_name": "Pool",
+														"class_kind": "struct",
+														"id": 93824997822144,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "Pool",
+														"scope": {
+															"name": "Pool"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}]
+									}
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "m",
+							"id": 93824996729008,
+							"kind": "function parameter",
+							"name": "m",
+							"type": {
+								"_typeName": "void const*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "void const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "void",
+										"builtin_type_kind": "void",
+										"kind": "builtin"
+									}
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "n",
+							"id": 93824996729296,
+							"kind": "function parameter",
+							"name": "n",
+							"type": {
+								"_typeName": "size_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "size_t"
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "void*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "void",
+								"builtin_type_kind": "void",
+								"kind": "builtin"
+							}
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::mempool::base::pool_t*,void const*,size_t)"
+					}, {
+						"_fullName": "::stappler::mempool::base::pool::pstrdup(stappler::mempool::base::pool_t*,char const*)",
+						"_kind": "function",
+						"_name": "pstrdup",
+						"body_kind": "declaration",
+						"id": 93824996729632,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "pstrdup",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "a",
+							"id": 93824996730192,
+							"kind": "function parameter",
+							"name": "a",
+							"type": {
+								"_typeName": "stappler::mempool::base::pool_t*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::mempool::base::pool_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::mempool::base::pool_t",
+										"objects": [{
+											"_fullName": "::stappler::mempool::base::pool_t",
+											"_kind": "type alias",
+											"_name": "pool_t",
+											"id": 140737142936960,
+											"kind": "type alias",
+											"name": "pool_t",
+											"underlying_type": {
+												"_typeName": "custom::Pool",
+												"kind": "user_defined",
+												"target": {
+													"name": "custom::Pool",
+													"objects": [{
+														"_fullName": "::stappler::mempool::custom::Pool",
+														"_kind": "class",
+														"_name": "Pool",
+														"class_kind": "struct",
+														"id": 93824997822144,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "Pool",
+														"scope": {
+															"name": "Pool"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}]
+									}
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "s",
+							"id": 93824996730432,
+							"kind": "function parameter",
+							"name": "s",
+							"type": {
+								"_typeName": "char const*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "char const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "char",
+										"builtin_type_kind": "char",
+										"kind": "builtin"
+									}
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "char*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "char",
+								"builtin_type_kind": "char",
+								"kind": "builtin"
+							}
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::mempool::base::pool_t*,char const*)"
+					}, {
+						"_fullName": "::stappler::mempool::base::pool::isThreadSafeForAllocations(stappler::mempool::base::pool_t*)",
+						"_kind": "function",
+						"_name": "isThreadSafeForAllocations",
+						"body_kind": "declaration",
+						"id": 93824996730816,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "isThreadSafeForAllocations",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "pool",
+							"id": 93824996731376,
+							"kind": "function parameter",
+							"name": "pool",
+							"type": {
+								"_typeName": "stappler::mempool::base::pool_t*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::mempool::base::pool_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::mempool::base::pool_t",
+										"objects": [{
+											"_fullName": "::stappler::mempool::base::pool_t",
+											"_kind": "type alias",
+											"_name": "pool_t",
+											"id": 140737142936960,
+											"kind": "type alias",
+											"name": "pool_t",
+											"underlying_type": {
+												"_typeName": "custom::Pool",
+												"kind": "user_defined",
+												"target": {
+													"name": "custom::Pool",
+													"objects": [{
+														"_fullName": "::stappler::mempool::custom::Pool",
+														"_kind": "class",
+														"_name": "Pool",
+														"class_kind": "struct",
+														"id": 93824997822144,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "Pool",
+														"scope": {
+															"name": "Pool"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}]
+									}
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "bool",
+							"builtin_type_kind": "bool",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::mempool::base::pool_t*)"
+					}, {
+						"_fullName": "::stappler::mempool::base::pool::isThreadSafeAsParent(stappler::mempool::base::pool_t*)",
+						"_kind": "function",
+						"_name": "isThreadSafeAsParent",
+						"body_kind": "declaration",
+						"id": 93824998511776,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "isThreadSafeAsParent",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "pool",
+							"id": 93824998512336,
+							"kind": "function parameter",
+							"name": "pool",
+							"type": {
+								"_typeName": "stappler::mempool::base::pool_t*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::mempool::base::pool_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::mempool::base::pool_t",
+										"objects": [{
+											"_fullName": "::stappler::mempool::base::pool_t",
+											"_kind": "type alias",
+											"_name": "pool_t",
+											"id": 140737142936960,
+											"kind": "type alias",
+											"name": "pool_t",
+											"underlying_type": {
+												"_typeName": "custom::Pool",
+												"kind": "user_defined",
+												"target": {
+													"name": "custom::Pool",
+													"objects": [{
+														"_fullName": "::stappler::mempool::custom::Pool",
+														"_kind": "class",
+														"_name": "Pool",
+														"class_kind": "struct",
+														"id": 93824997822144,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "Pool",
+														"scope": {
+															"name": "Pool"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}]
+									}
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "bool",
+							"builtin_type_kind": "bool",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::mempool::base::pool_t*)"
+					}, {
+						"_fullName": "::stappler::mempool::base::pool::get_tag(stappler::mempool::base::pool_t*)",
+						"_kind": "function",
+						"_name": "get_tag",
+						"body_kind": "declaration",
+						"id": 93824998512624,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "get_tag",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 93824998513184,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::mempool::base::pool_t*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::mempool::base::pool_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::mempool::base::pool_t",
+										"objects": [{
+											"_fullName": "::stappler::mempool::base::pool_t",
+											"_kind": "type alias",
+											"_name": "pool_t",
+											"id": 140737142936960,
+											"kind": "type alias",
+											"name": "pool_t",
+											"underlying_type": {
+												"_typeName": "custom::Pool",
+												"kind": "user_defined",
+												"target": {
+													"name": "custom::Pool",
+													"objects": [{
+														"_fullName": "::stappler::mempool::custom::Pool",
+														"_kind": "class",
+														"_name": "Pool",
+														"class_kind": "struct",
+														"id": 93824997822144,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "Pool",
+														"scope": {
+															"name": "Pool"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}]
+									}
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "char const*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "char const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "char",
+									"builtin_type_kind": "char",
+									"kind": "builtin"
+								}
+							}
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::mempool::base::pool_t*)"
+					}, {
+						"_fullName": "::stappler::mempool::base::pool::get_allocated_bytes(stappler::mempool::base::pool_t*)",
+						"_kind": "function",
+						"_name": "get_allocated_bytes",
+						"body_kind": "declaration",
+						"id": 93824998513424,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "get_allocated_bytes",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 93824998513936,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::mempool::base::pool_t*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::mempool::base::pool_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::mempool::base::pool_t",
+										"objects": [{
+											"_fullName": "::stappler::mempool::base::pool_t",
+											"_kind": "type alias",
+											"_name": "pool_t",
+											"id": 140737142936960,
+											"kind": "type alias",
+											"name": "pool_t",
+											"underlying_type": {
+												"_typeName": "custom::Pool",
+												"kind": "user_defined",
+												"target": {
+													"name": "custom::Pool",
+													"objects": [{
+														"_fullName": "::stappler::mempool::custom::Pool",
+														"_kind": "class",
+														"_name": "Pool",
+														"class_kind": "struct",
+														"id": 93824997822144,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "Pool",
+														"scope": {
+															"name": "Pool"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}]
+									}
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::mempool::base::pool_t*)"
+					}, {
+						"_fullName": "::stappler::mempool::base::pool::get_return_bytes(stappler::mempool::base::pool_t*)",
+						"_kind": "function",
+						"_name": "get_return_bytes",
+						"body_kind": "declaration",
+						"id": 93824998514176,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "get_return_bytes",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 93824998895392,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::mempool::base::pool_t*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::mempool::base::pool_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::mempool::base::pool_t",
+										"objects": [{
+											"_fullName": "::stappler::mempool::base::pool_t",
+											"_kind": "type alias",
+											"_name": "pool_t",
+											"id": 140737142936960,
+											"kind": "type alias",
+											"name": "pool_t",
+											"underlying_type": {
+												"_typeName": "custom::Pool",
+												"kind": "user_defined",
+												"target": {
+													"name": "custom::Pool",
+													"objects": [{
+														"_fullName": "::stappler::mempool::custom::Pool",
+														"_kind": "class",
+														"_name": "Pool",
+														"class_kind": "struct",
+														"id": 93824997822144,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "Pool",
+														"scope": {
+															"name": "Pool"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}]
+									}
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::mempool::base::pool_t*)"
+					}, {
+						"_fullName": "::stappler::mempool::base::pool::get_active_count()",
+						"_kind": "function",
+						"_name": "get_active_count",
+						"body_kind": "declaration",
+						"id": 93824998895632,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "get_active_count",
+						"return_type": {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						},
+						"semantic_scope": "",
+						"signature": "()"
+					}, {
+						"_fullName": "::stappler::mempool::base::pool::debug_begin(stappler::mempool::base::pool_t*)",
+						"_kind": "function",
+						"_name": "debug_begin",
+						"body_kind": "declaration",
+						"id": 93824998895952,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "debug_begin",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "pool",
+							"default_value": {
+								"expression": [{
+									"kind": "keyword",
+									"spelling": "nullptr"
+								}],
+								"kind": "unexposed",
+								"type": {
+									"_typeName": "stappler::mempool::base::pool_t*",
+									"kind": "pointer",
+									"pointee": {
+										"_typeName": "stappler::mempool::base::pool_t",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::mempool::base::pool_t",
+											"objects": [{
+												"_fullName": "::stappler::mempool::base::pool_t",
+												"_kind": "type alias",
+												"_name": "pool_t",
+												"id": 140737142936960,
+												"kind": "type alias",
+												"name": "pool_t",
+												"underlying_type": {
+													"_typeName": "custom::Pool",
+													"kind": "user_defined",
+													"target": {
+														"name": "custom::Pool",
+														"objects": [{
+															"_fullName": "::stappler::mempool::custom::Pool",
+															"_kind": "class",
+															"_name": "Pool",
+															"class_kind": "struct",
+															"id": 93824997822144,
+															"is_declaration": false,
+															"is_definition": true,
+															"is_final": false,
+															"kind": "class",
+															"name": "Pool",
+															"scope": {
+																"name": "Pool"
+															},
+															"semantic_scope": ""
+														}]
+													}
+												}
+											}]
+										}
+									}
+								}
+							},
+							"id": 93824998896704,
+							"kind": "function parameter",
+							"name": "pool",
+							"type": {
+								"_typeName": "stappler::mempool::base::pool_t*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::mempool::base::pool_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::mempool::base::pool_t",
+										"objects": [{
+											"_fullName": "::stappler::mempool::base::pool_t",
+											"_kind": "type alias",
+											"_name": "pool_t",
+											"id": 140737142936960,
+											"kind": "type alias",
+											"name": "pool_t",
+											"underlying_type": {
+												"_typeName": "custom::Pool",
+												"kind": "user_defined",
+												"target": {
+													"name": "custom::Pool",
+													"objects": [{
+														"_fullName": "::stappler::mempool::custom::Pool",
+														"_kind": "class",
+														"_name": "Pool",
+														"class_kind": "struct",
+														"id": 93824997822144,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "Pool",
+														"scope": {
+															"name": "Pool"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}]
+									}
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "bool",
+							"builtin_type_kind": "bool",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::mempool::base::pool_t*)"
+					}, {
+						"_fullName": "::stappler::mempool::base::pool::debug_end()",
+						"_kind": "function",
+						"_name": "debug_end",
+						"body_kind": "declaration",
+						"id": 93824998897136,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "debug_end",
+						"return_type": {
+							"_typeName": "std::map<pool_t *, const char **>",
+							"arguments_exposed": false,
+							"kind": "template_instantiation",
+							"primary_template": {
+								"name": "std::map"
+							},
+							"unexposed_arguments": "pool_t *, const char **"
+						},
+						"semantic_scope": "",
+						"signature": "()"
+					}, {
+						"_fullName": "::stappler::mempool::base::pool::debug_foreach(void*,void(*)(void*,stappler::mempool::base::pool_t*))",
+						"_kind": "function",
+						"_name": "debug_foreach",
+						"body_kind": "declaration",
+						"id": 93824998897408,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "debug_foreach",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 93824998897776,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "void*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "void",
+									"builtin_type_kind": "void",
+									"kind": "builtin"
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 93824996971248,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "void(*)(void*,stappler::mempool::base::pool_t*)",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "void(void*,stappler::mempool::base::pool_t*)",
+									"is_variadic": false,
+									"kind": "function",
+									"parameter_types": [{
+										"_typeName": "void*",
+										"kind": "pointer",
+										"pointee": {
+											"_typeName": "void",
+											"builtin_type_kind": "void",
+											"kind": "builtin"
+										}
+									}, {
+										"_typeName": "stappler::mempool::base::pool_t*",
+										"kind": "pointer",
+										"pointee": {
+											"_typeName": "stappler::mempool::base::pool_t",
+											"kind": "user_defined",
+											"target": {
+												"name": "stappler::mempool::base::pool_t",
+												"objects": [{
+													"_fullName": "::stappler::mempool::base::pool_t",
+													"_kind": "type alias",
+													"_name": "pool_t",
+													"id": 140737142936960,
+													"kind": "type alias",
+													"name": "pool_t",
+													"underlying_type": {
+														"_typeName": "custom::Pool",
+														"kind": "user_defined",
+														"target": {
+															"name": "custom::Pool",
+															"objects": [{
+																"_fullName": "::stappler::mempool::custom::Pool",
+																"_kind": "class",
+																"_name": "Pool",
+																"class_kind": "struct",
+																"id": 93824997822144,
+																"is_declaration": false,
+																"is_definition": true,
+																"is_final": false,
+																"kind": "class",
+																"name": "Pool",
+																"scope": {
+																	"name": "Pool"
+																},
+																"semantic_scope": ""
+															}]
+														}
+													}
+												}]
+											}
+										}
+									}],
+									"return_type":  {
+										"_typeName": "void",
+										"builtin_type_kind": "void",
+										"kind": "builtin"
+									}
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(void*,void(*)(void*,stappler::mempool::base::pool_t*))"
+					}],
+					"id": 93824997177504,
+					"is_anonymous": false,
+					"is_inline": false,
+					"is_nested": true,
+					"kind": "namespace",
+					"name": "pool",
+					"scope": {
+						"name": "pool"
+					}
+				}],
+				"id": 93824997387200,
+				"is_anonymous": false,
+				"is_inline": false,
+				"is_nested": true,
+				"kind": "namespace",
+				"name": "base",
+				"scope": {
+					"name": "base"
+				}
+			}],
+			"id": 93824997150176,
+			"is_anonymous": false,
+			"is_inline": false,
+			"is_nested": true,
+			"kind": "namespace",
+			"name": "mempool",
+			"scope": {
+				"name": "mempool"
+			}
+		}],
+		"id": 93824996957504,
+		"is_anonymous": false,
+		"is_inline": false,
+		"is_nested": false,
+		"kind": "namespace",
+		"name": "stappler",
+		"scope": {
+			"name": "stappler"
+		}
+	}],
+	"id": 140737088401440,
+	"kind": "file",
+	"name": "/home/sbkarr/stappler/xenolith/libstappler/common/memory/pool/SPMemPoolInterface.h",
+	"unmatched_comments": [{
+		"line": 21,
+		"text": "\nCopyright (c) 2020-2022 Roman Katuntsev <sbkarr@stappler.org>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n"
+	}]
+}

@@ -1,0 +1,2204 @@
+{
+	"_kind": "file",
+	"_name": "/home/sbkarr/stappler/xenolith/libstappler/common/io/SPIO.h",
+	"childs": [{
+		"_kind": "include directive",
+		"_name": "SPCommon.h",
+		"id": 140736987149008,
+		"include": "/home/sbkarr/stappler/xenolith/libstappler/build/host/clang/debug/common/include/home/sbkarr/stappler/xenolith/libstappler/common/core/SPCommon.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "SPCommon.h"
+	}, {
+		"_kind": "include directive",
+		"_name": "SPIOCommon.h",
+		"id": 140737097932912,
+		"include": "/home/sbkarr/stappler/xenolith/libstappler/common/io/SPIOCommon.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "SPIOCommon.h"
+	}, {
+		"_kind": "include directive",
+		"_name": "SPIOConsumer.h",
+		"id": 140737085739408,
+		"include": "/home/sbkarr/stappler/xenolith/libstappler/common/io/SPIOConsumer.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "SPIOConsumer.h"
+	}, {
+		"_kind": "include directive",
+		"_name": "SPIOProducer.h",
+		"id": 140737148273200,
+		"include": "/home/sbkarr/stappler/xenolith/libstappler/common/io/SPIOProducer.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "SPIOProducer.h"
+	}, {
+		"_kind": "include directive",
+		"_name": "SPIOBuffer.h",
+		"id": 140737106853328,
+		"include": "/home/sbkarr/stappler/xenolith/libstappler/common/io/SPIOBuffer.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "SPIOBuffer.h"
+	}, {
+		"_kind": "include directive",
+		"_name": "SPBuffer.h",
+		"id": 93825000599440,
+		"include": "/home/sbkarr/stappler/xenolith/libstappler/common/utils/SPBuffer.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "SPBuffer.h"
+	}, {
+		"_fullName": "LIBSTAPPLER_COMMON_IO_SPIO_H_",
+		"_kind": "macro definition",
+		"_name": "LIBSTAPPLER_COMMON_IO_SPIO_H_",
+		"id": 140736954130240,
+		"is_function_like": false,
+		"is_object_like": true,
+		"is_variadic": false,
+		"kind": "macro definition",
+		"name": "LIBSTAPPLER_COMMON_IO_SPIO_H_",
+		"replacement": ""
+	}, {
+		"_fullName": "::stappler",
+		"_kind": "namespace",
+		"_name": "stappler",
+		"childs": [{
+			"_fullName": "::stappler::io",
+			"_kind": "namespace",
+			"_name": "io",
+			"childs": [{
+				"_fullName": "::stappler::io::read(stappler::io::Producer const&,Callback<void (const stappler::io::Buffer &)> const&)",
+				"_kind": "function",
+				"_name": "read",
+				"body_kind": "declaration",
+				"id": 93824998751696,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": true,
+				"is_definition": false,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "read",
+				"parameters": [{
+					"_kind": "function parameter",
+					"_name": "from",
+					"id": 140736973059120,
+					"kind": "function parameter",
+					"name": "from",
+					"type": {
+						"_typeName": "stappler::io::Producer const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::io::Producer const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::io::Producer",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::io::Producer",
+									"objects": [{
+										"_fullName": "::stappler::io::Producer",
+										"_kind": "class",
+										"_name": "Producer",
+										"class_kind": "struct",
+										"id": 93824998987008,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Producer",
+										"scope": {
+											"name": "Producer"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_kind": "function parameter",
+					"_name": "",
+					"id": 140737098458528,
+					"kind": "function parameter",
+					"name": "",
+					"type": {
+						"_typeName": "Callback<void (const stappler::io::Buffer &)> const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "Callback<void (const stappler::io::Buffer &)> const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "Callback<void (const stappler::io::Buffer &)>",
+								"arguments_exposed": false,
+								"kind": "template_instantiation",
+								"primary_template": {
+									"name": "Callback",
+									"objects": [{
+										"_fullName": "::stappler::memory::callback<typename>",
+										"_kind": "class template",
+										"_name": "callback",
+										"class": {
+											"_fullName": "::stappler::memory::callback<typename>",
+											"_kind": "class",
+											"_name": "callback",
+											"class_kind": "class",
+											"id": 93824997040048,
+											"is_declaration": true,
+											"is_definition": false,
+											"is_final": false,
+											"kind": "class",
+											"name": "callback",
+											"scope": {
+												"is_templated": true,
+												"name": "callback",
+												"template_parameters": [{
+													"_kind": "template type parameter",
+													"_name": "UnusedType",
+													"id": 93824997058880,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "UnusedType"
+												}]
+											},
+											"semantic_scope": ""
+										},
+										"id": 93824997058480,
+										"kind": "class template",
+										"name": "callback",
+										"parameters": [{
+											"_kind": "template type parameter",
+											"_name": "UnusedType",
+											"id": 93824997058880,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "UnusedType"
+										}],
+										"scope":  {
+											"is_templated": true,
+											"name": "callback",
+											"template_parameters": [{
+												"_kind": "template type parameter",
+												"_name": "UnusedType",
+												"id": 93824997058880,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "UnusedType"
+											}]
+										}
+									}]
+								},
+								"unexposed_arguments": "void (const stappler::io::Buffer &)"
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "size_t",
+					"kind": "user_defined",
+					"target": {
+						"name": "size_t"
+					}
+				},
+				"semantic_scope": "",
+				"signature": "(stappler::io::Producer const&,Callback<void (const stappler::io::Buffer &)> const&)"
+			}, {
+				"_fullName": "::stappler::io::read(stappler::io::Producer const&,stappler::io::Buffer const&,Callback<void (const stappler::io::Buffer &)> const&)",
+				"_kind": "function",
+				"_name": "read",
+				"body_kind": "declaration",
+				"id": 140737096770032,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": true,
+				"is_definition": false,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "read",
+				"parameters": [{
+					"_kind": "function parameter",
+					"_name": "from",
+					"id": 140737088128496,
+					"kind": "function parameter",
+					"name": "from",
+					"type": {
+						"_typeName": "stappler::io::Producer const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::io::Producer const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::io::Producer",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::io::Producer",
+									"objects": [{
+										"_fullName": "::stappler::io::Producer",
+										"_kind": "class",
+										"_name": "Producer",
+										"class_kind": "struct",
+										"id": 93824998987008,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Producer",
+										"scope": {
+											"name": "Producer"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_kind": "function parameter",
+					"_name": "",
+					"id": 140737115384688,
+					"kind": "function parameter",
+					"name": "",
+					"type": {
+						"_typeName": "stappler::io::Buffer const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::io::Buffer const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::io::Buffer",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::io::Buffer",
+									"objects": [{
+										"_fullName": "::stappler::io::Buffer",
+										"_kind": "class",
+										"_name": "Buffer",
+										"class_kind": "struct",
+										"id": 140737093984144,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Buffer",
+										"scope": {
+											"name": "Buffer"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_kind": "function parameter",
+					"_name": "",
+					"id": 140737102507440,
+					"kind": "function parameter",
+					"name": "",
+					"type": {
+						"_typeName": "Callback<void (const stappler::io::Buffer &)> const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "Callback<void (const stappler::io::Buffer &)> const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "Callback<void (const stappler::io::Buffer &)>",
+								"arguments_exposed": false,
+								"kind": "template_instantiation",
+								"primary_template": {
+									"name": "Callback",
+									"objects": [{
+										"_fullName": "::stappler::memory::callback<typename>",
+										"_kind": "class template",
+										"_name": "callback",
+										"class": {
+											"_fullName": "::stappler::memory::callback<typename>",
+											"_kind": "class",
+											"_name": "callback",
+											"class_kind": "class",
+											"id": 93824997040048,
+											"is_declaration": true,
+											"is_definition": false,
+											"is_final": false,
+											"kind": "class",
+											"name": "callback",
+											"scope": {
+												"is_templated": true,
+												"name": "callback",
+												"template_parameters": [{
+													"_kind": "template type parameter",
+													"_name": "UnusedType",
+													"id": 93824997058880,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "UnusedType"
+												}]
+											},
+											"semantic_scope": ""
+										},
+										"id": 93824997058480,
+										"kind": "class template",
+										"name": "callback",
+										"parameters": [{
+											"_kind": "template type parameter",
+											"_name": "UnusedType",
+											"id": 93824997058880,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "UnusedType"
+										}],
+										"scope":  {
+											"is_templated": true,
+											"name": "callback",
+											"template_parameters": [{
+												"_kind": "template type parameter",
+												"_name": "UnusedType",
+												"id": 93824997058880,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "UnusedType"
+											}]
+										}
+									}]
+								},
+								"unexposed_arguments": "void (const stappler::io::Buffer &)"
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "size_t",
+					"kind": "user_defined",
+					"target": {
+						"name": "size_t"
+					}
+				},
+				"semantic_scope": "",
+				"signature": "(stappler::io::Producer const&,stappler::io::Buffer const&,Callback<void (const stappler::io::Buffer &)> const&)"
+			}, {
+				"_fullName": "::stappler::io::read(stappler::io::Producer const&,stappler::io::Consumer const&)",
+				"_kind": "function",
+				"_name": "read",
+				"body_kind": "declaration",
+				"id": 140737094470784,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": true,
+				"is_definition": false,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "read",
+				"parameters": [{
+					"_kind": "function parameter",
+					"_name": "from",
+					"id": 93825000598624,
+					"kind": "function parameter",
+					"name": "from",
+					"type": {
+						"_typeName": "stappler::io::Producer const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::io::Producer const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::io::Producer",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::io::Producer",
+									"objects": [{
+										"_fullName": "::stappler::io::Producer",
+										"_kind": "class",
+										"_name": "Producer",
+										"class_kind": "struct",
+										"id": 93824998987008,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Producer",
+										"scope": {
+											"name": "Producer"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_kind": "function parameter",
+					"_name": "to",
+					"id": 93825004406736,
+					"kind": "function parameter",
+					"name": "to",
+					"type": {
+						"_typeName": "stappler::io::Consumer const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::io::Consumer const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::io::Consumer",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::io::Consumer",
+									"objects": [{
+										"_fullName": "::stappler::io::Consumer",
+										"_kind": "class",
+										"_name": "Consumer",
+										"class_kind": "struct",
+										"id": 93825002719936,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Consumer",
+										"scope": {
+											"name": "Consumer"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "size_t",
+					"kind": "user_defined",
+					"target": {
+						"name": "size_t"
+					}
+				},
+				"semantic_scope": "",
+				"signature": "(stappler::io::Producer const&,stappler::io::Consumer const&)"
+			}, {
+				"_fullName": "::stappler::io::read(stappler::io::Producer const&,stappler::io::Consumer const&,Callback<void (const stappler::io::Buffer &)> const&)",
+				"_kind": "function",
+				"_name": "read",
+				"body_kind": "declaration",
+				"id": 140736974406736,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": true,
+				"is_definition": false,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "read",
+				"parameters": [{
+					"_kind": "function parameter",
+					"_name": "from",
+					"id": 93824999689984,
+					"kind": "function parameter",
+					"name": "from",
+					"type": {
+						"_typeName": "stappler::io::Producer const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::io::Producer const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::io::Producer",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::io::Producer",
+									"objects": [{
+										"_fullName": "::stappler::io::Producer",
+										"_kind": "class",
+										"_name": "Producer",
+										"class_kind": "struct",
+										"id": 93824998987008,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Producer",
+										"scope": {
+											"name": "Producer"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_kind": "function parameter",
+					"_name": "to",
+					"id": 93825011836832,
+					"kind": "function parameter",
+					"name": "to",
+					"type": {
+						"_typeName": "stappler::io::Consumer const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::io::Consumer const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::io::Consumer",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::io::Consumer",
+									"objects": [{
+										"_fullName": "::stappler::io::Consumer",
+										"_kind": "class",
+										"_name": "Consumer",
+										"class_kind": "struct",
+										"id": 93825002719936,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Consumer",
+										"scope": {
+											"name": "Consumer"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_kind": "function parameter",
+					"_name": "",
+					"id": 93825006353488,
+					"kind": "function parameter",
+					"name": "",
+					"type": {
+						"_typeName": "Callback<void (const stappler::io::Buffer &)> const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "Callback<void (const stappler::io::Buffer &)> const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "Callback<void (const stappler::io::Buffer &)>",
+								"arguments_exposed": false,
+								"kind": "template_instantiation",
+								"primary_template": {
+									"name": "Callback",
+									"objects": [{
+										"_fullName": "::stappler::memory::callback<typename>",
+										"_kind": "class template",
+										"_name": "callback",
+										"class": {
+											"_fullName": "::stappler::memory::callback<typename>",
+											"_kind": "class",
+											"_name": "callback",
+											"class_kind": "class",
+											"id": 93824997040048,
+											"is_declaration": true,
+											"is_definition": false,
+											"is_final": false,
+											"kind": "class",
+											"name": "callback",
+											"scope": {
+												"is_templated": true,
+												"name": "callback",
+												"template_parameters": [{
+													"_kind": "template type parameter",
+													"_name": "UnusedType",
+													"id": 93824997058880,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "UnusedType"
+												}]
+											},
+											"semantic_scope": ""
+										},
+										"id": 93824997058480,
+										"kind": "class template",
+										"name": "callback",
+										"parameters": [{
+											"_kind": "template type parameter",
+											"_name": "UnusedType",
+											"id": 93824997058880,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "UnusedType"
+										}],
+										"scope":  {
+											"is_templated": true,
+											"name": "callback",
+											"template_parameters": [{
+												"_kind": "template type parameter",
+												"_name": "UnusedType",
+												"id": 93824997058880,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "UnusedType"
+											}]
+										}
+									}]
+								},
+								"unexposed_arguments": "void (const stappler::io::Buffer &)"
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "size_t",
+					"kind": "user_defined",
+					"target": {
+						"name": "size_t"
+					}
+				},
+				"semantic_scope": "",
+				"signature": "(stappler::io::Producer const&,stappler::io::Consumer const&,Callback<void (const stappler::io::Buffer &)> const&)"
+			}, {
+				"_fullName": "::stappler::io::read(stappler::io::Producer const&,stappler::io::Consumer const&,stappler::io::Buffer const&)",
+				"_kind": "function",
+				"_name": "read",
+				"body_kind": "declaration",
+				"id": 140737101976336,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": true,
+				"is_definition": false,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "read",
+				"parameters": [{
+					"_kind": "function parameter",
+					"_name": "from",
+					"id": 93825006352976,
+					"kind": "function parameter",
+					"name": "from",
+					"type": {
+						"_typeName": "stappler::io::Producer const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::io::Producer const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::io::Producer",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::io::Producer",
+									"objects": [{
+										"_fullName": "::stappler::io::Producer",
+										"_kind": "class",
+										"_name": "Producer",
+										"class_kind": "struct",
+										"id": 93824998987008,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Producer",
+										"scope": {
+											"name": "Producer"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_kind": "function parameter",
+					"_name": "to",
+					"id": 93824999489904,
+					"kind": "function parameter",
+					"name": "to",
+					"type": {
+						"_typeName": "stappler::io::Consumer const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::io::Consumer const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::io::Consumer",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::io::Consumer",
+									"objects": [{
+										"_fullName": "::stappler::io::Consumer",
+										"_kind": "class",
+										"_name": "Consumer",
+										"class_kind": "struct",
+										"id": 93825002719936,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Consumer",
+										"scope": {
+											"name": "Consumer"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_kind": "function parameter",
+					"_name": "",
+					"id": 93825000598848,
+					"kind": "function parameter",
+					"name": "",
+					"type": {
+						"_typeName": "stappler::io::Buffer const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::io::Buffer const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::io::Buffer",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::io::Buffer",
+									"objects": [{
+										"_fullName": "::stappler::io::Buffer",
+										"_kind": "class",
+										"_name": "Buffer",
+										"class_kind": "struct",
+										"id": 140737093984144,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Buffer",
+										"scope": {
+											"name": "Buffer"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "size_t",
+					"kind": "user_defined",
+					"target": {
+						"name": "size_t"
+					}
+				},
+				"semantic_scope": "",
+				"signature": "(stappler::io::Producer const&,stappler::io::Consumer const&,stappler::io::Buffer const&)"
+			}, {
+				"_fullName": "::stappler::io::read(stappler::io::Producer const&,stappler::io::Consumer const&,stappler::io::Buffer const&,Callback<void (const stappler::io::Buffer &)> const&)",
+				"_kind": "function",
+				"_name": "read",
+				"body_kind": "declaration",
+				"id": 93824999970464,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": true,
+				"is_definition": false,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "read",
+				"parameters": [{
+					"_kind": "function parameter",
+					"_name": "from",
+					"id": 93824999490400,
+					"kind": "function parameter",
+					"name": "from",
+					"type": {
+						"_typeName": "stappler::io::Producer const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::io::Producer const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::io::Producer",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::io::Producer",
+									"objects": [{
+										"_fullName": "::stappler::io::Producer",
+										"_kind": "class",
+										"_name": "Producer",
+										"class_kind": "struct",
+										"id": 93824998987008,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Producer",
+										"scope": {
+											"name": "Producer"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_kind": "function parameter",
+					"_name": "to",
+					"id": 93824999490832,
+					"kind": "function parameter",
+					"name": "to",
+					"type": {
+						"_typeName": "stappler::io::Consumer const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::io::Consumer const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::io::Consumer",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::io::Consumer",
+									"objects": [{
+										"_fullName": "::stappler::io::Consumer",
+										"_kind": "class",
+										"_name": "Consumer",
+										"class_kind": "struct",
+										"id": 93825002719936,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Consumer",
+										"scope": {
+											"name": "Consumer"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_kind": "function parameter",
+					"_name": "",
+					"id": 93825001940608,
+					"kind": "function parameter",
+					"name": "",
+					"type": {
+						"_typeName": "stappler::io::Buffer const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::io::Buffer const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::io::Buffer",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::io::Buffer",
+									"objects": [{
+										"_fullName": "::stappler::io::Buffer",
+										"_kind": "class",
+										"_name": "Buffer",
+										"class_kind": "struct",
+										"id": 140737093984144,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Buffer",
+										"scope": {
+											"name": "Buffer"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_kind": "function parameter",
+					"_name": "",
+					"id": 93825001812592,
+					"kind": "function parameter",
+					"name": "",
+					"type": {
+						"_typeName": "Callback<void (const stappler::io::Buffer &)> const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "Callback<void (const stappler::io::Buffer &)> const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "Callback<void (const stappler::io::Buffer &)>",
+								"arguments_exposed": false,
+								"kind": "template_instantiation",
+								"primary_template": {
+									"name": "Callback",
+									"objects": [{
+										"_fullName": "::stappler::memory::callback<typename>",
+										"_kind": "class template",
+										"_name": "callback",
+										"class": {
+											"_fullName": "::stappler::memory::callback<typename>",
+											"_kind": "class",
+											"_name": "callback",
+											"class_kind": "class",
+											"id": 93824997040048,
+											"is_declaration": true,
+											"is_definition": false,
+											"is_final": false,
+											"kind": "class",
+											"name": "callback",
+											"scope": {
+												"is_templated": true,
+												"name": "callback",
+												"template_parameters": [{
+													"_kind": "template type parameter",
+													"_name": "UnusedType",
+													"id": 93824997058880,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "UnusedType"
+												}]
+											},
+											"semantic_scope": ""
+										},
+										"id": 93824997058480,
+										"kind": "class template",
+										"name": "callback",
+										"parameters": [{
+											"_kind": "template type parameter",
+											"_name": "UnusedType",
+											"id": 93824997058880,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "UnusedType"
+										}],
+										"scope":  {
+											"is_templated": true,
+											"name": "callback",
+											"template_parameters": [{
+												"_kind": "template type parameter",
+												"_name": "UnusedType",
+												"id": 93824997058880,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "UnusedType"
+											}]
+										}
+									}]
+								},
+								"unexposed_arguments": "void (const stappler::io::Buffer &)"
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "size_t",
+					"kind": "user_defined",
+					"target": {
+						"name": "size_t"
+					}
+				},
+				"semantic_scope": "",
+				"signature": "(stappler::io::Producer const&,stappler::io::Consumer const&,stappler::io::Buffer const&,Callback<void (const stappler::io::Buffer &)> const&)"
+			}, {
+				"_fullName": "::stappler::io::tread<typename>(stappler::io::Producer const&,T const&)",
+				"_kind": "function template",
+				"_name": "tread",
+				"childs": [{
+					"_fullName": "::stappler::io::tread<typename>(stappler::io::Producer const&,T const&)",
+					"_kind": "function",
+					"_name": "tread",
+					"body_kind": "definition",
+					"id": 93825001941040,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "tread",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "from",
+						"id": 93825001813120,
+						"kind": "function parameter",
+						"name": "from",
+						"type": {
+							"_typeName": "stappler::io::Producer const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::io::Producer const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::io::Producer",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::io::Producer",
+										"objects": [{
+											"_fullName": "::stappler::io::Producer",
+											"_kind": "class",
+											"_name": "Producer",
+											"class_kind": "struct",
+											"id": 93824998987008,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Producer",
+											"scope": {
+												"name": "Producer"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "f",
+						"id": 93825002466224,
+						"kind": "function parameter",
+						"name": "f",
+						"type": {
+							"_typeName": "T const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "T const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "T",
+									"entity": {
+										"name": "T",
+										"objects": [{
+											"_kind": "template type parameter",
+											"_name": "T",
+											"id": 140736956898176,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "T"
+										}]
+									},
+									"kind": "template_parameter"
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "size_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "size_t"
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::io::Producer const&,T const&)"
+				}],
+				"function":  {
+					"_fullName": "::stappler::io::tread<typename>(stappler::io::Producer const&,T const&)",
+					"_kind": "function",
+					"_name": "tread",
+					"body_kind": "definition",
+					"id": 93825001941040,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "tread",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "from",
+						"id": 93825001813120,
+						"kind": "function parameter",
+						"name": "from",
+						"type": {
+							"_typeName": "stappler::io::Producer const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::io::Producer const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::io::Producer",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::io::Producer",
+										"objects": [{
+											"_fullName": "::stappler::io::Producer",
+											"_kind": "class",
+											"_name": "Producer",
+											"class_kind": "struct",
+											"id": 93824998987008,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Producer",
+											"scope": {
+												"name": "Producer"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "f",
+						"id": 93825002466224,
+						"kind": "function parameter",
+						"name": "f",
+						"type": {
+							"_typeName": "T const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "T const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "T",
+									"entity": {
+										"name": "T",
+										"objects": [{
+											"_kind": "template type parameter",
+											"_name": "T",
+											"id": 140736956898176,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "T"
+										}]
+									},
+									"kind": "template_parameter"
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "size_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "size_t"
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::io::Producer const&,T const&)"
+				},
+				"id": 140737109444336,
+				"kind": "function template",
+				"name": "tread",
+				"parameters": [{
+					"_kind": "template type parameter",
+					"_name": "T",
+					"id": 140736956898176,
+					"is_variadic": false,
+					"keyword": "typename",
+					"kind": "template type parameter",
+					"name": "T"
+				}]
+			}, {
+				"_fullName": "::stappler::io::tread<typename>(stappler::io::Producer const&,stappler::io::Buffer const&,T const&)",
+				"_kind": "function template",
+				"_name": "tread",
+				"childs": [{
+					"_fullName": "::stappler::io::tread<typename>(stappler::io::Producer const&,stappler::io::Buffer const&,T const&)",
+					"_kind": "function",
+					"_name": "tread",
+					"body_kind": "definition",
+					"id": 93825002466608,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "tread",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "from",
+						"id": 93825000274768,
+						"kind": "function parameter",
+						"name": "from",
+						"type": {
+							"_typeName": "stappler::io::Producer const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::io::Producer const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::io::Producer",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::io::Producer",
+										"objects": [{
+											"_fullName": "::stappler::io::Producer",
+											"_kind": "class",
+											"_name": "Producer",
+											"class_kind": "struct",
+											"id": 93824998987008,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Producer",
+											"scope": {
+												"name": "Producer"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "buf",
+						"id": 93825000275200,
+						"kind": "function parameter",
+						"name": "buf",
+						"type": {
+							"_typeName": "stappler::io::Buffer const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::io::Buffer const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::io::Buffer",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::io::Buffer",
+										"objects": [{
+											"_fullName": "::stappler::io::Buffer",
+											"_kind": "class",
+											"_name": "Buffer",
+											"class_kind": "struct",
+											"id": 140737093984144,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Buffer",
+											"scope": {
+												"name": "Buffer"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "f",
+						"id": 93825004407088,
+						"kind": "function parameter",
+						"name": "f",
+						"type": {
+							"_typeName": "T const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "T const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "T",
+									"entity": {
+										"name": "T",
+										"objects": [{
+											"_kind": "template type parameter",
+											"_name": "T",
+											"id": 140736986300848,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "T"
+										}]
+									},
+									"kind": "template_parameter"
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "size_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "size_t"
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::io::Producer const&,stappler::io::Buffer const&,T const&)"
+				}],
+				"function":  {
+					"_fullName": "::stappler::io::tread<typename>(stappler::io::Producer const&,stappler::io::Buffer const&,T const&)",
+					"_kind": "function",
+					"_name": "tread",
+					"body_kind": "definition",
+					"id": 93825002466608,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "tread",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "from",
+						"id": 93825000274768,
+						"kind": "function parameter",
+						"name": "from",
+						"type": {
+							"_typeName": "stappler::io::Producer const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::io::Producer const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::io::Producer",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::io::Producer",
+										"objects": [{
+											"_fullName": "::stappler::io::Producer",
+											"_kind": "class",
+											"_name": "Producer",
+											"class_kind": "struct",
+											"id": 93824998987008,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Producer",
+											"scope": {
+												"name": "Producer"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "buf",
+						"id": 93825000275200,
+						"kind": "function parameter",
+						"name": "buf",
+						"type": {
+							"_typeName": "stappler::io::Buffer const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::io::Buffer const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::io::Buffer",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::io::Buffer",
+										"objects": [{
+											"_fullName": "::stappler::io::Buffer",
+											"_kind": "class",
+											"_name": "Buffer",
+											"class_kind": "struct",
+											"id": 140737093984144,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Buffer",
+											"scope": {
+												"name": "Buffer"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "f",
+						"id": 93825004407088,
+						"kind": "function parameter",
+						"name": "f",
+						"type": {
+							"_typeName": "T const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "T const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "T",
+									"entity": {
+										"name": "T",
+										"objects": [{
+											"_kind": "template type parameter",
+											"_name": "T",
+											"id": 140736986300848,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "T"
+										}]
+									},
+									"kind": "template_parameter"
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "size_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "size_t"
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::io::Producer const&,stappler::io::Buffer const&,T const&)"
+				},
+				"id": 93825001336736,
+				"kind": "function template",
+				"name": "tread",
+				"parameters": [{
+					"_kind": "template type parameter",
+					"_name": "T",
+					"id": 140736986300848,
+					"is_variadic": false,
+					"keyword": "typename",
+					"kind": "template type parameter",
+					"name": "T"
+				}]
+			}, {
+				"_fullName": "::stappler::io::tread<typename>(stappler::io::Producer const&,stappler::io::Consumer const&,T const&)",
+				"_kind": "function template",
+				"_name": "tread",
+				"childs": [{
+					"_fullName": "::stappler::io::tread<typename>(stappler::io::Producer const&,stappler::io::Consumer const&,T const&)",
+					"_kind": "function",
+					"_name": "tread",
+					"body_kind": "definition",
+					"id": 93825004407472,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "tread",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "from",
+						"id": 93824998755088,
+						"kind": "function parameter",
+						"name": "from",
+						"type": {
+							"_typeName": "stappler::io::Producer const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::io::Producer const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::io::Producer",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::io::Producer",
+										"objects": [{
+											"_fullName": "::stappler::io::Producer",
+											"_kind": "class",
+											"_name": "Producer",
+											"class_kind": "struct",
+											"id": 93824998987008,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Producer",
+											"scope": {
+												"name": "Producer"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "to",
+						"id": 93824998755520,
+						"kind": "function parameter",
+						"name": "to",
+						"type": {
+							"_typeName": "stappler::io::Consumer const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::io::Consumer const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::io::Consumer",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::io::Consumer",
+										"objects": [{
+											"_fullName": "::stappler::io::Consumer",
+											"_kind": "class",
+											"_name": "Consumer",
+											"class_kind": "struct",
+											"id": 93825002719936,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Consumer",
+											"scope": {
+												"name": "Consumer"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "f",
+						"id": 93824998755904,
+						"kind": "function parameter",
+						"name": "f",
+						"type": {
+							"_typeName": "T const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "T const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "T",
+									"entity": {
+										"name": "T",
+										"objects": [{
+											"_kind": "template type parameter",
+											"_name": "T",
+											"id": 140737124290688,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "T"
+										}]
+									},
+									"kind": "template_parameter"
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "size_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "size_t"
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::io::Producer const&,stappler::io::Consumer const&,T const&)"
+				}],
+				"function":  {
+					"_fullName": "::stappler::io::tread<typename>(stappler::io::Producer const&,stappler::io::Consumer const&,T const&)",
+					"_kind": "function",
+					"_name": "tread",
+					"body_kind": "definition",
+					"id": 93825004407472,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "tread",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "from",
+						"id": 93824998755088,
+						"kind": "function parameter",
+						"name": "from",
+						"type": {
+							"_typeName": "stappler::io::Producer const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::io::Producer const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::io::Producer",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::io::Producer",
+										"objects": [{
+											"_fullName": "::stappler::io::Producer",
+											"_kind": "class",
+											"_name": "Producer",
+											"class_kind": "struct",
+											"id": 93824998987008,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Producer",
+											"scope": {
+												"name": "Producer"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "to",
+						"id": 93824998755520,
+						"kind": "function parameter",
+						"name": "to",
+						"type": {
+							"_typeName": "stappler::io::Consumer const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::io::Consumer const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::io::Consumer",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::io::Consumer",
+										"objects": [{
+											"_fullName": "::stappler::io::Consumer",
+											"_kind": "class",
+											"_name": "Consumer",
+											"class_kind": "struct",
+											"id": 93825002719936,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Consumer",
+											"scope": {
+												"name": "Consumer"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "f",
+						"id": 93824998755904,
+						"kind": "function parameter",
+						"name": "f",
+						"type": {
+							"_typeName": "T const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "T const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "T",
+									"entity": {
+										"name": "T",
+										"objects": [{
+											"_kind": "template type parameter",
+											"_name": "T",
+											"id": 140737124290688,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "T"
+										}]
+									},
+									"kind": "template_parameter"
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "size_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "size_t"
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::io::Producer const&,stappler::io::Consumer const&,T const&)"
+				},
+				"id": 93824999039920,
+				"kind": "function template",
+				"name": "tread",
+				"parameters": [{
+					"_kind": "template type parameter",
+					"_name": "T",
+					"id": 140737124290688,
+					"is_variadic": false,
+					"keyword": "typename",
+					"kind": "template type parameter",
+					"name": "T"
+				}]
+			}, {
+				"_fullName": "::stappler::io::tread<typename>(stappler::io::Producer const&,stappler::io::Consumer const&,stappler::io::Buffer const&,T const&)",
+				"_kind": "function template",
+				"_name": "tread",
+				"childs": [{
+					"_fullName": "::stappler::io::tread<typename>(stappler::io::Producer const&,stappler::io::Consumer const&,stappler::io::Buffer const&,T const&)",
+					"_kind": "function",
+					"_name": "tread",
+					"body_kind": "definition",
+					"id": 93824999040272,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "tread",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "from",
+						"id": 93824999040784,
+						"kind": "function parameter",
+						"name": "from",
+						"type": {
+							"_typeName": "stappler::io::Producer const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::io::Producer const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::io::Producer",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::io::Producer",
+										"objects": [{
+											"_fullName": "::stappler::io::Producer",
+											"_kind": "class",
+											"_name": "Producer",
+											"class_kind": "struct",
+											"id": 93824998987008,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Producer",
+											"scope": {
+												"name": "Producer"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "to",
+						"id": 93825002053744,
+						"kind": "function parameter",
+						"name": "to",
+						"type": {
+							"_typeName": "stappler::io::Consumer const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::io::Consumer const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::io::Consumer",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::io::Consumer",
+										"objects": [{
+											"_fullName": "::stappler::io::Consumer",
+											"_kind": "class",
+											"_name": "Consumer",
+											"class_kind": "struct",
+											"id": 93825002719936,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Consumer",
+											"scope": {
+												"name": "Consumer"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "buf",
+						"id": 93825002054176,
+						"kind": "function parameter",
+						"name": "buf",
+						"type": {
+							"_typeName": "stappler::io::Buffer const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::io::Buffer const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::io::Buffer",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::io::Buffer",
+										"objects": [{
+											"_fullName": "::stappler::io::Buffer",
+											"_kind": "class",
+											"_name": "Buffer",
+											"class_kind": "struct",
+											"id": 140737093984144,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Buffer",
+											"scope": {
+												"name": "Buffer"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "f",
+						"id": 93824997729760,
+						"kind": "function parameter",
+						"name": "f",
+						"type": {
+							"_typeName": "T const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "T const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "T",
+									"entity": {
+										"name": "T",
+										"objects": [{
+											"_kind": "template type parameter",
+											"_name": "T",
+											"id": 140737146424640,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "T"
+										}]
+									},
+									"kind": "template_parameter"
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "size_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "size_t"
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::io::Producer const&,stappler::io::Consumer const&,stappler::io::Buffer const&,T const&)"
+				}],
+				"function":  {
+					"_fullName": "::stappler::io::tread<typename>(stappler::io::Producer const&,stappler::io::Consumer const&,stappler::io::Buffer const&,T const&)",
+					"_kind": "function",
+					"_name": "tread",
+					"body_kind": "definition",
+					"id": 93824999040272,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "tread",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "from",
+						"id": 93824999040784,
+						"kind": "function parameter",
+						"name": "from",
+						"type": {
+							"_typeName": "stappler::io::Producer const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::io::Producer const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::io::Producer",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::io::Producer",
+										"objects": [{
+											"_fullName": "::stappler::io::Producer",
+											"_kind": "class",
+											"_name": "Producer",
+											"class_kind": "struct",
+											"id": 93824998987008,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Producer",
+											"scope": {
+												"name": "Producer"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "to",
+						"id": 93825002053744,
+						"kind": "function parameter",
+						"name": "to",
+						"type": {
+							"_typeName": "stappler::io::Consumer const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::io::Consumer const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::io::Consumer",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::io::Consumer",
+										"objects": [{
+											"_fullName": "::stappler::io::Consumer",
+											"_kind": "class",
+											"_name": "Consumer",
+											"class_kind": "struct",
+											"id": 93825002719936,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Consumer",
+											"scope": {
+												"name": "Consumer"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "buf",
+						"id": 93825002054176,
+						"kind": "function parameter",
+						"name": "buf",
+						"type": {
+							"_typeName": "stappler::io::Buffer const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::io::Buffer const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::io::Buffer",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::io::Buffer",
+										"objects": [{
+											"_fullName": "::stappler::io::Buffer",
+											"_kind": "class",
+											"_name": "Buffer",
+											"class_kind": "struct",
+											"id": 140737093984144,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Buffer",
+											"scope": {
+												"name": "Buffer"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "f",
+						"id": 93824997729760,
+						"kind": "function parameter",
+						"name": "f",
+						"type": {
+							"_typeName": "T const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "T const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "T",
+									"entity": {
+										"name": "T",
+										"objects": [{
+											"_kind": "template type parameter",
+											"_name": "T",
+											"id": 140737146424640,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "T"
+										}]
+									},
+									"kind": "template_parameter"
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "size_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "size_t"
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::io::Producer const&,stappler::io::Consumer const&,stappler::io::Buffer const&,T const&)"
+				},
+				"id": 93824997730096,
+				"kind": "function template",
+				"name": "tread",
+				"parameters": [{
+					"_kind": "template type parameter",
+					"_name": "T",
+					"id": 140737146424640,
+					"is_variadic": false,
+					"keyword": "typename",
+					"kind": "template type parameter",
+					"name": "T"
+				}]
+			}],
+			"id": 140736957717744,
+			"is_anonymous": false,
+			"is_inline": false,
+			"is_nested": true,
+			"kind": "namespace",
+			"name": "io",
+			"scope": {
+				"name": "io"
+			}
+		}],
+		"id": 140737096198160,
+		"is_anonymous": false,
+		"is_inline": false,
+		"is_nested": false,
+		"kind": "namespace",
+		"name": "stappler",
+		"scope": {
+			"name": "stappler"
+		}
+	}],
+	"id": 140737110817888,
+	"kind": "file",
+	"name": "/home/sbkarr/stappler/xenolith/libstappler/common/io/SPIO.h",
+	"unmatched_comments": [{
+		"line": 21,
+		"text": "\nCopyright (c) 2016-2022 Roman Katuntsev <sbkarr@stappler.org>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n"
+	}]
+}

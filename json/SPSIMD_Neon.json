@@ -1,0 +1,2919 @@
+{
+	"_kind": "file",
+	"_name": "/home/sbkarr/stappler/xenolith/libstappler/modules/geom/SPSIMD_Neon.h",
+	"childs": [{
+		"_kind": "include directive",
+		"_name": "SPSIMD.h",
+		"id": 140737103319792,
+		"include": "/home/sbkarr/stappler/xenolith/libstappler/modules/geom/SPSIMD.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "SPSIMD.h"
+	}, {
+		"_kind": "include directive",
+		"_name": "SPSIMD_Sse.h",
+		"id": 140736987465872,
+		"include": "/home/sbkarr/stappler/xenolith/libstappler/modules/geom/SPSIMD_Sse.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "SPSIMD_Sse.h"
+	}, {
+		"_kind": "include directive",
+		"_name": "simde/arm/neon.h",
+		"id": 140737086384048,
+		"include": "/home/sbkarr/stappler/xenolith/libstappler/thirdparty/simde/arm/neon.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "simde/arm/neon.h"
+	}, {
+		"_fullName": "LIBSTAPPLER_MODULE_GEOM_SPSIMD_NEON_H_",
+		"_kind": "macro definition",
+		"_name": "LIBSTAPPLER_MODULE_GEOM_SPSIMD_NEON_H_",
+		"id": 140737116045536,
+		"is_function_like": false,
+		"is_object_like": true,
+		"is_variadic": false,
+		"kind": "macro definition",
+		"name": "LIBSTAPPLER_MODULE_GEOM_SPSIMD_NEON_H_",
+		"replacement": ""
+	}, {
+		"_fullName": "::stappler",
+		"_kind": "namespace",
+		"_name": "stappler",
+		"childs": [{
+			"_fullName": "::stappler::simd",
+			"_kind": "namespace",
+			"_name": "simd",
+			"childs": [{
+				"_fullName": "::stappler::simd::neon",
+				"_kind": "namespace",
+				"_name": "neon",
+				"childs": [{
+					"_fullName": "::stappler::simd::neon::f32x4",
+					"_kind": "type alias",
+					"_name": "f32x4",
+					"id": 140737117434096,
+					"kind": "type alias",
+					"name": "f32x4",
+					"underlying_type": {
+						"_typeName": "simde__m128",
+						"kind": "user_defined",
+						"target": {
+							"name": "simde__m128"
+						}
+					}
+				}, {
+					"_fullName": "::stappler::simd::neon::load(float,float,float,float)",
+					"_kind": "function",
+					"_name": "load",
+					"attributes": [{
+						"is_variadic": false,
+						"kind": "unknown",
+						"name": "always_inline"
+					}],
+					"body_kind": "definition",
+					"id": 93825001384336,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "load",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "v1",
+						"id": 140737108590384,
+						"kind": "function parameter",
+						"name": "v1",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "v2",
+						"id": 140737131881408,
+						"kind": "function parameter",
+						"name": "v2",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "v3",
+						"id": 140737108408240,
+						"kind": "function parameter",
+						"name": "v3",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "v4",
+						"id": 140737089116400,
+						"kind": "function parameter",
+						"name": "v4",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "f32x4",
+						"kind": "user_defined",
+						"target": {
+							"name": "f32x4",
+							"objects": [{
+								"_fullName": "::stappler::simd::neon::f32x4",
+								"_kind": "type alias",
+								"_name": "f32x4",
+								"id": 140737117434096,
+								"kind": "type alias",
+								"name": "f32x4",
+								"underlying_type": {
+									"_typeName": "simde__m128",
+									"kind": "user_defined",
+									"target": {
+										"name": "simde__m128"
+									}
+								}
+							}]
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(float,float,float,float)"
+				}, {
+					"_fullName": "::stappler::simd::neon::load(float const[4])",
+					"_kind": "function",
+					"_name": "load",
+					"attributes": [{
+						"is_variadic": false,
+						"kind": "unknown",
+						"name": "always_inline"
+					}],
+					"body_kind": "definition",
+					"id": 140737095783712,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "load",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "v",
+						"id": 140736989874752,
+						"kind": "function parameter",
+						"name": "v",
+						"type": {
+							"_typeName": "float const[4]",
+							"kind": "array",
+							"size": {
+								"kind": "literal",
+								"type": {
+									"_typeName": "unsigned long long",
+									"builtin_type_kind": "unsigned long long",
+									"kind": "builtin"
+								},
+								"value": "4"
+							},
+							"value_type":  {
+								"_typeName": "float const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "float",
+									"builtin_type_kind": "float",
+									"kind": "builtin"
+								}
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "f32x4",
+						"kind": "user_defined",
+						"target": {
+							"name": "f32x4",
+							"objects": [{
+								"_fullName": "::stappler::simd::neon::f32x4",
+								"_kind": "type alias",
+								"_name": "f32x4",
+								"id": 140737117434096,
+								"kind": "type alias",
+								"name": "f32x4",
+								"underlying_type": {
+									"_typeName": "simde__m128",
+									"kind": "user_defined",
+									"target": {
+										"name": "simde__m128"
+									}
+								}
+							}]
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(float const[4])"
+				}, {
+					"_fullName": "::stappler::simd::neon::load(float)",
+					"_kind": "function",
+					"_name": "load",
+					"attributes": [{
+						"is_variadic": false,
+						"kind": "unknown",
+						"name": "always_inline"
+					}],
+					"body_kind": "definition",
+					"id": 140736957230256,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "load",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "v",
+						"id": 140737114138512,
+						"kind": "function parameter",
+						"name": "v",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "f32x4",
+						"kind": "user_defined",
+						"target": {
+							"name": "f32x4",
+							"objects": [{
+								"_fullName": "::stappler::simd::neon::f32x4",
+								"_kind": "type alias",
+								"_name": "f32x4",
+								"id": 140737117434096,
+								"kind": "type alias",
+								"name": "f32x4",
+								"underlying_type": {
+									"_typeName": "simde__m128",
+									"kind": "user_defined",
+									"target": {
+										"name": "simde__m128"
+									}
+								}
+							}]
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(float)"
+				}, {
+					"_fullName": "::stappler::simd::neon::store(float[4],stappler::simd::neon::f32x4 const&)",
+					"_kind": "function",
+					"_name": "store",
+					"attributes": [{
+						"is_variadic": false,
+						"kind": "unknown",
+						"name": "always_inline"
+					}],
+					"body_kind": "definition",
+					"id": 140737120865328,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "store",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "target",
+						"id": 93825002046160,
+						"kind": "function parameter",
+						"name": "target",
+						"type": {
+							"_typeName": "float[4]",
+							"kind": "array",
+							"size": {
+								"kind": "literal",
+								"type": {
+									"_typeName": "unsigned long long",
+									"builtin_type_kind": "unsigned long long",
+									"kind": "builtin"
+								},
+								"value": "4"
+							},
+							"value_type":  {
+								"_typeName": "float",
+								"builtin_type_kind": "float",
+								"kind": "builtin"
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "v",
+						"id": 93825001390640,
+						"kind": "function parameter",
+						"name": "v",
+						"type": {
+							"_typeName": "stappler::simd::neon::f32x4 const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::simd::neon::f32x4 const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::simd::neon::f32x4",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::simd::neon::f32x4",
+										"objects": [{
+											"_fullName": "::stappler::simd::neon::f32x4",
+											"_kind": "type alias",
+											"_name": "f32x4",
+											"id": 140737117434096,
+											"kind": "type alias",
+											"name": "f32x4",
+											"underlying_type": {
+												"_typeName": "simde__m128",
+												"kind": "user_defined",
+												"target": {
+													"name": "simde__m128"
+												}
+											}
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(float[4],stappler::simd::neon::f32x4 const&)"
+				}, {
+					"_fullName": "::stappler::simd::neon::mul(stappler::simd::neon::f32x4 const&,stappler::simd::neon::f32x4 const&)",
+					"_kind": "function",
+					"_name": "mul",
+					"attributes": [{
+						"is_variadic": false,
+						"kind": "unknown",
+						"name": "always_inline"
+					}],
+					"body_kind": "definition",
+					"id": 93825000336432,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "mul",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "v1",
+						"id": 93824999569104,
+						"kind": "function parameter",
+						"name": "v1",
+						"type": {
+							"_typeName": "stappler::simd::neon::f32x4 const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::simd::neon::f32x4 const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::simd::neon::f32x4",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::simd::neon::f32x4",
+										"objects": [{
+											"_fullName": "::stappler::simd::neon::f32x4",
+											"_kind": "type alias",
+											"_name": "f32x4",
+											"id": 140737117434096,
+											"kind": "type alias",
+											"name": "f32x4",
+											"underlying_type": {
+												"_typeName": "simde__m128",
+												"kind": "user_defined",
+												"target": {
+													"name": "simde__m128"
+												}
+											}
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "v2",
+						"id": 93824997369904,
+						"kind": "function parameter",
+						"name": "v2",
+						"type": {
+							"_typeName": "stappler::simd::neon::f32x4 const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::simd::neon::f32x4 const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::simd::neon::f32x4",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::simd::neon::f32x4",
+										"objects": [{
+											"_fullName": "::stappler::simd::neon::f32x4",
+											"_kind": "type alias",
+											"_name": "f32x4",
+											"id": 140737117434096,
+											"kind": "type alias",
+											"name": "f32x4",
+											"underlying_type": {
+												"_typeName": "simde__m128",
+												"kind": "user_defined",
+												"target": {
+													"name": "simde__m128"
+												}
+											}
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "f32x4",
+						"kind": "user_defined",
+						"target": {
+							"name": "f32x4",
+							"objects": [{
+								"_fullName": "::stappler::simd::neon::f32x4",
+								"_kind": "type alias",
+								"_name": "f32x4",
+								"id": 140737117434096,
+								"kind": "type alias",
+								"name": "f32x4",
+								"underlying_type": {
+									"_typeName": "simde__m128",
+									"kind": "user_defined",
+									"target": {
+										"name": "simde__m128"
+									}
+								}
+							}]
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::simd::neon::f32x4 const&,stappler::simd::neon::f32x4 const&)"
+				}, {
+					"_fullName": "::stappler::simd::neon::div(stappler::simd::neon::f32x4 const&,stappler::simd::neon::f32x4 const&)",
+					"_kind": "function",
+					"_name": "div",
+					"attributes": [{
+						"is_variadic": false,
+						"kind": "unknown",
+						"name": "always_inline"
+					}],
+					"body_kind": "definition",
+					"id": 93825002311440,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "div",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "v1",
+						"id": 93825000045712,
+						"kind": "function parameter",
+						"name": "v1",
+						"type": {
+							"_typeName": "stappler::simd::neon::f32x4 const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::simd::neon::f32x4 const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::simd::neon::f32x4",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::simd::neon::f32x4",
+										"objects": [{
+											"_fullName": "::stappler::simd::neon::f32x4",
+											"_kind": "type alias",
+											"_name": "f32x4",
+											"id": 140737117434096,
+											"kind": "type alias",
+											"name": "f32x4",
+											"underlying_type": {
+												"_typeName": "simde__m128",
+												"kind": "user_defined",
+												"target": {
+													"name": "simde__m128"
+												}
+											}
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "v2",
+						"id": 93824997544800,
+						"kind": "function parameter",
+						"name": "v2",
+						"type": {
+							"_typeName": "stappler::simd::neon::f32x4 const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::simd::neon::f32x4 const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::simd::neon::f32x4",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::simd::neon::f32x4",
+										"objects": [{
+											"_fullName": "::stappler::simd::neon::f32x4",
+											"_kind": "type alias",
+											"_name": "f32x4",
+											"id": 140737117434096,
+											"kind": "type alias",
+											"name": "f32x4",
+											"underlying_type": {
+												"_typeName": "simde__m128",
+												"kind": "user_defined",
+												"target": {
+													"name": "simde__m128"
+												}
+											}
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "f32x4",
+						"kind": "user_defined",
+						"target": {
+							"name": "f32x4",
+							"objects": [{
+								"_fullName": "::stappler::simd::neon::f32x4",
+								"_kind": "type alias",
+								"_name": "f32x4",
+								"id": 140737117434096,
+								"kind": "type alias",
+								"name": "f32x4",
+								"underlying_type": {
+									"_typeName": "simde__m128",
+									"kind": "user_defined",
+									"target": {
+										"name": "simde__m128"
+									}
+								}
+							}]
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::simd::neon::f32x4 const&,stappler::simd::neon::f32x4 const&)"
+				}, {
+					"_fullName": "::stappler::simd::neon::add(stappler::simd::neon::f32x4 const&,stappler::simd::neon::f32x4 const&)",
+					"_kind": "function",
+					"_name": "add",
+					"attributes": [{
+						"is_variadic": false,
+						"kind": "unknown",
+						"name": "always_inline"
+					}],
+					"body_kind": "definition",
+					"id": 93824999909840,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "add",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "v1",
+						"id": 93824998574912,
+						"kind": "function parameter",
+						"name": "v1",
+						"type": {
+							"_typeName": "stappler::simd::neon::f32x4 const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::simd::neon::f32x4 const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::simd::neon::f32x4",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::simd::neon::f32x4",
+										"objects": [{
+											"_fullName": "::stappler::simd::neon::f32x4",
+											"_kind": "type alias",
+											"_name": "f32x4",
+											"id": 140737117434096,
+											"kind": "type alias",
+											"name": "f32x4",
+											"underlying_type": {
+												"_typeName": "simde__m128",
+												"kind": "user_defined",
+												"target": {
+													"name": "simde__m128"
+												}
+											}
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "v2",
+						"id": 93825000503632,
+						"kind": "function parameter",
+						"name": "v2",
+						"type": {
+							"_typeName": "stappler::simd::neon::f32x4 const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::simd::neon::f32x4 const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::simd::neon::f32x4",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::simd::neon::f32x4",
+										"objects": [{
+											"_fullName": "::stappler::simd::neon::f32x4",
+											"_kind": "type alias",
+											"_name": "f32x4",
+											"id": 140737117434096,
+											"kind": "type alias",
+											"name": "f32x4",
+											"underlying_type": {
+												"_typeName": "simde__m128",
+												"kind": "user_defined",
+												"target": {
+													"name": "simde__m128"
+												}
+											}
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "f32x4",
+						"kind": "user_defined",
+						"target": {
+							"name": "f32x4",
+							"objects": [{
+								"_fullName": "::stappler::simd::neon::f32x4",
+								"_kind": "type alias",
+								"_name": "f32x4",
+								"id": 140737117434096,
+								"kind": "type alias",
+								"name": "f32x4",
+								"underlying_type": {
+									"_typeName": "simde__m128",
+									"kind": "user_defined",
+									"target": {
+										"name": "simde__m128"
+									}
+								}
+							}]
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::simd::neon::f32x4 const&,stappler::simd::neon::f32x4 const&)"
+				}, {
+					"_fullName": "::stappler::simd::neon::sub(stappler::simd::neon::f32x4 const&,stappler::simd::neon::f32x4 const&)",
+					"_kind": "function",
+					"_name": "sub",
+					"attributes": [{
+						"is_variadic": false,
+						"kind": "unknown",
+						"name": "always_inline"
+					}],
+					"body_kind": "definition",
+					"id": 93825001409840,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "sub",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "v1",
+						"id": 93825000121248,
+						"kind": "function parameter",
+						"name": "v1",
+						"type": {
+							"_typeName": "stappler::simd::neon::f32x4 const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::simd::neon::f32x4 const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::simd::neon::f32x4",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::simd::neon::f32x4",
+										"objects": [{
+											"_fullName": "::stappler::simd::neon::f32x4",
+											"_kind": "type alias",
+											"_name": "f32x4",
+											"id": 140737117434096,
+											"kind": "type alias",
+											"name": "f32x4",
+											"underlying_type": {
+												"_typeName": "simde__m128",
+												"kind": "user_defined",
+												"target": {
+													"name": "simde__m128"
+												}
+											}
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "v2",
+						"id": 93824999628560,
+						"kind": "function parameter",
+						"name": "v2",
+						"type": {
+							"_typeName": "stappler::simd::neon::f32x4 const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::simd::neon::f32x4 const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::simd::neon::f32x4",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::simd::neon::f32x4",
+										"objects": [{
+											"_fullName": "::stappler::simd::neon::f32x4",
+											"_kind": "type alias",
+											"_name": "f32x4",
+											"id": 140737117434096,
+											"kind": "type alias",
+											"name": "f32x4",
+											"underlying_type": {
+												"_typeName": "simde__m128",
+												"kind": "user_defined",
+												"target": {
+													"name": "simde__m128"
+												}
+											}
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "f32x4",
+						"kind": "user_defined",
+						"target": {
+							"name": "f32x4",
+							"objects": [{
+								"_fullName": "::stappler::simd::neon::f32x4",
+								"_kind": "type alias",
+								"_name": "f32x4",
+								"id": 140737117434096,
+								"kind": "type alias",
+								"name": "f32x4",
+								"underlying_type": {
+									"_typeName": "simde__m128",
+									"kind": "user_defined",
+									"target": {
+										"name": "simde__m128"
+									}
+								}
+							}]
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::simd::neon::f32x4 const&,stappler::simd::neon::f32x4 const&)"
+				}, {
+					"_fullName": "::stappler::simd::neon::rsqrt(stappler::simd::neon::f32x4 const&)",
+					"_kind": "function",
+					"_name": "rsqrt",
+					"attributes": [{
+						"is_variadic": false,
+						"kind": "unknown",
+						"name": "always_inline"
+					}],
+					"body_kind": "definition",
+					"id": 93824997494336,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "rsqrt",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "v",
+						"id": 93824998673072,
+						"kind": "function parameter",
+						"name": "v",
+						"type": {
+							"_typeName": "stappler::simd::neon::f32x4 const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::simd::neon::f32x4 const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::simd::neon::f32x4",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::simd::neon::f32x4",
+										"objects": [{
+											"_fullName": "::stappler::simd::neon::f32x4",
+											"_kind": "type alias",
+											"_name": "f32x4",
+											"id": 140737117434096,
+											"kind": "type alias",
+											"name": "f32x4",
+											"underlying_type": {
+												"_typeName": "simde__m128",
+												"kind": "user_defined",
+												"target": {
+													"name": "simde__m128"
+												}
+											}
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "f32x4",
+						"kind": "user_defined",
+						"target": {
+							"name": "f32x4",
+							"objects": [{
+								"_fullName": "::stappler::simd::neon::f32x4",
+								"_kind": "type alias",
+								"_name": "f32x4",
+								"id": 140737117434096,
+								"kind": "type alias",
+								"name": "f32x4",
+								"underlying_type": {
+									"_typeName": "simde__m128",
+									"kind": "user_defined",
+									"target": {
+										"name": "simde__m128"
+									}
+								}
+							}]
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::simd::neon::f32x4 const&)"
+				}, {
+					"_fullName": "::stappler::simd::neon::load1(float)",
+					"_kind": "function",
+					"_name": "load1",
+					"attributes": [{
+						"is_variadic": false,
+						"kind": "unknown",
+						"name": "always_inline"
+					}],
+					"body_kind": "definition",
+					"id": 93825000351504,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "load1",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "v",
+						"id": 93824999909392,
+						"kind": "function parameter",
+						"name": "v",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "f32x4",
+						"kind": "user_defined",
+						"target": {
+							"name": "f32x4",
+							"objects": [{
+								"_fullName": "::stappler::simd::neon::f32x4",
+								"_kind": "type alias",
+								"_name": "f32x4",
+								"id": 140737117434096,
+								"kind": "type alias",
+								"name": "f32x4",
+								"underlying_type": {
+									"_typeName": "simde__m128",
+									"kind": "user_defined",
+									"target": {
+										"name": "simde__m128"
+									}
+								}
+							}]
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(float)"
+				}, {
+					"_fullName": "::stappler::simd::neon::store1(float*,stappler::simd::neon::f32x4 const&)",
+					"_kind": "function",
+					"_name": "store1",
+					"attributes": [{
+						"is_variadic": false,
+						"kind": "unknown",
+						"name": "always_inline"
+					}],
+					"body_kind": "definition",
+					"id": 93825000714064,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "store1",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "target",
+						"id": 93824998747776,
+						"kind": "function parameter",
+						"name": "target",
+						"type": {
+							"_typeName": "float*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "float",
+								"builtin_type_kind": "float",
+								"kind": "builtin"
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "v",
+						"id": 93825000402864,
+						"kind": "function parameter",
+						"name": "v",
+						"type": {
+							"_typeName": "stappler::simd::neon::f32x4 const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::simd::neon::f32x4 const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::simd::neon::f32x4",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::simd::neon::f32x4",
+										"objects": [{
+											"_fullName": "::stappler::simd::neon::f32x4",
+											"_kind": "type alias",
+											"_name": "f32x4",
+											"id": 140737117434096,
+											"kind": "type alias",
+											"name": "f32x4",
+											"underlying_type": {
+												"_typeName": "simde__m128",
+												"kind": "user_defined",
+												"target": {
+													"name": "simde__m128"
+												}
+											}
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(float*,stappler::simd::neon::f32x4 const&)"
+				}, {
+					"_fullName": "::stappler::simd::neon::mul1(stappler::simd::neon::f32x4 const&,stappler::simd::neon::f32x4 const&)",
+					"_kind": "function",
+					"_name": "mul1",
+					"attributes": [{
+						"is_variadic": false,
+						"kind": "unknown",
+						"name": "always_inline"
+					}],
+					"body_kind": "definition",
+					"id": 93825000120656,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "mul1",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "v1",
+						"id": 93825002813776,
+						"kind": "function parameter",
+						"name": "v1",
+						"type": {
+							"_typeName": "stappler::simd::neon::f32x4 const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::simd::neon::f32x4 const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::simd::neon::f32x4",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::simd::neon::f32x4",
+										"objects": [{
+											"_fullName": "::stappler::simd::neon::f32x4",
+											"_kind": "type alias",
+											"_name": "f32x4",
+											"id": 140737117434096,
+											"kind": "type alias",
+											"name": "f32x4",
+											"underlying_type": {
+												"_typeName": "simde__m128",
+												"kind": "user_defined",
+												"target": {
+													"name": "simde__m128"
+												}
+											}
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "v2",
+						"id": 93825000783056,
+						"kind": "function parameter",
+						"name": "v2",
+						"type": {
+							"_typeName": "stappler::simd::neon::f32x4 const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::simd::neon::f32x4 const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::simd::neon::f32x4",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::simd::neon::f32x4",
+										"objects": [{
+											"_fullName": "::stappler::simd::neon::f32x4",
+											"_kind": "type alias",
+											"_name": "f32x4",
+											"id": 140737117434096,
+											"kind": "type alias",
+											"name": "f32x4",
+											"underlying_type": {
+												"_typeName": "simde__m128",
+												"kind": "user_defined",
+												"target": {
+													"name": "simde__m128"
+												}
+											}
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "f32x4",
+						"kind": "user_defined",
+						"target": {
+							"name": "f32x4",
+							"objects": [{
+								"_fullName": "::stappler::simd::neon::f32x4",
+								"_kind": "type alias",
+								"_name": "f32x4",
+								"id": 140737117434096,
+								"kind": "type alias",
+								"name": "f32x4",
+								"underlying_type": {
+									"_typeName": "simde__m128",
+									"kind": "user_defined",
+									"target": {
+										"name": "simde__m128"
+									}
+								}
+							}]
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::simd::neon::f32x4 const&,stappler::simd::neon::f32x4 const&)"
+				}, {
+					"_fullName": "::stappler::simd::neon::add1(stappler::simd::neon::f32x4 const&,stappler::simd::neon::f32x4 const&)",
+					"_kind": "function",
+					"_name": "add1",
+					"attributes": [{
+						"is_variadic": false,
+						"kind": "unknown",
+						"name": "always_inline"
+					}],
+					"body_kind": "definition",
+					"id": 93825000121504,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "add1",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "v1",
+						"id": 93824999072240,
+						"kind": "function parameter",
+						"name": "v1",
+						"type": {
+							"_typeName": "stappler::simd::neon::f32x4 const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::simd::neon::f32x4 const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::simd::neon::f32x4",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::simd::neon::f32x4",
+										"objects": [{
+											"_fullName": "::stappler::simd::neon::f32x4",
+											"_kind": "type alias",
+											"_name": "f32x4",
+											"id": 140737117434096,
+											"kind": "type alias",
+											"name": "f32x4",
+											"underlying_type": {
+												"_typeName": "simde__m128",
+												"kind": "user_defined",
+												"target": {
+													"name": "simde__m128"
+												}
+											}
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "v2",
+						"id": 93824999115888,
+						"kind": "function parameter",
+						"name": "v2",
+						"type": {
+							"_typeName": "stappler::simd::neon::f32x4 const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::simd::neon::f32x4 const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::simd::neon::f32x4",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::simd::neon::f32x4",
+										"objects": [{
+											"_fullName": "::stappler::simd::neon::f32x4",
+											"_kind": "type alias",
+											"_name": "f32x4",
+											"id": 140737117434096,
+											"kind": "type alias",
+											"name": "f32x4",
+											"underlying_type": {
+												"_typeName": "simde__m128",
+												"kind": "user_defined",
+												"target": {
+													"name": "simde__m128"
+												}
+											}
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "f32x4",
+						"kind": "user_defined",
+						"target": {
+							"name": "f32x4",
+							"objects": [{
+								"_fullName": "::stappler::simd::neon::f32x4",
+								"_kind": "type alias",
+								"_name": "f32x4",
+								"id": 140737117434096,
+								"kind": "type alias",
+								"name": "f32x4",
+								"underlying_type": {
+									"_typeName": "simde__m128",
+									"kind": "user_defined",
+									"target": {
+										"name": "simde__m128"
+									}
+								}
+							}]
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::simd::neon::f32x4 const&,stappler::simd::neon::f32x4 const&)"
+				}, {
+					"_fullName": "::stappler::simd::neon::sub1(stappler::simd::neon::f32x4 const&,stappler::simd::neon::f32x4 const&)",
+					"_kind": "function",
+					"_name": "sub1",
+					"attributes": [{
+						"is_variadic": false,
+						"kind": "unknown",
+						"name": "always_inline"
+					}],
+					"body_kind": "definition",
+					"id": 93824999910320,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "sub1",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "v1",
+						"id": 93825000504144,
+						"kind": "function parameter",
+						"name": "v1",
+						"type": {
+							"_typeName": "stappler::simd::neon::f32x4 const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::simd::neon::f32x4 const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::simd::neon::f32x4",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::simd::neon::f32x4",
+										"objects": [{
+											"_fullName": "::stappler::simd::neon::f32x4",
+											"_kind": "type alias",
+											"_name": "f32x4",
+											"id": 140737117434096,
+											"kind": "type alias",
+											"name": "f32x4",
+											"underlying_type": {
+												"_typeName": "simde__m128",
+												"kind": "user_defined",
+												"target": {
+													"name": "simde__m128"
+												}
+											}
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "v2",
+						"id": 93825000351024,
+						"kind": "function parameter",
+						"name": "v2",
+						"type": {
+							"_typeName": "stappler::simd::neon::f32x4 const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::simd::neon::f32x4 const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::simd::neon::f32x4",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::simd::neon::f32x4",
+										"objects": [{
+											"_fullName": "::stappler::simd::neon::f32x4",
+											"_kind": "type alias",
+											"_name": "f32x4",
+											"id": 140737117434096,
+											"kind": "type alias",
+											"name": "f32x4",
+											"underlying_type": {
+												"_typeName": "simde__m128",
+												"kind": "user_defined",
+												"target": {
+													"name": "simde__m128"
+												}
+											}
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "f32x4",
+						"kind": "user_defined",
+						"target": {
+							"name": "f32x4",
+							"objects": [{
+								"_fullName": "::stappler::simd::neon::f32x4",
+								"_kind": "type alias",
+								"_name": "f32x4",
+								"id": 140737117434096,
+								"kind": "type alias",
+								"name": "f32x4",
+								"underlying_type": {
+									"_typeName": "simde__m128",
+									"kind": "user_defined",
+									"target": {
+										"name": "simde__m128"
+									}
+								}
+							}]
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::simd::neon::f32x4 const&,stappler::simd::neon::f32x4 const&)"
+				}, {
+					"_fullName": "::stappler::simd::neon::rsqrt1(stappler::simd::neon::f32x4 const&)",
+					"_kind": "function",
+					"_name": "rsqrt1",
+					"attributes": [{
+						"is_variadic": false,
+						"kind": "unknown",
+						"name": "always_inline"
+					}],
+					"body_kind": "definition",
+					"id": 93825000640352,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "rsqrt1",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "v",
+						"id": 93824999206656,
+						"kind": "function parameter",
+						"name": "v",
+						"type": {
+							"_typeName": "stappler::simd::neon::f32x4 const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::simd::neon::f32x4 const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::simd::neon::f32x4",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::simd::neon::f32x4",
+										"objects": [{
+											"_fullName": "::stappler::simd::neon::f32x4",
+											"_kind": "type alias",
+											"_name": "f32x4",
+											"id": 140737117434096,
+											"kind": "type alias",
+											"name": "f32x4",
+											"underlying_type": {
+												"_typeName": "simde__m128",
+												"kind": "user_defined",
+												"target": {
+													"name": "simde__m128"
+												}
+											}
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "f32x4",
+						"kind": "user_defined",
+						"target": {
+							"name": "f32x4",
+							"objects": [{
+								"_fullName": "::stappler::simd::neon::f32x4",
+								"_kind": "type alias",
+								"_name": "f32x4",
+								"id": 140737117434096,
+								"kind": "type alias",
+								"name": "f32x4",
+								"underlying_type": {
+									"_typeName": "simde__m128",
+									"kind": "user_defined",
+									"target": {
+										"name": "simde__m128"
+									}
+								}
+							}]
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::simd::neon::f32x4 const&)"
+				}, {
+					"_fullName": "::stappler::simd::neon::addMat4Scalar(float const[16],float,float[16])",
+					"_kind": "function",
+					"_name": "addMat4Scalar",
+					"body_kind": "definition",
+					"id": 93825001539696,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "addMat4Scalar",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "m",
+						"id": 93824999206944,
+						"kind": "function parameter",
+						"name": "m",
+						"type": {
+							"_typeName": "float const[16]",
+							"kind": "array",
+							"size": {
+								"kind": "literal",
+								"type": {
+									"_typeName": "unsigned long long",
+									"builtin_type_kind": "unsigned long long",
+									"kind": "builtin"
+								},
+								"value": "16"
+							},
+							"value_type":  {
+								"_typeName": "float const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "float",
+									"builtin_type_kind": "float",
+									"kind": "builtin"
+								}
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "scalar",
+						"id": 93825012516288,
+						"kind": "function parameter",
+						"name": "scalar",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "dst",
+						"id": 93825012516576,
+						"kind": "function parameter",
+						"name": "dst",
+						"type": {
+							"_typeName": "float[16]",
+							"kind": "array",
+							"size": {
+								"kind": "literal",
+								"type": {
+									"_typeName": "unsigned long long",
+									"builtin_type_kind": "unsigned long long",
+									"kind": "builtin"
+								},
+								"value": "16"
+							},
+							"value_type":  {
+								"_typeName": "float",
+								"builtin_type_kind": "float",
+								"kind": "builtin"
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(float const[16],float,float[16])"
+				}, {
+					"_fullName": "::stappler::simd::neon::addMat4(float const[16],float const[16],float[16])",
+					"_kind": "function",
+					"_name": "addMat4",
+					"body_kind": "definition",
+					"id": 93824997668288,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "addMat4",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "m1",
+						"id": 93824997668752,
+						"kind": "function parameter",
+						"name": "m1",
+						"type": {
+							"_typeName": "float const[16]",
+							"kind": "array",
+							"size": {
+								"kind": "literal",
+								"type": {
+									"_typeName": "unsigned long long",
+									"builtin_type_kind": "unsigned long long",
+									"kind": "builtin"
+								},
+								"value": "16"
+							},
+							"value_type":  {
+								"_typeName": "float const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "float",
+									"builtin_type_kind": "float",
+									"kind": "builtin"
+								}
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "m2",
+						"id": 93825000352208,
+						"kind": "function parameter",
+						"name": "m2",
+						"type": {
+							"_typeName": "float const[16]",
+							"kind": "array",
+							"size": {
+								"kind": "literal",
+								"type": {
+									"_typeName": "unsigned long long",
+									"builtin_type_kind": "unsigned long long",
+									"kind": "builtin"
+								},
+								"value": "16"
+							},
+							"value_type":  {
+								"_typeName": "float const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "float",
+									"builtin_type_kind": "float",
+									"kind": "builtin"
+								}
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "dst",
+						"id": 93824999073536,
+						"kind": "function parameter",
+						"name": "dst",
+						"type": {
+							"_typeName": "float[16]",
+							"kind": "array",
+							"size": {
+								"kind": "literal",
+								"type": {
+									"_typeName": "unsigned long long",
+									"builtin_type_kind": "unsigned long long",
+									"kind": "builtin"
+								},
+								"value": "16"
+							},
+							"value_type":  {
+								"_typeName": "float",
+								"builtin_type_kind": "float",
+								"kind": "builtin"
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(float const[16],float const[16],float[16])"
+				}, {
+					"_fullName": "::stappler::simd::neon::subtractMat4(float const[16],float const[16],float[16])",
+					"_kind": "function",
+					"_name": "subtractMat4",
+					"body_kind": "definition",
+					"id": 93824999073776,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "subtractMat4",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "m1",
+						"id": 93824998652064,
+						"kind": "function parameter",
+						"name": "m1",
+						"type": {
+							"_typeName": "float const[16]",
+							"kind": "array",
+							"size": {
+								"kind": "literal",
+								"type": {
+									"_typeName": "unsigned long long",
+									"builtin_type_kind": "unsigned long long",
+									"kind": "builtin"
+								},
+								"value": "16"
+							},
+							"value_type":  {
+								"_typeName": "float const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "float",
+									"builtin_type_kind": "float",
+									"kind": "builtin"
+								}
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "m2",
+						"id": 93825000074496,
+						"kind": "function parameter",
+						"name": "m2",
+						"type": {
+							"_typeName": "float const[16]",
+							"kind": "array",
+							"size": {
+								"kind": "literal",
+								"type": {
+									"_typeName": "unsigned long long",
+									"builtin_type_kind": "unsigned long long",
+									"kind": "builtin"
+								},
+								"value": "16"
+							},
+							"value_type":  {
+								"_typeName": "float const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "float",
+									"builtin_type_kind": "float",
+									"kind": "builtin"
+								}
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "dst",
+						"id": 93825000074896,
+						"kind": "function parameter",
+						"name": "dst",
+						"type": {
+							"_typeName": "float[16]",
+							"kind": "array",
+							"size": {
+								"kind": "literal",
+								"type": {
+									"_typeName": "unsigned long long",
+									"builtin_type_kind": "unsigned long long",
+									"kind": "builtin"
+								},
+								"value": "16"
+							},
+							"value_type":  {
+								"_typeName": "float",
+								"builtin_type_kind": "float",
+								"kind": "builtin"
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(float const[16],float const[16],float[16])"
+				}, {
+					"_fullName": "::stappler::simd::neon::multiplyMat4Scalar(float const[16],float,float[16])",
+					"_kind": "function",
+					"_name": "multiplyMat4Scalar",
+					"body_kind": "definition",
+					"id": 93825005471712,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "multiplyMat4Scalar",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "m",
+						"id": 93825000797152,
+						"kind": "function parameter",
+						"name": "m",
+						"type": {
+							"_typeName": "float const[16]",
+							"kind": "array",
+							"size": {
+								"kind": "literal",
+								"type": {
+									"_typeName": "unsigned long long",
+									"builtin_type_kind": "unsigned long long",
+									"kind": "builtin"
+								},
+								"value": "16"
+							},
+							"value_type":  {
+								"_typeName": "float const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "float",
+									"builtin_type_kind": "float",
+									"kind": "builtin"
+								}
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "scalar",
+						"id": 93825000797344,
+						"kind": "function parameter",
+						"name": "scalar",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "dst",
+						"id": 93824999072832,
+						"kind": "function parameter",
+						"name": "dst",
+						"type": {
+							"_typeName": "float[16]",
+							"kind": "array",
+							"size": {
+								"kind": "literal",
+								"type": {
+									"_typeName": "unsigned long long",
+									"builtin_type_kind": "unsigned long long",
+									"kind": "builtin"
+								},
+								"value": "16"
+							},
+							"value_type":  {
+								"_typeName": "float",
+								"builtin_type_kind": "float",
+								"kind": "builtin"
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(float const[16],float,float[16])"
+				}, {
+					"_fullName": "::stappler::simd::neon::multiplyMat4(float const[16],float const[16],float[16])",
+					"_kind": "function",
+					"_name": "multiplyMat4",
+					"body_kind": "definition",
+					"id": 93824999073120,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "multiplyMat4",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "m1",
+						"id": 93825000336912,
+						"kind": "function parameter",
+						"name": "m1",
+						"type": {
+							"_typeName": "float const[16]",
+							"kind": "array",
+							"size": {
+								"kind": "literal",
+								"type": {
+									"_typeName": "unsigned long long",
+									"builtin_type_kind": "unsigned long long",
+									"kind": "builtin"
+								},
+								"value": "16"
+							},
+							"value_type":  {
+								"_typeName": "float const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "float",
+									"builtin_type_kind": "float",
+									"kind": "builtin"
+								}
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "m2",
+						"id": 93825001550512,
+						"kind": "function parameter",
+						"name": "m2",
+						"type": {
+							"_typeName": "float const[16]",
+							"kind": "array",
+							"size": {
+								"kind": "literal",
+								"type": {
+									"_typeName": "unsigned long long",
+									"builtin_type_kind": "unsigned long long",
+									"kind": "builtin"
+								},
+								"value": "16"
+							},
+							"value_type":  {
+								"_typeName": "float const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "float",
+									"builtin_type_kind": "float",
+									"kind": "builtin"
+								}
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "dst",
+						"id": 93825001550848,
+						"kind": "function parameter",
+						"name": "dst",
+						"type": {
+							"_typeName": "float[16]",
+							"kind": "array",
+							"size": {
+								"kind": "literal",
+								"type": {
+									"_typeName": "unsigned long long",
+									"builtin_type_kind": "unsigned long long",
+									"kind": "builtin"
+								},
+								"value": "16"
+							},
+							"value_type":  {
+								"_typeName": "float",
+								"builtin_type_kind": "float",
+								"kind": "builtin"
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(float const[16],float const[16],float[16])"
+				}, {
+					"_fullName": "::stappler::simd::neon::negateMat4(float const[16],float[16])",
+					"_kind": "function",
+					"_name": "negateMat4",
+					"body_kind": "definition",
+					"id": 93824999620496,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "negateMat4",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "m",
+						"id": 93825001551136,
+						"kind": "function parameter",
+						"name": "m",
+						"type": {
+							"_typeName": "float const[16]",
+							"kind": "array",
+							"size": {
+								"kind": "literal",
+								"type": {
+									"_typeName": "unsigned long long",
+									"builtin_type_kind": "unsigned long long",
+									"kind": "builtin"
+								},
+								"value": "16"
+							},
+							"value_type":  {
+								"_typeName": "float const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "float",
+									"builtin_type_kind": "float",
+									"kind": "builtin"
+								}
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "dst",
+						"id": 93824999074288,
+						"kind": "function parameter",
+						"name": "dst",
+						"type": {
+							"_typeName": "float[16]",
+							"kind": "array",
+							"size": {
+								"kind": "literal",
+								"type": {
+									"_typeName": "unsigned long long",
+									"builtin_type_kind": "unsigned long long",
+									"kind": "builtin"
+								},
+								"value": "16"
+							},
+							"value_type":  {
+								"_typeName": "float",
+								"builtin_type_kind": "float",
+								"kind": "builtin"
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(float const[16],float[16])"
+				}, {
+					"_fullName": "::stappler::simd::neon::transposeMat4(float const[16],float[16])",
+					"_kind": "function",
+					"_name": "transposeMat4",
+					"body_kind": "definition",
+					"id": 93824999074576,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "transposeMat4",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "m",
+						"id": 93824998574096,
+						"kind": "function parameter",
+						"name": "m",
+						"type": {
+							"_typeName": "float const[16]",
+							"kind": "array",
+							"size": {
+								"kind": "literal",
+								"type": {
+									"_typeName": "unsigned long long",
+									"builtin_type_kind": "unsigned long long",
+									"kind": "builtin"
+								},
+								"value": "16"
+							},
+							"value_type":  {
+								"_typeName": "float const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "float",
+									"builtin_type_kind": "float",
+									"kind": "builtin"
+								}
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "dst",
+						"id": 93824998574496,
+						"kind": "function parameter",
+						"name": "dst",
+						"type": {
+							"_typeName": "float[16]",
+							"kind": "array",
+							"size": {
+								"kind": "literal",
+								"type": {
+									"_typeName": "unsigned long long",
+									"builtin_type_kind": "unsigned long long",
+									"kind": "builtin"
+								},
+								"value": "16"
+							},
+							"value_type":  {
+								"_typeName": "float",
+								"builtin_type_kind": "float",
+								"kind": "builtin"
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(float const[16],float[16])"
+				}, {
+					"_fullName": "::stappler::simd::neon::transformVec4Components(float const[16],float,float,float,float,float[4])",
+					"_kind": "function",
+					"_name": "transformVec4Components",
+					"body_kind": "definition",
+					"id": 93825000350000,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "transformVec4Components",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "m",
+						"id": 93825000350528,
+						"kind": "function parameter",
+						"name": "m",
+						"type": {
+							"_typeName": "float const[16]",
+							"kind": "array",
+							"size": {
+								"kind": "literal",
+								"type": {
+									"_typeName": "unsigned long long",
+									"builtin_type_kind": "unsigned long long",
+									"kind": "builtin"
+								},
+								"value": "16"
+							},
+							"value_type":  {
+								"_typeName": "float const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "float",
+									"builtin_type_kind": "float",
+									"kind": "builtin"
+								}
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "x",
+						"id": 93825002815008,
+						"kind": "function parameter",
+						"name": "x",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "y",
+						"id": 93825002815248,
+						"kind": "function parameter",
+						"name": "y",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "z",
+						"id": 93825002815488,
+						"kind": "function parameter",
+						"name": "z",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "w",
+						"id": 93825000951536,
+						"kind": "function parameter",
+						"name": "w",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "dst",
+						"id": 93825000951872,
+						"kind": "function parameter",
+						"name": "dst",
+						"type": {
+							"_typeName": "float[4]",
+							"kind": "array",
+							"size": {
+								"kind": "literal",
+								"type": {
+									"_typeName": "unsigned long long",
+									"builtin_type_kind": "unsigned long long",
+									"kind": "builtin"
+								},
+								"value": "4"
+							},
+							"value_type":  {
+								"_typeName": "float",
+								"builtin_type_kind": "float",
+								"kind": "builtin"
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(float const[16],float,float,float,float,float[4])"
+				}, {
+					"_fullName": "::stappler::simd::neon::transformVec4(float const[16],float const[4],float[4])",
+					"_kind": "function",
+					"_name": "transformVec4",
+					"body_kind": "definition",
+					"id": 93825000952112,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "transformVec4",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "m",
+						"id": 93825001690720,
+						"kind": "function parameter",
+						"name": "m",
+						"type": {
+							"_typeName": "float const[16]",
+							"kind": "array",
+							"size": {
+								"kind": "literal",
+								"type": {
+									"_typeName": "unsigned long long",
+									"builtin_type_kind": "unsigned long long",
+									"kind": "builtin"
+								},
+								"value": "16"
+							},
+							"value_type":  {
+								"_typeName": "float const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "float",
+									"builtin_type_kind": "float",
+									"kind": "builtin"
+								}
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "v",
+						"id": 93825001691168,
+						"kind": "function parameter",
+						"name": "v",
+						"type": {
+							"_typeName": "float const[4]",
+							"kind": "array",
+							"size": {
+								"kind": "literal",
+								"type": {
+									"_typeName": "unsigned long long",
+									"builtin_type_kind": "unsigned long long",
+									"kind": "builtin"
+								},
+								"value": "4"
+							},
+							"value_type":  {
+								"_typeName": "float const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "float",
+									"builtin_type_kind": "float",
+									"kind": "builtin"
+								}
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "dst",
+						"id": 93825002814192,
+						"kind": "function parameter",
+						"name": "dst",
+						"type": {
+							"_typeName": "float[4]",
+							"kind": "array",
+							"size": {
+								"kind": "literal",
+								"type": {
+									"_typeName": "unsigned long long",
+									"builtin_type_kind": "unsigned long long",
+									"kind": "builtin"
+								},
+								"value": "4"
+							},
+							"value_type":  {
+								"_typeName": "float",
+								"builtin_type_kind": "float",
+								"kind": "builtin"
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(float const[16],float const[4],float[4])"
+				}, {
+					"_fullName": "::stappler::simd::neon::crossVec3(float const[3],float const[3],float[3])",
+					"_kind": "function",
+					"_name": "crossVec3",
+					"body_kind": "definition",
+					"id": 93825002814480,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "crossVec3",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "v1",
+						"id": 93825000781920,
+						"kind": "function parameter",
+						"name": "v1",
+						"type": {
+							"_typeName": "float const[3]",
+							"kind": "array",
+							"size": {
+								"kind": "literal",
+								"type": {
+									"_typeName": "unsigned long long",
+									"builtin_type_kind": "unsigned long long",
+									"kind": "builtin"
+								},
+								"value": "3"
+							},
+							"value_type":  {
+								"_typeName": "float const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "float",
+									"builtin_type_kind": "float",
+									"kind": "builtin"
+								}
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "v2",
+						"id": 93825000782368,
+						"kind": "function parameter",
+						"name": "v2",
+						"type": {
+							"_typeName": "float const[3]",
+							"kind": "array",
+							"size": {
+								"kind": "literal",
+								"type": {
+									"_typeName": "unsigned long long",
+									"builtin_type_kind": "unsigned long long",
+									"kind": "builtin"
+								},
+								"value": "3"
+							},
+							"value_type":  {
+								"_typeName": "float const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "float",
+									"builtin_type_kind": "float",
+									"kind": "builtin"
+								}
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "dst",
+						"id": 93825002225232,
+						"kind": "function parameter",
+						"name": "dst",
+						"type": {
+							"_typeName": "float[3]",
+							"kind": "array",
+							"size": {
+								"kind": "literal",
+								"type": {
+									"_typeName": "unsigned long long",
+									"builtin_type_kind": "unsigned long long",
+									"kind": "builtin"
+								},
+								"value": "3"
+							},
+							"value_type":  {
+								"_typeName": "float",
+								"builtin_type_kind": "float",
+								"kind": "builtin"
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(float const[3],float const[3],float[3])"
+				}, {
+					"_fullName": "::stappler::simd::neon::multiplyVec4(float const[4],float const[4],float[4])",
+					"_kind": "function",
+					"_name": "multiplyVec4",
+					"body_kind": "definition",
+					"id": 93825002225520,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "multiplyVec4",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "a",
+						"id": 93825002601280,
+						"kind": "function parameter",
+						"name": "a",
+						"type": {
+							"_typeName": "float const[4]",
+							"kind": "array",
+							"size": {
+								"kind": "literal",
+								"type": {
+									"_typeName": "unsigned long long",
+									"builtin_type_kind": "unsigned long long",
+									"kind": "builtin"
+								},
+								"value": "4"
+							},
+							"value_type":  {
+								"_typeName": "float const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "float",
+									"builtin_type_kind": "float",
+									"kind": "builtin"
+								}
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "b",
+						"id": 93825002601728,
+						"kind": "function parameter",
+						"name": "b",
+						"type": {
+							"_typeName": "float const[4]",
+							"kind": "array",
+							"size": {
+								"kind": "literal",
+								"type": {
+									"_typeName": "unsigned long long",
+									"builtin_type_kind": "unsigned long long",
+									"kind": "builtin"
+								},
+								"value": "4"
+							},
+							"value_type":  {
+								"_typeName": "float const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "float",
+									"builtin_type_kind": "float",
+									"kind": "builtin"
+								}
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "dst",
+						"id": 93824998746560,
+						"kind": "function parameter",
+						"name": "dst",
+						"type": {
+							"_typeName": "float[4]",
+							"kind": "array",
+							"size": {
+								"kind": "literal",
+								"type": {
+									"_typeName": "unsigned long long",
+									"builtin_type_kind": "unsigned long long",
+									"kind": "builtin"
+								},
+								"value": "4"
+							},
+							"value_type":  {
+								"_typeName": "float",
+								"builtin_type_kind": "float",
+								"kind": "builtin"
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(float const[4],float const[4],float[4])"
+				}, {
+					"_fullName": "::stappler::simd::neon::multiplyVec4Scalar(float const[4],float const&,float[4])",
+					"_kind": "function",
+					"_name": "multiplyVec4Scalar",
+					"body_kind": "definition",
+					"id": 93824998746800,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "multiplyVec4Scalar",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "a",
+						"id": 93824998747264,
+						"kind": "function parameter",
+						"name": "a",
+						"type": {
+							"_typeName": "float const[4]",
+							"kind": "array",
+							"size": {
+								"kind": "literal",
+								"type": {
+									"_typeName": "unsigned long long",
+									"builtin_type_kind": "unsigned long long",
+									"kind": "builtin"
+								},
+								"value": "4"
+							},
+							"value_type":  {
+								"_typeName": "float const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "float",
+									"builtin_type_kind": "float",
+									"kind": "builtin"
+								}
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "b",
+						"id": 93825000114752,
+						"kind": "function parameter",
+						"name": "b",
+						"type": {
+							"_typeName": "float const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "float const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "float",
+									"builtin_type_kind": "float",
+									"kind": "builtin"
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "dst",
+						"id": 93825000115152,
+						"kind": "function parameter",
+						"name": "dst",
+						"type": {
+							"_typeName": "float[4]",
+							"kind": "array",
+							"size": {
+								"kind": "literal",
+								"type": {
+									"_typeName": "unsigned long long",
+									"builtin_type_kind": "unsigned long long",
+									"kind": "builtin"
+								},
+								"value": "4"
+							},
+							"value_type":  {
+								"_typeName": "float",
+								"builtin_type_kind": "float",
+								"kind": "builtin"
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(float const[4],float const&,float[4])"
+				}, {
+					"_fullName": "::stappler::simd::neon::divideVec4(float const[4],float const[4],float[4])",
+					"_kind": "function",
+					"_name": "divideVec4",
+					"body_kind": "definition",
+					"id": 93825001390960,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "divideVec4",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "a",
+						"id": 93825001391488,
+						"kind": "function parameter",
+						"name": "a",
+						"type": {
+							"_typeName": "float const[4]",
+							"kind": "array",
+							"size": {
+								"kind": "literal",
+								"type": {
+									"_typeName": "unsigned long long",
+									"builtin_type_kind": "unsigned long long",
+									"kind": "builtin"
+								},
+								"value": "4"
+							},
+							"value_type":  {
+								"_typeName": "float const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "float",
+									"builtin_type_kind": "float",
+									"kind": "builtin"
+								}
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "b",
+						"id": 93825000115440,
+						"kind": "function parameter",
+						"name": "b",
+						"type": {
+							"_typeName": "float const[4]",
+							"kind": "array",
+							"size": {
+								"kind": "literal",
+								"type": {
+									"_typeName": "unsigned long long",
+									"builtin_type_kind": "unsigned long long",
+									"kind": "builtin"
+								},
+								"value": "4"
+							},
+							"value_type":  {
+								"_typeName": "float const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "float",
+									"builtin_type_kind": "float",
+									"kind": "builtin"
+								}
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "dst",
+						"id": 93825000849536,
+						"kind": "function parameter",
+						"name": "dst",
+						"type": {
+							"_typeName": "float[4]",
+							"kind": "array",
+							"size": {
+								"kind": "literal",
+								"type": {
+									"_typeName": "unsigned long long",
+									"builtin_type_kind": "unsigned long long",
+									"kind": "builtin"
+								},
+								"value": "4"
+							},
+							"value_type":  {
+								"_typeName": "float",
+								"builtin_type_kind": "float",
+								"kind": "builtin"
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(float const[4],float const[4],float[4])"
+				}, {
+					"_fullName": "::stappler::simd::neon::isVec2BboxIntersects(stappler::simd::neon::f32x4 const&,stappler::simd::neon::f32x4 const&,stappler::simd::neon::f32x4&)",
+					"_kind": "function",
+					"_name": "isVec2BboxIntersects",
+					"attributes": [{
+						"is_variadic": false,
+						"kind": "unknown",
+						"name": "always_inline"
+					}],
+					"body_kind": "definition",
+					"id": 93825000849952,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "isVec2BboxIntersects",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "v1",
+						"id": 93824999163376,
+						"kind": "function parameter",
+						"name": "v1",
+						"type": {
+							"_typeName": "stappler::simd::neon::f32x4 const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::simd::neon::f32x4 const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::simd::neon::f32x4",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::simd::neon::f32x4",
+										"objects": [{
+											"_fullName": "::stappler::simd::neon::f32x4",
+											"_kind": "type alias",
+											"_name": "f32x4",
+											"id": 140737117434096,
+											"kind": "type alias",
+											"name": "f32x4",
+											"underlying_type": {
+												"_typeName": "simde__m128",
+												"kind": "user_defined",
+												"target": {
+													"name": "simde__m128"
+												}
+											}
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "v2",
+						"id": 93824999163808,
+						"kind": "function parameter",
+						"name": "v2",
+						"type": {
+							"_typeName": "stappler::simd::neon::f32x4 const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::simd::neon::f32x4 const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::simd::neon::f32x4",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::simd::neon::f32x4",
+										"objects": [{
+											"_fullName": "::stappler::simd::neon::f32x4",
+											"_kind": "type alias",
+											"_name": "f32x4",
+											"id": 140737117434096,
+											"kind": "type alias",
+											"name": "f32x4",
+											"underlying_type": {
+												"_typeName": "simde__m128",
+												"kind": "user_defined",
+												"target": {
+													"name": "simde__m128"
+												}
+											}
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "isect",
+						"id": 93824999164192,
+						"kind": "function parameter",
+						"name": "isect",
+						"type": {
+							"_typeName": "stappler::simd::neon::f32x4&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::simd::neon::f32x4",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::simd::neon::f32x4",
+									"objects": [{
+										"_fullName": "::stappler::simd::neon::f32x4",
+										"_kind": "type alias",
+										"_name": "f32x4",
+										"id": 140737117434096,
+										"kind": "type alias",
+										"name": "f32x4",
+										"underlying_type": {
+											"_typeName": "simde__m128",
+											"kind": "user_defined",
+											"target": {
+												"name": "simde__m128"
+											}
+										}
+									}]
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::simd::neon::f32x4 const&,stappler::simd::neon::f32x4 const&,stappler::simd::neon::f32x4&)"
+				}],
+				"id": 140737135916784,
+				"is_anonymous": false,
+				"is_inline": false,
+				"is_nested": true,
+				"kind": "namespace",
+				"name": "neon",
+				"scope": {
+					"name": "neon"
+				}
+			}],
+			"id": 140737143990512,
+			"is_anonymous": false,
+			"is_inline": false,
+			"is_nested": true,
+			"kind": "namespace",
+			"name": "simd",
+			"scope": {
+				"name": "simd"
+			}
+		}],
+		"id": 140737135916944,
+		"is_anonymous": false,
+		"is_inline": false,
+		"is_nested": false,
+		"kind": "namespace",
+		"name": "stappler",
+		"scope": {
+			"name": "stappler"
+		}
+	}],
+	"id": 140736995066864,
+	"kind": "file",
+	"name": "/home/sbkarr/stappler/xenolith/libstappler/modules/geom/SPSIMD_Neon.h",
+	"unmatched_comments": [{
+		"line": 22,
+		"text": "\nCopyright (c) 2022 Roman Katuntsev <sbkarr@stappler.org>\nCopyright (c) 2023 Stappler LLC <admin@stappler.dev>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n"
+	}]
+}

@@ -1,0 +1,3244 @@
+{
+	"_kind": "file",
+	"_name": "/home/sbkarr/stappler/xenolith/libstappler/modules/tess/SPTessLine.h",
+	"childs": [{
+		"_kind": "include directive",
+		"_name": "SPTess.h",
+		"id": 140737148023472,
+		"include": "/home/sbkarr/stappler/xenolith/libstappler/modules/tess/SPTess.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "SPTess.h"
+	}, {
+		"_fullName": "MODULES_TESS_SPTESSLINE_H_",
+		"_kind": "macro definition",
+		"_name": "MODULES_TESS_SPTESSLINE_H_",
+		"id": 140736955823184,
+		"is_function_like": false,
+		"is_object_like": true,
+		"is_variadic": false,
+		"kind": "macro definition",
+		"name": "MODULES_TESS_SPTESSLINE_H_",
+		"replacement": ""
+	}, {
+		"_fullName": "::stappler",
+		"_kind": "namespace",
+		"_name": "stappler",
+		"childs": [{
+			"_fullName": "::stappler::geom",
+			"_kind": "namespace",
+			"_name": "geom",
+			"childs": [{
+				"_fullName": "::stappler::geom::LineCup",
+				"_kind": "enum",
+				"_name": "LineCup",
+				"childs": [{
+					"_fullName": "::stappler::geom::LineCup::Butt",
+					"_kind": "enum value",
+					"_name": "Butt",
+					"id": 140737124542928,
+					"kind": "enum value",
+					"name": "Butt"
+				}, {
+					"_fullName": "::stappler::geom::LineCup::Round",
+					"_kind": "enum value",
+					"_name": "Round",
+					"id": 140737116185488,
+					"kind": "enum value",
+					"name": "Round"
+				}, {
+					"_fullName": "::stappler::geom::LineCup::Square",
+					"_kind": "enum value",
+					"_name": "Square",
+					"id": 140737149072304,
+					"kind": "enum value",
+					"name": "Square"
+				}],
+				"has_explicit_type": false,
+				"id": 140737146423072,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_scoped": true,
+				"kind": "enum",
+				"name": "LineCup",
+				"scope": {
+					"name": "LineCup"
+				},
+				"semantic_scope": "",
+				"underlying_type": {
+					"_typeName": "int",
+					"builtin_type_kind": "int",
+					"kind": "builtin"
+				}
+			}, {
+				"_fullName": "::stappler::geom::LineJoin",
+				"_kind": "enum",
+				"_name": "LineJoin",
+				"childs": [{
+					"_fullName": "::stappler::geom::LineJoin::Miter",
+					"_kind": "enum value",
+					"_name": "Miter",
+					"id": 140736954042496,
+					"kind": "enum value",
+					"name": "Miter"
+				}, {
+					"_fullName": "::stappler::geom::LineJoin::Round",
+					"_kind": "enum value",
+					"_name": "Round",
+					"id": 140737086932896,
+					"kind": "enum value",
+					"name": "Round"
+				}, {
+					"_fullName": "::stappler::geom::LineJoin::Bevel",
+					"_kind": "enum value",
+					"_name": "Bevel",
+					"id": 140737151037856,
+					"kind": "enum value",
+					"name": "Bevel"
+				}],
+				"has_explicit_type": false,
+				"id": 140737145686288,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_scoped": true,
+				"kind": "enum",
+				"name": "LineJoin",
+				"scope": {
+					"name": "LineJoin"
+				},
+				"semantic_scope": "",
+				"underlying_type": {
+					"_typeName": "int",
+					"builtin_type_kind": "int",
+					"kind": "builtin"
+				}
+			}, {
+				"_fullName": "::stappler::geom::DrawStyle",
+				"_kind": "enum",
+				"_name": "DrawStyle",
+				"childs": [{
+					"_fullName": "::stappler::geom::DrawStyle::None",
+					"_kind": "enum value",
+					"_name": "None",
+					"id": 93825003979568,
+					"kind": "enum value",
+					"name": "None",
+					"value": {
+						"kind": "literal",
+						"type": {
+							"_typeName": "int",
+							"builtin_type_kind": "int",
+							"kind": "builtin"
+						},
+						"value": "0"
+					}
+				}, {
+					"_fullName": "::stappler::geom::DrawStyle::Fill",
+					"_kind": "enum value",
+					"_name": "Fill",
+					"id": 93825011570160,
+					"kind": "enum value",
+					"name": "Fill",
+					"value": {
+						"kind": "literal",
+						"type": {
+							"_typeName": "int",
+							"builtin_type_kind": "int",
+							"kind": "builtin"
+						},
+						"value": "1"
+					}
+				}, {
+					"_fullName": "::stappler::geom::DrawStyle::Stroke",
+					"_kind": "enum value",
+					"_name": "Stroke",
+					"id": 93825005231600,
+					"kind": "enum value",
+					"name": "Stroke",
+					"value": {
+						"kind": "literal",
+						"type": {
+							"_typeName": "int",
+							"builtin_type_kind": "int",
+							"kind": "builtin"
+						},
+						"value": "2"
+					}
+				}, {
+					"_fullName": "::stappler::geom::DrawStyle::FillAndStroke",
+					"_kind": "enum value",
+					"_name": "FillAndStroke",
+					"id": 93825005231248,
+					"kind": "enum value",
+					"name": "FillAndStroke",
+					"value": {
+						"kind": "literal",
+						"type": {
+							"_typeName": "int",
+							"builtin_type_kind": "int",
+							"kind": "builtin"
+						},
+						"value": "3"
+					}
+				}],
+				"has_explicit_type": false,
+				"id": 140737143908448,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_scoped": true,
+				"kind": "enum",
+				"name": "DrawStyle",
+				"scope": {
+					"name": "DrawStyle"
+				},
+				"semantic_scope": "",
+				"underlying_type": {
+					"_typeName": "int",
+					"builtin_type_kind": "int",
+					"kind": "builtin"
+				}
+			}, {
+				"_fullName": "::stappler::geom::operator|(stappler::geom::DrawStyle const&,stappler::geom::DrawStyle const&)",
+				"_kind": "function",
+				"_name": "operator|",
+				"body_kind": "definition",
+				"id": 140736987504992,
+				"is_consteval": false,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "operator|",
+				"parameters": [{
+					"_kind": "function parameter",
+					"_name": "l",
+					"id": 93825010890816,
+					"kind": "function parameter",
+					"name": "l",
+					"type": {
+						"_typeName": "stappler::geom::DrawStyle const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::geom::DrawStyle const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::geom::DrawStyle",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::DrawStyle",
+									"objects": [{
+										"_fullName": "::stappler::geom::DrawStyle",
+										"_kind": "enum",
+										"_name": "DrawStyle",
+										"has_explicit_type": false,
+										"id": 140737143908448,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "DrawStyle",
+										"scope": {
+											"name": "DrawStyle"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_kind": "function parameter",
+					"_name": "r",
+					"id": 93825010886608,
+					"kind": "function parameter",
+					"name": "r",
+					"type": {
+						"_typeName": "stappler::geom::DrawStyle const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::geom::DrawStyle const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::geom::DrawStyle",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::DrawStyle",
+									"objects": [{
+										"_fullName": "::stappler::geom::DrawStyle",
+										"_kind": "enum",
+										"_name": "DrawStyle",
+										"has_explicit_type": false,
+										"id": 140737143908448,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "DrawStyle",
+										"scope": {
+											"name": "DrawStyle"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "stappler::geom::DrawStyle",
+					"kind": "user_defined",
+					"target": {
+						"name": "stappler::geom::DrawStyle",
+						"objects": [{
+							"_fullName": "::stappler::geom::DrawStyle",
+							"_kind": "enum",
+							"_name": "DrawStyle",
+							"has_explicit_type": false,
+							"id": 140737143908448,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_scoped": true,
+							"kind": "enum",
+							"name": "DrawStyle",
+							"scope": {
+								"name": "DrawStyle"
+							},
+							"semantic_scope": "",
+							"underlying_type": {
+								"_typeName": "int",
+								"builtin_type_kind": "int",
+								"kind": "builtin"
+							}
+						}]
+					}
+				},
+				"semantic_scope": "",
+				"signature": "(stappler::geom::DrawStyle const&,stappler::geom::DrawStyle const&)"
+			}, {
+				"_fullName": "::stappler::geom::operator&(stappler::geom::DrawStyle const&,stappler::geom::DrawStyle const&)",
+				"_kind": "function",
+				"_name": "operator&",
+				"body_kind": "definition",
+				"id": 140737098747696,
+				"is_consteval": false,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "operator&",
+				"parameters": [{
+					"_kind": "function parameter",
+					"_name": "l",
+					"id": 93824999732432,
+					"kind": "function parameter",
+					"name": "l",
+					"type": {
+						"_typeName": "stappler::geom::DrawStyle const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::geom::DrawStyle const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::geom::DrawStyle",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::DrawStyle",
+									"objects": [{
+										"_fullName": "::stappler::geom::DrawStyle",
+										"_kind": "enum",
+										"_name": "DrawStyle",
+										"has_explicit_type": false,
+										"id": 140737143908448,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "DrawStyle",
+										"scope": {
+											"name": "DrawStyle"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_kind": "function parameter",
+					"_name": "r",
+					"id": 93825004640400,
+					"kind": "function parameter",
+					"name": "r",
+					"type": {
+						"_typeName": "stappler::geom::DrawStyle const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::geom::DrawStyle const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::geom::DrawStyle",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::DrawStyle",
+									"objects": [{
+										"_fullName": "::stappler::geom::DrawStyle",
+										"_kind": "enum",
+										"_name": "DrawStyle",
+										"has_explicit_type": false,
+										"id": 140737143908448,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "DrawStyle",
+										"scope": {
+											"name": "DrawStyle"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "stappler::geom::DrawStyle",
+					"kind": "user_defined",
+					"target": {
+						"name": "stappler::geom::DrawStyle",
+						"objects": [{
+							"_fullName": "::stappler::geom::DrawStyle",
+							"_kind": "enum",
+							"_name": "DrawStyle",
+							"has_explicit_type": false,
+							"id": 140737143908448,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_scoped": true,
+							"kind": "enum",
+							"name": "DrawStyle",
+							"scope": {
+								"name": "DrawStyle"
+							},
+							"semantic_scope": "",
+							"underlying_type": {
+								"_typeName": "int",
+								"builtin_type_kind": "int",
+								"kind": "builtin"
+							}
+						}]
+					}
+				},
+				"semantic_scope": "",
+				"signature": "(stappler::geom::DrawStyle const&,stappler::geom::DrawStyle const&)"
+			}, {
+				"_fullName": "::stappler::geom::operator^(stappler::geom::DrawStyle const&,stappler::geom::DrawStyle const&)",
+				"_kind": "function",
+				"_name": "operator^",
+				"body_kind": "definition",
+				"id": 140737121218768,
+				"is_consteval": false,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "operator^",
+				"parameters": [{
+					"_kind": "function parameter",
+					"_name": "l",
+					"id": 93825003761312,
+					"kind": "function parameter",
+					"name": "l",
+					"type": {
+						"_typeName": "stappler::geom::DrawStyle const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::geom::DrawStyle const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::geom::DrawStyle",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::DrawStyle",
+									"objects": [{
+										"_fullName": "::stappler::geom::DrawStyle",
+										"_kind": "enum",
+										"_name": "DrawStyle",
+										"has_explicit_type": false,
+										"id": 140737143908448,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "DrawStyle",
+										"scope": {
+											"name": "DrawStyle"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_kind": "function parameter",
+					"_name": "r",
+					"id": 93825010891632,
+					"kind": "function parameter",
+					"name": "r",
+					"type": {
+						"_typeName": "stappler::geom::DrawStyle const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::geom::DrawStyle const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::geom::DrawStyle",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::DrawStyle",
+									"objects": [{
+										"_fullName": "::stappler::geom::DrawStyle",
+										"_kind": "enum",
+										"_name": "DrawStyle",
+										"has_explicit_type": false,
+										"id": 140737143908448,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "DrawStyle",
+										"scope": {
+											"name": "DrawStyle"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "stappler::geom::DrawStyle",
+					"kind": "user_defined",
+					"target": {
+						"name": "stappler::geom::DrawStyle",
+						"objects": [{
+							"_fullName": "::stappler::geom::DrawStyle",
+							"_kind": "enum",
+							"_name": "DrawStyle",
+							"has_explicit_type": false,
+							"id": 140737143908448,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_scoped": true,
+							"kind": "enum",
+							"name": "DrawStyle",
+							"scope": {
+								"name": "DrawStyle"
+							},
+							"semantic_scope": "",
+							"underlying_type": {
+								"_typeName": "int",
+								"builtin_type_kind": "int",
+								"kind": "builtin"
+							}
+						}]
+					}
+				},
+				"semantic_scope": "",
+				"signature": "(stappler::geom::DrawStyle const&,stappler::geom::DrawStyle const&)"
+			}, {
+				"_fullName": "::stappler::geom::operator|=(stappler::geom::DrawStyle&,stappler::geom::DrawStyle const&)",
+				"_kind": "function",
+				"_name": "operator|=",
+				"body_kind": "definition",
+				"id": 93825003979712,
+				"is_consteval": false,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "operator|=",
+				"parameters": [{
+					"_kind": "function parameter",
+					"_name": "l",
+					"id": 93825010891360,
+					"kind": "function parameter",
+					"name": "l",
+					"type": {
+						"_typeName": "stappler::geom::DrawStyle&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::geom::DrawStyle",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::geom::DrawStyle",
+								"objects": [{
+									"_fullName": "::stappler::geom::DrawStyle",
+									"_kind": "enum",
+									"_name": "DrawStyle",
+									"has_explicit_type": false,
+									"id": 140737143908448,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_scoped": true,
+									"kind": "enum",
+									"name": "DrawStyle",
+									"scope": {
+										"name": "DrawStyle"
+									},
+									"semantic_scope": "",
+									"underlying_type": {
+										"_typeName": "int",
+										"builtin_type_kind": "int",
+										"kind": "builtin"
+									}
+								}]
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_kind": "function parameter",
+					"_name": "r",
+					"id": 93825010886368,
+					"kind": "function parameter",
+					"name": "r",
+					"type": {
+						"_typeName": "stappler::geom::DrawStyle const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::geom::DrawStyle const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::geom::DrawStyle",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::DrawStyle",
+									"objects": [{
+										"_fullName": "::stappler::geom::DrawStyle",
+										"_kind": "enum",
+										"_name": "DrawStyle",
+										"has_explicit_type": false,
+										"id": 140737143908448,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "DrawStyle",
+										"scope": {
+											"name": "DrawStyle"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "stappler::geom::DrawStyle&",
+					"kind": "reference",
+					"referee": {
+						"_typeName": "stappler::geom::DrawStyle",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::geom::DrawStyle",
+							"objects": [{
+								"_fullName": "::stappler::geom::DrawStyle",
+								"_kind": "enum",
+								"_name": "DrawStyle",
+								"has_explicit_type": false,
+								"id": 140737143908448,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_scoped": true,
+								"kind": "enum",
+								"name": "DrawStyle",
+								"scope": {
+									"name": "DrawStyle"
+								},
+								"semantic_scope": "",
+								"underlying_type": {
+									"_typeName": "int",
+									"builtin_type_kind": "int",
+									"kind": "builtin"
+								}
+							}]
+						}
+					},
+					"reference_kind": "lvalue"
+				},
+				"semantic_scope": "",
+				"signature": "(stappler::geom::DrawStyle&,stappler::geom::DrawStyle const&)"
+			}, {
+				"_fullName": "::stappler::geom::operator&=(stappler::geom::DrawStyle&,stappler::geom::DrawStyle const&)",
+				"_kind": "function",
+				"_name": "operator&=",
+				"body_kind": "definition",
+				"id": 93825003399248,
+				"is_consteval": false,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "operator&=",
+				"parameters": [{
+					"_kind": "function parameter",
+					"_name": "l",
+					"id": 93825005232320,
+					"kind": "function parameter",
+					"name": "l",
+					"type": {
+						"_typeName": "stappler::geom::DrawStyle&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::geom::DrawStyle",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::geom::DrawStyle",
+								"objects": [{
+									"_fullName": "::stappler::geom::DrawStyle",
+									"_kind": "enum",
+									"_name": "DrawStyle",
+									"has_explicit_type": false,
+									"id": 140737143908448,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_scoped": true,
+									"kind": "enum",
+									"name": "DrawStyle",
+									"scope": {
+										"name": "DrawStyle"
+									},
+									"semantic_scope": "",
+									"underlying_type": {
+										"_typeName": "int",
+										"builtin_type_kind": "int",
+										"kind": "builtin"
+									}
+								}]
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_kind": "function parameter",
+					"_name": "r",
+					"id": 93824999732976,
+					"kind": "function parameter",
+					"name": "r",
+					"type": {
+						"_typeName": "stappler::geom::DrawStyle const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::geom::DrawStyle const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::geom::DrawStyle",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::DrawStyle",
+									"objects": [{
+										"_fullName": "::stappler::geom::DrawStyle",
+										"_kind": "enum",
+										"_name": "DrawStyle",
+										"has_explicit_type": false,
+										"id": 140737143908448,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "DrawStyle",
+										"scope": {
+											"name": "DrawStyle"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "stappler::geom::DrawStyle&",
+					"kind": "reference",
+					"referee": {
+						"_typeName": "stappler::geom::DrawStyle",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::geom::DrawStyle",
+							"objects": [{
+								"_fullName": "::stappler::geom::DrawStyle",
+								"_kind": "enum",
+								"_name": "DrawStyle",
+								"has_explicit_type": false,
+								"id": 140737143908448,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_scoped": true,
+								"kind": "enum",
+								"name": "DrawStyle",
+								"scope": {
+									"name": "DrawStyle"
+								},
+								"semantic_scope": "",
+								"underlying_type": {
+									"_typeName": "int",
+									"builtin_type_kind": "int",
+									"kind": "builtin"
+								}
+							}]
+						}
+					},
+					"reference_kind": "lvalue"
+				},
+				"semantic_scope": "",
+				"signature": "(stappler::geom::DrawStyle&,stappler::geom::DrawStyle const&)"
+			}, {
+				"_fullName": "::stappler::geom::operator^=(stappler::geom::DrawStyle&,stappler::geom::DrawStyle const&)",
+				"_kind": "function",
+				"_name": "operator^=",
+				"body_kind": "definition",
+				"id": 93825004288256,
+				"is_consteval": false,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "operator^=",
+				"parameters": [{
+					"_kind": "function parameter",
+					"_name": "l",
+					"id": 93825004288720,
+					"kind": "function parameter",
+					"name": "l",
+					"type": {
+						"_typeName": "stappler::geom::DrawStyle&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::geom::DrawStyle",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::geom::DrawStyle",
+								"objects": [{
+									"_fullName": "::stappler::geom::DrawStyle",
+									"_kind": "enum",
+									"_name": "DrawStyle",
+									"has_explicit_type": false,
+									"id": 140737143908448,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_scoped": true,
+									"kind": "enum",
+									"name": "DrawStyle",
+									"scope": {
+										"name": "DrawStyle"
+									},
+									"semantic_scope": "",
+									"underlying_type": {
+										"_typeName": "int",
+										"builtin_type_kind": "int",
+										"kind": "builtin"
+									}
+								}]
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_kind": "function parameter",
+					"_name": "r",
+					"id": 93825001974432,
+					"kind": "function parameter",
+					"name": "r",
+					"type": {
+						"_typeName": "stappler::geom::DrawStyle const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::geom::DrawStyle const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::geom::DrawStyle",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::DrawStyle",
+									"objects": [{
+										"_fullName": "::stappler::geom::DrawStyle",
+										"_kind": "enum",
+										"_name": "DrawStyle",
+										"has_explicit_type": false,
+										"id": 140737143908448,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "DrawStyle",
+										"scope": {
+											"name": "DrawStyle"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "stappler::geom::DrawStyle&",
+					"kind": "reference",
+					"referee": {
+						"_typeName": "stappler::geom::DrawStyle",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::geom::DrawStyle",
+							"objects": [{
+								"_fullName": "::stappler::geom::DrawStyle",
+								"_kind": "enum",
+								"_name": "DrawStyle",
+								"has_explicit_type": false,
+								"id": 140737143908448,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_scoped": true,
+								"kind": "enum",
+								"name": "DrawStyle",
+								"scope": {
+									"name": "DrawStyle"
+								},
+								"semantic_scope": "",
+								"underlying_type": {
+									"_typeName": "int",
+									"builtin_type_kind": "int",
+									"kind": "builtin"
+								}
+							}]
+						}
+					},
+					"reference_kind": "lvalue"
+				},
+				"semantic_scope": "",
+				"signature": "(stappler::geom::DrawStyle&,stappler::geom::DrawStyle const&)"
+			}, {
+				"_fullName": "::stappler::geom::operator==(stappler::geom::DrawStyle const&,std::underlying_type<DrawStyle>::type const&)",
+				"_kind": "function",
+				"_name": "operator==",
+				"body_kind": "definition",
+				"id": 93825008346352,
+				"is_consteval": false,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "operator==",
+				"parameters": [{
+					"_kind": "function parameter",
+					"_name": "l",
+					"id": 93825008346864,
+					"kind": "function parameter",
+					"name": "l",
+					"type": {
+						"_typeName": "stappler::geom::DrawStyle const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::geom::DrawStyle const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::geom::DrawStyle",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::DrawStyle",
+									"objects": [{
+										"_fullName": "::stappler::geom::DrawStyle",
+										"_kind": "enum",
+										"_name": "DrawStyle",
+										"has_explicit_type": false,
+										"id": 140737143908448,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "DrawStyle",
+										"scope": {
+											"name": "DrawStyle"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_kind": "function parameter",
+					"_name": "r",
+					"id": 93825007915200,
+					"kind": "function parameter",
+					"name": "r",
+					"type": {
+						"_typeName": "std::underlying_type<DrawStyle>::type const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "std::underlying_type<DrawStyle>::type const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "std::underlying_type<DrawStyle>::type",
+								"kind": "user_defined",
+								"target": {
+									"name": "std::underlying_type<DrawStyle>::type"
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "bool",
+					"builtin_type_kind": "bool",
+					"kind": "builtin"
+				},
+				"semantic_scope": "",
+				"signature": "(stappler::geom::DrawStyle const&,std::underlying_type<DrawStyle>::type const&)"
+			}, {
+				"_fullName": "::stappler::geom::operator==(std::underlying_type<DrawStyle>::type const&,stappler::geom::DrawStyle const&)",
+				"_kind": "function",
+				"_name": "operator==",
+				"body_kind": "definition",
+				"id": 93825007914928,
+				"is_consteval": false,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "operator==",
+				"parameters": [{
+					"_kind": "function parameter",
+					"_name": "l",
+					"id": 93825000369440,
+					"kind": "function parameter",
+					"name": "l",
+					"type": {
+						"_typeName": "std::underlying_type<DrawStyle>::type const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "std::underlying_type<DrawStyle>::type const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "std::underlying_type<DrawStyle>::type",
+								"kind": "user_defined",
+								"target": {
+									"name": "std::underlying_type<DrawStyle>::type"
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_kind": "function parameter",
+					"_name": "r",
+					"id": 93825004639568,
+					"kind": "function parameter",
+					"name": "r",
+					"type": {
+						"_typeName": "stappler::geom::DrawStyle const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::geom::DrawStyle const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::geom::DrawStyle",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::DrawStyle",
+									"objects": [{
+										"_fullName": "::stappler::geom::DrawStyle",
+										"_kind": "enum",
+										"_name": "DrawStyle",
+										"has_explicit_type": false,
+										"id": 140737143908448,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "DrawStyle",
+										"scope": {
+											"name": "DrawStyle"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "bool",
+					"builtin_type_kind": "bool",
+					"kind": "builtin"
+				},
+				"semantic_scope": "",
+				"signature": "(std::underlying_type<DrawStyle>::type const&,stappler::geom::DrawStyle const&)"
+			}, {
+				"_fullName": "::stappler::geom::operator!=(stappler::geom::DrawStyle const&,std::underlying_type<DrawStyle>::type const&)",
+				"_kind": "function",
+				"_name": "operator!=",
+				"body_kind": "definition",
+				"id": 93825000369168,
+				"is_consteval": false,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "operator!=",
+				"parameters": [{
+					"_kind": "function parameter",
+					"_name": "l",
+					"id": 93825004640048,
+					"kind": "function parameter",
+					"name": "l",
+					"type": {
+						"_typeName": "stappler::geom::DrawStyle const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::geom::DrawStyle const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::geom::DrawStyle",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::DrawStyle",
+									"objects": [{
+										"_fullName": "::stappler::geom::DrawStyle",
+										"_kind": "enum",
+										"_name": "DrawStyle",
+										"has_explicit_type": false,
+										"id": 140737143908448,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "DrawStyle",
+										"scope": {
+											"name": "DrawStyle"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_kind": "function parameter",
+					"_name": "r",
+					"id": 93825004069232,
+					"kind": "function parameter",
+					"name": "r",
+					"type": {
+						"_typeName": "std::underlying_type<DrawStyle>::type const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "std::underlying_type<DrawStyle>::type const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "std::underlying_type<DrawStyle>::type",
+								"kind": "user_defined",
+								"target": {
+									"name": "std::underlying_type<DrawStyle>::type"
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "bool",
+					"builtin_type_kind": "bool",
+					"kind": "builtin"
+				},
+				"semantic_scope": "",
+				"signature": "(stappler::geom::DrawStyle const&,std::underlying_type<DrawStyle>::type const&)"
+			}, {
+				"_fullName": "::stappler::geom::operator!=(std::underlying_type<DrawStyle>::type const&,stappler::geom::DrawStyle const&)",
+				"_kind": "function",
+				"_name": "operator!=",
+				"body_kind": "definition",
+				"id": 93825004068960,
+				"is_consteval": false,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "operator!=",
+				"parameters": [{
+					"_kind": "function parameter",
+					"_name": "l",
+					"id": 93825003768576,
+					"kind": "function parameter",
+					"name": "l",
+					"type": {
+						"_typeName": "std::underlying_type<DrawStyle>::type const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "std::underlying_type<DrawStyle>::type const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "std::underlying_type<DrawStyle>::type",
+								"kind": "user_defined",
+								"target": {
+									"name": "std::underlying_type<DrawStyle>::type"
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_kind": "function parameter",
+					"_name": "r",
+					"id": 93824997567328,
+					"kind": "function parameter",
+					"name": "r",
+					"type": {
+						"_typeName": "stappler::geom::DrawStyle const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::geom::DrawStyle const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::geom::DrawStyle",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::DrawStyle",
+									"objects": [{
+										"_fullName": "::stappler::geom::DrawStyle",
+										"_kind": "enum",
+										"_name": "DrawStyle",
+										"has_explicit_type": false,
+										"id": 140737143908448,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "DrawStyle",
+										"scope": {
+											"name": "DrawStyle"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "bool",
+					"builtin_type_kind": "bool",
+					"kind": "builtin"
+				},
+				"semantic_scope": "",
+				"signature": "(std::underlying_type<DrawStyle>::type const&,stappler::geom::DrawStyle const&)"
+			}, {
+				"_fullName": "::stappler::geom::operator~(stappler::geom::DrawStyle const&)",
+				"_kind": "function",
+				"_name": "operator~",
+				"body_kind": "definition",
+				"id": 93825003768304,
+				"is_consteval": false,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "operator~",
+				"parameters": [{
+					"_kind": "function parameter",
+					"_name": "t",
+					"id": 93825004567776,
+					"kind": "function parameter",
+					"name": "t",
+					"type": {
+						"_typeName": "stappler::geom::DrawStyle const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::geom::DrawStyle const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::geom::DrawStyle",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::DrawStyle",
+									"objects": [{
+										"_fullName": "::stappler::geom::DrawStyle",
+										"_kind": "enum",
+										"_name": "DrawStyle",
+										"has_explicit_type": false,
+										"id": 140737143908448,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "DrawStyle",
+										"scope": {
+											"name": "DrawStyle"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "stappler::geom::DrawStyle",
+					"kind": "user_defined",
+					"target": {
+						"name": "stappler::geom::DrawStyle",
+						"objects": [{
+							"_fullName": "::stappler::geom::DrawStyle",
+							"_kind": "enum",
+							"_name": "DrawStyle",
+							"has_explicit_type": false,
+							"id": 140737143908448,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_scoped": true,
+							"kind": "enum",
+							"name": "DrawStyle",
+							"scope": {
+								"name": "DrawStyle"
+							},
+							"semantic_scope": "",
+							"underlying_type": {
+								"_typeName": "int",
+								"builtin_type_kind": "int",
+								"kind": "builtin"
+							}
+						}]
+					}
+				},
+				"semantic_scope": "",
+				"signature": "(stappler::geom::DrawStyle const&)"
+			}, {
+				"_fullName": "::stappler::geom::LineDrawer",
+				"_kind": "class",
+				"_name": "LineDrawer",
+				"childs": [{
+					"_fullName": "::stappler::geom::LineDrawer::LineDrawer(float,Rc<stappler::geom::Tesselator>&&,Rc<stappler::geom::Tesselator>&&,float,stappler::geom::LineJoin,stappler::geom::LineCup)",
+					"_kind": "constructor",
+					"_name": "LineDrawer",
+					"body_kind": "declaration",
+					"id": 93825003276608,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_explicit": false,
+					"is_variadic": false,
+					"kind": "constructor",
+					"name": "LineDrawer",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "e",
+						"id": 93825004568288,
+						"kind": "function parameter",
+						"name": "e",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "fill",
+						"id": 93825003763520,
+						"kind": "function parameter",
+						"name": "fill",
+						"type": {
+							"_typeName": "Rc<stappler::geom::Tesselator>&&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "Rc<stappler::geom::Tesselator>",
+								"arguments_exposed": false,
+								"kind": "template_instantiation",
+								"primary_template": {
+									"name": "Rc",
+									"objects": [{
+										"_fullName": "::stappler::RcBase<typename>",
+										"_kind": "class template",
+										"_name": "RcBase",
+										"class": {
+											"_fullName": "::stappler::RcBase<typename>",
+											"_kind": "class",
+											"_name": "RcBase",
+											"class_kind": "class",
+											"id": 93824999765056,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "RcBase",
+											"scope": {
+												"is_templated": true,
+												"name": "RcBase",
+												"template_parameters": [{
+													"_kind": "template type parameter",
+													"_name": "Base",
+													"id": 93825002831392,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "Base"
+												}]
+											},
+											"semantic_scope": ""
+										},
+										"id": 93825002831184,
+										"kind": "class template",
+										"name": "RcBase",
+										"parameters": [{
+											"_kind": "template type parameter",
+											"_name": "Base",
+											"id": 93825002831392,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "Base"
+										}],
+										"scope":  {
+											"is_templated": true,
+											"name": "RcBase",
+											"template_parameters": [{
+												"_kind": "template type parameter",
+												"_name": "Base",
+												"id": 93825002831392,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Base"
+											}]
+										}
+									}]
+								},
+								"unexposed_arguments": "stappler::geom::Tesselator"
+							},
+							"reference_kind": "rvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "stroke",
+						"id": 93825003763952,
+						"kind": "function parameter",
+						"name": "stroke",
+						"type": {
+							"_typeName": "Rc<stappler::geom::Tesselator>&&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "Rc<stappler::geom::Tesselator>",
+								"arguments_exposed": false,
+								"kind": "template_instantiation",
+								"primary_template": {
+									"name": "Rc",
+									"objects": [{
+										"_fullName": "::stappler::RcBase<typename>",
+										"_kind": "class template",
+										"_name": "RcBase",
+										"class": {
+											"_fullName": "::stappler::RcBase<typename>",
+											"_kind": "class",
+											"_name": "RcBase",
+											"class_kind": "class",
+											"id": 93824999765056,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "RcBase",
+											"scope": {
+												"is_templated": true,
+												"name": "RcBase",
+												"template_parameters": [{
+													"_kind": "template type parameter",
+													"_name": "Base",
+													"id": 93825002831392,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "Base"
+												}]
+											},
+											"semantic_scope": ""
+										},
+										"id": 93825002831184,
+										"kind": "class template",
+										"name": "RcBase",
+										"parameters": [{
+											"_kind": "template type parameter",
+											"_name": "Base",
+											"id": 93825002831392,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "Base"
+										}],
+										"scope":  {
+											"is_templated": true,
+											"name": "RcBase",
+											"template_parameters": [{
+												"_kind": "template type parameter",
+												"_name": "Base",
+												"id": 93825002831392,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Base"
+											}]
+										}
+									}]
+								},
+								"unexposed_arguments": "stappler::geom::Tesselator"
+							},
+							"reference_kind": "rvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "lineWidth",
+						"default_value": {
+							"expression": [{
+								"kind": "float_literal",
+								"spelling": "1.0f"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "float",
+								"builtin_type_kind": "float",
+								"kind": "builtin"
+							}
+						},
+						"id": 93825011580880,
+						"kind": "function parameter",
+						"name": "lineWidth",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "lineJoin",
+						"default_value": {
+							"expression": [{
+								"kind": "identifier",
+								"spelling": "LineJoin"
+							}, {
+								"kind": "punctuation",
+								"spelling": "::"
+							}, {
+								"kind": "identifier",
+								"spelling": "Miter"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "stappler::geom::LineJoin",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::LineJoin",
+									"objects": [{
+										"_fullName": "::stappler::geom::LineJoin",
+										"_kind": "enum",
+										"_name": "LineJoin",
+										"has_explicit_type": false,
+										"id": 140737145686288,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "LineJoin",
+										"scope": {
+											"name": "LineJoin"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
+						},
+						"id": 93825001100160,
+						"kind": "function parameter",
+						"name": "lineJoin",
+						"type": {
+							"_typeName": "stappler::geom::LineJoin",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::geom::LineJoin",
+								"objects": [{
+									"_fullName": "::stappler::geom::LineJoin",
+									"_kind": "enum",
+									"_name": "LineJoin",
+									"has_explicit_type": false,
+									"id": 140737145686288,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_scoped": true,
+									"kind": "enum",
+									"name": "LineJoin",
+									"scope": {
+										"name": "LineJoin"
+									},
+									"semantic_scope": "",
+									"underlying_type": {
+										"_typeName": "int",
+										"builtin_type_kind": "int",
+										"kind": "builtin"
+									}
+								}]
+							}
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "lineCup",
+						"default_value": {
+							"expression": [{
+								"kind": "identifier",
+								"spelling": "LineCup"
+							}, {
+								"kind": "punctuation",
+								"spelling": "::"
+							}, {
+								"kind": "identifier",
+								"spelling": "Butt"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "stappler::geom::LineCup",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::LineCup",
+									"objects": [{
+										"_fullName": "::stappler::geom::LineCup",
+										"_kind": "enum",
+										"_name": "LineCup",
+										"has_explicit_type": false,
+										"id": 140737146423072,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "LineCup",
+										"scope": {
+											"name": "LineCup"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
+						},
+						"id": 93825001100512,
+						"kind": "function parameter",
+						"name": "lineCup",
+						"type": {
+							"_typeName": "stappler::geom::LineCup",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::geom::LineCup",
+								"objects": [{
+									"_fullName": "::stappler::geom::LineCup",
+									"_kind": "enum",
+									"_name": "LineCup",
+									"has_explicit_type": false,
+									"id": 140737146423072,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_scoped": true,
+									"kind": "enum",
+									"name": "LineCup",
+									"scope": {
+										"name": "LineCup"
+									},
+									"semantic_scope": "",
+									"underlying_type": {
+										"_typeName": "int",
+										"builtin_type_kind": "int",
+										"kind": "builtin"
+									}
+								}]
+							}
+						}
+					}],
+					"semantic_scope": "",
+					"signature": "(float,Rc<stappler::geom::Tesselator>&&,Rc<stappler::geom::Tesselator>&&,float,stappler::geom::LineJoin,stappler::geom::LineCup)"
+				}, {
+					"_fullName": "::stappler::geom::LineDrawer::drawBegin(float,float)",
+					"_kind": "member function",
+					"_name": "drawBegin",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 93824998639456,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "drawBegin",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "x",
+						"id": 93824998639776,
+						"kind": "function parameter",
+						"name": "x",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "y",
+						"id": 93824998640016,
+						"kind": "function parameter",
+						"name": "y",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(float,float)"
+				}, {
+					"_fullName": "::stappler::geom::LineDrawer::drawLine(float,float)",
+					"_kind": "member function",
+					"_name": "drawLine",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 93825011398480,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "drawLine",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "x",
+						"id": 93825011398800,
+						"kind": "function parameter",
+						"name": "x",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "y",
+						"id": 93825011399040,
+						"kind": "function parameter",
+						"name": "y",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(float,float)"
+				}, {
+					"_fullName": "::stappler::geom::LineDrawer::drawQuadBezier(float,float,float,float)",
+					"_kind": "member function",
+					"_name": "drawQuadBezier",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 93825006585760,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "drawQuadBezier",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "x1",
+						"id": 93825006586080,
+						"kind": "function parameter",
+						"name": "x1",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "y1",
+						"id": 93825006586320,
+						"kind": "function parameter",
+						"name": "y1",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "x2",
+						"id": 93825001100768,
+						"kind": "function parameter",
+						"name": "x2",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "y2",
+						"id": 93825006201280,
+						"kind": "function parameter",
+						"name": "y2",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(float,float,float,float)"
+				}, {
+					"_fullName": "::stappler::geom::LineDrawer::drawCubicBezier(float,float,float,float,float,float)",
+					"_kind": "member function",
+					"_name": "drawCubicBezier",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 93825006201520,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "drawCubicBezier",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "x1",
+						"id": 93825006201840,
+						"kind": "function parameter",
+						"name": "x1",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "y1",
+						"id": 93825000254128,
+						"kind": "function parameter",
+						"name": "y1",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "x2",
+						"id": 93825000254368,
+						"kind": "function parameter",
+						"name": "x2",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "y2",
+						"id": 93825000254608,
+						"kind": "function parameter",
+						"name": "y2",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "x3",
+						"id": 93825000254848,
+						"kind": "function parameter",
+						"name": "x3",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "y3",
+						"id": 93825003279344,
+						"kind": "function parameter",
+						"name": "y3",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(float,float,float,float,float,float)"
+				}, {
+					"_fullName": "::stappler::geom::LineDrawer::drawArc(float,float,float,bool,bool,float,float)",
+					"_kind": "member function",
+					"_name": "drawArc",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 93825003279584,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "drawArc",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "rx",
+						"id": 93825003279904,
+						"kind": "function parameter",
+						"name": "rx",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "ry",
+						"id": 93825003280144,
+						"kind": "function parameter",
+						"name": "ry",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "angle",
+						"id": 93825005004784,
+						"kind": "function parameter",
+						"name": "angle",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "largeArc",
+						"id": 93825005005024,
+						"kind": "function parameter",
+						"name": "largeArc",
+						"type": {
+							"_typeName": "bool",
+							"builtin_type_kind": "bool",
+							"kind": "builtin"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "sweep",
+						"id": 93825005005264,
+						"kind": "function parameter",
+						"name": "sweep",
+						"type": {
+							"_typeName": "bool",
+							"builtin_type_kind": "bool",
+							"kind": "builtin"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "x",
+						"id": 93825005005504,
+						"kind": "function parameter",
+						"name": "x",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "y",
+						"id": 93825004527200,
+						"kind": "function parameter",
+						"name": "y",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(float,float,float,bool,bool,float,float)"
+				}, {
+					"_fullName": "::stappler::geom::LineDrawer::drawClose(bool)",
+					"_kind": "member function",
+					"_name": "drawClose",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 93825004527440,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "drawClose",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "closed",
+						"id": 93825004527760,
+						"kind": "function parameter",
+						"name": "closed",
+						"type": {
+							"_typeName": "bool",
+							"builtin_type_kind": "bool",
+							"kind": "builtin"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(bool)"
+				}, {
+					"_fullName": "::stappler::geom::LineDrawer::push(float,float)",
+					"_kind": "member function",
+					"_name": "push",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 93825004528000,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "push",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "x",
+						"id": 93825002530768,
+						"kind": "function parameter",
+						"name": "x",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "y",
+						"id": 93825002531008,
+						"kind": "function parameter",
+						"name": "y",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(float,float)"
+				}, {
+					"_fullName": "::stappler::geom::LineDrawer::pushStroke(stappler::geom::Vec2 const&,stappler::geom::Vec2 const&,stappler::geom::Vec2 const&)",
+					"_kind": "member function",
+					"_name": "pushStroke",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 93825002531248,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "pushStroke",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "v0",
+						"id": 93825002531664,
+						"kind": "function parameter",
+						"name": "v0",
+						"type": {
+							"_typeName": "stappler::geom::Vec2 const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::Vec2 const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::geom::Vec2",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::geom::Vec2",
+										"objects": [{
+											"_fullName": "::stappler::geom::Vec2",
+											"_kind": "class",
+											"_name": "Vec2",
+											"class_kind": "class",
+											"id": 140737093477856,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Vec2",
+											"scope": {
+												"name": "Vec2"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "v1",
+						"id": 93825000252832,
+						"kind": "function parameter",
+						"name": "v1",
+						"type": {
+							"_typeName": "stappler::geom::Vec2 const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::Vec2 const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::geom::Vec2",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::geom::Vec2",
+										"objects": [{
+											"_fullName": "::stappler::geom::Vec2",
+											"_kind": "class",
+											"_name": "Vec2",
+											"class_kind": "class",
+											"id": 140737093477856,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Vec2",
+											"scope": {
+												"name": "Vec2"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "v2",
+						"id": 93825000253264,
+						"kind": "function parameter",
+						"name": "v2",
+						"type": {
+							"_typeName": "stappler::geom::Vec2 const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::Vec2 const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::geom::Vec2",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::geom::Vec2",
+										"objects": [{
+											"_fullName": "::stappler::geom::Vec2",
+											"_kind": "class",
+											"_name": "Vec2",
+											"class_kind": "class",
+											"id": 140737093477856,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Vec2",
+											"scope": {
+												"name": "Vec2"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::geom::Vec2 const&,stappler::geom::Vec2 const&,stappler::geom::Vec2 const&)"
+				}, {
+					"_fullName": "::stappler::geom::LineDrawer::BufferNode",
+					"_kind": "class",
+					"_name": "BufferNode",
+					"childs": [{
+						"_fullName": "::stappler::geom::LineDrawer::BufferNode::next",
+						"_kind": "member variable",
+						"_name": "next",
+						"id": 140736972894368,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "next",
+						"type": {
+							"_typeName": "stappler::geom::LineDrawer::BufferNode*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::geom::LineDrawer::BufferNode",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::LineDrawer::BufferNode",
+									"objects": [{
+										"_fullName": "::stappler::geom::LineDrawer::BufferNode",
+										"_kind": "class",
+										"_name": "BufferNode",
+										"class_kind": "struct",
+										"id": 93825000253504,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "BufferNode",
+										"scope": {
+											"name": "BufferNode"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						}
+					}, {
+						"_fullName": "::stappler::geom::LineDrawer::BufferNode::prev",
+						"_kind": "member variable",
+						"_name": "prev",
+						"id": 140737093147632,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "prev",
+						"type": {
+							"_typeName": "stappler::geom::LineDrawer::BufferNode*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::geom::LineDrawer::BufferNode",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::LineDrawer::BufferNode",
+									"objects": [{
+										"_fullName": "::stappler::geom::LineDrawer::BufferNode",
+										"_kind": "class",
+										"_name": "BufferNode",
+										"class_kind": "struct",
+										"id": 93825000253504,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "BufferNode",
+										"scope": {
+											"name": "BufferNode"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						}
+					}, {
+						"_fullName": "::stappler::geom::LineDrawer::BufferNode::point",
+						"_kind": "member variable",
+						"_name": "point",
+						"id": 140737144193344,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "point",
+						"type": {
+							"_typeName": "stappler::geom::Vec2",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::geom::Vec2",
+								"objects": [{
+									"_fullName": "::stappler::geom::Vec2",
+									"_kind": "class",
+									"_name": "Vec2",
+									"class_kind": "class",
+									"id": 140737093477856,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "Vec2",
+									"scope": {
+										"name": "Vec2"
+									},
+									"semantic_scope": ""
+								}]
+							}
+						}
+					}],
+					"class_kind": "struct",
+					"id": 93825000253504,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_final": false,
+					"kind": "class",
+					"name": "BufferNode",
+					"scope": {
+						"name": "BufferNode"
+					},
+					"semantic_scope": ""
+				}, {
+					"_fullName": "::stappler::geom::LineDrawer::style",
+					"_kind": "member variable",
+					"_name": "style",
+					"default_value": {
+						"expression": [{
+							"kind": "identifier",
+							"spelling": "DrawStyle"
+						}, {
+							"kind": "punctuation",
+							"spelling": "::"
+						}, {
+							"kind": "identifier",
+							"spelling": "None"
+						}],
+						"kind": "unexposed",
+						"type": {
+							"_typeName": "stappler::geom::DrawStyle",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::geom::DrawStyle",
+								"objects": [{
+									"_fullName": "::stappler::geom::DrawStyle",
+									"_kind": "enum",
+									"_name": "DrawStyle",
+									"has_explicit_type": false,
+									"id": 140737143908448,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_scoped": true,
+									"kind": "enum",
+									"name": "DrawStyle",
+									"scope": {
+										"name": "DrawStyle"
+									},
+									"semantic_scope": "",
+									"underlying_type": {
+										"_typeName": "int",
+										"builtin_type_kind": "int",
+										"kind": "builtin"
+									}
+								}]
+							}
+						}
+					},
+					"id": 93825000219952,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "style",
+					"type": {
+						"_typeName": "stappler::geom::DrawStyle",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::geom::DrawStyle",
+							"objects": [{
+								"_fullName": "::stappler::geom::DrawStyle",
+								"_kind": "enum",
+								"_name": "DrawStyle",
+								"has_explicit_type": false,
+								"id": 140737143908448,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_scoped": true,
+								"kind": "enum",
+								"name": "DrawStyle",
+								"scope": {
+									"name": "DrawStyle"
+								},
+								"semantic_scope": "",
+								"underlying_type": {
+									"_typeName": "int",
+									"builtin_type_kind": "int",
+									"kind": "builtin"
+								}
+							}]
+						}
+					}
+				}, {
+					"_fullName": "::stappler::geom::LineDrawer::lineJoin",
+					"_kind": "member variable",
+					"_name": "lineJoin",
+					"default_value": {
+						"expression": [{
+							"kind": "identifier",
+							"spelling": "LineJoin"
+						}, {
+							"kind": "punctuation",
+							"spelling": "::"
+						}, {
+							"kind": "identifier",
+							"spelling": "Miter"
+						}],
+						"kind": "unexposed",
+						"type": {
+							"_typeName": "stappler::geom::LineJoin",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::geom::LineJoin",
+								"objects": [{
+									"_fullName": "::stappler::geom::LineJoin",
+									"_kind": "enum",
+									"_name": "LineJoin",
+									"has_explicit_type": false,
+									"id": 140737145686288,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_scoped": true,
+									"kind": "enum",
+									"name": "LineJoin",
+									"scope": {
+										"name": "LineJoin"
+									},
+									"semantic_scope": "",
+									"underlying_type": {
+										"_typeName": "int",
+										"builtin_type_kind": "int",
+										"kind": "builtin"
+									}
+								}]
+							}
+						}
+					},
+					"id": 93825001498528,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "lineJoin",
+					"type": {
+						"_typeName": "stappler::geom::LineJoin",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::geom::LineJoin",
+							"objects": [{
+								"_fullName": "::stappler::geom::LineJoin",
+								"_kind": "enum",
+								"_name": "LineJoin",
+								"has_explicit_type": false,
+								"id": 140737145686288,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_scoped": true,
+								"kind": "enum",
+								"name": "LineJoin",
+								"scope": {
+									"name": "LineJoin"
+								},
+								"semantic_scope": "",
+								"underlying_type": {
+									"_typeName": "int",
+									"builtin_type_kind": "int",
+									"kind": "builtin"
+								}
+							}]
+						}
+					}
+				}, {
+					"_fullName": "::stappler::geom::LineDrawer::lineCup",
+					"_kind": "member variable",
+					"_name": "lineCup",
+					"default_value": {
+						"expression": [{
+							"kind": "identifier",
+							"spelling": "LineCup"
+						}, {
+							"kind": "punctuation",
+							"spelling": "::"
+						}, {
+							"kind": "identifier",
+							"spelling": "Butt"
+						}],
+						"kind": "unexposed",
+						"type": {
+							"_typeName": "stappler::geom::LineCup",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::geom::LineCup",
+								"objects": [{
+									"_fullName": "::stappler::geom::LineCup",
+									"_kind": "enum",
+									"_name": "LineCup",
+									"has_explicit_type": false,
+									"id": 140737146423072,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_scoped": true,
+									"kind": "enum",
+									"name": "LineCup",
+									"scope": {
+										"name": "LineCup"
+									},
+									"semantic_scope": "",
+									"underlying_type": {
+										"_typeName": "int",
+										"builtin_type_kind": "int",
+										"kind": "builtin"
+									}
+								}]
+							}
+						}
+					},
+					"id": 93825001499072,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "lineCup",
+					"type": {
+						"_typeName": "stappler::geom::LineCup",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::geom::LineCup",
+							"objects": [{
+								"_fullName": "::stappler::geom::LineCup",
+								"_kind": "enum",
+								"_name": "LineCup",
+								"has_explicit_type": false,
+								"id": 140737146423072,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_scoped": true,
+								"kind": "enum",
+								"name": "LineCup",
+								"scope": {
+									"name": "LineCup"
+								},
+								"semantic_scope": "",
+								"underlying_type": {
+									"_typeName": "int",
+									"builtin_type_kind": "int",
+									"kind": "builtin"
+								}
+							}]
+						}
+					}
+				}, {
+					"_fullName": "::stappler::geom::LineDrawer::distanceError",
+					"_kind": "member variable",
+					"_name": "distanceError",
+					"default_value": {
+						"expression": [{
+							"kind": "float_literal",
+							"spelling": "0.0f"
+						}],
+						"kind": "unexposed",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					},
+					"id": 93825003975424,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "distanceError",
+					"type": {
+						"_typeName": "float",
+						"builtin_type_kind": "float",
+						"kind": "builtin"
+					}
+				}, {
+					"_fullName": "::stappler::geom::LineDrawer::angularError",
+					"_kind": "member variable",
+					"_name": "angularError",
+					"default_value": {
+						"expression": [{
+							"kind": "float_literal",
+							"spelling": "0.0f"
+						}],
+						"kind": "unexposed",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					},
+					"id": 93825003975840,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "angularError",
+					"type": {
+						"_typeName": "float",
+						"builtin_type_kind": "float",
+						"kind": "builtin"
+					}
+				}, {
+					"_fullName": "::stappler::geom::LineDrawer::strokeWidth",
+					"_kind": "member variable",
+					"_name": "strokeWidth",
+					"default_value": {
+						"expression": [{
+							"kind": "float_literal",
+							"spelling": "0.0f"
+						}],
+						"kind": "unexposed",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					},
+					"id": 93825005633488,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "strokeWidth",
+					"type": {
+						"_typeName": "float",
+						"builtin_type_kind": "float",
+						"kind": "builtin"
+					}
+				}, {
+					"_fullName": "::stappler::geom::LineDrawer::count",
+					"_kind": "member variable",
+					"_name": "count",
+					"default_value": {
+						"expression": [{
+							"kind": "int_literal",
+							"spelling": "0"
+						}],
+						"kind": "unexposed",
+						"type": {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						}
+					},
+					"id": 93825005633904,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "count",
+					"type": {
+						"_typeName": "size_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "size_t"
+						}
+					}
+				}, {
+					"_fullName": "::stappler::geom::LineDrawer::origin",
+					"_kind": "member variable",
+					"_name": "origin",
+					"id": 93825003759424,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "origin",
+					"type": {
+						"_typeName": "stappler::geom::Vec2[2]",
+						"kind": "array",
+						"size": {
+							"kind": "literal",
+							"type": {
+								"_typeName": "unsigned long long",
+								"builtin_type_kind": "unsigned long long",
+								"kind": "builtin"
+							},
+							"value": "2"
+						},
+						"value_type":  {
+							"_typeName": "stappler::geom::Vec2",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::geom::Vec2",
+								"objects": [{
+									"_fullName": "::stappler::geom::Vec2",
+									"_kind": "class",
+									"_name": "Vec2",
+									"class_kind": "class",
+									"id": 140737093477856,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "Vec2",
+									"scope": {
+										"name": "Vec2"
+									},
+									"semantic_scope": ""
+								}]
+							}
+						}
+					}
+				}, {
+					"_fullName": "::stappler::geom::LineDrawer::buffer",
+					"_kind": "member variable",
+					"_name": "buffer",
+					"id": 93825003759936,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "buffer",
+					"type": {
+						"_typeName": "stappler::geom::LineDrawer::BufferNode[3]",
+						"kind": "array",
+						"size": {
+							"kind": "literal",
+							"type": {
+								"_typeName": "unsigned long long",
+								"builtin_type_kind": "unsigned long long",
+								"kind": "builtin"
+							},
+							"value": "3"
+						},
+						"value_type":  {
+							"_typeName": "stappler::geom::LineDrawer::BufferNode",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::geom::LineDrawer::BufferNode",
+								"objects": [{
+									"_fullName": "::stappler::geom::LineDrawer::BufferNode",
+									"_kind": "class",
+									"_name": "BufferNode",
+									"class_kind": "struct",
+									"id": 93825000253504,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "BufferNode",
+									"scope": {
+										"name": "BufferNode"
+									},
+									"semantic_scope": ""
+								}]
+							}
+						}
+					}
+				}, {
+					"_fullName": "::stappler::geom::LineDrawer::target",
+					"_kind": "member variable",
+					"_name": "target",
+					"default_value": {
+						"expression": [{
+							"kind": "keyword",
+							"spelling": "nullptr"
+						}],
+						"kind": "unexposed",
+						"type": {
+							"_typeName": "stappler::geom::LineDrawer::BufferNode*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::geom::LineDrawer::BufferNode",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::LineDrawer::BufferNode",
+									"objects": [{
+										"_fullName": "::stappler::geom::LineDrawer::BufferNode",
+										"_kind": "class",
+										"_name": "BufferNode",
+										"class_kind": "struct",
+										"id": 93825000253504,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "BufferNode",
+										"scope": {
+											"name": "BufferNode"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						}
+					},
+					"id": 93825011410272,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "target",
+					"type": {
+						"_typeName": "stappler::geom::LineDrawer::BufferNode*",
+						"kind": "pointer",
+						"pointee": {
+							"_typeName": "stappler::geom::LineDrawer::BufferNode",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::geom::LineDrawer::BufferNode",
+								"objects": [{
+									"_fullName": "::stappler::geom::LineDrawer::BufferNode",
+									"_kind": "class",
+									"_name": "BufferNode",
+									"class_kind": "struct",
+									"id": 93825000253504,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "BufferNode",
+									"scope": {
+										"name": "BufferNode"
+									},
+									"semantic_scope": ""
+								}]
+							}
+						}
+					}
+				}, {
+					"_fullName": "::stappler::geom::LineDrawer::fill",
+					"_kind": "member variable",
+					"_name": "fill",
+					"id": 93825011410720,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "fill",
+					"type": {
+						"_typeName": "Rc<stappler::geom::Tesselator>",
+						"arguments_exposed": false,
+						"kind": "template_instantiation",
+						"primary_template": {
+							"name": "Rc",
+							"objects": [{
+								"_fullName": "::stappler::RcBase<typename>",
+								"_kind": "class template",
+								"_name": "RcBase",
+								"class": {
+									"_fullName": "::stappler::RcBase<typename>",
+									"_kind": "class",
+									"_name": "RcBase",
+									"class_kind": "class",
+									"id": 93824999765056,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "RcBase",
+									"scope": {
+										"is_templated": true,
+										"name": "RcBase",
+										"template_parameters": [{
+											"_kind": "template type parameter",
+											"_name": "Base",
+											"id": 93825002831392,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "Base"
+										}]
+									},
+									"semantic_scope": ""
+								},
+								"id": 93825002831184,
+								"kind": "class template",
+								"name": "RcBase",
+								"parameters": [{
+									"_kind": "template type parameter",
+									"_name": "Base",
+									"id": 93825002831392,
+									"is_variadic": false,
+									"keyword": "typename",
+									"kind": "template type parameter",
+									"name": "Base"
+								}],
+								"scope":  {
+									"is_templated": true,
+									"name": "RcBase",
+									"template_parameters": [{
+										"_kind": "template type parameter",
+										"_name": "Base",
+										"id": 93825002831392,
+										"is_variadic": false,
+										"keyword": "typename",
+										"kind": "template type parameter",
+										"name": "Base"
+									}]
+								}
+							}]
+						},
+						"unexposed_arguments": "stappler::geom::Tesselator"
+					}
+				}, {
+					"_fullName": "::stappler::geom::LineDrawer::fillCursor",
+					"_kind": "member variable",
+					"_name": "fillCursor",
+					"id": 93825011411024,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "fillCursor",
+					"type": {
+						"_typeName": "Tesselator::Cursor",
+						"kind": "user_defined",
+						"target": {
+							"name": "Tesselator::Cursor",
+							"objects": [{
+								"_fullName": "::stappler::geom::Tesselator::Cursor",
+								"_kind": "class",
+								"_name": "Cursor",
+								"class_kind": "struct",
+								"id": 93825004289744,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_final": false,
+								"kind": "class",
+								"name": "Cursor",
+								"scope": {
+									"name": "Cursor"
+								},
+								"semantic_scope": ""
+							}]
+						}
+					}
+				}, {
+					"_fullName": "::stappler::geom::LineDrawer::stroke",
+					"_kind": "member variable",
+					"_name": "stroke",
+					"id": 93825004666096,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "stroke",
+					"type": {
+						"_typeName": "Rc<stappler::geom::Tesselator>",
+						"arguments_exposed": false,
+						"kind": "template_instantiation",
+						"primary_template": {
+							"name": "Rc",
+							"objects": [{
+								"_fullName": "::stappler::RcBase<typename>",
+								"_kind": "class template",
+								"_name": "RcBase",
+								"class": {
+									"_fullName": "::stappler::RcBase<typename>",
+									"_kind": "class",
+									"_name": "RcBase",
+									"class_kind": "class",
+									"id": 93824999765056,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "RcBase",
+									"scope": {
+										"is_templated": true,
+										"name": "RcBase",
+										"template_parameters": [{
+											"_kind": "template type parameter",
+											"_name": "Base",
+											"id": 93825002831392,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "Base"
+										}]
+									},
+									"semantic_scope": ""
+								},
+								"id": 93825002831184,
+								"kind": "class template",
+								"name": "RcBase",
+								"parameters": [{
+									"_kind": "template type parameter",
+									"_name": "Base",
+									"id": 93825002831392,
+									"is_variadic": false,
+									"keyword": "typename",
+									"kind": "template type parameter",
+									"name": "Base"
+								}],
+								"scope":  {
+									"is_templated": true,
+									"name": "RcBase",
+									"template_parameters": [{
+										"_kind": "template type parameter",
+										"_name": "Base",
+										"id": 93825002831392,
+										"is_variadic": false,
+										"keyword": "typename",
+										"kind": "template type parameter",
+										"name": "Base"
+									}]
+								}
+							}]
+						},
+						"unexposed_arguments": "stappler::geom::Tesselator"
+					}
+				}, {
+					"_fullName": "::stappler::geom::LineDrawer::strokeCursor",
+					"_kind": "member variable",
+					"_name": "strokeCursor",
+					"id": 93825004666400,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "strokeCursor",
+					"type": {
+						"_typeName": "Tesselator::Cursor",
+						"kind": "user_defined",
+						"target": {
+							"name": "Tesselator::Cursor",
+							"objects": [{
+								"_fullName": "::stappler::geom::Tesselator::Cursor",
+								"_kind": "class",
+								"_name": "Cursor",
+								"class_kind": "struct",
+								"id": 93825004289744,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_final": false,
+								"kind": "class",
+								"name": "Cursor",
+								"scope": {
+									"name": "Cursor"
+								},
+								"semantic_scope": ""
+							}]
+						}
+					}
+				}, {
+					"_fullName": "::stappler::geom::LineDrawer::_miterLimit",
+					"_kind": "member variable",
+					"_name": "_miterLimit",
+					"default_value": {
+						"expression": [{
+							"kind": "float_literal",
+							"spelling": "4.0f"
+						}],
+						"kind": "unexposed",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					},
+					"id": 93825004666704,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "_miterLimit",
+					"type": {
+						"_typeName": "float",
+						"builtin_type_kind": "float",
+						"kind": "builtin"
+					}
+				}],
+				"class_kind": "struct",
+				"id": 140737117700320,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_final": false,
+				"kind": "class",
+				"name": "LineDrawer",
+				"scope": {
+					"name": "LineDrawer"
+				},
+				"semantic_scope": ""
+			}],
+			"id": 140737095533328,
+			"is_anonymous": false,
+			"is_inline": false,
+			"is_nested": true,
+			"kind": "namespace",
+			"name": "geom",
+			"scope": {
+				"name": "geom"
+			}
+		}],
+		"id": 140737114294032,
+		"is_anonymous": false,
+		"is_inline": false,
+		"is_nested": false,
+		"kind": "namespace",
+		"name": "stappler",
+		"scope": {
+			"name": "stappler"
+		}
+	}],
+	"id": 140737142640544,
+	"kind": "file",
+	"name": "/home/sbkarr/stappler/xenolith/libstappler/modules/tess/SPTessLine.h",
+	"unmatched_comments": [{
+		"line": 21,
+		"text": "\nCopyright (c) 2022 Roman Katuntsev <sbkarr@stappler.org>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n"
+	}]
+}

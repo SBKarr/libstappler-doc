@@ -1,0 +1,3289 @@
+{
+	"_kind": "file",
+	"_name": "/home/sbkarr/stappler/xenolith/libstappler/common/memory/SPMemPriorityQueue.h",
+	"childs": [{
+		"_kind": "include directive",
+		"_name": "SPMemFunction.h",
+		"id": 140737103274000,
+		"include": "/home/sbkarr/stappler/xenolith/libstappler/common/memory/SPMemFunction.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "SPMemFunction.h"
+	}, {
+		"_fullName": "LIBSTAPPLER_COMMON_MEMORY_SPMEMPRIORITYQUEUE_H_",
+		"_kind": "macro definition",
+		"_name": "LIBSTAPPLER_COMMON_MEMORY_SPMEMPRIORITYQUEUE_H_",
+		"id": 140737151018528,
+		"is_function_like": false,
+		"is_object_like": true,
+		"is_variadic": false,
+		"kind": "macro definition",
+		"name": "LIBSTAPPLER_COMMON_MEMORY_SPMEMPRIORITYQUEUE_H_",
+		"replacement": ""
+	}, {
+		"_fullName": "SP_PRIORITY_QUEUE_RANGE_DEBUG",
+		"_kind": "macro definition",
+		"_name": "SP_PRIORITY_QUEUE_RANGE_DEBUG",
+		"id": 140737148779488,
+		"is_function_like": false,
+		"is_object_like": true,
+		"is_variadic": false,
+		"kind": "macro definition",
+		"name": "SP_PRIORITY_QUEUE_RANGE_DEBUG",
+		"replacement": "0"
+	}, {
+		"_fullName": "::stappler",
+		"_kind": "namespace",
+		"_name": "stappler",
+		"childs": [{
+			"_fullName": "::stappler::memory",
+			"_kind": "namespace",
+			"_name": "memory",
+			"childs": [{
+				"_fullName": "::stappler::memory::PriorityQueue_lock_noOp(void*)",
+				"_kind": "function",
+				"_name": "PriorityQueue_lock_noOp",
+				"body_kind": "declaration",
+				"id": 140736953352544,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": true,
+				"is_definition": false,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "PriorityQueue_lock_noOp",
+				"parameters": [{
+					"_kind": "function parameter",
+					"_name": "",
+					"id": 140737086381392,
+					"kind": "function parameter",
+					"name": "",
+					"type": {
+						"_typeName": "void*",
+						"kind": "pointer",
+						"pointee": {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						}
+					}
+				}],
+				"return_type":  {
+					"_typeName": "void",
+					"builtin_type_kind": "void",
+					"kind": "builtin"
+				},
+				"semantic_scope": "",
+				"signature": "(void*)"
+			}, {
+				"_fullName": "::stappler::memory::PriorityQueue_lock_std_mutex(void*)",
+				"_kind": "function",
+				"_name": "PriorityQueue_lock_std_mutex",
+				"body_kind": "declaration",
+				"id": 140737101963984,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": true,
+				"is_definition": false,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "PriorityQueue_lock_std_mutex",
+				"parameters": [{
+					"_kind": "function parameter",
+					"_name": "",
+					"id": 140737124656976,
+					"kind": "function parameter",
+					"name": "",
+					"type": {
+						"_typeName": "void*",
+						"kind": "pointer",
+						"pointee": {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						}
+					}
+				}],
+				"return_type":  {
+					"_typeName": "void",
+					"builtin_type_kind": "void",
+					"kind": "builtin"
+				},
+				"semantic_scope": "",
+				"signature": "(void*)"
+			}, {
+				"_fullName": "::stappler::memory::PriorityQueue_unlock_std_mutex(void*)",
+				"_kind": "function",
+				"_name": "PriorityQueue_unlock_std_mutex",
+				"body_kind": "declaration",
+				"id": 140737103904560,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": true,
+				"is_definition": false,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "PriorityQueue_unlock_std_mutex",
+				"parameters": [{
+					"_kind": "function parameter",
+					"_name": "",
+					"id": 140737112251968,
+					"kind": "function parameter",
+					"name": "",
+					"type": {
+						"_typeName": "void*",
+						"kind": "pointer",
+						"pointee": {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						}
+					}
+				}],
+				"return_type":  {
+					"_typeName": "void",
+					"builtin_type_kind": "void",
+					"kind": "builtin"
+				},
+				"semantic_scope": "",
+				"signature": "(void*)"
+			}, {
+				"_fullName": "::stappler::memory::PriorityQueue<typename>",
+				"_kind": "class template",
+				"_name": "PriorityQueue",
+				"childs": [{
+					"_fullName": "::stappler::memory::PriorityQueue<typename>",
+					"_kind": "class",
+					"_name": "PriorityQueue",
+					"childs": [{
+						"_kind": "access specifier",
+						"_name": "public",
+						"access_specifier": "public",
+						"id": 140736954592112,
+						"kind": "access specifier",
+						"name": "public"
+					}, {
+						"_fullName": "::stappler::memory::PriorityQueue<typename>::PreallocatedNodes",
+						"_kind": "variable",
+						"_name": "PreallocatedNodes",
+						"default_value": {
+							"expression": [{
+								"kind": "int_literal",
+								"spelling": "8"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "size_t const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "size_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "size_t"
+									}
+								}
+							}
+						},
+						"id": 140737121218528,
+						"is_constexpr": true,
+						"is_declaration": false,
+						"is_definition": true,
+						"kind": "variable",
+						"name": "PreallocatedNodes",
+						"semantic_scope": "",
+						"storage_class": [
+							"static"
+						],
+						"type":  {
+							"_typeName": "size_t const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "size_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "size_t"
+								}
+							}
+						}
+					}, {
+						"_fullName": "::stappler::memory::PriorityQueue<typename>::StorageNodes",
+						"_kind": "variable",
+						"_name": "StorageNodes",
+						"default_value": {
+							"expression": [{
+								"kind": "int_literal",
+								"spelling": "64"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "size_t const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "size_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "size_t"
+									}
+								}
+							}
+						},
+						"id": 140737086491456,
+						"is_constexpr": true,
+						"is_declaration": false,
+						"is_definition": true,
+						"kind": "variable",
+						"name": "StorageNodes",
+						"semantic_scope": "",
+						"storage_class": [
+							"static"
+						],
+						"type":  {
+							"_typeName": "size_t const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "size_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "size_t"
+								}
+							}
+						}
+					}, {
+						"_fullName": "::stappler::memory::PriorityQueue<typename>::LockFnPtr",
+						"_kind": "type alias",
+						"_name": "LockFnPtr",
+						"id": 140737148181568,
+						"kind": "type alias",
+						"name": "LockFnPtr",
+						"underlying_type": {
+							"_typeName": "void(*)(void*)",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "void(void*)",
+								"is_variadic": false,
+								"kind": "function",
+								"parameter_types": [{
+									"_typeName": "void*",
+									"kind": "pointer",
+									"pointee": {
+										"_typeName": "void",
+										"builtin_type_kind": "void",
+										"kind": "builtin"
+									}
+								}],
+								"return_type":  {
+									"_typeName": "void",
+									"builtin_type_kind": "void",
+									"kind": "builtin"
+								}
+							}
+						}
+					}, {
+						"_fullName": "::stappler::memory::PriorityQueue<typename>::PriorityType",
+						"_kind": "type alias",
+						"_name": "PriorityType",
+						"id": 140737086539536,
+						"kind": "type alias",
+						"name": "PriorityType",
+						"underlying_type": {
+							"_typeName": "int32_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "int32_t"
+							}
+						}
+					}, {
+						"_fullName": "::stappler::memory::PriorityQueue<typename>::StorageBlock",
+						"_kind": "class",
+						"_name": "StorageBlock",
+						"childs": null,
+						"class_kind": "struct",
+						"id": 140737141722288,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_final": false,
+						"kind": "class",
+						"name": "StorageBlock",
+						"scope": {
+							"name": "StorageBlock"
+						},
+						"semantic_scope": ""
+					}, {
+						"_fullName": "::stappler::memory::PriorityQueue<typename>::AlignedStorage",
+						"_kind": "class",
+						"_name": "AlignedStorage",
+						"attributes": [{
+							"arguments": [{
+								"kind": "identifier",
+								"spelling": "Value"
+							}],
+							"is_variadic": false,
+							"kind": "alignas_",
+							"name": "alignas"
+						}],
+						"childs":  [{
+							"_fullName": "::stappler::memory::PriorityQueue<typename>::AlignedStorage::buffer",
+							"_kind": "member variable",
+							"_name": "buffer",
+							"id": 140737086540096,
+							"is_mutable": false,
+							"kind": "member variable",
+							"name": "buffer",
+							"type": {
+								"_typeName": "uint8_t[sizeof(_Tp)]",
+								"kind": "array",
+								"size": {
+									"expression": [{
+										"kind": "keyword",
+										"spelling": "sizeof"
+									}, {
+										"kind": "punctuation",
+										"spelling": "("
+									}, {
+										"kind": "identifier",
+										"spelling": "_Tp"
+									}, {
+										"kind": "punctuation",
+										"spelling": ")"
+									}],
+									"kind": "unexposed",
+									"type": {
+										"_typeName": "unsigned long long",
+										"builtin_type_kind": "unsigned long long",
+										"kind": "builtin"
+									}
+								},
+								"value_type":  {
+									"_typeName": "uint8_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "uint8_t"
+									}
+								}
+							}
+						}],
+						"class_kind": "struct",
+						"id": 140737110671504,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_final": false,
+						"kind": "class",
+						"name": "AlignedStorage",
+						"scope": {
+							"name": "AlignedStorage"
+						},
+						"semantic_scope": ""
+					}, {
+						"_fullName": "::stappler::memory::PriorityQueue<typename>::Node",
+						"_kind": "class",
+						"_name": "Node",
+						"childs": [{
+							"_fullName": "::stappler::memory::PriorityQueue<typename>::Node::storage",
+							"_kind": "member variable",
+							"_name": "storage",
+							"id": 140737122613984,
+							"is_mutable": false,
+							"kind": "member variable",
+							"name": "storage",
+							"type": {
+								"_typeName": "stappler::memory::PriorityQueue::AlignedStorage",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::memory::PriorityQueue::AlignedStorage",
+									"objects": [{
+										"_fullName": "::stappler::memory::PriorityQueue<typename>::AlignedStorage",
+										"_kind": "class",
+										"_name": "AlignedStorage",
+										"attributes": [{
+											"arguments": [{
+												"kind": "identifier",
+												"spelling": "Value"
+											}],
+											"is_variadic": false,
+											"kind": "alignas_",
+											"name": "alignas"
+										}],
+										"class_kind": "struct",
+										"id": 140737110671504,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "AlignedStorage",
+										"scope": {
+											"name": "AlignedStorage"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						}, {
+							"_fullName": "::stappler::memory::PriorityQueue<typename>::Node::next",
+							"_kind": "member variable",
+							"_name": "next",
+							"id": 140737115708864,
+							"is_mutable": false,
+							"kind": "member variable",
+							"name": "next",
+							"type": {
+								"_typeName": "stappler::memory::PriorityQueue::Node*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::memory::PriorityQueue::Node",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::memory::PriorityQueue::Node",
+										"objects": [{
+											"_fullName": "::stappler::memory::PriorityQueue<typename>::Node",
+											"_kind": "class",
+											"_name": "Node",
+											"class_kind": "struct",
+											"id": 93825007969984,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Node",
+											"scope": {
+												"name": "Node"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							}
+						}, {
+							"_fullName": "::stappler::memory::PriorityQueue<typename>::Node::block",
+							"_kind": "member variable",
+							"_name": "block",
+							"id": 140736956523184,
+							"is_mutable": false,
+							"kind": "member variable",
+							"name": "block",
+							"type": {
+								"_typeName": "stappler::memory::PriorityQueue::StorageBlock*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::memory::PriorityQueue::StorageBlock",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::memory::PriorityQueue::StorageBlock",
+										"objects": [{
+											"_fullName": "::stappler::memory::PriorityQueue<typename>::StorageBlock",
+											"_kind": "class",
+											"_name": "StorageBlock",
+											"class_kind": "struct",
+											"id": 93825004935488,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "StorageBlock",
+											"scope": {
+												"name": "StorageBlock"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							}
+						}, {
+							"_fullName": "::stappler::memory::PriorityQueue<typename>::Node::priority",
+							"_kind": "member variable",
+							"_name": "priority",
+							"id": 93825003824800,
+							"is_mutable": false,
+							"kind": "member variable",
+							"name": "priority",
+							"type": {
+								"_typeName": "stappler::memory::PriorityQueue::PriorityType",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::memory::PriorityQueue::PriorityType",
+									"objects": [{
+										"_fullName": "::stappler::memory::PriorityQueue<typename>::PriorityType",
+										"_kind": "type alias",
+										"_name": "PriorityType",
+										"id": 140737086539536,
+										"kind": "type alias",
+										"name": "PriorityType",
+										"underlying_type": {
+											"_typeName": "int32_t",
+											"kind": "user_defined",
+											"target": {
+												"name": "int32_t"
+											}
+										}
+									}]
+								}
+							}
+						}],
+						"class_kind": "struct",
+						"id": 93825007969984,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_final": false,
+						"kind": "class",
+						"name": "Node",
+						"scope": {
+							"name": "Node"
+						},
+						"semantic_scope": ""
+					}, {
+						"_fullName": "::stappler::memory::PriorityQueue<typename>::StorageBlock",
+						"_kind": "class",
+						"_name": "StorageBlock",
+						"childs": [{
+							"_fullName": "::stappler::memory::PriorityQueue<typename>::StorageBlock::nodes",
+							"_kind": "member variable",
+							"_name": "nodes",
+							"id": 93825001334992,
+							"is_mutable": false,
+							"kind": "member variable",
+							"name": "nodes",
+							"type": {
+								"_typeName": "std::array<Node, StorageNodes>",
+								"arguments_exposed": false,
+								"kind": "template_instantiation",
+								"primary_template": {
+									"name": "std::array"
+								},
+								"unexposed_arguments": "Node, StorageNodes"
+							}
+						}, {
+							"_fullName": "::stappler::memory::PriorityQueue<typename>::StorageBlock::used",
+							"_kind": "member variable",
+							"_name": "used",
+							"default_value": {
+								"expression": [{
+									"kind": "int_literal",
+									"spelling": "0"
+								}],
+								"kind": "unexposed",
+								"type": {
+									"_typeName": "uint32_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "uint32_t"
+									}
+								}
+							},
+							"id": 93824997568512,
+							"is_mutable": false,
+							"kind": "member variable",
+							"name": "used",
+							"type": {
+								"_typeName": "uint32_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "uint32_t"
+								}
+							}
+						}],
+						"class_kind": "struct",
+						"id": 93825004935488,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_final": false,
+						"kind": "class",
+						"name": "StorageBlock",
+						"scope": {
+							"name": "StorageBlock"
+						},
+						"semantic_scope": ""
+					}, {
+						"_fullName": "::stappler::memory::PriorityQueue<typename>::LockInterface",
+						"_kind": "class",
+						"_name": "LockInterface",
+						"childs": [{
+							"_fullName": "::stappler::memory::PriorityQueue<typename>::LockInterface::lockPtr",
+							"_kind": "member variable",
+							"_name": "lockPtr",
+							"default_value": {
+								"expression": [{
+									"kind": "keyword",
+									"spelling": "nullptr"
+								}],
+								"kind": "unexposed",
+								"type": {
+									"_typeName": "void*",
+									"kind": "pointer",
+									"pointee": {
+										"_typeName": "void",
+										"builtin_type_kind": "void",
+										"kind": "builtin"
+									}
+								}
+							},
+							"id": 93825007645968,
+							"is_mutable": false,
+							"kind": "member variable",
+							"name": "lockPtr",
+							"type": {
+								"_typeName": "void*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "void",
+									"builtin_type_kind": "void",
+									"kind": "builtin"
+								}
+							}
+						}, {
+							"_fullName": "::stappler::memory::PriorityQueue<typename>::LockInterface::lockFn",
+							"_kind": "member variable",
+							"_name": "lockFn",
+							"default_value": {
+								"expression": [{
+									"kind": "punctuation",
+									"spelling": "&"
+								}, {
+									"kind": "identifier",
+									"spelling": "PriorityQueue_lock_noOp"
+								}],
+								"kind": "unexposed",
+								"type": {
+									"_typeName": "stappler::memory::PriorityQueue::LockFnPtr",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::memory::PriorityQueue::LockFnPtr",
+										"objects": [{
+											"_fullName": "::stappler::memory::PriorityQueue<typename>::LockFnPtr",
+											"_kind": "type alias",
+											"_name": "LockFnPtr",
+											"id": 140737148181568,
+											"kind": "type alias",
+											"name": "LockFnPtr",
+											"underlying_type": {
+												"_typeName": "void(*)(void*)",
+												"kind": "pointer",
+												"pointee": {
+													"_typeName": "void(void*)",
+													"is_variadic": false,
+													"kind": "function",
+													"parameter_types": [{
+														"_typeName": "void*",
+														"kind": "pointer",
+														"pointee": {
+															"_typeName": "void",
+															"builtin_type_kind": "void",
+															"kind": "builtin"
+														}
+													}],
+													"return_type":  {
+														"_typeName": "void",
+														"builtin_type_kind": "void",
+														"kind": "builtin"
+													}
+												}
+											}
+										}]
+									}
+								}
+							},
+							"id": 93825002558080,
+							"is_mutable": false,
+							"kind": "member variable",
+							"name": "lockFn",
+							"type": {
+								"_typeName": "stappler::memory::PriorityQueue::LockFnPtr",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::memory::PriorityQueue::LockFnPtr",
+									"objects": [{
+										"_fullName": "::stappler::memory::PriorityQueue<typename>::LockFnPtr",
+										"_kind": "type alias",
+										"_name": "LockFnPtr",
+										"id": 140737148181568,
+										"kind": "type alias",
+										"name": "LockFnPtr",
+										"underlying_type": {
+											"_typeName": "void(*)(void*)",
+											"kind": "pointer",
+											"pointee": {
+												"_typeName": "void(void*)",
+												"is_variadic": false,
+												"kind": "function",
+												"parameter_types": [{
+													"_typeName": "void*",
+													"kind": "pointer",
+													"pointee": {
+														"_typeName": "void",
+														"builtin_type_kind": "void",
+														"kind": "builtin"
+													}
+												}],
+												"return_type":  {
+													"_typeName": "void",
+													"builtin_type_kind": "void",
+													"kind": "builtin"
+												}
+											}
+										}
+									}]
+								}
+							}
+						}, {
+							"_fullName": "::stappler::memory::PriorityQueue<typename>::LockInterface::unlockFn",
+							"_kind": "member variable",
+							"_name": "unlockFn",
+							"default_value": {
+								"expression": [{
+									"kind": "punctuation",
+									"spelling": "&"
+								}, {
+									"kind": "identifier",
+									"spelling": "PriorityQueue_lock_noOp"
+								}],
+								"kind": "unexposed",
+								"type": {
+									"_typeName": "stappler::memory::PriorityQueue::LockFnPtr",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::memory::PriorityQueue::LockFnPtr",
+										"objects": [{
+											"_fullName": "::stappler::memory::PriorityQueue<typename>::LockFnPtr",
+											"_kind": "type alias",
+											"_name": "LockFnPtr",
+											"id": 140737148181568,
+											"kind": "type alias",
+											"name": "LockFnPtr",
+											"underlying_type": {
+												"_typeName": "void(*)(void*)",
+												"kind": "pointer",
+												"pointee": {
+													"_typeName": "void(void*)",
+													"is_variadic": false,
+													"kind": "function",
+													"parameter_types": [{
+														"_typeName": "void*",
+														"kind": "pointer",
+														"pointee": {
+															"_typeName": "void",
+															"builtin_type_kind": "void",
+															"kind": "builtin"
+														}
+													}],
+													"return_type":  {
+														"_typeName": "void",
+														"builtin_type_kind": "void",
+														"kind": "builtin"
+													}
+												}
+											}
+										}]
+									}
+								}
+							},
+							"id": 93825002557184,
+							"is_mutable": false,
+							"kind": "member variable",
+							"name": "unlockFn",
+							"type": {
+								"_typeName": "stappler::memory::PriorityQueue::LockFnPtr",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::memory::PriorityQueue::LockFnPtr",
+									"objects": [{
+										"_fullName": "::stappler::memory::PriorityQueue<typename>::LockFnPtr",
+										"_kind": "type alias",
+										"_name": "LockFnPtr",
+										"id": 140737148181568,
+										"kind": "type alias",
+										"name": "LockFnPtr",
+										"underlying_type": {
+											"_typeName": "void(*)(void*)",
+											"kind": "pointer",
+											"pointee": {
+												"_typeName": "void(void*)",
+												"is_variadic": false,
+												"kind": "function",
+												"parameter_types": [{
+													"_typeName": "void*",
+													"kind": "pointer",
+													"pointee": {
+														"_typeName": "void",
+														"builtin_type_kind": "void",
+														"kind": "builtin"
+													}
+												}],
+												"return_type":  {
+													"_typeName": "void",
+													"builtin_type_kind": "void",
+													"kind": "builtin"
+												}
+											}
+										}
+									}]
+								}
+							}
+						}, {
+							"_fullName": "::stappler::memory::PriorityQueue<typename>::LockInterface::clear()",
+							"_kind": "member function",
+							"_name": "clear",
+							"body_kind": "definition",
+							"cv_qualifier": "none",
+							"id": 140737144500624,
+							"is_consteval": false,
+							"is_constexpr": false,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_variadic": false,
+							"is_virtual": false,
+							"kind": "member function",
+							"name": "clear",
+							"ref_qualifier": "none",
+							"return_type": {
+								"_typeName": "void",
+								"builtin_type_kind": "void",
+								"kind": "builtin"
+							},
+							"semantic_scope": "",
+							"signature": "()"
+						}, {
+							"_fullName": "::stappler::memory::PriorityQueue<typename>::LockInterface::lock()",
+							"_kind": "member function",
+							"_name": "lock",
+							"body_kind": "definition",
+							"cv_qualifier": "none",
+							"id": 93825005968192,
+							"is_consteval": false,
+							"is_constexpr": false,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_variadic": false,
+							"is_virtual": false,
+							"kind": "member function",
+							"name": "lock",
+							"ref_qualifier": "none",
+							"return_type": {
+								"_typeName": "void",
+								"builtin_type_kind": "void",
+								"kind": "builtin"
+							},
+							"semantic_scope": "",
+							"signature": "()"
+						}, {
+							"_fullName": "::stappler::memory::PriorityQueue<typename>::LockInterface::unlock()",
+							"_kind": "member function",
+							"_name": "unlock",
+							"body_kind": "definition",
+							"cv_qualifier": "none",
+							"id": 93825001333872,
+							"is_consteval": false,
+							"is_constexpr": false,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_variadic": false,
+							"is_virtual": false,
+							"kind": "member function",
+							"name": "unlock",
+							"ref_qualifier": "none",
+							"return_type": {
+								"_typeName": "void",
+								"builtin_type_kind": "void",
+								"kind": "builtin"
+							},
+							"semantic_scope": "",
+							"signature": "()"
+						}, {
+							"_fullName": "::stappler::memory::PriorityQueue<typename>::LockInterface::operator==(stappler::memory::PriorityQueue::LockInterface const&) const",
+							"_kind": "member function",
+							"_name": "operator==",
+							"body_kind": "definition",
+							"cv_qualifier": "const",
+							"id": 93825001334192,
+							"is_consteval": false,
+							"is_constexpr": false,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_variadic": false,
+							"is_virtual": false,
+							"kind": "member function",
+							"name": "operator==",
+							"parameters": [{
+								"_kind": "function parameter",
+								"_name": "other",
+								"id": 93825001335760,
+								"kind": "function parameter",
+								"name": "other",
+								"type": {
+									"_typeName": "stappler::memory::PriorityQueue::LockInterface const&",
+									"kind": "reference",
+									"referee": {
+										"_typeName": "stappler::memory::PriorityQueue::LockInterface const",
+										"cv_qualifier": "const",
+										"kind": "cv_qualified",
+										"type": {
+											"_typeName": "stappler::memory::PriorityQueue::LockInterface",
+											"kind": "user_defined",
+											"target": {
+												"name": "stappler::memory::PriorityQueue::LockInterface",
+												"objects": [{
+													"_fullName": "::stappler::memory::PriorityQueue<typename>::LockInterface",
+													"_kind": "class",
+													"_name": "LockInterface",
+													"class_kind": "struct",
+													"id": 93825005010976,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "LockInterface",
+													"scope": {
+														"name": "LockInterface"
+													},
+													"semantic_scope": ""
+												}]
+											}
+										}
+									},
+									"reference_kind": "lvalue"
+								}
+							}],
+							"ref_qualifier": "none",
+							"return_type": {
+								"_typeName": "bool",
+								"builtin_type_kind": "bool",
+								"kind": "builtin"
+							},
+							"semantic_scope": "",
+							"signature": "(stappler::memory::PriorityQueue::LockInterface const&) const"
+						}, {
+							"_fullName": "::stappler::memory::PriorityQueue<typename>::LockInterface::operator!=(stappler::memory::PriorityQueue::LockInterface const&) const",
+							"_kind": "member function",
+							"_name": "operator!=",
+							"body_kind": "definition",
+							"cv_qualifier": "const",
+							"id": 93825003825200,
+							"is_consteval": false,
+							"is_constexpr": false,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_variadic": false,
+							"is_virtual": false,
+							"kind": "member function",
+							"name": "operator!=",
+							"parameters": [{
+								"_kind": "function parameter",
+								"_name": "other",
+								"id": 93825003825776,
+								"kind": "function parameter",
+								"name": "other",
+								"type": {
+									"_typeName": "stappler::memory::PriorityQueue::LockInterface const&",
+									"kind": "reference",
+									"referee": {
+										"_typeName": "stappler::memory::PriorityQueue::LockInterface const",
+										"cv_qualifier": "const",
+										"kind": "cv_qualified",
+										"type": {
+											"_typeName": "stappler::memory::PriorityQueue::LockInterface",
+											"kind": "user_defined",
+											"target": {
+												"name": "stappler::memory::PriorityQueue::LockInterface",
+												"objects": [{
+													"_fullName": "::stappler::memory::PriorityQueue<typename>::LockInterface",
+													"_kind": "class",
+													"_name": "LockInterface",
+													"class_kind": "struct",
+													"id": 93825005010976,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "LockInterface",
+													"scope": {
+														"name": "LockInterface"
+													},
+													"semantic_scope": ""
+												}]
+											}
+										}
+									},
+									"reference_kind": "lvalue"
+								}
+							}],
+							"ref_qualifier": "none",
+							"return_type": {
+								"_typeName": "bool",
+								"builtin_type_kind": "bool",
+								"kind": "builtin"
+							},
+							"semantic_scope": "",
+							"signature": "(stappler::memory::PriorityQueue::LockInterface const&) const"
+						}],
+						"class_kind": "struct",
+						"id": 93825005010976,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_final": false,
+						"kind": "class",
+						"name": "LockInterface",
+						"scope": {
+							"name": "LockInterface"
+						},
+						"semantic_scope": ""
+					}, {
+						"_fullName": "::stappler::memory::PriorityQueue<typename>::NodeInterface",
+						"_kind": "class",
+						"_name": "NodeInterface",
+						"childs": [{
+							"_fullName": "::stappler::memory::PriorityQueue<typename>::NodeInterface::first",
+							"_kind": "member variable",
+							"_name": "first",
+							"default_value": {
+								"expression": [{
+									"kind": "keyword",
+									"spelling": "nullptr"
+								}],
+								"kind": "unexposed",
+								"type": {
+									"_typeName": "stappler::memory::PriorityQueue::Node*",
+									"kind": "pointer",
+									"pointee": {
+										"_typeName": "stappler::memory::PriorityQueue::Node",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::memory::PriorityQueue::Node",
+											"objects": [{
+												"_fullName": "::stappler::memory::PriorityQueue<typename>::Node",
+												"_kind": "class",
+												"_name": "Node",
+												"class_kind": "struct",
+												"id": 93825007969984,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "Node",
+												"scope": {
+													"name": "Node"
+												},
+												"semantic_scope": ""
+											}]
+										}
+									}
+								}
+							},
+							"id": 93825003824224,
+							"is_mutable": false,
+							"kind": "member variable",
+							"name": "first",
+							"type": {
+								"_typeName": "stappler::memory::PriorityQueue::Node*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::memory::PriorityQueue::Node",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::memory::PriorityQueue::Node",
+										"objects": [{
+											"_fullName": "::stappler::memory::PriorityQueue<typename>::Node",
+											"_kind": "class",
+											"_name": "Node",
+											"class_kind": "struct",
+											"id": 93825007969984,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Node",
+											"scope": {
+												"name": "Node"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							}
+						}, {
+							"_fullName": "::stappler::memory::PriorityQueue<typename>::NodeInterface::last",
+							"_kind": "member variable",
+							"_name": "last",
+							"default_value": {
+								"expression": [{
+									"kind": "keyword",
+									"spelling": "nullptr"
+								}],
+								"kind": "unexposed",
+								"type": {
+									"_typeName": "stappler::memory::PriorityQueue::Node*",
+									"kind": "pointer",
+									"pointee": {
+										"_typeName": "stappler::memory::PriorityQueue::Node",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::memory::PriorityQueue::Node",
+											"objects": [{
+												"_fullName": "::stappler::memory::PriorityQueue<typename>::Node",
+												"_kind": "class",
+												"_name": "Node",
+												"class_kind": "struct",
+												"id": 93825007969984,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "Node",
+												"scope": {
+													"name": "Node"
+												},
+												"semantic_scope": ""
+											}]
+										}
+									}
+								}
+							},
+							"id": 93825003943888,
+							"is_mutable": false,
+							"kind": "member variable",
+							"name": "last",
+							"type": {
+								"_typeName": "stappler::memory::PriorityQueue::Node*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::memory::PriorityQueue::Node",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::memory::PriorityQueue::Node",
+										"objects": [{
+											"_fullName": "::stappler::memory::PriorityQueue<typename>::Node",
+											"_kind": "class",
+											"_name": "Node",
+											"class_kind": "struct",
+											"id": 93825007969984,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Node",
+											"scope": {
+												"name": "Node"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							}
+						}, {
+							"_fullName": "::stappler::memory::PriorityQueue<typename>::NodeInterface::lock",
+							"_kind": "member variable",
+							"_name": "lock",
+							"id": 93825003945312,
+							"is_mutable": false,
+							"kind": "member variable",
+							"name": "lock",
+							"type": {
+								"_typeName": "stappler::memory::PriorityQueue::LockInterface",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::memory::PriorityQueue::LockInterface",
+									"objects": [{
+										"_fullName": "::stappler::memory::PriorityQueue<typename>::LockInterface",
+										"_kind": "class",
+										"_name": "LockInterface",
+										"class_kind": "struct",
+										"id": 93825005010976,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "LockInterface",
+										"scope": {
+											"name": "LockInterface"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						}],
+						"class_kind": "struct",
+						"id": 93825001893520,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_final": false,
+						"kind": "class",
+						"name": "NodeInterface",
+						"scope": {
+							"name": "NodeInterface"
+						},
+						"semantic_scope": ""
+					}, {
+						"_fullName": "::stappler::memory::PriorityQueue<typename>::PriorityQueue()",
+						"_kind": "constructor",
+						"_name": "PriorityQueue",
+						"body_kind": "definition",
+						"id": 93825003823776,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_explicit": false,
+						"is_variadic": false,
+						"kind": "constructor",
+						"name": "PriorityQueue",
+						"semantic_scope": "",
+						"signature": "()"
+					}, {
+						"_fullName": "::stappler::memory::PriorityQueue<typename>::~PriorityQueue()",
+						"_kind": "destructor",
+						"_name": "~PriorityQueue",
+						"body_kind": "definition",
+						"id": 93825003945872,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "destructor",
+						"name": "~PriorityQueue",
+						"semantic_scope": "",
+						"signature": "()"
+					}, {
+						"_fullName": "::stappler::memory::PriorityQueue<typename>::PriorityQueue(const PriorityQueue<Value>&)",
+						"_kind": "constructor",
+						"_name": "PriorityQueue",
+						"body_kind": "deleted",
+						"id": 93825003945616,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_explicit": false,
+						"is_variadic": false,
+						"kind": "constructor",
+						"name": "PriorityQueue",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 93825001894336,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "const PriorityQueue<Value>&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "const PriorityQueue<Value>",
+									"kind": "unexposed",
+									"name": "const PriorityQueue<Value>"
+								},
+								"reference_kind": "lvalue"
+							}
+						}],
+						"semantic_scope": "",
+						"signature": "(const PriorityQueue<Value>&)"
+					}, {
+						"_fullName": "::stappler::memory::PriorityQueue<typename>::operator=(const PriorityQueue<Value>&)",
+						"_kind": "member function",
+						"_name": "operator=",
+						"body_kind": "deleted",
+						"cv_qualifier": "none",
+						"id": 93825001894528,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "operator=",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 93825001895072,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "const PriorityQueue<Value>&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "const PriorityQueue<Value>",
+									"kind": "unexposed",
+									"name": "const PriorityQueue<Value>"
+								},
+								"reference_kind": "lvalue"
+							}
+						}],
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "PriorityQueue<Value>&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "PriorityQueue<Value>",
+								"kind": "unexposed",
+								"name": "PriorityQueue<Value>"
+							},
+							"reference_kind": "lvalue"
+						},
+						"semantic_scope": "",
+						"signature": "(const PriorityQueue<Value>&)"
+					}, {
+						"_fullName": "::stappler::memory::PriorityQueue<typename>::PriorityQueue(PriorityQueue<Value>&&)",
+						"_kind": "constructor",
+						"_name": "PriorityQueue",
+						"body_kind": "deleted",
+						"id": 93825002558400,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_explicit": false,
+						"is_variadic": false,
+						"kind": "constructor",
+						"name": "PriorityQueue",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 93825002558768,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "PriorityQueue<Value>&&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "PriorityQueue<Value>",
+									"kind": "unexposed",
+									"name": "PriorityQueue<Value>"
+								},
+								"reference_kind": "rvalue"
+							}
+						}],
+						"semantic_scope": "",
+						"signature": "(PriorityQueue<Value>&&)"
+					}, {
+						"_fullName": "::stappler::memory::PriorityQueue<typename>::operator=(PriorityQueue<Value>&&)",
+						"_kind": "member function",
+						"_name": "operator=",
+						"body_kind": "deleted",
+						"cv_qualifier": "none",
+						"id": 93825002559264,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "operator=",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 93825002559712,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "PriorityQueue<Value>&&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "PriorityQueue<Value>",
+									"kind": "unexposed",
+									"name": "PriorityQueue<Value>"
+								},
+								"reference_kind": "rvalue"
+							}
+						}],
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "PriorityQueue<Value>&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "PriorityQueue<Value>",
+								"kind": "unexposed",
+								"name": "PriorityQueue<Value>"
+							},
+							"reference_kind": "lvalue"
+						},
+						"semantic_scope": "",
+						"signature": "(PriorityQueue<Value>&&)"
+					}, {
+						"_fullName": "::stappler::memory::PriorityQueue<typename>::capacity() const",
+						"_kind": "member function",
+						"_name": "capacity",
+						"body_kind": "definition",
+						"cv_qualifier": "const",
+						"id": 93825005011600,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "capacity",
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						},
+						"semantic_scope": "",
+						"signature": "() const"
+					}, {
+						"_fullName": "::stappler::memory::PriorityQueue<typename>::free_capacity()",
+						"_kind": "member function",
+						"_name": "free_capacity",
+						"body_kind": "definition",
+						"cv_qualifier": "none",
+						"id": 93825005012016,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "free_capacity",
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						},
+						"semantic_scope": "",
+						"signature": "()"
+					}, {
+						"_fullName": "::stappler::memory::PriorityQueue<typename>::setQueueLocking(stappler::memory::PriorityQueue::LockFnPtr,stappler::memory::PriorityQueue::LockFnPtr,void*)",
+						"_kind": "member function",
+						"_name": "setQueueLocking",
+						"body_kind": "definition",
+						"cv_qualifier": "none",
+						"id": 93825005012384,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "setQueueLocking",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "lockFn",
+							"id": 93825005012816,
+							"kind": "function parameter",
+							"name": "lockFn",
+							"type": {
+								"_typeName": "stappler::memory::PriorityQueue::LockFnPtr",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::memory::PriorityQueue::LockFnPtr",
+									"objects": [{
+										"_fullName": "::stappler::memory::PriorityQueue<typename>::LockFnPtr",
+										"_kind": "type alias",
+										"_name": "LockFnPtr",
+										"id": 140737148181568,
+										"kind": "type alias",
+										"name": "LockFnPtr",
+										"underlying_type": {
+											"_typeName": "void(*)(void*)",
+											"kind": "pointer",
+											"pointee": {
+												"_typeName": "void(void*)",
+												"is_variadic": false,
+												"kind": "function",
+												"parameter_types": [{
+													"_typeName": "void*",
+													"kind": "pointer",
+													"pointee": {
+														"_typeName": "void",
+														"builtin_type_kind": "void",
+														"kind": "builtin"
+													}
+												}],
+												"return_type":  {
+													"_typeName": "void",
+													"builtin_type_kind": "void",
+													"kind": "builtin"
+												}
+											}
+										}
+									}]
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "unlockFn",
+							"id": 93825005013168,
+							"kind": "function parameter",
+							"name": "unlockFn",
+							"type": {
+								"_typeName": "stappler::memory::PriorityQueue::LockFnPtr",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::memory::PriorityQueue::LockFnPtr",
+									"objects": [{
+										"_fullName": "::stappler::memory::PriorityQueue<typename>::LockFnPtr",
+										"_kind": "type alias",
+										"_name": "LockFnPtr",
+										"id": 140737148181568,
+										"kind": "type alias",
+										"name": "LockFnPtr",
+										"underlying_type": {
+											"_typeName": "void(*)(void*)",
+											"kind": "pointer",
+											"pointee": {
+												"_typeName": "void(void*)",
+												"is_variadic": false,
+												"kind": "function",
+												"parameter_types": [{
+													"_typeName": "void*",
+													"kind": "pointer",
+													"pointee": {
+														"_typeName": "void",
+														"builtin_type_kind": "void",
+														"kind": "builtin"
+													}
+												}],
+												"return_type":  {
+													"_typeName": "void",
+													"builtin_type_kind": "void",
+													"kind": "builtin"
+												}
+											}
+										}
+									}]
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "ptr",
+							"id": 93825006448544,
+							"kind": "function parameter",
+							"name": "ptr",
+							"type": {
+								"_typeName": "void*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "void",
+									"builtin_type_kind": "void",
+									"kind": "builtin"
+								}
+							}
+						}],
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::memory::PriorityQueue::LockFnPtr,stappler::memory::PriorityQueue::LockFnPtr,void*)"
+					}, {
+						"_fullName": "::stappler::memory::PriorityQueue<typename>::setFreeLocking(stappler::memory::PriorityQueue::LockFnPtr,stappler::memory::PriorityQueue::LockFnPtr,void*)",
+						"_kind": "member function",
+						"_name": "setFreeLocking",
+						"body_kind": "definition",
+						"cv_qualifier": "none",
+						"id": 93825006448832,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "setFreeLocking",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "lockFn",
+							"id": 93825006449264,
+							"kind": "function parameter",
+							"name": "lockFn",
+							"type": {
+								"_typeName": "stappler::memory::PriorityQueue::LockFnPtr",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::memory::PriorityQueue::LockFnPtr",
+									"objects": [{
+										"_fullName": "::stappler::memory::PriorityQueue<typename>::LockFnPtr",
+										"_kind": "type alias",
+										"_name": "LockFnPtr",
+										"id": 140737148181568,
+										"kind": "type alias",
+										"name": "LockFnPtr",
+										"underlying_type": {
+											"_typeName": "void(*)(void*)",
+											"kind": "pointer",
+											"pointee": {
+												"_typeName": "void(void*)",
+												"is_variadic": false,
+												"kind": "function",
+												"parameter_types": [{
+													"_typeName": "void*",
+													"kind": "pointer",
+													"pointee": {
+														"_typeName": "void",
+														"builtin_type_kind": "void",
+														"kind": "builtin"
+													}
+												}],
+												"return_type":  {
+													"_typeName": "void",
+													"builtin_type_kind": "void",
+													"kind": "builtin"
+												}
+											}
+										}
+									}]
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "unlockFn",
+							"id": 93825006449616,
+							"kind": "function parameter",
+							"name": "unlockFn",
+							"type": {
+								"_typeName": "stappler::memory::PriorityQueue::LockFnPtr",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::memory::PriorityQueue::LockFnPtr",
+									"objects": [{
+										"_fullName": "::stappler::memory::PriorityQueue<typename>::LockFnPtr",
+										"_kind": "type alias",
+										"_name": "LockFnPtr",
+										"id": 140737148181568,
+										"kind": "type alias",
+										"name": "LockFnPtr",
+										"underlying_type": {
+											"_typeName": "void(*)(void*)",
+											"kind": "pointer",
+											"pointee": {
+												"_typeName": "void(void*)",
+												"is_variadic": false,
+												"kind": "function",
+												"parameter_types": [{
+													"_typeName": "void*",
+													"kind": "pointer",
+													"pointee": {
+														"_typeName": "void",
+														"builtin_type_kind": "void",
+														"kind": "builtin"
+													}
+												}],
+												"return_type":  {
+													"_typeName": "void",
+													"builtin_type_kind": "void",
+													"kind": "builtin"
+												}
+											}
+										}
+									}]
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "ptr",
+							"id": 93825006449904,
+							"kind": "function parameter",
+							"name": "ptr",
+							"type": {
+								"_typeName": "void*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "void",
+									"builtin_type_kind": "void",
+									"kind": "builtin"
+								}
+							}
+						}],
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::memory::PriorityQueue::LockFnPtr,stappler::memory::PriorityQueue::LockFnPtr,void*)"
+					}, {
+						"_fullName": "::stappler::memory::PriorityQueue<typename>::setLocking(stappler::memory::PriorityQueue::LockFnPtr,stappler::memory::PriorityQueue::LockFnPtr,void*)",
+						"_kind": "member function",
+						"_name": "setLocking",
+						"body_kind": "definition",
+						"cv_qualifier": "none",
+						"id": 93825006450192,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "setLocking",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "lockFn",
+							"id": 93825007646480,
+							"kind": "function parameter",
+							"name": "lockFn",
+							"type": {
+								"_typeName": "stappler::memory::PriorityQueue::LockFnPtr",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::memory::PriorityQueue::LockFnPtr",
+									"objects": [{
+										"_fullName": "::stappler::memory::PriorityQueue<typename>::LockFnPtr",
+										"_kind": "type alias",
+										"_name": "LockFnPtr",
+										"id": 140737148181568,
+										"kind": "type alias",
+										"name": "LockFnPtr",
+										"underlying_type": {
+											"_typeName": "void(*)(void*)",
+											"kind": "pointer",
+											"pointee": {
+												"_typeName": "void(void*)",
+												"is_variadic": false,
+												"kind": "function",
+												"parameter_types": [{
+													"_typeName": "void*",
+													"kind": "pointer",
+													"pointee": {
+														"_typeName": "void",
+														"builtin_type_kind": "void",
+														"kind": "builtin"
+													}
+												}],
+												"return_type":  {
+													"_typeName": "void",
+													"builtin_type_kind": "void",
+													"kind": "builtin"
+												}
+											}
+										}
+									}]
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "unlockFn",
+							"id": 93825007646832,
+							"kind": "function parameter",
+							"name": "unlockFn",
+							"type": {
+								"_typeName": "stappler::memory::PriorityQueue::LockFnPtr",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::memory::PriorityQueue::LockFnPtr",
+									"objects": [{
+										"_fullName": "::stappler::memory::PriorityQueue<typename>::LockFnPtr",
+										"_kind": "type alias",
+										"_name": "LockFnPtr",
+										"id": 140737148181568,
+										"kind": "type alias",
+										"name": "LockFnPtr",
+										"underlying_type": {
+											"_typeName": "void(*)(void*)",
+											"kind": "pointer",
+											"pointee": {
+												"_typeName": "void(void*)",
+												"is_variadic": false,
+												"kind": "function",
+												"parameter_types": [{
+													"_typeName": "void*",
+													"kind": "pointer",
+													"pointee": {
+														"_typeName": "void",
+														"builtin_type_kind": "void",
+														"kind": "builtin"
+													}
+												}],
+												"return_type":  {
+													"_typeName": "void",
+													"builtin_type_kind": "void",
+													"kind": "builtin"
+												}
+											}
+										}
+									}]
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "ptr",
+							"id": 93825007647120,
+							"kind": "function parameter",
+							"name": "ptr",
+							"type": {
+								"_typeName": "void*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "void",
+									"builtin_type_kind": "void",
+									"kind": "builtin"
+								}
+							}
+						}],
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::memory::PriorityQueue::LockFnPtr,stappler::memory::PriorityQueue::LockFnPtr,void*)"
+					}, {
+						"_fullName": "::stappler::memory::PriorityQueue<typename>::setQueueLocking(std::mutex&)",
+						"_kind": "member function",
+						"_name": "setQueueLocking",
+						"body_kind": "definition",
+						"cv_qualifier": "none",
+						"id": 93825007647408,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "setQueueLocking",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "mutex",
+							"id": 93825007647824,
+							"kind": "function parameter",
+							"name": "mutex",
+							"type": {
+								"_typeName": "std::mutex&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "std::mutex",
+									"kind": "user_defined",
+									"target": {
+										"name": "std::mutex"
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}],
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(std::mutex&)"
+					}, {
+						"_fullName": "::stappler::memory::PriorityQueue<typename>::setFreeLocking(std::mutex&)",
+						"_kind": "member function",
+						"_name": "setFreeLocking",
+						"body_kind": "definition",
+						"cv_qualifier": "none",
+						"id": 93825007648112,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "setFreeLocking",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "mutex",
+							"id": 93825007648528,
+							"kind": "function parameter",
+							"name": "mutex",
+							"type": {
+								"_typeName": "std::mutex&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "std::mutex",
+									"kind": "user_defined",
+									"target": {
+										"name": "std::mutex"
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}],
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(std::mutex&)"
+					}, {
+						"_fullName": "::stappler::memory::PriorityQueue<typename>::setLocking(std::mutex&)",
+						"_kind": "member function",
+						"_name": "setLocking",
+						"body_kind": "definition",
+						"cv_qualifier": "none",
+						"id": 93825011465680,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "setLocking",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "mutex",
+							"id": 93825011466096,
+							"kind": "function parameter",
+							"name": "mutex",
+							"type": {
+								"_typeName": "std::mutex&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "std::mutex",
+									"kind": "user_defined",
+									"target": {
+										"name": "std::mutex"
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}],
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(std::mutex&)"
+					}, {
+						"_fullName": "::stappler::memory::PriorityQueue<typename>::clear()",
+						"_kind": "member function",
+						"_name": "clear",
+						"body_kind": "definition",
+						"cv_qualifier": "none",
+						"id": 93825011466384,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "clear",
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "()"
+					}, {
+						"_fullName": "::stappler::memory::PriorityQueue<typename>::empty()",
+						"_kind": "member function",
+						"_name": "empty",
+						"body_kind": "definition",
+						"cv_qualifier": "none",
+						"id": 93825011466752,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "empty",
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "bool",
+							"builtin_type_kind": "bool",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "()"
+					}, {
+						"_fullName": "::stappler::memory::PriorityQueue<typename>::empty<class>(std::unique_lock<T>&)",
+						"_kind": "function template",
+						"_name": "empty",
+						"childs": [{
+							"_fullName": "::stappler::memory::PriorityQueue<typename>::empty<class>(std::unique_lock<T>&)",
+							"_kind": "member function",
+							"_name": "empty",
+							"body_kind": "definition",
+							"cv_qualifier": "none",
+							"id": 93825011467120,
+							"is_consteval": false,
+							"is_constexpr": false,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_variadic": false,
+							"is_virtual": false,
+							"kind": "member function",
+							"name": "empty",
+							"parameters": [{
+								"_kind": "function parameter",
+								"_name": "lock",
+								"id": 93825011467632,
+								"kind": "function parameter",
+								"name": "lock",
+								"type": {
+									"_typeName": "std::unique_lock<T>&",
+									"kind": "reference",
+									"referee": {
+										"_typeName": "std::unique_lock<T>",
+										"arguments_exposed": false,
+										"kind": "template_instantiation",
+										"primary_template": {
+											"name": "std::unique_lock"
+										},
+										"unexposed_arguments": "T"
+									},
+									"reference_kind": "lvalue"
+								}
+							}],
+							"ref_qualifier": "none",
+							"return_type": {
+								"_typeName": "bool",
+								"builtin_type_kind": "bool",
+								"kind": "builtin"
+							},
+							"semantic_scope": "",
+							"signature": "(std::unique_lock<T>&)"
+						}],
+						"function":  {
+							"_fullName": "::stappler::memory::PriorityQueue<typename>::empty<class>(std::unique_lock<T>&)",
+							"_kind": "member function",
+							"_name": "empty",
+							"body_kind": "definition",
+							"cv_qualifier": "none",
+							"id": 93825011467120,
+							"is_consteval": false,
+							"is_constexpr": false,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_variadic": false,
+							"is_virtual": false,
+							"kind": "member function",
+							"name": "empty",
+							"parameters": [{
+								"_kind": "function parameter",
+								"_name": "lock",
+								"id": 93825011467632,
+								"kind": "function parameter",
+								"name": "lock",
+								"type": {
+									"_typeName": "std::unique_lock<T>&",
+									"kind": "reference",
+									"referee": {
+										"_typeName": "std::unique_lock<T>",
+										"arguments_exposed": false,
+										"kind": "template_instantiation",
+										"primary_template": {
+											"name": "std::unique_lock"
+										},
+										"unexposed_arguments": "T"
+									},
+									"reference_kind": "lvalue"
+								}
+							}],
+							"ref_qualifier": "none",
+							"return_type": {
+								"_typeName": "bool",
+								"builtin_type_kind": "bool",
+								"kind": "builtin"
+							},
+							"semantic_scope": "",
+							"signature": "(std::unique_lock<T>&)"
+						},
+						"id": 93825001894176,
+						"kind": "function template",
+						"name": "empty",
+						"parameters": [{
+							"_kind": "template type parameter",
+							"_name": "T",
+							"id": 140737141022064,
+							"is_variadic": false,
+							"keyword": "class",
+							"kind": "template type parameter",
+							"name": "T"
+						}]
+					}, {
+						"_fullName": "::stappler::memory::PriorityQueue<typename>::push<typename>(stappler::memory::PriorityQueue::PriorityType,bool,Args &&...)",
+						"_kind": "function template",
+						"_name": "push",
+						"childs": [{
+							"_fullName": "::stappler::memory::PriorityQueue<typename>::push<typename>(stappler::memory::PriorityQueue::PriorityType,bool,Args &&...)",
+							"_kind": "member function",
+							"_name": "push",
+							"body_kind": "definition",
+							"cv_qualifier": "none",
+							"id": 93825000177840,
+							"is_consteval": false,
+							"is_constexpr": false,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_variadic": false,
+							"is_virtual": false,
+							"kind": "member function",
+							"name": "push",
+							"parameters": [{
+								"_kind": "function parameter",
+								"_name": "p",
+								"id": 93825000178272,
+								"kind": "function parameter",
+								"name": "p",
+								"type": {
+									"_typeName": "stappler::memory::PriorityQueue::PriorityType",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::memory::PriorityQueue::PriorityType",
+										"objects": [{
+											"_fullName": "::stappler::memory::PriorityQueue<typename>::PriorityType",
+											"_kind": "type alias",
+											"_name": "PriorityType",
+											"id": 140737086539536,
+											"kind": "type alias",
+											"name": "PriorityType",
+											"underlying_type": {
+												"_typeName": "int32_t",
+												"kind": "user_defined",
+												"target": {
+													"name": "int32_t"
+												}
+											}
+										}]
+									}
+								}
+							}, {
+								"_kind": "function parameter",
+								"_name": "insertFirst",
+								"id": 93825000178512,
+								"kind": "function parameter",
+								"name": "insertFirst",
+								"type": {
+									"_typeName": "bool",
+									"builtin_type_kind": "bool",
+									"kind": "builtin"
+								}
+							}, {
+								"_kind": "function parameter",
+								"_name": "args",
+								"id": 93825000178768,
+								"kind": "function parameter",
+								"name": "args",
+								"type": {
+									"_typeName": "Args &&...",
+									"kind": "unexposed",
+									"name": "Args &&..."
+								}
+							}],
+							"ref_qualifier": "none",
+							"return_type": {
+								"_typeName": "void",
+								"builtin_type_kind": "void",
+								"kind": "builtin"
+							},
+							"semantic_scope": "",
+							"signature": "(stappler::memory::PriorityQueue::PriorityType,bool,Args &&...)"
+						}],
+						"function":  {
+							"_fullName": "::stappler::memory::PriorityQueue<typename>::push<typename>(stappler::memory::PriorityQueue::PriorityType,bool,Args &&...)",
+							"_kind": "member function",
+							"_name": "push",
+							"body_kind": "definition",
+							"cv_qualifier": "none",
+							"id": 93825000177840,
+							"is_consteval": false,
+							"is_constexpr": false,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_variadic": false,
+							"is_virtual": false,
+							"kind": "member function",
+							"name": "push",
+							"parameters": [{
+								"_kind": "function parameter",
+								"_name": "p",
+								"id": 93825000178272,
+								"kind": "function parameter",
+								"name": "p",
+								"type": {
+									"_typeName": "stappler::memory::PriorityQueue::PriorityType",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::memory::PriorityQueue::PriorityType",
+										"objects": [{
+											"_fullName": "::stappler::memory::PriorityQueue<typename>::PriorityType",
+											"_kind": "type alias",
+											"_name": "PriorityType",
+											"id": 140737086539536,
+											"kind": "type alias",
+											"name": "PriorityType",
+											"underlying_type": {
+												"_typeName": "int32_t",
+												"kind": "user_defined",
+												"target": {
+													"name": "int32_t"
+												}
+											}
+										}]
+									}
+								}
+							}, {
+								"_kind": "function parameter",
+								"_name": "insertFirst",
+								"id": 93825000178512,
+								"kind": "function parameter",
+								"name": "insertFirst",
+								"type": {
+									"_typeName": "bool",
+									"builtin_type_kind": "bool",
+									"kind": "builtin"
+								}
+							}, {
+								"_kind": "function parameter",
+								"_name": "args",
+								"id": 93825000178768,
+								"kind": "function parameter",
+								"name": "args",
+								"type": {
+									"_typeName": "Args &&...",
+									"kind": "unexposed",
+									"name": "Args &&..."
+								}
+							}],
+							"ref_qualifier": "none",
+							"return_type": {
+								"_typeName": "void",
+								"builtin_type_kind": "void",
+								"kind": "builtin"
+							},
+							"semantic_scope": "",
+							"signature": "(stappler::memory::PriorityQueue::PriorityType,bool,Args &&...)"
+						},
+						"id": 93825000178960,
+						"kind": "function template",
+						"name": "push",
+						"parameters": [{
+							"_kind": "template type parameter",
+							"_name": "Args",
+							"id": 140737144804064,
+							"is_variadic": true,
+							"keyword": "typename",
+							"kind": "template type parameter",
+							"name": "Args"
+						}]
+					}, {
+						"_fullName": "::stappler::memory::PriorityQueue<typename>::pop_prefix(callback<void (stappler::memory::PriorityQueue::PriorityType, Value &&)> const&)",
+						"_kind": "member function",
+						"_name": "pop_prefix",
+						"body_kind": "definition",
+						"cv_qualifier": "none",
+						"id": 93825000179424,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "pop_prefix",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "cb",
+							"id": 93825004376752,
+							"kind": "function parameter",
+							"name": "cb",
+							"type": {
+								"_typeName": "callback<void (stappler::memory::PriorityQueue::PriorityType, Value &&)> const&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "callback<void (stappler::memory::PriorityQueue::PriorityType, Value &&)> const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "callback<void (stappler::memory::PriorityQueue::PriorityType, Value &&)>",
+										"arguments_exposed": false,
+										"kind": "template_instantiation",
+										"primary_template": {
+											"name": "callback",
+											"objects": [{
+												"_fullName": "::stappler::memory::callback<typename>",
+												"_kind": "class template",
+												"_name": "callback",
+												"class": {
+													"_fullName": "::stappler::memory::callback<typename>",
+													"_kind": "class",
+													"_name": "callback",
+													"class_kind": "class",
+													"id": 93824997040048,
+													"is_declaration": true,
+													"is_definition": false,
+													"is_final": false,
+													"kind": "class",
+													"name": "callback",
+													"scope": {
+														"is_templated": true,
+														"name": "callback",
+														"template_parameters": [{
+															"_kind": "template type parameter",
+															"_name": "UnusedType",
+															"id": 93824997058880,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "UnusedType"
+														}]
+													},
+													"semantic_scope": ""
+												},
+												"id": 93824997058480,
+												"kind": "class template",
+												"name": "callback",
+												"parameters": [{
+													"_kind": "template type parameter",
+													"_name": "UnusedType",
+													"id": 93824997058880,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "UnusedType"
+												}],
+												"scope":  {
+													"is_templated": true,
+													"name": "callback",
+													"template_parameters": [{
+														"_kind": "template type parameter",
+														"_name": "UnusedType",
+														"id": 93824997058880,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "UnusedType"
+													}]
+												}
+											}]
+										},
+										"unexposed_arguments": "void (stappler::memory::PriorityQueue::PriorityType, Value &&)"
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}],
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "bool",
+							"builtin_type_kind": "bool",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(callback<void (stappler::memory::PriorityQueue::PriorityType, Value &&)> const&)"
+					}, {
+						"_fullName": "::stappler::memory::PriorityQueue<typename>::pop_direct(callback<void (stappler::memory::PriorityQueue::PriorityType, Value &&)> const&)",
+						"_kind": "member function",
+						"_name": "pop_direct",
+						"body_kind": "definition",
+						"cv_qualifier": "none",
+						"id": 93825004377040,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "pop_direct",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "cb",
+							"id": 93825004377552,
+							"kind": "function parameter",
+							"name": "cb",
+							"type": {
+								"_typeName": "callback<void (stappler::memory::PriorityQueue::PriorityType, Value &&)> const&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "callback<void (stappler::memory::PriorityQueue::PriorityType, Value &&)> const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "callback<void (stappler::memory::PriorityQueue::PriorityType, Value &&)>",
+										"arguments_exposed": false,
+										"kind": "template_instantiation",
+										"primary_template": {
+											"name": "callback",
+											"objects": [{
+												"_fullName": "::stappler::memory::callback<typename>",
+												"_kind": "class template",
+												"_name": "callback",
+												"class": {
+													"_fullName": "::stappler::memory::callback<typename>",
+													"_kind": "class",
+													"_name": "callback",
+													"class_kind": "class",
+													"id": 93824997040048,
+													"is_declaration": true,
+													"is_definition": false,
+													"is_final": false,
+													"kind": "class",
+													"name": "callback",
+													"scope": {
+														"is_templated": true,
+														"name": "callback",
+														"template_parameters": [{
+															"_kind": "template type parameter",
+															"_name": "UnusedType",
+															"id": 93824997058880,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "UnusedType"
+														}]
+													},
+													"semantic_scope": ""
+												},
+												"id": 93824997058480,
+												"kind": "class template",
+												"name": "callback",
+												"parameters": [{
+													"_kind": "template type parameter",
+													"_name": "UnusedType",
+													"id": 93824997058880,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "UnusedType"
+												}],
+												"scope":  {
+													"is_templated": true,
+													"name": "callback",
+													"template_parameters": [{
+														"_kind": "template type parameter",
+														"_name": "UnusedType",
+														"id": 93824997058880,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "UnusedType"
+													}]
+												}
+											}]
+										},
+										"unexposed_arguments": "void (stappler::memory::PriorityQueue::PriorityType, Value &&)"
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}],
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "bool",
+							"builtin_type_kind": "bool",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(callback<void (stappler::memory::PriorityQueue::PriorityType, Value &&)> const&)"
+					}, {
+						"_fullName": "::stappler::memory::PriorityQueue<typename>::foreach(callback<void (stappler::memory::PriorityQueue::PriorityType, const Value &)> const&)",
+						"_kind": "member function",
+						"_name": "foreach",
+						"body_kind": "definition",
+						"cv_qualifier": "none",
+						"id": 93825004377840,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "foreach",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "cb",
+							"id": 93825004378352,
+							"kind": "function parameter",
+							"name": "cb",
+							"type": {
+								"_typeName": "callback<void (stappler::memory::PriorityQueue::PriorityType, const Value &)> const&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "callback<void (stappler::memory::PriorityQueue::PriorityType, const Value &)> const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "callback<void (stappler::memory::PriorityQueue::PriorityType, const Value &)>",
+										"arguments_exposed": false,
+										"kind": "template_instantiation",
+										"primary_template": {
+											"name": "callback",
+											"objects": [{
+												"_fullName": "::stappler::memory::callback<typename>",
+												"_kind": "class template",
+												"_name": "callback",
+												"class": {
+													"_fullName": "::stappler::memory::callback<typename>",
+													"_kind": "class",
+													"_name": "callback",
+													"class_kind": "class",
+													"id": 93824997040048,
+													"is_declaration": true,
+													"is_definition": false,
+													"is_final": false,
+													"kind": "class",
+													"name": "callback",
+													"scope": {
+														"is_templated": true,
+														"name": "callback",
+														"template_parameters": [{
+															"_kind": "template type parameter",
+															"_name": "UnusedType",
+															"id": 93824997058880,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "UnusedType"
+														}]
+													},
+													"semantic_scope": ""
+												},
+												"id": 93824997058480,
+												"kind": "class template",
+												"name": "callback",
+												"parameters": [{
+													"_kind": "template type parameter",
+													"_name": "UnusedType",
+													"id": 93824997058880,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "UnusedType"
+												}],
+												"scope":  {
+													"is_templated": true,
+													"name": "callback",
+													"template_parameters": [{
+														"_kind": "template type parameter",
+														"_name": "UnusedType",
+														"id": 93824997058880,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "UnusedType"
+													}]
+												}
+											}]
+										},
+										"unexposed_arguments": "void (stappler::memory::PriorityQueue::PriorityType, const Value &)"
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}],
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(callback<void (stappler::memory::PriorityQueue::PriorityType, const Value &)> const&)"
+					}, {
+						"_kind": "access specifier",
+						"_name": "protected",
+						"access_specifier": "protected",
+						"id": 93825004378592,
+						"kind": "access specifier",
+						"name": "protected"
+					}, {
+						"_fullName": "::stappler::memory::PriorityQueue<typename>::initNodes(stappler::memory::PriorityQueue::Node*,stappler::memory::PriorityQueue::Node*,stappler::memory::PriorityQueue::StorageBlock*)",
+						"_kind": "member function",
+						"_name": "initNodes",
+						"body_kind": "definition",
+						"cv_qualifier": "none",
+						"id": 93825004378784,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "initNodes",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "first",
+							"id": 93825006107968,
+							"kind": "function parameter",
+							"name": "first",
+							"type": {
+								"_typeName": "stappler::memory::PriorityQueue::Node*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::memory::PriorityQueue::Node",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::memory::PriorityQueue::Node",
+										"objects": [{
+											"_fullName": "::stappler::memory::PriorityQueue<typename>::Node",
+											"_kind": "class",
+											"_name": "Node",
+											"class_kind": "struct",
+											"id": 93825007969984,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Node",
+											"scope": {
+												"name": "Node"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "last",
+							"id": 93825006108256,
+							"kind": "function parameter",
+							"name": "last",
+							"type": {
+								"_typeName": "stappler::memory::PriorityQueue::Node*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::memory::PriorityQueue::Node",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::memory::PriorityQueue::Node",
+										"objects": [{
+											"_fullName": "::stappler::memory::PriorityQueue<typename>::Node",
+											"_kind": "class",
+											"_name": "Node",
+											"class_kind": "struct",
+											"id": 93825007969984,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Node",
+											"scope": {
+												"name": "Node"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "block",
+							"id": 93825006108624,
+							"kind": "function parameter",
+							"name": "block",
+							"type": {
+								"_typeName": "stappler::memory::PriorityQueue::StorageBlock*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::memory::PriorityQueue::StorageBlock",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::memory::PriorityQueue::StorageBlock",
+										"objects": [{
+											"_fullName": "::stappler::memory::PriorityQueue<typename>::StorageBlock",
+											"_kind": "class",
+											"_name": "StorageBlock",
+											"class_kind": "struct",
+											"id": 93825004935488,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "StorageBlock",
+											"scope": {
+												"name": "StorageBlock"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							}
+						}],
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::memory::PriorityQueue::Node*,stappler::memory::PriorityQueue::Node*,stappler::memory::PriorityQueue::StorageBlock*)"
+					}, {
+						"_fullName": "::stappler::memory::PriorityQueue<typename>::popNode()",
+						"_kind": "member function",
+						"_name": "popNode",
+						"body_kind": "definition",
+						"cv_qualifier": "none",
+						"id": 93825006109152,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "popNode",
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "stappler::memory::PriorityQueue::Node*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::memory::PriorityQueue::Node",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::memory::PriorityQueue::Node",
+									"objects": [{
+										"_fullName": "::stappler::memory::PriorityQueue<typename>::Node",
+										"_kind": "class",
+										"_name": "Node",
+										"class_kind": "struct",
+										"id": 93825007969984,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Node",
+										"scope": {
+											"name": "Node"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						},
+						"semantic_scope": "",
+						"signature": "()"
+					}, {
+						"_fullName": "::stappler::memory::PriorityQueue<typename>::pushNode(stappler::memory::PriorityQueue::Node*,bool)",
+						"_kind": "member function",
+						"_name": "pushNode",
+						"body_kind": "definition",
+						"cv_qualifier": "none",
+						"id": 93825006109424,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "pushNode",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "node",
+							"id": 93825006109984,
+							"kind": "function parameter",
+							"name": "node",
+							"type": {
+								"_typeName": "stappler::memory::PriorityQueue::Node*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::memory::PriorityQueue::Node",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::memory::PriorityQueue::Node",
+										"objects": [{
+											"_fullName": "::stappler::memory::PriorityQueue<typename>::Node",
+											"_kind": "class",
+											"_name": "Node",
+											"class_kind": "struct",
+											"id": 93825007969984,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Node",
+											"scope": {
+												"name": "Node"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "insertFirst",
+							"id": 93825006110128,
+							"kind": "function parameter",
+							"name": "insertFirst",
+							"type": {
+								"_typeName": "bool",
+								"builtin_type_kind": "bool",
+								"kind": "builtin"
+							}
+						}],
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::memory::PriorityQueue::Node*,bool)"
+					}, {
+						"_fullName": "::stappler::memory::PriorityQueue<typename>::allocateNode()",
+						"_kind": "member function",
+						"_name": "allocateNode",
+						"body_kind": "definition",
+						"cv_qualifier": "none",
+						"id": 93825007929472,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "allocateNode",
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "stappler::memory::PriorityQueue::Node*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::memory::PriorityQueue::Node",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::memory::PriorityQueue::Node",
+									"objects": [{
+										"_fullName": "::stappler::memory::PriorityQueue<typename>::Node",
+										"_kind": "class",
+										"_name": "Node",
+										"class_kind": "struct",
+										"id": 93825007969984,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Node",
+										"scope": {
+											"name": "Node"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						},
+						"semantic_scope": "",
+						"signature": "()"
+					}, {
+						"_fullName": "::stappler::memory::PriorityQueue<typename>::freeNode(stappler::memory::PriorityQueue::Node*)",
+						"_kind": "member function",
+						"_name": "freeNode",
+						"body_kind": "definition",
+						"cv_qualifier": "none",
+						"id": 93825007929792,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "freeNode",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "node",
+							"id": 93825007930352,
+							"kind": "function parameter",
+							"name": "node",
+							"type": {
+								"_typeName": "stappler::memory::PriorityQueue::Node*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::memory::PriorityQueue::Node",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::memory::PriorityQueue::Node",
+										"objects": [{
+											"_fullName": "::stappler::memory::PriorityQueue<typename>::Node",
+											"_kind": "class",
+											"_name": "Node",
+											"class_kind": "struct",
+											"id": 93825007969984,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Node",
+											"scope": {
+												"name": "Node"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							}
+						}],
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::memory::PriorityQueue::Node*)"
+					}, {
+						"_fullName": "::stappler::memory::PriorityQueue<typename>::allocateBlock(std::unique_lock<LockInterface>&)",
+						"_kind": "member function",
+						"_name": "allocateBlock",
+						"body_kind": "definition",
+						"cv_qualifier": "none",
+						"id": 93825007930640,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "allocateBlock",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "lock",
+							"id": 93825007931152,
+							"kind": "function parameter",
+							"name": "lock",
+							"type": {
+								"_typeName": "std::unique_lock<LockInterface>&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "std::unique_lock<LockInterface>",
+									"arguments_exposed": false,
+									"kind": "template_instantiation",
+									"primary_template": {
+										"name": "std::unique_lock"
+									},
+									"unexposed_arguments": "LockInterface"
+								},
+								"reference_kind": "lvalue"
+							}
+						}],
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "stappler::memory::PriorityQueue::StorageBlock*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::memory::PriorityQueue::StorageBlock",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::memory::PriorityQueue::StorageBlock",
+									"objects": [{
+										"_fullName": "::stappler::memory::PriorityQueue<typename>::StorageBlock",
+										"_kind": "class",
+										"_name": "StorageBlock",
+										"class_kind": "struct",
+										"id": 93825004935488,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "StorageBlock",
+										"scope": {
+											"name": "StorageBlock"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						},
+						"semantic_scope": "",
+						"signature": "(std::unique_lock<LockInterface>&)"
+					}, {
+						"_fullName": "::stappler::memory::PriorityQueue<typename>::deallocateBlock(std::unique_lock<LockInterface>&,stappler::memory::PriorityQueue::StorageBlock*)",
+						"_kind": "member function",
+						"_name": "deallocateBlock",
+						"body_kind": "definition",
+						"cv_qualifier": "none",
+						"id": 93825007931440,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "deallocateBlock",
+						"parameters": [{
+							"_kind": "function parameter",
+							"_name": "lock",
+							"id": 93825004709152,
+							"kind": "function parameter",
+							"name": "lock",
+							"type": {
+								"_typeName": "std::unique_lock<LockInterface>&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "std::unique_lock<LockInterface>",
+									"arguments_exposed": false,
+									"kind": "template_instantiation",
+									"primary_template": {
+										"name": "std::unique_lock"
+									},
+									"unexposed_arguments": "LockInterface"
+								},
+								"reference_kind": "lvalue"
+							}
+						}, {
+							"_kind": "function parameter",
+							"_name": "block",
+							"id": 93825004709552,
+							"kind": "function parameter",
+							"name": "block",
+							"type": {
+								"_typeName": "stappler::memory::PriorityQueue::StorageBlock*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::memory::PriorityQueue::StorageBlock",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::memory::PriorityQueue::StorageBlock",
+										"objects": [{
+											"_fullName": "::stappler::memory::PriorityQueue<typename>::StorageBlock",
+											"_kind": "class",
+											"_name": "StorageBlock",
+											"class_kind": "struct",
+											"id": 93825004935488,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "StorageBlock",
+											"scope": {
+												"name": "StorageBlock"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							}
+						}],
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(std::unique_lock<LockInterface>&,stappler::memory::PriorityQueue::StorageBlock*)"
+					}, {
+						"_fullName": "::stappler::memory::PriorityQueue<typename>::_preallocated",
+						"_kind": "member variable",
+						"_name": "_preallocated",
+						"id": 93825000179120,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "_preallocated",
+						"type": {
+							"_typeName": "std::array<Node, PreallocatedNodes>",
+							"arguments_exposed": false,
+							"kind": "template_instantiation",
+							"primary_template": {
+								"name": "std::array"
+							},
+							"unexposed_arguments": "Node, PreallocatedNodes"
+						}
+					}, {
+						"_fullName": "::stappler::memory::PriorityQueue<typename>::_queue",
+						"_kind": "member variable",
+						"_name": "_queue",
+						"id": 93825004710128,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "_queue",
+						"type": {
+							"_typeName": "stappler::memory::PriorityQueue::NodeInterface",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::memory::PriorityQueue::NodeInterface",
+								"objects": [{
+									"_fullName": "::stappler::memory::PriorityQueue<typename>::NodeInterface",
+									"_kind": "class",
+									"_name": "NodeInterface",
+									"class_kind": "struct",
+									"id": 93825001893520,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "NodeInterface",
+									"scope": {
+										"name": "NodeInterface"
+									},
+									"semantic_scope": ""
+								}]
+							}
+						}
+					}, {
+						"_fullName": "::stappler::memory::PriorityQueue<typename>::_free",
+						"_kind": "member variable",
+						"_name": "_free",
+						"id": 93825004710448,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "_free",
+						"type": {
+							"_typeName": "stappler::memory::PriorityQueue::NodeInterface",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::memory::PriorityQueue::NodeInterface",
+								"objects": [{
+									"_fullName": "::stappler::memory::PriorityQueue<typename>::NodeInterface",
+									"_kind": "class",
+									"_name": "NodeInterface",
+									"class_kind": "struct",
+									"id": 93825001893520,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "NodeInterface",
+									"scope": {
+										"name": "NodeInterface"
+									},
+									"semantic_scope": ""
+								}]
+							}
+						}
+					}, {
+						"_fullName": "::stappler::memory::PriorityQueue<typename>::_capacity",
+						"_kind": "member variable",
+						"_name": "_capacity",
+						"default_value": {
+							"expression": [{
+								"kind": "identifier",
+								"spelling": "PreallocatedNodes"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "size_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "size_t"
+								}
+							}
+						},
+						"id": 93825004710896,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "_capacity",
+						"type": {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						}
+					}],
+					"class_kind": "class",
+					"id": 140737135222080,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_final": false,
+					"kind": "class",
+					"name": "PriorityQueue",
+					"scope": {
+						"is_templated": true,
+						"name": "PriorityQueue",
+						"template_parameters": [{
+							"_kind": "template type parameter",
+							"_name": "Value",
+							"id": 140736990200016,
+							"is_variadic": false,
+							"keyword": "typename",
+							"kind": "template type parameter",
+							"name": "Value"
+						}]
+					},
+					"semantic_scope": ""
+				}],
+				"class":  {
+					"_fullName": "::stappler::memory::PriorityQueue<typename>",
+					"_kind": "class",
+					"_name": "PriorityQueue",
+					"class_kind": "class",
+					"id": 140737135222080,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_final": false,
+					"kind": "class",
+					"name": "PriorityQueue",
+					"scope": {
+						"is_templated": true,
+						"name": "PriorityQueue",
+						"template_parameters": [{
+							"_kind": "template type parameter",
+							"_name": "Value",
+							"id": 140736990200016,
+							"is_variadic": false,
+							"keyword": "typename",
+							"kind": "template type parameter",
+							"name": "Value"
+						}]
+					},
+					"semantic_scope": ""
+				},
+				"id": 93825004711104,
+				"kind": "class template",
+				"name": "PriorityQueue",
+				"parameters": [{
+					"_kind": "template type parameter",
+					"_name": "Value",
+					"id": 140736990200016,
+					"is_variadic": false,
+					"keyword": "typename",
+					"kind": "template type parameter",
+					"name": "Value"
+				}],
+				"scope":  {
+					"is_templated": true,
+					"name": "PriorityQueue",
+					"template_parameters": [{
+						"_kind": "template type parameter",
+						"_name": "Value",
+						"id": 140736990200016,
+						"is_variadic": false,
+						"keyword": "typename",
+						"kind": "template type parameter",
+						"name": "Value"
+					}]
+				}
+			}],
+			"id": 140737114341760,
+			"is_anonymous": false,
+			"is_inline": false,
+			"is_nested": true,
+			"kind": "namespace",
+			"name": "memory",
+			"scope": {
+				"name": "memory"
+			}
+		}],
+		"id": 140737114341600,
+		"is_anonymous": false,
+		"is_inline": false,
+		"is_nested": false,
+		"kind": "namespace",
+		"name": "stappler",
+		"scope": {
+			"name": "stappler"
+		}
+	}],
+	"id": 140737151059072,
+	"kind": "file",
+	"name": "/home/sbkarr/stappler/xenolith/libstappler/common/memory/SPMemPriorityQueue.h",
+	"unmatched_comments": [{
+		"line": 22,
+		"text": "\nCopyright (c) 2021-2022 Roman Katuntsev <sbkarr@stappler.org>\nCopyright (c) 2023 Stappler LLC <admin@stappler.dev>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n"
+	}]
+}

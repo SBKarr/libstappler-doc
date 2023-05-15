@@ -1,0 +1,3947 @@
+{
+	"_kind": "file",
+	"_name": "/home/sbkarr/stappler/xenolith/libstappler/modules/threads/SPThreadTask.h",
+	"childs": [{
+		"_kind": "include directive",
+		"_name": "SPRef.h",
+		"id": 140737128910912,
+		"include": "/home/sbkarr/stappler/xenolith/libstappler/common/utils/SPRef.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "SPRef.h"
+	}, {
+		"_kind": "include directive",
+		"_name": "SPMemPriorityQueue.h",
+		"id": 140737122829328,
+		"include": "/home/sbkarr/stappler/xenolith/libstappler/common/memory/SPMemPriorityQueue.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "SPMemPriorityQueue.h"
+	}, {
+		"_fullName": "MODULES_THREADS_SPTHREADTASK_H_",
+		"_kind": "macro definition",
+		"_name": "MODULES_THREADS_SPTHREADTASK_H_",
+		"id": 140737113627648,
+		"is_function_like": false,
+		"is_object_like": true,
+		"is_variadic": false,
+		"kind": "macro definition",
+		"name": "MODULES_THREADS_SPTHREADTASK_H_",
+		"replacement": ""
+	}, {
+		"_fullName": "::stappler",
+		"_kind": "namespace",
+		"_name": "stappler",
+		"childs": [{
+			"_fullName": "::stappler::thread",
+			"_kind": "namespace",
+			"_name": "thread",
+			"childs": [{
+				"_fullName": "::stappler::thread::Task",
+				"_kind": "class",
+				"_name": "Task",
+				"bases": [{
+					"_kind": "base class specifier",
+					"_name": "RefBase<memory::StandartInterface>",
+					"access_specifier": "public",
+					"id": 140736987651136,
+					"is_virtual": false,
+					"kind": "base class specifier",
+					"name": "RefBase<memory::StandartInterface>",
+					"type": {
+						"_typeName": "RefBase<memory::StandartInterface>",
+						"arguments_exposed": false,
+						"kind": "template_instantiation",
+						"primary_template": {
+							"name": "RefBase",
+							"objects": [{
+								"_fullName": "::stappler::RefBase<typename>",
+								"_kind": "class template",
+								"_name": "RefBase",
+								"class": {
+									"_fullName": "::stappler::RefBase<typename>",
+									"_kind": "class",
+									"_name": "RefBase",
+									"bases": [{
+										"_kind": "base class specifier",
+										"_name": "Interface::AllocBaseType",
+										"access_specifier": "public",
+										"id": 140737110671360,
+										"is_virtual": false,
+										"kind": "base class specifier",
+										"name": "Interface::AllocBaseType",
+										"type": {
+											"_typeName": "Interface::AllocBaseType",
+											"kind": "unexposed",
+											"name": "Interface::AllocBaseType"
+										}
+									}],
+									"class_kind": "class",
+									"id": 140736980257312,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "RefBase",
+									"scope": {
+										"is_templated": true,
+										"name": "RefBase",
+										"template_parameters": [{
+											"_kind": "template type parameter",
+											"_name": "Interface",
+											"id": 140737135446944,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "Interface"
+										}]
+									},
+									"semantic_scope": ""
+								},
+								"id": 93824997686736,
+								"kind": "class template",
+								"name": "RefBase",
+								"parameters": [{
+									"_kind": "template type parameter",
+									"_name": "Interface",
+									"id": 140737135446944,
+									"is_variadic": false,
+									"keyword": "typename",
+									"kind": "template type parameter",
+									"name": "Interface"
+								}],
+								"scope":  {
+									"is_templated": true,
+									"name": "RefBase",
+									"template_parameters": [{
+										"_kind": "template type parameter",
+										"_name": "Interface",
+										"id": 140737135446944,
+										"is_variadic": false,
+										"keyword": "typename",
+										"kind": "template type parameter",
+										"name": "Interface"
+									}]
+								}
+							}]
+						},
+						"unexposed_arguments": "memory::StandartInterface"
+					}
+				}],
+				"childs":  [{
+					"_kind": "access specifier",
+					"_name": "public",
+					"access_specifier": "public",
+					"id": 140737086845424,
+					"kind": "access specifier",
+					"name": "public"
+				}, {
+					"_fullName": "::stappler::thread::Task::Ref",
+					"_kind": "type alias",
+					"_name": "Ref",
+					"id": 140737145311200,
+					"kind": "type alias",
+					"name": "Ref",
+					"underlying_type": {
+						"_typeName": "RefBase<memory::StandartInterface>",
+						"arguments_exposed": false,
+						"kind": "template_instantiation",
+						"primary_template": {
+							"name": "RefBase",
+							"objects": [{
+								"_fullName": "::stappler::RefBase<typename>",
+								"_kind": "class template",
+								"_name": "RefBase",
+								"class": {
+									"_fullName": "::stappler::RefBase<typename>",
+									"_kind": "class",
+									"_name": "RefBase",
+									"bases": [{
+										"_kind": "base class specifier",
+										"_name": "Interface::AllocBaseType",
+										"access_specifier": "public",
+										"id": 140737110671360,
+										"is_virtual": false,
+										"kind": "base class specifier",
+										"name": "Interface::AllocBaseType",
+										"type": {
+											"_typeName": "Interface::AllocBaseType",
+											"kind": "unexposed",
+											"name": "Interface::AllocBaseType"
+										}
+									}],
+									"class_kind": "class",
+									"id": 140736980257312,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "RefBase",
+									"scope": {
+										"is_templated": true,
+										"name": "RefBase",
+										"template_parameters": [{
+											"_kind": "template type parameter",
+											"_name": "Interface",
+											"id": 140737135446944,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "Interface"
+										}]
+									},
+									"semantic_scope": ""
+								},
+								"id": 93824997686736,
+								"kind": "class template",
+								"name": "RefBase",
+								"parameters": [{
+									"_kind": "template type parameter",
+									"_name": "Interface",
+									"id": 140737135446944,
+									"is_variadic": false,
+									"keyword": "typename",
+									"kind": "template type parameter",
+									"name": "Interface"
+								}],
+								"scope":  {
+									"is_templated": true,
+									"name": "RefBase",
+									"template_parameters": [{
+										"_kind": "template type parameter",
+										"_name": "Interface",
+										"id": 140737135446944,
+										"is_variadic": false,
+										"keyword": "typename",
+										"kind": "template type parameter",
+										"name": "Interface"
+									}]
+								}
+							}]
+						},
+						"unexposed_arguments": "memory::StandartInterface"
+					}
+				}, {
+					"_fullName": "::stappler::thread::Task::PrepareCallback",
+					"_kind": "type alias",
+					"_name": "PrepareCallback",
+					"id": 140737131254624,
+					"kind": "type alias",
+					"name": "PrepareCallback",
+					"underlying_type": {
+						"_typeName": "std::function<bool (const Task &)>",
+						"arguments_exposed": false,
+						"kind": "template_instantiation",
+						"primary_template": {
+							"name": "std::function"
+						},
+						"unexposed_arguments": "bool (const Task &)"
+					}
+				}, {
+					"_fullName": "::stappler::thread::Task::ExecuteCallback",
+					"_kind": "type alias",
+					"_name": "ExecuteCallback",
+					"id": 93825000680256,
+					"kind": "type alias",
+					"name": "ExecuteCallback",
+					"underlying_type": {
+						"_typeName": "std::function<bool (const Task &)>",
+						"arguments_exposed": false,
+						"kind": "template_instantiation",
+						"primary_template": {
+							"name": "std::function"
+						},
+						"unexposed_arguments": "bool (const Task &)"
+					}
+				}, {
+					"_fullName": "::stappler::thread::Task::CompleteCallback",
+					"_kind": "type alias",
+					"_name": "CompleteCallback",
+					"id": 93825005230176,
+					"kind": "type alias",
+					"name": "CompleteCallback",
+					"underlying_type": {
+						"_typeName": "std::function<void (const Task &, bool)>",
+						"arguments_exposed": false,
+						"kind": "template_instantiation",
+						"primary_template": {
+							"name": "std::function"
+						},
+						"unexposed_arguments": "void (const Task &, bool)"
+					}
+				}, {
+					"_fullName": "::stappler::thread::Task::PriorityTypeFlag",
+					"_kind": "class",
+					"_name": "PriorityTypeFlag",
+					"childs": null,
+					"class_kind": "class",
+					"id": 140737144500368,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_final": false,
+					"kind": "class",
+					"name": "PriorityTypeFlag",
+					"scope": {
+						"name": "PriorityTypeFlag"
+					},
+					"semantic_scope": ""
+				}, {
+					"_fullName": "::stappler::thread::Task::PriorityType",
+					"_kind": "type alias",
+					"_name": "PriorityType",
+					"id": 93825000678640,
+					"kind": "type alias",
+					"name": "PriorityType",
+					"underlying_type": {
+						"_typeName": "ValueWrapper<memory::PriorityQueue<Rc<Task>>::PriorityType, class PriorityTypeFlag>",
+						"arguments_exposed": false,
+						"kind": "template_instantiation",
+						"primary_template": {
+							"name": "ValueWrapper",
+							"objects": [{
+								"_fullName": "::stappler::ValueWrapper<class,class>",
+								"_kind": "class template",
+								"_name": "ValueWrapper",
+								"class": {
+									"_fullName": "::stappler::ValueWrapper<class,class>",
+									"_kind": "class",
+									"_name": "ValueWrapper",
+									"class_kind": "struct",
+									"id": 140737091383856,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "ValueWrapper",
+									"scope": {
+										"is_templated": true,
+										"name": "ValueWrapper",
+										"template_parameters": [{
+											"_kind": "template type parameter",
+											"_name": "T",
+											"id": 93824997203824,
+											"is_variadic": false,
+											"keyword": "class",
+											"kind": "template type parameter",
+											"name": "T"
+										}, {
+											"_kind": "template type parameter",
+											"_name": "Flag",
+											"id": 93824997204064,
+											"is_variadic": false,
+											"keyword": "class",
+											"kind": "template type parameter",
+											"name": "Flag"
+										}]
+									},
+									"semantic_scope": ""
+								},
+								"id": 93824997203616,
+								"kind": "class template",
+								"name": "ValueWrapper",
+								"parameters": [{
+									"_kind": "template type parameter",
+									"_name": "T",
+									"id": 93824997203824,
+									"is_variadic": false,
+									"keyword": "class",
+									"kind": "template type parameter",
+									"name": "T"
+								}, {
+									"_kind": "template type parameter",
+									"_name": "Flag",
+									"id": 93824997204064,
+									"is_variadic": false,
+									"keyword": "class",
+									"kind": "template type parameter",
+									"name": "Flag"
+								}],
+								"scope":  {
+									"is_templated": true,
+									"name": "ValueWrapper",
+									"template_parameters": [{
+										"_kind": "template type parameter",
+										"_name": "T",
+										"id": 93824997203824,
+										"is_variadic": false,
+										"keyword": "class",
+										"kind": "template type parameter",
+										"name": "T"
+									}, {
+										"_kind": "template type parameter",
+										"_name": "Flag",
+										"id": 93824997204064,
+										"is_variadic": false,
+										"keyword": "class",
+										"kind": "template type parameter",
+										"name": "Flag"
+									}]
+								}
+							}]
+						},
+						"unexposed_arguments": "memory::PriorityQueue<Rc<Task>>::PriorityType, class PriorityTypeFlag"
+					}
+				}, {
+					"_fullName": "::stappler::thread::Task::Task()",
+					"_kind": "constructor",
+					"_name": "Task",
+					"body_kind": "declaration",
+					"id": 140737149854608,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_explicit": false,
+					"is_variadic": false,
+					"kind": "constructor",
+					"name": "Task",
+					"semantic_scope": "",
+					"signature": "()"
+				}, {
+					"_fullName": "::stappler::thread::Task::~Task()",
+					"_kind": "destructor",
+					"_name": "~Task",
+					"body_kind": "declaration",
+					"id": 93825005423424,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_override": true,
+					"is_variadic": false,
+					"is_virtual": true,
+					"kind": "destructor",
+					"name": "~Task",
+					"semantic_scope": "",
+					"signature": "()"
+				}, {
+					"_fullName": "::stappler::thread::Task::init(stappler::thread::Task::CompleteCallback const&,stappler::thread::Task::Ref*)",
+					"_kind": "member function",
+					"_name": "init",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 140737107096176,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "init",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93825000678272,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::thread::Task::CompleteCallback const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::thread::Task::CompleteCallback const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::thread::Task::CompleteCallback",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::thread::Task::CompleteCallback",
+										"objects": [{
+											"_fullName": "::stappler::thread::Task::CompleteCallback",
+											"_kind": "type alias",
+											"_name": "CompleteCallback",
+											"id": 93825005230176,
+											"kind": "type alias",
+											"name": "CompleteCallback",
+											"underlying_type": {
+												"_typeName": "std::function<void (const Task &, bool)>",
+												"arguments_exposed": false,
+												"kind": "template_instantiation",
+												"primary_template": {
+													"name": "std::function"
+												},
+												"unexposed_arguments": "void (const Task &, bool)"
+											}
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "",
+						"default_value": {
+							"expression": [{
+								"kind": "keyword",
+								"spelling": "nullptr"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "stappler::thread::Task::Ref*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::thread::Task::Ref",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::thread::Task::Ref",
+										"objects": [{
+											"_fullName": "::stappler::thread::Task::Ref",
+											"_kind": "type alias",
+											"_name": "Ref",
+											"id": 140737145311200,
+											"kind": "type alias",
+											"name": "Ref",
+											"underlying_type": {
+												"_typeName": "RefBase<memory::StandartInterface>",
+												"arguments_exposed": false,
+												"kind": "template_instantiation",
+												"primary_template": {
+													"name": "RefBase",
+													"objects": [{
+														"_fullName": "::stappler::RefBase<typename>",
+														"_kind": "class template",
+														"_name": "RefBase",
+														"class": {
+															"_fullName": "::stappler::RefBase<typename>",
+															"_kind": "class",
+															"_name": "RefBase",
+															"bases": [{
+																"_kind": "base class specifier",
+																"_name": "Interface::AllocBaseType",
+																"access_specifier": "public",
+																"id": 140737110671360,
+																"is_virtual": false,
+																"kind": "base class specifier",
+																"name": "Interface::AllocBaseType",
+																"type": {
+																	"_typeName": "Interface::AllocBaseType",
+																	"kind": "unexposed",
+																	"name": "Interface::AllocBaseType"
+																}
+															}],
+															"class_kind": "class",
+															"id": 140736980257312,
+															"is_declaration": false,
+															"is_definition": true,
+															"is_final": false,
+															"kind": "class",
+															"name": "RefBase",
+															"scope": {
+																"is_templated": true,
+																"name": "RefBase",
+																"template_parameters": [{
+																	"_kind": "template type parameter",
+																	"_name": "Interface",
+																	"id": 140737135446944,
+																	"is_variadic": false,
+																	"keyword": "typename",
+																	"kind": "template type parameter",
+																	"name": "Interface"
+																}]
+															},
+															"semantic_scope": ""
+														},
+														"id": 93824997686736,
+														"kind": "class template",
+														"name": "RefBase",
+														"parameters": [{
+															"_kind": "template type parameter",
+															"_name": "Interface",
+															"id": 140737135446944,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "Interface"
+														}],
+														"scope":  {
+															"is_templated": true,
+															"name": "RefBase",
+															"template_parameters": [{
+																"_kind": "template type parameter",
+																"_name": "Interface",
+																"id": 140737135446944,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "Interface"
+															}]
+														}
+													}]
+												},
+												"unexposed_arguments": "memory::StandartInterface"
+											}
+										}]
+									}
+								}
+							}
+						},
+						"id": 93825005402864,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::thread::Task::Ref*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::thread::Task::Ref",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::thread::Task::Ref",
+									"objects": [{
+										"_fullName": "::stappler::thread::Task::Ref",
+										"_kind": "type alias",
+										"_name": "Ref",
+										"id": 140737145311200,
+										"kind": "type alias",
+										"name": "Ref",
+										"underlying_type": {
+											"_typeName": "RefBase<memory::StandartInterface>",
+											"arguments_exposed": false,
+											"kind": "template_instantiation",
+											"primary_template": {
+												"name": "RefBase",
+												"objects": [{
+													"_fullName": "::stappler::RefBase<typename>",
+													"_kind": "class template",
+													"_name": "RefBase",
+													"class": {
+														"_fullName": "::stappler::RefBase<typename>",
+														"_kind": "class",
+														"_name": "RefBase",
+														"bases": [{
+															"_kind": "base class specifier",
+															"_name": "Interface::AllocBaseType",
+															"access_specifier": "public",
+															"id": 140737110671360,
+															"is_virtual": false,
+															"kind": "base class specifier",
+															"name": "Interface::AllocBaseType",
+															"type": {
+																"_typeName": "Interface::AllocBaseType",
+																"kind": "unexposed",
+																"name": "Interface::AllocBaseType"
+															}
+														}],
+														"class_kind": "class",
+														"id": 140736980257312,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "RefBase",
+														"scope": {
+															"is_templated": true,
+															"name": "RefBase",
+															"template_parameters": [{
+																"_kind": "template type parameter",
+																"_name": "Interface",
+																"id": 140737135446944,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "Interface"
+															}]
+														},
+														"semantic_scope": ""
+													},
+													"id": 93824997686736,
+													"kind": "class template",
+													"name": "RefBase",
+													"parameters": [{
+														"_kind": "template type parameter",
+														"_name": "Interface",
+														"id": 140737135446944,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "Interface"
+													}],
+													"scope":  {
+														"is_templated": true,
+														"name": "RefBase",
+														"template_parameters": [{
+															"_kind": "template type parameter",
+															"_name": "Interface",
+															"id": 140737135446944,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "Interface"
+														}]
+													}
+												}]
+											},
+											"unexposed_arguments": "memory::StandartInterface"
+										}
+									}]
+								}
+							}
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::thread::Task::CompleteCallback const&,stappler::thread::Task::Ref*)"
+				}, {
+					"_fullName": "::stappler::thread::Task::init(stappler::thread::Task::CompleteCallback&&,stappler::thread::Task::Ref*)",
+					"_kind": "member function",
+					"_name": "init",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 140737108113008,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "init",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93825000680608,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::thread::Task::CompleteCallback&&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::thread::Task::CompleteCallback",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::thread::Task::CompleteCallback",
+									"objects": [{
+										"_fullName": "::stappler::thread::Task::CompleteCallback",
+										"_kind": "type alias",
+										"_name": "CompleteCallback",
+										"id": 93825005230176,
+										"kind": "type alias",
+										"name": "CompleteCallback",
+										"underlying_type": {
+											"_typeName": "std::function<void (const Task &, bool)>",
+											"arguments_exposed": false,
+											"kind": "template_instantiation",
+											"primary_template": {
+												"name": "std::function"
+											},
+											"unexposed_arguments": "void (const Task &, bool)"
+										}
+									}]
+								}
+							},
+							"reference_kind": "rvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "",
+						"default_value": {
+							"expression": [{
+								"kind": "keyword",
+								"spelling": "nullptr"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "stappler::thread::Task::Ref*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::thread::Task::Ref",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::thread::Task::Ref",
+										"objects": [{
+											"_fullName": "::stappler::thread::Task::Ref",
+											"_kind": "type alias",
+											"_name": "Ref",
+											"id": 140737145311200,
+											"kind": "type alias",
+											"name": "Ref",
+											"underlying_type": {
+												"_typeName": "RefBase<memory::StandartInterface>",
+												"arguments_exposed": false,
+												"kind": "template_instantiation",
+												"primary_template": {
+													"name": "RefBase",
+													"objects": [{
+														"_fullName": "::stappler::RefBase<typename>",
+														"_kind": "class template",
+														"_name": "RefBase",
+														"class": {
+															"_fullName": "::stappler::RefBase<typename>",
+															"_kind": "class",
+															"_name": "RefBase",
+															"bases": [{
+																"_kind": "base class specifier",
+																"_name": "Interface::AllocBaseType",
+																"access_specifier": "public",
+																"id": 140737110671360,
+																"is_virtual": false,
+																"kind": "base class specifier",
+																"name": "Interface::AllocBaseType",
+																"type": {
+																	"_typeName": "Interface::AllocBaseType",
+																	"kind": "unexposed",
+																	"name": "Interface::AllocBaseType"
+																}
+															}],
+															"class_kind": "class",
+															"id": 140736980257312,
+															"is_declaration": false,
+															"is_definition": true,
+															"is_final": false,
+															"kind": "class",
+															"name": "RefBase",
+															"scope": {
+																"is_templated": true,
+																"name": "RefBase",
+																"template_parameters": [{
+																	"_kind": "template type parameter",
+																	"_name": "Interface",
+																	"id": 140737135446944,
+																	"is_variadic": false,
+																	"keyword": "typename",
+																	"kind": "template type parameter",
+																	"name": "Interface"
+																}]
+															},
+															"semantic_scope": ""
+														},
+														"id": 93824997686736,
+														"kind": "class template",
+														"name": "RefBase",
+														"parameters": [{
+															"_kind": "template type parameter",
+															"_name": "Interface",
+															"id": 140737135446944,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "Interface"
+														}],
+														"scope":  {
+															"is_templated": true,
+															"name": "RefBase",
+															"template_parameters": [{
+																"_kind": "template type parameter",
+																"_name": "Interface",
+																"id": 140737135446944,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "Interface"
+															}]
+														}
+													}]
+												},
+												"unexposed_arguments": "memory::StandartInterface"
+											}
+										}]
+									}
+								}
+							}
+						},
+						"id": 93825001870144,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::thread::Task::Ref*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::thread::Task::Ref",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::thread::Task::Ref",
+									"objects": [{
+										"_fullName": "::stappler::thread::Task::Ref",
+										"_kind": "type alias",
+										"_name": "Ref",
+										"id": 140737145311200,
+										"kind": "type alias",
+										"name": "Ref",
+										"underlying_type": {
+											"_typeName": "RefBase<memory::StandartInterface>",
+											"arguments_exposed": false,
+											"kind": "template_instantiation",
+											"primary_template": {
+												"name": "RefBase",
+												"objects": [{
+													"_fullName": "::stappler::RefBase<typename>",
+													"_kind": "class template",
+													"_name": "RefBase",
+													"class": {
+														"_fullName": "::stappler::RefBase<typename>",
+														"_kind": "class",
+														"_name": "RefBase",
+														"bases": [{
+															"_kind": "base class specifier",
+															"_name": "Interface::AllocBaseType",
+															"access_specifier": "public",
+															"id": 140737110671360,
+															"is_virtual": false,
+															"kind": "base class specifier",
+															"name": "Interface::AllocBaseType",
+															"type": {
+																"_typeName": "Interface::AllocBaseType",
+																"kind": "unexposed",
+																"name": "Interface::AllocBaseType"
+															}
+														}],
+														"class_kind": "class",
+														"id": 140736980257312,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "RefBase",
+														"scope": {
+															"is_templated": true,
+															"name": "RefBase",
+															"template_parameters": [{
+																"_kind": "template type parameter",
+																"_name": "Interface",
+																"id": 140737135446944,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "Interface"
+															}]
+														},
+														"semantic_scope": ""
+													},
+													"id": 93824997686736,
+													"kind": "class template",
+													"name": "RefBase",
+													"parameters": [{
+														"_kind": "template type parameter",
+														"_name": "Interface",
+														"id": 140737135446944,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "Interface"
+													}],
+													"scope":  {
+														"is_templated": true,
+														"name": "RefBase",
+														"template_parameters": [{
+															"_kind": "template type parameter",
+															"_name": "Interface",
+															"id": 140737135446944,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "Interface"
+														}]
+													}
+												}]
+											},
+											"unexposed_arguments": "memory::StandartInterface"
+										}
+									}]
+								}
+							}
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::thread::Task::CompleteCallback&&,stappler::thread::Task::Ref*)"
+				}, {
+					"_fullName": "::stappler::thread::Task::init(stappler::thread::Task::ExecuteCallback const&,stappler::thread::Task::CompleteCallback const&,stappler::thread::Task::Ref*)",
+					"_kind": "member function",
+					"_name": "init",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 140737114095472,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "init",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93825005421664,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::thread::Task::ExecuteCallback const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::thread::Task::ExecuteCallback const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::thread::Task::ExecuteCallback",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::thread::Task::ExecuteCallback",
+										"objects": [{
+											"_fullName": "::stappler::thread::Task::ExecuteCallback",
+											"_kind": "type alias",
+											"_name": "ExecuteCallback",
+											"id": 93825000680256,
+											"kind": "type alias",
+											"name": "ExecuteCallback",
+											"underlying_type": {
+												"_typeName": "std::function<bool (const Task &)>",
+												"arguments_exposed": false,
+												"kind": "template_instantiation",
+												"primary_template": {
+													"name": "std::function"
+												},
+												"unexposed_arguments": "bool (const Task &)"
+											}
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "",
+						"default_value": {
+							"expression": [{
+								"kind": "keyword",
+								"spelling": "nullptr"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "stappler::thread::Task::CompleteCallback const&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "stappler::thread::Task::CompleteCallback const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "stappler::thread::Task::CompleteCallback",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::thread::Task::CompleteCallback",
+											"objects": [{
+												"_fullName": "::stappler::thread::Task::CompleteCallback",
+												"_kind": "type alias",
+												"_name": "CompleteCallback",
+												"id": 93825005230176,
+												"kind": "type alias",
+												"name": "CompleteCallback",
+												"underlying_type": {
+													"_typeName": "std::function<void (const Task &, bool)>",
+													"arguments_exposed": false,
+													"kind": "template_instantiation",
+													"primary_template": {
+														"name": "std::function"
+													},
+													"unexposed_arguments": "void (const Task &, bool)"
+												}
+											}]
+										}
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						},
+						"id": 93824997566496,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::thread::Task::CompleteCallback const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::thread::Task::CompleteCallback const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::thread::Task::CompleteCallback",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::thread::Task::CompleteCallback",
+										"objects": [{
+											"_fullName": "::stappler::thread::Task::CompleteCallback",
+											"_kind": "type alias",
+											"_name": "CompleteCallback",
+											"id": 93825005230176,
+											"kind": "type alias",
+											"name": "CompleteCallback",
+											"underlying_type": {
+												"_typeName": "std::function<void (const Task &, bool)>",
+												"arguments_exposed": false,
+												"kind": "template_instantiation",
+												"primary_template": {
+													"name": "std::function"
+												},
+												"unexposed_arguments": "void (const Task &, bool)"
+											}
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "",
+						"default_value": {
+							"expression": [{
+								"kind": "keyword",
+								"spelling": "nullptr"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "stappler::thread::Task::Ref*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::thread::Task::Ref",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::thread::Task::Ref",
+										"objects": [{
+											"_fullName": "::stappler::thread::Task::Ref",
+											"_kind": "type alias",
+											"_name": "Ref",
+											"id": 140737145311200,
+											"kind": "type alias",
+											"name": "Ref",
+											"underlying_type": {
+												"_typeName": "RefBase<memory::StandartInterface>",
+												"arguments_exposed": false,
+												"kind": "template_instantiation",
+												"primary_template": {
+													"name": "RefBase",
+													"objects": [{
+														"_fullName": "::stappler::RefBase<typename>",
+														"_kind": "class template",
+														"_name": "RefBase",
+														"class": {
+															"_fullName": "::stappler::RefBase<typename>",
+															"_kind": "class",
+															"_name": "RefBase",
+															"bases": [{
+																"_kind": "base class specifier",
+																"_name": "Interface::AllocBaseType",
+																"access_specifier": "public",
+																"id": 140737110671360,
+																"is_virtual": false,
+																"kind": "base class specifier",
+																"name": "Interface::AllocBaseType",
+																"type": {
+																	"_typeName": "Interface::AllocBaseType",
+																	"kind": "unexposed",
+																	"name": "Interface::AllocBaseType"
+																}
+															}],
+															"class_kind": "class",
+															"id": 140736980257312,
+															"is_declaration": false,
+															"is_definition": true,
+															"is_final": false,
+															"kind": "class",
+															"name": "RefBase",
+															"scope": {
+																"is_templated": true,
+																"name": "RefBase",
+																"template_parameters": [{
+																	"_kind": "template type parameter",
+																	"_name": "Interface",
+																	"id": 140737135446944,
+																	"is_variadic": false,
+																	"keyword": "typename",
+																	"kind": "template type parameter",
+																	"name": "Interface"
+																}]
+															},
+															"semantic_scope": ""
+														},
+														"id": 93824997686736,
+														"kind": "class template",
+														"name": "RefBase",
+														"parameters": [{
+															"_kind": "template type parameter",
+															"_name": "Interface",
+															"id": 140737135446944,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "Interface"
+														}],
+														"scope":  {
+															"is_templated": true,
+															"name": "RefBase",
+															"template_parameters": [{
+																"_kind": "template type parameter",
+																"_name": "Interface",
+																"id": 140737135446944,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "Interface"
+															}]
+														}
+													}]
+												},
+												"unexposed_arguments": "memory::StandartInterface"
+											}
+										}]
+									}
+								}
+							}
+						},
+						"id": 93825007985904,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::thread::Task::Ref*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::thread::Task::Ref",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::thread::Task::Ref",
+									"objects": [{
+										"_fullName": "::stappler::thread::Task::Ref",
+										"_kind": "type alias",
+										"_name": "Ref",
+										"id": 140737145311200,
+										"kind": "type alias",
+										"name": "Ref",
+										"underlying_type": {
+											"_typeName": "RefBase<memory::StandartInterface>",
+											"arguments_exposed": false,
+											"kind": "template_instantiation",
+											"primary_template": {
+												"name": "RefBase",
+												"objects": [{
+													"_fullName": "::stappler::RefBase<typename>",
+													"_kind": "class template",
+													"_name": "RefBase",
+													"class": {
+														"_fullName": "::stappler::RefBase<typename>",
+														"_kind": "class",
+														"_name": "RefBase",
+														"bases": [{
+															"_kind": "base class specifier",
+															"_name": "Interface::AllocBaseType",
+															"access_specifier": "public",
+															"id": 140737110671360,
+															"is_virtual": false,
+															"kind": "base class specifier",
+															"name": "Interface::AllocBaseType",
+															"type": {
+																"_typeName": "Interface::AllocBaseType",
+																"kind": "unexposed",
+																"name": "Interface::AllocBaseType"
+															}
+														}],
+														"class_kind": "class",
+														"id": 140736980257312,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "RefBase",
+														"scope": {
+															"is_templated": true,
+															"name": "RefBase",
+															"template_parameters": [{
+																"_kind": "template type parameter",
+																"_name": "Interface",
+																"id": 140737135446944,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "Interface"
+															}]
+														},
+														"semantic_scope": ""
+													},
+													"id": 93824997686736,
+													"kind": "class template",
+													"name": "RefBase",
+													"parameters": [{
+														"_kind": "template type parameter",
+														"_name": "Interface",
+														"id": 140737135446944,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "Interface"
+													}],
+													"scope":  {
+														"is_templated": true,
+														"name": "RefBase",
+														"template_parameters": [{
+															"_kind": "template type parameter",
+															"_name": "Interface",
+															"id": 140737135446944,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "Interface"
+														}]
+													}
+												}]
+											},
+											"unexposed_arguments": "memory::StandartInterface"
+										}
+									}]
+								}
+							}
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::thread::Task::ExecuteCallback const&,stappler::thread::Task::CompleteCallback const&,stappler::thread::Task::Ref*)"
+				}, {
+					"_fullName": "::stappler::thread::Task::init(stappler::thread::Task::ExecuteCallback&&,stappler::thread::Task::CompleteCallback&&,stappler::thread::Task::Ref*)",
+					"_kind": "member function",
+					"_name": "init",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 93825001661776,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "init",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93825007986288,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::thread::Task::ExecuteCallback&&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::thread::Task::ExecuteCallback",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::thread::Task::ExecuteCallback",
+									"objects": [{
+										"_fullName": "::stappler::thread::Task::ExecuteCallback",
+										"_kind": "type alias",
+										"_name": "ExecuteCallback",
+										"id": 93825000680256,
+										"kind": "type alias",
+										"name": "ExecuteCallback",
+										"underlying_type": {
+											"_typeName": "std::function<bool (const Task &)>",
+											"arguments_exposed": false,
+											"kind": "template_instantiation",
+											"primary_template": {
+												"name": "std::function"
+											},
+											"unexposed_arguments": "bool (const Task &)"
+										}
+									}]
+								}
+							},
+							"reference_kind": "rvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "",
+						"default_value": {
+							"expression": [{
+								"kind": "keyword",
+								"spelling": "nullptr"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "stappler::thread::Task::CompleteCallback&&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "stappler::thread::Task::CompleteCallback",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::thread::Task::CompleteCallback",
+										"objects": [{
+											"_fullName": "::stappler::thread::Task::CompleteCallback",
+											"_kind": "type alias",
+											"_name": "CompleteCallback",
+											"id": 93825005230176,
+											"kind": "type alias",
+											"name": "CompleteCallback",
+											"underlying_type": {
+												"_typeName": "std::function<void (const Task &, bool)>",
+												"arguments_exposed": false,
+												"kind": "template_instantiation",
+												"primary_template": {
+													"name": "std::function"
+												},
+												"unexposed_arguments": "void (const Task &, bool)"
+											}
+										}]
+									}
+								},
+								"reference_kind": "rvalue"
+							}
+						},
+						"id": 93825001869552,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::thread::Task::CompleteCallback&&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::thread::Task::CompleteCallback",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::thread::Task::CompleteCallback",
+									"objects": [{
+										"_fullName": "::stappler::thread::Task::CompleteCallback",
+										"_kind": "type alias",
+										"_name": "CompleteCallback",
+										"id": 93825005230176,
+										"kind": "type alias",
+										"name": "CompleteCallback",
+										"underlying_type": {
+											"_typeName": "std::function<void (const Task &, bool)>",
+											"arguments_exposed": false,
+											"kind": "template_instantiation",
+											"primary_template": {
+												"name": "std::function"
+											},
+											"unexposed_arguments": "void (const Task &, bool)"
+										}
+									}]
+								}
+							},
+							"reference_kind": "rvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "",
+						"default_value": {
+							"expression": [{
+								"kind": "keyword",
+								"spelling": "nullptr"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "stappler::thread::Task::Ref*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::thread::Task::Ref",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::thread::Task::Ref",
+										"objects": [{
+											"_fullName": "::stappler::thread::Task::Ref",
+											"_kind": "type alias",
+											"_name": "Ref",
+											"id": 140737145311200,
+											"kind": "type alias",
+											"name": "Ref",
+											"underlying_type": {
+												"_typeName": "RefBase<memory::StandartInterface>",
+												"arguments_exposed": false,
+												"kind": "template_instantiation",
+												"primary_template": {
+													"name": "RefBase",
+													"objects": [{
+														"_fullName": "::stappler::RefBase<typename>",
+														"_kind": "class template",
+														"_name": "RefBase",
+														"class": {
+															"_fullName": "::stappler::RefBase<typename>",
+															"_kind": "class",
+															"_name": "RefBase",
+															"bases": [{
+																"_kind": "base class specifier",
+																"_name": "Interface::AllocBaseType",
+																"access_specifier": "public",
+																"id": 140737110671360,
+																"is_virtual": false,
+																"kind": "base class specifier",
+																"name": "Interface::AllocBaseType",
+																"type": {
+																	"_typeName": "Interface::AllocBaseType",
+																	"kind": "unexposed",
+																	"name": "Interface::AllocBaseType"
+																}
+															}],
+															"class_kind": "class",
+															"id": 140736980257312,
+															"is_declaration": false,
+															"is_definition": true,
+															"is_final": false,
+															"kind": "class",
+															"name": "RefBase",
+															"scope": {
+																"is_templated": true,
+																"name": "RefBase",
+																"template_parameters": [{
+																	"_kind": "template type parameter",
+																	"_name": "Interface",
+																	"id": 140737135446944,
+																	"is_variadic": false,
+																	"keyword": "typename",
+																	"kind": "template type parameter",
+																	"name": "Interface"
+																}]
+															},
+															"semantic_scope": ""
+														},
+														"id": 93824997686736,
+														"kind": "class template",
+														"name": "RefBase",
+														"parameters": [{
+															"_kind": "template type parameter",
+															"_name": "Interface",
+															"id": 140737135446944,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "Interface"
+														}],
+														"scope":  {
+															"is_templated": true,
+															"name": "RefBase",
+															"template_parameters": [{
+																"_kind": "template type parameter",
+																"_name": "Interface",
+																"id": 140737135446944,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "Interface"
+															}]
+														}
+													}]
+												},
+												"unexposed_arguments": "memory::StandartInterface"
+											}
+										}]
+									}
+								}
+							}
+						},
+						"id": 93825005403616,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::thread::Task::Ref*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::thread::Task::Ref",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::thread::Task::Ref",
+									"objects": [{
+										"_fullName": "::stappler::thread::Task::Ref",
+										"_kind": "type alias",
+										"_name": "Ref",
+										"id": 140737145311200,
+										"kind": "type alias",
+										"name": "Ref",
+										"underlying_type": {
+											"_typeName": "RefBase<memory::StandartInterface>",
+											"arguments_exposed": false,
+											"kind": "template_instantiation",
+											"primary_template": {
+												"name": "RefBase",
+												"objects": [{
+													"_fullName": "::stappler::RefBase<typename>",
+													"_kind": "class template",
+													"_name": "RefBase",
+													"class": {
+														"_fullName": "::stappler::RefBase<typename>",
+														"_kind": "class",
+														"_name": "RefBase",
+														"bases": [{
+															"_kind": "base class specifier",
+															"_name": "Interface::AllocBaseType",
+															"access_specifier": "public",
+															"id": 140737110671360,
+															"is_virtual": false,
+															"kind": "base class specifier",
+															"name": "Interface::AllocBaseType",
+															"type": {
+																"_typeName": "Interface::AllocBaseType",
+																"kind": "unexposed",
+																"name": "Interface::AllocBaseType"
+															}
+														}],
+														"class_kind": "class",
+														"id": 140736980257312,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "RefBase",
+														"scope": {
+															"is_templated": true,
+															"name": "RefBase",
+															"template_parameters": [{
+																"_kind": "template type parameter",
+																"_name": "Interface",
+																"id": 140737135446944,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "Interface"
+															}]
+														},
+														"semantic_scope": ""
+													},
+													"id": 93824997686736,
+													"kind": "class template",
+													"name": "RefBase",
+													"parameters": [{
+														"_kind": "template type parameter",
+														"_name": "Interface",
+														"id": 140737135446944,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "Interface"
+													}],
+													"scope":  {
+														"is_templated": true,
+														"name": "RefBase",
+														"template_parameters": [{
+															"_kind": "template type parameter",
+															"_name": "Interface",
+															"id": 140737135446944,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "Interface"
+														}]
+													}
+												}]
+											},
+											"unexposed_arguments": "memory::StandartInterface"
+										}
+									}]
+								}
+							}
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::thread::Task::ExecuteCallback&&,stappler::thread::Task::CompleteCallback&&,stappler::thread::Task::Ref*)"
+				}, {
+					"_fullName": "::stappler::thread::Task::init(stappler::thread::Task::PrepareCallback const&,stappler::thread::Task::ExecuteCallback const&,stappler::thread::Task::CompleteCallback const&,stappler::thread::Task::Ref*)",
+					"_kind": "member function",
+					"_name": "init",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 93825000682720,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "init",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93825000683248,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::thread::Task::PrepareCallback const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::thread::Task::PrepareCallback const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::thread::Task::PrepareCallback",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::thread::Task::PrepareCallback",
+										"objects": [{
+											"_fullName": "::stappler::thread::Task::PrepareCallback",
+											"_kind": "type alias",
+											"_name": "PrepareCallback",
+											"id": 140737131254624,
+											"kind": "type alias",
+											"name": "PrepareCallback",
+											"underlying_type": {
+												"_typeName": "std::function<bool (const Task &)>",
+												"arguments_exposed": false,
+												"kind": "template_instantiation",
+												"primary_template": {
+													"name": "std::function"
+												},
+												"unexposed_arguments": "bool (const Task &)"
+											}
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93825001753328,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::thread::Task::ExecuteCallback const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::thread::Task::ExecuteCallback const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::thread::Task::ExecuteCallback",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::thread::Task::ExecuteCallback",
+										"objects": [{
+											"_fullName": "::stappler::thread::Task::ExecuteCallback",
+											"_kind": "type alias",
+											"_name": "ExecuteCallback",
+											"id": 93825000680256,
+											"kind": "type alias",
+											"name": "ExecuteCallback",
+											"underlying_type": {
+												"_typeName": "std::function<bool (const Task &)>",
+												"arguments_exposed": false,
+												"kind": "template_instantiation",
+												"primary_template": {
+													"name": "std::function"
+												},
+												"unexposed_arguments": "bool (const Task &)"
+											}
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "",
+						"default_value": {
+							"expression": [{
+								"kind": "keyword",
+								"spelling": "nullptr"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "stappler::thread::Task::CompleteCallback const&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "stappler::thread::Task::CompleteCallback const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "stappler::thread::Task::CompleteCallback",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::thread::Task::CompleteCallback",
+											"objects": [{
+												"_fullName": "::stappler::thread::Task::CompleteCallback",
+												"_kind": "type alias",
+												"_name": "CompleteCallback",
+												"id": 93825005230176,
+												"kind": "type alias",
+												"name": "CompleteCallback",
+												"underlying_type": {
+													"_typeName": "std::function<void (const Task &, bool)>",
+													"arguments_exposed": false,
+													"kind": "template_instantiation",
+													"primary_template": {
+														"name": "std::function"
+													},
+													"unexposed_arguments": "void (const Task &, bool)"
+												}
+											}]
+										}
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						},
+						"id": 93825001752368,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::thread::Task::CompleteCallback const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::thread::Task::CompleteCallback const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::thread::Task::CompleteCallback",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::thread::Task::CompleteCallback",
+										"objects": [{
+											"_fullName": "::stappler::thread::Task::CompleteCallback",
+											"_kind": "type alias",
+											"_name": "CompleteCallback",
+											"id": 93825005230176,
+											"kind": "type alias",
+											"name": "CompleteCallback",
+											"underlying_type": {
+												"_typeName": "std::function<void (const Task &, bool)>",
+												"arguments_exposed": false,
+												"kind": "template_instantiation",
+												"primary_template": {
+													"name": "std::function"
+												},
+												"unexposed_arguments": "void (const Task &, bool)"
+											}
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "",
+						"default_value": {
+							"expression": [{
+								"kind": "keyword",
+								"spelling": "nullptr"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "stappler::thread::Task::Ref*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::thread::Task::Ref",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::thread::Task::Ref",
+										"objects": [{
+											"_fullName": "::stappler::thread::Task::Ref",
+											"_kind": "type alias",
+											"_name": "Ref",
+											"id": 140737145311200,
+											"kind": "type alias",
+											"name": "Ref",
+											"underlying_type": {
+												"_typeName": "RefBase<memory::StandartInterface>",
+												"arguments_exposed": false,
+												"kind": "template_instantiation",
+												"primary_template": {
+													"name": "RefBase",
+													"objects": [{
+														"_fullName": "::stappler::RefBase<typename>",
+														"_kind": "class template",
+														"_name": "RefBase",
+														"class": {
+															"_fullName": "::stappler::RefBase<typename>",
+															"_kind": "class",
+															"_name": "RefBase",
+															"bases": [{
+																"_kind": "base class specifier",
+																"_name": "Interface::AllocBaseType",
+																"access_specifier": "public",
+																"id": 140737110671360,
+																"is_virtual": false,
+																"kind": "base class specifier",
+																"name": "Interface::AllocBaseType",
+																"type": {
+																	"_typeName": "Interface::AllocBaseType",
+																	"kind": "unexposed",
+																	"name": "Interface::AllocBaseType"
+																}
+															}],
+															"class_kind": "class",
+															"id": 140736980257312,
+															"is_declaration": false,
+															"is_definition": true,
+															"is_final": false,
+															"kind": "class",
+															"name": "RefBase",
+															"scope": {
+																"is_templated": true,
+																"name": "RefBase",
+																"template_parameters": [{
+																	"_kind": "template type parameter",
+																	"_name": "Interface",
+																	"id": 140737135446944,
+																	"is_variadic": false,
+																	"keyword": "typename",
+																	"kind": "template type parameter",
+																	"name": "Interface"
+																}]
+															},
+															"semantic_scope": ""
+														},
+														"id": 93824997686736,
+														"kind": "class template",
+														"name": "RefBase",
+														"parameters": [{
+															"_kind": "template type parameter",
+															"_name": "Interface",
+															"id": 140737135446944,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "Interface"
+														}],
+														"scope":  {
+															"is_templated": true,
+															"name": "RefBase",
+															"template_parameters": [{
+																"_kind": "template type parameter",
+																"_name": "Interface",
+																"id": 140737135446944,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "Interface"
+															}]
+														}
+													}]
+												},
+												"unexposed_arguments": "memory::StandartInterface"
+											}
+										}]
+									}
+								}
+							}
+						},
+						"id": 93825001753056,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::thread::Task::Ref*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::thread::Task::Ref",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::thread::Task::Ref",
+									"objects": [{
+										"_fullName": "::stappler::thread::Task::Ref",
+										"_kind": "type alias",
+										"_name": "Ref",
+										"id": 140737145311200,
+										"kind": "type alias",
+										"name": "Ref",
+										"underlying_type": {
+											"_typeName": "RefBase<memory::StandartInterface>",
+											"arguments_exposed": false,
+											"kind": "template_instantiation",
+											"primary_template": {
+												"name": "RefBase",
+												"objects": [{
+													"_fullName": "::stappler::RefBase<typename>",
+													"_kind": "class template",
+													"_name": "RefBase",
+													"class": {
+														"_fullName": "::stappler::RefBase<typename>",
+														"_kind": "class",
+														"_name": "RefBase",
+														"bases": [{
+															"_kind": "base class specifier",
+															"_name": "Interface::AllocBaseType",
+															"access_specifier": "public",
+															"id": 140737110671360,
+															"is_virtual": false,
+															"kind": "base class specifier",
+															"name": "Interface::AllocBaseType",
+															"type": {
+																"_typeName": "Interface::AllocBaseType",
+																"kind": "unexposed",
+																"name": "Interface::AllocBaseType"
+															}
+														}],
+														"class_kind": "class",
+														"id": 140736980257312,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "RefBase",
+														"scope": {
+															"is_templated": true,
+															"name": "RefBase",
+															"template_parameters": [{
+																"_kind": "template type parameter",
+																"_name": "Interface",
+																"id": 140737135446944,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "Interface"
+															}]
+														},
+														"semantic_scope": ""
+													},
+													"id": 93824997686736,
+													"kind": "class template",
+													"name": "RefBase",
+													"parameters": [{
+														"_kind": "template type parameter",
+														"_name": "Interface",
+														"id": 140737135446944,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "Interface"
+													}],
+													"scope":  {
+														"is_templated": true,
+														"name": "RefBase",
+														"template_parameters": [{
+															"_kind": "template type parameter",
+															"_name": "Interface",
+															"id": 140737135446944,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "Interface"
+														}]
+													}
+												}]
+											},
+											"unexposed_arguments": "memory::StandartInterface"
+										}
+									}]
+								}
+							}
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::thread::Task::PrepareCallback const&,stappler::thread::Task::ExecuteCallback const&,stappler::thread::Task::CompleteCallback const&,stappler::thread::Task::Ref*)"
+				}, {
+					"_fullName": "::stappler::thread::Task::init(stappler::thread::Task::PrepareCallback&&,stappler::thread::Task::ExecuteCallback&&,stappler::thread::Task::CompleteCallback&&,stappler::thread::Task::Ref*)",
+					"_kind": "member function",
+					"_name": "init",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 93825005422288,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "init",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93825005422752,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::thread::Task::PrepareCallback&&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::thread::Task::PrepareCallback",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::thread::Task::PrepareCallback",
+									"objects": [{
+										"_fullName": "::stappler::thread::Task::PrepareCallback",
+										"_kind": "type alias",
+										"_name": "PrepareCallback",
+										"id": 140737131254624,
+										"kind": "type alias",
+										"name": "PrepareCallback",
+										"underlying_type": {
+											"_typeName": "std::function<bool (const Task &)>",
+											"arguments_exposed": false,
+											"kind": "template_instantiation",
+											"primary_template": {
+												"name": "std::function"
+											},
+											"unexposed_arguments": "bool (const Task &)"
+										}
+									}]
+								}
+							},
+							"reference_kind": "rvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93825008191792,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::thread::Task::ExecuteCallback&&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::thread::Task::ExecuteCallback",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::thread::Task::ExecuteCallback",
+									"objects": [{
+										"_fullName": "::stappler::thread::Task::ExecuteCallback",
+										"_kind": "type alias",
+										"_name": "ExecuteCallback",
+										"id": 93825000680256,
+										"kind": "type alias",
+										"name": "ExecuteCallback",
+										"underlying_type": {
+											"_typeName": "std::function<bool (const Task &)>",
+											"arguments_exposed": false,
+											"kind": "template_instantiation",
+											"primary_template": {
+												"name": "std::function"
+											},
+											"unexposed_arguments": "bool (const Task &)"
+										}
+									}]
+								}
+							},
+							"reference_kind": "rvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "",
+						"default_value": {
+							"expression": [{
+								"kind": "keyword",
+								"spelling": "nullptr"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "stappler::thread::Task::CompleteCallback&&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "stappler::thread::Task::CompleteCallback",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::thread::Task::CompleteCallback",
+										"objects": [{
+											"_fullName": "::stappler::thread::Task::CompleteCallback",
+											"_kind": "type alias",
+											"_name": "CompleteCallback",
+											"id": 93825005230176,
+											"kind": "type alias",
+											"name": "CompleteCallback",
+											"underlying_type": {
+												"_typeName": "std::function<void (const Task &, bool)>",
+												"arguments_exposed": false,
+												"kind": "template_instantiation",
+												"primary_template": {
+													"name": "std::function"
+												},
+												"unexposed_arguments": "void (const Task &, bool)"
+											}
+										}]
+									}
+								},
+								"reference_kind": "rvalue"
+							}
+						},
+						"id": 93825008192400,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::thread::Task::CompleteCallback&&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::thread::Task::CompleteCallback",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::thread::Task::CompleteCallback",
+									"objects": [{
+										"_fullName": "::stappler::thread::Task::CompleteCallback",
+										"_kind": "type alias",
+										"_name": "CompleteCallback",
+										"id": 93825005230176,
+										"kind": "type alias",
+										"name": "CompleteCallback",
+										"underlying_type": {
+											"_typeName": "std::function<void (const Task &, bool)>",
+											"arguments_exposed": false,
+											"kind": "template_instantiation",
+											"primary_template": {
+												"name": "std::function"
+											},
+											"unexposed_arguments": "void (const Task &, bool)"
+										}
+									}]
+								}
+							},
+							"reference_kind": "rvalue"
+						}
+					}, {
+						"_kind": "function parameter",
+						"_name": "",
+						"default_value": {
+							"expression": [{
+								"kind": "keyword",
+								"spelling": "nullptr"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "stappler::thread::Task::Ref*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::thread::Task::Ref",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::thread::Task::Ref",
+										"objects": [{
+											"_fullName": "::stappler::thread::Task::Ref",
+											"_kind": "type alias",
+											"_name": "Ref",
+											"id": 140737145311200,
+											"kind": "type alias",
+											"name": "Ref",
+											"underlying_type": {
+												"_typeName": "RefBase<memory::StandartInterface>",
+												"arguments_exposed": false,
+												"kind": "template_instantiation",
+												"primary_template": {
+													"name": "RefBase",
+													"objects": [{
+														"_fullName": "::stappler::RefBase<typename>",
+														"_kind": "class template",
+														"_name": "RefBase",
+														"class": {
+															"_fullName": "::stappler::RefBase<typename>",
+															"_kind": "class",
+															"_name": "RefBase",
+															"bases": [{
+																"_kind": "base class specifier",
+																"_name": "Interface::AllocBaseType",
+																"access_specifier": "public",
+																"id": 140737110671360,
+																"is_virtual": false,
+																"kind": "base class specifier",
+																"name": "Interface::AllocBaseType",
+																"type": {
+																	"_typeName": "Interface::AllocBaseType",
+																	"kind": "unexposed",
+																	"name": "Interface::AllocBaseType"
+																}
+															}],
+															"class_kind": "class",
+															"id": 140736980257312,
+															"is_declaration": false,
+															"is_definition": true,
+															"is_final": false,
+															"kind": "class",
+															"name": "RefBase",
+															"scope": {
+																"is_templated": true,
+																"name": "RefBase",
+																"template_parameters": [{
+																	"_kind": "template type parameter",
+																	"_name": "Interface",
+																	"id": 140737135446944,
+																	"is_variadic": false,
+																	"keyword": "typename",
+																	"kind": "template type parameter",
+																	"name": "Interface"
+																}]
+															},
+															"semantic_scope": ""
+														},
+														"id": 93824997686736,
+														"kind": "class template",
+														"name": "RefBase",
+														"parameters": [{
+															"_kind": "template type parameter",
+															"_name": "Interface",
+															"id": 140737135446944,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "Interface"
+														}],
+														"scope":  {
+															"is_templated": true,
+															"name": "RefBase",
+															"template_parameters": [{
+																"_kind": "template type parameter",
+																"_name": "Interface",
+																"id": 140737135446944,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "Interface"
+															}]
+														}
+													}]
+												},
+												"unexposed_arguments": "memory::StandartInterface"
+											}
+										}]
+									}
+								}
+							}
+						},
+						"id": 93825005404288,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::thread::Task::Ref*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::thread::Task::Ref",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::thread::Task::Ref",
+									"objects": [{
+										"_fullName": "::stappler::thread::Task::Ref",
+										"_kind": "type alias",
+										"_name": "Ref",
+										"id": 140737145311200,
+										"kind": "type alias",
+										"name": "Ref",
+										"underlying_type": {
+											"_typeName": "RefBase<memory::StandartInterface>",
+											"arguments_exposed": false,
+											"kind": "template_instantiation",
+											"primary_template": {
+												"name": "RefBase",
+												"objects": [{
+													"_fullName": "::stappler::RefBase<typename>",
+													"_kind": "class template",
+													"_name": "RefBase",
+													"class": {
+														"_fullName": "::stappler::RefBase<typename>",
+														"_kind": "class",
+														"_name": "RefBase",
+														"bases": [{
+															"_kind": "base class specifier",
+															"_name": "Interface::AllocBaseType",
+															"access_specifier": "public",
+															"id": 140737110671360,
+															"is_virtual": false,
+															"kind": "base class specifier",
+															"name": "Interface::AllocBaseType",
+															"type": {
+																"_typeName": "Interface::AllocBaseType",
+																"kind": "unexposed",
+																"name": "Interface::AllocBaseType"
+															}
+														}],
+														"class_kind": "class",
+														"id": 140736980257312,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "RefBase",
+														"scope": {
+															"is_templated": true,
+															"name": "RefBase",
+															"template_parameters": [{
+																"_kind": "template type parameter",
+																"_name": "Interface",
+																"id": 140737135446944,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "Interface"
+															}]
+														},
+														"semantic_scope": ""
+													},
+													"id": 93824997686736,
+													"kind": "class template",
+													"name": "RefBase",
+													"parameters": [{
+														"_kind": "template type parameter",
+														"_name": "Interface",
+														"id": 140737135446944,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "Interface"
+													}],
+													"scope":  {
+														"is_templated": true,
+														"name": "RefBase",
+														"template_parameters": [{
+															"_kind": "template type parameter",
+															"_name": "Interface",
+															"id": 140737135446944,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "Interface"
+														}]
+													}
+												}]
+											},
+											"unexposed_arguments": "memory::StandartInterface"
+										}
+									}]
+								}
+							}
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::thread::Task::PrepareCallback&&,stappler::thread::Task::ExecuteCallback&&,stappler::thread::Task::CompleteCallback&&,stappler::thread::Task::Ref*)"
+				}, {
+					"_fullName": "::stappler::thread::Task::addPrepareCallback(stappler::thread::Task::PrepareCallback const&)",
+					"_kind": "member function",
+					"_name": "addPrepareCallback",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 93825005404544,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "addPrepareCallback",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93825003181856,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::thread::Task::PrepareCallback const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::thread::Task::PrepareCallback const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::thread::Task::PrepareCallback",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::thread::Task::PrepareCallback",
+										"objects": [{
+											"_fullName": "::stappler::thread::Task::PrepareCallback",
+											"_kind": "type alias",
+											"_name": "PrepareCallback",
+											"id": 140737131254624,
+											"kind": "type alias",
+											"name": "PrepareCallback",
+											"underlying_type": {
+												"_typeName": "std::function<bool (const Task &)>",
+												"arguments_exposed": false,
+												"kind": "template_instantiation",
+												"primary_template": {
+													"name": "std::function"
+												},
+												"unexposed_arguments": "bool (const Task &)"
+											}
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::thread::Task::PrepareCallback const&)"
+				}, {
+					"_fullName": "::stappler::thread::Task::addPrepareCallback(stappler::thread::Task::PrepareCallback&&)",
+					"_kind": "member function",
+					"_name": "addPrepareCallback",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 93825003182048,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "addPrepareCallback",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93825003182512,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::thread::Task::PrepareCallback&&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::thread::Task::PrepareCallback",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::thread::Task::PrepareCallback",
+									"objects": [{
+										"_fullName": "::stappler::thread::Task::PrepareCallback",
+										"_kind": "type alias",
+										"_name": "PrepareCallback",
+										"id": 140737131254624,
+										"kind": "type alias",
+										"name": "PrepareCallback",
+										"underlying_type": {
+											"_typeName": "std::function<bool (const Task &)>",
+											"arguments_exposed": false,
+											"kind": "template_instantiation",
+											"primary_template": {
+												"name": "std::function"
+											},
+											"unexposed_arguments": "bool (const Task &)"
+										}
+									}]
+								}
+							},
+							"reference_kind": "rvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::thread::Task::PrepareCallback&&)"
+				}, {
+					"_fullName": "::stappler::thread::Task::addExecuteCallback(stappler::thread::Task::ExecuteCallback const&)",
+					"_kind": "member function",
+					"_name": "addExecuteCallback",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 93825008190640,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "addExecuteCallback",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93825003182752,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::thread::Task::ExecuteCallback const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::thread::Task::ExecuteCallback const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::thread::Task::ExecuteCallback",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::thread::Task::ExecuteCallback",
+										"objects": [{
+											"_fullName": "::stappler::thread::Task::ExecuteCallback",
+											"_kind": "type alias",
+											"_name": "ExecuteCallback",
+											"id": 93825000680256,
+											"kind": "type alias",
+											"name": "ExecuteCallback",
+											"underlying_type": {
+												"_typeName": "std::function<bool (const Task &)>",
+												"arguments_exposed": false,
+												"kind": "template_instantiation",
+												"primary_template": {
+													"name": "std::function"
+												},
+												"unexposed_arguments": "bool (const Task &)"
+											}
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::thread::Task::ExecuteCallback const&)"
+				}, {
+					"_fullName": "::stappler::thread::Task::addExecuteCallback(stappler::thread::Task::ExecuteCallback&&)",
+					"_kind": "member function",
+					"_name": "addExecuteCallback",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 93825008191264,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "addExecuteCallback",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93825003180304,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::thread::Task::ExecuteCallback&&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::thread::Task::ExecuteCallback",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::thread::Task::ExecuteCallback",
+									"objects": [{
+										"_fullName": "::stappler::thread::Task::ExecuteCallback",
+										"_kind": "type alias",
+										"_name": "ExecuteCallback",
+										"id": 93825000680256,
+										"kind": "type alias",
+										"name": "ExecuteCallback",
+										"underlying_type": {
+											"_typeName": "std::function<bool (const Task &)>",
+											"arguments_exposed": false,
+											"kind": "template_instantiation",
+											"primary_template": {
+												"name": "std::function"
+											},
+											"unexposed_arguments": "bool (const Task &)"
+										}
+									}]
+								}
+							},
+							"reference_kind": "rvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::thread::Task::ExecuteCallback&&)"
+				}, {
+					"_fullName": "::stappler::thread::Task::addCompleteCallback(stappler::thread::Task::CompleteCallback const&)",
+					"_kind": "member function",
+					"_name": "addCompleteCallback",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 93825003180544,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "addCompleteCallback",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93825003181072,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::thread::Task::CompleteCallback const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::thread::Task::CompleteCallback const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::thread::Task::CompleteCallback",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::thread::Task::CompleteCallback",
+										"objects": [{
+											"_fullName": "::stappler::thread::Task::CompleteCallback",
+											"_kind": "type alias",
+											"_name": "CompleteCallback",
+											"id": 93825005230176,
+											"kind": "type alias",
+											"name": "CompleteCallback",
+											"underlying_type": {
+												"_typeName": "std::function<void (const Task &, bool)>",
+												"arguments_exposed": false,
+												"kind": "template_instantiation",
+												"primary_template": {
+													"name": "std::function"
+												},
+												"unexposed_arguments": "void (const Task &, bool)"
+											}
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::thread::Task::CompleteCallback const&)"
+				}, {
+					"_fullName": "::stappler::thread::Task::addCompleteCallback(stappler::thread::Task::CompleteCallback&&)",
+					"_kind": "member function",
+					"_name": "addCompleteCallback",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 93825003181312,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "addCompleteCallback",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 93825006036544,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::thread::Task::CompleteCallback&&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::thread::Task::CompleteCallback",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::thread::Task::CompleteCallback",
+									"objects": [{
+										"_fullName": "::stappler::thread::Task::CompleteCallback",
+										"_kind": "type alias",
+										"_name": "CompleteCallback",
+										"id": 93825005230176,
+										"kind": "type alias",
+										"name": "CompleteCallback",
+										"underlying_type": {
+											"_typeName": "std::function<void (const Task &, bool)>",
+											"arguments_exposed": false,
+											"kind": "template_instantiation",
+											"primary_template": {
+												"name": "std::function"
+											},
+											"unexposed_arguments": "void (const Task &, bool)"
+										}
+									}]
+								}
+							},
+							"reference_kind": "rvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::thread::Task::CompleteCallback&&)"
+				}, {
+					"_fullName": "::stappler::thread::Task::setTag(int)",
+					"_kind": "member function",
+					"_name": "setTag",
+					"body_kind": "definition",
+					"cv_qualifier": "none",
+					"id": 93825006036784,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "setTag",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "tag",
+						"id": 93825006037104,
+						"kind": "function parameter",
+						"name": "tag",
+						"type": {
+							"_typeName": "int",
+							"builtin_type_kind": "int",
+							"kind": "builtin"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(int)"
+				}, {
+					"_fullName": "::stappler::thread::Task::getTag() const",
+					"_kind": "member function",
+					"_name": "getTag",
+					"body_kind": "definition",
+					"cv_qualifier": "const",
+					"id": 93825006037392,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "getTag",
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "int",
+						"builtin_type_kind": "int",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "() const"
+				}, {
+					"_fullName": "::stappler::thread::Task::setPriority(PriorityType::Type)",
+					"_kind": "member function",
+					"_name": "setPriority",
+					"body_kind": "definition",
+					"cv_qualifier": "none",
+					"id": 93825000681152,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "setPriority",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "priority",
+						"id": 93825000681568,
+						"kind": "function parameter",
+						"name": "priority",
+						"type": {
+							"_typeName": "PriorityType::Type",
+							"kind": "user_defined",
+							"target": {
+								"name": "PriorityType::Type"
+							}
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(PriorityType::Type)"
+				}, {
+					"_fullName": "::stappler::thread::Task::getPriority() const",
+					"_kind": "member function",
+					"_name": "getPriority",
+					"body_kind": "definition",
+					"cv_qualifier": "const",
+					"id": 93825000681952,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "getPriority",
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "PriorityType",
+						"kind": "user_defined",
+						"target": {
+							"name": "PriorityType",
+							"objects": [{
+								"_fullName": "::stappler::thread::Task::PriorityType",
+								"_kind": "type alias",
+								"_name": "PriorityType",
+								"id": 93825000678640,
+								"kind": "type alias",
+								"name": "PriorityType",
+								"underlying_type": {
+									"_typeName": "ValueWrapper<memory::PriorityQueue<Rc<Task>>::PriorityType, class PriorityTypeFlag>",
+									"arguments_exposed": false,
+									"kind": "template_instantiation",
+									"primary_template": {
+										"name": "ValueWrapper",
+										"objects": [{
+											"_fullName": "::stappler::ValueWrapper<class,class>",
+											"_kind": "class template",
+											"_name": "ValueWrapper",
+											"class": {
+												"_fullName": "::stappler::ValueWrapper<class,class>",
+												"_kind": "class",
+												"_name": "ValueWrapper",
+												"class_kind": "struct",
+												"id": 140737091383856,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "ValueWrapper",
+												"scope": {
+													"is_templated": true,
+													"name": "ValueWrapper",
+													"template_parameters": [{
+														"_kind": "template type parameter",
+														"_name": "T",
+														"id": 93824997203824,
+														"is_variadic": false,
+														"keyword": "class",
+														"kind": "template type parameter",
+														"name": "T"
+													}, {
+														"_kind": "template type parameter",
+														"_name": "Flag",
+														"id": 93824997204064,
+														"is_variadic": false,
+														"keyword": "class",
+														"kind": "template type parameter",
+														"name": "Flag"
+													}]
+												},
+												"semantic_scope": ""
+											},
+											"id": 93824997203616,
+											"kind": "class template",
+											"name": "ValueWrapper",
+											"parameters": [{
+												"_kind": "template type parameter",
+												"_name": "T",
+												"id": 93824997203824,
+												"is_variadic": false,
+												"keyword": "class",
+												"kind": "template type parameter",
+												"name": "T"
+											}, {
+												"_kind": "template type parameter",
+												"_name": "Flag",
+												"id": 93824997204064,
+												"is_variadic": false,
+												"keyword": "class",
+												"kind": "template type parameter",
+												"name": "Flag"
+											}],
+											"scope":  {
+												"is_templated": true,
+												"name": "ValueWrapper",
+												"template_parameters": [{
+													"_kind": "template type parameter",
+													"_name": "T",
+													"id": 93824997203824,
+													"is_variadic": false,
+													"keyword": "class",
+													"kind": "template type parameter",
+													"name": "T"
+												}, {
+													"_kind": "template type parameter",
+													"_name": "Flag",
+													"id": 93824997204064,
+													"is_variadic": false,
+													"keyword": "class",
+													"kind": "template type parameter",
+													"name": "Flag"
+												}]
+											}
+										}]
+									},
+									"unexposed_arguments": "memory::PriorityQueue<Rc<Task>>::PriorityType, class PriorityTypeFlag"
+								}
+							}]
+						}
+					},
+					"semantic_scope": "",
+					"signature": "() const"
+				}, {
+					"_fullName": "::stappler::thread::Task::setTarget(stappler::thread::Task::Ref*)",
+					"_kind": "member function",
+					"_name": "setTarget",
+					"body_kind": "definition",
+					"cv_qualifier": "none",
+					"id": 93825000682272,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "setTarget",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "target",
+						"id": 93825007986768,
+						"kind": "function parameter",
+						"name": "target",
+						"type": {
+							"_typeName": "stappler::thread::Task::Ref*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::thread::Task::Ref",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::thread::Task::Ref",
+									"objects": [{
+										"_fullName": "::stappler::thread::Task::Ref",
+										"_kind": "type alias",
+										"_name": "Ref",
+										"id": 140737145311200,
+										"kind": "type alias",
+										"name": "Ref",
+										"underlying_type": {
+											"_typeName": "RefBase<memory::StandartInterface>",
+											"arguments_exposed": false,
+											"kind": "template_instantiation",
+											"primary_template": {
+												"name": "RefBase",
+												"objects": [{
+													"_fullName": "::stappler::RefBase<typename>",
+													"_kind": "class template",
+													"_name": "RefBase",
+													"class": {
+														"_fullName": "::stappler::RefBase<typename>",
+														"_kind": "class",
+														"_name": "RefBase",
+														"bases": [{
+															"_kind": "base class specifier",
+															"_name": "Interface::AllocBaseType",
+															"access_specifier": "public",
+															"id": 140737110671360,
+															"is_virtual": false,
+															"kind": "base class specifier",
+															"name": "Interface::AllocBaseType",
+															"type": {
+																"_typeName": "Interface::AllocBaseType",
+																"kind": "unexposed",
+																"name": "Interface::AllocBaseType"
+															}
+														}],
+														"class_kind": "class",
+														"id": 140736980257312,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "RefBase",
+														"scope": {
+															"is_templated": true,
+															"name": "RefBase",
+															"template_parameters": [{
+																"_kind": "template type parameter",
+																"_name": "Interface",
+																"id": 140737135446944,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "Interface"
+															}]
+														},
+														"semantic_scope": ""
+													},
+													"id": 93824997686736,
+													"kind": "class template",
+													"name": "RefBase",
+													"parameters": [{
+														"_kind": "template type parameter",
+														"_name": "Interface",
+														"id": 140737135446944,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "Interface"
+													}],
+													"scope":  {
+														"is_templated": true,
+														"name": "RefBase",
+														"template_parameters": [{
+															"_kind": "template type parameter",
+															"_name": "Interface",
+															"id": 140737135446944,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "Interface"
+														}]
+													}
+												}]
+											},
+											"unexposed_arguments": "memory::StandartInterface"
+										}
+									}]
+								}
+							}
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::thread::Task::Ref*)"
+				}, {
+					"_fullName": "::stappler::thread::Task::getTarget() const",
+					"_kind": "member function",
+					"_name": "getTarget",
+					"body_kind": "definition",
+					"cv_qualifier": "const",
+					"id": 93825007987200,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "getTarget",
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "Ref*",
+						"kind": "pointer",
+						"pointee": {
+							"_typeName": "Ref",
+							"kind": "user_defined",
+							"target": {
+								"name": "Ref",
+								"objects": [{
+									"_fullName": "::stappler::thread::Task::Ref",
+									"_kind": "type alias",
+									"_name": "Ref",
+									"id": 140737145311200,
+									"kind": "type alias",
+									"name": "Ref",
+									"underlying_type": {
+										"_typeName": "RefBase<memory::StandartInterface>",
+										"arguments_exposed": false,
+										"kind": "template_instantiation",
+										"primary_template": {
+											"name": "RefBase",
+											"objects": [{
+												"_fullName": "::stappler::RefBase<typename>",
+												"_kind": "class template",
+												"_name": "RefBase",
+												"class": {
+													"_fullName": "::stappler::RefBase<typename>",
+													"_kind": "class",
+													"_name": "RefBase",
+													"bases": [{
+														"_kind": "base class specifier",
+														"_name": "Interface::AllocBaseType",
+														"access_specifier": "public",
+														"id": 140737110671360,
+														"is_virtual": false,
+														"kind": "base class specifier",
+														"name": "Interface::AllocBaseType",
+														"type": {
+															"_typeName": "Interface::AllocBaseType",
+															"kind": "unexposed",
+															"name": "Interface::AllocBaseType"
+														}
+													}],
+													"class_kind": "class",
+													"id": 140736980257312,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "RefBase",
+													"scope": {
+														"is_templated": true,
+														"name": "RefBase",
+														"template_parameters": [{
+															"_kind": "template type parameter",
+															"_name": "Interface",
+															"id": 140737135446944,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "Interface"
+														}]
+													},
+													"semantic_scope": ""
+												},
+												"id": 93824997686736,
+												"kind": "class template",
+												"name": "RefBase",
+												"parameters": [{
+													"_kind": "template type parameter",
+													"_name": "Interface",
+													"id": 140737135446944,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "Interface"
+												}],
+												"scope":  {
+													"is_templated": true,
+													"name": "RefBase",
+													"template_parameters": [{
+														"_kind": "template type parameter",
+														"_name": "Interface",
+														"id": 140737135446944,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "Interface"
+													}]
+												}
+											}]
+										},
+										"unexposed_arguments": "memory::StandartInterface"
+									}
+								}]
+							}
+						}
+					},
+					"semantic_scope": "",
+					"signature": "() const"
+				}, {
+					"_fullName": "::stappler::thread::Task::setSuccessful(bool)",
+					"_kind": "member function",
+					"_name": "setSuccessful",
+					"body_kind": "definition",
+					"cv_qualifier": "none",
+					"id": 93825007987472,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "setSuccessful",
+					"parameters": [{
+						"_kind": "function parameter",
+						"_name": "value",
+						"id": 93825007987792,
+						"kind": "function parameter",
+						"name": "value",
+						"type": {
+							"_typeName": "bool",
+							"builtin_type_kind": "bool",
+							"kind": "builtin"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(bool)"
+				}, {
+					"_fullName": "::stappler::thread::Task::isSuccessful() const",
+					"_kind": "member function",
+					"_name": "isSuccessful",
+					"body_kind": "definition",
+					"cv_qualifier": "const",
+					"id": 93825001185072,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "isSuccessful",
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "() const"
+				}, {
+					"_fullName": "::stappler::thread::Task::getPrepareTasks() const",
+					"_kind": "member function",
+					"_name": "getPrepareTasks",
+					"body_kind": "definition",
+					"cv_qualifier": "const",
+					"id": 93825001185632,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "getPrepareTasks",
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "std::vector<PrepareCallback> const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "std::vector<PrepareCallback> const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "std::vector<PrepareCallback>",
+								"arguments_exposed": false,
+								"kind": "template_instantiation",
+								"primary_template": {
+									"name": "std::vector"
+								},
+								"unexposed_arguments": "PrepareCallback"
+							}
+						},
+						"reference_kind": "lvalue"
+					},
+					"semantic_scope": "",
+					"signature": "() const"
+				}, {
+					"_fullName": "::stappler::thread::Task::getExecuteTasks() const",
+					"_kind": "member function",
+					"_name": "getExecuteTasks",
+					"body_kind": "definition",
+					"cv_qualifier": "const",
+					"id": 93825001186192,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "getExecuteTasks",
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "std::vector<ExecuteCallback> const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "std::vector<ExecuteCallback> const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "std::vector<ExecuteCallback>",
+								"arguments_exposed": false,
+								"kind": "template_instantiation",
+								"primary_template": {
+									"name": "std::vector"
+								},
+								"unexposed_arguments": "ExecuteCallback"
+							}
+						},
+						"reference_kind": "lvalue"
+					},
+					"semantic_scope": "",
+					"signature": "() const"
+				}, {
+					"_fullName": "::stappler::thread::Task::getCompleteTasks() const",
+					"_kind": "member function",
+					"_name": "getCompleteTasks",
+					"body_kind": "definition",
+					"cv_qualifier": "const",
+					"id": 93825003294688,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "getCompleteTasks",
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "std::vector<CompleteCallback> const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "std::vector<CompleteCallback> const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "std::vector<CompleteCallback>",
+								"arguments_exposed": false,
+								"kind": "template_instantiation",
+								"primary_template": {
+									"name": "std::vector"
+								},
+								"unexposed_arguments": "CompleteCallback"
+							}
+						},
+						"reference_kind": "lvalue"
+					},
+					"semantic_scope": "",
+					"signature": "() const"
+				}, {
+					"_kind": "access specifier",
+					"_name": "public",
+					"access_specifier": "public",
+					"id": 93825003295008,
+					"kind": "access specifier",
+					"name": "public"
+				}, {
+					"_fullName": "::stappler::thread::Task::prepare() const",
+					"_kind": "member function",
+					"_name": "prepare",
+					"body_kind": "declaration",
+					"cv_qualifier": "const",
+					"id": 93825003295200,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": true,
+					"kind": "member function",
+					"name": "prepare",
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "() const"
+				}, {
+					"_fullName": "::stappler::thread::Task::execute()",
+					"_kind": "member function",
+					"_name": "execute",
+					"body_kind": "declaration",
+					"comment": "called on worker thread",
+					"cv_qualifier": "none",
+					"id": 93825003295568,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": true,
+					"kind": "member function",
+					"name": "execute",
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "()"
+				}, {
+					"_fullName": "::stappler::thread::Task::onComplete()",
+					"_kind": "member function",
+					"_name": "onComplete",
+					"body_kind": "declaration",
+					"comment": "called on UI thread when request is completed",
+					"cv_qualifier": "none",
+					"id": 93825003799264,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": true,
+					"kind": "member function",
+					"name": "onComplete",
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "()"
+				}, {
+					"_kind": "access specifier",
+					"_name": "protected",
+					"access_specifier": "protected",
+					"id": 93825003799584,
+					"kind": "access specifier",
+					"name": "protected"
+				}, {
+					"_fullName": "::stappler::thread::Task::_isSuccessful",
+					"_kind": "member variable",
+					"_name": "_isSuccessful",
+					"default_value": {
+						"expression": [{
+							"kind": "keyword",
+							"spelling": "true"
+						}],
+						"kind": "unexposed",
+						"type": {
+							"_typeName": "bool",
+							"builtin_type_kind": "bool",
+							"kind": "builtin"
+						}
+					},
+					"id": 140737141766432,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "_isSuccessful",
+					"type": {
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
+						"kind": "builtin"
+					}
+				}, {
+					"_fullName": "::stappler::thread::Task::_tag",
+					"_kind": "member variable",
+					"_name": "_tag",
+					"default_value": {
+						"expression": [{
+							"kind": "punctuation",
+							"spelling": "-"
+						}, {
+							"kind": "int_literal",
+							"spelling": "1"
+						}],
+						"kind": "unexposed",
+						"type": {
+							"_typeName": "int",
+							"builtin_type_kind": "int",
+							"kind": "builtin"
+						}
+					},
+					"id": 140737148273040,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "_tag",
+					"type": {
+						"_typeName": "int",
+						"builtin_type_kind": "int",
+						"kind": "builtin"
+					}
+				}, {
+					"_fullName": "::stappler::thread::Task::_priority",
+					"_kind": "member variable",
+					"_name": "_priority",
+					"default_value": {
+						"expression": [{
+							"kind": "identifier",
+							"spelling": "PriorityType"
+						}, {
+							"kind": "punctuation",
+							"spelling": "("
+						}, {
+							"kind": "punctuation",
+							"spelling": ")"
+						}],
+						"kind": "unexposed",
+						"type": {
+							"_typeName": "PriorityType",
+							"kind": "user_defined",
+							"target": {
+								"name": "PriorityType",
+								"objects": [{
+									"_fullName": "::stappler::thread::Task::PriorityType",
+									"_kind": "type alias",
+									"_name": "PriorityType",
+									"id": 93825000678640,
+									"kind": "type alias",
+									"name": "PriorityType",
+									"underlying_type": {
+										"_typeName": "ValueWrapper<memory::PriorityQueue<Rc<Task>>::PriorityType, class PriorityTypeFlag>",
+										"arguments_exposed": false,
+										"kind": "template_instantiation",
+										"primary_template": {
+											"name": "ValueWrapper",
+											"objects": [{
+												"_fullName": "::stappler::ValueWrapper<class,class>",
+												"_kind": "class template",
+												"_name": "ValueWrapper",
+												"class": {
+													"_fullName": "::stappler::ValueWrapper<class,class>",
+													"_kind": "class",
+													"_name": "ValueWrapper",
+													"class_kind": "struct",
+													"id": 140737091383856,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "ValueWrapper",
+													"scope": {
+														"is_templated": true,
+														"name": "ValueWrapper",
+														"template_parameters": [{
+															"_kind": "template type parameter",
+															"_name": "T",
+															"id": 93824997203824,
+															"is_variadic": false,
+															"keyword": "class",
+															"kind": "template type parameter",
+															"name": "T"
+														}, {
+															"_kind": "template type parameter",
+															"_name": "Flag",
+															"id": 93824997204064,
+															"is_variadic": false,
+															"keyword": "class",
+															"kind": "template type parameter",
+															"name": "Flag"
+														}]
+													},
+													"semantic_scope": ""
+												},
+												"id": 93824997203616,
+												"kind": "class template",
+												"name": "ValueWrapper",
+												"parameters": [{
+													"_kind": "template type parameter",
+													"_name": "T",
+													"id": 93824997203824,
+													"is_variadic": false,
+													"keyword": "class",
+													"kind": "template type parameter",
+													"name": "T"
+												}, {
+													"_kind": "template type parameter",
+													"_name": "Flag",
+													"id": 93824997204064,
+													"is_variadic": false,
+													"keyword": "class",
+													"kind": "template type parameter",
+													"name": "Flag"
+												}],
+												"scope":  {
+													"is_templated": true,
+													"name": "ValueWrapper",
+													"template_parameters": [{
+														"_kind": "template type parameter",
+														"_name": "T",
+														"id": 93824997203824,
+														"is_variadic": false,
+														"keyword": "class",
+														"kind": "template type parameter",
+														"name": "T"
+													}, {
+														"_kind": "template type parameter",
+														"_name": "Flag",
+														"id": 93824997204064,
+														"is_variadic": false,
+														"keyword": "class",
+														"kind": "template type parameter",
+														"name": "Flag"
+													}]
+												}
+											}]
+										},
+										"unexposed_arguments": "memory::PriorityQueue<Rc<Task>>::PriorityType, class PriorityTypeFlag"
+									}
+								}]
+							}
+						}
+					},
+					"id": 93825001704416,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "_priority",
+					"type": {
+						"_typeName": "PriorityType",
+						"kind": "user_defined",
+						"target": {
+							"name": "PriorityType",
+							"objects": [{
+								"_fullName": "::stappler::thread::Task::PriorityType",
+								"_kind": "type alias",
+								"_name": "PriorityType",
+								"id": 93825000678640,
+								"kind": "type alias",
+								"name": "PriorityType",
+								"underlying_type": {
+									"_typeName": "ValueWrapper<memory::PriorityQueue<Rc<Task>>::PriorityType, class PriorityTypeFlag>",
+									"arguments_exposed": false,
+									"kind": "template_instantiation",
+									"primary_template": {
+										"name": "ValueWrapper",
+										"objects": [{
+											"_fullName": "::stappler::ValueWrapper<class,class>",
+											"_kind": "class template",
+											"_name": "ValueWrapper",
+											"class": {
+												"_fullName": "::stappler::ValueWrapper<class,class>",
+												"_kind": "class",
+												"_name": "ValueWrapper",
+												"class_kind": "struct",
+												"id": 140737091383856,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "ValueWrapper",
+												"scope": {
+													"is_templated": true,
+													"name": "ValueWrapper",
+													"template_parameters": [{
+														"_kind": "template type parameter",
+														"_name": "T",
+														"id": 93824997203824,
+														"is_variadic": false,
+														"keyword": "class",
+														"kind": "template type parameter",
+														"name": "T"
+													}, {
+														"_kind": "template type parameter",
+														"_name": "Flag",
+														"id": 93824997204064,
+														"is_variadic": false,
+														"keyword": "class",
+														"kind": "template type parameter",
+														"name": "Flag"
+													}]
+												},
+												"semantic_scope": ""
+											},
+											"id": 93824997203616,
+											"kind": "class template",
+											"name": "ValueWrapper",
+											"parameters": [{
+												"_kind": "template type parameter",
+												"_name": "T",
+												"id": 93824997203824,
+												"is_variadic": false,
+												"keyword": "class",
+												"kind": "template type parameter",
+												"name": "T"
+											}, {
+												"_kind": "template type parameter",
+												"_name": "Flag",
+												"id": 93824997204064,
+												"is_variadic": false,
+												"keyword": "class",
+												"kind": "template type parameter",
+												"name": "Flag"
+											}],
+											"scope":  {
+												"is_templated": true,
+												"name": "ValueWrapper",
+												"template_parameters": [{
+													"_kind": "template type parameter",
+													"_name": "T",
+													"id": 93824997203824,
+													"is_variadic": false,
+													"keyword": "class",
+													"kind": "template type parameter",
+													"name": "T"
+												}, {
+													"_kind": "template type parameter",
+													"_name": "Flag",
+													"id": 93824997204064,
+													"is_variadic": false,
+													"keyword": "class",
+													"kind": "template type parameter",
+													"name": "Flag"
+												}]
+											}
+										}]
+									},
+									"unexposed_arguments": "memory::PriorityQueue<Rc<Task>>::PriorityType, class PriorityTypeFlag"
+								}
+							}]
+						}
+					}
+				}, {
+					"_fullName": "::stappler::thread::Task::_target",
+					"_kind": "member variable",
+					"_name": "_target",
+					"id": 93825005966880,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "_target",
+					"type": {
+						"_typeName": "Rc<stappler::thread::Task::Ref>",
+						"arguments_exposed": false,
+						"kind": "template_instantiation",
+						"primary_template": {
+							"name": "Rc",
+							"objects": [{
+								"_fullName": "::stappler::RcBase<typename>",
+								"_kind": "class template",
+								"_name": "RcBase",
+								"class": {
+									"_fullName": "::stappler::RcBase<typename>",
+									"_kind": "class",
+									"_name": "RcBase",
+									"class_kind": "class",
+									"id": 93824999765056,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "RcBase",
+									"scope": {
+										"is_templated": true,
+										"name": "RcBase",
+										"template_parameters": [{
+											"_kind": "template type parameter",
+											"_name": "Base",
+											"id": 93825002831392,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "Base"
+										}]
+									},
+									"semantic_scope": ""
+								},
+								"id": 93825002831184,
+								"kind": "class template",
+								"name": "RcBase",
+								"parameters": [{
+									"_kind": "template type parameter",
+									"_name": "Base",
+									"id": 93825002831392,
+									"is_variadic": false,
+									"keyword": "typename",
+									"kind": "template type parameter",
+									"name": "Base"
+								}],
+								"scope":  {
+									"is_templated": true,
+									"name": "RcBase",
+									"template_parameters": [{
+										"_kind": "template type parameter",
+										"_name": "Base",
+										"id": 93825002831392,
+										"is_variadic": false,
+										"keyword": "typename",
+										"kind": "template type parameter",
+										"name": "Base"
+									}]
+								}
+							}]
+						},
+						"unexposed_arguments": "stappler::thread::Task::Ref"
+					}
+				}, {
+					"_fullName": "::stappler::thread::Task::_prepare",
+					"_kind": "member variable",
+					"_name": "_prepare",
+					"id": 93825005967280,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "_prepare",
+					"type": {
+						"_typeName": "std::vector<PrepareCallback>",
+						"arguments_exposed": false,
+						"kind": "template_instantiation",
+						"primary_template": {
+							"name": "std::vector"
+						},
+						"unexposed_arguments": "PrepareCallback"
+					}
+				}, {
+					"_fullName": "::stappler::thread::Task::_execute",
+					"_kind": "member variable",
+					"_name": "_execute",
+					"id": 93825005967632,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "_execute",
+					"type": {
+						"_typeName": "std::vector<ExecuteCallback>",
+						"arguments_exposed": false,
+						"kind": "template_instantiation",
+						"primary_template": {
+							"name": "std::vector"
+						},
+						"unexposed_arguments": "ExecuteCallback"
+					}
+				}, {
+					"_fullName": "::stappler::thread::Task::_complete",
+					"_kind": "member variable",
+					"_name": "_complete",
+					"id": 93825005967984,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "_complete",
+					"type": {
+						"_typeName": "std::vector<CompleteCallback>",
+						"arguments_exposed": false,
+						"kind": "template_instantiation",
+						"primary_template": {
+							"name": "std::vector"
+						},
+						"unexposed_arguments": "CompleteCallback"
+					}
+				}],
+				"class_kind": "class",
+				"id": 140737086458624,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_final": false,
+				"kind": "class",
+				"name": "Task",
+				"scope": {
+					"name": "Task"
+				},
+				"semantic_scope": ""
+			}],
+			"id": 140736972758208,
+			"is_anonymous": false,
+			"is_inline": false,
+			"is_nested": true,
+			"kind": "namespace",
+			"name": "thread",
+			"scope": {
+				"name": "thread"
+			}
+		}],
+		"id": 140736987001376,
+		"is_anonymous": false,
+		"is_inline": false,
+		"is_nested": false,
+		"kind": "namespace",
+		"name": "stappler",
+		"scope": {
+			"name": "stappler"
+		}
+	}],
+	"id": 140737098747040,
+	"kind": "file",
+	"name": "/home/sbkarr/stappler/xenolith/libstappler/modules/threads/SPThreadTask.h",
+	"unmatched_comments": [{
+		"line": 22,
+		"text": "\nCopyright (c) 2016-2019 Roman Katuntsev <sbkarr@stappler.org>\nCopyright (c) 2023 Stappler LLC <admin@stappler.dev>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n"
+	}]
+}
