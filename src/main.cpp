@@ -380,44 +380,62 @@ SP_EXTERN_C int main(int argc, const char * argv[]) {
 		std::cout << "  Target directory: " << root << "\n";
 	}
 
-	if (args.getBool("help")) {
+	if (opts.getBool("help")) {
 		std::cout << HELP_STRING;
 		return 0;
 	}
 
-	StringStream compileDatabase;
-	compileDatabase << "[";
+	if (args.size() < 2) {
+		StringStream compileDatabase;
+		compileDatabase << "[";
 
-	filesystem::ftw(root, [&] (StringView path, bool isFile) {
-		if (isFile && filepath::lastExtension(path) == "json") {
-			auto data = filesystem::readIntoMemory<Interface>(path);
-			compileDatabase << StringView((const char *)data.data(), data.size());
+		filesystem::ftw(root, [&] (StringView path, bool isFile) {
+			if (isFile && filepath::lastExtension(path) == "json") {
+				auto data = filesystem::readIntoMemory<Interface>(path);
+				compileDatabase << StringView((const char *)data.data(), data.size());
+			}
+		});
+
+		compileDatabase << "]";
+
+		String db = compileDatabase.str();
+
+		auto val = data::read<Interface>(db);
+		if (val.isArray() && val.size() > 0) {
+			auto outdir = filesystem::currentDir<Interface>("out");
+			filesystem::mkdir(outdir);
+
+			auto compilationRoot = val.getValue(0).getString("directory");
+
+			auto dbFile = filepath::merge<Interface>(outdir, "compile_commands.json");
+
+			filesystem::remove(dbFile);
+
+			data::save(val, dbFile, data::EncodeFormat::Pretty);
+
+			ParserStruct parser(outdir, compilationRoot);
+
+			return 0;
+		} else {
+			std::cerr << "Empty compilation database\n";
 		}
-	});
-
-	compileDatabase << "]";
-
-	String db = compileDatabase.str();
-
-	auto val = data::read<Interface>(db);
-	if (val.isArray() && val.size() > 0) {
+	} else if (args.getString(1) == "make-stub") {
+		SymbolsInfo info;
 		auto outdir = filesystem::currentDir<Interface>("out");
-		filesystem::mkdir(outdir);
-
-		auto compilationRoot = val.getValue(0).getString("directory");
-
-		auto dbFile = filepath::merge<Interface>(outdir, "compile_commands.json");
-
-		filesystem::remove(dbFile);
-
-		data::save(val, dbFile, data::EncodeFormat::Pretty);
-
-		ParserStruct parser(outdir, compilationRoot);
-
-		return 0;
-	} else {
+		filesystem::ftw(outdir, [&] (StringView path, bool isFile) {
+			if (isFile) {
+				if (filepath::lastExtension(path) == "json") {
+					auto val = data::readFile<Interface>(path);
+					if (val.isDictionary() && val.getString("_kind") == "file") {
+						writeStub(outdir, info, val);
+					}
+				}
+			}
+		});
 		return 0;
 	}
+
+	return -1;
 }
 
 }

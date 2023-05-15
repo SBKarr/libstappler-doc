@@ -90,6 +90,17 @@ Value serializeEntity(const index_t &index, const cppast::cpp_entity &);
 void writeExpression(StringStream &output, const cppast::cpp_expression& expr);
 void writeType(StringStream& output, const cppast::cpp_type &type, bool is_variadic = false);
 
+struct SymbolInfo {
+	String name;
+	String access;
+};
+
+struct SymbolsInfo {
+	Map<String, Vector<SymbolInfo>> names;
+};
+
+void writeStub(StringView out, SymbolsInfo &, const Value &);
+
 }
 
 #endif /* SRC_SERIALIZE_H_ */

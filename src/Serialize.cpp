@@ -240,6 +240,10 @@ Value serializeReference(const index_t &index, const cppast::cpp_type_ref &ref) 
 Value serializeType(const index_t &index, const cppast::cpp_type &type) {
 	Value ret;
 
+	StringStream out;
+	writeType(out, type, false);
+	ret.setString(out.str(), "_typeName");
+
 	using namespace cppast;
 	switch (type.kind()) {
 	case cpp_type_kind::builtin_t:
