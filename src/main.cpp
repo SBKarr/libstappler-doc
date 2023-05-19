@@ -433,6 +433,37 @@ SP_EXTERN_C int main(int argc, const char * argv[]) {
 			}
 		});
 		return 0;
+	} else if (args.getString(1) == "make-map") {
+		SymbolsInfo info;
+		auto outdir = filesystem::currentDir<Interface>("out");
+		filesystem::ftw(outdir, [&] (StringView path, bool isFile) {
+			if (isFile) {
+				if (filepath::lastExtension(path) == "json") {
+					auto val = data::readFile<Interface>(path);
+					if (val.isDictionary() && val.getString("_kind") == "file") {
+						writeMap(info, val);
+					}
+				}
+			}
+		});
+
+		Value out;
+		Value &forward = out.emplace("forward");
+		Value &reverse = out.emplace("reverse");
+		for (auto &it : info.names) {
+			auto &f = forward.emplace(it.first);
+			for (auto &iit : it.second) {
+				f.addString(iit.name);
+				reverse.setString(it.first, iit.name);
+			}
+		}
+
+		auto path = toString(outdir, "/map.json");
+		filesystem::remove(path);
+
+		data::save(out, path, data::EncodeFormat::Pretty);
+
+		return 0;
 	}
 
 	return -1;

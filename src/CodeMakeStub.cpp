@@ -178,4 +178,23 @@ void writeStub(StringView out, SymbolsInfo &info, const Value &val) {
 	filesystem::write(filepath, outData.str());
 }
 
+void writeMap(SymbolsInfo &info, const Value &val) {
+	auto name = val.getString("name");
+	auto fname = filepath::lastComponent(name);
+
+	auto it = info.names.find(fname);
+	if (it == info.names.end()) {
+		String str = fname.str<Interface>();
+		it = info.names.emplace(str, Vector<SymbolInfo>()).first;
+	}
+
+	std::cout << name << "\n";
+
+	StringStream outData;
+	String access;
+	for (auto &child : val.getArray("childs")) {
+		processValue(it->second, "::", access, child, outData);
+	}
+}
+
 }

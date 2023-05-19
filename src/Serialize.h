@@ -100,6 +100,7 @@ struct SymbolsInfo {
 };
 
 void writeStub(StringView out, SymbolsInfo &, const Value &);
+void writeMap(SymbolsInfo &, const Value &);
 
 }
 
