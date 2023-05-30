@@ -23,8 +23,7 @@
 #ifndef SRC_SERIALIZE_H_
 #define SRC_SERIALIZE_H_
 
-#include "SPCommon.h"
-#include "SPData.h"
+#include "SPMemory.h"
 
 #include <cppast/code_generator.hpp> // code_generator, generate_code()
 #include <cppast/visitor.hpp>        // visit()
@@ -57,7 +56,7 @@
 
 namespace stappler::doc {
 
-using namespace mem_std;
+using namespace stappler::mem_std;
 
 struct IndexData {
 	Vector<String> context;

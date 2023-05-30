@@ -367,7 +367,7 @@ SP_EXTERN_C int main(int argc, const char * argv[]) {
 	if (opts.hasValue("root")) {
 		root = opts.getString("root");
 	} else {
-		root = filesystem::currentDir<Interface>();
+		root = filesystem::currentDir<Interface>("sample");
 	}
 
 	if (root.front() != '/') {
@@ -405,7 +405,8 @@ SP_EXTERN_C int main(int argc, const char * argv[]) {
 			auto outdir = filesystem::currentDir<Interface>("out");
 			filesystem::mkdir(outdir);
 
-			auto compilationRoot = val.getValue(0).getString("directory");
+			auto compilationRoot = filesystem::currentDir<Interface>();
+			compilationRoot = filepath::root(compilationRoot).str<Interface>();
 
 			auto dbFile = filepath::merge<Interface>(outdir, "compile_commands.json");
 
