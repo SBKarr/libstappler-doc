@@ -728,7 +728,6 @@ Value serializeEntity(const index_t &index, const cppast::cpp_entity &e) {
 	Value ret;
 	ret.setString(e.name(), "name");
 	ret.setString(cppast::to_string(e.kind()), "kind");
-	ret.setInteger(uintptr_t(&e), "id");
 
 	using namespace cppast;
 
@@ -766,6 +765,29 @@ Value serializeEntity(const index_t &index, const cppast::cpp_entity &e) {
 		if (it == index.names.end()) {
 			index.names.emplace(fullName, target);
 		}
+
+		auto hash = int64_t(hash::hash32(fullName.data(), fullName.size())) | (int64_t(toInt(e.kind())) >> 32LL);
+		auto hashIt = index.hashNames.find(hash);
+		if (hashIt == index.hashNames.end()) {
+			index.hashNames.emplace(hash, fullName);
+		} else if (hashIt->second != fullName) {
+			std::cout << "Duplicate hash: " << hash << " " << fullName << "\n";
+		}
+
+		ret.setInteger(hash, "id");
+	} else {
+		fullName = e.name();
+
+		auto hash = int64_t(hash::hash32(fullName.data(), fullName.size())) | (int64_t(toInt(e.kind())) >> 32LL);
+		auto hashIt = index.hashNames.find(hash);
+		if (hashIt == index.hashNames.end()) {
+			index.hashNames.emplace(hash, fullName);
+		} else if (hashIt->second != fullName) {
+			std::cout << "Duplicate hash: " << hash << " " << fullName << "\n";
+		}
+
+		ret.setString(e.name(), "_fullName");
+		ret.setInteger(hash, "id");
 	}
 
 	// extra field for human readability

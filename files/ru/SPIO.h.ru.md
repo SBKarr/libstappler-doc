@@ -1,160 +1,204 @@
 Title: SPIO.h
 
 
-# LIBSTAPPLER_COMMON_IO_SPIO_H_
+# STAPPLER_CORE_IO_SPIO_H_
 
 ## BRIEF
 
+Макрос защиты заголовка
+
 ## CONTENT
+
+Макрос защиты заголовка
 
 
 # ::stappler::io::read(stappler::io::Producer const&,Callback<void (const stappler::io::Buffer &)> const&)
 
 ## BRIEF
 
+Функция чтения данных из породителя с использованием внутреннего буфера
+
 ## CONTENT
 
+Функция чтения данных из породителя с использованием внутреннего буфера. Функция читает из объекта-породителя данных с использованием внутреннего стекового буфера. Как только буфер заполняется - вызывается переданная функция. Вызов завершается, когда объект полностью прочитан.
+
 Параметры:
-* stappler::io::Producer const&
-* Callback<void (const stappler::io::Buffer &)> const&
+* stappler::io::Producer const& - объект-породитель, из которого нужно читать данные
+* Callback<void (const stappler::io::Buffer &)> const& - функция, вызываемая при заполнении буфера. Используйте функции `data` и `size` буфера, чтобы получить доступ к записанным данным.
 
 Возвращает:
-* size_t
+* size_t - число прочитанных байт
 
 # ::stappler::io::read(stappler::io::Producer const&,stappler::io::Buffer const&,Callback<void (const stappler::io::Buffer &)> const&)
 
 ## BRIEF
 
+Функция чтения данных из породителя с использованием пользовательского буфера
+
 ## CONTENT
 
+Функция чтения данных из породителя с использованием пользовательского буфера. Функция читает из объекта-породителя данных с использованием пользовательского буфера. Как только буфер заполняется - вызывается переданная функция. Вызов завершается, когда объект полностью прочитан.
+
 Параметры:
-* stappler::io::Producer const&
-* stappler::io::Buffer const&
-* Callback<void (const stappler::io::Buffer &)> const&
+* stappler::io::Producer const& - объект-породитель, из которого нужно читать данные
+* stappler::io::Buffer const& - пользовательский буфер, в который читать
+* Callback<void (const stappler::io::Buffer &)> const& - функция, вызываемая при заполнении буфера. Используйте функции `data` и `size` буфера, чтобы получить доступ к записанным данным.
 
 Возвращает:
-* size_t
+* size_t - число прочитанных байт
 
 # ::stappler::io::read(stappler::io::Producer const&,stappler::io::Consumer const&)
 
 ## BRIEF
 
+Функция чтения данных из породителя в потребителя с использованием внутреннего буфера
+
 ## CONTENT
 
+Функция чтения данных из породителя в потребителя с использованием внутреннего буфера. При заполнении внутреннего буфера вызываются соотвествующие функции потребителя. Вызов завершается, когда объект полностью прочитан.
+
 Параметры:
-* stappler::io::Producer const&
-* stappler::io::Consumer const&
+* stappler::io::Producer const& - объект-породитель
+* stappler::io::Consumer const& - объект-потребитель
 
 Возвращает:
-* size_t
+* size_t - число прочитанных байт
 
 # ::stappler::io::read(stappler::io::Producer const&,stappler::io::Consumer const&,Callback<void (const stappler::io::Buffer &)> const&)
 
 ## BRIEF
 
+Функция чтения данных из породителя в потребителя с использованием внутреннего буфера
+
 ## CONTENT
 
+Функция чтения данных из породителя в потребителя с использованием внутреннего буфера. При заполнении внутреннего буфера вызываются соотвествующие функции потребителя. Вызов завершается, когда объект полностью прочитан. Дополнительно, вызывает пользовательскую функцию, когда буфер заполняется, до передачи буфера потребителю.
+
 Параметры:
-* stappler::io::Producer const&
-* stappler::io::Consumer const&
-* Callback<void (const stappler::io::Buffer &)> const&
+* stappler::io::Producer const& - объект-породитель
+* stappler::io::Consumer const& - объект-потребитель
+* Callback<void (const stappler::io::Buffer &)> const& - функция вызывается при заполнении буфера, до того, как данные переданы потребителю
 
 Возвращает:
-* size_t
+* size_t - число прочитанных байт
 
 # ::stappler::io::read(stappler::io::Producer const&,stappler::io::Consumer const&,stappler::io::Buffer const&)
 
 ## BRIEF
 
+Функция чтения данных из породителя в потребителя с использованием пользовательского буфера
+
 ## CONTENT
 
+Функция чтения данных из породителя в потребителя с использованием пользовательского буфера. При заполнении пользовательского буфера вызываются соотвествующие функции потребителя. Вызов завершается, когда объект полностью прочитан.
+
 Параметры:
-* stappler::io::Producer const&
-* stappler::io::Consumer const&
-* stappler::io::Buffer const&
+* stappler::io::Producer const& - объект-породитель
+* stappler::io::Consumer const& - объект-потребитель
+* stappler::io::Buffer const& - пользовательский буфер
 
 Возвращает:
-* size_t
+* size_t - число прочитанных байт
 
 # ::stappler::io::read(stappler::io::Producer const&,stappler::io::Consumer const&,stappler::io::Buffer const&,Callback<void (const stappler::io::Buffer &)> const&)
 
 ## BRIEF
 
+Функция чтения данных из породителя в потребителя с использованием пользовательского буфера
+
 ## CONTENT
 
+Функция чтения данных из породителя в потребителя с использованием пользовательского буфера. При заполнении пользовательского буфера вызываются соотвествующие функции потребителя. Вызов завершается, когда объект полностью прочитан. Дополнительно, вызывает пользовательскую функцию, когда буфер заполняется, до передачи буфера потребителю.
+
 Параметры:
-* stappler::io::Producer const&
-* stappler::io::Consumer const&
-* stappler::io::Buffer const&
-* Callback<void (const stappler::io::Buffer &)> const&
+* stappler::io::Producer const& - объект-породитель
+* stappler::io::Consumer const& - объект-потребитель
+* stappler::io::Buffer const& - пользовательский буфер
+* Callback<void (const stappler::io::Buffer &)> const& - функция вызывается при заполнении буфера, до того, как данные переданы потребителю
 
 Возвращает:
-* size_t
+* size_t - число прочитанных байт
 
 # ::stappler::io::tread<typename>(stappler::io::Producer const&,T const&)
 
 ## BRIEF
 
+Функция чтения данных из породителя с использованием внутреннего буфера
+
 ## CONTENT
 
+Функция чтения данных из породителя с использованием внутреннего буфера. Функция читает из объекта-породителя данных с использованием внутреннего стекового буфера. Как только буфер заполняется - вызывается переданный функтор. Вызов завершается, когда объект полностью прочитан. В качестве цели обратного вызова используется шаблонная переменная.
+
 Параметры шаблона:
-* typename T
+* typename T - тип для обратного вызова, должен быть вызываем по сигнатуре `void(const stappler::io::Buffer &)`
 
 Параметры:
-* stappler::io::Producer const&
-* T const&
+* stappler::io::Producer const& - объект-породитель
+* T const& - функтор для обратного вызова
 
 Возвращает:
-* size_t
+* size_t - число прочитанных байт
 
 # ::stappler::io::tread<typename>(stappler::io::Producer const&,stappler::io::Buffer const&,T const&)
 
 ## BRIEF
 
+Функция чтения данных из породителя с использованием пользовательского буфера
+
 ## CONTENT
 
+Функция чтения данных из породителя с использованием пользовательского буфера. Функция читает из объекта-породителя данных с использованием пользовательского буфера. Как только буфер заполняется - вызывается переданный функтор. Вызов завершается, когда объект полностью прочитан. В качестве цели обратного вызова используется шаблонная переменная.
+
 Параметры шаблона:
-* typename T
+* typename T - тип для обратного вызова, должен быть вызываем по сигнатуре `void(const stappler::io::Buffer &)`
 
 Параметры:
-* stappler::io::Producer const&
-* stappler::io::Buffer const&
-* T const&
+* stappler::io::Producer const& - объект-породитель
+* stappler::io::Buffer const& - пользовательский буфер
+* T const& - функтор для обратного вызова
 
 Возвращает:
-* size_t
+* size_t - число прочитанных байт
 
 # ::stappler::io::tread<typename>(stappler::io::Producer const&,stappler::io::Consumer const&,T const&)
 
 ## BRIEF
 
+Функция чтения данных из породителя в потребителя с использованием внутреннего буфера
+
 ## CONTENT
 
+Функция чтения данных из породителя в потребителя с использованием внутреннего буфера. При заполнении внутреннего буфера вызываются соотвествующие функции потребителя. Вызов завершается, когда объект полностью прочитан. Дополнительно, вызывает пользовательский функтор, когда буфер заполняется, до передачи буфера потребителю.
+
 Параметры шаблона:
-* typename T
+* typename T - тип для обратного вызова, должен быть вызываем по сигнатуре `void(const stappler::io::Buffer &)`
 
 Параметры:
-* stappler::io::Producer const&
-* stappler::io::Consumer const&
-* T const&
+* stappler::io::Producer const& - объект-породитель
+* stappler::io::Consumer const& - объект-потребитель
+* T const& - функтор для обратного вызова
 
 Возвращает:
-* size_t
+* size_t - число прочитанных байт
 
 # ::stappler::io::tread<typename>(stappler::io::Producer const&,stappler::io::Consumer const&,stappler::io::Buffer const&,T const&)
 
 ## BRIEF
 
+Функция чтения данных из породителя в потребителя с использованием пользовательского буфера
+
 ## CONTENT
 
+Функция чтения данных из породителя в потребителя с использованием пользовательского буфера. При заполнении внутреннего буфера вызываются соотвествующие функции потребителя. Вызов завершается, когда объект полностью прочитан. Дополнительно, вызывает пользовательский функтор, когда буфер заполняется, до передачи буфера потребителю.
+
 Параметры шаблона:
-* typename T
+* typename T - тип для обратного вызова, должен быть вызываем по сигнатуре `void(const stappler::io::Buffer &)`
 
 Параметры:
-* stappler::io::Producer const&
-* stappler::io::Consumer const&
-* stappler::io::Buffer const&
-* T const&
+* stappler::io::Producer const& - объект-породитель
+* stappler::io::Consumer const& - объект-потребитель
+* stappler::io::Buffer const& - пользователський буфер
+* T const& - функтор для обратного вызова
 
 Возвращает:
-* size_t
+* size_t - число прочитанных байт

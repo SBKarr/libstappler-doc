@@ -63,6 +63,7 @@ struct IndexData {
 	cppast::cpp_entity_index index;
 
 	mutable Map<String, const cppast::cpp_entity *> names;
+	mutable Map<uint32_t, String> hashNames;
 
 	String getFullName(const cppast::cpp_entity &) const;
 };
@@ -98,8 +99,22 @@ struct SymbolsInfo {
 	Map<String, Vector<SymbolInfo>> names;
 };
 
+struct DocSymbolInfo {
+	String name;
+	String brief;
+	String content;
+	bool validated = false;
+};
+
+struct DocSymbolTable {
+	Map<String, DocSymbolInfo> symbols;
+};
+
 void writeStub(StringView out, SymbolsInfo &, const Value &);
 void writeMap(SymbolsInfo &, const Value &);
+
+void readDocSymbolTable(DocSymbolTable &, StringView);
+void readSymbols(const Value &, const Callback<void(DocSymbolInfo &)> &);
 
 }
 

@@ -270,7 +270,7 @@ struct ParserStruct {
 		if (ext == "h" || ext == "hpp") {
 			auto subpath = StringView(fullpath).sub(libraryRoot.size());
 			// todo: this should be toolkit profile
-			if (subpath.starts_with("/common") || subpath.starts_with("/modules")) {
+			if (!subpath.starts_with("/core/thirdparty") && !subpath.starts_with("/deps")) {
 				return true;
 			}
 		}
@@ -278,7 +278,8 @@ struct ParserStruct {
 	}
 
 	void processIncludes(const cppast::libclang_compile_config &config, const cppast::cpp_file &file) {
-		if (filepath::lastExtension(file.name()) == "cpp" || filepath::lastExtension(file.name()) == "cc" || filepath::lastExtension(file.name()) == "h") {
+		if (filepath::lastExtension(file.name()) == "cpp" || filepath::lastExtension(file.name()) == "cc"
+				|| filepath::lastExtension(file.name()) == "h") {
 			for (auto &entity : file) {
 				if (entity.kind() == cppast::cpp_include_directive::kind()) {
 					auto &include = static_cast<const cppast::cpp_include_directive&>(entity);
@@ -464,6 +465,81 @@ SP_EXTERN_C int main(int argc, const char * argv[]) {
 
 		data::save(out, path, data::EncodeFormat::Pretty);
 
+		return 0;
+	} else if (args.getString(1) == "validate-doc") {
+		auto mdPath = args.getString(2);
+		auto jsonPath = args.getString(3);
+
+		if (mdPath.empty() || jsonPath.empty()) {
+			return -1;
+		}
+
+		auto mdPathStr = filesystem::currentDir<Interface>(mdPath);
+		auto jsonPathStr = filesystem::currentDir<Interface>(jsonPath);
+
+		SymbolsInfo info;
+
+		size_t totalSymbols = 0;
+		size_t notFoundSymbols = 0;
+		size_t definedSymbols = 0;
+		size_t undefinedSymbols = 0;
+		size_t extraSymbols = 0;
+
+		filesystem::ftw(mdPathStr, [&] (StringView path, bool isFile) {
+			auto name = filepath::lastComponent(path);
+			if (name.ends_with(".ru.md")) {
+				name = filepath::name(path);
+				auto dataFile = toString(jsonPathStr, "/", name, ".json");
+
+				DocSymbolTable table;
+				auto mdData = filesystem::readTextFile<Interface>(path);
+
+				readDocSymbolTable(table, mdData);
+
+				if (filesystem::exists(dataFile)) {
+					auto val = data::readFile<Interface>(dataFile);
+
+					readSymbols(val, [&] (DocSymbolInfo &info) {
+						++ totalSymbols;
+						auto it = table.symbols.find(info.name);
+						if (it == table.symbols.end()) {
+							++ notFoundSymbols;
+							std::cout << name << ": Symbol not found in documentation: " << info.name << "\n";
+							std::cout << "++++++++++++ Stub block:\n";
+							std::cout << "# " << info.name << "\n\n## BRIEF\n\n## CONTENT\n\n" << info.content << "\n";
+							std::cout << "++++++++++++ End stub block\n";
+						} else {
+							it->second.validated = true;
+							if (it->second.content.size() > info.content.size() && it->second.brief.size() > info.brief.size()) {
+								++ definedSymbols;
+								if (verbose) {
+									std::cout << name << ": Symbol defined in documentation: " << info.name << "\n";
+								}
+							} else {
+								++ undefinedSymbols;
+								if (verbose) {
+									std::cout << name << ": Symbol NOT defined in documentation: " << info.name << "\n";
+								}
+							}
+						}
+					});
+
+					for (auto &it : table.symbols) {
+						if (!it.second.validated) {
+							++ extraSymbols;
+							std::cout << name << ": EXTRA Symbol defined: " << it.second.name << "\n";
+						}
+					}
+				}
+			}
+		});
+
+		std::cout << "Total:\n"
+				"\tSymbols: " << totalSymbols << "\n"
+				"\tNot found: " << notFoundSymbols << "\n"
+				"\tUndefined: " << undefinedSymbols << "\n"
+				"\tExtra: " << extraSymbols << "\n"
+				"\tDefined: " << definedSymbols << "\n";
 		return 0;
 	}
 
