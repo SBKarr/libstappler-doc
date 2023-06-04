@@ -927,11 +927,20 @@ static String getTemplateScopeName(const cppast::cpp_template_template_parameter
 }
 
 template <typename T>
-static String getTemplateScope(const T &tpl) {
+static String getTemplateScope(const T &tpl, size_t nparams = 0) {
+	size_t p = 0;
+	for (auto &it : tpl.parameters()) {
+		++ p;
+	}
+
+	size_t i = 0;
 	StringStream str;
 	str << "<";
 	bool started = false;
 	for (auto &it : tpl.parameters()) {
+		if (i > p - nparams - 1) {
+			break;
+		}
 		if (started) { str << ","; } else { started = true; }
 		using namespace cppast;
 		switch (it.kind()) {
@@ -947,6 +956,8 @@ static String getTemplateScope(const T &tpl) {
 		default:
 			break;
 		}
+
+		++ i;
 	}
 	str << ">";
 	return str.str();
@@ -1017,18 +1028,24 @@ static String getScopeName(const index_t &index, const cppast::cpp_entity &e, co
 
 	case cpp_entity_kind::member_variable_t:
 	case cpp_entity_kind::bitfield_t:
-	case cpp_entity_kind::variable_t:
+	case cpp_entity_kind::variable_t: {
+		auto v = dynamic_cast<const cpp_forward_declarable *>(&e);
+		auto name = e.name();
+		if (v && !v->semantic_scope().empty()) {
+			name = toString(v->semantic_scope(), name);
+		}
 		if (parent && parent->kind() == cpp_entity_kind::variable_template_t) {
-			return toString(e.name(),
+			return toString(name,
 					getTemplateScope(static_cast<const cpp_variable_template &>(*parent)));
 		} else if (auto p = e.parent()) {
 			if (p.value().kind() == cpp_entity_kind::variable_template_t) {
-				return toString(e.name(),
+				return toString(name,
 						getTemplateScope(static_cast<const cpp_variable_template &>(p.value())));
 			}
 		}
-		return e.name();
+		return name;
 		break;
+	}
 
 	case cpp_entity_kind::class_t:
 		if (parent) {
@@ -1056,20 +1073,28 @@ static String getScopeName(const index_t &index, const cppast::cpp_entity &e, co
 	case cpp_entity_kind::conversion_op_t:
 	case cpp_entity_kind::constructor_t:
 	case cpp_entity_kind::destructor_t: {
+		uint32_t semTemplates = 0;
 		auto &fn = static_cast<const cpp_function_base &>(e);
 		StringStream out;
 		if (auto sp = fn.semantic_parent()) {
 			auto candidates = sp.value().get(index.index);
 			if (candidates.size() == 1) {
-				out << getScopeName(index, candidates.front().get()) << "::";
+				auto &candidate = candidates.front().get();
+				out << getScopeName(index, candidate) << "::";
+				if (candidate.kind() == cpp_entity_kind::class_template_t) {
+					auto &tpl = static_cast<const cpp_class_template &>(candidate);
+					for (auto &it : tpl.parameters()) {
+						++ semTemplates;
+					}
+				}
 			}
 		}
 		out << e.name();
 		if (parent && parent->kind() == cpp_entity_kind::function_template_t) {
-			out << getTemplateScope(static_cast<const cpp_function_template &>(*parent));
+			out << getTemplateScope(static_cast<const cpp_function_template &>(*parent), semTemplates);
 		} else if (auto p = e.parent()) {
 			if (p.value().kind() == cpp_entity_kind::function_template_t) {
-				out << getTemplateScope(static_cast<const cpp_function_template &>(p.value()));
+				out << getTemplateScope(static_cast<const cpp_function_template &>(p.value()), semTemplates);
 			}
 		}
 		out << fn.signature();

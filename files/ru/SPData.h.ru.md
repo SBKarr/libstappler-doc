@@ -1,98 +1,96 @@
 Title: SPData.h
 
 
-# MODULES_DATA_SPDATA_H_
+# STAPPLER_DATA_SPDATA_H_
 
 ## BRIEF
 
+Макрос защиты заголовка
+
 ## CONTENT
+
+Макрос защиты заголовка
 
 
 # ::stappler::data::parseCommandLineOptions<typename>(int,char const*[],Callback<int (ValueTemplate<Interface> &, char, const char *)> const&,Callback<int (ValueTemplate<Interface> &, const stappler::StringView &, int, const char **)> const&)
 
 ## BRIEF
 
+Разбирает аргументы командной строки
+
 ## CONTENT
 
+Разбирает аргументы командной строки
+
 Параметры шаблона:
-* typename Interface
+* typename Interface - используемый интерфейс памяти
 
 Параметры:
-* int
-* char const*[]
-* Callback<int (ValueTemplate<Interface> &, char, const char *)> const&
-* Callback<int (ValueTemplate<Interface> &, const stappler::StringView &, int, const char **)> const&
+* int - число аргументов
+* char const*[] - аргументы командной строки
+* Callback<int (ValueTemplate<Interface> &, char, const char *)> const& - функция для разбора символьных ключей
+* Callback<int (ValueTemplate<Interface> &, const stappler::StringView &, int, const char **)> const& - функция для разбора текстовых ключей
 
 Возвращает:
-* ValueTemplate<Interface>
+* ValueTemplate<Interface> - результат разбора
+
+Функция анализирует аргументы последовательно, обрабатывая ключи двух видов:
+
+-C - символьные аргументы. Символьные аргументы могут быть упакованы в одну строку (например, -abc вместо -a -b -c). Если символ был разобран - нужно вернуть 1 из функции. Дополнительный аргумент - указатель на текущее положени в разбираемой строке. С его помощью можно разобрать больше одного символа. В таком случае, из функции нужно вернуть число разобранных символов.
+
+--string - строковые аргументы. Такие аргументы читаются всей строкой. Если аргумент разобран - нужно вернуть 1 из функции. Дополнительный аргумент - текущее состояние разбора аргументов, где указатель указывает на текущую строку. С его помощью можно разобрать больше, чем одну строку. В таком случае, нужно вернуть число разобранных строк.
+
+В ходе разбора данные сохраняются в результирующие значение. Не разобранные строки и строки без ключей добавляются в массив с именем `args` внутри этого значения.
 
 # ::stappler::data::parseCommandLineOptions<typename>(int,char16_t const*[],Callback<int (ValueTemplate<Interface> &, char, const char *)> const&,Callback<int (ValueTemplate<Interface> &, const stappler::StringView &, int, const char **)> const&)
 
 ## BRIEF
 
+Разбирает аргументы командной строки
+
 ## CONTENT
 
+Разбирает аргументы командной строки
+
 Параметры шаблона:
-* typename Interface
+* typename Interface - используемый интерфейс памяти
 
 Параметры:
-* int
-* char16_t const*[]
-* Callback<int (ValueTemplate<Interface> &, char, const char *)> const&
-* Callback<int (ValueTemplate<Interface> &, const stappler::StringView &, int, const char **)> const&
+* int - число аргументов
+* char16_t const*[] - аргументы командной строки
+* Callback<int (ValueTemplate<Interface> &, char, const char *)> const& - функция для разбора символьных ключей
+* Callback<int (ValueTemplate<Interface> &, const stappler::StringView &, int, const char **)> const& - функция для разбора текстовых ключей
 
 Возвращает:
-* ValueTemplate<Interface>
+* ValueTemplate<Interface> - результат разбора
+
+Функция анализирует аргументы последовательно, обрабатывая ключи двух видов:
+
+-C - символьные аргументы. Символьные аргументы могут быть упакованы в одну строку (например, -abc вместо -a -b -c). Если символ был разобран - нужно вернуть 1 из функции. Дополнительный аргумент - указатель на текущее положени в разбираемой строке. С его помощью можно разобрать больше одного символа. В таком случае, из функции нужно вернуть число разобранных символов.
+
+--string - строковые аргументы. Такие аргументы читаются всей строкой. Если аргумент разобран - нужно вернуть 1 из функции. Дополнительный аргумент - текущее состояние разбора аргументов, где указатель указывает на текущую строку. С его помощью можно разобрать больше, чем одну строку. В таком случае, нужно вернуть число разобранных строк.
+
+В ходе разбора данные сохраняются в результирующие значение. Не разобранные строки и строки без ключей добавляются в массив с именем `args` внутри этого значения.
 
 # ::stappler::data::readUrlencoded<typename>(stappler::StringView,size_t,size_t)
 
 ## BRIEF
 
-## CONTENT
-
-Параметры шаблона:
-* typename Interface
-
-Параметры:
-* stappler::StringView
-* size_t
-* size_t
-
-Возвращает:
-* data::ValueTemplate<Interface>
-
-# ::stappler::data::parseCommandLineOptions<typename>(int,char const*[],Callback<int (ValueTemplate<Interface> &, char, const char *)> const&,Callback<int (ValueTemplate<Interface> &, const stappler::StringView &, int, const char **)> const&)
-
-## BRIEF
+Читает аргументы, закодированные в строку url, и формат x-www-urlencoded в целом.
 
 ## CONTENT
 
-Параметры шаблона:
-* typename Interface
-
-Параметры:
-* int
-* char const*[]
-* Callback<int (ValueTemplate<Interface> &, char, const char *)> const&
-* Callback<int (ValueTemplate<Interface> &, const stappler::StringView &, int, const char **)> const&
-
-Возвращает:
-* ValueTemplate<Interface>
-
-# ::stappler::data::parseCommandLineOptions<typename>(int,char16_t const*[],Callback<int (ValueTemplate<Interface> &, char, const char *)> const&,Callback<int (ValueTemplate<Interface> &, const stappler::StringView &, int, const char **)> const&)
-
-## BRIEF
-
-## CONTENT
+Читает аргументы, закодированные в строку url, и формат x-www-urlencoded в целом.
 
 Параметры шаблона:
-* typename Interface
+* typename Interface - используемый интерфейс памяти
 
 Параметры:
-* int
-* char16_t const*[]
-* Callback<int (ValueTemplate<Interface> &, char, const char *)> const&
-* Callback<int (ValueTemplate<Interface> &, const stappler::StringView &, int, const char **)> const&
+* stappler::StringView - исходная строка
+* size_t - максимальная длина строки разбора
+* size_t - масимальная длина одной переменной в строке
 
 Возвращает:
-* ValueTemplate<Interface>
+* data::ValueTemplate<Interface> - результирующие значение
+
+Функция разбирает как простые переменные (`name=value`), так и массивы (`name[]=value`), в том числе ассоциативные (`name[subname]=value`)

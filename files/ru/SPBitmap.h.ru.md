@@ -427,7 +427,7 @@ Title: SPBitmap.h
 Возвращает:
 * bool - успешность операции
 
-# ::stappler::bitmap::BitmapTemplate<typename>::convertWithTarget(uint8_t*,stappler::bitmap::PixelFormat,stappler::bitmap::StrideFn const&)
+# ::stappler::bitmap::BitmapTemplate<typename>::convertWithTarget(uint8_t*,stappler::bitmap::PixelFormat,stappler::bitmap::StrideFn const&) const
 
 ## BRIEF
 

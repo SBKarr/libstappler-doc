@@ -778,80 +778,110 @@ Title: SPGeometry.h
 
 ## BRIEF
 
+Структура целочисленного трёхмерного размера - ширины, высоты и глубины
+
 ## CONTENT
 
+Структура целочисленного трёхмерного размера - ширины, высоты и глубины
 
 # ::stappler::geom::Extent3::ZERO
 
 ## BRIEF
 
+Статический нулевой размер
+
 ## CONTENT
 
 Тип: stappler::geom::Extent3 const
 
+Статический нулевой размер
 
 # ::stappler::geom::Extent3::width
 
 ## BRIEF
 
+Значение ширины
+
 ## CONTENT
 
 Тип: uint32_t
 
+Значение ширины
 
 # ::stappler::geom::Extent3::height
 
 ## BRIEF
 
+Значение высоты
+
 ## CONTENT
 
 Тип: uint32_t
 
+Значение высоты
 
 # ::stappler::geom::Extent3::depth
 
 ## BRIEF
 
+Значение глубины
+
 ## CONTENT
 
 Тип: uint32_t
 
+Значение глубины
 
 # ::stappler::geom::Extent3::Extent3()
 
 ## BRIEF
 
+Конструктор по умолчанию
+
 ## CONTENT
 
+Конструктор по умолчанию, создаёт нулевой размер
 
 # ::stappler::geom::Extent3::Extent3(uint32_t,uint32_t,uint32_t)
 
 ## BRIEF
 
+Поэлементный конструктор
+
 ## CONTENT
 
+Поэлементный конструктор
+
 Параметры:
-* uint32_t
-* uint32_t
-* uint32_t
+* uint32_t - ширина
+* uint32_t - высота
+* uint32_t - глубина
 
 
 # ::stappler::geom::Extent3::Extent3(stappler::geom::Extent2,uint32_t)
 
 ## BRIEF
 
+Поэлементный конструктор
+
 ## CONTENT
 
+Поэлементный конструктор
+
 Параметры:
-* stappler::geom::Extent2
-* uint32_t
+* stappler::geom::Extent2 - двумерный разме с шириной и высотой
+* uint32_t - глубина
 
 
 # ::stappler::geom::Extent3::Extent3(stappler::geom::Extent3 const&)
 
 ## BRIEF
 
+Конструктор копирования
+
 ## CONTENT
+
+Конструктор копирования по умолчанию
 
 Параметры:
 * stappler::geom::Extent3 const&
@@ -861,109 +891,149 @@ Title: SPGeometry.h
 
 ## BRIEF
 
+Оператор копирования
+
 ## CONTENT
+
+Оператор копирования по умолчанию
 
 Параметры:
 * stappler::geom::Extent3 const&
 
 Возвращает:
-* stappler::geom::Extent3&
+* stappler::geom::Extent3& - ссылка на себя
 
 # ::stappler::geom::Extent3::Extent3(stappler::geom::Extent2 const&)
 
 ## BRIEF
 
+Конструктор из двумерного размера
+
 ## CONTENT
 
+Конструктор из двумерного размера, глубина инициализируется в единицу (1). Поведение обусловлено конвертацией одиночного двумерного изображения в массив изображений
+
 Параметры:
-* stappler::geom::Extent2 const&
+* stappler::geom::Extent2 const& - двумерный размер с шириной и высотой
 
 
 # ::stappler::geom::Extent3::operator=(stappler::geom::Extent2 const&)
 
 ## BRIEF
 
+Копирование из двумерного размера
+
 ## CONTENT
 
+Копирование из двумерного размера, глубина инициализируется в единицу (1). Поведение обусловлено конвертацией одиночного двумерного изображения в массив изображений.
+
 Параметры:
-* stappler::geom::Extent2 const&
+* stappler::geom::Extent2 const& - двумерный размер с шириной и высотой
 
 Возвращает:
-* stappler::geom::Extent3&
+* stappler::geom::Extent3& - ссылка на себя
 
 # ::stappler::geom::Extent3::Extent3(stappler::geom::Size3 const&)
 
 ## BRIEF
 
+Конструктор из нецелочисленного размера
+
 ## CONTENT
 
+Конструктор из нецелочисленного размера. Обрезает нецелочисленные значения платформозависимым способом. Для достижения стабильности используйте ручное округление и покомпонентный конструктор.
+
 Параметры:
-* stappler::geom::Size3 const&
+* stappler::geom::Size3 const& - нецелочисленный размер
 
 
 # ::stappler::geom::Extent3::Extent3(stappler::geom::Vec3 const&)
 
 ## BRIEF
 
+Конструктор из нецелочисленной точки
+
 ## CONTENT
 
+Конструктор из нецелочисленного точки. Обрезает нецелочисленные значения платформозависимым способом. Для достижения стабильности используйте ручное округление и покомпонентный конструктор.
+
 Параметры:
-* stappler::geom::Vec3 const&
+* stappler::geom::Vec3 const& - вектор, интерпретируемый как точка в трёхмерном пространстве
 
 
 # ::stappler::geom::Extent3::operator=(stappler::geom::Size3 const&)
 
 ## BRIEF
 
+Копирование из нецелочисленного размера
+
 ## CONTENT
 
+Копирование из нецелочисленного размера. Обрезает нецелочисленные значения платформозависимым способом. Для достижения стабильности используйте ручное округление и покомпонентный конструктор.
+
 Параметры:
-* stappler::geom::Size3 const&
+* stappler::geom::Size3 const& - нецелочисленный размер
 
 Возвращает:
-* stappler::geom::Extent3&
+* stappler::geom::Extent3& - ссылка на себя
 
 # ::stappler::geom::Extent3::operator=(stappler::geom::Vec3 const&)
 
 ## BRIEF
 
+Копирование из нецелочисленной точки
+
 ## CONTENT
 
+Копирование из нецелочисленной точки. Обрезает нецелочисленные значения платформозависимым способом. Для достижения стабильности используйте ручное округление и покомпонентный конструктор.
+
 Параметры:
-* stappler::geom::Vec3 const&
+* stappler::geom::Vec3 const& - вектор, интерпретируемый как точка в трёхмерном пространстве
 
 Возвращает:
-* stappler::geom::Extent3&
+* stappler::geom::Extent3& - ссылка на себя
 
 # ::stappler::geom::Extent3::operator==(stappler::geom::Extent3 const&) const
 
 ## BRIEF
 
+Сравнивает два размера
+
 ## CONTENT
+
+Сравнивает два размера
 
 Параметры:
 * stappler::geom::Extent3 const&
 
 Возвращает:
-* bool
+* bool - true если размеры совпадают
 
 # ::stappler::geom::Extent3::operator!=(stappler::geom::Extent3 const&) const
 
 ## BRIEF
 
+Сравнивает два размера
+
 ## CONTENT
+
+Сравнивает два размера
 
 Параметры:
 * stappler::geom::Extent3 const&
 
 Возвращает:
-* bool
+* bool - true если размеры не совпадают
 
 # ::stappler::geom::Extent3::operator<=>(stappler::geom::Extent3 const&) const
 
 ## BRIEF
 
+Сравнивает два размера
+
 ## CONTENT
+
+Сравнивает два размера, автоматически порождает код, необходимый для лексикографического сравнения размеров
 
 Параметры:
 * stappler::geom::Extent3 const&
@@ -975,90 +1045,113 @@ Title: SPGeometry.h
 
 ## BRIEF
 
+Конвертирует целочисленный размер в нецелочисленный
+
 ## CONTENT
+
+Конвертирует целочисленный размер в нецелочисленный
 
 Возвращает:
-* stappler::geom::Size3
-
-# ::stappler::geom::ZERO
-
-## BRIEF
-
-## CONTENT
-
-Тип: stappler::geom::Extent3 const
+* stappler::geom::Size3 - соотвествующий нецелочисленный размер
 
 
 # ::stappler::geom::Rect
 
 ## BRIEF
 
+Структура прямоугольника
+
 ## CONTENT
 
+Структура прямоугольника, определённого через исходную точку и положительный размер. Использование отрицательного размера ведёт к ошибкам.
 
 # ::stappler::geom::Rect::ZERO
 
 ## BRIEF
 
+Статический нулевой прямоугольник
+
 ## CONTENT
 
 Тип: stappler::geom::Rect const
 
+Статический нулевой прямоугольник, все компоненты равны нулю
 
 # ::stappler::geom::Rect::origin
 
 ## BRIEF
 
+Исходная точка прямоугольника
+
 ## CONTENT
 
 Тип: stappler::geom::Vec2
 
+Исходная точка прямоугольника
 
 # ::stappler::geom::Rect::size
 
 ## BRIEF
 
+Размер прямоугольника
+
 ## CONTENT
 
 Тип: stappler::geom::Size2
 
+Размер прямоугольника
 
 # ::stappler::geom::Rect::Rect()
 
 ## BRIEF
 
+Конструктор по умолчанию
+
 ## CONTENT
 
+Конструктор по умолчанию, создаёт нулевой прямоугольник
 
 # ::stappler::geom::Rect::Rect(float,float,float,float)
 
 ## BRIEF
 
+Покомпонентный конструктор
+
 ## CONTENT
 
+Покомпонентный конструктор
+
 Параметры:
-* float
-* float
-* float
-* float
+* float - x
+* float - y
+* float - ширина
+* float - высота
 
 
 # ::stappler::geom::Rect::Rect(stappler::geom::Vec2 const&,stappler::geom::Size2 const&)
 
 ## BRIEF
 
+Покомпонентный конструктор
+
 ## CONTENT
 
+Покомпонентный конструктор
+
 Параметры:
-* stappler::geom::Vec2 const&
-* stappler::geom::Size2 const&
+* stappler::geom::Vec2 const& - исходная точка прямоугольника
+* stappler::geom::Size2 const& - размер прямоугольника
 
 
 # ::stappler::geom::Rect::Rect(stappler::geom::Rect const&)
 
 ## BRIEF
 
+Конструктор копирования
+
 ## CONTENT
+
+Конструктор копирования по умолчанию
 
 Параметры:
 * stappler::geom::Rect const&
@@ -1068,369 +1161,497 @@ Title: SPGeometry.h
 
 ## BRIEF
 
+Оператор копирования
+
 ## CONTENT
+
+Оператор копирования по умолчанию
 
 Параметры:
 * stappler::geom::Rect const&
 
 Возвращает:
-* stappler::geom::Rect&
+* stappler::geom::Rect& - ссылка на себя
 
 # ::stappler::geom::Rect::getMaxX() const
 
 ## BRIEF
 
+Возвращает максимальную координату X прямоугольника
+
 ## CONTENT
 
+Возвращает максимальную координату X прямоугольника
+
 Возвращает:
-* float
+* float - максимальное значение по оси X для прямоугольника
 
 # ::stappler::geom::Rect::getMidX() const
 
 ## BRIEF
 
+Возвращает координату X середины прямоугольника
+
 ## CONTENT
 
+Возвращает координату X середины прямоугольника
+
 Возвращает:
-* float
+* float - значение X середины прямоугольника
 
 # ::stappler::geom::Rect::getMinX() const
 
 ## BRIEF
 
+Возвращает минимальную координату X прямоугольника
+
 ## CONTENT
 
+Возвращает минимальную координату X прямоугольника
+
 Возвращает:
-* float
+* float - минимальное значение по оси X для прямоугольника
 
 # ::stappler::geom::Rect::getMaxY() const
 
 ## BRIEF
 
+Возвращает максимальную координату Y прямоугольника
+
 ## CONTENT
 
+Возвращает максимальную координату Y прямоугольника
+
 Возвращает:
-* float
+* float - максимальное значение по оси Y для прямоугольника
 
 # ::stappler::geom::Rect::getMidY() const
 
 ## BRIEF
 
+Возвращает координату Y середины прямоугольника
+
 ## CONTENT
 
+Возвращает координату Y середины прямоугольника
+
 Возвращает:
-* float
+* float - значение Y середины прямоугольника
 
 # ::stappler::geom::Rect::getMinY() const
 
 ## BRIEF
 
+Возвращает минимальную координату Y прямоугольника
+
 ## CONTENT
 
+Возвращает минимальную координату Y прямоугольника
+
 Возвращает:
-* float
+* float - минимальное значение по оси Y для прямоугольника
+
 
 # ::stappler::geom::Rect::equals(stappler::geom::Rect const&) const
 
 ## BRIEF
 
+Сравнивает два прямоугольника
+
 ## CONTENT
+
+Сравнивает два прямоугольника
 
 Параметры:
 * stappler::geom::Rect const&
 
 Возвращает:
-* bool
+* bool - true если прямоугольники равны
 
 # ::stappler::geom::Rect::containsPoint(stappler::geom::Vec2 const&) const
 
 ## BRIEF
 
+Проверяет, содержит ли прямоугольник заданную точку
+
 ## CONTENT
 
+Проверяет, содержит ли прямоугольник заданную точку
+
 Параметры:
-* stappler::geom::Vec2 const&
+* stappler::geom::Vec2 const& - двумерная точка
 
 Возвращает:
-* bool
+* bool - true если точка лежит внутри или на границе прямоугольника
 
 # ::stappler::geom::Rect::intersectsRect(stappler::geom::Rect const&) const
 
 ## BRIEF
 
+Проверяет, пересекаются ли прямоугольники
+
 ## CONTENT
+
+Проверяет, пересекаются ли прямоугольники
 
 Параметры:
 * stappler::geom::Rect const&
 
 Возвращает:
-* bool
+* bool - true если прямоугольники пересекаются
 
 # ::stappler::geom::Rect::intersectsCircle(stappler::geom::Vec2 const&,float) const
 
 ## BRIEF
 
+Проверяет, пересекаются ли прямоугольник и круг
+
 ## CONTENT
 
+Проверяет, пересекаются ли прямоугольник и круг
+
 Параметры:
-* stappler::geom::Vec2 const&
-* float
+* stappler::geom::Vec2 const& - центр круга
+* float - радиус круга
 
 Возвращает:
-* bool
+* bool - true если прямоугольник и круг пересекаются
 
 # ::stappler::geom::Rect::unionWithRect(stappler::geom::Rect const&) const
 
 ## BRIEF
 
+Возвращает прямоугольник, вмещающий оба заданных прямоугольника
+
 ## CONTENT
+
+Возвращает прямоугольник, вмещающий оба заданных прямоугольника
 
 Параметры:
 * stappler::geom::Rect const&
 
 Возвращает:
-* stappler::geom::Rect
+* stappler::geom::Rect - прямоугольник, вмещающий оба заданных прямоугольника
 
 # ::stappler::geom::Rect::merge(stappler::geom::Rect const&)
 
 ## BRIEF
 
+Соединяет текущий прямоугольник с другим, превращая его в общий прямоугольник
+
 ## CONTENT
+
+Соединяет текущий прямоугольник с другим, превращая его в общий прямоугольник
 
 Параметры:
 * stappler::geom::Rect const&
-
-
-# ::stappler::geom::ZERO
-
-## BRIEF
-
-## CONTENT
-
-Тип: stappler::geom::Rect const
 
 
 # ::stappler::geom::UVec2
 
 ## BRIEF
 
+Структура целочисленной двумерной точки
+
 ## CONTENT
 
+Структура целочисленной двумерной точки (X, Y)
 
 # ::stappler::geom::UVec2::x
 
 ## BRIEF
 
+Значение X
+
 ## CONTENT
 
 Тип: uint32_t
 
+Значение X
 
 # ::stappler::geom::UVec2::y
 
 ## BRIEF
 
+Значение Y
+
 ## CONTENT
 
 Тип: uint32_t
 
+Значение Y
 
 # ::stappler::geom::UVec2::operator==(stappler::geom::UVec2 const&) const
 
 ## BRIEF
 
+Сравнивает две точки
+
 ## CONTENT
+
+Сравнивает две точки
 
 Параметры:
 * stappler::geom::UVec2 const&
 
 Возвращает:
-* bool
+* bool - true если точки равны
 
 # ::stappler::geom::UVec2::operator!=(stappler::geom::UVec2 const&) const
 
 ## BRIEF
 
+Сравнивает две точки
+
 ## CONTENT
+
+Сравнивает две точки
 
 Параметры:
 * stappler::geom::UVec2 const&
 
 Возвращает:
-* bool
+* bool - true если точки не равны
 
 # ::stappler::geom::URect
 
 ## BRIEF
 
+Структура целочисленного двумерного прямоугольника
+
 ## CONTENT
 
+Структура целочисленного двумерного прямоугольника, заданного через исходную точку и положительный размер. Использование отрицательного размера ведёт к ошибкам.
 
 # ::stappler::geom::URect::x
 
 ## BRIEF
 
+Исходная координата X
+
 ## CONTENT
 
 Тип: uint32_t
 
+Исходная координата X
 
 # ::stappler::geom::URect::y
 
 ## BRIEF
 
+Исходная координата Y
+
 ## CONTENT
 
 Тип: uint32_t
 
+Исходная координата Y
 
 # ::stappler::geom::URect::width
 
 ## BRIEF
 
+Значение ширины
+
 ## CONTENT
 
 Тип: uint32_t
 
+Значение ширины
 
 # ::stappler::geom::URect::height
 
 ## BRIEF
 
+Значение высоты
+
 ## CONTENT
 
 Тип: uint32_t
 
+Значение высоты
 
 # ::stappler::geom::URect::origin() const
 
 ## BRIEF
 
+Возвращает исходную точку прямоугольника
+
 ## CONTENT
 
+Возвращает исходную точку прямоугольника
+
 Возвращает:
-* stappler::geom::UVec2
+* stappler::geom::UVec2 - исходная точка прямоугольника
 
 # ::stappler::geom::URect::operator==(stappler::geom::URect const&) const
 
 ## BRIEF
 
+Сравнивает два прямоугольника
+
 ## CONTENT
+
+Сравнивает два прямоугольника
 
 Параметры:
 * stappler::geom::URect const&
 
 Возвращает:
-* bool
+* bool - true если прямоугольники совпадают
 
 # ::stappler::geom::URect::operator!=(stappler::geom::URect const&) const
 
 ## BRIEF
 
+Сравнивает два прямоугольника
+
 ## CONTENT
+
+Сравнивает два прямоугольника
 
 Параметры:
 * stappler::geom::URect const&
 
 Возвращает:
-* bool
+* bool - true если прямоугольники совпадают
 
 # ::stappler::geom::URect::getMaxX() const
 
 ## BRIEF
 
+Возвращает максимальное значение X прямоугольника
+
 ## CONTENT
 
+Возвращает максимальное значение X прямоугольника
+
 Возвращает:
-* float
+* float - максимальное значение X
 
 # ::stappler::geom::URect::getMidX() const
 
 ## BRIEF
 
+Возвращает координату X середины прямоугольника
+
 ## CONTENT
 
+Возвращает координату X середины прямоугольника
+
 Возвращает:
-* float
+* float - значение X середины прямоугольника
 
 # ::stappler::geom::URect::getMinX() const
 
 ## BRIEF
 
+Возвращает минимальное значение X прямоугольника
+
 ## CONTENT
 
+Возвращает минимальное значение X прямоугольника
+
 Возвращает:
-* float
+* float - минимальное значение X
 
 # ::stappler::geom::URect::getMaxY() const
 
 ## BRIEF
 
+Возвращает максимальное значение Y прямоугольника
+
 ## CONTENT
 
+Возвращает максимальное значение Y прямоугольника
+
 Возвращает:
-* float
+* float - максимальное значение Y
 
 # ::stappler::geom::URect::getMidY() const
 
 ## BRIEF
 
+Возвращает координату Y середины прямоугольника
+
 ## CONTENT
 
+Возвращает координату Y середины прямоугольника
+
 Возвращает:
-* float
+* float - координата Y середины прямоугольника
 
 # ::stappler::geom::URect::getMinY() const
 
 ## BRIEF
 
+Возвращает минимальное значение Y прямоугольника
+
 ## CONTENT
 
+Возвращает минимальное значение Y прямоугольника
+
 Возвращает:
-* float
+* float - минимальное значение Y
 
 # ::stappler::geom::URect::containsPoint(stappler::geom::UVec2 const&) const
 
 ## BRIEF
 
+Проверяет, лежит ли точка в прямоугольнике
+
 ## CONTENT
+
+Проверяет, лежит ли точка в прямоугольнике или на его границах
 
 Параметры:
 * stappler::geom::UVec2 const&
 
 Возвращает:
-* bool
+* bool - true если точка лежит в прямоугольнике
 
 # ::stappler::geom::URect::intersectsRect(stappler::geom::URect const&) const
 
 ## BRIEF
 
+Проверяет, пересекаются ли прямоугольники
+
 ## CONTENT
+
+Проверяет, пересекаются ли прямоугольники
 
 Параметры:
 * stappler::geom::URect const&
 
 Возвращает:
-* bool
+* bool - true если прямоугольники пересекаются
 
 # ::stappler::geom::TransformRect(stappler::geom::Rect const&,stappler::geom::Mat4 const&)
 
 ## BRIEF
 
+Трансформирует прямоугольник с помощью матрицы трансформации
+
 ## CONTENT
 
+Трансформирует прямоугольник с помощью матрицы трансформации
+
 Параметры:
-* stappler::geom::Rect const&
-* stappler::geom::Mat4 const&
+* stappler::geom::Rect const& - прямоугольник
+* stappler::geom::Mat4 const& - матрица трансформации
 
 Возвращает:
-* stappler::geom::Rect
+* stappler::geom::Rect - трансформированный прямоугольник
 
 # ::stappler::geom::operator<<(std::ostream&,stappler::geom::Rect const&)
 
 ## BRIEF
 
+Выводит данные прямоугольника в текстовый поток
+
 ## CONTENT
+
+Выводит данные прямоугольника в текстовый поток
 
 Параметры:
 * std::ostream&
@@ -1443,7 +1664,11 @@ Title: SPGeometry.h
 
 ## BRIEF
 
+Выводит размер в текстовый поток
+
 ## CONTENT
+
+Выводит размер в текстовый поток
 
 Параметры:
 * std::ostream&
@@ -1456,7 +1681,11 @@ Title: SPGeometry.h
 
 ## BRIEF
 
+Выводит размер в текстовый поток
+
 ## CONTENT
+
+Выводит размер в текстовый поток
 
 Параметры:
 * std::ostream&
@@ -1469,7 +1698,11 @@ Title: SPGeometry.h
 
 ## BRIEF
 
+Выводит целочисленный размер в текстовый поток
+
 ## CONTENT
+
+Выводит целочисленный размер в текстовый поток
 
 Параметры:
 * std::ostream&
@@ -1482,7 +1715,11 @@ Title: SPGeometry.h
 
 ## BRIEF
 
+Выводит целочисленный размер в текстовый поток
+
 ## CONTENT
+
+Выводит целочисленный размер в текстовый поток
 
 Параметры:
 * std::ostream&
@@ -1490,9 +1727,3 @@ Title: SPGeometry.h
 
 Возвращает:
 * std::ostream&
-
-# ::stappler::geom::Size
-
-## BRIEF
-
-## CONTENT

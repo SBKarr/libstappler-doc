@@ -536,10 +536,10 @@ SP_EXTERN_C int main(int argc, const char * argv[]) {
 
 		std::cout << "Total:\n"
 				"\tSymbols: " << totalSymbols << "\n"
-				"\tNot found: " << notFoundSymbols << "\n"
-				"\tUndefined: " << undefinedSymbols << "\n"
-				"\tExtra: " << extraSymbols << "\n"
-				"\tDefined: " << definedSymbols << "\n";
+				"\tNot found: " << notFoundSymbols << " " << (float(notFoundSymbols) / float(totalSymbols)) * 100.0f << "%\n"
+				"\tUndefined: " << undefinedSymbols << " " << (float(undefinedSymbols) / float(totalSymbols)) * 100.0f << "%\n"
+				"\tExtra: " << extraSymbols << " " << (float(extraSymbols) / float(totalSymbols)) * 100.0f << "%\n"
+				"\tDefined: " << definedSymbols << " " << (float(definedSymbols) / float(totalSymbols)) * 100.0f << "%\n";
 		return 0;
 	}
 

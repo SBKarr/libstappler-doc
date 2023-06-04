@@ -339,6 +339,38 @@
 								"unexposed_arguments": "Interface"
 							}
 						}, {
+							"_fullName": "::stappler::data::json::RawEncoder<typename>::Type",
+							"_kind": "enum",
+							"_name": "Type",
+							"childs": [{
+								"_fullName": "::stappler::data::json::RawEncoder<typename>::Type::Stream",
+								"_kind": "enum value",
+								"_name": "Stream",
+								"id": 194869539,
+								"kind": "enum value",
+								"name": "Stream"
+							}, {
+								"_fullName": "::stappler::data::json::RawEncoder<typename>::Type::Bytes",
+								"_kind": "enum value",
+								"_name": "Bytes",
+								"id": 50679374,
+								"kind": "enum value",
+								"name": "Bytes"
+							}],
+							"has_explicit_type": false,
+							"id": 1149243078,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_scoped": false,
+							"kind": "enum",
+							"name": "Type",
+							"semantic_scope": "",
+							"underlying_type": {
+								"_typeName": "<dependent type>",
+								"kind": "unexposed",
+								"name": "<dependent type>"
+							}
+						}, {
 							"_fullName": "::stappler::data::json::RawEncoder<typename>::RawEncoder(std::ostream*)",
 							"_kind": "constructor",
 							"_name": "RawEncoder",
@@ -373,6 +405,146 @@
 							}],
 							"semantic_scope": "",
 							"signature": "(std::ostream*)"
+						}, {
+							"_fullName": "::stappler::data::json::RawEncoder<typename>::writeData(char const*,size_t)",
+							"_kind": "member function",
+							"_name": "writeData",
+							"body_kind": "definition",
+							"cv_qualifier": "none",
+							"id": 2092671590,
+							"is_consteval": false,
+							"is_constexpr": false,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_variadic": false,
+							"is_virtual": false,
+							"kind": "member function",
+							"name": "writeData",
+							"parameters": [{
+								"_fullName": "data",
+								"_kind": "function parameter",
+								"_name": "data",
+								"id": 555911733,
+								"kind": "function parameter",
+								"name": "data",
+								"type": {
+									"_typeName": "char const*",
+									"kind": "pointer",
+									"pointee": {
+										"_typeName": "char const",
+										"cv_qualifier": "const",
+										"kind": "cv_qualified",
+										"type": {
+											"_typeName": "char",
+											"builtin_type_kind": "char",
+											"kind": "builtin"
+										}
+									}
+								}
+							}, {
+								"_fullName": "size",
+								"_kind": "function parameter",
+								"_name": "size",
+								"id": 928651816,
+								"kind": "function parameter",
+								"name": "size",
+								"type": {
+									"_typeName": "size_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "size_t"
+									}
+								}
+							}],
+							"ref_qualifier": "none",
+							"return_type": {
+								"_typeName": "void",
+								"builtin_type_kind": "void",
+								"kind": "builtin"
+							},
+							"semantic_scope": "",
+							"signature": "(char const*,size_t)"
+						}, {
+							"_fullName": "::stappler::data::json::RawEncoder<typename>::writeData(char const*)",
+							"_kind": "member function",
+							"_name": "writeData",
+							"body_kind": "definition",
+							"cv_qualifier": "none",
+							"id": 3294610878,
+							"is_consteval": false,
+							"is_constexpr": false,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_variadic": false,
+							"is_virtual": false,
+							"kind": "member function",
+							"name": "writeData",
+							"parameters": [{
+								"_fullName": "data",
+								"_kind": "function parameter",
+								"_name": "data",
+								"id": 555911733,
+								"kind": "function parameter",
+								"name": "data",
+								"type": {
+									"_typeName": "char const*",
+									"kind": "pointer",
+									"pointee": {
+										"_typeName": "char const",
+										"cv_qualifier": "const",
+										"kind": "cv_qualified",
+										"type": {
+											"_typeName": "char",
+											"builtin_type_kind": "char",
+											"kind": "builtin"
+										}
+									}
+								}
+							}],
+							"ref_qualifier": "none",
+							"return_type": {
+								"_typeName": "void",
+								"builtin_type_kind": "void",
+								"kind": "builtin"
+							},
+							"semantic_scope": "",
+							"signature": "(char const*)"
+						}, {
+							"_fullName": "::stappler::data::json::RawEncoder<typename>::writeChar(char)",
+							"_kind": "member function",
+							"_name": "writeChar",
+							"body_kind": "definition",
+							"cv_qualifier": "none",
+							"id": 3551843844,
+							"is_consteval": false,
+							"is_constexpr": false,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_variadic": false,
+							"is_virtual": false,
+							"kind": "member function",
+							"name": "writeChar",
+							"parameters": [{
+								"_fullName": "c",
+								"_kind": "function parameter",
+								"_name": "c",
+								"id": 4004515611,
+								"kind": "function parameter",
+								"name": "c",
+								"type": {
+									"_typeName": "char",
+									"builtin_type_kind": "char",
+									"kind": "builtin"
+								}
+							}],
+							"ref_qualifier": "none",
+							"return_type": {
+								"_typeName": "void",
+								"builtin_type_kind": "void",
+								"kind": "builtin"
+							},
+							"semantic_scope": "",
+							"signature": "(char)"
 						}, {
 							"_fullName": "::stappler::data::json::RawEncoder<typename>::write(stappler::nullptr_t)",
 							"_kind": "member function",
@@ -847,9 +1019,98 @@
 							"semantic_scope": "",
 							"signature": "()"
 						}, {
+							"_fullName": "::stappler::data::json::RawEncoder<typename>::type",
+							"_kind": "member variable",
+							"_name": "type",
+							"default_value": {
+								"expression": [{
+									"kind": "identifier",
+									"spelling": "Type"
+								}, {
+									"kind": "punctuation",
+									"spelling": "::"
+								}, {
+									"kind": "identifier",
+									"spelling": "Stream"
+								}],
+								"kind": "unexposed",
+								"type": {
+									"_typeName": "stappler::data::json::RawEncoder::Type",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::data::json::RawEncoder::Type",
+										"objects": [{
+											"_fullName": "::stappler::data::json::RawEncoder<typename>::Type",
+											"_kind": "enum",
+											"_name": "Type",
+											"has_explicit_type": false,
+											"id": 1149243078,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_scoped": false,
+											"kind": "enum",
+											"name": "Type",
+											"semantic_scope": "",
+											"underlying_type": {
+												"_typeName": "<dependent type>",
+												"kind": "unexposed",
+												"name": "<dependent type>"
+											}
+										}]
+									}
+								}
+							},
+							"id": 3065230193,
+							"is_mutable": false,
+							"kind": "member variable",
+							"name": "type",
+							"type": {
+								"_typeName": "stappler::data::json::RawEncoder::Type",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::data::json::RawEncoder::Type",
+									"objects": [{
+										"_fullName": "::stappler::data::json::RawEncoder<typename>::Type",
+										"_kind": "enum",
+										"_name": "Type",
+										"has_explicit_type": false,
+										"id": 1149243078,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": false,
+										"kind": "enum",
+										"name": "Type",
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "<dependent type>",
+											"kind": "unexposed",
+											"name": "<dependent type>"
+										}
+									}]
+								}
+							}
+						}, {
 							"_fullName": "::stappler::data::json::RawEncoder<typename>::stream",
 							"_kind": "member variable",
 							"_name": "stream",
+							"default_value": {
+								"expression": [{
+									"kind": "keyword",
+									"spelling": "nullptr"
+								}],
+								"kind": "unexposed",
+								"type": {
+									"_typeName": "std::ostream*",
+									"kind": "pointer",
+									"pointee": {
+										"_typeName": "std::ostream",
+										"kind": "user_defined",
+										"target": {
+											"name": "std::ostream"
+										}
+									}
+								}
+							},
 							"id": 2897522531,
 							"is_mutable": false,
 							"kind": "member variable",
@@ -863,6 +1124,39 @@
 									"target": {
 										"name": "std::ostream"
 									}
+								}
+							}
+						}, {
+							"_fullName": "::stappler::data::json::RawEncoder<typename>::bytes",
+							"_kind": "member variable",
+							"_name": "bytes",
+							"default_value": {
+								"expression": [{
+									"kind": "keyword",
+									"spelling": "nullptr"
+								}],
+								"kind": "unexposed",
+								"type": {
+									"_typeName": "typename Interface::BytesType*",
+									"kind": "pointer",
+									"pointee": {
+										"_typeName": "typename Interface::BytesType",
+										"kind": "unexposed",
+										"name": "typename Interface::BytesType"
+									}
+								}
+							},
+							"id": 3529537896,
+							"is_mutable": false,
+							"kind": "member variable",
+							"name": "bytes",
+							"type": {
+								"_typeName": "typename Interface::BytesType*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "typename Interface::BytesType",
+									"kind": "unexposed",
+									"name": "typename Interface::BytesType"
 								}
 							}
 						}],

@@ -536,11 +536,11 @@
 							"semantic_scope": "",
 							"signature": "(std::ostream*)"
 						}, {
-							"_fullName": "::stappler::data::cbor::Encoder<typename>::Encoder(bool)",
+							"_fullName": "::stappler::data::cbor::Encoder<typename>::Encoder(bool,size_t)",
 							"_kind": "constructor",
 							"_name": "Encoder",
 							"body_kind": "definition",
-							"id": 180608291,
+							"id": 2147397364,
 							"is_consteval": false,
 							"is_constexpr": false,
 							"is_declaration": false,
@@ -573,9 +573,37 @@
 									"builtin_type_kind": "bool",
 									"kind": "builtin"
 								}
+							}, {
+								"_fullName": "reserve",
+								"_kind": "function parameter",
+								"_name": "reserve",
+								"default_value": {
+									"expression": [{
+										"kind": "int_literal",
+										"spelling": "1_KiB"
+									}],
+									"kind": "unexposed",
+									"type": {
+										"_typeName": "size_t",
+										"kind": "user_defined",
+										"target": {
+											"name": "size_t"
+										}
+									}
+								},
+								"id": 3160664884,
+								"kind": "function parameter",
+								"name": "reserve",
+								"type": {
+									"_typeName": "size_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "size_t"
+									}
+								}
 							}],
 							"semantic_scope": "",
-							"signature": "(bool)"
+							"signature": "(bool,size_t)"
 						}, {
 							"_fullName": "::stappler::data::cbor::Encoder<typename>::~Encoder()",
 							"_kind": "destructor",
@@ -1504,15 +1532,15 @@
 						"name": "Interface"
 					}]
 				}, {
-					"_fullName": "::stappler::data::cbor::write<typename>(ValueTemplate<Interface> const&)",
+					"_fullName": "::stappler::data::cbor::write<typename>(ValueTemplate<Interface> const&,size_t)",
 					"_kind": "function template",
 					"_name": "write",
 					"childs": [{
-						"_fullName": "::stappler::data::cbor::write<typename>(ValueTemplate<Interface> const&)",
+						"_fullName": "::stappler::data::cbor::write<typename>(ValueTemplate<Interface> const&,size_t)",
 						"_kind": "function",
 						"_name": "write",
 						"body_kind": "definition",
-						"id": 3515957298,
+						"id": 2183241404,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": false,
@@ -1620,6 +1648,34 @@
 								},
 								"reference_kind": "lvalue"
 							}
+						}, {
+							"_fullName": "reserve",
+							"_kind": "function parameter",
+							"_name": "reserve",
+							"default_value": {
+								"expression": [{
+									"kind": "int_literal",
+									"spelling": "1_KiB"
+								}],
+								"kind": "unexposed",
+								"type": {
+									"_typeName": "size_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "size_t"
+									}
+								}
+							},
+							"id": 3160664884,
+							"kind": "function parameter",
+							"name": "reserve",
+							"type": {
+								"_typeName": "size_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "size_t"
+								}
+							}
 						}],
 						"return_type":  {
 							"_typeName": "typename Interface::BytesType",
@@ -1627,14 +1683,14 @@
 							"name": "typename Interface::BytesType"
 						},
 						"semantic_scope": "",
-						"signature": "(ValueTemplate<Interface> const&)"
+						"signature": "(ValueTemplate<Interface> const&,size_t)"
 					}],
 					"function":  {
-						"_fullName": "::stappler::data::cbor::write<typename>(ValueTemplate<Interface> const&)",
+						"_fullName": "::stappler::data::cbor::write<typename>(ValueTemplate<Interface> const&,size_t)",
 						"_kind": "function",
 						"_name": "write",
 						"body_kind": "definition",
-						"id": 3515957298,
+						"id": 2183241404,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": false,
@@ -1742,6 +1798,34 @@
 								},
 								"reference_kind": "lvalue"
 							}
+						}, {
+							"_fullName": "reserve",
+							"_kind": "function parameter",
+							"_name": "reserve",
+							"default_value": {
+								"expression": [{
+									"kind": "int_literal",
+									"spelling": "1_KiB"
+								}],
+								"kind": "unexposed",
+								"type": {
+									"_typeName": "size_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "size_t"
+									}
+								}
+							},
+							"id": 3160664884,
+							"kind": "function parameter",
+							"name": "reserve",
+							"type": {
+								"_typeName": "size_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "size_t"
+								}
+							}
 						}],
 						"return_type":  {
 							"_typeName": "typename Interface::BytesType",
@@ -1749,9 +1833,9 @@
 							"name": "typename Interface::BytesType"
 						},
 						"semantic_scope": "",
-						"signature": "(ValueTemplate<Interface> const&)"
+						"signature": "(ValueTemplate<Interface> const&,size_t)"
 					},
-					"id": 3515957298,
+					"id": 2183241404,
 					"kind": "function template",
 					"name": "write",
 					"parameters": [{

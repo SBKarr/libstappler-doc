@@ -36,7 +36,7 @@ static void addSymbol(Vector<SymbolInfo> &names, StringView name, StringView acc
 static void processValue(Vector<SymbolInfo> &names, StringView context, String &access, const Value &val, StringStream &out, const Value &tpl = Value()) {
 	auto kind = val.getString("kind");
 
-	if (kind == "file" || kind == "macro parameter" || kind == "include directive" || kind == "language linkage"
+	if (kind == "file" || kind == "include directive" || kind == "language linkage"
 			|| kind == "using directive" || kind == "using declaration") {
 		return;
 	} else if (kind == "namespace") {
@@ -46,9 +46,9 @@ static void processValue(Vector<SymbolInfo> &names, StringView context, String &
 		}
 	} else if (kind == "macro definition") {
 		addSymbol(names, val.getString("_fullName"), access, out);
-		if (val.getBool("is_function_like") && val.isArray("childs")) {
+		if (val.getBool("is_function_like") && val.isArray("parameters")) {
 			out << "\nПараметры:\n";
-			for (auto &child : val.getArray("childs")) {
+			for (auto &child : val.getArray("parameters")) {
 				processValue(names, context, access, child, out);
 			}
 		}
@@ -165,9 +165,9 @@ static void processValue(Vector<SymbolInfo> &names, StringView context, String &
 	} else if (kind == "macro definition") {
 		StringStream out;
 		addSymbol(names, val.getString("_fullName"), access, out);
-		if (val.getBool("is_function_like") && val.isArray("childs")) {
+		if (val.getBool("is_function_like") && val.isArray("parameters")) {
 			out << "\nПараметры:\n";
-			for (auto &child : val.getArray("childs")) {
+			for (auto &child : val.getArray("parameters")) {
 				processValue(names, context, access, child, out);
 			}
 		}

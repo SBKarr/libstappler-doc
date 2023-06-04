@@ -134,11 +134,7 @@
 ::stappler::BytesViewTemplate<stappler::Endian>::BytesViewTemplate(stappler::BytesViewTemplate::StdBytes const&); constructor; class
 ::stappler::BytesViewTemplate<stappler::Endian>::BytesViewTemplate(stappler::StringView); constructor; class
 ::stappler::BytesViewTemplate<stappler::Endian>::BytesViewTemplate(uint8_t const*,size_t); constructor; class
-::stappler::BytesViewTemplate<stappler::Endian>::BytesViewTemplate<size_t,stappler::Endian>(std::array<uint8_t, Size> const&); constructor; function template
 ::stappler::BytesViewTemplate<stappler::Endian>::BytesViewTemplate<size_t>(std::array<uint8_t, Size> const&); constructor; function template
-::stappler::BytesViewTemplate<stappler::Endian>::BytesViewTemplate<stappler::Endian,stappler::Endian>(BytesViewTemplate<OtherEndianess> const&); constructor; function template
-::stappler::BytesViewTemplate<stappler::Endian>::BytesViewTemplate<stappler::Endian,stappler::Endian>(BytesViewTemplate<OtherEndianess> const,size_t); constructor; function template
-::stappler::BytesViewTemplate<stappler::Endian>::BytesViewTemplate<stappler::Endian,stappler::Endian>(BytesViewTemplate<OtherEndianess> const,size_t,size_t); constructor; function template
 ::stappler::BytesViewTemplate<stappler::Endian>::BytesViewTemplate<stappler::Endian>(BytesViewTemplate<OtherEndianess> const&); constructor; function template
 ::stappler::BytesViewTemplate<stappler::Endian>::BytesViewTemplate<stappler::Endian>(BytesViewTemplate<OtherEndianess> const,size_t); constructor; function template
 ::stappler::BytesViewTemplate<stappler::Endian>::BytesViewTemplate<stappler::Endian>(BytesViewTemplate<OtherEndianess> const,size_t,size_t); constructor; function template
@@ -146,9 +142,7 @@
 ::stappler::BytesViewTemplate<stappler::Endian>::PoolBytes; type alias; class
 ::stappler::BytesViewTemplate<stappler::Endian>::Self; type alias; class
 ::stappler::BytesViewTemplate<stappler::Endian>::StdBytes; type alias; class
-::stappler::BytesViewTemplate<stappler::Endian>::bytes<typename,stappler::Endian>() const; member function; function template
 ::stappler::BytesViewTemplate<stappler::Endian>::bytes<typename>() const; member function; function template
-::stappler::BytesViewTemplate<stappler::Endian>::convert<typename,stappler::Endian>(uint8_t const*); member function; function template
 ::stappler::BytesViewTemplate<stappler::Endian>::convert<typename>(uint8_t const*); member function; function template
 ::stappler::BytesViewTemplate<stappler::Endian>::operator!=(stappler::BytesViewTemplate::Self const&) const; member function; class
 ::stappler::BytesViewTemplate<stappler::Endian>::operator++(); member function; class
@@ -159,7 +153,6 @@
 ::stappler::BytesViewTemplate<stappler::Endian>::operator=(stappler::BytesViewTemplate::StdBytes const&); member function; class
 ::stappler::BytesViewTemplate<stappler::Endian>::operator==(stappler::BytesViewTemplate::Self const&) const; member function; class
 ::stappler::BytesViewTemplate<stappler::Endian>::pdup(memory::pool_t*) const; member function; class
-::stappler::BytesViewTemplate<stappler::Endian>::readBytes<stappler::Endian,stappler::Endian>(size_t); member function; function template
 ::stappler::BytesViewTemplate<stappler::Endian>::readBytes<stappler::Endian>(size_t); member function; function template
 ::stappler::BytesViewTemplate<stappler::Endian>::readFloat16(); member function; class
 ::stappler::BytesViewTemplate<stappler::Endian>::readFloat32(); member function; class
@@ -455,28 +448,17 @@
 ::stappler::StringViewBase<typename>::StringViewBase(stappler::StringViewBase::StdString const&); constructor; class
 ::stappler::StringViewBase<typename>::TraitsType; type alias; class
 ::stappler::StringViewBase<typename>::WhiteSpace; type alias; class
-::stappler::StringViewBase<typename>::__merge<typename,typename,typename>(Buf&,T const&); function; function template
 ::stappler::StringViewBase<typename>::__merge<typename,typename>(Buf&,T const&); function; function template
-::stappler::StringViewBase<typename>::__merge<typename,typename>(Buf&,stappler::StringViewBase::CharType const*); function; function template
 ::stappler::StringViewBase<typename>::__merge<typename>(Buf&,stappler::StringViewBase::CharType const*); function; function template
 ::stappler::StringViewBase<typename>::__size(stappler::StringViewBase::CharType const*); function; class
-::stappler::StringViewBase<typename>::__size<typename,typename>(T const&); function; function template
 ::stappler::StringViewBase<typename>::__size<typename>(T const&); function; function template
-::stappler::StringViewBase<typename>::_merge<typename,typename,typename,typename>(Buf&,T&&,Args &&...); function; function template
-::stappler::StringViewBase<typename>::_merge<typename,typename,typename>(Buf&,T&&); function; function template
 ::stappler::StringViewBase<typename>::_merge<typename,typename,typename>(Buf&,T&&,Args &&...); function; function template
 ::stappler::StringViewBase<typename>::_merge<typename,typename>(Buf&,T&&); function; function template
-::stappler::StringViewBase<typename>::_size<typename,typename,typename>(T&&); function; function template
-::stappler::StringViewBase<typename>::_size<typename,typename,typename>(T&&,Args &&...); function; function template
 ::stappler::StringViewBase<typename>::_size<typename,typename>(T&&); function; function template
 ::stappler::StringViewBase<typename>::_size<typename,typename>(T&&,Args &&...); function; function template
-::stappler::StringViewBase<typename>::backwardReadChars<typename,typename>(); member function; function template
 ::stappler::StringViewBase<typename>::backwardReadChars<typename>(); member function; function template
-::stappler::StringViewBase<typename>::backwardReadUntil<typename,typename>(); member function; function template
 ::stappler::StringViewBase<typename>::backwardReadUntil<typename>(); member function; function template
-::stappler::StringViewBase<typename>::backwardSkipChars<typename,typename>(); member function; function template
 ::stappler::StringViewBase<typename>::backwardSkipChars<typename>(); member function; function template
-::stappler::StringViewBase<typename>::backwardSkipUntil<typename,typename>(); member function; function template
 ::stappler::StringViewBase<typename>::backwardSkipUntil<typename>(); member function; function template
 ::stappler::StringViewBase<typename>::begin() const; member function; class
 ::stappler::StringViewBase<typename>::end() const; member function; class
@@ -485,15 +467,11 @@
 ::stappler::StringViewBase<typename>::is(stappler::StringViewBase::CharType const&) const; member function; class
 ::stappler::StringViewBase<typename>::is(stappler::StringViewBase::CharType const*) const; member function; class
 ::stappler::StringViewBase<typename>::is(stappler::StringViewBase::Self const&) const; member function; class
-::stappler::StringViewBase<typename>::is<_CharType,typename>() const; member function; function template
-::stappler::StringViewBase<typename>::is<stappler::CharGroupId,typename>() const; member function; function template
+::stappler::StringViewBase<typename>::is<_CharType>() const; member function; function template
 ::stappler::StringViewBase<typename>::is<stappler::CharGroupId>() const; member function; function template
 ::stappler::StringViewBase<typename>::is<stappler::StringViewBase::CharType>() const; member function; function template
-::stappler::StringViewBase<typename>::is<typename,typename>() const; member function; function template
 ::stappler::StringViewBase<typename>::is<typename>() const; member function; function template
-::stappler::StringViewBase<typename>::match<typename,typename>(stappler::StringViewBase::CharType); member function; function template
 ::stappler::StringViewBase<typename>::match<typename>(stappler::StringViewBase::CharType); member function; function template
-::stappler::StringViewBase<typename>::merge<typename,typename,typename>(Args &&...); function; function template
 ::stappler::StringViewBase<typename>::merge<typename,typename>(Args &&...); function; function template
 ::stappler::StringViewBase<typename>::operator!=(stappler::StringViewBase::Self const&) const; member function; class
 ::stappler::StringViewBase<typename>::operator++(); member function; class
@@ -506,32 +484,24 @@
 ::stappler::StringViewBase<typename>::operator=(stappler::StringViewBase::StdString const&); member function; class
 ::stappler::StringViewBase<typename>::operator==(stappler::StringViewBase::Self const&) const; member function; class
 ::stappler::StringViewBase<typename>::pdup(memory::pool_t*) const; member function; class
-::stappler::StringViewBase<typename>::readChars<typename,typename>(); member function; function template
 ::stappler::StringViewBase<typename>::readChars<typename>(); member function; function template
 ::stappler::StringViewBase<typename>::readDouble(); member function; class
 ::stappler::StringViewBase<typename>::readFloat(); member function; class
 ::stappler::StringViewBase<typename>::readInteger(int); member function; class
-::stappler::StringViewBase<typename>::readUntil<typename,typename>(); member function; function template
 ::stappler::StringViewBase<typename>::readUntil<typename>(); member function; function template
 ::stappler::StringViewBase<typename>::readUntilString(stappler::StringViewBase::Self const&); member function; class
 ::stappler::StringViewBase<typename>::set(stappler::StringViewBase::CharType const*,size_t); member function; class
 ::stappler::StringViewBase<typename>::set(stappler::StringViewBase::PoolString const&); member function; class
 ::stappler::StringViewBase<typename>::set(stappler::StringViewBase::Self const&); member function; class
 ::stappler::StringViewBase<typename>::set(stappler::StringViewBase::StdString const&); member function; class
-::stappler::StringViewBase<typename>::skipChars<typename,typename>(); member function; function template
 ::stappler::StringViewBase<typename>::skipChars<typename>(); member function; function template
 ::stappler::StringViewBase<typename>::skipString(stappler::StringViewBase::Self const&); member function; class
-::stappler::StringViewBase<typename>::skipUntil<typename,typename>(); member function; function template
 ::stappler::StringViewBase<typename>::skipUntil<typename>(); member function; function template
 ::stappler::StringViewBase<typename>::skipUntilString(stappler::StringViewBase::Self const&,bool); member function; class
-::stappler::StringViewBase<typename>::split<typename,typename,typename>(Callback const&) const; member function; function template
 ::stappler::StringViewBase<typename>::split<typename,typename>(Callback const&) const; member function; function template
-::stappler::StringViewBase<typename>::str<typename,typename>() const; member function; function template
 ::stappler::StringViewBase<typename>::str<typename>() const; member function; function template
 ::stappler::StringViewBase<typename>::sub(size_t,size_t) const; member function; class
-::stappler::StringViewBase<typename>::trimChars<typename,typename>(); member function; function template
 ::stappler::StringViewBase<typename>::trimChars<typename>(); member function; function template
-::stappler::StringViewBase<typename>::trimUntil<typename,typename>(); member function; function template
 ::stappler::StringViewBase<typename>::trimUntil<typename>(); member function; function template
 ::stappler::StringViewBase<typename>::value_type; type alias; class
 ::stappler::StringViewUtf8; class; namespace
@@ -826,8 +796,6 @@
 ::stappler::ValueWrapper<class,class>::value; member variable; class
 ::stappler::ValueWrapper<class,class>::zero(); function; class
 ::stappler::WideStringView; type alias; namespace
-::stappler::_Rc_PtrCast<class>; class; class template
-::stappler::_Rc_PtrCast<class>::cast(Base*); function; class
 ::stappler::_ValueReinterpretator<T,T>::_ValueReinterpretator<T,T>; class; class template specialization
 ::stappler::_ValueReinterpretator<T,T>::reinterpret(T); function; class
 ::stappler::_ValueReinterpretator<class,class>; class; class template
@@ -1138,11 +1106,9 @@
 ::stappler::chars::CharGroup<char16_t,GroupId::WhiteSpace>::CharGroup<char16_t,GroupId::WhiteSpace>; class; class template specialization
 ::stappler::chars::CharGroup<typename,stappler::chars::GroupId>; class; class template
 ::stappler::chars::Chars<typename,CharType...>; class; class template
-::stappler::chars::Chars<typename,CharType...>::foreach<typename,typename,CharType...>(Func const&); function; function template
 ::stappler::chars::Chars<typename,CharType...>::foreach<typename>(Func const&); function; function template
 ::stappler::chars::Chars<typename,CharType...>::match(CharType); function; class
 ::stappler::chars::Compose<typename,typename>; class; class template
-::stappler::chars::Compose<typename,typename>::foreach<typename,typename,typename>(Func const&); function; function template
 ::stappler::chars::Compose<typename,typename>::foreach<typename>(Func const&); function; function template
 ::stappler::chars::Compose<typename,typename>::match(CharType); function; class
 ::stappler::chars::GroupId; type alias; namespace
@@ -1162,7 +1128,6 @@
 ::stappler::chars::MatchTraits::matchCompose<typename,typename>(CharType); function; function template
 ::stappler::chars::MatchTraits::matchPair<typename,CharType,CharType>(CharType); function; function template
 ::stappler::chars::Range<typename,CharType,CharType>; class; class template
-::stappler::chars::Range<typename,CharType,CharType>::foreach<typename,typename,CharType,CharType>(Func const&); function; function template
 ::stappler::chars::Range<typename,CharType,CharType>::foreach<typename>(Func const&); function; function template
 ::stappler::chars::Range<typename,CharType,CharType>::match(CharType); function; class
 ::stappler::chars::UniChar; class; namespace
@@ -1274,8 +1239,6 @@
 ::stappler::crypto::makeAesKey(stappler::BytesView,stappler::BytesView,uint32_t); function; namespace
 ::stappler::crypto::makeAesKey(stappler::crypto::PrivateKey const&,stappler::BytesView,uint32_t); function; namespace
 ::stappler::data; namespace; namespace
-::stappler::data::ArrayNull; variable; namespace
-::stappler::data::BytesNull; variable; namespace
 ::stappler::data::CborBuffer<typename>; class; class template
 ::stappler::data::DataFormat; enum; namespace
 ::stappler::data::DataFormat::Brotli_Short; enum value; enum
@@ -1287,7 +1250,6 @@
 ::stappler::data::DataFormat::LZ4_Word; enum value; enum
 ::stappler::data::DataFormat::Serenity; enum value; enum
 ::stappler::data::DataFormat::Unknown; enum value; enum
-::stappler::data::DictionaryNull; variable; namespace
 ::stappler::data::EncodeFormat; class; namespace
 ::stappler::data::EncodeFormat::CborCompressed; variable; class
 ::stappler::data::EncodeFormat::Compression; enum; class
@@ -1325,10 +1287,9 @@
 ::stappler::data::EncodeTraits<typename>::StringType; type alias; class
 ::stappler::data::EncodeTraits<typename>::ValueType; type alias; class
 ::stappler::data::EncodeTraits<typename>::save(stappler::data::EncodeTraits::ValueType const&,stappler::StringView const&,stappler::data::EncodeFormat); function; class
-::stappler::data::EncodeTraits<typename>::write(stappler::data::EncodeTraits::ValueType const&,stappler::data::EncodeFormat); function; class
+::stappler::data::EncodeTraits<typename>::write(stappler::data::EncodeTraits::ValueType const&,stappler::data::EncodeFormat,size_t); function; class
 ::stappler::data::EncodeTraits<typename>::write(std::ostream&,stappler::data::EncodeTraits::ValueType const&,stappler::data::EncodeFormat); function; class
 ::stappler::data::JsonBuffer<typename>; class; class template
-::stappler::data::Null; variable; namespace
 ::stappler::data::StreamTraits<typename>; class; class template
 ::stappler::data::StreamTraits<typename>::CallTest_onArrayValue<typename>(); function; function template
 ::stappler::data::StreamTraits<typename>::CallTest_onArrayValue<typename>(typeof (& C::onArrayValue)); function; function template
@@ -1359,7 +1320,11 @@
 ::stappler::data::StreamTraits<typename>::onNextValue; variable; class
 ::stappler::data::StreamTraits<typename>::onValue; variable; class
 ::stappler::data::StreamTraits<typename>::success; type alias; class
-::stappler::data::StringNull; variable; namespace
+::stappler::data::ValueTemplate<Interface>::ArrayNull; variable; namespace
+::stappler::data::ValueTemplate<Interface>::BytesNull; variable; namespace
+::stappler::data::ValueTemplate<Interface>::DictionaryNull; variable; namespace
+::stappler::data::ValueTemplate<Interface>::Null; variable; namespace
+::stappler::data::ValueTemplate<Interface>::StringNull; variable; namespace
 ::stappler::data::ValueTemplate<typename>; class; class template
 ::stappler::data::ValueTemplate<typename>::; class; class
 ::stappler::data::ValueTemplate<typename>::ArrayNull; variable; class
@@ -1414,7 +1379,6 @@
 ::stappler::data::ValueTemplate<typename>::ValueTemplate(stappler::nullptr_t); constructor; class
 ::stappler::data::ValueTemplate<typename>::ValueTemplate(uint32_t); constructor; class
 ::stappler::data::ValueTemplate<typename>::ValueTemplate(uint64_t); constructor; class
-::stappler::data::ValueTemplate<typename>::ValueTemplate<typename,typename>(ValueTemplate<OtherInterface> const&); constructor; function template
 ::stappler::data::ValueTemplate<typename>::ValueTemplate<typename>; class; class template
 ::stappler::data::ValueTemplate<typename>::ValueTemplate<typename>(ValueTemplate<OtherInterface> const&); constructor; function template
 ::stappler::data::ValueTemplate<typename>::_type; member variable; class
@@ -1433,7 +1397,6 @@
 ::stappler::data::ValueTemplate<typename>::addString(stappler::StringView const&); member function; class
 ::stappler::data::ValueTemplate<typename>::addString(stappler::data::ValueTemplate::StringType const&); member function; class
 ::stappler::data::ValueTemplate<typename>::addString(stappler::data::ValueTemplate::StringType&&); member function; class
-::stappler::data::ValueTemplate<typename>::addValue<class,typename>(Val&&); member function; function template
 ::stappler::data::ValueTemplate<typename>::addValue<class>(Val&&); member function; function template
 ::stappler::data::ValueTemplate<typename>::arrayVal; member variable; class
 ::stappler::data::ValueTemplate<typename>::asArray(); member function; class
@@ -1456,83 +1419,66 @@
 ::stappler::data::ValueTemplate<typename>::dictVal; member variable; class
 ::stappler::data::ValueTemplate<typename>::doubleVal; member variable; class
 ::stappler::data::ValueTemplate<typename>::emplace(); member function; class
-::stappler::data::ValueTemplate<typename>::emplace<class,typename>(Key&&); member function; function template
 ::stappler::data::ValueTemplate<typename>::emplace<class>(Key&&); member function; function template
 ::stappler::data::ValueTemplate<typename>::empty() const; member function; class
-::stappler::data::ValueTemplate<typename>::encode<class,class,typename>(Stream&) const; member function; function template
 ::stappler::data::ValueTemplate<typename>::encode<class,class>(Stream&) const; member function; function template
-::stappler::data::ValueTemplate<typename>::erase<class,typename>(Key&&); member function; function template
 ::stappler::data::ValueTemplate<typename>::erase<class>(Key&&); member function; function template
 ::stappler::data::ValueTemplate<typename>::getArray(); member function; class
 ::stappler::data::ValueTemplate<typename>::getArray() const; member function; class
-::stappler::data::ValueTemplate<typename>::getArray<class,typename>(Key&&); member function; function template
-::stappler::data::ValueTemplate<typename>::getArray<class,typename>(Key&&) const; member function; function template
 ::stappler::data::ValueTemplate<typename>::getArray<class>(Key&&); member function; function template
 ::stappler::data::ValueTemplate<typename>::getArray<class>(Key&&) const; member function; function template
 ::stappler::data::ValueTemplate<typename>::getBool() const; member function; class
-::stappler::data::ValueTemplate<typename>::getBool<class,typename>(Key&&) const; member function; function template
 ::stappler::data::ValueTemplate<typename>::getBool<class>(Key&&) const; member function; function template
 ::stappler::data::ValueTemplate<typename>::getBytes(); member function; class
 ::stappler::data::ValueTemplate<typename>::getBytes() const; member function; class
-::stappler::data::ValueTemplate<typename>::getBytes<class,typename>(Key&&); member function; function template
-::stappler::data::ValueTemplate<typename>::getBytes<class,typename>(Key&&) const; member function; function template
 ::stappler::data::ValueTemplate<typename>::getBytes<class>(Key&&); member function; function template
 ::stappler::data::ValueTemplate<typename>::getBytes<class>(Key&&) const; member function; function template
 ::stappler::data::ValueTemplate<typename>::getDict(); member function; class
 ::stappler::data::ValueTemplate<typename>::getDict() const; member function; class
-::stappler::data::ValueTemplate<typename>::getDict<class,typename>(Key&&); member function; function template
-::stappler::data::ValueTemplate<typename>::getDict<class,typename>(Key&&) const; member function; function template
 ::stappler::data::ValueTemplate<typename>::getDict<class>(Key&&); member function; function template
 ::stappler::data::ValueTemplate<typename>::getDict<class>(Key&&) const; member function; function template
 ::stappler::data::ValueTemplate<typename>::getDouble(double) const; member function; class
-::stappler::data::ValueTemplate<typename>::getDouble<class,typename>(Key&&,double) const; member function; function template
 ::stappler::data::ValueTemplate<typename>::getDouble<class>(Key&&,double) const; member function; function template
 ::stappler::data::ValueTemplate<typename>::getInteger(int64_t) const; member function; class
-::stappler::data::ValueTemplate<typename>::getInteger<class,typename>(Key&&,int64_t) const; member function; function template
 ::stappler::data::ValueTemplate<typename>::getInteger<class>(Key&&,int64_t) const; member function; function template
 ::stappler::data::ValueTemplate<typename>::getString(); member function; class
 ::stappler::data::ValueTemplate<typename>::getString() const; member function; class
-::stappler::data::ValueTemplate<typename>::getString<class,typename>(Key&&); member function; function template
-::stappler::data::ValueTemplate<typename>::getString<class,typename>(Key&&) const; member function; function template
 ::stappler::data::ValueTemplate<typename>::getString<class>(Key&&); member function; function template
 ::stappler::data::ValueTemplate<typename>::getString<class>(Key&&) const; member function; function template
 ::stappler::data::ValueTemplate<typename>::getType() const; member function; class
 ::stappler::data::ValueTemplate<typename>::getType<class>(Key&&) const; member function; function template
-::stappler::data::ValueTemplate<typename>::getType<typename,typename>(Key&&) const; member function; function template
-::stappler::data::ValueTemplate<typename>::getValue<class,typename>(Key&&); member function; function template
-::stappler::data::ValueTemplate<typename>::getValue<class,typename>(Key&&) const; member function; function template
+::stappler::data::ValueTemplate<typename>::getType<typename>(Key&&) const; member function; function template
 ::stappler::data::ValueTemplate<typename>::getValue<class>(Key&&); member function; function template
 ::stappler::data::ValueTemplate<typename>::getValue<class>(Key&&) const; member function; function template
-::stappler::data::ValueTemplate<typename>::hasValue<class,typename>(Key&&) const; member function; function template
 ::stappler::data::ValueTemplate<typename>::hasValue<class>(Key&&) const; member function; function template
 ::stappler::data::ValueTemplate<typename>::intVal; member variable; class
 ::stappler::data::ValueTemplate<typename>::isArray() const; member function; class
 ::stappler::data::ValueTemplate<typename>::isArray<class>(Key&&) const; member function; function template
-::stappler::data::ValueTemplate<typename>::isArray<typename,typename>(Key&&) const; member function; function template
+::stappler::data::ValueTemplate<typename>::isArray<typename>(Key&&) const; member function; function template
 ::stappler::data::ValueTemplate<typename>::isBasicType() const; member function; class
 ::stappler::data::ValueTemplate<typename>::isBasicType<class>(Key&&) const; member function; function template
-::stappler::data::ValueTemplate<typename>::isBasicType<typename,typename>(Key&&) const; member function; function template
+::stappler::data::ValueTemplate<typename>::isBasicType<typename>(Key&&) const; member function; function template
 ::stappler::data::ValueTemplate<typename>::isBool() const; member function; class
 ::stappler::data::ValueTemplate<typename>::isBool<class>(Key&&) const; member function; function template
-::stappler::data::ValueTemplate<typename>::isBool<typename,typename>(Key&&) const; member function; function template
+::stappler::data::ValueTemplate<typename>::isBool<typename>(Key&&) const; member function; function template
 ::stappler::data::ValueTemplate<typename>::isBytes() const; member function; class
 ::stappler::data::ValueTemplate<typename>::isBytes<class>(Key&&) const; member function; function template
-::stappler::data::ValueTemplate<typename>::isBytes<typename,typename>(Key&&) const; member function; function template
+::stappler::data::ValueTemplate<typename>::isBytes<typename>(Key&&) const; member function; function template
 ::stappler::data::ValueTemplate<typename>::isDictionary() const; member function; class
 ::stappler::data::ValueTemplate<typename>::isDictionary<class>(Key&&) const; member function; function template
-::stappler::data::ValueTemplate<typename>::isDictionary<typename,typename>(Key&&) const; member function; function template
+::stappler::data::ValueTemplate<typename>::isDictionary<typename>(Key&&) const; member function; function template
 ::stappler::data::ValueTemplate<typename>::isDouble() const; member function; class
 ::stappler::data::ValueTemplate<typename>::isDouble<class>(Key&&) const; member function; function template
-::stappler::data::ValueTemplate<typename>::isDouble<typename,typename>(Key&&) const; member function; function template
+::stappler::data::ValueTemplate<typename>::isDouble<typename>(Key&&) const; member function; function template
 ::stappler::data::ValueTemplate<typename>::isInteger() const; member function; class
 ::stappler::data::ValueTemplate<typename>::isInteger<class>(Key&&) const; member function; function template
-::stappler::data::ValueTemplate<typename>::isInteger<typename,typename>(Key&&) const; member function; function template
+::stappler::data::ValueTemplate<typename>::isInteger<typename>(Key&&) const; member function; function template
 ::stappler::data::ValueTemplate<typename>::isNull() const; member function; class
 ::stappler::data::ValueTemplate<typename>::isNull<class>(Key&&) const; member function; function template
-::stappler::data::ValueTemplate<typename>::isNull<typename,typename>(Key&&) const; member function; function template
+::stappler::data::ValueTemplate<typename>::isNull<typename>(Key&&) const; member function; function template
 ::stappler::data::ValueTemplate<typename>::isString() const; member function; class
 ::stappler::data::ValueTemplate<typename>::isString<class>(Key&&) const; member function; function template
-::stappler::data::ValueTemplate<typename>::isString<typename,typename>(Key&&) const; member function; function template
+::stappler::data::ValueTemplate<typename>::isString<typename>(Key&&) const; member function; function template
 ::stappler::data::ValueTemplate<typename>::newArray<class>(Key&&); member function; function template
 ::stappler::data::ValueTemplate<typename>::newDict<class>(Key&&); member function; function template
 ::stappler::data::ValueTemplate<typename>::operator bool() const; conversion operator; class
@@ -1571,7 +1517,6 @@
 ::stappler::data::ValueTemplate<typename>::operator=(stappler::data::ValueTemplate::StringType const&); member function; class
 ::stappler::data::ValueTemplate<typename>::operator=(stappler::data::ValueTemplate::StringType&&); member function; class
 ::stappler::data::ValueTemplate<typename>::operator=(stappler::nullptr_t); member function; class
-::stappler::data::ValueTemplate<typename>::operator=<typename,typename>(ValueTemplate<OtherInterface> const&); member function; function template
 ::stappler::data::ValueTemplate<typename>::operator=<typename>(ValueTemplate<OtherInterface> const&); member function; function template
 ::stappler::data::ValueTemplate<typename>::operator==(bool) const; member function; class
 ::stappler::data::ValueTemplate<typename>::operator==(char const*) const; member function; class
@@ -1620,9 +1565,7 @@
 ::stappler::data::ValueTemplate<typename>::setString<class>(stappler::StringView const&,Key&&); member function; function template
 ::stappler::data::ValueTemplate<typename>::setString<class>(stappler::data::ValueTemplate::StringType const&,Key&&); member function; function template
 ::stappler::data::ValueTemplate<typename>::setString<class>(stappler::data::ValueTemplate::StringType&&,Key&&); member function; function template
-::stappler::data::ValueTemplate<typename>::setValue<class,class,typename>(Val&&,Key&&); member function; function template
 ::stappler::data::ValueTemplate<typename>::setValue<class,class>(Val&&,Key&&); member function; function template
-::stappler::data::ValueTemplate<typename>::setValue<class,typename>(Val&&); member function; function template
 ::stappler::data::ValueTemplate<typename>::setValue<class>(Val&&); member function; function template
 ::stappler::data::ValueTemplate<typename>::size() const; member function; class
 ::stappler::data::ValueTemplate<typename>::slice(int,int); member function; class
@@ -1747,7 +1690,6 @@
 ::stappler::data::cbor::Decoder<typename>::decodePositiveInt(uint8_t,stappler::data::cbor::Decoder::ValueType&); member function; class
 ::stappler::data::cbor::Decoder<typename>::decodeSimpleValue(uint8_t,stappler::data::cbor::Decoder::ValueType&); member function; class
 ::stappler::data::cbor::Decoder<typename>::decodeTaggedValue(uint8_t,stappler::data::cbor::Decoder::ValueType&); member function; class
-::stappler::data::cbor::Decoder<typename>::decodeUndefinedLength<typename,typename>(Container&,stappler::data::cbor::MajorTypeEncoded); member function; function template
 ::stappler::data::cbor::Decoder<typename>::decodeUndefinedLength<typename>(Container&,stappler::data::cbor::MajorTypeEncoded); member function; function template
 ::stappler::data::cbor::Decoder<typename>::parse(stappler::data::cbor::Decoder::ValueType&); member function; class
 ::stappler::data::cbor::Decoder<typename>::parseNumber(stappler::data::cbor::Decoder::ValueType&); member function; class
@@ -1756,7 +1698,7 @@
 ::stappler::data::cbor::Decoder<typename>::stack; member variable; class
 ::stappler::data::cbor::Encoder<typename>; class; class template
 ::stappler::data::cbor::Encoder<typename>::; class; class
-::stappler::data::cbor::Encoder<typename>::Encoder(bool); constructor; class
+::stappler::data::cbor::Encoder<typename>::Encoder(bool,size_t); constructor; class
 ::stappler::data::cbor::Encoder<typename>::Encoder(stappler::StringView); constructor; class
 ::stappler::data::cbor::Encoder<typename>::Encoder(std::ostream*); constructor; class
 ::stappler::data::cbor::Encoder<typename>::InterfaceType; type alias; class
@@ -1893,7 +1835,7 @@
 ::stappler::data::cbor::read<typename>(BytesViewTemplate<Endian::Network>&); function; function template
 ::stappler::data::cbor::save<typename>(ValueTemplate<Interface> const&,stappler::StringView); function; function template
 ::stappler::data::cbor::type(uint8_t); function; namespace
-::stappler::data::cbor::write<typename>(ValueTemplate<Interface> const&); function; function template
+::stappler::data::cbor::write<typename>(ValueTemplate<Interface> const&,size_t); function; function template
 ::stappler::data::cbor::write<typename>(std::ostream&,ValueTemplate<Interface> const&); function; function template
 ::stappler::data::cbor::writeArray<typename>(const typename ValueTemplate<Interface>::ArrayType&); function; function template
 ::stappler::data::cbor::writeObject<typename>(const typename ValueTemplate<Interface>::DictionaryType&); function; function template
@@ -1958,7 +1900,11 @@
 ::stappler::data::json::RawEncoder<typename>; class; class template
 ::stappler::data::json::RawEncoder<typename>::InterfaceType; type alias; class
 ::stappler::data::json::RawEncoder<typename>::RawEncoder(std::ostream*); constructor; class
+::stappler::data::json::RawEncoder<typename>::Type; enum; class
+::stappler::data::json::RawEncoder<typename>::Type::Bytes; enum value; enum
+::stappler::data::json::RawEncoder<typename>::Type::Stream; enum value; enum
 ::stappler::data::json::RawEncoder<typename>::ValueType; type alias; class
+::stappler::data::json::RawEncoder<typename>::bytes; member variable; class
 ::stappler::data::json::RawEncoder<typename>::onBeginArray(const typename ValueType::ArrayType&); member function; class
 ::stappler::data::json::RawEncoder<typename>::onBeginDict(const typename ValueType::DictionaryType&); member function; class
 ::stappler::data::json::RawEncoder<typename>::onEndArray(const typename ValueType::ArrayType&); member function; class
@@ -1966,12 +1912,16 @@
 ::stappler::data::json::RawEncoder<typename>::onKey(const typename ValueType::StringType&); member function; class
 ::stappler::data::json::RawEncoder<typename>::onNextValue(); member function; class
 ::stappler::data::json::RawEncoder<typename>::stream; member variable; class
+::stappler::data::json::RawEncoder<typename>::type; member variable; class
 ::stappler::data::json::RawEncoder<typename>::write(bool); member function; class
 ::stappler::data::json::RawEncoder<typename>::write(const typename ValueType::BytesType&); member function; class
 ::stappler::data::json::RawEncoder<typename>::write(const typename ValueType::StringType&); member function; class
 ::stappler::data::json::RawEncoder<typename>::write(double); member function; class
 ::stappler::data::json::RawEncoder<typename>::write(int64_t); member function; class
 ::stappler::data::json::RawEncoder<typename>::write(stappler::nullptr_t); member function; class
+::stappler::data::json::RawEncoder<typename>::writeChar(char); member function; class
+::stappler::data::json::RawEncoder<typename>::writeData(char const*); member function; class
+::stappler::data::json::RawEncoder<typename>::writeData(char const*,size_t); member function; class
 ::stappler::data::json::decodeNumber(stappler::StringView&,bool&); function; namespace
 ::stappler::data::json::encodeString<typename>(std::ostream&,StringType const&); function; function template
 ::stappler::data::json::read<typename>(stappler::StringView const&); function; function template
@@ -2083,7 +2033,7 @@
 ::stappler::data::serenity::write<typename>(std::ostream&,ValueTemplate<Interface> const&,bool); function; function template
 ::stappler::data::toString<typename>(ValueTemplate<Interface> const&,EncodeFormat::Format); function; function template
 ::stappler::data::toString<typename>(ValueTemplate<Interface> const&,bool); function; function template
-::stappler::data::write<typename>(ValueTemplate<Interface> const&,stappler::data::EncodeFormat); function; function template
+::stappler::data::write<typename>(ValueTemplate<Interface> const&,stappler::data::EncodeFormat,size_t); function; function template
 ::stappler::data::write<typename>(std::ostream&,ValueTemplate<Interface> const&,stappler::data::EncodeFormat); function; function template
 ::stappler::data::writeCompressionMark(uint8_t*,size_t,EncodeFormat::Compression); function; namespace
 ::stappler::db; namespace; namespace
@@ -4326,7 +4276,6 @@
 ::stappler::geom::Anchor::TopLeft; variable; namespace
 ::stappler::geom::Anchor::TopRight; variable; namespace
 ::stappler::geom::AngleIsConvex(stappler::geom::HalfEdge const*,stappler::geom::HalfEdge const*); function; namespace
-::stappler::geom::BLACK; variable; namespace
 ::stappler::geom::Color; class; namespace
 ::stappler::geom::Color3B; class; namespace
 ::stappler::geom::Color3B::BLACK; variable; class
@@ -4887,8 +4836,6 @@
 ::stappler::geom::Helper::e1; member variable; class
 ::stappler::geom::Helper::e2; member variable; class
 ::stappler::geom::Helper::type; member variable; class
-::stappler::geom::IDENTITY; variable; namespace
-::stappler::geom::INVALID; variable; namespace
 ::stappler::geom::IntersectionEvent; enum; namespace
 ::stappler::geom::IntersectionEvent::EdgeConnection1; enum value; enum
 ::stappler::geom::IntersectionEvent::EdgeConnection2; enum value; enum
@@ -4931,6 +4878,7 @@
 ::stappler::geom::LineJoin::Bevel; enum value; enum
 ::stappler::geom::LineJoin::Miter; enum value; enum
 ::stappler::geom::LineJoin::Round; enum value; enum
+::stappler::geom::Margin; type alias; namespace
 ::stappler::geom::Mat4; class; namespace
 ::stappler::geom::Mat4::IDENTITY; variable; class
 ::stappler::geom::Mat4::INVALID; variable; class
@@ -5028,7 +4976,6 @@
 ::stappler::geom::Mat4::translate(stappler::geom::Vec3 const&); member function; class
 ::stappler::geom::Mat4::translate(stappler::geom::Vec3 const&,stappler::geom::Mat4*) const; member function; class
 ::stappler::geom::Mat4::transpose(); member function; class
-::stappler::geom::ONE; variable; namespace
 ::stappler::geom::ObjectAllocator; class; namespace
 ::stappler::geom::ObjectAllocator::ObjectAllocator(memory::pool_t*); constructor; class
 ::stappler::geom::ObjectAllocator::_boundaries; member variable; class
@@ -5052,6 +4999,37 @@
 ::stappler::geom::ObjectAllocator::releaseVertex(uint32_t,uint32_t); member function; class
 ::stappler::geom::ObjectAllocator::removeEdgeFromVec(memory::vector<HalfEdge *>&,stappler::geom::HalfEdge*); member function; class
 ::stappler::geom::ObjectAllocator::trimVertexes(); member function; class
+::stappler::geom::Padding; class; namespace
+::stappler::geom::Padding::Padding(); constructor; class
+::stappler::geom::Padding::Padding(float); constructor; class
+::stappler::geom::Padding::Padding(float,float); constructor; class
+::stappler::geom::Padding::Padding(float,float,float); constructor; class
+::stappler::geom::Padding::Padding(float,float,float,float); constructor; class
+::stappler::geom::Padding::Padding(stappler::geom::Padding const&); constructor; class
+::stappler::geom::Padding::bottom; member variable; class
+::stappler::geom::Padding::getBottomLeft(stappler::geom::Size2 const&) const; member function; class
+::stappler::geom::Padding::getBottomRight(stappler::geom::Size2 const&) const; member function; class
+::stappler::geom::Padding::getTopLeft(stappler::geom::Size2 const&) const; member function; class
+::stappler::geom::Padding::getTopRight(stappler::geom::Size2 const&) const; member function; class
+::stappler::geom::Padding::horizontal() const; member function; class
+::stappler::geom::Padding::left; member variable; class
+::stappler::geom::Padding::operator!=(stappler::geom::Padding const&) const; member function; class
+::stappler::geom::Padding::operator*(float); member function; class
+::stappler::geom::Padding::operator*=(float); member function; class
+::stappler::geom::Padding::operator/(float); member function; class
+::stappler::geom::Padding::operator/=(float); member function; class
+::stappler::geom::Padding::operator==(stappler::geom::Padding const&) const; member function; class
+::stappler::geom::Padding::right; member variable; class
+::stappler::geom::Padding::set(float); member function; class
+::stappler::geom::Padding::set(float,float); member function; class
+::stappler::geom::Padding::set(float,float,float); member function; class
+::stappler::geom::Padding::set(float,float,float,float); member function; class
+::stappler::geom::Padding::setBottom(float); member function; class
+::stappler::geom::Padding::setLeft(float); member function; class
+::stappler::geom::Padding::setRight(float); member function; class
+::stappler::geom::Padding::setTop(float); member function; class
+::stappler::geom::Padding::top; member variable; class
+::stappler::geom::Padding::vertical() const; member function; class
 ::stappler::geom::Quaternion; class; namespace
 ::stappler::geom::Quaternion::IDENTITY; variable; class
 ::stappler::geom::Quaternion::Quaternion(); constructor; class
@@ -5086,9 +5064,6 @@
 ::stappler::geom::Quaternion::y; member variable; class
 ::stappler::geom::Quaternion::z; member variable; class
 ::stappler::geom::QueueHandle; type alias; namespace
-::stappler::geom::ROTATION_Z_180; variable; namespace
-::stappler::geom::ROTATION_Z_270; variable; namespace
-::stappler::geom::ROTATION_Z_90; variable; namespace
 ::stappler::geom::Rect; class; namespace
 ::stappler::geom::Rect::Rect(); constructor; class
 ::stappler::geom::Rect::Rect(float,float,float,float); constructor; class
@@ -5110,7 +5085,6 @@
 ::stappler::geom::Rect::origin; member variable; class
 ::stappler::geom::Rect::size; member variable; class
 ::stappler::geom::Rect::unionWithRect(stappler::geom::Rect const&) const; member function; class
-::stappler::geom::Size; type alias; namespace
 ::stappler::geom::Size2; class; namespace
 ::stappler::geom::Size2::Size2(); constructor; class
 ::stappler::geom::Size2::Size2(float,float); constructor; class
@@ -5190,10 +5164,6 @@
 ::stappler::geom::Tesselator::write(stappler::geom::TessResult&); member function; class
 ::stappler::geom::Tesselator::~Tesselator(); destructor; class
 ::stappler::geom::TransformRect(stappler::geom::Rect const&,stappler::geom::Mat4 const&); function; namespace
-::stappler::geom::UNIT_W; variable; namespace
-::stappler::geom::UNIT_X; variable; namespace
-::stappler::geom::UNIT_Y; variable; namespace
-::stappler::geom::UNIT_Z; variable; namespace
 ::stappler::geom::URect; class; namespace
 ::stappler::geom::URect::containsPoint(stappler::geom::UVec2 const&) const; member function; class
 ::stappler::geom::URect::getMaxX() const; member function; class
@@ -5470,14 +5440,12 @@
 ::stappler::geom::VertexType::RegularTop; enum value; enum
 ::stappler::geom::VertexType::Split; enum value; enum
 ::stappler::geom::VertexType::Start; enum value; enum
-::stappler::geom::WHITE; variable; namespace
 ::stappler::geom::Winding; enum; namespace
 ::stappler::geom::Winding::AbsGeqTwo; enum value; enum
 ::stappler::geom::Winding::EvenOdd; enum value; enum
 ::stappler::geom::Winding::Negative; enum value; enum
 ::stappler::geom::Winding::NonZero; enum value; enum
 ::stappler::geom::Winding::Positive; enum value; enum
-::stappler::geom::ZERO; variable; namespace
 ::stappler::geom::getBisectVec(simd::f32x4 const&); function; namespace
 ::stappler::geom::getNormalizedVec(float const[2],float const[2],float const[2]); function; namespace
 ::stappler::geom::getVertexNormal(float const[2],float const[],float const[],float[4]); function; namespace
@@ -6150,6 +6118,7 @@
 ::stappler::memory::basic_ostringstream<typename>::traits_type; type alias; class
 ::stappler::memory::basic_ostringstream<typename>::weak() const; member function; class
 ::stappler::memory::basic_ostringstream<typename>::~basic_ostringstream(); destructor; class
+::stappler::memory::basic_string<CharType>::npos; variable; namespace
 ::stappler::memory::basic_string<typename>; class; class template
 ::stappler::memory::basic_string<typename>::__basic_string_fill<typename,typename,bool>; class; class template
 ::stappler::memory::basic_string<typename>::_mem; member variable; class
@@ -6188,7 +6157,6 @@
 ::stappler::memory::basic_string<typename>::basic_string(stappler::memory::basic_string::self const&,stappler::memory::basic_string::allocator_type const&); constructor; class
 ::stappler::memory::basic_string<typename>::basic_string(stappler::memory::basic_string::self const&,stappler::memory::basic_string::size_type,stappler::memory::basic_string::size_type,stappler::memory::basic_string::allocator_type const&); constructor; class
 ::stappler::memory::basic_string<typename>::basic_string(stappler::memory::basic_string::size_type,stappler::memory::basic_string::charT,stappler::memory::basic_string::allocator_type const&); constructor; class
-::stappler::memory::basic_string<typename>::basic_string<class,class>(InputIterator,InputIterator,stappler::memory::basic_string::allocator_type const&); constructor; function template
 ::stappler::memory::basic_string<typename>::basic_string<class>(InputIterator,InputIterator,stappler::memory::basic_string::allocator_type const&); constructor; function template
 ::stappler::memory::basic_string<typename>::basic_string<int>(stappler::memory::basic_string::charT const(&)[N],stappler::memory::basic_string::allocator_type const&); constructor; function template
 ::stappler::memory::basic_string<typename>::basic_string<int>(stappler::memory::basic_string::charT(&)[N],stappler::memory::basic_string::allocator_type const&); constructor; function template
@@ -6688,7 +6656,6 @@
 ::stappler::memory::mem_sso_test<data::ValueTemplate<Interface>>::value; variable; class
 ::stappler::memory::mem_sso_test<typename>; class; class template
 ::stappler::memory::mem_sso_test<typename>::value; variable; class
-::stappler::memory::npos; variable; namespace
 ::stappler::memory::operator!=<class>(CharT const*,basic_string<CharT> const&); function; function template
 ::stappler::memory::operator!=<class>(basic_string<CharT> const&,CharT const*); function; function template
 ::stappler::memory::operator!=<class>(basic_string<CharT> const&,basic_string<CharT> const&); function; function template
@@ -8342,7 +8309,7 @@
 ::stappler::sql::DeleteWhere::returning(); member function; namespace
 ::stappler::sql::FieldsClause<typename>::aggregate(stappler::StringView const&,stappler::sql::Query::Field const&); member function; namespace
 ::stappler::sql::FieldsClause<typename>::field(stappler::sql::Query::Field const&); member function; namespace
-::stappler::sql::FieldsClause<typename>::fields<typename,typename,typename,typename>(stappler::sql::Query::Field const&,Args &&...); member function; function template
+::stappler::sql::FieldsClause<typename>::fields<typename,typename,typename>(stappler::sql::Query::Field const&,Args &&...); member function; function template
 ::stappler::sql::GenericQuery::insert(stappler::StringView const&); member function; namespace
 ::stappler::sql::GenericQuery::insert(stappler::StringView const&,stappler::StringView const&); member function; namespace
 ::stappler::sql::GenericQuery::remove(stappler::StringView const&); member function; namespace
@@ -8555,8 +8522,6 @@
 ::stappler::sql::Query<typename,typename>::remove(stappler::StringView const&); member function; namespace
 ::stappler::sql::Query<typename,typename>::remove(stappler::StringView const&,stappler::StringView const&); member function; namespace
 ::stappler::sql::Query<typename,typename>::select(stappler::sql::Query::Distinct); member function; namespace
-::stappler::sql::Query<typename,typename>::select<typename,typename,typename>(stappler::sql::Query::Distinct,stappler::sql::Query::Field const&,Args &&...); member function; function template
-::stappler::sql::Query<typename,typename>::select<typename,typename,typename>(stappler::sql::Query::Field const&,Args &&...); member function; function template
 ::stappler::sql::Query<typename,typename>::select<typename>(stappler::sql::Query::Distinct,stappler::sql::Query::Field const&,Args &&...); member function; function template
 ::stappler::sql::Query<typename,typename>::select<typename>(stappler::sql::Query::Field const&,Args &&...); member function; function template
 ::stappler::sql::Query<typename,typename>::setProfile(stappler::sql::Profile); member function; class
@@ -8565,7 +8530,6 @@
 ::stappler::sql::Query<typename,typename>::target; member variable; class
 ::stappler::sql::Query<typename,typename>::update(stappler::StringView const&); member function; namespace
 ::stappler::sql::Query<typename,typename>::update(stappler::StringView const&,stappler::StringView const&); member function; namespace
-::stappler::sql::Query<typename,typename>::with<typename,typename,typename>(stappler::StringView const&,Callback const&); member function; function template
 ::stappler::sql::Query<typename,typename>::with<typename>(stappler::StringView const&,Callback const&); member function; function template
 ::stappler::sql::Query<typename,typename>::writeBind(Callback<void (stappler::sql::Query::Select &)> const&); member function; class
 ::stappler::sql::Query<typename,typename>::writeBind(stappler::StringView const&,stappler::sql::Query::Field const&); member function; class
@@ -8573,7 +8537,6 @@
 ::stappler::sql::Query<typename,typename>::writeBind(stappler::sql::Query::Field const&,bool); member function; class
 ::stappler::sql::Query<typename,typename>::writeBind(stappler::sql::Query::RawString const&); member function; class
 ::stappler::sql::Query<typename,typename>::writeBind(stappler::sql::Query::RawStringView const&); member function; class
-::stappler::sql::Query<typename,typename>::writeBind<typename,typename,typename>(Value&&); member function; function template
 ::stappler::sql::Query<typename,typename>::writeBind<typename>(Value&&); member function; function template
 ::stappler::sql::QueryHandle::finalize(); member function; namespace
 ::stappler::sql::Query_writeComparation<typename,typename,typename,typename>(Query<Binder, Interface>&,typename Interface::StringStreamType&,const typename Query<Binder, Interface>::Field&,stappler::sql::Comparation,Value1&&,Value2&&); function; function template
@@ -8617,8 +8580,8 @@
 ::stappler::sql::SelectWhere::group(stappler::sql::Query::Field const&); member function; namespace
 ::stappler::sql::SelectWhere::order(stappler::sql::Ordering,stappler::sql::Query::Field const&,stappler::sql::Nulls); member function; namespace
 ::stappler::sql::SetClause<typename>::def(stappler::StringView const&); member function; namespace
-::stappler::sql::SetClause<typename>::set<typename,typename,typename,typename>(stappler::StringView const&,Value&&); member function; function template
-::stappler::sql::SetClause<typename>::set<typename,typename,typename,typename>(stappler::StringView const&,stappler::StringView const&,Value&&); member function; function template
+::stappler::sql::SetClause<typename>::set<typename,typename,typename>(stappler::StringView const&,Value&&); member function; function template
+::stappler::sql::SetClause<typename>::set<typename,typename,typename>(stappler::StringView const&,stappler::StringView const&,Value&&); member function; function template
 ::stappler::sql::SimpleBinder<typename>; class; class template
 ::stappler::sql::SimpleBinder<typename>::writeBind(std::ostream&,PatternComparator<data::ValueTemplate<Interface>> const&); member function; class
 ::stappler::sql::SimpleBinder<typename>::writeBind(std::ostream&,const typename Interface::BytesType&); member function; class
@@ -8631,11 +8594,11 @@
 ::stappler::sql::WhereBegin::where(); member function; namespace
 ::stappler::sql::WhereBegin::where<typename,typename,typename>(Args &&...); member function; function template
 ::stappler::sql::WhereBegin::whereParentesis<typename,typename,typename>(Callback const&); member function; function template
-::stappler::sql::WhereClause<typename>::parenthesis<typename,typename,typename,typename>(stappler::sql::Operator,Callback const&); member function; function template
-::stappler::sql::WhereClause<typename>::where<typename,typename,typename,typename>(stappler::sql::Operator,stappler::sql::Query::Field const&,stappler::StringView const&,Value&&); member function; function template
-::stappler::sql::WhereClause<typename>::where<typename,typename,typename,typename>(stappler::sql::Operator,stappler::sql::Query::Field const&,stappler::StringView const&,Value&&,stappler::StringView const&,Value&&); member function; function template
-::stappler::sql::WhereClause<typename>::where<typename,typename,typename,typename>(stappler::sql::Operator,stappler::sql::Query::Field const&,stappler::sql::Comparation,Value&&); member function; function template
-::stappler::sql::WhereClause<typename>::where<typename,typename,typename,typename>(stappler::sql::Operator,stappler::sql::Query::Field const&,stappler::sql::Comparation,Value&&,Value&&); member function; function template
+::stappler::sql::WhereClause<typename>::parenthesis<typename,typename,typename>(stappler::sql::Operator,Callback const&); member function; function template
+::stappler::sql::WhereClause<typename>::where<typename,typename,typename>(stappler::sql::Operator,stappler::sql::Query::Field const&,stappler::StringView const&,Value&&); member function; function template
+::stappler::sql::WhereClause<typename>::where<typename,typename,typename>(stappler::sql::Operator,stappler::sql::Query::Field const&,stappler::StringView const&,Value&&,stappler::StringView const&,Value&&); member function; function template
+::stappler::sql::WhereClause<typename>::where<typename,typename,typename>(stappler::sql::Operator,stappler::sql::Query::Field const&,stappler::sql::Comparation,Value&&); member function; function template
+::stappler::sql::WhereClause<typename>::where<typename,typename,typename>(stappler::sql::Operator,stappler::sql::Query::Field const&,stappler::sql::Comparation,Value&&,Value&&); member function; function template
 ::stappler::sql::decodeComparation(stappler::StringView); function; namespace
 ::stappler::sql::encodeComparation(stappler::sql::Comparation); function; namespace
 ::stappler::sql::makePatternComparator<typename>(stappler::sql::Comparation,T&&); function; function template
@@ -8666,7 +8629,6 @@
 ::stappler::string::StringTraits<typename>::Vector<typename>; type alias; alias template
 ::stappler::string::StringTraits<typename>::WideString; type alias; class
 ::stappler::string::StringTraits<typename>::isUrlencodeChar(char); function; class
-::stappler::string::StringTraits<typename>::split<typename,typename>(stappler::string::StringTraits::String const&,stappler::string::StringTraits::String const&,T&&); function; function template
 ::stappler::string::StringTraits<typename>::split<typename>(stappler::string::StringTraits::String const&,stappler::string::StringTraits::String const&,T&&); function; function template
 ::stappler::string::StringTraits<typename>::toKoi8r(stappler::WideStringView const&); function; class
 ::stappler::string::StringTraits<typename>::toUtf16(char32_t); function; class
@@ -9382,6 +9344,7 @@ STAPPLER_FILESYSTEM_SPFILESYSTEM_H_; macro definition; file
 STAPPLER_GEOM_SPCOLOR_H_; macro definition; file
 STAPPLER_GEOM_SPGEOMETRY_H_; macro definition; file
 STAPPLER_GEOM_SPMAT4_H_; macro definition; file
+STAPPLER_GEOM_SPPADDING_H_; macro definition; file
 STAPPLER_GEOM_SPQUATERNION_H_; macro definition; file
 STAPPLER_GEOM_SPSIMD_H_; macro definition; file
 STAPPLER_GEOM_SPSIMD_NEON64_H_; macro definition; file
