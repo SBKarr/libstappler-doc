@@ -928,11 +928,7 @@ static String getTemplateScopeName(const cppast::cpp_template_template_parameter
 
 template <typename T>
 static String getTemplateScope(const T &tpl, size_t nparams = 0) {
-	size_t p = 0;
-	for (auto &it : tpl.parameters()) {
-		++ p;
-	}
-
+	size_t p = std::distance(tpl.parameters().begin(), tpl.parameters().end());
 	size_t i = 0;
 	StringStream str;
 	str << "<";
@@ -1083,9 +1079,7 @@ static String getScopeName(const index_t &index, const cppast::cpp_entity &e, co
 				out << getScopeName(index, candidate) << "::";
 				if (candidate.kind() == cpp_entity_kind::class_template_t) {
 					auto &tpl = static_cast<const cpp_class_template &>(candidate);
-					for (auto &it : tpl.parameters()) {
-						++ semTemplates;
-					}
+					semTemplates += std::distance(tpl.parameters().begin(), tpl.parameters().end());
 				}
 			}
 		}
