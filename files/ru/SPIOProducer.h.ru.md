@@ -1,331 +1,453 @@
 Title: SPIOProducer.h
 
 
-# LIBSTAPPLER_COMMON_IO_SPIOPRODUCER_H_
+# STAPPLER_CORE_IO_SPIOPRODUCER_H_
 
 ## BRIEF
 
+Заголовок, описывающий производителя данных для единого интерфейса ввода-вывода
+
 ## CONTENT
+
+Заголовок, описывающий производителя данных для единого интерфейса ввода-вывода
 
 
 # ::stappler::io::ProducerTraitsStream
 
 ## BRIEF
 
+Адаптер для чтения данных из потока
+
 ## CONTENT
+
+Адаптер для чтения данных из потока
 
 
 # ::stappler::io::ProducerTraitsStream::stream_type
 
 ## BRIEF
 
+Тип потока для чтения
+
 ## CONTENT
+
+Тип потока для чтения
 
 
 # ::stappler::io::ProducerTraitsStream::ReadFn(void*,uint8_t*,size_t)
 
 ## BRIEF
 
+Функция чтения данных
+
 ## CONTENT
 
+Функция чтения данных
+
 Параметры:
-* void*
-* uint8_t*
-* size_t
+* void* - непрозрачный указатель на производителя данных
+* uint8_t* - буфер для записи
+* size_t - длина буфера
 
 Возвращает:
-* size_t
+* size_t - число реально записанных байт
 
 # ::stappler::io::ProducerTraitsStream::SeekFn(void*,int64_t,stappler::io::Seek)
 
 ## BRIEF
 
+Функция перемещения внутри производителя данных
+
 ## CONTENT
 
+Функция перемещения внутри производителя данных
+
 Параметры:
-* void*
-* int64_t
-* stappler::io::Seek
+* void* - непрозрачный указатель на производителя данных
+* int64_t - смещение позиции
+* stappler::io::Seek - тип смещения
 
 Возвращает:
-* size_t
+* size_t - новая позиция внутри производителя, начиная с начала
+
 
 # ::stappler::io::ProducerTraitsStream::TellFn(void*)
 
 ## BRIEF
 
+Функция возврата позиции внутри производителя данных
+
 ## CONTENT
 
+Функция возврата позиции внутри производителя данных
+
 Параметры:
-* void*
+* void* - непрозрачный указатель на производителя данных
 
 Возвращает:
-* size_t
+* size_t - позиция внутри производителя, начиная с начала
+
 
 # ::stappler::io::ReadFunction<class>(T&,uint8_t*,size_t)
 
 ## BRIEF
 
+Перегружаемая функция чтения данных из производителя
+
 ## CONTENT
 
+Перегружаемая функция чтения данных из производителя
+
 Параметры шаблона:
-* class T
+* class T - тип производителя
 
 Параметры:
-* T&
-* uint8_t*
-* size_t
+* T& - объект производителя
+* uint8_t* - буфер для записи данных
+* size_t - размер буфера
 
 Возвращает:
-* size_t
+* size_t - число реально прочитанных байт
+
 
 # ::stappler::io::SeekFunction<class>(T&,int64_t,stappler::io::Seek)
 
 ## BRIEF
 
+Перегружаемая функция перемещения внутри производителя
+
 ## CONTENT
 
+Перегружаемая функция перемещения внутри производителя
+
 Параметры шаблона:
-* class T
+* class T - тип производителя
 
 Параметры:
-* T&
-* int64_t
-* stappler::io::Seek
+* T& - объект производителя
+* int64_t - смещение позиции
+* stappler::io::Seek - способ смещения позиции
 
 Возвращает:
-* size_t
+* size_t - новая позиция внутри проиводителя, в байтах с начала
 
 # ::stappler::io::TellFunction<class>(T&)
 
 ## BRIEF
 
+Перегружаемая функция получения текущей позиции производителя данных
+
 ## CONTENT
 
+Перегружаемая функция получения текущей позиции производителя данных
+
 Параметры шаблона:
-* class T
+* class T - тип производителя
 
 Параметры:
-* T&
+* T& - объект производителя
 
 Возвращает:
-* size_t
+* size_t - позиция внутри проиводителя, в байтах с начала
 
 # ::stappler::io::ProducerTraitsOverload<class>
 
 ## BRIEF
 
+Адаптер производителя на основе перегружаемых функций
+
 ## CONTENT
 
+Адаптер производителя на основе перегружаемых функций
+
 Параметры шаблона:
-* class T
+* class T - тип производителя
 
 
 # ::stappler::io::ProducerTraitsOverload<class>::ReadFn(void*,uint8_t*,size_t)
 
 ## BRIEF
 
+Функция чтения данных
+
 ## CONTENT
 
+Функция чтения данных
+
 Параметры:
-* void*
-* uint8_t*
-* size_t
+* void* - непрозрачный указатель на производителя данных
+* uint8_t* - буфер для записи
+* size_t - длина буфера
 
 Возвращает:
-* size_t
+* size_t - число реально записанных байт
+
 
 # ::stappler::io::ProducerTraitsOverload<class>::SeekFn(void*,int64_t,stappler::io::Seek)
 
 ## BRIEF
 
+Функция перемещения внутри производителя данных
+
 ## CONTENT
 
+Функция перемещения внутри производителя данных
+
 Параметры:
-* void*
-* int64_t
-* stappler::io::Seek
+* void* - непрозрачный указатель на производителя данных
+* int64_t - смещение позиции
+* stappler::io::Seek - тип смещения
 
 Возвращает:
-* size_t
+* size_t - новая позиция внутри производителя, начиная с начала
+
 
 # ::stappler::io::ProducerTraitsOverload<class>::TellFn(void*)
 
 ## BRIEF
 
+Функция возврата позиции внутри производителя данных
+
 ## CONTENT
 
+Функция возврата позиции внутри производителя данных
+
 Параметры:
-* void*
+* void* - непрозрачный указатель на производителя данных
 
 Возвращает:
-* size_t
+* size_t - позиция внутри производителя, начиная с начала
+
 
 # ::stappler::io::ProducerTraitsResolution<typename>
 
 ## BRIEF
 
+Вспомогательный класс для определения адаптера для производителя данных
+
 ## CONTENT
 
+Вспомогательный класс для определения адаптера для производителя данных
+
 Параметры шаблона:
-* typename T
+* typename T - тип производителя
 
 
 # ::stappler::io::ProducerTraitsResolution<typename>::type
 
 ## BRIEF
 
+Результат вычисления адаптера производителя
+
 ## CONTENT
+
+Результат вычисления адаптера производителя
 
 
 # ::stappler::io::ProducerTraits<typename>
 
 ## BRIEF
 
+Общий адаптер для производителя данных
+
 ## CONTENT
 
+Общий адаптер для производителя данных
+
 Параметры шаблона:
-* typename T
+* typename T - тип производителя
 
 
 # ::stappler::io::ProducerTraits<typename>::traits_type
 
 ## BRIEF
 
+Тип конкретного адаптера производителя
+
 ## CONTENT
+
+Тип конкретного адаптера производителя
 
 
 # ::stappler::io::ProducerTraits<typename>::ReadFn(void*,uint8_t*,size_t)
 
 ## BRIEF
 
+Функция чтения данных
+
 ## CONTENT
 
+Функция чтения данных
+
 Параметры:
-* void*
-* uint8_t*
-* size_t
+* void* - непрозрачный указатель на производителя данных
+* uint8_t* - буфер для записи
+* size_t - длина буфера
 
 Возвращает:
-* size_t
+* size_t - число реально записанных байт
+
 
 # ::stappler::io::ProducerTraits<typename>::SeekFn(void*,int64_t,stappler::io::Seek)
 
 ## BRIEF
 
+Функция перемещения внутри производителя данных
+
 ## CONTENT
 
+Функция перемещения внутри производителя данных
+
 Параметры:
-* void*
-* int64_t
-* stappler::io::Seek
+* void* - непрозрачный указатель на производителя данных
+* int64_t - смещение позиции
+* stappler::io::Seek - тип смещения
 
 Возвращает:
-* size_t
+* size_t - новая позиция внутри производителя, начиная с начала
+
 
 # ::stappler::io::ProducerTraits<typename>::TellFn(void*)
 
 ## BRIEF
 
+Функция возврата позиции внутри производителя данных
+
 ## CONTENT
 
+Функция возврата позиции внутри производителя данных
+
 Параметры:
-* void*
+* void* - непрозрачный указатель на производителя данных
 
 Возвращает:
-* size_t
+* size_t - позиция внутри производителя, начиная с начала
+
 
 # ::stappler::io::Producer
 
 ## BRIEF
 
+Обёртка производителя данных для единого интерфейса ввода-вывода
+
 ## CONTENT
+
+Обёртка производителя данных для единого интерфейса ввода-вывода
 
 
 # ::stappler::io::Producer::Producer<typename,typename>(T&)
 
 ## BRIEF
 
+Создаёт обёртку вокруг производителя данных
+
 ## CONTENT
 
+Создаёт обёртку вокруг производителя данных. Производиетль должен существовать, пока существует обёртка
+
 Параметры шаблона:
-* typename T
-* typename Traits
+* typename T - тип производиетля данных
+* typename Traits - тип адаптера к производиетлю данных
 
 Параметры:
-* T&
+* T&  объект производиетля данных
 
 
 # ::stappler::io::Producer::read(uint8_t*,size_t) const
 
 ## BRIEF
 
+Функция чтения из производителя
+
 ## CONTENT
 
+Функция чтения из производителя
+
 Параметры:
-* uint8_t*
-* size_t
+* uint8_t* - буфер для чтения
+* size_t - размер буфера
 
 Возвращает:
-* size_t
+* size_t - число реально прочитанных байт
 
 # ::stappler::io::Producer::read(stappler::io::Buffer const&,size_t) const
 
 ## BRIEF
 
+Функция чтения из производителя в буфер
+
 ## CONTENT
 
+Функция чтения из производителя в буфер
+
 Параметры:
-* stappler::io::Buffer const&
-* size_t
+* stappler::io::Buffer const& - буфер для чтения
+* size_t - число байт для чтения
 
 Возвращает:
-* size_t
+* size_t - число реально прочитанных байт
+
 
 # ::stappler::io::Producer::seek(int64_t,stappler::io::Seek) const
 
 ## BRIEF
 
+Перемещает позицию внутри производиетля
+
 ## CONTENT
 
+Перемещает позицию внутри производиетля
+
 Параметры:
-* int64_t
-* stappler::io::Seek
+* int64_t - смещение позиции
+* stappler::io::Seek - тип смещения
 
 Возвращает:
-* size_t
+* size_t - новая позиция в байтах с начала
 
 # ::stappler::io::Producer::seekAndRead<typename>(size_t,T&&,size_t) const
 
 ## BRIEF
 
+Перемещает позицию и считывает данные с неё в буфер
+
 ## CONTENT
 
+Перемещает позицию и считывает данные с неё в буфер
+
 Параметры шаблона:
-* typename T
+* typename T - тип буфера для чтения
 
 Параметры:
-* size_t
-* T&&
-* size_t
+* size_t - позиция для перемещения в байтах с начала
+* T&& - буфер для чтения
+* size_t - число байт для чтения
 
 Возвращает:
-* size_t
+* size_t - реально прочитанное число байт
 
 # ::stappler::io::Producer::tell() const
 
 ## BRIEF
 
+Возвращает реальную позицию внутри производителя
+
 ## CONTENT
 
+Возвращает реальную позицию внутри производителя
+
 Возвращает:
-* size_t
+* size_t - позиция в байтах с начала
 
 # ::stappler::io::Producer::ptr
 
 ## BRIEF
 
+Непрозрачный указатель на реального производителя
+
 ## CONTENT
+
+Непрозрачный указатель на реального производителя
 
 Тип: void*
 
@@ -334,7 +456,11 @@ Title: SPIOProducer.h
 
 ## BRIEF
 
+Функция чтения
+
 ## CONTENT
+
+Функция чтения
 
 Тип: stappler::io::read_fn
 
@@ -343,7 +469,11 @@ Title: SPIOProducer.h
 
 ## BRIEF
 
+Функция перемещения
+
 ## CONTENT
+
+Функция перемещения
 
 Тип: stappler::io::seek_fn
 
@@ -352,73 +482,10 @@ Title: SPIOProducer.h
 
 ## BRIEF
 
+Функция определения позиции
+
 ## CONTENT
+
+Функция определения позиции
 
 Тип: stappler::io::size_fn
-
-
-# ::stappler::io::Producer::Producer<typename,typename>(T&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename T
-* typename Traits
-
-Параметры:
-* T&
-
-
-# ::stappler::io::Producer::read(uint8_t*,size_t) const
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* uint8_t*
-* size_t
-
-Возвращает:
-* size_t
-
-# ::stappler::io::Producer::seek(int64_t,stappler::io::Seek) const
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* int64_t
-* stappler::io::Seek
-
-Возвращает:
-* size_t
-
-# ::stappler::io::Producer::seekAndRead<typename>(size_t,T&&,size_t) const
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename T
-
-Параметры:
-* size_t
-* T&&
-* size_t
-
-Возвращает:
-* size_t
-
-# ::stappler::io::Producer::tell() const
-
-## BRIEF
-
-## CONTENT
-
-Возвращает:
-* size_t

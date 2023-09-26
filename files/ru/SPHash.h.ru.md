@@ -1,43 +1,57 @@
 Title: SPHash.h
 
 
-# LIBSTAPPLER_COMMON_STRING_SPHASH_H_
+# STAPPLER_CORE_STRING_SPHASH_H_
 
 ## BRIEF
 
+Заголовок стандартной хэш-функции XXH-2
+
 ## CONTENT
 
+Заголовок стандартной хэш-функции XXH-2. Эта хэш-функция используется как стандартная для хэш-таблиц SDK. Функция реализована в вариантах 32 и 64 бита, поддерживается вычисление на этапе компиляции (constexpr)
 
 # ::stappler::hash::xxh32
 
 ## BRIEF
 
+Контекст 32-битного хэша
+
 ## CONTENT
 
+Контекст 32-битного хэша
 
 # ::stappler::hash::xxh32::hash(char const*,uint32_t,uint32_t)
 
 ## BRIEF
 
+Вычисляет 32-битный хэш данных
+
 ## CONTENT
+
+Вычисляет 32-битный хэш данных
 
 Доступ: public
 
 Параметры:
-* char const*
-* uint32_t
-* uint32_t
+* char const* - исходный блок данных
+* uint32_t - размер блока данных
+* uint32_t - инициализирующее значение
 
 Возвращает:
-* uint32_t
+* uint32_t - значение хэша
 
 # ::stappler::hash::xxh32::PRIME1
 
 ## BRIEF
 
+Значение PRIME1
+
 ## CONTENT
 
 Доступ: private
+
+Значение PRIME1
 
 Тип: uint32_t const
 
@@ -46,9 +60,13 @@ Title: SPHash.h
 
 ## BRIEF
 
+Значение PRIME2
+
 ## CONTENT
 
 Доступ: private
+
+Значение PRIME2
 
 Тип: uint32_t const
 
@@ -57,9 +75,13 @@ Title: SPHash.h
 
 ## BRIEF
 
+Значение PRIME3
+
 ## CONTENT
 
 Доступ: private
+
+Значение PRIME3
 
 Тип: uint32_t const
 
@@ -68,9 +90,13 @@ Title: SPHash.h
 
 ## BRIEF
 
+Значение PRIME4
+
 ## CONTENT
 
 Доступ: private
+
+Значение PRIME4
 
 Тип: uint32_t const
 
@@ -79,9 +105,13 @@ Title: SPHash.h
 
 ## BRIEF
 
+Значение PRIME5
+
 ## CONTENT
 
 Доступ: private
+
+Значение PRIME5
 
 Тип: uint32_t const
 
@@ -90,9 +120,13 @@ Title: SPHash.h
 
 ## BRIEF
 
+Рабочая функция
+
 ## CONTENT
 
 Доступ: private
+
+Рабочая функция
 
 Параметры:
 * uint32_t
@@ -105,9 +139,13 @@ Title: SPHash.h
 
 ## BRIEF
 
+Рабочая функция
+
 ## CONTENT
 
 Доступ: private
+
+Рабочая функция
 
 Параметры:
 * uint32_t
@@ -120,9 +158,13 @@ Title: SPHash.h
 
 ## BRIEF
 
+Рабочая функция
+
 ## CONTENT
 
 Доступ: private
+
+Рабочая функция
 
 Параметры:
 * uint32_t const
@@ -136,9 +178,13 @@ Title: SPHash.h
 
 ## BRIEF
 
+Рабочая функция
+
 ## CONTENT
 
 Доступ: private
+
+Рабочая функция
 
 Параметры:
 * uint32_t const
@@ -150,9 +196,13 @@ Title: SPHash.h
 
 ## BRIEF
 
+Рабочая функция
+
 ## CONTENT
 
 Доступ: private
+
+Рабочая функция
 
 Параметры:
 * char const*
@@ -164,9 +214,13 @@ Title: SPHash.h
 
 ## BRIEF
 
+Рабочая функция
+
 ## CONTENT
 
 Доступ: private
+
+Рабочая функция
 
 Параметры:
 * char const*
@@ -179,9 +233,13 @@ Title: SPHash.h
 
 ## BRIEF
 
+Рабочая функция
+
 ## CONTENT
 
 Доступ: private
+
+Рабочая функция
 
 Параметры:
 * uint32_t
@@ -195,9 +253,13 @@ Title: SPHash.h
 
 ## BRIEF
 
+Рабочая функция
+
 ## CONTENT
 
 Доступ: private
+
+Рабочая функция
 
 Параметры:
 * char const*
@@ -214,9 +276,13 @@ Title: SPHash.h
 
 ## BRIEF
 
+Рабочая функция
+
 ## CONTENT
 
 Доступ: private
+
+Рабочая функция
 
 Параметры:
 * char const*
@@ -230,32 +296,44 @@ Title: SPHash.h
 
 ## BRIEF
 
+Контекст 64-битного хэша
+
 ## CONTENT
+
+Контекст 64-битного хэша
 
 
 # ::stappler::hash::xxh64::hash(char const*,uint64_t,uint64_t)
 
 ## BRIEF
 
+Вычисляет 64-битный хэш данных
+
 ## CONTENT
+
+Вычисляет 64-битный хэш данных
 
 Доступ: public
 
 Параметры:
-* char const*
-* uint64_t
-* uint64_t
+* char const* - исходный блок данных
+* uint64_t - размер блока данных
+* uint64_t - инициализирующее значение
 
 Возвращает:
-* uint64_t
+* uint64_t - значение хэша
 
 # ::stappler::hash::xxh64::PRIME1
 
 ## BRIEF
 
+Значение PRIME1
+
 ## CONTENT
 
 Доступ: private
+
+Значение PRIME1
 
 Тип: uint64_t const
 
@@ -264,9 +342,13 @@ Title: SPHash.h
 
 ## BRIEF
 
+Значение PRIME2
+
 ## CONTENT
 
 Доступ: private
+
+Значение PRIME2
 
 Тип: uint64_t const
 
@@ -275,9 +357,13 @@ Title: SPHash.h
 
 ## BRIEF
 
+Значение PRIME3
+
 ## CONTENT
 
 Доступ: private
+
+Значение PRIME3
 
 Тип: uint64_t const
 
@@ -286,9 +372,13 @@ Title: SPHash.h
 
 ## BRIEF
 
+Значение PRIME4
+
 ## CONTENT
 
 Доступ: private
+
+Значение PRIME4
 
 Тип: uint64_t const
 
@@ -297,9 +387,13 @@ Title: SPHash.h
 
 ## BRIEF
 
+Значение PRIME5
+
 ## CONTENT
 
 Доступ: private
+
+Значение PRIME5
 
 Тип: uint64_t const
 
@@ -308,9 +402,13 @@ Title: SPHash.h
 
 ## BRIEF
 
+Рабочая функция
+
 ## CONTENT
 
 Доступ: private
+
+Рабочая функция
 
 Параметры:
 * uint64_t
@@ -323,9 +421,13 @@ Title: SPHash.h
 
 ## BRIEF
 
+Рабочая функция
+
 ## CONTENT
 
 Доступ: private
+
+Рабочая функция
 
 Параметры:
 * uint64_t const
@@ -339,9 +441,13 @@ Title: SPHash.h
 
 ## BRIEF
 
+Рабочая функция
+
 ## CONTENT
 
 Доступ: private
+
+Рабочая функция
 
 Параметры:
 * uint64_t const
@@ -354,9 +460,13 @@ Title: SPHash.h
 
 ## BRIEF
 
+Рабочая функция
+
 ## CONTENT
 
 Доступ: private
+
+Рабочая функция
 
 Параметры:
 * uint64_t const
@@ -369,9 +479,13 @@ Title: SPHash.h
 
 ## BRIEF
 
+Рабочая функция
+
 ## CONTENT
 
 Доступ: private
+
+Рабочая функция
 
 Параметры:
 * char const*
@@ -383,9 +497,13 @@ Title: SPHash.h
 
 ## BRIEF
 
+Рабочая функция
+
 ## CONTENT
 
 Доступ: private
+
+Рабочая функция
 
 Параметры:
 * char const*
@@ -397,9 +515,13 @@ Title: SPHash.h
 
 ## BRIEF
 
+Рабочая функция
+
 ## CONTENT
 
 Доступ: private
+
+Рабочая функция
 
 Параметры:
 * char const*
@@ -412,9 +534,13 @@ Title: SPHash.h
 
 ## BRIEF
 
+Рабочая функция
+
 ## CONTENT
 
 Доступ: private
+
+Рабочая функция
 
 Параметры:
 * char const*
@@ -426,9 +552,13 @@ Title: SPHash.h
 
 ## BRIEF
 
+Рабочая функция
+
 ## CONTENT
 
 Доступ: private
+
+Рабочая функция
 
 Параметры:
 * uint64_t
@@ -442,9 +572,13 @@ Title: SPHash.h
 
 ## BRIEF
 
+Рабочая функция
+
 ## CONTENT
 
 Доступ: private
+
+Рабочая функция
 
 Параметры:
 * char const*
@@ -461,9 +595,13 @@ Title: SPHash.h
 
 ## BRIEF
 
+Рабочая функция
+
 ## CONTENT
 
 Доступ: private
+
+Рабочая функция
 
 Параметры:
 * char const*
@@ -477,46 +615,63 @@ Title: SPHash.h
 
 ## BRIEF
 
+Вычисляет 32-битный хэш данных
+
 ## CONTENT
 
-Параметры:
-* char const*
-* uint32_t
-* uint32_t
+Вычисляет 32-битный хэш данных
 
-Возвращает:
-* uint32_t
+Доступ: public
+
+Параметры:
+* char const* - исходный блок данных
+* uint32_t - размер блока данных
+* uint32_t - инициализирующее значение
 
 # ::stappler::hash::hash64(char const*,size_t,uint64_t)
 
 ## BRIEF
 
+Вычисляет 64-битный хэш данных
+
 ## CONTENT
 
+Вычисляет 64-битный хэш данных
+
+Доступ: public
+
 Параметры:
-* char const*
-* size_t
-* uint64_t
+* char const* - исходный блок данных
+* size_t - размер блока данных
+* uint64_t - инициализирующее значение
 
 Возвращает:
-* uint64_t
+* uint64_t - значение хэша
 
 # ::stappler::hash::hashSize(char const*,size_t,uint64_t)
 
 ## BRIEF
 
+Вычисляет хэш, соотвествующий размеру size_t платформы
+
 ## CONTENT
 
+Вычисляет хэш, соотвествующий размеру size_t платформы
+
 Параметры:
-* char const*
-* size_t
-* uint64_t
+* char const* - исходный блок данных
+* size_t - размер блока данных
+* uint64_t - инициализирующее значение
 
 Возвращает:
-* size_t
+* size_t - значение хэша
 
 # SP_HASH_INLINE
 
 ## BRIEF
 
+Макрос атрибута вложенности рабочих функций хэша
+
 ## CONTENT
+
+Макрос атрибута вложенности рабочих функций хэша

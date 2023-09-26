@@ -1,39 +1,66 @@
 Title: SPMemRbtree.h
 
 
-# LIBSTAPPLER_COMMON_MEMORY_SPMEMRBTREE_H_
+# STAPPLER_CORE_MEMORY_SPMEMRBTREE_H_
 
 ## BRIEF
 
+Заголовок контейнера вида красно-чёрного дерева
+
 ## CONTENT
+
+Заголовок контейнера вида красно-чёрного дерева. Используется для аналогов map и set
+
+
+# SP_MEM_RBTREE_DEBUG
+
+## BRIEF
+
+Макрос для включения отладочных возожностей
+
+## CONTENT
+
+Макрос для включения отладочных возожностей
 
 
 # ::stappler::memory::rbtree::NodeColor
 
 ## BRIEF
 
+Цвет элеммента дерева
+
 ## CONTENT
 
+Цвет элеммента дерева
+
 Значения:
-* Red
-* Black
+* Red - красный
+* Black - чёрный
 
 
 # ::stappler::memory::rbtree::Storage<typename>
 
 ## BRIEF
 
+Тип хранилища элементов дерева
+
 ## CONTENT
 
+Тип хранилища элементов дерева
+
 Параметры шаблона:
-* typename Value
+* typename Value - тип хранимого значения
 
 
 # ::stappler::memory::rbtree::NodeBase
 
 ## BRIEF
 
+Базовый класс элемента дерева
+
 ## CONTENT
+
+Базовый класс элемента дерева
 
 Базовые классы:
 * AllocPool
@@ -43,14 +70,22 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Набор флагов элемента
+
 ## CONTENT
+
+Набор флагов элемента
 
 
 # ::stappler::memory::rbtree::NodeBase::Flag::color
 
 ## BRIEF
 
+Цвет нода
+
 ## CONTENT
+
+Цвет нода (0 - красный)
 
 Тип: uintptr_t
 
@@ -59,7 +94,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Флаг блоковой преаллокации элемента
+
 ## CONTENT
+
+Флаг блоковой преаллокации элемента. Установлен если элемент распределён в составе блока
 
 Тип: uintptr_t
 
@@ -68,7 +107,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Индекс блока преаллокации
+
 ## CONTENT
+
+Индекс блока преаллокации
 
 Тип: uintptr_t
 
@@ -77,7 +120,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Размер блока преаллокации
+
 ## CONTENT
+
+Размер блока преаллокации
 
 Тип: uintptr_t
 
@@ -86,7 +133,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Родительский элемент
+
 ## CONTENT
+
+Родительский элемент
 
 Тип: stappler::memory::rbtree::NodeBase*
 
@@ -95,7 +146,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Левый элемент
+
 ## CONTENT
+
+Левый элемент
 
 Тип: stappler::memory::rbtree::NodeBase*
 
@@ -104,7 +159,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Правый элемент
+
 ## CONTENT
+
+Правый элемент
 
 Тип: stappler::memory::rbtree::NodeBase*
 
@@ -113,7 +172,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Флаги элемента
+
 ## CONTENT
+
+Флаги элемента
 
 Тип: stappler::memory::rbtree::NodeBase::Flag
 
@@ -122,12 +185,18 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Конструктор по умолчанию
+
 ## CONTENT
+
+Конструктор по умолчанию
 
 
 # ::stappler::memory::rbtree::NodeBase::NodeBase(stappler::memory::rbtree::NodeColor)
 
 ## BRIEF
+
+Конструктор по цвету
 
 ## CONTENT
 
@@ -139,7 +208,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Устанавливает цвет элемента
+
 ## CONTENT
+
+Устанавливает цвет элемента
 
 Параметры:
 * stappler::memory::rbtree::NodeColor
@@ -149,7 +222,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Возвращает цвет элемента
+
 ## CONTENT
+
+Возвращает цвет элемента
 
 Возвращает:
 * stappler::memory::rbtree::NodeColor
@@ -158,7 +235,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Устанавливает флаг преаллокации
+
 ## CONTENT
+
+Устанавливает флаг преаллокации
 
 Параметры:
 * bool
@@ -168,7 +249,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Возвращает флаг преаллокации
+
 ## CONTENT
+
+Возвращает флаг преаллокации
 
 Возвращает:
 * bool
@@ -177,7 +262,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Устанавливает размер преаллоцированного блока
+
 ## CONTENT
+
+Устанавливает размер преаллоцированного блока
 
 Параметры:
 * uintptr_t
@@ -187,7 +276,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Возвращает размер преаллоцированного блока
+
 ## CONTENT
+
+Возвращает размер преаллоцированного блока
 
 Возвращает:
 * uintptr_t
@@ -196,7 +289,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Устанавливает индекс преаллоцированного блока
+
 ## CONTENT
+
+Устанавливает индекс преаллоцированного блока
 
 Параметры:
 * uintptr_t
@@ -206,7 +303,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Возвращает индекс преаллоцированного блока
+
 ## CONTENT
+
+Возвращает индекс преаллоцированного блока
 
 Возвращает:
 * uintptr_t
@@ -215,7 +316,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Возвращает минимальный следующий элемент
+
 ## CONTENT
+
+Возвращает минимальный следующий элемент
 
 Параметры:
 * stappler::memory::rbtree::NodeBase*
@@ -227,7 +332,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Возвращает минимальный следующий элемент
+
 ## CONTENT
+
+Возвращает минимальный следующий элемент
 
 Параметры:
 * stappler::memory::rbtree::NodeBase const*
@@ -239,7 +348,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Возвращает максимальный следующий элемент
+
 ## CONTENT
+
+Возвращает максимальный следующий элемент
 
 Параметры:
 * stappler::memory::rbtree::NodeBase*
@@ -251,7 +364,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Возвращает максимальный следующий элемент
+
 ## CONTENT
+
+Возвращает максимальный следующий элемент
 
 Параметры:
 * stappler::memory::rbtree::NodeBase const*
@@ -263,7 +380,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Возвращает следующий элемент в дереве
+
 ## CONTENT
+
+Возвращает следующий элемент в дереве
 
 Параметры:
 * stappler::memory::rbtree::NodeBase*
@@ -275,7 +396,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Возвращает следующий элемент в дереве
+
 ## CONTENT
+
+Возвращает следующий элемент в дереве
 
 Параметры:
 * stappler::memory::rbtree::NodeBase const*
@@ -287,7 +412,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Возвращает предыдущий элемент в дереве
+
 ## CONTENT
+
+Возвращает предыдущий элемент в дереве
 
 Параметры:
 * stappler::memory::rbtree::NodeBase*
@@ -299,7 +428,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Возвращает предыдущий элемент в дереве
+
 ## CONTENT
+
+Возвращает предыдущий элемент в дереве
 
 Параметры:
 * stappler::memory::rbtree::NodeBase const*
@@ -311,11 +444,15 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Заменяет элемент на его позиции в дереве
+
 ## CONTENT
 
+Заменяет элемент на его позиции в дереве
+
 Параметры:
-* stappler::memory::rbtree::NodeBase*
-* stappler::memory::rbtree::NodeBase*
+* stappler::memory::rbtree::NodeBase* - старый элемент
+* stappler::memory::rbtree::NodeBase* - новый элемент
 
 Возвращает:
 * stappler::memory::rbtree::NodeBase*
@@ -324,7 +461,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Добавляет элемент в дерево
+
 ## CONTENT
+
+Добавляет элемент в дерево
 
 Параметры:
 * stappler::memory::rbtree::NodeBase*
@@ -335,7 +476,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Удаляет элемент из дерева
+
 ## CONTENT
+
+Удаляет элемент из дерева
 
 Параметры:
 * stappler::memory::rbtree::NodeBase*
@@ -346,10 +491,14 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Тип конкретного элемента в дереве
+
 ## CONTENT
 
+Тип конкретного элемента в дереве
+
 Параметры шаблона:
-* typename Value
+* typename Value - тип хранимого значения
 
 Базовые классы:
 * NodeBase
@@ -359,7 +508,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Хранимое значение
+
 ## CONTENT
+
+Хранимое значение
 
 Тип: Storage<Value>
 
@@ -368,7 +521,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Возвращает указатель на значение в элементе
+
 ## CONTENT
+
+Возвращает указатель на значение в элементе
 
 Параметры:
 * stappler::memory::rbtree::NodeBase*
@@ -380,7 +537,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Возвращает указатель на значение в элементе
+
 ## CONTENT
+
+Возвращает указатель на значение в элементе
 
 Параметры:
 * stappler::memory::rbtree::NodeBase const*
@@ -392,87 +553,136 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Итератор дерева
+
 ## CONTENT
 
+Итератор дерева
+
 Параметры шаблона:
-* typename Value
+* typename Value - тип хранимого значения
 
 
 # ::stappler::memory::rbtree::TreeIterator<typename>::iterator_category
 
 ## BRIEF
 
+Категория итератора для стандартной библиотеки
+
 ## CONTENT
+
+Категория итератора для стандартной библиотеки
 
 
 # ::stappler::memory::rbtree::TreeIterator<typename>::node_type
 
 ## BRIEF
 
+Тип элемента итератора
+
 ## CONTENT
+
+Тип элемента итератора
 
 
 # ::stappler::memory::rbtree::TreeIterator<typename>::value_type
 
 ## BRIEF
 
+Тип значения итератора
+
 ## CONTENT
+
+Тип значения итератора
 
 
 # ::stappler::memory::rbtree::TreeIterator<typename>::reference
 
 ## BRIEF
 
+Тип ссылки на значение
+
 ## CONTENT
+
+Тип ссылки на значение
 
 
 # ::stappler::memory::rbtree::TreeIterator<typename>::pointer
 
 ## BRIEF
 
+Тип указателя на значение
+
 ## CONTENT
+
+Тип указателя на значение
+
 
 
 # ::stappler::memory::rbtree::TreeIterator<typename>::difference_type
 
 ## BRIEF
 
+Тип разницы размеров
+
 ## CONTENT
+
+Тип разницы размеров
 
 
 # ::stappler::memory::rbtree::TreeIterator<typename>::self
 
 ## BRIEF
 
+Тип себя
+
 ## CONTENT
+
+Тип себя
 
 
 # ::stappler::memory::rbtree::TreeIterator<typename>::node_ptr
 
 ## BRIEF
 
+Тип указателя на элемент
+
 ## CONTENT
+
+Тип указателя на элемент
 
 
 # ::stappler::memory::rbtree::TreeIterator<typename>::link_ptr
 
 ## BRIEF
 
+Тип указателя на ссылку
+
 ## CONTENT
+
+Тип указателя на ссылку
 
 
 # ::stappler::memory::rbtree::TreeIterator<typename>::TreeIterator()
 
 ## BRIEF
 
+Конструктор по умолчанию
+
 ## CONTENT
+
+Конструктор по умолчанию
 
 
 # ::stappler::memory::rbtree::TreeIterator<typename>::TreeIterator(stappler::memory::rbtree::TreeIterator::node_ptr)
 
 ## BRIEF
 
+Конструктор из указателя на элемент
+
 ## CONTENT
+
+Конструктор из указателя на элемент
 
 Параметры:
 * stappler::memory::rbtree::TreeIterator::node_ptr
@@ -482,7 +692,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Разыменование итератора
+
 ## CONTENT
+
+Разыменование итератора
 
 Возвращает:
 * reference
@@ -491,7 +705,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Разыменование итератора
+
 ## CONTENT
+
+Разыменование итератора
 
 Возвращает:
 * pointer
@@ -500,7 +718,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Переходит к следующему элементу
+
 ## CONTENT
+
+Переходит к следующему элементу
 
 Возвращает:
 * self&
@@ -509,7 +731,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Переходит к следующему элементу постфиксно
+
 ## CONTENT
+
+Переходит к следующему элементу постфиксно
 
 Параметры:
 * int
@@ -521,7 +747,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Переходит к предыдущему элементу
+
 ## CONTENT
+
+Переходит к предыдущему элементу
 
 Возвращает:
 * self&
@@ -530,7 +760,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Переходит к предыдущему элементу постфиксно
+
 ## CONTENT
+
+Переходит к предыдущему элементу постфиксно
 
 Параметры:
 * int
@@ -542,7 +776,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Сравнивает итераторы
+
 ## CONTENT
+
+Сравнивает итераторы
 
 Параметры:
 * stappler::memory::rbtree::TreeIterator::self const&
@@ -554,7 +792,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Сравнивает итераторы
+
 ## CONTENT
+
+Сравнивает итераторы
 
 Параметры:
 * stappler::memory::rbtree::TreeIterator::self const&
@@ -566,7 +808,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Указатель на элемент в дереве
+
 ## CONTENT
+
+Указатель на элемент в дереве
 
 Тип: node_ptr
 
@@ -575,94 +821,146 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Тип постоянного итератора дерева
+
 ## CONTENT
 
+Тип постоянного итератора дерева
+
 Параметры шаблона:
-* typename Value
+* typename Value - тип значения дерева
 
 
 # ::stappler::memory::rbtree::TreeConstIterator<typename>::iterator_category
 
 ## BRIEF
 
+Категория итератора для стандартной библиотеки
+
 ## CONTENT
+
+Категория итератора для стандартной библиотеки
 
 
 # ::stappler::memory::rbtree::TreeConstIterator<typename>::node_type
 
 ## BRIEF
 
+Тип элемента дерева
+
 ## CONTENT
+
+Тип элемента дерева
 
 
 # ::stappler::memory::rbtree::TreeConstIterator<typename>::value_type
 
 ## BRIEF
 
+Тип значения дерева
+
 ## CONTENT
+
+Тип значения дерева
 
 
 # ::stappler::memory::rbtree::TreeConstIterator<typename>::reference
 
 ## BRIEF
 
+Тип ссылки на значение
+
 ## CONTENT
+
+Тип ссылки на значение
 
 
 # ::stappler::memory::rbtree::TreeConstIterator<typename>::pointer
 
 ## BRIEF
 
+Тип указателя на значение
+
 ## CONTENT
+
+Тип указателя на значение
 
 
 # ::stappler::memory::rbtree::TreeConstIterator<typename>::iterator
 
 ## BRIEF
 
+Тип стандартного итератора
+
 ## CONTENT
+
+Тип стандартного итератора
 
 
 # ::stappler::memory::rbtree::TreeConstIterator<typename>::difference_type
 
 ## BRIEF
 
+Тип разницы размеров
+
 ## CONTENT
+
+Тип разницы размеров
 
 
 # ::stappler::memory::rbtree::TreeConstIterator<typename>::self
 
 ## BRIEF
 
+Тип себя
+
 ## CONTENT
+
+Тип себя
 
 
 # ::stappler::memory::rbtree::TreeConstIterator<typename>::node_ptr
 
 ## BRIEF
 
+Тип указателя на элемент
+
 ## CONTENT
+
+Тип указателя на элемент
 
 
 # ::stappler::memory::rbtree::TreeConstIterator<typename>::link_ptr
 
 ## BRIEF
 
+Тип указателя на ссылку
+
 ## CONTENT
+
+Тип указателя на ссылку
 
 
 # ::stappler::memory::rbtree::TreeConstIterator<typename>::TreeConstIterator()
 
 ## BRIEF
 
+Конструктор по умолчанию
+
 ## CONTENT
+
+Конструктор по умолчанию
 
 
 # ::stappler::memory::rbtree::TreeConstIterator<typename>::TreeConstIterator(stappler::memory::rbtree::TreeConstIterator::node_ptr)
 
 ## BRIEF
 
+Конструктор из указателя на элемент дерева
+
 ## CONTENT
+
+Конструктор из указателя на элемент дерева
 
 Параметры:
 * stappler::memory::rbtree::TreeConstIterator::node_ptr
@@ -672,7 +970,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Конструктор из стандартного итератора
+
 ## CONTENT
+
+Конструктор из стандартного итератора
 
 Параметры:
 * stappler::memory::rbtree::TreeConstIterator::iterator const&
@@ -682,7 +984,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Создаёт стандартный итератор из постоянного
+
 ## CONTENT
+
+Создаёт стандартный итератор из постоянного
 
 Возвращает:
 * iterator
@@ -691,7 +997,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Разыменовывает итератор
+
 ## CONTENT
+
+Разыменовывает итератор
 
 Возвращает:
 * reference
@@ -700,7 +1010,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Разыменовывает итератор
+
 ## CONTENT
+
+Разыменовывает итератор
 
 Возвращает:
 * pointer
@@ -709,7 +1023,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Переходит к следующему элементу
+
 ## CONTENT
+
+Переходит к следующему элементу
 
 Возвращает:
 * self&
@@ -718,7 +1036,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Переходит к следующему элементу постфиксно
+
 ## CONTENT
+
+Переходит к следующему элементу постфиксно
 
 Параметры:
 * int
@@ -730,7 +1052,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Переходит к предыдущему элементу
+
 ## CONTENT
+
+Переходит к предыдущему элементу
 
 Возвращает:
 * self&
@@ -739,7 +1065,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Переходит к предыдущему элементу постфиксно
+
 ## CONTENT
+
+Переходит к предыдущему элементу постфиксно
 
 Параметры:
 * int
@@ -751,7 +1081,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Сравнивает итераторы
+
 ## CONTENT
+
+Сравнивает итераторы
 
 Параметры:
 * stappler::memory::rbtree::TreeConstIterator::self const&
@@ -763,7 +1097,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Сравнивает итераторы
+
 ## CONTENT
+
+Сравнивает итераторы
 
 Параметры:
 * stappler::memory::rbtree::TreeConstIterator::self const&
@@ -775,7 +1113,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Указатель на элемент дерева
+
 ## CONTENT
+
+Указатель на элемент дерева
 
 Тип: node_ptr
 
@@ -784,7 +1126,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Сравнивает итераторы
+
 ## CONTENT
+
+Сравнивает итераторы
 
 Параметры шаблона:
 * typename Value
@@ -800,7 +1146,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Сравнивает итераторы
+
 ## CONTENT
+
+Сравнивает итераторы
 
 Параметры шаблона:
 * typename Value
@@ -816,7 +1166,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Интерфейс извлечения ключа из одиночного типа
+
 ## CONTENT
+
+Интерфейс извлечения ключа из одиночного типа
 
 Параметры шаблона:
 * typename Key
@@ -826,7 +1180,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Извлекает ключ из хранимого значения
+
 ## CONTENT
+
+Извлекает ключ из хранимого значения
 
 Параметры:
 * Key const&
@@ -838,52 +1196,66 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Конструирует элемент из ключа и аргументов значения
+
 ## CONTENT
 
+Конструирует элемент из ключа и аргументов значения
+
 Параметры шаблона:
-* typename A
-* typename Args
+* typename A - тип аллокатора
+* typename Args - тип аргументов
 
 Параметры:
-* A&
-* Node<Key>*
-* Key const&
-* Args &&...
+* A& - аллокатор
+* Node<Key>* - целевой элемент
+* Key const& - ключ
+* Args &&... - аргументы для конструирования значения
 
 
 # ::stappler::memory::rbtree::TreeKeyExtractor<Key,Key>::construct<typename,typename>(A&,Node<Key>*,Key&&,Args &&...)
 
 ## BRIEF
 
+Конструирует элемент из ключа и аргументов значения
+
 ## CONTENT
 
+Конструирует элемент из ключа и аргументов значения
+
 Параметры шаблона:
-* typename A
-* typename Args
+* typename A - тип аллокатора
+* typename Args - тип аргументов
 
 Параметры:
-* A&
-* Node<Key>*
-* Key&&
-* Args &&...
+* A& - аллокатор
+* Node<Key>* - целевой элемент
+* Key&& - ключ
+* Args &&... - аргументы для конструирования значения
 
 
 # ::stappler::memory::rbtree::TreeKeyExtractor<Key,Pair<Key,Value>>::TreeKeyExtractor<Key,Pair<Key,Value>>
 
 ## BRIEF
 
+Интерфейс извлечения ключа из пары типов
+
 ## CONTENT
 
 Параметры шаблона:
-* typename Key
-* typename Value
+* typename Key - тип ключа в паре
+* typename Value - тип значения в паре
 
 
 # ::stappler::memory::rbtree::TreeKeyExtractor<Key,Pair<Key,Value>>::extract(Pair<Key, Value> const&)
 
 ## BRIEF
 
+Извлекает ключ из пары значений
+
 ## CONTENT
+
+Извлекает ключ из пары значений
 
 Параметры:
 * Pair<Key, Value> const&
@@ -895,52 +1267,66 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Конструирует элемент из ключа и аргументов значения
+
 ## CONTENT
 
+Конструирует элемент из ключа и аргументов значения
+
 Параметры шаблона:
-* typename A
+* typename A - тип аллокатора
 * typename Args
 
 Параметры:
-* A&
-* Node<Pair<Key, Value>>*
-* Key const&
-* Args &&...
+* A& - аллокатор
+* Node<Pair<Key, Value>>* - целевой элемент
+* Key const& - ключ
+* Args &&... - аргументы для конструирования значения
 
 
 # ::stappler::memory::rbtree::TreeKeyExtractor<Key,Pair<Key,Value>>::construct<typename,typename>(A&,Node<Pair<Key, Value>>*,Key&&,Args &&...)
 
 ## BRIEF
 
+Конструирует элемент из ключа и аргументов значения
+
 ## CONTENT
 
+Конструирует элемент из ключа и аргументов значения
+
 Параметры шаблона:
-* typename A
+* typename A - тип аллокатора
 * typename Args
 
 Параметры:
-* A&
-* Node<Pair<Key, Value>>*
-* Key&&
-* Args &&...
+* A& - аллокатор
+* Node<Pair<Key, Value>>* - целевой элемент
+* Key&& - ключ
+* Args &&... - аргументы для конструирования значения
 
 
-# ::stappler::memory::rbtree::TreeKeyExtractor<Key,Pair<constKey,Value>>::TreeKeyExtractor<Key,Pair<constKey,Value>>
+# ::stappler::memory::rbtree::TreeKeyExtractor<Key,Pair<const Key,Value>>::TreeKeyExtractor<Key,Pair<const Key,Value>>
 
 ## BRIEF
+
+Интерфейс извлечения ключа из пары типов
 
 ## CONTENT
 
 Параметры шаблона:
-* typename Key
-* typename Value
+* typename Key - тип ключа в паре
+* typename Value - тип значения в паре
 
 
-# ::stappler::memory::rbtree::TreeKeyExtractor<Key,Pair<constKey,Value>>::extract(Pair<const Key, Value> const&)
+# ::stappler::memory::rbtree::TreeKeyExtractor<Key,Pair<const Key,Value>>::extract(Pair<const Key, Value> const&)
 
 ## BRIEF
 
+Извлекает ключ из пары значений
+
 ## CONTENT
+
+Извлекает ключ из пары значений
 
 Параметры:
 * Pair<const Key, Value> const&
@@ -948,57 +1334,74 @@ Title: SPMemRbtree.h
 Возвращает:
 * Key const&
 
-# ::stappler::memory::rbtree::TreeKeyExtractor<Key,Pair<constKey,Value>>::construct<typename,typename>(A&,Node<Pair<const Key, Value>>*,Key const&,Args &&...)
+
+# ::stappler::memory::rbtree::TreeKeyExtractor<Key,Pair<const Key,Value>>::construct<typename,typename>(A&,Node<Pair<const Key, Value>>*,Key const&,Args &&...)
 
 ## BRIEF
 
+Конструирует элемент из ключа и аргументов значения
+
 ## CONTENT
 
+Конструирует элемент из ключа и аргументов значения
+
 Параметры шаблона:
-* typename A
+* typename A - тип аллокатора
 * typename Args
 
 Параметры:
-* A&
-* Node<Pair<const Key, Value>>*
-* Key const&
-* Args &&...
+* A& - аллокатор
+* Node<Pair<const Key, Value>>* - целевой элемент
+* Key const& - ключ
+* Args &&... - аргументы для конструирования значения
 
 
-# ::stappler::memory::rbtree::TreeKeyExtractor<Key,Pair<constKey,Value>>::construct<typename,typename>(A&,Node<Pair<const Key, Value>>*,Key&&,Args &&...)
+# ::stappler::memory::rbtree::TreeKeyExtractor<Key,Pair<const Key,Value>>::construct<typename,typename>(A&,Node<Pair<const Key, Value>>*,Key&&,Args &&...)
 
 ## BRIEF
 
+Конструирует элемент из ключа и аргументов значения
+
 ## CONTENT
 
+Конструирует элемент из ключа и аргументов значения
+
 Параметры шаблона:
-* typename A
+* typename A - тип аллокатора
 * typename Args
 
 Параметры:
-* A&
-* Node<Pair<const Key, Value>>*
-* Key&&
-* Args &&...
+* A& - аллокатор
+* Node<Pair<const Key, Value>>* - целевой элемент
+* Key&& - ключ
+* Args &&... - аргументы для конструирования значения
 
 
 # ::stappler::memory::rbtree::TreeComparator<typename,typename,typename>
 
 ## BRIEF
 
+Интерфейс сравнения ключей значений
+
 ## CONTENT
 
+Интерфейс сравнения ключей значений
+
 Параметры шаблона:
-* typename Key
-* typename Comp
-* typename Transparent
+* typename Key - тип ключа
+* typename Comp - тип функтора сравнения
+* typename Transparent - флаговый параметр прозрачного сравнения
 
 
 # ::stappler::memory::rbtree::TreeComparator<typename,typename,typename>::compare(Key const&,Key const&,Comp const&)
 
 ## BRIEF
 
+Сравнивает ключи
+
 ## CONTENT
+
+Сравнивает ключи
 
 Параметры:
 * Key const&
@@ -1012,7 +1415,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Сравнивает ключи
+
 ## CONTENT
+
+Сравнивает ключи
 
 Параметры шаблона:
 * typename A
@@ -1027,22 +1434,30 @@ Title: SPMemRbtree.h
 Возвращает:
 * bool
 
-# ::stappler::memory::rbtree::TreeComparator<Key,Comp,typenameComp::is_transparent>::TreeComparator<Key,Comp,typenameComp::is_transparent>
+# ::stappler::memory::rbtree::TreeComparator<Key,Comp,typename Comp::is_transparent>::TreeComparator<Key,Comp,typename Comp::is_transparent>
 
 ## BRIEF
 
+Интерфейс сравнения ключей значений
+
 ## CONTENT
+
+Интерфейс сравнения ключей значений
 
 Параметры шаблона:
 * typename Key
 * typename Comp
 
 
-# ::stappler::memory::rbtree::TreeComparator<Key,Comp,typenameComp::is_transparent>::compare<typename,typename>(A const&,B const&,Comp const&)
+# ::stappler::memory::rbtree::TreeComparator<Key,Comp,typename Comp::is_transparent>::compare<typename,typename>(A const&,B const&,Comp const&)
 
 ## BRIEF
 
+Сравнивает ключи
+
 ## CONTENT
+
+Сравнивает ключи
 
 Параметры шаблона:
 * typename A
@@ -1060,12 +1475,16 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Структура красно-чёрного дерева
+
 ## CONTENT
 
+Структура красно-чёрного дерева
+
 Параметры шаблона:
-* typename Key
-* typename Value
-* typename Comp
+* typename Key - тип ключа
+* typename Value - тип значения
+* typename Comp - тип функтора сравнения
 
 Базовые классы:
 * AllocPool
@@ -1075,34 +1494,50 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Тип значения
+
 ## CONTENT
 
 Доступ: public
+
+Тип значения
 
 
 # ::stappler::memory::rbtree::Tree<typename,typename,typename>::node_type
 
 ## BRIEF
 
+Тип элеммента
+
 ## CONTENT
 
 Доступ: public
+
+Тип элеммента
 
 
 # ::stappler::memory::rbtree::Tree<typename,typename,typename>::node_ptr
 
 ## BRIEF
 
+Тип указателя на элемент
+
 ## CONTENT
 
 Доступ: public
+
+Тип указателя на элемент
 
 
 # ::stappler::memory::rbtree::Tree<typename,typename,typename>::base_type
 
 ## BRIEF
 
+Тип базового элемента
+
 ## CONTENT
+
+Тип базового элемента
 
 Доступ: public
 
@@ -1111,94 +1546,135 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Тип постоянного базового элемента
+
 ## CONTENT
 
 Доступ: public
+
+Тип постоянного базового элемента
+
 
 
 # ::stappler::memory::rbtree::Tree<typename,typename,typename>::node_allocator_type
 
 ## BRIEF
 
+Тип аллокатора элемента
+
 ## CONTENT
 
 Доступ: public
+
+Тип аллокатора элемента
 
 
 # ::stappler::memory::rbtree::Tree<typename,typename,typename>::value_allocator_type
 
 ## BRIEF
 
+Тип аллокатора значения
+
 ## CONTENT
 
 Доступ: public
+
+Тип аллокатора значения
 
 
 # ::stappler::memory::rbtree::Tree<typename,typename,typename>::comparator_type
 
 ## BRIEF
 
+Тип функтора сравнения
+
 ## CONTENT
 
 Доступ: public
+
+Тип функтора сравнения
 
 
 # ::stappler::memory::rbtree::Tree<typename,typename,typename>::iterator
 
 ## BRIEF
 
+Тип итератора
+
 ## CONTENT
 
 Доступ: public
+
+Тип итератора
 
 
 # ::stappler::memory::rbtree::Tree<typename,typename,typename>::const_iterator
 
 ## BRIEF
 
+Тип постоянного итератора
+
 ## CONTENT
 
 Доступ: public
+
+Тип постоянного итератора
 
 
 # ::stappler::memory::rbtree::Tree<typename,typename,typename>::reverse_iterator
 
 ## BRIEF
 
+Тип обратного итератора
+
 ## CONTENT
 
 Доступ: public
+
+Тип обратного итератора
 
 
 # ::stappler::memory::rbtree::Tree<typename,typename,typename>::const_reverse_iterator
 
 ## BRIEF
 
+Тип постоянного обратного итератора
+
 ## CONTENT
 
 Доступ: public
+
+Тип постоянного обратного итератора
 
 
 # ::stappler::memory::rbtree::Tree<typename,typename,typename>::Tree(Comp const&,stappler::memory::rbtree::Tree::value_allocator_type const&)
 
 ## BRIEF
 
+Конструктор дерева
+
 ## CONTENT
 
 Доступ: public
 
+Конструктор дерева
+
 Параметры:
-* Comp const&
-* stappler::memory::rbtree::Tree::value_allocator_type const&
+* Comp const& - функтор сравнения значений
+* stappler::memory::rbtree::Tree::value_allocator_type const& - аллокатор
 
 
 # ::stappler::memory::rbtree::Tree<typename,typename,typename>::Tree(const Tree<Key, Value, Comp>&,stappler::memory::rbtree::Tree::value_allocator_type const&)
 
 ## BRIEF
 
+Конструктор копирования дерева
+
 ## CONTENT
 
 Доступ: public
+
+Конструктор копирования дерева
 
 Параметры:
 * const Tree<Key, Value, Comp>&
@@ -1209,9 +1685,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Конструктор перемещения дерева
+
 ## CONTENT
 
 Доступ: public
+
+Конструктор перемещения дерева. Перемещение возможно, если алокаторы совпадают, в противном случае элементы копируются
 
 Параметры:
 * Tree<Key, Value, Comp>&&
@@ -1222,9 +1702,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Оператор копирования
+
 ## CONTENT
 
 Доступ: public
+
+Оператор копирования
 
 Параметры:
 * const Tree<Key, Value, Comp>&
@@ -1236,9 +1720,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Оператор перемещения
+
 ## CONTENT
 
 Доступ: public
+
+Оператор перемещения. Перемещение возможно, если алокаторы совпадают, в противном случае элементы копируются
 
 Параметры:
 * Tree<Key, Value, Comp>&&
@@ -1250,18 +1738,26 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::memory::rbtree::Tree<typename,typename,typename>::get_allocator() const
 
 ## BRIEF
 
+Возвращает аллокатор
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает аллокатор
 
 Возвращает:
 * value_allocator_type&
@@ -1270,165 +1766,205 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Добавляет элемент в дерево
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет элемент в дерево. Если элемент с таким ключом уже есть - не делает ничего.
 
 Параметры шаблона:
 * typename Args
 
 Параметры:
-* Args &&...
+* Args &&... - аргументы для конструирования элемента
 
 Возвращает:
-* Pair<stappler::memory::rbtree::Tree::iterator, bool>
+* Pair<stappler::memory::rbtree::Tree::iterator, bool> - итератор на месте вставки или существующего элемента, true если элемент был добавлен
 
 # ::stappler::memory::rbtree::Tree<typename,typename,typename>::emplace_hint<typename>(stappler::memory::rbtree::Tree::const_iterator,Args &&...)
 
 ## BRIEF
 
+Добавляет элемент с вспомогательным итератором
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет элемент с вспомогательным итератором. Если элемент с таким ключом уже есть - не делает ничего.
 
 Параметры шаблона:
 * typename Args
 
 Параметры:
-* stappler::memory::rbtree::Tree::const_iterator
-* Args &&...
+* stappler::memory::rbtree::Tree::const_iterator - вспомогательный итератор на месте вставки
+* Args &&... - аргументы для конструирования элемента
 
 Возвращает:
-* iterator
+* iterator - итератор на месте вставки или существующего элемента
 
 # ::stappler::memory::rbtree::Tree<typename,typename,typename>::try_emplace<typename,typename>(K&&,Args &&...)
 
 ## BRIEF
 
+Пытается добавить элемент в дерево
+
 ## CONTENT
 
 Доступ: public
 
+Пытается добавить элемент в дерево. Если элемент с таким ключом уже есть - не делает ничего
+
 Параметры шаблона:
-* typename K
+* typename K - тип ключа
 * typename Args
 
 Параметры:
-* K&&
-* Args &&...
+* K&& - ключ
+* Args &&... - аргументы для конструирования значения
 
 Возвращает:
-* Pair<stappler::memory::rbtree::Tree::iterator, bool>
+* Pair<stappler::memory::rbtree::Tree::iterator, bool> - итератор на месте вставки или существующего элемента, true если элемент был добавлен
 
 # ::stappler::memory::rbtree::Tree<typename,typename,typename>::try_emplace<typename,typename>(stappler::memory::rbtree::Tree::const_iterator,K&&,Args &&...)
 
 ## BRIEF
 
+Пытается добавить элемент в дерево со вспомогательным итератором
+
 ## CONTENT
 
 Доступ: public
 
+Пытается добавить элемент в дерево со вспомогательным итератором. Если элемент с таким ключом уже есть - не делает ничего
+
 Параметры шаблона:
-* typename K
+* typename K - тип ключа
 * typename Args
 
 Параметры:
-* stappler::memory::rbtree::Tree::const_iterator
-* K&&
-* Args &&...
+* stappler::memory::rbtree::Tree::const_iterator - вспомогательный итератор на месте вставки
+* K&& - ключ
+* Args &&... - аргументы для конструирования значения
 
 Возвращает:
-* iterator
+* iterator - итератор на месте вставки или существующего элемента
 
 # ::stappler::memory::rbtree::Tree<typename,typename,typename>::insert_or_assign<typename,class>(K&&,M&&)
 
 ## BRIEF
 
+Добавляет или назначает новое значение элементу
+
 ## CONTENT
 
 Доступ: public
 
+Добавляет или назначает новое значение элементу
+
 Параметры шаблона:
-* typename K
-* class M
+* typename K - тип ключа
+* class M - тип значения
 
 Параметры:
-* K&&
-* M&&
+* K&& - ключ
+* M&& - значение
 
 Возвращает:
-* Pair<stappler::memory::rbtree::Tree::iterator, bool>
+* Pair<stappler::memory::rbtree::Tree::iterator, bool> - итератор на месте вставки или существующего элемента, true если элемент был добавлен
 
 # ::stappler::memory::rbtree::Tree<typename,typename,typename>::insert_or_assign<typename,class>(stappler::memory::rbtree::Tree::const_iterator,K&&,M&&)
 
 ## BRIEF
 
+Добавляет или назначает новое значение элементу. Использует вспомогательный итератор.
+
 ## CONTENT
 
 Доступ: public
 
+Добавляет или назначает новое значение элементу. Использует вспомогательный итератор.
+
 Параметры шаблона:
-* typename K
-* class M
+* typename K - тип ключа
+* class M - тип значения
 
 Параметры:
-* stappler::memory::rbtree::Tree::const_iterator
-* K&&
-* M&&
+* stappler::memory::rbtree::Tree::const_iterator - вспомогательный итератор на месте вставки
+* K&& - ключ
+* M&& - значение
 
 Возвращает:
-* iterator
+* iterator - итератор на месте вставки или существующего элемента
 
 # ::stappler::memory::rbtree::Tree<typename,typename,typename>::erase(stappler::memory::rbtree::Tree::const_iterator)
 
 ## BRIEF
 
+Удаляет элемент по итератору
+
 ## CONTENT
 
 Доступ: public
+
+Удаляет элемент по итератору
 
 Параметры:
 * stappler::memory::rbtree::Tree::const_iterator
 
 Возвращает:
-* iterator
+* iterator - итератор на месте удаления
 
 # ::stappler::memory::rbtree::Tree<typename,typename,typename>::erase(stappler::memory::rbtree::Tree::const_iterator,stappler::memory::rbtree::Tree::const_iterator)
 
 ## BRIEF
 
+Удаляет элемент по диапазону итераторов
+
 ## CONTENT
 
 Доступ: public
+
+Удаляет элемент по диапазону итераторов
 
 Параметры:
 * stappler::memory::rbtree::Tree::const_iterator
 * stappler::memory::rbtree::Tree::const_iterator
 
 Возвращает:
-* iterator
+* iterator - итератор на месте удаления
 
 # ::stappler::memory::rbtree::Tree<typename,typename,typename>::erase_unique(Key const&)
 
 ## BRIEF
 
+Удаляет уникальное значение по ключу
+
 ## CONTENT
 
 Доступ: public
 
+Удаляет уникальное значение по ключу
+
 Параметры:
-* Key const&
+* Key const& - ключ
 
 Возвращает:
-* size_t
+* size_t - число удалённых элементов
 
 # ::stappler::memory::rbtree::Tree<typename,typename,typename>::begin()
 
 ## BRIEF
 
+Возвращает начальный итератор
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает начальный итератор
 
 Возвращает:
 * iterator
@@ -1437,9 +1973,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Возвращает конечный итератор
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает конечный итератор
 
 Возвращает:
 * iterator
@@ -1448,9 +1988,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Возвращает начальный итератор
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает начальный итератор
 
 Возвращает:
 * const_iterator
@@ -1459,9 +2003,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Возвращает конечный итератор
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает конечный итератор
 
 Возвращает:
 * const_iterator
@@ -1470,9 +2018,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Возвращает начальный обратный итератор
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает начальный обратный итератор
 
 Возвращает:
 * reverse_iterator
@@ -1481,9 +2033,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Возвращает конечный обратный итератор
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает конечный обратный итератор
 
 Возвращает:
 * reverse_iterator
@@ -1492,9 +2048,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Возвращает начальный обратный итератор
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает начальный обратный итератор
 
 Возвращает:
 * const_reverse_iterator
@@ -1503,9 +2063,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Возвращает конечный обратный итератор
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает конечный обратный итератор
 
 Возвращает:
 * const_reverse_iterator
@@ -1514,9 +2078,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Возвращает начальный итератор
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает начальный итератор
 
 Возвращает:
 * const_iterator
@@ -1525,9 +2093,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Возвращает конечный итератор
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает конечный итератор
 
 Возвращает:
 * const_iterator
@@ -1536,9 +2108,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Возвращает начальный обратный итератор
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает начальный обратный итератор
 
 Возвращает:
 * const_reverse_iterator
@@ -1547,9 +2123,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Возвращает конечный обратный итератор
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает конечный обратный итератор
 
 Возвращает:
 * const_reverse_iterator
@@ -1558,27 +2138,39 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Очищает дерево
+
 ## CONTENT
 
 Доступ: public
+
+Очищает дерево
 
 
 # ::stappler::memory::rbtree::Tree<typename,typename,typename>::shrink_to_fit()
 
 ## BRIEF
 
+Удаляет невостребованные хранимые свободные элементы
+
 ## CONTENT
 
 Доступ: public
+
+Удаляет невостребованные хранимые свободные элементы
 
 
 # ::stappler::memory::rbtree::Tree<typename,typename,typename>::capacity() const
 
 ## BRIEF
 
+Возвращает текущую вместимость дерева
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает текущую вместимость дерева
 
 Возвращает:
 * size_t
@@ -1587,9 +2179,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Возвращает число активных элементов в дереве
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает число активных элементов в дереве
 
 Возвращает:
 * size_t
@@ -1598,32 +2194,44 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Проверяет дерево на пустоту
+
 ## CONTENT
 
 Доступ: public
 
+Проверяет дерево на пустоту
+
 Возвращает:
-* bool
+* bool - true если дерево пустое
 
 # ::stappler::memory::rbtree::Tree<typename,typename,typename>::set_memory_persistent(bool)
 
 ## BRIEF
 
+Устанавливает флаг постоянного хранения элементов
+
 ## CONTENT
 
 Доступ: public
 
+Устанавливает флаг постоянного хранения элементов. Если флаг установлен, удаляемые элементы не возвращаются, а добавляются во внутренний связный список, откуда могут использоваться повторно.
+
 Параметры:
-* bool
+* bool - значение флага
 
 
 # ::stappler::memory::rbtree::Tree<typename,typename,typename>::memory_persistent() const
 
 ## BRIEF
 
+Возвращает значение флага постоянной памяти
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает значение флага постоянной памяти
 
 Возвращает:
 * bool
@@ -1632,9 +2240,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Обменивает деревья значениями
+
 ## CONTENT
 
 Доступ: public
+
+Обменивает деревья значениями. Обмен эффективен, если аллокаторы совпадают.
 
 Параметры:
 * Tree<Key, Value, Comp>&
@@ -1644,9 +2256,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Ищет элемент по ключу
+
 ## CONTENT
 
 Доступ: public
+
+Ищет элемент по ключу
 
 Параметры шаблона:
 * class K
@@ -1661,9 +2277,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Ищет элемент по ключу
+
 ## CONTENT
 
 Доступ: public
+
+Ищет элемент по ключу
 
 Параметры шаблона:
 * class K
@@ -1678,9 +2298,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Возвращает нижнюю границу значения по ключу
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает нижнюю границу значения по ключу. То есть, указатель на первое значение не меньше ключа
 
 Параметры шаблона:
 * class K
@@ -1695,9 +2319,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Возвращает нижнюю границу значения по ключу
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает нижнюю границу значения по ключу. То есть, указатель на первое значение не меньше ключа
 
 Параметры шаблона:
 * class K
@@ -1712,9 +2340,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Возвращает верхнюю границу значения по ключу
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает верхнюю границу значения по ключу. То есть, указатель на первое значение больше ключа
 
 Параметры шаблона:
 * class K
@@ -1729,9 +2361,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Возвращает верхнюю границу значения по ключу
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает верхнюю границу значения по ключу. То есть, указатель на первое значение больше ключа
 
 Параметры шаблона:
 * class K
@@ -1746,9 +2382,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Возвращает диапазон значений по ключу
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает диапазон значений по ключу
 
 Параметры шаблона:
 * class K
@@ -1763,9 +2403,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Возвращает диапазон значений по ключу
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает диапазон значений по ключу
 
 Параметры шаблона:
 * class K
@@ -1780,9 +2424,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Возвращает число элементов для ключа
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает число элементов для ключа
 
 Параметры шаблона:
 * class K
@@ -1797,9 +2445,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Возвращает число элементов для ключа
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает число элементов для ключа
 
 Параметры шаблона:
 * class K
@@ -1814,9 +2466,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Резервирует память под элементы
+
 ## CONTENT
 
 Доступ: public
+
+Резервирует память под элементы. Дополнительная память резервируется и освобождается цельным блоком для оптимизации.
 
 Параметры:
 * size_t
@@ -1826,9 +2482,27 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Заголовочный элемент дерева
+
 ## CONTENT
 
 Доступ: protected
+
+Заголовочный элемент дерева. Указатели имеют специальное значение.
+
+`_header.parent` - ЛЕВЫЙ элемент корня дерева (первый элемент для обхода)
+
+`_header.right` - Правый элемент корня дерева
+
+`_header.left` - Корневой элемент, nullptr если дерево пусто
+
+`&_header` (указатель на заголовок) - последний элемент обхода
+
+`_header.size` - число свободных нолов в связанном списке
+
+`_header.index` - число преаллоцированных блоков
+
+`_header.prealloc` - флаг постоянной памяти
 
 Тип: stappler::memory::rbtree::NodeBase
 
@@ -1837,9 +2511,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Функтор сравнения ключей элементов
+
 ## CONTENT
 
 Доступ: protected
+
+Функтор сравнения ключей элементов
 
 Тип: comparator_type
 
@@ -1848,9 +2526,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Аллокатор
+
 ## CONTENT
 
 Доступ: protected
+
+Аллокатор
 
 Тип: value_allocator_type
 
@@ -1859,9 +2541,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Текущий размер дерева
+
 ## CONTENT
 
 Доступ: protected
+
+Текущий размер дерева
 
 Тип: size_t
 
@@ -1870,9 +2556,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Связный список свободных элементов
+
 ## CONTENT
 
 Доступ: protected
+
+Связный список свободных элементов
 
 Тип: Node<Value>*
 
@@ -1881,9 +2571,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Возвращает корень дерева
+
 ## CONTENT
 
 Доступ: protected
+
+Возвращает корень дерева
 
 Возвращает:
 * node_ptr
@@ -1892,9 +2586,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Возвращает корень дерева
+
 ## CONTENT
 
 Доступ: protected
+
+Возвращает корень дерева
 
 Возвращает:
 * const_node_ptr
@@ -1903,9 +2601,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Устанавливает корень дерева
+
 ## CONTENT
 
 Доступ: protected
+
+Устанавливает корень дерева
 
 Параметры:
 * stappler::memory::rbtree::Tree::base_type
@@ -1915,9 +2617,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Возвращает левый элемент корня
+
 ## CONTENT
 
 Доступ: protected
+
+Возвращает левый элемент корня
 
 Возвращает:
 * node_ptr
@@ -1926,9 +2632,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Возвращает левый элемент корня
+
 ## CONTENT
 
 Доступ: protected
+
+Возвращает левый элемент корня
 
 Возвращает:
 * const_node_ptr
@@ -1937,9 +2647,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Устанавливает левый элемент корня
+
 ## CONTENT
 
 Доступ: protected
+
+Устанавливает левый элемент корня
 
 Параметры:
 * stappler::memory::rbtree::Tree::base_type
@@ -1949,9 +2663,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Возвращает правый элемент корня
+
 ## CONTENT
 
 Доступ: protected
+
+Возвращает правый элемент корня
 
 Возвращает:
 * node_ptr
@@ -1960,9 +2678,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Возвращает правый элемент корня
+
 ## CONTENT
 
 Доступ: protected
+
+Возвращает правый элемент корня
 
 Возвращает:
 * const_node_ptr
@@ -1971,9 +2693,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Устанавливает правый элемент корня
+
 ## CONTENT
 
 Доступ: protected
+
+Устанавливает правый элемент корня
 
 Параметры:
 * stappler::memory::rbtree::Tree::base_type
@@ -1983,9 +2709,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Извлекает ключ элемента
+
 ## CONTENT
 
 Доступ: protected
+
+Извлекает ключ элемента
 
 Параметры:
 * Value const&
@@ -1997,9 +2727,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Извлекает ключ элемента
+
 ## CONTENT
 
 Доступ: protected
+
+Извлекает ключ элемента
 
 Параметры:
 * Storage<Value> const&
@@ -2011,9 +2745,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Извлекает ключ элемента
+
 ## CONTENT
 
 Доступ: protected
+
+Извлекает ключ элемента
 
 Параметры:
 * stappler::memory::rbtree::NodeBase const*
@@ -2025,9 +2763,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Проверяет, что один ключ меньше другого
+
 ## CONTENT
 
 Доступ: protected
+
+Проверяет, что один ключ меньше другого
 
 Параметры шаблона:
 * typename A
@@ -2044,9 +2786,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Проверяет, что один ключ меньше другого
+
 ## CONTENT
 
 Доступ: protected
+
+Проверяет, что один ключ меньше другого
 
 Параметры:
 * Key const&
@@ -2059,9 +2805,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Сравнивает два ключа на равенство
+
 ## CONTENT
 
 Доступ: protected
+
+Сравнивает два ключа на равенство
 
 Параметры:
 * Key const&
@@ -2074,9 +2824,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Сравнивает два значения на равенство
+
 ## CONTENT
 
 Доступ: protected
+
+Сравнивает два значения на равенство
 
 Параметры:
 * Value const&
@@ -2089,9 +2843,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Проверяет, что одно значение меньше другого
+
 ## CONTENT
 
 Доступ: protected
+
+Проверяет, что одно значение меньше другого
 
 Параметры:
 * Value const&
@@ -2104,16 +2862,24 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Структура информации для вставки значения
+
 ## CONTENT
 
 Доступ: protected
+
+Структура информации для вставки значения
 
 
 # ::stappler::memory::rbtree::Tree<typename,typename,typename>::InsertData::key
 
 ## BRIEF
 
+Ключ
+
 ## CONTENT
+
+Ключ
 
 Тип: Key const*
 
@@ -2122,7 +2888,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Элемент для вставки
+
 ## CONTENT
+
+Элемент для вставки
 
 Тип: Node<Value>*
 
@@ -2131,7 +2901,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Текущий элеммент обхода
+
 ## CONTENT
+
+Текущий элеммент обхода
 
 Тип: stappler::memory::rbtree::NodeBase*
 
@@ -2140,7 +2914,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Корневой элемент обхода
+
 ## CONTENT
+
+Корневой элемент обхода
 
 Тип: stappler::memory::rbtree::NodeBase*
 
@@ -2149,7 +2927,11 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Флаг, если текущий элемент слева от родителя
+
 ## CONTENT
+
+Флаг, если текущий элемент слева от родителя
 
 Тип: bool
 
@@ -2158,9 +2940,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Конструирует новый элемент
+
 ## CONTENT
 
 Доступ: protected
+
+Конструирует новый элемент
 
 Параметры шаблона:
 * typename Args
@@ -2175,9 +2961,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Конструирует данные вставки на основе ключа
+
 ## CONTENT
 
 Доступ: protected
+
+Конструирует данные вставки на основе ключа
 
 Параметры:
 * Key const&
@@ -2189,9 +2979,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Конструирует данные вставки на основе ключа
+
 ## CONTENT
 
 Доступ: protected
+
+Конструирует данные вставки на основе ключа
 
 Параметры:
 * Key&&
@@ -2203,9 +2997,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Конструирует элемент на месте вставки
+
 ## CONTENT
 
 Доступ: protected
+
+Конструирует элемент на месте вставки
 
 Параметры шаблона:
 * typename K
@@ -2222,9 +3020,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Назначает элементу значение
+
 ## CONTENT
 
 Доступ: protected
+
+Назначает элементу значение
 
 Параметры шаблона:
 * typename M
@@ -2238,9 +3040,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Назначает элементу значение
+
 ## CONTENT
 
 Доступ: protected
+
+Назначает элементу значение
 
 Параметры шаблона:
 * typename M
@@ -2254,9 +3060,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Ищет позицию для вставки элемента
+
 ## CONTENT
 
 Доступ: protected
+
+Ищет позицию для вставки элемента
 
 Параметры:
 * stappler::memory::rbtree::Tree::InsertData&
@@ -2268,9 +3078,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Проверяет корень дерева на возможность быстрой вставки
+
 ## CONTENT
 
 Доступ: protected
+
+Проверяет корень дерева на возможность быстрой вставки
 
 Параметры:
 * stappler::memory::rbtree::Tree::InsertData&
@@ -2282,9 +3096,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Проверяет вспомогательный итератор на возможность быстрой вставки
+
 ## CONTENT
 
 Доступ: protected
+
+Проверяет вспомогательный итератор на возможность быстрой вставки
 
 Параметры:
 * stappler::memory::rbtree::Tree::InsertData&
@@ -2296,9 +3114,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Проверяет левый элемент дерева на возможность быстрой вставки
+
 ## CONTENT
 
 Доступ: protected
+
+Проверяет левый элемент дерева на возможность быстрой вставки
 
 Параметры:
 * stappler::memory::rbtree::Tree::InsertData&
@@ -2310,9 +3132,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Проверяет правый элемент дерева на возможность быстрой вставки
+
 ## CONTENT
 
 Доступ: protected
+
+Проверяет правый элемент дерева на возможность быстрой вставки
 
 Параметры:
 * stappler::memory::rbtree::Tree::InsertData&
@@ -2324,9 +3150,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Получает позицию для вставки элемента
+
 ## CONTENT
 
 Доступ: protected
+
+Получает позицию для вставки элемента
 
 Параметры:
 * stappler::memory::rbtree::Tree::InsertData&
@@ -2338,9 +3168,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Добавляет новый элемент
+
 ## CONTENT
 
 Доступ: protected
+
+Добавляет новый элемент
 
 Параметры шаблона:
 * typename Args
@@ -2355,9 +3189,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Добавляет новый элемент со вспомогательным итератором
+
 ## CONTENT
 
 Доступ: protected
+
+Добавляет новый элемент со вспомогательным итератором
 
 Параметры шаблона:
 * typename Args
@@ -2373,9 +3211,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Пытается добавить новый элемент
+
 ## CONTENT
 
 Доступ: protected
+
+Пытается добавить новый элемент
 
 Параметры шаблона:
 * typename K
@@ -2392,9 +3234,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Пытается добавить новый элемент со вспомогательным итератором
+
 ## CONTENT
 
 Доступ: protected
+
+Пытается добавить новый элемент со вспомогательным итератором
 
 Параметры шаблона:
 * typename K
@@ -2412,9 +3258,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Пытается добавить или назначить новый элемент
+
 ## CONTENT
 
 Доступ: protected
+
+Пытается добавить или назначить новый элемент
 
 Параметры шаблона:
 * typename K
@@ -2431,9 +3281,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Пытается добавить или назначить новый элемент со вспомогательным итератором
+
 ## CONTENT
 
 Доступ: protected
+
+Пытается добавить или назначить новый элемент со вспомогательным итератором
 
 Параметры шаблона:
 * typename K
@@ -2451,9 +3305,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Выпоняет действительную вставку элемента в дерево
+
 ## CONTENT
 
 Доступ: protected
+
+Выпоняет действительную вставку элемента в дерево
 
 Параметры:
 * Node<Value>*
@@ -2467,9 +3325,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Удаляет элемент из дерева
+
 ## CONTENT
 
 Доступ: protected
+
+Удаляет элемент из дерева
 
 Параметры:
 * stappler::memory::rbtree::NodeBase*
@@ -2479,9 +3341,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Обходит элементы для удаления дерева
+
 ## CONTENT
 
 Доступ: protected
+
+Обходит элементы для удаления дерева
 
 Параметры:
 * Node<Value>*
@@ -2491,9 +3357,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Обходит элементы для клонирования дерева
+
 ## CONTENT
 
 Доступ: protected
+
+Обходит элементы для клонирования дерева
 
 Параметры:
 * Node<Value> const*
@@ -2504,9 +3374,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Клонирует дерево
+
 ## CONTENT
 
 Доступ: protected
+
+Клонирует дерево
 
 Параметры:
 * const Tree<Key, Value, Comp>&
@@ -2516,9 +3390,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Находит элемент по ключу
+
 ## CONTENT
 
 Доступ: protected
+
+Находит элемент по ключу
 
 Параметры шаблона:
 * class K
@@ -2533,9 +3411,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Находит нижнюю границу
+
 ## CONTENT
 
 Доступ: protected
+
+Находит нижнюю границу
 
 Параметры шаблона:
 * class K
@@ -2550,9 +3432,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Находит верхнюю границу
+
 ## CONTENT
 
 Доступ: protected
+
+Находит верхнюю границу
 
 Параметры шаблона:
 * class K
@@ -2567,9 +3453,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Подсчитывает элементы по ключу
+
 ## CONTENT
 
 Доступ: protected
+
+Подсчитывает элементы по ключу
 
 Параметры шаблона:
 * class K
@@ -2584,9 +3474,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Уничтожает элемент
+
 ## CONTENT
 
 Доступ: protected
+
+Уничтожает элемент, удаляет его либо добавляет в связный список ожидания
 
 Параметры:
 * Node<Value>*
@@ -2596,9 +3490,13 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Распределяет новый элемент
+
 ## CONTENT
 
 Доступ: protected
+
+Распределяет новый элемент из пула или связного списка ожидания
 
 Возвращает:
 * Node<Value>*
@@ -2607,25 +3505,26 @@ Title: SPMemRbtree.h
 
 ## BRIEF
 
+Резервирует новый блок элементов
+
 ## CONTENT
 
 Доступ: protected
 
+Резервирует новый блок элементов
+
 Параметры:
-* size_t
+* size_t - число элементов в блоке
 
 
 # ::stappler::memory::rbtree::Tree<typename,typename,typename>::releaseTmp()
 
 ## BRIEF
 
+Освобождает свободные элементы дерева
+
 ## CONTENT
 
 Доступ: protected
 
-
-# MEM_RBTREE_DEBUG
-
-## BRIEF
-
-## CONTENT
+Резервирует новый блок элементов

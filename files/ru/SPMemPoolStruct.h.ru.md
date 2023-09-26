@@ -1,25 +1,36 @@
 Title: SPMemPoolStruct.h
 
 
-# LIBSTAPPLER_COMMON_MEMORY_POOL_SPMEMPOOLSTRUCT_H_
+# STAPPLER_CORE_MEMORY_POOL_SPMEMPOOLSTRUCT_H_
 
 ## BRIEF
 
+Заголовок внутренней структуры пулов памяти
+
 ## CONTENT
 
+Заголовок внутренней структуры пулов памяти. Не должен использоваться в основном коде.
 
 # ::stappler::mempool::custom::MemAddr
 
 ## BRIEF
 
+Структура адреса блока памяти
+
 ## CONTENT
+
+Структура адреса блока памяти
 
 
 # ::stappler::mempool::custom::MemAddr::size
 
 ## BRIEF
 
+Размер блока памяти
+
 ## CONTENT
+
+Размер блока памяти
 
 Тип: uint32_t
 
@@ -28,7 +39,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Указательн а следующий блок памяти
+
 ## CONTENT
+
+Указательн а следующий блок памяти
 
 Тип: stappler::mempool::custom::MemAddr*
 
@@ -37,7 +52,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Адрес блока памяти
+
 ## CONTENT
+
+Адрес блока памяти
 
 Тип: void*
 
@@ -46,21 +65,33 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Структура управления распределением памяти из пула
+
 ## CONTENT
+
+Структура управления распределением памяти из пула
 
 
 # ::stappler::mempool::custom::AllocManager::AllocFn
 
 ## BRIEF
 
+Функция аллокации памяти
+
 ## CONTENT
+
+Функция аллокации памяти
 
 
 # ::stappler::mempool::custom::AllocManager::pool
 
 ## BRIEF
 
+Ассоциированный пул памяти
+
 ## CONTENT
+
+Ассоциированный пул памяти
 
 Тип: void*
 
@@ -69,7 +100,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Связанный список возвращённых сегментов памяти
+
 ## CONTENT
+
+Связанный список возвращённых сегментов памяти
 
 Тип: stappler::mempool::custom::MemAddr*
 
@@ -78,7 +113,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Буферизованные структуры для хранения блков памяти
+
 ## CONTENT
+
+Буферизованные структуры для хранения блков памяти
 
 Тип: stappler::mempool::custom::MemAddr*
 
@@ -87,7 +126,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Информационный тег
+
 ## CONTENT
+
+Информационный тег
 
 Тип: uint32_t
 
@@ -96,7 +139,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Вспомогательный указатель
+
 ## CONTENT
+
+Вспомогательный указатель
 
 Тип: void const*
 
@@ -105,7 +152,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Всего распределено байт
+
 ## CONTENT
+
+Всего распределено байт
 
 Тип: size_t
 
@@ -114,7 +165,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Всего распределено байт
+
 ## CONTENT
+
+Всего распределено байт
 
 Тип: size_t
 
@@ -123,7 +178,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Выделено через возвратную оптимизацию
+
 ## CONTENT
+
+Выделено через возвратную оптимизацию
 
 Тип: size_t
 
@@ -132,7 +191,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Флаги распределения памяти (устаревшее)
+
 ## CONTENT
+
+Флаги распределения памяти (устаревшее)
 
 Тип: size_t
 
@@ -141,42 +204,56 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Сбрасывает параметры управления распределением памяти
+
 ## CONTENT
 
+Сбрасывает параметры управления распределением памяти
+
 Параметры:
-* void*
+* void* - указатель на пул памяти
 
 
 # ::stappler::mempool::custom::AllocManager::alloc(size_t&,stappler::mempool::custom::AllocManager::AllocFn)
 
 ## BRIEF
 
+Выделяет память из пула
+
 ## CONTENT
 
 Параметры:
-* size_t&
-* stappler::mempool::custom::AllocManager::AllocFn
+* size_t& - (вход) число байт для распределения, (выход) реальный размер блока памяти
+* stappler::mempool::custom::AllocManager::AllocFn - функция аллокации
 
 Возвращает:
-* void*
+* void* - распределённая память
 
 # ::stappler::mempool::custom::AllocManager::free(void*,size_t,stappler::mempool::custom::AllocManager::AllocFn)
 
 ## BRIEF
 
+Освобожждает память, регистрирует её для возвратной оптимизации
+
 ## CONTENT
 
+Освобожждает память, регистрирует её для возвратной оптимизации
+
 Параметры:
-* void*
-* size_t
-* stappler::mempool::custom::AllocManager::AllocFn
+* void* - адрес памяти
+* size_t - размер блока
+* stappler::mempool::custom::AllocManager::AllocFn - функция аллокации
 
 
 # ::stappler::mempool::custom::AllocManager::increment_alloc(size_t)
 
 ## BRIEF
 
+Увеличивает счётчик распределения памяти
+
 ## CONTENT
+
+Увеличивает счётчик распределения памяти
 
 Параметры:
 * size_t
@@ -186,7 +263,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Увеличивает счётчик возвратной оптимизации
+
 ## CONTENT
+
+Увеличивает счётчик возвратной оптимизации
 
 Параметры:
 * size_t
@@ -196,7 +277,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Возвращает количество распределённых байт
+
 ## CONTENT
+
+Возвращает количество распределённых байт
 
 Возвращает:
 * size_t
@@ -205,7 +290,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Возвращает количество байт возвратной оптимизации
+
 ## CONTENT
+
+Возвращает количество байт возвратной оптимизации
 
 Возвращает:
 * size_t
@@ -214,14 +303,21 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Структура блока памяти
+
 ## CONTENT
 
+Структура блока памяти
 
 # ::stappler::mempool::custom::MemNode::next
 
 ## BRIEF
 
+Указатель на следующий блок в списке
+
 ## CONTENT
+
+Указатель на следующий блок в списке
 
 Тип: stappler::mempool::custom::MemNode*
 
@@ -230,7 +326,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Указатель на указатель, хранящий ссылку на себя
+
 ## CONTENT
+
+Указатель на указатель, хранящий ссылку на себя
 
 Тип: stappler::mempool::custom::MemNode**
 
@@ -239,7 +339,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Индекс размера блока
+
 ## CONTENT
+
+Индекс размера блока
 
 Тип: uint32_t
 
@@ -248,7 +352,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Число свободных страниц памяти в сегменте
+
 ## CONTENT
+
+Число свободных страниц памяти в сегменте
 
 Тип: uint32_t
 
@@ -257,7 +365,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Указатель на первую доступную память
+
 ## CONTENT
+
+Указатель на первую доступную память
 
 Тип: uint8_t*
 
@@ -266,7 +378,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Указатель на конец доступной памяти
+
 ## CONTENT
+
+Указатель на конец доступной памяти
 
 Тип: uint8_t*
 
@@ -275,7 +391,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Добавляет сегмент в связный список
+
 ## CONTENT
+
+Добавляет сегмент в связный список
 
 Параметры:
 * stappler::mempool::custom::MemNode*
@@ -285,14 +405,22 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Удаляет сегмент из связного списка
+
 ## CONTENT
+
+Удаляет сегмент из связного списка
 
 
 # ::stappler::mempool::custom::MemNode::free_space() const
 
 ## BRIEF
 
+Возвращает число свободных байт
+
 ## CONTENT
+
+Возвращает число свободных байт
 
 Возвращает:
 * size_t
@@ -301,21 +429,33 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Структура функции деинициализации
+
 ## CONTENT
+
+Структура функции деинициализации
 
 
 # ::stappler::mempool::custom::Cleanup::Callback
 
 ## BRIEF
 
+Тип указателя на функцию деинициализации
+
 ## CONTENT
+
+Тип указателя на функцию деинициализации
 
 
 # ::stappler::mempool::custom::Cleanup::next
 
 ## BRIEF
 
+Указатель на следующую функцию в списке
+
 ## CONTENT
+
+Указатель на следующую функцию в списке
 
 Тип: stappler::mempool::custom::Cleanup*
 
@@ -324,7 +464,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Непрозрачный указатель на объект
+
 ## CONTENT
+
+Непрозрачный указатель на объект
 
 Тип: void const*
 
@@ -333,7 +477,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Указатель на функцию деинициализации
+
 ## CONTENT
+
+Указатель на функцию деинициализации
 
 Тип: Callback
 
@@ -342,7 +490,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Запускает функции деинициализации списком
+
 ## CONTENT
+
+Запускает функции деинициализации списком
 
 Параметры:
 * stappler::mempool::custom::Cleanup**
@@ -352,21 +504,33 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Структура аллокатора памяти
+
 ## CONTENT
+
+Структура аллокатора памяти
 
 
 # ::stappler::mempool::custom::Allocator::AllocMutex
 
 ## BRIEF
 
+Тип мутекса аллокатора
+
 ## CONTENT
+
+Тип мутекса аллокатора
 
 
 # ::stappler::mempool::custom::Allocator::last
 
 ## BRIEF
 
+Максимальный индекс свободного блока памяти
+
 ## CONTENT
+
+Максимальный индекс свободного блока памяти
 
 Тип: uint32_t
 
@@ -375,7 +539,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Максимальнное число хранимых свободных страниц памяти
+
 ## CONTENT
+
+Максимальнное число хранимых свободных страниц памяти
 
 Тип: uint32_t
 
@@ -384,7 +552,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Число выделенных страниц памяти
+
 ## CONTENT
+
+Число выделенных страниц памяти
 
 Тип: uint32_t
 
@@ -393,7 +565,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Пул, отвечающий за этот аллокатор
+
 ## CONTENT
+
+Пул, отвечающий за этот аллокатор
 
 Тип: stappler::mempool::custom::Pool*
 
@@ -402,7 +578,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Мутекс аллокатора
+
 ## CONTENT
+
+Мутекс аллокатора
 
 Тип: AllocMutex*
 
@@ -411,7 +591,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Буфер свободных сегментов памяти
+
 ## CONTENT
+
+Буфер свободных сегментов памяти
 
 Тип: std::array<MemNode *, MAX_INDEX>
 
@@ -420,7 +604,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Число аллоцированных байт
+
 ## CONTENT
+
+Число аллоцированных байт
 
 Тип: std::atomic<size_t>
 
@@ -429,7 +617,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Возвращает число активных аллокаторов
+
 ## CONTENT
+
+Возвращает число активных аллокаторов
 
 Возвращает:
 * size_t
@@ -438,24 +630,35 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Создаёт новый аллокатор
+
 ## CONTENT
 
+Создаёт новый аллокатор
+
 Параметры:
-* bool
+* bool - сделать аллокатор потокобезопасным
 
 
 # ::stappler::mempool::custom::Allocator::~Allocator()
 
 ## BRIEF
 
+Уничтожает аллокатор
+
 ## CONTENT
 
+Уничтожает аллокатор
 
 # ::stappler::mempool::custom::Allocator::set_max(uint32_t)
 
 ## BRIEF
 
+Устанавливает максимальное число свободных страниц памяти
+
 ## CONTENT
+
+Устанавливает максимальное число свободных страниц памяти
 
 Параметры:
 * uint32_t
@@ -465,7 +668,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Аллоцирует блок памяти по определённому индексу размера
+
 ## CONTENT
+
+Аллоцирует блок памяти по определённому индексу размера
 
 Параметры:
 * uint32_t
@@ -477,7 +684,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Освобождает блок памяти
+
 ## CONTENT
+
+Освобождает блок памяти
 
 Параметры:
 * stappler::mempool::custom::MemNode*
@@ -487,21 +698,33 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Блокирует аллокатор для потокобезопасности
+
 ## CONTENT
+
+Блокирует аллокатор для потокобезопасности
 
 
 # ::stappler::mempool::custom::Allocator::unlock()
 
 ## BRIEF
 
+Разблокирует аллокатор для потокобезопасности
+
 ## CONTENT
+
+Разблокирует аллокатор для потокобезопасности
 
 
 # ::stappler::mempool::custom::Allocator::mmapdes
 
 ## BRIEF
 
+Файловый дескриптор для mmap
+
 ## CONTENT
+
+Файловый дескриптор для mmap
 
 Тип: int
 
@@ -510,7 +733,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Указатель на сегмент mmap
+
 ## CONTENT
+
+Указатель на сегмент mmap
 
 Тип: void*
 
@@ -518,6 +745,8 @@ Title: SPMemPoolStruct.h
 # ::stappler::mempool::custom::Allocator::mmapCurrent
 
 ## BRIEF
+
+Число выделенной памяти из mmap
 
 ## CONTENT
 
@@ -528,7 +757,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Максимальный размер выделяемой памяти для mmap
+
 ## CONTENT
+
+Максимальный размер выделяемой памяти для mmap
 
 Тип: uint32_t
 
@@ -537,7 +770,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Включает интерфейс mmap для распределения памяти
+
 ## CONTENT
+
+Включает интерфейс mmap для распределения памяти
 
 Параметры:
 * uint64_t
@@ -549,7 +786,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Функция отслеживания аллокаций памяти для отладки
+
 ## CONTENT
+
+Функция отслеживания аллокаций памяти для отладки
 
 Тип: AllocManager::AllocFn
 
@@ -558,14 +799,21 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Структура пула памяти
+
 ## CONTENT
 
+Структура пула памяти
 
 # ::stappler::mempool::custom::Pool::tag
 
 ## BRIEF
 
+Текстовый тег пула памяти
+
 ## CONTENT
+
+Текстовый тег пула памяти
 
 Тип: char const*
 
@@ -574,7 +822,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Родительский пул памяти
+
 ## CONTENT
+
+Родительский пул памяти
 
 Тип: stappler::mempool::custom::Pool*
 
@@ -583,7 +835,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Первый дочерний пул в списке
+
 ## CONTENT
+
+Первый дочерний пул в списке
 
 Тип: stappler::mempool::custom::Pool*
 
@@ -592,7 +848,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Следующий дочерний пул родителя в списке
+
 ## CONTENT
+
+Следующий дочерний пул родителя в списке. Формирует связный список.
 
 Тип: stappler::mempool::custom::Pool*
 
@@ -601,7 +861,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Указатель на указатель себя в списке пулов родителя
+
 ## CONTENT
+
+Указатель на указатель себя в списке пулов родителя
 
 Тип: stappler::mempool::custom::Pool**
 
@@ -609,6 +873,8 @@ Title: SPMemPoolStruct.h
 # ::stappler::mempool::custom::Pool::cleanups
 
 ## BRIEF
+
+Связный список функций деинициализации
 
 ## CONTENT
 
@@ -619,6 +885,8 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Связный список распределённый структур функций инициализации
+
 ## CONTENT
 
 Тип: stappler::mempool::custom::Cleanup*
@@ -628,7 +896,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Связанный с пулом аллокатор
+
 ## CONTENT
+
+Связанный с пулом аллокатор
 
 Тип: stappler::mempool::custom::Allocator*
 
@@ -637,7 +909,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Текущий активный сегмент памяти
+
 ## CONTENT
+
+Текущий активный сегмент памяти
 
 Тип: stappler::mempool::custom::MemNode*
 
@@ -646,7 +922,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Сегмент памяти, содержащий данные пула
+
 ## CONTENT
+
+Сегмент памяти, содержащий данные пула
 
 Тип: stappler::mempool::custom::MemNode*
 
@@ -655,7 +935,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Указатель на доступную память из собственного базового сегмента памяти
+
 ## CONTENT
+
+Указатель на доступную память из собственного базового сегмента памяти
 
 Тип: uint8_t*
 
@@ -664,7 +948,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Связный список ранних функций деинициализации
+
 ## CONTENT
+
+Связный список ранних функций деинициализации
 
 Тип: stappler::mempool::custom::Cleanup*
 
@@ -673,7 +961,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Таблица пользовательских объектов
+
 ## CONTENT
+
+Таблица пользовательских объектов
 
 Тип: stappler::mempool::custom::HashTable*
 
@@ -682,7 +974,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Объект, управляющий аллокацией
+
 ## CONTENT
+
+Объект, управляющий аллокацией
 
 Тип: stappler::mempool::custom::AllocManager
 
@@ -691,7 +987,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Флаг потокобезопасности пула для выделения памяти
+
 ## CONTENT
+
+Флаг потокобезопасности пула для выделения памяти
 
 Тип: bool
 
@@ -700,7 +1000,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Создаёт пул с помощью аллокатора
+
 ## CONTENT
+
+Создаёт пул с помощью аллокатора
 
 Параметры:
 * stappler::mempool::custom::Allocator*
@@ -713,7 +1017,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Уничтожает пул памяти
+
 ## CONTENT
+
+Уничтожает пул памяти
 
 Параметры:
 * stappler::mempool::custom::Pool*
@@ -722,6 +1030,8 @@ Title: SPMemPoolStruct.h
 # ::stappler::mempool::custom::Pool::getPoolsCount()
 
 ## BRIEF
+
+Возвращает число активных пулов памяти
 
 ## CONTENT
 
@@ -732,46 +1042,66 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Конструктор по умолчанию
+
 ## CONTENT
+
+Конструктор по умолчанию
 
 
 # ::stappler::mempool::custom::Pool::Pool(stappler::mempool::custom::Allocator*,stappler::mempool::custom::MemNode*,bool)
 
 ## BRIEF
 
+Конструктор с использованием аллокатора и сегмента памяти
+
 ## CONTENT
+
+Конструктор с использованием аллокатора и сегмента памяти
 
 Параметры:
 * stappler::mempool::custom::Allocator*
 * stappler::mempool::custom::MemNode*
-* bool
+* bool - true если необходимо сделать пул потокобезопасным для аллокации
 
 
 # ::stappler::mempool::custom::Pool::Pool(stappler::mempool::custom::Pool*,stappler::mempool::custom::Allocator*,stappler::mempool::custom::MemNode*,bool)
 
 ## BRIEF
 
+Конструктор с использованием родительского пула, аллокатора и сегмента памяти
+
 ## CONTENT
+
+Конструктор с использованием родительского пула, аллокатора и сегмента памяти
 
 Параметры:
 * stappler::mempool::custom::Pool*
 * stappler::mempool::custom::Allocator*
 * stappler::mempool::custom::MemNode*
-* bool
+* bool - true если необходимо сделать пул потокобезопасным для аллокации
 
 
 # ::stappler::mempool::custom::Pool::~Pool()
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
+
+Деструктор
 
 
 # ::stappler::mempool::custom::Pool::alloc(size_t&)
 
 ## BRIEF
 
+Выделяет память из пула
+
 ## CONTENT
+
+Выделяет память из пула
 
 Параметры:
 * size_t&
@@ -783,7 +1113,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Освобождает ранее выделенную память
+
 ## CONTENT
+
+Освобождает ранее выделенную память. Необязательный вызов.
 
 Параметры:
 * void*
@@ -794,7 +1128,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Распределяет память
+
 ## CONTENT
+
+Распределяет память
 
 Параметры:
 * size_t
@@ -806,7 +1144,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Распределяет память для нескольких объектов
+
 ## CONTENT
+
+Распределяет память для нескольких объектов
 
 Параметры:
 * size_t
@@ -819,7 +1161,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Дублирует блок памяти с использованием пула памяти 
+
 ## CONTENT
+
+Дублирует блок памяти с использованием пула памяти 
 
 Параметры:
 * void const*
@@ -832,7 +1178,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Дублирует строку с использованием пула памяти 
+
 ## CONTENT
+
+Дублирует строку с использованием пула памяти 
 
 Параметры:
 * char const*
@@ -844,14 +1194,21 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Очищает пул памяти
+
 ## CONTENT
 
+Очищает пул памяти, вызывает функции деинициализации
 
 # ::stappler::mempool::custom::Pool::make_child()
 
 ## BRIEF
 
+Порождает новый дочерний пул
+
 ## CONTENT
+
+Порождает новый дочерний пул
 
 Возвращает:
 * stappler::mempool::custom::Pool*
@@ -860,7 +1217,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Порождает новый дочерний пул с помощью аллокатора
+
 ## CONTENT
+
+Порождает новый дочерний пул с помощью аллокатора
 
 Параметры:
 * stappler::mempool::custom::Allocator*
@@ -872,7 +1233,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Регистрирует функцию деинициализации
+
 ## CONTENT
+
+Регистрирует функцию деинициализации
 
 Параметры:
 * void const*
@@ -883,7 +1248,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Регистрирует предварительную функцию деинициализации
+
 ## CONTENT
+
+Регистрирует предварительную функцию деинициализации
 
 Параметры:
 * void const*
@@ -894,7 +1263,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Запускает функцию деинициализации и удаляет её из списка
+
 ## CONTENT
+
+Запускает функцию деинициализации и удаляет её из списка
 
 Параметры:
 * void*
@@ -905,7 +1278,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Запускает функцию деинициализации
+
 ## CONTENT
+
+Запускает функцию деинициализации
 
 Параметры:
 * void*
@@ -916,7 +1293,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Добавляет пользовательский объект
+
 ## CONTENT
+
+Добавляет пользовательский объект
 
 Параметры:
 * void const*
@@ -930,7 +1311,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Добавляет пользовательский объект
+
 ## CONTENT
+
+Добавляет пользовательский объект
 
 Параметры:
 * void const*
@@ -944,7 +1329,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Получает пользовательский объект
+
 ## CONTENT
+
+Получает пользовательский объект
 
 Параметры:
 * void**
@@ -957,7 +1346,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Получает пользовательский объект
+
 ## CONTENT
+
+Получает пользовательский объект
 
 Параметры:
 * void**
@@ -971,35 +1364,55 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Блокирует пул для потокобезопасности
+
 ## CONTENT
+
+Блокирует пул для потокобезопасности
 
 
 # ::stappler::mempool::custom::Pool::unlock()
 
 ## BRIEF
 
+Деблокирует пул для потокобезопасности
+
 ## CONTENT
+
+Деблокирует пул для потокобезопасности
 
 
 # ::stappler::mempool::custom::HashFunc
 
 ## BRIEF
 
+Хеш-функция для пользовательских объектов
+
 ## CONTENT
+
+Хеш-функция для пользовательских объектов
 
 
 # ::stappler::mempool::custom::HashEntry
 
 ## BRIEF
 
+Элемент хеш-таблицы пользовательских значений
+
 ## CONTENT
+
+Элемент хеш-таблицы пользовательских значений
 
 
 # ::stappler::mempool::custom::HashEntry::next
 
 ## BRIEF
 
+Следующий элемент в связном списке
+
 ## CONTENT
+
+Следующий элемент в связном списке
 
 Тип: stappler::mempool::custom::HashEntry*
 
@@ -1008,7 +1421,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Значение хэша элемента
+
 ## CONTENT
+
+Значение хэша элемента
 
 Тип: uint32_t
 
@@ -1017,7 +1434,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Непрозрачный указатель на ключ
+
 ## CONTENT
+
+Непрозрачный указатель на ключ
 
 Тип: void const*
 
@@ -1026,7 +1447,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Длина ключа
+
 ## CONTENT
+
+Длина ключа
 
 Тип: size_t
 
@@ -1035,7 +1460,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Непрозрачный указатель на значение
+
 ## CONTENT
+
+Непрозрачный указатель на значение
 
 Тип: void const*
 
@@ -1044,14 +1473,22 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Итератор для обхода значений хэш-таблицы
+
 ## CONTENT
+
+Итератор для обхода значений хэш-таблицы
 
 
 # ::stappler::mempool::custom::HashIndex::ht
 
 ## BRIEF
 
+Указатель на таблицу
+
 ## CONTENT
+
+Указатель на таблицу
 
 Тип: stappler::mempool::custom::HashTable*
 
@@ -1060,7 +1497,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Указатель на текущий элемент итерации
+
 ## CONTENT
+
+Указатель на текущий элемент итерации
 
 Тип: stappler::mempool::custom::HashEntry*
 
@@ -1069,7 +1510,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Указатель на следующий элемент итерации
+
 ## CONTENT
+
+Указатель на следующий элемент итерации
 
 Тип: stappler::mempool::custom::HashEntry*
 
@@ -1078,7 +1523,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Текущий индекс в таблице
+
 ## CONTENT
+
+Текущий индекс в таблице
 
 Тип: uint32_t
 
@@ -1087,7 +1536,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Возвращает итератор, указывающий на следующее значение
+
 ## CONTENT
+
+Возвращает итератор, указывающий на следующее значение
 
 Возвращает:
 * stappler::mempool::custom::HashIndex*
@@ -1096,7 +1549,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Читает ключ и значение текущего элемента
+
 ## CONTENT
+
+Читает ключ и значение текущего элемента
 
 Параметры:
 * void const**
@@ -1108,28 +1565,45 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Структура внутренней хэш-таблицы пула памяти
+
 ## CONTENT
+
+Структура внутренней хэш-таблицы пула памяти
+
 
 
 # ::stappler::mempool::custom::HashTable::merge_fn
 
 ## BRIEF
 
+Функция объединения элемента по ключу
+
 ## CONTENT
+
+Функция объединения элемента по ключу
 
 
 # ::stappler::mempool::custom::HashTable::foreach_fn
 
 ## BRIEF
 
+Функция перечисления всех элементов таблицы
+
 ## CONTENT
+
+Функция перечисления всех элементов таблицы
 
 
 # ::stappler::mempool::custom::HashTable::pool
 
 ## BRIEF
 
+Пул памяти таблицы
+
 ## CONTENT
+
+Пул памяти таблицы
 
 Тип: stappler::mempool::custom::Pool*
 
@@ -1138,7 +1612,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Массив записей в таблице
+
 ## CONTENT
+
+Массив записей в таблице
 
 Тип: stappler::mempool::custom::HashEntry**
 
@@ -1146,6 +1624,8 @@ Title: SPMemPoolStruct.h
 # ::stappler::mempool::custom::HashTable::iterator
 
 ## BRIEF
+
+Вложенная структура итератора для экономии памяти при обходе
 
 ## CONTENT
 
@@ -1156,7 +1636,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Число элементов в таблице
+
 ## CONTENT
+
+Число элементов в таблице
 
 Тип: uint32_t
 
@@ -1165,7 +1649,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Максимальная текущая вместимость таблицы
+
 ## CONTENT
+
+Максимальная текущая вместимость таблицы
 
 Тип: uint32_t
 
@@ -1174,7 +1662,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Инициализирующее значение хэшей в таблице
+
 ## CONTENT
+
+Инициализирующее значение хэшей в таблице
 
 Тип: uint32_t
 
@@ -1183,7 +1675,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Указатель на функцию хэширования
+
 ## CONTENT
+
+Указатель на функцию хэширования
 
 Тип: stappler::mempool::custom::HashFunc
 
@@ -1192,7 +1688,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Связный список свободных ячеек элементов
+
 ## CONTENT
+
+Связный список свободных ячеек элементов
 
 Тип: stappler::mempool::custom::HashEntry*
 
@@ -1201,7 +1701,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Инициализирует новую хэш-таблицу
+
 ## CONTENT
+
+Инициализирует новую хэш-таблицу
 
 Параметры:
 * stappler::mempool::custom::HashTable*
@@ -1212,7 +1716,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Создаёт новую хэш-таблицу из пула памяти
+
 ## CONTENT
+
+Создаёт новую хэш-таблицу из пула памяти
 
 Параметры:
 * stappler::mempool::custom::Pool*
@@ -1224,7 +1732,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Создаёт новую хэш-таблицу из пула памяти
+
 ## CONTENT
+
+Создаёт новую хэш-таблицу из пула памяти
 
 Параметры:
 * stappler::mempool::custom::Pool*
@@ -1237,7 +1749,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Возвращает итератор, указывающий на первый элемент в таблице
+
 ## CONTENT
+
+Возвращает итератор, указывающий на первый элемент в таблице
 
 Параметры:
 * stappler::mempool::custom::Pool*
@@ -1249,7 +1765,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Копирует хэш-таблицу
+
 ## CONTENT
+
+Копирует хэш-таблицу
 
 Параметры:
 * stappler::mempool::custom::Pool*
@@ -1261,7 +1781,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Получает значение из таблицы по ключу
+
 ## CONTENT
+
+Получает значение из таблицы по ключу
 
 Параметры:
 * void const*
@@ -1274,7 +1798,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Устанавливает значение для ключа
+
 ## CONTENT
+
+Устанавливает значение для ключа
 
 Параметры:
 * void const*
@@ -1286,7 +1814,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Возвращает текущее количество элементов в таблице
+
 ## CONTENT
+
+Возвращает текущее количество элементов в таблице
 
 Возвращает:
 * size_t
@@ -1295,14 +1827,22 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Очищает таблицу
+
 ## CONTENT
+
+Очищает таблицу
 
 
 # ::stappler::mempool::custom::HashTable::merge(stappler::mempool::custom::Pool*,stappler::mempool::custom::HashTable const*) const
 
 ## BRIEF
 
+Объединяет две таблицы
+
 ## CONTENT
+
+Объединяет две таблицы
 
 Параметры:
 * stappler::mempool::custom::Pool*
@@ -1315,7 +1855,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Объединяет две таблицы
+
 ## CONTENT
+
+Объединяет две таблицы
 
 Параметры:
 * stappler::mempool::custom::Pool*
@@ -1330,7 +1874,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Обходит все элементы в таблице
+
 ## CONTENT
+
+Обходит все элементы в таблице
 
 Параметры:
 * stappler::mempool::custom::HashTable::foreach_fn
@@ -1343,21 +1891,33 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Инициализирует подсистему пулов памяти
+
 ## CONTENT
+
+Инициализирует подсистему пулов памяти
 
 
 # ::stappler::mempool::custom::terminate()
 
 ## BRIEF
 
+Деинициализирует подсистему пулов памяти
+
 ## CONTENT
+
+Деинициализирует подсистему пулов памяти
 
 
 # ::stappler::mempool::custom::create(stappler::mempool::custom::Pool*)
 
 ## BRIEF
 
+Создаёт новый дочерний пул памяти
+
 ## CONTENT
+
+Создаёт новый дочерний пул памяти
 
 Параметры:
 * stappler::mempool::custom::Pool*
@@ -1369,7 +1929,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Уничтоает пул памяти
+
 ## CONTENT
+
+Уничтоает пул памяти
 
 Параметры:
 * stappler::mempool::custom::Pool*
@@ -1379,7 +1943,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Очищает пул памяти
+
 ## CONTENT
+
+Очищает пул памяти
 
 Параметры:
 * stappler::mempool::custom::Pool*
@@ -1389,7 +1957,11 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Размер структуры сегмента памяти
+
 ## CONTENT
+
+Размер структуры сегмента памяти
 
 Тип: size_t const
 
@@ -1398,6 +1970,10 @@ Title: SPMemPoolStruct.h
 
 ## BRIEF
 
+Размер структуры пула памяти
+
 ## CONTENT
+
+Размер структуры пула памяти
 
 Тип: size_t const

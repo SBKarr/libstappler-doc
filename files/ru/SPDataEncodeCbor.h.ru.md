@@ -1,21 +1,28 @@
 Title: SPDataEncodeCbor.h
 
 
-# MODULES_DATA_SPDATAENCODECBOR_H_
+# STAPPLER_DATA_SPDATAENCODECBOR_H_
 
 ## BRIEF
 
+Заголовок, описывающий кодирование данных в формат CBOR
+
 ## CONTENT
 
+Заголовок, описывающий кодирование данных в формат CBOR
 
 # ::stappler::data::cbor::Encoder<typename>
 
 ## BRIEF
 
+Класс кодировщика в CBOR
+
 ## CONTENT
 
+Класс кодировщика в CBOR
+
 Параметры шаблона:
-* typename Interface
+* typename Interface - интерфейс памяти
 
 Базовые классы:
 * Interface::AllocBaseType
@@ -25,35 +32,49 @@ Title: SPDataEncodeCbor.h
 
 ## BRIEF
 
+Тип интерфейса памяти
+
 ## CONTENT
 
+Тип интерфейса памяти
 
 # ::stappler::data::cbor::Encoder<typename>::ValueType
 
 ## BRIEF
 
+Тип принимаемого значения
+
 ## CONTENT
 
+Тип принимаемого значения
 
 # ::stappler::data::cbor::Encoder<typename>::Type
 
 ## BRIEF
 
+Тип кодирования
+
 ## CONTENT
+
+Тип кодирования
 
 Значения:
 * None
-* File
-* Buffered
-* Vector
-* Stream
+* File - в файл
+* Buffered - в буфер
+* Vector - в вектор
+* Stream - в поток
 
 
 # ::stappler::data::cbor::Encoder<typename>::encode(const typename ValueType::ArrayType&)
 
 ## BRIEF
 
+Кодирует массив в статический байтовый контейнер
+
 ## CONTENT
+
+Кодирует массив в статический байтовый контейнер
 
 Параметры:
 * const typename ValueType::ArrayType&
@@ -65,7 +86,11 @@ Title: SPDataEncodeCbor.h
 
 ## BRIEF
 
+Кодирует словарь в статический байтовый контейнер
+
 ## CONTENT
+
+Кодирует словарь в статический байтовый контейнер
 
 Параметры:
 * const typename ValueType::DictionaryType&
@@ -77,42 +102,59 @@ Title: SPDataEncodeCbor.h
 
 ## BRIEF
 
+Инициализирует кодировщик именем файла
+
 ## CONTENT
 
+Инициализирует кодировщик именем файла
+
 Параметры:
-* stappler::StringView
+* stappler::StringView - имя файла для записи
 
 
 # ::stappler::data::cbor::Encoder<typename>::Encoder(std::ostream*)
 
 ## BRIEF
 
+Инициализирует кодировщик с выходным потоком
+
 ## CONTENT
 
+Инициализирует кодировщик с выходным потоком
+
 Параметры:
-* std::ostream*
+* std::ostream* - выходной поток
 
 
-# ::stappler::data::cbor::Encoder<typename>::Encoder(bool)
+# ::stappler::data::cbor::Encoder<typename>::Encoder(bool,size_t)
 
 ## BRIEF
 
+Инициализирует кодировщик с внутренним буфером
+
 ## CONTENT
 
-Параметры:
-* bool
+Инициализирует кодировщик с внутренним буфером
 
+Параметры:
+* bool - true если кодирование не начато и необходимо записать флаговое значение
+* size_t - размер для резервирование внутреннего буфера
 
 # ::stappler::data::cbor::Encoder<typename>::~Encoder()
 
 ## BRIEF
 
+Деинициализирует кодировщик
+
 ## CONTENT
 
+Деинициализирует кодировщик
 
 # ::stappler::data::cbor::Encoder<typename>::emplace(uint8_t)
 
 ## BRIEF
+
+Записывает байт в выходной интерфейс
 
 ## CONTENT
 
@@ -124,37 +166,53 @@ Title: SPDataEncodeCbor.h
 
 ## BRIEF
 
+Записывает блок памяти в выходной интерфейс
+
 ## CONTENT
 
+Записывает блок памяти в выходной интерфейс
+
 Параметры:
-* uint8_t const*
-* size_t
+* uint8_t const* - указатель на наачало блока памяти
+* size_t - размер блока памяти
 
 
 # ::stappler::data::cbor::Encoder<typename>::switchBuffer(size_t)
 
 ## BRIEF
 
+Переключает запись с внутреннего буфера на динамический вектор
+
 ## CONTENT
 
+Переключает запись с внутреннего буфера на динамический вектор, при переполнении внутреннего буфера
+
 Параметры:
-* size_t
+* size_t - целевой размер вектора
 
 
 # ::stappler::data::cbor::Encoder<typename>::isOpen() const
 
 ## BRIEF
 
+Проверяет, доступен ли интерфейс для записи
+
 ## CONTENT
 
+Проверяет, доступен ли интерфейс для записи
+
 Возвращает:
-* bool
+* bool - true если интерфейс доступен для записи
 
 # ::stappler::data::cbor::Encoder<typename>::data()
 
 ## BRIEF
 
+Возвращает результат кодирования
+
 ## CONTENT
+
+Возвращает результат кодирования
 
 Возвращает:
 * typename ValueType::BytesType
@@ -163,9 +221,13 @@ Title: SPDataEncodeCbor.h
 
 ## BRIEF
 
+Записывает NULL
+
 ## CONTENT
 
 Доступ: public
+
+Записывает NULL
 
 Параметры:
 * stappler::nullptr_t
@@ -175,9 +237,13 @@ Title: SPDataEncodeCbor.h
 
 ## BRIEF
 
+Записывает булево значение
+
 ## CONTENT
 
 Доступ: public
+
+Записывает булево значение
 
 Параметры:
 * bool
@@ -187,9 +253,13 @@ Title: SPDataEncodeCbor.h
 
 ## BRIEF
 
+Записывает целое число
+
 ## CONTENT
 
 Доступ: public
+
+Записывает целое число
 
 Параметры:
 * int64_t
@@ -199,9 +269,13 @@ Title: SPDataEncodeCbor.h
 
 ## BRIEF
 
+Записывает число с плавающей точкой
+
 ## CONTENT
 
 Доступ: public
+
+Записывает число с плавающей точкой
 
 Параметры:
 * double
@@ -211,9 +285,13 @@ Title: SPDataEncodeCbor.h
 
 ## BRIEF
 
+Записывает символьную строку
+
 ## CONTENT
 
 Доступ: public
+
+Записывает символьную строку
 
 Параметры:
 * const typename ValueType::StringType&
@@ -223,9 +301,13 @@ Title: SPDataEncodeCbor.h
 
 ## BRIEF
 
+Записывает байтовую строку
+
 ## CONTENT
 
 Доступ: public
+
+Записывает байтовую строку
 
 Параметры:
 * const typename ValueType::BytesType&
@@ -235,9 +317,13 @@ Title: SPDataEncodeCbor.h
 
 ## BRIEF
 
+Записывает массив
+
 ## CONTENT
 
 Доступ: public
+
+Записывает массив
 
 Параметры:
 * const typename ValueType::ArrayType&
@@ -247,9 +333,13 @@ Title: SPDataEncodeCbor.h
 
 ## BRIEF
 
+Записывает словарь
+
 ## CONTENT
 
 Доступ: public
+
+Записывает словарь
 
 Параметры:
 * const typename ValueType::DictionaryType&
@@ -259,16 +349,22 @@ Title: SPDataEncodeCbor.h
 
 ## BRIEF
 
+Безымянное объединение интерфейсов для кодирования
+
 ## CONTENT
 
-Доступ: private
+Безымянное объединение интерфейсов для кодирования
 
 
 # ::stappler::data::cbor::Encoder<typename>::buffer
 
 ## BRIEF
 
+Внутренний буфер или динамический вектор для записи
+
 ## CONTENT
+
+Внутренний буфер или динамический вектор для записи
 
 Тип: typename ValueType::BytesType*
 
@@ -277,7 +373,11 @@ Title: SPDataEncodeCbor.h
 
 ## BRIEF
 
+Выходной поток для записи файла
+
 ## CONTENT
+
+Выходной поток для записи файла
 
 Тип: std::ofstream*
 
@@ -286,7 +386,11 @@ Title: SPDataEncodeCbor.h
 
 ## BRIEF
 
+Поток для записи
+
 ## CONTENT
+
+Поток для записи
 
 Тип: std::ostream*
 
@@ -295,9 +399,13 @@ Title: SPDataEncodeCbor.h
 
 ## BRIEF
 
+Тип текущего интерфейса
+
 ## CONTENT
 
 Доступ: private
+
+Тип текущего интерфейса
 
 Тип: stappler::data::cbor::Encoder::Type
 
@@ -306,10 +414,14 @@ Title: SPDataEncodeCbor.h
 
 ## BRIEF
 
+Записывает массив в байтовый контейнер
+
 ## CONTENT
 
+Записывает массив в байтовый контейнер
+
 Параметры шаблона:
-* typename Interface
+* typename Interface - интерфейс памяти
 
 Параметры:
 * const typename ValueTemplate<Interface>::ArrayType&
@@ -321,10 +433,14 @@ Title: SPDataEncodeCbor.h
 
 ## BRIEF
 
+Записывает словарь в байтовый контейнер
+
 ## CONTENT
 
+Записывает словарь в байтовый контейнер
+
 Параметры шаблона:
-* typename Interface
+* typename Interface - интерфейс памяти
 
 Параметры:
 * const typename ValueTemplate<Interface>::DictionaryType&
@@ -332,17 +448,22 @@ Title: SPDataEncodeCbor.h
 Возвращает:
 * typename Interface::BytesType
 
-# ::stappler::data::cbor::write<typename>(ValueTemplate<Interface> const&)
+# ::stappler::data::cbor::write<typename>(ValueTemplate<Interface> const&,size_t)
 
 ## BRIEF
 
+Записывает значение в байтовый контейнер
+
 ## CONTENT
 
+Записывает значение в байтовый контейнер
+
 Параметры шаблона:
-* typename Interface
+* typename Interface - интерфейс памяти
 
 Параметры:
 * ValueTemplate<Interface> const&
+* size_t - размер блока для резервирования памяти
 
 Возвращает:
 * typename Interface::BytesType
@@ -351,30 +472,38 @@ Title: SPDataEncodeCbor.h
 
 ## BRIEF
 
+Записывает значение в поток
+
 ## CONTENT
 
+Записывает значение в поток
+
 Параметры шаблона:
-* typename Interface
+* typename Interface - интерфейс памяти
 
 Параметры:
-* std::ostream&
+* std::ostream& - выходной поток
 * ValueTemplate<Interface> const&
 
 Возвращает:
-* bool
+* bool - true если запись успешна
 
 # ::stappler::data::cbor::save<typename>(ValueTemplate<Interface> const&,stappler::StringView)
 
 ## BRIEF
 
+Записывает значение в файл
+
 ## CONTENT
 
+Записывает значение в файл
+
 Параметры шаблона:
-* typename Interface
+* typename Interface - интерфейс памяти
 
 Параметры:
 * ValueTemplate<Interface> const&
-* stappler::StringView
+* stappler::StringView - имя файла
 
 Возвращает:
-* bool
+* bool - true если запись успешна

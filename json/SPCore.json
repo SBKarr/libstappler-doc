@@ -1,7 +1,7 @@
 {
-	"_fullName": "/home/sbkarr/stappler/libstappler-root/core/core/SPCore.h",
+	"_fullName": "core/core/SPCore.h",
 	"_kind": "file",
-	"_name": "/home/sbkarr/stappler/libstappler-root/core/core/SPCore.h",
+	"_name": "core/core/SPCore.h",
 	"childs": [{
 		"_fullName": "type_traits",
 		"_kind": "include directive",
@@ -385,7 +385,7 @@
 		"_kind": "include directive",
 		"_name": "SPHash.h",
 		"id": 2616309998,
-		"include": "/home/sbkarr/stappler/libstappler-root/core/core/string/SPHash.h",
+		"include": "core/core/string/SPHash.h",
 		"include_kind": "local",
 		"kind": "include directive",
 		"name": "SPHash.h"
@@ -412,6 +412,82 @@
 		"name": "SPDEFAULT",
 		"replacement": "1"
 	}, {
+		"_fullName": "SP_THREE_WAY_COMPARISON_TYPE",
+		"_kind": "macro definition",
+		"_name": "SP_THREE_WAY_COMPARISON_TYPE",
+		"id": 754815376,
+		"is_function_like": true,
+		"is_object_like": false,
+		"is_variadic": false,
+		"kind": "macro definition",
+		"name": "SP_THREE_WAY_COMPARISON_TYPE",
+		"parameters": [{
+			"_fullName": "Type",
+			"_kind": "macro parameter",
+			"_name": "Type",
+			"id": 3167053791,
+			"kind": "macro parameter",
+			"name": "Type"
+		}],
+		"replacement": "auto operator<=>(const Type&) const = default;"
+	}, {
+		"_fullName": "SP_THREE_WAY_COMPARISON_FRIEND",
+		"_kind": "macro definition",
+		"_name": "SP_THREE_WAY_COMPARISON_FRIEND",
+		"id": 3310980379,
+		"is_function_like": true,
+		"is_object_like": false,
+		"is_variadic": false,
+		"kind": "macro definition",
+		"name": "SP_THREE_WAY_COMPARISON_FRIEND",
+		"parameters": [{
+			"_fullName": "Type",
+			"_kind": "macro parameter",
+			"_name": "Type",
+			"id": 3167053791,
+			"kind": "macro parameter",
+			"name": "Type"
+		}],
+		"replacement": "friend auto operator<=>(const Type&, const Type &) = default;"
+	}, {
+		"_fullName": "SP_THREE_WAY_COMPARISON_TYPE_CONSTEXPR",
+		"_kind": "macro definition",
+		"_name": "SP_THREE_WAY_COMPARISON_TYPE_CONSTEXPR",
+		"id": 2849775671,
+		"is_function_like": true,
+		"is_object_like": false,
+		"is_variadic": false,
+		"kind": "macro definition",
+		"name": "SP_THREE_WAY_COMPARISON_TYPE_CONSTEXPR",
+		"parameters": [{
+			"_fullName": "Type",
+			"_kind": "macro parameter",
+			"_name": "Type",
+			"id": 3167053791,
+			"kind": "macro parameter",
+			"name": "Type"
+		}],
+		"replacement": "constexpr auto operator<=>(const Type &) const = default;"
+	}, {
+		"_fullName": "SP_THREE_WAY_COMPARISON_FRIEND_CONSTEXPR",
+		"_kind": "macro definition",
+		"_name": "SP_THREE_WAY_COMPARISON_FRIEND_CONSTEXPR",
+		"id": 3455223244,
+		"is_function_like": true,
+		"is_object_like": false,
+		"is_variadic": false,
+		"kind": "macro definition",
+		"name": "SP_THREE_WAY_COMPARISON_FRIEND_CONSTEXPR",
+		"parameters": [{
+			"_fullName": "Type",
+			"_kind": "macro parameter",
+			"_name": "Type",
+			"id": 3167053791,
+			"kind": "macro parameter",
+			"name": "Type"
+		}],
+		"replacement": "friend constexpr auto operator<=>(const Type&, const Type &) = default;"
+	}, {
 		"_fullName": "__STDC_WANT_IEC_60559_TYPES_EXT__",
 		"_kind": "macro definition",
 		"_name": "__STDC_WANT_IEC_60559_TYPES_EXT__",
@@ -432,7 +508,7 @@
 		"is_variadic": false,
 		"kind": "macro definition",
 		"name": "SPUNUSED",
-		"replacement": "__attribute__((unused))"
+		"replacement": "[[maybe_unused]]"
 	}, {
 		"_fullName": "SPINLINE",
 		"_kind": "macro definition",
@@ -1435,6 +1511,111 @@
 			"_typeName": "char",
 			"builtin_type_kind": "char",
 			"kind": "builtin"
+		},
+		"semantic_scope": "",
+		"signature": "(unsigned long long)"
+	}, {
+		"_fullName": "::operator\"\"_usec(unsigned long long)",
+		"_kind": "function",
+		"_name": "operator\"\"_usec",
+		"body_kind": "definition",
+		"id": 3123139006,
+		"is_consteval": false,
+		"is_constexpr": true,
+		"is_declaration": false,
+		"is_definition": true,
+		"is_variadic": false,
+		"kind": "function",
+		"name": "operator\"\"_usec",
+		"parameters": [{
+			"_fullName": "val",
+			"_kind": "function parameter",
+			"_name": "val",
+			"id": 1885358389,
+			"kind": "function parameter",
+			"name": "val",
+			"type": {
+				"_typeName": "unsigned long long",
+				"builtin_type_kind": "unsigned long long",
+				"kind": "builtin"
+			}
+		}],
+		"return_type":  {
+			"_typeName": "uint64_t",
+			"kind": "user_defined",
+			"target": {
+				"name": "uint64_t"
+			}
+		},
+		"semantic_scope": "",
+		"signature": "(unsigned long long)"
+	}, {
+		"_fullName": "::operator\"\"_msec(unsigned long long)",
+		"_kind": "function",
+		"_name": "operator\"\"_msec",
+		"body_kind": "definition",
+		"id": 401092335,
+		"is_consteval": false,
+		"is_constexpr": true,
+		"is_declaration": false,
+		"is_definition": true,
+		"is_variadic": false,
+		"kind": "function",
+		"name": "operator\"\"_msec",
+		"parameters": [{
+			"_fullName": "val",
+			"_kind": "function parameter",
+			"_name": "val",
+			"id": 1885358389,
+			"kind": "function parameter",
+			"name": "val",
+			"type": {
+				"_typeName": "unsigned long long",
+				"builtin_type_kind": "unsigned long long",
+				"kind": "builtin"
+			}
+		}],
+		"return_type":  {
+			"_typeName": "uint64_t",
+			"kind": "user_defined",
+			"target": {
+				"name": "uint64_t"
+			}
+		},
+		"semantic_scope": "",
+		"signature": "(unsigned long long)"
+	}, {
+		"_fullName": "::operator\"\"_mksec(unsigned long long)",
+		"_kind": "function",
+		"_name": "operator\"\"_mksec",
+		"body_kind": "definition",
+		"id": 2788637703,
+		"is_consteval": false,
+		"is_constexpr": true,
+		"is_declaration": false,
+		"is_definition": true,
+		"is_variadic": false,
+		"kind": "function",
+		"name": "operator\"\"_mksec",
+		"parameters": [{
+			"_fullName": "val",
+			"_kind": "function parameter",
+			"_name": "val",
+			"id": 1885358389,
+			"kind": "function parameter",
+			"name": "val",
+			"type": {
+				"_typeName": "unsigned long long",
+				"builtin_type_kind": "unsigned long long",
+				"kind": "builtin"
+			}
+		}],
+		"return_type":  {
+			"_typeName": "uint64_t",
+			"kind": "user_defined",
+			"target": {
+				"name": "uint64_t"
+			}
 		},
 		"semantic_scope": "",
 		"signature": "(unsigned long long)"
@@ -13062,6 +13243,520 @@
 					}
 				}
 			}, {
+				"_fullName": "::stappler::math::smooth<typename>(T const&,T const&,float,float)",
+				"_kind": "function template",
+				"_name": "smooth",
+				"childs": [{
+					"_fullName": "::stappler::math::smooth<typename>(T const&,T const&,float,float)",
+					"_kind": "function",
+					"_name": "smooth",
+					"body_kind": "definition",
+					"id": 1807853222,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "smooth",
+					"parameters": [{
+						"_fullName": "source",
+						"_kind": "function parameter",
+						"_name": "source",
+						"id": 1840890631,
+						"kind": "function parameter",
+						"name": "source",
+						"type": {
+							"_typeName": "T const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "T const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "T",
+									"entity": {
+										"name": "T",
+										"objects": [{
+											"_fullName": "T",
+											"_kind": "template type parameter",
+											"_name": "T",
+											"id": 1306257776,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "T"
+										}]
+									},
+									"kind": "template_parameter"
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_fullName": "target",
+						"_kind": "function parameter",
+						"_name": "target",
+						"id": 3334587534,
+						"kind": "function parameter",
+						"name": "target",
+						"type": {
+							"_typeName": "T const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "T const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "T",
+									"entity": {
+										"name": "T",
+										"objects": [{
+											"_fullName": "T",
+											"_kind": "template type parameter",
+											"_name": "T",
+											"id": 1306257776,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "T"
+										}]
+									},
+									"kind": "template_parameter"
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_fullName": "elapsed",
+						"_kind": "function parameter",
+						"_name": "elapsed",
+						"id": 792548408,
+						"kind": "function parameter",
+						"name": "elapsed",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}, {
+						"_fullName": "response",
+						"_kind": "function parameter",
+						"_name": "response",
+						"id": 2298941638,
+						"kind": "function parameter",
+						"name": "response",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "T",
+						"entity": {
+							"name": "T",
+							"objects": [{
+								"_fullName": "T",
+								"_kind": "template type parameter",
+								"_name": "T",
+								"id": 1306257776,
+								"is_variadic": false,
+								"keyword": "typename",
+								"kind": "template type parameter",
+								"name": "T"
+							}]
+						},
+						"kind": "template_parameter"
+					},
+					"semantic_scope": "",
+					"signature": "(T const&,T const&,float,float)"
+				}],
+				"function":  {
+					"_fullName": "::stappler::math::smooth<typename>(T const&,T const&,float,float)",
+					"_kind": "function",
+					"_name": "smooth",
+					"body_kind": "definition",
+					"id": 1807853222,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "smooth",
+					"parameters": [{
+						"_fullName": "source",
+						"_kind": "function parameter",
+						"_name": "source",
+						"id": 1840890631,
+						"kind": "function parameter",
+						"name": "source",
+						"type": {
+							"_typeName": "T const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "T const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "T",
+									"entity": {
+										"name": "T",
+										"objects": [{
+											"_fullName": "T",
+											"_kind": "template type parameter",
+											"_name": "T",
+											"id": 1306257776,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "T"
+										}]
+									},
+									"kind": "template_parameter"
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_fullName": "target",
+						"_kind": "function parameter",
+						"_name": "target",
+						"id": 3334587534,
+						"kind": "function parameter",
+						"name": "target",
+						"type": {
+							"_typeName": "T const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "T const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "T",
+									"entity": {
+										"name": "T",
+										"objects": [{
+											"_fullName": "T",
+											"_kind": "template type parameter",
+											"_name": "T",
+											"id": 1306257776,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "T"
+										}]
+									},
+									"kind": "template_parameter"
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_fullName": "elapsed",
+						"_kind": "function parameter",
+						"_name": "elapsed",
+						"id": 792548408,
+						"kind": "function parameter",
+						"name": "elapsed",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}, {
+						"_fullName": "response",
+						"_kind": "function parameter",
+						"_name": "response",
+						"id": 2298941638,
+						"kind": "function parameter",
+						"name": "response",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "T",
+						"entity": {
+							"name": "T",
+							"objects": [{
+								"_fullName": "T",
+								"_kind": "template type parameter",
+								"_name": "T",
+								"id": 1306257776,
+								"is_variadic": false,
+								"keyword": "typename",
+								"kind": "template type parameter",
+								"name": "T"
+							}]
+						},
+						"kind": "template_parameter"
+					},
+					"semantic_scope": "",
+					"signature": "(T const&,T const&,float,float)"
+				},
+				"id": 1807853222,
+				"kind": "function template",
+				"name": "smooth",
+				"parameters": [{
+					"_fullName": "T",
+					"_kind": "template type parameter",
+					"_name": "T",
+					"id": 1306257776,
+					"is_variadic": false,
+					"keyword": "typename",
+					"kind": "template type parameter",
+					"name": "T"
+				}]
+			}, {
+				"_fullName": "::stappler::math::lerp<typename>(T const&,T const&,float)",
+				"_kind": "function template",
+				"_name": "lerp",
+				"childs": [{
+					"_fullName": "::stappler::math::lerp<typename>(T const&,T const&,float)",
+					"_kind": "function",
+					"_name": "lerp",
+					"body_kind": "definition",
+					"id": 2367323215,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "lerp",
+					"parameters": [{
+						"_fullName": "a",
+						"_kind": "function parameter",
+						"_name": "a",
+						"id": 1426945110,
+						"kind": "function parameter",
+						"name": "a",
+						"type": {
+							"_typeName": "T const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "T const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "T",
+									"entity": {
+										"name": "T",
+										"objects": [{
+											"_fullName": "T",
+											"_kind": "template type parameter",
+											"_name": "T",
+											"id": 1306257776,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "T"
+										}]
+									},
+									"kind": "template_parameter"
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_fullName": "b",
+						"_kind": "function parameter",
+						"_name": "b",
+						"id": 2718739903,
+						"kind": "function parameter",
+						"name": "b",
+						"type": {
+							"_typeName": "T const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "T const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "T",
+									"entity": {
+										"name": "T",
+										"objects": [{
+											"_fullName": "T",
+											"_kind": "template type parameter",
+											"_name": "T",
+											"id": 1306257776,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "T"
+										}]
+									},
+									"kind": "template_parameter"
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_fullName": "alpha",
+						"_kind": "function parameter",
+						"_name": "alpha",
+						"id": 1409586120,
+						"kind": "function parameter",
+						"name": "alpha",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "T",
+						"entity": {
+							"name": "T",
+							"objects": [{
+								"_fullName": "T",
+								"_kind": "template type parameter",
+								"_name": "T",
+								"id": 1306257776,
+								"is_variadic": false,
+								"keyword": "typename",
+								"kind": "template type parameter",
+								"name": "T"
+							}]
+						},
+						"kind": "template_parameter"
+					},
+					"semantic_scope": "",
+					"signature": "(T const&,T const&,float)"
+				}],
+				"function":  {
+					"_fullName": "::stappler::math::lerp<typename>(T const&,T const&,float)",
+					"_kind": "function",
+					"_name": "lerp",
+					"body_kind": "definition",
+					"id": 2367323215,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "lerp",
+					"parameters": [{
+						"_fullName": "a",
+						"_kind": "function parameter",
+						"_name": "a",
+						"id": 1426945110,
+						"kind": "function parameter",
+						"name": "a",
+						"type": {
+							"_typeName": "T const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "T const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "T",
+									"entity": {
+										"name": "T",
+										"objects": [{
+											"_fullName": "T",
+											"_kind": "template type parameter",
+											"_name": "T",
+											"id": 1306257776,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "T"
+										}]
+									},
+									"kind": "template_parameter"
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_fullName": "b",
+						"_kind": "function parameter",
+						"_name": "b",
+						"id": 2718739903,
+						"kind": "function parameter",
+						"name": "b",
+						"type": {
+							"_typeName": "T const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "T const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "T",
+									"entity": {
+										"name": "T",
+										"objects": [{
+											"_fullName": "T",
+											"_kind": "template type parameter",
+											"_name": "T",
+											"id": 1306257776,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "T"
+										}]
+									},
+									"kind": "template_parameter"
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_fullName": "alpha",
+						"_kind": "function parameter",
+						"_name": "alpha",
+						"id": 1409586120,
+						"kind": "function parameter",
+						"name": "alpha",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "T",
+						"entity": {
+							"name": "T",
+							"objects": [{
+								"_fullName": "T",
+								"_kind": "template type parameter",
+								"_name": "T",
+								"id": 1306257776,
+								"is_variadic": false,
+								"keyword": "typename",
+								"kind": "template type parameter",
+								"name": "T"
+							}]
+						},
+						"kind": "template_parameter"
+					},
+					"semantic_scope": "",
+					"signature": "(T const&,T const&,float)"
+				},
+				"id": 2367323215,
+				"kind": "function template",
+				"name": "lerp",
+				"parameters": [{
+					"_fullName": "T",
+					"_kind": "template type parameter",
+					"_name": "T",
+					"id": 1306257776,
+					"is_variadic": false,
+					"keyword": "typename",
+					"kind": "template type parameter",
+					"name": "T"
+				}]
+			}, {
 				"_fullName": "::stappler::math::clamp<class,class>(T const&,T const&,T const&,Compare)",
 				"_kind": "function template",
 				"_name": "clamp",
@@ -16048,14 +16743,17 @@
 			"name": "std"
 		}
 	}],
-	"id": 2715195162,
+	"id": 604894599,
 	"kind": "file",
-	"name": "/home/sbkarr/stappler/libstappler-root/core/core/SPCore.h",
+	"name": "core/core/SPCore.h",
 	"unmatched_comments": [{
 		"line": 22,
 		"text": "\nCopyright (c) 2016-2022 Roman Katuntsev <sbkarr@stappler.org>\nCopyright (c) 2023 Stappler LLC <admin@stappler.dev>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n"
 	}, {
-		"line": 499,
+		"line": 514,
 		"text": "Value wrapper is a syntactic sugar struct, that allow you to create\nan alias type for some other type, that will be statically and uniquely\ndifferent from all other types\n\nMost common usage is type-based overload resolution, like\n\nusing FilePath = ValueWrapper<StringView, class FilePathFlag>;\nusing DataString =  ValueWrapper<StringView, class DataStringFlag>;\n\n...\n\nclass SomeClass {\n SomeClass(FilePath); // init with data from file\n SomeClass(DataString); // init with data from memory\n};\n\nAlso, ValueWrapper used in implementation of function with named arguments\nand function, that requires additional type-checking\n"
+	}, {
+		"line": 659,
+		"text": "\nUpdates this vector towards the given target using a smoothing function.\nThe given response time determines the amount of smoothing (lag). A longer\nresponse time yields a smoother result and more lag. To force this vector to\nfollow the target closely, provide a response time that is very small relative\nto the given elapsed time."
 	}]
 }

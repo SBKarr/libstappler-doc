@@ -28,7 +28,8 @@ LOCAL_MODULES_PATHS = $(STAPPLER_ROOT)/core/stappler-modules.mk
 LOCAL_MODULES := \
 	stappler_filesystem \
 	stappler_data \
-	stappler_brotli_lib
+	stappler_brotli_lib \
+	stappler_threads
 
 LOCAL_ROOT = .
 

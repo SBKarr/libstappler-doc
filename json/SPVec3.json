@@ -1,13 +1,13 @@
 {
-	"_fullName": "/home/sbkarr/stappler/libstappler-root/core/geom/SPVec3.h",
+	"_fullName": "core/geom/SPVec3.h",
 	"_kind": "file",
-	"_name": "/home/sbkarr/stappler/libstappler-root/core/geom/SPVec3.h",
+	"_name": "core/geom/SPVec3.h",
 	"childs": [{
 		"_fullName": "SPSIMD.h",
 		"_kind": "include directive",
 		"_name": "SPSIMD.h",
 		"id": 2279788260,
-		"include": "/home/sbkarr/stappler/libstappler-root/core/geom/SPSIMD.h",
+		"include": "core/geom/SPSIMD.h",
 		"include_kind": "local",
 		"kind": "include directive",
 		"name": "SPSIMD.h"
@@ -16,7 +16,7 @@
 		"_kind": "include directive",
 		"_name": "SPVec2.h",
 		"id": 288057728,
-		"include": "/home/sbkarr/stappler/libstappler-root/core/geom/SPVec2.h",
+		"include": "core/geom/SPVec2.h",
 		"include_kind": "local",
 		"kind": "include directive",
 		"name": "SPVec2.h"
@@ -72,6 +72,38 @@
 				},
 				"semantic_scope": ""
 			}, {
+				"_fullName": "::stappler::geom::Size3",
+				"_kind": "class",
+				"_name": "Size3",
+				"childs": null,
+				"class_kind": "struct",
+				"id": 4121657314,
+				"is_declaration": true,
+				"is_definition": false,
+				"is_final": false,
+				"kind": "class",
+				"name": "Size3",
+				"scope": {
+					"name": "Size3"
+				},
+				"semantic_scope": ""
+			}, {
+				"_fullName": "::stappler::geom::Extent3",
+				"_kind": "class",
+				"_name": "Extent3",
+				"childs": null,
+				"class_kind": "struct",
+				"id": 3914224354,
+				"is_declaration": true,
+				"is_definition": false,
+				"is_final": false,
+				"kind": "class",
+				"name": "Extent3",
+				"scope": {
+					"name": "Extent3"
+				},
+				"semantic_scope": ""
+			}, {
 				"_fullName": "::stappler::geom::Vec3",
 				"_kind": "class",
 				"_name": "Vec3",
@@ -83,6 +115,51 @@
 					"id": 893076784,
 					"kind": "access specifier",
 					"name": "public"
+				}, {
+					"_fullName": "::stappler::geom::Vec3::Dimansions",
+					"_kind": "variable",
+					"_name": "Dimansions",
+					"default_value": {
+						"expression": [{
+							"kind": "int_literal",
+							"spelling": "2"
+						}],
+						"kind": "unexposed",
+						"type": {
+							"_typeName": "size_t const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "size_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "size_t"
+								}
+							}
+						}
+					},
+					"id": 245496763,
+					"is_constexpr": true,
+					"is_declaration": false,
+					"is_definition": true,
+					"kind": "variable",
+					"name": "Dimansions",
+					"semantic_scope": "",
+					"storage_class": [
+						"static"
+					],
+					"type":  {
+						"_typeName": "size_t const",
+						"cv_qualifier": "const",
+						"kind": "cv_qualified",
+						"type": {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						}
+					}
 				}, {
 					"_fullName": "::stappler::geom::Vec3::ZERO",
 					"_kind": "variable",
@@ -300,7 +377,7 @@
 					"body_kind": "definition",
 					"id": 1724389037,
 					"is_consteval": false,
-					"is_constexpr": false,
+					"is_constexpr": true,
 					"is_declaration": false,
 					"is_definition": true,
 					"is_variadic": false,
@@ -438,12 +515,288 @@
 					"body_kind": "definition",
 					"id": 1691440981,
 					"is_consteval": false,
-					"is_constexpr": false,
+					"is_constexpr": true,
 					"is_declaration": false,
 					"is_definition": true,
 					"is_variadic": false,
 					"kind": "function",
 					"name": "subtract",
+					"parameters": [{
+						"_fullName": "v1",
+						"_kind": "function parameter",
+						"_name": "v1",
+						"id": 4168426705,
+						"kind": "function parameter",
+						"name": "v1",
+						"type": {
+							"_typeName": "stappler::geom::Vec3 const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::Vec3 const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::geom::Vec3",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::geom::Vec3",
+										"objects": [{
+											"_fullName": "::stappler::geom::Vec3",
+											"_kind": "class",
+											"_name": "Vec3",
+											"class_kind": "class",
+											"id": 748569271,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Vec3",
+											"scope": {
+												"name": "Vec3"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_fullName": "v2",
+						"_kind": "function parameter",
+						"_name": "v2",
+						"id": 873243804,
+						"kind": "function parameter",
+						"name": "v2",
+						"type": {
+							"_typeName": "stappler::geom::Vec3 const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::Vec3 const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::geom::Vec3",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::geom::Vec3",
+										"objects": [{
+											"_fullName": "::stappler::geom::Vec3",
+											"_kind": "class",
+											"_name": "Vec3",
+											"class_kind": "class",
+											"id": 748569271,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Vec3",
+											"scope": {
+												"name": "Vec3"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_fullName": "dst",
+						"_kind": "function parameter",
+						"_name": "dst",
+						"id": 3700855415,
+						"kind": "function parameter",
+						"name": "dst",
+						"type": {
+							"_typeName": "stappler::geom::Vec3*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::geom::Vec3",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::Vec3",
+									"objects": [{
+										"_fullName": "::stappler::geom::Vec3",
+										"_kind": "class",
+										"_name": "Vec3",
+										"class_kind": "class",
+										"id": 748569271,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Vec3",
+										"scope": {
+											"name": "Vec3"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::geom::Vec3 const&,stappler::geom::Vec3 const&,stappler::geom::Vec3*)",
+					"storage_class": [
+						"static"
+					]
+				}, {
+					"_fullName": "::stappler::geom::Vec3::scale(stappler::geom::Vec3 const&,stappler::geom::Vec3 const&,stappler::geom::Vec3*)",
+					"_kind": "function",
+					"_name": "scale",
+					"body_kind": "definition",
+					"id": 4048237413,
+					"is_consteval": false,
+					"is_constexpr": true,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "scale",
+					"parameters": [{
+						"_fullName": "v1",
+						"_kind": "function parameter",
+						"_name": "v1",
+						"id": 4168426705,
+						"kind": "function parameter",
+						"name": "v1",
+						"type": {
+							"_typeName": "stappler::geom::Vec3 const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::Vec3 const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::geom::Vec3",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::geom::Vec3",
+										"objects": [{
+											"_fullName": "::stappler::geom::Vec3",
+											"_kind": "class",
+											"_name": "Vec3",
+											"class_kind": "class",
+											"id": 748569271,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Vec3",
+											"scope": {
+												"name": "Vec3"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_fullName": "v2",
+						"_kind": "function parameter",
+						"_name": "v2",
+						"id": 873243804,
+						"kind": "function parameter",
+						"name": "v2",
+						"type": {
+							"_typeName": "stappler::geom::Vec3 const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::Vec3 const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::geom::Vec3",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::geom::Vec3",
+										"objects": [{
+											"_fullName": "::stappler::geom::Vec3",
+											"_kind": "class",
+											"_name": "Vec3",
+											"class_kind": "class",
+											"id": 748569271,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Vec3",
+											"scope": {
+												"name": "Vec3"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_fullName": "dst",
+						"_kind": "function parameter",
+						"_name": "dst",
+						"id": 3700855415,
+						"kind": "function parameter",
+						"name": "dst",
+						"type": {
+							"_typeName": "stappler::geom::Vec3*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::geom::Vec3",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::Vec3",
+									"objects": [{
+										"_fullName": "::stappler::geom::Vec3",
+										"_kind": "class",
+										"_name": "Vec3",
+										"class_kind": "class",
+										"id": 748569271,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Vec3",
+										"scope": {
+											"name": "Vec3"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						}
+					}],
+					"return_type":  {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::geom::Vec3 const&,stappler::geom::Vec3 const&,stappler::geom::Vec3*)",
+					"storage_class": [
+						"static"
+					]
+				}, {
+					"_fullName": "::stappler::geom::Vec3::unscale(stappler::geom::Vec3 const&,stappler::geom::Vec3 const&,stappler::geom::Vec3*)",
+					"_kind": "function",
+					"_name": "unscale",
+					"body_kind": "definition",
+					"id": 1081444086,
+					"is_consteval": false,
+					"is_constexpr": true,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "unscale",
 					"parameters": [{
 						"_fullName": "v1",
 						"_kind": "function parameter",
@@ -714,7 +1067,7 @@
 					"body_kind": "definition",
 					"id": 3594572495,
 					"is_consteval": false,
-					"is_constexpr": false,
+					"is_constexpr": true,
 					"is_declaration": false,
 					"is_definition": true,
 					"is_variadic": false,
@@ -1094,6 +1447,586 @@
 						"static"
 					]
 				}, {
+					"_fullName": "::stappler::geom::Vec3::bitop<typename>(stappler::geom::Vec3 const&,Functor const&)",
+					"_kind": "function template",
+					"_name": "bitop",
+					"childs": [{
+						"_fullName": "::stappler::geom::Vec3::bitop<typename>(stappler::geom::Vec3 const&,Functor const&)",
+						"_kind": "function",
+						"_name": "bitop",
+						"body_kind": "definition",
+						"id": 2533077786,
+						"is_consteval": false,
+						"is_constexpr": true,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "bitop",
+						"parameters": [{
+							"_fullName": "v",
+							"_kind": "function parameter",
+							"_name": "v",
+							"id": 1259630150,
+							"kind": "function parameter",
+							"name": "v",
+							"type": {
+								"_typeName": "stappler::geom::Vec3 const&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "stappler::geom::Vec3 const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "stappler::geom::Vec3",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::geom::Vec3",
+											"objects": [{
+												"_fullName": "::stappler::geom::Vec3",
+												"_kind": "class",
+												"_name": "Vec3",
+												"class_kind": "class",
+												"id": 748569271,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "Vec3",
+												"scope": {
+													"name": "Vec3"
+												},
+												"semantic_scope": ""
+											}]
+										}
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}, {
+							"_fullName": "f",
+							"_kind": "function parameter",
+							"_name": "f",
+							"id": 1729662580,
+							"kind": "function parameter",
+							"name": "f",
+							"type": {
+								"_typeName": "Functor const&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "Functor const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "Functor",
+										"entity": {
+											"name": "Functor",
+											"objects": [{
+												"_fullName": "Functor",
+												"_kind": "template type parameter",
+												"_name": "Functor",
+												"id": 45003978,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Functor"
+											}]
+										},
+										"kind": "template_parameter"
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}],
+						"return_type":  {
+							"_typeName": "std::bitset<3>",
+							"arguments_exposed": false,
+							"kind": "template_instantiation",
+							"primary_template": {
+								"name": "std::bitset"
+							},
+							"unexposed_arguments": "3"
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::geom::Vec3 const&,Functor const&)",
+						"storage_class": [
+							"static"
+						]
+					}],
+					"function":  {
+						"_fullName": "::stappler::geom::Vec3::bitop<typename>(stappler::geom::Vec3 const&,Functor const&)",
+						"_kind": "function",
+						"_name": "bitop",
+						"body_kind": "definition",
+						"id": 2533077786,
+						"is_consteval": false,
+						"is_constexpr": true,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "bitop",
+						"parameters": [{
+							"_fullName": "v",
+							"_kind": "function parameter",
+							"_name": "v",
+							"id": 1259630150,
+							"kind": "function parameter",
+							"name": "v",
+							"type": {
+								"_typeName": "stappler::geom::Vec3 const&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "stappler::geom::Vec3 const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "stappler::geom::Vec3",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::geom::Vec3",
+											"objects": [{
+												"_fullName": "::stappler::geom::Vec3",
+												"_kind": "class",
+												"_name": "Vec3",
+												"class_kind": "class",
+												"id": 748569271,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "Vec3",
+												"scope": {
+													"name": "Vec3"
+												},
+												"semantic_scope": ""
+											}]
+										}
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}, {
+							"_fullName": "f",
+							"_kind": "function parameter",
+							"_name": "f",
+							"id": 1729662580,
+							"kind": "function parameter",
+							"name": "f",
+							"type": {
+								"_typeName": "Functor const&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "Functor const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "Functor",
+										"entity": {
+											"name": "Functor",
+											"objects": [{
+												"_fullName": "Functor",
+												"_kind": "template type parameter",
+												"_name": "Functor",
+												"id": 45003978,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Functor"
+											}]
+										},
+										"kind": "template_parameter"
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}],
+						"return_type":  {
+							"_typeName": "std::bitset<3>",
+							"arguments_exposed": false,
+							"kind": "template_instantiation",
+							"primary_template": {
+								"name": "std::bitset"
+							},
+							"unexposed_arguments": "3"
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::geom::Vec3 const&,Functor const&)",
+						"storage_class": [
+							"static"
+						]
+					},
+					"id": 2533077786,
+					"kind": "function template",
+					"name": "bitop",
+					"parameters": [{
+						"_fullName": "Functor",
+						"_kind": "template type parameter",
+						"_name": "Functor",
+						"id": 45003978,
+						"is_variadic": false,
+						"keyword": "typename",
+						"kind": "template type parameter",
+						"name": "Functor"
+					}]
+				}, {
+					"_fullName": "::stappler::geom::Vec3::bitop<typename>(stappler::geom::Vec3 const&,stappler::geom::Vec3 const&,Functor const&)",
+					"_kind": "function template",
+					"_name": "bitop",
+					"childs": [{
+						"_fullName": "::stappler::geom::Vec3::bitop<typename>(stappler::geom::Vec3 const&,stappler::geom::Vec3 const&,Functor const&)",
+						"_kind": "function",
+						"_name": "bitop",
+						"body_kind": "definition",
+						"id": 1856256273,
+						"is_consteval": false,
+						"is_constexpr": true,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "bitop",
+						"parameters": [{
+							"_fullName": "v1",
+							"_kind": "function parameter",
+							"_name": "v1",
+							"id": 4168426705,
+							"kind": "function parameter",
+							"name": "v1",
+							"type": {
+								"_typeName": "stappler::geom::Vec3 const&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "stappler::geom::Vec3 const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "stappler::geom::Vec3",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::geom::Vec3",
+											"objects": [{
+												"_fullName": "::stappler::geom::Vec3",
+												"_kind": "class",
+												"_name": "Vec3",
+												"class_kind": "class",
+												"id": 748569271,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "Vec3",
+												"scope": {
+													"name": "Vec3"
+												},
+												"semantic_scope": ""
+											}]
+										}
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}, {
+							"_fullName": "v2",
+							"_kind": "function parameter",
+							"_name": "v2",
+							"id": 873243804,
+							"kind": "function parameter",
+							"name": "v2",
+							"type": {
+								"_typeName": "stappler::geom::Vec3 const&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "stappler::geom::Vec3 const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "stappler::geom::Vec3",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::geom::Vec3",
+											"objects": [{
+												"_fullName": "::stappler::geom::Vec3",
+												"_kind": "class",
+												"_name": "Vec3",
+												"class_kind": "class",
+												"id": 748569271,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "Vec3",
+												"scope": {
+													"name": "Vec3"
+												},
+												"semantic_scope": ""
+											}]
+										}
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}, {
+							"_fullName": "f",
+							"_kind": "function parameter",
+							"_name": "f",
+							"id": 1729662580,
+							"kind": "function parameter",
+							"name": "f",
+							"type": {
+								"_typeName": "Functor const&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "Functor const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "Functor",
+										"entity": {
+											"name": "Functor",
+											"objects": [{
+												"_fullName": "Functor",
+												"_kind": "template type parameter",
+												"_name": "Functor",
+												"id": 45003978,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Functor"
+											}]
+										},
+										"kind": "template_parameter"
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}],
+						"return_type":  {
+							"_typeName": "std::bitset<3>",
+							"arguments_exposed": false,
+							"kind": "template_instantiation",
+							"primary_template": {
+								"name": "std::bitset"
+							},
+							"unexposed_arguments": "3"
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::geom::Vec3 const&,stappler::geom::Vec3 const&,Functor const&)",
+						"storage_class": [
+							"static"
+						]
+					}],
+					"function":  {
+						"_fullName": "::stappler::geom::Vec3::bitop<typename>(stappler::geom::Vec3 const&,stappler::geom::Vec3 const&,Functor const&)",
+						"_kind": "function",
+						"_name": "bitop",
+						"body_kind": "definition",
+						"id": 1856256273,
+						"is_consteval": false,
+						"is_constexpr": true,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "bitop",
+						"parameters": [{
+							"_fullName": "v1",
+							"_kind": "function parameter",
+							"_name": "v1",
+							"id": 4168426705,
+							"kind": "function parameter",
+							"name": "v1",
+							"type": {
+								"_typeName": "stappler::geom::Vec3 const&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "stappler::geom::Vec3 const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "stappler::geom::Vec3",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::geom::Vec3",
+											"objects": [{
+												"_fullName": "::stappler::geom::Vec3",
+												"_kind": "class",
+												"_name": "Vec3",
+												"class_kind": "class",
+												"id": 748569271,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "Vec3",
+												"scope": {
+													"name": "Vec3"
+												},
+												"semantic_scope": ""
+											}]
+										}
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}, {
+							"_fullName": "v2",
+							"_kind": "function parameter",
+							"_name": "v2",
+							"id": 873243804,
+							"kind": "function parameter",
+							"name": "v2",
+							"type": {
+								"_typeName": "stappler::geom::Vec3 const&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "stappler::geom::Vec3 const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "stappler::geom::Vec3",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::geom::Vec3",
+											"objects": [{
+												"_fullName": "::stappler::geom::Vec3",
+												"_kind": "class",
+												"_name": "Vec3",
+												"class_kind": "class",
+												"id": 748569271,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "Vec3",
+												"scope": {
+													"name": "Vec3"
+												},
+												"semantic_scope": ""
+											}]
+										}
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}, {
+							"_fullName": "f",
+							"_kind": "function parameter",
+							"_name": "f",
+							"id": 1729662580,
+							"kind": "function parameter",
+							"name": "f",
+							"type": {
+								"_typeName": "Functor const&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "Functor const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "Functor",
+										"entity": {
+											"name": "Functor",
+											"objects": [{
+												"_fullName": "Functor",
+												"_kind": "template type parameter",
+												"_name": "Functor",
+												"id": 45003978,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Functor"
+											}]
+										},
+										"kind": "template_parameter"
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}],
+						"return_type":  {
+							"_typeName": "std::bitset<3>",
+							"arguments_exposed": false,
+							"kind": "template_instantiation",
+							"primary_template": {
+								"name": "std::bitset"
+							},
+							"unexposed_arguments": "3"
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::geom::Vec3 const&,stappler::geom::Vec3 const&,Functor const&)",
+						"storage_class": [
+							"static"
+						]
+					},
+					"id": 1856256273,
+					"kind": "function template",
+					"name": "bitop",
+					"parameters": [{
+						"_fullName": "Functor",
+						"_kind": "template type parameter",
+						"_name": "Functor",
+						"id": 45003978,
+						"is_variadic": false,
+						"keyword": "typename",
+						"kind": "template type parameter",
+						"name": "Functor"
+					}]
+				}, {
+					"_fullName": "::stappler::geom::Vec3::fill(float)",
+					"_kind": "function",
+					"_name": "fill",
+					"body_kind": "definition",
+					"id": 2790467687,
+					"is_consteval": false,
+					"is_constexpr": true,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "fill",
+					"parameters": [{
+						"_fullName": "v",
+						"_kind": "function parameter",
+						"_name": "v",
+						"id": 1259630150,
+						"kind": "function parameter",
+						"name": "v",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "stappler::geom::Vec3",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::geom::Vec3",
+							"objects": [{
+								"_fullName": "::stappler::geom::Vec3",
+								"_kind": "class",
+								"_name": "Vec3",
+								"class_kind": "class",
+								"id": 748569271,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_final": false,
+								"kind": "class",
+								"name": "Vec3",
+								"scope": {
+									"name": "Vec3"
+								},
+								"semantic_scope": ""
+							}]
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(float)",
+					"storage_class": [
+						"static"
+					]
+				}, {
 					"_fullName": "::stappler::geom::Vec3::x",
 					"_kind": "member variable",
 					"_name": "x",
@@ -1368,6 +2301,488 @@
 					"semantic_scope": "",
 					"signature": "(stappler::geom::Vec3 const&,stappler::geom::Vec3 const&)"
 				}, {
+					"_fullName": "::stappler::geom::Vec3::Vec3<typename>(stappler::geom::Vec3 const&,Functor const&)",
+					"_kind": "function template",
+					"_name": "Vec3",
+					"childs": [{
+						"_fullName": "::stappler::geom::Vec3::Vec3<typename>(stappler::geom::Vec3 const&,Functor const&)",
+						"_kind": "constructor",
+						"_name": "Vec3",
+						"body_kind": "definition",
+						"id": 3569133901,
+						"is_consteval": false,
+						"is_constexpr": true,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_explicit": false,
+						"is_variadic": false,
+						"kind": "constructor",
+						"name": "Vec3",
+						"parameters": [{
+							"_fullName": "v",
+							"_kind": "function parameter",
+							"_name": "v",
+							"id": 1259630150,
+							"kind": "function parameter",
+							"name": "v",
+							"type": {
+								"_typeName": "stappler::geom::Vec3 const&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "stappler::geom::Vec3 const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "stappler::geom::Vec3",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::geom::Vec3",
+											"objects": [{
+												"_fullName": "::stappler::geom::Vec3",
+												"_kind": "class",
+												"_name": "Vec3",
+												"class_kind": "class",
+												"id": 748569271,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "Vec3",
+												"scope": {
+													"name": "Vec3"
+												},
+												"semantic_scope": ""
+											}]
+										}
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}, {
+							"_fullName": "f",
+							"_kind": "function parameter",
+							"_name": "f",
+							"id": 1729662580,
+							"kind": "function parameter",
+							"name": "f",
+							"type": {
+								"_typeName": "Functor const&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "Functor const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "Functor",
+										"entity": {
+											"name": "Functor",
+											"objects": [{
+												"_fullName": "Functor",
+												"_kind": "template type parameter",
+												"_name": "Functor",
+												"id": 45003978,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Functor"
+											}]
+										},
+										"kind": "template_parameter"
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}],
+						"semantic_scope": "",
+						"signature": "(stappler::geom::Vec3 const&,Functor const&)"
+					}],
+					"function":  {
+						"_fullName": "::stappler::geom::Vec3::Vec3<typename>(stappler::geom::Vec3 const&,Functor const&)",
+						"_kind": "constructor",
+						"_name": "Vec3",
+						"body_kind": "definition",
+						"id": 3569133901,
+						"is_consteval": false,
+						"is_constexpr": true,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_explicit": false,
+						"is_variadic": false,
+						"kind": "constructor",
+						"name": "Vec3",
+						"parameters": [{
+							"_fullName": "v",
+							"_kind": "function parameter",
+							"_name": "v",
+							"id": 1259630150,
+							"kind": "function parameter",
+							"name": "v",
+							"type": {
+								"_typeName": "stappler::geom::Vec3 const&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "stappler::geom::Vec3 const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "stappler::geom::Vec3",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::geom::Vec3",
+											"objects": [{
+												"_fullName": "::stappler::geom::Vec3",
+												"_kind": "class",
+												"_name": "Vec3",
+												"class_kind": "class",
+												"id": 748569271,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "Vec3",
+												"scope": {
+													"name": "Vec3"
+												},
+												"semantic_scope": ""
+											}]
+										}
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}, {
+							"_fullName": "f",
+							"_kind": "function parameter",
+							"_name": "f",
+							"id": 1729662580,
+							"kind": "function parameter",
+							"name": "f",
+							"type": {
+								"_typeName": "Functor const&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "Functor const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "Functor",
+										"entity": {
+											"name": "Functor",
+											"objects": [{
+												"_fullName": "Functor",
+												"_kind": "template type parameter",
+												"_name": "Functor",
+												"id": 45003978,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Functor"
+											}]
+										},
+										"kind": "template_parameter"
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}],
+						"semantic_scope": "",
+						"signature": "(stappler::geom::Vec3 const&,Functor const&)"
+					},
+					"id": 3569133901,
+					"kind": "function template",
+					"name": "Vec3",
+					"parameters": [{
+						"_fullName": "Functor",
+						"_kind": "template type parameter",
+						"_name": "Functor",
+						"id": 45003978,
+						"is_variadic": false,
+						"keyword": "typename",
+						"kind": "template type parameter",
+						"name": "Functor"
+					}]
+				}, {
+					"_fullName": "::stappler::geom::Vec3::Vec3<typename>(stappler::geom::Vec3 const&,stappler::geom::Vec3 const&,Functor const&)",
+					"_kind": "function template",
+					"_name": "Vec3",
+					"childs": [{
+						"_fullName": "::stappler::geom::Vec3::Vec3<typename>(stappler::geom::Vec3 const&,stappler::geom::Vec3 const&,Functor const&)",
+						"_kind": "constructor",
+						"_name": "Vec3",
+						"body_kind": "definition",
+						"id": 270206248,
+						"is_consteval": false,
+						"is_constexpr": true,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_explicit": false,
+						"is_variadic": false,
+						"kind": "constructor",
+						"name": "Vec3",
+						"parameters": [{
+							"_fullName": "v1",
+							"_kind": "function parameter",
+							"_name": "v1",
+							"id": 4168426705,
+							"kind": "function parameter",
+							"name": "v1",
+							"type": {
+								"_typeName": "stappler::geom::Vec3 const&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "stappler::geom::Vec3 const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "stappler::geom::Vec3",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::geom::Vec3",
+											"objects": [{
+												"_fullName": "::stappler::geom::Vec3",
+												"_kind": "class",
+												"_name": "Vec3",
+												"class_kind": "class",
+												"id": 748569271,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "Vec3",
+												"scope": {
+													"name": "Vec3"
+												},
+												"semantic_scope": ""
+											}]
+										}
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}, {
+							"_fullName": "v2",
+							"_kind": "function parameter",
+							"_name": "v2",
+							"id": 873243804,
+							"kind": "function parameter",
+							"name": "v2",
+							"type": {
+								"_typeName": "stappler::geom::Vec3 const&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "stappler::geom::Vec3 const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "stappler::geom::Vec3",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::geom::Vec3",
+											"objects": [{
+												"_fullName": "::stappler::geom::Vec3",
+												"_kind": "class",
+												"_name": "Vec3",
+												"class_kind": "class",
+												"id": 748569271,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "Vec3",
+												"scope": {
+													"name": "Vec3"
+												},
+												"semantic_scope": ""
+											}]
+										}
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}, {
+							"_fullName": "f",
+							"_kind": "function parameter",
+							"_name": "f",
+							"id": 1729662580,
+							"kind": "function parameter",
+							"name": "f",
+							"type": {
+								"_typeName": "Functor const&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "Functor const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "Functor",
+										"entity": {
+											"name": "Functor",
+											"objects": [{
+												"_fullName": "Functor",
+												"_kind": "template type parameter",
+												"_name": "Functor",
+												"id": 45003978,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Functor"
+											}]
+										},
+										"kind": "template_parameter"
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}],
+						"semantic_scope": "",
+						"signature": "(stappler::geom::Vec3 const&,stappler::geom::Vec3 const&,Functor const&)"
+					}],
+					"function":  {
+						"_fullName": "::stappler::geom::Vec3::Vec3<typename>(stappler::geom::Vec3 const&,stappler::geom::Vec3 const&,Functor const&)",
+						"_kind": "constructor",
+						"_name": "Vec3",
+						"body_kind": "definition",
+						"id": 270206248,
+						"is_consteval": false,
+						"is_constexpr": true,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_explicit": false,
+						"is_variadic": false,
+						"kind": "constructor",
+						"name": "Vec3",
+						"parameters": [{
+							"_fullName": "v1",
+							"_kind": "function parameter",
+							"_name": "v1",
+							"id": 4168426705,
+							"kind": "function parameter",
+							"name": "v1",
+							"type": {
+								"_typeName": "stappler::geom::Vec3 const&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "stappler::geom::Vec3 const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "stappler::geom::Vec3",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::geom::Vec3",
+											"objects": [{
+												"_fullName": "::stappler::geom::Vec3",
+												"_kind": "class",
+												"_name": "Vec3",
+												"class_kind": "class",
+												"id": 748569271,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "Vec3",
+												"scope": {
+													"name": "Vec3"
+												},
+												"semantic_scope": ""
+											}]
+										}
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}, {
+							"_fullName": "v2",
+							"_kind": "function parameter",
+							"_name": "v2",
+							"id": 873243804,
+							"kind": "function parameter",
+							"name": "v2",
+							"type": {
+								"_typeName": "stappler::geom::Vec3 const&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "stappler::geom::Vec3 const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "stappler::geom::Vec3",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::geom::Vec3",
+											"objects": [{
+												"_fullName": "::stappler::geom::Vec3",
+												"_kind": "class",
+												"_name": "Vec3",
+												"class_kind": "class",
+												"id": 748569271,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "Vec3",
+												"scope": {
+													"name": "Vec3"
+												},
+												"semantic_scope": ""
+											}]
+										}
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}, {
+							"_fullName": "f",
+							"_kind": "function parameter",
+							"_name": "f",
+							"id": 1729662580,
+							"kind": "function parameter",
+							"name": "f",
+							"type": {
+								"_typeName": "Functor const&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "Functor const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "Functor",
+										"entity": {
+											"name": "Functor",
+											"objects": [{
+												"_fullName": "Functor",
+												"_kind": "template type parameter",
+												"_name": "Functor",
+												"id": 45003978,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Functor"
+											}]
+										},
+										"kind": "template_parameter"
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}],
+						"semantic_scope": "",
+						"signature": "(stappler::geom::Vec3 const&,stappler::geom::Vec3 const&,Functor const&)"
+					},
+					"id": 270206248,
+					"kind": "function template",
+					"name": "Vec3",
+					"parameters": [{
+						"_fullName": "Functor",
+						"_kind": "template type parameter",
+						"_name": "Functor",
+						"id": 45003978,
+						"is_variadic": false,
+						"keyword": "typename",
+						"kind": "template type parameter",
+						"name": "Functor"
+					}]
+				}, {
 					"_fullName": "::stappler::geom::Vec3::Vec3(stappler::geom::Vec3 const&)",
 					"_kind": "constructor",
 					"_name": "Vec3",
@@ -1425,12 +2840,126 @@
 					"semantic_scope": "",
 					"signature": "(stappler::geom::Vec3 const&)"
 				}, {
-					"_fullName": "::stappler::geom::Vec3::isZero() const",
+					"_fullName": "::stappler::geom::Vec3::Vec3(stappler::geom::Size3 const&)",
+					"_kind": "constructor",
+					"_name": "Vec3",
+					"body_kind": "declaration",
+					"id": 3977674668,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_explicit": true,
+					"is_variadic": false,
+					"kind": "constructor",
+					"name": "Vec3",
+					"parameters": [{
+						"_fullName": "",
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 46947589,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::geom::Size3 const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::Size3 const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::geom::Size3",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::geom::Size3",
+										"objects": [{
+											"_fullName": "::stappler::geom::Size3",
+											"_kind": "class",
+											"_name": "Size3",
+											"class_kind": "struct",
+											"id": 4121657314,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Size3",
+											"scope": {
+												"name": "Size3"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"semantic_scope": "",
+					"signature": "(stappler::geom::Size3 const&)"
+				}, {
+					"_fullName": "::stappler::geom::Vec3::Vec3(stappler::geom::Extent3 const&)",
+					"_kind": "constructor",
+					"_name": "Vec3",
+					"body_kind": "declaration",
+					"id": 3361946059,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_explicit": true,
+					"is_variadic": false,
+					"kind": "constructor",
+					"name": "Vec3",
+					"parameters": [{
+						"_fullName": "",
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 46947589,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::geom::Extent3 const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::Extent3 const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::geom::Extent3",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::geom::Extent3",
+										"objects": [{
+											"_fullName": "::stappler::geom::Extent3",
+											"_kind": "class",
+											"_name": "Extent3",
+											"class_kind": "struct",
+											"id": 3914224354,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Extent3",
+											"scope": {
+												"name": "Extent3"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"semantic_scope": "",
+					"signature": "(stappler::geom::Extent3 const&)"
+				}, {
+					"_fullName": "::stappler::geom::Vec3::isValid() const",
 					"_kind": "member function",
-					"_name": "isZero",
+					"_name": "isValid",
 					"body_kind": "definition",
 					"cv_qualifier": "const",
-					"id": 1214651782,
+					"id": 1115330987,
 					"is_consteval": false,
 					"is_constexpr": true,
 					"is_declaration": false,
@@ -1438,7 +2967,7 @@
 					"is_variadic": false,
 					"is_virtual": false,
 					"kind": "member function",
-					"name": "isZero",
+					"name": "isValid",
 					"ref_qualifier": "none",
 					"return_type": {
 						"_typeName": "bool",
@@ -1448,12 +2977,12 @@
 					"semantic_scope": "",
 					"signature": "() const"
 				}, {
-					"_fullName": "::stappler::geom::Vec3::isOne() const",
+					"_fullName": "::stappler::geom::Vec3::xy() const",
 					"_kind": "member function",
-					"_name": "isOne",
+					"_name": "xy",
 					"body_kind": "definition",
 					"cv_qualifier": "const",
-					"id": 66000383,
+					"id": 2355552955,
 					"is_consteval": false,
 					"is_constexpr": true,
 					"is_declaration": false,
@@ -1461,15 +2990,79 @@
 					"is_variadic": false,
 					"is_virtual": false,
 					"kind": "member function",
-					"name": "isOne",
+					"name": "xy",
 					"ref_qualifier": "none",
 					"return_type": {
-						"_typeName": "bool",
-						"builtin_type_kind": "bool",
-						"kind": "builtin"
+						"_typeName": "stappler::geom::Vec2",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::geom::Vec2",
+							"objects": [{
+								"_fullName": "::stappler::geom::Vec2",
+								"_kind": "class",
+								"_name": "Vec2",
+								"class_kind": "class",
+								"id": 16661423,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_final": false,
+								"kind": "class",
+								"name": "Vec2",
+								"scope": {
+									"name": "Vec2"
+								},
+								"semantic_scope": ""
+							}]
+						}
 					},
 					"semantic_scope": "",
 					"signature": "() const"
+				}, {
+					"_fullName": "::stappler::geom::Vec3::add(float const&)",
+					"_kind": "member function",
+					"_name": "add",
+					"body_kind": "definition",
+					"cv_qualifier": "none",
+					"id": 1131430019,
+					"is_consteval": false,
+					"is_constexpr": true,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "add",
+					"parameters": [{
+						"_fullName": "v",
+						"_kind": "function parameter",
+						"_name": "v",
+						"id": 1259630150,
+						"kind": "function parameter",
+						"name": "v",
+						"type": {
+							"_typeName": "float const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "float const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "float",
+									"builtin_type_kind": "float",
+									"kind": "builtin"
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(float const&)"
 				}, {
 					"_fullName": "::stappler::geom::Vec3::add(stappler::geom::Vec3 const&)",
 					"_kind": "member function",
@@ -1535,12 +3128,12 @@
 					"semantic_scope": "",
 					"signature": "(stappler::geom::Vec3 const&)"
 				}, {
-					"_fullName": "::stappler::geom::Vec3::add(float,float,float)",
+					"_fullName": "::stappler::geom::Vec3::subtract(float const&)",
 					"_kind": "member function",
-					"_name": "add",
+					"_name": "subtract",
 					"body_kind": "definition",
 					"cv_qualifier": "none",
-					"id": 604515494,
+					"id": 209114723,
 					"is_consteval": false,
 					"is_constexpr": true,
 					"is_declaration": false,
@@ -1548,42 +3141,28 @@
 					"is_variadic": false,
 					"is_virtual": false,
 					"kind": "member function",
-					"name": "add",
+					"name": "subtract",
 					"parameters": [{
-						"_fullName": "xx",
+						"_fullName": "v",
 						"_kind": "function parameter",
-						"_name": "xx",
-						"id": 147859612,
+						"_name": "v",
+						"id": 1259630150,
 						"kind": "function parameter",
-						"name": "xx",
+						"name": "v",
 						"type": {
-							"_typeName": "float",
-							"builtin_type_kind": "float",
-							"kind": "builtin"
-						}
-					}, {
-						"_fullName": "yy",
-						"_kind": "function parameter",
-						"_name": "yy",
-						"id": 4228107649,
-						"kind": "function parameter",
-						"name": "yy",
-						"type": {
-							"_typeName": "float",
-							"builtin_type_kind": "float",
-							"kind": "builtin"
-						}
-					}, {
-						"_fullName": "zz",
-						"_kind": "function parameter",
-						"_name": "zz",
-						"id": 4040669120,
-						"kind": "function parameter",
-						"name": "zz",
-						"type": {
-							"_typeName": "float",
-							"builtin_type_kind": "float",
-							"kind": "builtin"
+							"_typeName": "float const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "float const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "float",
+									"builtin_type_kind": "float",
+									"kind": "builtin"
+								}
+							},
+							"reference_kind": "lvalue"
 						}
 					}],
 					"ref_qualifier": "none",
@@ -1593,7 +3172,7 @@
 						"kind": "builtin"
 					},
 					"semantic_scope": "",
-					"signature": "(float,float,float)"
+					"signature": "(float const&)"
 				}, {
 					"_fullName": "::stappler::geom::Vec3::subtract(stappler::geom::Vec3 const&)",
 					"_kind": "member function",
@@ -1659,81 +3238,12 @@
 					"semantic_scope": "",
 					"signature": "(stappler::geom::Vec3 const&)"
 				}, {
-					"_fullName": "::stappler::geom::Vec3::length() const",
-					"_kind": "member function",
-					"_name": "length",
-					"body_kind": "definition",
-					"cv_qualifier": "const",
-					"id": 1789211626,
-					"is_consteval": false,
-					"is_constexpr": true,
-					"is_declaration": false,
-					"is_definition": true,
-					"is_variadic": false,
-					"is_virtual": false,
-					"kind": "member function",
-					"name": "length",
-					"ref_qualifier": "none",
-					"return_type": {
-						"_typeName": "float",
-						"builtin_type_kind": "float",
-						"kind": "builtin"
-					},
-					"semantic_scope": "",
-					"signature": "() const"
-				}, {
-					"_fullName": "::stappler::geom::Vec3::lengthSquared() const",
-					"_kind": "member function",
-					"_name": "lengthSquared",
-					"body_kind": "definition",
-					"cv_qualifier": "const",
-					"id": 2244142075,
-					"is_consteval": false,
-					"is_constexpr": true,
-					"is_declaration": false,
-					"is_definition": true,
-					"is_variadic": false,
-					"is_virtual": false,
-					"kind": "member function",
-					"name": "lengthSquared",
-					"ref_qualifier": "none",
-					"return_type": {
-						"_typeName": "float",
-						"builtin_type_kind": "float",
-						"kind": "builtin"
-					},
-					"semantic_scope": "",
-					"signature": "() const"
-				}, {
-					"_fullName": "::stappler::geom::Vec3::negate()",
-					"_kind": "member function",
-					"_name": "negate",
-					"body_kind": "definition",
-					"cv_qualifier": "none",
-					"id": 2197579929,
-					"is_consteval": false,
-					"is_constexpr": true,
-					"is_declaration": false,
-					"is_definition": true,
-					"is_variadic": false,
-					"is_virtual": false,
-					"kind": "member function",
-					"name": "negate",
-					"ref_qualifier": "none",
-					"return_type": {
-						"_typeName": "void",
-						"builtin_type_kind": "void",
-						"kind": "builtin"
-					},
-					"semantic_scope": "",
-					"signature": "()"
-				}, {
-					"_fullName": "::stappler::geom::Vec3::scale(float)",
+					"_fullName": "::stappler::geom::Vec3::scale(float const&)",
 					"_kind": "member function",
 					"_name": "scale",
 					"body_kind": "definition",
 					"cv_qualifier": "none",
-					"id": 3751967022,
+					"id": 2952378591,
 					"is_consteval": false,
 					"is_constexpr": true,
 					"is_declaration": false,
@@ -1743,16 +3253,26 @@
 					"kind": "member function",
 					"name": "scale",
 					"parameters": [{
-						"_fullName": "scalar",
+						"_fullName": "v",
 						"_kind": "function parameter",
-						"_name": "scalar",
-						"id": 3137648071,
+						"_name": "v",
+						"id": 1259630150,
 						"kind": "function parameter",
-						"name": "scalar",
+						"name": "v",
 						"type": {
-							"_typeName": "float",
-							"builtin_type_kind": "float",
-							"kind": "builtin"
+							"_typeName": "float const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "float const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "float",
+									"builtin_type_kind": "float",
+									"kind": "builtin"
+								}
+							},
+							"reference_kind": "lvalue"
 						}
 					}],
 					"ref_qualifier": "none",
@@ -1762,108 +3282,14 @@
 						"kind": "builtin"
 					},
 					"semantic_scope": "",
-					"signature": "(float)"
+					"signature": "(float const&)"
 				}, {
-					"_fullName": "::stappler::geom::Vec3::lerp(stappler::geom::Vec3 const&,float) const",
+					"_fullName": "::stappler::geom::Vec3::scale(stappler::geom::Vec3 const&)",
 					"_kind": "member function",
-					"_name": "lerp",
-					"body_kind": "definition",
-					"cv_qualifier": "const",
-					"id": 600240434,
-					"is_consteval": false,
-					"is_constexpr": true,
-					"is_declaration": false,
-					"is_definition": true,
-					"is_variadic": false,
-					"is_virtual": false,
-					"kind": "member function",
-					"name": "lerp",
-					"parameters": [{
-						"_fullName": "target",
-						"_kind": "function parameter",
-						"_name": "target",
-						"id": 3334587534,
-						"kind": "function parameter",
-						"name": "target",
-						"type": {
-							"_typeName": "stappler::geom::Vec3 const&",
-							"kind": "reference",
-							"referee": {
-								"_typeName": "stappler::geom::Vec3 const",
-								"cv_qualifier": "const",
-								"kind": "cv_qualified",
-								"type": {
-									"_typeName": "stappler::geom::Vec3",
-									"kind": "user_defined",
-									"target": {
-										"name": "stappler::geom::Vec3",
-										"objects": [{
-											"_fullName": "::stappler::geom::Vec3",
-											"_kind": "class",
-											"_name": "Vec3",
-											"class_kind": "class",
-											"id": 748569271,
-											"is_declaration": false,
-											"is_definition": true,
-											"is_final": false,
-											"kind": "class",
-											"name": "Vec3",
-											"scope": {
-												"name": "Vec3"
-											},
-											"semantic_scope": ""
-										}]
-									}
-								}
-							},
-							"reference_kind": "lvalue"
-						}
-					}, {
-						"_fullName": "alpha",
-						"_kind": "function parameter",
-						"_name": "alpha",
-						"id": 1409586120,
-						"kind": "function parameter",
-						"name": "alpha",
-						"type": {
-							"_typeName": "float",
-							"builtin_type_kind": "float",
-							"kind": "builtin"
-						}
-					}],
-					"ref_qualifier": "none",
-					"return_type": {
-						"_typeName": "stappler::geom::Vec3",
-						"kind": "user_defined",
-						"target": {
-							"name": "stappler::geom::Vec3",
-							"objects": [{
-								"_fullName": "::stappler::geom::Vec3",
-								"_kind": "class",
-								"_name": "Vec3",
-								"class_kind": "class",
-								"id": 748569271,
-								"is_declaration": false,
-								"is_definition": true,
-								"is_final": false,
-								"kind": "class",
-								"name": "Vec3",
-								"scope": {
-									"name": "Vec3"
-								},
-								"semantic_scope": ""
-							}]
-						}
-					},
-					"semantic_scope": "",
-					"signature": "(stappler::geom::Vec3 const&,float) const"
-				}, {
-					"_fullName": "::stappler::geom::Vec3::setZero()",
-					"_kind": "member function",
-					"_name": "setZero",
+					"_name": "scale",
 					"body_kind": "definition",
 					"cv_qualifier": "none",
-					"id": 1389113396,
+					"id": 1879563141,
 					"is_consteval": false,
 					"is_constexpr": true,
 					"is_declaration": false,
@@ -1871,37 +3297,14 @@
 					"is_variadic": false,
 					"is_virtual": false,
 					"kind": "member function",
-					"name": "setZero",
-					"ref_qualifier": "none",
-					"return_type": {
-						"_typeName": "void",
-						"builtin_type_kind": "void",
-						"kind": "builtin"
-					},
-					"semantic_scope": "",
-					"signature": "()"
-				}, {
-					"_fullName": "::stappler::geom::Vec3::fuzzyEquals(stappler::geom::Vec3 const&,float) const",
-					"_kind": "member function",
-					"_name": "fuzzyEquals",
-					"body_kind": "definition",
-					"cv_qualifier": "const",
-					"id": 2890628534,
-					"is_consteval": false,
-					"is_constexpr": true,
-					"is_declaration": false,
-					"is_definition": true,
-					"is_variadic": false,
-					"is_virtual": false,
-					"kind": "member function",
-					"name": "fuzzyEquals",
+					"name": "scale",
 					"parameters": [{
-						"_fullName": "b",
+						"_fullName": "v",
 						"_kind": "function parameter",
-						"_name": "b",
-						"id": 2718739903,
+						"_name": "v",
+						"id": 1259630150,
 						"kind": "function parameter",
-						"name": "b",
+						"name": "v",
 						"type": {
 							"_typeName": "stappler::geom::Vec3 const&",
 							"kind": "reference",
@@ -1935,34 +3338,22 @@
 							},
 							"reference_kind": "lvalue"
 						}
-					}, {
-						"_fullName": "var",
-						"_kind": "function parameter",
-						"_name": "var",
-						"id": 213312799,
-						"kind": "function parameter",
-						"name": "var",
-						"type": {
-							"_typeName": "float",
-							"builtin_type_kind": "float",
-							"kind": "builtin"
-						}
 					}],
 					"ref_qualifier": "none",
 					"return_type": {
-						"_typeName": "bool",
-						"builtin_type_kind": "bool",
+						"_typeName": "void",
+						"builtin_type_kind": "void",
 						"kind": "builtin"
 					},
 					"semantic_scope": "",
-					"signature": "(stappler::geom::Vec3 const&,float) const"
+					"signature": "(stappler::geom::Vec3 const&)"
 				}, {
-					"_fullName": "::stappler::geom::Vec3::getAbs() const",
+					"_fullName": "::stappler::geom::Vec3::unscale(float const&)",
 					"_kind": "member function",
-					"_name": "getAbs",
+					"_name": "unscale",
 					"body_kind": "definition",
-					"cv_qualifier": "const",
-					"id": 838945374,
+					"cv_qualifier": "none",
+					"id": 3350122339,
 					"is_consteval": false,
 					"is_constexpr": true,
 					"is_declaration": false,
@@ -1970,33 +3361,102 @@
 					"is_variadic": false,
 					"is_virtual": false,
 					"kind": "member function",
-					"name": "getAbs",
+					"name": "unscale",
+					"parameters": [{
+						"_fullName": "v",
+						"_kind": "function parameter",
+						"_name": "v",
+						"id": 1259630150,
+						"kind": "function parameter",
+						"name": "v",
+						"type": {
+							"_typeName": "float const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "float const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "float",
+									"builtin_type_kind": "float",
+									"kind": "builtin"
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
 					"ref_qualifier": "none",
 					"return_type": {
-						"_typeName": "stappler::geom::Vec3",
-						"kind": "user_defined",
-						"target": {
-							"name": "stappler::geom::Vec3",
-							"objects": [{
-								"_fullName": "::stappler::geom::Vec3",
-								"_kind": "class",
-								"_name": "Vec3",
-								"class_kind": "class",
-								"id": 748569271,
-								"is_declaration": false,
-								"is_definition": true,
-								"is_final": false,
-								"kind": "class",
-								"name": "Vec3",
-								"scope": {
-									"name": "Vec3"
-								},
-								"semantic_scope": ""
-							}]
-						}
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
 					},
 					"semantic_scope": "",
-					"signature": "() const"
+					"signature": "(float const&)"
+				}, {
+					"_fullName": "::stappler::geom::Vec3::unscale(stappler::geom::Vec3 const&)",
+					"_kind": "member function",
+					"_name": "unscale",
+					"body_kind": "definition",
+					"cv_qualifier": "none",
+					"id": 4167010173,
+					"is_consteval": false,
+					"is_constexpr": true,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "unscale",
+					"parameters": [{
+						"_fullName": "v",
+						"_kind": "function parameter",
+						"_name": "v",
+						"id": 1259630150,
+						"kind": "function parameter",
+						"name": "v",
+						"type": {
+							"_typeName": "stappler::geom::Vec3 const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::Vec3 const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::geom::Vec3",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::geom::Vec3",
+										"objects": [{
+											"_fullName": "::stappler::geom::Vec3",
+											"_kind": "class",
+											"_name": "Vec3",
+											"class_kind": "class",
+											"id": 748569271,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Vec3",
+											"scope": {
+												"name": "Vec3"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::geom::Vec3 const&)"
 				}, {
 					"_fullName": "::stappler::geom::Vec3::clamp(stappler::geom::Vec3 const&,stappler::geom::Vec3 const&)",
 					"_kind": "member function",
@@ -2102,51 +3562,319 @@
 					"semantic_scope": "",
 					"signature": "(stappler::geom::Vec3 const&,stappler::geom::Vec3 const&)"
 				}, {
-					"_fullName": "::stappler::geom::Vec3::normalize()",
+					"_fullName": "::stappler::geom::Vec3::distanceSquared(stappler::geom::Vec3 const&) const",
 					"_kind": "member function",
-					"_name": "normalize",
-					"body_kind": "declaration",
-					"cv_qualifier": "none",
-					"id": 2971538412,
+					"_name": "distanceSquared",
+					"body_kind": "definition",
+					"cv_qualifier": "const",
+					"id": 669568361,
 					"is_consteval": false,
 					"is_constexpr": true,
-					"is_declaration": true,
-					"is_definition": false,
+					"is_declaration": false,
+					"is_definition": true,
 					"is_variadic": false,
 					"is_virtual": false,
 					"kind": "member function",
-					"name": "normalize",
+					"name": "distanceSquared",
+					"parameters": [{
+						"_fullName": "v",
+						"_kind": "function parameter",
+						"_name": "v",
+						"id": 1259630150,
+						"kind": "function parameter",
+						"name": "v",
+						"type": {
+							"_typeName": "stappler::geom::Vec3 const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::Vec3 const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::geom::Vec3",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::geom::Vec3",
+										"objects": [{
+											"_fullName": "::stappler::geom::Vec3",
+											"_kind": "class",
+											"_name": "Vec3",
+											"class_kind": "class",
+											"id": 748569271,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Vec3",
+											"scope": {
+												"name": "Vec3"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
 					"ref_qualifier": "none",
 					"return_type": {
-						"_typeName": "stappler::geom::Vec3&",
-						"kind": "reference",
-						"referee": {
-							"_typeName": "stappler::geom::Vec3",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::geom::Vec3",
-								"objects": [{
-									"_fullName": "::stappler::geom::Vec3",
-									"_kind": "class",
-									"_name": "Vec3",
-									"class_kind": "class",
-									"id": 748569271,
-									"is_declaration": false,
-									"is_definition": true,
-									"is_final": false,
-									"kind": "class",
-									"name": "Vec3",
-									"scope": {
-										"name": "Vec3"
-									},
-									"semantic_scope": ""
-								}]
-							}
-						},
-						"reference_kind": "lvalue"
+						"_typeName": "float",
+						"builtin_type_kind": "float",
+						"kind": "builtin"
 					},
 					"semantic_scope": "",
-					"signature": "()"
+					"signature": "(stappler::geom::Vec3 const&) const"
+				}, {
+					"_fullName": "::stappler::geom::Vec3::lengthSquared() const",
+					"_kind": "member function",
+					"_name": "lengthSquared",
+					"body_kind": "definition",
+					"cv_qualifier": "const",
+					"id": 2244142075,
+					"is_consteval": false,
+					"is_constexpr": true,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "lengthSquared",
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "float",
+						"builtin_type_kind": "float",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "() const"
+				}, {
+					"_fullName": "::stappler::geom::Vec3::distance(stappler::geom::Vec3 const&) const",
+					"_kind": "member function",
+					"_name": "distance",
+					"body_kind": "definition",
+					"cv_qualifier": "const",
+					"id": 2676230085,
+					"is_consteval": false,
+					"is_constexpr": true,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "distance",
+					"parameters": [{
+						"_fullName": "other",
+						"_kind": "function parameter",
+						"_name": "other",
+						"id": 1825998954,
+						"kind": "function parameter",
+						"name": "other",
+						"type": {
+							"_typeName": "stappler::geom::Vec3 const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::Vec3 const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::geom::Vec3",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::geom::Vec3",
+										"objects": [{
+											"_fullName": "::stappler::geom::Vec3",
+											"_kind": "class",
+											"_name": "Vec3",
+											"class_kind": "class",
+											"id": 748569271,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Vec3",
+											"scope": {
+												"name": "Vec3"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "float",
+						"builtin_type_kind": "float",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::geom::Vec3 const&) const"
+				}, {
+					"_fullName": "::stappler::geom::Vec3::length() const",
+					"_kind": "member function",
+					"_name": "length",
+					"body_kind": "definition",
+					"cv_qualifier": "const",
+					"id": 1789211626,
+					"is_consteval": false,
+					"is_constexpr": true,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "length",
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "float",
+						"builtin_type_kind": "float",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "() const"
+				}, {
+					"_fullName": "::stappler::geom::Vec3::isWithinDistance(stappler::geom::Vec3 const&,float) const",
+					"_kind": "member function",
+					"_name": "isWithinDistance",
+					"body_kind": "definition",
+					"cv_qualifier": "const",
+					"id": 2493959494,
+					"is_consteval": false,
+					"is_constexpr": true,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "isWithinDistance",
+					"parameters": [{
+						"_fullName": "v",
+						"_kind": "function parameter",
+						"_name": "v",
+						"id": 1259630150,
+						"kind": "function parameter",
+						"name": "v",
+						"type": {
+							"_typeName": "stappler::geom::Vec3 const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::Vec3 const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::geom::Vec3",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::geom::Vec3",
+										"objects": [{
+											"_fullName": "::stappler::geom::Vec3",
+											"_kind": "class",
+											"_name": "Vec3",
+											"class_kind": "class",
+											"id": 748569271,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Vec3",
+											"scope": {
+												"name": "Vec3"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_fullName": "val",
+						"_kind": "function parameter",
+						"_name": "val",
+						"id": 1885358389,
+						"kind": "function parameter",
+						"name": "val",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::geom::Vec3 const&,float) const"
+				}, {
+					"_fullName": "::stappler::geom::Vec3::dot(stappler::geom::Vec3 const&) const",
+					"_kind": "member function",
+					"_name": "dot",
+					"body_kind": "definition",
+					"cv_qualifier": "const",
+					"id": 3727855599,
+					"is_consteval": false,
+					"is_constexpr": true,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "dot",
+					"parameters": [{
+						"_fullName": "v",
+						"_kind": "function parameter",
+						"_name": "v",
+						"id": 1259630150,
+						"kind": "function parameter",
+						"name": "v",
+						"type": {
+							"_typeName": "stappler::geom::Vec3 const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::Vec3 const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::geom::Vec3",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::geom::Vec3",
+										"objects": [{
+											"_fullName": "::stappler::geom::Vec3",
+											"_kind": "class",
+											"_name": "Vec3",
+											"class_kind": "class",
+											"id": 748569271,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Vec3",
+											"scope": {
+												"name": "Vec3"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "float",
+						"builtin_type_kind": "float",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::geom::Vec3 const&) const"
 				}, {
 					"_fullName": "::stappler::geom::Vec3::cross(stappler::geom::Vec3 const&)",
 					"_kind": "member function",
@@ -2212,238 +3940,74 @@
 					"semantic_scope": "",
 					"signature": "(stappler::geom::Vec3 const&)"
 				}, {
-					"_fullName": "::stappler::geom::Vec3::dot(stappler::geom::Vec3 const&) const",
+					"_fullName": "::stappler::geom::Vec3::negate()",
 					"_kind": "member function",
-					"_name": "dot",
+					"_name": "negate",
 					"body_kind": "definition",
-					"cv_qualifier": "const",
-					"id": 3727855599,
+					"cv_qualifier": "none",
+					"id": 2197579929,
 					"is_consteval": false,
-					"is_constexpr": false,
+					"is_constexpr": true,
 					"is_declaration": false,
 					"is_definition": true,
 					"is_variadic": false,
 					"is_virtual": false,
 					"kind": "member function",
-					"name": "dot",
-					"parameters": [{
-						"_fullName": "v",
-						"_kind": "function parameter",
-						"_name": "v",
-						"id": 1259630150,
-						"kind": "function parameter",
-						"name": "v",
-						"type": {
-							"_typeName": "stappler::geom::Vec3 const&",
-							"kind": "reference",
-							"referee": {
-								"_typeName": "stappler::geom::Vec3 const",
-								"cv_qualifier": "const",
-								"kind": "cv_qualified",
-								"type": {
-									"_typeName": "stappler::geom::Vec3",
-									"kind": "user_defined",
-									"target": {
-										"name": "stappler::geom::Vec3",
-										"objects": [{
-											"_fullName": "::stappler::geom::Vec3",
-											"_kind": "class",
-											"_name": "Vec3",
-											"class_kind": "class",
-											"id": 748569271,
-											"is_declaration": false,
-											"is_definition": true,
-											"is_final": false,
-											"kind": "class",
-											"name": "Vec3",
-											"scope": {
-												"name": "Vec3"
-											},
-											"semantic_scope": ""
-										}]
-									}
-								}
-							},
-							"reference_kind": "lvalue"
-						}
-					}],
+					"name": "negate",
 					"ref_qualifier": "none",
 					"return_type": {
-						"_typeName": "float",
-						"builtin_type_kind": "float",
+						"_typeName": "void",
+						"builtin_type_kind": "void",
 						"kind": "builtin"
 					},
 					"semantic_scope": "",
-					"signature": "(stappler::geom::Vec3 const&) const"
+					"signature": "()"
 				}, {
-					"_fullName": "::stappler::geom::Vec3::distance(stappler::geom::Vec3 const&) const",
+					"_fullName": "::stappler::geom::Vec3::normalize()",
 					"_kind": "member function",
-					"_name": "distance",
+					"_name": "normalize",
 					"body_kind": "declaration",
-					"cv_qualifier": "const",
-					"id": 2676230085,
+					"cv_qualifier": "none",
+					"id": 2971538412,
 					"is_consteval": false,
-					"is_constexpr": false,
+					"is_constexpr": true,
 					"is_declaration": true,
 					"is_definition": false,
 					"is_variadic": false,
 					"is_virtual": false,
 					"kind": "member function",
-					"name": "distance",
-					"parameters": [{
-						"_fullName": "v",
-						"_kind": "function parameter",
-						"_name": "v",
-						"id": 1259630150,
-						"kind": "function parameter",
-						"name": "v",
-						"type": {
-							"_typeName": "stappler::geom::Vec3 const&",
-							"kind": "reference",
-							"referee": {
-								"_typeName": "stappler::geom::Vec3 const",
-								"cv_qualifier": "const",
-								"kind": "cv_qualified",
-								"type": {
-									"_typeName": "stappler::geom::Vec3",
-									"kind": "user_defined",
-									"target": {
-										"name": "stappler::geom::Vec3",
-										"objects": [{
-											"_fullName": "::stappler::geom::Vec3",
-											"_kind": "class",
-											"_name": "Vec3",
-											"class_kind": "class",
-											"id": 748569271,
-											"is_declaration": false,
-											"is_definition": true,
-											"is_final": false,
-											"kind": "class",
-											"name": "Vec3",
-											"scope": {
-												"name": "Vec3"
-											},
-											"semantic_scope": ""
-										}]
-									}
-								}
-							},
-							"reference_kind": "lvalue"
-						}
-					}],
+					"name": "normalize",
 					"ref_qualifier": "none",
 					"return_type": {
-						"_typeName": "float",
-						"builtin_type_kind": "float",
-						"kind": "builtin"
+						"_typeName": "stappler::geom::Vec3&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::geom::Vec3",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::geom::Vec3",
+								"objects": [{
+									"_fullName": "::stappler::geom::Vec3",
+									"_kind": "class",
+									"_name": "Vec3",
+									"class_kind": "class",
+									"id": 748569271,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "Vec3",
+									"scope": {
+										"name": "Vec3"
+									},
+									"semantic_scope": ""
+								}]
+							}
+						},
+						"reference_kind": "lvalue"
 					},
 					"semantic_scope": "",
-					"signature": "(stappler::geom::Vec3 const&) const"
-				}, {
-					"_fullName": "::stappler::geom::Vec3::distanceSquared(stappler::geom::Vec3 const&) const",
-					"_kind": "member function",
-					"_name": "distanceSquared",
-					"body_kind": "declaration",
-					"cv_qualifier": "const",
-					"id": 669568361,
-					"is_consteval": false,
-					"is_constexpr": false,
-					"is_declaration": true,
-					"is_definition": false,
-					"is_variadic": false,
-					"is_virtual": false,
-					"kind": "member function",
-					"name": "distanceSquared",
-					"parameters": [{
-						"_fullName": "v",
-						"_kind": "function parameter",
-						"_name": "v",
-						"id": 1259630150,
-						"kind": "function parameter",
-						"name": "v",
-						"type": {
-							"_typeName": "stappler::geom::Vec3 const&",
-							"kind": "reference",
-							"referee": {
-								"_typeName": "stappler::geom::Vec3 const",
-								"cv_qualifier": "const",
-								"kind": "cv_qualified",
-								"type": {
-									"_typeName": "stappler::geom::Vec3",
-									"kind": "user_defined",
-									"target": {
-										"name": "stappler::geom::Vec3",
-										"objects": [{
-											"_fullName": "::stappler::geom::Vec3",
-											"_kind": "class",
-											"_name": "Vec3",
-											"class_kind": "class",
-											"id": 748569271,
-											"is_declaration": false,
-											"is_definition": true,
-											"is_final": false,
-											"kind": "class",
-											"name": "Vec3",
-											"scope": {
-												"name": "Vec3"
-											},
-											"semantic_scope": ""
-										}]
-									}
-								}
-							},
-							"reference_kind": "lvalue"
-						}
-					}],
-					"ref_qualifier": "none",
-					"return_type": {
-						"_typeName": "float",
-						"builtin_type_kind": "float",
-						"kind": "builtin"
-					},
-					"semantic_scope": "",
-					"signature": "(stappler::geom::Vec3 const&) const"
-				}, {
-					"_fullName": "::stappler::geom::Vec3::xy() const",
-					"_kind": "member function",
-					"_name": "xy",
-					"body_kind": "declaration",
-					"cv_qualifier": "const",
-					"id": 2355552955,
-					"is_consteval": false,
-					"is_constexpr": false,
-					"is_declaration": true,
-					"is_definition": false,
-					"is_variadic": false,
-					"is_virtual": false,
-					"kind": "member function",
-					"name": "xy",
-					"ref_qualifier": "none",
-					"return_type": {
-						"_typeName": "stappler::geom::Vec2",
-						"kind": "user_defined",
-						"target": {
-							"name": "stappler::geom::Vec2",
-							"objects": [{
-								"_fullName": "::stappler::geom::Vec2",
-								"_kind": "class",
-								"_name": "Vec2",
-								"class_kind": "class",
-								"id": 16661423,
-								"is_declaration": false,
-								"is_definition": true,
-								"is_final": false,
-								"kind": "class",
-								"name": "Vec2",
-								"scope": {
-									"name": "Vec2"
-								},
-								"semantic_scope": ""
-							}]
-						}
-					},
-					"semantic_scope": "",
-					"signature": "() const"
+					"signature": "()"
 				}, {
 					"_fullName": "::stappler::geom::Vec3::getNormalized() const",
 					"_kind": "member function",
@@ -2486,28 +4050,27 @@
 					"semantic_scope": "",
 					"signature": "() const"
 				}, {
-					"_fullName": "::stappler::geom::Vec3::smooth(stappler::geom::Vec3 const&,float,float)",
+					"_fullName": "::stappler::geom::Vec3::fuzzyEquals(stappler::geom::Vec3 const&,float) const",
 					"_kind": "member function",
-					"_name": "smooth",
-					"body_kind": "declaration",
-					"comment": "\nUpdates this vector towards the given target using a smoothing function.\nThe given response time determines the amount of smoothing (lag). A longer\nresponse time yields a smoother result and more lag. To force this vector to\nfollow the target closely, provide a response time that is very small relative\nto the given elapsed time.",
-					"cv_qualifier": "none",
-					"id": 1357454793,
+					"_name": "fuzzyEquals",
+					"body_kind": "definition",
+					"cv_qualifier": "const",
+					"id": 2890628534,
 					"is_consteval": false,
-					"is_constexpr": false,
-					"is_declaration": true,
-					"is_definition": false,
+					"is_constexpr": true,
+					"is_declaration": false,
+					"is_definition": true,
 					"is_variadic": false,
 					"is_virtual": false,
 					"kind": "member function",
-					"name": "smooth",
+					"name": "fuzzyEquals",
 					"parameters": [{
-						"_fullName": "target",
+						"_fullName": "b",
 						"_kind": "function parameter",
-						"_name": "target",
-						"id": 3334587534,
+						"_name": "b",
+						"id": 2718739903,
 						"kind": "function parameter",
-						"name": "target",
+						"name": "b",
 						"type": {
 							"_typeName": "stappler::geom::Vec3 const&",
 							"kind": "reference",
@@ -2542,24 +4105,45 @@
 							"reference_kind": "lvalue"
 						}
 					}, {
-						"_fullName": "elapsedTime",
+						"_fullName": "var",
 						"_kind": "function parameter",
-						"_name": "elapsedTime",
-						"id": 3999538942,
+						"_name": "var",
+						"default_value": {
+							"expression": [{
+								"kind": "identifier",
+								"spelling": "NumericLimits"
+							}, {
+								"kind": "punctuation",
+								"spelling": "<"
+							}, {
+								"kind": "keyword",
+								"spelling": "float"
+							}, {
+								"kind": "punctuation",
+								"spelling": ">"
+							}, {
+								"kind": "punctuation",
+								"spelling": "::"
+							}, {
+								"kind": "identifier",
+								"spelling": "epsilon"
+							}, {
+								"kind": "punctuation",
+								"spelling": "("
+							}, {
+								"kind": "punctuation",
+								"spelling": ")"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "float",
+								"builtin_type_kind": "float",
+								"kind": "builtin"
+							}
+						},
+						"id": 213312799,
 						"kind": "function parameter",
-						"name": "elapsedTime",
-						"type": {
-							"_typeName": "float",
-							"builtin_type_kind": "float",
-							"kind": "builtin"
-						}
-					}, {
-						"_fullName": "responseTime",
-						"_kind": "function parameter",
-						"_name": "responseTime",
-						"id": 3117158462,
-						"kind": "function parameter",
-						"name": "responseTime",
+						"name": "var",
 						"type": {
 							"_typeName": "float",
 							"builtin_type_kind": "float",
@@ -2568,19 +4152,19 @@
 					}],
 					"ref_qualifier": "none",
 					"return_type": {
-						"_typeName": "void",
-						"builtin_type_kind": "void",
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
 						"kind": "builtin"
 					},
 					"semantic_scope": "",
-					"signature": "(stappler::geom::Vec3 const&,float,float)"
+					"signature": "(stappler::geom::Vec3 const&,float) const"
 				}, {
-					"_fullName": "::stappler::geom::Vec3::operator+(stappler::geom::Vec3 const&) const",
+					"_fullName": "::stappler::geom::Vec3::operator+=(float const&)",
 					"_kind": "member function",
-					"_name": "operator+",
+					"_name": "operator+=",
 					"body_kind": "definition",
-					"cv_qualifier": "const",
-					"id": 4071162740,
+					"cv_qualifier": "none",
+					"id": 1805541506,
 					"is_consteval": false,
 					"is_constexpr": true,
 					"is_declaration": false,
@@ -2588,7 +4172,7 @@
 					"is_variadic": false,
 					"is_virtual": false,
 					"kind": "member function",
-					"name": "operator+",
+					"name": "operator+=",
 					"parameters": [{
 						"_fullName": "v",
 						"_kind": "function parameter",
@@ -2597,34 +4181,16 @@
 						"kind": "function parameter",
 						"name": "v",
 						"type": {
-							"_typeName": "stappler::geom::Vec3 const&",
+							"_typeName": "float const&",
 							"kind": "reference",
 							"referee": {
-								"_typeName": "stappler::geom::Vec3 const",
+								"_typeName": "float const",
 								"cv_qualifier": "const",
 								"kind": "cv_qualified",
 								"type": {
-									"_typeName": "stappler::geom::Vec3",
-									"kind": "user_defined",
-									"target": {
-										"name": "stappler::geom::Vec3",
-										"objects": [{
-											"_fullName": "::stappler::geom::Vec3",
-											"_kind": "class",
-											"_name": "Vec3",
-											"class_kind": "class",
-											"id": 748569271,
-											"is_declaration": false,
-											"is_definition": true,
-											"is_final": false,
-											"kind": "class",
-											"name": "Vec3",
-											"scope": {
-												"name": "Vec3"
-											},
-											"semantic_scope": ""
-										}]
-									}
+									"_typeName": "float",
+									"builtin_type_kind": "float",
+									"kind": "builtin"
 								}
 							},
 							"reference_kind": "lvalue"
@@ -2632,10 +4198,9 @@
 					}],
 					"ref_qualifier": "none",
 					"return_type": {
-						"_typeName": "stappler::geom::Vec3 const",
-						"cv_qualifier": "const",
-						"kind": "cv_qualified",
-						"type": {
+						"_typeName": "stappler::geom::Vec3&",
+						"kind": "reference",
+						"referee": {
 							"_typeName": "stappler::geom::Vec3",
 							"kind": "user_defined",
 							"target": {
@@ -2657,10 +4222,11 @@
 									"semantic_scope": ""
 								}]
 							}
-						}
+						},
+						"reference_kind": "lvalue"
 					},
 					"semantic_scope": "",
-					"signature": "(stappler::geom::Vec3 const&) const"
+					"signature": "(float const&)"
 				}, {
 					"_fullName": "::stappler::geom::Vec3::operator+=(stappler::geom::Vec3 const&)",
 					"_kind": "member function",
@@ -2749,12 +4315,12 @@
 					"semantic_scope": "",
 					"signature": "(stappler::geom::Vec3 const&)"
 				}, {
-					"_fullName": "::stappler::geom::Vec3::operator-(stappler::geom::Vec3 const&) const",
+					"_fullName": "::stappler::geom::Vec3::operator-=(float const&)",
 					"_kind": "member function",
-					"_name": "operator-",
+					"_name": "operator-=",
 					"body_kind": "definition",
-					"cv_qualifier": "const",
-					"id": 3722588472,
+					"cv_qualifier": "none",
+					"id": 4043087281,
 					"is_consteval": false,
 					"is_constexpr": true,
 					"is_declaration": false,
@@ -2762,7 +4328,7 @@
 					"is_variadic": false,
 					"is_virtual": false,
 					"kind": "member function",
-					"name": "operator-",
+					"name": "operator-=",
 					"parameters": [{
 						"_fullName": "v",
 						"_kind": "function parameter",
@@ -2771,34 +4337,16 @@
 						"kind": "function parameter",
 						"name": "v",
 						"type": {
-							"_typeName": "stappler::geom::Vec3 const&",
+							"_typeName": "float const&",
 							"kind": "reference",
 							"referee": {
-								"_typeName": "stappler::geom::Vec3 const",
+								"_typeName": "float const",
 								"cv_qualifier": "const",
 								"kind": "cv_qualified",
 								"type": {
-									"_typeName": "stappler::geom::Vec3",
-									"kind": "user_defined",
-									"target": {
-										"name": "stappler::geom::Vec3",
-										"objects": [{
-											"_fullName": "::stappler::geom::Vec3",
-											"_kind": "class",
-											"_name": "Vec3",
-											"class_kind": "class",
-											"id": 748569271,
-											"is_declaration": false,
-											"is_definition": true,
-											"is_final": false,
-											"kind": "class",
-											"name": "Vec3",
-											"scope": {
-												"name": "Vec3"
-											},
-											"semantic_scope": ""
-										}]
-									}
+									"_typeName": "float",
+									"builtin_type_kind": "float",
+									"kind": "builtin"
 								}
 							},
 							"reference_kind": "lvalue"
@@ -2806,10 +4354,9 @@
 					}],
 					"ref_qualifier": "none",
 					"return_type": {
-						"_typeName": "stappler::geom::Vec3 const",
-						"cv_qualifier": "const",
-						"kind": "cv_qualified",
-						"type": {
+						"_typeName": "stappler::geom::Vec3&",
+						"kind": "reference",
+						"referee": {
 							"_typeName": "stappler::geom::Vec3",
 							"kind": "user_defined",
 							"target": {
@@ -2831,10 +4378,11 @@
 									"semantic_scope": ""
 								}]
 							}
-						}
+						},
+						"reference_kind": "lvalue"
 					},
 					"semantic_scope": "",
-					"signature": "(stappler::geom::Vec3 const&) const"
+					"signature": "(float const&)"
 				}, {
 					"_fullName": "::stappler::geom::Vec3::operator-=(stappler::geom::Vec3 const&)",
 					"_kind": "member function",
@@ -2923,117 +4471,12 @@
 					"semantic_scope": "",
 					"signature": "(stappler::geom::Vec3 const&)"
 				}, {
-					"_fullName": "::stappler::geom::Vec3::operator-() const",
-					"_kind": "member function",
-					"_name": "operator-",
-					"body_kind": "definition",
-					"cv_qualifier": "const",
-					"id": 1961138238,
-					"is_consteval": false,
-					"is_constexpr": true,
-					"is_declaration": false,
-					"is_definition": true,
-					"is_variadic": false,
-					"is_virtual": false,
-					"kind": "member function",
-					"name": "operator-",
-					"ref_qualifier": "none",
-					"return_type": {
-						"_typeName": "stappler::geom::Vec3 const",
-						"cv_qualifier": "const",
-						"kind": "cv_qualified",
-						"type": {
-							"_typeName": "stappler::geom::Vec3",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::geom::Vec3",
-								"objects": [{
-									"_fullName": "::stappler::geom::Vec3",
-									"_kind": "class",
-									"_name": "Vec3",
-									"class_kind": "class",
-									"id": 748569271,
-									"is_declaration": false,
-									"is_definition": true,
-									"is_final": false,
-									"kind": "class",
-									"name": "Vec3",
-									"scope": {
-										"name": "Vec3"
-									},
-									"semantic_scope": ""
-								}]
-							}
-						}
-					},
-					"semantic_scope": "",
-					"signature": "() const"
-				}, {
-					"_fullName": "::stappler::geom::Vec3::operator*(float) const",
-					"_kind": "member function",
-					"_name": "operator*",
-					"body_kind": "definition",
-					"cv_qualifier": "const",
-					"id": 2091162511,
-					"is_consteval": false,
-					"is_constexpr": true,
-					"is_declaration": false,
-					"is_definition": true,
-					"is_variadic": false,
-					"is_virtual": false,
-					"kind": "member function",
-					"name": "operator*",
-					"parameters": [{
-						"_fullName": "s",
-						"_kind": "function parameter",
-						"_name": "s",
-						"id": 974162354,
-						"kind": "function parameter",
-						"name": "s",
-						"type": {
-							"_typeName": "float",
-							"builtin_type_kind": "float",
-							"kind": "builtin"
-						}
-					}],
-					"ref_qualifier": "none",
-					"return_type": {
-						"_typeName": "stappler::geom::Vec3 const",
-						"cv_qualifier": "const",
-						"kind": "cv_qualified",
-						"type": {
-							"_typeName": "stappler::geom::Vec3",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::geom::Vec3",
-								"objects": [{
-									"_fullName": "::stappler::geom::Vec3",
-									"_kind": "class",
-									"_name": "Vec3",
-									"class_kind": "class",
-									"id": 748569271,
-									"is_declaration": false,
-									"is_definition": true,
-									"is_final": false,
-									"kind": "class",
-									"name": "Vec3",
-									"scope": {
-										"name": "Vec3"
-									},
-									"semantic_scope": ""
-								}]
-							}
-						}
-					},
-					"semantic_scope": "",
-					"signature": "(float) const"
-				}, {
-					"_fullName": "::stappler::geom::Vec3::operator*=(float)",
+					"_fullName": "::stappler::geom::Vec3::operator*=(float const&)",
 					"_kind": "member function",
 					"_name": "operator*=",
 					"body_kind": "definition",
 					"cv_qualifier": "none",
-					"id": 2165342303,
+					"id": 3364220815,
 					"is_consteval": false,
 					"is_constexpr": true,
 					"is_declaration": false,
@@ -3043,16 +4486,26 @@
 					"kind": "member function",
 					"name": "operator*=",
 					"parameters": [{
-						"_fullName": "s",
+						"_fullName": "v",
 						"_kind": "function parameter",
-						"_name": "s",
-						"id": 974162354,
+						"_name": "v",
+						"id": 1259630150,
 						"kind": "function parameter",
-						"name": "s",
+						"name": "v",
 						"type": {
-							"_typeName": "float",
-							"builtin_type_kind": "float",
-							"kind": "builtin"
+							"_typeName": "float const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "float const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "float",
+									"builtin_type_kind": "float",
+									"kind": "builtin"
+								}
+							},
+							"reference_kind": "lvalue"
 						}
 					}],
 					"ref_qualifier": "none",
@@ -3085,14 +4538,14 @@
 						"reference_kind": "lvalue"
 					},
 					"semantic_scope": "",
-					"signature": "(float)"
+					"signature": "(float const&)"
 				}, {
-					"_fullName": "::stappler::geom::Vec3::operator/(float) const",
+					"_fullName": "::stappler::geom::Vec3::operator*=(stappler::geom::Vec3 const&)",
 					"_kind": "member function",
-					"_name": "operator/",
+					"_name": "operator*=",
 					"body_kind": "definition",
-					"cv_qualifier": "const",
-					"id": 2928301901,
+					"cv_qualifier": "none",
+					"id": 2641714479,
 					"is_consteval": false,
 					"is_constexpr": true,
 					"is_declaration": false,
@@ -3100,7 +4553,7 @@
 					"is_variadic": false,
 					"is_virtual": false,
 					"kind": "member function",
-					"name": "operator/",
+					"name": "operator*=",
 					"parameters": [{
 						"_fullName": "s",
 						"_kind": "function parameter",
@@ -3109,17 +4562,44 @@
 						"kind": "function parameter",
 						"name": "s",
 						"type": {
-							"_typeName": "float",
-							"builtin_type_kind": "float",
-							"kind": "builtin"
+							"_typeName": "stappler::geom::Vec3 const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::geom::Vec3 const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::geom::Vec3",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::geom::Vec3",
+										"objects": [{
+											"_fullName": "::stappler::geom::Vec3",
+											"_kind": "class",
+											"_name": "Vec3",
+											"class_kind": "class",
+											"id": 748569271,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Vec3",
+											"scope": {
+												"name": "Vec3"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
 						}
 					}],
 					"ref_qualifier": "none",
 					"return_type": {
-						"_typeName": "stappler::geom::Vec3 const",
-						"cv_qualifier": "const",
-						"kind": "cv_qualified",
-						"type": {
+						"_typeName": "stappler::geom::Vec3&",
+						"kind": "reference",
+						"referee": {
 							"_typeName": "stappler::geom::Vec3",
 							"kind": "user_defined",
 							"target": {
@@ -3141,17 +4621,18 @@
 									"semantic_scope": ""
 								}]
 							}
-						}
+						},
+						"reference_kind": "lvalue"
 					},
 					"semantic_scope": "",
-					"signature": "(float) const"
+					"signature": "(stappler::geom::Vec3 const&)"
 				}, {
-					"_fullName": "::stappler::geom::Vec3::operator<(stappler::geom::Vec3 const&) const",
+					"_fullName": "::stappler::geom::Vec3::operator/=(float const&)",
 					"_kind": "member function",
-					"_name": "operator<",
+					"_name": "operator/=",
 					"body_kind": "definition",
-					"cv_qualifier": "const",
-					"id": 157121640,
+					"cv_qualifier": "none",
+					"id": 2563780560,
 					"is_consteval": false,
 					"is_constexpr": true,
 					"is_declaration": false,
@@ -3159,135 +4640,7 @@
 					"is_variadic": false,
 					"is_virtual": false,
 					"kind": "member function",
-					"name": "operator<",
-					"parameters": [{
-						"_fullName": "rhs",
-						"_kind": "function parameter",
-						"_name": "rhs",
-						"id": 771914642,
-						"kind": "function parameter",
-						"name": "rhs",
-						"type": {
-							"_typeName": "stappler::geom::Vec3 const&",
-							"kind": "reference",
-							"referee": {
-								"_typeName": "stappler::geom::Vec3 const",
-								"cv_qualifier": "const",
-								"kind": "cv_qualified",
-								"type": {
-									"_typeName": "stappler::geom::Vec3",
-									"kind": "user_defined",
-									"target": {
-										"name": "stappler::geom::Vec3",
-										"objects": [{
-											"_fullName": "::stappler::geom::Vec3",
-											"_kind": "class",
-											"_name": "Vec3",
-											"class_kind": "class",
-											"id": 748569271,
-											"is_declaration": false,
-											"is_definition": true,
-											"is_final": false,
-											"kind": "class",
-											"name": "Vec3",
-											"scope": {
-												"name": "Vec3"
-											},
-											"semantic_scope": ""
-										}]
-									}
-								}
-							},
-							"reference_kind": "lvalue"
-						}
-					}],
-					"ref_qualifier": "none",
-					"return_type": {
-						"_typeName": "bool",
-						"builtin_type_kind": "bool",
-						"kind": "builtin"
-					},
-					"semantic_scope": "",
-					"signature": "(stappler::geom::Vec3 const&) const"
-				}, {
-					"_fullName": "::stappler::geom::Vec3::operator>(stappler::geom::Vec3 const&) const",
-					"_kind": "member function",
-					"_name": "operator>",
-					"body_kind": "definition",
-					"cv_qualifier": "const",
-					"id": 2499918240,
-					"is_consteval": false,
-					"is_constexpr": true,
-					"is_declaration": false,
-					"is_definition": true,
-					"is_variadic": false,
-					"is_virtual": false,
-					"kind": "member function",
-					"name": "operator>",
-					"parameters": [{
-						"_fullName": "rhs",
-						"_kind": "function parameter",
-						"_name": "rhs",
-						"id": 771914642,
-						"kind": "function parameter",
-						"name": "rhs",
-						"type": {
-							"_typeName": "stappler::geom::Vec3 const&",
-							"kind": "reference",
-							"referee": {
-								"_typeName": "stappler::geom::Vec3 const",
-								"cv_qualifier": "const",
-								"kind": "cv_qualified",
-								"type": {
-									"_typeName": "stappler::geom::Vec3",
-									"kind": "user_defined",
-									"target": {
-										"name": "stappler::geom::Vec3",
-										"objects": [{
-											"_fullName": "::stappler::geom::Vec3",
-											"_kind": "class",
-											"_name": "Vec3",
-											"class_kind": "class",
-											"id": 748569271,
-											"is_declaration": false,
-											"is_definition": true,
-											"is_final": false,
-											"kind": "class",
-											"name": "Vec3",
-											"scope": {
-												"name": "Vec3"
-											},
-											"semantic_scope": ""
-										}]
-									}
-								}
-							},
-							"reference_kind": "lvalue"
-						}
-					}],
-					"ref_qualifier": "none",
-					"return_type": {
-						"_typeName": "bool",
-						"builtin_type_kind": "bool",
-						"kind": "builtin"
-					},
-					"semantic_scope": "",
-					"signature": "(stappler::geom::Vec3 const&) const"
-				}, {
-					"_fullName": "::stappler::geom::Vec3::operator==(stappler::geom::Vec3 const&) const",
-					"_kind": "member function",
-					"_name": "operator==",
-					"body_kind": "definition",
-					"cv_qualifier": "const",
-					"id": 1341612960,
-					"is_consteval": false,
-					"is_constexpr": true,
-					"is_declaration": false,
-					"is_definition": true,
-					"is_variadic": false,
-					"is_virtual": false,
-					"kind": "member function",
-					"name": "operator==",
+					"name": "operator/=",
 					"parameters": [{
 						"_fullName": "v",
 						"_kind": "function parameter",
@@ -3296,34 +4649,16 @@
 						"kind": "function parameter",
 						"name": "v",
 						"type": {
-							"_typeName": "stappler::geom::Vec3 const&",
+							"_typeName": "float const&",
 							"kind": "reference",
 							"referee": {
-								"_typeName": "stappler::geom::Vec3 const",
+								"_typeName": "float const",
 								"cv_qualifier": "const",
 								"kind": "cv_qualified",
 								"type": {
-									"_typeName": "stappler::geom::Vec3",
-									"kind": "user_defined",
-									"target": {
-										"name": "stappler::geom::Vec3",
-										"objects": [{
-											"_fullName": "::stappler::geom::Vec3",
-											"_kind": "class",
-											"_name": "Vec3",
-											"class_kind": "class",
-											"id": 748569271,
-											"is_declaration": false,
-											"is_definition": true,
-											"is_final": false,
-											"kind": "class",
-											"name": "Vec3",
-											"scope": {
-												"name": "Vec3"
-											},
-											"semantic_scope": ""
-										}]
-									}
+									"_typeName": "float",
+									"builtin_type_kind": "float",
+									"kind": "builtin"
 								}
 							},
 							"reference_kind": "lvalue"
@@ -3331,19 +4666,42 @@
 					}],
 					"ref_qualifier": "none",
 					"return_type": {
-						"_typeName": "bool",
-						"builtin_type_kind": "bool",
-						"kind": "builtin"
+						"_typeName": "stappler::geom::Vec3&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::geom::Vec3",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::geom::Vec3",
+								"objects": [{
+									"_fullName": "::stappler::geom::Vec3",
+									"_kind": "class",
+									"_name": "Vec3",
+									"class_kind": "class",
+									"id": 748569271,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "Vec3",
+									"scope": {
+										"name": "Vec3"
+									},
+									"semantic_scope": ""
+								}]
+							}
+						},
+						"reference_kind": "lvalue"
 					},
 					"semantic_scope": "",
-					"signature": "(stappler::geom::Vec3 const&) const"
+					"signature": "(float const&)"
 				}, {
-					"_fullName": "::stappler::geom::Vec3::operator!=(stappler::geom::Vec3 const&) const",
+					"_fullName": "::stappler::geom::Vec3::operator/=(stappler::geom::Vec3 const&)",
 					"_kind": "member function",
-					"_name": "operator!=",
+					"_name": "operator/=",
 					"body_kind": "definition",
-					"cv_qualifier": "const",
-					"id": 1407986950,
+					"cv_qualifier": "none",
+					"id": 1538856580,
 					"is_consteval": false,
 					"is_constexpr": true,
 					"is_declaration": false,
@@ -3351,14 +4709,14 @@
 					"is_variadic": false,
 					"is_virtual": false,
 					"kind": "member function",
-					"name": "operator!=",
+					"name": "operator/=",
 					"parameters": [{
-						"_fullName": "v",
+						"_fullName": "s",
 						"_kind": "function parameter",
-						"_name": "v",
-						"id": 1259630150,
+						"_name": "s",
+						"id": 974162354,
 						"kind": "function parameter",
-						"name": "v",
+						"name": "s",
 						"type": {
 							"_typeName": "stappler::geom::Vec3 const&",
 							"kind": "reference",
@@ -3395,12 +4753,143 @@
 					}],
 					"ref_qualifier": "none",
 					"return_type": {
-						"_typeName": "bool",
-						"builtin_type_kind": "bool",
-						"kind": "builtin"
+						"_typeName": "stappler::geom::Vec3&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::geom::Vec3",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::geom::Vec3",
+								"objects": [{
+									"_fullName": "::stappler::geom::Vec3",
+									"_kind": "class",
+									"_name": "Vec3",
+									"class_kind": "class",
+									"id": 748569271,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "Vec3",
+									"scope": {
+										"name": "Vec3"
+									},
+									"semantic_scope": ""
+								}]
+							}
+						},
+						"reference_kind": "lvalue"
 					},
 					"semantic_scope": "",
-					"signature": "(stappler::geom::Vec3 const&) const"
+					"signature": "(stappler::geom::Vec3 const&)"
+				}, {
+					"_fullName": "",
+					"_kind": "friend",
+					"_name": "",
+					"entity": {
+						"_fullName": "::stappler::geom::Vec3::operator<=>(stappler::geom::Vec3 const&,stappler::geom::Vec3 const&)",
+						"_kind": "function",
+						"_name": "operator<=>",
+						"body_kind": "defaulted",
+						"id": 1746126220,
+						"is_consteval": false,
+						"is_constexpr": true,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "operator<=>",
+						"parameters": [{
+							"_fullName": "",
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 46947589,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::geom::Vec3 const&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "stappler::geom::Vec3 const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "stappler::geom::Vec3",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::geom::Vec3",
+											"objects": [{
+												"_fullName": "::stappler::geom::Vec3",
+												"_kind": "class",
+												"_name": "Vec3",
+												"class_kind": "class",
+												"id": 748569271,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "Vec3",
+												"scope": {
+													"name": "Vec3"
+												},
+												"semantic_scope": ""
+											}]
+										}
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}, {
+							"_fullName": "",
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 46947589,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::geom::Vec3 const&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "stappler::geom::Vec3 const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "stappler::geom::Vec3",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::geom::Vec3",
+											"objects": [{
+												"_fullName": "::stappler::geom::Vec3",
+												"_kind": "class",
+												"_name": "Vec3",
+												"class_kind": "class",
+												"id": 748569271,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "Vec3",
+												"scope": {
+													"name": "Vec3"
+												},
+												"semantic_scope": ""
+											}]
+										}
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}],
+						"return_type":  {
+							"_typeName": "auto",
+							"kind": "auto"
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::geom::Vec3 const&,stappler::geom::Vec3 const&)"
+					},
+					"id": 46947589,
+					"kind": "friend",
+					"name": ""
 				}],
 				"class_kind": "class",
 				"id": 748569271,
@@ -3769,37 +5258,65 @@
 					}
 				}
 			}, {
-				"_fullName": "::stappler::geom::operator*(float,stappler::geom::Vec3 const&)",
+				"_fullName": "::stappler::geom::operator+(stappler::geom::Vec3 const&,stappler::geom::Vec3 const&)",
 				"_kind": "function",
-				"_name": "operator*",
+				"_name": "operator+",
 				"body_kind": "definition",
-				"id": 2862938483,
+				"id": 1679908447,
 				"is_consteval": false,
 				"is_constexpr": true,
 				"is_declaration": false,
 				"is_definition": true,
 				"is_variadic": false,
 				"kind": "function",
-				"name": "operator*",
+				"name": "operator+",
 				"parameters": [{
-					"_fullName": "x",
+					"_fullName": "l",
 					"_kind": "function parameter",
-					"_name": "x",
-					"id": 784609514,
+					"_name": "l",
+					"id": 2049515854,
 					"kind": "function parameter",
-					"name": "x",
+					"name": "l",
 					"type": {
-						"_typeName": "float",
-						"builtin_type_kind": "float",
-						"kind": "builtin"
+						"_typeName": "stappler::geom::Vec3 const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::geom::Vec3 const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::geom::Vec3",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::Vec3",
+									"objects": [{
+										"_fullName": "::stappler::geom::Vec3",
+										"_kind": "class",
+										"_name": "Vec3",
+										"class_kind": "class",
+										"id": 748569271,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Vec3",
+										"scope": {
+											"name": "Vec3"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
 					}
 				}, {
-					"_fullName": "v",
+					"_fullName": "r",
 					"_kind": "function parameter",
-					"_name": "v",
-					"id": 1259630150,
+					"_name": "r",
+					"id": 643963725,
 					"kind": "function parameter",
-					"name": "v",
+					"name": "r",
 					"type": {
 						"_typeName": "stappler::geom::Vec3 const&",
 						"kind": "reference",
@@ -3863,7 +5380,1094 @@
 					}
 				},
 				"semantic_scope": "",
-				"signature": "(float,stappler::geom::Vec3 const&)"
+				"signature": "(stappler::geom::Vec3 const&,stappler::geom::Vec3 const&)"
+			}, {
+				"_fullName": "::stappler::geom::operator+(stappler::geom::Vec3 const&,float const&)",
+				"_kind": "function",
+				"_name": "operator+",
+				"body_kind": "definition",
+				"id": 1110719321,
+				"is_consteval": false,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "operator+",
+				"parameters": [{
+					"_fullName": "l",
+					"_kind": "function parameter",
+					"_name": "l",
+					"id": 2049515854,
+					"kind": "function parameter",
+					"name": "l",
+					"type": {
+						"_typeName": "stappler::geom::Vec3 const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::geom::Vec3 const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::geom::Vec3",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::Vec3",
+									"objects": [{
+										"_fullName": "::stappler::geom::Vec3",
+										"_kind": "class",
+										"_name": "Vec3",
+										"class_kind": "class",
+										"id": 748569271,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Vec3",
+										"scope": {
+											"name": "Vec3"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_fullName": "r",
+					"_kind": "function parameter",
+					"_name": "r",
+					"id": 643963725,
+					"kind": "function parameter",
+					"name": "r",
+					"type": {
+						"_typeName": "float const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "float const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "float",
+								"builtin_type_kind": "float",
+								"kind": "builtin"
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "stappler::geom::Vec3 const",
+					"cv_qualifier": "const",
+					"kind": "cv_qualified",
+					"type": {
+						"_typeName": "stappler::geom::Vec3",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::geom::Vec3",
+							"objects": [{
+								"_fullName": "::stappler::geom::Vec3",
+								"_kind": "class",
+								"_name": "Vec3",
+								"class_kind": "class",
+								"id": 748569271,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_final": false,
+								"kind": "class",
+								"name": "Vec3",
+								"scope": {
+									"name": "Vec3"
+								},
+								"semantic_scope": ""
+							}]
+						}
+					}
+				},
+				"semantic_scope": "",
+				"signature": "(stappler::geom::Vec3 const&,float const&)"
+			}, {
+				"_fullName": "::stappler::geom::operator+(float const&,stappler::geom::Vec3 const&)",
+				"_kind": "function",
+				"_name": "operator+",
+				"body_kind": "definition",
+				"id": 287038643,
+				"is_consteval": false,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "operator+",
+				"parameters": [{
+					"_fullName": "l",
+					"_kind": "function parameter",
+					"_name": "l",
+					"id": 2049515854,
+					"kind": "function parameter",
+					"name": "l",
+					"type": {
+						"_typeName": "float const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "float const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "float",
+								"builtin_type_kind": "float",
+								"kind": "builtin"
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_fullName": "r",
+					"_kind": "function parameter",
+					"_name": "r",
+					"id": 643963725,
+					"kind": "function parameter",
+					"name": "r",
+					"type": {
+						"_typeName": "stappler::geom::Vec3 const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::geom::Vec3 const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::geom::Vec3",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::Vec3",
+									"objects": [{
+										"_fullName": "::stappler::geom::Vec3",
+										"_kind": "class",
+										"_name": "Vec3",
+										"class_kind": "class",
+										"id": 748569271,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Vec3",
+										"scope": {
+											"name": "Vec3"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "stappler::geom::Vec3 const",
+					"cv_qualifier": "const",
+					"kind": "cv_qualified",
+					"type": {
+						"_typeName": "stappler::geom::Vec3",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::geom::Vec3",
+							"objects": [{
+								"_fullName": "::stappler::geom::Vec3",
+								"_kind": "class",
+								"_name": "Vec3",
+								"class_kind": "class",
+								"id": 748569271,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_final": false,
+								"kind": "class",
+								"name": "Vec3",
+								"scope": {
+									"name": "Vec3"
+								},
+								"semantic_scope": ""
+							}]
+						}
+					}
+				},
+				"semantic_scope": "",
+				"signature": "(float const&,stappler::geom::Vec3 const&)"
+			}, {
+				"_fullName": "::stappler::geom::operator-(stappler::geom::Vec3 const&,stappler::geom::Vec3 const&)",
+				"_kind": "function",
+				"_name": "operator-",
+				"body_kind": "definition",
+				"id": 1120852352,
+				"is_consteval": false,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "operator-",
+				"parameters": [{
+					"_fullName": "l",
+					"_kind": "function parameter",
+					"_name": "l",
+					"id": 2049515854,
+					"kind": "function parameter",
+					"name": "l",
+					"type": {
+						"_typeName": "stappler::geom::Vec3 const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::geom::Vec3 const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::geom::Vec3",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::Vec3",
+									"objects": [{
+										"_fullName": "::stappler::geom::Vec3",
+										"_kind": "class",
+										"_name": "Vec3",
+										"class_kind": "class",
+										"id": 748569271,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Vec3",
+										"scope": {
+											"name": "Vec3"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_fullName": "r",
+					"_kind": "function parameter",
+					"_name": "r",
+					"id": 643963725,
+					"kind": "function parameter",
+					"name": "r",
+					"type": {
+						"_typeName": "stappler::geom::Vec3 const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::geom::Vec3 const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::geom::Vec3",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::Vec3",
+									"objects": [{
+										"_fullName": "::stappler::geom::Vec3",
+										"_kind": "class",
+										"_name": "Vec3",
+										"class_kind": "class",
+										"id": 748569271,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Vec3",
+										"scope": {
+											"name": "Vec3"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "stappler::geom::Vec3 const",
+					"cv_qualifier": "const",
+					"kind": "cv_qualified",
+					"type": {
+						"_typeName": "stappler::geom::Vec3",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::geom::Vec3",
+							"objects": [{
+								"_fullName": "::stappler::geom::Vec3",
+								"_kind": "class",
+								"_name": "Vec3",
+								"class_kind": "class",
+								"id": 748569271,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_final": false,
+								"kind": "class",
+								"name": "Vec3",
+								"scope": {
+									"name": "Vec3"
+								},
+								"semantic_scope": ""
+							}]
+						}
+					}
+				},
+				"semantic_scope": "",
+				"signature": "(stappler::geom::Vec3 const&,stappler::geom::Vec3 const&)"
+			}, {
+				"_fullName": "::stappler::geom::operator-(stappler::geom::Vec3 const&,float const&)",
+				"_kind": "function",
+				"_name": "operator-",
+				"body_kind": "definition",
+				"id": 2770659884,
+				"is_consteval": false,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "operator-",
+				"parameters": [{
+					"_fullName": "l",
+					"_kind": "function parameter",
+					"_name": "l",
+					"id": 2049515854,
+					"kind": "function parameter",
+					"name": "l",
+					"type": {
+						"_typeName": "stappler::geom::Vec3 const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::geom::Vec3 const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::geom::Vec3",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::Vec3",
+									"objects": [{
+										"_fullName": "::stappler::geom::Vec3",
+										"_kind": "class",
+										"_name": "Vec3",
+										"class_kind": "class",
+										"id": 748569271,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Vec3",
+										"scope": {
+											"name": "Vec3"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_fullName": "r",
+					"_kind": "function parameter",
+					"_name": "r",
+					"id": 643963725,
+					"kind": "function parameter",
+					"name": "r",
+					"type": {
+						"_typeName": "float const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "float const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "float",
+								"builtin_type_kind": "float",
+								"kind": "builtin"
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "stappler::geom::Vec3 const",
+					"cv_qualifier": "const",
+					"kind": "cv_qualified",
+					"type": {
+						"_typeName": "stappler::geom::Vec3",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::geom::Vec3",
+							"objects": [{
+								"_fullName": "::stappler::geom::Vec3",
+								"_kind": "class",
+								"_name": "Vec3",
+								"class_kind": "class",
+								"id": 748569271,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_final": false,
+								"kind": "class",
+								"name": "Vec3",
+								"scope": {
+									"name": "Vec3"
+								},
+								"semantic_scope": ""
+							}]
+						}
+					}
+				},
+				"semantic_scope": "",
+				"signature": "(stappler::geom::Vec3 const&,float const&)"
+			}, {
+				"_fullName": "::stappler::geom::operator*(stappler::geom::Vec3 const&,stappler::geom::Vec3 const&)",
+				"_kind": "function",
+				"_name": "operator*",
+				"body_kind": "definition",
+				"id": 1937164983,
+				"is_consteval": false,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "operator*",
+				"parameters": [{
+					"_fullName": "l",
+					"_kind": "function parameter",
+					"_name": "l",
+					"id": 2049515854,
+					"kind": "function parameter",
+					"name": "l",
+					"type": {
+						"_typeName": "stappler::geom::Vec3 const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::geom::Vec3 const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::geom::Vec3",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::Vec3",
+									"objects": [{
+										"_fullName": "::stappler::geom::Vec3",
+										"_kind": "class",
+										"_name": "Vec3",
+										"class_kind": "class",
+										"id": 748569271,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Vec3",
+										"scope": {
+											"name": "Vec3"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_fullName": "r",
+					"_kind": "function parameter",
+					"_name": "r",
+					"id": 643963725,
+					"kind": "function parameter",
+					"name": "r",
+					"type": {
+						"_typeName": "stappler::geom::Vec3 const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::geom::Vec3 const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::geom::Vec3",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::Vec3",
+									"objects": [{
+										"_fullName": "::stappler::geom::Vec3",
+										"_kind": "class",
+										"_name": "Vec3",
+										"class_kind": "class",
+										"id": 748569271,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Vec3",
+										"scope": {
+											"name": "Vec3"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "stappler::geom::Vec3 const",
+					"cv_qualifier": "const",
+					"kind": "cv_qualified",
+					"type": {
+						"_typeName": "stappler::geom::Vec3",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::geom::Vec3",
+							"objects": [{
+								"_fullName": "::stappler::geom::Vec3",
+								"_kind": "class",
+								"_name": "Vec3",
+								"class_kind": "class",
+								"id": 748569271,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_final": false,
+								"kind": "class",
+								"name": "Vec3",
+								"scope": {
+									"name": "Vec3"
+								},
+								"semantic_scope": ""
+							}]
+						}
+					}
+				},
+				"semantic_scope": "",
+				"signature": "(stappler::geom::Vec3 const&,stappler::geom::Vec3 const&)"
+			}, {
+				"_fullName": "::stappler::geom::operator*(stappler::geom::Vec3 const&,float const&)",
+				"_kind": "function",
+				"_name": "operator*",
+				"body_kind": "definition",
+				"id": 1704870734,
+				"is_consteval": false,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "operator*",
+				"parameters": [{
+					"_fullName": "l",
+					"_kind": "function parameter",
+					"_name": "l",
+					"id": 2049515854,
+					"kind": "function parameter",
+					"name": "l",
+					"type": {
+						"_typeName": "stappler::geom::Vec3 const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::geom::Vec3 const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::geom::Vec3",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::Vec3",
+									"objects": [{
+										"_fullName": "::stappler::geom::Vec3",
+										"_kind": "class",
+										"_name": "Vec3",
+										"class_kind": "class",
+										"id": 748569271,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Vec3",
+										"scope": {
+											"name": "Vec3"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_fullName": "r",
+					"_kind": "function parameter",
+					"_name": "r",
+					"id": 643963725,
+					"kind": "function parameter",
+					"name": "r",
+					"type": {
+						"_typeName": "float const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "float const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "float",
+								"builtin_type_kind": "float",
+								"kind": "builtin"
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "stappler::geom::Vec3 const",
+					"cv_qualifier": "const",
+					"kind": "cv_qualified",
+					"type": {
+						"_typeName": "stappler::geom::Vec3",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::geom::Vec3",
+							"objects": [{
+								"_fullName": "::stappler::geom::Vec3",
+								"_kind": "class",
+								"_name": "Vec3",
+								"class_kind": "class",
+								"id": 748569271,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_final": false,
+								"kind": "class",
+								"name": "Vec3",
+								"scope": {
+									"name": "Vec3"
+								},
+								"semantic_scope": ""
+							}]
+						}
+					}
+				},
+				"semantic_scope": "",
+				"signature": "(stappler::geom::Vec3 const&,float const&)"
+			}, {
+				"_fullName": "::stappler::geom::operator*(float const&,stappler::geom::Vec3 const&)",
+				"_kind": "function",
+				"_name": "operator*",
+				"body_kind": "definition",
+				"id": 3638250192,
+				"is_consteval": false,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "operator*",
+				"parameters": [{
+					"_fullName": "l",
+					"_kind": "function parameter",
+					"_name": "l",
+					"id": 2049515854,
+					"kind": "function parameter",
+					"name": "l",
+					"type": {
+						"_typeName": "float const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "float const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "float",
+								"builtin_type_kind": "float",
+								"kind": "builtin"
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_fullName": "r",
+					"_kind": "function parameter",
+					"_name": "r",
+					"id": 643963725,
+					"kind": "function parameter",
+					"name": "r",
+					"type": {
+						"_typeName": "stappler::geom::Vec3 const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::geom::Vec3 const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::geom::Vec3",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::Vec3",
+									"objects": [{
+										"_fullName": "::stappler::geom::Vec3",
+										"_kind": "class",
+										"_name": "Vec3",
+										"class_kind": "class",
+										"id": 748569271,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Vec3",
+										"scope": {
+											"name": "Vec3"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "stappler::geom::Vec3 const",
+					"cv_qualifier": "const",
+					"kind": "cv_qualified",
+					"type": {
+						"_typeName": "stappler::geom::Vec3",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::geom::Vec3",
+							"objects": [{
+								"_fullName": "::stappler::geom::Vec3",
+								"_kind": "class",
+								"_name": "Vec3",
+								"class_kind": "class",
+								"id": 748569271,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_final": false,
+								"kind": "class",
+								"name": "Vec3",
+								"scope": {
+									"name": "Vec3"
+								},
+								"semantic_scope": ""
+							}]
+						}
+					}
+				},
+				"semantic_scope": "",
+				"signature": "(float const&,stappler::geom::Vec3 const&)"
+			}, {
+				"_fullName": "::stappler::geom::operator/(stappler::geom::Vec3 const&,stappler::geom::Vec3 const&)",
+				"_kind": "function",
+				"_name": "operator/",
+				"body_kind": "definition",
+				"id": 2257474100,
+				"is_consteval": false,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "operator/",
+				"parameters": [{
+					"_fullName": "l",
+					"_kind": "function parameter",
+					"_name": "l",
+					"id": 2049515854,
+					"kind": "function parameter",
+					"name": "l",
+					"type": {
+						"_typeName": "stappler::geom::Vec3 const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::geom::Vec3 const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::geom::Vec3",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::Vec3",
+									"objects": [{
+										"_fullName": "::stappler::geom::Vec3",
+										"_kind": "class",
+										"_name": "Vec3",
+										"class_kind": "class",
+										"id": 748569271,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Vec3",
+										"scope": {
+											"name": "Vec3"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_fullName": "r",
+					"_kind": "function parameter",
+					"_name": "r",
+					"id": 643963725,
+					"kind": "function parameter",
+					"name": "r",
+					"type": {
+						"_typeName": "stappler::geom::Vec3 const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::geom::Vec3 const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::geom::Vec3",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::Vec3",
+									"objects": [{
+										"_fullName": "::stappler::geom::Vec3",
+										"_kind": "class",
+										"_name": "Vec3",
+										"class_kind": "class",
+										"id": 748569271,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Vec3",
+										"scope": {
+											"name": "Vec3"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "stappler::geom::Vec3 const",
+					"cv_qualifier": "const",
+					"kind": "cv_qualified",
+					"type": {
+						"_typeName": "stappler::geom::Vec3",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::geom::Vec3",
+							"objects": [{
+								"_fullName": "::stappler::geom::Vec3",
+								"_kind": "class",
+								"_name": "Vec3",
+								"class_kind": "class",
+								"id": 748569271,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_final": false,
+								"kind": "class",
+								"name": "Vec3",
+								"scope": {
+									"name": "Vec3"
+								},
+								"semantic_scope": ""
+							}]
+						}
+					}
+				},
+				"semantic_scope": "",
+				"signature": "(stappler::geom::Vec3 const&,stappler::geom::Vec3 const&)"
+			}, {
+				"_fullName": "::stappler::geom::operator/(stappler::geom::Vec3 const&,float const&)",
+				"_kind": "function",
+				"_name": "operator/",
+				"body_kind": "definition",
+				"id": 3293676825,
+				"is_consteval": false,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "operator/",
+				"parameters": [{
+					"_fullName": "l",
+					"_kind": "function parameter",
+					"_name": "l",
+					"id": 2049515854,
+					"kind": "function parameter",
+					"name": "l",
+					"type": {
+						"_typeName": "stappler::geom::Vec3 const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::geom::Vec3 const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::geom::Vec3",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::Vec3",
+									"objects": [{
+										"_fullName": "::stappler::geom::Vec3",
+										"_kind": "class",
+										"_name": "Vec3",
+										"class_kind": "class",
+										"id": 748569271,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Vec3",
+										"scope": {
+											"name": "Vec3"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_fullName": "r",
+					"_kind": "function parameter",
+					"_name": "r",
+					"id": 643963725,
+					"kind": "function parameter",
+					"name": "r",
+					"type": {
+						"_typeName": "float const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "float const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "float",
+								"builtin_type_kind": "float",
+								"kind": "builtin"
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "stappler::geom::Vec3 const",
+					"cv_qualifier": "const",
+					"kind": "cv_qualified",
+					"type": {
+						"_typeName": "stappler::geom::Vec3",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::geom::Vec3",
+							"objects": [{
+								"_fullName": "::stappler::geom::Vec3",
+								"_kind": "class",
+								"_name": "Vec3",
+								"class_kind": "class",
+								"id": 748569271,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_final": false,
+								"kind": "class",
+								"name": "Vec3",
+								"scope": {
+									"name": "Vec3"
+								},
+								"semantic_scope": ""
+							}]
+						}
+					}
+				},
+				"semantic_scope": "",
+				"signature": "(stappler::geom::Vec3 const&,float const&)"
+			}, {
+				"_fullName": "::stappler::geom::operator-(stappler::geom::Vec3 const&)",
+				"_kind": "function",
+				"_name": "operator-",
+				"body_kind": "definition",
+				"id": 1098320917,
+				"is_consteval": false,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "operator-",
+				"parameters": [{
+					"_fullName": "v",
+					"_kind": "function parameter",
+					"_name": "v",
+					"id": 1259630150,
+					"kind": "function parameter",
+					"name": "v",
+					"type": {
+						"_typeName": "stappler::geom::Vec3 const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::geom::Vec3 const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::geom::Vec3",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::geom::Vec3",
+									"objects": [{
+										"_fullName": "::stappler::geom::Vec3",
+										"_kind": "class",
+										"_name": "Vec3",
+										"class_kind": "class",
+										"id": 748569271,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Vec3",
+										"scope": {
+											"name": "Vec3"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "stappler::geom::Vec3",
+					"kind": "user_defined",
+					"target": {
+						"name": "stappler::geom::Vec3",
+						"objects": [{
+							"_fullName": "::stappler::geom::Vec3",
+							"_kind": "class",
+							"_name": "Vec3",
+							"class_kind": "class",
+							"id": 748569271,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_final": false,
+							"kind": "class",
+							"name": "Vec3",
+							"scope": {
+								"name": "Vec3"
+							},
+							"semantic_scope": ""
+						}]
+					}
+				},
+				"semantic_scope": "",
+				"signature": "(stappler::geom::Vec3 const&)"
 			}, {
 				"_fullName": "::stappler::geom::operator<<(std::basic_ostream<char>&,stappler::geom::Vec3 const&)",
 				"_kind": "function",
@@ -3955,111 +6559,6 @@
 				},
 				"semantic_scope": "",
 				"signature": "(std::basic_ostream<char>&,stappler::geom::Vec3 const&)"
-			}, {
-				"_fullName": "::stappler::geom::lessThanEqual(stappler::geom::Vec3 const&,stappler::geom::Vec3 const&)",
-				"_kind": "function",
-				"_name": "lessThanEqual",
-				"body_kind": "definition",
-				"id": 1627177244,
-				"is_consteval": false,
-				"is_constexpr": false,
-				"is_declaration": false,
-				"is_definition": true,
-				"is_variadic": false,
-				"kind": "function",
-				"name": "lessThanEqual",
-				"parameters": [{
-					"_fullName": "l",
-					"_kind": "function parameter",
-					"_name": "l",
-					"id": 2049515854,
-					"kind": "function parameter",
-					"name": "l",
-					"type": {
-						"_typeName": "stappler::geom::Vec3 const&",
-						"kind": "reference",
-						"referee": {
-							"_typeName": "stappler::geom::Vec3 const",
-							"cv_qualifier": "const",
-							"kind": "cv_qualified",
-							"type": {
-								"_typeName": "stappler::geom::Vec3",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::geom::Vec3",
-									"objects": [{
-										"_fullName": "::stappler::geom::Vec3",
-										"_kind": "class",
-										"_name": "Vec3",
-										"class_kind": "class",
-										"id": 748569271,
-										"is_declaration": false,
-										"is_definition": true,
-										"is_final": false,
-										"kind": "class",
-										"name": "Vec3",
-										"scope": {
-											"name": "Vec3"
-										},
-										"semantic_scope": ""
-									}]
-								}
-							}
-						},
-						"reference_kind": "lvalue"
-					}
-				}, {
-					"_fullName": "r",
-					"_kind": "function parameter",
-					"_name": "r",
-					"id": 643963725,
-					"kind": "function parameter",
-					"name": "r",
-					"type": {
-						"_typeName": "stappler::geom::Vec3 const&",
-						"kind": "reference",
-						"referee": {
-							"_typeName": "stappler::geom::Vec3 const",
-							"cv_qualifier": "const",
-							"kind": "cv_qualified",
-							"type": {
-								"_typeName": "stappler::geom::Vec3",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::geom::Vec3",
-									"objects": [{
-										"_fullName": "::stappler::geom::Vec3",
-										"_kind": "class",
-										"_name": "Vec3",
-										"class_kind": "class",
-										"id": 748569271,
-										"is_declaration": false,
-										"is_definition": true,
-										"is_final": false,
-										"kind": "class",
-										"name": "Vec3",
-										"scope": {
-											"name": "Vec3"
-										},
-										"semantic_scope": ""
-									}]
-								}
-							}
-						},
-						"reference_kind": "lvalue"
-					}
-				}],
-				"return_type":  {
-					"_typeName": "std::bitset<3>",
-					"arguments_exposed": false,
-					"kind": "template_instantiation",
-					"primary_template": {
-						"name": "std::bitset"
-					},
-					"unexposed_arguments": "3"
-				},
-				"semantic_scope": "",
-				"signature": "(stappler::geom::Vec3 const&,stappler::geom::Vec3 const&)"
 			}],
 			"id": 2654716457,
 			"is_anonymous": false,
@@ -4081,9 +6580,9 @@
 			"name": "stappler"
 		}
 	}],
-	"id": 918061436,
+	"id": 2909191370,
 	"kind": "file",
-	"name": "/home/sbkarr/stappler/libstappler-root/core/geom/SPVec3.h",
+	"name": "core/geom/SPVec3.h",
 	"unmatched_comments": [{
 		"line": 23,
 		"text": "\nCopyright 2013 BlackBerry Inc.\nCopyright (c) 2014-2015 Chukong Technologies\nCopyright (c) 2017-2022 Roman Katuntsev <sbkarr@stappler.org>\nCopyright (c) 2023 Stappler LLC <admin@stappler.dev>\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\nhttp://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n\nOriginal file from GamePlay3D: http://gameplay3d.org\n\nThis file was modified to fit the cocos2d-x project\nThis file was modified for stappler project\n"

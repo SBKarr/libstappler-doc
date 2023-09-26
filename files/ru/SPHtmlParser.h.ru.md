@@ -5,11 +5,11 @@ Title: SPHtmlParser.h
 
 ## BRIEF
 
-Макрос защиты заголовка
+Заголовок HTML-парсера
 
 ## CONTENT
 
-Макрос защиты заголовка
+Заголовок HTML-парсера
 
 
 # ::stappler::html::parse<typename,typename,typename>(ReaderType&,StringReader const&,bool,bool)

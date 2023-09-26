@@ -1,33 +1,26 @@
 Title: SPCommon.h
 
 
-# LIBSTAPPLER_COMMON_CORE_SPCOMMON_H_
+# STAPPLER_CORE_SPCOMMON_H_
 
 ## BRIEF
 
+Обобщающий заголовок базовых типов SDK
+
 ## CONTENT
 
+Обобщающий заголовок базовых типов SDK. Использует для предкомпилированных заголовков.
 
 # ::stappler::getBacktrace(size_t,Callback<void (stappler::StringView)> const&)
 
 ## BRIEF
 
+Разворачивает стек на текущей позиции
+
 ## CONTENT
+
+Разворачивает стек на текущей позиции, возвращает отладочную информацию обратным вызовом.
 
 Параметры:
-* size_t
-* Callback<void (stappler::StringView)> const&
-
-
-# 
-
-## BRIEF
-
-## CONTENT
-
-
-# 
-
-## BRIEF
-
-## CONTENT
+* size_t - отступ от вершины стека, включая текущий фрейм (например, 2 - пропустить два верних фрейма)
+* Callback<void (stappler::StringView)> const& - функция обратного вызова, получающая описание фрейма, вызывается в порядке развёртывания в глубину

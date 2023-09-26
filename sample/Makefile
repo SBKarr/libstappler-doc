@@ -27,7 +27,9 @@ LOCAL_MAKEFILE := $(lastword $(MAKEFILE_LIST))
 LOCAL_OUTDIR := stappler-build
 LOCAL_EXECUTABLE := sampleapp
 
-LOCAL_MODULES_PATHS = $(STAPPLER_ROOT)/core/stappler-modules.mk
+LOCAL_MODULES_PATHS = \
+	$(STAPPLER_ROOT)/core/stappler-modules.mk \
+	$(STAPPLER_ROOT)/xenolith/xenolith-modules.mk
 
 LOCAL_MODULES ?= \
 	stappler_bitmap \
@@ -38,7 +40,10 @@ LOCAL_MODULES ?= \
 	stappler_zip \
 	stappler_threads \
 	stappler_network \
-	stappler_backtrace
+	stappler_backtrace \
+	xenolith_backend_vkgui \
+	xenolith_resources_assets \
+#	xenolith_renderer_material2d
 
 LOCAL_ROOT = .
 

@@ -1,18 +1,26 @@
 Title: SPMemUuid.h
 
 
-# LIBSTAPPLER_COMMON_MEMORY_SPMEMUUID_H_
+# STAPPLER_CORE_MEMORY_SPMEMUUID_H_
 
 ## BRIEF
 
+Заголовок типа для работы с UUID
+
 ## CONTENT
+
+Заголовок типа для работы с UUID
 
 
 # ::stappler::memory::uuid
 
 ## BRIEF
 
+Тип, представляющий UUID
+
 ## CONTENT
+
+Тип, представляющий UUID
 
 Базовые классы:
 * AllocPool
@@ -22,7 +30,11 @@ Title: SPMemUuid.h
 
 ## BRIEF
 
+Размер значения в форматированном виде
+
 ## CONTENT
+
+Размер значения в форматированном виде - 36 байт
 
 Тип: size_t const
 
@@ -31,38 +43,53 @@ Title: SPMemUuid.h
 
 ## BRIEF
 
+Тип хранимого в памяти значения
+
 ## CONTENT
 
+Тип хранимого в памяти значения - массив из 16 байт
 
 # ::stappler::memory::uuid::parse(stappler::memory::uuid::uuid_t&,char const*)
 
 ## BRIEF
 
+Читает UUID из строки
+
 ## CONTENT
 
+Читает UUID из строки
+
 Параметры:
-* stappler::memory::uuid::uuid_t&
-* char const*
+* stappler::memory::uuid::uuid_t& - (выход) значение для записи UUID
+* char const* - исходная строка
 
 Возвращает:
-* bool
+* bool - true при успешном чтении
 
 # ::stappler::memory::uuid::format(char*,stappler::memory::uuid::uuid_t const&)
 
 ## BRIEF
 
+Записывает форматированный UUID в строку
+
 ## CONTENT
 
+Записывает форматированный UUID в строку
+
 Параметры:
-* char*
-* stappler::memory::uuid::uuid_t const&
+* char* - указатель на буфер строки. Должен быть не меньше FormattedLength. FormattedLength байт будет записано
+* stappler::memory::uuid::uuid_t const& - записываемый UUID
 
 
 # ::stappler::memory::uuid::generate()
 
 ## BRIEF
 
+Создаёт новый UUID
+
 ## CONTENT
+
+Создаёт новый UUID
 
 Возвращает:
 * stappler::memory::uuid
@@ -71,14 +98,22 @@ Title: SPMemUuid.h
 
 ## BRIEF
 
+Создаёт нулевой UUID
+
 ## CONTENT
+
+Создаёт нулевой UUID
 
 
 # ::stappler::memory::uuid::uuid(stappler::StringView)
 
 ## BRIEF
 
+Читает UUID из форматированной строки
+
 ## CONTENT
+
+Читает UUID из форматированной строки. При неудаче UUID будет нулевым
 
 Параметры:
 * stappler::StringView
@@ -88,7 +123,11 @@ Title: SPMemUuid.h
 
 ## BRIEF
 
+Читает UUID из байтов
+
 ## CONTENT
+
+Читает UUID из байтов. Блок должен быть размером 16 байт.
 
 Параметры:
 * stappler::BytesView
@@ -98,7 +137,11 @@ Title: SPMemUuid.h
 
 ## BRIEF
 
+Копирует UUID
+
 ## CONTENT
+
+Копирует UUID
 
 Параметры:
 * stappler::memory::uuid::uuid_t const&
@@ -108,7 +151,11 @@ Title: SPMemUuid.h
 
 ## BRIEF
 
+Копирует UUID
+
 ## CONTENT
+
+Копирует UUID
 
 Параметры:
 * stappler::memory::uuid const&
@@ -118,7 +165,11 @@ Title: SPMemUuid.h
 
 ## BRIEF
 
+Копирует UUID
+
 ## CONTENT
+
+Копирует UUID
 
 Параметры:
 * stappler::memory::uuid const&
@@ -130,7 +181,11 @@ Title: SPMemUuid.h
 
 ## BRIEF
 
+Читает UUID из строки
+
 ## CONTENT
+
+Читает UUID из строки
 
 Параметры:
 * memory::string const&
@@ -142,7 +197,11 @@ Title: SPMemUuid.h
 
 ## BRIEF
 
+Читает UUID из строки
+
 ## CONTENT
+
+Читает UUID из строки
 
 Параметры:
 * std::string const&
@@ -154,7 +213,11 @@ Title: SPMemUuid.h
 
 ## BRIEF
 
+Читает UUID из байт
+
 ## CONTENT
+
+Читает UUID из байт
 
 Параметры:
 * memory::vector<uint8_t> const&
@@ -166,7 +229,11 @@ Title: SPMemUuid.h
 
 ## BRIEF
 
+Читает UUID из байт
+
 ## CONTENT
+
+Читает UUID из байт
 
 Параметры:
 * std::vector<uint8_t> const&
@@ -178,10 +245,14 @@ Title: SPMemUuid.h
 
 ## BRIEF
 
+Конвертирует UUID в форматированную строку
+
 ## CONTENT
 
+Конвертирует UUID в форматированную строку
+
 Параметры шаблона:
-* typename Str
+* typename Str - тип строки
 
 Возвращает:
 * Str
@@ -190,10 +261,14 @@ Title: SPMemUuid.h
 
 ## BRIEF
 
+Конвертирует UUID в байтовое значение
+
 ## CONTENT
 
+Конвертирует UUID в байтовое значение
+
 Параметры шаблона:
-* typename B
+* typename B - тип байтовой строки
 
 Возвращает:
 * B
@@ -202,7 +277,11 @@ Title: SPMemUuid.h
 
 ## BRIEF
 
+Конвертирует UUID в массив байт
+
 ## CONTENT
+
+Конвертирует UUID в массив байт
 
 Возвращает:
 * uuid_t
@@ -211,7 +290,11 @@ Title: SPMemUuid.h
 
 ## BRIEF
 
+Возвращает указатель на данные
+
 ## CONTENT
+
+Возвращает указатель на данные
 
 Возвращает:
 * uint8_t const*
@@ -220,7 +303,11 @@ Title: SPMemUuid.h
 
 ## BRIEF
 
+Возвращает размер данных (16 байт)
+
 ## CONTENT
+
+Возвращает размер данных (16 байт)
 
 Возвращает:
 * size_t
@@ -229,6 +316,10 @@ Title: SPMemUuid.h
 
 ## BRIEF
 
+Хранилище UUID
+
 ## CONTENT
+
+Хранилище UUID
 
 Тип: uuid_t

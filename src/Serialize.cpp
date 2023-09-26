@@ -136,8 +136,9 @@ static void serializeType(const index_t &index, Value &val, const cppast::cpp_te
 				val.emplace("arguments").addValue(serializeTemplateArgument(index, it));
 			}
 		}
+	} else {
+		val.setString(t.unexposed_arguments(), "unexposed_arguments");
 	}
-	val.setString(t.unexposed_arguments(), "unexposed_arguments");
 }
 
 static void serializeType(const index_t &index, Value &val, const cppast::cpp_dependent_type &t) {
@@ -388,7 +389,16 @@ static void serializeIncludeDirective(Value &val, const cppast::cpp_include_dire
 	case cppast::cpp_include_kind::local: val.setString("local", "include_kind"); break;
 	case cppast::cpp_include_kind::system: val.setString("system", "include_kind"); break;
 	}
-	val.setString(include.full_path(), "include");
+
+	auto name = include.full_path();
+	StringView n(name);
+	n.skipUntilString("libstappler-root/", true);
+	if (n.starts_with("libstappler-root/")) {
+		n += "libstappler-root/"_len;
+		val.setString(n, "include");
+	} else {
+		val.setString(name, "include");
+	}
 }
 
 static void serializeLanguageLinkage(Value &val, const cppast::cpp_language_linkage &linkage) {
@@ -725,11 +735,23 @@ static void serializeCount(Value &val, const cppast::cpp_entity &entity) {
 }
 
 Value serializeEntity(const index_t &index, const cppast::cpp_entity &e) {
-	Value ret;
-	ret.setString(e.name(), "name");
-	ret.setString(cppast::to_string(e.kind()), "kind");
-
 	using namespace cppast;
+
+	Value ret;
+	if (e.kind() == cpp_entity_kind::file_t) {
+		auto name = e.name();
+		StringView n(name);
+		n.skipUntilString("libstappler-root/", true);
+		if (n.starts_with("libstappler-root/")) {
+			n += "libstappler-root/"_len;
+			ret.setString(n, "name");
+		} else {
+			ret.setString(name, "name");
+		}
+	} else {
+		ret.setString(e.name(), "name");
+	}
+	ret.setString(cppast::to_string(e.kind()), "kind");
 
 	auto target = &e;
 	String fullName;
@@ -753,6 +775,9 @@ Value serializeEntity(const index_t &index, const cppast::cpp_entity &e) {
 	case cpp_entity_kind::alias_template_t:
 		fullName = index.getFullName(static_cast<const cpp_alias_template &>(e).type_alias());
 		target = &static_cast<const cpp_alias_template &>(e).type_alias();
+		break;
+	case cpp_entity_kind::file_t:
+		fullName = ret.getString("name");
 		break;
 	default:
 		fullName = index.getFullName(e);
@@ -791,7 +816,7 @@ Value serializeEntity(const index_t &index, const cppast::cpp_entity &e) {
 	}
 
 	// extra field for human readability
-	ret.setString(e.name(), "_name");
+	ret.setString(ret.getString("name"), "_name");
 	ret.setString(cppast::to_string(e.kind()), "_kind");
 
 	if (auto scope = e.scope_name()) {
@@ -979,8 +1004,24 @@ static String getTemplateScope(const cppast::cpp_class_template_specialization &
 			}
 		}
 	} else {
+		bool prevIsString = false;
 		for (auto &it : tpl.unexposed_arguments()) {
+			if (prevIsString) {
+				StringView r(it.spelling);
+				r.skipChars<StringView::Chars<'_'>, StringView::CharGroup<CharGroupId::Alphanumeric>>();
+				if (r.empty()) {
+					str << " ";
+				}
+			}
+
 			str << it.spelling;
+
+			prevIsString = false;
+			StringView r(it.spelling);
+			r.backwardSkipChars<StringView::Chars<'_'>, StringView::CharGroup<CharGroupId::Alphanumeric>>();
+			if (r.empty()) {
+				prevIsString = true;
+			}
 		}
 	}
 

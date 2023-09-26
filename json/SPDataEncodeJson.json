@@ -1,13 +1,13 @@
 {
-	"_fullName": "/home/sbkarr/stappler/libstappler-root/core/data/SPDataEncodeJson.h",
+	"_fullName": "core/data/SPDataEncodeJson.h",
 	"_kind": "file",
-	"_name": "/home/sbkarr/stappler/libstappler-root/core/data/SPDataEncodeJson.h",
+	"_name": "core/data/SPDataEncodeJson.h",
 	"childs": [{
 		"_fullName": "SPDataValue.h",
 		"_kind": "include directive",
 		"_name": "SPDataValue.h",
 		"id": 1157350684,
-		"include": "/home/sbkarr/stappler/libstappler-root/core/data/SPDataValue.h",
+		"include": "core/data/SPDataValue.h",
 		"include_kind": "local",
 		"kind": "include directive",
 		"name": "SPDataValue.h"
@@ -339,38 +339,6 @@
 								"unexposed_arguments": "Interface"
 							}
 						}, {
-							"_fullName": "::stappler::data::json::RawEncoder<typename>::Type",
-							"_kind": "enum",
-							"_name": "Type",
-							"childs": [{
-								"_fullName": "::stappler::data::json::RawEncoder<typename>::Type::Stream",
-								"_kind": "enum value",
-								"_name": "Stream",
-								"id": 194869539,
-								"kind": "enum value",
-								"name": "Stream"
-							}, {
-								"_fullName": "::stappler::data::json::RawEncoder<typename>::Type::Bytes",
-								"_kind": "enum value",
-								"_name": "Bytes",
-								"id": 50679374,
-								"kind": "enum value",
-								"name": "Bytes"
-							}],
-							"has_explicit_type": false,
-							"id": 1149243078,
-							"is_declaration": false,
-							"is_definition": true,
-							"is_scoped": false,
-							"kind": "enum",
-							"name": "Type",
-							"semantic_scope": "",
-							"underlying_type": {
-								"_typeName": "<dependent type>",
-								"kind": "unexposed",
-								"name": "<dependent type>"
-							}
-						}, {
 							"_fullName": "::stappler::data::json::RawEncoder<typename>::RawEncoder(std::ostream*)",
 							"_kind": "constructor",
 							"_name": "RawEncoder",
@@ -385,12 +353,12 @@
 							"kind": "constructor",
 							"name": "RawEncoder",
 							"parameters": [{
-								"_fullName": "stream",
+								"_fullName": "s",
 								"_kind": "function parameter",
-								"_name": "stream",
-								"id": 1136566236,
+								"_name": "s",
+								"id": 974162354,
 								"kind": "function parameter",
-								"name": "stream",
+								"name": "s",
 								"type": {
 									"_typeName": "std::ostream*",
 									"kind": "pointer",
@@ -1019,77 +987,6 @@
 							"semantic_scope": "",
 							"signature": "()"
 						}, {
-							"_fullName": "::stappler::data::json::RawEncoder<typename>::type",
-							"_kind": "member variable",
-							"_name": "type",
-							"default_value": {
-								"expression": [{
-									"kind": "identifier",
-									"spelling": "Type"
-								}, {
-									"kind": "punctuation",
-									"spelling": "::"
-								}, {
-									"kind": "identifier",
-									"spelling": "Stream"
-								}],
-								"kind": "unexposed",
-								"type": {
-									"_typeName": "stappler::data::json::RawEncoder::Type",
-									"kind": "user_defined",
-									"target": {
-										"name": "stappler::data::json::RawEncoder::Type",
-										"objects": [{
-											"_fullName": "::stappler::data::json::RawEncoder<typename>::Type",
-											"_kind": "enum",
-											"_name": "Type",
-											"has_explicit_type": false,
-											"id": 1149243078,
-											"is_declaration": false,
-											"is_definition": true,
-											"is_scoped": false,
-											"kind": "enum",
-											"name": "Type",
-											"semantic_scope": "",
-											"underlying_type": {
-												"_typeName": "<dependent type>",
-												"kind": "unexposed",
-												"name": "<dependent type>"
-											}
-										}]
-									}
-								}
-							},
-							"id": 3065230193,
-							"is_mutable": false,
-							"kind": "member variable",
-							"name": "type",
-							"type": {
-								"_typeName": "stappler::data::json::RawEncoder::Type",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::data::json::RawEncoder::Type",
-									"objects": [{
-										"_fullName": "::stappler::data::json::RawEncoder<typename>::Type",
-										"_kind": "enum",
-										"_name": "Type",
-										"has_explicit_type": false,
-										"id": 1149243078,
-										"is_declaration": false,
-										"is_definition": true,
-										"is_scoped": false,
-										"kind": "enum",
-										"name": "Type",
-										"semantic_scope": "",
-										"underlying_type": {
-											"_typeName": "<dependent type>",
-											"kind": "unexposed",
-											"name": "<dependent type>"
-										}
-									}]
-								}
-							}
-						}, {
 							"_fullName": "::stappler::data::json::RawEncoder<typename>::stream",
 							"_kind": "member variable",
 							"_name": "stream",
@@ -1124,39 +1021,6 @@
 									"target": {
 										"name": "std::ostream"
 									}
-								}
-							}
-						}, {
-							"_fullName": "::stappler::data::json::RawEncoder<typename>::bytes",
-							"_kind": "member variable",
-							"_name": "bytes",
-							"default_value": {
-								"expression": [{
-									"kind": "keyword",
-									"spelling": "nullptr"
-								}],
-								"kind": "unexposed",
-								"type": {
-									"_typeName": "typename Interface::BytesType*",
-									"kind": "pointer",
-									"pointee": {
-										"_typeName": "typename Interface::BytesType",
-										"kind": "unexposed",
-										"name": "typename Interface::BytesType"
-									}
-								}
-							},
-							"id": 3529537896,
-							"is_mutable": false,
-							"kind": "member variable",
-							"name": "bytes",
-							"type": {
-								"_typeName": "typename Interface::BytesType*",
-								"kind": "pointer",
-								"pointee": {
-									"_typeName": "typename Interface::BytesType",
-									"kind": "unexposed",
-									"name": "typename Interface::BytesType"
 								}
 							}
 						}],
@@ -4212,9 +4076,9 @@
 			"name": "stappler"
 		}
 	}],
-	"id": 1564989414,
+	"id": 2042062019,
 	"kind": "file",
-	"name": "/home/sbkarr/stappler/libstappler-root/core/data/SPDataEncodeJson.h",
+	"name": "core/data/SPDataEncodeJson.h",
 	"unmatched_comments": [{
 		"line": 22,
 		"text": "\nCopyright (c) 2017-2022 Roman Katuntsev <sbkarr@stappler.org>\nCopyright (c) 2023 Stappler LLC <admin@stappler.dev>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n"

@@ -1,5 +1,16 @@
 Title: SPBitmap.h
 
+# STAPPLER_BITMAP_SPBITMAP_H_
+
+## BRIEF
+
+Заголовок интерфейса битовых карт
+
+## CONTENT
+
+Заголовок интерфейса битовых карт. Определяет высокоуровневый интерфейс битовых карт для базовой работы с изображениями.
+
+
 # ::stappler::bitmap::ResampleFilter
 
 ## BRIEF

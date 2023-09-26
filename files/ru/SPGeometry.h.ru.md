@@ -5,11 +5,11 @@ Title: SPGeometry.h
 
 ## BRIEF
 
-Макрос защиты заголовка
+Заголовок базовых геометрических типов
 
 ## CONTENT
 
-Макрос защиты заголовка
+Заголовок базовых геометрических типов. Определяет типы Size2, Size3, Extent2, Extent3, Rect, UVec2, URect
 
 # ::stappler::geom::Size2
 
@@ -110,6 +110,24 @@ Title: SPGeometry.h
 * stappler::geom::Vec2 const& - вектор из ширины (X) и высоты (Y)
 
 
+# ::stappler::geom::Size2::Size2<typename>(stappler::geom::Size2 const&,Functor const&)
+
+## BRIEF
+
+Применяет функтор к размеру
+
+## CONTENT
+
+Применяет функтор к размеру
+
+Параметры шаблона:
+* typename Functor - функтор. принимающий и возвращающий float
+
+Параметры:
+* stappler::geom::Size2 const&
+* Functor const&
+
+
 # ::stappler::geom::Size2::operator Vec2() const
 
 ## BRIEF
@@ -123,37 +141,6 @@ Title: SPGeometry.h
 Возвращает:
 * stappler::geom::Vec2 вектор из ширины (X) и высоты (Y)
 
-# ::stappler::geom::Size2::operator==(stappler::geom::Size2 const&) const
-
-## BRIEF
-
-Сравнивает два размера
-
-## CONTENT
-
-Сравнивает два размера
-
-Параметры:
-* stappler::geom::Size2 const&
-
-Возвращает:
-* bool - true если размеры совпадают
-
-# ::stappler::geom::Size2::operator!=(stappler::geom::Size2 const&) const
-
-## BRIEF
-
-Сравнивает два размера
-
-## CONTENT
-
-Сравнивает два размера
-
-Параметры:
-* stappler::geom::Size2 const&
-
-Возвращает:
-* bool - true если размеры не совпадают
 
 # ::stappler::geom::Size2::operator=(stappler::geom::Size2 const&)
 
@@ -266,21 +253,22 @@ Title: SPGeometry.h
 * float - высота
 
 
-# ::stappler::geom::Size2::equals(stappler::geom::Size2 const&) const
+# ::stappler::geom::Size2::fuzzyEquals(stappler::geom::Size2 const&,float) const
 
 ## BRIEF
 
-Сравнивает текущий размер с другим
+Сравнивает размеры с погрешностью
 
 ## CONTENT
 
-Сравнивает текущий размер с другим
+Сравнивает размеры с погрешностью
 
 Параметры:
-* stappler::geom::Size2 const&
+* stappler::geom::Size2 const& - другой размер
+* float - погрешность
 
 Возвращает:
-* bool - true если размеры совпадают
+* bool - true если разность размером не больше погрешности
 
 # ::stappler::geom::Size3
 
@@ -395,6 +383,24 @@ Title: SPGeometry.h
 * stappler::geom::Vec3 const& - вектор из ширины (X), высоты (Y) и глубины (Z)
 
 
+# ::stappler::geom::Size3::Size3<typename>(stappler::geom::Size3 const&,Functor const&)
+
+## BRIEF
+
+Применяет функтор к размеру
+
+## CONTENT
+
+Применяет функтор к размеру
+
+Параметры шаблона:
+* typename Functor - функтор, принимающий и возвращающий float
+
+Параметры:
+* stappler::geom::Size3 const& - исходный размер
+* Functor const& - функтор
+
+
 # ::stappler::geom::Size3::operator Vec3() const
 
 ## BRIEF
@@ -408,37 +414,6 @@ Title: SPGeometry.h
 Возвращает:
 * stappler::geom::Vec3 - вектор из ширины (X), высоты (Y) и глубины (Z)
 
-# ::stappler::geom::Size3::operator==(stappler::geom::Size3 const&) const
-
-## BRIEF
-
-Сравнивает размеры
-
-## CONTENT
-
-Сравнивает размеры
-
-Параметры:
-* stappler::geom::Size3 const&
-
-Возвращает:
-* bool - true если размеры совпадают
-
-# ::stappler::geom::Size3::operator!=(stappler::geom::Size3 const&) const
-
-## BRIEF
-
-Сравнивает размеры
-
-## CONTENT
-
-Сравнивает размеры
-
-Параметры:
-* stappler::geom::Size3 const&
-
-Возвращает:
-* bool - true если размеры не совпадают
 
 # ::stappler::geom::Size3::operator=(stappler::geom::Size3 const&)
 
@@ -536,21 +511,23 @@ Title: SPGeometry.h
 Возвращает:
 * stappler::geom::Size3 - размер, покомпонентно делённый на число
 
-# ::stappler::geom::Size3::equals(stappler::geom::Size3 const&) const
+
+# ::stappler::geom::Size3::fuzzyEquals(stappler::geom::Size3 const&,float) const
 
 ## BRIEF
 
-Сравнивает текущий размер с другим
+Сравнивает размеры с погрешностью
 
 ## CONTENT
 
-Сравнивает текущий размер с другим
+Сравнивает размеры с погрешностью
 
 Параметры:
-* stappler::geom::Size3 const&
+* stappler::geom::Size3 const& - другой размер
+* float - погрешность
 
 Возвращает:
-* bool - true если размеры совпадают
+* bool - true если разность между объектами не превышает погрешность
 
 
 # ::stappler::geom::Extent2
@@ -1157,6 +1134,24 @@ Title: SPGeometry.h
 * stappler::geom::Rect const&
 
 
+# ::stappler::geom::Rect::Rect<typename>(stappler::geom::Rect const&,Functor const&)
+
+## BRIEF
+
+Применяет функтор к прямоугольнику
+
+## CONTENT
+
+Применяет функтор к прямоугольнику
+
+Параметры шаблона:
+* typename Functor - функтор, принимающий и возвращающий float
+
+Параметры:
+* stappler::geom::Rect const& - исходный прямоугольник
+* Functor const& - функтор
+
+
 # ::stappler::geom::Rect::operator=(stappler::geom::Rect const&)
 
 ## BRIEF
@@ -1380,6 +1375,50 @@ Title: SPGeometry.h
 Тип: uint32_t
 
 Значение Y
+
+
+# ::stappler::geom::URect::URect()
+
+## BRIEF
+
+Конструктор по умолчанию
+
+## CONTENT
+
+Конструктор по умолчанию
+
+
+# ::stappler::geom::URect::URect(stappler::geom::UVec2 const&,stappler::geom::Extent2 const&)
+
+## BRIEF
+
+Конструктор прямоугольника из точки и размера
+
+## CONTENT
+
+Конструктор прямоугольника из точки и размера
+
+Параметры:
+* stappler::geom::UVec2 const& - исходная точка
+* stappler::geom::Extent2 const& - размер
+
+
+# ::stappler::geom::URect::URect(uint32_t,uint32_t,uint32_t,uint32_t)
+
+## BRIEF
+
+Конструктор из параметров
+
+## CONTENT
+
+Конструктор из параметров
+
+Параметры:
+* uint32_t - x
+* uint32_t - y
+* uint32_t - ширина
+* uint32_t - высота
+
 
 # ::stappler::geom::UVec2::operator==(stappler::geom::UVec2 const&) const
 

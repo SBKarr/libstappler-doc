@@ -1,18 +1,25 @@
 Title: SPDataCbor.h
 
 
-# MODULES_DATA_SPDATACBOR_H_
+# STAPPLER_DATA_SPDATACBOR_H_
 
 ## BRIEF
 
+Заголовок с определением типов данных для формата CBOR
+
 ## CONTENT
 
+Заголовок с определением типов данных для формата CBOR
 
 # ::stappler::data::cbor::MajorType
 
 ## BRIEF
 
+Список основных типов кодирования CBOR
+
 ## CONTENT
+
+Список основных типов кодирования CBOR
 
 Значения:
 * Unsigned
@@ -29,7 +36,11 @@ Title: SPDataCbor.h
 
 ## BRIEF
 
+Список предустановленных значений в кодирвоании CBOR
+
 ## CONTENT
+
+Список предустановленных значений вв кодирвоании CBOR
 
 Значения:
 * False
@@ -42,7 +53,11 @@ Title: SPDataCbor.h
 
 ## BRIEF
 
+Список флаговых значений CBOR
+
 ## CONTENT
+
+Список флаговых значений CBOR
 
 Значения:
 * Null
@@ -70,7 +85,11 @@ Title: SPDataCbor.h
 
 ## BRIEF
 
+Список закодированных основных типов CBOR
+
 ## CONTENT
+
+Список закодированных основных типов CBOR. Необходим, чтобы сравнивать типы без их демаскирования.
 
 Значения:
 * Unsigned
@@ -87,7 +106,11 @@ Title: SPDataCbor.h
 
 ## BRIEF
 
+Список определённых в стандарте тегов CBOR
+
 ## CONTENT
+
+Список определённых в стандарте тегов CBOR
 
 Значения:
 * DateTime
@@ -126,7 +149,11 @@ Title: SPDataCbor.h
 
 ## BRIEF
 
+Оператор для совмещения флагов и основного типа
+
 ## CONTENT
+
+Оператор для совмещения флагов и основного типа для получения кодированного значения
 
 Параметры:
 * stappler::data::cbor::MajorType
@@ -139,46 +166,62 @@ Title: SPDataCbor.h
 
 ## BRIEF
 
+Оператор сравнения кодированного значения с кодированным основным типом
+
 ## CONTENT
+
+Оператор сравнения кодированного значения с кодированным основным типом
 
 Параметры:
 * uint8_t
 * stappler::data::cbor::MajorTypeEncoded
 
 Возвращает:
-* bool
+* bool - true если значение кодирует указанный тип
 
 # ::stappler::data::cbor::operator==(uint8_t,stappler::data::cbor::MajorType)
 
 ## BRIEF
 
+Оператор сравнения кодированного значения с основным типом
+
 ## CONTENT
+
+Оператор сравнения кодированного значения с основным типом
 
 Параметры:
 * uint8_t
 * stappler::data::cbor::MajorType
 
 Возвращает:
-* bool
+* bool - true если значение кодирует указанный тип
 
 # ::stappler::data::cbor::operator==(uint8_t,stappler::data::cbor::Flags)
 
 ## BRIEF
 
+Оператор сравнения кодированного значения с флагами значения
+
 ## CONTENT
+
+Оператор сравнения кодированного значения с флагами значения
 
 Параметры:
 * uint8_t
 * stappler::data::cbor::Flags
 
 Возвращает:
-* bool
+* bool - true если флаги совпадают с флагами в кодированном значении
 
 # ::stappler::data::cbor::type(uint8_t)
 
 ## BRIEF
 
+Возвращает тип кодированного значения
+
 ## CONTENT
+
+Возвращает тип кодированного значения
 
 Параметры:
 * uint8_t
@@ -190,19 +233,27 @@ Title: SPDataCbor.h
 
 ## BRIEF
 
+Демаскирует блок данных из кодированного значения
+
 ## CONTENT
 
+Демаскирует блок данных из кодированного значения
+
 Параметры:
-* uint8_t
+* uint8_t - кодированное значение
 
 Возвращает:
-* uint8_t
+* uint8_t - демаскированное значение
 
 # ::stappler::data::cbor::flags(uint8_t)
 
 ## BRIEF
 
+Возвращает флаги из кодированного значения
+
 ## CONTENT
+
+Возвращает флаги из кодированного значения
 
 Параметры:
 * uint8_t
@@ -214,287 +265,371 @@ Title: SPDataCbor.h
 
 ## BRIEF
 
+Записывает идентификатор кодированного в CBOR значения
+
 ## CONTENT
 
+Записывает идентификатор кодированного в CBOR значения. SDK всегда записывает префикс CBOR при кодировании.
+
 Параметры шаблона:
-* class Writer
+* class Writer - тип кодировщика
 
 Параметры:
-* Writer&
+* Writer& - объект кодировщика
 
 
 # ::stappler::data::cbor::_writeNumeric<class,class>(Writer&,T,stappler::data::cbor::MajorTypeEncoded,stappler::data::cbor::Flags)
 
 ## BRIEF
 
+Записывает численное значение с помощью кодировщика
+
 ## CONTENT
 
+Записывает численное значение с помощью кодировщика
+
 Параметры шаблона:
-* class Writer
-* class T
+* class Writer - тип кодировщика
+* class T - класс целочисленного значения
 
 Параметры:
-* Writer&
-* T
-* stappler::data::cbor::MajorTypeEncoded
-* stappler::data::cbor::Flags
+* Writer& - объект кодировщика
+* T - записываемое значение
+* stappler::data::cbor::MajorTypeEncoded - тип значения
+* stappler::data::cbor::Flags - информационные флаги
 
 
 # ::stappler::data::cbor::_writeInt<class>(Writer&,uint64_t,stappler::data::cbor::MajorTypeEncoded)
 
 ## BRIEF
 
+Записывает целое число с помощью кодировщика
+
 ## CONTENT
 
+Записывает целое число с помощью кодировщика. Следует правилам CBOR в отношении минималистичного кодирования чисел.
+
 Параметры шаблона:
-* class Writer
+* class Writer - тип кодировщика
 
 Параметры:
-* Writer&
-* uint64_t
-* stappler::data::cbor::MajorTypeEncoded
+* Writer& - объект кодировщика
+* uint64_t - целое число
+* stappler::data::cbor::MajorTypeEncoded - тип значения
 
 
 # ::stappler::data::cbor::_writeFloatNaN<class>(Writer&)
 
 ## BRIEF
 
+Записывает значение NaN с помощью кодировщика
+
 ## CONTENT
 
+Записывает значение NaN с помощью кодировщика. Следуя принципам CBOR, записывает NaN для 16-битного float.
+
 Параметры шаблона:
-* class Writer
+* class Writer - тип кодировщика
 
 Параметры:
-* Writer&
+* Writer& - объект кодировщика
 
 
 # ::stappler::data::cbor::_writeFloatPositiveInf<class>(Writer&)
 
 ## BRIEF
 
+Записывает значение +Inf с помощью кодировщика
+
 ## CONTENT
 
+Записывает значение +Inf с помощью кодировщика. Следуя принципам CBOR, записывает +Inf для 16-битного float.
+
 Параметры шаблона:
-* class Writer
+* class Writer - тип кодировщика
 
 Параметры:
-* Writer&
+* Writer& - объект кодировщика
 
 
 # ::stappler::data::cbor::_writeFloatNegativeInf<class>(Writer&)
 
 ## BRIEF
 
+Записывает значение -Inf с помощью кодировщика
+
 ## CONTENT
 
+Записывает значение -Inf с помощью кодировщика. Следуя принципам CBOR, записывает +Inf для 16-битного float.
+
 Параметры шаблона:
-* class Writer
+* class Writer - тип кодировщика
 
 Параметры:
-* Writer&
+* Writer& - объект кодировщика
 
 
 # ::stappler::data::cbor::_writeFloat16<class>(Writer&,uint16_t)
 
 ## BRIEF
 
+Записывает 16-битное число с плавающей точкой (IEEE 754)
+
 ## CONTENT
 
+Записывает 16-битное число с плавающей точкой (IEEE 754)
+
 Параметры шаблона:
-* class Writer
+* class Writer - тип кодировщика
 
 Параметры:
-* Writer&
-* uint16_t
+* Writer& - объект кодировщика
+* uint16_t - кодированное в uint16_t число с плавающей точкой
 
 
 # ::stappler::data::cbor::_writeFloat32<class>(Writer&,float)
 
 ## BRIEF
 
+Записывает 32-битное число с плавающей точкой (IEEE 754)
+
 ## CONTENT
 
+Записывает 32-битное число с плавающей точкой (IEEE 754)
+
 Параметры шаблона:
-* class Writer
+* class Writer - тип кодировщика
 
 Параметры:
-* Writer&
-* float
+* Writer& - объект кодировщика
+* float - записываемое число
 
 
 # ::stappler::data::cbor::_writeFloat64<class>(Writer&,double)
 
 ## BRIEF
 
+Записывает 64-битное число с плавающей точкой (IEEE 754)
+
 ## CONTENT
 
+Записывает 64-битное число с плавающей точкой (IEEE 754)
+
 Параметры шаблона:
-* class Writer
+* class Writer - тип кодировщика
 
 Параметры:
-* Writer&
-* double
+* Writer& - объект кодировщика
+* double - записываемое число
 
 
 # ::stappler::data::cbor::_writeArrayStart<class>(Writer&,size_t)
 
 ## BRIEF
 
+Записывает метку начала массива с длиной массива
+
 ## CONTENT
 
+Записывает метку начала массива с длиной массива. Следует правилам CBOR в отношении минималистичного кодирования чисел.
+
 Параметры шаблона:
-* class Writer
+* class Writer - тип кодировщика
 
 Параметры:
-* Writer&
-* size_t
+* Writer& - объект кодировщика
+* size_t - длина массива
 
 
 # ::stappler::data::cbor::_writeMapStart<class>(Writer&,size_t)
 
 ## BRIEF
 
+Записывает метку начала ассоциативного массива с длиной массива
+
 ## CONTENT
 
+Записывает метку начала ассоциативного массива с длиной массива. Следует правилам CBOR в отношении минималистичного кодирования чисел.
+
 Параметры шаблона:
-* class Writer
+* class Writer - тип кодировщика
 
 Параметры:
-* Writer&
-* size_t
+* Writer& - объект кодировщика
+* size_t - длина массива
 
 
 # ::stappler::data::cbor::_writeNull<class>(Writer&,stappler::nullptr_t)
 
 ## BRIEF
 
+Записывает значение NULL
+
 ## CONTENT
 
+Записывает значение NULL
+
 Параметры шаблона:
-* class Writer
+* class Writer - тип кодировщика
 
 Параметры:
-* Writer&
-* stappler::nullptr_t
+* Writer& - объект кодировщика
+* stappler::nullptr_t - метка типа NULL
 
 
 # ::stappler::data::cbor::_writeBool<class>(Writer&,bool)
 
 ## BRIEF
 
+Записывает булево значение
+
 ## CONTENT
 
+Записывает булево значение
+
 Параметры шаблона:
-* class Writer
+* class Writer - тип кодировщика
 
 Параметры:
-* Writer&
-* bool
+* Writer& - объект кодировщика
+* bool - значение
 
 
 # ::stappler::data::cbor::_writeInt<class>(Writer&,int64_t)
 
 ## BRIEF
 
+Записывает целое число
+
 ## CONTENT
 
+Записывает целое число. Следует правилам CBOR в отношении минималистичного кодирования чисел.
+
 Параметры шаблона:
-* class Writer
+* class Writer - тип кодировщика
 
 Параметры:
-* Writer&
-* int64_t
+* Writer& - объект кодировщика
+* int64_t - записываемое число
 
 
 # ::stappler::data::cbor::_writeFloat<class>(Writer&,double)
 
 ## BRIEF
 
+Записывает число с плавающей точкой
+
 ## CONTENT
 
+Записывает число с плавающей точкой. Следует правилам CBOR в отношении минималистичного кодирования чисел.
+
 Параметры шаблона:
-* class Writer
+* class Writer - тип кодировщика
 
 Параметры:
-* Writer&
-* double
+* Writer& - объект кодировщика
+* double - записываемое число
 
 
 # ::stappler::data::cbor::_writeString<class>(Writer&,stappler::StringView const&)
 
 ## BRIEF
 
+Записывает строку
+
 ## CONTENT
 
+Записывает строку
+
 Параметры шаблона:
-* class Writer
+* class Writer - тип кодировщика
 
 Параметры:
-* Writer&
-* stappler::StringView const&
+* Writer& - объект кодировщика
+* stappler::StringView const& - отображение записываемой строки
 
 
 # ::stappler::data::cbor::_writeBytes<class>(Writer&,BytesViewTemplate<Endian::Network> const&)
 
 ## BRIEF
 
+Записывает байтовую строку
+
 ## CONTENT
 
+Записывает байтовую строку
+
 Параметры шаблона:
-* class Writer
+* class Writer - тип кодировщика
 
 Параметры:
-* Writer&
-* BytesViewTemplate<Endian::Network> const&
+* Writer& - объект кодировщика
+* BytesViewTemplate<Endian::Network> const& - отображение байтовой строки
 
 
 # ::stappler::data::cbor::_writeNumber<class>(Writer&,float)
 
 ## BRIEF
 
+Записывает численное значение
+
 ## CONTENT
 
+Записывает численное значение, не конкретизируя его тип (целое или с плавающей точкой)
+
 Параметры шаблона:
-* class Writer
+* class Writer - тип кодировщика
 
 Параметры:
-* Writer&
-* float
+* Writer& - объект кодировщика
+* float - записываемое значение
 
 
 # ::stappler::data::cbor::_readIntValue(BytesViewTemplate<Endian::Network>&,uint8_t)
 
 ## BRIEF
 
+Читает натуральное значение из блока данных
+
 ## CONTENT
 
+Читает натуральное значение из блока данных
+
 Параметры:
-* BytesViewTemplate<Endian::Network>&
-* uint8_t
+* BytesViewTemplate<Endian::Network>& - блок данных
+* uint8_t - кодированный тип значения
 
 Возвращает:
-* uint64_t
+* uint64_t - прочитанное число
 
 # ::stappler::data::cbor::_readInt(BytesViewTemplate<Endian::Network>&)
 
 ## BRIEF
 
+Читает целое число из блока данных
+
 ## CONTENT
 
+Читает целое число из блока данных
+
 Параметры:
-* BytesViewTemplate<Endian::Network>&
+* BytesViewTemplate<Endian::Network>& - блок данных
 
 Возвращает:
-* int64_t
+* int64_t - прочитанное число
 
 # ::stappler::data::cbor::_readNumber(BytesViewTemplate<Endian::Network>&)
 
 ## BRIEF
 
+Читает нетипизированное число из блока данных
+
 ## CONTENT
 
+Читает нетипизированное число из блока данных
+
 Параметры:
-* BytesViewTemplate<Endian::Network>&
+* BytesViewTemplate<Endian::Network>& - блок данных
 
 Возвращает:
-* float
+* float - прочитанное число

@@ -1,0 +1,4032 @@
+{
+	"_fullName": "xenolith/scene/nodes/XLNodeInfo.h",
+	"_kind": "file",
+	"_name": "xenolith/scene/nodes/XLNodeInfo.h",
+	"childs": [{
+		"_fullName": "XLApplicationInfo.h",
+		"_kind": "include directive",
+		"_name": "XLApplicationInfo.h",
+		"id": 2731686263,
+		"include": "xenolith/application/XLApplicationInfo.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "XLApplicationInfo.h"
+	}, {
+		"_fullName": "XLSceneConfig.h",
+		"_kind": "include directive",
+		"_name": "XLSceneConfig.h",
+		"id": 1539141049,
+		"include": "xenolith/scene/XLSceneConfig.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "XLSceneConfig.h"
+	}, {
+		"_fullName": "XENOLITH_SCENE_NODES_XLNODEINFO_H_",
+		"_kind": "macro definition",
+		"_name": "XENOLITH_SCENE_NODES_XLNODEINFO_H_",
+		"id": 3976616530,
+		"is_function_like": false,
+		"is_object_like": true,
+		"is_variadic": false,
+		"kind": "macro definition",
+		"name": "XENOLITH_SCENE_NODES_XLNODEINFO_H_",
+		"replacement": ""
+	}, {
+		"_fullName": "::stappler",
+		"_kind": "namespace",
+		"_name": "stappler",
+		"childs": [{
+			"_fullName": "::stappler::xenolith",
+			"_kind": "namespace",
+			"_name": "xenolith",
+			"childs": [{
+				"_fullName": "::stappler::xenolith::RenderingLevel",
+				"_kind": "type alias",
+				"_name": "RenderingLevel",
+				"id": 4276780819,
+				"kind": "type alias",
+				"name": "RenderingLevel",
+				"underlying_type": {
+					"_typeName": "core::RenderingLevel",
+					"kind": "user_defined",
+					"target": {
+						"name": "core::RenderingLevel",
+						"objects": [{
+							"_fullName": "::stappler::xenolith::core::RenderingLevel",
+							"_kind": "enum",
+							"_name": "RenderingLevel",
+							"has_explicit_type": false,
+							"id": 4179200121,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_scoped": true,
+							"kind": "enum",
+							"name": "RenderingLevel",
+							"scope": {
+								"name": "RenderingLevel"
+							},
+							"semantic_scope": "",
+							"underlying_type": {
+								"_typeName": "int",
+								"builtin_type_kind": "int",
+								"kind": "builtin"
+							}
+						}]
+					}
+				}
+			}, {
+				"_fullName": "::stappler::xenolith::StateId",
+				"_kind": "type alias",
+				"_name": "StateId",
+				"id": 2886220807,
+				"kind": "type alias",
+				"name": "StateId",
+				"underlying_type": {
+					"_typeName": "uint32_t",
+					"kind": "user_defined",
+					"target": {
+						"name": "uint32_t"
+					}
+				}
+			}, {
+				"_fullName": "::stappler::xenolith::InvalidTag",
+				"_kind": "variable",
+				"_name": "InvalidTag",
+				"default_value": {
+					"expression": [{
+						"kind": "identifier",
+						"spelling": "maxOf"
+					}, {
+						"kind": "punctuation",
+						"spelling": "<"
+					}, {
+						"kind": "identifier",
+						"spelling": "uint64_t"
+					}, {
+						"kind": "punctuation",
+						"spelling": ">"
+					}, {
+						"kind": "punctuation",
+						"spelling": "("
+					}, {
+						"kind": "punctuation",
+						"spelling": ")"
+					}],
+					"kind": "unexposed",
+					"type": {
+						"_typeName": "uint64_t const",
+						"cv_qualifier": "const",
+						"kind": "cv_qualified",
+						"type": {
+							"_typeName": "uint64_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "uint64_t"
+							}
+						}
+					}
+				},
+				"id": 2479979577,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"kind": "variable",
+				"name": "InvalidTag",
+				"semantic_scope": "",
+				"storage_class": [
+					"static"
+				],
+				"type":  {
+					"_typeName": "uint64_t const",
+					"cv_qualifier": "const",
+					"kind": "cv_qualified",
+					"type": {
+						"_typeName": "uint64_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "uint64_t"
+						}
+					}
+				}
+			}, {
+				"_fullName": "::stappler::xenolith::NodeFlags",
+				"_kind": "enum",
+				"_name": "NodeFlags",
+				"childs": [{
+					"_fullName": "::stappler::xenolith::NodeFlags::None",
+					"_kind": "enum value",
+					"_name": "None",
+					"id": 3936873590,
+					"kind": "enum value",
+					"name": "None"
+				}, {
+					"_fullName": "::stappler::xenolith::NodeFlags::TransformDirty",
+					"_kind": "enum value",
+					"_name": "TransformDirty",
+					"id": 4190487360,
+					"kind": "enum value",
+					"name": "TransformDirty",
+					"value": {
+						"expression": [{
+							"kind": "int_literal",
+							"spelling": "1"
+						}, {
+							"kind": "punctuation",
+							"spelling": "<<"
+						}, {
+							"kind": "int_literal",
+							"spelling": "0"
+						}],
+						"kind": "unexposed",
+						"type": {
+							"_typeName": "int",
+							"builtin_type_kind": "int",
+							"kind": "builtin"
+						}
+					}
+				}, {
+					"_fullName": "::stappler::xenolith::NodeFlags::ContentSizeDirty",
+					"_kind": "enum value",
+					"_name": "ContentSizeDirty",
+					"id": 1431342683,
+					"kind": "enum value",
+					"name": "ContentSizeDirty",
+					"value": {
+						"expression": [{
+							"kind": "int_literal",
+							"spelling": "1"
+						}, {
+							"kind": "punctuation",
+							"spelling": "<<"
+						}, {
+							"kind": "int_literal",
+							"spelling": "1"
+						}],
+						"kind": "unexposed",
+						"type": {
+							"_typeName": "int",
+							"builtin_type_kind": "int",
+							"kind": "builtin"
+						}
+					}
+				}, {
+					"_fullName": "::stappler::xenolith::NodeFlags::DirtyMask",
+					"_kind": "enum value",
+					"_name": "DirtyMask",
+					"id": 865222554,
+					"kind": "enum value",
+					"name": "DirtyMask",
+					"value": {
+						"expression": [{
+							"kind": "identifier",
+							"spelling": "TransformDirty"
+						}, {
+							"kind": "punctuation",
+							"spelling": "|"
+						}, {
+							"kind": "identifier",
+							"spelling": "ContentSizeDirty"
+						}],
+						"kind": "unexposed",
+						"type": {
+							"_typeName": "int",
+							"builtin_type_kind": "int",
+							"kind": "builtin"
+						}
+					}
+				}],
+				"has_explicit_type": false,
+				"id": 1096610839,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_scoped": true,
+				"kind": "enum",
+				"name": "NodeFlags",
+				"scope": {
+					"name": "NodeFlags"
+				},
+				"semantic_scope": "",
+				"underlying_type": {
+					"_typeName": "int",
+					"builtin_type_kind": "int",
+					"kind": "builtin"
+				}
+			}, {
+				"_fullName": "::stappler::xenolith::operator|(stappler::xenolith::NodeFlags const&,stappler::xenolith::NodeFlags const&)",
+				"_kind": "function",
+				"_name": "operator|",
+				"body_kind": "definition",
+				"id": 961497203,
+				"is_consteval": false,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "operator|",
+				"parameters": [{
+					"_fullName": "l",
+					"_kind": "function parameter",
+					"_name": "l",
+					"id": 2049515854,
+					"kind": "function parameter",
+					"name": "l",
+					"type": {
+						"_typeName": "stappler::xenolith::NodeFlags const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::xenolith::NodeFlags const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::xenolith::NodeFlags",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::NodeFlags",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::NodeFlags",
+										"_kind": "enum",
+										"_name": "NodeFlags",
+										"has_explicit_type": false,
+										"id": 1096610839,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "NodeFlags",
+										"scope": {
+											"name": "NodeFlags"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_fullName": "r",
+					"_kind": "function parameter",
+					"_name": "r",
+					"id": 643963725,
+					"kind": "function parameter",
+					"name": "r",
+					"type": {
+						"_typeName": "stappler::xenolith::NodeFlags const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::xenolith::NodeFlags const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::xenolith::NodeFlags",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::NodeFlags",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::NodeFlags",
+										"_kind": "enum",
+										"_name": "NodeFlags",
+										"has_explicit_type": false,
+										"id": 1096610839,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "NodeFlags",
+										"scope": {
+											"name": "NodeFlags"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "stappler::xenolith::NodeFlags",
+					"kind": "user_defined",
+					"target": {
+						"name": "stappler::xenolith::NodeFlags",
+						"objects": [{
+							"_fullName": "::stappler::xenolith::NodeFlags",
+							"_kind": "enum",
+							"_name": "NodeFlags",
+							"has_explicit_type": false,
+							"id": 1096610839,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_scoped": true,
+							"kind": "enum",
+							"name": "NodeFlags",
+							"scope": {
+								"name": "NodeFlags"
+							},
+							"semantic_scope": "",
+							"underlying_type": {
+								"_typeName": "int",
+								"builtin_type_kind": "int",
+								"kind": "builtin"
+							}
+						}]
+					}
+				},
+				"semantic_scope": "",
+				"signature": "(stappler::xenolith::NodeFlags const&,stappler::xenolith::NodeFlags const&)"
+			}, {
+				"_fullName": "::stappler::xenolith::operator&(stappler::xenolith::NodeFlags const&,stappler::xenolith::NodeFlags const&)",
+				"_kind": "function",
+				"_name": "operator&",
+				"body_kind": "definition",
+				"id": 3637099289,
+				"is_consteval": false,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "operator&",
+				"parameters": [{
+					"_fullName": "l",
+					"_kind": "function parameter",
+					"_name": "l",
+					"id": 2049515854,
+					"kind": "function parameter",
+					"name": "l",
+					"type": {
+						"_typeName": "stappler::xenolith::NodeFlags const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::xenolith::NodeFlags const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::xenolith::NodeFlags",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::NodeFlags",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::NodeFlags",
+										"_kind": "enum",
+										"_name": "NodeFlags",
+										"has_explicit_type": false,
+										"id": 1096610839,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "NodeFlags",
+										"scope": {
+											"name": "NodeFlags"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_fullName": "r",
+					"_kind": "function parameter",
+					"_name": "r",
+					"id": 643963725,
+					"kind": "function parameter",
+					"name": "r",
+					"type": {
+						"_typeName": "stappler::xenolith::NodeFlags const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::xenolith::NodeFlags const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::xenolith::NodeFlags",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::NodeFlags",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::NodeFlags",
+										"_kind": "enum",
+										"_name": "NodeFlags",
+										"has_explicit_type": false,
+										"id": 1096610839,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "NodeFlags",
+										"scope": {
+											"name": "NodeFlags"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "stappler::xenolith::NodeFlags",
+					"kind": "user_defined",
+					"target": {
+						"name": "stappler::xenolith::NodeFlags",
+						"objects": [{
+							"_fullName": "::stappler::xenolith::NodeFlags",
+							"_kind": "enum",
+							"_name": "NodeFlags",
+							"has_explicit_type": false,
+							"id": 1096610839,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_scoped": true,
+							"kind": "enum",
+							"name": "NodeFlags",
+							"scope": {
+								"name": "NodeFlags"
+							},
+							"semantic_scope": "",
+							"underlying_type": {
+								"_typeName": "int",
+								"builtin_type_kind": "int",
+								"kind": "builtin"
+							}
+						}]
+					}
+				},
+				"semantic_scope": "",
+				"signature": "(stappler::xenolith::NodeFlags const&,stappler::xenolith::NodeFlags const&)"
+			}, {
+				"_fullName": "::stappler::xenolith::operator^(stappler::xenolith::NodeFlags const&,stappler::xenolith::NodeFlags const&)",
+				"_kind": "function",
+				"_name": "operator^",
+				"body_kind": "definition",
+				"id": 857077559,
+				"is_consteval": false,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "operator^",
+				"parameters": [{
+					"_fullName": "l",
+					"_kind": "function parameter",
+					"_name": "l",
+					"id": 2049515854,
+					"kind": "function parameter",
+					"name": "l",
+					"type": {
+						"_typeName": "stappler::xenolith::NodeFlags const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::xenolith::NodeFlags const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::xenolith::NodeFlags",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::NodeFlags",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::NodeFlags",
+										"_kind": "enum",
+										"_name": "NodeFlags",
+										"has_explicit_type": false,
+										"id": 1096610839,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "NodeFlags",
+										"scope": {
+											"name": "NodeFlags"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_fullName": "r",
+					"_kind": "function parameter",
+					"_name": "r",
+					"id": 643963725,
+					"kind": "function parameter",
+					"name": "r",
+					"type": {
+						"_typeName": "stappler::xenolith::NodeFlags const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::xenolith::NodeFlags const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::xenolith::NodeFlags",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::NodeFlags",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::NodeFlags",
+										"_kind": "enum",
+										"_name": "NodeFlags",
+										"has_explicit_type": false,
+										"id": 1096610839,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "NodeFlags",
+										"scope": {
+											"name": "NodeFlags"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "stappler::xenolith::NodeFlags",
+					"kind": "user_defined",
+					"target": {
+						"name": "stappler::xenolith::NodeFlags",
+						"objects": [{
+							"_fullName": "::stappler::xenolith::NodeFlags",
+							"_kind": "enum",
+							"_name": "NodeFlags",
+							"has_explicit_type": false,
+							"id": 1096610839,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_scoped": true,
+							"kind": "enum",
+							"name": "NodeFlags",
+							"scope": {
+								"name": "NodeFlags"
+							},
+							"semantic_scope": "",
+							"underlying_type": {
+								"_typeName": "int",
+								"builtin_type_kind": "int",
+								"kind": "builtin"
+							}
+						}]
+					}
+				},
+				"semantic_scope": "",
+				"signature": "(stappler::xenolith::NodeFlags const&,stappler::xenolith::NodeFlags const&)"
+			}, {
+				"_fullName": "::stappler::xenolith::operator|=(stappler::xenolith::NodeFlags&,stappler::xenolith::NodeFlags const&)",
+				"_kind": "function",
+				"_name": "operator|=",
+				"body_kind": "definition",
+				"id": 1492885539,
+				"is_consteval": false,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "operator|=",
+				"parameters": [{
+					"_fullName": "l",
+					"_kind": "function parameter",
+					"_name": "l",
+					"id": 2049515854,
+					"kind": "function parameter",
+					"name": "l",
+					"type": {
+						"_typeName": "stappler::xenolith::NodeFlags&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::xenolith::NodeFlags",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::xenolith::NodeFlags",
+								"objects": [{
+									"_fullName": "::stappler::xenolith::NodeFlags",
+									"_kind": "enum",
+									"_name": "NodeFlags",
+									"has_explicit_type": false,
+									"id": 1096610839,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_scoped": true,
+									"kind": "enum",
+									"name": "NodeFlags",
+									"scope": {
+										"name": "NodeFlags"
+									},
+									"semantic_scope": "",
+									"underlying_type": {
+										"_typeName": "int",
+										"builtin_type_kind": "int",
+										"kind": "builtin"
+									}
+								}]
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_fullName": "r",
+					"_kind": "function parameter",
+					"_name": "r",
+					"id": 643963725,
+					"kind": "function parameter",
+					"name": "r",
+					"type": {
+						"_typeName": "stappler::xenolith::NodeFlags const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::xenolith::NodeFlags const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::xenolith::NodeFlags",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::NodeFlags",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::NodeFlags",
+										"_kind": "enum",
+										"_name": "NodeFlags",
+										"has_explicit_type": false,
+										"id": 1096610839,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "NodeFlags",
+										"scope": {
+											"name": "NodeFlags"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "stappler::xenolith::NodeFlags&",
+					"kind": "reference",
+					"referee": {
+						"_typeName": "stappler::xenolith::NodeFlags",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::xenolith::NodeFlags",
+							"objects": [{
+								"_fullName": "::stappler::xenolith::NodeFlags",
+								"_kind": "enum",
+								"_name": "NodeFlags",
+								"has_explicit_type": false,
+								"id": 1096610839,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_scoped": true,
+								"kind": "enum",
+								"name": "NodeFlags",
+								"scope": {
+									"name": "NodeFlags"
+								},
+								"semantic_scope": "",
+								"underlying_type": {
+									"_typeName": "int",
+									"builtin_type_kind": "int",
+									"kind": "builtin"
+								}
+							}]
+						}
+					},
+					"reference_kind": "lvalue"
+				},
+				"semantic_scope": "",
+				"signature": "(stappler::xenolith::NodeFlags&,stappler::xenolith::NodeFlags const&)"
+			}, {
+				"_fullName": "::stappler::xenolith::operator&=(stappler::xenolith::NodeFlags&,stappler::xenolith::NodeFlags const&)",
+				"_kind": "function",
+				"_name": "operator&=",
+				"body_kind": "definition",
+				"id": 3465657262,
+				"is_consteval": false,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "operator&=",
+				"parameters": [{
+					"_fullName": "l",
+					"_kind": "function parameter",
+					"_name": "l",
+					"id": 2049515854,
+					"kind": "function parameter",
+					"name": "l",
+					"type": {
+						"_typeName": "stappler::xenolith::NodeFlags&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::xenolith::NodeFlags",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::xenolith::NodeFlags",
+								"objects": [{
+									"_fullName": "::stappler::xenolith::NodeFlags",
+									"_kind": "enum",
+									"_name": "NodeFlags",
+									"has_explicit_type": false,
+									"id": 1096610839,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_scoped": true,
+									"kind": "enum",
+									"name": "NodeFlags",
+									"scope": {
+										"name": "NodeFlags"
+									},
+									"semantic_scope": "",
+									"underlying_type": {
+										"_typeName": "int",
+										"builtin_type_kind": "int",
+										"kind": "builtin"
+									}
+								}]
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_fullName": "r",
+					"_kind": "function parameter",
+					"_name": "r",
+					"id": 643963725,
+					"kind": "function parameter",
+					"name": "r",
+					"type": {
+						"_typeName": "stappler::xenolith::NodeFlags const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::xenolith::NodeFlags const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::xenolith::NodeFlags",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::NodeFlags",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::NodeFlags",
+										"_kind": "enum",
+										"_name": "NodeFlags",
+										"has_explicit_type": false,
+										"id": 1096610839,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "NodeFlags",
+										"scope": {
+											"name": "NodeFlags"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "stappler::xenolith::NodeFlags&",
+					"kind": "reference",
+					"referee": {
+						"_typeName": "stappler::xenolith::NodeFlags",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::xenolith::NodeFlags",
+							"objects": [{
+								"_fullName": "::stappler::xenolith::NodeFlags",
+								"_kind": "enum",
+								"_name": "NodeFlags",
+								"has_explicit_type": false,
+								"id": 1096610839,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_scoped": true,
+								"kind": "enum",
+								"name": "NodeFlags",
+								"scope": {
+									"name": "NodeFlags"
+								},
+								"semantic_scope": "",
+								"underlying_type": {
+									"_typeName": "int",
+									"builtin_type_kind": "int",
+									"kind": "builtin"
+								}
+							}]
+						}
+					},
+					"reference_kind": "lvalue"
+				},
+				"semantic_scope": "",
+				"signature": "(stappler::xenolith::NodeFlags&,stappler::xenolith::NodeFlags const&)"
+			}, {
+				"_fullName": "::stappler::xenolith::operator^=(stappler::xenolith::NodeFlags&,stappler::xenolith::NodeFlags const&)",
+				"_kind": "function",
+				"_name": "operator^=",
+				"body_kind": "definition",
+				"id": 341542215,
+				"is_consteval": false,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "operator^=",
+				"parameters": [{
+					"_fullName": "l",
+					"_kind": "function parameter",
+					"_name": "l",
+					"id": 2049515854,
+					"kind": "function parameter",
+					"name": "l",
+					"type": {
+						"_typeName": "stappler::xenolith::NodeFlags&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::xenolith::NodeFlags",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::xenolith::NodeFlags",
+								"objects": [{
+									"_fullName": "::stappler::xenolith::NodeFlags",
+									"_kind": "enum",
+									"_name": "NodeFlags",
+									"has_explicit_type": false,
+									"id": 1096610839,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_scoped": true,
+									"kind": "enum",
+									"name": "NodeFlags",
+									"scope": {
+										"name": "NodeFlags"
+									},
+									"semantic_scope": "",
+									"underlying_type": {
+										"_typeName": "int",
+										"builtin_type_kind": "int",
+										"kind": "builtin"
+									}
+								}]
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_fullName": "r",
+					"_kind": "function parameter",
+					"_name": "r",
+					"id": 643963725,
+					"kind": "function parameter",
+					"name": "r",
+					"type": {
+						"_typeName": "stappler::xenolith::NodeFlags const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::xenolith::NodeFlags const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::xenolith::NodeFlags",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::NodeFlags",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::NodeFlags",
+										"_kind": "enum",
+										"_name": "NodeFlags",
+										"has_explicit_type": false,
+										"id": 1096610839,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "NodeFlags",
+										"scope": {
+											"name": "NodeFlags"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "stappler::xenolith::NodeFlags&",
+					"kind": "reference",
+					"referee": {
+						"_typeName": "stappler::xenolith::NodeFlags",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::xenolith::NodeFlags",
+							"objects": [{
+								"_fullName": "::stappler::xenolith::NodeFlags",
+								"_kind": "enum",
+								"_name": "NodeFlags",
+								"has_explicit_type": false,
+								"id": 1096610839,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_scoped": true,
+								"kind": "enum",
+								"name": "NodeFlags",
+								"scope": {
+									"name": "NodeFlags"
+								},
+								"semantic_scope": "",
+								"underlying_type": {
+									"_typeName": "int",
+									"builtin_type_kind": "int",
+									"kind": "builtin"
+								}
+							}]
+						}
+					},
+					"reference_kind": "lvalue"
+				},
+				"semantic_scope": "",
+				"signature": "(stappler::xenolith::NodeFlags&,stappler::xenolith::NodeFlags const&)"
+			}, {
+				"_fullName": "::stappler::xenolith::operator==(stappler::xenolith::NodeFlags const&,std::underlying_type<NodeFlags>::type const&)",
+				"_kind": "function",
+				"_name": "operator==",
+				"body_kind": "definition",
+				"id": 3551385348,
+				"is_consteval": false,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "operator==",
+				"parameters": [{
+					"_fullName": "l",
+					"_kind": "function parameter",
+					"_name": "l",
+					"id": 2049515854,
+					"kind": "function parameter",
+					"name": "l",
+					"type": {
+						"_typeName": "stappler::xenolith::NodeFlags const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::xenolith::NodeFlags const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::xenolith::NodeFlags",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::NodeFlags",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::NodeFlags",
+										"_kind": "enum",
+										"_name": "NodeFlags",
+										"has_explicit_type": false,
+										"id": 1096610839,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "NodeFlags",
+										"scope": {
+											"name": "NodeFlags"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_fullName": "r",
+					"_kind": "function parameter",
+					"_name": "r",
+					"id": 643963725,
+					"kind": "function parameter",
+					"name": "r",
+					"type": {
+						"_typeName": "std::underlying_type<NodeFlags>::type const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "std::underlying_type<NodeFlags>::type const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "std::underlying_type<NodeFlags>::type",
+								"kind": "user_defined",
+								"target": {
+									"name": "std::underlying_type<NodeFlags>::type"
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "bool",
+					"builtin_type_kind": "bool",
+					"kind": "builtin"
+				},
+				"semantic_scope": "",
+				"signature": "(stappler::xenolith::NodeFlags const&,std::underlying_type<NodeFlags>::type const&)"
+			}, {
+				"_fullName": "::stappler::xenolith::operator==(std::underlying_type<NodeFlags>::type const&,stappler::xenolith::NodeFlags const&)",
+				"_kind": "function",
+				"_name": "operator==",
+				"body_kind": "definition",
+				"id": 530744790,
+				"is_consteval": false,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "operator==",
+				"parameters": [{
+					"_fullName": "l",
+					"_kind": "function parameter",
+					"_name": "l",
+					"id": 2049515854,
+					"kind": "function parameter",
+					"name": "l",
+					"type": {
+						"_typeName": "std::underlying_type<NodeFlags>::type const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "std::underlying_type<NodeFlags>::type const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "std::underlying_type<NodeFlags>::type",
+								"kind": "user_defined",
+								"target": {
+									"name": "std::underlying_type<NodeFlags>::type"
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_fullName": "r",
+					"_kind": "function parameter",
+					"_name": "r",
+					"id": 643963725,
+					"kind": "function parameter",
+					"name": "r",
+					"type": {
+						"_typeName": "stappler::xenolith::NodeFlags const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::xenolith::NodeFlags const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::xenolith::NodeFlags",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::NodeFlags",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::NodeFlags",
+										"_kind": "enum",
+										"_name": "NodeFlags",
+										"has_explicit_type": false,
+										"id": 1096610839,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "NodeFlags",
+										"scope": {
+											"name": "NodeFlags"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "bool",
+					"builtin_type_kind": "bool",
+					"kind": "builtin"
+				},
+				"semantic_scope": "",
+				"signature": "(std::underlying_type<NodeFlags>::type const&,stappler::xenolith::NodeFlags const&)"
+			}, {
+				"_fullName": "::stappler::xenolith::operator!=(stappler::xenolith::NodeFlags const&,std::underlying_type<NodeFlags>::type const&)",
+				"_kind": "function",
+				"_name": "operator!=",
+				"body_kind": "definition",
+				"id": 1120194806,
+				"is_consteval": false,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "operator!=",
+				"parameters": [{
+					"_fullName": "l",
+					"_kind": "function parameter",
+					"_name": "l",
+					"id": 2049515854,
+					"kind": "function parameter",
+					"name": "l",
+					"type": {
+						"_typeName": "stappler::xenolith::NodeFlags const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::xenolith::NodeFlags const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::xenolith::NodeFlags",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::NodeFlags",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::NodeFlags",
+										"_kind": "enum",
+										"_name": "NodeFlags",
+										"has_explicit_type": false,
+										"id": 1096610839,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "NodeFlags",
+										"scope": {
+											"name": "NodeFlags"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_fullName": "r",
+					"_kind": "function parameter",
+					"_name": "r",
+					"id": 643963725,
+					"kind": "function parameter",
+					"name": "r",
+					"type": {
+						"_typeName": "std::underlying_type<NodeFlags>::type const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "std::underlying_type<NodeFlags>::type const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "std::underlying_type<NodeFlags>::type",
+								"kind": "user_defined",
+								"target": {
+									"name": "std::underlying_type<NodeFlags>::type"
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "bool",
+					"builtin_type_kind": "bool",
+					"kind": "builtin"
+				},
+				"semantic_scope": "",
+				"signature": "(stappler::xenolith::NodeFlags const&,std::underlying_type<NodeFlags>::type const&)"
+			}, {
+				"_fullName": "::stappler::xenolith::operator!=(std::underlying_type<NodeFlags>::type const&,stappler::xenolith::NodeFlags const&)",
+				"_kind": "function",
+				"_name": "operator!=",
+				"body_kind": "definition",
+				"id": 1788994320,
+				"is_consteval": false,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "operator!=",
+				"parameters": [{
+					"_fullName": "l",
+					"_kind": "function parameter",
+					"_name": "l",
+					"id": 2049515854,
+					"kind": "function parameter",
+					"name": "l",
+					"type": {
+						"_typeName": "std::underlying_type<NodeFlags>::type const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "std::underlying_type<NodeFlags>::type const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "std::underlying_type<NodeFlags>::type",
+								"kind": "user_defined",
+								"target": {
+									"name": "std::underlying_type<NodeFlags>::type"
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_fullName": "r",
+					"_kind": "function parameter",
+					"_name": "r",
+					"id": 643963725,
+					"kind": "function parameter",
+					"name": "r",
+					"type": {
+						"_typeName": "stappler::xenolith::NodeFlags const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::xenolith::NodeFlags const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::xenolith::NodeFlags",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::NodeFlags",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::NodeFlags",
+										"_kind": "enum",
+										"_name": "NodeFlags",
+										"has_explicit_type": false,
+										"id": 1096610839,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "NodeFlags",
+										"scope": {
+											"name": "NodeFlags"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "bool",
+					"builtin_type_kind": "bool",
+					"kind": "builtin"
+				},
+				"semantic_scope": "",
+				"signature": "(std::underlying_type<NodeFlags>::type const&,stappler::xenolith::NodeFlags const&)"
+			}, {
+				"_fullName": "::stappler::xenolith::operator~(stappler::xenolith::NodeFlags const&)",
+				"_kind": "function",
+				"_name": "operator~",
+				"body_kind": "definition",
+				"id": 2633660634,
+				"is_consteval": false,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "operator~",
+				"parameters": [{
+					"_fullName": "t",
+					"_kind": "function parameter",
+					"_name": "t",
+					"id": 4086942996,
+					"kind": "function parameter",
+					"name": "t",
+					"type": {
+						"_typeName": "stappler::xenolith::NodeFlags const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::xenolith::NodeFlags const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::xenolith::NodeFlags",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::NodeFlags",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::NodeFlags",
+										"_kind": "enum",
+										"_name": "NodeFlags",
+										"has_explicit_type": false,
+										"id": 1096610839,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "NodeFlags",
+										"scope": {
+											"name": "NodeFlags"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "stappler::xenolith::NodeFlags",
+					"kind": "user_defined",
+					"target": {
+						"name": "stappler::xenolith::NodeFlags",
+						"objects": [{
+							"_fullName": "::stappler::xenolith::NodeFlags",
+							"_kind": "enum",
+							"_name": "NodeFlags",
+							"has_explicit_type": false,
+							"id": 1096610839,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_scoped": true,
+							"kind": "enum",
+							"name": "NodeFlags",
+							"scope": {
+								"name": "NodeFlags"
+							},
+							"semantic_scope": "",
+							"underlying_type": {
+								"_typeName": "int",
+								"builtin_type_kind": "int",
+								"kind": "builtin"
+							}
+						}]
+					}
+				},
+				"semantic_scope": "",
+				"signature": "(stappler::xenolith::NodeFlags const&)"
+			}, {
+				"_fullName": "::stappler::xenolith::CommandFlags",
+				"_kind": "enum",
+				"_name": "CommandFlags",
+				"childs": [{
+					"_fullName": "::stappler::xenolith::CommandFlags::None",
+					"_kind": "enum value",
+					"_name": "None",
+					"id": 3245868366,
+					"kind": "enum value",
+					"name": "None"
+				}, {
+					"_fullName": "::stappler::xenolith::CommandFlags::DoNotCount",
+					"_kind": "enum value",
+					"_name": "DoNotCount",
+					"id": 3307706022,
+					"kind": "enum value",
+					"name": "DoNotCount",
+					"value": {
+						"expression": [{
+							"kind": "int_literal",
+							"spelling": "1"
+						}, {
+							"kind": "punctuation",
+							"spelling": "<<"
+						}, {
+							"kind": "int_literal",
+							"spelling": "0"
+						}],
+						"kind": "unexposed",
+						"type": {
+							"_typeName": "uint16_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "uint16_t"
+							}
+						}
+					}
+				}],
+				"has_explicit_type": true,
+				"id": 2716897368,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_scoped": true,
+				"kind": "enum",
+				"name": "CommandFlags",
+				"scope": {
+					"name": "CommandFlags"
+				},
+				"semantic_scope": "",
+				"underlying_type": {
+					"_typeName": "uint16_t",
+					"kind": "user_defined",
+					"target": {
+						"name": "uint16_t"
+					}
+				}
+			}, {
+				"_fullName": "::stappler::xenolith::operator|(stappler::xenolith::CommandFlags const&,stappler::xenolith::CommandFlags const&)",
+				"_kind": "function",
+				"_name": "operator|",
+				"body_kind": "definition",
+				"id": 1307338180,
+				"is_consteval": false,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "operator|",
+				"parameters": [{
+					"_fullName": "l",
+					"_kind": "function parameter",
+					"_name": "l",
+					"id": 2049515854,
+					"kind": "function parameter",
+					"name": "l",
+					"type": {
+						"_typeName": "stappler::xenolith::CommandFlags const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::xenolith::CommandFlags const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::xenolith::CommandFlags",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::CommandFlags",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::CommandFlags",
+										"_kind": "enum",
+										"_name": "CommandFlags",
+										"has_explicit_type": true,
+										"id": 2716897368,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "CommandFlags",
+										"scope": {
+											"name": "CommandFlags"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "uint16_t",
+											"kind": "user_defined",
+											"target": {
+												"name": "uint16_t"
+											}
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_fullName": "r",
+					"_kind": "function parameter",
+					"_name": "r",
+					"id": 643963725,
+					"kind": "function parameter",
+					"name": "r",
+					"type": {
+						"_typeName": "stappler::xenolith::CommandFlags const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::xenolith::CommandFlags const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::xenolith::CommandFlags",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::CommandFlags",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::CommandFlags",
+										"_kind": "enum",
+										"_name": "CommandFlags",
+										"has_explicit_type": true,
+										"id": 2716897368,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "CommandFlags",
+										"scope": {
+											"name": "CommandFlags"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "uint16_t",
+											"kind": "user_defined",
+											"target": {
+												"name": "uint16_t"
+											}
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "stappler::xenolith::CommandFlags",
+					"kind": "user_defined",
+					"target": {
+						"name": "stappler::xenolith::CommandFlags",
+						"objects": [{
+							"_fullName": "::stappler::xenolith::CommandFlags",
+							"_kind": "enum",
+							"_name": "CommandFlags",
+							"has_explicit_type": true,
+							"id": 2716897368,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_scoped": true,
+							"kind": "enum",
+							"name": "CommandFlags",
+							"scope": {
+								"name": "CommandFlags"
+							},
+							"semantic_scope": "",
+							"underlying_type": {
+								"_typeName": "uint16_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "uint16_t"
+								}
+							}
+						}]
+					}
+				},
+				"semantic_scope": "",
+				"signature": "(stappler::xenolith::CommandFlags const&,stappler::xenolith::CommandFlags const&)"
+			}, {
+				"_fullName": "::stappler::xenolith::operator&(stappler::xenolith::CommandFlags const&,stappler::xenolith::CommandFlags const&)",
+				"_kind": "function",
+				"_name": "operator&",
+				"body_kind": "definition",
+				"id": 3804843610,
+				"is_consteval": false,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "operator&",
+				"parameters": [{
+					"_fullName": "l",
+					"_kind": "function parameter",
+					"_name": "l",
+					"id": 2049515854,
+					"kind": "function parameter",
+					"name": "l",
+					"type": {
+						"_typeName": "stappler::xenolith::CommandFlags const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::xenolith::CommandFlags const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::xenolith::CommandFlags",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::CommandFlags",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::CommandFlags",
+										"_kind": "enum",
+										"_name": "CommandFlags",
+										"has_explicit_type": true,
+										"id": 2716897368,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "CommandFlags",
+										"scope": {
+											"name": "CommandFlags"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "uint16_t",
+											"kind": "user_defined",
+											"target": {
+												"name": "uint16_t"
+											}
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_fullName": "r",
+					"_kind": "function parameter",
+					"_name": "r",
+					"id": 643963725,
+					"kind": "function parameter",
+					"name": "r",
+					"type": {
+						"_typeName": "stappler::xenolith::CommandFlags const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::xenolith::CommandFlags const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::xenolith::CommandFlags",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::CommandFlags",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::CommandFlags",
+										"_kind": "enum",
+										"_name": "CommandFlags",
+										"has_explicit_type": true,
+										"id": 2716897368,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "CommandFlags",
+										"scope": {
+											"name": "CommandFlags"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "uint16_t",
+											"kind": "user_defined",
+											"target": {
+												"name": "uint16_t"
+											}
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "stappler::xenolith::CommandFlags",
+					"kind": "user_defined",
+					"target": {
+						"name": "stappler::xenolith::CommandFlags",
+						"objects": [{
+							"_fullName": "::stappler::xenolith::CommandFlags",
+							"_kind": "enum",
+							"_name": "CommandFlags",
+							"has_explicit_type": true,
+							"id": 2716897368,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_scoped": true,
+							"kind": "enum",
+							"name": "CommandFlags",
+							"scope": {
+								"name": "CommandFlags"
+							},
+							"semantic_scope": "",
+							"underlying_type": {
+								"_typeName": "uint16_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "uint16_t"
+								}
+							}
+						}]
+					}
+				},
+				"semantic_scope": "",
+				"signature": "(stappler::xenolith::CommandFlags const&,stappler::xenolith::CommandFlags const&)"
+			}, {
+				"_fullName": "::stappler::xenolith::operator^(stappler::xenolith::CommandFlags const&,stappler::xenolith::CommandFlags const&)",
+				"_kind": "function",
+				"_name": "operator^",
+				"body_kind": "definition",
+				"id": 3671057482,
+				"is_consteval": false,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "operator^",
+				"parameters": [{
+					"_fullName": "l",
+					"_kind": "function parameter",
+					"_name": "l",
+					"id": 2049515854,
+					"kind": "function parameter",
+					"name": "l",
+					"type": {
+						"_typeName": "stappler::xenolith::CommandFlags const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::xenolith::CommandFlags const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::xenolith::CommandFlags",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::CommandFlags",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::CommandFlags",
+										"_kind": "enum",
+										"_name": "CommandFlags",
+										"has_explicit_type": true,
+										"id": 2716897368,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "CommandFlags",
+										"scope": {
+											"name": "CommandFlags"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "uint16_t",
+											"kind": "user_defined",
+											"target": {
+												"name": "uint16_t"
+											}
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_fullName": "r",
+					"_kind": "function parameter",
+					"_name": "r",
+					"id": 643963725,
+					"kind": "function parameter",
+					"name": "r",
+					"type": {
+						"_typeName": "stappler::xenolith::CommandFlags const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::xenolith::CommandFlags const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::xenolith::CommandFlags",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::CommandFlags",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::CommandFlags",
+										"_kind": "enum",
+										"_name": "CommandFlags",
+										"has_explicit_type": true,
+										"id": 2716897368,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "CommandFlags",
+										"scope": {
+											"name": "CommandFlags"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "uint16_t",
+											"kind": "user_defined",
+											"target": {
+												"name": "uint16_t"
+											}
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "stappler::xenolith::CommandFlags",
+					"kind": "user_defined",
+					"target": {
+						"name": "stappler::xenolith::CommandFlags",
+						"objects": [{
+							"_fullName": "::stappler::xenolith::CommandFlags",
+							"_kind": "enum",
+							"_name": "CommandFlags",
+							"has_explicit_type": true,
+							"id": 2716897368,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_scoped": true,
+							"kind": "enum",
+							"name": "CommandFlags",
+							"scope": {
+								"name": "CommandFlags"
+							},
+							"semantic_scope": "",
+							"underlying_type": {
+								"_typeName": "uint16_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "uint16_t"
+								}
+							}
+						}]
+					}
+				},
+				"semantic_scope": "",
+				"signature": "(stappler::xenolith::CommandFlags const&,stappler::xenolith::CommandFlags const&)"
+			}, {
+				"_fullName": "::stappler::xenolith::operator|=(stappler::xenolith::CommandFlags&,stappler::xenolith::CommandFlags const&)",
+				"_kind": "function",
+				"_name": "operator|=",
+				"body_kind": "definition",
+				"id": 956426059,
+				"is_consteval": false,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "operator|=",
+				"parameters": [{
+					"_fullName": "l",
+					"_kind": "function parameter",
+					"_name": "l",
+					"id": 2049515854,
+					"kind": "function parameter",
+					"name": "l",
+					"type": {
+						"_typeName": "stappler::xenolith::CommandFlags&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::xenolith::CommandFlags",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::xenolith::CommandFlags",
+								"objects": [{
+									"_fullName": "::stappler::xenolith::CommandFlags",
+									"_kind": "enum",
+									"_name": "CommandFlags",
+									"has_explicit_type": true,
+									"id": 2716897368,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_scoped": true,
+									"kind": "enum",
+									"name": "CommandFlags",
+									"scope": {
+										"name": "CommandFlags"
+									},
+									"semantic_scope": "",
+									"underlying_type": {
+										"_typeName": "uint16_t",
+										"kind": "user_defined",
+										"target": {
+											"name": "uint16_t"
+										}
+									}
+								}]
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_fullName": "r",
+					"_kind": "function parameter",
+					"_name": "r",
+					"id": 643963725,
+					"kind": "function parameter",
+					"name": "r",
+					"type": {
+						"_typeName": "stappler::xenolith::CommandFlags const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::xenolith::CommandFlags const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::xenolith::CommandFlags",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::CommandFlags",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::CommandFlags",
+										"_kind": "enum",
+										"_name": "CommandFlags",
+										"has_explicit_type": true,
+										"id": 2716897368,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "CommandFlags",
+										"scope": {
+											"name": "CommandFlags"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "uint16_t",
+											"kind": "user_defined",
+											"target": {
+												"name": "uint16_t"
+											}
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "stappler::xenolith::CommandFlags&",
+					"kind": "reference",
+					"referee": {
+						"_typeName": "stappler::xenolith::CommandFlags",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::xenolith::CommandFlags",
+							"objects": [{
+								"_fullName": "::stappler::xenolith::CommandFlags",
+								"_kind": "enum",
+								"_name": "CommandFlags",
+								"has_explicit_type": true,
+								"id": 2716897368,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_scoped": true,
+								"kind": "enum",
+								"name": "CommandFlags",
+								"scope": {
+									"name": "CommandFlags"
+								},
+								"semantic_scope": "",
+								"underlying_type": {
+									"_typeName": "uint16_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "uint16_t"
+									}
+								}
+							}]
+						}
+					},
+					"reference_kind": "lvalue"
+				},
+				"semantic_scope": "",
+				"signature": "(stappler::xenolith::CommandFlags&,stappler::xenolith::CommandFlags const&)"
+			}, {
+				"_fullName": "::stappler::xenolith::operator&=(stappler::xenolith::CommandFlags&,stappler::xenolith::CommandFlags const&)",
+				"_kind": "function",
+				"_name": "operator&=",
+				"body_kind": "definition",
+				"id": 2619905066,
+				"is_consteval": false,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "operator&=",
+				"parameters": [{
+					"_fullName": "l",
+					"_kind": "function parameter",
+					"_name": "l",
+					"id": 2049515854,
+					"kind": "function parameter",
+					"name": "l",
+					"type": {
+						"_typeName": "stappler::xenolith::CommandFlags&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::xenolith::CommandFlags",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::xenolith::CommandFlags",
+								"objects": [{
+									"_fullName": "::stappler::xenolith::CommandFlags",
+									"_kind": "enum",
+									"_name": "CommandFlags",
+									"has_explicit_type": true,
+									"id": 2716897368,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_scoped": true,
+									"kind": "enum",
+									"name": "CommandFlags",
+									"scope": {
+										"name": "CommandFlags"
+									},
+									"semantic_scope": "",
+									"underlying_type": {
+										"_typeName": "uint16_t",
+										"kind": "user_defined",
+										"target": {
+											"name": "uint16_t"
+										}
+									}
+								}]
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_fullName": "r",
+					"_kind": "function parameter",
+					"_name": "r",
+					"id": 643963725,
+					"kind": "function parameter",
+					"name": "r",
+					"type": {
+						"_typeName": "stappler::xenolith::CommandFlags const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::xenolith::CommandFlags const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::xenolith::CommandFlags",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::CommandFlags",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::CommandFlags",
+										"_kind": "enum",
+										"_name": "CommandFlags",
+										"has_explicit_type": true,
+										"id": 2716897368,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "CommandFlags",
+										"scope": {
+											"name": "CommandFlags"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "uint16_t",
+											"kind": "user_defined",
+											"target": {
+												"name": "uint16_t"
+											}
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "stappler::xenolith::CommandFlags&",
+					"kind": "reference",
+					"referee": {
+						"_typeName": "stappler::xenolith::CommandFlags",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::xenolith::CommandFlags",
+							"objects": [{
+								"_fullName": "::stappler::xenolith::CommandFlags",
+								"_kind": "enum",
+								"_name": "CommandFlags",
+								"has_explicit_type": true,
+								"id": 2716897368,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_scoped": true,
+								"kind": "enum",
+								"name": "CommandFlags",
+								"scope": {
+									"name": "CommandFlags"
+								},
+								"semantic_scope": "",
+								"underlying_type": {
+									"_typeName": "uint16_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "uint16_t"
+									}
+								}
+							}]
+						}
+					},
+					"reference_kind": "lvalue"
+				},
+				"semantic_scope": "",
+				"signature": "(stappler::xenolith::CommandFlags&,stappler::xenolith::CommandFlags const&)"
+			}, {
+				"_fullName": "::stappler::xenolith::operator^=(stappler::xenolith::CommandFlags&,stappler::xenolith::CommandFlags const&)",
+				"_kind": "function",
+				"_name": "operator^=",
+				"body_kind": "definition",
+				"id": 3054914256,
+				"is_consteval": false,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "operator^=",
+				"parameters": [{
+					"_fullName": "l",
+					"_kind": "function parameter",
+					"_name": "l",
+					"id": 2049515854,
+					"kind": "function parameter",
+					"name": "l",
+					"type": {
+						"_typeName": "stappler::xenolith::CommandFlags&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::xenolith::CommandFlags",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::xenolith::CommandFlags",
+								"objects": [{
+									"_fullName": "::stappler::xenolith::CommandFlags",
+									"_kind": "enum",
+									"_name": "CommandFlags",
+									"has_explicit_type": true,
+									"id": 2716897368,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_scoped": true,
+									"kind": "enum",
+									"name": "CommandFlags",
+									"scope": {
+										"name": "CommandFlags"
+									},
+									"semantic_scope": "",
+									"underlying_type": {
+										"_typeName": "uint16_t",
+										"kind": "user_defined",
+										"target": {
+											"name": "uint16_t"
+										}
+									}
+								}]
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_fullName": "r",
+					"_kind": "function parameter",
+					"_name": "r",
+					"id": 643963725,
+					"kind": "function parameter",
+					"name": "r",
+					"type": {
+						"_typeName": "stappler::xenolith::CommandFlags const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::xenolith::CommandFlags const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::xenolith::CommandFlags",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::CommandFlags",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::CommandFlags",
+										"_kind": "enum",
+										"_name": "CommandFlags",
+										"has_explicit_type": true,
+										"id": 2716897368,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "CommandFlags",
+										"scope": {
+											"name": "CommandFlags"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "uint16_t",
+											"kind": "user_defined",
+											"target": {
+												"name": "uint16_t"
+											}
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "stappler::xenolith::CommandFlags&",
+					"kind": "reference",
+					"referee": {
+						"_typeName": "stappler::xenolith::CommandFlags",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::xenolith::CommandFlags",
+							"objects": [{
+								"_fullName": "::stappler::xenolith::CommandFlags",
+								"_kind": "enum",
+								"_name": "CommandFlags",
+								"has_explicit_type": true,
+								"id": 2716897368,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_scoped": true,
+								"kind": "enum",
+								"name": "CommandFlags",
+								"scope": {
+									"name": "CommandFlags"
+								},
+								"semantic_scope": "",
+								"underlying_type": {
+									"_typeName": "uint16_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "uint16_t"
+									}
+								}
+							}]
+						}
+					},
+					"reference_kind": "lvalue"
+				},
+				"semantic_scope": "",
+				"signature": "(stappler::xenolith::CommandFlags&,stappler::xenolith::CommandFlags const&)"
+			}, {
+				"_fullName": "::stappler::xenolith::operator==(stappler::xenolith::CommandFlags const&,std::underlying_type<CommandFlags>::type const&)",
+				"_kind": "function",
+				"_name": "operator==",
+				"body_kind": "definition",
+				"id": 95545575,
+				"is_consteval": false,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "operator==",
+				"parameters": [{
+					"_fullName": "l",
+					"_kind": "function parameter",
+					"_name": "l",
+					"id": 2049515854,
+					"kind": "function parameter",
+					"name": "l",
+					"type": {
+						"_typeName": "stappler::xenolith::CommandFlags const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::xenolith::CommandFlags const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::xenolith::CommandFlags",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::CommandFlags",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::CommandFlags",
+										"_kind": "enum",
+										"_name": "CommandFlags",
+										"has_explicit_type": true,
+										"id": 2716897368,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "CommandFlags",
+										"scope": {
+											"name": "CommandFlags"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "uint16_t",
+											"kind": "user_defined",
+											"target": {
+												"name": "uint16_t"
+											}
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_fullName": "r",
+					"_kind": "function parameter",
+					"_name": "r",
+					"id": 643963725,
+					"kind": "function parameter",
+					"name": "r",
+					"type": {
+						"_typeName": "std::underlying_type<CommandFlags>::type const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "std::underlying_type<CommandFlags>::type const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "std::underlying_type<CommandFlags>::type",
+								"kind": "user_defined",
+								"target": {
+									"name": "std::underlying_type<CommandFlags>::type"
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "bool",
+					"builtin_type_kind": "bool",
+					"kind": "builtin"
+				},
+				"semantic_scope": "",
+				"signature": "(stappler::xenolith::CommandFlags const&,std::underlying_type<CommandFlags>::type const&)"
+			}, {
+				"_fullName": "::stappler::xenolith::operator==(std::underlying_type<CommandFlags>::type const&,stappler::xenolith::CommandFlags const&)",
+				"_kind": "function",
+				"_name": "operator==",
+				"body_kind": "definition",
+				"id": 1615483617,
+				"is_consteval": false,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "operator==",
+				"parameters": [{
+					"_fullName": "l",
+					"_kind": "function parameter",
+					"_name": "l",
+					"id": 2049515854,
+					"kind": "function parameter",
+					"name": "l",
+					"type": {
+						"_typeName": "std::underlying_type<CommandFlags>::type const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "std::underlying_type<CommandFlags>::type const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "std::underlying_type<CommandFlags>::type",
+								"kind": "user_defined",
+								"target": {
+									"name": "std::underlying_type<CommandFlags>::type"
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_fullName": "r",
+					"_kind": "function parameter",
+					"_name": "r",
+					"id": 643963725,
+					"kind": "function parameter",
+					"name": "r",
+					"type": {
+						"_typeName": "stappler::xenolith::CommandFlags const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::xenolith::CommandFlags const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::xenolith::CommandFlags",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::CommandFlags",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::CommandFlags",
+										"_kind": "enum",
+										"_name": "CommandFlags",
+										"has_explicit_type": true,
+										"id": 2716897368,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "CommandFlags",
+										"scope": {
+											"name": "CommandFlags"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "uint16_t",
+											"kind": "user_defined",
+											"target": {
+												"name": "uint16_t"
+											}
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "bool",
+					"builtin_type_kind": "bool",
+					"kind": "builtin"
+				},
+				"semantic_scope": "",
+				"signature": "(std::underlying_type<CommandFlags>::type const&,stappler::xenolith::CommandFlags const&)"
+			}, {
+				"_fullName": "::stappler::xenolith::operator!=(stappler::xenolith::CommandFlags const&,std::underlying_type<CommandFlags>::type const&)",
+				"_kind": "function",
+				"_name": "operator!=",
+				"body_kind": "definition",
+				"id": 3057761467,
+				"is_consteval": false,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "operator!=",
+				"parameters": [{
+					"_fullName": "l",
+					"_kind": "function parameter",
+					"_name": "l",
+					"id": 2049515854,
+					"kind": "function parameter",
+					"name": "l",
+					"type": {
+						"_typeName": "stappler::xenolith::CommandFlags const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::xenolith::CommandFlags const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::xenolith::CommandFlags",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::CommandFlags",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::CommandFlags",
+										"_kind": "enum",
+										"_name": "CommandFlags",
+										"has_explicit_type": true,
+										"id": 2716897368,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "CommandFlags",
+										"scope": {
+											"name": "CommandFlags"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "uint16_t",
+											"kind": "user_defined",
+											"target": {
+												"name": "uint16_t"
+											}
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_fullName": "r",
+					"_kind": "function parameter",
+					"_name": "r",
+					"id": 643963725,
+					"kind": "function parameter",
+					"name": "r",
+					"type": {
+						"_typeName": "std::underlying_type<CommandFlags>::type const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "std::underlying_type<CommandFlags>::type const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "std::underlying_type<CommandFlags>::type",
+								"kind": "user_defined",
+								"target": {
+									"name": "std::underlying_type<CommandFlags>::type"
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "bool",
+					"builtin_type_kind": "bool",
+					"kind": "builtin"
+				},
+				"semantic_scope": "",
+				"signature": "(stappler::xenolith::CommandFlags const&,std::underlying_type<CommandFlags>::type const&)"
+			}, {
+				"_fullName": "::stappler::xenolith::operator!=(std::underlying_type<CommandFlags>::type const&,stappler::xenolith::CommandFlags const&)",
+				"_kind": "function",
+				"_name": "operator!=",
+				"body_kind": "definition",
+				"id": 1361269119,
+				"is_consteval": false,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "operator!=",
+				"parameters": [{
+					"_fullName": "l",
+					"_kind": "function parameter",
+					"_name": "l",
+					"id": 2049515854,
+					"kind": "function parameter",
+					"name": "l",
+					"type": {
+						"_typeName": "std::underlying_type<CommandFlags>::type const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "std::underlying_type<CommandFlags>::type const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "std::underlying_type<CommandFlags>::type",
+								"kind": "user_defined",
+								"target": {
+									"name": "std::underlying_type<CommandFlags>::type"
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_fullName": "r",
+					"_kind": "function parameter",
+					"_name": "r",
+					"id": 643963725,
+					"kind": "function parameter",
+					"name": "r",
+					"type": {
+						"_typeName": "stappler::xenolith::CommandFlags const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::xenolith::CommandFlags const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::xenolith::CommandFlags",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::CommandFlags",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::CommandFlags",
+										"_kind": "enum",
+										"_name": "CommandFlags",
+										"has_explicit_type": true,
+										"id": 2716897368,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "CommandFlags",
+										"scope": {
+											"name": "CommandFlags"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "uint16_t",
+											"kind": "user_defined",
+											"target": {
+												"name": "uint16_t"
+											}
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "bool",
+					"builtin_type_kind": "bool",
+					"kind": "builtin"
+				},
+				"semantic_scope": "",
+				"signature": "(std::underlying_type<CommandFlags>::type const&,stappler::xenolith::CommandFlags const&)"
+			}, {
+				"_fullName": "::stappler::xenolith::operator~(stappler::xenolith::CommandFlags const&)",
+				"_kind": "function",
+				"_name": "operator~",
+				"body_kind": "definition",
+				"id": 1949002101,
+				"is_consteval": false,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "operator~",
+				"parameters": [{
+					"_fullName": "t",
+					"_kind": "function parameter",
+					"_name": "t",
+					"id": 4086942996,
+					"kind": "function parameter",
+					"name": "t",
+					"type": {
+						"_typeName": "stappler::xenolith::CommandFlags const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::xenolith::CommandFlags const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::xenolith::CommandFlags",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::CommandFlags",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::CommandFlags",
+										"_kind": "enum",
+										"_name": "CommandFlags",
+										"has_explicit_type": true,
+										"id": 2716897368,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "CommandFlags",
+										"scope": {
+											"name": "CommandFlags"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "uint16_t",
+											"kind": "user_defined",
+											"target": {
+												"name": "uint16_t"
+											}
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "stappler::xenolith::CommandFlags",
+					"kind": "user_defined",
+					"target": {
+						"name": "stappler::xenolith::CommandFlags",
+						"objects": [{
+							"_fullName": "::stappler::xenolith::CommandFlags",
+							"_kind": "enum",
+							"_name": "CommandFlags",
+							"has_explicit_type": true,
+							"id": 2716897368,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_scoped": true,
+							"kind": "enum",
+							"name": "CommandFlags",
+							"scope": {
+								"name": "CommandFlags"
+							},
+							"semantic_scope": "",
+							"underlying_type": {
+								"_typeName": "uint16_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "uint16_t"
+								}
+							}
+						}]
+					}
+				},
+				"semantic_scope": "",
+				"signature": "(stappler::xenolith::CommandFlags const&)"
+			}, {
+				"_fullName": "::stappler::xenolith::MaterialInfo",
+				"_kind": "class",
+				"_name": "MaterialInfo",
+				"childs": [{
+					"_fullName": "::stappler::xenolith::MaterialInfo::images",
+					"_kind": "member variable",
+					"_name": "images",
+					"default_value": {
+						"expression": [{
+							"kind": "punctuation",
+							"spelling": "{"
+						}, {
+							"kind": "int_literal",
+							"spelling": "0"
+						}, {
+							"kind": "punctuation",
+							"spelling": "}"
+						}],
+						"kind": "unexposed",
+						"type": {
+							"_typeName": "std::array<uint64_t, config::MaxMaterialImages>",
+							"arguments_exposed": false,
+							"kind": "template_instantiation",
+							"primary_template": {
+								"name": "std::array"
+							},
+							"unexposed_arguments": "uint64_t, config::MaxMaterialImages"
+						}
+					},
+					"id": 3491202741,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "images",
+					"type": {
+						"_typeName": "std::array<uint64_t, config::MaxMaterialImages>",
+						"arguments_exposed": false,
+						"kind": "template_instantiation",
+						"primary_template": {
+							"name": "std::array"
+						},
+						"unexposed_arguments": "uint64_t, config::MaxMaterialImages"
+					}
+				}, {
+					"_fullName": "::stappler::xenolith::MaterialInfo::samplers",
+					"_kind": "member variable",
+					"_name": "samplers",
+					"default_value": {
+						"expression": [{
+							"kind": "punctuation",
+							"spelling": "{"
+						}, {
+							"kind": "int_literal",
+							"spelling": "0"
+						}, {
+							"kind": "punctuation",
+							"spelling": "}"
+						}],
+						"kind": "unexposed",
+						"type": {
+							"_typeName": "std::array<uint16_t, config::MaxMaterialImages>",
+							"arguments_exposed": false,
+							"kind": "template_instantiation",
+							"primary_template": {
+								"name": "std::array"
+							},
+							"unexposed_arguments": "uint16_t, config::MaxMaterialImages"
+						}
+					},
+					"id": 2747079268,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "samplers",
+					"type": {
+						"_typeName": "std::array<uint16_t, config::MaxMaterialImages>",
+						"arguments_exposed": false,
+						"kind": "template_instantiation",
+						"primary_template": {
+							"name": "std::array"
+						},
+						"unexposed_arguments": "uint16_t, config::MaxMaterialImages"
+					}
+				}, {
+					"_fullName": "::stappler::xenolith::MaterialInfo::colorModes",
+					"_kind": "member variable",
+					"_name": "colorModes",
+					"default_value": {
+						"expression": [{
+							"kind": "punctuation",
+							"spelling": "{"
+						}, {
+							"kind": "identifier",
+							"spelling": "core"
+						}, {
+							"kind": "punctuation",
+							"spelling": "::"
+						}, {
+							"kind": "identifier",
+							"spelling": "ColorMode"
+						}, {
+							"kind": "punctuation",
+							"spelling": "("
+						}, {
+							"kind": "punctuation",
+							"spelling": ")"
+						}, {
+							"kind": "punctuation",
+							"spelling": "}"
+						}],
+						"kind": "unexposed",
+						"type": {
+							"_typeName": "std::array<core::ColorMode, config::MaxMaterialImages>",
+							"arguments_exposed": false,
+							"kind": "template_instantiation",
+							"primary_template": {
+								"name": "std::array"
+							},
+							"unexposed_arguments": "core::ColorMode, config::MaxMaterialImages"
+						}
+					},
+					"id": 1797181923,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "colorModes",
+					"type": {
+						"_typeName": "std::array<core::ColorMode, config::MaxMaterialImages>",
+						"arguments_exposed": false,
+						"kind": "template_instantiation",
+						"primary_template": {
+							"name": "std::array"
+						},
+						"unexposed_arguments": "core::ColorMode, config::MaxMaterialImages"
+					}
+				}, {
+					"_fullName": "::stappler::xenolith::MaterialInfo::pipeline",
+					"_kind": "member variable",
+					"_name": "pipeline",
+					"id": 1284335742,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "pipeline",
+					"type": {
+						"_typeName": "core::PipelineMaterialInfo",
+						"kind": "user_defined",
+						"target": {
+							"name": "core::PipelineMaterialInfo",
+							"objects": [{
+								"_fullName": "::stappler::xenolith::core::PipelineMaterialInfo",
+								"_kind": "class",
+								"_name": "PipelineMaterialInfo",
+								"class_kind": "class",
+								"id": 2399418346,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_final": false,
+								"kind": "class",
+								"name": "PipelineMaterialInfo",
+								"scope": {
+									"name": "PipelineMaterialInfo"
+								},
+								"semantic_scope": ""
+							}]
+						}
+					}
+				}, {
+					"_fullName": "::stappler::xenolith::MaterialInfo::hash() const",
+					"_kind": "member function",
+					"_name": "hash",
+					"body_kind": "definition",
+					"cv_qualifier": "const",
+					"id": 3786194493,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "hash",
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "uint64_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "uint64_t"
+						}
+					},
+					"semantic_scope": "",
+					"signature": "() const"
+				}, {
+					"_fullName": "::stappler::xenolith::MaterialInfo::description() const",
+					"_kind": "member function",
+					"_name": "description",
+					"body_kind": "declaration",
+					"cv_qualifier": "const",
+					"id": 371047779,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "description",
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "stappler::mem_std::String",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::mem_std::String",
+							"objects": [{
+								"_fullName": "::stappler::mem_std::String",
+								"_kind": "type alias",
+								"_name": "String",
+								"id": 3385475468,
+								"kind": "type alias",
+								"name": "String",
+								"underlying_type": {
+									"_typeName": "std::string",
+									"kind": "user_defined",
+									"target": {
+										"name": "std::string"
+									}
+								}
+							}]
+						}
+					},
+					"semantic_scope": "",
+					"signature": "() const"
+				}, {
+					"_fullName": "::stappler::xenolith::MaterialInfo::operator==(stappler::xenolith::MaterialInfo const&) const",
+					"_kind": "member function",
+					"_name": "operator==",
+					"body_kind": "defaulted",
+					"cv_qualifier": "const",
+					"id": 1298866944,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "operator==",
+					"parameters": [{
+						"_fullName": "info",
+						"_kind": "function parameter",
+						"_name": "info",
+						"id": 1022149591,
+						"kind": "function parameter",
+						"name": "info",
+						"type": {
+							"_typeName": "stappler::xenolith::MaterialInfo const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::xenolith::MaterialInfo const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::xenolith::MaterialInfo",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::xenolith::MaterialInfo",
+										"objects": [{
+											"_fullName": "::stappler::xenolith::MaterialInfo",
+											"_kind": "class",
+											"_name": "MaterialInfo",
+											"class_kind": "struct",
+											"id": 2729705837,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "MaterialInfo",
+											"scope": {
+												"name": "MaterialInfo"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::xenolith::MaterialInfo const&) const"
+				}, {
+					"_fullName": "::stappler::xenolith::MaterialInfo::operator!=(stappler::xenolith::MaterialInfo const&) const",
+					"_kind": "member function",
+					"_name": "operator!=",
+					"body_kind": "defaulted",
+					"cv_qualifier": "const",
+					"id": 2056764152,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "operator!=",
+					"parameters": [{
+						"_fullName": "info",
+						"_kind": "function parameter",
+						"_name": "info",
+						"id": 1022149591,
+						"kind": "function parameter",
+						"name": "info",
+						"type": {
+							"_typeName": "stappler::xenolith::MaterialInfo const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::xenolith::MaterialInfo const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::xenolith::MaterialInfo",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::xenolith::MaterialInfo",
+										"objects": [{
+											"_fullName": "::stappler::xenolith::MaterialInfo",
+											"_kind": "class",
+											"_name": "MaterialInfo",
+											"class_kind": "struct",
+											"id": 2729705837,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "MaterialInfo",
+											"scope": {
+												"name": "MaterialInfo"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::xenolith::MaterialInfo const&) const"
+				}, {
+					"_fullName": "::stappler::xenolith::MaterialInfo::hasImage(uint64_t) const",
+					"_kind": "member function",
+					"_name": "hasImage",
+					"body_kind": "declaration",
+					"cv_qualifier": "const",
+					"id": 3652940176,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "hasImage",
+					"parameters": [{
+						"_fullName": "id",
+						"_kind": "function parameter",
+						"_name": "id",
+						"id": 3922346207,
+						"kind": "function parameter",
+						"name": "id",
+						"type": {
+							"_typeName": "uint64_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "uint64_t"
+							}
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(uint64_t) const"
+				}, {
+					"_fullName": "::stappler::xenolith::MaterialInfo::MaterialInfo()",
+					"_kind": "constructor",
+					"_name": "MaterialInfo",
+					"body_kind": "definition",
+					"id": 3615584512,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_explicit": false,
+					"is_variadic": false,
+					"kind": "constructor",
+					"name": "MaterialInfo",
+					"semantic_scope": "",
+					"signature": "()"
+				}],
+				"class_kind": "struct",
+				"id": 2729705837,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_final": false,
+				"kind": "class",
+				"name": "MaterialInfo",
+				"scope": {
+					"name": "MaterialInfo"
+				},
+				"semantic_scope": ""
+			}, {
+				"_fullName": "::stappler::xenolith::ZOrderLess",
+				"_kind": "class",
+				"_name": "ZOrderLess",
+				"childs": [{
+					"_fullName": "::stappler::xenolith::ZOrderLess::operator()(SpanView<stappler::xenolith::ZOrder> const&,SpanView<stappler::xenolith::ZOrder> const&) const",
+					"_kind": "member function",
+					"_name": "operator()",
+					"body_kind": "definition",
+					"cv_qualifier": "const",
+					"id": 3682597144,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "operator()",
+					"noexcept_condition": {
+						"kind": "literal",
+						"type": {
+							"_typeName": "bool",
+							"builtin_type_kind": "bool",
+							"kind": "builtin"
+						},
+						"value": "true"
+					},
+					"parameters":  [{
+						"_fullName": "l",
+						"_kind": "function parameter",
+						"_name": "l",
+						"id": 2049515854,
+						"kind": "function parameter",
+						"name": "l",
+						"type": {
+							"_typeName": "SpanView<stappler::xenolith::ZOrder> const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "SpanView<stappler::xenolith::ZOrder> const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "SpanView<stappler::xenolith::ZOrder>",
+									"arguments_exposed": false,
+									"kind": "template_instantiation",
+									"primary_template": {
+										"name": "SpanView",
+										"objects": [{
+											"_fullName": "::stappler::SpanView<typename>",
+											"_kind": "class template",
+											"_name": "SpanView",
+											"class": {
+												"_fullName": "::stappler::SpanView<typename>",
+												"_kind": "class",
+												"_name": "SpanView",
+												"class_kind": "class",
+												"id": 2371948180,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "SpanView",
+												"scope": {
+													"is_templated": true,
+													"name": "SpanView",
+													"template_parameters": [{
+														"_fullName": "_Type",
+														"_kind": "template type parameter",
+														"_name": "_Type",
+														"id": 1327381061,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "_Type"
+													}]
+												},
+												"semantic_scope": ""
+											},
+											"id": 2371948180,
+											"kind": "class template",
+											"name": "SpanView",
+											"parameters": [{
+												"_fullName": "_Type",
+												"_kind": "template type parameter",
+												"_name": "_Type",
+												"id": 1327381061,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "_Type"
+											}],
+											"scope":  {
+												"is_templated": true,
+												"name": "SpanView",
+												"template_parameters": [{
+													"_fullName": "_Type",
+													"_kind": "template type parameter",
+													"_name": "_Type",
+													"id": 1327381061,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "_Type"
+												}]
+											}
+										}]
+									},
+									"unexposed_arguments": "stappler::xenolith::ZOrder"
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_fullName": "r",
+						"_kind": "function parameter",
+						"_name": "r",
+						"id": 643963725,
+						"kind": "function parameter",
+						"name": "r",
+						"type": {
+							"_typeName": "SpanView<stappler::xenolith::ZOrder> const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "SpanView<stappler::xenolith::ZOrder> const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "SpanView<stappler::xenolith::ZOrder>",
+									"arguments_exposed": false,
+									"kind": "template_instantiation",
+									"primary_template": {
+										"name": "SpanView",
+										"objects": [{
+											"_fullName": "::stappler::SpanView<typename>",
+											"_kind": "class template",
+											"_name": "SpanView",
+											"class": {
+												"_fullName": "::stappler::SpanView<typename>",
+												"_kind": "class",
+												"_name": "SpanView",
+												"class_kind": "class",
+												"id": 2371948180,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "SpanView",
+												"scope": {
+													"is_templated": true,
+													"name": "SpanView",
+													"template_parameters": [{
+														"_fullName": "_Type",
+														"_kind": "template type parameter",
+														"_name": "_Type",
+														"id": 1327381061,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "_Type"
+													}]
+												},
+												"semantic_scope": ""
+											},
+											"id": 2371948180,
+											"kind": "class template",
+											"name": "SpanView",
+											"parameters": [{
+												"_fullName": "_Type",
+												"_kind": "template type parameter",
+												"_name": "_Type",
+												"id": 1327381061,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "_Type"
+											}],
+											"scope":  {
+												"is_templated": true,
+												"name": "SpanView",
+												"template_parameters": [{
+													"_fullName": "_Type",
+													"_kind": "template type parameter",
+													"_name": "_Type",
+													"id": 1327381061,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "_Type"
+												}]
+											}
+										}]
+									},
+									"unexposed_arguments": "stappler::xenolith::ZOrder"
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(SpanView<stappler::xenolith::ZOrder> const&,SpanView<stappler::xenolith::ZOrder> const&) const"
+				}],
+				"class_kind": "struct",
+				"id": 4186019156,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_final": false,
+				"kind": "class",
+				"name": "ZOrderLess",
+				"scope": {
+					"name": "ZOrderLess"
+				},
+				"semantic_scope": ""
+			}, {
+				"_fullName": "::stappler::xenolith::DrawStateValues",
+				"_kind": "class",
+				"_name": "DrawStateValues",
+				"childs": [{
+					"_fullName": "::stappler::xenolith::DrawStateValues::enabled",
+					"_kind": "member variable",
+					"_name": "enabled",
+					"default_value": {
+						"expression": [{
+							"kind": "identifier",
+							"spelling": "core"
+						}, {
+							"kind": "punctuation",
+							"spelling": "::"
+						}, {
+							"kind": "identifier",
+							"spelling": "DynamicState"
+						}, {
+							"kind": "punctuation",
+							"spelling": "::"
+						}, {
+							"kind": "identifier",
+							"spelling": "None"
+						}],
+						"kind": "unexposed",
+						"type": {
+							"_typeName": "core::DynamicState",
+							"kind": "user_defined",
+							"target": {
+								"name": "core::DynamicState",
+								"objects": [{
+									"_fullName": "::stappler::xenolith::core::DynamicState",
+									"_kind": "enum",
+									"_name": "DynamicState",
+									"has_explicit_type": false,
+									"id": 642785997,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_scoped": true,
+									"kind": "enum",
+									"name": "DynamicState",
+									"scope": {
+										"name": "DynamicState"
+									},
+									"semantic_scope": "",
+									"underlying_type": {
+										"_typeName": "int",
+										"builtin_type_kind": "int",
+										"kind": "builtin"
+									}
+								}]
+							}
+						}
+					},
+					"id": 3385824107,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "enabled",
+					"type": {
+						"_typeName": "core::DynamicState",
+						"kind": "user_defined",
+						"target": {
+							"name": "core::DynamicState",
+							"objects": [{
+								"_fullName": "::stappler::xenolith::core::DynamicState",
+								"_kind": "enum",
+								"_name": "DynamicState",
+								"has_explicit_type": false,
+								"id": 642785997,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_scoped": true,
+								"kind": "enum",
+								"name": "DynamicState",
+								"scope": {
+									"name": "DynamicState"
+								},
+								"semantic_scope": "",
+								"underlying_type": {
+									"_typeName": "int",
+									"builtin_type_kind": "int",
+									"kind": "builtin"
+								}
+							}]
+						}
+					}
+				}, {
+					"_fullName": "::stappler::xenolith::DrawStateValues::viewport",
+					"_kind": "member variable",
+					"_name": "viewport",
+					"id": 2535388576,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "viewport",
+					"type": {
+						"_typeName": "stappler::xenolith::URect",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::xenolith::URect",
+							"objects": [{
+								"_fullName": "::stappler::xenolith::URect",
+								"_kind": "type alias",
+								"_name": "URect",
+								"id": 1340224438,
+								"kind": "type alias",
+								"name": "URect",
+								"underlying_type": {
+									"_typeName": "geom::URect",
+									"kind": "user_defined",
+									"target": {
+										"name": "geom::URect",
+										"objects": [{
+											"_fullName": "::stappler::geom::URect",
+											"_kind": "class",
+											"_name": "URect",
+											"class_kind": "struct",
+											"id": 3322474382,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "URect",
+											"scope": {
+												"name": "URect"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							}]
+						}
+					}
+				}, {
+					"_fullName": "::stappler::xenolith::DrawStateValues::scissor",
+					"_kind": "member variable",
+					"_name": "scissor",
+					"id": 60023434,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "scissor",
+					"type": {
+						"_typeName": "stappler::xenolith::URect",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::xenolith::URect",
+							"objects": [{
+								"_fullName": "::stappler::xenolith::URect",
+								"_kind": "type alias",
+								"_name": "URect",
+								"id": 1340224438,
+								"kind": "type alias",
+								"name": "URect",
+								"underlying_type": {
+									"_typeName": "geom::URect",
+									"kind": "user_defined",
+									"target": {
+										"name": "geom::URect",
+										"objects": [{
+											"_fullName": "::stappler::geom::URect",
+											"_kind": "class",
+											"_name": "URect",
+											"class_kind": "struct",
+											"id": 3322474382,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "URect",
+											"scope": {
+												"name": "URect"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							}]
+						}
+					}
+				}, {
+					"_fullName": "::stappler::xenolith::DrawStateValues::operator==(stappler::xenolith::DrawStateValues const&) const",
+					"_kind": "member function",
+					"_name": "operator==",
+					"body_kind": "defaulted",
+					"cv_qualifier": "const",
+					"id": 266210803,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "operator==",
+					"parameters": [{
+						"_fullName": "",
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 46947589,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::xenolith::DrawStateValues const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::xenolith::DrawStateValues const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::xenolith::DrawStateValues",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::xenolith::DrawStateValues",
+										"objects": [{
+											"_fullName": "::stappler::xenolith::DrawStateValues",
+											"_kind": "class",
+											"_name": "DrawStateValues",
+											"class_kind": "struct",
+											"id": 4028357205,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "DrawStateValues",
+											"scope": {
+												"name": "DrawStateValues"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::xenolith::DrawStateValues const&) const"
+				}, {
+					"_fullName": "::stappler::xenolith::DrawStateValues::isScissorEnabled() const",
+					"_kind": "member function",
+					"_name": "isScissorEnabled",
+					"body_kind": "definition",
+					"cv_qualifier": "const",
+					"id": 3782135679,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "isScissorEnabled",
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "() const"
+				}, {
+					"_fullName": "::stappler::xenolith::DrawStateValues::isViewportEnabled() const",
+					"_kind": "member function",
+					"_name": "isViewportEnabled",
+					"body_kind": "definition",
+					"cv_qualifier": "const",
+					"id": 1732484526,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "isViewportEnabled",
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "() const"
+				}],
+				"class_kind": "struct",
+				"id": 4028357205,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_final": false,
+				"kind": "class",
+				"name": "DrawStateValues",
+				"scope": {
+					"name": "DrawStateValues"
+				},
+				"semantic_scope": ""
+			}, {
+				"_fullName": "::stappler::xenolith::DrawStat",
+				"_kind": "class",
+				"_name": "DrawStat",
+				"childs": [{
+					"_fullName": "::stappler::xenolith::DrawStat::vertexes",
+					"_kind": "member variable",
+					"_name": "vertexes",
+					"id": 3347498974,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "vertexes",
+					"type": {
+						"_typeName": "uint32_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "uint32_t"
+						}
+					}
+				}, {
+					"_fullName": "::stappler::xenolith::DrawStat::triangles",
+					"_kind": "member variable",
+					"_name": "triangles",
+					"id": 1112638598,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "triangles",
+					"type": {
+						"_typeName": "uint32_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "uint32_t"
+						}
+					}
+				}, {
+					"_fullName": "::stappler::xenolith::DrawStat::zPaths",
+					"_kind": "member variable",
+					"_name": "zPaths",
+					"id": 3047987160,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "zPaths",
+					"type": {
+						"_typeName": "uint32_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "uint32_t"
+						}
+					}
+				}, {
+					"_fullName": "::stappler::xenolith::DrawStat::drawCalls",
+					"_kind": "member variable",
+					"_name": "drawCalls",
+					"id": 2880222244,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "drawCalls",
+					"type": {
+						"_typeName": "uint32_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "uint32_t"
+						}
+					}
+				}, {
+					"_fullName": "::stappler::xenolith::DrawStat::cachedImages",
+					"_kind": "member variable",
+					"_name": "cachedImages",
+					"id": 2202441340,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "cachedImages",
+					"type": {
+						"_typeName": "uint32_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "uint32_t"
+						}
+					}
+				}, {
+					"_fullName": "::stappler::xenolith::DrawStat::cachedFramebuffers",
+					"_kind": "member variable",
+					"_name": "cachedFramebuffers",
+					"id": 3094540258,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "cachedFramebuffers",
+					"type": {
+						"_typeName": "uint32_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "uint32_t"
+						}
+					}
+				}, {
+					"_fullName": "::stappler::xenolith::DrawStat::cachedImageViews",
+					"_kind": "member variable",
+					"_name": "cachedImageViews",
+					"id": 100709679,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "cachedImageViews",
+					"type": {
+						"_typeName": "uint32_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "uint32_t"
+						}
+					}
+				}, {
+					"_fullName": "::stappler::xenolith::DrawStat::materials",
+					"_kind": "member variable",
+					"_name": "materials",
+					"id": 635031148,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "materials",
+					"type": {
+						"_typeName": "uint32_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "uint32_t"
+						}
+					}
+				}, {
+					"_fullName": "::stappler::xenolith::DrawStat::solidCmds",
+					"_kind": "member variable",
+					"_name": "solidCmds",
+					"id": 2204576017,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "solidCmds",
+					"type": {
+						"_typeName": "uint32_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "uint32_t"
+						}
+					}
+				}, {
+					"_fullName": "::stappler::xenolith::DrawStat::surfaceCmds",
+					"_kind": "member variable",
+					"_name": "surfaceCmds",
+					"id": 3580501960,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "surfaceCmds",
+					"type": {
+						"_typeName": "uint32_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "uint32_t"
+						}
+					}
+				}, {
+					"_fullName": "::stappler::xenolith::DrawStat::transparentCmds",
+					"_kind": "member variable",
+					"_name": "transparentCmds",
+					"id": 525533140,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "transparentCmds",
+					"type": {
+						"_typeName": "uint32_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "uint32_t"
+						}
+					}
+				}, {
+					"_fullName": "::stappler::xenolith::DrawStat::vertexInputTime",
+					"_kind": "member variable",
+					"_name": "vertexInputTime",
+					"id": 3055965175,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "vertexInputTime",
+					"type": {
+						"_typeName": "uint32_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "uint32_t"
+						}
+					}
+				}],
+				"class_kind": "struct",
+				"id": 609481682,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_final": false,
+				"kind": "class",
+				"name": "DrawStat",
+				"scope": {
+					"name": "DrawStat"
+				},
+				"semantic_scope": ""
+			}],
+			"id": 2324754634,
+			"is_anonymous": false,
+			"is_inline": false,
+			"is_nested": true,
+			"kind": "namespace",
+			"name": "xenolith",
+			"scope": {
+				"name": "xenolith"
+			}
+		}],
+		"id": 96045446,
+		"is_anonymous": false,
+		"is_inline": false,
+		"is_nested": false,
+		"kind": "namespace",
+		"name": "stappler",
+		"scope": {
+			"name": "stappler"
+		}
+	}],
+	"id": 1040713723,
+	"kind": "file",
+	"name": "xenolith/scene/nodes/XLNodeInfo.h",
+	"unmatched_comments": [{
+		"line": 21,
+		"text": "\nCopyright (c) 2023 Stappler LLC <admin@stappler.dev>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n"
+	}]
+}

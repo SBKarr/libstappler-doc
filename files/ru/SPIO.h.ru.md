@@ -5,11 +5,11 @@ Title: SPIO.h
 
 ## BRIEF
 
-Макрос защиты заголовка
+Заголовок единого интерфейса ввода-вывода
 
 ## CONTENT
 
-Макрос защиты заголовка
+Заголовок единого интерфейса ввода-вывода
 
 
 # ::stappler::io::read(stappler::io::Producer const&,Callback<void (const stappler::io::Buffer &)> const&)

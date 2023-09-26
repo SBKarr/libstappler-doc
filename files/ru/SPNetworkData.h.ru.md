@@ -1,18 +1,26 @@
 Title: SPNetworkData.h
 
 
-# MODULES_NETWORK_SPNETWORKHANDLEDATA_H_
+# STAPPLER_NETWORK_SPNETWORKHANDLEDATA_H_
 
 ## BRIEF
 
+Заголовок описания схем данных, необходимых для сетевого соединения
+
 ## CONTENT
+
+Заголовок описания схем данных, необходимых для сетевого соединения
 
 
 # ::stappler::network::DefaultCertPath
 
 ## BRIEF
 
+Путь по умолчанию к SSL/TLS сертификатам, установленным в системе пользователя.
+
 ## CONTENT
+
+Путь по умолчанию к SSL/TLS сертификатам, установленным в системе пользователя.
 
 Тип: auto const
 
@@ -21,7 +29,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Доступные методы сетевого соединения
+
 ## CONTENT
+
+Доступные методы сетевого соединения
 
 Значения:
 * Unknown
@@ -30,26 +42,34 @@ Title: SPNetworkData.h
 * Put
 * Delete
 * Head
-* Smtp
+* Smtp - отправка почтовых сообщений
 
 
 # ::stappler::network::AuthMethod
 
 ## BRIEF
 
+Доступные методы сетевой аутентификации
+
 ## CONTENT
+
+Доступные методы сетевой аутентификации
 
 Значения:
 * Basic
 * Digest
-* PKey
+* PKey - дополнительный метод авторизации по личному ключу
 
 
 # ::stappler::network::getActiveHandles()
 
 ## BRIEF
 
+Возвращает число активных сетевых соединений
+
 ## CONTENT
+
+Возвращает число активных сетевых соединений
 
 Возвращает:
 * uint32_t
@@ -58,24 +78,36 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Данные для авторизации пользователя
+
 ## CONTENT
 
+Данные для авторизации пользователя
+
 Параметры шаблона:
-* typename Interface
+* typename Interface - используемый интерфейс памяти
 
 
 # ::stappler::network::AuthData<typename>::String
 
 ## BRIEF
 
+Тип строки
+
 ## CONTENT
+
+Тип строки
 
 
 # ::stappler::network::AuthData<typename>::data
 
 ## BRIEF
 
+Варианты данных для авторизации
+
 ## CONTENT
+
+Варианты данных для авторизации. Имя пользователя и пароль, или строка подписи ключом.
 
 Тип: std::variant<Pair<String, String>, String>
 
@@ -84,7 +116,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Адрес прокси для соединения
+
 ## CONTENT
+
+Адрес прокси для соединения
 
 Тип: String
 
@@ -93,7 +129,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Строка для авторизации на прокси
+
 ## CONTENT
+
+Строка для авторизации на прокси
 
 Тип: String
 
@@ -102,7 +142,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Метод авторизации
+
 ## CONTENT
+
+Метод авторизации
 
 Тип: stappler::network::AuthMethod
 
@@ -111,17 +155,25 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Данные для отправки по сети
+
 ## CONTENT
 
+Данные для отправки по сети
+
 Параметры шаблона:
-* typename Interface
+* typename Interface - интерфейс памяти
 
 
 # ::stappler::network::SendData<typename>::Function<typename>
 
 ## BRIEF
 
+Тип фунционального контейнера
+
 ## CONTENT
+
+Тип фунционального контейнера
 
 Параметры шаблона:
 * typename T
@@ -131,7 +183,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Тип вектора
+
 ## CONTENT
+
+Тип вектора
 
 Параметры шаблона:
 * typename T
@@ -141,7 +197,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Тип хранилища ключ-значение
+
 ## CONTENT
+
+Тип хранилища ключ-значение
 
 Параметры шаблона:
 * typename K
@@ -152,35 +212,57 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Тип символьной строки
+
 ## CONTENT
+
+Тип символьной строки
 
 
 # ::stappler::network::SendData<typename>::Bytes
 
 ## BRIEF
 
+Тип байтовой строки
+
 ## CONTENT
+
+Тип байтовой строки
 
 
 # ::stappler::network::SendData<typename>::IOCallback
 
 ## BRIEF
 
+Тип обратного вызова ввода-вывода данных
+
 ## CONTENT
+
+Тип обратного вызова ввода-вывода данных
 
 
 # ::stappler::network::SendData<typename>::DataSource
 
 ## BRIEF
 
+Объединение, определяющее установленный источник данных ввода
+
 ## CONTENT
 
+Объединение, определяющее установленный источник данных ввода:
+* Файл
+* Данные в памяти
+* Фнкция обратного вызова
 
 # ::stappler::network::SendData<typename>::headers
 
 ## BRIEF
 
+Отправляемые дополнительные заголовки протокола
+
 ## CONTENT
+
+Отправляемые дополнительные заголовки протокола
 
 Тип: Map<stappler::network::SendData::String, stappler::network::SendData::String>
 
@@ -189,7 +271,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+URL для соединения
+
 ## CONTENT
+
+URL для соединения
 
 Тип: String
 
@@ -198,7 +284,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Получатели почтового сообщения
+
 ## CONTENT
+
+Получатели почтового сообщения
 
 Тип: Vector<stappler::network::SendData::String>
 
@@ -207,7 +297,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Обратный адрес отправителя почтового сообщения
+
 ## CONTENT
+
+Обратный адрес отправителя почтового сообщения
 
 Тип: String
 
@@ -216,7 +310,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Название сетевого клиента пользователя
+
 ## CONTENT
+
+Название сетевого клиента пользователя
 
 Тип: String
 
@@ -225,7 +323,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Источник данных для отправки
+
 ## CONTENT
+
+Источник данных для отправки
 
 Тип: DataSource
 
@@ -234,7 +336,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Размер данных для отправки
+
 ## CONTENT
+
+Размер данных для отправки
 
 Тип: size_t
 
@@ -243,7 +349,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Смещение внутри данных для отправки
+
 ## CONTENT
+
+Смещение внутри данных для отправки
 
 Тип: size_t
 
@@ -252,7 +362,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Сетевой метод соединения
+
 ## CONTENT
+
+Сетевой метод соединения
 
 Тип: stappler::network::Method
 
@@ -261,17 +375,25 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Данные для обработки процесса передачи данных
+
 ## CONTENT
 
+Данные для обработки процесса передачи данных
+
 Параметры шаблона:
-* typename Interface
+* typename Interface - интерфейс памяти
 
 
 # ::stappler::network::ProcessData<typename>::Function<typename>
 
 ## BRIEF
 
+Тип функционального контейнера
+
 ## CONTENT
+
+Тип функционального контейнера
 
 Параметры шаблона:
 * typename T
@@ -281,28 +403,44 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Тип символьной строки
+
 ## CONTENT
+
+Тип символьной строки
 
 
 # ::stappler::network::ProcessData<typename>::StringStream
 
 ## BRIEF
 
+Тип строкового потока
+
 ## CONTENT
+
+Тип строкового потока
 
 
 # ::stappler::network::ProcessData<typename>::ProgressCallback
 
 ## BRIEF
 
+Тип обратного вызова прогресса соединения
+
 ## CONTENT
+
+Тип обратного вызова прогресса соединения
 
 
 # ::stappler::network::ProcessData<typename>::debugData
 
 ## BRIEF
 
+Отладочные данные соединения
+
 ## CONTENT
+
+Отладочные данные соединения
 
 Тип: StringStream
 
@@ -311,7 +449,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Файл для загрузки и хранения cookie
+
 ## CONTENT
+
+Файл для загрузки и хранения cookie
 
 Тип: String
 
@@ -320,7 +462,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Текущая строка ошибки
+
 ## CONTENT
+
+Текущая строка ошибки
 
 Тип: String
 
@@ -329,7 +475,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Функция прогресса загрузки данных на сервер (отправки данныз)
+
 ## CONTENT
+
+Функция прогресса загрузки данных на сервер (отправки данныз)
 
 Тип: ProgressCallback
 
@@ -338,7 +488,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Функция прогресса загрузки данных от сервера (получения данныз)
+
 ## CONTENT
+
+Функция прогресса загрузки данных от сервера (получения данныз)
 
 Тип: ProgressCallback
 
@@ -347,7 +501,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Непрозрачный указатель на разделяемые данные
+
 ## CONTENT
+
+Непрозрачный указатель на разделяемые данные
 
 Тип: void*
 
@@ -356,7 +514,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Текущий объём отправки данных
+
 ## CONTENT
+
+Текущий объём отправки данных
 
 Тип: int64_t
 
@@ -365,7 +527,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Текущая длительность отправки данных
+
 ## CONTENT
+
+Текущая длительность отправки данных
 
 Тип: stappler::Time
 
@@ -374,7 +540,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Текущий объём получения данных
+
 ## CONTENT
+
+Текущий объём получения данных
 
 Тип: int64_t
 
@@ -383,7 +553,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Текущая длительность получения данных
+
 ## CONTENT
+
+Текущая длительность получения данных
 
 Тип: stappler::Time
 
@@ -392,7 +566,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Код ошибки бэкэнда
+
 ## CONTENT
+
+Код ошибки бэкэнда
 
 Тип: long
 
@@ -401,7 +579,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Код ответа сервера
+
 ## CONTENT
+
+Код ответа сервера
 
 Тип: long
 
@@ -410,7 +592,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Допустимая задержка соединения
+
 ## CONTENT
+
+Допустимая задержка соединения
 
 Тип: int
 
@@ -419,7 +605,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Предел низкой скорости соединения по времени
+
 ## CONTENT
+
+Предел низкой скорости соединения по времени
 
 Тип: int
 
@@ -428,7 +618,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Предел низкой скорости соединения по объёму
+
 ## CONTENT
+
+Предел низкой скорости соединения по объёму
 
 Тип: int
 
@@ -437,7 +631,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Флаг разделяемых данных соединения
+
 ## CONTENT
+
+Флаг разделяемых данных соединения
 
 Тип: bool
 
@@ -446,7 +644,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Требование устанавливать подлинность сертификата соединения
+
 ## CONTENT
+
+Требование устанавливать подлинность сертификата соединения
 
 Тип: bool
 
@@ -455,7 +657,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Флаг сохранения отладочной информации
+
 ## CONTENT
+
+Флаг сохранения отладочной информации
 
 Тип: bool
 
@@ -464,7 +670,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Флаг допустимости повторного использования соединения
+
 ## CONTENT
+
+Флаг допустимости повторного использования соединения
 
 Тип: bool
 
@@ -473,7 +683,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Флаг подавления вывода дополниетльной информации и ошибок
+
 ## CONTENT
+
+Флаг подавления вывода дополниетльной информации и ошибок
 
 Тип: bool
 
@@ -482,7 +696,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Флаг того, что соединение уже выполнено
+
 ## CONTENT
+
+Флаг того, что соединение уже выполнено
 
 Тип: bool
 
@@ -491,17 +709,25 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Данные для получения ответа от сервера
+
 ## CONTENT
 
+Данные для получения ответа от сервера
+
 Параметры шаблона:
-* typename Interface
+* typename Interface - интерфейс памяти
 
 
 # ::stappler::network::ReceiveData<typename>::Function<typename>
 
 ## BRIEF
 
+Тип функционального контейнера
+
 ## CONTENT
+
+Тип функционального контейнера
 
 Параметры шаблона:
 * typename T
@@ -511,7 +737,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Тип вектора
+
 ## CONTENT
+
+Тип вектора
 
 Параметры шаблона:
 * typename T
@@ -521,7 +751,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Тип хранилища ключ-значение
+
 ## CONTENT
+
+Тип хранилища ключ-значение
 
 Параметры шаблона:
 * typename K
@@ -532,42 +766,68 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Тип символьной строки
+
 ## CONTENT
+
+Тип символьной строки
 
 
 # ::stappler::network::ReceiveData<typename>::Bytes
 
 ## BRIEF
 
+Тип байтовой строки
+
 ## CONTENT
+
+Тип байтовой строки
 
 
 # ::stappler::network::ReceiveData<typename>::IOCallback
 
 ## BRIEF
 
+Тип обратного вызова операций ввода-вывода
+
 ## CONTENT
+
+Тип обратного вызова операций ввода-вывода
 
 
 # ::stappler::network::ReceiveData<typename>::HeaderCallback
 
 ## BRIEF
 
+Тип обратного вызова для чтения заголовков
+
 ## CONTENT
+
+Тип обратного вызова для чтения заголовков
 
 
 # ::stappler::network::ReceiveData<typename>::DataSource
 
 ## BRIEF
 
+Объединение, показывающее цель для записи данных
+
 ## CONTENT
+
+Объединение, показывающее цель для записи данных:
+* Имя файла
+* Функция обратного вызова
 
 
 # ::stappler::network::ReceiveData<typename>::headers
 
 ## BRIEF
 
+Полученные заголовки
+
 ## CONTENT
+
+Полученные заголовки
 
 Тип: Vector<stappler::network::ReceiveData::String>
 
@@ -576,7 +836,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Разобранные заголовки
+
 ## CONTENT
+
+Разобранные заголовки
 
 Тип: Map<stappler::network::ReceiveData::String, stappler::network::ReceiveData::String>
 
@@ -585,7 +849,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Тип содержимого, если получен
+
 ## CONTENT
+
+Тип содержимого, если получен
 
 Тип: String
 
@@ -594,7 +862,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Данные для чтения
+
 ## CONTENT
+
+Данные для чтения
 
 Тип: DataSource
 
@@ -603,7 +875,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Функция чтения заголовков
+
 ## CONTENT
+
+Функция чтения заголовков
 
 Тип: HeaderCallback
 
@@ -612,7 +888,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Смещение для записи данных
+
 ## CONTENT
+
+Смещение для записи данных
 
 Тип: uint64_t
 
@@ -621,7 +901,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Флаг возобновления загрузки
+
 ## CONTENT
+
+Флаг возобновления загрузки
 
 Тип: bool
 
@@ -630,10 +914,14 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Обобщение данных сетевого запроса
+
 ## CONTENT
 
+Обобщение данных сетевого запроса
+
 Параметры шаблона:
-* typename Interface
+* typename Interface - интерфейс памяти
 
 Базовые классы:
 * Interface::AllocBaseType
@@ -643,7 +931,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Тип вектора
+
 ## CONTENT
+
+Тип вектора
 
 Параметры шаблона:
 * typename T
@@ -653,7 +945,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Тип функционального контейнера
+
 ## CONTENT
+
+Тип функционального контейнера
 
 Параметры шаблона:
 * typename T
@@ -663,7 +959,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Тип хранилища ключ-значение
+
 ## CONTENT
+
+Тип хранилища ключ-значение
 
 Параметры шаблона:
 * typename K
@@ -674,63 +974,99 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Тип символьной строки
+
 ## CONTENT
+
+Тип символьной строки
 
 
 # ::stappler::network::HandleData<typename>::StringStream
 
 ## BRIEF
 
+Тип стркового потока
+
 ## CONTENT
+
+Тип стркового потока
 
 
 # ::stappler::network::HandleData<typename>::Bytes
 
 ## BRIEF
 
+Тип байтовой строки
+
 ## CONTENT
+
+Тип байтовой строки
 
 
 # ::stappler::network::HandleData<typename>::Value
 
 ## BRIEF
 
+Тип нетипизированного значения
+
 ## CONTENT
+
+Тип нетипизированного значения
 
 
 # ::stappler::network::HandleData<typename>::HeaderMap
 
 ## BRIEF
 
+Тип хранения заголовков
+
 ## CONTENT
+
+Тип хранения заголовков
 
 
 # ::stappler::network::HandleData<typename>::ProgressCallback
 
 ## BRIEF
 
+Тип прогресса получения или отправки данных
+
 ## CONTENT
+
+Тип прогресса получения или отправки данных
 
 
 # ::stappler::network::HandleData<typename>::IOCallback
 
 ## BRIEF
 
+Тип обратного вызова ввода-вывдоа
+
 ## CONTENT
+
+Тип обратного вызова ввода-вывдоа
 
 
 # ::stappler::network::HandleData<typename>::HeaderCallback
 
 ## BRIEF
 
+Тип чтения заголовков
+
 ## CONTENT
+
+Тип чтения заголовков
 
 
 # ::stappler::network::HandleData<typename>::send
 
 ## BRIEF
 
+Данные для отпраки на сервер
+
 ## CONTENT
+
+Данные для отпраки на сервер
 
 Тип: SendData<Interface>
 
@@ -739,7 +1075,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Данные для обработки процесса соединения
+
 ## CONTENT
+
+Данные для обработки процесса соединения
 
 Тип: ProcessData<Interface>
 
@@ -748,7 +1088,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Данные для получения данных
+
 ## CONTENT
+
+Данные для получения данных
 
 Тип: ReceiveData<Interface>
 
@@ -757,7 +1101,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Данные для авторизации
+
 ## CONTENT
+
+Данные для авторизации
 
 Тип: AuthData<Interface>
 
@@ -766,27 +1114,39 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
+
+Деструктор
 
 
 # ::stappler::network::HandleData<typename>::reset(stappler::network::Method,stappler::StringView)
 
 ## BRIEF
 
+Переустаналвивает метод соединения и URL
+
 ## CONTENT
+
+Переустаналвивает метод соединения и URL
 
 Параметры:
 * stappler::network::Method
-* stappler::StringView
+* stappler::StringView - новый URL
 
 Возвращает:
-* bool
+* bool - true если успешно
 
 # ::stappler::network::HandleData<typename>::getResponseCode() const
 
 ## BRIEF
 
+Возвращает код ответа сервера
+
 ## CONTENT
+
+Возвращает код ответа сервера
 
 Возвращает:
 * long
@@ -795,7 +1155,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Возвращает код ошибки бэкэнда
+
 ## CONTENT
+
+Возвращает код ошибки бэкэнда
 
 Возвращает:
 * long
@@ -804,7 +1168,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Возвращает текстовую форму ошибки
+
 ## CONTENT
+
+Возвращает текстовую форму ошибки
 
 Возвращает:
 * stappler::StringView
@@ -813,7 +1181,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Устанавливает имя файла для чтения и записи cookies
+
 ## CONTENT
+
+Устанавливает имя файла для чтения и записи cookies
 
 Параметры:
 * stappler::StringView
@@ -823,7 +1195,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Устанавливает строку, идентифицирующую пользовательский клиент
+
 ## CONTENT
+
+Устанавливает строку, идентифицирующую пользовательский клиент
 
 Параметры:
 * stappler::StringView
@@ -833,7 +1209,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Устанавливает URL для соединения
+
 ## CONTENT
+
+Устанавливает URL для соединения
 
 Параметры:
 * stappler::StringView
@@ -843,25 +1223,37 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Очищает дополнительные заголовки запроса
+
 ## CONTENT
+
+Очищает дополнительные заголовки запроса
 
 
 # ::stappler::network::HandleData<typename>::addHeader(stappler::StringView,stappler::StringView)
 
 ## BRIEF
 
+Добавляет дополнительный заголовок
+
 ## CONTENT
 
+Добавляет дополнительный заголовок
+
 Параметры:
-* stappler::StringView
-* stappler::StringView
+* stappler::StringView - имя заголовка
+* stappler::StringView - тело заголовка
 
 
 # ::stappler::network::HandleData<typename>::getRequestHeaders() const
 
 ## BRIEF
 
+Получает заголовки запроса
+
 ## CONTENT
+
+Получает заголовки запроса
 
 Возвращает:
 * HeaderMap&
@@ -870,7 +1262,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Устанавливает обратный адрес для отправки почты
+
 ## CONTENT
+
+Устанавливает обратный адрес для отправки почты
 
 Параметры:
 * stappler::StringView
@@ -880,14 +1276,22 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Очищает список получателей почты
+
 ## CONTENT
+
+Очищает список получателей почты
 
 
 # ::stappler::network::HandleData<typename>::addMailTo(stappler::StringView)
 
 ## BRIEF
 
+Добавляет адресата для почты
+
 ## CONTENT
+
+Добавляет адресата для почты
 
 Параметры:
 * stappler::StringView
@@ -897,65 +1301,90 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Устанавливает данные для авторизации пользователя стандартыми методами (не Pkey)
+
 ## CONTENT
 
+Устанавливает данные для авторизации пользователя стандартыми методами (не Pkey)
+
 Параметры:
-* stappler::StringView
-* stappler::StringView
-* stappler::network::AuthMethod
+* stappler::StringView - имя пользователя
+* stappler::StringView - пароль
+* stappler::network::AuthMethod - метод авторизации
 
 
 # ::stappler::network::HandleData<typename>::setPrivateKeyAuth(stappler::BytesView)
 
 ## BRIEF
 
+Устанавливает авторизацию по личному ключу
+
 ## CONTENT
 
+Устанавливает авторизацию по личному ключу
+
 Параметры:
-* stappler::BytesView
+* stappler::BytesView - данные личного ключа
 
 Возвращает:
-* bool
+* bool - true если авторизация подготовлена успешно
 
 # ::stappler::network::HandleData<typename>::setPrivateKeyAuth(crypto::PrivateKey const&)
 
 ## BRIEF
 
+Устанавливает авторизацию по личному ключу
+
 ## CONTENT
 
+Устанавливает авторизацию по личному ключу
+
 Параметры:
-* crypto::PrivateKey const&
+* crypto::PrivateKey const& - личный ключ
 
 Возвращает:
-* bool
+* bool - true если авторизация подготовлена успешно
+
 
 # ::stappler::network::HandleData<typename>::setProxy(stappler::StringView,stappler::StringView)
 
 ## BRIEF
 
+Устанавливает данные прокси-соединения
+
 ## CONTENT
 
+Устанавливает данные прокси-соединения
+
 Параметры:
-* stappler::StringView
-* stappler::StringView
+* stappler::StringView - адрес прокси-сервера
+* stappler::StringView - данные авторизации на прокси-сервере
 
 
 # ::stappler::network::HandleData<typename>::setReceiveFile(stappler::StringView,bool)
 
 ## BRIEF
 
+Устанавливает путь к файлу для получения данных
+
 ## CONTENT
 
+Устанавливает путь к файлу для получения данных
+
 Параметры:
-* stappler::StringView
-* bool
+* stappler::StringView - путь к файлу
+* bool - true если необходимо возобновить загрузку
 
 
 # ::stappler::network::HandleData<typename>::setReceiveCallback(stappler::network::HandleData::IOCallback&&)
 
 ## BRIEF
 
+Устанавливает обратный вызов для получения данных от сервера
+
 ## CONTENT
+
+Устанавливает обратный вызов для получения данных от сервера
 
 Параметры:
 * stappler::network::HandleData::IOCallback&&
@@ -965,7 +1394,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Устанавливает флаг возобновления загрузки
+
 ## CONTENT
+
+Устанавливает флаг возобновления загрузки, если не используется получение в файл
 
 Параметры:
 * bool
@@ -974,6 +1407,8 @@ Title: SPNetworkData.h
 # ::stappler::network::HandleData<typename>::setResumeOffset(uint64_t)
 
 ## BRIEF
+
+Устанавливает смещение для возобновления загрузки, если не используется получение в файл
 
 ## CONTENT
 
@@ -985,6 +1420,8 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Получает данные для получения данных от сервера
+
 ## CONTENT
 
 Возвращает:
@@ -994,7 +1431,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Устанавливает длину содержимого для отправки
+
 ## CONTENT
+
+Устанавливает длину содержимого для отправки при использовании функции обратного вызова
 
 Параметры:
 * size_t
@@ -1004,86 +1445,118 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Устанавливает файл для отправки
+
 ## CONTENT
 
+Устанавливает файл для отправки
+
 Параметры:
-* stappler::StringView
-* stappler::StringView
+* stappler::StringView - путь к файлу
+* stappler::StringView - тип содержимого (заголовок Content-Type)
 
 
 # ::stappler::network::HandleData<typename>::setSendCallback(stappler::network::HandleData::IOCallback&&,size_t,stappler::StringView)
 
 ## BRIEF
 
+Устанавливает функцию обратного вызова для отправки данных
+
 ## CONTENT
 
+Устанавливает функцию обратного вызова для отправки данных
+
 Параметры:
-* stappler::network::HandleData::IOCallback&&
-* size_t
-* stappler::StringView
+* stappler::network::HandleData::IOCallback&& - функция обратного вызова, ддолжна записывать данные в предлагаемый буфер
+* size_t - размер данных для отправки
+* stappler::StringView - тип данных для отправки (заголовок Content-Type)
 
 
 # ::stappler::network::HandleData<typename>::setSendData(stappler::StringView,stappler::StringView)
 
 ## BRIEF
 
+Устанавливает строковые данные для отправки
+
 ## CONTENT
 
+Устанавливает строковые данные для отправки
+
 Параметры:
-* stappler::StringView
-* stappler::StringView
+* stappler::StringView - строка для отправки
+* stappler::StringView - тип данных для отправки (заголовок Content-Type)
 
 
 # ::stappler::network::HandleData<typename>::setSendData(stappler::BytesView,stappler::StringView)
 
 ## BRIEF
 
+Устанавливает байтовые данные для отправки
+
 ## CONTENT
 
+Устанавливает байтовые данные для отправки
+
 Параметры:
-* stappler::BytesView
-* stappler::StringView
+* stappler::BytesView - данные для отправки
+* stappler::StringView - тип данных для отправки (заголовок Content-Type)
 
 
 # ::stappler::network::HandleData<typename>::setSendData(stappler::network::HandleData::Bytes&&,stappler::StringView)
 
 ## BRIEF
 
+Устанавливает байтовые данные для отправки
+
 ## CONTENT
 
+Устанавливает байтовые данные для отправки
+
 Параметры:
-* stappler::network::HandleData::Bytes&&
-* stappler::StringView
+* stappler::network::HandleData::Bytes&& - данные для отправки
+* stappler::StringView - тип данных для отправки (заголовок Content-Type)
 
 
 # ::stappler::network::HandleData<typename>::setSendData(uint8_t const*,size_t,stappler::StringView)
 
 ## BRIEF
 
+Устанавливает байтовые данные для отправки
+
 ## CONTENT
 
+Устанавливает байтовые данные для отправки
+
 Параметры:
-* uint8_t const*
-* size_t
-* stappler::StringView
+* uint8_t const* - указатель на данные
+* size_t - размер данных
+* stappler::StringView - тип данных для отправки (заголовок Content-Type)
 
 
 # ::stappler::network::HandleData<typename>::setSendData(stappler::network::HandleData::Value const&,data::EncodeFormat)
 
 ## BRIEF
 
+Устанавливает нетипизирвоанные данные для отправки
+
 ## CONTENT
 
+Устанавливает нетипизирвоанные данные для отправки
+
 Параметры:
-* stappler::network::HandleData::Value const&
-* data::EncodeFormat
+* stappler::network::HandleData::Value const& - данные для отправки
+* data::EncodeFormat - формат кодирования (определяет, в том числе, Content-Type)
 
 
 # ::stappler::network::HandleData<typename>::getSendDataSource() const
 
 ## BRIEF
 
+Возвращает данные для отправки данных
+
 ## CONTENT
+
+Возвращает данные для отправки данных
 
 Возвращает:
 * const typename SendData<Interface>::DataSource&
@@ -1092,7 +1565,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Устанавливает функцию для чтения принимаемых заголовков от сервера
+
 ## CONTENT
+
+Устанавливает функцию для чтения принимаемых заголовков от сервера
 
 Параметры:
 * stappler::network::HandleData::HeaderCallback&&
@@ -1102,7 +1579,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Возвращает функцию для чтения заголовков
+
 ## CONTENT
+
+Возвращает функцию для чтения заголовков
 
 Возвращает:
 * HeaderCallback&
@@ -1111,31 +1592,44 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Возвращает принятый заголовок в виде строки
+
 ## CONTENT
 
+Возвращает принятый заголовок в виде строки. Имена заголовков не чувствительны к регистру.
+
 Параметры:
-* stappler::StringView
+* stappler::StringView - имя заголовка
 
 Возвращает:
-* stappler::StringView
+* stappler::StringView - тело заголовка или пустая строка
+
 
 # ::stappler::network::HandleData<typename>::getReceivedHeaderInt(stappler::StringView) const
 
 ## BRIEF
 
+Возвращает принятый заголовок в виде целого числа
+
 ## CONTENT
 
+Возвращает принятый заголовок в виде целого числа. Имена заголовков не чувствительны к регистру.
+
 Параметры:
-* stappler::StringView
+* stappler::StringView - имя заголовка
 
 Возвращает:
-* int64_t
+* int64_t - значение заголовка или 0
 
 # ::stappler::network::HandleData<typename>::getMethod() const
 
 ## BRIEF
 
+Возвращает метод сетевого соединения
+
 ## CONTENT
+
+Возвращает метод сетевого соединения
 
 Возвращает:
 * stappler::network::Method
@@ -1144,7 +1638,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Возвращает URL соединения
+
 ## CONTENT
+
+Возвращает URL соединения
 
 Возвращает:
 * stappler::StringView
@@ -1153,7 +1651,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Возвращает файл для чтения и записи cookies
+
 ## CONTENT
+
+Возвращает файл для чтения и записи cookies
 
 Возвращает:
 * stappler::StringView
@@ -1162,7 +1664,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Возвращает идентификатор клиента пользователя
+
 ## CONTENT
+
+Возвращает идентификатор клиента пользователя
 
 Возвращает:
 * stappler::StringView
@@ -1171,7 +1677,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Возвращает тип содержимого ответа
+
 ## CONTENT
+
+Возвращает тип содержимого ответа
 
 Возвращает:
 * stappler::StringView
@@ -1180,7 +1690,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Возвращает полученные заголовки
+
 ## CONTENT
+
+Возвращает полученные заголовки
 
 Возвращает:
 * Vector<stappler::network::HandleData::String> const&
@@ -1189,7 +1703,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Устанавливает флаг отладки
+
 ## CONTENT
+
+Устанавливает флаг отладки
 
 Параметры:
 * bool
@@ -1199,7 +1717,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Устанавливает флаг повторного использования
+
 ## CONTENT
+
+Устанавливает флаг повторного использования
 
 Параметры:
 * bool
@@ -1209,7 +1731,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Устанавливает флаг разделяемых данных
+
 ## CONTENT
+
+Устанавливает флаг разделяемых данных
 
 Параметры:
 * bool
@@ -1219,7 +1745,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Устанавливает флаг подавления текстовых сообщений
+
 ## CONTENT
+
+Устанавливает флаг подавления текстовых сообщений
 
 Параметры:
 * bool
@@ -1229,7 +1759,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Получает собранные отладочные данные
+
 ## CONTENT
+
+Получает собранные отладочные данные
 
 Возвращает:
 * StringStream&
@@ -1238,7 +1772,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Устанавливает функцию, получающую информацию о прогрессе получения данных
+
 ## CONTENT
+
+Устанавливает функцию, получающую информацию о прогрессе получения данных
 
 Параметры:
 * stappler::network::HandleData::ProgressCallback&&
@@ -1248,7 +1786,11 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Устанавливает функцию, получающую информацию о прогрессе отправки данных
+
 ## CONTENT
+
+Устанавливает функцию, получающую информацию о прогрессе отправки данных
 
 Параметры:
 * stappler::network::HandleData::ProgressCallback&&
@@ -1258,28 +1800,40 @@ Title: SPNetworkData.h
 
 ## BRIEF
 
+Устанавливает максимальное время ожидания соединения
+
 ## CONTENT
 
+Устанавливает максимальное время ожидания соединения
+
 Параметры:
-* int
+* int - время в секундах
 
 
 # ::stappler::network::HandleData<typename>::setLowSpeedLimit(int,size_t)
 
 ## BRIEF
 
+Устанавливает пределя для низкой скорости соединения
+
 ## CONTENT
 
+Устанавливает пределя для низкой скорости соединения
+
 Параметры:
-* int
-* size_t
+* int - предел по времени в секундах
+* size_t - предел по объёму
 
 
 # ::stappler::network::HandleData<typename>::setVerifyTls(bool)
 
 ## BRIEF
 
+Устанавливает флаг требования верификации сертификата соединения
+
 ## CONTENT
+
+Устанавливает флаг требования верификации сертификата соединения
 
 Параметры:
 * bool
