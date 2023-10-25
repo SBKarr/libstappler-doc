@@ -1,18 +1,26 @@
 Title: STStorageFile.h
 
 
-# MODULES_DB_STSTORAGEFILE_H_
+# STAPPLER_DB_STSTORAGEFILE_H_
 
 ## BRIEF
 
+Заголовок для работы с внешними файлами в интерфейсе данных
+
 ## CONTENT
+
+Заголовок для работы с внешними файлами в интерфейсе данных
 
 
 # ::stappler::db::File
 
 ## BRIEF
 
+Структура объекта внешнего файла
+
 ## CONTENT
+
+Структура объекта внешнего файла
 
 Базовые классы:
 * Object
@@ -22,9 +30,13 @@ Title: STStorageFile.h
 
 ## BRIEF
 
+Возвращает путь в файловой системе для объекта файла
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает путь в файловой системе для объекта файла
 
 Параметры:
 * uint64_t
@@ -36,9 +48,13 @@ Title: STStorageFile.h
 
 ## BRIEF
 
+Проверяет, возможно ли сохранить внешний файл в определённом поле
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, возможно ли сохранить внешний файл в определённом поле
 
 Параметры:
 * stappler::db::Field const&
@@ -51,14 +67,18 @@ Title: STStorageFile.h
 
 ## BRIEF
 
+Проверяет, возможно ли сохранить внешний файл в определённом поле
+
 ## CONTENT
 
 Доступ: public
 
+Проверяет, возможно ли сохранить внешний файл в определённом поле
+
 Параметры:
 * stappler::db::Field const&
-* stappler::StringView const&
-* stappler::BytesView const&
+* stappler::StringView const& - тип файла
+* stappler::BytesView const& - данные файла
 
 Возвращает:
 * bool
@@ -67,9 +87,13 @@ Title: STStorageFile.h
 
 ## BRIEF
 
+Создаёт значение для записи внешнего файла в БД
+
 ## CONTENT
 
 Доступ: public
+
+Создаёт значение для записи внешнего файла в БД
 
 Параметры:
 * stappler::db::Transaction const&
@@ -83,15 +107,19 @@ Title: STStorageFile.h
 
 ## BRIEF
 
+Создаёт значение для записи внешнего файла в БД
+
 ## CONTENT
 
 Доступ: public
+
+Создаёт значение для записи внешнего файла в БД
 
 Параметры:
 * stappler::db::Transaction const&
 * stappler::StringView const&
 * stappler::StringView const&
-* int64_t
+* int64_t - время изменения файла
 
 Возвращает:
 * stappler::data::WrapperTemplate<stappler::memory::PoolInterface>::Value
@@ -100,15 +128,19 @@ Title: STStorageFile.h
 
 ## BRIEF
 
+Создаёт значение для записи внешнего файла в БД
+
 ## CONTENT
 
 Доступ: public
 
+Создаёт значение для записи внешнего файла в БД
+
 Параметры:
 * stappler::db::Transaction const&
-* stappler::StringView const&
-* stappler::BytesView const&
-* int64_t
+* stappler::StringView const& - тип файла
+* stappler::BytesView const& - данные файла
+* int64_t - время изменения файла
 
 Возвращает:
 * stappler::data::WrapperTemplate<stappler::memory::PoolInterface>::Value
@@ -117,9 +149,13 @@ Title: STStorageFile.h
 
 ## BRIEF
 
+Создаёт значение для записи внешнего изображения в БД
+
 ## CONTENT
 
 Доступ: public
+
+Создаёт значение для записи внешнего изображения в БД
 
 Параметры:
 * stappler::db::Transaction const&
@@ -133,16 +169,20 @@ Title: STStorageFile.h
 
 ## BRIEF
 
+Создаёт значение для записи внешнего изображения в БД
+
 ## CONTENT
 
 Доступ: public
 
+Создаёт значение для записи внешнего изображения в БД
+
 Параметры:
 * stappler::db::Transaction const&
 * stappler::db::Field const&
-* stappler::StringView const&
-* stappler::BytesView const&
-* int64_t
+* stappler::StringView const& - тип изображения
+* stappler::BytesView const& - данные изображения
+* int64_t - время изменения файла
 
 Возвращает:
 * stappler::data::WrapperTemplate<stappler::memory::PoolInterface>::Value
@@ -151,9 +191,13 @@ Title: STStorageFile.h
 
 ## BRIEF
 
+Получает данные файла по ид
+
 ## CONTENT
 
 Доступ: public
+
+Получает данные файла по ид
 
 Параметры:
 * stappler::db::Transaction const&
@@ -166,9 +210,13 @@ Title: STStorageFile.h
 
 ## BRIEF
 
+Устанавливает данные файла по ид
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает данные файла по ид
 
 Параметры:
 * stappler::db::Transaction const&
@@ -180,9 +228,13 @@ Title: STStorageFile.h
 
 ## BRIEF
 
+Удаляет хранимый внешний файл
+
 ## CONTENT
 
 Доступ: public
+
+Удаляет хранимый внешний файл
 
 Параметры:
 * stappler::data::WrapperTemplate<stappler::memory::PoolInterface>::Value const&
@@ -194,9 +246,13 @@ Title: STStorageFile.h
 
 ## BRIEF
 
+Удаляет хранимый внешний файл
+
 ## CONTENT
 
 Доступ: public
+
+Удаляет хранимый внешний файл
 
 Параметры:
 * int64_t
@@ -208,9 +264,13 @@ Title: STStorageFile.h
 
 ## BRIEF
 
+Очищает данные внешнего файла
+
 ## CONTENT
 
 Доступ: public
+
+Очищает данные внешнего файла
 
 Параметры:
 * stappler::db::Transaction const&
@@ -223,9 +283,13 @@ Title: STStorageFile.h
 
 ## BRIEF
 
+Очищает данные внешнего файла
+
 ## CONTENT
 
 Доступ: public
+
+Очищает данные внешнего файла
 
 Параметры:
 * stappler::db::Transaction const&
@@ -238,9 +302,13 @@ Title: STStorageFile.h
 
 ## BRIEF
 
+Возврашает схему данных для хранения внешних файлов
+
 ## CONTENT
 
 Доступ: public
+
+Возврашает схему данных для хранения внешних файлов
 
 Возвращает:
 * stappler::db::Scheme const*

@@ -1,18 +1,26 @@
 Title: STStorageObject.h
 
 
-# MODULES_DB_STSTORAGEOBJECT_H_
+# STAPPLER_DB_STSTORAGEOBJECT_H_
 
 ## BRIEF
 
+Заголовок для структуры объекта БД
+
 ## CONTENT
+
+Заголовок для структуры объекта БД
 
 
 # ::stappler::db::Object
 
 ## BRIEF
 
+Структура обёртки вокруг данных БД, представляющая отдельный объект
+
 ## CONTENT
+
+Структура обёртки вокруг данных БД, представляющая отдельный объект. Позволяет контролировать изменение объекта и записывать его назад, в БД.
 
 Базовые классы:
 * stappler::data::WrapperTemplate<Interface>
@@ -22,9 +30,13 @@ Title: STStorageObject.h
 
 ## BRIEF
 
+Создаёт новый объект
+
 ## CONTENT
 
 Доступ: public
+
+Создаёт новый объект
 
 Параметры:
 * stappler::data::WrapperTemplate<stappler::memory::PoolInterface>::Value&&
@@ -35,9 +47,13 @@ Title: STStorageObject.h
 
 ## BRIEF
 
+Возвращает схему данных для объекта
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает схему данных для объекта
 
 Возвращает:
 * stappler::db::Scheme const&
@@ -46,9 +62,13 @@ Title: STStorageObject.h
 
 ## BRIEF
 
+Возвращает ид объекта
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает ид объекта
 
 Возвращает:
 * uint64_t
@@ -57,9 +77,13 @@ Title: STStorageObject.h
 
 ## BRIEF
 
+Блокирует запись поля
+
 ## CONTENT
 
 Доступ: public
+
+Блокирует запись поля
 
 Параметры:
 * stappler::StringView const&
@@ -69,9 +93,13 @@ Title: STStorageObject.h
 
 ## BRIEF
 
+Разблокирует запись поля
+
 ## CONTENT
 
 Доступ: public
+
+Разблокирует запись поля
 
 Параметры:
 * stappler::StringView const&
@@ -81,9 +109,13 @@ Title: STStorageObject.h
 
 ## BRIEF
 
+Проверяет, заблокирована ли запись поля
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, заблокирована ли запись поля
 
 Параметры:
 * stappler::StringView const&
@@ -95,9 +127,13 @@ Title: STStorageObject.h
 
 ## BRIEF
 
+Проверяет, является ли поле защищённым от пользователя
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, является ли поле защищённым от пользователя
 
 Параметры:
 * stappler::StringView const&
@@ -109,9 +145,13 @@ Title: STStorageObject.h
 
 ## BRIEF
 
+Начинает обход поля
+
 ## CONTENT
 
 Доступ: public
+
+Начинает обход поля
 
 Возвращает:
 * auto
@@ -120,9 +160,13 @@ Title: STStorageObject.h
 
 ## BRIEF
 
+Заканчивает обход поля
+
 ## CONTENT
 
 Доступ: public
+
+Заканчивает обход поля
 
 Возвращает:
 * auto
@@ -131,9 +175,13 @@ Title: STStorageObject.h
 
 ## BRIEF
 
+Начинает обход поля
+
 ## CONTENT
 
 Доступ: public
+
+Начинает обход поля
 
 Возвращает:
 * auto
@@ -142,9 +190,13 @@ Title: STStorageObject.h
 
 ## BRIEF
 
+Заканчивает обход поля
+
 ## CONTENT
 
 Доступ: public
+
+Заканчивает обход поля
 
 Возвращает:
 * auto
@@ -153,9 +205,13 @@ Title: STStorageObject.h
 
 ## BRIEF
 
+Сохраняет изменённый объект в БД
+
 ## CONTENT
 
 Доступ: public
+
+Сохраняет изменённый объект в БД
 
 Параметры:
 * stappler::db::Adapter const&
@@ -168,9 +224,13 @@ Title: STStorageObject.h
 
 ## BRIEF
 
+Идентификатор объекта
+
 ## CONTENT
 
 Доступ: protected
+
+Идентификатор объекта
 
 Тип: uint64_t
 
@@ -179,9 +239,13 @@ Title: STStorageObject.h
 
 ## BRIEF
 
+Список заблокированных полей
+
 ## CONTENT
 
 Доступ: protected
+
+Список заблокированных полей
 
 Тип: Set<stappler::data::WrapperTemplate<stappler::memory::PoolInterface>::String>
 
@@ -190,8 +254,12 @@ Title: STStorageObject.h
 
 ## BRIEF
 
+Схема данных для объекта
+
 ## CONTENT
 
 Доступ: protected
+
+Схема данных для объекта
 
 Тип: stappler::db::Scheme const&

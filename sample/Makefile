@@ -32,6 +32,9 @@ LOCAL_MODULES_PATHS = \
 	$(STAPPLER_ROOT)/xenolith/xenolith-modules.mk
 
 LOCAL_MODULES ?= \
+	stappler_core \
+	stappler_data \
+	stappler_sql \
 	stappler_bitmap \
 	stappler_brotli_lib \
 	stappler_db \
@@ -43,7 +46,7 @@ LOCAL_MODULES ?= \
 	stappler_backtrace \
 	xenolith_backend_vkgui \
 	xenolith_resources_assets \
-#	xenolith_renderer_material2d
+	xenolith_renderer_material2d
 
 LOCAL_ROOT = .
 

@@ -1,133 +1,174 @@
 Title: SPSql.h
 
 
-# MODULES_SQL_SQLQUERY_H_
+# STAPPLER_SQL_SQLQUERY_H_
 
 ## BRIEF
 
+Заголовок построителя SQL-запросов
+
 ## CONTENT
+
+Заголовок построителя SQL-запросов
 
 
 # ::stappler::sql::Profile
 
 ## BRIEF
 
+Профиль подмножества языка SQL
+
 ## CONTENT
 
+Профиль подмножества языка SQL
+
 Значения:
-* Postgres
-* Sqlite
+* Postgres - PostgreSQL
+* Sqlite - SQLite
 
 
 # ::stappler::sql::Comparation
 
 ## BRIEF
 
+Способ сравнения значений
+
 ## CONTENT
 
+Способ сравнения значений
+
 Значения:
-* Invalid
-* LessThen
-* LessOrEqual
-* Equal
-* NotEqual
-* GreatherOrEqual
-* GreatherThen
-* BetweenValues
-* BetweenEquals
-* NotBetweenValues
-* NotBetweenEquals
-* Includes
-* Between
-* In
-* NotIn
-* IsNull
-* IsNotNull
-* Prefix
-* Suffix
-* WordPart
+* Invalid - не определено
+* LessThen - меньше
+* LessOrEqual - меньше или равно
+* Equal - равно
+* NotEqual - не равно
+* GreatherOrEqual - больше или равно
+* GreatherThen - больше
+* BetweenValues между значениями
+* BetweenEquals - между или равно значениям
+* NotBetweenValues - не между значениями
+* NotBetweenEquals - не между и не равно значениям
+* Includes - включается в контейнер
+* Between - между значениями
+* In - включается в контейнер или перечисление
+* NotIn - не включается в контейнер или перечисление
+* IsNull - соотвествует NULL
+* IsNotNull - не соотвествует NULL
+* Prefix - соответсвует префиксу
+* Suffix - соотвествует суффиксу
+* WordPart - соответствует части слова
 
 
 # ::stappler::sql::Ordering
 
 ## BRIEF
 
+Способ упорядочивания
+
 ## CONTENT
 
+Способ упорядочивания
+
 Значения:
-* Ascending
-* Descending
+* Ascending - по возрастанию
+* Descending - по убыванию
 
 
 # ::stappler::sql::Nulls
 
 ## BRIEF
 
+Способ упорядочивания NULL
+
 ## CONTENT
 
 Значения:
-* None
-* First
-* Last
+* None - исключить
+* First - добавить первыми
+* Last - добавить последними
 
 
 # ::stappler::sql::Operator
 
 ## BRIEF
 
+Логический оператор
+
 ## CONTENT
 
+Логический оператор
+
 Значения:
-* And
-* Or
+* And - И
+* Or - ИЛИ
 
 
 # ::stappler::sql::encodeComparation(stappler::sql::Comparation)
 
 ## BRIEF
 
+Кодирует оператор сравнения в виде текста
+
 ## CONTENT
+
+Кодирует оператор сравнения в виде текста
 
 Параметры:
 * stappler::sql::Comparation
 
 Возвращает:
-* Pair<stappler::StringView, bool>
+* Pair<stappler::StringView, bool> - текстовое преставление и true если оператор принимает два аргумента, а не один
 
 # ::stappler::sql::decodeComparation(stappler::StringView)
 
 ## BRIEF
 
+Декодирует оператор сравнения из текста
+
 ## CONTENT
+
+Декодирует оператор сравнения из текста
 
 Параметры:
 * stappler::StringView
 
 Возвращает:
-* Pair<stappler::sql::Comparation, bool>
+* Pair<stappler::sql::Comparation, bool> - значение оператора и true если оператор принимает два аргумента, а не один
 
 # ::stappler::sql::PatternComparator<typename>
 
 ## BRIEF
 
+Вспомогательная структура для сравнения элементов
+
 ## CONTENT
 
+Вспомогательная структура для сравнения элементов
+
 Параметры шаблона:
-* typename T
+* typename T - тип элемента
 
 
 # ::stappler::sql::PatternComparator<typename>::Type
 
 ## BRIEF
 
+Тип элемента
+
 ## CONTENT
 
+Тип элемента
 
 # ::stappler::sql::PatternComparator<typename>::cmp
 
 ## BRIEF
 
+Значени еоператора сравнения
+
 ## CONTENT
+
+Значени еоператора сравнения
 
 Тип: stappler::sql::Comparation
 
@@ -136,7 +177,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Значение для сравнения
+
 ## CONTENT
+
+Значение для сравнения
 
 Тип: Type*
 
@@ -145,7 +190,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Простой оператор связывания входящих значений с SQL-запросом
+
 ## CONTENT
+
+Простой оператор связывания входящих значений с SQL-запросом. Испольуется в качестве примера.
 
 Параметры шаблона:
 * typename Interface
@@ -158,55 +207,109 @@ Title: SPSql.h
 
 ## BRIEF
 
+Связывает аргумент в виде нетипизированного контейнера с запросом
+
 ## CONTENT
 
+Связывает аргумент в виде нетипизированного контейнера с запросом
+
 Параметры:
-* std::ostream&
-* data::ValueTemplate<Interface> const&
+* std::ostream& - поток для вывода результата
+* data::ValueTemplate<Interface> const& - аргумент
 
 
 # ::stappler::sql::SimpleBinder<typename>::writeBind(std::ostream&,const typename Interface::StringType&)
 
 ## BRIEF
 
+Связывает аргумент в виде символьной строки с запросом
+
 ## CONTENT
 
+Связывает аргумент в виде символьной строки с запросом
+
 Параметры:
-* std::ostream&
-* const typename Interface::StringType&
+* std::ostream& - поток для вывода результата
+* const typename Interface::StringType& - аргумент
 
 
 # ::stappler::sql::SimpleBinder<typename>::writeBind(std::ostream&,const typename Interface::BytesType&)
 
 ## BRIEF
 
+Связывает аргумент в виде байтовой строки с запросом
+
 ## CONTENT
 
+Связывает аргумент в виде байтовой строки с запросом
+
 Параметры:
-* std::ostream&
-* const typename Interface::BytesType&
+* std::ostream& - поток для вывода результата
+* const typename Interface::BytesType& - аргумент
 
 
 # ::stappler::sql::SimpleBinder<typename>::writeBind(std::ostream&,PatternComparator<data::ValueTemplate<Interface>> const&)
 
 ## BRIEF
 
+Связывает аргумент-сравнитель с запросом
+
 ## CONTENT
 
+Связывает аргумент-сравнитель с запросом
+
 Параметры:
-* std::ostream&
-* PatternComparator<data::ValueTemplate<Interface>> const&
+* std::ostream& - поток для вывода результата
+* PatternComparator<data::ValueTemplate<Interface>> const& - аргумент
 
 
 # ::stappler::sql::Query<typename,typename>
 
 ## BRIEF
 
+Базовый тип построения запроса
+
 ## CONTENT
 
+Базовый тип построения запроса. Тип используется для исключения ошибок при ручном написании запросов, а также передачи внешних аргументов в функции их связывания и проверки на стороне библиотеки БД, для исключения иньекций.
+
+Тип построен для написания базовых запросов, правильность которых проверяется на этапе компиляции. Каждая функция для записи запроса возвращает манипулятор для следующего блока. Функции манипулятора допускают создание только валидных запросов, в противном случае компилятор сообщит об ошибке. Не предполагается сохранение манипуляторов, только использование в цепочке вызовов.
+
+Пример построения запросов:
+
+```cpp
+query.select()
+	.fields("field", Field("field").as("alias")).field(Field("database", "field").as("alias"))
+	.from("table").from("table")
+	.where("alias", sql::Comparation::Equal, "value")
+	.where(sql::Operator::And, "field", sql::Comparation::Equal, Value(1234))
+	.where(sql::Operator::Or, "field", sql::Comparation::NotEqual, Value(false))
+	.where(sql::Operator::Or, "time", sql::Comparation::BetweenValues, Value(1234), Value(123400))
+	.order(sql::Ordering::Descending, "field")
+	.limit(12, 16)
+	.finalize();
+
+insertQuery.insert("table")
+	.field("field1").field("field2")
+	.values().value("test1").value("test2")
+	.values().value("test3").value("test4")
+	.finalize();
+
+updateQuery.update("table", "alias")
+	.set("field1", "value1").set("field1", "value2")
+	.where("field3", sql::Comparation::NotEqual, Value(false))
+	.returning().all()
+	.finalize();
+
+deleteQuery.remove("table", "alias")
+	.where("field3", sql::Comparation::NotEqual, Value(false))
+	.returning().all()
+	.finalize();
+```
+
 Параметры шаблона:
-* typename Binder
-* typename Interface
+* typename Binder - структура для связывания внешних аргументов с запросом
+* typename Interface - используемый интерфейс памяти
 
 Базовые классы:
 * Interface::AllocBaseType
@@ -216,27 +319,39 @@ Title: SPSql.h
 
 ## BRIEF
 
+Тип строкового потокадля записи текстовой части запроса
+
 ## CONTENT
 
 Доступ: public
+
+Тип строкового потокадля записи текстовой части запроса
 
 
 # ::stappler::sql::Query<typename,typename>::String
 
 ## BRIEF
 
+Тип строки
+
 ## CONTENT
 
 Доступ: public
+
+Тип строки
 
 
 # ::stappler::sql::Query<typename,typename>::Distinct
 
 ## BRIEF
 
+Значение DISTINCT (если поддерживается)
+
 ## CONTENT
 
 Доступ: public
+
+Значение DISTINCT (если поддерживается)
 
 Значения:
 * Distinct
@@ -247,46 +362,62 @@ Title: SPSql.h
 
 ## BRIEF
 
+Значение инициализации запроса
+
 ## CONTENT
 
 Доступ: public
 
+Значение инициализации запроса
+
 Значения:
-* None
-* Init
-* Some
+* None - значение не инициализировано
+* Init - значение инициализировано явно
+* Some - значение инициализировано неявно
 
 
 # ::stappler::sql::Query<typename,typename>::FinalizationState
 
 ## BRIEF
 
+Способ финализации элемента запроса
+
 ## CONTENT
 
 Доступ: public
 
+Способ финализации элемента запроса
+
 Значения:
-* None
-* Parentesis
-* Quote
-* DoubleQuote
-* Finalized
+* None - не требуется
+* Parentesis - скобки
+* Quote - одиночные кавычки
+* DoubleQuote - двойные кавычки
+* Finalized - уже финализировано
 
 
 # ::stappler::sql::Query<typename,typename>::RawString
 
 ## BRIEF
 
+Тип для записи необрабатываемой строки в запрос
+
 ## CONTENT
 
 Доступ: public
+
+Тип для записи необрабатываемой строки в запрос
 
 
 # ::stappler::sql::Query<typename,typename>::RawString::data
 
 ## BRIEF
 
+Содержимое необрабатываемой строки
+
 ## CONTENT
+
+Содержимое необрабатываемой строки
 
 Тип: stappler::sql::Query::String
 
@@ -295,16 +426,24 @@ Title: SPSql.h
 
 ## BRIEF
 
+Тип для записи необрабатываемой строки в запрос
+
 ## CONTENT
 
 Доступ: public
+
+Тип для записи необрабатываемой строки в запрос
 
 
 # ::stappler::sql::Query<typename,typename>::RawStringView::data
 
 ## BRIEF
 
+Содержимое необрабатываемой строки
+
 ## CONTENT
+
+Содержимое необрабатываемой строки
 
 Тип: stappler::StringView
 
@@ -313,16 +452,24 @@ Title: SPSql.h
 
 ## BRIEF
 
+Структура поля для запроса
+
 ## CONTENT
 
 Доступ: public
+
+Структура поля для запроса
 
 
 # ::stappler::sql::Query<typename,typename>::Field::all()
 
 ## BRIEF
 
+Возвращает идентификатор, соотвествующий любому полю
+
 ## CONTENT
+
+Возвращает идентификатор, соотвествующий любому полю (обычно "*")
 
 Возвращает:
 * stappler::sql::Query::Field
@@ -331,10 +478,14 @@ Title: SPSql.h
 
 ## BRIEF
 
+Возвращает именованый агрегат вокруг любого поля
+
 ## CONTENT
 
+Возвращает именованый агрегат вокруг любого поля (как в `COUNT(*)`)
+
 Параметры:
-* stappler::StringView const&
+* stappler::StringView const& - имя аггрегата
 
 Возвращает:
 * stappler::sql::Query::Field
@@ -343,7 +494,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Создаёт идентификатор именованного поля
+
 ## CONTENT
+
+Создаёт идентификатор именованного поля
 
 Параметры:
 * stappler::StringView const&
@@ -353,7 +508,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Создаёт идентификатор именованного поля
+
 ## CONTENT
+
+Создаёт идентификатор именованного поля
 
 Параметры:
 * char const*
@@ -363,7 +522,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Создаёт идентификатор именованного поля
+
 ## CONTENT
+
+Создаёт идентификатор именованного поля
 
 Параметры:
 * std::string const&
@@ -373,7 +536,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Создаёт идентификатор именованного поля
+
 ## CONTENT
+
+Создаёт идентификатор именованного поля
 
 Параметры:
 * memory::string const&
@@ -383,33 +550,45 @@ Title: SPSql.h
 
 ## BRIEF
 
+Создаёт идентификатор именованного поля
+
 ## CONTENT
+
+Создаёт идентификатор именованного поля
 
 Параметры:
 * stappler::StringView const&
-* bool
+* bool - true если необходимо использовать имя как простой текст (без кавычек имени)
 
 
 # ::stappler::sql::Query<typename,typename>::Field::Field<typename,typename>(SourceString&&,FieldString&&)
 
 ## BRIEF
 
+Создаёт идентификатор именованного поля с пространством имён
+
 ## CONTENT
+
+Создаёт идентификатор именованного поля с пространством имён
 
 Параметры шаблона:
 * typename SourceString
 * typename FieldString
 
 Параметры:
-* SourceString&&
-* FieldString&&
+* SourceString&& - идентификатор пространства имён
+* FieldString&& - имя поля
 
 
 # ::stappler::sql::Query<typename,typename>::Field::as(char const*)
 
 ## BRIEF
 
+Добавляет псевдоним полю
+
 ## CONTENT
+
+Добавляет псевдоним полю
 
 Параметры:
 * char const*
@@ -421,7 +600,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Добавляет псевдоним полю
+
 ## CONTENT
+
+Добавляет псевдоним полю
 
 Параметры:
 * std::string const&
@@ -433,7 +616,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Добавляет псевдоним полю
+
 ## CONTENT
+
+Добавляет псевдоним полю
 
 Параметры:
 * memory::string const&
@@ -445,7 +632,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Добавляет именованный источник для поля
+
 ## CONTENT
+
+Добавляет именованный источник для поля
 
 Параметры:
 * char const*
@@ -457,7 +648,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Добавляет именованный источник для поля
+
 ## CONTENT
+
+Добавляет именованный источник для поля
 
 Параметры:
 * std::string const&
@@ -469,7 +664,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Добавляет именованный источник для поля
+
 ## CONTENT
+
+Добавляет именованный источник для поля
 
 Параметры:
 * memory::string const&
@@ -481,7 +680,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Идентификатор источника или пространства имён
+
 ## CONTENT
+
+Идентификатор источника или пространства имён
 
 Тип: stappler::StringView
 
@@ -490,7 +693,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Идентификатор поля
+
 ## CONTENT
+
+Идентификатор поля
 
 Тип: stappler::StringView
 
@@ -499,7 +706,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Псевдоним поля
+
 ## CONTENT
+
+Псевдоним поля
 
 Тип: stappler::StringView
 
@@ -508,7 +719,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Флаг интрпретации имени как чистого текста
+
 ## CONTENT
+
+Флаг интрпретации имени как чистого текста. Если true - не добавляются кавычи для имени.
 
 Тип: bool
 
@@ -517,19 +732,27 @@ Title: SPSql.h
 
 ## BRIEF
 
+Вспомогательная структура с функциями для добавления аргументов к блоку
+
 ## CONTENT
 
 Доступ: public
 
+Вспомогательная структура с функциями для добавления аргументов к блоку
+
 Параметры шаблона:
-* typename Clause
+* typename Clause - тип внешнего блока
 
 
 # ::stappler::sql::Query<typename,typename>::Expand<typename>::fields<typename>(Clause&,stappler::sql::Query::Field const&,VArgs &&...)
 
 ## BRIEF
 
+Добавляет поля в качестве аргументов к блоку
+
 ## CONTENT
+
+Добавляет поля в качестве аргументов к блоку
 
 Параметры шаблона:
 * typename VArgs
@@ -544,7 +767,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Добавляет одиночное поле в качестве аргумента к блоку
+
 ## CONTENT
+
+Добавляет одиночное поле в качестве аргумента к блоку. Используется для конца рекурсивного обхода переменного числа аргументов
 
 Параметры:
 * Clause&
@@ -555,7 +782,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Добавляет источники к блоку
+
 ## CONTENT
+
+Добавляет источники к блоку
 
 Параметры шаблона:
 * typename VArgs
@@ -570,7 +801,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Добавляет источник к блоку
+
 ## CONTENT
+
+Добавляет источник к блоку. Используется для конца рекурсивного обхода переменного числа аргументов
 
 Параметры:
 * Clause&
@@ -581,7 +816,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Добавляет значения к блоку в качестве аргументов
+
 ## CONTENT
+
+Добавляет значения к блоку в качестве аргументов
 
 Параметры шаблона:
 * typename Value
@@ -597,7 +836,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Добавляет значение к блоку в качестве аргумента
+
 ## CONTENT
+
+Добавляет значение к блоку в качестве аргумента. Используется для конца рекурсивного обхода переменного числа аргументов
 
 Параметры шаблона:
 * typename Value
@@ -611,7 +854,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Вспомогательная функция завершения рекурсии
+
 ## CONTENT
+
+Вспомогательная функция завершения рекурсии (обработка бага GCC)
 
 Параметры:
 * Clause&
@@ -621,16 +868,24 @@ Title: SPSql.h
 
 ## BRIEF
 
+Манипулятор запроса для операционного SQL-блока
+
 ## CONTENT
 
 Доступ: public
+
+Манипулятор запроса для операционного SQL-блока. Используется в качстве базового класса для различных блоков запроса.
 
 
 # ::stappler::sql::Query<typename,typename>::QueryHandle::query
 
 ## BRIEF
 
+Указатель на связанный запрос
+
 ## CONTENT
+
+Указатель на связанный запрос
 
 Тип: Query<Binder, Interface>*
 
@@ -639,7 +894,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Статус инициализации блока
+
 ## CONTENT
+
+Статус инициализации блока
 
 Тип: stappler::sql::Query::State
 
@@ -648,30 +907,42 @@ Title: SPSql.h
 
 ## BRIEF
 
+Завершает запись блока
+
 ## CONTENT
+
+Завершает запись блока
 
 
 # ::stappler::sql::Query<typename,typename>::QueryHandle::QueryHandle(Query<Binder, Interface>*,stappler::sql::Query::State)
 
 ## BRIEF
 
+Инициализирует манипулятор запроса
+
 ## CONTENT
 
+Инициализирует манипулятор запроса
+
 Параметры:
-* Query<Binder, Interface>*
-* stappler::sql::Query::State
+* Query<Binder, Interface>* - исходный запрос
+* stappler::sql::Query::State - исходный статус инициализации
 
 
 # ::stappler::sql::Query<typename,typename>::WhereClause<typename>
 
 ## BRIEF
 
+Блок WHERE подзапроса
+
 ## CONTENT
 
 Доступ: public
 
+Блок WHERE подзапроса. Используется для блоков, где требуются аргументы, аналогичные WHERE.
+
 Параметры шаблона:
-* typename Clause
+* typename Clause - тип исходного блока
 
 Базовые классы:
 * QueryHandle
@@ -681,16 +952,20 @@ Title: SPSql.h
 
 ## BRIEF
 
+Записывает оператор сравнения поля и значения
+
 ## CONTENT
 
+Записывает оператор сравнения поля и значения
+
 Параметры шаблона:
-* typename Value
+* typename Value - тип значения
 
 Параметры:
-* stappler::sql::Operator
-* stappler::sql::Query::Field const&
-* stappler::sql::Comparation
-* Value&&
+* stappler::sql::Operator - логический оператор для объединения запросов
+* stappler::sql::Query::Field const& - поле для сравнения
+* stappler::sql::Comparation - оператор сравнения
+* Value&& - значение для сравнения
 
 Возвращает:
 * Clause&
@@ -699,16 +974,20 @@ Title: SPSql.h
 
 ## BRIEF
 
+Записывает оператор сравнения поля и значения
+
 ## CONTENT
 
+Записывает оператор сравнения поля и значения, для случая, когда подмножество SQL поддерживает нестандартные операторы
+
 Параметры шаблона:
-* typename Value
+* typename Value - тип значения
 
 Параметры:
-* stappler::sql::Operator
-* stappler::sql::Query::Field const&
-* stappler::StringView const&
-* Value&&
+* stappler::sql::Operator - логический оператор для объединения запросов
+* stappler::sql::Query::Field const& - поле для сравнения
+* stappler::StringView const& - текстовая форма оператора (для случая, когда подмножество языка поддерживает нестандартные операторы)
+* Value&& - значение для сравнения
 
 Возвращает:
 * Clause&
@@ -717,17 +996,21 @@ Title: SPSql.h
 
 ## BRIEF
 
+Записывает оператор сравнения поля и значений для двуместного оператора
+
 ## CONTENT
 
+Записывает оператор сравнения поля и значений для двуместного оператора
+
 Параметры шаблона:
-* typename Value
+* typename Value - тип значения
 
 Параметры:
-* stappler::sql::Operator
-* stappler::sql::Query::Field const&
-* stappler::sql::Comparation
-* Value&&
-* Value&&
+* stappler::sql::Operator - логический оператор для объединения запросов
+* stappler::sql::Query::Field const& - поле для сравнения
+* stappler::sql::Comparation - оператор сравнения
+* Value&& - первое значение для сравнения
+* Value&& - второе значение для сравнения
 
 Возвращает:
 * Clause&
@@ -736,18 +1019,22 @@ Title: SPSql.h
 
 ## BRIEF
 
+Записывает оператор сравнения поля и значений с двуместным оператором
+
 ## CONTENT
 
+Записывает оператор сравнения поля и значений с двуместным оператором, для случая, когда подмножество SQL поддерживает нестандартные операторы
+
 Параметры шаблона:
-* typename Value
+* typename Value - тип значения
 
 Параметры:
-* stappler::sql::Operator
-* stappler::sql::Query::Field const&
-* stappler::StringView const&
-* Value&&
-* stappler::StringView const&
-* Value&&
+* stappler::sql::Operator - логический оператор для объединения запросов
+* stappler::sql::Query::Field const& - поле для сравнения
+* stappler::StringView const& - текстовая форма первой части оператора (для случая, когда подмножество языка поддерживает нестандартные операторы)
+* Value&& - первое значение для сравнения
+* stappler::StringView const& - текстовая форма второй части оператора
+* Value&& - второе значение для сравнения
 
 Возвращает:
 * Clause&
@@ -756,14 +1043,18 @@ Title: SPSql.h
 
 ## BRIEF
 
+Упаковывает новый блок в текущий с использованием вложения
+
 ## CONTENT
+
+Упаковывает новый блок в текущий с использованием вложения
 
 Параметры шаблона:
 * typename Callback
 
 Параметры:
-* stappler::sql::Operator
-* Callback const&
+* stappler::sql::Operator - логический оператор для соединения
+* Callback const& - функция для вызова внутри вложения (вызывается с манипулятором WhereBegin)
 
 Возвращает:
 * Clause&
@@ -772,9 +1063,13 @@ Title: SPSql.h
 
 ## BRIEF
 
+Структура для начала секции WHERE запроса
+
 ## CONTENT
 
 Доступ: public
+
+Структура для начала секции WHERE запроса
 
 Базовые классы:
 * QueryHandle
@@ -784,7 +1079,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Начинает запись WHERE запроса
+
 ## CONTENT
+
+Начинает запись WHERE запроса. Арзументы передаются в WhereClause::where, игнорируя логический оператор
 
 Параметры шаблона:
 * typename Args
@@ -793,39 +1092,51 @@ Title: SPSql.h
 * Args &&...
 
 Возвращает:
-* stappler::sql::Query::WhereContinue
+* stappler::sql::Query::WhereContinue - манипулятор для продолжения записи блока
 
 # ::stappler::sql::Query<typename,typename>::WhereBegin::where()
 
 ## BRIEF
 
+Начинает запись WHERE запроса
+
 ## CONTENT
 
+Начинает запись WHERE запроса, инициализруя пустой блок
+
 Возвращает:
-* stappler::sql::Query::WhereContinue
+* stappler::sql::Query::WhereContinue - манипулятор для продолжения записи блока
 
 # ::stappler::sql::Query<typename,typename>::WhereBegin::whereParentesis<typename>(Callback const&)
 
 ## BRIEF
 
+Начинает запись WHERE запроса с подхапроса
+
 ## CONTENT
+
+Начинает запись WHERE запроса с подхапроса
 
 Параметры шаблона:
 * typename Callback
 
 Параметры:
-* Callback const&
+* Callback const& - функция, вызываемая для записи подзапроса (вызывается с манипулятором WhereBegin)
 
 Возвращает:
-* stappler::sql::Query::WhereContinue
+* stappler::sql::Query::WhereContinue - манипулятор для продолжения записи блока
 
 # ::stappler::sql::Query<typename,typename>::WhereContinue
 
 ## BRIEF
 
+Структуора для продолжения записи блока WHERE после инициализации
+
 ## CONTENT
 
 Доступ: public
+
+Структуора для продолжения записи блока WHERE после инициализации. Использует функции WhereClause.
 
 Базовые классы:
 * WhereClause<WhereContinue>
@@ -835,9 +1146,13 @@ Title: SPSql.h
 
 ## BRIEF
 
+Струкутра для записи блока SET
+
 ## CONTENT
 
 Доступ: public
+
+Струкутра для записи блока SET (как в UPDATE ... SET)
 
 Параметры шаблона:
 * typename Clause
@@ -850,14 +1165,18 @@ Title: SPSql.h
 
 ## BRIEF
 
+Записывает аргумент для записи в поле
+
 ## CONTENT
 
+Записывает аргумент для записи в поле
+
 Параметры шаблона:
-* typename Value
+* typename Value - тип значения
 
 Параметры:
-* stappler::StringView const&
-* Value&&
+* stappler::StringView const& - имя поля
+* Value&& - значение для запими
 
 Возвращает:
 * Clause&
@@ -866,15 +1185,19 @@ Title: SPSql.h
 
 ## BRIEF
 
+Записывает аргумент для записи в поле
+
 ## CONTENT
 
+Записывает аргумент для записи в поле в пространстве имён
+
 Параметры шаблона:
-* typename Value
+* typename Value - тип значения
 
 Параметры:
-* stappler::StringView const&
-* stappler::StringView const&
-* Value&&
+* stappler::StringView const& - пространство имён/таблица
+* stappler::StringView const& - имя поля
+* Value&& - значение
 
 Возвращает:
 * Clause&
@@ -883,10 +1206,14 @@ Title: SPSql.h
 
 ## BRIEF
 
+Записывает значение по умолчанию для поля
+
 ## CONTENT
 
+Записывает значение по умолчанию для поля
+
 Параметры:
-* stappler::StringView const&
+* stappler::StringView const& - имя поля
 
 Возвращает:
 * Clause&
@@ -895,9 +1222,13 @@ Title: SPSql.h
 
 ## BRIEF
 
+Структура списка полей для SELECT ... и подобных
+
 ## CONTENT
 
 Доступ: public
+
+Структура списка полей для SELECT ... и подобных
 
 Параметры шаблона:
 * typename Clause
@@ -910,14 +1241,18 @@ Title: SPSql.h
 
 ## BRIEF
 
+Добавляет поля к списку
+
 ## CONTENT
+
+Добавляет поля к списку
 
 Параметры шаблона:
 * typename Args
 
 Параметры:
-* stappler::sql::Query::Field const&
-* Args &&...
+* stappler::sql::Query::Field const& - первое поле
+* Args &&... - список следующих аргументов-полей
 
 Возвращает:
 * Clause&
@@ -926,7 +1261,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Добавляет поле к списку
+
 ## CONTENT
+
+Добавляет поле к списку
 
 Параметры:
 * stappler::sql::Query::Field const&
@@ -938,11 +1277,15 @@ Title: SPSql.h
 
 ## BRIEF
 
+Добавляет поле-агрегат к списку
+
 ## CONTENT
 
+Добавляет поле-агрегат к списку
+
 Параметры:
-* stappler::StringView const&
-* stappler::sql::Query::Field const&
+* stappler::StringView const& - имя агрегата вокруг поля
+* stappler::sql::Query::Field const& - поле для записи
 
 Возвращает:
 * Clause&
@@ -951,9 +1294,13 @@ Title: SPSql.h
 
 ## BRIEF
 
+Базовый тип для запроса или подзапроса
+
 ## CONTENT
 
 Доступ: public
+
+Базовый тип для запроса или подзапроса
 
 Базовые классы:
 * QueryHandle
@@ -963,14 +1310,18 @@ Title: SPSql.h
 
 ## BRIEF
 
+Добавляет подзапрос в виде структуры WITH
+
 ## CONTENT
+
+Добавляет подзапрос в виде структуры WITH
 
 Параметры шаблона:
 * typename Callback
 
 Параметры:
-* stappler::StringView const&
-* Callback const&
+* stappler::StringView const& - имя подзапроса
+* Callback const& - функция обратного вызова, вызывается с GenericQuery
 
 Возвращает:
 * stappler::sql::Query::GenericQuery&
@@ -979,19 +1330,28 @@ Title: SPSql.h
 
 ## BRIEF
 
+Начинает новый зпрос типа SELECT
+
 ## CONTENT
+
+Начинает новый зпрос типа SELECT
 
 Параметры:
 * stappler::sql::Query::Distinct
 
 Возвращает:
-* stappler::sql::Query::Select
+* stappler::sql::Query::Select - манипулятор заявления SELECT
+
 
 # ::stappler::sql::Query<typename,typename>::GenericQuery::select<typename>(stappler::sql::Query::Field const&,Args &&...)
 
 ## BRIEF
 
+Начинает новый зпрос типа SELECT
+
 ## CONTENT
+
+Начинает новый зпрос типа SELECT со списком полей
 
 Параметры шаблона:
 * typename Args
@@ -1007,7 +1367,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Начинает новый зпрос типа SELECT
+
 ## CONTENT
+
+Начинает новый зпрос типа SELECT со списком полей
 
 Параметры шаблона:
 * typename Args
@@ -1024,10 +1388,14 @@ Title: SPSql.h
 
 ## BRIEF
 
+Начинает новый запрос INSERT INTO
+
 ## CONTENT
 
+Начинает новый запрос INSERT INTO
+
 Параметры:
-* stappler::StringView const&
+* stappler::StringView const& - имя таблицы для вставки
 
 Возвращает:
 * stappler::sql::Query::Insert
@@ -1036,11 +1404,15 @@ Title: SPSql.h
 
 ## BRIEF
 
+Начинает новый запрос INSERT INTO
+
 ## CONTENT
 
+Начинает новый запрос INSERT INTO
+
 Параметры:
-* stappler::StringView const&
-* stappler::StringView const&
+* stappler::StringView const& - имя таблицы для вставки
+* stappler::StringView const& - внутренний псевдоним для таблицы
 
 Возвращает:
 * stappler::sql::Query::Insert
@@ -1049,10 +1421,14 @@ Title: SPSql.h
 
 ## BRIEF
 
+Начинает новый запрос UPDATE
+
 ## CONTENT
 
+Начинает новый запрос UPDATE
+
 Параметры:
-* stappler::StringView const&
+* stappler::StringView const& - имя таблицы для вставки
 
 Возвращает:
 * stappler::sql::Query::Update
@@ -1061,11 +1437,15 @@ Title: SPSql.h
 
 ## BRIEF
 
+Начинает новый запрос UPDATE
+
 ## CONTENT
 
+Начинает новый запрос UPDATE
+
 Параметры:
-* stappler::StringView const&
-* stappler::StringView const&
+* stappler::StringView const& - имя таблицы для вставки
+* stappler::StringView const& - внутренний псевдоним для таблицы
 
 Возвращает:
 * stappler::sql::Query::Update
@@ -1074,10 +1454,14 @@ Title: SPSql.h
 
 ## BRIEF
 
+Начинает новый запрос DELETE FROM
+
 ## CONTENT
 
+Начинает новый запрос DELETE FROM
+
 Параметры:
-* stappler::StringView const&
+* stappler::StringView const& - имя таблицы
 
 Возвращает:
 * stappler::sql::Query::Delete
@@ -1086,11 +1470,15 @@ Title: SPSql.h
 
 ## BRIEF
 
+Начинает новый запрос DELETE FROM
+
 ## CONTENT
 
+Начинает новый запрос DELETE FROM
+
 Параметры:
-* stappler::StringView const&
-* stappler::StringView const&
+* stappler::StringView const& - имя таблицы
+* stappler::StringView const& - внутренний псевдоним таблицы
 
 Возвращает:
 * stappler::sql::Query::Delete
@@ -1099,9 +1487,13 @@ Title: SPSql.h
 
 ## BRIEF
 
+Структура для запроса SELECT
+
 ## CONTENT
 
 Доступ: public
+
+Структура для запроса SELECT
 
 Базовые классы:
 * FieldsClause<Select>
@@ -1111,7 +1503,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Добавляет выбор всех полей
+
 ## CONTENT
+
+Добавляет выбор всех полей (`SELECT *`)
 
 Возвращает:
 * stappler::sql::Query::Select&
@@ -1120,7 +1516,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Добавляет выбор числа результатов
+
 ## CONTENT
+
+Добавляет выбор числа результатов (`SELECT COUNT(*)`)
 
 Возвращает:
 * stappler::sql::Query::Select&
@@ -1129,10 +1529,14 @@ Title: SPSql.h
 
 ## BRIEF
 
+Добавляет выбор числа результатов
+
 ## CONTENT
 
+Добавляет выбор числа результатов (`SELECT COUNT(name)`)
+
 Параметры:
-* stappler::sql::Query::String const&
+* stappler::sql::Query::String const& - имя для агрегата числа результатов
 
 Возвращает:
 * stappler::sql::Query::Select&
@@ -1141,7 +1545,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Переходит к записи блока FROM
+
 ## CONTENT
+
+Переходит к записи блока FROM
 
 Возвращает:
 * stappler::sql::Query::SelectFrom
@@ -1150,26 +1558,35 @@ Title: SPSql.h
 
 ## BRIEF
 
+Переходит к записи блока FROM
+
 ## CONTENT
 
+Переходит к записи блока FROM, сразу добавляя таблицу для выбора
+
 Параметры:
-* stappler::sql::Query::Field const&
+* stappler::sql::Query::Field const& - поле, идентифицирующее таблицу для выбора
 
 Возвращает:
 * stappler::sql::Query::SelectFrom
+
 
 # ::stappler::sql::Query<typename,typename>::Select::from<typename>(stappler::sql::Query::Field const&,Args &&...)
 
 ## BRIEF
 
+Переходит к записи блока FROM
+
 ## CONTENT
+
+Переходит к записи блока FROM, сразу добавляя список таблиц произвольной длины
 
 Параметры шаблона:
 * typename Args
 
 Параметры:
-* stappler::sql::Query::Field const&
-* Args &&...
+* stappler::sql::Query::Field const& - поле, идентифицирующее таблицу для выбора
+* Args &&... - список полей произвольной длины
 
 Возвращает:
 * stappler::sql::Query::SelectFrom
@@ -1178,9 +1595,13 @@ Title: SPSql.h
 
 ## BRIEF
 
+Структура для записи блока FROM
+
 ## CONTENT
 
 Доступ: public
+
+Структура для записи блока FROM
 
 Базовые классы:
 * QueryHandle
@@ -1190,10 +1611,14 @@ Title: SPSql.h
 
 ## BRIEF
 
+Добавляет таблицу для выбора
+
 ## CONTENT
 
+Добавляет таблицу для выбора
+
 Параметры:
-* stappler::sql::Query::Field const&
+* stappler::sql::Query::Field const& - поле, идентифицирующее таблицу
 
 Возвращает:
 * stappler::sql::Query::SelectFrom&
@@ -1202,14 +1627,18 @@ Title: SPSql.h
 
 ## BRIEF
 
+Добавляет таблицы для выбора
+
 ## CONTENT
+
+Добавляет таблицы для выбора
 
 Параметры шаблона:
 * typename Args
 
 Параметры:
-* stappler::sql::Query::Field const&
-* Args &&...
+* stappler::sql::Query::Field const& - поле, идентифицирующее таблицу
+* Args &&... - список полей
 
 Возвращает:
 * stappler::sql::Query::SelectFrom&
@@ -1218,14 +1647,18 @@ Title: SPSql.h
 
 ## BRIEF
 
+Добавляет INNER JOIN для предыдущего записанного заявления
+
 ## CONTENT
+
+Добавляет INNER JOIN для предыдущего записанного заявления
 
 Параметры шаблона:
 * typename Callback
 
 Параметры:
-* stappler::StringView const&
-* Callback const&
+* stappler::StringView const& - имя таблицы для INNER JOIN
+* Callback const& - функция обратного вызова для записи фильтра, вызывается с WhereBegin
 
 Возвращает:
 * stappler::sql::Query::SelectFrom&
@@ -1234,14 +1667,18 @@ Title: SPSql.h
 
 ## BRIEF
 
+Добавляет LEFT JOIN для предыдущего записанного заявления
+
 ## CONTENT
+
+Добавляет LEFT JOIN для предыдущего записанного заявления
 
 Параметры шаблона:
 * typename Callback
 
 Параметры:
-* stappler::StringView const&
-* Callback const&
+* stappler::StringView const& - имя таблицы для LEFT JOIN
+* Callback const& - функция обратного вызова для записи фильтра, вызывается с WhereBegin
 
 Возвращает:
 * stappler::sql::Query::SelectFrom&
@@ -1250,14 +1687,18 @@ Title: SPSql.h
 
 ## BRIEF
 
+Добавляет RIGHT JOIN для предыдущего записанного заявления
+
 ## CONTENT
+
+Добавляет RIGHT JOIN для предыдущего записанного заявления
 
 Параметры шаблона:
 * typename Callback
 
 Параметры:
-* stappler::StringView const&
-* Callback const&
+* stappler::StringView const& - имя таблицы для RIGHT JOIN
+* Callback const& - функция обратного вызова для записи фильтра, вызывается с WhereBegin
 
 Возвращает:
 * stappler::sql::Query::SelectFrom&
@@ -1266,14 +1707,18 @@ Title: SPSql.h
 
 ## BRIEF
 
+Добавляет FULL JOIN для предыдущего записанного заявления
+
 ## CONTENT
+
+Добавляет FULL JOIN для предыдущего записанного заявления
 
 Параметры шаблона:
 * typename Callback
 
 Параметры:
-* stappler::StringView const&
-* Callback const&
+* stappler::StringView const& - имя таблицы для FULL JOIN
+* Callback const& - функция обратного вызова для записи фильтра, вызывается с WhereBegin
 
 Возвращает:
 * stappler::sql::Query::SelectFrom&
@@ -1282,7 +1727,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Переходит к записи блока WHERE
+
 ## CONTENT
+
+Переходит к записи блока WHERE, сразу получая начальные аргументы (см. WhereClause)
 
 Параметры шаблона:
 * typename Args
@@ -1297,7 +1746,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Переходит к записи блока WHERE
+
 ## CONTENT
+
+Переходит к записи блока WHERE
 
 Возвращает:
 * stappler::sql::Query::SelectWhere
@@ -1306,10 +1759,14 @@ Title: SPSql.h
 
 ## BRIEF
 
+Переходит к записи блока GROUP BY
+
 ## CONTENT
 
+Переходит к записи блока GROUP BY
+
 Параметры:
-* stappler::sql::Query::Field const&
+* stappler::sql::Query::Field const& - поле для группировки
 
 Возвращает:
 * stappler::sql::Query::SelectGroup
@@ -1318,12 +1775,16 @@ Title: SPSql.h
 
 ## BRIEF
 
+Переходит к записи ORDER BY
+
 ## CONTENT
 
+Переходит к записи ORDER BY
+
 Параметры:
-* stappler::sql::Ordering
-* stappler::sql::Query::Field const&
-* stappler::sql::Nulls
+* stappler::sql::Ordering - способ упорядочивания
+* stappler::sql::Query::Field const& - поле для упорядочивания
+* stappler::sql::Nulls - способ уполядочивания значений NULL
 
 Возвращает:
 * stappler::sql::Query::SelectOrder
@@ -1332,16 +1793,24 @@ Title: SPSql.h
 
 ## BRIEF
 
+Записывает флаг FOR UPDATE
+
 ## CONTENT
+
+Записывает флаг FOR UPDATE, завершает запись запроса
 
 
 # ::stappler::sql::Query<typename,typename>::SelectGroup
 
 ## BRIEF
 
+Структура для записи GROUP BY
+
 ## CONTENT
 
 Доступ: public
+
+Структура для записи GROUP BY
 
 Базовые классы:
 * QueryHandle
@@ -1351,7 +1820,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Записывает список полей для группировки
+
 ## CONTENT
+
+Записывает список полей для группировки
 
 Параметры шаблона:
 * typename Args
@@ -1367,7 +1840,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Записывает одиночное поле для группировки
+
 ## CONTENT
+
+Записывает одиночное поле для группировки
 
 Параметры:
 * stappler::sql::Query::Field const&
@@ -1379,12 +1856,16 @@ Title: SPSql.h
 
 ## BRIEF
 
+Переходит к записи ORDER BY
+
 ## CONTENT
 
+Переходит к записи ORDER BY
+
 Параметры:
-* stappler::sql::Ordering
-* stappler::sql::Query::Field const&
-* stappler::sql::Nulls
+* stappler::sql::Ordering - способ упорядочивания
+* stappler::sql::Query::Field const& - поле для упорядочивания
+* stappler::sql::Nulls - способ уполядочивания значений NULL
 
 Возвращает:
 * stappler::sql::Query::SelectOrder
@@ -1393,9 +1874,13 @@ Title: SPSql.h
 
 ## BRIEF
 
+Структура для записи блока WHERE
+
 ## CONTENT
 
 Доступ: public
+
+Структура для записи блока WHERE, наследует функции WhereClause
 
 Базовые классы:
 * WhereClause<SelectWhere>
@@ -1405,10 +1890,14 @@ Title: SPSql.h
 
 ## BRIEF
 
+Переходит к записи GROUP BY
+
 ## CONTENT
 
+Переходит к записи GROUP BY
+
 Параметры:
-* stappler::sql::Query::Field const&
+* stappler::sql::Query::Field const& - начальное поле для группировки
 
 Возвращает:
 * stappler::sql::Query::SelectGroup
@@ -1417,12 +1906,16 @@ Title: SPSql.h
 
 ## BRIEF
 
+Переходит к записи ORDER BY
+
 ## CONTENT
 
+Переходит к записи ORDER BY
+
 Параметры:
-* stappler::sql::Ordering
-* stappler::sql::Query::Field const&
-* stappler::sql::Nulls
+* stappler::sql::Ordering - способ упорядочивания
+* stappler::sql::Query::Field const& - поле для упорядочивания
+* stappler::sql::Nulls - способ уполядочивания значений NULL
 
 Возвращает:
 * stappler::sql::Query::SelectOrder
@@ -1431,16 +1924,24 @@ Title: SPSql.h
 
 ## BRIEF
 
+Записывает флаг FOR UPDATE
+
 ## CONTENT
+
+Записывает флаг FOR UPDATE, завершает запись запроса
 
 
 # ::stappler::sql::Query<typename,typename>::SelectOrder
 
 ## BRIEF
 
+Структура для записи блока ORDER BY
+
 ## CONTENT
 
 Доступ: public
+
+Структура для записи блока ORDER BY
 
 Базовые классы:
 * QueryHandle
@@ -1450,11 +1951,15 @@ Title: SPSql.h
 
 ## BRIEF
 
+Записывает блок LIMIT ... OFFSET
+
 ## CONTENT
 
+Записывает блок LIMIT ... OFFSET
+
 Параметры:
-* size_t
-* size_t
+* size_t - значение для LIMIT
+* size_t - значение для OFFSET
 
 Возвращает:
 * stappler::sql::Query::SelectPost
@@ -1463,10 +1968,14 @@ Title: SPSql.h
 
 ## BRIEF
 
+Записывает блок LIMIT
+
 ## CONTENT
 
+Записывает блок LIMIT
+
 Параметры:
-* size_t
+* size_t - значение для LIMIT
 
 Возвращает:
 * stappler::sql::Query::SelectPost
@@ -1475,10 +1984,14 @@ Title: SPSql.h
 
 ## BRIEF
 
+Записывает блок OFFSET
+
 ## CONTENT
 
+Записывает блок OFFSET
+
 Параметры:
-* size_t
+* size_t - значение для OFFSET
 
 Возвращает:
 * stappler::sql::Query::SelectPost
@@ -1487,16 +2000,24 @@ Title: SPSql.h
 
 ## BRIEF
 
+Записывает флаг FOR UPDATE
+
 ## CONTENT
+
+Записывает флаг FOR UPDATE, завершает запись запроса
 
 
 # ::stappler::sql::Query<typename,typename>::SelectPost
 
 ## BRIEF
 
+Финальная структура для запроса SELECT
+
 ## CONTENT
 
 Доступ: public
+
+Финальная структура для запроса SELECT
 
 Базовые классы:
 * QueryHandle
@@ -1506,16 +2027,24 @@ Title: SPSql.h
 
 ## BRIEF
 
+Записывает флаг FOR UPDATE
+
 ## CONTENT
+
+Записывает флаг FOR UPDATE, завершает запись запроса
 
 
 # ::stappler::sql::Query<typename,typename>::Insert
 
 ## BRIEF
 
+Структура для записи блока INSERT INTO
+
 ## CONTENT
 
 Доступ: public
+
+Структура для записи блока INSERT INTO. Для записи полей используются функции FieldsClause
 
 Базовые классы:
 * FieldsClause<Insert>
@@ -1525,24 +2054,32 @@ Title: SPSql.h
 
 ## BRIEF
 
+Переходит к записи значений для вставки
+
 ## CONTENT
+
+Переходит к записи значений для вставки
 
 Параметры шаблона:
 * typename Args
 
 Параметры:
-* Args &&...
+* Args &&... - список значений для вставки в текущем пакете
 
 Возвращает:
-* stappler::sql::Query::InsertValues
+* stappler::sql::Query::InsertValues - манипулятор для вставки значений
 
 # ::stappler::sql::Query<typename,typename>::InsertValues
 
 ## BRIEF
 
+Структура для вставки значений в блок INSERT INTO
+
 ## CONTENT
 
 Доступ: public
+
+Структура для вставки значений в блок INSERT INTO
 
 Базовые классы:
 * QueryHandle
@@ -1552,13 +2089,17 @@ Title: SPSql.h
 
 ## BRIEF
 
+Добавляет значение для вставки
+
 ## CONTENT
+
+Добавляет значение для вставки
 
 Параметры шаблона:
 * typename Value
 
 Параметры:
-* Value&&
+* Value&& - новое значение
 
 Возвращает:
 * stappler::sql::Query::InsertValues&
@@ -1567,7 +2108,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Добавляет значение по умолчанию для вставки
+
 ## CONTENT
+
+Добавляет значение по умолчанию для вставки
 
 Возвращает:
 * stappler::sql::Query::InsertValues&
@@ -1576,7 +2121,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Добавляет значения для вставки
+
 ## CONTENT
+
+Добавляет значения для вставки в виде аргументов переменной длины
 
 Параметры шаблона:
 * typename Args
@@ -1591,10 +2140,14 @@ Title: SPSql.h
 
 ## BRIEF
 
+Переходит к записи блока ON CONFLICT, если такой доступен
+
 ## CONTENT
 
+Переходит к записи блока ON CONFLICT, если такой доступен. Завершает запись значений.
+
 Параметры:
-* stappler::StringView const&
+* stappler::StringView const& - поле, по которому проверяется конфликт
 
 Возвращает:
 * stappler::sql::Query::InsertConflict
@@ -1603,7 +2156,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Записывает отмену действия при конфликте
+
 ## CONTENT
+
+Записывает отмену действия при конфликте. Завершает запись значений.
 
 Возвращает:
 * stappler::sql::Query::InsertPostConflict
@@ -1612,7 +2169,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Запистывает блок RETURNING или аналогичные, если возможно
+
 ## CONTENT
+
+Запистывает блок RETURNING или аналогичные, если возможно. Завершает запись значений.
 
 Возвращает:
 * stappler::sql::Query::Returning
@@ -1621,7 +2182,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Переходит к записи следующего набора значений
+
 ## CONTENT
+
+Переходит к записи следующего набора значений
 
 Возвращает:
 * stappler::sql::Query::InsertValues
@@ -1630,9 +2195,13 @@ Title: SPSql.h
 
 ## BRIEF
 
+Струкутра для записи механизма разрешения конфликтов при вставке
+
 ## CONTENT
 
 Доступ: public
+
+Струкутра для записи механизма разрешения конфликтов при вставке
 
 Базовые классы:
 * QueryHandle
@@ -1642,7 +2211,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Отменяет действие при конфликте
+
 ## CONTENT
+
+Отменяет действие при конфликте
 
 Возвращает:
 * stappler::sql::Query::InsertPostConflict
@@ -1651,18 +2224,27 @@ Title: SPSql.h
 
 ## BRIEF
 
+Указывает альтернативные значения для замены в строке при конфликте
+
 ## CONTENT
 
+Указывает альтернативные значения для замены в строке при конфликте
+
 Возвращает:
-* stappler::sql::Query::InsertUpdateValues
+* stappler::sql::Query::InsertUpdateValues - манипулятор для указания новых значений
+
 
 # ::stappler::sql::Query<typename,typename>::InsertUpdateValues
 
 ## BRIEF
 
+Структура для указания новых значений при изменении строки на основании конфликта
+
 ## CONTENT
 
 Доступ: public
+
+Структура для указания новых значений при изменении строки на основании конфликта. Использует функции SetClause для работы
 
 Базовые классы:
 * SetClause<InsertUpdateValues>
@@ -1672,10 +2254,14 @@ Title: SPSql.h
 
 ## BRIEF
 
+Назначает для поля значение из конфликтной строки вставки
+
 ## CONTENT
 
+Назначает для поля значение из конфликтной строки вставки
+
 Параметры:
-* stappler::StringView
+* stappler::StringView - имя пола
 
 Возвращает:
 * stappler::sql::Query::InsertUpdateValues&
@@ -1684,11 +2270,15 @@ Title: SPSql.h
 
 ## BRIEF
 
+Назначает для поля значение из конфликтной строки вставки
+
 ## CONTENT
 
+Назначает для поля значение из конфликтной строки вставки для другого поля
+
 Параметры:
-* stappler::StringView
-* stappler::StringView
+* stappler::StringView - поле в существующей строке для обновления
+* stappler::StringView - поле в строке вставки, которое необходимо использовать
 
 Возвращает:
 * stappler::sql::Query::InsertUpdateValues&
@@ -1697,7 +2287,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Добавляет условие для обновления полей при конфликте
+
 ## CONTENT
+
+Добавляет условие для обновления полей при конфликте. Параметры передаются в WhereClause, игнорируя условный оператор в начале.
 
 Параметры шаблона:
 * typename Args
@@ -1706,22 +2300,30 @@ Title: SPSql.h
 * Args &&...
 
 Возвращает:
-* stappler::sql::Query::InsertWhereValues
+* stappler::sql::Query::InsertWhereValues - манипулятор для записи условия
 
 # ::stappler::sql::Query<typename,typename>::InsertUpdateValues::where()
 
 ## BRIEF
 
+Добавляет условие для обновления полей при конфликте
+
 ## CONTENT
 
+Добавляет условие для обновления полей при конфликте
+
 Возвращает:
-* stappler::sql::Query::InsertWhereValues
+* stappler::sql::Query::InsertWhereValues - манипулятор для записи условия
 
 # ::stappler::sql::Query<typename,typename>::InsertUpdateValues::returning()
 
 ## BRIEF
 
+Переходит к записи блока RETURNING или аналогичных
+
 ## CONTENT
+
+Переходит к записи блока RETURNING или аналогичных
 
 Возвращает:
 * stappler::sql::Query::Returning
@@ -1730,9 +2332,13 @@ Title: SPSql.h
 
 ## BRIEF
 
+Струкутра для записи условий при обновлении полей на основании конфликта
+
 ## CONTENT
 
 Доступ: public
+
+Струкутра для записи условий при обновлении полей на основании конфликта. Основано на функциях WhereClause
 
 Базовые классы:
 * WhereClause<InsertWhereValues>
@@ -1742,7 +2348,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Переходит к записи блока RETURNING или аналогичных
+
 ## CONTENT
+
+Переходит к записи блока RETURNING или аналогичных
 
 Возвращает:
 * stappler::sql::Query::Returning
@@ -1751,9 +2361,13 @@ Title: SPSql.h
 
 ## BRIEF
 
+Манипулятор для отражения состояния после записи всех блоков для запроса INSERT INTO
+
 ## CONTENT
 
 Доступ: public
+
+Манипулятор для отражения состояния после записи всех блоков для запроса INSERT INTO
 
 Базовые классы:
 * QueryHandle
@@ -1763,7 +2377,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Переходит к записи блока RETURNING или аналогичных
+
 ## CONTENT
+
+Переходит к записи блока RETURNING или аналогичных
 
 Возвращает:
 * stappler::sql::Query::Returning
@@ -1772,9 +2390,13 @@ Title: SPSql.h
 
 ## BRIEF
 
+Струкутра для записи запроса UPDATE
+
 ## CONTENT
 
 Доступ: public
+
+Струкутра для записи запроса UPDATE. Инициализируется сразу с указанной таблицей для обновления. Для добавления данных использует интерфейс SetClause.
 
 Базовые классы:
 * SetClause<Update>
@@ -1784,7 +2406,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Добавляет условие для обновления полей
+
 ## CONTENT
+
+Добавляет условие для обновления полей. Аргументы передаются в WhereClause, исключая первый аргумент: логический оператор.
 
 Параметры шаблона:
 * typename Args
@@ -1799,7 +2425,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Добавляет условие для обновления полей
+
 ## CONTENT
+
+Добавляет условие для обновления полей
 
 Возвращает:
 * stappler::sql::Query::UpdateWhere
@@ -1808,7 +2438,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Переходит к записи блока RETURNING или аналогичных
+
 ## CONTENT
+
+Переходит к записи блока RETURNING или аналогичных
 
 Возвращает:
 * stappler::sql::Query::Returning
@@ -1817,9 +2451,13 @@ Title: SPSql.h
 
 ## BRIEF
 
+Структура для записи условия для обновления полей
+
 ## CONTENT
 
 Доступ: public
+
+Структура для записи условия для обновления полей. Использует функции WhereClause для записи условий.
 
 Базовые классы:
 * WhereClause<UpdateWhere>
@@ -1829,7 +2467,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Переходит к записи блока RETURNING или аналогичных
+
 ## CONTENT
+
+Переходит к записи блока RETURNING или аналогичных
 
 Возвращает:
 * stappler::sql::Query::Returning
@@ -1838,9 +2480,13 @@ Title: SPSql.h
 
 ## BRIEF
 
+Структура для записи запроса DELETE
+
 ## CONTENT
 
 Доступ: public
+
+Структура для записи запроса DELETE. Создаётся сразу с указанием таблицы для удаления.
 
 Базовые классы:
 * QueryHandle
@@ -1850,7 +2496,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Записывает услвоие для удаления
+
 ## CONTENT
+
+Записывает услвоие для удаления. Аргументы передаются в WhereClause, исключая первый аргумент: логический оператор.
 
 Параметры шаблона:
 * typename Args
@@ -1865,7 +2515,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Записывает услвоие для удаления
+
 ## CONTENT
+
+Записывает услвоие для удаления
 
 Возвращает:
 * stappler::sql::Query::DeleteWhere
@@ -1874,7 +2528,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Переходит к записи блока RETURNING или аналогичных
+
 ## CONTENT
+
+Переходит к записи блока RETURNING или аналогичных
 
 Возвращает:
 * stappler::sql::Query::Returning
@@ -1883,9 +2541,13 @@ Title: SPSql.h
 
 ## BRIEF
 
+Структура для записи блока условий для запроса DELETE
+
 ## CONTENT
 
 Доступ: public
+
+Структура для записи блока условий для запроса DELETE. Основана на WhereClause.
 
 Базовые классы:
 * WhereClause<DeleteWhere>
@@ -1895,7 +2557,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Переходит к записи блока RETURNING или аналогичных
+
 ## CONTENT
+
+Переходит к записи блока RETURNING или аналогичных
 
 Возвращает:
 * stappler::sql::Query::Returning
@@ -1904,9 +2570,13 @@ Title: SPSql.h
 
 ## BRIEF
 
+Структура для записи блока RETURNING и подобных
+
 ## CONTENT
 
 Доступ: public
+
+Структура для записи блока RETURNING и подобных. Для записи полей возврата использует функции FieldsClause.
 
 Базовые классы:
 * FieldsClause<Returning>
@@ -1916,7 +2586,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Помечает все поля для возврата
+
 ## CONTENT
+
+Помечает все поля для возврата (`RETURNING *`)
 
 Возвращает:
 * stappler::sql::Query::Returning&
@@ -1925,7 +2599,11 @@ Title: SPSql.h
 
 ## BRIEF
 
+Возвращает число изменённых строк
+
 ## CONTENT
+
+Возвращает число изменённых строк
 
 Возвращает:
 * stappler::sql::Query::Returning&
@@ -1934,10 +2612,14 @@ Title: SPSql.h
 
 ## BRIEF
 
+Возвращает число изменённых строк по полю
+
 ## CONTENT
 
+Возвращает число изменённых строк по полю
+
 Параметры:
-* stappler::StringView const&
+* stappler::StringView const& - имя поля
 
 Возвращает:
 * stappler::sql::Query::Returning&
@@ -1946,18 +2628,26 @@ Title: SPSql.h
 
 ## BRIEF
 
+Инициализирует новый запрос
+
 ## CONTENT
 
 Доступ: public
+
+Инициализирует новый запрос
 
 
 # ::stappler::sql::Query<typename,typename>::setProfile(stappler::sql::Profile)
 
 ## BRIEF
 
+Устанавливает профиль языка SQL
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает профиль языка SQL
 
 Параметры:
 * stappler::sql::Profile
@@ -1967,16 +2657,20 @@ Title: SPSql.h
 
 ## BRIEF
 
+Добавляет подзапрос CTE (WITH)
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет подзапрос CTE (WITH)
 
 Параметры шаблона:
 * typename Callback
 
 Параметры:
-* stappler::StringView const&
-* Callback const&
+* stappler::StringView const& - имя подзапроса
+* Callback const& - функция обратного вызова, вызывается с GenericQuery для записи подзапроса
 
 Возвращает:
 * stappler::sql::Query::GenericQuery
@@ -1985,9 +2679,13 @@ Title: SPSql.h
 
 ## BRIEF
 
+Начинает запись запроса SELECT
+
 ## CONTENT
 
 Доступ: public
+
+Начинает запись запроса SELECT
 
 Параметры:
 * stappler::sql::Query::Distinct
@@ -1999,9 +2697,13 @@ Title: SPSql.h
 
 ## BRIEF
 
+Начинает запись запроса SELECT
+
 ## CONTENT
 
 Доступ: public
+
+Начинает запись запроса SELECT со списокм полей для возврата
 
 Параметры шаблона:
 * typename Args
@@ -2017,9 +2719,13 @@ Title: SPSql.h
 
 ## BRIEF
 
+Начинает запись запроса SELECT
+
 ## CONTENT
 
 Доступ: public
+
+Начинает запись запроса SELECT со списокм полей для возврата
 
 Параметры шаблона:
 * typename Args
@@ -2036,12 +2742,16 @@ Title: SPSql.h
 
 ## BRIEF
 
+Начинает запись запроса INSERT INTO
+
 ## CONTENT
 
 Доступ: public
 
+Начинает запись запроса INSERT INTO для таблицы
+
 Параметры:
-* stappler::StringView const&
+* stappler::StringView const& - имя таблицы
 
 Возвращает:
 * stappler::sql::Query::Insert
@@ -2050,13 +2760,17 @@ Title: SPSql.h
 
 ## BRIEF
 
+Начинает запись запроса INSERT INTO
+
 ## CONTENT
 
 Доступ: public
 
+Начинает запись запроса INSERT INTO для таблицы
+
 Параметры:
-* stappler::StringView const&
-* stappler::StringView const&
+* stappler::StringView const& - имя таблицы
+* stappler::StringView const& - внутренний псевдоним для таблицы
 
 Возвращает:
 * stappler::sql::Query::Insert
@@ -2065,12 +2779,16 @@ Title: SPSql.h
 
 ## BRIEF
 
+Начинает запись запроса UPDATE
+
 ## CONTENT
 
 Доступ: public
 
+Начинает запись запроса UPDATE для таблицы
+
 Параметры:
-* stappler::StringView const&
+* stappler::StringView const& - имя таблицы
 
 Возвращает:
 * stappler::sql::Query::Update
@@ -2079,13 +2797,17 @@ Title: SPSql.h
 
 ## BRIEF
 
+Начинает запись запроса UPDATE
+
 ## CONTENT
 
 Доступ: public
 
+Начинает запись запроса UPDATE для таблицы
+
 Параметры:
-* stappler::StringView const&
-* stappler::StringView const&
+* stappler::StringView const& - имя таблицы
+* stappler::StringView const& - внутренний псевдоним для таблицы
 
 Возвращает:
 * stappler::sql::Query::Update
@@ -2094,12 +2816,16 @@ Title: SPSql.h
 
 ## BRIEF
 
+Начинает запись запроса DELETE
+
 ## CONTENT
 
 Доступ: public
 
+Начинает запись запроса DELETE для таблицы
+
 Параметры:
-* stappler::StringView const&
+* stappler::StringView const& - имя таблицы
 
 Возвращает:
 * stappler::sql::Query::Delete
@@ -2108,13 +2834,17 @@ Title: SPSql.h
 
 ## BRIEF
 
+Начинает запись запроса DELETE
+
 ## CONTENT
 
 Доступ: public
 
+Начинает запись запроса DELETE для таблицы
+
 Параметры:
-* stappler::StringView const&
-* stappler::StringView const&
+* stappler::StringView const& - имя таблицы
+* stappler::StringView const& - внутренний псевдоним для таблицы
 
 Возвращает:
 * stappler::sql::Query::Delete
@@ -2123,18 +2853,26 @@ Title: SPSql.h
 
 ## BRIEF
 
+Завершает запись запроса
+
 ## CONTENT
 
 Доступ: public
+
+Завершает запись запроса
 
 
 # ::stappler::sql::Query<typename,typename>::writeBind<typename>(Value&&)
 
 ## BRIEF
 
+Связывает значение с запросом
+
 ## CONTENT
 
 Доступ: public
+
+Связывает значение с запросом, записывая его в запрос с помощью библиотеки БД. Если значение записывается через параметр, подставляет в запрос идентификатор этого параметра.
 
 Параметры шаблона:
 * typename Value
@@ -2147,9 +2885,13 @@ Title: SPSql.h
 
 ## BRIEF
 
+Связывает значение с запросом
+
 ## CONTENT
 
 Доступ: public
+
+Связывает значение необработанной строки с запросом. Записывает эту строку в запрос. Будьте осторожны, это может позволять SQL-инъекции.
 
 Параметры:
 * stappler::sql::Query::RawString const&
@@ -2159,9 +2901,13 @@ Title: SPSql.h
 
 ## BRIEF
 
+Связывает значение с запросом
+
 ## CONTENT
 
 Доступ: public
+
+Связывает значение необработанной строки с запросом. Записывает эту строку в запрос. Будьте осторожны, это может позволять SQL-инъекции.
 
 Параметры:
 * stappler::sql::Query::RawStringView const&
@@ -2171,21 +2917,29 @@ Title: SPSql.h
 
 ## BRIEF
 
+Связывает подзапрос с текущим запросом
+
 ## CONTENT
 
 Доступ: public
 
+Связывает подзапрос с текущим запросом
+
 Параметры:
-* Callback<void (stappler::sql::Query::Select &)> const&
+* Callback<void (stappler::sql::Query::Select &)> const& - функция обратного вызова для записи подзапроса
 
 
 # ::stappler::sql::Query<typename,typename>::writeBind(stappler::sql::Query::Field const&)
 
 ## BRIEF
 
+Связывает поле с запросом
+
 ## CONTENT
 
 Доступ: public
+
+Связывает поле с запросом. Записывает значение поля в запрос.
 
 Параметры:
 * stappler::sql::Query::Field const&
@@ -2195,22 +2949,30 @@ Title: SPSql.h
 
 ## BRIEF
 
+Связывает поле с запросом
+
 ## CONTENT
 
 Доступ: public
 
+Связывает поле с запросом. Записывает значение поля в запрос.
+
 Параметры:
 * stappler::sql::Query::Field const&
-* bool
+* bool - false - игнорировать псевдоним поля, даже если он установлен
 
 
 # ::stappler::sql::Query<typename,typename>::writeBind(stappler::StringView const&,stappler::sql::Query::Field const&)
 
 ## BRIEF
 
+Записывает в запрос вызов функции-агрегата для поля
+
 ## CONTENT
 
 Доступ: public
+
+Записывает в запрос вызов функции-агрегата для поля. В случае такой записи, псевдоним поля считается псевдонимом результата функции-агрегата
 
 Параметры:
 * stappler::StringView const&
@@ -2221,9 +2983,13 @@ Title: SPSql.h
 
 ## BRIEF
 
+Возвращает поток для записи запроса
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает поток для записи запроса
 
 Возвращает:
 * Stream&
@@ -2232,9 +2998,13 @@ Title: SPSql.h
 
 ## BRIEF
 
+Возвращает объект, связывающий аргументы с запросом
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает объект, связывающий аргументы с запросом
 
 Возвращает:
 * Binder&
@@ -2243,9 +3013,13 @@ Title: SPSql.h
 
 ## BRIEF
 
+Возвращает имя целевой таблицы основного запроса, если есть
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает имя целевой таблицы основного запроса, если есть
 
 Возвращает:
 * stappler::StringView
@@ -2254,9 +3028,13 @@ Title: SPSql.h
 
 ## BRIEF
 
+Статус финализации всего запроса
+
 ## CONTENT
 
 Доступ: protected
+
+Статус финализации всего запроса
 
 Тип: stappler::sql::Query::FinalizationState
 
@@ -2265,9 +3043,13 @@ Title: SPSql.h
 
 ## BRIEF
 
+Объект для связи аргументов с запросом
+
 ## CONTENT
 
 Доступ: protected
+
+Объект для связи аргументов с запросом
 
 Тип: Binder
 
@@ -2276,9 +3058,13 @@ Title: SPSql.h
 
 ## BRIEF
 
+Текстовый поток для записи запроса
+
 ## CONTENT
 
 Доступ: protected
+
+Текстовый поток для записи запроса
 
 Тип: Stream
 
@@ -2287,9 +3073,13 @@ Title: SPSql.h
 
 ## BRIEF
 
+Целевая таблица основного запроса
+
 ## CONTENT
 
 Доступ: protected
+
+Целевая таблица основного запроса
 
 Тип: stappler::StringView
 
@@ -2298,9 +3088,13 @@ Title: SPSql.h
 
 ## BRIEF
 
+Флаг, что в текущий момент записывается подзапрос
+
 ## CONTENT
 
 Доступ: protected
+
+Флаг, что в текущий момент записывается подзапрос
 
 Тип: bool
 
@@ -2309,9 +3103,13 @@ Title: SPSql.h
 
 ## BRIEF
 
+Профиль языка SQL
+
 ## CONTENT
 
 Доступ: protected
+
+Профиль языка SQL
 
 Тип: stappler::sql::Profile
 
@@ -2320,19 +3118,27 @@ Title: SPSql.h
 
 ## BRIEF
 
+Специализация функции связывания аргументов для произвольного типа
+
 ## CONTENT
 
+Специализация функции связывания аргументов для произвольного типа
+
 Параметры шаблона:
-* typename Binder
-* typename Interface
-* typename Value
+* typename Binder - объект, связывающий аргументы с запросом
+* typename Interface - испольузенмый интерфейс памяти
+* typename Value - тип значения для связи
 
 
 # ::stappler::sql::BinderTraits<typename,typename,typename>::writeBind<typename>(Query<Binder, Interface>&,Binder&,V&&)
 
 ## BRIEF
 
+Вызывает функцию связи для произвольного объекта
+
 ## CONTENT
+
+Вызывает функцию связи для произвольного объекта
 
 Параметры шаблона:
 * typename V
@@ -2343,22 +3149,30 @@ Title: SPSql.h
 * V&&
 
 
-# ::stappler::sql::BinderTraits<Binder,Interface,typenameQuery<Binder,Interface>::Field>::BinderTraits<Binder,Interface,typenameQuery<Binder,Interface>::Field>
+# ::stappler::sql::BinderTraits<Binder,Interface,typename Query<Binder,Interface>::Field>::BinderTraits<Binder,Interface,typename Query<Binder,Interface>::Field>
 
 ## BRIEF
 
+Специализация функции связывания аргументов для идентификатора поля
+
 ## CONTENT
+
+Специализация функции связывания аргументов для идентификатора поля
 
 Параметры шаблона:
 * typename Binder
 * typename Interface
 
 
-# ::stappler::sql::BinderTraits<Binder,Interface,typenameQuery<Binder,Interface>::Field>::writeBind(Query<Binder, Interface>&,Binder&,const typename Query<Binder, Interface>::Field&)
+# ::stappler::sql::BinderTraits<Binder,Interface,typename Query<Binder,Interface>::Field>::writeBind(Query<Binder, Interface>&,Binder&,const typename Query<Binder, Interface>::Field&)
 
 ## BRIEF
 
+Вызывает функцию связи для идентификатора поля
+
 ## CONTENT
+
+Вызывает функцию связи для идентификатора поля
 
 Параметры:
 * Query<Binder, Interface>&
@@ -2366,22 +3180,30 @@ Title: SPSql.h
 * const typename Query<Binder, Interface>::Field&
 
 
-# ::stappler::sql::BinderTraits<Binder,Interface,typenameQuery<Binder,Interface>::RawString>::BinderTraits<Binder,Interface,typenameQuery<Binder,Interface>::RawString>
+# ::stappler::sql::BinderTraits<Binder,Interface,typename Query<Binder,Interface>::RawString>::BinderTraits<Binder,Interface,typename Query<Binder,Interface>::RawString>
 
 ## BRIEF
 
+Специализация функции связывания аргументов для необрабатываемой строки
+
 ## CONTENT
+
+Специализация функции связывания аргументов для необрабатываемой строки
 
 Параметры шаблона:
 * typename Binder
 * typename Interface
 
 
-# ::stappler::sql::BinderTraits<Binder,Interface,typenameQuery<Binder,Interface>::RawString>::writeBind(Query<Binder, Interface>&,Binder&,const typename Query<Binder, Interface>::RawString&)
+# ::stappler::sql::BinderTraits<Binder,Interface,typename Query<Binder,Interface>::RawString>::writeBind(Query<Binder, Interface>&,Binder&,const typename Query<Binder, Interface>::RawString&)
 
 ## BRIEF
 
+Вызывает функцию связи для необрабатываемой строки
+
 ## CONTENT
+
+Вызывает функцию связи для необрабатываемой строки
 
 Параметры:
 * Query<Binder, Interface>&
@@ -2389,22 +3211,30 @@ Title: SPSql.h
 * const typename Query<Binder, Interface>::RawString&
 
 
-# ::stappler::sql::BinderTraits<Binder,Interface,typenameQuery<Binder,Interface>::RawStringView>::BinderTraits<Binder,Interface,typenameQuery<Binder,Interface>::RawStringView>
+# ::stappler::sql::BinderTraits<Binder,Interface,typename Query<Binder,Interface>::RawStringView>::BinderTraits<Binder,Interface,typename Query<Binder,Interface>::RawStringView>
 
 ## BRIEF
 
+Специализация функции связывания аргументов для необрабатываемой строки
+
 ## CONTENT
+
+Специализация функции связывания аргументов для необрабатываемой строки
 
 Параметры шаблона:
 * typename Binder
 * typename Interface
 
 
-# ::stappler::sql::BinderTraits<Binder,Interface,typenameQuery<Binder,Interface>::RawStringView>::writeBind(Query<Binder, Interface>&,Binder&,const typename Query<Binder, Interface>::RawStringView&)
+# ::stappler::sql::BinderTraits<Binder,Interface,typename Query<Binder,Interface>::RawStringView>::writeBind(Query<Binder, Interface>&,Binder&,const typename Query<Binder, Interface>::RawStringView&)
 
 ## BRIEF
 
+Вызывает функцию связи для необрабатываемой строки
+
 ## CONTENT
+
+Вызывает функцию связи для необрабатываемой строки
 
 Параметры:
 * Query<Binder, Interface>&
@@ -2412,303 +3242,32 @@ Title: SPSql.h
 * const typename Query<Binder, Interface>::RawStringView&
 
 
-# ::stappler::sql::BinderTraits<Binder,Interface,Callback<void(typenameQuery<Binder,Interface>::Select&)>>::BinderTraits<Binder,Interface,Callback<void(typenameQuery<Binder,Interface>::Select&)>>
+# ::stappler::sql::BinderTraits<Binder,Interface,Callback<void(typename Query<Binder,Interface>::Select&)>>::BinderTraits<Binder,Interface,Callback<void(typename Query<Binder,Interface>::Select&)>>
 
 ## BRIEF
 
+Специализация функции связывания аргументов для подзапроса
+
 ## CONTENT
+
+Специализация функции связывания аргументов для подзапроса
 
 Параметры шаблона:
 * typename Binder
 * typename Interface
 
 
-# ::stappler::sql::BinderTraits<Binder,Interface,Callback<void(typenameQuery<Binder,Interface>::Select&)>>::writeBind(Query<Binder, Interface>&,Binder&,Callback<void (typename Query<Binder, Interface>::Select &)> const&)
+# ::stappler::sql::BinderTraits<Binder,Interface,Callback<void(typename Query<Binder,Interface>::Select&)>>::writeBind(Query<Binder, Interface>&,Binder&,Callback<void (typename Query<Binder, Interface>::Select &)> const&)
 
 ## BRIEF
 
+Вызывает функцию связи для подзапроса
+
 ## CONTENT
+
+Вызывает функцию связи для подзапроса
 
 Параметры:
 * Query<Binder, Interface>&
 * Binder&
 * Callback<void (typename Query<Binder, Interface>::Select &)> const&
-
-
-# ::stappler::sql::QueryHandle::finalize()
-
-## BRIEF
-
-## CONTENT
-
-
-# ::stappler::sql::Query<typename,typename>::writeBind<typename,typename,typename>(Value&&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Value
-* typename Binder
-* typename Interface
-
-Параметры:
-* Value&&
-
-
-# ::stappler::sql::Query<typename,typename>::writeBind(stappler::sql::Query::RawString const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::sql::Query::RawString const&
-
-
-# ::stappler::sql::Query<typename,typename>::writeBind(stappler::sql::Query::RawStringView const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::sql::Query::RawStringView const&
-
-
-# ::stappler::sql::Query<typename,typename>::writeBind(Callback<void (stappler::sql::Query::Select &)> const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* Callback<void (stappler::sql::Query::Select &)> const&
-
-
-# ::stappler::sql::Query<typename,typename>::writeBind(stappler::sql::Query::Field const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::sql::Query::Field const&
-
-
-# ::stappler::sql::Query<typename,typename>::writeBind(stappler::sql::Query::Field const&,bool)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::sql::Query::Field const&
-* bool
-
-
-# ::stappler::sql::Query<typename,typename>::writeBind(stappler::StringView const&,stappler::sql::Query::Field const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringView const&
-* stappler::sql::Query::Field const&
-
-
-# ::stappler::sql::Query<typename,typename>::getStream()
-
-## BRIEF
-
-## CONTENT
-
-Возвращает:
-* typename Query<Binder, Interface>::Stream&
-
-# ::stappler::sql::Query<typename,typename>::getBinder()
-
-## BRIEF
-
-## CONTENT
-
-Возвращает:
-* Binder&
-
-# ::stappler::sql::Query<typename,typename>::getTarget() const
-
-## BRIEF
-
-## CONTENT
-
-Возвращает:
-* stappler::StringView
-
-# ::stappler::sql::Query<typename,typename>::finalize()
-
-## BRIEF
-
-## CONTENT
-
-
-# ::stappler::sql::Query<typename,typename>::with<typename,typename,typename>(stappler::StringView const&,Callback const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Callback
-* typename Binder
-* typename Interface
-
-Параметры:
-* stappler::StringView const&
-* Callback const&
-
-Возвращает:
-* stappler::sql::Query::GenericQuery
-
-# ::stappler::sql::GenericQuery::with<typename,typename,typename>(stappler::StringView const&,Callback const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Callback
-* typename Binder
-* typename Interface
-
-Параметры:
-* stappler::StringView const&
-* Callback const&
-
-Возвращает:
-* stappler::sql::Query::GenericQuery&
-
-# ::stappler::sql::GenericQuery::select(stappler::sql::Query::Distinct)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::sql::Query::Distinct
-
-Возвращает:
-* stappler::sql::Query::Select
-
-# ::stappler::sql::GenericQuery::select<typename,typename,typename>(stappler::sql::Query::Field const&,Args &&...)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Args
-* typename Binder
-* typename Interface
-
-Параметры:
-* stappler::sql::Query::Field const&
-* Args &&...
-
-Возвращает:
-* stappler::sql::Query::Select
-
-# ::stappler::sql::GenericQuery::select<typename,typename,typename>(stappler::sql::Query::Distinct,stappler::sql::Query::Field const&,Args &&...)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Args
-* typename Binder
-* typename Interface
-
-Параметры:
-* stappler::sql::Query::Distinct
-* stappler::sql::Query::Field const&
-* Args &&...
-
-Возвращает:
-* stappler::sql::Query::Select
-
-# ::stappler::sql::GenericQuery::insert(stappler::StringView const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringView const&
-
-Возвращает:
-* stappler::sql::Query::Insert
-
-# ::stappler::sql::GenericQuery::insert(stappler::StringView const&,stappler::StringView const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringView const&
-* stappler::StringView const&
-
-Возвращает:
-* stappler::sql::Query::Insert
-
-# ::stappler::sql::GenericQuery::update(stappler::StringView const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringView const&
-
-Возвращает:
-* stappler::sql::Query::Update
-
-# ::stappler::sql::GenericQuery::update(stappler::StringView const&,stappler::StringView const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringView const&
-* stappler::StringView const&
-
-Возвращает:
-* stappler::sql::Query::Update
-
-# ::stappler::sql::GenericQuery::remove(stappler::StringView const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringView const&
-
-Возвращает:
-* stappler::sql::Query::Delete
-
-# ::stappler::sql::GenericQuery::remove(stappler::StringView const&,stappler::StringView const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringView const&
-* stappler::StringView const&
-
-Возвращает:
-* stappler::sql::Query::Delete

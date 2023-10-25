@@ -200,6 +200,8 @@ Title: SPMemRbtree.h
 
 ## CONTENT
 
+Конструктор по цвету
+
 Параметры:
 * stappler::memory::rbtree::NodeColor
 

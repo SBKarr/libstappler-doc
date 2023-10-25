@@ -65,6 +65,7 @@ struct IndexData {
 	mutable Map<String, const cppast::cpp_entity *> names;
 	mutable Map<uint32_t, String> hashNames;
 
+	String getScope(const cppast::cpp_entity &) const;
 	String getFullName(const cppast::cpp_entity &) const;
 };
 

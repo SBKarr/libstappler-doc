@@ -1,22 +1,30 @@
 Title: STStorageTransaction.h
 
 
-# MODULES_DB_STSTORAGETRANSACTION_H_
+# STAPPLER_DB_STSTORAGETRANSACTION_H_
 
 ## BRIEF
 
+Заголовок транзакционных операций
+
 ## CONTENT
+
+Заголовок транзакционных операций
 
 
 # ::stappler::db::AccessRoleId
 
 ## BRIEF
 
+Идентификаторы ролей доступа
+
 ## CONTENT
 
+Идентификаторы ролей доступа. Определено 11 пользвательских ролей доступа, и 5 специальных с заранее определёнными эффектами. Тем не менее, для предопределённых ролей (кроме системы) можно менять поведение.
+
 Значения:
-* Nobody
-* Authorized
+* Nobody - неизвестный пользователь
+* Authorized - известный пользователь
 * UserDefined1
 * UserDefined2
 * UserDefined3
@@ -28,9 +36,9 @@ Title: STStorageTransaction.h
 * UserDefined9
 * UserDefined10
 * UserDefined11
-* Admin
-* System
-* Default
+* Admin - администратор системы
+* System - действия самой системы. Имеет не переопределяемые абсолютные полномочия
+* Default - действия по умолчанию, выполняемые для всех, кроме системы
 * Max
 
 
@@ -38,7 +46,11 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Структура транзакции
+
 ## CONTENT
+
+Структура транзакции. Транзакция выполняет операции в БД, реализует контроль доступа для операций и возврата результата.
 
 Базовые классы:
 * AllocBase
@@ -48,26 +60,30 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Операция БД
+
 ## CONTENT
 
 Доступ: public
 
+Операция БД
+
 Значения:
 * None
-* Id
+* Id - получение идентификатора объекта
 * Select
 * Count
 * Remove
 * Create
-* Save
-* Patch
+* Save - чтение-обновление-запись
+* Patch - атомарная запись
 * FieldGet
 * FieldSet
 * FieldAppend
 * FieldClear
 * FieldCount
-* Delta
-* DeltaView
+* Delta - дельта-запрос
+* DeltaView - дельта-запрос к полю отображения
 * RemoveFromView
 * AddToView
 * Max
@@ -77,9 +93,13 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Данные транзакции
+
 ## CONTENT
 
 Доступ: public
+
+Данные транзакции
 
 Базовые классы:
 * AllocPool
@@ -89,7 +109,11 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Адаптер БД
+
 ## CONTENT
+
+Адаптер БД
 
 Тип: stappler::db::Adapter
 
@@ -98,7 +122,11 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Пул памяти
+
 ## CONTENT
+
+Пул памяти
 
 Тип: stappler::mempool::base::pool_t*
 
@@ -107,7 +135,11 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Дополнительные данные
+
 ## CONTENT
+
+Дополнительные данные
 
 Тип: Map<stappler::mem_pool::String, stappler::mem_pool::Value>
 
@@ -116,7 +148,11 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Статус транзакции
+
 ## CONTENT
+
+Статус транзакции
 
 Тип: int
 
@@ -125,7 +161,11 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Данные известных объектов
+
 ## CONTENT
+
+Данные известных объектов
 
 Тип: Map<int64_t, stappler::mem_pool::Value>
 
@@ -134,7 +174,11 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Текущая роль исполнителя транзакции
+
 ## CONTENT
+
+Текущая роль исполнителя транзакции
 
 Тип: stappler::db::AccessRoleId
 
@@ -143,20 +187,28 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Конструирует данные
+
 ## CONTENT
 
+Конструирует данные
+
 Параметры:
-* stappler::db::Adapter const&
-* memory::pool_t*
+* stappler::db::Adapter const& - используемый адаптер БД
+* memory::pool_t* - пул памяти
 
 
 # ::stappler::db::Transaction::Stack
 
 ## BRIEF
 
+Тип стека активных транзакций
+
 ## CONTENT
 
 Доступ: public
+
+Тип стека активных транзакций
 
 Базовые классы:
 * AllocPool
@@ -166,7 +218,11 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Стек активных транзакций
+
 ## CONTENT
+
+Стек активных транзакций
 
 Тип: Vector<stappler::db::Transaction::Data *>
 
@@ -175,9 +231,13 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Возвращает операцию транзакции для операции над полем
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает операцию транзакции для операции над полем
 
 Параметры:
 * stappler::db::Action
@@ -189,9 +249,13 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Возвращает или создаёт активную транзакцию для адаптера
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает или создаёт активную транзакцию для адаптера
 
 Параметры:
 * stappler::db::Adapter const&
@@ -203,9 +267,13 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Возвращает или создаёт активную транзакцию для текущего контента
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает или создаёт активную транзакцию для текущего контента
 
 Возвращает:
 * stappler::db::Transaction
@@ -214,9 +282,13 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Возвращает активную транзакцию для текущего контента, если существует
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает активную транзакцию для текущего контента, если существует
 
 Возвращает:
 * stappler::db::Transaction
@@ -225,9 +297,13 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Возвращает активную транзакцию для контента, если существует
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает активную транзакцию для контента, если существует
 
 Параметры:
 * memory::pool_t*
@@ -239,9 +315,13 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Конструирует пустую транзакцию
+
 ## CONTENT
 
 Доступ: public
+
+Конструирует пустую транзакцию
 
 Параметры:
 * stappler::nullptr_t
@@ -251,9 +331,13 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Устанавливает действующую пользовательскую роль
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает действующую пользовательскую роль
 
 Параметры:
 * stappler::db::AccessRoleId
@@ -263,9 +347,13 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Возвращает действующую пользовательскую роль
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает действующую пользовательскую роль
 
 Возвращает:
 * stappler::db::AccessRoleId
@@ -274,9 +362,13 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Устанавливает стутс транзакции
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает стутс транзакции
 
 Параметры:
 * int
@@ -286,9 +378,13 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Возвращает статус транзакции
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает статус транзакции
 
 Возвращает:
 * int
@@ -297,9 +393,13 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Устанавливает значение для ключа
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает значение для ключа
 
 Параметры:
 * stappler::StringView const&
@@ -312,9 +412,13 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Получает значение для ключа
+
 ## CONTENT
 
 Доступ: public
+
+Получает значение для ключа
 
 Параметры:
 * stappler::StringView const&
@@ -326,9 +430,13 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Устанавливает данные для известного объекта
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает данные для известного объекта
 
 Параметры:
 * int64_t
@@ -341,9 +449,13 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Получает данные известного объекта
+
 ## CONTENT
 
 Доступ: public
+
+Получает данные известного объекта
 
 Параметры:
 * int64_t
@@ -355,9 +467,13 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Устанавливает действующий адаптер
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает действующий адаптер
 
 Параметры:
 * stappler::db::Adapter const&
@@ -367,9 +483,13 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Возвращает адаптер БД
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает адаптер БД
 
 Возвращает:
 * stappler::db::Adapter const&
@@ -378,9 +498,13 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Проверяет на действующую транзакцию
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет на действующую транзакцию
 
 Возвращает:
 * bool
@@ -389,9 +513,13 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Возвращает объект, сохраняет его в известных
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает объект, сохраняет его в известных. Получает его из БД изи возвращает из известных.
 
 Параметры:
 * stappler::db::Scheme const&
@@ -404,37 +532,49 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Выполняет задачу в транзакции
+
 ## CONTENT
 
 Доступ: public
 
+Выполняет задачу в транзакции
+
 Параметры:
-* Callback<bool ()> const&
+* Callback<bool ()> const& - если вернуть false, завершает тразакцию аварийно
 
 Возвращает:
-* bool
+* bool - успешность выполнения
 
 # ::stappler::db::Transaction::performAsSystem(Callback<bool ()> const&) const
 
 ## BRIEF
 
+Выполняет задачу в транзакции от имени системы
+
 ## CONTENT
 
 Доступ: public
 
+Выполняет задачу в транзакции от имени системы. Временно повышает полномочия до системных на момент вызова функции.
+
 Параметры:
-* Callback<bool ()> const&
+* Callback<bool ()> const& - если вернуть false, завершает тразакцию аварийно
 
 Возвращает:
-* bool
+* bool - успешность выполнения
 
 # ::stappler::db::Transaction::isInTransaction() const
 
 ## BRIEF
 
+Проверяет, выполняется ли действие в транзакции
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, выполняется ли действие в транзакции
 
 Возвращает:
 * bool
@@ -443,9 +583,13 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Возвращает статус транзакции для адаптера
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает статус транзакции для адаптера
 
 Возвращает:
 * stappler::db::TransactionStatus
@@ -454,14 +598,18 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Выполняет перечисление для запроса
+
 ## CONTENT
 
 Доступ: public
 
+Выполняет перечисление для запроса
+
 Параметры:
 * stappler::db::Worker&
 * stappler::db::Query const&
-* Callback<bool (stappler::mem_pool::Value &)> const&
+* Callback<bool (stappler::mem_pool::Value &)> const& - функция для перечисления
 
 Возвращает:
 * bool
@@ -470,9 +618,13 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Выполняет запрос, возвращает результат
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет запрос, возвращает результат
 
 Параметры:
 * stappler::db::Worker&
@@ -485,9 +637,13 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Подсчитывает число объектов по запросу
+
 ## CONTENT
 
 Доступ: public
+
+Подсчитывает число объектов по запросу
 
 Параметры:
 * stappler::db::Worker&
@@ -500,9 +656,13 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Удаляет объект
+
 ## CONTENT
 
 Доступ: public
+
+Удаляет объект
 
 Параметры:
 * stappler::db::Worker&
@@ -515,9 +675,13 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Создаёт объект
+
 ## CONTENT
 
 Доступ: public
+
+Создаёт объект
 
 Параметры:
 * stappler::db::Worker&
@@ -530,9 +694,13 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Сохраняет данные объекта
+
 ## CONTENT
 
 Доступ: public
+
+Сохраняет данные объекта
 
 Параметры:
 * stappler::db::Worker&
@@ -547,9 +715,13 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Обновляет данные объекта атомарно
+
 ## CONTENT
 
 Доступ: public
+
+Обновляет данные объекта атомарно
 
 Параметры:
 * stappler::db::Worker&
@@ -563,9 +735,13 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Выполняет операцию над полем объекта
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет операцию над полем объекта
 
 Параметры:
 * stappler::db::Action
@@ -581,9 +757,13 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Выполняет операцию над полем объекта
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет операцию над полем объекта
 
 Параметры:
 * stappler::db::Action
@@ -599,9 +779,13 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Удаляет объект из отображения
+
 ## CONTENT
 
 Доступ: public
+
+Удаляет объект из отображения
 
 Параметры:
 * stappler::db::Scheme const&
@@ -616,9 +800,13 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Добавляет объект в отображения
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет объект в отображения
 
 Параметры:
 * stappler::db::Scheme const&
@@ -634,9 +822,13 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Возвращает значение дельты для схемы
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает значение дельты для схемы
 
 Параметры:
 * stappler::db::Scheme const&
@@ -648,9 +840,13 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Возвращает значение дельты для поля отображения
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает значение дельты для поля отображения
 
 Параметры:
 * stappler::db::Scheme const&
@@ -660,13 +856,17 @@ Title: STStorageTransaction.h
 Возвращает:
 * int64_t
 
-# ::stappler::db::Transaction::performQueryListForIds(stappler::db::QueryList const&,size_t)
+# ::stappler::db::Transaction::performQueryListForIds(stappler::db::QueryList const&,size_t) const
 
 ## BRIEF
+
+Выполняет иерархический список запросов для получения идентификаторов
 
 ## CONTENT
 
 Доступ: public
+
+Выполняет иерархический список запросов для получения идентификаторов
 
 Параметры:
 * stappler::db::QueryList const&
@@ -675,13 +875,17 @@ Title: STStorageTransaction.h
 Возвращает:
 * Vector<int64_t>
 
-# ::stappler::db::Transaction::performQueryList(stappler::db::QueryList const&,size_t,bool)
+# ::stappler::db::Transaction::performQueryList(stappler::db::QueryList const&,size_t,bool) const
 
 ## BRIEF
+
+Выполняет иерархический список запросов
 
 ## CONTENT
 
 Доступ: public
+
+Выполняет иерархический список запросов
 
 Параметры:
 * stappler::db::QueryList const&
@@ -691,13 +895,17 @@ Title: STStorageTransaction.h
 Возвращает:
 * stappler::mem_pool::Value
 
-# ::stappler::db::Transaction::performQueryListField(stappler::db::QueryList const&,stappler::db::Field const&)
+# ::stappler::db::Transaction::performQueryListField(stappler::db::QueryList const&,stappler::db::Field const&) const
 
 ## BRIEF
+
+Выполняет иерархический список запросов для поля
 
 ## CONTENT
 
 Доступ: public
+
+Выполняет иерархический список запросов для поля
 
 Параметры:
 * stappler::db::QueryList const&
@@ -710,9 +918,13 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Планирует асинхронное обновление автоматического поля
+
 ## CONTENT
 
 Доступ: public
+
+Планирует асинхронное обновление автоматического поля
 
 Параметры:
 * stappler::db::Scheme const&
@@ -724,34 +936,49 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Захватывает и сохраняет транзакцию на стеке
+
 ## CONTENT
 
 Доступ: public
 
+Захватывает и сохраняет транзакцию на стеке для использования нескольких транзакций одновременно
 
 # ::stappler::db::Transaction::release() const
 
 ## BRIEF
 
+Убирает транзакцию со стека и освобождает
+
 ## CONTENT
 
 Доступ: public
+
+Убирает транзакцию со стека и освобождает
 
 
 # ::stappler::db::Transaction::TransactionGuard
 
 ## BRIEF
 
+Защитный класс для поддержания транзакции на стеке во время её исполнения
+
 ## CONTENT
 
 Доступ: protected
+
+Защитный класс для поддержания транзакции на стеке во время её исполнения
 
 
 # ::stappler::db::Transaction::TransactionGuard::TransactionGuard(stappler::db::Transaction const&)
 
 ## BRIEF
 
+Конструирует защиту для транзакции
+
 ## CONTENT
+
+Конструирует защиту для транзакции
 
 Параметры:
 * stappler::db::Transaction const&
@@ -761,14 +988,22 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Удаляет защиту для транзакции
+
 ## CONTENT
+
+Удаляет защиту для транзакции
 
 
 # ::stappler::db::Transaction::TransactionGuard::_t
 
 ## BRIEF
 
+Транзакция
+
 ## CONTENT
+
+Транзакция
 
 Тип: stappler::db::Transaction const*
 
@@ -777,9 +1012,13 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Начинает транзакцию
+
 ## CONTENT
 
 Доступ: protected
+
+Начинает транзакцию
 
 Возвращает:
 * bool
@@ -788,9 +1027,13 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Завершает транзакцию успешно
+
 ## CONTENT
 
 Доступ: protected
+
+Завершает транзакцию успешно
 
 Возвращает:
 * bool
@@ -799,27 +1042,39 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Завершает транзакцию с ошибкой
+
 ## CONTENT
 
 Доступ: protected
+
+Завершает транзакцию с ошибкой
 
 
 # ::stappler::db::Transaction::clearObjectStorage() const
 
 ## BRIEF
 
+Удаляет сохранённые объекты
+
 ## CONTENT
 
 Доступ: protected
+
+Удаляет сохранённые объекты
 
 
 # ::stappler::db::Transaction::processReturnObject(stappler::db::Scheme const&,stappler::mem_pool::Value&) const
 
 ## BRIEF
 
+Фильтрует возвращаемый объект на основании контроля доступа
+
 ## CONTENT
 
 Доступ: protected
+
+Фильтрует возвращаемый объект на основании контроля доступа
 
 Параметры:
 * stappler::db::Scheme const&
@@ -832,9 +1087,13 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Фильтрует возвращаемое поле на основании контроля доступа
+
 ## CONTENT
 
 Доступ: protected
+
+Фильтрует возвращаемое поле на основании контроля доступа
 
 Параметры:
 * stappler::db::Scheme const&
@@ -849,9 +1108,13 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Проверяет, доступна ли операция для схемы и поля на основании контроля доступа
+
 ## CONTENT
 
 Доступ: protected
+
+Проверяет, доступна ли операция для схемы и поля на основании контроля доступа
 
 Параметры:
 * stappler::db::Scheme const&
@@ -865,9 +1128,13 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Конструирует транзакцию с данными
+
 ## CONTENT
 
 Доступ: protected
+
+Конструирует транзакцию с данными
 
 Параметры:
 * stappler::db::Transaction::Data*
@@ -877,42 +1144,26 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Данные транзакции
+
 ## CONTENT
 
 Доступ: protected
 
+Данные транзакции
+
 Тип: stappler::db::Transaction::Data*
 
-
-# ::stappler::db::Transaction::perform(Callback<bool ()> const&) const
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* Callback<bool ()> const&
-
-Возвращает:
-* bool
-
-# ::stappler::db::Transaction::performAsSystem(Callback<bool ()> const&) const
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* Callback<bool ()> const&
-
-Возвращает:
-* bool
 
 # ::stappler::db::AccessRole
 
 ## BRIEF
 
+Структура контроля доступа
+
 ## CONTENT
+
+Структура контроля доступа. Хранит функции для реализации контроля доступа. Если функции не определены - пользуется общим правилом. Общее правило - разрешать все действия, для которых флаг допустимости всех соотвествующих операций установлен.
 
 Базовые классы:
 * AllocBase
@@ -922,70 +1173,109 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Функция для допуска запроса получения данных к выполнению
+
 ## CONTENT
+
+Функция для допуска запроса получения данных к выполнению
 
 
 # ::stappler::db::AccessRole::OnCount
 
 ## BRIEF
 
+Функция для допуска запроса подсчёта данных к выполнению
+
 ## CONTENT
+
+Функция для допуска запроса подсчёта данных к выполнению
 
 
 # ::stappler::db::AccessRole::OnCreate
 
 ## BRIEF
 
+Функция для допуска запроса создания объекта к выполнению
+
 ## CONTENT
+
+Функция для допуска запроса создания объекта к выполнению
 
 
 # ::stappler::db::AccessRole::OnPatch
 
 ## BRIEF
 
+Функция для допуска запроса атомарного обновления объекта к выполнению
+
 ## CONTENT
 
+Функция для допуска запроса атомарного обновления объекта к выполнению. Если не определна, но определена функция допуска обновлению - всегда выполняется чтение-модификация-запись.
 
 # ::stappler::db::AccessRole::OnSave
 
 ## BRIEF
 
+Функция для допуска запроса обновления объекта к выполнению
+
 ## CONTENT
+
+Функция для допуска запроса обновления объекта к выполнению
 
 
 # ::stappler::db::AccessRole::OnRemove
 
 ## BRIEF
 
+Функция для допуска запроса удаления объекта к выполнению
+
 ## CONTENT
+
+Функция для допуска запроса удаления объекта к выполнению
 
 
 # ::stappler::db::AccessRole::OnField
 
 ## BRIEF
 
+Функция для допуска запроса к полю объекта к выполнению
+
 ## CONTENT
+
+Функция для допуска запроса к полю объекта к выполнению
 
 
 # ::stappler::db::AccessRole::OnReturn
 
 ## BRIEF
 
+Функция для фильтрации объектов при выводе
+
 ## CONTENT
+
+Функция для фильтрации объектов при выводе
 
 
 # ::stappler::db::AccessRole::OnReturnField
 
 ## BRIEF
 
+Функция для фильтрации данных поля при выводе
+
 ## CONTENT
+
+Функция для фильтрации данных поля при выводе
 
 
 # ::stappler::db::AccessRole::Empty<typename>(Args &&...)
 
 ## BRIEF
 
+Конструирует структуру доступа, для которой запрещены все операции
+
 ## CONTENT
+
+Конструирует структуру доступа, для которой запрещены все операции
 
 Параметры шаблона:
 * typename Args
@@ -1000,7 +1290,11 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Конструирует структуру доступа, для которой разрешены операции чтения
+
 ## CONTENT
+
+Конструирует структуру доступа, для которой разрешены операции чтения
 
 Параметры шаблона:
 * typename Args
@@ -1015,7 +1309,11 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Конструирует структуру доступа, для которой разрешены все операции
+
 ## CONTENT
+
+Конструирует структуру доступа, для которой разрешены все операции
 
 Параметры шаблона:
 * typename Args
@@ -1030,7 +1328,11 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Определяет параметры контроля доступа в качестве набора аргументов произвольной длины
+
 ## CONTENT
+
+Определяет параметры контроля доступа в качестве набора аргументов произвольной длины
 
 Параметры шаблона:
 * typename T
@@ -1047,7 +1349,11 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Оконечная функция обхода аргументов
+
 ## CONTENT
+
+Оконечная функция обхода аргументов
 
 Возвращает:
 * stappler::db::AccessRole&
@@ -1056,7 +1362,11 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Устанавливает идентификатор пользователя, для которого предназначена структура
+
 ## CONTENT
+
+Устанавливает идентификатор пользователя, для которого предназначена структура
 
 Параметры:
 * stappler::db::AccessRoleId
@@ -1068,7 +1378,11 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Опрределяет допустимую операцию
+
 ## CONTENT
+
+Опрределяет допустимую операцию
 
 Параметры:
 * Transaction::Op
@@ -1080,7 +1394,11 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Опрределяет функцию для проверки доступности операции.
+
 ## CONTENT
+
+Опрределяет функцию для проверки доступности операции. Автоматически разрешает требуемые для вызова функции операции.
 
 Параметры:
 * stappler::db::AccessRole::OnSelect&&
@@ -1092,7 +1410,11 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Опрределяет функцию для проверки доступности операции.
+
 ## CONTENT
+
+Опрределяет функцию для проверки доступности операции. Автоматически разрешает требуемые для вызова функции операции.
 
 Параметры:
 * stappler::db::AccessRole::OnCount&&
@@ -1104,7 +1426,11 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Опрределяет функцию для проверки доступности операции.
+
 ## CONTENT
+
+Опрределяет функцию для проверки доступности операции. Автоматически разрешает требуемые для вызова функции операции.
 
 Параметры:
 * stappler::db::AccessRole::OnCreate&&
@@ -1116,7 +1442,11 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Опрределяет функцию для проверки доступности операции.
+
 ## CONTENT
+
+Опрределяет функцию для проверки доступности операции. Автоматически разрешает требуемые для вызова функции операции.
 
 Параметры:
 * stappler::db::AccessRole::OnPatch&&
@@ -1128,7 +1458,11 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Опрределяет функцию для проверки доступности операции.
+
 ## CONTENT
+
+Опрределяет функцию для проверки доступности операции. Автоматически разрешает требуемые для вызова функции операции.
 
 Параметры:
 * stappler::db::AccessRole::OnSave&&
@@ -1140,7 +1474,11 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Опрределяет функцию для проверки доступности операции.
+
 ## CONTENT
+
+Опрределяет функцию для проверки доступности операции. Автоматически разрешает требуемые для вызова функции операции.
 
 Параметры:
 * stappler::db::AccessRole::OnRemove&&
@@ -1152,7 +1490,11 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Опрределяет функцию для проверки доступности операции.
+
 ## CONTENT
+
+Опрределяет функцию для проверки доступности операции. Не включает все разрешения для операций над полями автоматически. Необходимо включать операции вручную.
 
 Параметры:
 * stappler::db::AccessRole::OnField&&
@@ -1164,7 +1506,11 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Опрределяет функцию для фильтрации результата вызова
+
 ## CONTENT
+
+Опрределяет функцию для фильтрации результата вызова
 
 Параметры:
 * stappler::db::AccessRole::OnReturn&&
@@ -1176,7 +1522,11 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Опрределяет функцию для фильтрации результата вызова
+
 ## CONTENT
+
+Опрределяет функцию для фильтрации результата вызова
 
 Параметры:
 * stappler::db::AccessRole::OnReturnField&&
@@ -1188,7 +1538,11 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Идентификаторы пользователей, для которых предназначена структура
+
 ## CONTENT
+
+Идентификаторы пользователей, для которых предназначена структура
 
 Тип: std::bitset<stappler::toInt(AccessRoleId::Max)>
 
@@ -1197,7 +1551,11 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Список разрешённых операций
+
 ## CONTENT
+
+Список разрешённых операций
 
 Тип: std::bitset<stappler::toInt(Transaction::Op::Max)>
 
@@ -1206,7 +1564,11 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Функция проверки доступности операции получения объектов
+
 ## CONTENT
+
+Функция проверки доступности операции получения объектов
 
 Тип: Function<bool (stappler::db::Worker &, const stappler::db::Query &)>
 
@@ -1215,7 +1577,11 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Функция проверки доступности операции подсчёта объектов
+
 ## CONTENT
+
+Функция проверки доступности операции подсчёта объектов
 
 Тип: Function<bool (stappler::db::Worker &, const stappler::db::Query &)>
 
@@ -1224,7 +1590,11 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Функция проверки доступности операции создания объекта
+
 ## CONTENT
+
+Функция проверки доступности операции создания объекта
 
 Тип: Function<bool (stappler::db::Worker &, stappler::mem_pool::Value &)>
 
@@ -1233,7 +1603,11 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Функция проверки доступности операции атомарного обновления объекта
+
 ## CONTENT
+
+Функция проверки доступности операции атомарного обновления объекта. Если не определна, но определена функция допуска обновлению - всегда выполняется чтение-модификация-запись.
 
 Тип: Function<bool (stappler::db::Worker &, int64_t, stappler::mem_pool::Value &)>
 
@@ -1242,7 +1616,11 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Функция проверки доступности операции обновления объекта
+
 ## CONTENT
+
+Функция проверки доступности операции обновления объекта
 
 Тип: Function<bool (stappler::db::Worker &, const stappler::mem_pool::Value &, stappler::mem_pool::Value &, Vector<stappler::mem_pool::String> &)>
 
@@ -1251,7 +1629,11 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Функция проверки доступности операции удаления объекта
+
 ## CONTENT
+
+Функция проверки доступности операции удаления объекта
 
 Тип: Function<bool (stappler::db::Worker &, const stappler::mem_pool::Value &)>
 
@@ -1260,7 +1642,11 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Функция проверки доступности операции над полем объекта
+
 ## CONTENT
+
+Функция проверки доступности операции над полем объекта
 
 Тип: Function<bool (stappler::db::Action, stappler::db::Worker &, const stappler::mem_pool::Value &, const stappler::db::Field &, stappler::mem_pool::Value &)>
 
@@ -1269,7 +1655,11 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Функция фильтрации возвращаемых объектов
+
 ## CONTENT
+
+Функция фильтрации возвращаемых объектов
 
 Тип: Function<bool (const stappler::db::Scheme &, stappler::mem_pool::Value &)>
 
@@ -1278,69 +1668,10 @@ Title: STStorageTransaction.h
 
 ## BRIEF
 
+Функция фильтрации возвращаемых полей
+
 ## CONTENT
+
+Функция фильтрации возвращаемых полей
 
 Тип: Function<bool (const stappler::db::Scheme &, const stappler::db::Field &, stappler::mem_pool::Value &)>
-
-
-# ::stappler::db::AccessRole::define<typename,typename>(T&&,Args &&...)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename T
-* typename Args
-
-Параметры:
-* T&&
-* Args &&...
-
-Возвращает:
-* stappler::db::AccessRole&
-
-# ::stappler::db::AccessRole::Empty<typename>(Args &&...)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Args
-
-Параметры:
-* Args &&...
-
-Возвращает:
-* stappler::db::AccessRole
-
-# ::stappler::db::AccessRole::Default<typename>(Args &&...)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Args
-
-Параметры:
-* Args &&...
-
-Возвращает:
-* stappler::db::AccessRole
-
-# ::stappler::db::AccessRole::Admin<typename>(Args &&...)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Args
-
-Параметры:
-* Args &&...
-
-Возвращает:
-* stappler::db::AccessRole

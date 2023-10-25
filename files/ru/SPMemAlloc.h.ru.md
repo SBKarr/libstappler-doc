@@ -91,7 +91,11 @@ Title: SPMemAlloc.h
 
 ## BRIEF
 
+Базовый тип для объектов, распределяемых из пула памяти
+
 ## CONTENT
+
+Базовый тип для объектов, распределяемых из пула памяти
 
 
 # ::stappler::memory::AllocPool::operator new(size_t)

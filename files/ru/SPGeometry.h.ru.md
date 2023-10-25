@@ -1766,3 +1766,20 @@ Title: SPGeometry.h
 
 Возвращает:
 * std::ostream&
+
+# ::stappler::geom::operator<<(std::ostream&,stappler::geom::URect const&)
+
+## BRIEF
+
+Выводит целочисленный прямоугольник в текстовый поток
+
+## CONTENT
+
+Выводит целочисленный прямоугольник в текстовый поток
+
+Параметры:
+* std::ostream&
+* stappler::geom::URect const&
+
+Возвращает:
+* std::ostream&

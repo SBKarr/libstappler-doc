@@ -1314,3 +1314,88 @@ Title: SPBytesView.h
 
 Возвращает:
 * bool
+
+# ::stappler::operator==<stappler::Endian,size_t>(std::array<uint8_t, Size> const&,BytesViewTemplate<Endianess> const&)
+
+## BRIEF
+
+Лексикографически побайтово сравнивает отображение и контейнер
+
+## CONTENT
+
+Лексикографически побайтово сравнивает отображение и контейнер
+
+Параметры шаблона:
+* stappler::Endian Endianess
+* size_t Size
+
+Параметры:
+* std::array<uint8_t, Size> const&
+* BytesViewTemplate<Endianess> const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator==<stappler::Endian,size_t>(BytesViewTemplate<Endianess> const&,std::array<uint8_t, Size> const&)
+
+## BRIEF
+
+Лексикографически побайтово сравнивает отображение и контейнер
+
+## CONTENT
+
+Лексикографически побайтово сравнивает отображение и контейнер
+
+Параметры шаблона:
+* stappler::Endian Endianess
+* size_t Size
+
+Параметры:
+* BytesViewTemplate<Endianess> const&
+* std::array<uint8_t, Size> const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator!=<stappler::Endian,size_t>(std::array<uint8_t, Size> const&,BytesViewTemplate<Endianess> const&)
+
+## BRIEF
+
+Лексикографически побайтово сравнивает отображение и контейнер
+
+## CONTENT
+
+Лексикографически побайтово сравнивает отображение и контейнер
+
+Параметры шаблона:
+* stappler::Endian Endianess
+* size_t Size
+
+Параметры:
+* std::array<uint8_t, Size> const&
+* BytesViewTemplate<Endianess> const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator!=<stappler::Endian,size_t>(BytesViewTemplate<Endianess> const&,std::array<uint8_t, Size> const&)
+
+## BRIEF
+
+Лексикографически побайтово сравнивает отображение и контейнер
+
+## CONTENT
+
+Лексикографически побайтово сравнивает отображение и контейнер
+
+Параметры шаблона:
+* stappler::Endian Endianess
+* size_t Size
+
+Параметры:
+* BytesViewTemplate<Endianess> const&
+* std::array<uint8_t, Size> const&
+
+Возвращает:
+* bool
+

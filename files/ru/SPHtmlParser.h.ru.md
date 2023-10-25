@@ -534,9 +534,13 @@ struct Reader {
 
 ## BRIEF
 
+Проверяет, доступен ли метод `onReadAttributeName`
+
 ## CONTENT
 
 Доступ: private
+
+Проверяет, доступен ли метод `onReadAttributeName`
 
 Параметры шаблона:
 * typename C - класс, получающий результат разбора HTML/XML

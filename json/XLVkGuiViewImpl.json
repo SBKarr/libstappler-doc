@@ -2217,12 +2217,12 @@
 							"semantic_scope": "",
 							"signature": "()"
 						}, {
-							"_fullName": "::stappler::xenolith::vk::platform::ViewImpl::wakeup()",
+							"_fullName": "::stappler::xenolith::vk::platform::ViewImpl::wakeup(std::unique_lock<Mutex>&)",
 							"_kind": "member function",
 							"_name": "wakeup",
 							"body_kind": "declaration",
 							"cv_qualifier": "none",
-							"id": 1471091026,
+							"id": 2565686693,
 							"is_consteval": false,
 							"is_constexpr": false,
 							"is_declaration": true,
@@ -2232,6 +2232,28 @@
 							"is_virtual": true,
 							"kind": "member function",
 							"name": "wakeup",
+							"parameters": [{
+								"_fullName": "",
+								"_kind": "function parameter",
+								"_name": "",
+								"id": 46947589,
+								"kind": "function parameter",
+								"name": "",
+								"type": {
+									"_typeName": "std::unique_lock<Mutex>&",
+									"kind": "reference",
+									"referee": {
+										"_typeName": "std::unique_lock<Mutex>",
+										"arguments_exposed": false,
+										"kind": "template_instantiation",
+										"primary_template": {
+											"name": "std::unique_lock"
+										},
+										"unexposed_arguments": "Mutex"
+									},
+									"reference_kind": "lvalue"
+								}
+							}],
 							"ref_qualifier": "none",
 							"return_type": {
 								"_typeName": "void",
@@ -2239,7 +2261,7 @@
 								"kind": "builtin"
 							},
 							"semantic_scope": "",
-							"signature": "()"
+							"signature": "(std::unique_lock<Mutex>&)"
 						}, {
 							"_fullName": "::stappler::xenolith::vk::platform::ViewImpl::updateTextCursor(uint32_t,uint32_t)",
 							"_kind": "member function",

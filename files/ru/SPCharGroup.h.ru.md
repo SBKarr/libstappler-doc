@@ -1554,3 +1554,316 @@ Title: SPCharGroup.h
 
 Параметры:
 * Func const& - функтор для перебора
+
+
+# ::stappler::chars::CharGroup<char32_t,GroupId::PunctuationBasic>::CharGroup<char32_t,GroupId::PunctuationBasic>
+
+## BRIEF
+
+Реализация именованной группы символов
+
+## CONTENT
+
+Реализация именованной группы символов
+
+Базовые классы:
+* Compose<char32_t,Range<char32_t,U'\u0021',U'\u002F'>,Range<char32_t,U'\u003A',U'\u0040'>,Range<char32_t,U'\u005B',U'\u0060'>,Range<char32_t,U'\u007B',U'\u007E'>,Range<char32_t,U'\u00A1',U'\u00BF'>,Chars<char32_t,U'\u00AD',U'\u2013',U'\u2014',U'\u2019',U'\u201c',U'\u201d',U'\u2116'>>
+
+# ::stappler::chars::CharGroup<char32_t,GroupId::Numbers>::CharGroup<char32_t,GroupId::Numbers>
+
+## BRIEF
+
+Реализация именованной группы символов
+
+## CONTENT
+
+Реализация именованной группы символов
+
+Базовые классы:
+* Compose<char32_t,Range<char32_t,U'0',U'9'>>
+
+# ::stappler::chars::CharGroup<char32_t,GroupId::Latin>::CharGroup<char32_t,GroupId::Latin>
+
+## BRIEF
+
+Реализация именованной группы символов
+
+## CONTENT
+
+Реализация именованной группы символов
+
+Базовые классы:
+* Compose<char32_t,Range<char32_t,U'A',U'Z'>,Range<char32_t,U'a',U'z'>>
+
+# ::stappler::chars::CharGroup<char32_t,GroupId::Cyrillic>::CharGroup<char32_t,GroupId::Cyrillic>
+
+## BRIEF
+
+Реализация именованной группы символов
+
+## CONTENT
+
+Реализация именованной группы символов
+
+Базовые классы:
+* Compose<char32_t,Range<char32_t,U'А',U'Я'>,Range<char32_t,U'а',U'я'>,Chars<char32_t,U'Ё',U'ё'>>
+
+# ::stappler::chars::CharGroup<char32_t,GroupId::Currency>::CharGroup<char32_t,GroupId::Currency>
+
+## BRIEF
+
+Реализация именованной группы символов
+
+## CONTENT
+
+Реализация именованной группы символов
+
+Базовые классы:
+* Compose<char32_t,Range<char32_t,U'\u20A0',U'\u20BE'>>
+
+# ::stappler::chars::CharGroup<char32_t,GroupId::GreekBasic>::CharGroup<char32_t,GroupId::GreekBasic>
+
+## BRIEF
+
+Реализация именованной группы символов
+
+## CONTENT
+
+Реализация именованной группы символов
+
+Базовые классы:
+* Compose<char32_t,Range<char32_t,U'\u0391',U'\u03AB'>,Range<char32_t,U'\u03B1',U'\u03CB'>>
+
+# ::stappler::chars::CharGroup<char32_t,GroupId::Math>::CharGroup<char32_t,GroupId::Math>
+
+## BRIEF
+
+Реализация именованной группы символов
+
+## CONTENT
+
+Реализация именованной группы символов
+
+Базовые классы:
+* Compose<char32_t,Range<char32_t,U'\u2200',U'\u22FF'>>
+
+# ::stappler::chars::CharGroup<char32_t,GroupId::Arrows>::CharGroup<char32_t,GroupId::Arrows>
+
+## BRIEF
+
+Реализация именованной группы символов
+
+## CONTENT
+
+Реализация именованной группы символов
+
+Базовые классы:
+* Compose<char32_t,Range<char32_t,U'\u2190',U'\u21FF'>>
+
+# ::stappler::chars::CharGroup<char32_t,GroupId::Fractionals>::CharGroup<char32_t,GroupId::Fractionals>
+
+## BRIEF
+
+Реализация именованной группы символов
+
+## CONTENT
+
+Реализация именованной группы символов
+
+Базовые классы:
+* Compose<char32_t,Range<char32_t,U'\u2150',U'\u215F'>>
+
+# ::stappler::chars::CharGroup<char32_t,GroupId::LatinSuppl1>::CharGroup<char32_t,GroupId::LatinSuppl1>
+
+## BRIEF
+
+Реализация именованной группы символов
+
+## CONTENT
+
+Реализация именованной группы символов
+
+Базовые классы:
+* Compose<char32_t,Range<char32_t,U'\u00C0',U'\u00FF'>>
+
+# ::stappler::chars::CharGroup<char32_t,GroupId::PunctuationAdvanced>::CharGroup<char32_t,GroupId::PunctuationAdvanced>
+
+## BRIEF
+
+Реализация именованной группы символов
+
+## CONTENT
+
+Реализация именованной группы символов
+
+Базовые классы:
+* Compose<char32_t,Range<char32_t,U'\u0021',U'\u002F'>,Range<char32_t,U'\u003A',U'\u0040'>,Range<char32_t,U'\u005B',U'\u0060'>,Range<char32_t,U'\u007B',U'\u007F'>,Range<char32_t,U'\u00A1',U'\u00BF'>,Range<char32_t,U'\u2010',U'\u201F'>,Range<char32_t,U'\u2024',U'\u2027'>,Range<char32_t,U'\u2030',U'\u203D'>,Chars<char32_t,U'\u2013',U'\u2014',U'\u2019',U'\u201c',U'\u201d',U'\u2116'>>
+
+# ::stappler::chars::CharGroup<char32_t,GroupId::GreekAdvanced>::CharGroup<char32_t,GroupId::GreekAdvanced>
+
+## BRIEF
+
+Реализация именованной группы символов
+
+## CONTENT
+
+Реализация именованной группы символов
+
+Базовые классы:
+* Compose<char32_t,Range<char32_t,U'\u0391',U'\u03AB'>,Range<char32_t,U'\u03B1',U'\u03CB'>,Range<char32_t,U'\u0370',U'\u0377'>,Range<char32_t,U'\u037A',U'\u037F'>,Range<char32_t,U'\u0384',U'\u038A'>,Range<char32_t,U'\u038E',U'\u0390'>,Range<char32_t,U'\u03AC',U'\u03B0'>,Range<char32_t,U'\u03CC',U'\u03FF'>,Chars<char32_t,U'\u038C'>>
+
+# ::stappler::chars::CharGroup<char32_t,GroupId::WhiteSpace>::CharGroup<char32_t,GroupId::WhiteSpace>
+
+## BRIEF
+
+Реализация именованной группы символов
+
+## CONTENT
+
+Реализация именованной группы символов
+
+Базовые классы:
+* Compose<char32_t,Range<char32_t,U'\u0009',U'\u000D'>,Range<char32_t,U'\u2000',U'\u200D'>,Chars<char32_t,U'\u0020',U'\u0085',U'\u00A0',U'\u1680',U'\u2028',U'\u2029',U'\u202F',U'\u205F',U'\u2060',U'\u3000',U'\uFEFF',U'\uFFFF'>>
+
+# ::stappler::chars::CharGroup<char32_t,GroupId::Controls>::CharGroup<char32_t,GroupId::Controls>
+
+## BRIEF
+
+Реализация именованной группы символов
+
+## CONTENT
+
+Реализация именованной группы символов
+
+Базовые классы:
+* Compose<char32_t,Range<char32_t,U'\u0001',U'\u0020'>>
+
+# ::stappler::chars::CharGroup<char32_t,GroupId::NonPrintable>::CharGroup<char32_t,GroupId::NonPrintable>
+
+## BRIEF
+
+Реализация именованной группы символов
+
+## CONTENT
+
+Реализация именованной группы символов
+
+Базовые классы:
+* Compose<char32_t,Range<char32_t,U'\u0001',U'\u0020'>,Range<char32_t,U'\u2000',U'\u200D'>,Chars<char32_t,U'\u0020',U'\u0085',U'\u00A0',U'\u1680',U'\u2028',U'\u2029',U'\u202F',U'\u205F',U'\u2060',U'\u3000',U'\uFEFF',U'\uFFFF'>>
+
+# ::stappler::chars::CharGroup<char32_t,GroupId::LatinLowercase>::CharGroup<char32_t,GroupId::LatinLowercase>
+
+## BRIEF
+
+Реализация именованной группы символов
+
+## CONTENT
+
+Реализация именованной группы символов
+
+Базовые классы:
+* Compose<char32_t,Range<char32_t,U'a',U'z'>>
+
+# ::stappler::chars::CharGroup<char32_t,GroupId::LatinUppercase>::CharGroup<char32_t,GroupId::LatinUppercase>
+
+## BRIEF
+
+Реализация именованной группы символов
+
+## CONTENT
+
+Реализация именованной группы символов
+
+Базовые классы:
+* Compose<char32_t,Range<char32_t,U'A',U'Z'>>
+
+# ::stappler::chars::CharGroup<char32_t,GroupId::Alphanumeric>::CharGroup<char32_t,GroupId::Alphanumeric>
+
+## BRIEF
+
+Реализация именованной группы символов
+
+## CONTENT
+
+Реализация именованной группы символов
+
+Базовые классы:
+* Compose<char32_t,Range<char32_t,U'0',U'9'>,Range<char32_t,U'A',U'Z'>,Range<char32_t,U'a',U'z'>>
+
+# ::stappler::chars::CharGroup<char32_t,GroupId::Hexadecimial>::CharGroup<char32_t,GroupId::Hexadecimial>
+
+## BRIEF
+
+Реализация именованной группы символов
+
+## CONTENT
+
+Реализация именованной группы символов
+
+Базовые классы:
+* Compose<char32_t,Range<char32_t,U'0',U'9'>,Range<char32_t,U'A',U'F'>,Range<char32_t,U'a',U'f'>>
+
+# ::stappler::chars::CharGroup<char32_t,GroupId::Base64>::CharGroup<char32_t,GroupId::Base64>
+
+## BRIEF
+
+Реализация именованной группы символов
+
+## CONTENT
+
+Реализация именованной группы символов
+
+Базовые классы:
+* Compose<char32_t,Range<char32_t,U'0',U'9'>,Range<char32_t,U'A',U'Z'>,Range<char32_t,U'a',U'z'>,Chars<char32_t,U'=',U'/',U'+',U'-',U'_'>>
+
+# ::stappler::chars::CharGroup<char32_t,GroupId::BreakableWhiteSpace>::CharGroup<char32_t,GroupId::BreakableWhiteSpace>
+
+## BRIEF
+
+Реализация именованной группы символов
+
+## CONTENT
+
+Реализация именованной группы символов
+
+Базовые классы:
+* Compose<char32_t,Range<char32_t,U'\u0009',U'\u000D'>,Range<char32_t,U'\u2000',U'\u200D'>,Chars<char32_t,U'\u0020',U'\u0085',U'\u1680',U'\u2028',U'\u2029',U'\u205F',U'\u2060',U'\u3000',U'\uFEFF'>>
+
+# ::stappler::chars::CharGroup<char32_t,GroupId::OpticalAlignmentSpecial>::CharGroup<char32_t,GroupId::OpticalAlignmentSpecial>
+
+## BRIEF
+
+Реализация именованной группы символов
+
+## CONTENT
+
+Реализация именованной группы символов
+
+Базовые классы:
+* Compose<char32_t,Chars<char32_t,U'(',U'[',U'{',U'"',U'\'',U'\\',U'<',U'«',U'„',U'.',U',',U'\u00AD',U'-'>>
+
+# ::stappler::chars::CharGroup<char32_t,GroupId::OpticalAlignmentBullet>::CharGroup<char32_t,GroupId::OpticalAlignmentBullet>
+
+## BRIEF
+
+Реализация именованной группы символов
+
+## CONTENT
+
+Реализация именованной группы символов
+
+Базовые классы:
+* Compose<char32_t,Range<char32_t,U'0',U'9'>,Chars<char32_t,U'—',U'–',U'―',U'•',U'‣',U'⁃',U'-',U'*',U'◦',U'■',U'.',U',',U')'>>
+
+# ::stappler::chars::CharGroup<char32_t,GroupId::TextPunctuation>::CharGroup<char32_t,GroupId::TextPunctuation>
+
+## BRIEF
+
+Реализация именованной группы символов
+
+## CONTENT
+
+Реализация именованной группы символов
+
+Базовые классы:
+* Compose<char32_t,Chars<char32_t,U'=',U'/',U'(',U')',U'.',U',',U'-',U'\'',U'"',U':',U';',U'?',U'!',U'@',U'#',U'$',U'%',U'^',U'*',U'\\',U'_',U'+',U'[',U']',U'«',U'»'>>

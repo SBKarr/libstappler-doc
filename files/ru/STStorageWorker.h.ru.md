@@ -1,33 +1,45 @@
 Title: STStorageWorker.h
 
 
-# MODULES_DB_STSTORAGEWORKER_H_
+# STAPPLER_DB_STSTORAGEWORKER_H_
 
 ## BRIEF
 
+Заголовок структуры для обработки запросов к БД перед передачей в транзакцию
+
 ## CONTENT
+
+Заголовок структуры для обработки запросов к БД перед передачей в транзакцию
 
 
 # ::stappler::db::UpdateFlags
 
 ## BRIEF
 
+Дополнительные флаги запроса
+
 ## CONTENT
+
+Дополнительные флаги запроса
 
 Значения:
 * None
-* Protected
-* NoReturn
-* GetAll
-* GetForUpdate
-* Cached
+* Protected - запрос выполняется в защищённом режиме
+* NoReturn - запрещает возвращать данные
+* GetAll - получает все доступные поля в запросе
+* GetForUpdate - получает данные для последующего обновления
+* Cached - кеширует возвращаемые объекты в транзакции
 
 
 # ::stappler::db::operator|(stappler::db::UpdateFlags const&,stappler::db::UpdateFlags const&)
 
 ## BRIEF
 
+Автоматически созданный оператор битового флага
+
 ## CONTENT
+
+Автоматически созданный оператор битового флага
 
 Параметры:
 * stappler::db::UpdateFlags const&
@@ -40,7 +52,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Автоматически созданный оператор битового флага
+
 ## CONTENT
+
+Автоматически созданный оператор битового флага
 
 Параметры:
 * stappler::db::UpdateFlags const&
@@ -53,7 +69,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Автоматически созданный оператор битового флага
+
 ## CONTENT
+
+Автоматически созданный оператор битового флага
 
 Параметры:
 * stappler::db::UpdateFlags const&
@@ -66,7 +86,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Автоматически созданный оператор битового флага
+
 ## CONTENT
+
+Автоматически созданный оператор битового флага
 
 Параметры:
 * stappler::db::UpdateFlags&
@@ -79,7 +103,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Автоматически созданный оператор битового флага
+
 ## CONTENT
+
+Автоматически созданный оператор битового флага
 
 Параметры:
 * stappler::db::UpdateFlags&
@@ -92,7 +120,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Автоматически созданный оператор битового флага
+
 ## CONTENT
+
+Автоматически созданный оператор битового флага
 
 Параметры:
 * stappler::db::UpdateFlags&
@@ -105,7 +137,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Автоматически созданный оператор битового флага
+
 ## CONTENT
+
+Автоматически созданный оператор битового флага
 
 Параметры:
 * stappler::db::UpdateFlags const&
@@ -118,7 +154,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Автоматически созданный оператор битового флага
+
 ## CONTENT
+
+Автоматически созданный оператор битового флага
 
 Параметры:
 * std::underlying_type<UpdateFlags>::type const&
@@ -131,7 +171,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Автоматически созданный оператор битового флага
+
 ## CONTENT
+
+Автоматически созданный оператор битового флага
 
 Параметры:
 * stappler::db::UpdateFlags const&
@@ -144,7 +188,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Автоматически созданный оператор битового флага
+
 ## CONTENT
+
+Автоматически созданный оператор битового флага
 
 Параметры:
 * std::underlying_type<UpdateFlags>::type const&
@@ -157,7 +205,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Автоматически созданный оператор битового флага
+
 ## CONTENT
+
+Автоматически созданный оператор битового флага
 
 Параметры:
 * stappler::db::UpdateFlags const&
@@ -169,14 +221,22 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Структура для разрещения конфликтов
+
 ## CONTENT
+
+Структура для разрещения конфликтов
 
 
 # ::stappler::db::Conflict::Flags
 
 ## BRIEF
 
+Флаг действия
+
 ## CONTENT
+
+Флаг действия
 
 Значения:
 * None
@@ -188,7 +248,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Создаёт структуру для разрешения конфликта поля через обновление данных
+
 ## CONTENT
+
+Создаёт структуру для разрешения конфликта поля через обновление данных
 
 Параметры:
 * stappler::StringView
@@ -200,7 +264,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Поле конфликта
+
 ## CONTENT
+
+Поле конфликта
 
 Тип: stappler::mem_pool::String
 
@@ -209,7 +277,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Условие для возможности разрешения конфликта
+
 ## CONTENT
+
+Условие для возможности разрешения конфликта
 
 Тип: Query::Select
 
@@ -218,7 +290,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Маска полей, исключаемых из конфликта
+
 ## CONTENT
+
+Маска полей, исключаемых из конфликта
 
 Тип: Vector<stappler::mem_pool::String>
 
@@ -227,7 +303,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Флаг действия при конфликте
+
 ## CONTENT
+
+Флаг действия при конфликте
 
 Тип: stappler::db::Conflict::Flags
 
@@ -236,7 +316,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Конструирует структуру конфликта из флага
+
 ## CONTENT
+
+Конструирует структуру конфликта из флага
 
 Параметры:
 * Conflict::Flags
@@ -246,7 +330,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Конструирует структуру конфликта для обновления при конфликте
+
 ## CONTENT
+
+Конструирует структуру конфликта для обновления при конфликте
 
 Параметры:
 * stappler::StringView
@@ -258,7 +346,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Конструирует структуру конфликта для обновления при конфликте
+
 ## CONTENT
+
+Конструирует структуру конфликта для обновления при конфликте
 
 Параметры:
 * stappler::StringView
@@ -270,7 +362,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Устанавливает флаг
+
 ## CONTENT
+
+Устанавливает флаг
 
 Параметры:
 * stappler::db::Conflict::Flags
@@ -282,7 +378,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Автоматически созданный оператор битового флага
+
 ## CONTENT
+
+Автоматически созданный оператор битового флага
 
 Параметры:
 * Conflict::Flags const&
@@ -295,7 +395,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Автоматически созданный оператор битового флага
+
 ## CONTENT
+
+Автоматически созданный оператор битового флага
 
 Параметры:
 * Conflict::Flags const&
@@ -308,7 +412,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Автоматически созданный оператор битового флага
+
 ## CONTENT
+
+Автоматически созданный оператор битового флага
 
 Параметры:
 * Conflict::Flags const&
@@ -321,7 +429,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Автоматически созданный оператор битового флага
+
 ## CONTENT
+
+Автоматически созданный оператор битового флага
 
 Параметры:
 * Conflict::Flags&
@@ -334,7 +446,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Автоматически созданный оператор битового флага
+
 ## CONTENT
+
+Автоматически созданный оператор битового флага
 
 Параметры:
 * Conflict::Flags&
@@ -347,7 +463,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Автоматически созданный оператор битового флага
+
 ## CONTENT
+
+Автоматически созданный оператор битового флага
 
 Параметры:
 * Conflict::Flags&
@@ -360,7 +480,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Автоматически созданный оператор битового флага
+
 ## CONTENT
+
+Автоматически созданный оператор битового флага
 
 Параметры:
 * Conflict::Flags const&
@@ -373,7 +497,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Автоматически созданный оператор битового флага
+
 ## CONTENT
+
+Автоматически созданный оператор битового флага
 
 Параметры:
 * std::underlying_type<Conflict::Flags>::type const&
@@ -386,7 +514,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Автоматически созданный оператор битового флага
+
 ## CONTENT
+
+Автоматически созданный оператор битового флага
 
 Параметры:
 * Conflict::Flags const&
@@ -399,7 +531,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Автоматически созданный оператор битового флага
+
 ## CONTENT
+
+Автоматически созданный оператор битового флага
 
 Параметры:
 * std::underlying_type<Conflict::Flags>::type const&
@@ -412,7 +548,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Автоматически созданный оператор битового флага
+
 ## CONTENT
+
+Автоматически созданный оператор битового флага
 
 Параметры:
 * Conflict::Flags const&
@@ -424,7 +564,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Стуктура для обработки запроса перед передачей в транзакцию
+
 ## CONTENT
+
+Стуктура для обработки запроса перед передачей в транзакцию
 
 Базовые классы:
 * AllocBase
@@ -434,25 +578,37 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Тип функции для перечисления полей схемы данных
+
 ## CONTENT
 
 Доступ: public
+
+Тип функции для перечисления полей схемы данных
 
 
 # ::stappler::db::Worker::RequiredFields
 
 ## BRIEF
 
+Структура требуемых к возврату полей
+
 ## CONTENT
 
 Доступ: public
+
+Структура требуемых к возврату полей
 
 
 # ::stappler::db::Worker::RequiredFields::scheme
 
 ## BRIEF
 
+Исходная схема данных
+
 ## CONTENT
+
+Исходная схема данных
 
 Тип: stappler::db::Scheme const*
 
@@ -461,7 +617,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Поля для включения
+
 ## CONTENT
+
+Поля для включения
 
 Тип: Vector<const stappler::db::Field *>
 
@@ -470,7 +630,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Поля для исключения
+
 ## CONTENT
+
+Поля для исключения
 
 Тип: Vector<const stappler::db::Field *>
 
@@ -479,7 +643,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Флаг для отключения всякого возврата
+
 ## CONTENT
+
+Флаг для отключения всякого возврата
 
 Тип: bool
 
@@ -488,7 +656,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Флаг для включения всех полей в возврат
+
 ## CONTENT
+
+Флаг для включения всех полей в возврат
 
 Тип: bool
 
@@ -497,14 +669,22 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Очищает структуру
+
 ## CONTENT
+
+Очищает структуру
 
 
 # ::stappler::db::Worker::RequiredFields::reset(stappler::db::Scheme const&)
 
 ## BRIEF
 
+Очищает структуру и устанавливает схему
+
 ## CONTENT
+
+Очищает структуру и устанавливает схему
 
 Параметры:
 * stappler::db::Scheme const&
@@ -514,7 +694,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Включает поля для возврата
+
 ## CONTENT
+
+Включает поля для возврата
 
 Параметры:
 * std::initializer_list<StringView>
@@ -524,7 +708,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Включает поля для возврата
+
 ## CONTENT
+
+Включает поля для возврата
 
 Параметры:
 * Set<const stappler::db::Field *> const&
@@ -534,7 +722,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Включает поля для возврата
+
 ## CONTENT
+
+Включает поля для возврата
 
 Параметры:
 * stappler::StringView const&
@@ -544,7 +736,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Включает поля для возврата
+
 ## CONTENT
+
+Включает поля для возврата
 
 Параметры:
 * stappler::db::Field const*
@@ -554,7 +750,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Исключает поля из возврата
+
 ## CONTENT
+
+Исключает поля из возврата
 
 Параметры:
 * std::initializer_list<StringView>
@@ -564,7 +764,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Исключает поля из возврата
+
 ## CONTENT
+
+Исключает поля из возврата
 
 Параметры:
 * Set<const stappler::db::Field *> const&
@@ -574,7 +778,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Исключает поля из возврата
+
 ## CONTENT
+
+Исключает поля из возврата
 
 Параметры:
 * stappler::StringView const&
@@ -584,7 +792,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Исключает поля из возврата
+
 ## CONTENT
+
+Исключает поля из возврата
 
 Параметры:
 * stappler::db::Field const*
@@ -594,16 +806,24 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Данные для условного оператора
+
 ## CONTENT
 
 Доступ: public
+
+Данные для условного оператора
 
 
 # ::stappler::db::Worker::ConditionData::compare
 
 ## BRIEF
 
+Оператор сравнения
+
 ## CONTENT
+
+Оператор сравнения
 
 Тип: stappler::db::Comparation
 
@@ -612,7 +832,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Первое значение для сравнения
+
 ## CONTENT
+
+Первое значение для сравнения
 
 Тип: stappler::mem_pool::Value
 
@@ -621,7 +845,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Второе значение для сравнения
+
 ## CONTENT
+
+Второе значение для сравнения (для троичного оператора)
 
 Тип: stappler::mem_pool::Value
 
@@ -630,7 +858,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Поле для сравнения
+
 ## CONTENT
+
+Поле для сравнения
 
 Тип: stappler::db::Field const*
 
@@ -639,14 +871,21 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Конструктор по умолчанию
+
 ## CONTENT
 
+Конструктор по умолчанию
 
 # ::stappler::db::Worker::ConditionData::ConditionData(Query::Select const&,stappler::db::Field const*)
 
 ## BRIEF
 
+Конструктор для поля
+
 ## CONTENT
+
+Конструктор для поля
 
 Параметры:
 * Query::Select const&
@@ -657,7 +896,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Конструктор для поля
+
 ## CONTENT
+
+Конструктор для поля
 
 Параметры:
 * Query::Select&&
@@ -668,7 +911,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Устанавливает запрос и поле
+
 ## CONTENT
+
+Устанавливает запрос и поле
 
 Параметры:
 * Query::Select&&
@@ -679,7 +926,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Устанавливает запрос и поле
+
 ## CONTENT
+
+Устанавливает запрос и поле
 
 Параметры:
 * Query::Select const&
@@ -690,7 +941,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Раскрытые данные для разрешения конфликта
+
 ## CONTENT
+
+Раскрытые данные для разрешения конфликта
 
 Доступ: public
 
@@ -699,7 +954,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Поле, по которому проходит конфликт
+
 ## CONTENT
+
+Поле, по которому проходит конфликт
 
 Тип: stappler::db::Field const*
 
@@ -708,7 +967,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Условие для обновления данных при конфликте
+
 ## CONTENT
+
+Условие для обновления данных при конфликте
 
 Тип: stappler::db::Worker::ConditionData
 
@@ -717,7 +980,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Список полей для исключения из обновления
+
 ## CONTENT
+
+Список полей для исключения из обновления
 
 Тип: Vector<const stappler::db::Field *>
 
@@ -726,7 +993,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Флаг действия при конфликте
+
 ## CONTENT
+
+Флаг действия при конфликте
 
 Тип: Conflict::Flags
 
@@ -735,7 +1006,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Проверяет, предполагается ли ничего не делать при конфликте
+
 ## CONTENT
+
+Проверяет, предполагается ли ничего не делать при конфликте
 
 Возвращает:
 * bool
@@ -744,7 +1019,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Проверяет, есть ли условия для обновления
+
 ## CONTENT
+
+Проверяет, есть ли условия для обновления
 
 Возвращает:
 * bool
@@ -753,9 +1032,13 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Конструирует из схемы
+
 ## CONTENT
 
 Доступ: public
+
+Конструирует из схемы. Начинает транзакцию для текущего контекста.
 
 Параметры:
 * stappler::db::Scheme const&
@@ -765,7 +1048,13 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Конструирует из схемы и адаптера.
+
 ## CONTENT
+
+Доступ: public
+
+Конструирует из схемы и адаптера. Запрашивает текущую транзакцию у адаптера или начинает новую.
 
 Доступ: public
 
@@ -778,9 +1067,13 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Конструирует из схемы и транзакции
+
 ## CONTENT
 
 Доступ: public
+
+Конструирует из схемы и транзакции
 
 Параметры:
 * stappler::db::Scheme const&
@@ -791,9 +1084,13 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Конструктор копирования
+
 ## CONTENT
 
 Доступ: public
+
+Конструктор копирования. Необходим для некоторых функций.
 
 Параметры:
 * stappler::db::Worker const&
@@ -803,9 +1100,13 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Запрет перемещения
+
 ## CONTENT
 
 Доступ: public
+
+Запрет перемещения
 
 Параметры:
 * stappler::db::Worker&&
@@ -815,9 +1116,13 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Запрет перемещения
+
 ## CONTENT
 
 Доступ: public
+
+Запрет перемещения
 
 Параметры:
 * stappler::db::Worker&&
@@ -829,9 +1134,13 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Запрет оператора копирования
+
 ## CONTENT
 
 Доступ: public
+
+Запрет оператора копирования
 
 Параметры:
 * stappler::db::Worker const&
@@ -843,18 +1152,26 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::db::Worker::perform<typename>(Callback const&) const
 
 ## BRIEF
 
+Выполняет функцию в контексте транзакции
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет функцию в контексте транзакции
 
 Параметры шаблона:
 * typename Callback
@@ -869,9 +1186,13 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Возвращает транзакцию
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает транзакцию
 
 Возвращает:
 * stappler::db::Transaction const&
@@ -880,9 +1201,13 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Возвращает схему данных
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает схему данных
 
 Возвращает:
 * stappler::db::Scheme const&
@@ -891,18 +1216,26 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Запрещает запросу возвращать данные
+
 ## CONTENT
 
 Доступ: public
+
+Запрещает запросу возвращать данные
 
 
 # ::stappler::db::Worker::include<typename>(T&&)
 
 ## BRIEF
 
+Включает поле в возврат запроса
+
 ## CONTENT
 
 Доступ: public
+
+Включает поле в возврат запроса
 
 Параметры шаблона:
 * typename T
@@ -917,9 +1250,13 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Исключает поле из возврата запроса
+
 ## CONTENT
 
 Доступ: public
+
+Исключает поле из возврата запроса
 
 Параметры шаблона:
 * typename T
@@ -934,7 +1271,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Очищает требуемые к возврату поля
+
 ## CONTENT
+
+Очищает требуемые к возврату поля
 
 Доступ: public
 
@@ -943,9 +1284,13 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Проверяет, должен ли запрос не возвращать ничего
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, должен ли запрос не возвращать ничего
 
 Возвращает:
 * bool
@@ -954,9 +1299,13 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Проверяет, должен ли запрос возвращать все доступные поля
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, должен ли запрос возвращать все доступные поля
 
 Возвращает:
 * bool
@@ -965,9 +1314,13 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Помечает запрос для исполнения от имени системы
+
 ## CONTENT
 
 Доступ: public
+
+Помечает запрос для исполнения от имени системы
 
 Возвращает:
 * stappler::db::Worker&
@@ -976,9 +1329,13 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Проверяет, исполняется ли запрос от имени системы
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, исполняется ли запрос от имени системы
 
 Возвращает:
 * bool
@@ -987,9 +1344,13 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Возвращает требуемые поля
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает требуемые поля
 
 Возвращает:
 * stappler::db::Worker::RequiredFields const&
@@ -998,9 +1359,13 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Возвращает правила разрешения конфликтов
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает правила разрешения конфликтов
 
 Возвращает:
 * Map<const stappler::db::Field *, stappler::db::Worker::ConflictData> const&
@@ -1009,9 +1374,13 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Возвращает данные условий для запроса
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает данные условий для запроса
 
 Возвращает:
 * Vector<stappler::db::Worker::ConditionData> const&
@@ -1020,9 +1389,13 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Выполняет запрос для получения объекта по идентификатору
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет запрос для получения объекта по идентификатору
 
 Параметры:
 * uint64_t
@@ -1035,9 +1408,13 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Выполняет запрос для получения объекта по псевдониму
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет запрос для получения объекта по псевдониму
 
 Параметры:
 * stappler::StringView const&
@@ -1050,9 +1427,13 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Выполняет запрос для получения объекта по идентификатору или псевдониму
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет запрос для получения объекта по идентификатору или псевдониму
 
 Параметры:
 * stappler::mem_pool::Value const&
@@ -1065,13 +1446,17 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Выполняет запрос для получения объекта по идентификатору
+
 ## CONTENT
 
 Доступ: public
 
+Выполняет запрос для получения объекта по идентификатору
+
 Параметры:
 * uint64_t
-* stappler::StringView
+* stappler::StringView - поле для возврата
 * stappler::db::UpdateFlags
 
 Возвращает:
@@ -1081,13 +1466,17 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Выполняет запрос для получения объекта по псевдониму
+
 ## CONTENT
 
 Доступ: public
 
+Выполняет запрос для получения объекта по псевдониму
+
 Параметры:
 * stappler::StringView const&
-* stappler::StringView
+* stappler::StringView - поле для возврата
 * stappler::db::UpdateFlags
 
 Возвращает:
@@ -1097,13 +1486,17 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Выполняет запрос для получения объекта по идентификатору или псевдониму
+
 ## CONTENT
 
 Доступ: public
 
+Выполняет запрос для получения объекта по идентификатору или псевдониму
+
 Параметры:
 * stappler::mem_pool::Value const&
-* stappler::StringView
+* stappler::StringView - поле для возврата
 * stappler::db::UpdateFlags
 
 Возвращает:
@@ -1113,13 +1506,17 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Выполняет запрос для получения объекта по идентификатору
+
 ## CONTENT
 
 Доступ: public
 
+Выполняет запрос для получения объекта по идентификатору
+
 Параметры:
 * uint64_t
-* std::initializer_list<StringView>&&
+* std::initializer_list<StringView>&& - поля для возврата
 * stappler::db::UpdateFlags
 
 Возвращает:
@@ -1129,13 +1526,17 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Выполняет запрос для получения объекта по псевдониму
+
 ## CONTENT
 
 Доступ: public
 
+Выполняет запрос для получения объекта по псевдониму
+
 Параметры:
 * stappler::StringView const&
-* std::initializer_list<StringView>&&
+* std::initializer_list<StringView>&& - поля для возврата
 * stappler::db::UpdateFlags
 
 Возвращает:
@@ -1145,13 +1546,17 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Выполняет запрос для получения объекта по идентификатору или псевдониму
+
 ## CONTENT
 
 Доступ: public
 
+Выполняет запрос для получения объекта по идентификатору или псевдониму
+
 Параметры:
 * stappler::mem_pool::Value const&
-* std::initializer_list<StringView>&&
+* std::initializer_list<StringView>&& - поля для возврата
 * stappler::db::UpdateFlags
 
 Возвращает:
@@ -1161,13 +1566,17 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Выполняет запрос для получения объекта по идентификатору
+
 ## CONTENT
 
 Доступ: public
 
+Выполняет запрос для получения объекта по идентификатору
+
 Параметры:
 * uint64_t
-* std::initializer_list<const char *>&&
+* std::initializer_list<const char *>&& - поля для возврата
 * stappler::db::UpdateFlags
 
 Возвращает:
@@ -1177,13 +1586,17 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Выполняет запрос для получения объекта по псевдониму
+
 ## CONTENT
 
 Доступ: public
 
+Выполняет запрос для получения объекта по псевдониму
+
 Параметры:
 * stappler::StringView const&
-* std::initializer_list<const char *>&&
+* std::initializer_list<const char *>&& - поля для возврата
 * stappler::db::UpdateFlags
 
 Возвращает:
@@ -1193,13 +1606,17 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Выполняет запрос для получения объекта по идентификатору или псевдониму
+
 ## CONTENT
 
 Доступ: public
 
+Выполняет запрос для получения объекта по идентификатору или псевдониму
+
 Параметры:
 * stappler::mem_pool::Value const&
-* std::initializer_list<const char *>&&
+* std::initializer_list<const char *>&& - поля для возврата
 * stappler::db::UpdateFlags
 
 Возвращает:
@@ -1209,13 +1626,17 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Выполняет запрос для получения объекта по идентификатору
+
 ## CONTENT
 
 Доступ: public
 
+Выполняет запрос для получения объекта по идентификатору
+
 Параметры:
 * uint64_t
-* std::initializer_list<const Field *>&&
+* std::initializer_list<const Field *>&& - поля для возврата
 * stappler::db::UpdateFlags
 
 Возвращает:
@@ -1225,13 +1646,17 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Выполняет запрос для получения объекта по псевдониму
+
 ## CONTENT
 
 Доступ: public
 
+Выполняет запрос для получения объекта по псевдониму
+
 Параметры:
 * stappler::StringView const&
-* std::initializer_list<const Field *>&&
+* std::initializer_list<const Field *>&& - поля для возврата
 * stappler::db::UpdateFlags
 
 Возвращает:
@@ -1241,13 +1666,17 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Выполняет запрос для получения объекта по идентификатору или псевдониму
+
 ## CONTENT
 
 Доступ: public
 
+Выполняет запрос для получения объекта по идентификатору или псевдониму
+
 Параметры:
 * stappler::mem_pool::Value const&
-* std::initializer_list<const Field *>&&
+* std::initializer_list<const Field *>&& - поля для возврата
 * stappler::db::UpdateFlags
 
 Возвращает:
@@ -1257,13 +1686,17 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Выполняет запрос для получения объекта по идентификатору
+
 ## CONTENT
 
 Доступ: public
 
+Выполняет запрос для получения объекта по идентификатору
+
 Параметры:
 * uint64_t
-* SpanView<const stappler::db::Field *>
+* SpanView<const stappler::db::Field *> - поля для возврата
 * stappler::db::UpdateFlags
 
 Возвращает:
@@ -1273,13 +1706,17 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Выполняет запрос для получения объекта по псевдониму
+
 ## CONTENT
 
 Доступ: public
 
+Выполняет запрос для получения объекта по псевдониму
+
 Параметры:
 * stappler::StringView const&
-* SpanView<const stappler::db::Field *>
+* SpanView<const stappler::db::Field *> - поля для возврата
 * stappler::db::UpdateFlags
 
 Возвращает:
@@ -1289,13 +1726,17 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Выполняет запрос для получения объекта по идентификатору или псевдониму
+
 ## CONTENT
 
 Доступ: public
 
+Выполняет запрос для получения объекта по идентификатору или псевдониму
+
 Параметры:
 * stappler::mem_pool::Value const&
-* SpanView<const stappler::db::Field *>
+* SpanView<const stappler::db::Field *> - поля для возврата
 * stappler::db::UpdateFlags
 
 Возвращает:
@@ -1305,13 +1746,17 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Выполняет запрос на обход объектов по запросу
+
 ## CONTENT
 
 Доступ: public
 
+Выполняет запрос на обход объектов по запросу
+
 Параметры:
-* stappler::db::Query const&
-* Callback<bool (stappler::mem_pool::Value &)> const&
+* stappler::db::Query const& - запрос
+* Callback<bool (stappler::mem_pool::Value &)> const& - функция перечисления
 * stappler::db::UpdateFlags
 
 Возвращает:
@@ -1321,9 +1766,13 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Выполняет запрос для возврата данных
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет запрос для возврата данных
 
 Параметры:
 * stappler::db::Query const&
@@ -1336,13 +1785,17 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Выполняет запрос на создание объекта
+
 ## CONTENT
 
 Доступ: public
 
+Выполняет запрос на создание объекта
+
 Параметры:
 * stappler::mem_pool::Value const&
-* bool
+* bool - true для защищунного окружения
 
 Возвращает:
 * stappler::mem_pool::Value
@@ -1351,9 +1804,13 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Выполняет запрос на создание объекта
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет запрос на создание объекта
 
 Параметры:
 * stappler::mem_pool::Value const&
@@ -1366,14 +1823,18 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Выполняет запрос на создание объекта
+
 ## CONTENT
 
 Доступ: public
 
+Выполняет запрос на создание объекта
+
 Параметры:
 * stappler::mem_pool::Value const&
 * stappler::db::UpdateFlags
-* stappler::db::Conflict const&
+* stappler::db::Conflict const& - структура разрешения конфликтов
 
 Возвращает:
 * stappler::mem_pool::Value
@@ -1382,14 +1843,18 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Выполняет запрос на создание объекта
+
 ## CONTENT
 
 Доступ: public
 
+Выполняет запрос на создание объекта
+
 Параметры:
 * stappler::mem_pool::Value const&
 * stappler::db::UpdateFlags
-* Vector<stappler::db::Conflict> const&
+* Vector<stappler::db::Conflict> const& - структуры разрешения конфликтов
 
 Возвращает:
 * stappler::mem_pool::Value
@@ -1398,13 +1863,17 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Выполняет запрос на создание объекта
+
 ## CONTENT
 
 Доступ: public
 
+Выполняет запрос на создание объекта
+
 Параметры:
 * stappler::mem_pool::Value const&
-* Conflict::Flags
+* Conflict::Flags - действие при разрешении конфликтов, позволяет указать только `DoNothing`
 
 Возвращает:
 * stappler::mem_pool::Value
@@ -1413,13 +1882,17 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Выполняет запрос на создание объекта
+
 ## CONTENT
 
 Доступ: public
 
+Выполняет запрос на создание объекта
+
 Параметры:
 * stappler::mem_pool::Value const&
-* stappler::db::Conflict const&
+* stappler::db::Conflict const& - структура разрешения конфликта
 
 Возвращает:
 * stappler::mem_pool::Value
@@ -1428,13 +1901,17 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Выполняет запрос на создание объекта
+
 ## CONTENT
 
 Доступ: public
 
+Выполняет запрос на создание объекта
+
 Параметры:
 * stappler::mem_pool::Value const&
-* Vector<stappler::db::Conflict> const&
+* Vector<stappler::db::Conflict> const& - структуры разрешения конфликта
 
 Возвращает:
 * stappler::mem_pool::Value
@@ -1443,14 +1920,18 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Выполняет запрос на изменение объекта
+
 ## CONTENT
 
 Доступ: public
 
+Выполняет запрос на изменение объекта
+
 Параметры:
-* uint64_t
+* uint64_t - ид объекта
 * stappler::mem_pool::Value const&
-* bool
+* bool - true для безопасного окружения
 
 Возвращает:
 * stappler::mem_pool::Value
@@ -1459,14 +1940,18 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Выполняет запрос на изменение объекта
+
 ## CONTENT
 
 Доступ: public
 
+Выполняет запрос на изменение объекта
+
 Параметры:
-* stappler::mem_pool::Value const&
-* stappler::mem_pool::Value const&
-* bool
+* stappler::mem_pool::Value const& - исходный объект
+* stappler::mem_pool::Value const& - данные для обновления
+* bool - true для безопасного окружения
 
 Возвращает:
 * stappler::mem_pool::Value
@@ -1475,13 +1960,17 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Выполняет запрос на изменение объекта
+
 ## CONTENT
 
 Доступ: public
 
+Выполняет запрос на изменение объекта
+
 Параметры:
-* uint64_t
-* stappler::mem_pool::Value const&
+* uint64_t - ид объекта
+* stappler::mem_pool::Value const& - данные для обновления
 * stappler::db::UpdateFlags
 
 Возвращает:
@@ -1491,13 +1980,17 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Выполняет запрос на изменение объекта
+
 ## CONTENT
 
 Доступ: public
 
+Выполняет запрос на изменение объекта
+
 Параметры:
-* stappler::mem_pool::Value const&
-* stappler::mem_pool::Value const&
+* stappler::mem_pool::Value const& - исходный объект
+* stappler::mem_pool::Value const& - данные для обновления
 * stappler::db::UpdateFlags
 
 Возвращает:
@@ -1507,15 +2000,19 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Выполняет запрос на изменение объекта
+
 ## CONTENT
 
 Доступ: public
 
+Выполняет запрос на изменение объекта
+
 Параметры:
-* uint64_t
+* uint64_t - ид объекта
 * stappler::mem_pool::Value const&
-* stappler::db::UpdateFlags
-* Query::Select const&
+* stappler::db::UpdateFlags - данные для обновления
+* Query::Select const& - условный запрос для обновления
 
 Возвращает:
 * stappler::mem_pool::Value
@@ -1524,15 +2021,19 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Выполняет запрос на изменение объекта
+
 ## CONTENT
 
 Доступ: public
 
+Выполняет запрос на изменение объекта
+
 Параметры:
-* stappler::mem_pool::Value const&
-* stappler::mem_pool::Value const&
+* stappler::mem_pool::Value const& - исходный объект
+* stappler::mem_pool::Value const& - данные для обновления
 * stappler::db::UpdateFlags
-* Query::Select const&
+* Query::Select const& - условный запрос для обновления
 
 Возвращает:
 * stappler::mem_pool::Value
@@ -1541,15 +2042,19 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Выполняет запрос на изменение объекта
+
 ## CONTENT
 
 Доступ: public
 
+Выполняет запрос на изменение объекта
+
 Параметры:
-* uint64_t
-* stappler::mem_pool::Value const&
+* uint64_t - ид объекта
+* stappler::mem_pool::Value const& - данные для обновления
 * stappler::db::UpdateFlags
-* Vector<Query::Select> const&
+* Vector<Query::Select> const& - условные запросы для обновления
 
 Возвращает:
 * stappler::mem_pool::Value
@@ -1558,15 +2063,19 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Выполняет запрос на изменение объекта
+
 ## CONTENT
 
 Доступ: public
 
+Выполняет запрос на изменение объекта
+
 Параметры:
-* stappler::mem_pool::Value const&
-* stappler::mem_pool::Value const&
+* stappler::mem_pool::Value const& - исходный объект
+* stappler::mem_pool::Value const& - данные для обновления
 * stappler::db::UpdateFlags
-* Vector<Query::Select> const&
+* Vector<Query::Select> const& - условные запросы для обновления
 
 Возвращает:
 * stappler::mem_pool::Value
@@ -1575,14 +2084,18 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Выполняет запрос на изменение объекта
+
 ## CONTENT
 
 Доступ: public
 
+Выполняет запрос на изменение объекта
+
 Параметры:
-* uint64_t
-* stappler::mem_pool::Value const&
-* Query::Select const&
+* uint64_t - ид объекта
+* stappler::mem_pool::Value const& - данные для обновления
+* Query::Select const& - условный запрос для обновления
 
 Возвращает:
 * stappler::mem_pool::Value
@@ -1591,14 +2104,18 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Выполняет запрос на изменение объекта
+
 ## CONTENT
 
 Доступ: public
 
+Выполняет запрос на изменение объекта
+
 Параметры:
-* stappler::mem_pool::Value const&
-* stappler::mem_pool::Value const&
-* Query::Select const&
+* stappler::mem_pool::Value const& - исходный объект
+* stappler::mem_pool::Value const& - данные для обновления
+* Query::Select const& - условный запрос для обновления
 
 Возвращает:
 * stappler::mem_pool::Value
@@ -1607,14 +2124,18 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Выполняет запрос на изменение объекта
+
 ## CONTENT
 
 Доступ: public
 
+Выполняет запрос на изменение объекта
+
 Параметры:
-* uint64_t
-* stappler::mem_pool::Value const&
-* Vector<Query::Select> const&
+* uint64_t - ид объекта
+* stappler::mem_pool::Value const& - данные для обновления
+* Vector<Query::Select> const& - условные запросы для обновления
 
 Возвращает:
 * stappler::mem_pool::Value
@@ -1623,14 +2144,18 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Выполняет запрос на изменение объекта
+
 ## CONTENT
 
 Доступ: public
 
+Выполняет запрос на изменение объекта
+
 Параметры:
-* stappler::mem_pool::Value const&
-* stappler::mem_pool::Value const&
-* Vector<Query::Select> const&
+* stappler::mem_pool::Value const& - исходный объект
+* stappler::mem_pool::Value const& - данные для обновления
+* Vector<Query::Select> const& - условные запросы для обновления
 
 Возвращает:
 * stappler::mem_pool::Value
@@ -1639,37 +2164,49 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Выполняет запрос на удаление объекта
+
 ## CONTENT
 
 Доступ: public
 
+Выполняет запрос на удаление объекта
+
 Параметры:
-* uint64_t
+* uint64_t - ид объекта
 
 Возвращает:
-* bool
+* bool - true если успешно
 
 # ::stappler::db::Worker::remove(stappler::mem_pool::Value const&)
 
 ## BRIEF
 
+Выполняет запрос на удаление объекта
+
 ## CONTENT
 
 Доступ: public
 
+Выполняет запрос на удаление объекта
+
 Параметры:
-* stappler::mem_pool::Value const&
+* stappler::mem_pool::Value const& - исходный объект
 
 Возвращает:
-* bool
+* bool - true если успешно
 
 # ::stappler::db::Worker::count()
 
 ## BRIEF
 
+Выполняет запрос на подсчёт числа объектов во всей схеме
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет запрос на подсчёт числа объектов во всей схеме
 
 Возвращает:
 * size_t
@@ -1678,9 +2215,13 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Выполняет запрос на подсчёт числа объектов по запросу
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет запрос на подсчёт числа объектов по запросу
 
 Параметры:
 * stappler::db::Query const&
@@ -1692,38 +2233,50 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Выполняет обновление времени жизни объекта
+
 ## CONTENT
 
 Доступ: public
 
+Выполняет обновление времени жизни объекта
+
 Параметры:
-* uint64_t
+* uint64_t - ид объекта
 
 
 # ::stappler::db::Worker::touch(stappler::mem_pool::Value const&)
 
 ## BRIEF
 
+Выполняет обновление времени жизни объекта
+
 ## CONTENT
 
 Доступ: public
 
+Выполняет обновление времени жизни объекта
+
 Параметры:
-* stappler::mem_pool::Value const&
+* stappler::mem_pool::Value const& - исходный объект
 
 
 # ::stappler::db::Worker::getField(uint64_t,stappler::StringView const&,std::initializer_list<StringView>)
 
 ## BRIEF
 
+Получает поле объекта
+
 ## CONTENT
 
 Доступ: public
 
+Получает поле объекта
+
 Параметры:
-* uint64_t
-* stappler::StringView const&
-* std::initializer_list<StringView>
+* uint64_t - ид объекта
+* stappler::StringView const& - поле объекта
+* std::initializer_list<StringView> - поля для возврата
 
 Возвращает:
 * stappler::mem_pool::Value
@@ -1732,14 +2285,18 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Получает поле объекта
+
 ## CONTENT
 
 Доступ: public
 
+Получает поле объекта
+
 Параметры:
-* stappler::mem_pool::Value const&
-* stappler::StringView const&
-* std::initializer_list<StringView>
+* stappler::mem_pool::Value const& - исходный объект
+* stappler::StringView const& - поле объекта
+* std::initializer_list<StringView> - поля для возврата
 
 Возвращает:
 * stappler::mem_pool::Value
@@ -1748,14 +2305,18 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Получает поле объекта
+
 ## CONTENT
 
 Доступ: public
 
+Получает поле объекта
+
 Параметры:
-* uint64_t
-* stappler::StringView const&
-* Set<const stappler::db::Field *> const&
+* uint64_t - ид объекта
+* stappler::StringView const& - поле объекта
+* Set<const stappler::db::Field *> const& - поля для возврата
 
 Возвращает:
 * stappler::mem_pool::Value
@@ -1764,14 +2325,18 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Получает поле объекта
+
 ## CONTENT
 
 Доступ: public
 
+Получает поле объекта
+
 Параметры:
-* stappler::mem_pool::Value const&
-* stappler::StringView const&
-* Set<const stappler::db::Field *> const&
+* stappler::mem_pool::Value const& - исходный объект
+* stappler::StringView const& - поле объекта
+* Set<const stappler::db::Field *> const& - поля для возврата
 
 Возвращает:
 * stappler::mem_pool::Value
@@ -1780,14 +2345,18 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Устанавливет значение поля объекта
+
 ## CONTENT
 
 Доступ: public
 
+Устанавливет значение поля объекта
+
 Параметры:
-* uint64_t
-* stappler::StringView const&
-* stappler::mem_pool::Value&&
+* uint64_t - ид объекта
+* stappler::StringView const& - поле объекта
+* stappler::mem_pool::Value&& - данные объекта
 
 Возвращает:
 * stappler::mem_pool::Value
@@ -1796,14 +2365,18 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Устанавливет значение поля объекта
+
 ## CONTENT
 
 Доступ: public
 
+Устанавливет значение поля объекта
+
 Параметры:
-* stappler::mem_pool::Value const&
-* stappler::StringView const&
-* stappler::mem_pool::Value&&
+* stappler::mem_pool::Value const& - исходный объект
+* stappler::StringView const& - поле объекта
+* stappler::mem_pool::Value&& - данные объекта
 
 Возвращает:
 * stappler::mem_pool::Value
@@ -1812,14 +2385,18 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Устанавливет значение поля объекта
+
 ## CONTENT
 
 Доступ: public
 
+Устанавливет значение поля объекта
+
 Параметры:
-* uint64_t
-* stappler::StringView const&
-* stappler::db::InputFile&
+* uint64_t - ид объекта
+* stappler::StringView const& - поле объекта
+* stappler::db::InputFile& - файл для поля
 
 Возвращает:
 * stappler::mem_pool::Value
@@ -1828,14 +2405,18 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Устанавливет значение поля объекта
+
 ## CONTENT
 
 Доступ: public
 
+Устанавливет значение поля объекта
+
 Параметры:
-* stappler::mem_pool::Value const&
-* stappler::StringView const&
-* stappler::db::InputFile&
+* stappler::mem_pool::Value const& - исходный объект
+* stappler::StringView const& - поле объекта
+* stappler::db::InputFile& - файл для поля
 
 Возвращает:
 * stappler::mem_pool::Value
@@ -1844,14 +2425,18 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Очищает поле объекта
+
 ## CONTENT
 
 Доступ: public
 
+Очищает поле объекта
+
 Параметры:
-* uint64_t
-* stappler::StringView const&
-* stappler::mem_pool::Value&&
+* uint64_t - ид объекта
+* stappler::StringView const&  -поле объекта
+* stappler::mem_pool::Value&& - дополнительные данные
 
 Возвращает:
 * bool
@@ -1860,14 +2445,18 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Очищает поле объекта
+
 ## CONTENT
 
 Доступ: public
 
+Очищает поле объекта
+
 Параметры:
-* stappler::mem_pool::Value const&
-* stappler::StringView const&
-* stappler::mem_pool::Value&&
+* stappler::mem_pool::Value const& - исходный объект
+* stappler::StringView const&  -поле объекта
+* stappler::mem_pool::Value&& - дополнительные данные
 
 Возвращает:
 * bool
@@ -1876,14 +2465,18 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Добавляет значение к полю объекта
+
 ## CONTENT
 
 Доступ: public
 
+Добавляет значение к полю объекта
+
 Параметры:
-* uint64_t
-* stappler::StringView const&
-* stappler::mem_pool::Value&&
+* uint64_t - ид объекта
+* stappler::StringView const& - поле объекта
+* stappler::mem_pool::Value&& - данные для добавления
 
 Возвращает:
 * stappler::mem_pool::Value
@@ -1892,14 +2485,18 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Добавляет значение к полю объекта
+
 ## CONTENT
 
 Доступ: public
 
+Добавляет значение к полю объекта
+
 Параметры:
-* stappler::mem_pool::Value const&
-* stappler::StringView const&
-* stappler::mem_pool::Value&&
+* stappler::mem_pool::Value const& - исходный объект
+* stappler::StringView const& - поле объекта
+* stappler::mem_pool::Value&& - данные для добавления
 
 Возвращает:
 * stappler::mem_pool::Value
@@ -1908,13 +2505,17 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Подсчитывает число объектов в поле объекта
+
 ## CONTENT
 
 Доступ: public
 
+Подсчитывает число объектов в поле объекта
+
 Параметры:
-* uint64_t
-* stappler::StringView const&
+* uint64_t - ид объекта
+* stappler::StringView const& - поле объекта
 
 Возвращает:
 * size_t
@@ -1923,29 +2524,38 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Подсчитывает число объектов в поле объекта
+
 ## CONTENT
 
 Доступ: public
 
+Подсчитывает число объектов в поле объекта
+
 Параметры:
-* stappler::mem_pool::Value const&
-* stappler::StringView const&
+* stappler::mem_pool::Value const& - исходный объект
+* stappler::StringView const& - поле объекта
 
 Возвращает:
 * size_t
+
 
 # ::stappler::db::Worker::getField(uint64_t,stappler::db::Field const&,std::initializer_list<StringView>)
 
 ## BRIEF
 
+Получает поле объекта
+
 ## CONTENT
 
 Доступ: public
 
+Получает поле объекта
+
 Параметры:
-* uint64_t
-* stappler::db::Field const&
-* std::initializer_list<StringView>
+* uint64_t - ид объекта
+* stappler::db::Field const& - поле объекта
+* std::initializer_list<StringView> - поля для возврата
 
 Возвращает:
 * stappler::mem_pool::Value
@@ -1954,14 +2564,18 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Получает поле объекта
+
 ## CONTENT
 
 Доступ: public
 
+Получает поле объекта
+
 Параметры:
-* stappler::mem_pool::Value const&
-* stappler::db::Field const&
-* std::initializer_list<StringView>
+* stappler::mem_pool::Value const& - исходный объект
+* stappler::db::Field const& - поле объекта
+* std::initializer_list<StringView> - поля для возврата
 
 Возвращает:
 * stappler::mem_pool::Value
@@ -1970,14 +2584,18 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Получает поле объекта
+
 ## CONTENT
 
 Доступ: public
 
+Получает поле объекта
+
 Параметры:
-* uint64_t
-* stappler::db::Field const&
-* Set<const stappler::db::Field *> const&
+* uint64_t - ид объекта
+* stappler::db::Field const& - поле объекта
+* Set<const stappler::db::Field *> const& - поля для возврата
 
 Возвращает:
 * stappler::mem_pool::Value
@@ -1986,14 +2604,18 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Получает поле объекта
+
 ## CONTENT
 
 Доступ: public
 
+Получает поле объекта
+
 Параметры:
-* stappler::mem_pool::Value const&
-* stappler::db::Field const&
-* Set<const stappler::db::Field *> const&
+* stappler::mem_pool::Value const& - исходный объект
+* stappler::db::Field const& - поле объекта
+* Set<const stappler::db::Field *> const& - поля для возврата
 
 Возвращает:
 * stappler::mem_pool::Value
@@ -2002,14 +2624,18 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Устанавливет значение поля объекта
+
 ## CONTENT
 
 Доступ: public
 
+Устанавливет значение поля объекта
+
 Параметры:
-* uint64_t
-* stappler::db::Field const&
-* stappler::mem_pool::Value&&
+* uint64_t - ид объекта
+* stappler::db::Field const& - поле объекта
+* stappler::mem_pool::Value&& - данные объекта
 
 Возвращает:
 * stappler::mem_pool::Value
@@ -2018,14 +2644,18 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Устанавливет значение поля объекта
+
 ## CONTENT
 
 Доступ: public
 
+Устанавливет значение поля объекта
+
 Параметры:
-* stappler::mem_pool::Value const&
-* stappler::db::Field const&
-* stappler::mem_pool::Value&&
+* stappler::mem_pool::Value const& - исходный объект
+* stappler::db::Field const& - поле объекта
+* stappler::mem_pool::Value&& - данные объекта
 
 Возвращает:
 * stappler::mem_pool::Value
@@ -2034,14 +2664,18 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Устанавливет значение поля объекта
+
 ## CONTENT
 
 Доступ: public
 
+Устанавливет значение поля объекта
+
 Параметры:
-* uint64_t
-* stappler::db::Field const&
-* stappler::db::InputFile&
+* uint64_t - ид объекта
+* stappler::db::Field const& - поле объекта
+* stappler::db::InputFile& - файл для поля
 
 Возвращает:
 * stappler::mem_pool::Value
@@ -2050,14 +2684,18 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Устанавливет значение поля объекта
+
 ## CONTENT
 
 Доступ: public
 
+Устанавливет значение поля объекта
+
 Параметры:
-* stappler::mem_pool::Value const&
-* stappler::db::Field const&
-* stappler::db::InputFile&
+* stappler::mem_pool::Value const& - исходный объект
+* stappler::db::Field const& - поле объекта
+* stappler::db::InputFile& - файл для поля
 
 Возвращает:
 * stappler::mem_pool::Value
@@ -2066,14 +2704,18 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Очищает поле объекта
+
 ## CONTENT
 
 Доступ: public
 
+Очищает поле объекта
+
 Параметры:
-* uint64_t
-* stappler::db::Field const&
-* stappler::mem_pool::Value&&
+* uint64_t - ид объекта
+* stappler::db::Field const&  -поле объекта
+* stappler::mem_pool::Value&& - дополнительные данные
 
 Возвращает:
 * bool
@@ -2082,14 +2724,18 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Очищает поле объекта
+
 ## CONTENT
 
 Доступ: public
 
+Очищает поле объекта
+
 Параметры:
-* stappler::mem_pool::Value const&
-* stappler::db::Field const&
-* stappler::mem_pool::Value&&
+* stappler::mem_pool::Value const& - исходный объект
+* stappler::db::Field const&  -поле объекта
+* stappler::mem_pool::Value&& - дополнительные данные
 
 Возвращает:
 * bool
@@ -2098,14 +2744,18 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Добавляет значение к полю объекта
+
 ## CONTENT
 
 Доступ: public
 
+Добавляет значение к полю объекта
+
 Параметры:
-* uint64_t
-* stappler::db::Field const&
-* stappler::mem_pool::Value&&
+* uint64_t - ид объекта
+* stappler::db::Field const& - поле объекта
+* stappler::mem_pool::Value&& - данные для добавления
 
 Возвращает:
 * stappler::mem_pool::Value
@@ -2114,14 +2764,18 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Добавляет значение к полю объекта
+
 ## CONTENT
 
 Доступ: public
 
+Добавляет значение к полю объекта
+
 Параметры:
-* stappler::mem_pool::Value const&
-* stappler::db::Field const&
-* stappler::mem_pool::Value&&
+* stappler::mem_pool::Value const& - исходный объект
+* stappler::db::Field const& - поле объекта
+* stappler::mem_pool::Value&& - данные для добавления
 
 Возвращает:
 * stappler::mem_pool::Value
@@ -2130,13 +2784,17 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Подсчитывает число объектов в поле объекта
+
 ## CONTENT
 
 Доступ: public
 
+Подсчитывает число объектов в поле объекта
+
 Параметры:
-* uint64_t
-* stappler::db::Field const&
+* uint64_t - ид объекта
+* stappler::db::Field const& - поле объекта
 
 Возвращает:
 * size_t
@@ -2145,13 +2803,17 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Подсчитывает число объектов в поле объекта
+
 ## CONTENT
 
 Доступ: public
 
+Подсчитывает число объектов в поле объекта
+
 Параметры:
-* stappler::mem_pool::Value const&
-* stappler::db::Field const&
+* stappler::mem_pool::Value const& - исходный объект
+* stappler::db::Field const& - поле объекта
 
 Возвращает:
 * size_t
@@ -2160,9 +2822,13 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Возвращает список полей по списку их имён
+
 ## CONTENT
 
 Доступ: protected
+
+Возвращает список полей по списку их имён
 
 Параметры:
 * stappler::db::Field const&
@@ -2175,9 +2841,13 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Добавляет схему разрешения конфликта
+
 ## CONTENT
 
 Доступ: protected
+
+Добавляет схему разрешения конфликта
 
 Параметры:
 * stappler::db::Conflict const&
@@ -2189,9 +2859,13 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Добавляет схему разрешения конфликта
+
 ## CONTENT
 
 Доступ: protected
+
+Добавляет схему разрешения конфликта
 
 Параметры:
 * Vector<stappler::db::Conflict> const&
@@ -2203,9 +2877,13 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Добавляет дополнительное условие запроса
+
 ## CONTENT
 
 Доступ: protected
+
+Добавляет дополнительное условие запроса
 
 Параметры:
 * Query::Select const&
@@ -2217,9 +2895,13 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Добавляет дополнительное условие запроса
+
 ## CONTENT
 
 Доступ: protected
+
+Добавляет дополнительное условие запроса
 
 Параметры:
 * Vector<Query::Select> const&
@@ -2231,9 +2913,13 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Возвращает единичный объект из запроса
+
 ## CONTENT
 
 Доступ: protected
+
+Возвращает единичный объект из запроса
 
 Параметры:
 * stappler::db::Query const&
@@ -2246,9 +2932,13 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Список схем разрешения конфликта
+
 ## CONTENT
 
 Доступ: protected
+
+Список схем разрешения конфликта
 
 Тип: Map<const stappler::db::Field *, stappler::db::Worker::ConflictData>
 
@@ -2257,9 +2947,13 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Список дополнительных условий запроса
+
 ## CONTENT
 
 Доступ: protected
+
+Список дополнительных условий запроса
 
 Тип: Vector<stappler::db::Worker::ConditionData>
 
@@ -2268,9 +2962,13 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Список требуемых полей
+
 ## CONTENT
 
 Доступ: protected
+
+Список требуемых полей
 
 Тип: stappler::db::Worker::RequiredFields
 
@@ -2279,9 +2977,13 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Схема данных
+
 ## CONTENT
 
 Доступ: protected
+
+Схема данных
 
 Тип: stappler::db::Scheme const*
 
@@ -2290,9 +2992,13 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Действующая транзакция
+
 ## CONTENT
 
 Доступ: protected
+
+Действующая транзакция
 
 Тип: stappler::db::Transaction
 
@@ -2301,9 +3007,13 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Флаг выполнения запроса от имени системы
+
 ## CONTENT
 
 Доступ: protected
+
+Флаг выполнения запроса от имени системы
 
 Тип: bool
 
@@ -2312,14 +3022,22 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Структура для разрешения требуемых полей
+
 ## CONTENT
+
+Структура для разрешения требуемых полей
 
 
 # ::stappler::db::FieldResolver::FieldResolver(stappler::db::Scheme const&,stappler::db::Worker const&,stappler::db::Query const&)
 
 ## BRIEF
 
+Конструктор
+
 ## CONTENT
+
+Конструктор
 
 Параметры:
 * stappler::db::Scheme const&
@@ -2331,7 +3049,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Конструктор
+
 ## CONTENT
+
+Конструктор
 
 Параметры:
 * stappler::db::Scheme const&
@@ -2342,7 +3064,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Конструктор
+
 ## CONTENT
+
+Конструктор
 
 Параметры:
 * stappler::db::Scheme const&
@@ -2353,7 +3079,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Конструктор
+
 ## CONTENT
+
+Конструктор
 
 Параметры:
 * stappler::db::Scheme const&
@@ -2365,7 +3095,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Конструктор
+
 ## CONTENT
+
+Конструктор
 
 Параметры:
 * stappler::db::Scheme const&
@@ -2375,7 +3109,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Конструктор
+
 ## CONTENT
+
+Конструктор
 
 Параметры:
 * stappler::db::Scheme const&
@@ -2386,7 +3124,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Есть ли необходимость для разрешения полей
+
 ## CONTENT
+
+Есть ли необходимость для разрешения полей
 
 Возвращает:
 * bool
@@ -2395,7 +3137,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Есть ли явно включённые или исключённые поля
+
 ## CONTENT
+
+Есть ли явно включённые или исключённые поля
 
 Возвращает:
 * bool
@@ -2404,7 +3150,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Нужно ли возвращать все доступные поля
+
 ## CONTENT
+
+Нужно ли возвращать все доступные поля
 
 Возвращает:
 * bool
@@ -2413,7 +3163,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Проверяет, нужно ли включать поле
+
 ## CONTENT
+
+Проверяет, нужно ли включать поле
 
 Параметры:
 * stappler::db::Field const&
@@ -2425,7 +3179,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Проверяет, нужно ли исключать поле
+
 ## CONTENT
+
+Проверяет, нужно ли исключать поле
 
 Параметры:
 * stappler::db::Field const&
@@ -2437,7 +3195,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Проверяет, является ли поле требуемым для запроса
+
 ## CONTENT
+
+Проверяет, является ли поле требуемым для запроса
 
 Параметры:
 * stappler::db::Field const&
@@ -2449,7 +3211,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Возвращает требуемые виртуальные поля
+
 ## CONTENT
+
+Возвращает требуемые виртуальные поля
 
 Возвращает:
 * Vector<const stappler::db::Field *>
@@ -2458,7 +3224,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Читает требуемые поля в функцию
+
 ## CONTENT
+
+Читает требуемые поля в функцию
 
 Параметры:
 * Worker::FieldCallback const&
@@ -2471,7 +3241,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Включает дополнительное поле
+
 ## CONTENT
+
+Включает дополнительное поле
 
 Параметры:
 * stappler::StringView
@@ -2481,7 +3255,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Схема данных
+
 ## CONTENT
+
+Схема данных
 
 Тип: stappler::db::Scheme const*
 
@@ -2490,7 +3268,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Указатель на требуемые поля
+
 ## CONTENT
+
+Указатель на требуемые поля
 
 Тип: Worker::RequiredFields const*
 
@@ -2499,7 +3281,11 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Запрос
+
 ## CONTENT
+
+Запрос
 
 Тип: stappler::db::Query const*
 
@@ -2508,22 +3294,10 @@ Title: STStorageWorker.h
 
 ## BRIEF
 
+Разрешённые требуемые поля
+
 ## CONTENT
+
+Разрешённые требуемые поля
 
 Тип: Vector<const stappler::db::Field *>
-
-
-# ::stappler::db::Worker::perform<typename>(Callback const&) const
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Callback
-
-Параметры:
-* Callback const&
-
-Возвращает:
-* bool

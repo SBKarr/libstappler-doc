@@ -458,6 +458,8 @@ Title: SPMemStringStream.h
 
 Доступ: protected
 
+Хранилище данных для буфера
+
 Тип: mem_type
 
 

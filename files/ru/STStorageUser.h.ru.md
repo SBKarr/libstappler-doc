@@ -1,18 +1,26 @@
 Title: STStorageUser.h
 
 
-# MODULES_DB_STSTORAGEUSER_H_
+# STAPPLER_DB_STSTORAGEUSER_H_
 
 ## BRIEF
 
+Заголовок для типа определённого в БД пользователя
+
 ## CONTENT
+
+Заголовок для типа определённого в БД пользователя. Предполагается, что это пользователи, имеющие права взаимодействовать с системой напрямую. Для внешних пользователей данную систему использовать опасно.
 
 
 # ::stappler::db::User
 
 ## BRIEF
 
+Струкрута пользователя, хранимого в БД
+
 ## CONTENT
+
+Струкрута пользователя, хранимого в БД. Использует базовый класс объекта. Вспомогательная структура для работы с данными объекта.
 
 Базовые классы:
 * Object
@@ -22,14 +30,18 @@ Title: STStorageUser.h
 
 ## BRIEF
 
+Создаёт пользователя в базе данных
+
 ## CONTENT
 
 Доступ: public
 
+Создаёт пользователя в базе данных
+
 Параметры:
 * stappler::db::Adapter const&
-* stappler::StringView const&
-* stappler::StringView const&
+* stappler::StringView const& - имя пользователя
+* stappler::StringView const& - пароль
 
 Возвращает:
 * stappler::db::User*
@@ -38,14 +50,18 @@ Title: STStorageUser.h
 
 ## BRIEF
 
+Выполняет первонаальную настройку системы с базовым администратором
+
 ## CONTENT
 
 Доступ: public
 
+Выполняет первонаальную настройку системы с базовым администратором
+
 Параметры:
 * stappler::db::Adapter const&
-* stappler::StringView const&
-* stappler::StringView const&
+* stappler::StringView const& - имя пользователя
+* stappler::StringView const& - пароль
 
 Возвращает:
 * stappler::db::User*
@@ -54,13 +70,17 @@ Title: STStorageUser.h
 
 ## BRIEF
 
+Создаёт пользователя в базе данных
+
 ## CONTENT
 
 Доступ: public
 
+Создаёт пользователя в базе данных
+
 Параметры:
 * stappler::db::Adapter const&
-* stappler::data::WrapperTemplate<stappler::memory::PoolInterface>::Value&&
+* stappler::data::WrapperTemplate<stappler::memory::PoolInterface>::Value&& - данные пользователя
 
 Возвращает:
 * stappler::db::User*
@@ -69,14 +89,18 @@ Title: STStorageUser.h
 
 ## BRIEF
 
+Получает пользователя из БД
+
 ## CONTENT
 
 Доступ: public
 
+Получает пользователя из БД
+
 Параметры:
 * stappler::db::Adapter const&
-* stappler::StringView const&
-* stappler::StringView const&
+* stappler::StringView const& - имя пользователя
+* stappler::StringView const& - пароль для сопоставления
 
 Возвращает:
 * stappler::db::User*
@@ -85,15 +109,19 @@ Title: STStorageUser.h
 
 ## BRIEF
 
+Получает пользователя из БД
+
 ## CONTENT
 
 Доступ: public
 
+Получает пользователя из БД
+
 Параметры:
 * stappler::db::Adapter const&
-* stappler::db::Scheme const&
-* stappler::StringView const&
-* stappler::StringView const&
+* stappler::db::Scheme const& - схема данных
+* stappler::StringView const& - имя пользователя
+* stappler::StringView const& - пароль для сопоставления
 
 Возвращает:
 * stappler::db::User*
@@ -102,14 +130,18 @@ Title: STStorageUser.h
 
 ## BRIEF
 
+Получает пользователя из БД
+
 ## CONTENT
 
 Доступ: public
 
+Получает пользователя из БД
+
 Параметры:
 * stappler::db::Adapter const&
-* stappler::db::Scheme const&
-* stappler::BytesView const&
+* stappler::db::Scheme const& - схема данных
+* stappler::BytesView const& - ключ пользователя
 
 Возвращает:
 * stappler::db::User*
@@ -118,13 +150,17 @@ Title: STStorageUser.h
 
 ## BRIEF
 
+Получает пользователя из БД
+
 ## CONTENT
 
 Доступ: public
 
+Получает пользователя из БД
+
 Параметры:
 * stappler::db::Adapter const&
-* uint64_t
+* uint64_t - ид пользователя
 
 Возвращает:
 * stappler::db::User*
@@ -133,14 +169,18 @@ Title: STStorageUser.h
 
 ## BRIEF
 
+Получает пользователя из БД
+
 ## CONTENT
 
 Доступ: public
 
+Получает пользователя из БД
+
 Параметры:
 * stappler::db::Adapter const&
-* stappler::db::Scheme const&
-* uint64_t
+* stappler::db::Scheme const& - схема данных
+* uint64_t - ид пользователя
 
 Возвращает:
 * stappler::db::User*
@@ -149,9 +189,13 @@ Title: STStorageUser.h
 
 ## BRIEF
 
+Конструирует объект из данных
+
 ## CONTENT
 
 Доступ: public
+
+Конструирует объект из данных
 
 Параметры:
 * stappler::data::WrapperTemplate<stappler::memory::PoolInterface>::Value&&
@@ -162,9 +206,13 @@ Title: STStorageUser.h
 
 ## BRIEF
 
+Проверяет пароль на соотвествие паролю в БД
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет пароль на соотвествие паролю в БД
 
 Параметры:
 * stappler::StringView const&
@@ -176,9 +224,13 @@ Title: STStorageUser.h
 
 ## BRIEF
 
+Устанавливает новый пароль
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает новый пароль
 
 Параметры:
 * stappler::StringView const&
@@ -188,9 +240,13 @@ Title: STStorageUser.h
 
 ## BRIEF
 
+Проверяет, является ли пользователель администратором
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, является ли пользователель администратором
 
 Возвращает:
 * bool
@@ -199,9 +255,13 @@ Title: STStorageUser.h
 
 ## BRIEF
 
+Возвращает имя пользователя
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает имя пользователя
 
 Возвращает:
 * stappler::StringView

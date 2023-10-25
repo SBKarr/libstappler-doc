@@ -942,6 +942,8 @@ Title: SPMemMap.h
 
 Доступ: public
 
+Добавляет элементы из списка инициализации. Элементы с существующими ключами игнорируются.
+
 Параметры:
 * InitializerList<stappler::memory::map::value_type>
 

@@ -1341,6 +1341,8 @@ Title: SPMemVector.h
 
 ## CONTENT
 
+Сравнивает два вектора лексикографически
+
 Параметры:
 * vector<uint8_t> const&
 * vector<uint8_t> const&

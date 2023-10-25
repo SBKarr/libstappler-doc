@@ -623,6 +623,7 @@ SP_EXTERN_C int main(int argc, const char * argv[]) {
 			if (filesystem::exists(dataFile)) {
 				auto val = data::readFile<Interface>(dataFile);
 
+				auto undef = undefinedSymbols;
 				readSymbols(val, [&] (DocSymbolInfo &info) {
 					++ totalSymbols;
 					auto it = table.symbols.find(info.name);
@@ -634,11 +635,18 @@ SP_EXTERN_C int main(int argc, const char * argv[]) {
 						std::cout << "++++++++++++ End stub block\n";
 					} else {
 						it->second.validated = true;
-						if (it->second.content.size() > info.content.size() && it->second.brief.size() > info.brief.size()) {
+
+						auto autoContentSize = info.content.size();
+						auto autoBriefSize = info.brief.size();
+
+						auto currentContentSize = it->second.content.size();
+						auto currentBriefSize = it->second.brief.size();
+
+						if (currentContentSize > autoContentSize && currentBriefSize > autoBriefSize) {
 							++ definedSymbols;
-							if (verbose) {
-								std::cout << name << ": Symbol defined in documentation: " << info.name << "\n";
-							}
+							//if (verbose) {
+							//	std::cout << name << ": Symbol defined in documentation: " << info.name << "\n";
+							//}
 						} else {
 							++ undefinedSymbols;
 							if (verbose) {
@@ -647,6 +655,10 @@ SP_EXTERN_C int main(int argc, const char * argv[]) {
 						}
 					}
 				});
+
+				if (undef != undefinedSymbols) {
+					std::cout << name << ": Undefined in file: " << undefinedSymbols - undef << "\n";
+				}
 
 				for (auto &it : table.symbols) {
 					if (!it.second.validated) {

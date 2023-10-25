@@ -42,7 +42,7 @@ LOCAL_INCLUDES_OBJS := \
 	$(LOCAL_OUTDIR)/cppast/_deps/type_safe-src/external/debug_assert
 
 LOCAL_LIBS = $(LOCAL_OUTDIR)/cppast/src/libcppast.a $(LOCAL_OUTDIR)/cppast/external/tpl/libtiny-process-library.a
-LDFLAGS += -L/usr/lib/llvm-14/lib -lclang
+LDFLAGS += -L/usr/lib/llvm-15/lib -lclang
 
 include $(STAPPLER_ROOT)/build/make/universal.mk
 

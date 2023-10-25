@@ -1748,6 +1748,8 @@ Title: SPMat4.h
 
 ## CONTENT
 
+Оператор вывода матрицы в поток
+
 Параметры:
 * std::basic_ostream<char>&
 * stappler::geom::Mat4 const&

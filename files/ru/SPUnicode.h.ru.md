@@ -1,18 +1,40 @@
 Title: SPUnicode.h
 
 
-# LIBSTAPPLER_COMMON_STRING_SPUNICODE_H_
+# STAPPLER_CORE_STRING_SPUNICODE_H_
 
 ## BRIEF
 
+Заголовок базовых функций поддержки юникода
+
 ## CONTENT
 
+Заголовок базовых функций поддержки юникода
+
+Фреймворк использует кодирование в UTF-8 для 8-битных строк и UTF-16 для 16-битных. Отдельные символы обрабатываются как char32_t.
 
 # ::stappler::unicode::utf8_length_data
 
 ## BRIEF
 
+Таблица поиска для длины кодированного символа в UTF-8
+
 ## CONTENT
+
+Таблица поиска для длины кодированного символа в UTF-8. По первому символу кода определяет число символов для полного символа юникода.
+
+Тип: uint8_t const[256]
+
+
+# ::stappler::unicode::utf16_length_data
+
+## BRIEF
+
+Таблица поиска для длины кодированного символа в UTF-16 для символа UTF-8
+
+## CONTENT
+
+Таблица поиска для длины кодированного символа в UTF-16 для символа UTF-8. Используется при прямом транскодировании.
 
 Тип: uint8_t const[256]
 
@@ -21,91 +43,24 @@ Title: SPUnicode.h
 
 ## BRIEF
 
+Таблица для поиска значимой маски для символа UTF-8
+
 ## CONTENT
+
+Таблица для поиска значимой маски для символа UTF-8. Маска позволяет оставить только значимые символы в первом символе кода.
 
 Тип: uint8_t const[256]
 
-
-# ::stappler::unicode::utf8Decode(char const*)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* char const*
-
-Возвращает:
-* char16_t
-
-# ::stappler::unicode::utf8Decode(char const*,uint8_t&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* char const*
-* uint8_t&
-
-Возвращает:
-* char16_t
-
-# ::stappler::unicode::utf8Decode(char16_t const*)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* char16_t const*
-
-Возвращает:
-* char16_t
-
-# ::stappler::unicode::utf8Decode(char16_t const*,uint8_t&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* char16_t const*
-* uint8_t&
-
-Возвращает:
-* char16_t
-
-# ::stappler::unicode::utf8EncodeLength(char16_t)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* char16_t
-
-Возвращает:
-* uint8_t
-
-# ::stappler::unicode::utf8EncodeBuf(char*,char16_t)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* char*
-* char16_t
-
-Возвращает:
-* uint8_t
 
 # ::stappler::unicode::isUtf8Surrogate(char)
 
 ## BRIEF
 
+Проверяет, является ли символ юникода суррогатным
+
 ## CONTENT
+
+Проверяет, является ли символ юникода суррогатным (то есть, частью большего кода)
 
 Параметры:
 * char
@@ -113,64 +68,67 @@ Title: SPUnicode.h
 Возвращает:
 * bool
 
-# ::stappler::unicode::utf8Decode(char const*)
+# ::stappler::unicode::utf8Decode32(char const*)
 
 ## BRIEF
 
+Декодирует символ юникода из UTF-8
+
 ## CONTENT
+
+Декодирует символ юникода из UTF-8
 
 Параметры:
 * char const*
 
 Возвращает:
-* char16_t
+* char32_t
 
-# ::stappler::unicode::utf8Decode(char const*,uint8_t&)
+# ::stappler::unicode::utf8Decode32(char const*,uint8_t&)
 
 ## BRIEF
 
+Декодирует символ юникода из UTF-8
+
 ## CONTENT
+
+Декодирует символ юникода из UTF-8
 
 Параметры:
 * char const*
-* uint8_t&
+* uint8_t& - возвращает число прочитанных байт
 
 Возвращает:
-* char16_t
-
-# ::stappler::unicode::utf8Decode(char16_t const*)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* char16_t const*
-
-Возвращает:
-* char16_t
-
-# ::stappler::unicode::utf8Decode(char16_t const*,uint8_t&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* char16_t const*
-* uint8_t&
-
-Возвращает:
-* char16_t
+* char32_t
 
 # ::stappler::unicode::utf8EncodeLength(char16_t)
 
 ## BRIEF
 
+Вычисляет размер кодирования символа в UTF-8 в байтах
+
 ## CONTENT
+
+Вычисляет размер кодирования символа в UTF-8 в байтах
 
 Параметры:
 * char16_t
+
+Возвращает:
+* uint8_t
+
+# ::stappler::unicode::utf8EncodeLength(char32_t)
+
+## BRIEF
+
+Вычисляет размер кодирования символа в UTF-8 в байтах
+
+## CONTENT
+
+Вычисляет размер кодирования символа в UTF-8 в байтах
+
+Параметры:
+* char32_t
 
 Возвращает:
 * uint8_t
@@ -179,106 +137,299 @@ Title: SPUnicode.h
 
 ## BRIEF
 
+Кодирует символ в UTF-8, записывает в буфер
+
 ## CONTENT
 
+Кодирует символ в UTF-8, записывает в буфер
+
 Параметры:
-* char*
+* char* - буфер для кодирования
 * char16_t
 
 Возвращает:
-* uint8_t
+* uint8_t - число записанных байт
+
+# ::stappler::unicode::utf8EncodeBuf(char*,char32_t)
+
+## BRIEF
+
+Кодирует символ в UTF-8, записывает в буфер
+
+## CONTENT
+
+Кодирует символ в UTF-8, записывает в буфер
+
+Параметры:
+* char* - буфер для кодирования
+* char32_t
+
+Возвращает:
+* uint8_t - число записанных байт
 
 # ::stappler::unicode::utf8Encode(std::string&,char16_t)
 
 ## BRIEF
 
+Кодирует символ в UTF-8, записывает в строку
+
 ## CONTENT
+
+Кодирует символ в UTF-8, записывает в строку
 
 Параметры:
 * std::string&
 * char16_t
 
 Возвращает:
-* uint8_t
+* uint8_t - число записанных байт
+
+# ::stappler::unicode::utf8Encode(std::string&,char32_t)
+
+## BRIEF
+
+Кодирует символ в UTF-8, записывает в строку
+
+## CONTENT
+
+Кодирует символ в UTF-8, записывает в строку
+
+Параметры:
+* std::string&
+* char32_t
+
+Возвращает:
+* uint8_t - число записанных байт
 
 # ::stappler::unicode::utf8Encode(memory::string&,char16_t)
 
 ## BRIEF
 
+Кодирует символ в UTF-8, записывает в строку
+
 ## CONTENT
+
+Кодирует символ в UTF-8, записывает в строку
 
 Параметры:
 * memory::string&
 * char16_t
 
 Возвращает:
-* uint8_t
+* uint8_t - число записанных байт
+
+# ::stappler::unicode::utf8Encode(memory::string&,char32_t)
+
+## BRIEF
+
+Кодирует символ в UTF-8, записывает в строку
+
+## CONTENT
+
+Кодирует символ в UTF-8, записывает в строку
+
+Параметры:
+* memory::string&
+* char32_t
+
+Возвращает:
+* uint8_t - число записанных байт
 
 # ::stappler::unicode::utf8Encode(std::ostream&,char16_t)
 
 ## BRIEF
 
+Кодирует символ в UTF-8, записывает в поток
+
 ## CONTENT
+
+Кодирует символ в UTF-8, записывает в поток
 
 Параметры:
 * std::ostream&
 * char16_t
 
 Возвращает:
-* uint8_t
+* uint8_t - число записанных байт
 
-# ::stappler::unicode::isUtf8Surrogate(char)
+# ::stappler::unicode::utf8Encode(std::ostream&,char32_t)
 
 ## BRIEF
 
+Кодирует символ в UTF-8, записывает в поток
+
 ## CONTENT
 
+Кодирует символ в UTF-8, записывает в поток
+
 Параметры:
-* char
+* std::ostream&
+* char32_t
 
 Возвращает:
-* bool
+* uint8_t - число записанных байт
+
+# ::stappler::unicode::utf16EncodeLength(char32_t)
+
+## BRIEF
+
+Возвращает длину символа при кодировании UTF-16
+
+## CONTENT
+
+Возвращает длину символа при кодировании UTF-16
+
+Параметры:
+* char32_t
+
+Возвращает:
+* uint8_t - 1 или 2 байта
+
+# ::stappler::unicode::utf16EncodeBuf(char16_t*,char32_t)
+
+## BRIEF
+
+Кодирует символ в UTF-16, записывает в буфер
+
+## CONTENT
+
+Кодирует символ в UTF-16, записывает в буфер
+
+Параметры:
+* char16_t*
+* char32_t
+
+Возвращает:
+* uint8_t - число записанных 16-битных символов
+
+# ::stappler::unicode::utf16Encode(std::u16string&,char32_t)
+
+## BRIEF
+
+Кодирует символ в UTF-16, записывает в строку
+
+## CONTENT
+
+Кодирует символ в UTF-16, записывает в строку
+
+Параметры:
+* std::u16string&
+* char32_t
+
+Возвращает:
+* uint8_t - число записанных 16-битных символов
+
+# ::stappler::unicode::utf16Encode(memory::u16string&,char32_t)
+
+## BRIEF
+
+Кодирует символ в UTF-16, записывает в строку
+
+## CONTENT
+
+Кодирует символ в UTF-16, записывает в строку
+
+Параметры:
+* memory::u16string&
+* char32_t
+
+Возвращает:
+* uint8_t - число записанных 16-битных символов
+
+# ::stappler::unicode::utf16Encode(std::basic_ostream<char16_t>&,char32_t)
+
+## BRIEF
+
+Кодирует символ в UTF-16, записывает в поток
+
+## CONTENT
+
+Кодирует символ в UTF-16, записывает в поток
+
+Параметры:
+* std::basic_ostream<char16_t>&
+* char32_t
+
+Возвращает:
+* uint8_t - число записанных 16-битных символов
+
 
 # ::stappler::string::char_ptr_t
 
 ## BRIEF
 
+Вспомогательный тип указателя
+
 ## CONTENT
+
+Вспомогательный тип указателя
 
 
 # ::stappler::string::char_ptr_ref_t
 
 ## BRIEF
 
+Вспомогательный тип ссылки на указатель
+
 ## CONTENT
 
+Вспомогательный тип ссылки на указатель
 
 # ::stappler::string::char_const_ptr_t
 
 ## BRIEF
 
+Вспомогательный тип постоянного указателя
+
 ## CONTENT
+
+Вспомогательный тип постоянного указателя
 
 
 # ::stappler::string::char_const_ptr_ref_t
 
 ## BRIEF
 
+Вспомогательный тип ссылки на постоянный указатель
+
 ## CONTENT
+
+Вспомогательный тип ссылки на постоянный указатель
 
 
 # ::stappler::string::char_const_ptr_const_ref_t
 
 ## BRIEF
 
+Вспомогательный тип постоянной ссылки на постоянный указатель
+
 ## CONTENT
+
+Вспомогательный тип постоянной ссылки на постоянный указатель
+
+
+# ::stappler::string::DOUBLE_MAX_DIGITS
+
+## BRIEF
+
+Максимальное число символов, используемых в алгоритме _dtoa
+
+## CONTENT
+
+Максимальное число символов, используемых в алгоритме _dtoa
+
+Тип: size_t const
 
 
 # ::stappler::string::toupper(char&,char&)
 
 ## BRIEF
 
+Конвертирует двухсимвольную пару к верхнему регистру с учётом юникода
+
 ## CONTENT
+
+Конвертирует двухсимвольную пару к верхнему регистру с учётом юникода
 
 Параметры:
 * char&
@@ -289,7 +440,11 @@ Title: SPUnicode.h
 
 ## BRIEF
 
+Конвертирует двухсимвольную пару к нижнему регистру с учётом юникода
+
 ## CONTENT
+
+Конвертирует двухсимвольную пару к нижнему регистру с учётом юникода
 
 Параметры:
 * char&
@@ -300,7 +455,11 @@ Title: SPUnicode.h
 
 ## BRIEF
 
+Конвертирует символ UTF-16 к верхнему регистру
+
 ## CONTENT
+
+Конвертирует символ UTF-16 к верхнему регистру
 
 Параметры:
 * char16_t
@@ -312,7 +471,11 @@ Title: SPUnicode.h
 
 ## BRIEF
 
+Конвертирует символ UTF-16 к нижнему регистру
+
 ## CONTENT
+
+Конвертирует символ UTF-16 к нижнему регистру
 
 Параметры:
 * char16_t
@@ -324,130 +487,166 @@ Title: SPUnicode.h
 
 ## BRIEF
 
+Конвертирует символы в буфере к верхнему регистру
+
 ## CONTENT
+
+Конвертирует символы в буфере к верхнему регистру, предполагая UTF-8
 
 Параметры:
 * char*
-* size_t
+* size_t - число 8-битных символов в буфере
 
 
 # ::stappler::string::tolower_buf(char*,size_t)
 
 ## BRIEF
 
+Конвертирует символы в буфере к нижнему регистру
+
 ## CONTENT
+
+Конвертирует символы в буфере к нижнему регистру, предполагая UTF-8
 
 Параметры:
 * char*
-* size_t
+* size_t - число 8-битных символов в буфере
 
 
 # ::stappler::string::toupper_buf(char16_t*,size_t)
 
 ## BRIEF
 
+Конвертирует символы UTF-16 в буфере к верзнему регистру
+
 ## CONTENT
+
+Конвертирует символы UTF-16 в буфере к верзнему регистру
 
 Параметры:
 * char16_t*
-* size_t
+* size_t - число 16-битных символов в буфере
 
 
 # ::stappler::string::tolower_buf(char16_t*,size_t)
 
 ## BRIEF
 
+Конвертирует символы UTF-16 в буфере к нижнему регистру
+
 ## CONTENT
+
+Конвертирует символы UTF-16 в буфере к нижнему регистру
 
 Параметры:
 * char16_t*
-* size_t
+* size_t - число 16-битных символов в буфере
 
 
-# ::stappler::string::isspace(char)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* char
-
-Возвращает:
-* bool
-
-# ::stappler::string::isspace(char16_t)
+# ::stappler::string::_itoa(int64_t,char*,size_t)
 
 ## BRIEF
 
+Записывает целое число в строковый буфер
+
 ## CONTENT
 
+Записывает целое число в строковый буфер. Алгоритм записывает число в буфер, начиная с конца буфера. Таким образом, первый символ числа будет записан по адресу buf + bsize - ret, где ret - значение возврата.
+
 Параметры:
-* char16_t
+* int64_t - исходное число
+* char* - указатель на начало буфера
+* size_t - размер буфера
 
 Возвращает:
-* bool
+* size_t - число аписанных символов
 
-# ::stappler::string::isspace(stappler::string::char_const_ptr_t)
+# ::stappler::string::_itoa(uint64_t,char*,size_t)
 
 ## BRIEF
 
+Записывает целое число в строковый буфер
+
 ## CONTENT
 
+Записывает целое число в строковый буфер. Алгоритм записывает число в буфер, начиная с конца буфера. Таким образом, первый символ числа будет записан по адресу buf + bsize - ret, где ret - значение возврата.
+
 Параметры:
-* stappler::string::char_const_ptr_t
+* uint64_t - исходное число
+* char* - указатель на начало буфера
+* size_t - размер буфера
 
 Возвращает:
-* bool
+* size_t - число аписанных символов
 
-# ::stappler::string::_to_decimal(int64_t,char*)
+# ::stappler::string::_itoa(int64_t,char16_t*,size_t)
 
 ## BRIEF
 
+Записывает целое число в строковый буфер
+
 ## CONTENT
 
+Записывает целое число в строковый буфер. Алгоритм записывает число в буфер, начиная с конца буфера. Таким образом, первый символ числа будет записан по адресу buf + bsize - ret, где ret - значение возврата.
+
 Параметры:
-* int64_t
-* char*
+* int64_t - исходное число
+* char16_t* - указатель на начало буфера
+* size_t - размер буфера
 
 Возвращает:
-* size_t
+* size_t - число аписанных символов
 
-# ::stappler::string::_to_decimal(uint64_t,char*)
+# ::stappler::string::_itoa(uint64_t,char16_t*,size_t)
 
 ## BRIEF
 
+Записывает целое число в строковый буфер
+
 ## CONTENT
 
+Записывает целое число в строковый буфер. Алгоритм записывает число в буфер, начиная с конца буфера. Таким образом, первый символ числа будет записан по адресу buf + bsize - ret, где ret - значение возврата.
+
 Параметры:
-* uint64_t
-* char*
+* uint64_t - исходное число
+* char16_t* - указатель на начало буфера
+* size_t - размер буфера
 
 Возвращает:
-* size_t
+* size_t - число аписанных символов
 
-# ::stappler::string::_to_decimal(int64_t,char16_t*)
+# ::stappler::string::_dtoa(double,char*,size_t)
 
 ## BRIEF
 
+Записывает число с плавающей точкой в строку по алгоритму Grisu2.
+
 ## CONTENT
 
+Записывает число с плавающей точкой в строку по алгоритму Grisu2. Буфер должен быть не меньше `DOUBLE_MAX_DIGITS`. Запись идёт с начала буфера.
+
 Параметры:
-* int64_t
-* char16_t*
+* double - исходное число
+* char* - указатель на начало буфера
+* size_t - размер буфера
 
 Возвращает:
-* size_t
+* size_t - число аписанных символов
 
-# ::stappler::string::_to_decimal(uint64_t,char16_t*)
+# ::stappler::string::_dtoa(double,char16_t*,size_t)
 
 ## BRIEF
 
+Записывает число с плавающей точкой в строку по алгоритму Grisu2.
+
 ## CONTENT
 
+Записывает число с плавающей точкой в строку по алгоритму Grisu2. Буфер должен быть не меньше `DOUBLE_MAX_DIGITS`. Запись идёт с начала буфера.
+
 Параметры:
-* uint64_t
-* char16_t*
+* double - исходное число
+* char16_t* - указатель на начало буфера
+* size_t - размер буфера
 
 Возвращает:
-* size_t
+* size_t - число аписанных символов

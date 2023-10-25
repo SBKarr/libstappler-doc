@@ -524,7 +524,7 @@ Title: SPRef.h
 Возвращает:
 * RcBase<Base>& - ссылка на себя
 
-# ::stappler::RcBase<typename>::operator=<typename,typename std::enable_if<std::is_convertible<B *, Base *>({})>::type*>(RcBase<B> const&)
+# ::stappler::RcBase<typename>::operator=<typename,typename std::enable_if<std::is_convertible<B *, Base *>{}>::type*>(RcBase<B> const&)
 
 ## BRIEF
 
@@ -673,7 +673,7 @@ Title: SPRef.h
 Возвращает:
 * bool - true если указатель хранит активную ссылку
 
-# ::stappler::RcBase<typename>::operator RcBase<B><typename,typename std::enable_if<std::is_convertible<Base *, B *>({})>::type*>()
+# ::stappler::RcBase<typename>::operator RcBase<B><typename,typename std::enable_if<std::is_convertible<Base *, B *>{}>::type*>()
 
 ## BRIEF
 

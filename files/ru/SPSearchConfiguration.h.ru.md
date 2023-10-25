@@ -87,6 +87,8 @@ Title: SPSearchConfiguration.h
 
 Доступ: public
 
+Тип строки
+
 
 # ::stappler::search::Configuration::StringStream
 
@@ -97,6 +99,8 @@ Title: SPSearchConfiguration.h
 ## CONTENT
 
 Доступ: public
+
+Тип строкового потока
 
 
 # ::stappler::search::Configuration::StemmerCallback

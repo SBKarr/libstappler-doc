@@ -1,18 +1,26 @@
 Title: STSqlQuery.h
 
 
-# MODULES_DB_SQL_STSQLQUERY_H_
+# STAPPLER_DB_SQL_STSQLQUERY_H_
 
 ## BRIEF
 
+Заголовок базовой структуры SQL-запроса
+
 ## CONTENT
+
+Заголовок базовой структуры SQL-запроса
 
 
 # ::stappler::db::sql::SqlQuery
 
 ## BRIEF
 
+Базовая структура SQL-запроса
+
 ## CONTENT
+
+Базовая структура SQL-запроса. Эта структура служит для построениясложных SQL запросов на оснвое требований пользователя. Используется в качестве вспомогательного типа для SQL-соединений.
 
 Базовые классы:
 * stappler::sql::Query<db::Binder,Interface>
@@ -22,9 +30,13 @@ Title: STSqlQuery.h
 
 ## BRIEF
 
+Структура контекста запроса
+
 ## CONTENT
 
 Доступ: public
+
+Структура контекста запроса. Содержит данные для раскрытия полей запроса и структуру самого запроса.
 
 Базовые классы:
 * FieldResolver
@@ -34,7 +46,11 @@ Title: STSqlQuery.h
 
 ## BRIEF
 
+Создаёт новый контекст
+
 ## CONTENT
+
+Создаёт новый контекст
 
 Параметры:
 * stappler::db::sql::SqlQuery&
@@ -47,7 +63,11 @@ Title: STSqlQuery.h
 
 ## BRIEF
 
+Запрос для этого контекста
+
 ## CONTENT
+
+Запрос для этого контекста
 
 Тип: stappler::db::sql::SqlQuery*
 
@@ -56,7 +76,11 @@ Title: STSqlQuery.h
 
 ## BRIEF
 
+Флаг наличия альтернативного поля для мягкого лимита
+
 ## CONTENT
+
+Флаг наличия альтернативного поля для мягкого лимита
 
 Тип: bool
 
@@ -65,7 +89,11 @@ Title: STSqlQuery.h
 
 ## BRIEF
 
+Флаг, показывающий, что для мягкого лимита используется полнотекстовый ранг
+
 ## CONTENT
+
+Флаг, показывающий, что для мягкого лимита используется полнотекстовый ранг
 
 Тип: bool
 
@@ -74,7 +102,11 @@ Title: STSqlQuery.h
 
 ## BRIEF
 
+Поле для мягкого лимита
+
 ## CONTENT
+
+Поле для мягкого лимита
 
 Тип: stappler::StringView
 
@@ -83,7 +115,11 @@ Title: STSqlQuery.h
 
 ## BRIEF
 
+Возвращает альтернативное поле для мягкого лимита
+
 ## CONTENT
+
+Возвращает альтернативное поле для мягкого лимита
 
 Параметры:
 * stappler::StringView
@@ -95,18 +131,25 @@ Title: STSqlQuery.h
 
 ## BRIEF
 
+Типизированная строка в SQL
+
 ## CONTENT
 
 Доступ: public
 
+Типизированная строка в SQL
 
 # ::stappler::db::sql::SqlQuery::SqlQuery(db::QueryInterface*)
 
 ## BRIEF
 
+Начинает запись запроса для интерфейса
+
 ## CONTENT
 
 Доступ: public
+
+Начинает запись запроса для интерфейса
 
 Параметры:
 * db::QueryInterface*
@@ -116,18 +159,25 @@ Title: STSqlQuery.h
 
 ## BRIEF
 
+Очищает запрос
+
 ## CONTENT
 
 Доступ: public
 
+Очищает запрос
 
 # ::stappler::db::sql::SqlQuery::writeQuery(stappler::db::sql::SqlQuery::Context&)
 
 ## BRIEF
 
+Записывает запрос для контекста
+
 ## CONTENT
 
 Доступ: public
+
+Записывает запрос для контекста
 
 Параметры:
 * stappler::db::sql::SqlQuery::Context&
@@ -139,9 +189,13 @@ Title: STSqlQuery.h
 
 ## BRIEF
 
+Записывает запрос для контекста по отношению к отдельному объекту
+
 ## CONTENT
 
 Доступ: public
+
+Записывает запрос для контекста по отношению к отдельному объекту
 
 Параметры:
 * stappler::db::sql::SqlQuery::Context&
@@ -156,9 +210,13 @@ Title: STSqlQuery.h
 
 ## BRIEF
 
+Записывает условную часть запроса
+
 ## CONTENT
 
 Доступ: public
+
+Записывает условную часть запроса
 
 Параметры:
 * SqlQuery::SelectWhere&
@@ -171,9 +229,13 @@ Title: STSqlQuery.h
 
 ## BRIEF
 
+Записывает условную часть запроса
+
 ## CONTENT
 
 Доступ: public
+
+Записывает условную часть запроса
 
 Параметры:
 * SqlQuery::WhereContinue&
@@ -186,9 +248,13 @@ Title: STSqlQuery.h
 
 ## BRIEF
 
+Записывает условную часть запроса
+
 ## CONTENT
 
 Доступ: public
+
+Записывает условную часть запроса
 
 Параметры:
 * SqlQuery::WhereContinue&
@@ -201,9 +267,13 @@ Title: STSqlQuery.h
 
 ## BRIEF
 
+Записывает условную часть запроса
+
 ## CONTENT
 
 Доступ: public
+
+Записывает условную часть запроса
 
 Параметры:
 * SqlQuery::WhereContinue&
@@ -216,9 +286,13 @@ Title: STSqlQuery.h
 
 ## BRIEF
 
+Записывает упорядочивание запроса
+
 ## CONTENT
 
 Доступ: public
+
+Записывает упорядочивание запроса
 
 Параметры:
 * SqlQuery::SelectFrom&
@@ -231,9 +305,13 @@ Title: STSqlQuery.h
 
 ## BRIEF
 
+Записывает исходные таблицы для запроса
+
 ## CONTENT
 
 Доступ: public
+
+Записывает исходные таблицы для запроса
 
 Параметры:
 * stappler::sql::Query<stappler::db::Binder, stappler::memory::PoolInterface>::GenericQuery&
@@ -250,9 +328,13 @@ Title: STSqlQuery.h
 
 ## BRIEF
 
+Записывает исходные таблицы для запроса
+
 ## CONTENT
 
 Доступ: public
+
+Записывает исходные таблицы для запроса
 
 Параметры:
 * stappler::sql::Query<stappler::db::Binder, stappler::memory::PoolInterface>::Select&
@@ -265,9 +347,13 @@ Title: STSqlQuery.h
 
 ## BRIEF
 
+Записывает подзапрос для иерарзического списка запросов
+
 ## CONTENT
 
 Доступ: public
+
+Записывает подзапрос для иерарзического списка запросов
 
 Параметры:
 * SqlQuery::SelectFrom&
@@ -278,9 +364,13 @@ Title: STSqlQuery.h
 
 ## BRIEF
 
+Записывает подзапрос для иерарзического списка запросов
+
 ## CONTENT
 
 Доступ: public
+
+Записывает подзапрос для иерарзического списка запросов
 
 Параметры:
 * stappler::sql::Query<stappler::db::Binder, stappler::memory::PoolInterface>::GenericQuery&
@@ -295,9 +385,13 @@ Title: STSqlQuery.h
 
 ## BRIEF
 
+Записывает запрос на основе иерархического списка запросов
+
 ## CONTENT
 
 Доступ: public
+
+Записывает запрос на основе иерархического списка запросов
 
 Параметры:
 * db::QueryList const&
@@ -309,9 +403,13 @@ Title: STSqlQuery.h
 
 ## BRIEF
 
+Записывает запрос к фейловому полю
+
 ## CONTENT
 
 Доступ: public
+
+Записывает запрос к фейловому полю
 
 Параметры:
 * db::QueryList const&
@@ -322,9 +420,13 @@ Title: STSqlQuery.h
 
 ## BRIEF
 
+Записывает запрос к полю-массиву
+
 ## CONTENT
 
 Доступ: public
+
+Записывает запрос к полю-массиву
 
 Параметры:
 * db::QueryList const&
@@ -335,9 +437,13 @@ Title: STSqlQuery.h
 
 ## BRIEF
 
+Записывает дельта-запрос
+
 ## CONTENT
 
 Доступ: public
+
+Записывает дельта-запрос
 
 Параметры:
 * db::Scheme const&
@@ -350,9 +456,13 @@ Title: STSqlQuery.h
 
 ## BRIEF
 
+Записывает дельта-запрос
+
 ## CONTENT
 
 Доступ: public
+
+Записывает дельта-запрос
 
 Параметры:
 * db::QueryList const&
@@ -365,9 +475,13 @@ Title: STSqlQuery.h
 
 ## BRIEF
 
+Возвращает текст SQL-запроса
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает текст SQL-запроса
 
 Возвращает:
 * stappler::mem_pool::StringStream const&
@@ -376,9 +490,13 @@ Title: STSqlQuery.h
 
 ## BRIEF
 
+Возвращает интерфейс соединения с БД
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает интерфейс соединения с БД
 
 Возвращает:
 * db::QueryInterface*
@@ -387,9 +505,13 @@ Title: STSqlQuery.h
 
 ## BRIEF
 
+Записывает запрос для полнотекстового поиска
+
 ## CONTENT
 
 Доступ: public
+
+Записывает запрос для полнотекстового поиска
 
 Параметры:
 * stappler::sql::Query<stappler::db::Binder, stappler::memory::PoolInterface>::Select&
@@ -401,9 +523,13 @@ Title: STSqlQuery.h
 
 ## BRIEF
 
+Записывает запрос для полнотекстового поиска
+
 ## CONTENT
 
 Доступ: public
+
+Записывает запрос для полнотекстового поиска
 
 Параметры:
 * db::Scheme const&
@@ -417,8 +543,12 @@ Title: STSqlQuery.h
 
 ## BRIEF
 
+Индексирвоанный список полнотекстовых запросов
+
 ## CONTENT
 
 Доступ: protected
+
+Индексирвоанный список полнотекстовых запросов
 
 Тип: Map<stappler::sql::Query<stappler::db::Binder, stappler::memory::PoolInterface>::String, stappler::sql::Query<stappler::db::Binder, stappler::memory::PoolInterface>::String>

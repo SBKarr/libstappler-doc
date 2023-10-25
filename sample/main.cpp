@@ -23,7 +23,6 @@
 #include "SPCommon.h"
 #include "SPMemory.h"
 #include "SPData.h"
-#include "SPPadding.h"
 
 namespace stappler::sample {
 

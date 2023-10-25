@@ -1,18 +1,26 @@
 Title: STFieldPoint.h
 
 
-# MODULES_DB_EXTENSIONS_STFIELDPOINT_H_
+# STAPPLER_DB_EXTENSIONS_STFIELDPOINT_H_
 
 ## BRIEF
 
+Заголовок расширения основных типов БД, определяет тип точки в пространстве
+
 ## CONTENT
+
+Заголовок расширения основных типов БД, определяет тип точки в пространстве
 
 
 # ::stappler::db::FieldPoint
 
 ## BRIEF
 
+Поле типа точки в пространстве
+
 ## CONTENT
+
+Поле типа точки в пространстве
 
 Базовые классы:
 * db::FieldCustom
@@ -22,7 +30,11 @@ Title: STFieldPoint.h
 
 ## BRIEF
 
+Конструктор поля
+
 ## CONTENT
+
+Конструктор поля. Перенаправляет аргументы в стандартный конструктор поля.
 
 Параметры шаблона:
 * typename Args
@@ -36,26 +48,34 @@ Title: STFieldPoint.h
 
 ## BRIEF
 
+Преобразовывает значение, переданное на запись в БД
+
 ## CONTENT
 
+Преобразовывает значение, переданное на запись в БД. Контролирует, что в значении действительно содержится целочисленный массив.
+
 Параметры:
-* db::Scheme const&
-* stappler::mem_pool::Value const&
-* stappler::mem_pool::Value&
+* db::Scheme const& - схема данных для записи
+* stappler::mem_pool::Value const& - объект для записи
+* stappler::mem_pool::Value& - значение для записи
 * bool
 
 Возвращает:
-* bool
+* bool - true если запись допустима
 
 # ::stappler::db::FieldPoint::readFromStorage(db::ResultCursor const&,size_t) const
 
 ## BRIEF
 
+Функция для чтения значния из курсора БД
+
 ## CONTENT
 
+Функция для чтения значния из курсора БД
+
 Параметры:
-* db::ResultCursor const&
-* size_t
+* db::ResultCursor const& - курсор для чтения
+* size_t - индекс, по которому в результате храниться значение данного типа
 
 Возвращает:
 * stappler::mem_pool::Value
@@ -64,21 +84,29 @@ Title: STFieldPoint.h
 
 ## BRIEF
 
+Функция для записи значения в БД
+
 ## CONTENT
 
+Функция для записи значения в БД. Записывает значение с помощью интерфейса запроса.
+
 Параметры:
-* db::QueryInterface&
-* stappler::mem_pool::StringStream&
-* stappler::mem_pool::Value const&
+* db::QueryInterface& - интерфейс запроса
+* stappler::mem_pool::StringStream& - текстовый поток запроса
+* stappler::mem_pool::Value const& - значение для записи
 
 Возвращает:
-* bool
+* bool - true при успешной записи
 
 # ::stappler::db::FieldPoint::getTypeName() const
 
 ## BRIEF
 
+Возвращает имя типа для БД
+
 ## CONTENT
+
+Возвращает имя типа для БД
 
 Возвращает:
 * stappler::StringView
@@ -87,7 +115,11 @@ Title: STFieldPoint.h
 
 ## BRIEF
 
+Возвращает флаг простой укладки
+
 ## CONTENT
+
+Возвращает флаг простой укладки. Если флаг установлен - для работой с полем не нужны подзапросы
 
 Возвращает:
 * bool
@@ -96,7 +128,11 @@ Title: STFieldPoint.h
 
 ## BRIEF
 
+Возвращает стандартное название индекса для поля
+
 ## CONTENT
+
+Возвращает стандартное название индекса для поля
 
 Возвращает:
 * stappler::mem_pool::String
@@ -105,7 +141,11 @@ Title: STFieldPoint.h
 
 ## BRIEF
 
+Возвращает текст определения индекса для БД
+
 ## CONTENT
+
+Возвращает текст определения индекса для БД
 
 Возвращает:
 * stappler::mem_pool::String
@@ -114,7 +154,11 @@ Title: STFieldPoint.h
 
 ## BRIEF
 
+Проверяет, доступна ли форма сравнения для поля
+
 ## CONTENT
+
+Проверяет, доступна ли форма сравнения для поля
 
 Параметры:
 * stappler::sql::Comparation
@@ -126,13 +170,17 @@ Title: STFieldPoint.h
 
 ## BRIEF
 
+Записывает сравнение поля в запрос
+
 ## CONTENT
 
+Записывает сравнение поля в запрос
+
 Параметры:
-* db::Scheme const&
-* stappler::sql::Query<db::Binder, Interface>::WhereContinue&
-* stappler::sql::Operator
-* stappler::StringView const&
-* stappler::sql::Comparation
-* stappler::mem_pool::Value const&
-* stappler::mem_pool::Value const&
+* db::Scheme const& - рабочая схема данных запроса
+* stappler::sql::Query<db::Binder, Interface>::WhereContinue& - манипулятор для записи запроса
+* stappler::sql::Operator - требуетмый логический оператор для запроса
+* stappler::StringView const& - имя поля для сравнения
+* stappler::sql::Comparation - оператор сравнения
+* stappler::mem_pool::Value const& - первое значение для сравнения
+* stappler::mem_pool::Value const& - второе значение для сравнения

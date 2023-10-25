@@ -1,76 +1,108 @@
 Title: SPStringView.h
 
 
-# LIBSTAPPLER_COMMON_STRING_SPSTRINGVIEW_H_
+# STAPPLER_CORE_STRING_SPSTRINGVIEW_H_
 
 ## BRIEF
 
+Заголовок типа строкового отображения
+
 ## CONTENT
 
+Заголовок типа строкового отображения.
+
+Строковое отображение (StringView), помимо стандартных функций, имеет так же функции для последовательного чтения и разбора строк. Функции фида `skip*` позволяют пропускать символы на основе маски, смещая строку вперёд. Функции вида `read*` позволяют прочитать символы на основе маски в отдельное отображение. Функции вида `trim*` позволяют обрезать символы с начала и конца строки на основе маски.
+
+Для большей инфомрации по маскам см. `SPCharGroup.h`
+
+Также, заголовок определяет возможность использовать функции обратного вызова (вида `Callback<void(StringView)>`) для вывода строк вместо потока. В определённых случаях такое использование вывода в поток значительно эффективнее. Многие функции `SPString.h` позволяют передавать в качестве потока произвольный аргумент для использования этой функции
 
 # ::stappler::const_char_ptr
 
 ## BRIEF
 
+Тип указателя для однобайтовой строки
+
 ## CONTENT
 
+Тип указателя для однобайтовой строки
 
 # ::stappler::const_char16_ptr
 
 ## BRIEF
 
+Тип указателя для двухбайтовой строки
+
 ## CONTENT
+
+Тип указателя для двухбайтовой строки
 
 
 # ::stappler::StringView_readNumber<typename>(stappler::const_char_ptr&,size_t&,int)
 
 ## BRIEF
 
+Читает число указанного типа из строки
+
 ## CONTENT
 
+Читает число указанного типа из строки
+
 Параметры шаблона:
-* typename T
+* typename T - тип числа, поддерживаются базовые целочисленные типы и типы с плавающей точкой)
 
 Параметры:
-* stappler::const_char_ptr&
-* size_t&
-* int
+* stappler::const_char_ptr& - ссылка на указатель, из которого читается число. При успешном чтении указатель смещается.
+* size_t& - длина строки для чтения. При успешном чтении соотвествующе уменьшается
+* int - размерность для чтения (10 - десятичная система)
 
 Возвращает:
-* Result<T>
+* Result<T> - опциональный тип результата (см `SPCore.h`)
 
 # ::stappler::StringView_readNumber<typename>(stappler::const_char16_ptr&,size_t&,int)
 
 ## BRIEF
 
+Читает число указанного типа из строки
+
 ## CONTENT
 
+Читает число указанного типа из строки
+
 Параметры шаблона:
-* typename T
+* typename T - тип числа, поддерживаются базовые целочисленные типы и типы с плавающей точкой)
 
 Параметры:
-* stappler::const_char16_ptr&
-* size_t&
-* int
+* stappler::const_char16_ptr& - ссылка на указатель, из которого читается число. При успешном чтении указатель смещается.
+* size_t& - длина строки для чтения. При успешном чтении соотвествующе уменьшается
+* int - размерность для чтения (10 - десятичная система)
 
 Возвращает:
-* Result<T>
+* Result<T> - опциональный тип результата (см `SPCore.h`)
 
 # ::stappler::ReaderClassBase<typename>
 
 ## BRIEF
 
+Вспомогательный тип, упрощающий доступ к типам масок символов
+
 ## CONTENT
 
+Вспомогательный тип, упрощающий доступ к типам масок символов
+
 Параметры шаблона:
-* typename CharType
+* typename CharType - используемый тип символа
 
 
 # ::stappler::ReaderClassBase<typename>::Chars<CharType...>
 
 ## BRIEF
 
+Тип набора символов
+
 ## CONTENT
+
+Тип набора символов
 
 Параметры шаблона:
 * CharType Args
@@ -80,7 +112,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Тип диапазона символов
+
 ## CONTENT
+
+Тип диапазона символов
 
 Параметры шаблона:
 * CharType First
@@ -91,14 +127,22 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Идентификатор предустановленной группы символов
+
 ## CONTENT
+
+Идентификатор предустановленной группы символов
 
 
 # ::stappler::ReaderClassBase<typename>::Group<GroupId>
 
 ## BRIEF
 
+Тип группы символов
+
 ## CONTENT
+
+Тип группы символов
 
 Параметры шаблона:
 * GroupId G
@@ -108,85 +152,120 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Базовый тип строкового отображения
+
 ## CONTENT
 
+Базовый тип строкового отображения. Фукнции чтения этого типа работают с хранимым типом символов без учёта кодировки. Для работы с UTF-8, в частности, чтобы иметь возможность использовать маски с символами юникода (32-битными) для 8-битных строк, используйте StringViewUtf8
+
 Параметры шаблона:
-* typename _CharType
+* typename _CharType - тип символа
 
 Базовые классы:
-* BytesReader<_CharType>
+* BytesReader<_CharType> - наследует функции базового байтового отображения
 
 
 # ::stappler::StringViewBase<typename>::Self
 
 ## BRIEF
 
+Тип себя
+
 ## CONTENT
 
 Доступ: public
 
+Тип себя
 
 # ::stappler::StringViewBase<typename>::MatchCharType
 
 ## BRIEF
 
+Тип символов для маски сопоставления
+
 ## CONTENT
 
 Доступ: public
+
+Тип символов для маски сопоставления
 
 
 # ::stappler::StringViewBase<typename>::CharType
 
 ## BRIEF
 
+Базовый тип символов
+
 ## CONTENT
 
 Доступ: public
+
+Базовый тип символов
 
 
 # ::stappler::StringViewBase<typename>::value_type
 
 ## BRIEF
 
+Тип символов для использования в стандартных алгоритмах
+
 ## CONTENT
 
 Доступ: public
+
+Тип символов для использования в стандартных алгоритмах
 
 
 # ::stappler::StringViewBase<typename>::TraitsType
 
 ## BRIEF
 
+Тип для доступа к стандартным символьным алгоритмам
+
 ## CONTENT
 
 Доступ: public
+
+Тип для доступа к стандартным символьным алгоритмам
 
 
 # ::stappler::StringViewBase<typename>::PoolString
 
 ## BRIEF
 
+Тип соотвествующей строки на основе пулов памяти
+
 ## CONTENT
 
 Доступ: public
+
+Тип соотвествующей строки на основе пулов памяти
 
 
 # ::stappler::StringViewBase<typename>::StdString
 
 ## BRIEF
 
+Тип соотвествующей стандартной строки
+
 ## CONTENT
 
 Доступ: public
+
+Тип соотвествующей стандартной строки
 
 
 # ::stappler::StringViewBase<typename>::MatchChars<CharType...>
 
 ## BRIEF
 
+Тип соотвествующего набора символов для маски
+
 ## CONTENT
 
 Доступ: public
+
+Тип соотвествующего набора символов для маски
 
 Параметры шаблона:
 * CharType Args
@@ -196,9 +275,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Тип соотвествующего диапазона символов для маски
+
 ## CONTENT
 
 Доступ: public
+
+Тип соотвествующего диапазона символов для маски
 
 Параметры шаблона:
 * char First
@@ -209,9 +292,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Тип соотвествующей предустановленной группы символов для маски
+
 ## CONTENT
 
 Доступ: public
+
+Тип соотвествующей предустановленной группы символов для маски
 
 Параметры шаблона:
 * stappler::CharGroupId Group
@@ -221,84 +308,143 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Псевдоним для группы символов
+
 ## CONTENT
 
 Доступ: public
+
+Псевдоним для группы символов
 
 
 # ::stappler::StringViewBase<typename>::Latin
 
 ## BRIEF
 
+Псевдоним для группы символов
+
 ## CONTENT
 
 Доступ: public
+
+Псевдоним для группы символов
 
 
 # ::stappler::StringViewBase<typename>::WhiteSpace
 
 ## BRIEF
 
+Псевдоним для группы символов
+
 ## CONTENT
 
 Доступ: public
+
+Псевдоним для группы символов
 
 
 # ::stappler::StringViewBase<typename>::LatinLowercase
 
 ## BRIEF
 
+Псевдоним для группы символов
+
 ## CONTENT
 
 Доступ: public
+
+Псевдоним для группы символов
 
 
 # ::stappler::StringViewBase<typename>::LatinUppercase
 
 ## BRIEF
 
+Псевдоним для группы символов
+
 ## CONTENT
 
 Доступ: public
+
+Псевдоним для группы символов
 
 
 # ::stappler::StringViewBase<typename>::Alphanumeric
 
 ## BRIEF
 
+Псевдоним для группы символов
+
 ## CONTENT
 
 Доступ: public
+
+Псевдоним для группы символов
 
 
 # ::stappler::StringViewBase<typename>::Hexadecimial
 
 ## BRIEF
 
+Псевдоним для группы символов
+
 ## CONTENT
 
 Доступ: public
+
+Псевдоним для группы символов
 
 
 # ::stappler::StringViewBase<typename>::Base64
 
 ## BRIEF
 
+Псевдоним для группы символов
+
 ## CONTENT
 
 Доступ: public
+
+Псевдоним для группы символов
 
 
 # ::stappler::StringViewBase<typename>::merge<typename,typename>(Args &&...)
 
 ## BRIEF
 
+Функция для соединения нескольких отображений в строку
+
 ## CONTENT
 
 Доступ: public
 
+Функция для соединения нескольких отображений в строку. Значительно эффективнее `toString`, но для слияния принимает только строки и отображения, соответсвующие текущему типу символов.
+
 Параметры шаблона:
-* typename Interface
+* typename Interface - интерфейс памяти для новой строки
+* typename Args
+
+Параметры:
+* Args &&...
+
+Возвращает:
+* typename Interface::template BasicStringType<stappler::StringViewBase::CharType>
+
+# ::stappler::StringViewBase<typename>::merge<typename,_CharType,typename>(Args &&...)
+
+## BRIEF
+
+Функция для соединения нескольких отображений в строку с использованием символа-разделителя
+
+## CONTENT
+
+Доступ: public
+
+Функция для соединения нескольких отображений в строку с использованием символа-разделителя. Значительно эффективнее `toString`, но для слияния принимает только строки и отображения, соответсвующие текущему типу символов.
+
+Параметры шаблона:
+* typename Interface - интерфейс памяти для новой строки
+* _CharType c - символ-разделитель
 * typename Args
 
 Параметры:
@@ -311,72 +457,95 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Конструктор по умолчанию
+
 ## CONTENT
 
 Доступ: public
 
+Конструктор по умолчанию, создаёт пустое отображение
 
 # ::stappler::StringViewBase<typename>::StringViewBase(stappler::StringViewBase::CharType const*,size_t)
 
 ## BRIEF
 
+Конструктор из блока памяти
+
 ## CONTENT
 
 Доступ: public
 
+Конструктор из блока памяти
+
 Параметры:
-* stappler::StringViewBase::CharType const*
-* size_t
+* stappler::StringViewBase::CharType const* - указатель на начало блока
+* size_t - длина блока в символах
 
 
 # ::stappler::StringViewBase<typename>::StringViewBase(stappler::StringViewBase::CharType const*,size_t,size_t)
 
 ## BRIEF
 
+Конструктор из блока памяти
+
 ## CONTENT
 
 Доступ: public
 
+Конструктор из блока памяти
+
 Параметры:
-* stappler::StringViewBase::CharType const*
-* size_t
-* size_t
+* stappler::StringViewBase::CharType const* - указатель на начало блока
+* size_t - отступ от начала блока
+* size_t - длина блока для отображения после отступа
 
 
 # ::stappler::StringViewBase<typename>::StringViewBase(stappler::StringViewBase::Self const&,size_t,size_t)
 
 ## BRIEF
 
+Конструктор из другого отображения
+
 ## CONTENT
 
 Доступ: public
 
+Конструктор из другого отображения. Выход за пределы отображения в параметрах ведёт к неопределённому поведению.
+
 Параметры:
-* stappler::StringViewBase::Self const&
-* size_t
-* size_t
+* stappler::StringViewBase::Self const& - исходное отображение
+* size_t - отступ внутри отображения в символах
+* size_t - длина для отображения после отступа
 
 
 # ::stappler::StringViewBase<typename>::StringViewBase(stappler::StringViewBase::Self const&,size_t)
 
 ## BRIEF
 
+Конструктор из другого отображения
+
 ## CONTENT
 
 Доступ: public
 
+Конструктор из другого отображения. Выход за пределы отображения в параметрах ведёт к неопределённому поведению.
+
 Параметры:
 * stappler::StringViewBase::Self const&
-* size_t
+* size_t - длина для отображения в символах
 
 
 # ::stappler::StringViewBase<typename>::StringViewBase(stappler::StringViewBase::PoolString const&)
 
 ## BRIEF
 
+Конструктор из строки
+
 ## CONTENT
 
 Доступ: public
+
+Конструктор из строки. Отображение верно. пока строка существует и неизменна.
 
 Параметры:
 * stappler::StringViewBase::PoolString const&
@@ -386,9 +555,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Конструктор из строки
+
 ## CONTENT
 
 Доступ: public
+
+Конструктор из строки. Отображение верно. пока строка существует и неизменна.
 
 Параметры:
 * stappler::StringViewBase::StdString const&
@@ -398,9 +571,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Копирование из строки
+
 ## CONTENT
 
 Доступ: public
+
+Копирование из строки. Отображение верно. пока строка существует и неизменна.
 
 Параметры:
 * stappler::StringViewBase::PoolString const&
@@ -412,9 +589,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Копирование из строки
+
 ## CONTENT
 
 Доступ: public
+
+Копирование из строки. Отображение верно. пока строка существует и неизменна.
 
 Параметры:
 * stappler::StringViewBase::StdString const&
@@ -426,9 +607,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Оператор копирования
+
 ## CONTENT
 
 Доступ: public
+
+Оператор копирования
 
 Параметры:
 * stappler::StringViewBase::Self const&
@@ -440,9 +625,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Устанавливает отображение для строки
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает отображение для строки. Отображение верно. пока строка существует и неизменна.
 
 Параметры:
 * stappler::StringViewBase::PoolString const&
@@ -454,9 +643,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Устанавливает отображение для строки
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает отображение для строки. Отображение верно. пока строка существует и неизменна.
 
 Параметры:
 * stappler::StringViewBase::StdString const&
@@ -468,9 +661,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Копирует отображение
+
 ## CONTENT
 
 Доступ: public
+
+Копирует отображение
 
 Параметры:
 * stappler::StringViewBase::Self const&
@@ -482,13 +679,17 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Устанавливает блок памяти для отображения
+
 ## CONTENT
 
 Доступ: public
 
+Устанавливает блок памяти для отображения.
+
 Параметры:
-* stappler::StringViewBase::CharType const*
-* size_t
+* stappler::StringViewBase::CharType const* - указатель на начало блока памяти
+* size_t - длина блока памяти в символах
 
 Возвращает:
 * Self&
@@ -497,9 +698,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Сравнивает два отображения
+
 ## CONTENT
 
 Доступ: public
+
+Сравнивает два отображения
 
 Параметры:
 * stappler::StringViewBase::Self const&
@@ -511,9 +716,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Сравнивает два отображения
+
 ## CONTENT
 
 Доступ: public
+
+Сравнивает два отображения
 
 Параметры:
 * stappler::StringViewBase::Self const&
@@ -525,9 +734,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Проверяет, является ли переданный символ первым символом в отображении
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, является ли переданный символ первым символом в отображении
 
 Параметры:
 * stappler::StringViewBase::CharType const&
@@ -539,9 +752,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Проверяет, начинается ли отображение со строки
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, начинается ли отображение со строки
 
 Параметры:
 * stappler::StringViewBase::CharType const*
@@ -553,9 +770,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Проверяет, начинается ли отображение со строки из другого отображения
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, начинается ли отображение со строки из другого отображения
 
 Параметры:
 * stappler::StringViewBase::Self const&
@@ -563,16 +784,20 @@ Title: SPStringView.h
 Возвращает:
 * bool
 
-# ::stappler::StringViewBase<typename>::is<stappler::StringViewBase::CharType>() const
+# ::stappler::StringViewBase<typename>::is<_CharType>() const
 
 ## BRIEF
+
+Проверяет, является ли переданный в шаблоне символ первым символом в отображении
 
 ## CONTENT
 
 Доступ: public
 
+Проверяет, является ли переданный в шаблоне символ первым символом в отображении
+
 Параметры шаблона:
-* stappler::StringViewBase::CharType C
+* _CharType C - символ для проверки
 
 Возвращает:
 * bool
@@ -581,12 +806,16 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Проверяет, относится ли первый символ к группе из шаблона
+
 ## CONTENT
 
 Доступ: public
 
+Проверяет, относится ли первый символ к группе из шаблона
+
 Параметры шаблона:
-* stappler::CharGroupId G
+* stappler::CharGroupId G - группа для проверки
 
 Возвращает:
 * bool
@@ -595,12 +824,16 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Проверяет, относится ли первый символ к переданной в шаблоне маске символов
+
 ## CONTENT
 
 Доступ: public
 
+Проверяет, относится ли первый символ к переданной в шаблоне маске символов
+
 Параметры шаблона:
-* typename M
+* typename M - тип маски символов для проверки
 
 Возвращает:
 * bool
@@ -609,13 +842,17 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Возвращает сегмент отображения
+
 ## CONTENT
 
 Доступ: public
 
+Возвращает сегмент отображения. При выходе за границы поведение не определено.
+
 Параметры:
-* size_t
-* size_t
+* size_t - позиция начала сегмента
+* size_t - длина сегмента
 
 Возвращает:
 * Self
@@ -624,12 +861,16 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Дублирует память, на которую указывает отображение, из пула памяти
+
 ## CONTENT
 
 Доступ: public
 
+Дублирует память, на которую указывает отображение, из пула памяти. Возвращает новое отображение, использующее новую память.
+
 Параметры:
-* memory::pool_t*
+* memory::pool_t* - пул памяти или nullptr для использования текущего контекста
 
 Возвращает:
 * Self
@@ -638,12 +879,16 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Конвертирует отображение в строку
+
 ## CONTENT
 
 Доступ: public
 
+Конвертирует отображение в строку
+
 Параметры шаблона:
-* typename Interface
+* typename Interface - интерфейс памяти для новой строки
 
 Возвращает:
 * typename Interface::template BasicStringType<stappler::StringViewBase::CharType>
@@ -652,9 +897,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Смещает отображение вперёд на один символ
+
 ## CONTENT
 
 Доступ: public
+
+Смещает отображение вперёд на один символ (то есть, отбрасывает один символ с начала)
 
 Возвращает:
 * Self&
@@ -663,9 +912,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Смещает отображение вперёд на один символ
+
 ## CONTENT
 
 Доступ: public
+
+Смещает отображение вперёд на один символ (то есть, отбрасывает один символ с начала)
 
 Параметры:
 * int
@@ -677,12 +930,16 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Смещает отображение на несколько символов
+
 ## CONTENT
 
 Доступ: public
 
+Смещает отображение на несколько символов (то есть, отбрасывает символы с начала)
+
 Параметры:
-* size_t
+* size_t - число символов для смещения
 
 Возвращает:
 * Self&
@@ -691,9 +948,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Возвращает псевдоитератор для начала
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает псевдоитератор для начала. Отображение является итератором для самого себя при использовании в алгоритмах обхода.
 
 Возвращает:
 * Self
@@ -702,7 +963,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Возвращает псевдоитератор для конца
+
 ## CONTENT
+
+Доступ: public
+
+Возвращает псевдоитератор для конца. Отображение является итератором для самого себя при использовании в алгоритмах обхода
 
 Доступ: public
 
@@ -713,9 +980,15 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Возвращает разницу между текущим отображением и его вариантом со смещением
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает разницу между текущим отображением и его вариантом со смещением. Если передан не смещённый вариант этого же отображения - поведение не определено.
+
+Возращает такое отображение, что расположено от начала текущего сегмента до начала переданного сегмента.
 
 Параметры:
 * stappler::StringViewBase::Self const&
@@ -727,9 +1000,15 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Отрезает сегмент от отображения
+
 ## CONTENT
 
 Доступ: public
+
+Отрезает сегмент от отображения. Если передан не смещённый вариант этого же отображения - поведение не определено.
+
+Текущее отобрадение становится разницей между собой и переданным сегментом.
 
 Параметры:
 * stappler::StringViewBase::Self const&
@@ -741,9 +1020,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Вычисляет 64-битный хэш отображения
+
 ## CONTENT
 
 Доступ: public
+
+Вычисляет 64-битный хэш отображения
 
 Возвращает:
 * uint64_t
@@ -752,20 +1035,28 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Вычисляет 32-битный хэш отображения
+
 ## CONTENT
 
 Доступ: public
 
+Вычисляет 32-битный хэш отображения
+
 Возвращает:
-* uint64_t
+* uint32_t
 
 # ::stappler::StringViewBase<typename>::readFloat()
 
 ## BRIEF
 
+Читает float из текущего отображения
+
 ## CONTENT
 
 Доступ: public
+
+Читает float из текущего отображения. При успешном чтении смещает отображение вперёд, убирая прочитанные символы от начала.
 
 Возвращает:
 * Result<float>
@@ -774,7 +1065,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Читает double из текущего отображения
+
 ## CONTENT
+
+Читает double из текущего отображения. При успешном чтении смещает отображение вперёд, убирая прочитанные символы от начала.
 
 Доступ: public
 
@@ -785,12 +1080,16 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Читает int64_t из текущего отображения
+
 ## CONTENT
 
 Доступ: public
 
+Читает int64_t из текущего отображения. При успешном чтении смещает отображение вперёд, убирая прочитанные символы от начала.
+
 Параметры:
-* int
+* int - размерность для чтения. 10 - десятиричная система.
 
 Возвращает:
 * Result<int64_t>
@@ -799,89 +1098,117 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Читает отображение от начала, пропуская символы. соотвествующие маске
+
 ## CONTENT
 
 Доступ: public
 
+Читает отображение от начала, пропуская символы. соотвествующие маске. Останавливает смещение на первом символе, не соответствующем маске.
+
 Параметры шаблона:
-* typename Args
+* typename Args - набор масок символов
 
 
 # ::stappler::StringViewBase<typename>::skipUntil<typename>()
 
 ## BRIEF
 
+Читает отображение от начала, пропуская символы. не соотвествующие маске.
+
 ## CONTENT
 
 Доступ: public
 
+Читает отображение от начала, пропуская символы. не соотвествующие маске. Останавливает смещение на первом символе, соответствующем маске.
+
 Параметры шаблона:
-* typename Args
+* typename Args - набор масок символов
 
 
 # ::stappler::StringViewBase<typename>::backwardSkipChars<typename>()
 
 ## BRIEF
 
+Читает отображение с конца, пропуская символы. соотвествующие маске.
+
 ## CONTENT
 
 Доступ: public
 
+Читает отображение с конца, пропуская символы. соотвествующие маске. Останавливает смещение на первом символе, не соответствующем маске.
+
 Параметры шаблона:
-* typename Args
+* typename Args - набор масок символов
 
 
 # ::stappler::StringViewBase<typename>::backwardSkipUntil<typename>()
 
 ## BRIEF
 
+Читает отображение с конца, пропуская символы. не соотвествующие маске.
+
 ## CONTENT
 
 Доступ: public
 
+Читает отображение с конца, пропуская символы. соотвествующие маске. Останавливает смещение на первом символе, соответствующем маске.
+
 Параметры шаблона:
-* typename Args
+* typename Args - набор масок символов
 
 
 # ::stappler::StringViewBase<typename>::skipString(stappler::StringViewBase::Self const&)
 
 ## BRIEF
 
+Пропускает строку, если она расположена в начале отображения
+
 ## CONTENT
 
 Доступ: public
+
+Пропускает строку, если она расположена в начале отображения
 
 Параметры:
 * stappler::StringViewBase::Self const&
 
 Возвращает:
-* bool
+* bool - true если отображение было смещено
 
 # ::stappler::StringViewBase<typename>::skipUntilString(stappler::StringViewBase::Self const&,bool)
 
 ## BRIEF
 
+Читает отображение до тех пор, пока не найдёт строку
+
 ## CONTENT
 
 Доступ: public
 
+Читает отображение до тех пор, пока не найдёт строку, или не прочитает до конца.
+
 Параметры:
-* stappler::StringViewBase::Self const&
-* bool
+* stappler::StringViewBase::Self const& - строка для поиска
+* bool - true если необходимо остановиться перед строкой, false - после строки
 
 Возвращает:
-* bool
+* bool - true если строка найдена
 
 # ::stappler::StringViewBase<typename>::readChars<typename>()
 
 ## BRIEF
 
+Читает отображение от начала, пока символы соотвеествуют маске
+
 ## CONTENT
 
 Доступ: public
 
+Читает отображение от начала, пока символы соотвеествуют маске. Останавливается на первом символе, не соотвествующем маске. Смещает текущее отображение. Возвращает прочитанный сегмент.
+
 Параметры шаблона:
-* typename Args
+* typename Args - набор масок символов
 
 Возвращает:
 * Self
@@ -890,12 +1217,16 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Читает отображение от начала, пока символы не соотвеествуют маске
+
 ## CONTENT
 
 Доступ: public
 
+Читает отображение от начала, пока символы не соотвеествуют маске. Останавливается на первом символе, соотвествующем маске. Смещает текущее отображение. Возвращает прочитанный сегмент.
+
 Параметры шаблона:
-* typename Args
+* typename Args - набор масок символов
 
 Возвращает:
 * Self
@@ -904,12 +1235,16 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Читает отображение с конца, пока символы соотвеествуют маске
+
 ## CONTENT
 
 Доступ: public
 
+Читает отображение с конца, пока символы соотвеествуют маске. Останавливается на первом символе, не соотвествующем маске. Уменьшает размер текущего отображения. Возвращает прочитанный сегмент.
+
 Параметры шаблона:
-* typename Args
+* typename Args - набор масок символов
 
 Возвращает:
 * Self
@@ -918,12 +1253,16 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Читает отображение с конца, пока символы не соотвеествуют маске
+
 ## CONTENT
 
 Доступ: public
 
+Читает отображение с конца, пока символы не соотвеествуют маске. Останавливается на первом символе, соотвествующем маске. Уменьшает размер текущего отображения. Возвращает прочитанный сегмент.
+
 Параметры шаблона:
-* typename Args
+* typename Args - набор масок символов
 
 Возвращает:
 * Self
@@ -932,9 +1271,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Читает отображение с начала, пока не будет найдена строка
+
 ## CONTENT
 
 Доступ: public
+
+Читает отображение с начала, пока не будет найдена строка. Возвращает прочитанный сегмент. Останавливается перед найденной строкой или в конце отображения.
 
 Параметры:
 * stappler::StringViewBase::Self const&
@@ -946,13 +1289,17 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Разделяет отображение по маске-разделителю
+
 ## CONTENT
 
 Доступ: public
 
+Разделяет отображение по маске-разделителю. Символы из маски игнорируются при возврате.
+
 Параметры шаблона:
-* typename Separator
-* typename Callback
+* typename Separator - маска разделителя
+* typename Callback - функция вызывается для разделённого сегмента, передаваемого в виде `Self`.
 
 Параметры:
 * Callback const&
@@ -962,21 +1309,29 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Отрезает символы по маске с начала и конца отображения
+
 ## CONTENT
 
 Доступ: public
 
+Отрезает символы по маске с начала и конца отображения
+
 Параметры шаблона:
-* typename Args
+* typename Args - набор масок символов
 
 
 # ::stappler::StringViewBase<typename>::trimUntil<typename>()
 
 ## BRIEF
 
+Отрезает символы, не входящие в маску, с начала и конца отображения
+
 ## CONTENT
 
 Доступ: public
+
+Отрезает символы, не входящие в маску, с начала и конца отображения
 
 Параметры шаблона:
 * typename Args
@@ -986,9 +1341,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Вспомогательная функция определения длины строки при слиянии
+
 ## CONTENT
 
 Доступ: protected
+
+Вспомогательная функция определения длины строки при слиянии
 
 Параметры шаблона:
 * typename T
@@ -1003,9 +1362,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Вспомогательная функция определения длины строки при слиянии
+
 ## CONTENT
 
 Доступ: protected
+
+Вспомогательная функция определения длины строки при слиянии
 
 Параметры:
 * stappler::StringViewBase::CharType const*
@@ -1017,9 +1380,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Вспомогательная функция определения длины строки при слиянии
+
 ## CONTENT
 
 Доступ: protected
+
+Вспомогательная функция определения длины строки при слиянии
 
 Параметры шаблона:
 * typename T
@@ -1035,9 +1402,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Вспомогательная функция определения длины строки при слиянии
+
 ## CONTENT
 
 Доступ: protected
+
+Вспомогательная функция определения длины строки при слиянии
 
 Параметры шаблона:
 * typename T
@@ -1050,13 +1421,17 @@ Title: SPStringView.h
 Возвращает:
 * size_t
 
-# ::stappler::StringViewBase<typename>::__merge<typename,typename>(Buf&,T const&)
+# ::stappler::StringViewBase<typename>::__merge<typename,typename>(Buf&,T&&)
 
 ## BRIEF
+
+Вспомогательная функция слияния строк
 
 ## CONTENT
 
 Доступ: protected
+
+Вспомогательная функция слияния строк
 
 Параметры шаблона:
 * typename Buf
@@ -1064,16 +1439,20 @@ Title: SPStringView.h
 
 Параметры:
 * Buf&
-* T const&
+* T&&
 
 
 # ::stappler::StringViewBase<typename>::__merge<typename>(Buf&,stappler::StringViewBase::CharType const*)
 
 ## BRIEF
 
+Вспомогательная функция слияния строк
+
 ## CONTENT
 
 Доступ: protected
+
+Вспомогательная функция слияния строк
 
 Параметры шаблона:
 * typename Buf
@@ -1087,9 +1466,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Вспомогательная функция слияния строк
+
 ## CONTENT
 
 Доступ: protected
+
+Вспомогательная функция слияния строк
 
 Параметры шаблона:
 * typename Buf
@@ -1106,12 +1489,87 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Вспомогательная функция слияния строк
+
 ## CONTENT
 
 Доступ: protected
 
+Вспомогательная функция слияния строк
+
 Параметры шаблона:
 * typename Buf
+* typename T
+
+Параметры:
+* Buf&
+* T&&
+
+
+# ::stappler::StringViewBase<typename>::__mergeWithSep<typename,_CharType,bool,typename>(Buf&,T&&)
+
+## BRIEF
+
+Вспомогательная функция слияния строк
+
+## CONTENT
+
+Доступ: protected
+
+Вспомогательная функция слияния строк
+
+Параметры шаблона:
+* typename Buf
+* _CharType C
+* bool Front
+* typename T
+
+Параметры:
+* Buf&
+* T&&
+
+
+# ::stappler::StringViewBase<typename>::_mergeWithSep<typename,_CharType,bool,typename,typename>(Buf&,T&&,Args &&...)
+
+## BRIEF
+
+Вспомогательная функция слияния строк
+
+## CONTENT
+
+Доступ: protected
+
+Вспомогательная функция слияния строк
+
+Параметры шаблона:
+* typename Buf
+* _CharType C
+* bool Front
+* typename T
+* typename Args
+
+Параметры:
+* Buf&
+* T&&
+* Args &&...
+
+
+# ::stappler::StringViewBase<typename>::_mergeWithSep<typename,_CharType,bool,typename>(Buf&,T&&)
+
+## BRIEF
+
+Вспомогательная функция слияния строк
+
+## CONTENT
+
+Доступ: protected
+
+Вспомогательная функция слияния строк
+
+Параметры шаблона:
+* typename Buf
+* _CharType C
+* bool Front
 * typename T
 
 Параметры:
@@ -1123,9 +1581,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Вспомогательная функция проверки символа на вхождение в маску
+
 ## CONTENT
 
 Доступ: protected
+
+Вспомогательная функция проверки символа на вхождение в маску
 
 Параметры шаблона:
 * typename Args
@@ -1140,7 +1602,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Невладеющий строковый контейнер для строк в UTF-8
+
 ## CONTENT
+
+Невладеющий строковый контейнер для строк в UTF-8. Функции чтения из этого контейнера аналогичны StringView, но работают не с отдельными символами (char), а с кодированными блоками UTF-8 и символами юникода.
 
 Базовые классы:
 * BytesReader<char>
@@ -1150,72 +1616,104 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Тип себя
+
 ## CONTENT
 
 Доступ: public
+
+Тип себя
 
 
 # ::stappler::StringViewUtf8::MatchCharType
 
 ## BRIEF
 
+Тип символа для маски
+
 ## CONTENT
 
 Доступ: public
+
+Тип символа для маски - char32_t
 
 
 # ::stappler::StringViewUtf8::CharType
 
 ## BRIEF
 
+Тип хранимого символа
+
 ## CONTENT
 
 Доступ: public
+
+Тип хранимого символа
 
 
 # ::stappler::StringViewUtf8::value_type
 
 ## BRIEF
 
+Тип значения контейнера для стандартных алгоритмов
+
 ## CONTENT
 
 Доступ: public
+
+Тип значения контейнера для стандартных алгоритмов
 
 
 # ::stappler::StringViewUtf8::TraitsType
 
 ## BRIEF
 
+Тип для доступа к стандартным строковым алгоритмам
+
 ## CONTENT
 
 Доступ: public
+
+Тип для доступа к стандартным строковым алгоритмам
 
 
 # ::stappler::StringViewUtf8::PoolString
 
 ## BRIEF
 
+Тип строки из пула памяти
+
 ## CONTENT
 
 Доступ: public
+
+Тип строки из пула памяти
 
 
 # ::stappler::StringViewUtf8::StdString
 
 ## BRIEF
 
+Тип стандартной строки
+
 ## CONTENT
 
 Доступ: public
+
+Тип стандартной строки
 
 
 # ::stappler::StringViewUtf8::MatchChars<MatchCharType...>
 
 ## BRIEF
 
+Тип набора символов для маски юникода
+
 ## CONTENT
 
 Доступ: public
+
+Тип набора символов для маски юникода
 
 Параметры шаблона:
 * MatchCharType Args
@@ -1225,9 +1723,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Тип диапазона символов для маски юникода
+
 ## CONTENT
 
 Доступ: public
+
+Тип диапазона символов для маски юникода
 
 Параметры шаблона:
 * char First
@@ -1238,9 +1740,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Тип именованной группы символов для маски юникода
+
 ## CONTENT
 
 Доступ: public
+
+Тип именованной группы символов для маски юникода
 
 Параметры шаблона:
 * stappler::CharGroupId Group
@@ -1250,9 +1756,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Тип композиции примитивов символов для маски юникода
+
 ## CONTENT
 
 Доступ: public
+
+Тип композиции примитивов символов для маски юникода
 
 Параметры шаблона:
 * typename Args
@@ -1262,9 +1772,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Тип набора символов для маски юникода
+
 ## CONTENT
 
 Доступ: public
+
+Тип набора символов для маски юникода
 
 Параметры шаблона:
 * MatchCharType Args
@@ -1274,9 +1788,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Тип диапазона символов для маски юникода
+
 ## CONTENT
 
 Доступ: public
+
+Тип диапазона символов для маски юникода
 
 Параметры шаблона:
 * char First
@@ -1287,9 +1805,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Тип именованной группы символов для маски юникода
+
 ## CONTENT
 
 Доступ: public
+
+Тип именованной группы символов для маски юникода
 
 Параметры шаблона:
 * stappler::CharGroupId Group
@@ -1299,9 +1821,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Тип композиции примитивов символов для маски юникода
+
 ## CONTENT
 
 Доступ: public
+
+Тип композиции примитивов символов для маски юникода
 
 Параметры шаблона:
 * typename Args
@@ -1311,144 +1837,200 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Псевдоним для именованной группы символов
+
 ## CONTENT
 
 Доступ: public
+
+Псевдоним для именованной группы символов
 
 
 # ::stappler::StringViewUtf8::Latin
 
 ## BRIEF
 
+Псевдоним для именованной группы символов
+
 ## CONTENT
 
 Доступ: public
+
+Псевдоним для именованной группы символов
 
 
 # ::stappler::StringViewUtf8::WhiteSpace
 
 ## BRIEF
 
+Псевдоним для именованной группы символов
+
 ## CONTENT
 
 Доступ: public
+
+Псевдоним для именованной группы символов
 
 
 # ::stappler::StringViewUtf8::LatinLowercase
 
 ## BRIEF
 
+Псевдоним для именованной группы символов
+
 ## CONTENT
 
 Доступ: public
+
+Псевдоним для именованной группы символов
 
 
 # ::stappler::StringViewUtf8::LatinUppercase
 
 ## BRIEF
 
+Псевдоним для именованной группы символов
+
 ## CONTENT
 
 Доступ: public
+
+Псевдоним для именованной группы символов
 
 
 # ::stappler::StringViewUtf8::Alphanumeric
 
 ## BRIEF
 
+Псевдоним для именованной группы символов
+
 ## CONTENT
 
 Доступ: public
+
+Псевдоним для именованной группы символов
 
 
 # ::stappler::StringViewUtf8::Hexadecimial
 
 ## BRIEF
 
+Псевдоним для именованной группы символов
+
 ## CONTENT
 
 Доступ: public
+
+Псевдоним для именованной группы символов
 
 
 # ::stappler::StringViewUtf8::Base64
 
 ## BRIEF
 
+Псевдоним для именованной группы символов
+
 ## CONTENT
 
 Доступ: public
+
+Псевдоним для именованной группы символов
 
 
 # ::stappler::StringViewUtf8::StringViewUtf8()
 
 ## BRIEF
 
+Конструктор по умолчанию
+
 ## CONTENT
 
 Доступ: public
+
+Конструктор по умолчанию. Создаёт пустое отображение
 
 
 # ::stappler::StringViewUtf8::StringViewUtf8(char const*,size_t)
 
 ## BRIEF
 
+Конструктор из блока памяти
+
 ## CONTENT
 
 Доступ: public
 
+Конструктор из блока памяти
+
 Параметры:
-* char const*
-* size_t
+* char const* - укалатель на начало блока памяти
+* size_t - размер блока памяти в символах
 
 
 # ::stappler::StringViewUtf8::StringViewUtf8(char const*,size_t,size_t)
 
 ## BRIEF
 
+Конструктор из блока памяти
+
 ## CONTENT
 
 Доступ: public
 
+Конструктор из блока памяти
+
 Параметры:
-* char const*
-* size_t
-* size_t
+* char const* - укалатель на начало блока памяти
+* size_t - отступ от начала блока памяти
+* size_t - размер блока памяти после отступа в символах
 
 
 # ::stappler::StringViewUtf8::StringViewUtf8(stappler::StringViewUtf8 const&,size_t)
 
 ## BRIEF
 
+Конструктор из другого отображения
+
 ## CONTENT
 
 Доступ: public
 
+Конструктор из другого отображения. Выход за границы исходного отображения ведёт к неопределённому поведению.
+
 Параметры:
-* stappler::StringViewUtf8 const&
-* size_t
+* stappler::StringViewUtf8 const& - другое отображение
+* size_t - размер нового отображения в символах. Должен быть не больше размера исходного
 
 
 # ::stappler::StringViewUtf8::StringViewUtf8(stappler::StringViewUtf8 const&,size_t,size_t)
 
 ## BRIEF
 
+Конструктор из другого отображения
+
 ## CONTENT
 
 Доступ: public
 
+Конструктор из другого отображения. Выход за границы исходного отображения ведёт к неопределённому поведению.
+
 Параметры:
-* stappler::StringViewUtf8 const&
-* size_t
-* size_t
+* stappler::StringViewUtf8 const& - другое отображение
+* size_t - отступ от начала другого отображения
+* size_t - размер нового отображения после отступа в символах
 
 
 # ::stappler::StringViewUtf8::StringViewUtf8(stappler::StringViewUtf8::PoolString const&)
 
 ## BRIEF
 
+Конструктор из строки
+
 ## CONTENT
 
 Доступ: public
+
+Конструктор из строки. Отображение верно пока строка существует и неизменно.
 
 Параметры:
 * stappler::StringViewUtf8::PoolString const&
@@ -1458,9 +2040,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Конструктор из строки
+
 ## CONTENT
 
 Доступ: public
+
+Конструктор из строки. Отображение верно пока строка существует и неизменно.
 
 Параметры:
 * stappler::StringViewUtf8::StdString const&
@@ -1470,9 +2056,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Конструктор копирования
+
 ## CONTENT
 
 Доступ: public
+
+Конструктор копирования
 
 Параметры:
 * StringViewBase<char> const&
@@ -1482,9 +2072,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Копирование из строки
+
 ## CONTENT
 
 Доступ: public
+
+Копирование из строки. Отображение верно пока строка существует и неизменно.
 
 Параметры:
 * stappler::StringViewUtf8::PoolString const&
@@ -1496,9 +2090,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Копирование из строки
+
 ## CONTENT
 
 Доступ: public
+
+Копирование из строки. Отображение верно пока строка существует и неизменно.
 
 Параметры:
 * stappler::StringViewUtf8::StdString const&
@@ -1510,9 +2108,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Оператор копирования
+
 ## CONTENT
 
 Доступ: public
+
+Оператор копирования
 
 Параметры:
 * stappler::StringViewUtf8::Self const&
@@ -1524,9 +2126,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Устанавливает отображение для строки
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает отображение для строки. Отображение верно пока строка существует и неизменно.
 
 Параметры:
 * stappler::StringViewUtf8::PoolString const&
@@ -1538,9 +2144,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Устанавливает отображение для строки
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает отображение для строки. Отображение верно пока строка существует и неизменно.
 
 Параметры:
 * stappler::StringViewUtf8::StdString const&
@@ -1552,9 +2162,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Копирует отображение
+
 ## CONTENT
 
 Доступ: public
+
+Копирует отображение
 
 Параметры:
 * stappler::StringViewUtf8::Self const&
@@ -1566,13 +2180,17 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Устанавливает блок памяти для отображения
+
 ## CONTENT
 
 Доступ: public
 
+Устанавливает блок памяти для отображения
+
 Параметры:
-* char const*
-* size_t
+* char const* - указатель на начало блока памяти
+* size_t - размер блока памяти в символах
 
 Возвращает:
 * Self&
@@ -1581,9 +2199,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Сравнивает два отображения
+
 ## CONTENT
 
 Доступ: public
+
+Сравнивает два отображения
 
 Параметры:
 * stappler::StringViewUtf8::Self const&
@@ -1595,9 +2217,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Сравнивает два отображения
+
 ## CONTENT
 
 Доступ: public
+
+Сравнивает два отображения
 
 Параметры:
 * stappler::StringViewUtf8::Self const&
@@ -1609,9 +2235,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Проверяет, является ли символ первым символом отображения
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, является ли символ первым символом отображения
 
 Параметры:
 * char const&
@@ -1623,12 +2253,34 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Проверяет, является ли символ первым символом отображения с учётом кодировки
+
 ## CONTENT
 
 Доступ: public
 
+Проверяет, является ли символ первым символом отображения с учётом кодировки. Декодирует первый символ отображения в символ юникода и сравнивает с ним.
+
 Параметры:
 * char16_t const&
+
+Возвращает:
+* bool
+
+# ::stappler::StringViewUtf8::is(char32_t const&) const
+
+## BRIEF
+
+Проверяет, является ли символ первым символом отображения с учётом кодировки
+
+## CONTENT
+
+Доступ: public
+
+Проверяет, является ли символ первым символом отображения с учётом кодировки. Декодирует первый символ отображения в символ юникода и сравнивает с ним.
+
+Параметры:
+* char32_t const&
 
 Возвращает:
 * bool
@@ -1637,9 +2289,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Проверяет, является ли С-строка префиксом отображения
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, является ли С-строка префиксом отображения
 
 Параметры:
 * char const*
@@ -1651,9 +2307,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Проверяет, является ли переданное отображение префиксом отображения
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, является ли переданное отображение префиксом отображения
 
 Параметры:
 * stappler::StringViewUtf8::Self const&
@@ -1665,12 +2325,34 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Проверяет, является ли символ из шаблона первым символом отображения с учётом кодировки
+
 ## CONTENT
 
 Доступ: public
 
+Проверяет, является ли символ из шаблона первым символом отображения с учётом кодировки. Декодирует первый символ отображения в символ юникода и сравнивает с ним.
+
 Параметры шаблона:
 * char16_t C
+
+Возвращает:
+* bool
+
+# ::stappler::StringViewUtf8::is<char32_t>() const
+
+## BRIEF
+
+Проверяет, является ли символ из шаблона первым символом отображения с учётом кодировки
+
+## CONTENT
+
+Доступ: public
+
+Проверяет, является ли символ из шаблона первым символом отображения с учётом кодировки. Декодирует первый символ отображения в символ юникода и сравнивает с ним.
+
+Параметры шаблона:
+* char32_t C
 
 Возвращает:
 * bool
@@ -1679,9 +2361,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Проверяет, относится ли первый символ отображения с учётом кодировки к именованной группе символов
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, относится ли первый символ отображения с учётом кодировки к именованной группе символов. Декодирует первый символ отображения в символ юникода и сравнивает с ним.
 
 Параметры шаблона:
 * stappler::CharGroupId G
@@ -1693,9 +2379,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Проверяет, соотвествует ли первый символ маске символов с учётом кодировки
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, соотвествует ли первый символ маске символов с учётом кодировки. Декодирует первый символ отображения в символ юникода и сравнивает с ним.
 
 Параметры шаблона:
 * typename M
@@ -1707,41 +2397,50 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Возвращает сегмент отображения
+
 ## CONTENT
 
 Доступ: public
 
+Возвращает сегмент отображения. Не учитывает кодировку, считает в хранимых 8-битных символах. При выходе за границы отображения поведение не определено.
+
 Параметры:
-* size_t
-* size_t
+* size_t - смещение внутри отображения в символах
+* size_t - длина отображения в символах
 
 Возвращает:
 * Self
 
-# ::stappler::StringViewUtf8::letter<typename>() const
+# ::stappler::StringViewUtf8::letter() const
 
 ## BRIEF
+
+Возвращает сегмент, соответствующий текущему полному символу юникода
 
 ## CONTENT
 
 Доступ: public
 
-Параметры шаблона:
-* typename Interface
+Возвращает сегмент, соответствующий текущему полному символу юникода (1-4 8-битных символа)
 
 Возвращает:
-* typename Interface::StringType
+* Self
 
 # ::stappler::StringViewUtf8::str<typename>() const
 
 ## BRIEF
 
+Создаёт новую строку из отображения
+
 ## CONTENT
 
 Доступ: public
 
+Создаёт новую строку из отображения
+
 Параметры шаблона:
-* typename Interface
+* typename Interface - интерфейс памяти для новой строки
 
 Возвращает:
 * typename Interface::StringType
@@ -1750,21 +2449,29 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Смещает отображение на указанное число символов юникода
+
 ## CONTENT
 
 Доступ: public
 
+Смещает отображение на указанное число символов юникода. Символ юникода может соотвествовать от 1 до 4 8-битных символов.
+
 Параметры:
-* size_t
+* size_t - количество символов для смещения
 
 
 # ::stappler::StringViewUtf8::operator++()
 
 ## BRIEF
 
+Смещает отображение на один символ юникода
+
 ## CONTENT
 
 Доступ: public
+
+Смещает отображение на один символ юникода. Символ юникода может соотвествовать от 1 до 4 8-битных символов.
 
 Возвращает:
 * Self&
@@ -1773,9 +2480,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Смещает отображение на один символ юникода постфиксно
+
 ## CONTENT
 
 Доступ: public
+
+Смещает отображение на один символ юникода постфиксно. Символ юникода может соотвествовать от 1 до 4 8-битных символов.
 
 Параметры:
 * int
@@ -1787,9 +2498,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Смещает отображение на указанное число символов юникода
+
 ## CONTENT
 
 Доступ: public
+
+Смещает отображение на указанное число символов юникода. Символ юникода может соотвествовать от 1 до 4 8-битных символов.
 
 Параметры:
 * size_t
@@ -1801,9 +2516,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Проверяет, состоит ли строка только из пробельных символов
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, состоит ли строка только из пробельных символов. Для оценки используется группа Whitespace для символов юникода
 
 Возвращает:
 * bool
@@ -1812,9 +2531,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Возвращает псевдоитератор начала
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает псевдоитератор начала. Тип является итератором для самого себя при рабте со стандартными алгоритмами.
 
 Возвращает:
 * Self
@@ -1823,10 +2546,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Возвращает псевдоитератор конца
+
 ## CONTENT
 
 Доступ: public
 
+Возвращает псевдоитератор конца. Тип является итератором для самого себя при рабте со стандартными алгоритмами.
 Возвращает:
 * Self
 
@@ -1834,26 +2560,34 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Возвращает разность между отображением и его вложенным сегментом
+
 ## CONTENT
 
 Доступ: public
 
+Возвращает разность между отображением и его вложенным сегментом. Если переданное отображение не является вложенным сегментом для текущего - поведение не определено
+
 Параметры:
-* stappler::StringViewUtf8::Self const&
+* stappler::StringViewUtf8::Self const& - вложенный сегмент
 
 Возвращает:
-* Self
+* Self - отображение между началом текущего сегмента и началом вложенного сегмента
 
 # ::stappler::StringViewUtf8::operator-=(stappler::StringViewUtf8::Self const&)
 
 ## BRIEF
 
+Вычитает вложенный сегмент из текущего отображения
+
 ## CONTENT
 
 Доступ: public
 
+Вычитает вложенный сегмент из текущего отображения. Если переданное отображение не является вложенным сегментом для текущего - поведение не определено. Текущий сегмент становится сегментом между началом исходного отображения и началом вычитаемого сегмента.
+
 Параметры:
-* stappler::StringViewUtf8::Self const&
+* stappler::StringViewUtf8::Self const& - вложенный сегмент
 
 Возвращает:
 * Self&
@@ -1862,9 +2596,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Возвращает текущий первый символ как символ юникода
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает текущий первый символ как символ юникода
 
 Возвращает:
 * MatchCharType
@@ -1873,9 +2611,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Обходит все символы юникода с помощью функции обратного вызова
+
 ## CONTENT
 
 Доступ: public
+
+Обходит все символы юникода с помощью функции обратного вызова. Функция вызывается последовательно для каждого декодированного символа юникода (`MatchCharType`)
 
 Параметры шаблона:
 * typename Callback
@@ -1888,9 +2630,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Возвращает длину строки в символах юникода
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает длину строки в символах юникода
 
 Возвращает:
 * size_t
@@ -1899,9 +2645,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Конвертирует отображение в стандартное строковое отображение
+
 ## CONTENT
 
 Доступ: public
+
+Конвертирует отображение в стандартное строковое отображение
 
 Возвращает:
 * StringViewBase<char>
@@ -1910,9 +2660,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Возвращает 64-битный хэш отображения
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает 64-битный хэш отображения
 
 Возвращает:
 * uint64_t
@@ -1921,9 +2675,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Возвращает 32-битный хэш отображения
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает 32-битный хэш отображения
 
 Возвращает:
 * uint64_t
@@ -1932,9 +2690,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Читает float из отобраения
+
 ## CONTENT
 
 Доступ: public
+
+Читает float из отобраения. При успешном чтении смещает отображение на прочитанные символы.
 
 Возвращает:
 * Result<float>
@@ -1943,9 +2705,13 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Читает double из отобраения
+
 ## CONTENT
 
 Доступ: public
+
+Читает double из отобраения. При успешном чтении смещает отображение на прочитанные символы.
 
 Возвращает:
 * Result<double>
@@ -1954,103 +2720,135 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Читает int64_t из отобраения
+
 ## CONTENT
 
 Доступ: public
 
+Читает int64_t из отобраения. При успешном чтении смещает отображение на прочитанные символы.
+
 Параметры:
-* int
+* int - размерность для чтения. 10 для десятиричной системы
 
 Возвращает:
-* Result<int64_t>
+* Result<int64_t> - опциональный результат
 
 # ::stappler::StringViewUtf8::skipChars<typename>()
 
 ## BRIEF
 
+Читает отображение от начала, пропуская символы. соотвествующие маске
+
 ## CONTENT
 
 Доступ: public
 
+Читает отображение от начала, пропуская символы. соотвествующие маске. Останавливает смещение на первом символе, не соответствующем маске. Для проверки по маске конвертирует строку в символы юникода.
+
 Параметры шаблона:
-* typename Args
+* typename Args - набор масок символов
 
 
 # ::stappler::StringViewUtf8::skipUntil<typename>()
 
 ## BRIEF
 
+Читает отображение от начала, пропуская символы. не соотвествующие маске.
+
 ## CONTENT
 
 Доступ: public
 
+Читает отображение от начала, пропуская символы. не соотвествующие маске. Останавливает смещение на первом символе, соответствующем маске. Для проверки по маске конвертирует строку в символы юникода.
+
 Параметры шаблона:
-* typename Args
+* typename Args - набор масок символов
 
 
 # ::stappler::StringViewUtf8::backwardSkipChars<typename>()
 
 ## BRIEF
 
+Читает отображение с конца, пропуская символы. соотвествующие маске.
+
 ## CONTENT
 
 Доступ: public
 
+Читает отображение с конца, пропуская символы. соотвествующие маске. Останавливает смещение на первом символе, не соответствующем маске. Для проверки по маске конвертирует строку в символы юникода.
+
 Параметры шаблона:
-* typename Args
+* typename Args - набор масок символов
 
 
 # ::stappler::StringViewUtf8::backwardSkipUntil<typename>()
 
 ## BRIEF
 
+Читает отображение с конца, пропуская символы. не соотвествующие маске.
+
 ## CONTENT
 
 Доступ: public
 
+Читает отображение с конца, пропуская символы. соотвествующие маске. Останавливает смещение на первом символе, соответствующем маске. Для проверки по маске конвертирует строку в символы юникода.
+
 Параметры шаблона:
-* typename Args
+* typename Args - набор масок символов
 
 
 # ::stappler::StringViewUtf8::skipString(stappler::StringViewUtf8::Self const&)
 
 ## BRIEF
 
+Пропускает строку, если она расположена в начале отображения
+
 ## CONTENT
 
 Доступ: public
 
+Пропускает строку, если она расположена в начале отображения
+
 Параметры:
-* stappler::StringViewUtf8::Self const&
+* stappler::StringViewBase::Self const&
 
 Возвращает:
-* bool
+* bool - true если отображение было смещено
 
 # ::stappler::StringViewUtf8::skipUntilString(stappler::StringViewUtf8::Self const&,bool)
 
 ## BRIEF
 
+Читает отображение до тех пор, пока не найдёт строку
+
 ## CONTENT
 
 Доступ: public
 
+Читает отображение до тех пор, пока не найдёт строку, или не прочитает до конца.
+
 Параметры:
-* stappler::StringViewUtf8::Self const&
-* bool
+* stappler::StringViewBase::Self const& - строка для поиска
+* bool - true если необходимо остановиться перед строкой, false - после строки
 
 Возвращает:
-* bool
+* bool - true если строка найдена
 
 # ::stappler::StringViewUtf8::readChars<typename>()
 
 ## BRIEF
 
+Читает отображение от начала, пока символы соотвеествуют маске
+
 ## CONTENT
 
 Доступ: public
 
+Читает отображение от начала, пока символы соотвеествуют маске. Останавливается на первом символе, не соотвествующем маске. Смещает текущее отображение. Возвращает прочитанный сегмент. Для проверки по маске конвертирует строку в символы юникода.
+
 Параметры шаблона:
-* typename Args
+* typename Args - набор масок символов
 
 Возвращает:
 * Self
@@ -2059,12 +2857,16 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Читает отображение от начала, пока символы не соотвеествуют маске
+
 ## CONTENT
 
 Доступ: public
 
+Читает отображение от начала, пока символы не соотвеествуют маске. Останавливается на первом символе, соотвествующем маске. Смещает текущее отображение. Возвращает прочитанный сегмент. Для проверки по маске конвертирует строку в символы юникода.
+
 Параметры шаблона:
-* typename Args
+* typename Args - набор масок символов
 
 Возвращает:
 * Self
@@ -2073,12 +2875,16 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Читает отображение с конца, пока символы соотвеествуют маске
+
 ## CONTENT
 
 Доступ: public
 
+Читает отображение с конца, пока символы соотвеествуют маске. Останавливается на первом символе, не соотвествующем маске. Уменьшает размер текущего отображения. Возвращает прочитанный сегмент. Для проверки по маске конвертирует строку в символы юникода.
+
 Параметры шаблона:
-* typename Args
+* typename Args - набор масок символов
 
 Возвращает:
 * Self
@@ -2087,12 +2893,16 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Читает отображение с конца, пока символы не соотвеествуют маске
+
 ## CONTENT
 
 Доступ: public
 
+Читает отображение с конца, пока символы не соотвеествуют маске. Останавливается на первом символе, соотвествующем маске. Уменьшает размер текущего отображения. Возвращает прочитанный сегмент. Для проверки по маске конвертирует строку в символы юникода.
+
 Параметры шаблона:
-* typename Args
+* typename Args - набор масок символов
 
 Возвращает:
 * Self
@@ -2101,12 +2911,16 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Читает отображение с начала, пока не будет найдена строка
+
 ## CONTENT
 
 Доступ: public
 
+Читает отображение с начала, пока не будет найдена строка. Возвращает прочитанный сегмент. Останавливается перед найденной строкой или в конце отображения.
+
 Параметры:
-* stappler::StringViewUtf8::Self const&
+* stappler::StringViewBase::Self const&
 
 Возвращает:
 * Self
@@ -2115,13 +2929,17 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Разделяет отображение по маске-разделителю
+
 ## CONTENT
 
 Доступ: public
 
+Разделяет отображение по маске-разделителю. Символы из маски игнорируются при возврате.
+
 Параметры шаблона:
-* typename Separator
-* typename Callback
+* typename Separator - маска разделителя
+* typename Callback - функция вызывается для разделённого сегмента, передаваемого в виде `Self`.
 
 Параметры:
 * Callback const&
@@ -2131,21 +2949,29 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Отрезает символы по маске с начала и конца отображения
+
 ## CONTENT
 
 Доступ: public
 
+Отрезает символы по маске с начала и конца отображения
+
 Параметры шаблона:
-* typename Args
+* typename Args - набор масок символов
 
 
 # ::stappler::StringViewUtf8::trimUntil<typename>()
 
 ## BRIEF
 
+Отрезает символы, не входящие в маску, с начала и конца отображения
+
 ## CONTENT
 
 Доступ: public
+
+Отрезает символы, не входящие в маску, с начала и конца отображения
 
 Параметры шаблона:
 * typename Args
@@ -2155,217 +2981,164 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Вычисляет смещение в 8-битных символах с конца для маски символов юникода
+
 ## CONTENT
 
 Доступ: protected
 
+Вычисляет смещение в 8-битных символах с конца для маски символов юникода
+
 Параметры шаблона:
-* typename Args
+* typename Args - набор масок символов
 
 Параметры:
-* stappler::StringViewUtf8::CharType const*
-* size_t
-* uint8_t&
+* stappler::StringViewUtf8::CharType const* - указатель на начало блока памяти
+* size_t - размер блока памяти
+* uint8_t& - (выход) вычисленное смещение
 
 Возвращает:
-* bool
+* bool - true если смещение вычислено
 
-# ::stappler::StringViewUtf8::match<typename>(char16_t)
+
+# ::stappler::StringViewUtf8::match<typename>(stappler::StringViewUtf8::MatchCharType)
 
 ## BRIEF
 
+Проверяет символ юникода на соотвествие маске
+
 ## CONTENT
 
 Доступ: protected
 
+Проверяет символ юникода на соотвествие маске
+
 Параметры шаблона:
-* typename Args
+* typename Args - набор масок для проверки
 
 Параметры:
-* char16_t
+* MatchCharType - символ для проверки
 
 Возвращает:
-* bool
+* bool - true если символ соотвествует маске
 
 # ::stappler::StringView
 
 ## BRIEF
 
+Псевдоним для стандатного 8-битного строкового отображения
+
 ## CONTENT
+
+Псевдоним для стандатного 8-битного строкового отображения
 
 
 # ::stappler::WideStringView
 
 ## BRIEF
 
-## CONTENT
-
-
-# ::stappler::operator<<<typename>(Callback<void (StringViewBase<Char>)> const&,int64_t,StringViewBase<Char>)
-
-## BRIEF
+Псевдоним для стандатного 16-битного строкового отображения
 
 ## CONTENT
 
-Параметры шаблона:
-* typename Char
+Псевдоним для стандатного 16-битного строкового отображения
 
-Параметры:
-* Callback<void (StringViewBase<Char>)> const&
-* int64_t
-* StringViewBase<Char>
-
-Возвращает:
-* Callback<void (StringViewBase<Char>)> const&
-
-# ::stappler::operator<<<typename>(Callback<void (StringViewBase<Char>)> const&,uint64_t,StringViewBase<Char>)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Char
-
-Параметры:
-* Callback<void (StringViewBase<Char>)> const&
-* uint64_t
-* StringViewBase<Char>
-
-Возвращает:
-* Callback<void (StringViewBase<Char>)> const&
-
-# ::stappler::operator<<<typename>(Callback<void (StringViewBase<Char>)> const&,StringViewBase<Char>,StringViewBase<Char>)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Char
-
-Параметры:
-* Callback<void (StringViewBase<Char>)> const&
-* StringViewBase<Char>
-* StringViewBase<Char>
-
-Возвращает:
-* Callback<void (StringViewBase<Char>)> const&
-
-# ::stappler::operator<<(Callback<void (stappler::StringViewUtf8)> const&,int64_t)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* Callback<void (stappler::StringViewUtf8)> const&
-* int64_t
-
-Возвращает:
-* Callback<void (stappler::StringViewUtf8)> const&
-
-# ::stappler::operator<<(Callback<void (stappler::StringViewUtf8)> const&,uint64_t)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* Callback<void (stappler::StringViewUtf8)> const&
-* uint64_t
-
-Возвращает:
-* Callback<void (stappler::StringViewUtf8)> const&
-
-# ::stappler::operator<<(Callback<void (stappler::StringViewUtf8)> const&,stappler::StringViewUtf8)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* Callback<void (stappler::StringViewUtf8)> const&
-* stappler::StringViewUtf8
-
-Возвращает:
-* Callback<void (stappler::StringViewUtf8)> const&
 
 # ::stappler::string::compare<typename,typename,typename>(L const&,R const&)
 
 ## BRIEF
 
+Лексикографически сравнивает два строковых контейнера с использованием `std::char_traits<CharType>::compare`
+
 ## CONTENT
 
+Лексикографически сравнивает два строковых контейнера с использованием `std::char_traits<CharType>::compare`
+
 Параметры шаблона:
-* typename L
-* typename R
-* typename CharType
+* typename L - тип первого контейнера
+* typename R - тип первого контейнера
+* typename CharType - тип символа
 
 Параметры:
 * L const&
 * R const&
 
 Возвращает:
-* int
+* int - результат сравнения: -1, 0 или 1
 
 # ::stappler::string::compareCaseInsensivive<typename,typename,typename>(L const&,R const&)
 
 ## BRIEF
 
+Лексикографически сравнивает два строковых контейнера с использованием `std::char_traits<CharType>::compare` игнорируя регистр
+
 ## CONTENT
 
+Лексикографически сравнивает два строковых контейнера с использованием `std::char_traits<CharType>::compare` игнорируя регистр
+
 Параметры шаблона:
-* typename L
-* typename R
-* typename CharType
+* typename L - тип первого контейнера
+* typename R - тип первого контейнера
+* typename CharType - тип символа
 
 Параметры:
 * L const&
 * R const&
 
 Возвращает:
-* int
+* int - результат сравнения: -1, 0 или 1
 
 # ::stappler::string::length<typename>(_CharT const*)
 
 ## BRIEF
 
+Вычисляет длину строки в буфере стандартным алгоритмом
+
 ## CONTENT
 
+Вычисляет длину строки в буфере стандартным алгоритмом
+
 Параметры шаблона:
-* typename _CharT
+* typename _CharT - тип символа в строке
 
 Параметры:
-* _CharT const*
+* _CharT const* - указатель на начало буфера, должен быть завершающий 0
 
 Возвращает:
-* size_t
+* size_t - длина строки
 
 # ::stappler::string::length<typename>(_CharT const*,size_t)
 
 ## BRIEF
 
+Вычисляет длину строки в буфере, если она меньше значения
+
 ## CONTENT
 
+Вычисляет длину строки в буфере, если она меньше значения
+
 Параметры шаблона:
-* typename _CharT
+* typename _CharT - тип символа в строке
 
 Параметры:
-* _CharT const*
-* size_t
+* _CharT const* - указатель на начало буфера, должен быть завершающий 0
+* size_t - максимальная длина строки
 
 Возвращает:
-* size_t
+* size_t - длина строки или максимальная длина
 
 # ::stappler::operator<<<typename>(std::basic_ostream<C>&,StringViewBase<C> const&)
 
 ## BRIEF
 
+Оператор вывода отображения в поток
+
 ## CONTENT
 
+Оператор вывода отображения в поток
+
 Параметры шаблона:
-* typename C
+* typename C = тип символа в отображении
 
 Параметры:
 * std::basic_ostream<C>&
@@ -2378,7 +3151,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Оператор вывода отображения в поток
+
 ## CONTENT
+
+Оператор вывода отображения в поток
 
 Параметры:
 * std::basic_ostream<char>&
@@ -2391,7 +3168,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Лексикографически сравнивает содержимое двух контейнеров
+
 ## CONTENT
+
+Лексикографически сравнивает содержимое двух контейнеров
 
 Параметры шаблона:
 * typename C
@@ -2407,7 +3188,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Лексикографически сравнивает содержимое двух контейнеров
+
 ## CONTENT
+
+Лексикографически сравнивает содержимое двух контейнеров
 
 Параметры шаблона:
 * typename C
@@ -2423,7 +3208,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Лексикографически сравнивает содержимое двух контейнеров
+
 ## CONTENT
+
+Лексикографически сравнивает содержимое двух контейнеров
 
 Параметры шаблона:
 * typename C
@@ -2439,7 +3228,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Лексикографически сравнивает содержимое двух контейнеров
+
 ## CONTENT
+
+Лексикографически сравнивает содержимое двух контейнеров
 
 Параметры шаблона:
 * typename C
@@ -2455,7 +3248,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Сравнивает содержимое двух контейнеров
+
 ## CONTENT
+
+Сравнивает содержимое двух контейнеров
 
 Параметры шаблона:
 * typename C
@@ -2471,7 +3268,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Сравнивает содержимое двух контейнеров
+
 ## CONTENT
+
+Сравнивает содержимое двух контейнеров
 
 Параметры шаблона:
 * typename C
@@ -2487,7 +3288,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Лексикографически сравнивает содержимое двух контейнеров
+
 ## CONTENT
+
+Лексикографически сравнивает содержимое двух контейнеров
 
 Параметры шаблона:
 * typename C
@@ -2503,7 +3308,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Лексикографически сравнивает содержимое двух контейнеров
+
 ## CONTENT
+
+Лексикографически сравнивает содержимое двух контейнеров
 
 Параметры шаблона:
 * typename C
@@ -2519,7 +3328,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Лексикографически сравнивает содержимое двух контейнеров
+
 ## CONTENT
+
+Лексикографически сравнивает содержимое двух контейнеров
 
 Параметры шаблона:
 * typename C
@@ -2535,7 +3348,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Лексикографически сравнивает содержимое двух контейнеров
+
 ## CONTENT
+
+Лексикографически сравнивает содержимое двух контейнеров
 
 Параметры шаблона:
 * typename C
@@ -2551,7 +3368,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Сравнивает содержимое двух контейнеров
+
 ## CONTENT
+
+Сравнивает содержимое двух контейнеров
 
 Параметры шаблона:
 * typename C
@@ -2567,7 +3388,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Сравнивает содержимое двух контейнеров
+
 ## CONTENT
+
+Сравнивает содержимое двух контейнеров
 
 Параметры шаблона:
 * typename C
@@ -2583,7 +3408,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Лексикографически сравнивает содержимое двух контейнеров
+
 ## CONTENT
+
+Лексикографически сравнивает содержимое двух контейнеров
 
 Параметры шаблона:
 * typename C
@@ -2599,7 +3428,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Лексикографически сравнивает содержимое двух контейнеров
+
 ## CONTENT
+
+Лексикографически сравнивает содержимое двух контейнеров
 
 Параметры шаблона:
 * typename C
@@ -2615,7 +3448,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Лексикографически сравнивает содержимое двух контейнеров
+
 ## CONTENT
+
+Лексикографически сравнивает содержимое двух контейнеров
 
 Параметры шаблона:
 * typename C
@@ -2631,7 +3468,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Лексикографически сравнивает содержимое двух контейнеров
+
 ## CONTENT
+
+Лексикографически сравнивает содержимое двух контейнеров
 
 Параметры шаблона:
 * typename C
@@ -2647,7 +3488,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Сравнивает содержимое двух контейнеров
+
 ## CONTENT
+
+Сравнивает содержимое двух контейнеров
 
 Параметры шаблона:
 * typename C
@@ -2663,7 +3508,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Сравнивает содержимое двух контейнеров
+
 ## CONTENT
+
+Сравнивает содержимое двух контейнеров
 
 Параметры шаблона:
 * typename C
@@ -2679,7 +3528,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Лексикографически сравнивает содержимое двух контейнеров
+
 ## CONTENT
+
+Лексикографически сравнивает содержимое двух контейнеров
 
 Параметры шаблона:
 * typename C
@@ -2695,7 +3548,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Лексикографически сравнивает содержимое двух контейнеров
+
 ## CONTENT
+
+Лексикографически сравнивает содержимое двух контейнеров
 
 Параметры шаблона:
 * typename C
@@ -2711,7 +3568,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Лексикографически сравнивает содержимое двух контейнеров
+
 ## CONTENT
+
+Лексикографически сравнивает содержимое двух контейнеров
 
 Параметры шаблона:
 * typename C
@@ -2727,7 +3588,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Лексикографически сравнивает содержимое двух контейнеров
+
 ## CONTENT
+
+Лексикографически сравнивает содержимое двух контейнеров
 
 Параметры шаблона:
 * typename C
@@ -2743,7 +3608,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Сравнивает содержимое двух контейнеров
+
 ## CONTENT
+
+Сравнивает содержимое двух контейнеров
 
 Параметры шаблона:
 * typename C
@@ -2759,7 +3628,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Сравнивает содержимое двух контейнеров
+
 ## CONTENT
+
+Сравнивает содержимое двух контейнеров
 
 Параметры шаблона:
 * typename C
@@ -2775,7 +3648,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Лексикографически сравнивает содержимое двух контейнеров
+
 ## CONTENT
+
+Лексикографически сравнивает содержимое двух контейнеров
 
 Параметры шаблона:
 * typename C
@@ -2791,7 +3668,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Лексикографически сравнивает содержимое двух контейнеров
+
 ## CONTENT
+
+Лексикографически сравнивает содержимое двух контейнеров
 
 Параметры шаблона:
 * typename C
@@ -2807,7 +3688,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Лексикографически сравнивает содержимое двух контейнеров
+
 ## CONTENT
+
+Лексикографически сравнивает содержимое двух контейнеров
 
 Параметры шаблона:
 * typename C
@@ -2823,7 +3708,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Лексикографически сравнивает содержимое двух контейнеров
+
 ## CONTENT
+
+Лексикографически сравнивает содержимое двух контейнеров
 
 Параметры шаблона:
 * typename C
@@ -2839,7 +3728,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Соединяет строку со строковым отобраежением
+
 ## CONTENT
+
+Соединяет строку со строковым отобраежением, получая новую строку
 
 Параметры шаблона:
 * typename C
@@ -2855,7 +3748,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Соединяет строку со строковым отобраежением
+
 ## CONTENT
+
+Соединяет строку со строковым отобраежением, получая новую строку
 
 Параметры шаблона:
 * typename C
@@ -2871,7 +3768,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Соединяет строку со строковым отобраежением
+
 ## CONTENT
+
+Соединяет строку со строковым отобраежением, получая новую строку
 
 Параметры шаблона:
 * typename C
@@ -2887,7 +3788,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Соединяет строку со строковым отобраежением
+
 ## CONTENT
+
+Соединяет строку со строковым отобраежением, получая новую строку
 
 Параметры шаблона:
 * typename C
@@ -2903,7 +3808,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Соединяет строку со строковым отобраежением
+
 ## CONTENT
+
+Соединяет строку со строковым отобраежением, получая новую строку
 
 Параметры шаблона:
 * typename C
@@ -2919,7 +3828,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Соединяет строку со строковым отобраежением
+
 ## CONTENT
+
+Соединяет строку со строковым отобраежением, получая новую строку
 
 Параметры шаблона:
 * typename C
@@ -2935,7 +3848,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Соединяет строку со строковым отобраежением
+
 ## CONTENT
+
+Соединяет строку со строковым отобраежением, получая новую строку
 
 Параметры шаблона:
 * typename C
@@ -2951,7 +3868,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Соединяет строку со строковым отобраежением
+
 ## CONTENT
+
+Соединяет строку со строковым отобраежением, получая новую строку
 
 Параметры шаблона:
 * typename C
@@ -2963,1395 +3884,15 @@ Title: SPStringView.h
 Возвращает:
 * typename memory::PoolInterface::BasicStringType<C>
 
-# ::stappler::StringViewBase<typename>::merge<typename,typename,typename>(Args &&...)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Interface
-* typename Args
-* typename _CharType
-
-Параметры:
-* Args &&...
-
-Возвращает:
-* typename Interface::template BasicStringType<stappler::StringViewBase::CharType>
-
-# ::stappler::StringViewBase<typename>::__size<typename,typename>(T const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename T
-* typename _CharType
-
-Параметры:
-* T const&
-
-Возвращает:
-* size_t
-
-# ::stappler::StringViewBase<typename>::__size(stappler::StringViewBase::CharType const*)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringViewBase::CharType const*
-
-Возвращает:
-* size_t
-
-# ::stappler::StringViewBase<typename>::_size<typename,typename,typename>(T&&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename T
-* typename Args
-* typename _CharType
-
-Параметры:
-* T&&
-
-Возвращает:
-* size_t
-
-# ::stappler::StringViewBase<typename>::_size<typename,typename,typename>(T&&,Args &&...)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename T
-* typename Args
-* typename _CharType
-
-Параметры:
-* T&&
-* Args &&...
-
-Возвращает:
-* size_t
-
-# ::stappler::StringViewBase<typename>::__merge<typename,typename,typename>(Buf&,T const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Buf
-* typename T
-* typename _CharType
-
-Параметры:
-* Buf&
-* T const&
-
-
-# ::stappler::StringViewBase<typename>::__merge<typename,typename>(Buf&,stappler::StringViewBase::CharType const*)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Buf
-* typename _CharType
-
-Параметры:
-* Buf&
-* stappler::StringViewBase::CharType const*
-
-
-# ::stappler::StringViewBase<typename>::_merge<typename,typename,typename,typename>(Buf&,T&&,Args &&...)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Buf
-* typename T
-* typename Args
-* typename _CharType
-
-Параметры:
-* Buf&
-* T&&
-* Args &&...
-
-
-# ::stappler::StringViewBase<typename>::_merge<typename,typename,typename>(Buf&,T&&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Buf
-* typename T
-* typename _CharType
-
-Параметры:
-* Buf&
-* T&&
-
-
-# ::stappler::StringViewBase<typename>::StringViewBase()
-
-## BRIEF
-
-## CONTENT
-
-
-# ::stappler::StringViewBase<typename>::StringViewBase(stappler::StringViewBase::CharType const*,size_t)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringViewBase::CharType const*
-* size_t
-
-
-# ::stappler::StringViewBase<typename>::StringViewBase(stappler::StringViewBase::CharType const*,size_t,size_t)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringViewBase::CharType const*
-* size_t
-* size_t
-
-
-# ::stappler::StringViewBase<typename>::StringViewBase(stappler::StringViewBase::Self const&,size_t,size_t)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringViewBase::Self const&
-* size_t
-* size_t
-
-
-# ::stappler::StringViewBase<typename>::StringViewBase(stappler::StringViewBase::Self const&,size_t)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringViewBase::Self const&
-* size_t
-
-
-# ::stappler::StringViewBase(char const*,size_t)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* char const*
-* size_t
-
-
-# ::stappler::StringViewBase<typename>::StringViewBase(stappler::StringViewBase::PoolString const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringViewBase::PoolString const&
-
-
-# ::stappler::StringViewBase<typename>::StringViewBase(stappler::StringViewBase::StdString const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringViewBase::StdString const&
-
-
-# ::stappler::StringViewBase<typename>::operator=(stappler::StringViewBase::PoolString const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringViewBase::PoolString const&
-
-Возвращает:
-* Self&
-
-# ::stappler::StringViewBase<typename>::operator=(stappler::StringViewBase::StdString const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringViewBase::StdString const&
-
-Возвращает:
-* Self&
-
-# ::stappler::StringViewBase<typename>::operator=(stappler::StringViewBase::Self const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringViewBase::Self const&
-
-Возвращает:
-* Self&
-
-# ::stappler::StringViewBase<typename>::set(stappler::StringViewBase::PoolString const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringViewBase::PoolString const&
-
-Возвращает:
-* Self&
-
-# ::stappler::StringViewBase<typename>::set(stappler::StringViewBase::StdString const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringViewBase::StdString const&
-
-Возвращает:
-* Self&
-
-# ::stappler::StringViewBase<typename>::set(stappler::StringViewBase::Self const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringViewBase::Self const&
-
-Возвращает:
-* Self&
-
-# ::stappler::StringViewBase<typename>::set(stappler::StringViewBase::CharType const*,size_t)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringViewBase::CharType const*
-* size_t
-
-Возвращает:
-* Self&
-
-# ::stappler::StringViewBase<typename>::operator==(stappler::StringViewBase::Self const&) const
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringViewBase::Self const&
-
-Возвращает:
-* bool
-
-# ::stappler::StringViewBase<typename>::operator!=(stappler::StringViewBase::Self const&) const
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringViewBase::Self const&
-
-Возвращает:
-* bool
-
-# ::stappler::StringViewBase<typename>::pdup(memory::pool_t*) const
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* memory::pool_t*
-
-Возвращает:
-* Self
-
-# ::stappler::StringViewBase<typename>::str<typename,typename>() const
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Interface
-* typename _CharType
-
-Возвращает:
-* typename Interface::template BasicStringType<stappler::StringViewBase::CharType>
-
-# ::stappler::StringViewBase<typename>::operator++()
-
-## BRIEF
-
-## CONTENT
-
-Возвращает:
-* Self&
-
-# ::stappler::StringViewBase<typename>::operator++(int)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* int
-
-Возвращает:
-* Self&
-
-# ::stappler::StringViewBase<typename>::operator+=(size_t)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* size_t
-
-Возвращает:
-* Self&
-
-# ::stappler::StringViewBase<typename>::is(stappler::StringViewBase::CharType const&) const
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringViewBase::CharType const&
-
-Возвращает:
-* bool
-
-# ::stappler::StringViewBase<typename>::is(stappler::StringViewBase::CharType const*) const
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringViewBase::CharType const*
-
-Возвращает:
-* bool
-
-# ::stappler::StringViewBase<typename>::is(stappler::StringViewBase::Self const&) const
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringViewBase::Self const&
-
-Возвращает:
-* bool
-
-# ::stappler::StringViewBase<typename>::is<_CharType,typename>() const
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* _CharType C
-* typename _CharType
-
-Возвращает:
-* bool
-
-# ::stappler::StringViewBase<typename>::is<stappler::CharGroupId,typename>() const
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* stappler::CharGroupId G
-* typename _CharType
-
-Возвращает:
-* bool
-
-# ::stappler::StringViewBase<typename>::is<typename,typename>() const
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename M
-* typename _CharType
-
-Возвращает:
-* bool
-
-# ::stappler::StringViewBase<typename>::begin() const
-
-## BRIEF
-
-## CONTENT
-
-Возвращает:
-* Self
-
-# ::stappler::StringViewBase<typename>::end() const
-
-## BRIEF
-
-## CONTENT
-
-Возвращает:
-* Self
-
-# ::stappler::StringViewBase<typename>::operator-(stappler::StringViewBase::Self const&) const
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringViewBase::Self const&
-
-Возвращает:
-* Self
-
-# ::stappler::StringViewBase<typename>::operator-=(stappler::StringViewBase::Self const&) const
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringViewBase::Self const&
-
-Возвращает:
-* Self&
-
-# ::stappler::StringViewBase<typename>::readFloat()
-
-## BRIEF
-
-## CONTENT
-
-Возвращает:
-* Result<float>
-
-# ::stappler::StringViewBase<typename>::readDouble()
-
-## BRIEF
-
-## CONTENT
-
-Возвращает:
-* Result<double>
-
-# ::stappler::StringViewBase<typename>::readInteger(int)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* int
-
-Возвращает:
-* Result<int64_t>
-
-# ::stappler::StringViewBase<typename>::skipChars<typename,typename>()
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Args
-* typename _CharType
-
-
-# ::stappler::StringViewBase<typename>::skipUntil<typename,typename>()
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Args
-* typename _CharType
-
-
-# ::stappler::StringViewBase<typename>::backwardSkipChars<typename,typename>()
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Args
-* typename _CharType
-
-
-# ::stappler::StringViewBase<typename>::backwardSkipUntil<typename,typename>()
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Args
-* typename _CharType
-
-
-# ::stappler::StringViewBase<typename>::skipString(stappler::StringViewBase::Self const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringViewBase::Self const&
-
-Возвращает:
-* bool
-
-# ::stappler::StringViewBase<typename>::skipUntilString(stappler::StringViewBase::Self const&,bool)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringViewBase::Self const&
-* bool
-
-Возвращает:
-* bool
-
-# ::stappler::StringViewBase<typename>::readChars<typename,typename>()
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Args
-* typename _CharType
-
-Возвращает:
-* Self
-
-# ::stappler::StringViewBase<typename>::readUntil<typename,typename>()
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Args
-* typename _CharType
-
-Возвращает:
-* Self
-
-# ::stappler::StringViewBase<typename>::backwardReadChars<typename,typename>()
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Args
-* typename _CharType
-
-Возвращает:
-* Self
-
-# ::stappler::StringViewBase<typename>::backwardReadUntil<typename,typename>()
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Args
-* typename _CharType
-
-Возвращает:
-* Self
-
-# ::stappler::StringViewBase<typename>::readUntilString(stappler::StringViewBase::Self const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringViewBase::Self const&
-
-Возвращает:
-* Self
-
-# ::stappler::StringViewBase<typename>::split<typename,typename,typename>(Callback const&) const
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Separator
-* typename Callback
-* typename _CharType
-
-Параметры:
-* Callback const&
-
-
-# ::stappler::StringViewBase<typename>::trimChars<typename,typename>()
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Args
-* typename _CharType
-
-
-# ::stappler::StringViewBase<typename>::trimUntil<typename,typename>()
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Args
-* typename _CharType
-
-
-# ::stappler::StringViewBase<typename>::match<typename,typename>(stappler::StringViewBase::CharType)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Args
-* typename _CharType
-
-Параметры:
-* stappler::StringViewBase::CharType
-
-Возвращает:
-* bool
-
-# ::stappler::StringViewUtf8::StringViewUtf8()
-
-## BRIEF
-
-## CONTENT
-
-
-# ::stappler::StringViewUtf8::StringViewUtf8(char const*,size_t)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* char const*
-* size_t
-
-
-# ::stappler::StringViewUtf8::StringViewUtf8(char const*,size_t,size_t)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* char const*
-* size_t
-* size_t
-
-
-# ::stappler::StringViewUtf8::StringViewUtf8(stappler::StringViewUtf8 const&,size_t)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringViewUtf8 const&
-* size_t
-
-
-# ::stappler::StringViewUtf8::StringViewUtf8(stappler::StringViewUtf8 const&,size_t,size_t)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringViewUtf8 const&
-* size_t
-* size_t
-
-
-# ::stappler::StringViewUtf8::StringViewUtf8(stappler::StringViewUtf8::PoolString const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringViewUtf8::PoolString const&
-
-
-# ::stappler::StringViewUtf8::StringViewUtf8(stappler::StringViewUtf8::StdString const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringViewUtf8::StdString const&
-
-
-# ::stappler::StringViewUtf8::StringViewUtf8(StringViewBase<char> const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* StringViewBase<char> const&
-
-
-# ::stappler::StringViewUtf8::operator=(stappler::StringViewUtf8::PoolString const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringViewUtf8::PoolString const&
-
-Возвращает:
-* Self&
-
-# ::stappler::StringViewUtf8::operator=(stappler::StringViewUtf8::StdString const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringViewUtf8::StdString const&
-
-Возвращает:
-* Self&
-
-# ::stappler::StringViewUtf8::operator=(stappler::StringViewUtf8::Self const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringViewUtf8::Self const&
-
-Возвращает:
-* Self&
-
-# ::stappler::StringViewUtf8::set(stappler::StringViewUtf8::PoolString const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringViewUtf8::PoolString const&
-
-Возвращает:
-* Self&
-
-# ::stappler::StringViewUtf8::set(stappler::StringViewUtf8::StdString const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringViewUtf8::StdString const&
-
-Возвращает:
-* Self&
-
-# ::stappler::StringViewUtf8::set(stappler::StringViewUtf8::Self const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringViewUtf8::Self const&
-
-Возвращает:
-* Self&
-
-# ::stappler::StringViewUtf8::set(char const*,size_t)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* char const*
-* size_t
-
-Возвращает:
-* Self&
-
-# ::stappler::StringViewUtf8::is(char const&) const
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* char const&
-
-Возвращает:
-* bool
-
-# ::stappler::StringViewUtf8::is(char16_t const&) const
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* char16_t const&
-
-Возвращает:
-* bool
-
-# ::stappler::StringViewUtf8::is(char const*) const
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* char const*
-
-Возвращает:
-* bool
-
-# ::stappler::StringViewUtf8::is(stappler::StringViewUtf8::Self const&) const
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringViewUtf8::Self const&
-
-Возвращает:
-* bool
-
-# ::stappler::StringViewUtf8::is<char16_t>() const
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* char16_t C
-
-Возвращает:
-* bool
-
-# ::stappler::StringViewUtf8::is<stappler::CharGroupId>() const
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* stappler::CharGroupId G
-
-Возвращает:
-* bool
-
-# ::stappler::StringViewUtf8::is<typename>() const
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename M
-
-Возвращает:
-* bool
-
-# ::stappler::StringViewUtf8::letter<typename>() const
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Interface
-
-Возвращает:
-* typename Interface::StringType
-
-# ::stappler::StringViewUtf8::str<typename>() const
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Interface
-
-Возвращает:
-* typename Interface::StringType
-
-# ::stappler::StringViewUtf8::operator==(stappler::StringViewUtf8::Self const&) const
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringViewUtf8::Self const&
-
-Возвращает:
-* bool
-
-# ::stappler::StringViewUtf8::operator!=(stappler::StringViewUtf8::Self const&) const
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringViewUtf8::Self const&
-
-Возвращает:
-* bool
-
-# ::stappler::StringViewUtf8::offset(size_t)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* size_t
-
-
-# ::stappler::StringViewUtf8::operator++()
-
-## BRIEF
-
-## CONTENT
-
-Возвращает:
-* Self&
-
-# ::stappler::StringViewUtf8::operator++(int)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* int
-
-Возвращает:
-* Self&
-
-# ::stappler::StringViewUtf8::operator+=(size_t)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* size_t
-
-Возвращает:
-* Self&
-
-# ::stappler::StringViewUtf8::isSpace() const
-
-## BRIEF
-
-## CONTENT
-
-Возвращает:
-* bool
-
-# ::stappler::StringViewUtf8::begin() const
-
-## BRIEF
-
-## CONTENT
-
-Возвращает:
-* Self
-
-# ::stappler::StringViewUtf8::end() const
-
-## BRIEF
-
-## CONTENT
-
-Возвращает:
-* Self
-
-# ::stappler::StringViewUtf8::operator-(stappler::StringViewUtf8::Self const&) const
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringViewUtf8::Self const&
-
-Возвращает:
-* Self
-
-# ::stappler::StringViewUtf8::operator-=(stappler::StringViewUtf8::Self const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringViewUtf8::Self const&
-
-Возвращает:
-* Self&
-
-# ::stappler::StringViewUtf8::operator*() const
-
-## BRIEF
-
-## CONTENT
-
-Возвращает:
-* MatchCharType
-
-# ::stappler::StringViewUtf8::foreach<typename>(Callback const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Callback
-
-Параметры:
-* Callback const&
-
-
-# ::stappler::StringViewUtf8::code_size() const
-
-## BRIEF
-
-## CONTENT
-
-Возвращает:
-* size_t
-
-# ::stappler::StringViewUtf8::operator StringViewBase<char>() const
-
-## BRIEF
-
-## CONTENT
-
-Возвращает:
-* StringViewBase<char>
-
-# ::stappler::StringViewUtf8::readFloat()
-
-## BRIEF
-
-## CONTENT
-
-Возвращает:
-* Result<float>
-
-# ::stappler::StringViewUtf8::readDouble()
-
-## BRIEF
-
-## CONTENT
-
-Возвращает:
-* Result<double>
-
-# ::stappler::StringViewUtf8::readInteger(int)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* int
-
-Возвращает:
-* Result<int64_t>
-
-# ::stappler::StringViewUtf8::skipChars<typename>()
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Args
-
-
-# ::stappler::StringViewUtf8::skipUntil<typename>()
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Args
-
-
-# ::stappler::StringViewUtf8::backwardSkipChars<typename>()
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Args
-
-
-# ::stappler::StringViewUtf8::backwardSkipUntil<typename>()
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Args
-
-
-# ::stappler::StringViewUtf8::skipString(stappler::StringViewUtf8::Self const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringViewUtf8::Self const&
-
-Возвращает:
-* bool
-
-# ::stappler::StringViewUtf8::skipUntilString(stappler::StringViewUtf8::Self const&,bool)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringViewUtf8::Self const&
-* bool
-
-Возвращает:
-* bool
-
-# ::stappler::StringViewUtf8::readChars<typename>()
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Args
-
-Возвращает:
-* Self
-
-# ::stappler::StringViewUtf8::readUntil<typename>()
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Args
-
-Возвращает:
-* Self
-
-# ::stappler::StringViewUtf8::backwardReadChars<typename>()
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Args
-
-Возвращает:
-* Self
-
-# ::stappler::StringViewUtf8::backwardReadUntil<typename>()
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Args
-
-Возвращает:
-* Self
-
-# ::stappler::StringViewUtf8::readUntilString(stappler::StringViewUtf8::Self const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringViewUtf8::Self const&
-
-Возвращает:
-* Self
-
-# ::stappler::StringViewUtf8::split<typename,typename>(Callback const&) const
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Separator
-* typename Callback
-
-Параметры:
-* Callback const&
-
-
-# ::stappler::StringViewUtf8::trimChars<typename>()
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Args
-
-
-# ::stappler::StringViewUtf8::trimUntil<typename>()
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Args
-
-
-# ::stappler::StringViewUtf8::rv_match_utf8<typename>(stappler::StringViewUtf8::CharType const*,size_t,uint8_t&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Args
-
-Параметры:
-* stappler::StringViewUtf8::CharType const*
-* size_t
-* uint8_t&
-
-Возвращает:
-* bool
-
-# ::stappler::StringViewUtf8::match<typename>(char16_t)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Args
-
-Параметры:
-* char16_t
-
-Возвращает:
-* bool
-
 # ::stappler::operator<<(Callback<void (StringViewBase<char>)> const&,char const*)
 
 ## BRIEF
 
+Использует функцию как поток для вывода аргумента
+
 ## CONTENT
+
+Использует функцию как поток для вывода аргумента
 
 Параметры:
 * Callback<void (StringViewBase<char>)> const&
@@ -4360,11 +3901,15 @@ Title: SPStringView.h
 Возвращает:
 * Callback<void (StringViewBase<char>)> const&
 
-# ::stappler::operator<<<size_t>(Callback<void (StringViewBase<char>)> const&,char const[N],StringViewBase<char>)
+# ::stappler::operator<<<size_t>(Callback<void (StringViewBase<char>)> const&,char const[N])
 
 ## BRIEF
 
+Использует функцию как поток для вывода аргумента
+
 ## CONTENT
+
+Использует функцию как поток для вывода аргумента
 
 Параметры шаблона:
 * size_t N
@@ -4372,7 +3917,6 @@ Title: SPStringView.h
 Параметры:
 * Callback<void (StringViewBase<char>)> const&
 * char const[N]
-* StringViewBase<char>
 
 Возвращает:
 * Callback<void (StringViewBase<char>)> const&
@@ -4381,7 +3925,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Использует функцию как поток для вывода аргумента
+
 ## CONTENT
+
+Использует функцию как поток для вывода аргумента
 
 Параметры:
 * Callback<void (StringViewBase<char>)> const&
@@ -4394,7 +3942,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Использует функцию как поток для вывода аргумента
+
 ## CONTENT
+
+Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
 
 Параметры:
 * Callback<void (StringViewBase<char>)> const&
@@ -4407,7 +3959,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Использует функцию как поток для вывода аргумента
+
 ## CONTENT
+
+Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
 
 Параметры:
 * Callback<void (StringViewBase<char>)> const&
@@ -4420,7 +3976,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Использует функцию как поток для вывода аргумента
+
 ## CONTENT
+
+Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
 
 Параметры:
 * Callback<void (StringViewBase<char>)> const&
@@ -4429,11 +3989,52 @@ Title: SPStringView.h
 Возвращает:
 * Callback<void (StringViewBase<char>)> const&
 
+# ::stappler::operator<<(Callback<void (StringViewBase<char16_t>)> const&,char16_t const*)
+
+## BRIEF
+
+Использует функцию как поток для вывода аргумента
+
+## CONTENT
+
+Использует функцию как поток для вывода аргумента
+
+Параметры:
+* Callback<void (StringViewBase<char16_t>)> const&
+* char16_t const*
+
+Возвращает:
+* Callback<void (StringViewBase<char16_t>)> const&
+
+# ::stappler::operator<<<size_t>(Callback<void (StringViewBase<char16_t>)> const&,char16_t const[N])
+
+## BRIEF
+
+Использует функцию как поток для вывода аргумента
+
+## CONTENT
+
+Использует функцию как поток для вывода аргумента
+
+Параметры шаблона:
+* size_t N
+
+Параметры:
+* Callback<void (StringViewBase<char16_t>)> const&
+* char16_t const[N]
+
+Возвращает:
+* Callback<void (StringViewBase<char16_t>)> const&
+
 # ::stappler::operator<<(Callback<void (StringViewBase<char16_t>)> const&,StringViewBase<char16_t>)
 
 ## BRIEF
 
+Использует функцию как поток для вывода аргумента
+
 ## CONTENT
+
+Использует функцию как поток для вывода аргумента
 
 Параметры:
 * Callback<void (StringViewBase<char16_t>)> const&
@@ -4442,11 +4043,32 @@ Title: SPStringView.h
 Возвращает:
 * Callback<void (StringViewBase<char16_t>)> const&
 
+# ::stappler::operator<<(Callback<void (StringViewBase<char16_t>)> const&,double)
+
+## BRIEF
+
+Использует функцию как поток для вывода аргумента
+
+## CONTENT
+
+Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
+
+Параметры:
+* Callback<void (StringViewBase<char16_t>)> const&
+* double
+
+Возвращает:
+* Callback<void (StringViewBase<char16_t>)> const&
+
 # ::stappler::operator<<(Callback<void (StringViewBase<char16_t>)> const&,int64_t)
 
 ## BRIEF
 
+Использует функцию как поток для вывода аргумента
+
 ## CONTENT
+
+Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
 
 Параметры:
 * Callback<void (StringViewBase<char16_t>)> const&
@@ -4459,7 +4081,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Использует функцию как поток для вывода аргумента
+
 ## CONTENT
+
+Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
 
 Параметры:
 * Callback<void (StringViewBase<char16_t>)> const&
@@ -4468,11 +4094,52 @@ Title: SPStringView.h
 Возвращает:
 * Callback<void (StringViewBase<char16_t>)> const&
 
+# ::stappler::operator<<(Callback<void (stappler::StringViewUtf8)> const&,char const*)
+
+## BRIEF
+
+Использует функцию как поток для вывода аргумента
+
+## CONTENT
+
+Использует функцию как поток для вывода аргумента
+
+Параметры:
+* Callback<void (stappler::StringViewUtf8)> const&
+* char const*
+
+Возвращает:
+* Callback<void (stappler::StringViewUtf8)> const&
+
+# ::stappler::operator<<<size_t>(Callback<void (stappler::StringViewUtf8)> const&,char const[N])
+
+## BRIEF
+
+Использует функцию как поток для вывода аргумента
+
+## CONTENT
+
+Использует функцию как поток для вывода аргумента
+
+Параметры шаблона:
+* size_t N
+
+Параметры:
+* Callback<void (stappler::StringViewUtf8)> const&
+* char const[N]
+
+Возвращает:
+* Callback<void (stappler::StringViewUtf8)> const&
+
 # ::stappler::operator<<(Callback<void (stappler::StringViewUtf8)> const&,stappler::StringViewUtf8)
 
 ## BRIEF
 
+Использует функцию как поток для вывода аргумента
+
 ## CONTENT
+
+Использует функцию как поток для вывода аргумента
 
 Параметры:
 * Callback<void (stappler::StringViewUtf8)> const&
@@ -4481,11 +4148,32 @@ Title: SPStringView.h
 Возвращает:
 * Callback<void (stappler::StringViewUtf8)> const&
 
+# ::stappler::operator<<(Callback<void (stappler::StringViewUtf8)> const&,double)
+
+## BRIEF
+
+Использует функцию как поток для вывода аргумента
+
+## CONTENT
+
+Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
+
+Параметры:
+* Callback<void (stappler::StringViewUtf8)> const&
+* double
+
+Возвращает:
+* Callback<void (stappler::StringViewUtf8)> const&
+
 # ::stappler::operator<<(Callback<void (stappler::StringViewUtf8)> const&,int64_t)
 
 ## BRIEF
 
+Использует функцию как поток для вывода аргумента
+
 ## CONTENT
+
+Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
 
 Параметры:
 * Callback<void (stappler::StringViewUtf8)> const&
@@ -4498,7 +4186,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Использует функцию как поток для вывода аргумента
+
 ## CONTENT
+
+Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
 
 Параметры:
 * Callback<void (stappler::StringViewUtf8)> const&
@@ -4511,7 +4203,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Использует функцию как поток для вывода аргумента
+
 ## CONTENT
+
+Использует функцию как поток для вывода аргумента
 
 Параметры:
 * std::function<void (StringViewBase<char>)> const&
@@ -4520,11 +4216,15 @@ Title: SPStringView.h
 Возвращает:
 * std::function<void (StringViewBase<char>)> const&
 
-# ::stappler::operator<<<size_t>(std::function<void (StringViewBase<char>)> const&,char const[N],StringViewBase<char>)
+# ::stappler::operator<<<size_t>(std::function<void (StringViewBase<char>)> const&,char const[N])
 
 ## BRIEF
 
+Использует функцию как поток для вывода аргумента
+
 ## CONTENT
+
+Использует функцию как поток для вывода аргумента
 
 Параметры шаблона:
 * size_t N
@@ -4532,7 +4232,6 @@ Title: SPStringView.h
 Параметры:
 * std::function<void (StringViewBase<char>)> const&
 * char const[N]
-* StringViewBase<char>
 
 Возвращает:
 * std::function<void (StringViewBase<char>)> const&
@@ -4541,7 +4240,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Использует функцию как поток для вывода аргумента
+
 ## CONTENT
+
+Использует функцию как поток для вывода аргумента
 
 Параметры:
 * std::function<void (StringViewBase<char>)> const&
@@ -4554,7 +4257,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Использует функцию как поток для вывода аргумента
+
 ## CONTENT
+
+Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
 
 Параметры:
 * std::function<void (StringViewBase<char>)> const&
@@ -4567,7 +4274,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Использует функцию как поток для вывода аргумента
+
 ## CONTENT
+
+Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
 
 Параметры:
 * std::function<void (StringViewBase<char>)> const&
@@ -4580,7 +4291,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Использует функцию как поток для вывода аргумента
+
 ## CONTENT
+
+Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
 
 Параметры:
 * std::function<void (StringViewBase<char>)> const&
@@ -4589,11 +4304,52 @@ Title: SPStringView.h
 Возвращает:
 * std::function<void (StringViewBase<char>)> const&
 
+# ::stappler::operator<<(std::function<void (StringViewBase<char16_t>)> const&,char16_t const*)
+
+## BRIEF
+
+Использует функцию как поток для вывода аргумента
+
+## CONTENT
+
+Использует функцию как поток для вывода аргумента
+
+Параметры:
+* std::function<void (StringViewBase<char16_t>)> const&
+* char16_t const*
+
+Возвращает:
+* std::function<void (StringViewBase<char16_t>)> const&
+
+# ::stappler::operator<<<size_t>(std::function<void (StringViewBase<char16_t>)> const&,char16_t const[N])
+
+## BRIEF
+
+Использует функцию как поток для вывода аргумента
+
+## CONTENT
+
+Использует функцию как поток для вывода аргумента
+
+Параметры шаблона:
+* size_t N
+
+Параметры:
+* std::function<void (StringViewBase<char16_t>)> const&
+* char16_t const[N]
+
+Возвращает:
+* std::function<void (StringViewBase<char16_t>)> const&
+
 # ::stappler::operator<<(std::function<void (StringViewBase<char16_t>)> const&,StringViewBase<char16_t>)
 
 ## BRIEF
 
+Использует функцию как поток для вывода аргумента
+
 ## CONTENT
+
+Использует функцию как поток для вывода аргумента
 
 Параметры:
 * std::function<void (StringViewBase<char16_t>)> const&
@@ -4602,11 +4358,32 @@ Title: SPStringView.h
 Возвращает:
 * std::function<void (StringViewBase<char16_t>)> const&
 
+# ::stappler::operator<<(std::function<void (StringViewBase<char16_t>)> const&,double)
+
+## BRIEF
+
+Использует функцию как поток для вывода аргумента
+
+## CONTENT
+
+Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
+
+Параметры:
+* std::function<void (StringViewBase<char16_t>)> const&
+* double
+
+Возвращает:
+* std::function<void (StringViewBase<char16_t>)> const&
+
 # ::stappler::operator<<(std::function<void (StringViewBase<char16_t>)> const&,int64_t)
 
 ## BRIEF
 
+Использует функцию как поток для вывода аргумента
+
 ## CONTENT
+
+Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
 
 Параметры:
 * std::function<void (StringViewBase<char16_t>)> const&
@@ -4619,7 +4396,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Использует функцию как поток для вывода аргумента
+
 ## CONTENT
+
+Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
 
 Параметры:
 * std::function<void (StringViewBase<char16_t>)> const&
@@ -4628,11 +4409,52 @@ Title: SPStringView.h
 Возвращает:
 * std::function<void (StringViewBase<char16_t>)> const&
 
+# ::stappler::operator<<(std::function<void (StringViewUtf8)> const&,char const*)
+
+## BRIEF
+
+Использует функцию как поток для вывода аргумента
+
+## CONTENT
+
+Использует функцию как поток для вывода аргумента
+
+Параметры:
+* std::function<void (StringViewUtf8)> const&
+* char const*
+
+Возвращает:
+* std::function<void (StringViewUtf8)> const&
+
+# ::stappler::operator<<<size_t>(std::function<void (StringViewUtf8)> const&,char const[N])
+
+## BRIEF
+
+Использует функцию как поток для вывода аргумента
+
+## CONTENT
+
+Использует функцию как поток для вывода аргумента
+
+Параметры шаблона:
+* size_t N
+
+Параметры:
+* std::function<void (StringViewUtf8)> const&
+* char const[N]
+
+Возвращает:
+* std::function<void (StringViewUtf8)> const&
+
 # ::stappler::operator<<(std::function<void (StringViewUtf8)> const&,stappler::StringViewUtf8)
 
 ## BRIEF
 
+Использует функцию как поток для вывода аргумента
+
 ## CONTENT
+
+Использует функцию как поток для вывода аргумента
 
 Параметры:
 * std::function<void (StringViewUtf8)> const&
@@ -4641,11 +4463,32 @@ Title: SPStringView.h
 Возвращает:
 * std::function<void (StringViewUtf8)> const&
 
+# ::stappler::operator<<(std::function<void (StringViewUtf8)> const&,double)
+
+## BRIEF
+
+Использует функцию как поток для вывода аргумента
+
+## CONTENT
+
+Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
+
+Параметры:
+* std::function<void (StringViewUtf8)> const&
+* double
+
+Возвращает:
+* std::function<void (StringViewUtf8)> const&
+
 # ::stappler::operator<<(std::function<void (StringViewUtf8)> const&,int64_t)
 
 ## BRIEF
 
+Использует функцию как поток для вывода аргумента
+
 ## CONTENT
+
+Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
 
 Параметры:
 * std::function<void (StringViewUtf8)> const&
@@ -4658,7 +4501,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Использует функцию как поток для вывода аргумента
+
 ## CONTENT
+
+Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
 
 Параметры:
 * std::function<void (StringViewUtf8)> const&
@@ -4671,7 +4518,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Использует функцию как поток для вывода аргумента
+
 ## CONTENT
+
+Использует функцию как поток для вывода аргумента
 
 Параметры:
 * memory::function<void (StringViewBase<char>)> const&
@@ -4680,11 +4531,15 @@ Title: SPStringView.h
 Возвращает:
 * memory::function<void (StringViewBase<char>)> const&
 
-# ::stappler::operator<<<size_t>(memory::function<void (StringViewBase<char>)> const&,char const[N],StringViewBase<char>)
+# ::stappler::operator<<<size_t>(memory::function<void (StringViewBase<char>)> const&,char const[N])
 
 ## BRIEF
 
+Использует функцию как поток для вывода аргумента
+
 ## CONTENT
+
+Использует функцию как поток для вывода аргумента
 
 Параметры шаблона:
 * size_t N
@@ -4692,7 +4547,6 @@ Title: SPStringView.h
 Параметры:
 * memory::function<void (StringViewBase<char>)> const&
 * char const[N]
-* StringViewBase<char>
 
 Возвращает:
 * memory::function<void (StringViewBase<char>)> const&
@@ -4701,7 +4555,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Использует функцию как поток для вывода аргумента
+
 ## CONTENT
+
+Использует функцию как поток для вывода аргумента
 
 Параметры:
 * memory::function<void (StringViewBase<char>)> const&
@@ -4714,7 +4572,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Использует функцию как поток для вывода аргумента
+
 ## CONTENT
+
+Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
 
 Параметры:
 * memory::function<void (StringViewBase<char>)> const&
@@ -4727,7 +4589,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Использует функцию как поток для вывода аргумента
+
 ## CONTENT
+
+Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
 
 Параметры:
 * memory::function<void (StringViewBase<char>)> const&
@@ -4740,7 +4606,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Использует функцию как поток для вывода аргумента
+
 ## CONTENT
+
+Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
 
 Параметры:
 * memory::function<void (StringViewBase<char>)> const&
@@ -4749,11 +4619,52 @@ Title: SPStringView.h
 Возвращает:
 * memory::function<void (StringViewBase<char>)> const&
 
+# ::stappler::operator<<(memory::function<void (StringViewBase<char16_t>)> const&,char16_t const*)
+
+## BRIEF
+
+Использует функцию как поток для вывода аргумента
+
+## CONTENT
+
+Использует функцию как поток для вывода аргумента
+
+Параметры:
+* memory::function<void (StringViewBase<char16_t>)> const&
+* char16_t const*
+
+Возвращает:
+* memory::function<void (StringViewBase<char16_t>)> const&
+
+# ::stappler::operator<<<size_t>(memory::function<void (StringViewBase<char16_t>)> const&,char16_t const[N])
+
+## BRIEF
+
+Использует функцию как поток для вывода аргумента
+
+## CONTENT
+
+Использует функцию как поток для вывода аргумента
+
+Параметры шаблона:
+* size_t N
+
+Параметры:
+* memory::function<void (StringViewBase<char16_t>)> const&
+* char16_t const[N]
+
+Возвращает:
+* memory::function<void (StringViewBase<char16_t>)> const&
+
 # ::stappler::operator<<(memory::function<void (StringViewBase<char16_t>)> const&,StringViewBase<char16_t>)
 
 ## BRIEF
 
+Использует функцию как поток для вывода аргумента
+
 ## CONTENT
+
+Использует функцию как поток для вывода аргумента
 
 Параметры:
 * memory::function<void (StringViewBase<char16_t>)> const&
@@ -4762,11 +4673,32 @@ Title: SPStringView.h
 Возвращает:
 * memory::function<void (StringViewBase<char16_t>)> const&
 
+# ::stappler::operator<<(memory::function<void (StringViewBase<char16_t>)> const&,double)
+
+## BRIEF
+
+Использует функцию как поток для вывода аргумента
+
+## CONTENT
+
+Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
+
+Параметры:
+* memory::function<void (StringViewBase<char16_t>)> const&
+* double
+
+Возвращает:
+* memory::function<void (StringViewBase<char16_t>)> const&
+
 # ::stappler::operator<<(memory::function<void (StringViewBase<char16_t>)> const&,int64_t)
 
 ## BRIEF
 
+Использует функцию как поток для вывода аргумента
+
 ## CONTENT
+
+Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
 
 Параметры:
 * memory::function<void (StringViewBase<char16_t>)> const&
@@ -4779,7 +4711,11 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Использует функцию как поток для вывода аргумента
+
 ## CONTENT
+
+Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
 
 Параметры:
 * memory::function<void (StringViewBase<char16_t>)> const&
@@ -4788,11 +4724,52 @@ Title: SPStringView.h
 Возвращает:
 * memory::function<void (StringViewBase<char16_t>)> const&
 
+# ::stappler::operator<<(memory::function<void (StringViewUtf8)> const&,char const*)
+
+## BRIEF
+
+Использует функцию как поток для вывода аргумента
+
+## CONTENT
+
+Использует функцию как поток для вывода аргумента
+
+Параметры:
+* memory::function<void (StringViewUtf8)> const&
+* char const*
+
+Возвращает:
+* memory::function<void (StringViewUtf8)> const&
+
+# ::stappler::operator<<<size_t>(memory::function<void (StringViewUtf8)> const&,char const[N])
+
+## BRIEF
+
+Использует функцию как поток для вывода аргумента
+
+## CONTENT
+
+Использует функцию как поток для вывода аргумента
+
+Параметры шаблона:
+* size_t N
+
+Параметры:
+* memory::function<void (StringViewUtf8)> const&
+* char const[N]
+
+Возвращает:
+* memory::function<void (StringViewUtf8)> const&
+
 # ::stappler::operator<<(memory::function<void (StringViewUtf8)> const&,stappler::StringViewUtf8)
 
 ## BRIEF
 
+Использует функцию как поток для вывода аргумента
+
 ## CONTENT
+
+Использует функцию как поток для вывода аргумента
 
 Параметры:
 * memory::function<void (StringViewUtf8)> const&
@@ -4801,11 +4778,32 @@ Title: SPStringView.h
 Возвращает:
 * memory::function<void (StringViewUtf8)> const&
 
+# ::stappler::operator<<(memory::function<void (StringViewUtf8)> const&,double)
+
+## BRIEF
+
+Использует функцию как поток для вывода аргумента
+
+## CONTENT
+
+Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
+
+Параметры:
+* memory::function<void (StringViewUtf8)> const&
+* double
+
+Возвращает:
+* memory::function<void (StringViewUtf8)> const&
+
 # ::stappler::operator<<(memory::function<void (StringViewUtf8)> const&,int64_t)
 
 ## BRIEF
 
+Использует функцию как поток для вывода аргумента
+
 ## CONTENT
+
+Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
 
 Параметры:
 * memory::function<void (StringViewUtf8)> const&
@@ -4818,70 +4816,49 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Использует функцию как поток для вывода аргумента
+
 ## CONTENT
+
+Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
 
 Параметры:
 * memory::function<void (StringViewUtf8)> const&
-* uint64_t
+* int64_t
 
 Возвращает:
 * memory::function<void (StringViewUtf8)> const&
-
-# ::stappler::string::compare<typename,typename,typename>(L const&,R const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename L
-* typename R
-* typename CharType
-
-Параметры:
-* L const&
-* R const&
-
-Возвращает:
-* int
-
-# ::stappler::string::compareCaseInsensivive<typename,typename,typename>(L const&,R const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename L
-* typename R
-* typename CharType
-
-Параметры:
-* L const&
-* R const&
-
-Возвращает:
-* int
 
 # ::std::hash<stappler::StringView>::hash<stappler::StringView>
 
 ## BRIEF
 
+Вспомогательная структура для вычисления стандартного хэша
+
 ## CONTENT
 
+Вспомогательная структура для вычисления стандартного хэша
 
 # ::std::hash<stappler::StringView>::hash()
 
 ## BRIEF
 
+Конструктор по умолчанию
+
 ## CONTENT
+
+Конструктор по умолчанию
 
 
 # ::std::hash<stappler::StringView>::operator()(stappler::StringView const&) const
 
 ## BRIEF
 
+Вычисляет стандартный хэш для отображения
+
 ## CONTENT
+
+Вычисляет стандартный хэш для отображения
 
 Параметры:
 * stappler::StringView const&
@@ -4893,21 +4870,33 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Вспомогательная структура для вычисления стандартного хэша
+
 ## CONTENT
+
+Вспомогательная структура для вычисления стандартного хэша
 
 
 # ::std::hash<stappler::StringViewUtf8>::hash()
 
 ## BRIEF
 
+Конструктор по умолчанию
+
 ## CONTENT
+
+Конструктор по умолчанию
 
 
 # ::std::hash<stappler::StringViewUtf8>::operator()(stappler::StringViewUtf8 const&) const
 
 ## BRIEF
 
+Вычисляет стандартный хэш для отображения
+
 ## CONTENT
+
+Вычисляет стандартный хэш для отображения
 
 Параметры:
 * stappler::StringViewUtf8 const&
@@ -4919,21 +4908,33 @@ Title: SPStringView.h
 
 ## BRIEF
 
+Вспомогательная структура для вычисления стандартного хэша
+
 ## CONTENT
+
+Вспомогательная структура для вычисления стандартного хэша
 
 
 # ::std::hash<stappler::WideStringView>::hash()
 
 ## BRIEF
 
+Конструктор по умолчанию
+
 ## CONTENT
+
+Конструктор по умолчанию
 
 
 # ::std::hash<stappler::WideStringView>::operator()(stappler::WideStringView const&) const
 
 ## BRIEF
 
+Вычисляет стандартный хэш для отображения
+
 ## CONTENT
+
+Вычисляет стандартный хэш для отображения
 
 Параметры:
 * stappler::WideStringView const&

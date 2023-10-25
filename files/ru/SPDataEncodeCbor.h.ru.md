@@ -158,6 +158,8 @@ Title: SPDataEncodeCbor.h
 
 ## CONTENT
 
+Записывает байт в выходной интерфейс
+
 Параметры:
 * uint8_t
 

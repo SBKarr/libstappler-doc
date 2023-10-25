@@ -128,6 +128,8 @@ Title: SPMovingAverage.h
 
 Доступ: public
 
+Замещает значения в буфере указанным
+
 Параметры:
 * T const&
 

@@ -1629,7 +1629,39 @@ Title: SPFilesystem.h
 Возвращает:
 * FILE*
 
+# ::stappler::filesystem::native::unlink_fn(stappler::StringView)
 
+## BRIEF
+
+Удаляет именованную ссылку на файл
+
+## CONTENT
+
+Удаляет именованную ссылку на файл
+
+Параметры:
+* stappler::StringView
+
+Возвращает:
+* bool
+
+# ::stappler::filesystem::native::write_fn(stappler::StringView,unsigned char const*,size_t)
+
+## BRIEF
+
+Записывает данные в файл
+
+## CONTENT
+
+Записывает данные в файл
+
+Параметры:
+* stappler::StringView
+* unsigned char const*
+* size_t
+
+Возвращает:
+* bool
 # ::stappler::io::ProducerTraits<filesystem::File>::ProducerTraits<filesystem::File>
 
 ## BRIEF

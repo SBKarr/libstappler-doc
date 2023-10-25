@@ -1,39 +1,59 @@
 Title: STStorageQuery.h
 
 
-# MODULES_DB_STSTORAGEQUERY_H_
+# STAPPLER_DB_STSTORAGEQUERY_H_
 
 ## BRIEF
 
+Заголовок структуры запроса к БД
+
 ## CONTENT
+
+Заголовок структуры запроса к БД
 
 
 # ::stappler::db::Operator
 
 ## BRIEF
 
+Тип логического оператора
+
 ## CONTENT
+
+Тип логического оператора
 
 
 # ::stappler::db::Comparation
 
 ## BRIEF
 
+Тип оператора сравнения
+
 ## CONTENT
+
+Тип оператора сравнения
 
 
 # ::stappler::db::Ordering
 
 ## BRIEF
 
+Тип оператора упорядочивания
+
 ## CONTENT
+
+Тип оператора упорядочивания
 
 
 # ::stappler::db::Resolve
 
 ## BRIEF
 
+Флаги для раскрытия составных полей
+
 ## CONTENT
+
+Флаги для раскрытия составных полей
 
 Значения:
 * None
@@ -41,9 +61,9 @@ Title: STStorageQuery.h
 * Sets
 * Objects
 * Arrays
-* Ids
-* Basics
-* Defaults
+* Ids - возврашает только идентификаторы для объектов составных полей
+* Basics - возвращает все несоставные поля
+* Defaults - возвраает помеченные для возврата по умолчанию поля
 * All
 
 
@@ -51,7 +71,11 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::db::Resolve const&
@@ -64,7 +88,11 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::db::Resolve const&
@@ -77,7 +105,11 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::db::Resolve const&
@@ -90,7 +122,11 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::db::Resolve&
@@ -103,7 +139,11 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::db::Resolve&
@@ -116,7 +156,11 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::db::Resolve&
@@ -129,7 +173,11 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::db::Resolve const&
@@ -142,7 +190,11 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * std::underlying_type<Resolve>::type const&
@@ -155,7 +207,11 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::db::Resolve const&
@@ -168,7 +224,11 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * std::underlying_type<Resolve>::type const&
@@ -181,7 +241,11 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::db::Resolve const&
@@ -193,7 +257,11 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Структура запроса к БД
+
 ## CONTENT
+
+Структура запроса к БД. Описывает параметры запроса, упорядочивание, условные операторы, список полей для возврата
 
 Базовые классы:
 * AllocBase
@@ -203,9 +271,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Структура поля для возврата
+
 ## CONTENT
 
 Доступ: public
+
+Структура запроса к БД
 
 Базовые классы:
 * AllocBase
@@ -215,7 +287,11 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Имя поля
+
 ## CONTENT
+
+Имя поля
 
 Тип: stappler::mem_pool::String
 
@@ -224,7 +300,11 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Список вложенных полей для возврата
+
 ## CONTENT
+
+Список вложенных полей для возврата
 
 Тип: Vector<stappler::db::Query::Field>
 
@@ -233,7 +313,11 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Конструктор перемещения
+
 ## CONTENT
+
+Конструктор перемещения
 
 Параметры:
 * stappler::db::Query::Field&&
@@ -243,7 +327,11 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Конструктор копирования
+
 ## CONTENT
+
+Конструктор копирования
 
 Параметры:
 * stappler::db::Query::Field const&
@@ -253,7 +341,11 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Оператор перемещения
+
 ## CONTENT
+
+Оператор перемещения
 
 Параметры:
 * stappler::db::Query::Field&&
@@ -265,7 +357,11 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Оператор копирования
+
 ## CONTENT
+
+Оператор копирования
 
 Параметры:
 * stappler::db::Query::Field const&
@@ -277,7 +373,11 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Конструирует поле из имени
+
 ## CONTENT
+
+Конструирует поле из имени
 
 Параметры шаблона:
 * typename Str
@@ -290,7 +390,11 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Конструирует поле из имени и списка вложенных полей
+
 ## CONTENT
+
+Конструирует поле из имени и списка вложенных полей
 
 Параметры шаблона:
 * typename Str
@@ -304,7 +408,11 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Конструирует поле из имени и списка вложенных полей
+
 ## CONTENT
+
+Конструирует поле из имени и списка вложенных полей
 
 Параметры шаблона:
 * typename Str
@@ -318,7 +426,11 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Конструирует поле из имени и списка вложенных полей
+
 ## CONTENT
+
+Конструирует поле из имени и списка вложенных полей
 
 Параметры шаблона:
 * typename Str
@@ -332,7 +444,11 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Конструирует поле из имени и списка вложенных полей
+
 ## CONTENT
+
+Конструирует поле из имени и списка вложенных полей
 
 Параметры шаблона:
 * typename Str
@@ -346,7 +462,11 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Устанавливает имя запрошенного поля
+
 ## CONTENT
+
+Устанавливает имя запрошенного поля
 
 Параметры:
 * char const*
@@ -356,7 +476,11 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Устанавливает имя запрошенного поля
+
 ## CONTENT
+
+Устанавливает имя запрошенного поля
 
 Параметры:
 * stappler::StringView const&
@@ -366,7 +490,11 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Устанавливает имя запрошенного поля
+
 ## CONTENT
+
+Устанавливает имя запрошенного поля
 
 Параметры:
 * stappler::mem_pool::String const&
@@ -376,7 +504,11 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Устанавливает имя запрошенного поля
+
 ## CONTENT
+
+Устанавливает имя запрошенного поля
 
 Параметры:
 * stappler::mem_pool::String&&
@@ -386,7 +518,11 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Устанавливает имя запрошенного поля
+
 ## CONTENT
+
+Устанавливает имя запрошенного поля
 
 Параметры:
 * stappler::db::Query::Field const&
@@ -396,7 +532,11 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Устанавливает имя запрошенного поля
+
 ## CONTENT
+
+Устанавливает имя запрошенного поля
 
 Параметры:
 * stappler::db::Query::Field&&
@@ -406,7 +546,11 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Тип списка полей для возврата
+
 ## CONTENT
+
+Тип списка полей для возврата
 
 Доступ: public
 
@@ -415,9 +559,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Структура условного запроса
+
 ## CONTENT
 
 Доступ: public
+
+Структура условного запроса
 
 Базовые классы:
 * AllocBase
@@ -427,7 +575,11 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Оператор сравнения
+
 ## CONTENT
+
+Оператор сравнения
 
 Тип: stappler::db::Comparation
 
@@ -436,7 +588,11 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Первое значение для сравнения
+
 ## CONTENT
+
+Первое значение для сравнения
 
 Тип: stappler::mem_pool::Value
 
@@ -445,7 +601,11 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Второе значение для сравнения, если оператор троичный
+
 ## CONTENT
+
+Второе значение для сравнения, если оператор троичный
 
 Тип: stappler::mem_pool::Value
 
@@ -454,7 +614,11 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Имя поля для сравнения
+
 ## CONTENT
+
+Имя поля для сравнения
 
 Тип: stappler::mem_pool::String
 
@@ -463,7 +627,11 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Полнотекстовый запрос
+
 ## CONTENT
+
+Полнотекстовый запрос
 
 Тип: Vector<stappler::search::SearchData>
 
@@ -472,14 +640,22 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Конструктор по умолчанию
+
 ## CONTENT
+
+Конструктор по умолчанию
 
 
 # ::stappler::db::Query::Select::Select(stappler::StringView const&,stappler::db::Comparation,stappler::mem_pool::Value&&,stappler::mem_pool::Value&&)
 
 ## BRIEF
 
+Конструирует новое сравнение
+
 ## CONTENT
+
+Конструирует новое сравнение
 
 Параметры:
 * stappler::StringView const&
@@ -492,7 +668,11 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Конструирует новое сравнение
+
 ## CONTENT
+
+Конструирует новое сравнение
 
 Параметры:
 * stappler::StringView const&
@@ -505,7 +685,11 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Конструирует новое сравнение
+
 ## CONTENT
+
+Конструирует новое сравнение
 
 Параметры:
 * stappler::StringView const&
@@ -517,7 +701,11 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Конструирует новое сравнение
+
 ## CONTENT
+
+Конструирует новое сравнение
 
 Параметры:
 * stappler::StringView const&
@@ -529,7 +717,11 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Конструирует новое полнотекстовое сравнение
+
 ## CONTENT
+
+Конструирует новое полнотекстовое сравнение
 
 Параметры:
 * stappler::StringView const&
@@ -541,16 +733,24 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Структура для применения мягкого лимита
+
 ## CONTENT
 
 Доступ: public
+
+Структура для применения мягкого лимита
 
 
 # ::stappler::db::Query::SoftLimit::field
 
 ## BRIEF
 
+Поле для мягкого лимита
+
 ## CONTENT
+
+Поле для мягкого лимита
 
 Тип: stappler::mem_pool::String
 
@@ -559,7 +759,11 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Число элементов на странице
+
 ## CONTENT
+
+Число элементов на странице
 
 Тип: size_t
 
@@ -568,7 +772,11 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Значение для смещения запроса с мягким лимитом
+
 ## CONTENT
+
+Значение для смещения запроса с мягким лимитом
 
 Тип: stappler::mem_pool::Value
 
@@ -577,7 +785,11 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Возвращет запрос, запрашивающий всё содержимое схемы данных
+
 ## CONTENT
+
+Возвращет запрос, запрашивающий всё содержимое схемы данных
 
 Доступ: public
 
@@ -588,13 +800,15 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Возвращет запрос, адресованный к полю обекта
+
 ## CONTENT
 
 Доступ: public
 
 Параметры:
-* int64_t
-* stappler::StringView const&
+* int64_t - ид объекта
+* stappler::StringView const& - имя поля
 
 Возвращает:
 * stappler::db::Query
@@ -603,14 +817,18 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Возвращет запрос, адресованный к полю обекта
+
 ## CONTENT
 
 Доступ: public
 
+Возвращет запрос, адресованный к полю обекта
+
 Параметры:
-* int64_t
-* stappler::StringView const&
-* stappler::db::Query const&
+* int64_t - ид объекта
+* stappler::StringView const& - имя поля
+* stappler::db::Query const& - базовый запрос
 
 Возвращает:
 * stappler::db::Query
@@ -619,9 +837,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Декодирует флаги возврата полей из строки
+
 ## CONTENT
 
 Доступ: public
+
+Декодирует флаги возврата полей из строки
 
 Параметры:
 * stappler::StringView const&
@@ -633,9 +855,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Кодирует флаги возврата полей в строку
+
 ## CONTENT
 
 Доступ: public
+
+Кодирует флаги возврата полей в строку
 
 Параметры:
 * stappler::db::Resolve
@@ -647,9 +873,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Добавляет запрос объекта по псевдониму
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет запрос объекта по псевдониму
 
 Параметры:
 * stappler::StringView const&
@@ -661,9 +891,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Добавляет запрос объекта по ид
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет запрос объекта по ид
 
 Параметры:
 * int64_t
@@ -675,9 +909,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Добавляет запрос объекта по нетипизированному значению (ид или псевдониму)
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет запрос объекта по нетипизированному значению (ид или псевдониму)
 
 Параметры:
 * stappler::mem_pool::Value const&
@@ -689,9 +927,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Добавляет запрос списка объектов по ид
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет запрос списка объектов по ид
 
 Параметры:
 * Vector<int64_t>&&
@@ -703,9 +945,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Добавляет запрос списка объектов по ид
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет запрос списка объектов по ид
 
 Параметры:
 * SpanView<int64_t>
@@ -717,9 +963,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Добавляет запрос списка объектов по ид
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет запрос списка объектов по ид
 
 Параметры:
 * std::initializer_list<int64_t>&&
@@ -731,9 +981,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Добавляет запрос с оператором сравнения
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет запрос с оператором сравнения
 
 Параметры:
 * stappler::StringView const&
@@ -748,9 +1002,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Добавляет запрос с проверкой поля на равенство значению
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет запрос с проверкой поля на равенство значению
 
 Параметры:
 * stappler::StringView const&
@@ -763,9 +1021,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Добавляет запрос с оператором сравнения
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет запрос с оператором сравнения
 
 Параметры:
 * stappler::StringView const&
@@ -779,9 +1041,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Добавляет запрос с оператором сравнения
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет запрос с оператором сравнения
 
 Параметры:
 * stappler::StringView const&
@@ -796,9 +1062,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Добавляет запрос с проверкой поля на равенство значению
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет запрос с проверкой поля на равенство значению
 
 Параметры:
 * stappler::StringView const&
@@ -811,9 +1081,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Добавляет запрос с проверкой поля на равенство значению
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет запрос с проверкой поля на равенство значению
 
 Параметры:
 * stappler::StringView const&
@@ -826,9 +1100,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Добавляет запрос с проверкой поля на равенство значению
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет запрос с проверкой поля на равенство значению
 
 Параметры:
 * stappler::StringView const&
@@ -841,9 +1119,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Добавляет запрос с проверкой поля на равенство значению
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет запрос с проверкой поля на равенство значению
 
 Параметры:
 * stappler::StringView const&
@@ -856,9 +1138,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Добавляет полнотекстовый запрос
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет полнотекстовый запрос
 
 Параметры:
 * stappler::StringView const&
@@ -871,9 +1157,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Добавляет запрос сравнения
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет запрос сравнения
 
 Параметры:
 * stappler::db::Query::Select&&
@@ -885,15 +1175,19 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Добавляет правило упорядочивания
+
 ## CONTENT
 
 Доступ: public
 
+Добавляет правило упорядочивания
+
 Параметры:
-* stappler::StringView const&
+* stappler::StringView const& - поле для упорядочивания
 * stappler::db::Ordering
-* size_t
-* size_t
+* size_t - максимальное число возвращаемых объектов
+* size_t - смещение при возврате объектов
 
 Возвращает:
 * stappler::db::Query&
@@ -902,15 +1196,19 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Добавляет мягкий лимит
+
 ## CONTENT
 
 Доступ: public
 
+Добавляет мягкий лимит
+
 Параметры:
-* stappler::StringView const&
+* stappler::StringView const& - поле для упорядочивания
 * stappler::db::Ordering
-* size_t
-* stappler::mem_pool::Value&&
+* size_t - число объектов на странице
+* stappler::mem_pool::Value&& - исходное значение
 
 Возвращает:
 * stappler::db::Query&
@@ -919,14 +1217,18 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Добавляет возврат первых объектов
+
 ## CONTENT
 
 Доступ: public
 
+Добавляет возврат первых объектов
+
 Параметры:
-* stappler::StringView const&
-* size_t
-* size_t
+* stappler::StringView const& - поле для упорядочивания
+* size_t - максимальное число возвращаемых объектов
+* size_t - смещение при возврате объектов
 
 Возвращает:
 * stappler::db::Query&
@@ -935,14 +1237,18 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Добавляет возврат последних объектов
+
 ## CONTENT
 
 Доступ: public
 
+Добавляет возврат последних объектов
+
 Параметры:
-* stappler::StringView const&
-* size_t
-* size_t
+* stappler::StringView const& - поле для упорядочивания
+* size_t - максимальное число возвращаемых объектов
+* size_t - смещение при возврате объектов
 
 Возвращает:
 * stappler::db::Query&
@@ -951,13 +1257,17 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Возврашает предел возврата
+
 ## CONTENT
 
 Доступ: public
 
+Возврашает предел возврата
+
 Параметры:
-* size_t
-* size_t
+* size_t - максимальное число возвращаемых объектов
+* size_t - смещение при возврате объектов
 
 Возвращает:
 * stappler::db::Query&
@@ -966,12 +1276,16 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Возврашает предел возврата
+
 ## CONTENT
 
 Доступ: public
 
+Возврашает предел возврата
+
 Параметры:
-* size_t
+* size_t - максимальное число возвращаемых объектов
 
 Возвращает:
 * stappler::db::Query&
@@ -980,12 +1294,16 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Добавляет смещение объектов при возврате
+
 ## CONTENT
 
 Доступ: public
 
+Добавляет смещение объектов при возврате
+
 Параметры:
-* size_t
+* size_t - смещение при возврате объектов
 
 Возвращает:
 * stappler::db::Query&
@@ -994,9 +1312,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Добавляет значение дельты для дельта-запроса
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет значение дельты для дельта-запроса
 
 Параметры:
 * uint64_t
@@ -1008,9 +1330,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Добавляет значение дельты для дельта-запроса
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет значение дельты для дельта-запроса. Кодируется байтовое представление целого числа в base64.
 
 Параметры:
 * stappler::StringView const&
@@ -1022,9 +1348,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Добавляет поля для возврата
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет поля для возврата
 
 Параметры шаблона:
 * typename Args
@@ -1040,9 +1370,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Добавляет поле для возврата
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет поле для возврата
 
 Параметры:
 * stappler::db::Query::Field&&
@@ -1054,9 +1388,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Исключает поле из возврата
+
 ## CONTENT
 
 Доступ: public
+
+Исключает поле из возврата
 
 Параметры:
 * stappler::db::Query::Field&&
@@ -1068,9 +1406,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Устанавливает максимальную глубину для раскрытия полей
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает максимальную глубину для раскрытия полей
 
 Параметры:
 * uint16_t
@@ -1082,9 +1424,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Помечает результирующие объекты для последующего обновления
+
 ## CONTENT
 
 Доступ: public
+
+Помечает результирующие объекты для последующего обновления
 
 Возвращает:
 * stappler::db::Query&
@@ -1093,9 +1439,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Очищает список включённых и исключённых полей
+
 ## CONTENT
 
 Доступ: public
+
+Очищает список включённых и исключённых полей
 
 Возвращает:
 * stappler::db::Query&
@@ -1104,9 +1454,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Проверяет запрос на пустоту условий
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет запрос на пустоту условий
 
 Возвращает:
 * bool
@@ -1115,9 +1469,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Возврашает поле запрошенного объекта
+
 ## CONTENT
 
 Доступ: public
+
+Возврашает поле запрошенного объекта
 
 Возвращает:
 * stappler::StringView
@@ -1126,9 +1484,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Возврашает ид запрошенного объекта
+
 ## CONTENT
 
 Доступ: public
+
+Возврашает ид запрошенного объекта
 
 Возвращает:
 * int64_t
@@ -1137,9 +1499,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Возврашает единственный ид в запросе, если он единственный
+
 ## CONTENT
 
 Доступ: public
+
+Возврашает единственный ид в запросе, если он единственный
 
 Возвращает:
 * int64_t
@@ -1148,9 +1514,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Возврашает ид запрошенных объектов
+
 ## CONTENT
 
 Доступ: public
+
+Возврашает ид запрошенных объектов
 
 Возвращает:
 * Vector<int64_t> const&
@@ -1159,9 +1529,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Возврашает запрошенный псевдоним
+
 ## CONTENT
 
 Доступ: public
+
+Возврашает запрошенный псевдоним
 
 Возвращает:
 * stappler::StringView
@@ -1170,9 +1544,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Возвращает список условий
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает список условий
 
 Возвращает:
 * Vector<stappler::db::Query::Select> const&
@@ -1181,9 +1559,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Возврашает поле упорядочивания
+
 ## CONTENT
 
 Доступ: public
+
+Возврашает поле упорядочивания
 
 Возвращает:
 * stappler::mem_pool::String const&
@@ -1192,9 +1574,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Возврашает порядок возврата
+
 ## CONTENT
 
 Доступ: public
+
+Возврашает порядок возврата
 
 Возвращает:
 * stappler::db::Ordering
@@ -1203,9 +1589,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Возвращает максимальное число возвращаемых объектов
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает максимальное число возвращаемых объектов
 
 Возвращает:
 * size_t
@@ -1214,9 +1604,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Возвращает смещение возвращаемых объектов
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает смещение возвращаемых объектов
 
 Возвращает:
 * size_t
@@ -1225,9 +1619,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Возврашает значение для мягкого лимита
+
 ## CONTENT
 
 Доступ: public
+
+Возврашает значение для мягкого лимита
 
 Возвращает:
 * stappler::mem_pool::Value const&
@@ -1236,9 +1634,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Проверяет, определено ли имя для запроса одиночного объекта
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, определено ли имя для запроса одиночного объекта
 
 Возвращает:
 * bool
@@ -1247,9 +1649,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Проверяет, определены ли дополнительные условия
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, определены ли дополнительные условия
 
 Возвращает:
 * bool
@@ -1258,9 +1664,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Проверяет определены ли условия возврата
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет определены ли условия возврата
 
 Возвращает:
 * bool
@@ -1269,9 +1679,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Проверяет, определено ли упорядочивание
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, определено ли упорядочивание
 
 Возвращает:
 * bool
@@ -1280,9 +1694,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Проверяет, определено ли максимальное число объектов
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, определено ли максимальное число объектов
 
 Возвращает:
 * bool
@@ -1291,9 +1709,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Проверяет, определено ли смещение объектов
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, определено ли смещение объектов
 
 Возвращает:
 * bool
@@ -1302,9 +1724,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Проверяет, определен ли дельта-запрос
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, определен ли дельта-запрос
 
 Возвращает:
 * bool
@@ -1313,9 +1739,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Проверяет, определены ли поля для возврата
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, определены ли поля для возврата
 
 Возвращает:
 * bool
@@ -1324,9 +1754,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Проверяет, установлен ли флаг получения для обновления
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, установлен ли флаг получения для обновления
 
 Возвращает:
 * bool
@@ -1335,9 +1769,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Проверяет, установлен ли мягкий лимит
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, установлен ли мягкий лимит
 
 Возвращает:
 * bool
@@ -1346,9 +1784,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Получает значение дельта-запроса
+
 ## CONTENT
 
 Доступ: public
+
+Получает значение дельта-запроса
 
 Возвращает:
 * uint64_t
@@ -1357,9 +1799,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Получает глубину разрешения полей
+
 ## CONTENT
 
 Доступ: public
+
+Получает глубину разрешения полей
 
 Возвращает:
 * uint16_t
@@ -1368,9 +1814,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Возвращает поля для включения
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает поля для включения
 
 Возвращает:
 * FieldsVec&
@@ -1379,9 +1829,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Возвращает поля для исключения
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает поля для исключения
 
 Возвращает:
 * FieldsVec&
@@ -1390,9 +1844,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Кодирует запрос для сохранения
+
 ## CONTENT
 
 Доступ: public
+
+Кодирует запрос для сохранения
 
 Возвращает:
 * stappler::mem_pool::Value
@@ -1401,9 +1859,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Поле объекта, к которому адресован запрос
+
 ## CONTENT
 
 Доступ: protected
+
+Поле объекта, к которому адресован запрос
 
 Тип: stappler::mem_pool::String
 
@@ -1412,9 +1874,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Ид объекта, к которому адресован запрос
+
 ## CONTENT
 
 Доступ: protected
+
+Ид объекта, к которому адресован запрос
 
 Тип: int64_t
 
@@ -1423,9 +1889,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Запрашиваемые ид объектов
+
 ## CONTENT
 
 Доступ: protected
+
+Запрашиваемые ид объектов
 
 Тип: Vector<int64_t>
 
@@ -1434,9 +1904,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Запрашиваемый псевдоним объекта
+
 ## CONTENT
 
 Доступ: protected
+
+Запрашиваемый псевдоним объекта
 
 Тип: stappler::mem_pool::String
 
@@ -1445,9 +1919,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Дополнительные условия
+
 ## CONTENT
 
 Доступ: protected
+
+Дополнительные условия
 
 Тип: Vector<stappler::db::Query::Select>
 
@@ -1456,9 +1934,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Порядок возврата
+
 ## CONTENT
 
 Доступ: protected
+
+Порядок возврата
 
 Тип: stappler::db::Ordering
 
@@ -1467,9 +1949,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Поле для упорядочивания
+
 ## CONTENT
 
 Доступ: protected
+
+Поле для упорядочивания
 
 Тип: stappler::mem_pool::String
 
@@ -1478,9 +1964,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Максимальное число возвращаемых объектов
+
 ## CONTENT
 
 Доступ: protected
+
+Максимальное число возвращаемых объектов
 
 Тип: size_t
 
@@ -1489,9 +1979,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Смещение возвращаемых объектов
+
 ## CONTENT
 
 Доступ: protected
+
+Смещение возвращаемых объектов
 
 Тип: size_t
 
@@ -1500,9 +1994,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Значение мягкого лимита
+
 ## CONTENT
 
 Доступ: protected
+
+Значение мягкого лимита
 
 Тип: stappler::mem_pool::Value
 
@@ -1511,9 +2009,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Дельта-запрос
+
 ## CONTENT
 
 Доступ: protected
+
+Дельта-запрос
 
 Тип: uint64_t
 
@@ -1522,9 +2024,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Глубина раскрытия вложенных полей
+
 ## CONTENT
 
 Доступ: protected
+
+Глубина раскрытия вложенных полей
 
 Тип: uint16_t
 
@@ -1533,9 +2039,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Поля для включения в запрос
+
 ## CONTENT
 
 Доступ: protected
+
+Поля для включения в запрос
 
 Тип: FieldsVec
 
@@ -1544,9 +2054,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Поля для исключения из запроса
+
 ## CONTENT
 
 Доступ: protected
+
+Поля для исключения из запроса
 
 Тип: FieldsVec
 
@@ -1555,9 +2069,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Флаг получения для обновления
+
 ## CONTENT
 
 Доступ: protected
+
+Флаг получения для обновления
 
 Тип: bool
 
@@ -1566,9 +2084,13 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Флаг мягкого лимита
+
 ## CONTENT
 
 Доступ: protected
+
+Флаг мягкого лимита
 
 Тип: bool
 
@@ -1577,94 +2099,12 @@ Title: STStorageQuery.h
 
 ## BRIEF
 
+Флаг выбора объектов по списку
+
 ## CONTENT
 
 Доступ: protected
 
+Флаг выбора объектов по списку
+
 Тип: bool
-
-
-# ::stappler::db::Field::Field<typename>(Str&&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Str
-
-Параметры:
-* Str&&
-
-
-# ::stappler::db::Field::Field<typename>(Str&&,Vector<stappler::mem_pool::String>&&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Str
-
-Параметры:
-* Str&&
-* Vector<stappler::mem_pool::String>&&
-
-
-# ::stappler::db::Field::Field<typename>(Str&&,std::initializer_list<String>&&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Str
-
-Параметры:
-* Str&&
-* std::initializer_list<String>&&
-
-
-# ::stappler::db::Field::Field<typename>(Str&&,Vector<stappler::db::Query::Field>&&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Str
-
-Параметры:
-* Str&&
-* Vector<stappler::db::Query::Field>&&
-
-
-# ::stappler::db::Field::Field<typename>(Str&&,std::initializer_list<Field>&&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Str
-
-Параметры:
-* Str&&
-* std::initializer_list<Field>&&
-
-
-# ::stappler::db::Query::include<typename>(stappler::db::Query::Field&&,Args &&...)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Args
-
-Параметры:
-* stappler::db::Query::Field&&
-* Args &&...
-
-Возвращает:
-* stappler::db::Query&

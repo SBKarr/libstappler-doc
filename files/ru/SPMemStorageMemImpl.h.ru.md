@@ -1340,6 +1340,8 @@ Title: SPMemStorageMemImpl.h
 
 Доступ: protected
 
+Выполняет перемещение данных в этот контейнер
+
 Параметры:
 * mem_soo_iface<type-parameter-0-0, Extra, true>&&
 

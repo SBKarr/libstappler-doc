@@ -1,18 +1,26 @@
 Title: STInputFile.h
 
 
-# MODULES_DB_STINPUTFILE_H_
+# STAPPLER_DB_STINPUTFILE_H_
 
 ## BRIEF
 
+Заголовок, определяющий тип файла, переданного для записи в БД
+
 ## CONTENT
+
+Заголовок, определяющий тип файла, переданного для записи в БД
 
 
 # ::stappler::db::InputFile
 
 ## BRIEF
 
+Тип файла для записи в структуру БД
+
 ## CONTENT
+
+Тип файла для записи в структуру БД. Файлы записываются в структуру БД по их имени в файловой системе. При этом, БД хранит дополнительную информацию для частичного сопоставления файла с его данными.
 
 Базовые классы:
 * AllocBase
@@ -22,7 +30,11 @@ Title: STInputFile.h
 
 ## BRIEF
 
+Путь к файлу
+
 ## CONTENT
+
+Путь к файлу
 
 Тип: stappler::mem_pool::String
 
@@ -31,7 +43,11 @@ Title: STInputFile.h
 
 ## BRIEF
 
+Имя поля файла
+
 ## CONTENT
+
+Имя поля файла
 
 Тип: stappler::mem_pool::String
 
@@ -40,7 +56,11 @@ Title: STInputFile.h
 
 ## BRIEF
 
+MIME-тип файла
+
 ## CONTENT
+
+MIME-тип файла
 
 Тип: stappler::mem_pool::String
 
@@ -49,7 +69,11 @@ Title: STInputFile.h
 
 ## BRIEF
 
+Способ кодировани файла при передаче
+
 ## CONTENT
+
+Способ кодировани файла при передаче (Content-Encoding)
 
 Тип: stappler::mem_pool::String
 
@@ -58,7 +82,11 @@ Title: STInputFile.h
 
 ## BRIEF
 
+Исходное имя файла в системе пользователя
+
 ## CONTENT
+
+Исходное имя файла в системе пользователя
 
 Тип: stappler::mem_pool::String
 
@@ -67,7 +95,11 @@ Title: STInputFile.h
 
 ## BRIEF
 
+Манипулятор файла
+
 ## CONTENT
+
+Манипулятор файла
 
 Тип: filesystem::File
 
@@ -76,7 +108,11 @@ Title: STInputFile.h
 
 ## BRIEF
 
+Флаг, является ли файл бинарным или текстовым
+
 ## CONTENT
+
+Флаг, является ли файл бинарным или текстовым
 
 Тип: bool
 
@@ -85,7 +121,11 @@ Title: STInputFile.h
 
 ## BRIEF
 
+Число байт, записанных во временный файл
+
 ## CONTENT
+
+Число байт, записанных во временный файл
 
 Тип: size_t
 
@@ -94,7 +134,11 @@ Title: STInputFile.h
 
 ## BRIEF
 
+Число байт, записанных в заголовке файла
+
 ## CONTENT
+
+Число байт, записанных в заголовке файла
 
 Тип: size_t
 
@@ -103,7 +147,11 @@ Title: STInputFile.h
 
 ## BRIEF
 
+Внутренний идентификатор файла в запросе
+
 ## CONTENT
+
+Внутренний идентификатор файла в запросе
 
 Тип: int64_t
 
@@ -112,29 +160,41 @@ Title: STInputFile.h
 
 ## BRIEF
 
+Конструктор файла
+
 ## CONTENT
 
+Конструктор файла
+
 Параметры:
-* stappler::mem_pool::String&&
-* stappler::mem_pool::String&&
-* stappler::mem_pool::String&&
-* stappler::mem_pool::String&&
-* size_t
-* int64_t
+* stappler::mem_pool::String&& - имя поля файла
+* stappler::mem_pool::String&& - тип файла
+* stappler::mem_pool::String&& - кодировка
+* stappler::mem_pool::String&& - исходное имя файла
+* size_t - число прочитанных байт в заголовке
+* int64_t - внутренний идентификатор
 
 
 # ::stappler::db::InputFile::~InputFile()
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
+
+Деструктор
 
 
 # ::stappler::db::InputFile::isOpen() const
 
 ## BRIEF
 
+Проверяет, открыт ли файл
+
 ## CONTENT
+
+Проверяет, открыт ли файл
 
 Возвращает:
 * bool
@@ -143,39 +203,54 @@ Title: STInputFile.h
 
 ## BRIEF
 
+Записывает данные во временный файл
+
 ## CONTENT
 
+Записывает данные во временный файл
+
 Параметры:
-* char const*
-* size_t
+* char const* - указатель на буфер
+* size_t - размер буфера в байтах
 
 Возвращает:
-* size_t
+* size_t - число записанных байт
 
 # ::stappler::db::InputFile::close()
 
 ## BRIEF
 
+Закрывает и удаляет временный файл
+
 ## CONTENT
 
+Закрывает и удаляет временный файл
 
 # ::stappler::db::InputFile::save(stappler::StringView const&) const
 
 ## BRIEF
 
+Закрывает временный файл и перемещает его по переданному имени
+
 ## CONTENT
+
+Закрывает временный файл и перемещает его по переданному имени
 
 Параметры:
 * stappler::StringView const&
 
 Возвращает:
-* bool
+* bool - true если перемещение успешно
 
 # ::stappler::db::InputFile::readBytes()
 
 ## BRIEF
 
+Читает файл в виде байтовой строки
+
 ## CONTENT
+
+Читает файл в виде байтовой строки
 
 Возвращает:
 * stappler::mem_pool::Bytes
@@ -184,7 +259,11 @@ Title: STInputFile.h
 
 ## BRIEF
 
+Читает файл в виде текстовой строки
+
 ## CONTENT
+
+Читает файл в виде текстовой строки
 
 Возвращает:
 * stappler::mem_pool::String
@@ -193,7 +272,11 @@ Title: STInputFile.h
 
 ## BRIEF
 
+Возвращает отрицательный идентификатор
+
 ## CONTENT
+
+Возвращает отрицательный идентификатор. Отрицательный идентификатор используется, чтобы идентифицировать файлы среди идентификаторов БД (положительных)
 
 Возвращает:
 * int64_t
@@ -202,7 +285,11 @@ Title: STInputFile.h
 
 ## BRIEF
 
+Запрет копирования
+
 ## CONTENT
+
+Запрет копирования
 
 Параметры:
 * stappler::db::InputFile const&
@@ -212,7 +299,11 @@ Title: STInputFile.h
 
 ## BRIEF
 
+Запрет перемещения
+
 ## CONTENT
+
+Запрет перемещения
 
 Параметры:
 * stappler::db::InputFile&&
@@ -222,7 +313,11 @@ Title: STInputFile.h
 
 ## BRIEF
 
+Запрет копирования
+
 ## CONTENT
+
+Запрет копирования
 
 Параметры:
 * stappler::db::InputFile const&
@@ -234,7 +329,11 @@ Title: STInputFile.h
 
 ## BRIEF
 
+Запрет перемещения
+
 ## CONTENT
+
+Запрет перемещения
 
 Параметры:
 * stappler::db::InputFile&&

@@ -1,32 +1,47 @@
 Title: SPVectorPath.h
 
 
-# MODULES_VG_SPVECTORPATH_H_
+# STAPPLER_VG_SPVECTORPATH_H_
 
 ## BRIEF
 
+Заголовок структуры векторного пути для вектоных изображений
+
 ## CONTENT
+
+Заголовок структуры векторного пути для вектоных изображений
 
 
 # ::stappler::vg::Interface
 
 ## BRIEF
 
+Используемый для векторной графики интерфейс памяти
+
 ## CONTENT
 
+Используемый для векторной графики интерфейс памяти - стандартный интерфейс памяти
 
 # ::stappler::vg::PathXRef
 
 ## BRIEF
 
+Струкутра именованой ссылки на векторый путь
+
 ## CONTENT
+
+Струкутра именованой ссылки на векторый путь
 
 
 # ::stappler::vg::PathXRef::id
 
 ## BRIEF
 
+Идентификатор пути
+
 ## CONTENT
+
+Идентификатор пути
 
 Тип: Interface::StringType
 
@@ -35,16 +50,23 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Идентифкатор для кеширования объекта
+
 ## CONTENT
 
 Тип: Interface::StringType
 
+Идентифкатор для кеширования объекта. Кеширование требут уникального имени пути для всей системы. Кеширование позволяет повторно использовать результаты тесселяции как в рамках одной сессии, так и между сессиями приложения, если данные кеша сохраняются в файл. Кеширование учитывает размер изображения, трансформацию и степень точности при сохранении кеш, но изображения с разными парметрами цвета кешируются совместно.
 
 # ::stappler::vg::PathXRef::mat
 
 ## BRIEF
 
+Дополниетльная матрица трансформации для ссылки
+
 ## CONTENT
+
+Дополниетльная матрица трансформации для ссылки
 
 Тип: stappler::geom::Mat4
 
@@ -53,7 +75,17 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Структура векторного пути
+
 ## CONTENT
+
+Структура векторного пути. Структура основана на правилах SVG для тега path.
+
+Путь состоит из набора команд, которые образуют один или несколько контуров. Контуры могут быть замкнуты или нет. При заливке контуры всегда считаются замкнутыми.
+
+Запись пути производится через команды. Новая команда добавляется в конец списка, продолжая имеющийся контур или начиная новый.
+
+Также, путь хранит дополниетльную информацию о цвете, способе отрисовки и матрицу трансформации.
 
 Базовые классы:
 * RefBase<Interface>
@@ -63,52 +95,76 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Тип способа рисования
+
 ## CONTENT
 
 Доступ: public
+
+Тип способа рисования
 
 
 # ::stappler::vg::VectorPath::Winding
 
 ## BRIEF
 
+Тип способа заливки
+
 ## CONTENT
 
 Доступ: public
+
+Тип способа заливки
 
 
 # ::stappler::vg::VectorPath::LineCup
 
 ## BRIEF
 
+Тип завершающего маркера для обводки
+
 ## CONTENT
 
 Доступ: public
+
+Тип завершающего маркера для обводки
 
 
 # ::stappler::vg::VectorPath::LineJoin
 
 ## BRIEF
 
+Тип для соединения линий обводки
+
 ## CONTENT
 
 Доступ: public
+
+Тип для соединения линий обводки
 
 
 # ::stappler::vg::VectorPath::Params
 
 ## BRIEF
 
+Структура параметров пути
+
 ## CONTENT
 
 Доступ: public
+
+Структура параметров пути
 
 
 # ::stappler::vg::VectorPath::Params::transform
 
 ## BRIEF
 
+Матрица трансформации
+
 ## CONTENT
+
+Матрица трансформации
 
 Тип: stappler::geom::Mat4
 
@@ -117,7 +173,11 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Цвет заливки
+
 ## CONTENT
+
+Цвет заливки
 
 Тип: stappler::geom::Color4B
 
@@ -126,7 +186,11 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Цвет обводки
+
 ## CONTENT
+
+Цвет обводки
 
 Тип: stappler::geom::Color4B
 
@@ -135,7 +199,11 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Способ рисования объекта
+
 ## CONTENT
+
+Способ рисования объекта
 
 Тип: stappler::vg::VectorPath::DrawStyle
 
@@ -144,7 +212,11 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Ширина обводки
+
 ## CONTENT
+
+Ширина обводки
 
 Тип: float
 
@@ -153,7 +225,11 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Способ заливки
+
 ## CONTENT
+
+Способ заливки
 
 Тип: stappler::vg::VectorPath::Winding
 
@@ -162,7 +238,11 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Маркер завершения для обводки
+
 ## CONTENT
+
+Маркер завершения для обводки
 
 Тип: stappler::vg::VectorPath::LineCup
 
@@ -171,7 +251,11 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Маркер соединения линий обводки
+
 ## CONTENT
+
+Маркер соединения линий обводки
 
 Тип: stappler::vg::VectorPath::LineJoin
 
@@ -180,7 +264,11 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Предел для усечения острых углов в обводке
+
 ## CONTENT
+
+Предел для усечения острых углов в обводке
 
 Тип: float
 
@@ -189,7 +277,11 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Флаг включённого вершинного антиалиасинга
+
 ## CONTENT
+
+Флаг включённого вершинного антиалиасинга
 
 Тип: bool
 
@@ -198,41 +290,61 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Данные команды рисования пути
+
 ## CONTENT
 
 Доступ: public
+
+Данные команды рисования пути. Команда ассоциируется с от нуля до трёх таких ячеек данных при кодировании.
 
 
 # ::stappler::vg::VectorPath::CommandData::
 
 ## BRIEF
 
+Безымянная структура для хранения данных
+
 ## CONTENT
+
+Безымянная структура для хранения данных
 
 
 # ::stappler::vg::VectorPath::CommandData::x
 
 ## BRIEF
 
+Координата x точки
+
 ## CONTENT
 
 Тип: float
+
+Координата x точки
 
 
 # ::stappler::vg::VectorPath::CommandData::y
 
 ## BRIEF
 
+Координата y точки
+
 ## CONTENT
 
 Тип: float
+
+Координата y точки
 
 
 # ::stappler::vg::VectorPath::CommandData::p
 
 ## BRIEF
 
+Структура для хранения точки
+
 ## CONTENT
+
+Структура для хранения точки
 
 Тип: 
 
@@ -241,14 +353,22 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Безымянная структура для хранения данных
+
 ## CONTENT
+
+Безымянная структура для хранения данных
 
 
 # ::stappler::vg::VectorPath::CommandData::v
 
 ## BRIEF
 
+Угол поворота эллипса для дуги
+
 ## CONTENT
+
+Угол поворота эллипса для дуги
 
 Тип: float
 
@@ -257,7 +377,11 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Флаг перевёрнутой дуги
+
 ## CONTENT
+
+Флаг перевёрнутой дуги
 
 Тип: bool
 
@@ -266,16 +390,25 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Флаг большей части дуги
+
 ## CONTENT
 
 Тип: bool
+
+
+Флаг большей части дуги
 
 
 # ::stappler::vg::VectorPath::CommandData::f
 
 ## BRIEF
 
+Структура для хранения данных дуги
+
 ## CONTENT
+
+Структура для хранения данных дуги
 
 Тип: 
 
@@ -284,7 +417,11 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Создаёт данные для точки
+
 ## CONTENT
+
+Создаёт данные для точки
 
 Параметры:
 * float
@@ -295,7 +432,11 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Создаёт данные для параметров дуги
+
 ## CONTENT
+
+Создаёт данные для параметров дуги
 
 Параметры:
 * float
@@ -307,47 +448,64 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Тип команды отрисовки
+
 ## CONTENT
 
 Доступ: public
 
+
+Тип команды отрисовки
+
 Значения:
-* MoveTo
-* LineTo
-* QuadTo
-* CubicTo
-* ArcTo
-* ClosePath
+* MoveTo - перемещение к началу нового контура
+* LineTo - прямая линия
+* QuadTo - квадратичная кривая Безье
+* CubicTo - кубическая кривая Безье
+* ArcTo - дуга до точки
+* ClosePath - заверение пути
 
 
 # ::stappler::vg::VectorPath::VectorPath()
 
 ## BRIEF
 
+Конструтор пустого векторного пути
+
 ## CONTENT
 
 Доступ: public
+
+Конструтор пустого векторного пути
 
 
 # ::stappler::vg::VectorPath::VectorPath(size_t)
 
 ## BRIEF
 
+Конструктор векторного пути с преаллокацией данных для некоторого числа команд
+
 ## CONTENT
 
 Доступ: public
 
+Конструктор векторного пути с преаллокацией данных для некоторого числа команд
+
 Параметры:
-* size_t
+* size_t - ожидаемое число команд
 
 
 # ::stappler::vg::VectorPath::VectorPath(stappler::vg::VectorPath const&)
 
 ## BRIEF
 
+Конструктор копирования
+
 ## CONTENT
 
 Доступ: public
+
+Конструктор копирования
 
 Параметры:
 * stappler::vg::VectorPath const&
@@ -357,9 +515,13 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Оператор копирования
+
 ## CONTENT
 
 Доступ: public
+
+Оператор копирования
 
 Параметры:
 * stappler::vg::VectorPath const&
@@ -371,9 +533,13 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Конструктор перемещения
+
 ## CONTENT
 
 Доступ: public
+
+Конструктор перемещения
 
 Параметры:
 * stappler::vg::VectorPath&&
@@ -383,9 +549,13 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Оператор перемещения
+
 ## CONTENT
 
 Доступ: public
+
+Оператор перемещения
 
 Параметры:
 * stappler::vg::VectorPath&&
@@ -397,62 +567,82 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Инициализирует пустой путь
+
 ## CONTENT
 
 Доступ: public
 
+Инициализирует пустой путь
+
 Возвращает:
-* bool
+* bool - true при успешной инициализации
 
 # ::stappler::vg::VectorPath::init(stappler::StringView const&)
 
 ## BRIEF
 
+Инициализирует путь из строки тега path в SVG
+
 ## CONTENT
 
 Доступ: public
+
+Инициализирует путь из строки тега path в SVG
 
 Параметры:
 * stappler::StringView const&
 
 Возвращает:
-* bool
+* bool - true при успешной инициализации
 
 # ::stappler::vg::VectorPath::init(stappler::FilePath&&)
 
 ## BRIEF
 
+Инициализирует путь из файла SVG, содержащего одиночный путь
+
 ## CONTENT
 
 Доступ: public
+
+Инициализирует путь из файла SVG, содержащего одиночный путь
 
 Параметры:
 * stappler::FilePath&&
 
 Возвращает:
-* bool
+* bool - true при успешной инициализации
 
 # ::stappler::vg::VectorPath::init(stappler::BytesView)
 
 ## BRIEF
 
+Инициализирует путь из данных, ранее сохранённых с помощью `encode`
+
 ## CONTENT
 
 Доступ: public
+
+Инициализирует путь из данных, ранее сохранённых с помощью `encode`. Формат не хранит параметры пути, только команды.
 
 Параметры:
 * stappler::BytesView
 
 Возвращает:
-* bool
+* bool - true при успешной инициализации
 
 # ::stappler::vg::VectorPath::addPath(stappler::vg::VectorPath const&)
 
 ## BRIEF
 
+Добавляет команды из другого пути к текущему в виде новых контуров
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет команды из другого пути к текущему в виде новых контуров
 
 Параметры:
 * stappler::vg::VectorPath const&
@@ -464,9 +654,13 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Добавляет команды из другого пути к текущему в виде новых контуров
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет команды из другого пути к текущему в виде новых контуров. Путь читается из внутреннего формата кодирования функции `encode`.
 
 Параметры:
 * stappler::BytesView
@@ -478,9 +672,13 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Добавляет команды из другого пути к текущему в виде новых контуров
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет команды из другого пути к текущему в виде новых контуров. Путь читается из строки для SVG-тега `path`.
 
 Параметры:
 * stappler::StringView
@@ -492,9 +690,13 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Возвращает число команд в пути
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает число команд в пути
 
 Возвращает:
 * size_t
@@ -503,13 +705,17 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Начинает новый контур на указанной точке
+
 ## CONTENT
 
 Доступ: public
 
+Начинает новый контур на указанной точке
+
 Параметры:
-* float
-* float
+* float - x
+* float - y
 
 Возвращает:
 * stappler::vg::VectorPath&
@@ -518,9 +724,13 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Начинает новый контур на указанной точке
+
 ## CONTENT
 
 Доступ: public
+
+Начинает новый контур на указанной точке
 
 Параметры:
 * stappler::geom::Vec2 const&
@@ -532,13 +742,17 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Создаёт прямую линию до точки
+
 ## CONTENT
 
 Доступ: public
 
+Создаёт прямую линию до точки
+
 Параметры:
-* float
-* float
+* float - x
+* float - y
 
 Возвращает:
 * stappler::vg::VectorPath&
@@ -547,9 +761,13 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Создаёт прямую линию до точки
+
 ## CONTENT
 
 Доступ: public
+
+Создаёт прямую линию до точки
 
 Параметры:
 * stappler::geom::Vec2 const&
@@ -561,15 +779,19 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Создаёт квадратичную кривую Безье до точки
+
 ## CONTENT
 
 Доступ: public
 
+Создаёт квадратичную кривую Безье до точки
+
 Параметры:
-* float
-* float
-* float
-* float
+* float - cx
+* float - cy
+* float - x
+* float - y
 
 Возвращает:
 * stappler::vg::VectorPath&
@@ -578,13 +800,17 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Создаёт квадратичную кривую Безье до точки
+
 ## CONTENT
 
 Доступ: public
 
+Создаёт квадратичную кривую Безье до точки
+
 Параметры:
-* stappler::geom::Vec2 const&
-* stappler::geom::Vec2 const&
+* stappler::geom::Vec2 const& - контрольная точка
+* stappler::geom::Vec2 const& - целевая точка
 
 Возвращает:
 * stappler::vg::VectorPath&
@@ -593,17 +819,21 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Создаёт кубическую кривую Безье до точки
+
 ## CONTENT
 
 Доступ: public
 
+Создаёт кубическую кривую Безье до точки
+
 Параметры:
-* float
-* float
-* float
-* float
-* float
-* float
+* float - c1x
+* float - c1y
+* float - c2x
+* float - c2y
+* float - x
+* float - y
 
 Возвращает:
 * stappler::vg::VectorPath&
@@ -612,14 +842,18 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Создаёт кубическую кривую Безье до точки
+
 ## CONTENT
 
 Доступ: public
 
+Создаёт кубическую кривую Безье до точки
+
 Параметры:
-* stappler::geom::Vec2 const&
-* stappler::geom::Vec2 const&
-* stappler::geom::Vec2 const&
+* stappler::geom::Vec2 const& - первая контрольная точка
+* stappler::geom::Vec2 const& - вторая контрольная точка
+* stappler::geom::Vec2 const& - целевая точка
 
 Возвращает:
 * stappler::vg::VectorPath&
@@ -628,18 +862,22 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Создаёт эллиптическую дугу до точки
+
 ## CONTENT
 
 Доступ: public
 
+Создаёт эллиптическую дугу до точки
+
 Параметры:
-* float
-* float
-* float
-* bool
-* bool
-* float
-* float
+* float - rx
+* float - ry
+* float - поворот элипса
+* bool - флаг переворота дуги
+* bool - флаг большого семента дуги
+* float - x
+* float - y
 
 Возвращает:
 * stappler::vg::VectorPath&
@@ -648,16 +886,22 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Создаёт эллиптическую дугу до точки
+
 ## CONTENT
 
 Доступ: public
 
+Создаёт эллиптическую дугу до точки
+
+Доступ: public
+
 Параметры:
-* stappler::geom::Vec2 const&
-* float
-* bool
-* bool
-* stappler::geom::Vec2 const&
+* stappler::geom::Vec2 const& - радиусы эллипса
+* float - поворот элипса
+* bool - флаг переворота дуги
+* bool - флаг большого семента дуги
+* stappler::geom::Vec2 const& - целевая точка
 
 Возвращает:
 * stappler::vg::VectorPath&
@@ -666,9 +910,13 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Завершает текущий контур
+
 ## CONTENT
 
 Доступ: public
+
+Завершает текущий контур
 
 Возвращает:
 * stappler::vg::VectorPath&
@@ -677,9 +925,13 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Добавляет контур прямоугольника
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет контур прямоугольника
 
 Параметры:
 * stappler::geom::Rect const&
@@ -691,14 +943,18 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Добавляет контур прямоугольника со скруглёнными углами
+
 ## CONTENT
 
 Доступ: public
 
+Добавляет контур прямоугольника со скруглёнными углами
+
 Параметры:
 * stappler::geom::Rect const&
-* float
-* float
+* float - радиус скругления по x
+* float - радиус скругления по y
 
 Возвращает:
 * stappler::vg::VectorPath&
@@ -707,15 +963,19 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Добавляет контур прямоугольника
+
 ## CONTENT
 
 Доступ: public
 
+Добавляет контур прямоугольника
+
 Параметры:
-* float
-* float
-* float
-* float
+* float - x
+* float - y
+* float - ширина
+* float - высота
 
 Возвращает:
 * stappler::vg::VectorPath&
@@ -724,9 +984,13 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Добавляет контур эллипса, вписанного в прямоугольник
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет контур эллипса, вписанного в прямоугольник
 
 Параметры:
 * stappler::geom::Rect const&
@@ -738,14 +1002,18 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Добавляет контур круга
+
 ## CONTENT
 
 Доступ: public
 
+Добавляет контур круга
+
 Параметры:
-* float
-* float
-* float
+* float - x
+* float - y
+* float - радиус
 
 Возвращает:
 * stappler::vg::VectorPath&
@@ -754,15 +1022,19 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Добавляет контур эллипса
+
 ## CONTENT
 
 Доступ: public
 
+Добавляет контур эллипса
+
 Параметры:
-* float
-* float
-* float
-* float
+* float - x
+* float - y
+* float - радиус по x
+* float - радиус по y
 
 Возвращает:
 * stappler::vg::VectorPath&
@@ -771,14 +1043,18 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Добавляет контур сектора эллипса
+
 ## CONTENT
 
 Доступ: public
 
+Добавляет контур сектора эллипса
+
 Параметры:
-* stappler::geom::Rect const&
-* float
-* float
+* stappler::geom::Rect const& - ограничивающий прямоугольник
+* float - наальный угол в радианах
+* float - угол поворота от начального в радианах
 
 Возвращает:
 * stappler::vg::VectorPath&
@@ -787,17 +1063,21 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Добавляет прямоугольник со скруглёнными углами
+
 ## CONTENT
 
 Доступ: public
 
+Добавляет прямоугольник со скруглёнными углами
+
 Параметры:
-* float
-* float
-* float
-* float
-* float
-* float
+* float - x
+* float - y
+* float - ширина
+* float - высота
+* float - радиус скругления по x
+* float - радиус скругления по y
 
 Возвращает:
 * stappler::vg::VectorPath&
@@ -806,9 +1086,13 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Устанавливает цвет заливки
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает цвет заливки
 
 Параметры:
 * stappler::geom::Color4B const&
@@ -820,13 +1104,17 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Устанавливает цвет заливки с возмонжостью сохранить прозрачность
+
 ## CONTENT
 
 Доступ: public
 
+Устанавливает цвет заливки с возмонжостью сохранить прозрачность
+
 Параметры:
 * stappler::geom::Color3B const&
-* bool
+* bool - true если нужно сохранить прозрачность
 
 Возвращает:
 * stappler::vg::VectorPath&
@@ -835,13 +1123,19 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Устанавливает цвет заливки с возмонжостью сохранить прозрачность
+
 ## CONTENT
+
+Доступ: public
+
+Устанавливает цвет заливки с возмонжостью сохранить прозрачность
 
 Доступ: public
 
 Параметры:
 * stappler::geom::Color const&
-* bool
+* bool - true если нужно сохранить прозрачность
 
 Возвращает:
 * stappler::vg::VectorPath&
@@ -850,9 +1144,13 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Возвращает цвет заливки
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает цвет заливки
 
 Возвращает:
 * stappler::geom::Color4B const&
@@ -861,9 +1159,13 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Устанавливает цвет обводки
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает цвет обводки
 
 Параметры:
 * stappler::geom::Color4B const&
@@ -875,13 +1177,17 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Устанавливает цвет обводки с возмонжостью сохранить прозрачность
+
 ## CONTENT
 
 Доступ: public
 
+Устанавливает цвет обводки с возмонжостью сохранить прозрачность
+
 Параметры:
 * stappler::geom::Color3B const&
-* bool
+* bool - true если нужно сохранить прозрачность
 
 Возвращает:
 * stappler::vg::VectorPath&
@@ -890,13 +1196,17 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Устанавливает цвет обводки с возмонжостью сохранить прозрачность
+
 ## CONTENT
 
 Доступ: public
 
+Устанавливает цвет обводки с возмонжостью сохранить прозрачность
+
 Параметры:
 * stappler::geom::Color const&
-* bool
+* bool - true если нужно сохранить прозрачность
 
 Возвращает:
 * stappler::vg::VectorPath&
@@ -905,9 +1215,13 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Возвращает цвет обводки
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает цвет обводки
 
 Возвращает:
 * stappler::geom::Color4B const&
@@ -916,9 +1230,13 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Устанавливает прозрачность заливки
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает прозрачность заливки
 
 Параметры:
 * uint8_t
@@ -930,9 +1248,13 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Возвращает прозрачность заливки
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает прозрачность заливки
 
 Возвращает:
 * uint8_t
@@ -941,9 +1263,13 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Устанавливает прозрачность обводки
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает прозрачность обводки
 
 Параметры:
 * uint8_t
@@ -955,9 +1281,13 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Возвращает прозрачность обводки
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает прозрачность обводки
 
 Возвращает:
 * uint8_t
@@ -966,9 +1296,13 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Устанавливает ширину обводки
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает ширину обводки
 
 Параметры:
 * float
@@ -980,9 +1314,13 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Возвращает ширину обводки
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает ширину обводки
 
 Возвращает:
 * float
@@ -991,9 +1329,13 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Устанавливает правило заливки
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает правило заливки
 
 Параметры:
 * stappler::vg::VectorPath::Winding
@@ -1005,9 +1347,13 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Возвращает правило заливки
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает правило заливки
 
 Возвращает:
 * Winding
@@ -1016,9 +1362,13 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Устанавливает маркеры завершения обводки
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает маркеры завершения обводки
 
 Параметры:
 * stappler::vg::VectorPath::LineCup
@@ -1030,9 +1380,13 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Возвращает маркеры завершения обводки
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает маркеры завершения обводки
 
 Возвращает:
 * LineCup
@@ -1041,9 +1395,13 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Устанавливает маркеры соединения линий обводки
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает маркеры соединения линий обводки
 
 Параметры:
 * stappler::vg::VectorPath::LineJoin
@@ -1055,9 +1413,13 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Возвращает маркеры соединения линий обводки
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает маркеры соединения линий обводки
 
 Возвращает:
 * LineJoin
@@ -1066,9 +1428,13 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Устанавливает предел угла для обводки
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает предел угла для обводки
 
 Параметры:
 * float
@@ -1080,9 +1446,13 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Возвращает предел угла для обводки
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает предел угла для обводки
 
 Возвращает:
 * float
@@ -1091,9 +1461,13 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Устанавливает способ отрисовки
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает способ отрисовки
 
 Параметры:
 * stappler::vg::VectorPath::DrawStyle
@@ -1105,9 +1479,13 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Возвращает способ отрисовки
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает способ отрисовки
 
 Возвращает:
 * DrawStyle
@@ -1116,9 +1494,13 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Устанавливает флаг вершинного антиалиасинга
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает флаг вершинного антиалиасинга
 
 Параметры:
 * bool
@@ -1130,9 +1512,13 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Возвращает флаг вершинного антиалиасинга
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает флаг вершинного антиалиасинга
 
 Возвращает:
 * bool
@@ -1141,9 +1527,13 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Устанавливает матрицу трансформации
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает матрицу трансформации
 
 Параметры:
 * stappler::geom::Mat4 const&
@@ -1155,9 +1545,13 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Добавляет матрицу трансформации к текущей
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет матрицу трансформации к текущей через умножение
 
 Параметры:
 * stappler::geom::Mat4 const&
@@ -1169,9 +1563,13 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Возвращает матрицу трансформации
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает матрицу трансформации
 
 Возвращает:
 * stappler::geom::Mat4 const&
@@ -1180,9 +1578,13 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Удаляет все команды из пути
+
 ## CONTENT
 
 Доступ: public
+
+Удаляет все команды из пути
 
 Возвращает:
 * stappler::vg::VectorPath&
@@ -1191,9 +1593,13 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Устанавливает параметры для пути
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает параметры для пути
 
 Параметры:
 * stappler::vg::VectorPath::Params const&
@@ -1205,9 +1611,13 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Возвращает параметры для пути
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает параметры для пути
 
 Возвращает:
 * stappler::vg::VectorPath::Params
@@ -1216,9 +1626,13 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Проверяет список команд на пустоту
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет список команд на пустоту
 
 Возвращает:
 * bool
@@ -1227,22 +1641,30 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Резервирует число команд и число слотов для данных
+
 ## CONTENT
 
 Доступ: public
 
+Резервирует число команд и число слотов для данных
+
 Параметры:
-* size_t
-* size_t
+* size_t - число команд
+* size_t - число слотов для данных команд
 
 
 # ::stappler::vg::VectorPath::getCommands() const
 
 ## BRIEF
 
+Возвращает список команд
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает список команд
 
 Возвращает:
 * Interface::VectorType<Command> const&
@@ -1251,9 +1673,13 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Возвращает список точек и данных для команд
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает список точек и данных для команд
 
 Возвращает:
 * Interface::VectorType<CommandData> const&
@@ -1262,9 +1688,13 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Проверяет путь на непустоту
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет путь на непустоту
 
 Возвращает:
 * bool
@@ -1273,9 +1703,13 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Кодирует путь для сохранения в бинарном виде
+
 ## CONTENT
 
 Доступ: public
+
+Кодирует путь для сохранения в бинарном виде. Команды кодируются вместе с данными по правилам формата CBOR для чисел. Сперва кодируется число версии, число команд и число слотов данных. После поочерёдно кодируются команды, после команды - ссотвествующие ей данные.
 
 Возвращает:
 * Interface::BytesType
@@ -1284,12 +1718,16 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Кодирует путь в соотвествующую SVG-строку
+
 ## CONTENT
 
 Доступ: public
 
+Кодирует путь в соотвествующую SVG-строку
+
 Параметры:
-* bool
+* bool - true для того, чтобы новый контур начинался с новой строки
 
 Возвращает:
 * Interface::StringType
@@ -1298,9 +1736,13 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Возвращает число команд
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает число команд
 
 Возвращает:
 * size_t
@@ -1309,9 +1751,13 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Возвращает слотов данных
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает слотов данных
 
 Возвращает:
 * size_t
@@ -1320,9 +1766,13 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Слоты данных команд
+
 ## CONTENT
 
 Доступ: protected
+
+Слоты данных команд
 
 Тип: Interface::VectorType<CommandData>
 
@@ -1331,9 +1781,13 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Список команд
+
 ## CONTENT
 
 Доступ: protected
+
+Список команд
 
 Тип: Interface::VectorType<Command>
 
@@ -1342,8 +1796,12 @@ Title: SPVectorPath.h
 
 ## BRIEF
 
+Параметры пути
+
 ## CONTENT
 
 Доступ: protected
+
+Параметры пути
 
 Тип: stappler::vg::VectorPath::Params

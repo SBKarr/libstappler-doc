@@ -324,36 +324,6 @@ Title: SPVec3.h
 * stappler::geom::Vec3 const&
 
 
-# ::stappler::geom::Vec3::isZero() const
-
-## BRIEF
-
-Проверяет, нулевой ли вектор
-
-## CONTENT
-
-Доступ: public
-
-Проверяет, нулевой ли вектор
-
-Возвращает:
-* bool - true если вектор нулевой
-
-# ::stappler::geom::Vec3::isOne() const
-
-## BRIEF
-
-Проверяет, содержат ли все компоненты вектора единицу
-
-## CONTENT
-
-Доступ: public
-
-Проверяет, содержат ли все компоненты вектора единицу
-
-Возвращает:
-* bool - true если все компоненты вектора равны единице
-
 # ::stappler::geom::Vec3::add(stappler::geom::Vec3 const&)
 
 ## BRIEF
@@ -368,24 +338,6 @@ Title: SPVec3.h
 
 Параметры:
 * stappler::geom::Vec3 const&
-
-
-# ::stappler::geom::Vec3::add(float,float,float)
-
-## BRIEF
-
-Покомпонентно добавляет значения к текущему вектору
-
-## CONTENT
-
-Доступ: public
-
-Покомпонентно добавляет значения к текущему вектору
-
-Параметры:
-* float - x
-* float - y
-* float - z
 
 
 # ::stappler::geom::Vec3::subtract(stappler::geom::Vec3 const&)
@@ -446,52 +398,6 @@ Title: SPVec3.h
 
 Отрицает текущий вектор, умножая его на -1
 
-# ::stappler::geom::Vec3::scale(float)
-
-## BRIEF
-
-Умножает текущий вектор на скаляр
-
-## CONTENT
-
-Доступ: public
-
-Умножает текущий вектор на скаляр
-
-Параметры:
-* float
-
-
-# ::stappler::geom::Vec3::lerp(stappler::geom::Vec3 const&,float) const
-
-## BRIEF
-
-Возвращает результат линейной интерполяции между двумя векторами
-
-## CONTENT
-
-Доступ: public
-
-Возвращает результат линейной интерполяции между двумя векторами
-
-Параметры:
-* stappler::geom::Vec3 const& - другой вектор
-* float - параметр интерполяции из [0, 1]
-
-Возвращает:
-* stappler::geom::Vec3 - результат линейной интерполяции
-
-# ::stappler::geom::Vec3::setZero()
-
-## BRIEF
-
-Сбрасывает текущий вектор, делая его нулевым
-
-## CONTENT
-
-Доступ: public
-
-Сбрасывает текущий вектор, делая его нулевым
 
 # ::stappler::geom::Vec3::fuzzyEquals(stappler::geom::Vec3 const&,float) const
 
@@ -509,21 +415,6 @@ Title: SPVec3.h
 
 Возвращает:
 * bool - true если векторы совпадают с заданным допуском
-
-# ::stappler::geom::Vec3::getAbs() const
-
-## BRIEF
-
-Возвращает покомпоентное абсолютное значение для данного вектора
-
-## CONTENT
-
-Доступ: public
-
-Возвращает покомпоентное абсолютное значение для данного вектора
-
-Возвращает:
-* stappler::geom::Vec3 - покомпоентное абсолютное значение для данного вектора
 
 # ::stappler::geom::Vec3::clamp(stappler::geom::Vec3 const&,stappler::geom::Vec3 const&)
 
@@ -657,41 +548,6 @@ Title: SPVec3.h
 Возвращает:
 * stappler::geom::Vec3 - нормализованный вектор
 
-# ::stappler::geom::Vec3::smooth(stappler::geom::Vec3 const&,float,float)
-
-## BRIEF
-
-Плавно смещает текущий вектор вслед за целевым
-
-## CONTENT
-
-Доступ: public
-
-Плавно смещает текущий вектор вслед за целевым. Исползуется функция оценки времени активности и допустимая задержка в смещении. Чем меньше задержка, тем точнее текущий вектор соотвествует целевому. Чем больше задержка, тем плавнее следование вектора за целевым.
-
-Параметры:
-* stappler::geom::Vec3 const& - целевой вектор
-* float - целевое время действия
-* float - время задержки
-
-
-# ::stappler::geom::Vec3::operator+(stappler::geom::Vec3 const&) const
-
-## BRIEF
-
-Возвращает сумму текущего и другого векторов
-
-## CONTENT
-
-Доступ: public
-
-Возвращает сумму текущего и другого векторов
-
-Параметры:
-* stappler::geom::Vec3 const&
-
-Возвращает:
-* stappler::geom::Vec3 const - сумма векторов
 
 # ::stappler::geom::Vec3::operator+=(stappler::geom::Vec3 const&)
 
@@ -711,24 +567,6 @@ Title: SPVec3.h
 Возвращает:
 * stappler::geom::Vec3& - ссылка на себя
 
-# ::stappler::geom::Vec3::operator-(stappler::geom::Vec3 const&) const
-
-## BRIEF
-
-Возвращает разность между текущим и другим вектором
-
-## CONTENT
-
-Доступ: public
-
-Возвращает разность между текущим и другим вектором
-
-Параметры:
-* stappler::geom::Vec3 const&
-
-Возвращает:
-* stappler::geom::Vec3 const - разность между векторами
-
 # ::stappler::geom::Vec3::operator-=(stappler::geom::Vec3 const&)
 
 ## BRIEF
@@ -747,147 +585,6 @@ Title: SPVec3.h
 Возвращает:
 * stappler::geom::Vec3& - ссылка на себя
 
-# ::stappler::geom::Vec3::operator-() const
-
-## BRIEF
-
-Возвращает отрицание текущего вектора
-
-## CONTENT
-
-Доступ: public
-
-Возвращает отрицание текущего вектора
-
-Возвращает:
-* stappler::geom::Vec3 const - отрицание текущего вектора
-
-# ::stappler::geom::Vec3::operator*(float) const
-
-## BRIEF
-
-Возвращает результат умножения текущего вектора на скаляр
-
-## CONTENT
-
-Доступ: public
-
-Возвращает результат умножения текущего вектора на скаляр
-
-Параметры:
-* float
-
-Возвращает:
-* stappler::geom::Vec3 const - результат умножения текущего вектора на скаляр
-
-# ::stappler::geom::Vec3::operator*=(float)
-
-## BRIEF
-
-Умножает текущий вектор на скаляр
-
-## CONTENT
-
-Доступ: public
-
-Умножает текущий вектор на скаляр
-
-Параметры:
-* float
-
-Возвращает:
-* stappler::geom::Vec3& - ссылка на себя
-
-# ::stappler::geom::Vec3::operator/(float) const
-
-## BRIEF
-
-Возвращает результат деления ткущего вектора на скаляр
-
-## CONTENT
-
-Доступ: public
-
-Возвращает результат деления ткущего вектора на скаляр
-
-Параметры:
-* float
-
-Возвращает:
-* stappler::geom::Vec3 const - результат деления ткущего вектора на скаляр
-
-# ::stappler::geom::Vec3::operator<(stappler::geom::Vec3 const&) const
-
-## BRIEF
-
-Вычисляет лексикографическое отношение двух векторов
-
-## CONTENT
-
-Доступ: public
-
-Вычисляет лексикографическое отношение двух векторов, используется для помещения векторов в упорядоченные контейнеры
-
-Параметры:
-* stappler::geom::Vec3 const&
-
-Возвращает:
-* bool - true если текущий вектор лексикографически меньше другого
-
-# ::stappler::geom::Vec3::operator>(stappler::geom::Vec3 const&) const
-
-## BRIEF
-
-Вычисляет лексикографическое отношение двух векторов
-
-## CONTENT
-
-Доступ: public
-
-Вычисляет лексикографическое отношение двух векторов, используется для помещения векторов в упорядоченные контейнеры
-
-Параметры:
-* stappler::geom::Vec3 const&
-
-Возвращает:
-* bool - true если текущий вектор лексикографически больше другого
-
-# ::stappler::geom::Vec3::operator==(stappler::geom::Vec3 const&) const
-
-## BRIEF
-
-Сравнивает два вектора
-
-## CONTENT
-
-Доступ: public
-
-Сравнивает два вектора
-
-Параметры:
-* stappler::geom::Vec3 const&
-
-Возвращает:
-* bool - true если вектора равны
-
-# ::stappler::geom::Vec3::operator!=(stappler::geom::Vec3 const&) const
-
-## BRIEF
-
-Сравнивает два вектора
-
-## CONTENT
-
-Доступ: public
-
-Сравнивает два вектора
-
-Параметры:
-* stappler::geom::Vec3 const&
-
-Возвращает:
-* bool - true если вектора не равны
-
 # ::stappler::geom::Vec3::normalize()
 
 ## BRIEF
@@ -900,24 +597,6 @@ Title: SPVec3.h
 
 Возвращает:
 * stappler::geom::Vec3& - ссылка на себя
-
-
-# ::stappler::geom::operator*(float,stappler::geom::Vec3 const&)
-
-## BRIEF
-
-Вычисляет результат умножения вектора на число
-
-## CONTENT
-
-Вычисляет результат умножения вектора на число
-
-Параметры:
-* float
-* stappler::geom::Vec3 const&
-
-Возвращает:
-* stappler::geom::Vec3 const - результат умножения вектора на число
 
 # ::stappler::geom::operator<<(std::basic_ostream<char>&,stappler::geom::Vec3 const&)
 
@@ -936,19 +615,601 @@ Title: SPVec3.h
 Возвращает:
 * std::basic_ostream<char>&
 
-# ::stappler::geom::lessThanEqual(stappler::geom::Vec3 const&,stappler::geom::Vec3 const&)
+# ::stappler::geom::Vec3::Dimansions
 
 ## BRIEF
 
-Вычисляет покомпонентное отношение
+Число измерений для поэлементных алгоритмов
 
 ## CONTENT
 
-Вычисляет покомпонентное отношение между векторами
+Доступ: public
+
+Число измерений для поэлементных алгоритмов
+
+Тип: size_t const
+
+# ::stappler::geom::Vec3::scale(stappler::geom::Vec3 const&,stappler::geom::Vec3 const&,stappler::geom::Vec3*)
+
+## BRIEF
+
+Вычисляет результат поэлементного умножения векторов и записывает результат по указателю
+
+## CONTENT
+
+Доступ: public
+
+Вычисляет результат поэлементного умножения векторов и записывает результат по указателю
 
 Параметры:
-* stappler::geom::Vec3 const& - вектор A
-* stappler::geom::Vec3 const& - вектор B
+* stappler::geom::Vec3 const&
+* stappler::geom::Vec3 const&
+* stappler::geom::Vec3*
+
+# ::stappler::geom::Vec3::unscale(stappler::geom::Vec3 const&,stappler::geom::Vec3 const&,stappler::geom::Vec3*)
+
+## BRIEF
+
+Вычисляет результат поэлементного деления векторов и записывает результат по указателю
+
+## CONTENT
+
+Доступ: public
+
+Вычисляет результат поэлементного деления векторов и записывает результат по указателю
+
+Параметры:
+* stappler::geom::Vec3 const&
+* stappler::geom::Vec3 const&
+* stappler::geom::Vec3*
+
+# ::stappler::geom::Vec3::bitop<typename>(stappler::geom::Vec3 const&,Functor const&)
+
+## BRIEF
+
+Применяет битовую операцию к вектору
+
+## CONTENT
+
+Доступ: public
+
+Применяет битовую операцию к вектору
+
+Параметры шаблона:
+* typename Functor
+
+Параметры:
+* stappler::geom::Vec3 const&
+* Functor const&
 
 Возвращает:
-* std::bitset<3> - битовая маска, в которой значение 1 означает, что соответствующий компонент вектора A меньше или равен соотвествующему компоненту вектора B
+* std::bitset<3>
+
+# ::stappler::geom::Vec3::bitop<typename>(stappler::geom::Vec3 const&,stappler::geom::Vec3 const&,Functor const&)
+
+## BRIEF
+
+Применяет битовую операцию к двум векторам
+
+## CONTENT
+
+Доступ: public
+
+Применяет битовую операцию к двум векторам
+
+Параметры шаблона:
+* typename Functor
+
+Параметры:
+* stappler::geom::Vec3 const&
+* stappler::geom::Vec3 const&
+* Functor const&
+
+Возвращает:
+* std::bitset<3>
+
+# ::stappler::geom::Vec3::fill(float)
+
+## BRIEF
+
+Заполняет все элементы вектора числом
+
+## CONTENT
+
+Доступ: public
+
+Заполняет все элементы вектора числом
+
+Параметры:
+* float
+
+Возвращает:
+* stappler::geom::Vec3
+
+# ::stappler::geom::Vec3::Vec3<typename>(stappler::geom::Vec3 const&,Functor const&)
+
+## BRIEF
+
+Конструктор из применения поэлементной операции вектору
+
+## CONTENT
+
+Доступ: public
+
+Конструктор из применения поэлементной операции вектору
+
+Параметры шаблона:
+* typename Functor
+
+Параметры:
+* stappler::geom::Vec3 const&
+* Functor const&
+
+# ::stappler::geom::Vec3::Vec3<typename>(stappler::geom::Vec3 const&,stappler::geom::Vec3 const&,Functor const&)
+
+## BRIEF
+
+Конструктор из применения поэлементной операции к двум векторам
+
+## CONTENT
+
+Доступ: public
+
+Конструктор из применения поэлементной операции к двум векторам
+
+Параметры шаблона:
+* typename Functor
+
+Параметры:
+* stappler::geom::Vec3 const&
+* stappler::geom::Vec3 const&
+* Functor const&
+
+# ::stappler::geom::Vec3::Vec3(stappler::geom::Size3 const&)
+
+## BRIEF
+
+Конструктор из трёхмерного размера
+
+## CONTENT
+
+Доступ: public
+
+Конструктор из трёхмерного размера
+
+Параметры:
+* stappler::geom::Size3 const&
+
+# ::stappler::geom::Vec3::Vec3(stappler::geom::Extent3 const&)
+
+## BRIEF
+
+Конструктор из трёхмерного размера
+
+## CONTENT
+
+Доступ: public
+
+Конструктор из трёхмерного размера
+
+Параметры:
+* stappler::geom::Extent3 const&
+
+# ::stappler::geom::Vec3::isValid() const
+
+## BRIEF
+
+Проверяет, что вектор не содержит NaN
+
+## CONTENT
+
+Доступ: public
+
+Проверяет, что вектор не содержит NaN
+
+Возвращает:
+* bool
+
+# ::stappler::geom::Vec3::add(float const&)
+
+## BRIEF
+
+Поэлементно добавляет число к вектору
+
+## CONTENT
+
+Доступ: public
+
+Поэлементно добавляет число к вектору
+
+Параметры:
+* float const&
+
+# ::stappler::geom::Vec3::subtract(float const&)
+
+## BRIEF
+
+Поэлментно вычитает число из вектора
+
+## CONTENT
+
+Доступ: public
+
+Поэлментно вычитает число из вектора
+
+Параметры:
+* float const&
+
+# ::stappler::geom::Vec3::scale(float const&)
+
+## BRIEF
+
+Поэлементно умножает вектор на число
+
+## CONTENT
+
+Доступ: public
+
+Поэлементно умножает вектор на число
+
+Параметры:
+* float const&
+
+# ::stappler::geom::Vec3::scale(stappler::geom::Vec3 const&)
+
+## BRIEF
+
+Поэлементно умножает векторы
+
+## CONTENT
+
+Доступ: public
+
+Поэлементно умножает векторы
+
+Параметры:
+* stappler::geom::Vec3 const&
+
+# ::stappler::geom::Vec3::unscale(float const&)
+
+## BRIEF
+
+Поэлементно делит вектор на число
+
+## CONTENT
+
+Доступ: public
+
+Поэлементно делит вектор на число
+
+Параметры:
+* float const&
+
+# ::stappler::geom::Vec3::unscale(stappler::geom::Vec3 const&)
+
+## BRIEF
+
+Поэлементно делит вектор на другой
+
+## CONTENT
+
+Доступ: public
+
+Поэлементно делит вектор на другой
+
+Параметры:
+* stappler::geom::Vec3 const&
+
+
+# ::stappler::geom::Vec3::isWithinDistance(stappler::geom::Vec3 const&,float) const
+
+## BRIEF
+
+Проверяет, что расстояние между векторами не больше значения
+
+## CONTENT
+
+Доступ: public
+
+Проверяет, что расстояние между векторами не больше значения. Избегает использования sqrt
+
+Параметры:
+* stappler::geom::Vec3 const&
+* float
+
+Возвращает:
+* bool
+
+# ::stappler::geom::Vec3::operator+=(float const&)
+
+## BRIEF
+
+Поэлементно добавляет число к вектору
+
+## CONTENT
+
+Доступ: public
+
+Поэлементно добавляет число к вектору
+
+Параметры:
+* float const&
+
+Возвращает:
+* stappler::geom::Vec3&
+
+# ::stappler::geom::Vec3::operator-=(float const&)
+
+## BRIEF
+
+Поэлементно вычитает число из вектора
+
+## CONTENT
+
+Доступ: public
+
+Поэлементно вычитает число из вектора
+
+Параметры:
+* float const&
+
+Возвращает:
+* stappler::geom::Vec3&
+
+# ::stappler::geom::Vec3::operator*=(float const&)
+
+## BRIEF
+
+Поэлементно умножает вектор на число
+
+## CONTENT
+
+Доступ: public
+
+Поэлементно умножает вектор на число
+
+Параметры:
+* float const&
+
+Возвращает:
+* stappler::geom::Vec3&
+
+# ::stappler::geom::Vec3::operator*=(stappler::geom::Vec3 const&)
+
+## BRIEF
+
+Поэлементно умножает вектор на другой
+
+## CONTENT
+
+Доступ: public
+
+Поэлементно умножает вектор на другой
+
+Параметры:
+* stappler::geom::Vec3 const&
+
+Возвращает:
+* stappler::geom::Vec3&
+
+# ::stappler::geom::Vec3::operator/=(float const&)
+
+## BRIEF
+
+Поэлементно делит вектор на число
+
+## CONTENT
+
+Доступ: public
+
+Поэлементно делит вектор на число
+
+Параметры:
+* float const&
+
+Возвращает:
+* stappler::geom::Vec3&
+
+# ::stappler::geom::Vec3::operator/=(stappler::geom::Vec3 const&)
+
+## BRIEF
+
+Поэлементно делит вектор на другой
+
+## CONTENT
+
+Доступ: public
+
+Поэлементно делит вектор на другой
+
+Параметры:
+* stappler::geom::Vec3 const&
+
+Возвращает:
+* stappler::geom::Vec3&
+
+# ::stappler::geom::operator+(stappler::geom::Vec3 const&,stappler::geom::Vec3 const&)
+
+## BRIEF
+
+Поэлементно суммирует векторы
+
+## CONTENT
+
+Поэлементно суммирует векторы
+
+Параметры:
+* stappler::geom::Vec3 const&
+* stappler::geom::Vec3 const&
+
+Возвращает:
+* stappler::geom::Vec3 const
+
+# ::stappler::geom::operator+(stappler::geom::Vec3 const&,float const&)
+
+## BRIEF
+
+Поэлементно суммирует вектор с числом
+
+## CONTENT
+
+Поэлементно суммирует вектор с числом
+
+Параметры:
+* stappler::geom::Vec3 const&
+* float const&
+
+Возвращает:
+* stappler::geom::Vec3 const
+
+# ::stappler::geom::operator+(float const&,stappler::geom::Vec3 const&)
+
+## BRIEF
+
+Поэлементно суммирует вектор с числом
+
+## CONTENT
+
+Поэлементно суммирует вектор с числом
+
+Параметры:
+* float const&
+* stappler::geom::Vec3 const&
+
+Возвращает:
+* stappler::geom::Vec3 const
+
+# ::stappler::geom::operator-(stappler::geom::Vec3 const&,stappler::geom::Vec3 const&)
+
+## BRIEF
+
+Поэлементно вычитает один вектор из другого
+
+## CONTENT
+
+Поэлементно вычитает один вектор из другого
+
+Параметры:
+* stappler::geom::Vec3 const&
+* stappler::geom::Vec3 const&
+
+Возвращает:
+* stappler::geom::Vec3 const
+
+# ::stappler::geom::operator-(stappler::geom::Vec3 const&,float const&)
+
+## BRIEF
+
+Поэлементно вычитает число из вектора
+
+## CONTENT
+
+Поэлементно вычитает число из вектора
+
+Параметры:
+* stappler::geom::Vec3 const&
+* float const&
+
+Возвращает:
+* stappler::geom::Vec3 const
+
+# ::stappler::geom::operator*(stappler::geom::Vec3 const&,stappler::geom::Vec3 const&)
+
+## BRIEF
+
+Поэлементно умножает векторы
+
+## CONTENT
+
+Поэлементно умножает векторы
+
+Параметры:
+* stappler::geom::Vec3 const&
+* stappler::geom::Vec3 const&
+
+Возвращает:
+* stappler::geom::Vec3 const
+
+# ::stappler::geom::operator*(stappler::geom::Vec3 const&,float const&)
+
+## BRIEF
+
+Поэлементно умножает вектор на число
+
+## CONTENT
+
+Поэлементно умножает вектор на число
+
+Параметры:
+* stappler::geom::Vec3 const&
+* float const&
+
+Возвращает:
+* stappler::geom::Vec3 const
+
+# ::stappler::geom::operator*(float const&,stappler::geom::Vec3 const&)
+
+## BRIEF
+
+Поэлементно умножает вектор на число
+
+## CONTENT
+
+Поэлементно умножает вектор на число
+
+Параметры:
+* float const&
+* stappler::geom::Vec3 const&
+
+Возвращает:
+* stappler::geom::Vec3 const
+
+# ::stappler::geom::operator/(stappler::geom::Vec3 const&,stappler::geom::Vec3 const&)
+
+## BRIEF
+
+Поэлементно делит векторы
+
+## CONTENT
+
+Поэлементно делит векторы
+
+Параметры:
+* stappler::geom::Vec3 const&
+* stappler::geom::Vec3 const&
+
+Возвращает:
+* stappler::geom::Vec3 const
+
+# ::stappler::geom::operator/(stappler::geom::Vec3 const&,float const&)
+
+## BRIEF
+
+Поэлементно делит вектор на число
+
+## CONTENT
+
+Поэлементно делит вектор на число
+
+Параметры:
+* stappler::geom::Vec3 const&
+* float const&
+
+Возвращает:
+* stappler::geom::Vec3 const
+
+# ::stappler::geom::operator-(stappler::geom::Vec3 const&)
+
+## BRIEF
+
+Возвращает поэлементное отрицание вектора
+
+## CONTENT
+
+Возвращает поэлементное отрицание вектора
+
+Параметры:
+* stappler::geom::Vec3 const&
+
+Возвращает:
+* stappler::geom::Vec3

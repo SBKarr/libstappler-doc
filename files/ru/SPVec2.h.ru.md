@@ -433,36 +433,6 @@ Title: SPVec2.h
 * stappler::geom::Size2 const&
 
 
-# ::stappler::geom::Vec2::isZero() const
-
-## BRIEF
-
-Проверяет, нулевая ли текущая точка
-
-## CONTENT
-
-Доступ: public
-
-Проверяет, нулевая ли текущая точка
-
-Возвращает:
-* bool - true если точка нулевая
-
-# ::stappler::geom::Vec2::isOne() const
-
-## BRIEF
-
-Проверяет, эквивалентны ли X и Y единице
-
-## CONTENT
-
-Доступ: public
-
-Проверяет, эквивалентны ли X и Y единице
-
-Возвращает:
-* bool - true если X и Y равны единице
-
 # ::stappler::geom::Vec2::isValid() const
 
 ## BRIEF
@@ -492,22 +462,6 @@ Title: SPVec2.h
 
 Параметры:
 * stappler::geom::Vec2 const&
-
-
-# ::stappler::geom::Vec2::add(float)
-
-## BRIEF
-
-Добавляет число к обеим координатам текущей точки
-
-## CONTENT
-
-Доступ: public
-
-Добавляет число к обеим координатам текущей точки
-
-Параметры:
-* float
 
 
 # ::stappler::geom::Vec2::distanceSquared(stappler::geom::Vec2 const&) const
@@ -592,22 +546,6 @@ Title: SPVec2.h
 
 Отрицает текущий вектор, умножает на -1
 
-# ::stappler::geom::Vec2::scale(float)
-
-## BRIEF
-
-Умножает обе координаты вектора на число
-
-## CONTENT
-
-Доступ: public
-
-Умножает обе координаты вектора на число
-
-Параметры:
-* float
-
-
 # ::stappler::geom::Vec2::scale(stappler::geom::Vec2 const&)
 
 ## BRIEF
@@ -624,18 +562,6 @@ Title: SPVec2.h
 * stappler::geom::Vec2 const&
 
 
-# ::stappler::geom::Vec2::setZero()
-
-## BRIEF
-
-Обнуляет текущий вектор
-
-## CONTENT
-
-Доступ: public
-
-Обнуляет текущий вектор
-
 # ::stappler::geom::Vec2::subtract(stappler::geom::Vec2 const&)
 
 ## BRIEF
@@ -651,76 +577,6 @@ Title: SPVec2.h
 Параметры:
 * stappler::geom::Vec2 const&
 
-
-# ::stappler::geom::Vec2::subtract(float)
-
-## BRIEF
-
-Вычитает число из обеих координат вектора
-
-## CONTENT
-
-Доступ: public
-
-Вычитает число из обеих координат вектора
-
-Параметры:
-* float
-
-
-# ::stappler::geom::Vec2::smooth(stappler::geom::Vec2 const&,float,float)
-
-## BRIEF
-
-Плавно смещает текущий вектор вслед за целевым
-
-## CONTENT
-
-Доступ: public
-
-Плавно смещает текущий вектор вслед за целевым. Исползуется функция оценки времени активности и допустимая задержка в смещении. Чем меньше задержка, тем точнее текущий вектор соотвествует целевому. Чем больше задержка, тем плавнее следование вектора за целевым.
-
-Параметры:
-* stappler::geom::Vec2 const& - целевой вектор
-* float - целевое время действия
-* float - время задержки
-
-
-# ::stappler::geom::Vec2::operator+(stappler::geom::Vec2 const&) const
-
-## BRIEF
-
-Возвращает сумму векторов
-
-## CONTENT
-
-Доступ: public
-
-Возвращает сумму векторов
-
-Параметры:
-* stappler::geom::Vec2 const&
-
-Возвращает:
-* stappler::geom::Vec2 const - сумма векторов
-
-# ::stappler::geom::Vec2::operator+(float) const
-
-## BRIEF
-
-Возвращает сумму вектора и числа
-
-## CONTENT
-
-Доступ: public
-
-Возвращает сумму вектора и числа
-
-Параметры:
-* float
-
-Возвращает:
-* stappler::geom::Vec2 const
 
 # ::stappler::geom::Vec2::operator+=(stappler::geom::Vec2 const&)
 
@@ -740,42 +596,6 @@ Title: SPVec2.h
 Возвращает:
 * stappler::geom::Vec2&
 
-# ::stappler::geom::Vec2::operator-(stappler::geom::Vec2 const&) const
-
-## BRIEF
-
-Возвращает разность векторов
-
-## CONTENT
-
-Доступ: public
-
-Возвращает разность векторов
-
-Параметры:
-* stappler::geom::Vec2 const&
-
-Возвращает:
-* stappler::geom::Vec2 const
-
-# ::stappler::geom::Vec2::operator-(float) const
-
-## BRIEF
-
-Возвращает разность вектора и числа
-
-## CONTENT
-
-Доступ: public
-
-Возвращает разность вектора и числа
-
-Параметры:
-* float
-
-Возвращает:
-* stappler::geom::Vec2 const
-
 # ::stappler::geom::Vec2::operator-=(stappler::geom::Vec2 const&)
 
 ## BRIEF
@@ -794,164 +614,6 @@ Title: SPVec2.h
 Возвращает:
 * stappler::geom::Vec2&
 
-# ::stappler::geom::Vec2::operator-() const
-
-## BRIEF
-
-Возвращает отрицание текущего вектора
-
-## CONTENT
-
-Доступ: public
-
-Возвращает отрицание текущего вектора
-
-Возвращает:
-* stappler::geom::Vec2 const
-
-# ::stappler::geom::Vec2::operator*(float) const
-
-## BRIEF
-
-Возвращает произведение вектора и числа
-
-## CONTENT
-
-Доступ: public
-
-Возвращает произведение вектора и числа
-
-Параметры:
-* float
-
-Возвращает:
-* stappler::geom::Vec2 const
-
-# ::stappler::geom::Vec2::operator*=(float)
-
-## BRIEF
-
-Умножает текущий вектор на число
-
-## CONTENT
-
-Доступ: public
-
-Умножает текущий вектор на число
-
-Параметры:
-* float
-
-Возвращает:
-* stappler::geom::Vec2&
-
-# ::stappler::geom::Vec2::operator/=(float)
-
-## BRIEF
-
-Делит текущий вектор на число
-
-## CONTENT
-
-Доступ: public
-
-Делит текущий вектор на число
-
-Параметры:
-* float
-
-Возвращает:
-* stappler::geom::Vec2&
-
-# ::stappler::geom::Vec2::operator<(stappler::geom::Vec2 const&) const
-
-## BRIEF
-
-Сравнивает два вектора
-
-## CONTENT
-
-Доступ: public
-
-Сравнивает два вектора
-
-Параметры:
-* stappler::geom::Vec2 const&
-
-Возвращает:
-* bool - true если текущий вектор лексиграфически меньше другого
-
-# ::stappler::geom::Vec2::operator>(stappler::geom::Vec2 const&) const
-
-## BRIEF
-
-Сравнивает два вектора
-
-## CONTENT
-
-Доступ: public
-
-Сравнивает два вектора
-
-Параметры:
-* stappler::geom::Vec2 const&
-
-Возвращает:
-* bool - true если текущий вектор лексиграфически больше другого
-
-# ::stappler::geom::Vec2::operator==(stappler::geom::Vec2 const&) const
-
-## BRIEF
-
-Сравнивает два вектора
-
-## CONTENT
-
-Доступ: public
-
-Сравнивает два вектора
-
-Параметры:
-* stappler::geom::Vec2 const&
-
-Возвращает:
-* bool - true если текущий вектор равен другому
-
-# ::stappler::geom::Vec2::operator!=(stappler::geom::Vec2 const&) const
-
-## BRIEF
-
-Сравнивает два вектора
-
-## CONTENT
-
-Доступ: public
-
-Сравнивает два вектора
-
-Параметры:
-* stappler::geom::Vec2 const&
-
-Возвращает:
-* bool - true если текущий вектор не равен другому
-
-# ::stappler::geom::Vec2::equals(stappler::geom::Vec2 const&) const
-
-## BRIEF
-
-Сравнивает два вектора
-
-## CONTENT
-
-Доступ: public
-
-Сравнивает два вектора
-
-Параметры:
-* stappler::geom::Vec2 const&
-
-Возвращает:
-* bool - true если текущий вектор равен другому
 
 # ::stappler::geom::Vec2::fuzzyEquals(stappler::geom::Vec2 const&,float) const
 
@@ -972,39 +634,6 @@ Title: SPVec2.h
 Возвращает:
 * bool - true если вектора равны с заданной погрешностью
 
-# ::stappler::geom::Vec2::getLength() const
-
-## BRIEF
-
-Возвращает длину текущего вектора
-
-## CONTENT
-
-Доступ: public
-
-Возвращает длину текущего вектора. Использует квадратный корень.
-
-Возвращает:
-* float - длина текущего вектора
-
-
-# ::stappler::geom::Vec2::getDistance(stappler::geom::Vec2 const&) const
-
-## BRIEF
-
-Возвращает расстояние между векторами
-
-## CONTENT
-
-Доступ: public
-
-Возвращает расстояние между векторами. Использует квадратный корень.
-
-Параметры:
-* stappler::geom::Vec2 const&
-
-Возвращает:
-* float - расстояние между векторами
 
 # ::stappler::geom::Vec2::getAngle() const
 
@@ -1156,40 +785,6 @@ Title: SPVec2.h
 
 Параметры:
 * stappler::geom::Vec2 const&
-
-Возвращает:
-* stappler::geom::Vec2
-
-# ::stappler::geom::Vec2::lerp(stappler::geom::Vec2 const&,float) const
-
-## BRIEF
-
-Возвращает результат линейной интерполяции между двумя векторами
-
-## CONTENT
-
-Доступ: public
-
-Возвращает результат линейной интерполяции между двумя векторами
-
-Параметры:
-* stappler::geom::Vec2 const&
-* float - параметр интерполяции
-
-Возвращает:
-* stappler::geom::Vec2
-
-# ::stappler::geom::Vec2::getAbs() const
-
-## BRIEF
-
-Возвращает вектор с абсолютными координатами от текущего
-
-## CONTENT
-
-Доступ: public
-
-Возвращает вектор с абсолютными координатами от текущего
 
 Возвращает:
 * stappler::geom::Vec2
@@ -1405,23 +1000,6 @@ Title: SPVec2.h
 
 Опорная точка в двумерном пространстве: середина нижней грани
 
-# ::stappler::geom::operator*(float,stappler::geom::Vec2 const&)
-
-## BRIEF
-
-Возвращает результат умножения числа на вектор
-
-## CONTENT
-
-Возвращает результат умножения числа на вектор
-
-Параметры:
-* float
-* stappler::geom::Vec2 const&
-
-Возвращает:
-* stappler::geom::Vec2 const
-
 # ::stappler::geom::operator*(stappler::geom::Vec2 const&,stappler::geom::Vec2 const&)
 
 ## BRIEF
@@ -1456,23 +1034,6 @@ Title: SPVec2.h
 Возвращает:
 * stappler::geom::Vec2 const
 
-# ::stappler::geom::operator/(stappler::geom::Vec2 const&,float)
-
-## BRIEF
-
-Возвращает результат деления вектора на число
-
-## CONTENT
-
-Возвращает результат деления вектора на число
-
-Параметры:
-* stappler::geom::Vec2 const&
-* float
-
-Возвращает:
-* stappler::geom::Vec2 const
-
 # ::stappler::geom::operator<<(std::basic_ostream<char>&,stappler::geom::Vec2 const&)
 
 ## BRIEF
@@ -1490,19 +1051,593 @@ Title: SPVec2.h
 Возвращает:
 * std::basic_ostream<char>&
 
-# ::stappler::geom::lessThanEqual(stappler::geom::Vec2 const&,stappler::geom::Vec2 const&)
+
+# ::stappler::geom::Vec2::Dimansions
 
 ## BRIEF
 
-Покомпонентно сравнивает два вектора
+Размерность вектора для параллельных алгоритмов
 
 ## CONTENT
 
-Покомпонентно сравнивает два вектора. Соотвествующий бит в результате будет равен 1, если значение в первом векторе меньше или равно значению во втором.
+Доступ: public
+
+Размерность вектора для параллельных алгоритмов
+
+Тип: size_t const
+
+# ::stappler::geom::Vec2::add(stappler::geom::Vec2 const&,stappler::geom::Vec2 const&,stappler::geom::Vec2*)
+
+## BRIEF
+
+Суммирует векторы, записывает результат по указателю
+
+## CONTENT
+
+Доступ: public
+
+Суммирует векторы, записывает результат по указателю
+
+Параметры:
+* stappler::geom::Vec2 const&
+* stappler::geom::Vec2 const&
+* stappler::geom::Vec2*
+
+# ::stappler::geom::Vec2::subtract(stappler::geom::Vec2 const&,stappler::geom::Vec2 const&,stappler::geom::Vec2*)
+
+## BRIEF
+
+Вычисляет разность векторов, записывает результат по указателю
+
+## CONTENT
+
+Доступ: public
+
+Вычисляет разность векторов, записывает результат по указателю
+
+Параметры:
+* stappler::geom::Vec2 const&
+* stappler::geom::Vec2 const&
+* stappler::geom::Vec2*
+
+# ::stappler::geom::Vec2::scale(stappler::geom::Vec2 const&,stappler::geom::Vec2 const&,stappler::geom::Vec2*)
+
+## BRIEF
+
+Вычисляет поэлементное произведение векторов, записывает результат по указателю
+
+## CONTENT
+
+Доступ: public
+
+Вычисляет поэлементное произведение векторов, записывает результат по указателю
+
+Параметры:
+* stappler::geom::Vec2 const&
+* stappler::geom::Vec2 const&
+* stappler::geom::Vec2*
+
+# ::stappler::geom::Vec2::unscale(stappler::geom::Vec2 const&,stappler::geom::Vec2 const&,stappler::geom::Vec2*)
+
+## BRIEF
+
+Поэлементно делит векторы, записывает результат по указателю
+
+## CONTENT
+
+Поэлементно делит векторы, записывает результат по указателю
+
+Доступ: public
+
+Параметры:
+* stappler::geom::Vec2 const&
+* stappler::geom::Vec2 const&
+* stappler::geom::Vec2*
+
+# ::stappler::geom::Vec2::cross(stappler::geom::Vec2 const&,stappler::geom::Vec2 const&)
+
+## BRIEF
+
+Вычисляет псевдоскалярное произведение векторов
+
+## CONTENT
+
+Доступ: public
+
+Вычисляет псевдоскалярное произведение векторов
 
 Параметры:
 * stappler::geom::Vec2 const&
 * stappler::geom::Vec2 const&
 
 Возвращает:
+* float
+
+# ::stappler::geom::Vec2::bitop<typename>(stappler::geom::Vec2 const&,Functor const&)
+
+## BRIEF
+
+Выполняет поэлементную битовую операцию над вектором
+
+## CONTENT
+
+Доступ: public
+
+Выполняет поэлементную битовую операцию над вектором
+
+Параметры шаблона:
+* typename Functor
+
+Параметры:
+* stappler::geom::Vec2 const&
+* Functor const&
+
+Возвращает:
 * std::bitset<2>
+
+# ::stappler::geom::Vec2::bitop<typename>(stappler::geom::Vec2 const&,stappler::geom::Vec2 const&,Functor const&)
+
+## BRIEF
+
+Выполняет поэлементную битовую операцию над двумя векторами
+
+## CONTENT
+
+Доступ: public
+
+Выполняет поэлементную битовую операцию над двумя векторами
+
+Параметры шаблона:
+* typename Functor
+
+Параметры:
+* stappler::geom::Vec2 const&
+* stappler::geom::Vec2 const&
+* Functor const&
+
+Возвращает:
+* std::bitset<2>
+
+# ::stappler::geom::Vec2::fill(float)
+
+## BRIEF
+
+Заполняет значением все элементы вектора
+
+## CONTENT
+
+Доступ: public
+
+Заполняет значением все элементы вектора
+
+Параметры:
+* float
+
+Возвращает:
+* stappler::geom::Vec2
+
+# ::stappler::geom::Vec2::Vec2<typename>(stappler::geom::Vec2 const&,Functor const&)
+
+## BRIEF
+
+Инициализирует вектор, выполняя поэлементную операцию над другим вектором
+
+## CONTENT
+
+Доступ: public
+
+Инициализирует вектор, выполняя поэлементную операцию над другим вектором
+
+Параметры шаблона:
+* typename Functor
+
+Параметры:
+* stappler::geom::Vec2 const&
+* Functor const&
+
+# ::stappler::geom::Vec2::Vec2<typename>(stappler::geom::Vec2 const&,stappler::geom::Vec2 const&,Functor const&)
+
+## BRIEF
+
+Инициализирует вектор, выполняя поэлементную операцию над другими вектороми
+
+## CONTENT
+
+Доступ: public
+
+Инициализирует вектор, выполняя поэлементную операцию над другими вектороми
+
+Параметры шаблона:
+* typename Functor
+
+Параметры:
+* stappler::geom::Vec2 const&
+* stappler::geom::Vec2 const&
+* Functor const&
+
+# ::stappler::geom::Vec2::Vec2(stappler::geom::Extent2 const&)
+
+## BRIEF
+
+Инициализирует вектор из целочисленного размера
+
+## CONTENT
+
+Доступ: public
+
+Инициализирует вектор из целочисленного размера
+
+Параметры:
+* stappler::geom::Extent2 const&
+
+# ::stappler::geom::Vec2::add(float const&)
+
+## BRIEF
+
+Добавляет число ко всем элементам вектора
+
+## CONTENT
+
+Доступ: public
+
+Добавляет число ко всем элементам вектора
+
+Параметры:
+* float const&
+
+# ::stappler::geom::Vec2::subtract(float const&)
+
+## BRIEF
+
+Вычитает число из всех элементов вектора
+
+## CONTENT
+
+Доступ: public
+
+Вычитает число из всех элементов вектора
+
+Параметры:
+* float const&
+
+# ::stappler::geom::Vec2::scale(float const&)
+
+## BRIEF
+
+Умножает элементы вектора на число
+
+## CONTENT
+
+Доступ: public
+
+Умножает элементы вектора на число
+
+Параметры:
+* float const&
+
+# ::stappler::geom::Vec2::unscale(float const&)
+
+## BRIEF
+
+Делит элементы вектора на число
+
+## CONTENT
+
+Доступ: public
+
+Делит элементы вектора на число
+
+Параметры:
+* float const&
+
+# ::stappler::geom::Vec2::unscale(stappler::geom::Vec2 const&)
+
+## BRIEF
+
+Поэлементно делит вектор
+
+## CONTENT
+
+Доступ: public
+
+Поэлементно делит вектор
+
+Параметры:
+* stappler::geom::Vec2 const&
+
+# ::stappler::geom::Vec2::distance(stappler::geom::Vec2 const&) const
+
+## BRIEF
+
+Вычисляет расстояние до другого вектора
+
+## CONTENT
+
+Доступ: public
+
+Вычисляет расстояние до другого вектора, использует sqrt.
+
+Параметры:
+* stappler::geom::Vec2 const&
+
+Возвращает:
+* float
+
+# ::stappler::geom::Vec2::length() const
+
+## BRIEF
+
+Вычисляет длину вектора
+
+## CONTENT
+
+Доступ: public
+
+Вычисляет длину вектора, использует sqrt
+
+Возвращает:
+* float
+
+# ::stappler::geom::Vec2::operator+=(float const&)
+
+## BRIEF
+
+Добавляет число к элементам вектора
+
+## CONTENT
+
+Доступ: public
+
+Добавляет число к элементам вектора
+
+Параметры:
+* float const&
+
+Возвращает:
+* stappler::geom::Vec2&
+
+# ::stappler::geom::Vec2::operator-=(float const&)
+
+## BRIEF
+
+Вычитает число из элементов вектора
+
+## CONTENT
+
+Доступ: public
+
+Вычитает число из элементов вектора
+
+Параметры:
+* float const&
+
+Возвращает:
+* stappler::geom::Vec2&
+
+# ::stappler::geom::Vec2::operator*=(float const&)
+
+## BRIEF
+
+Умножает элементы вектора на число
+
+## CONTENT
+
+Доступ: public
+
+Умножает элементы вектора на число
+
+Параметры:
+* float const&
+
+Возвращает:
+* stappler::geom::Vec2&
+
+# ::stappler::geom::Vec2::operator*=(stappler::geom::Vec2 const&)
+
+## BRIEF
+
+Поэлементно умножает вектор
+
+## CONTENT
+
+Доступ: public
+
+Поэлементно умножает вектор
+
+Параметры:
+* stappler::geom::Vec2 const&
+
+Возвращает:
+* stappler::geom::Vec2&
+
+# ::stappler::geom::Vec2::operator/=(float const&)
+
+## BRIEF
+
+Делит элементы вектора на число
+
+## CONTENT
+
+Доступ: public
+
+Делит элементы вектора на число
+
+Параметры:
+* float const&
+
+Возвращает:
+* stappler::geom::Vec2&
+
+# ::stappler::geom::Vec2::operator/=(stappler::geom::Vec2 const&)
+
+## BRIEF
+
+Поэлементно делит вектор
+
+## CONTENT
+
+Доступ: public
+
+Поэлементно делит вектор
+
+Параметры:
+* stappler::geom::Vec2 const&
+
+Возвращает:
+* stappler::geom::Vec2&
+
+# ::stappler::geom::operator+(stappler::geom::Vec2 const&,stappler::geom::Vec2 const&)
+
+## BRIEF
+
+Вычисляет сумму векторов
+
+## CONTENT
+
+Вычисляет сумму векторов
+
+Параметры:
+* stappler::geom::Vec2 const&
+* stappler::geom::Vec2 const&
+
+Возвращает:
+* stappler::geom::Vec2 const
+
+# ::stappler::geom::operator+(stappler::geom::Vec2 const&,float const&)
+
+## BRIEF
+
+Вычисляет поэлементную сумму вектора и числа
+
+## CONTENT
+
+Вычисляет поэлементную сумму вектора и числа
+
+Параметры:
+* stappler::geom::Vec2 const&
+* float const&
+
+Возвращает:
+* stappler::geom::Vec2 const
+
+# ::stappler::geom::operator+(float const&,stappler::geom::Vec2 const&)
+
+## BRIEF
+
+Вычисляет поэлементную сумму вектора и числа
+
+## CONTENT
+
+Вычисляет поэлементную сумму вектора и числа
+
+Параметры:
+* float const&
+
+# ::stappler::geom::operator-(stappler::geom::Vec2 const&,stappler::geom::Vec2 const&)
+
+## BRIEF
+
+Вычисляет разность векторов
+
+## CONTENT
+
+Вычисляет разность векторов
+
+Параметры:
+* stappler::geom::Vec2 const&
+* stappler::geom::Vec2 const&
+
+Возвращает:
+* stappler::geom::Vec2 const
+* stappler::geom::Vec2 const&
+
+Возвращает:
+* stappler::geom::Vec2 const
+
+# ::stappler::geom::operator-(stappler::geom::Vec2 const&,float const&)
+
+## BRIEF
+
+Вычисляет поэлементную разность вектора и числа
+
+## CONTENT
+
+Вычисляет поэлементную разность вектора и числа
+
+Параметры:
+* stappler::geom::Vec2 const&
+* float const&
+
+Возвращает:
+* stappler::geom::Vec2 const
+
+# ::stappler::geom::operator*(stappler::geom::Vec2 const&,float const&)
+
+## BRIEF
+
+Вычисляет поэлементное произведение вектора и числа
+
+## CONTENT
+
+Вычисляет поэлементное произведение вектора и числа
+
+Параметры:
+* stappler::geom::Vec2 const&
+* float const&
+
+Возвращает:
+* stappler::geom::Vec2 const
+
+# ::stappler::geom::operator*(float const&,stappler::geom::Vec2 const&)
+
+## BRIEF
+
+Вычисляет поэлементное произведение вектора и числа
+
+## CONTENT
+
+Вычисляет поэлементное произведение вектора и числа
+
+Параметры:
+* float const&
+* stappler::geom::Vec2 const&
+
+Возвращает:
+* stappler::geom::Vec2 const
+
+# ::stappler::geom::operator/(stappler::geom::Vec2 const&,float const&)
+
+## BRIEF
+
+Поэлементно делит вектор на число
+
+## CONTENT
+
+Поэлементно делит вектор на число
+
+Параметры:
+* stappler::geom::Vec2 const&
+* float const&
+
+Возвращает:
+* stappler::geom::Vec2 const
+
+# ::stappler::geom::operator-(stappler::geom::Vec2 const&)
+
+## BRIEF
+
+Возвращает поэлементное отрицание вектора
+
+## CONTENT
+
+Возвращает поэлементное отрицание вектора
+
+Параметры:
+* stappler::geom::Vec2 const&
+
+Возвращает:
+* stappler::geom::Vec2
+* float const&
+
+Возвращает:
+* stappler::geom::Vec2 const

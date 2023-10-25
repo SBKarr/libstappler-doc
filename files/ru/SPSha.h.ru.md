@@ -248,6 +248,8 @@ Title: SPSha.h
 
 ## CONTENT
 
+Текущий указатель для чтения
+
 Тип: size_t
 
 

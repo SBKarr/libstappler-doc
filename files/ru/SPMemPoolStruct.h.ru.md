@@ -750,6 +750,8 @@ Title: SPMemPoolStruct.h
 
 ## CONTENT
 
+Число выделенной памяти из mmap
+
 Тип: uint32_t
 
 
@@ -878,6 +880,8 @@ Title: SPMemPoolStruct.h
 
 ## CONTENT
 
+Связный список функций деинициализации
+
 Тип: stappler::mempool::custom::Cleanup*
 
 
@@ -888,6 +892,8 @@ Title: SPMemPoolStruct.h
 Связный список распределённый структур функций инициализации
 
 ## CONTENT
+
+Связный список распределённый структур функций инициализации
 
 Тип: stappler::mempool::custom::Cleanup*
 
@@ -1034,6 +1040,8 @@ Title: SPMemPoolStruct.h
 Возвращает число активных пулов памяти
 
 ## CONTENT
+
+Возвращает число активных пулов памяти
 
 Возвращает:
 * size_t
@@ -1628,6 +1636,8 @@ Title: SPMemPoolStruct.h
 Вложенная структура итератора для экономии памяти при обходе
 
 ## CONTENT
+
+Вложенная структура итератора для экономии памяти при обходе
 
 Тип: stappler::mempool::custom::HashIndex
 

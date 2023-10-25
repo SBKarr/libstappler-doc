@@ -25,6 +25,41 @@
 
 namespace stappler::doc {
 
+// cppast signature bug workaround
+static size_t getFixedMaxParameterCount(const cppast::cpp_function_base &base) {
+	if (auto parent = base.parent()) {
+		if (base.name() == "operator<<" && parent.value().kind() == cppast::cpp_entity_kind::function_template_t) {
+			return 2;
+		}
+	}
+	return maxOf<size_t>();
+}
+
+static String getFixedSignature(const cppast::cpp_function_base &base) {
+	auto maxparams = getFixedMaxParameterCount(base);
+	if (maxparams != maxOf<size_t>()) {
+		size_t nparams = 0;
+
+		std::string result = "(";
+		for (auto& param : base.parameters()) {
+			if (++ nparams > maxparams) {
+				break;
+			}
+			result += cppast::to_string(param.type()) + ',';
+		}
+		if (base.is_variadic())
+			result += "...";
+
+		if (result.back() == ',')
+			result.back() = ')';
+		else
+			result.push_back(')');
+
+		return result;
+	}
+	return base.signature();
+}
+
 static void serializeType(Value &val, const cppast::cpp_builtin_type &t) {
 	val.setString(cppast::to_string(t.builtin_type_kind()), "builtin_type_kind");
 }
@@ -519,7 +554,15 @@ static void serializeFunctionParameter(const index_t &index, Value &val, const c
 
 static void serializeFunctionBase(const index_t &index, Value &val, const cppast::cpp_function_base &base) {
 	serializeForwardDeclarable(index, val, base);
+
+	size_t nparams = 0;
+	size_t maxparams = getFixedMaxParameterCount(base);
+
 	for (auto &it : base.parameters()) {
+		if (++ nparams > maxparams) {
+			break;
+		}
+
 		val.emplace("parameters").addValue(serializeEntity(index, it));
 	}
 
@@ -535,7 +578,7 @@ static void serializeFunctionBase(const index_t &index, Value &val, const cppast
 		val.setValue(serializeExpression(index, nexpr.value()), "noexcept_condition");
 	}
 	val.setBool(base.is_variadic(), "is_variadic");
-	val.setString(base.signature(), "signature");
+	val.setString(getFixedSignature(base), "signature");
 }
 
 static void serializeFunction(const index_t &index, Value &val, const cppast::cpp_function &fn) {
@@ -755,25 +798,36 @@ Value serializeEntity(const index_t &index, const cppast::cpp_entity &e) {
 
 	auto target = &e;
 	String fullName;
+	String scopeNmae;
 	switch (e.kind()) {
 	case cpp_entity_kind::variable_template_t:
 		fullName = index.getFullName(static_cast<const cpp_variable_template &>(e).variable());
+		scopeNmae = index.getScope(static_cast<const cpp_variable_template &>(e).variable());
 		target = &static_cast<const cpp_variable_template &>(e).variable();
 		break;
 	case cpp_entity_kind::function_template_t:
 		fullName = index.getFullName(static_cast<const cpp_function_template &>(e).function());
+		scopeNmae = index.getScope(static_cast<const cpp_function_template &>(e).function());
 		target = &static_cast<const cpp_function_template &>(e).function();
+		break;
+	case cpp_entity_kind::function_template_specialization_t:
+		fullName = index.getFullName(static_cast<const cpp_function_template_specialization &>(e).function());
+		scopeNmae = index.getScope(static_cast<const cpp_function_template_specialization &>(e).function());
+		target = &static_cast<const cpp_function_template_specialization &>(e).function();
 		break;
 	case cpp_entity_kind::class_template_t:
 		fullName = index.getFullName(static_cast<const cpp_class_template &>(e).class_());
+		scopeNmae = index.getScope(static_cast<const cpp_class_template &>(e).class_());
 		target = &static_cast<const cpp_class_template &>(e).class_();
 		break;
 	case cpp_entity_kind::class_template_specialization_t:
 		fullName = index.getFullName(static_cast<const cpp_class_template_specialization &>(e).class_());
+		scopeNmae = index.getScope(static_cast<const cpp_class_template_specialization &>(e).class_());
 		target = &static_cast<const cpp_class_template_specialization &>(e).class_();
 		break;
 	case cpp_entity_kind::alias_template_t:
 		fullName = index.getFullName(static_cast<const cpp_alias_template &>(e).type_alias());
+		scopeNmae = index.getScope(static_cast<const cpp_alias_template &>(e).type_alias());
 		target = &static_cast<const cpp_alias_template &>(e).type_alias();
 		break;
 	case cpp_entity_kind::file_t:
@@ -1117,10 +1171,25 @@ static String getScopeName(const index_t &index, const cppast::cpp_entity &e, co
 			auto candidates = sp.value().get(index.index);
 			if (candidates.size() == 1) {
 				auto &candidate = candidates.front().get();
-				out << getScopeName(index, candidate) << "::";
+				out << index.getFullName(candidate) << "::";
 				if (candidate.kind() == cpp_entity_kind::class_template_t) {
 					auto &tpl = static_cast<const cpp_class_template &>(candidate);
 					semTemplates += std::distance(tpl.parameters().begin(), tpl.parameters().end());
+				}
+
+				auto p = candidate.parent();
+				while (p) {
+					if (p.value().kind() == cpp_entity_kind::class_template_t) {
+						auto &tpl = static_cast<const cpp_class_template &>(p.value());
+						semTemplates += std::distance(tpl.parameters().begin(), tpl.parameters().end());
+					}
+
+					p = p.value().parent();
+				}
+			} else {
+				auto scope = fn.semantic_scope();
+				if (!scope.empty()) {
+					out << scope;
 				}
 			}
 		}
@@ -1132,7 +1201,7 @@ static String getScopeName(const index_t &index, const cppast::cpp_entity &e, co
 				out << getTemplateScope(static_cast<const cpp_function_template &>(p.value()), semTemplates);
 			}
 		}
-		out << fn.signature();
+		out << getFixedSignature(fn);
 		return out.str();
 		break;
 	}
@@ -1149,7 +1218,6 @@ static String getScopeName(const index_t &index, const cppast::cpp_entity &e, co
 		}
 		return e.name();
 		break;
-
 	case cpp_entity_kind::function_template_t:
 		return getScopeName(index, static_cast<const cpp_function_template&>(e).function(), &e);
 		break;
@@ -1170,9 +1238,10 @@ static String getScopeName(const index_t &index, const cppast::cpp_entity &e, co
 	return String();
 }
 
-String IndexData::getFullName(const cppast::cpp_entity &e) const {
+String IndexData::getScope(const cppast::cpp_entity &e) const {
 	using namespace cppast;
 
+	StringStream scopedName;
 	Vector<const cpp_entity *> xpath;
 
 	auto p = e.parent();
@@ -1187,6 +1256,11 @@ String IndexData::getFullName(const cppast::cpp_entity &e) const {
 				break;
 			case cpp_entity_kind::function_template_t:
 				if (static_cast<const cpp_function_template&>(nextParent.value()).function().name() == p.value().name()) {
+					p = nextParent.value().parent();
+				}
+				break;
+			case cpp_entity_kind::function_template_specialization_t:
+				if (static_cast<const cpp_function_template_specialization&>(nextParent.value()).function().name() == p.value().name()) {
 					p = nextParent.value().parent();
 				}
 				break;
@@ -1216,13 +1290,21 @@ String IndexData::getFullName(const cppast::cpp_entity &e) const {
 
 	std::reverse(xpath.begin(), xpath.end());
 
-	StringStream scopedName;
 	for (auto &it : xpath) {
 		auto name = getScopeName(*this, *it);
 		if (!name.empty()) {
 			scopedName << "::" << name;
 		}
 	}
+
+	return scopedName.str();
+}
+
+String IndexData::getFullName(const cppast::cpp_entity &e) const {
+	using namespace cppast;
+
+	StringStream scopedName;
+	scopedName << getScope(e);
 
 	switch (e.kind()) {
 	case cpp_entity_kind::file_t:
@@ -1239,7 +1321,6 @@ String IndexData::getFullName(const cppast::cpp_entity &e) const {
 	case cpp_entity_kind::template_type_parameter_t:
 	case cpp_entity_kind::non_type_template_parameter_t:
 	case cpp_entity_kind::template_template_parameter_t:
-	case cpp_entity_kind::function_template_specialization_t:
 	case cpp_entity_kind::alias_template_t:
 	case cpp_entity_kind::static_assert_t:
 	case cpp_entity_kind::unexposed_t:
@@ -1296,7 +1377,15 @@ String IndexData::getFullName(const cppast::cpp_entity &e) const {
 	case cpp_entity_kind::member_function_t:
 	case cpp_entity_kind::conversion_op_t:
 	case cpp_entity_kind::constructor_t:
-	case cpp_entity_kind::destructor_t:
+	case cpp_entity_kind::destructor_t: {
+		auto &fn = static_cast<const cpp_function_base &>(e);
+		if (auto sp = fn.semantic_parent()) {
+			auto candidates = sp.value().get(index);
+			if (candidates.size() == 1) {
+				return getScopeName(*this, e);
+			}
+		}
+
 		if (auto p = e.parent()) {
 			if (p.value().kind() == cpp_entity_kind::function_template_t) {
 				return scopedName.str(); // name is already on scope
@@ -1304,7 +1393,7 @@ String IndexData::getFullName(const cppast::cpp_entity &e) const {
 		}
 		scopedName << "::" << getScopeName(*this, e);
 		break;
-
+	}
 	case cpp_entity_kind::type_alias_t:
 		if (auto p = e.parent()) {
 			if (p.value().kind() == cpp_entity_kind::alias_template_t) {
@@ -1319,6 +1408,7 @@ String IndexData::getFullName(const cppast::cpp_entity &e) const {
 	case cpp_entity_kind::function_template_t:
 	case cpp_entity_kind::class_template_t:
 	case cpp_entity_kind::class_template_specialization_t:
+	case cpp_entity_kind::function_template_specialization_t:
 		scopedName << "::" << getScopeName(*this, e);
 		break;
 	}

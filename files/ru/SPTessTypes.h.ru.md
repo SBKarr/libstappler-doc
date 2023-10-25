@@ -1,25 +1,37 @@
 Title: SPTessTypes.h
 
 
-# MODULES_TESS_SPTESSTYPES_H_
+# STAPPLER_TESS_SPTESSTYPES_H_
 
 ## BRIEF
 
+Вспомогательные типы для тесселятора
+
 ## CONTENT
+
+Вспомогательные типы для тесселятора
 
 
 # ::stappler::geom::QueueHandle
 
 ## BRIEF
 
+Тип индекса для очереди вершин
+
 ## CONTENT
+
+Тип индекса для очереди вершин
 
 
 # ::stappler::geom::VertexSetPrealloc
 
 ## BRIEF
 
+Число преаллоцированных вершин
+
 ## CONTENT
+
+Число преаллоцированных вершин
 
 Тип: uint32_t const
 
@@ -28,7 +40,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Число преаллоцированных граней
+
 ## CONTENT
+
+Число преаллоцированных граней
 
 Тип: uint32_t const
 
@@ -37,7 +53,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Число вершин в пакете для аллокации
+
 ## CONTENT
+
+Число вершин в пакете для аллокации
 
 Тип: uint32_t const
 
@@ -46,7 +66,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Число граней в пакете для аллокации
+
 ## CONTENT
+
+Число граней в пакете для аллокации
 
 Тип: uint32_t const
 
@@ -55,7 +79,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Текущий уровень вывода для алгоритмов тесселятора
+
 ## CONTENT
+
+Текущий уровень вывода для алгоритмов тесселятора
 
 Тип: int
 
@@ -64,7 +92,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Классификация типа вершины для тесселятора
+
 ## CONTENT
+
+Классификация типа вершины для тесселятора. См. Computational Geometry, Mark de Berg (1997)
 
 Значения:
 * Start
@@ -79,14 +111,23 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Вспомогательный тип для классификации вершины
+
 ## CONTENT
 
+Вспомогательный тип для классификации вершины. В алгоритме де Берга тесселяция проводится только для одного контура, а тесселятор выполняет проверку для нескольких контуров параллельно. Вспомогательный тип приближает ситуацию, описанную в алгоритме де Берга.
+
+Вспомогательный тип определяет тип вершины между двумя полугранями, присоединёнными к ней.
 
 # ::stappler::geom::Helper::e1
 
 ## BRIEF
 
+Первая полугрань угла вершины
+
 ## CONTENT
+
+Первая полугрань угла вершины
 
 Тип: stappler::geom::HalfEdge*
 
@@ -95,7 +136,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Вторая полугрань угла вершины
+
 ## CONTENT
+
+Вторая полугрань угла вершины
 
 Тип: stappler::geom::HalfEdge*
 
@@ -104,7 +149,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Вычисленный тип вершины между полугранями
+
 ## CONTENT
+
+Вычисленный тип вершины между полугранями
 
 Тип: stappler::geom::VertexType
 
@@ -113,14 +162,22 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Тип записи в словаре граней
+
 ## CONTENT
+
+Тип записи в словаре граней. Словарь граней используется для поиска граней выше или ниже точки для текущего положения сканирующей линии.
 
 
 # ::stappler::geom::EdgeDictNode::org
 
 ## BRIEF
 
+Исходная точка грани
+
 ## CONTENT
+
+Исходная точка грани
 
 Тип: stappler::geom::Vec2
 
@@ -129,7 +186,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Нормализованное направление грани
+
 ## CONTENT
+
+Нормализованное направление грани
 
 Тип: stappler::geom::Vec2
 
@@ -138,7 +199,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Комбинированный тип для текущего положения точки вдоль сканирующей линии и точки завершения грани
+
 ## CONTENT
+
+Комбинированный тип для текущего положения точки вдоль сканирующей линии и точки завершения грани. Значения совмещены в одном типе для алгоритма на основе SIMD.
 
 Тип: stappler::geom::Vec4
 
@@ -147,7 +212,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Указатель на грань
+
 ## CONTENT
+
+Указатель на грань
 
 Тип: stappler::geom::Edge*
 
@@ -156,7 +225,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Значение поворотного индекса над гранью
+
 ## CONTENT
+
+Значение поворотного индекса над гранью
 
 Тип: int16_t
 
@@ -165,7 +238,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Доминирующее направление грани
+
 ## CONTENT
+
+Доминирующее направление грани, true если горизонтально
 
 Тип: bool
 
@@ -174,7 +251,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Значение типа вершины для грани
+
 ## CONTENT
+
+Значение типа вершины для грани
 
 Тип: stappler::geom::Helper
 
@@ -183,7 +264,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Возвращает текущее положение на грани вдоль сканирующей линии
+
 ## CONTENT
+
+Возвращает текущее положение на грани вдоль сканирующей линии
 
 Возвращает:
 * stappler::geom::Vec2
@@ -192,7 +277,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Возвращает конечную точку грани
+
 ## CONTENT
+
+Возвращает конечную точку грани
 
 Возвращает:
 * stappler::geom::Vec2
@@ -201,7 +290,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Возвращает конечное значение X
+
 ## CONTENT
+
+Возвращает конечное значение X
 
 Возвращает:
 * float
@@ -210,7 +303,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Возвращает конечное значение Y
+
 ## CONTENT
+
+Возвращает конечное значение Y
 
 Возвращает:
 * float
@@ -219,7 +316,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Проверяет, находится ли текущая грань ниже переданной
+
 ## CONTENT
+
+Проверяет, находится ли текущая грань ниже переданной
 
 Параметры:
 * stappler::geom::EdgeDictNode const&
@@ -231,7 +332,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Проверяет, находится ли текущая грань ниже переданной
+
 ## CONTENT
+
+Проверяет, находится ли текущая грань ниже переданной
 
 Параметры:
 * stappler::geom::Edge const&
@@ -243,7 +348,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Проверяет, находится ли текущая грань ниже переданной точки
+
 ## CONTENT
+
+Проверяет, находится ли текущая грань ниже переданной точки
 
 Параметры:
 * stappler::geom::Vec2 const&
@@ -255,7 +364,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Проверяет, находится ли текущая грань ниже переданной или совпадает с ней в текущей точке
+
 ## CONTENT
+
+Проверяет, находится ли текущая грань ниже переданной или совпадает с ней в текущей точке
 
 Параметры:
 * stappler::geom::EdgeDictNode const&
@@ -267,7 +380,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Проверяет, совпадает ли переданная грань с текущей в текущей точке сканирующей линии
+
 ## CONTENT
+
+Проверяет, совпадает ли переданная грань с текущей в текущей точке сканирующей линии
 
 Параметры:
 * stappler::geom::EdgeDictNode const&
@@ -279,14 +396,22 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Тип вершины
+
 ## CONTENT
+
+Тип вершины
 
 
 # ::stappler::geom::Vertex::_edge
 
 ## BRIEF
 
+Исходная грань вершины для обхода вокруг неё
+
 ## CONTENT
+
+Исходная грань вершины для обхода вокруг неё
 
 Тип: stappler::geom::HalfEdge*
 
@@ -295,7 +420,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Позиция вершины
+
 ## CONTENT
+
+Позиция вершины
 
 Тип: stappler::geom::Vec2
 
@@ -304,7 +433,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Уникальный индекс вершины в тесселяторе
+
 ## CONTENT
+
+Уникальный индекс вершины в тесселяторе
 
 Тип: uint32_t
 
@@ -313,7 +446,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Индекс вершины в очереди обработки
+
 ## CONTENT
+
+Индекс вершины в очереди обработки
 
 Тип: stappler::geom::QueueHandle
 
@@ -322,7 +459,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Индекс вершины для экспорта
+
 ## CONTENT
+
+Индекс вершины для экспорта
 
 Тип: uint32_t
 
@@ -331,7 +472,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Добавляет грань, присоединённую к вершине
+
 ## CONTENT
+
+Добавляет грань, присоединённую к вершине
 
 Параметры:
 * stappler::geom::HalfEdge*
@@ -341,7 +486,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Заменяет текущую вершину на другую
+
 ## CONTENT
+
+Заменяет текущую вершину на другую
 
 Параметры:
 * stappler::geom::Vertex*
@@ -351,7 +500,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Обходит все грани при вершине
+
 ## CONTENT
+
+Обходит все грани при вершине
 
 Параметры:
 * Callback<void (const stappler::geom::HalfEdge &)> const&
@@ -361,7 +514,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Смещает вершину на новую позицию
+
 ## CONTENT
+
+Смещает вершину на новую позицию
 
 Параметры:
 * stappler::geom::Vec2 const&
@@ -371,7 +528,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Грань в контуре
+
 ## CONTENT
+
+Грань в контуре
 
 Базовые классы:
 * memory::AllocPool
@@ -381,7 +542,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Следующая грань в контуре
+
 ## CONTENT
+
+Следующая грань в контуре
 
 Тип: stappler::geom::FaceEdge*
 
@@ -390,7 +555,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Вершина грани
+
 ## CONTENT
+
+Вершина грани
 
 Тип: stappler::geom::Vertex*
 
@@ -399,7 +568,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Исходная точка грани
+
 ## CONTENT
+
+Исходная точка грани
 
 Тип: stappler::geom::Vec2
 
@@ -408,7 +581,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Смещённая позиция грани
+
 ## CONTENT
+
+Смещённая позиция грани
 
 Тип: stappler::geom::Vec2
 
@@ -417,7 +594,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Значение для алгоритма антиалиасинга
+
 ## CONTENT
+
+Значение для алгоритма антиалиасинга (1.0 - исходная вершина)
 
 Тип: float
 
@@ -426,7 +607,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Угол грани к оси oX
+
 ## CONTENT
+
+Угол грани к оси oX
 
 Тип: float
 
@@ -435,7 +620,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Вершина помечена для разделения при самопересечении
+
 ## CONTENT
+
+Вершина помечена для разделения при самопересечении
 
 Тип: bool
 
@@ -444,7 +633,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Грань вырождена
+
 ## CONTENT
+
+Грань вырождена
 
 Тип: bool
 
@@ -453,7 +646,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Обходит все грани вдоль контура
+
 ## CONTENT
+
+Обходит все грани вдоль контура
 
 Параметры:
 * Callback<void (const stappler::geom::FaceEdge &)> const&
@@ -463,14 +660,22 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Тип полуграни
+
 ## CONTENT
+
+Тип полуграни. Каждая грань формируется из двух разнонаправленных симметричных полуграней
 
 
 # ::stappler::geom::HalfEdge::_originNext
 
 ## BRIEF
 
+Следующая полугрань вокруг вершины
+
 ## CONTENT
+
+Следующая полугрань вокруг вершины
 
 Тип: stappler::geom::HalfEdge*
 
@@ -479,7 +684,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Следующая полугрань вдоль левого направления обхода контура (против часовой)
+
 ## CONTENT
+
+Следующая полугрань вдоль левого направления обхода контура (против часовой)
 
 Тип: stappler::geom::HalfEdge*
 
@@ -488,7 +697,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Исходная точка полуграни
+
 ## CONTENT
+
+Исходная точка полуграни
 
 Тип: stappler::geom::Vec2
 
@@ -497,7 +710,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Индекс исходной вершины
+
 ## CONTENT
+
+Индекс исходной вершины
 
 Тип: uint32_t
 
@@ -506,7 +723,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Вычисленный поворотный индекс над гранью
+
 ## CONTENT
+
+Вычисленный поворотный индекс над гранью
 
 Тип: int16_t
 
@@ -515,7 +736,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Является ли грань направленно вправо
+
 ## CONTENT
+
+Является ли грань направленно вправо (-1 - влево, 1 - вправо), значение обусловлено удобством алгоритмизации
 
 Тип: int16_t
 
@@ -524,7 +749,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Смещение грани в массиве полуграней
+
 ## CONTENT
+
+Смещение грани в массиве полуграней (0 или 1)
 
 Тип: int16_t
 
@@ -533,7 +762,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Изменение поворотного индекса при пересечении грани
+
 ## CONTENT
+
+Изменение поворотного индекса при пересечении грани (-1, 0 или 1)
 
 Тип: int16_t
 
@@ -542,7 +775,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Индекс для маркировки при обходе граней
+
 ## CONTENT
+
+Индекс для маркировки при обходе граней
 
 Тип: int16_t
 
@@ -551,7 +788,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Разделяет текущий контур по текущей грани, заменяет грань в вершине новой
+
 ## CONTENT
+
+Разделяет текущий контур по текущей грани, заменяет грань в вершине новой
 
 Параметры:
 * stappler::geom::HalfEdge*
@@ -563,7 +804,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Соединяет контуры по граням от первого и второго
+
 ## CONTENT
+
+Соединяет контуры по граням от первого и второго
 
 Параметры:
 * stappler::geom::HalfEdge*
@@ -574,7 +819,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Возвращает симметричную обратную грань
+
 ## CONTENT
+
+Возвращает симметричную обратную грань
 
 Возвращает:
 * stappler::geom::HalfEdge*
@@ -583,7 +832,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Возвращает индекс вершины грани
+
 ## CONTENT
+
+Возвращает индекс вершины грани
 
 Возвращает:
 * uint32_t
@@ -592,7 +845,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Устанавливает исходную вершину для полуграни
+
 ## CONTENT
+
+Устанавливает исходную вершину для полуграни
 
 Параметры:
 * stappler::geom::Vertex const*
@@ -602,7 +859,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Копирует исходную вершину из другой полуграни
+
 ## CONTENT
+
+Копирует исходную вершину из другой полуграни
 
 Параметры:
 * stappler::geom::HalfEdge const*
@@ -612,7 +873,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Возвращает следующую полугрань покруг вершины (против часовой)
+
 ## CONTENT
+
+Возвращает следующую полугрань покруг вершины (против часовой)
 
 Возвращает:
 * stappler::geom::HalfEdge*
@@ -621,7 +886,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Возвращает следующую полугрань покруг вершины (по часовой)
+
 ## CONTENT
+
+Возвращает следующую полугрань покруг вершины (по часовой)
 
 Возвращает:
 * stappler::geom::HalfEdge*
@@ -630,7 +899,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Возвращает следующую полугрань вокруг конечной вершины (против часовой)
+
 ## CONTENT
+
+Возвращает следующую полугрань вокруг конечной вершины (против часовой)
 
 Возвращает:
 * stappler::geom::HalfEdge*
@@ -639,7 +912,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Возвращает следующую полугрань вокруг конечной вершины (по часовой)
+
 ## CONTENT
+
+Возвращает следующую полугрань вокруг конечной вершины (по часовой)
 
 Возвращает:
 * stappler::geom::HalfEdge*
@@ -648,7 +925,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Возвращает следующую полугрань вдоль левого направления обхода
+
 ## CONTENT
+
+Возвращает следующую полугрань вдоль левого направления обхода
 
 Возвращает:
 * stappler::geom::HalfEdge*
@@ -657,7 +938,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Возвращает предыдущую полугрань вдоль левого направления обхода
+
 ## CONTENT
+
+Возвращает предыдущую полугрань вдоль левого направления обхода
 
 Возвращает:
 * stappler::geom::HalfEdge*
@@ -666,7 +951,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Возвращает следующую полугрань вдоль правого направления обхода
+
 ## CONTENT
+
+Возвращает следующую полугрань вдоль правого направления обхода
 
 Возвращает:
 * stappler::geom::HalfEdge*
@@ -675,7 +964,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Возвращает предыдущую полугрань вдоль правого направления обхода
+
 ## CONTENT
+
+Возвращает предыдущую полугрань вдоль правого направления обхода
 
 Возвращает:
 * stappler::geom::HalfEdge*
@@ -684,7 +977,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Возвращает координаты исходной вершины
+
 ## CONTENT
+
+Возвращает координаты исходной вершины
 
 Возвращает:
 * stappler::geom::Vec2 const&
@@ -693,7 +990,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Возвращает координаты конечной вершины
+
 ## CONTENT
+
+Возвращает координаты конечной вершины
 
 Возвращает:
 * stappler::geom::Vec2 const&
@@ -702,7 +1003,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Возвращает разность между конечной и начальной вершинами
+
 ## CONTENT
+
+Возвращает разность между конечной и начальной вершинами
 
 Возвращает:
 * stappler::geom::Vec2
@@ -711,7 +1016,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Возвращает длину грани
+
 ## CONTENT
+
+Возвращает длину грани
 
 Возвращает:
 * float
@@ -720,7 +1029,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Возвращает указатель на полную грань
+
 ## CONTENT
+
+Возвращает указатель на полную грань
 
 Возвращает:
 * stappler::geom::Edge*
@@ -729,7 +1042,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Проверяет, идёт ли грань налево
+
 ## CONTENT
+
+Проверяет, идёт ли грань налево
 
 Возвращает:
 * bool
@@ -738,7 +1055,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Проверяет, идёт ли грань направо
+
 ## CONTENT
+
+Проверяет, идёт ли грань направо
 
 Возвращает:
 * bool
@@ -747,7 +1068,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Обходит грани вдоль контура
+
 ## CONTENT
+
+Обходит грани вдоль контура
 
 Параметры:
 * Callback<void (stappler::geom::HalfEdge &)> const&
@@ -757,7 +1082,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Обходит грани вокруг вершины
+
 ## CONTENT
+
+Обходит грани вокруг вершины
 
 Параметры:
 * Callback<void (stappler::geom::HalfEdge &)> const&
@@ -767,7 +1096,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Обходит грани вдоль контура
+
 ## CONTENT
+
+Обходит грани вдоль контура
 
 Параметры:
 * Callback<void (const stappler::geom::HalfEdge &)> const&
@@ -777,7 +1110,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Обходит грани вокруг вершины
+
 ## CONTENT
+
+Обходит грани вокруг вершины
 
 Параметры:
 * Callback<void (const stappler::geom::HalfEdge &)> const&
@@ -787,7 +1124,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Возвращает псевдоугол грани с осью oX
+
 ## CONTENT
+
+Возвращает псевдоугол грани с осью oX
 
 Возвращает:
 * float
@@ -796,14 +1137,22 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Структура полной грани
+
 ## CONTENT
+
+Структура полной грани
 
 
 # ::stappler::geom::Edge::left
 
 ## BRIEF
 
+Левая полугрань
+
 ## CONTENT
+
+Левая полугрань
 
 Тип: stappler::geom::HalfEdge
 
@@ -812,7 +1161,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Правая полугрань
+
 ## CONTENT
+
+Правая полугрань
 
 Тип: stappler::geom::HalfEdge
 
@@ -821,7 +1174,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Запись в словаре граней
+
 ## CONTENT
+
+Запись в словаре граней
 
 Тип: stappler::geom::EdgeDictNode const*
 
@@ -830,7 +1187,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Псевдоугол грани с осью oX
+
 ## CONTENT
+
+Псевдоугол грани с осью oX
 
 Тип: float
 
@@ -839,7 +1200,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Флаг инвертированной оси
+
 ## CONTENT
+
+Флаг инвертированной оси (правая грань идёт налево)
 
 Тип: bool
 
@@ -848,7 +1213,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Флаг недопустимой или вырожденной грани
+
 ## CONTENT
+
+Флаг недопустимой или вырожденной грани
 
 Тип: bool
 
@@ -857,14 +1226,22 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Конструктор по умолчанию
+
 ## CONTENT
+
+Конструктор по умолчанию
 
 
 # ::stappler::geom::Edge::getLeftVec() const
 
 ## BRIEF
 
+Возвращает координаты левой вершины
+
 ## CONTENT
+
+Возвращает координаты левой вершины
 
 Возвращает:
 * stappler::geom::Vec2 const&
@@ -873,7 +1250,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Возвращает координаты правой вершины
+
 ## CONTENT
+
+Возвращает координаты правой вершины
 
 Возвращает:
 * stappler::geom::Vec2 const&
@@ -882,7 +1263,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Возвращает координаты исходной вершины
+
 ## CONTENT
+
+Возвращает координаты исходной вершины
 
 Возвращает:
 * stappler::geom::Vec2 const&
@@ -891,7 +1276,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Возвращает координаты конечной вершины
+
 ## CONTENT
+
+Возвращает координаты конечной вершины
 
 Возвращает:
 * stappler::geom::Vec2 const&
@@ -900,7 +1289,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Возвращает индекс левой вершины
+
 ## CONTENT
+
+Возвращает индекс левой вершины
 
 Возвращает:
 * uint32_t
@@ -909,7 +1302,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Возвращает индекс правой вершины
+
 ## CONTENT
+
+Возвращает индекс правой вершины
 
 Возвращает:
 * uint32_t
@@ -918,14 +1315,21 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Обновляет информацию о грани
+
 ## CONTENT
 
+Обновляет информацию о грани
 
 # ::stappler::geom::Edge::getLeftWinding() const
 
 ## BRIEF
 
+Возвращает смещение поворотного индекса при движении справа налево
+
 ## CONTENT
+
+Возвращает смещение поворотного индекса при движении справа налево
 
 Возвращает:
 * int16_t
@@ -934,7 +1338,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Возвращает смещение поворотного индекса при движении слева направо
+
 ## CONTENT
+
+Возвращает смещение поворотного индекса при движении слева направо
 
 Возвращает:
 * int16_t
@@ -943,7 +1351,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Возвращает полугрань с положительным (направо) направлением
+
 ## CONTENT
+
+Возвращает полугрань с положительным (направо) направлением
 
 Возвращает:
 * stappler::geom::HalfEdge*
@@ -952,7 +1364,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Возвращает полугрань с отрицательным (налево) направлением
+
 ## CONTENT
+
+Возвращает полугрань с отрицательным (налево) направлением
 
 Возвращает:
 * stappler::geom::HalfEdge*
@@ -961,7 +1377,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Аллокатор для объектов тесселятора
+
 ## CONTENT
+
+Аллокатор для объектов тесселятора. Аллокатор испоьзуется для пакетного распределения и поторного использования объектов.
 
 Базовые классы:
 * memory::AllocPool
@@ -971,7 +1391,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Используемый пул памяти
+
 ## CONTENT
+
+Используемый пул памяти
 
 Тип: memory::pool_t*
 
@@ -980,7 +1404,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Свободные вершины
+
 ## CONTENT
+
+Свободные вершины
 
 Тип: stappler::geom::Vertex*
 
@@ -989,7 +1417,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Свободные грани
+
 ## CONTENT
+
+Свободные грани
 
 Тип: stappler::geom::Edge*
 
@@ -998,7 +1430,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Свободные контуры
+
 ## CONTENT
+
+Свободные контуры
 
 Тип: stappler::geom::FaceEdge*
 
@@ -1007,7 +1443,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Активные вершины
+
 ## CONTENT
+
+Активные вершины
 
 Тип: memory::vector<Vertex *>
 
@@ -1016,7 +1456,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Помеченные для экспорта вершины
+
 ## CONTENT
+
+Помеченные для экспорта вершины
 
 Тип: memory::vector<Vertex *>
 
@@ -1025,7 +1469,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Грани, потенциально показывающие уникальные контуры
+
 ## CONTENT
+
+Грани, потенциально показывающие уникальные контуры
 
 Тип: memory::vector<HalfEdge *>
 
@@ -1034,7 +1482,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Используемые грани
+
 ## CONTENT
+
+Используемые грани
 
 Тип: memory::vector<HalfEdge *>
 
@@ -1043,7 +1495,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Используемые грани контуров
+
 ## CONTENT
+
+Используемые грани контуров
 
 Тип: memory::vector<FaceEdge *>
 
@@ -1052,7 +1508,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Смещение при записи вершин
+
 ## CONTENT
+
+Смещение при записи вершин
 
 Тип: uint32_t
 
@@ -1061,7 +1521,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Конструктор аллокатора с пулом памяти
+
 ## CONTENT
+
+Конструктор аллокатора с пулом памяти
 
 Параметры:
 * memory::pool_t*
@@ -1071,7 +1535,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Распределяет новую грань
+
 ## CONTENT
+
+Распределяет новую грань
 
 Возвращает:
 * stappler::geom::Edge*
@@ -1080,7 +1548,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Распределяет новую вершину
+
 ## CONTENT
+
+Распределяет новую вершину
 
 Возвращает:
 * stappler::geom::Vertex*
@@ -1089,7 +1561,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Распределяет грань контура
+
 ## CONTENT
+
+Распределяет грань контура
 
 Возвращает:
 * stappler::geom::FaceEdge*
@@ -1098,7 +1574,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Возвращает неиспользуемую грань
+
 ## CONTENT
+
+Возвращает неиспользуемую грань
 
 Параметры:
 * stappler::geom::Edge*
@@ -1108,18 +1588,26 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Возвращает неиспользуемую вершину по индексу
+
 ## CONTENT
+
+Возвращает неиспользуемую вершину по индексу
 
 Параметры:
 * uint32_t
-* uint32_t
+* uint32_t - индекс вершины для замены
 
 
 # ::stappler::geom::ObjectAllocator::releaseVertex(stappler::geom::Vertex*)
 
 ## BRIEF
 
+Возвращает неиспользуемую вершину
+
 ## CONTENT
+
+Возвращает неиспользуемую вершину
 
 Параметры:
 * stappler::geom::Vertex*
@@ -1129,14 +1617,22 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Возвращает неиспользованные вершины
+
 ## CONTENT
+
+Возвращает неиспользованные вершины
 
 
 # ::stappler::geom::ObjectAllocator::preallocateVertexes(uint32_t)
 
 ## BRIEF
 
+Предраспределяет вершины
+
 ## CONTENT
+
+Предраспределяет вершины
 
 Параметры:
 * uint32_t
@@ -1146,7 +1642,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Предраспределяет грани
+
 ## CONTENT
+
+Предраспределяет грани
 
 Параметры:
 * uint32_t
@@ -1156,7 +1656,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Предраспределяет грани контуров
+
 ## CONTENT
+
+Предраспределяет грани контуров
 
 Параметры:
 * uint32_t
@@ -1166,7 +1670,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Удаляет грань из списка
+
 ## CONTENT
+
+Удаляет грань из списка
 
 Параметры:
 * memory::vector<HalfEdge *>&
@@ -1177,28 +1685,44 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Приоритетная очередь вершин
+
 ## CONTENT
+
+Приоритетная очередь вершин. Вершины обходятся алгоритмом в порядке приоритета
 
 
 # ::stappler::geom::VertexPriorityQueue::Handle
 
 ## BRIEF
 
+Тип индекса в очереди
+
 ## CONTENT
+
+Тип индекса в очереди
 
 
 # ::stappler::geom::VertexPriorityQueue::Key
 
 ## BRIEF
 
+Тип вершины
+
 ## CONTENT
+
+Тип вершины
 
 
 # ::stappler::geom::VertexPriorityQueue::InvalidHandle
 
 ## BRIEF
 
+Недопустимый индекс
+
 ## CONTENT
+
+Недопустимый индекс
 
 Тип: Handle
 
@@ -1207,14 +1731,21 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Элемент-указатель очереди
+
 ## CONTENT
 
+Элемент-указатель очереди
 
 # ::stappler::geom::VertexPriorityQueue::Node::handle
 
 ## BRIEF
 
+Индекс значения элемента
+
 ## CONTENT
+
+Индекс значения элемента
 
 Тип: stappler::geom::VertexPriorityQueue::Handle
 
@@ -1223,14 +1754,22 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Элемент-хранилище очереди
+
 ## CONTENT
+
+Элемент-хранилище очереди
 
 
 # ::stappler::geom::VertexPriorityQueue::Elem::key
 
 ## BRIEF
 
+Ключ значения
+
 ## CONTENT
+
+Ключ значения
 
 Тип: stappler::geom::VertexPriorityQueue::Key
 
@@ -1239,7 +1778,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Значение
+
 ## CONTENT
+
+Значение
 
 Тип: stappler::geom::VertexPriorityQueue::Handle
 
@@ -1248,14 +1791,22 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Дополнительный блок для вершин, добавленных, после инициализации очереди
+
 ## CONTENT
+
+Дополнительный блок для вершин, добавленных, после инициализации очереди
 
 
 # ::stappler::geom::VertexPriorityQueue::Heap::nodes
 
 ## BRIEF
 
+Список указателей
+
 ## CONTENT
+
+Список указателей
 
 Тип: stappler::geom::VertexPriorityQueue::Node*
 
@@ -1264,7 +1815,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Список значений
+
 ## CONTENT
+
+Список значений
 
 Тип: stappler::geom::VertexPriorityQueue::Elem*
 
@@ -1273,7 +1828,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Число распределённых элементов
+
 ## CONTENT
+
+Число распределённых элементов
 
 Тип: uint32_t
 
@@ -1282,7 +1841,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Максимальный индекс элемента
+
 ## CONTENT
+
+Максимальный индекс элемента
 
 Тип: uint32_t
 
@@ -1291,7 +1854,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Список неиспольуемых элементов
+
 ## CONTENT
+
+Список неиспольуемых элементов
 
 Тип: stappler::geom::VertexPriorityQueue::Handle
 
@@ -1300,7 +1867,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Флаг инициализации
+
 ## CONTENT
+
+Флаг инициализации
 
 Тип: bool
 
@@ -1309,7 +1880,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Пул памяти для распределения новых элементов
+
 ## CONTENT
+
+Пул памяти для распределения новых элементов
 
 Тип: memory::pool_t*
 
@@ -1318,7 +1893,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Инициализирует хранилище с размером и пулом памяти
+
 ## CONTENT
+
+Инициализирует хранилище с размером и пулом памяти
 
 Параметры:
 * memory::pool_t*
@@ -1329,21 +1908,33 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
+
+Деструктор
 
 
 # ::stappler::geom::VertexPriorityQueue::Heap::init()
 
 ## BRIEF
 
+Инициализирует хранилище
+
 ## CONTENT
+
+Инициализирует хранилище
 
 
 # ::stappler::geom::VertexPriorityQueue::Heap::empty() const
 
 ## BRIEF
 
+Проверяет хранилище на пустоту
+
 ## CONTENT
+
+Проверяет хранилище на пустоту
 
 Возвращает:
 * bool
@@ -1352,7 +1943,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Возвращает наименьший ключ
+
 ## CONTENT
+
+Возвращает наименьший ключ
 
 Возвращает:
 * stappler::geom::VertexPriorityQueue::Key
@@ -1361,7 +1956,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Добавляет новое значение в хранилище
+
 ## CONTENT
+
+Добавляет новое значение в хранилище
 
 Параметры:
 * stappler::geom::VertexPriorityQueue::Key
@@ -1373,7 +1972,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Возвращает и изымает наименьшее значение из хранилища
+
 ## CONTENT
+
+Возвращает и изымает наименьшее значение из хранилища
 
 Возвращает:
 * stappler::geom::VertexPriorityQueue::Key
@@ -1382,7 +1985,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Убирает значение из хранилища по ключу
+
 ## CONTENT
+
+Убирает значение из хранилища по ключу
 
 Параметры:
 * stappler::geom::VertexPriorityQueue::Handle
@@ -1392,7 +1999,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Смещает значения в списке вниз
+
 ## CONTENT
+
+Смещает значения в списке вниз
 
 Параметры:
 * int
@@ -1402,7 +2013,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Смещает значения в списке вверх
+
 ## CONTENT
+
+Смещает значения в списке вверх
 
 Параметры:
 * int
@@ -1412,7 +2027,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Дополнительное хранилище
+
 ## CONTENT
+
+Дополнительное хранилище
 
 Тип: stappler::geom::VertexPriorityQueue::Heap
 
@@ -1421,7 +2040,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Список предопределённых ключей
+
 ## CONTENT
+
+Список предопределённых ключей
 
 Тип: Key*
 
@@ -1430,7 +2053,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Упорядоченный список ключей
+
 ## CONTENT
+
+Упорядоченный список ключей
 
 Тип: Key**
 
@@ -1439,7 +2066,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Число элементов в очереди
+
 ## CONTENT
+
+Число элементов в очереди
 
 Тип: uint32_t
 
@@ -1448,7 +2079,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Максимальный индекс в очереди
+
 ## CONTENT
+
+Максимальный индекс в очереди
 
 Тип: uint32_t
 
@@ -1457,7 +2092,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Флаг инициализации
+
 ## CONTENT
+
+Флаг инициализации
 
 Тип: bool
 
@@ -1466,7 +2105,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Пул памяти для использования
+
 ## CONTENT
+
+Пул памяти для использования
 
 Тип: memory::pool_t*
 
@@ -1475,7 +2118,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Неиспользуемые значения
+
 ## CONTENT
+
+Неиспользуемые значения
 
 Тип: Handle
 
@@ -1484,7 +2131,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Создаёт очередь с помощью пула памяти из списка вершин
+
 ## CONTENT
+
+Создаёт очередь с помощью пула памяти из списка вершин
 
 Параметры:
 * memory::pool_t*
@@ -1495,14 +2146,21 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
+Деструктор
 
 # ::stappler::geom::VertexPriorityQueue::init()
 
 ## BRIEF
 
+Инициализирует очередь после добавления вершин
+
 ## CONTENT
+
+Инициализирует очередь после добавления вершин
 
 Возвращает:
 * bool
@@ -1511,7 +2169,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Проверяет очередь на пустоту
+
 ## CONTENT
+
+Проверяет очередь на пустоту
 
 Возвращает:
 * bool
@@ -1520,7 +2182,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Добавляет новое значение в очередь
+
 ## CONTENT
+
+Добавляет новое значение в очередь
 
 Параметры:
 * stappler::geom::VertexPriorityQueue::Key
@@ -1532,7 +2198,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Удаляет значение по ключу
+
 ## CONTENT
+
+Удаляет значение по ключу
 
 Параметры:
 * stappler::geom::VertexPriorityQueue::Handle
@@ -1542,7 +2212,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Получает и изымает минимальное значение из очереди
+
 ## CONTENT
+
+Получает и изымает минимальное значение из очереди
 
 Возвращает:
 * Key
@@ -1551,7 +2225,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Получает минимальное значение из очереди
+
 ## CONTENT
+
+Получает минимальное значение из очереди
 
 Возвращает:
 * Key
@@ -1560,27 +2238,39 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Тип пересечения граней
+
 ## CONTENT
 
+Тип пересечения граней
+
 Значения:
-* Regular
-* EventIsIntersection
-* EdgeConnection1
-* EdgeConnection2
+* Regular - стандартное
+* EventIsIntersection - пересечение находится на самой грани
+* EdgeConnection1 - присоединение исходной грани к следующей
+* EdgeConnection2 - присоединение следующей грани к исходной
 
 
 # ::stappler::geom::EdgeDict
 
 ## BRIEF
 
+Словарь граней
+
 ## CONTENT
+
+Словарь граней
 
 
 # ::stappler::geom::EdgeDict::event
 
 ## BRIEF
 
+Текущее положение сканирующей линии
+
 ## CONTENT
+
+Текущее положение сканирующей линии
 
 Тип: stappler::geom::Vec2
 
@@ -1589,7 +2279,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Список элементов в словаре
+
 ## CONTENT
+
+Список элементов в словаре
 
 Тип: memory::set<EdgeDictNode>
 
@@ -1598,7 +2292,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Пул памяти для значений
+
 ## CONTENT
+
+Пул памяти для значений
 
 Тип: memory::pool_t*
 
@@ -1607,7 +2305,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Создаёт новый словарь граней
+
 ## CONTENT
+
+Создаёт новый словарь граней
 
 Параметры:
 * memory::pool_t*
@@ -1618,11 +2320,15 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Добавляет грань в словарь
+
 ## CONTENT
+
+Добавляет грань в словарь
 
 Параметры:
 * stappler::geom::Edge*
-* int16_t
+* int16_t - значение поворотного индекса над гранью
 
 Возвращает:
 * stappler::geom::EdgeDictNode const*
@@ -1631,7 +2337,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Убирает грань из словаря
+
 ## CONTENT
+
+Убирает грань из словаря
 
 Параметры:
 * stappler::geom::EdgeDictNode const*
@@ -1641,48 +2351,64 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Переходит к следующему положению сканирующей линии
+
 ## CONTENT
+
+Переходит к следующему положению сканирующей линии
 
 Параметры:
 * stappler::geom::Vertex*
-* float
+* float - чувствительность для удаления граней, попадающих в конечную точку
 
 
 # ::stappler::geom::EdgeDict::checkForIntersects(stappler::geom::Vertex*,stappler::geom::Vec2&,stappler::geom::IntersectionEvent&,float) const
 
 ## BRIEF
 
+Проверяет вершину на пересечение с гранями в словаре
+
 ## CONTENT
+
+Проверяет вершину на пересечение с гранями в словаре
 
 Параметры:
 * stappler::geom::Vertex*
-* stappler::geom::Vec2&
-* stappler::geom::IntersectionEvent&
-* float
+* stappler::geom::Vec2& - возвращает точку пересечения
+* stappler::geom::IntersectionEvent& - возвращает тип пересечения
+* float - чувствительность для определения пересечений
 
 Возвращает:
-* stappler::geom::EdgeDictNode const*
+* stappler::geom::EdgeDictNode const* - грань с пересечением, если найдено. или nullptr
 
 # ::stappler::geom::EdgeDict::checkForIntersects(stappler::geom::HalfEdge*,stappler::geom::Vec2&,stappler::geom::IntersectionEvent&,float) const
 
 ## BRIEF
 
+Проверяет грань на пересечение с гранями в словаре
+
 ## CONTENT
+
+Проверяет грань на пересечение с гранями в словаре
 
 Параметры:
 * stappler::geom::HalfEdge*
-* stappler::geom::Vec2&
-* stappler::geom::IntersectionEvent&
-* float
+* stappler::geom::Vec2& - возвращает точку пересечения
+* stappler::geom::IntersectionEvent& - возвращает тип пересечения
+* float - чувствительность для определения пересечений
 
 Возвращает:
-* stappler::geom::EdgeDictNode const*
+* stappler::geom::EdgeDictNode const* - грань с пересечением, если найдено. или nullptr
 
 # ::stappler::geom::EdgeDict::getEdgeBelow(stappler::geom::Edge const*) const
 
 ## BRIEF
 
+Возвращает грань ниже переданной грани
+
 ## CONTENT
+
+Возвращает грань ниже переданной грани
 
 Параметры:
 * stappler::geom::Edge const*
@@ -1694,11 +2420,15 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Возвращает грань ниже переданной точки
+
 ## CONTENT
+
+Возвращает грань ниже переданной точки
 
 Параметры:
 * stappler::geom::Vec2 const&
-* uint32_t
+* uint32_t - индекс вершины для проверки
 
 Возвращает:
 * stappler::geom::EdgeDictNode const*
@@ -1707,7 +2437,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Проверяет, лежит ли точка левее или совпадает с текущей
+
 ## CONTENT
+
+Проверяет, лежит ли точка левее или совпадает с текущей
 
 Параметры:
 * stappler::geom::Vec2 const&
@@ -1720,7 +2454,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Проверяет, лежит ли вершина левее или совпадает с текущей
+
 ## CONTENT
+
+Проверяет, лежит ли вершина левее или совпадает с текущей
 
 Параметры:
 * stappler::geom::Vertex const*
@@ -1733,7 +2471,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Проверяет точки на совпадение с заданной чувствительностью
+
 ## CONTENT
+
+Проверяет точки на совпадение с заданной чувствительностью
 
 Параметры:
 * stappler::geom::Vec2 const&
@@ -1741,13 +2483,17 @@ Title: SPTessTypes.h
 * float
 
 Возвращает:
-* bool
+* bool - true если точки совпадают
 
 # ::stappler::geom::FloatEq(float,float,float)
 
 ## BRIEF
 
+Проверяет число с плавающей точкой на совпадение с заданной чувствительностью
+
 ## CONTENT
+
+Проверяет число с плавающей точкой на совпадение с заданной чувствительностью
 
 Параметры:
 * float
@@ -1755,13 +2501,17 @@ Title: SPTessTypes.h
 * float
 
 Возвращает:
-* bool
+* bool- true если значения совпадают
 
 # ::stappler::geom::VertEq(stappler::geom::Vertex const*,stappler::geom::Vertex const*,float)
 
 ## BRIEF
 
+Проверяет вершины на совпадение с заданной чувствительностью
+
 ## CONTENT
+
+Проверяет вершины на совпадение с заданной чувствительностью
 
 Параметры:
 * stappler::geom::Vertex const*
@@ -1769,13 +2519,17 @@ Title: SPTessTypes.h
 * float
 
 Возвращает:
-* bool
+* bool- true если вершины совпадают
 
 # ::stappler::geom::EdgeGoesRight(stappler::geom::HalfEdge const*)
 
 ## BRIEF
 
+Проверяет, идёт ли грань направо
+
 ## CONTENT
+
+Проверяет, идёт ли грань направо
 
 Параметры:
 * stappler::geom::HalfEdge const*
@@ -1787,7 +2541,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Проверяет, идёт ли грань далево
+
 ## CONTENT
+
+Проверяет, идёт ли грань далево
 
 Параметры:
 * stappler::geom::HalfEdge const*
@@ -1799,7 +2557,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Проверяет, что угол между гранями не выпуклый
+
 ## CONTENT
+
+Проверяет, что угол между гранями не выпуклый
 
 Параметры:
 * stappler::geom::HalfEdge const*
@@ -1812,31 +2574,43 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Вычисляет псевдоугол направления грани
+
 ## CONTENT
+
+Вычисляет псевдоугол направления грани. Псевдоугол позволяет избежать вычисления накладый обратных тригнорметрических функций. Вместо этого, угол монотонно накладывается на отрезок, где 1.0 соотвествует 45 градусам
 
 Параметры:
 * stappler::geom::Vec2 const&
 
 Возвращает:
-* float
+* float - псевдоугол [-2.0, 2.0f]
 
 # ::stappler::geom::EdgeAngle(stappler::geom::Vec2 const&)
 
 ## BRIEF
 
+Вычисляетпсевдоугол грани с осью oX
+
 ## CONTENT
+
+Вычисляетпсевдоугол грани с осью oX. Псевдоугол позволяет избежать вычисления накладый обратных тригнорметрических функций. Вместо этого, угол монотонно накладывается на отрезок, где 1.0 соотвествует 45 градусам
 
 Параметры:
 * stappler::geom::Vec2 const&
 
 Возвращает:
-* float
+* float - псевдоугол [0.0f, 8.0f)
 
 # ::stappler::geom::EdgeAngle(stappler::geom::Vec2 const&,stappler::geom::Vec2 const&)
 
 ## BRIEF
 
+Возвращает минимальный псевдоугол между гранями
+
 ## CONTENT
+
+Возвращает минимальный псевдоугол между гранями
 
 Параметры:
 * stappler::geom::Vec2 const&
@@ -1849,7 +2623,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Проверяет, меньше ли угол требуемой чувствительности
+
 ## CONTENT
+
+Проверяет, меньше ли угол требуемой чувствительности
 
 Параметры:
 * float
@@ -1862,7 +2640,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Выводит вершину в поток для отладки
+
 ## CONTENT
+
+Выводит вершину в поток для отладки
 
 Параметры:
 * std::ostream&
@@ -1875,7 +2657,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Выводит полугрань в поток для отладки
+
 ## CONTENT
+
+Выводит полугрань в поток для отладки
 
 Параметры:
 * std::ostream&
@@ -1888,7 +2674,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Выводит грань контура в поток для отладки
+
 ## CONTENT
+
+Выводит грань контура в поток для отладки
 
 Параметры:
 * std::ostream&
@@ -1901,7 +2691,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Устанавливает флаг уровня отладочной информации
+
 ## CONTENT
+
+Устанавливает флаг уровня отладочной информации
 
 Параметры:
 * std::ostream&
@@ -1914,7 +2708,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Выводит элемент словаря граней в поток для отладки
+
 ## CONTENT
+
+Выводит элемент словаря граней в поток для отладки
 
 Параметры:
 * std::ostream&
@@ -1927,7 +2725,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Выводит грань в поток для отладки
+
 ## CONTENT
+
+Выводит грань в поток для отладки
 
 Параметры:
 * std::ostream&
@@ -1940,7 +2742,11 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Выводит перечисление типа пересечения граней в поток
+
 ## CONTENT
+
+Выводит перечисление типа пересечения граней в поток
 
 Параметры:
 * std::ostream&
@@ -1953,11 +2759,15 @@ Title: SPTessTypes.h
 
 ## BRIEF
 
+Проверяет, лежит ли элемент с указанным поворотным индексом внутри конттура согласно правилу
+
 ## CONTENT
 
+Проверяет, лежит ли элемент с указанным поворотным индексом внутри конттура согласно правилу
+
 Параметры:
-* stappler::geom::Winding
-* int16_t
+* stappler::geom::Winding - правило поворотного индекса
+* int16_t - вычисленный поворотный индекс
 
 Возвращает:
-* bool
+* bool - true если индекс должен быть внутри контура

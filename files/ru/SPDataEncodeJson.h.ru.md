@@ -526,6 +526,7 @@ Title: SPDataEncodeJson.h
 
 ## CONTENT
 
+Переходит к следующему значению контейнера
 
 # ::stappler::data::json::PrettyEncoder<typename>::onValue(stappler::data::json::PrettyEncoder::ValueType const&)
 
@@ -548,6 +549,8 @@ Title: SPDataEncodeJson.h
 Текущая глубина вложенности
 
 ## CONTENT
+
+Текущая глубина вложенности
 
 Тип: size_t
 

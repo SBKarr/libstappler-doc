@@ -1,115 +1,37 @@
 Title: SPSvgReader.h
 
 
-# MODULES_VG_SPSVGREADER_H_
+# STAPPLER_VG_SPSVGREADER_H_
 
 ## BRIEF
 
+Заголовок интерфейса для чтения формата SVG
+
 ## CONTENT
+
+Заголовок интерфейса для чтения формата SVG
 
 
 # ::stappler::vg::Metric
 
 ## BRIEF
 
-## CONTENT
-
-
-# ::stappler::vg::Metric::Units
-
-## BRIEF
+Псевдоним типа метрики для элементов с размером
 
 ## CONTENT
 
-Значения:
-* Percent
-* Px
-* Em
-* Rem
-* Auto
-* Dpi
-* Dppx
-* Contain
-* Cover
-* Vw
-* Vh
-* VMin
-* VMax
+Псевдоним типа метрики для элементов с размером
 
-
-# ::stappler::vg::Metric::isAuto() const
-
-## BRIEF
-
-## CONTENT
-
-Возвращает:
-* bool
-
-# ::stappler::vg::Metric::isFixed() const
-
-## BRIEF
-
-## CONTENT
-
-Возвращает:
-* bool
-
-# ::stappler::vg::Metric::value
-
-## BRIEF
-
-## CONTENT
-
-Тип: float
-
-
-# ::stappler::vg::Metric::metric
-
-## BRIEF
-
-## CONTENT
-
-Тип: stappler::vg::Metric::Units
-
-
-# ::stappler::vg::Metric::Metric(float,stappler::vg::Metric::Units)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* float
-* stappler::vg::Metric::Units
-
-
-# ::stappler::vg::Metric::Metric()
-
-## BRIEF
-
-## CONTENT
-
-
-# ::stappler::vg::Metric::readStyleValue(stappler::StringView,bool,bool)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::StringView
-* bool
-* bool
-
-Возвращает:
-* bool
 
 # ::stappler::vg::SvgTag
 
 ## BRIEF
 
+Тип тега объекта для чтения SVG
+
 ## CONTENT
+
+Тип тега объекта для чтения SVG. Тег используется для хранения данных объекта для отрисовки.
 
 Базовые классы:
 * html::Tag<StringView>
@@ -119,7 +41,11 @@ Title: SPSvgReader.h
 
 ## BRIEF
 
+Конструктор тега по имени
+
 ## CONTENT
+
+Конструктор тега по имени
 
 Параметры:
 * stappler::StringView&
@@ -129,24 +55,32 @@ Title: SPSvgReader.h
 
 ## BRIEF
 
+Перечисление формы объекта в теге
+
 ## CONTENT
+
+Перечисление формы объекта в теге
 
 Значения:
 * None
-* Rect
-* Circle
-* Ellipse
-* Line
-* Polyline
-* Polygon
-* Use
+* Rect - прямоугольник
+* Circle - круг
+* Ellipse - эллипс
+* Line - линия
+* Polyline - полилиния
+* Polygon - полигон
+* Use - ссылка на другой объект
 
 
 # ::stappler::vg::SvgTag::shape
 
 ## BRIEF
 
+Форма объекта в теге
+
 ## CONTENT
+
+Форма объекта в теге
 
 Тип: enum Shape
 
@@ -155,7 +89,11 @@ Title: SPSvgReader.h
 
 ## BRIEF
 
+Матрица трансформации для объекта
+
 ## CONTENT
+
+Матрица трансформации для объекта
 
 Тип: stappler::geom::Mat4
 
@@ -164,7 +102,11 @@ Title: SPSvgReader.h
 
 ## BRIEF
 
+Идентификатор тега
+
 ## CONTENT
+
+Идентификатор тега (атрибут `id`)
 
 Тип: stappler::StringView
 
@@ -173,7 +115,11 @@ Title: SPSvgReader.h
 
 ## BRIEF
 
+Текст ссылки на объект
+
 ## CONTENT
+
+Текст ссылки на объект
 
 Тип: stappler::StringView
 
@@ -182,7 +128,11 @@ Title: SPSvgReader.h
 
 ## BRIEF
 
+Данные векторного пути для объекта
+
 ## CONTENT
+
+Данные векторного пути для объекта
 
 Тип: stappler::vg::VectorPath
 
@@ -191,7 +141,11 @@ Title: SPSvgReader.h
 
 ## BRIEF
 
+Возвращает ссылку на путь
+
 ## CONTENT
+
+Возвращает ссылку на путь
 
 Возвращает:
 * stappler::vg::VectorPath&
@@ -200,42 +154,66 @@ Title: SPSvgReader.h
 
 ## BRIEF
 
+Объект для разбора формата SVG
+
 ## CONTENT
+
+Объект для разбора формата SVG. Использует XML-парсер для разбора. Ограниченно реализует формат, читает только формы и основные параметры закраски.
 
 
 # ::stappler::vg::SvgReader::Parser
 
 ## BRIEF
 
+Тип парсера
+
 ## CONTENT
+
+Тип парсера
 
 
 # ::stappler::vg::SvgReader::Tag
 
 ## BRIEF
 
+Тип тега SVG
+
 ## CONTENT
+
+Тип тега SVG
 
 
 # ::stappler::vg::SvgReader::StringReader
 
 ## BRIEF
 
+Тип, ссылающийся на себя для парсера XML
+
 ## CONTENT
+
+Тип, ссылающийся на себя для парсера XML
 
 
 # ::stappler::vg::SvgReader::SvgReader()
 
 ## BRIEF
 
+Конструктор по умолчанию
+
 ## CONTENT
+
+Конструктор по умолчанию
 
 
 # ::stappler::vg::SvgReader::onBeginTag(stappler::vg::SvgReader::Parser&,stappler::vg::SvgReader::Tag&)
 
 ## BRIEF
 
+Функция начала разбора тега
+
 ## CONTENT
+
+Функция начала разбора тега
 
 Параметры:
 * stappler::vg::SvgReader::Parser&
@@ -246,7 +224,11 @@ Title: SPSvgReader.h
 
 ## BRIEF
 
+Функция конца разбора тега
+
 ## CONTENT
+
+Функция конца разбора тега
 
 Параметры:
 * stappler::vg::SvgReader::Parser&
@@ -258,7 +240,11 @@ Title: SPSvgReader.h
 
 ## BRIEF
 
+Функция чтения целевого параметра
+
 ## CONTENT
+
+Функция чтения целевого параметра
 
 Параметры:
 * stappler::vg::SvgReader::Tag&
@@ -270,7 +256,11 @@ Title: SPSvgReader.h
 
 ## BRIEF
 
+Функция чтения значения стиля из атрибута
+
 ## CONTENT
+
+Функция чтения значения стиля из атрибута
 
 Параметры:
 * stappler::vg::SvgReader::Tag&
@@ -281,7 +271,11 @@ Title: SPSvgReader.h
 
 ## BRIEF
 
+Функция чтения атрибута тега
+
 ## CONTENT
+
+Функция чтения атрибута тега
 
 Параметры:
 * stappler::vg::SvgReader::Parser&
@@ -294,7 +288,11 @@ Title: SPSvgReader.h
 
 ## BRIEF
 
+Функция добавления тега
+
 ## CONTENT
+
+Функция добавления тега
 
 Параметры:
 * stappler::vg::SvgReader::Parser&
@@ -305,7 +303,11 @@ Title: SPSvgReader.h
 
 ## BRIEF
 
+Функция снятия тега
+
 ## CONTENT
+
+Функция снятия тега
 
 Параметры:
 * stappler::vg::SvgReader::Parser&
@@ -316,7 +318,11 @@ Title: SPSvgReader.h
 
 ## BRIEF
 
+Функция разбора вложенного тега
+
 ## CONTENT
+
+Функция разбора вложенного тега
 
 Параметры:
 * stappler::vg::SvgReader::Parser&
@@ -327,7 +333,11 @@ Title: SPSvgReader.h
 
 ## BRIEF
 
+Флаг нахождения символа в блоке `defs`
+
 ## CONTENT
+
+Флаг нахождения символа в блоке `defs`
 
 Тип: bool
 
@@ -336,7 +346,11 @@ Title: SPSvgReader.h
 
 ## BRIEF
 
+Длина диагонали активной области SVG
+
 ## CONTENT
+
+Длина диагонали активной области SVG
 
 Тип: float
 
@@ -345,7 +359,11 @@ Title: SPSvgReader.h
 
 ## BRIEF
 
+Ширина в базовых единицах формата
+
 ## CONTENT
+
+Ширина в базовых единицах формата
 
 Тип: float
 
@@ -354,7 +372,11 @@ Title: SPSvgReader.h
 
 ## BRIEF
 
+Высота в базовых единицах формата
+
 ## CONTENT
+
+Высота в базовых единицах формата
 
 Тип: float
 
@@ -363,7 +385,11 @@ Title: SPSvgReader.h
 
 ## BRIEF
 
+Следующий идентификатор для формы, используется для связи по тегу `use`
+
 ## CONTENT
+
+Следующий идентификатор для формы, используется для связи по тегу `use`
 
 Тип: uint16_t
 
@@ -372,7 +398,11 @@ Title: SPSvgReader.h
 
 ## BRIEF
 
+Данные `viewbox`
+
 ## CONTENT
+
+Данные `viewbox`
 
 Тип: stappler::geom::Rect
 
@@ -381,7 +411,11 @@ Title: SPSvgReader.h
 
 ## BRIEF
 
+Указатели на отрисовываемые объекты в порядке рисования
+
 ## CONTENT
+
+Указатели на отрисовываемые объекты в порядке рисования. Вектор может быть пустым, в аком случае рисование в порядке появления в файле.
 
 Тип: Interface::VectorType<PathXRef>
 
@@ -390,6 +424,10 @@ Title: SPSvgReader.h
 
 ## BRIEF
 
+Список всех объектов по их имени
+
 ## CONTENT
+
+Список всех объектов по их имени
 
 Тип: Interface::MapType<Interface::StringType, VectorPath>

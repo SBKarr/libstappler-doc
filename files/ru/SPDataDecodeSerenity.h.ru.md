@@ -196,6 +196,7 @@ Title: SPDataDecodeSerenity.h
 
 ## CONTENT
 
+Убирает значение со стека разбора
 
 # ::stappler::data::serenity::Decoder<typename>::stop
 

@@ -1,75 +1,89 @@
 Title: STStorageField.h
 
 
-# MODULES_DB_STSTORAGEFIELD_H_
+# STAPPLER_DB_STSTORAGEFIELD_H_
 
 ## BRIEF
 
+Заголово с определением полей для схемы данных
+
 ## CONTENT
+
+Заголово с определением полей для схемы данных
 
 
 # ::stappler::db::Type
 
 ## BRIEF
 
+Базовый тип поля
+
 ## CONTENT
+
+Базовый тип поля
 
 Значения:
 * None
-* Integer
-* Float
-* Boolean
-* Text
-* Bytes
-* Data
-* Extra
-* Object
-* Set
-* Array
-* File
-* Image
-* View
-* FullTextView
-* Virtual
-* Custom
+* Integer - целое число
+* Float - число с плавающей точкой
+* Boolean - булево
+* Text - текстовое
+* Bytes - байтовое
+* Data - нетипизированные структурированные данные
+* Extra - нетипизированные структурированные данные с предустановленной схемой
+* Object - связь объектом другой схемы
+* Set - набор объектов другой схемы
+* Array - массив
+* File - внешний файл
+* Image - внешний файл - изображение
+* View - отображение
+* FullTextView - полнотекстовое отображение
+* Virtual - виртуальное поле
+* Custom - пользовательское поле
 
 
 # ::stappler::db::Flags
 
 ## BRIEF
 
+Функциональные флаги поля
+
 ## CONTENT
 
 Значения:
 * None
-* Required
-* Protected
-* ReadOnly
-* Reference
-* Unique
-* AutoCTime
-* AutoMTime
-* AutoUser
-* Indexed
-* Admin
-* ForceInclude
-* ForceExclude
-* Composed
-* Compressed
-* Enum
-* PatternIndexed
-* TrigramIndexed
-* TsNormalize_DocLengthLog
-* TsNormalize_DocLength
-* TsNormalize_UniqueWordsCount
-* TsNormalize_UniqueWordsCountLog
+* Required - поле обязательно для схемы
+* Protected - поле недоступно для чтения пльзователем
+* ReadOnly - поле недоступно для записи
+* Reference - объект или набор объектов указывается по ссылке. иначе, имеют место отношение владения
+* Unique - поле имеет уникальное значение для схемы
+* AutoCTime - целочисленное поле автоматически заполняется временем создания
+* AutoMTime - целочисленное поле автоматически заполняется временем изменения
+* AutoUser - целочисленное или объектное поле автоматически заполняется идентификатором текущего пользователя
+* Indexed - поле индексируется для запросов по нему
+* Admin - поле доступно только администратором
+* ForceInclude - поле всегда включается в результат запроса (однако, удаляется из него при выводе, если пользователь его не запрашивал, но доступно в функциях фильтрации)
+* ForceExclude - поле исключается из вывода, если не запрошено явно
+* Composed - набор или объект входит в композиционную группу с родителем и имеет общее время обновления для всей группы
+* Compressed - поле с нетипизированными данными хранится в сжатом виде
+* Enum - целочисленное поле является перечислением
+* PatternIndexed - текстовое поле индексируется для поиска по префиксу и суффиксу
+* TrigramIndexed - текстовое поле индексируется для поиска по части слова
+* TsNormalize_DocLengthLog - способ нормализации для веса слова в полнотекстовом поиске для поля. Делит ранг слова на 1 + логарифм длины документа
+* TsNormalize_DocLength - способ нормализации для веса слова в полнотекстовом поиске для поля. Делит ранг на длину документа
+* TsNormalize_UniqueWordsCount - способ нормализации для веса слова в полнотекстовом поиске для поля. Делит ранг на число уникальных слов в документе
+* TsNormalize_UniqueWordsCountLog - способ нормализации для веса слова в полнотекстовом поиске для поля Делит ранг на 1 + логарифм от числа уникальных слов в документе
 
 
 # ::stappler::db::operator|(stappler::db::Flags const&,stappler::db::Flags const&)
 
 ## BRIEF
 
+Автоматически созданный оператор битового флага
+
 ## CONTENT
+
+Автоматически созданный оператор битового флага
 
 Параметры:
 * stappler::db::Flags const&
@@ -82,7 +96,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Автоматически созданный оператор битового флага
+
 ## CONTENT
+
+Автоматически созданный оператор битового флага
 
 Параметры:
 * stappler::db::Flags const&
@@ -95,7 +113,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Автоматически созданный оператор битового флага
+
 ## CONTENT
+
+Автоматически созданный оператор битового флага
 
 Параметры:
 * stappler::db::Flags const&
@@ -108,7 +130,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Автоматически созданный оператор битового флага
+
 ## CONTENT
+
+Автоматически созданный оператор битового флага
 
 Параметры:
 * stappler::db::Flags&
@@ -121,7 +147,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Автоматически созданный оператор битового флага
+
 ## CONTENT
+
+Автоматически созданный оператор битового флага
 
 Параметры:
 * stappler::db::Flags&
@@ -134,7 +164,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Автоматически созданный оператор битового флага
+
 ## CONTENT
+
+Автоматически созданный оператор битового флага
 
 Параметры:
 * stappler::db::Flags&
@@ -147,7 +181,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Автоматически созданный оператор битового флага
+
 ## CONTENT
+
+Автоматически созданный оператор битового флага
 
 Параметры:
 * stappler::db::Flags const&
@@ -160,7 +198,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Автоматически созданный оператор битового флага
+
 ## CONTENT
+
+Автоматически созданный оператор битового флага
 
 Параметры:
 * std::underlying_type<Flags>::type const&
@@ -173,7 +215,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Автоматически созданный оператор битового флага
+
 ## CONTENT
+
+Автоматически созданный оператор битового флага
 
 Параметры:
 * stappler::db::Flags const&
@@ -186,7 +232,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Автоматически созданный оператор битового флага
+
 ## CONTENT
+
+Автоматически созданный оператор битового флага
 
 Параметры:
 * std::underlying_type<Flags>::type const&
@@ -199,7 +249,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Автоматически созданный оператор битового флага
+
 ## CONTENT
+
+Автоматически созданный оператор битового флага
 
 Параметры:
 * stappler::db::Flags const&
@@ -211,7 +265,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Проверяет, возможен ли оператор сравнения для поля определённого типа и флагов
+
 ## CONTENT
+
+Проверяет, возможен ли оператор сравнения для поля определённого типа и флагов
 
 Параметры:
 * stappler::db::Type
@@ -225,45 +283,57 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Способ трансформации значения поля
+
 ## CONTENT
+
+Способ трансформации значения поля
 
 Значения:
 * None
-* Text
-* Identifier
-* Alias
+* Text - простой текст
+* Identifier - С-идентификатор
+* Alias - Псевдоним (индексированный идентификатор)
 * Url
 * Email
-* Number
-* Hexadecimial
-* Base64
+* Number - номер в текстовой форме
+* Hexadecimial - шестнадцатиричное число
+* Base64 - текст в Base64
 * Uuid
-* PublicKey
-* Array
-* Password
+* PublicKey - публичный ключ
+* Array - массив (для нетипизированных данных)
+* Password - хранимый пароль
 
 
 # ::stappler::db::ValidationLevel
 
 ## BRIEF
 
+Уровень для вычисления хэша схемы данных
+
 ## CONTENT
 
+Уровень для вычисления хэша схемы данных
+
 Значения:
-* NamesAndTypes
-* Slots
-* Full
+* NamesAndTypes - только имена полей и их типы
+* Slots - полностью слоты полей
+* Full - полностью данные схемы
 
 
 # ::stappler::db::Linkage
 
 ## BRIEF
 
+Способ связи полей
+
 ## CONTENT
 
+Способ связи полей
+
 Значения:
-* Auto
-* Manual
+* Auto - автоматическая
+* Manual - ручная
 * None
 
 
@@ -271,67 +341,102 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Псевдоним для определения аргумента минимальной длины
+
 ## CONTENT
+
+Псевдоним для определения аргумента минимальной длины
 
 
 # ::stappler::db::MaxLength
 
 ## BRIEF
 
+Псевдоним для определения аргумента максимальной длины
+
 ## CONTENT
+
+Псевдоним для определения аргумента максимальной длины
 
 
 # ::stappler::db::PasswordSalt
 
 ## BRIEF
 
+Псевдоним для определения аргумента ключа для пароля
+
 ## CONTENT
+
+Псевдоним для определения аргумента ключа для пароля
 
 
 # ::stappler::db::ForeignLink
 
 ## BRIEF
 
+Псевдоним для определения аргумента внешней ссылки
+
 ## CONTENT
+
+Псевдоним для определения аргумента внешней ссылки
 
 
 # ::stappler::db::Documentation
 
 ## BRIEF
 
+Псевдоним для определения аргумента документации
+
 ## CONTENT
+
+Псевдоним для определения аргумента документации
 
 
 # ::stappler::db::ImagePolicy
 
 ## BRIEF
 
+Способ работы с изображениями, размер которых отличается от требуемого
+
 ## CONTENT
 
+Способ работы с изображениями, размер которых отличается от требуемого
+
 Значения:
-* Resize
-* Reject
+* Resize - изменить размер
+* Reject - отказать в приёме изменений
 
 
 # ::stappler::db::MaxFileSize
 
 ## BRIEF
 
+Псевдоним для определения аргумента максимального размера файла
+
 ## CONTENT
 
+Псевдоним для определения аргумента максимального размера файла
 
 # ::stappler::db::MaxImageSize
 
 ## BRIEF
 
+Структура максимального размера изображения
+
 ## CONTENT
+
+Структура максимального размера изображения
 
 
 # ::stappler::db::MaxImageSize::width
 
 ## BRIEF
 
+Ширина
+
 ## CONTENT
+
+Ширина
 
 Тип: size_t
 
@@ -340,7 +445,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Высота
+
 ## CONTENT
+
+Высота
 
 Тип: size_t
 
@@ -349,7 +458,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Способ работы ограничения
+
 ## CONTENT
+
+Способ работы ограничения
 
 Тип: stappler::db::ImagePolicy
 
@@ -358,18 +471,26 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Конструктор
+
 ## CONTENT
+
+Конструктор
 
 
 # ::stappler::db::MaxImageSize::MaxImageSize(size_t,size_t,stappler::db::ImagePolicy)
 
 ## BRIEF
 
+Конструктор
+
 ## CONTENT
 
+Конструктор
+
 Параметры:
-* size_t
-* size_t
+* size_t - ширина
+* size_t - высота
 * stappler::db::ImagePolicy
 
 
@@ -377,14 +498,22 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Структура минимального размера изображения
+
 ## CONTENT
+
+Структура минимального размера изображения
 
 
 # ::stappler::db::MinImageSize::width
 
 ## BRIEF
 
+Ширина
+
 ## CONTENT
+
+Ширина
 
 Тип: size_t
 
@@ -393,7 +522,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Высота
+
 ## CONTENT
+
+Высота
 
 Тип: size_t
 
@@ -402,7 +535,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Способ работы ограничения
+
 ## CONTENT
+
+Способ работы ограничения
 
 Тип: stappler::db::ImagePolicy
 
@@ -411,18 +548,26 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Конструктор
+
 ## CONTENT
+
+Конструктор
 
 
 # ::stappler::db::MinImageSize::MinImageSize(size_t,size_t,stappler::db::ImagePolicy)
 
 ## BRIEF
 
+Конструктор
+
 ## CONTENT
 
+Конструктор
+
 Параметры:
-* size_t
-* size_t
+* size_t - ширина
+* size_t - высота
 * stappler::db::ImagePolicy
 
 
@@ -430,14 +575,21 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Структура для миниатюры изображения
+
 ## CONTENT
 
+Структура для миниатюры изображения
 
 # ::stappler::db::Thumbnail::width
 
 ## BRIEF
 
+Ширина
+
 ## CONTENT
+
+Ширина
 
 Тип: size_t
 
@@ -446,7 +598,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Высота
+
 ## CONTENT
+
+Высота
 
 Тип: size_t
 
@@ -455,7 +611,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Имя миниатюры
+
 ## CONTENT
+
+Имя миниатюры
 
 Тип: stappler::mem_pool::String
 
@@ -464,110 +624,169 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Конструктор
+
 ## CONTENT
 
+Конструктор
+
 Параметры:
-* stappler::mem_pool::String&&
-* size_t
-* size_t
+* stappler::mem_pool::String&& - имя
+* size_t - ширина
+* size_t - высота
 
 
 # ::stappler::db::RemovePolicy
 
 ## BRIEF
 
+Политика удаления связанного поля
+
 ## CONTENT
 
+Политика удаления связанного поля
+
 Значения:
-* Cascade
-* Restrict
-* Reference
-* StrongReference
-* Null
+* Cascade - удалять вместе с исходным
+* Restrict - запретить удалять исходное
+* Reference - поле является ссылкой, игнорировать удаление исходного объекта
+* StrongReference - поле является жесткой ссылкой, удалять вместе с исходным объектом
+* Null - назначать NULL при удалении исходного объекта
 
 
 # ::stappler::db::FilterFn
 
 ## BRIEF
 
+Функция фильтрации (устаревшая)
+
 ## CONTENT
+
+Функция фильтрации (устаревшая)
 
 
 # ::stappler::db::DefaultFn
 
 ## BRIEF
 
+Функция вывода значения по умолчанию
+
 ## CONTENT
+
+Функция вывода значения по умолчанию на основе других полей объекта
 
 
 # ::stappler::db::ReadFilterFn
 
 ## BRIEF
 
+Функция фильтрации поля для вывода его пользователю
+
 ## CONTENT
+
+Функция фильтрации поля для вывода его пользователю
 
 
 # ::stappler::db::WriteFilterFn
 
 ## BRIEF
 
+Функция фильтрации поля при вводе его в БД
+
 ## CONTENT
+
+Функция фильтрации поля при вводе его в БД
 
 
 # ::stappler::db::ReplaceFilterFn
 
 ## BRIEF
 
+Функция фильтрации при замене значения в поле
+
 ## CONTENT
+
+Функция фильтрации при замене значения в поле
 
 
 # ::stappler::db::ViewLinkageFn
 
 ## BRIEF
 
+Функцция для вывода идентификатора исходного объекта при связывании полей отображения
+
 ## CONTENT
 
+Функцция для вывода идентификатора исходного объекта при связывании полей отображения. Используется, чтобы установить, к какому объекту должны относиться связываемые объекты.
+
+Используется:
+* Полями отображений для вывода исходного объекта из объектов в отображении
+* Автоматическими полями для получения исходного объекта из объектов для генерации данных 
 
 # ::stappler::db::ViewFn
 
 ## BRIEF
 
+Функция проверяет, должен ли объект внешней схемы относиться к отображению
+
 ## CONTENT
+
+Функция проверяет, должен ли объект внешней схемы относиться к отображению
 
 
 # ::stappler::db::FullTextViewFn
 
 ## BRIEF
 
+Функция для извлечения полнотекстовых данных из объекта
+
 ## CONTENT
+
+Функция для извлечения полнотекстовых данных из объекта
 
 
 # ::stappler::db::FullTextQueryFn
 
 ## BRIEF
 
+Функция для получения полнотекстового запроса из запроса на сравнение строк
+
 ## CONTENT
+
+Функция для получения полнотекстового запроса из запроса на сравнение строк
 
 
 # ::stappler::db::VirtualReadFn
 
 ## BRIEF
 
+Функция для чтения виртуального поля
+
 ## CONTENT
+
+Функция для чтения виртуального поля
 
 
 # ::stappler::db::VirtualWriteFn
 
 ## BRIEF
 
+Функция для записи виртуального поля
+
 ## CONTENT
+
+Функция для записи виртуального поля
 
 
 # ::stappler::db::AutoFieldScheme
 
 ## BRIEF
 
+Структура для схемы автоматического поля
+
 ## CONTENT
+
+Структура для схемы автоматического поля
 
 Базовые классы:
 * AllocBase
@@ -577,14 +796,22 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Тип вектора требуемых полей
+
 ## CONTENT
+
+Тип вектора требуемых полей
 
 
 # ::stappler::db::AutoFieldScheme::scheme
 
 ## BRIEF
 
+Схема данных для вывода значений поля
+
 ## CONTENT
+
+Схема данных для вывода значений поля
 
 Тип: stappler::db::Scheme const&
 
@@ -593,7 +820,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Поля, обновление которых вызывает обновление автоматического поля
+
 ## CONTENT
+
+Поля, обновление которых вызывает обновление автоматического поля
 
 Тип: ReqVec
 
@@ -602,7 +833,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Функция для связи объектов внешней схемы с автоматическим полем
+
 ## CONTENT
+
+Функция для связи объектов внешней схемы с автоматическим полем
 
 Тип: stappler::db::ViewLinkageFn
 
@@ -611,7 +846,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Поля, требуемые для успешной связи поля внешней схемы с автоматическим полем
+
 ## CONTENT
+
+Поля, требуемые для успешной связи поля внешней схемы с автоматическим полем
 
 Тип: ReqVec
 
@@ -620,39 +859,55 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Конструктор автоматического поля
+
 ## CONTENT
 
+Конструктор автоматического поля
+
 Параметры:
-* stappler::db::Scheme const&
-* stappler::db::AutoFieldScheme::ReqVec&&
-* stappler::db::ViewLinkageFn&&
-* stappler::db::AutoFieldScheme::ReqVec&&
+* stappler::db::Scheme const& - схема. на основе которой формируется поле
+* stappler::db::AutoFieldScheme::ReqVec&& - список полей для обноления
+* stappler::db::ViewLinkageFn&& - функция связи
+* stappler::db::AutoFieldScheme::ReqVec&& - список полей для связи
 
 
 # ::stappler::db::AutoFieldScheme::AutoFieldScheme(stappler::db::Scheme const&,stappler::db::AutoFieldScheme::ReqVec&&,stappler::db::AutoFieldScheme::ReqVec&&)
 
 ## BRIEF
 
+Конструктор автоматического поля
+
 ## CONTENT
 
+Конструктор автоматического поля
+
 Параметры:
-* stappler::db::Scheme const&
-* stappler::db::AutoFieldScheme::ReqVec&&
-* stappler::db::AutoFieldScheme::ReqVec&&
+* stappler::db::Scheme const& - схема. на основе которой формируется поле
+* stappler::db::AutoFieldScheme::ReqVec&& - список полей для обноления
+* stappler::db::AutoFieldScheme::ReqVec&& - список полей для связи
 
 
 # ::stappler::db::AutoFieldDef
 
 ## BRIEF
 
+Структура определения автоматического поля
+
 ## CONTENT
+
+Структура определения автоматического поля
 
 
 # ::stappler::db::AutoFieldDef::schemes
 
 ## BRIEF
 
+Схемы, из которых берёт информацию автоматическое поле
+
 ## CONTENT
+
+Схемы, из которых берёт информацию автоматическое поле. Должна быть определена как минимум одна.
 
 Тип: Vector<stappler::db::AutoFieldScheme>
 
@@ -661,7 +916,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Функция для получения значения по умолчанию
+
 ## CONTENT
+
+Функция для получения значения по умолчанию
 
 Тип: stappler::db::DefaultFn
 
@@ -670,7 +929,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Поля, требуемые для вычисления значения
+
 ## CONTENT
+
+Поля, требуемые для вычисления значения
 
 Тип: Vector<stappler::mem_pool::String>
 
@@ -679,23 +942,34 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Структура для определения уникального огрничения
+
 ## CONTENT
+
+Структура для определения уникального огрничения
 
 
 # ::stappler::db::UniqueConstraintDef::name
 
 ## BRIEF
 
+Имя ограничения
+
 ## CONTENT
 
-Тип: stappler::StringView
+Имя ограничения
 
+Тип: stappler::StringView
 
 # ::stappler::db::UniqueConstraintDef::fields
 
 ## BRIEF
 
+Список полей для ограничения
+
 ## CONTENT
+
+Список полей для ограничения
 
 Тип: Vector<stappler::StringView>
 
@@ -704,7 +978,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Базовая структура для поля данных
+
 ## CONTENT
+
+Базовая структура для поля данных. Поле конструируется из имени и списка аргументов. Аргументы указываются в произвольном порядке. Список допустимых аргументов определяется полями слота поля данных.
 
 Базовые классы:
 * AllocBase
@@ -714,9 +992,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Создаёт поле нетипизированных данных
+
 ## CONTENT
 
 Доступ: public
+
+Создаёт поле нетипизированных данных
 
 Параметры шаблона:
 * typename Args
@@ -732,9 +1014,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Создаёт целочисленное поле
+
 ## CONTENT
 
 Доступ: public
+
+Создаёт целочисленное поле
 
 Параметры шаблона:
 * typename Args
@@ -750,9 +1036,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Создаёт поле числа с плавающей точкой
+
 ## CONTENT
 
 Доступ: public
+
+Создаёт поле числа с плавающей точкой
 
 Параметры шаблона:
 * typename Args
@@ -768,9 +1058,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Создаёт булево поле
+
 ## CONTENT
 
 Доступ: public
+
+Создаёт булево поле
 
 Параметры шаблона:
 * typename Args
@@ -786,9 +1080,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Создаёт текстовое поле
+
 ## CONTENT
 
 Доступ: public
+
+Создаёт текстовое поле
 
 Параметры шаблона:
 * typename Args
@@ -804,9 +1102,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Создаёт байтовое поле
+
 ## CONTENT
 
 Доступ: public
+
+Создаёт байтовое поле
 
 Параметры шаблона:
 * typename Args
@@ -822,9 +1124,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Создаёт поле пароля
+
 ## CONTENT
 
 Доступ: public
+
+Создаёт поле пароля
 
 Параметры шаблона:
 * typename Args
@@ -840,9 +1146,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Создаёт нетипизированное поле со схемой сопоставления
+
 ## CONTENT
 
 Доступ: public
+
+Создаёт нетипизированное поле со схемой сопоставления
 
 Параметры шаблона:
 * typename Args
@@ -858,16 +1168,20 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Создаёт нетипизированное поле со схемой сопоставления
+
 ## CONTENT
 
 Доступ: public
+
+Создаёт нетипизированное поле со схемой сопоставления
 
 Параметры шаблона:
 * typename Args
 
 Параметры:
 * stappler::mem_pool::String&&
-* stappler::InitializerList<Field>&&
+* stappler::InitializerList<Field>&& - поля для сопоставления
 * Args &&...
 
 Возвращает:
@@ -877,9 +1191,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Создаёт поле внешнего файла
+
 ## CONTENT
 
 Доступ: public
+
+Создаёт поле внешнего файла
 
 Параметры шаблона:
 * typename Args
@@ -895,9 +1213,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Создаёт поле внешнего изображения
+
 ## CONTENT
 
 Доступ: public
+
+Создаёт поле внешнего изображения
 
 Параметры шаблона:
 * typename Args
@@ -913,9 +1235,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Создаёт объектное поле
+
 ## CONTENT
 
 Доступ: public
+
+Создаёт объектное поле
 
 Параметры шаблона:
 * typename Args
@@ -931,9 +1257,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Создаёт поле набора из объектов
+
 ## CONTENT
 
 Доступ: public
+
+Создаёт объектное поле
 
 Параметры шаблона:
 * typename Args
@@ -949,9 +1279,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Создаёт поле-массив
+
 ## CONTENT
 
 Доступ: public
+
+Создаёт поле-массив
 
 Параметры шаблона:
 * typename Args
@@ -967,9 +1301,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Создаёт поле-отображение
+
 ## CONTENT
 
 Доступ: public
+
+Создаёт поле-отображение
 
 Параметры шаблона:
 * typename Args
@@ -985,9 +1323,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Создаёт поле для полнотекстового поиска
+
 ## CONTENT
 
 Доступ: public
+
+Создаёт поле для полнотекстового поиска
 
 Параметры шаблона:
 * typename Args
@@ -1003,9 +1345,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Создаёт виртуальное поле
+
 ## CONTENT
 
 Доступ: public
+
+Создаёт виртуальное поле. Виртуальное поле не хранится в БД, но позволяет вызывать функции для чтения и записи
 
 Параметры шаблона:
 * typename Args
@@ -1021,15 +1367,19 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Создаёт пользовательское поле
+
 ## CONTENT
 
 Доступ: public
+
+Создаёт пользовательское поле
 
 Параметры шаблона:
 * typename Args
 
 Параметры:
-* stappler::db::FieldCustom*
+* stappler::db::FieldCustom* - слот пользовательского поля
 
 Возвращает:
 * stappler::db::Field
@@ -1038,38 +1388,63 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Слот для поля
+
 ## CONTENT
 
 Доступ: public
 
+Слот для поля. Слот определяет конкретные параметры поля. Слоты полей различных типов наследуются от базового слота поля.
+
 Базовые классы:
 * AllocBase
+
+
+# ::stappler::db::Field::Slot::~Slot()
+
+## BRIEF
+
+Деструктор
+
+## CONTENT
+
+Доступ: public
+
+Деструктор
 
 
 # ::stappler::db::Field::Slot::setOptions<typename,typename>(F&,T&&)
 
 ## BRIEF
 
+Устанавливает аргумент поля
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает аргумент поля
 
 Параметры шаблона:
 * typename F
 * typename T
 
 Параметры:
-* F&
-* T&&
+* F& - тип слота поля
+* T&& - аргумент для определения поля
 
 
 # ::stappler::db::Field::Slot::setOptions<typename,typename,typename>(F&,T&&,Args &&...)
 
 ## BRIEF
 
+Устанавливает аргументы поля
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает аргументы поля
 
 Параметры шаблона:
 * typename F
@@ -1077,18 +1452,22 @@ Title: STStorageField.h
 * typename Args
 
 Параметры:
-* F&
-* T&&
-* Args &&...
+* F& - тип слота поля
+* T&& - аргумент для определения поля
+* Args &&... - другие аргументы
 
 
 # ::stappler::db::Field::Slot::init<typename>(F&)
 
 ## BRIEF
 
+Вызывает инициализацию слота
+
 ## CONTENT
 
 Доступ: public
+
+Вызывает инициализацию слота
 
 Параметры шаблона:
 * typename F
@@ -1101,9 +1480,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Вызывает инициализацию слота со списком аргументов в произвольном порядкке
+
 ## CONTENT
 
 Доступ: public
+
+Вызывает инициализацию слота со списком аргументов в произвольном порядкке
 
 Параметры шаблона:
 * typename F
@@ -1118,9 +1501,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Создаёт слот из имени и типа
+
 ## CONTENT
 
 Доступ: public
+
+Создаёт слот из имени и типа
 
 Параметры:
 * stappler::mem_pool::String&&
@@ -1131,9 +1518,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Возвращает имя поля
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает имя поля
 
 Возвращает:
 * stappler::StringView
@@ -1142,9 +1533,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Проверяет флаг поля
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет флаг поля
 
 Параметры:
 * stappler::db::Flags
@@ -1156,9 +1551,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Возвращает тип поля
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает тип поля
 
 Возвращает:
 * stappler::db::Type
@@ -1167,9 +1566,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Проверяет флаг защищённого поля
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет флаг защищённого поля
 
 Возвращает:
 * bool
@@ -1178,9 +1581,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Возврашает правило преобразвания
+
 ## CONTENT
 
 Доступ: public
+
+Возврашает правило преобразвания
 
 Возвращает:
 * stappler::db::Transform
@@ -1189,9 +1596,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Проверяет поле на простую укладку
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет поле на простую укладку. Поля простой укладки не требуют предварительного запроса для изменения.
 
 Возвращает:
 * bool
@@ -1200,9 +1611,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Проверяет на нетипизированное поле
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет на нетипизированное поле
 
 Возвращает:
 * bool
@@ -1211,9 +1626,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Проверяет, индексируется ли поле
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, индексируется ли поле
 
 Возвращает:
 * bool
@@ -1222,9 +1641,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Проверяет, является ли поле файлом
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, является ли поле файлом
 
 Возвращает:
 * bool
@@ -1233,9 +1656,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Проверяет, есть ли значение по умолчанию
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, есть ли значение по умолчанию
 
 Возвращает:
 * bool
@@ -1244,9 +1671,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Возврашает значение по умолчанию
+
 ## CONTENT
 
 Доступ: public
+
+Возврашает значение по умолчанию
 
 Параметры:
 * stappler::mem_pool::Value const&
@@ -1258,26 +1689,34 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Трансформирует значение для записи в поле
+
 ## CONTENT
 
 Доступ: public
 
+Трансформирует значение для записи в поле
+
 Параметры:
-* stappler::db::Scheme const&
-* stappler::mem_pool::Value const&
-* stappler::mem_pool::Value&
-* bool
+* stappler::db::Scheme const& = схема данных
+* stappler::mem_pool::Value const& - объект данных
+* stappler::mem_pool::Value& - значение в поле
+* bool - true для создания нового объекта
 
 Возвращает:
-* bool
+* bool - true при успешной трансформации
 
 # ::stappler::db::Field::Slot::hash(stappler::mem_pool::StringStream&,stappler::db::ValidationLevel) const
 
 ## BRIEF
 
+Собирает данные для хэша схемы данных
+
 ## CONTENT
 
 Доступ: public
+
+Собирает данные для хэша схемы данных
 
 Параметры:
 * stappler::mem_pool::StringStream&
@@ -1288,9 +1727,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Значение по умолчанию
+
 ## CONTENT
 
 Доступ: public
+
+Значение по умолчанию, используется, если функция не определена
 
 Тип: stappler::mem_pool::Value
 
@@ -1299,9 +1742,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Имя поля
+
 ## CONTENT
 
 Доступ: public
+
+Имя поля
 
 Тип: stappler::mem_pool::String
 
@@ -1310,9 +1757,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Текстовая документация к полю
+
 ## CONTENT
 
 Доступ: public
+
+Текстовая документация к полю
 
 Тип: stappler::mem_pool::String
 
@@ -1321,9 +1772,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Флаги поля
+
 ## CONTENT
 
 Доступ: public
+
+Флаги поля
 
 Тип: stappler::db::Flags
 
@@ -1332,9 +1787,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Тип поля
+
 ## CONTENT
 
 Доступ: public
+
+Тип поля
 
 Тип: stappler::db::Type
 
@@ -1343,9 +1802,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Значение трансформации
+
 ## CONTENT
 
 Доступ: public
+
+Значение трансформации
 
 Тип: stappler::db::Transform
 
@@ -1354,9 +1817,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Функция для вывода значения по умолчанию
+
 ## CONTENT
 
 Доступ: public
+
+Функция для вывода значения по умолчанию
 
 Тип: stappler::db::DefaultFn
 
@@ -1365,9 +1832,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Функция для трансформации при чтении
+
 ## CONTENT
 
 Доступ: public
+
+Функция для трансформации при чтении
 
 Тип: stappler::db::ReadFilterFn
 
@@ -1376,9 +1847,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Функция для трансформации при записи
+
 ## CONTENT
 
 Доступ: public
+
+Функция для трансформации при записи
 
 Тип: stappler::db::WriteFilterFn
 
@@ -1387,9 +1862,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Функция для трансформации при замене значения поля
+
 ## CONTENT
 
 Доступ: public
+
+Функция для трансформации при замене значения поля. Если не определена - используется функция трансформации при записи
 
 Тип: stappler::db::ReplaceFilterFn
 
@@ -1398,9 +1877,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Определение автоматического поля
+
 ## CONTENT
 
 Доступ: public
+
+Определение автоматического поля
 
 Тип: stappler::db::AutoFieldDef
 
@@ -1409,9 +1892,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Схема данных, в которой определено поле
+
 ## CONTENT
 
 Доступ: public
+
+Схема данных, в которой определено поле
 
 Тип: stappler::db::Scheme const*
 
@@ -1420,9 +1907,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Ссылка на исходное поле, в котором определено текущее
+
 ## CONTENT
 
 Доступ: public
+
+Ссылка на исходное поле, в котором определено текущее
 
 Тип: Field::Slot const*
 
@@ -1431,9 +1922,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Возвращает имя поле
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает имя поле
 
 Возвращает:
 * stappler::StringView
@@ -1442,9 +1937,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Возвращает тип поля
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает тип поля
 
 Возвращает:
 * stappler::db::Type
@@ -1453,9 +1952,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Возвращает флаги
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает флаги
 
 Возвращает:
 * stappler::db::Flags
@@ -1464,9 +1967,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Возвращает правило трансформации
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает правило трансформации
 
 Возвращает:
 * stappler::db::Transform
@@ -1475,9 +1982,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Возвращает значение по умолчанию
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает значение по умолчанию
 
 Параметры:
 * stappler::mem_pool::Value const&
@@ -1489,9 +2000,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Проверяет флаг поля
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет флаг поля
 
 Параметры:
 * stappler::db::Flags
@@ -1503,9 +2018,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Проверяет, есть ли значение по умолчанию
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, есть ли значение по умолчанию
 
 Возвращает:
 * bool
@@ -1514,9 +2033,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Проверяет, есть ли флаг защищённого поля
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, есть ли флаг защищённого поля
 
 Возвращает:
 * bool
@@ -1525,9 +2048,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Проверяет, использует ли поле простую укладку
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, использует ли поле простую укладку. Поля с простой укладкой можно обновлять без предварительного их чтения.
 
 Возвращает:
 * bool
@@ -1536,9 +2063,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Проверяет, использует ли поле нетипизированные данные
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, использует ли поле нетипизированные данные
 
 Возвращает:
 * bool
@@ -1547,9 +2078,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Првоеряет, индексируется ли поле
+
 ## CONTENT
 
 Доступ: public
+
+Првоеряет, индексируется ли поле
 
 Возвращает:
 * bool
@@ -1558,9 +2093,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Проверяет, является ли поле внешним файлом
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, является ли поле внешним файлом
 
 Возвращает:
 * bool
@@ -1569,9 +2108,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Проверяет, хранится ли в поле ссылка на другое поле
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, хранится ли в поле ссылка на другое поле
 
 Возвращает:
 * bool
@@ -1580,9 +2123,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Возврашает внешнюю схему для объекта, который хранится в поле
+
 ## CONTENT
 
 Доступ: public
+
+Возврашает внешнюю схему для объекта, который хранится в поле
 
 Возвращает:
 * stappler::db::Scheme const*
@@ -1591,9 +2138,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Добавляет данные поля в поток для вычисления хэша схемы данных
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет данные поля в поток для вычисления хэша схемы данных
 
 Параметры:
 * stappler::mem_pool::StringStream&
@@ -1604,43 +2155,55 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Выполняет трансформацию поля для его записи в БД
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет трансформацию поля для его записи в БД. Использует только идентификатор объекта вместо самого объекта
 
 Параметры:
 * stappler::db::Scheme const&
 * int64_t
 * stappler::mem_pool::Value&
-* bool
+* bool - true если объект создаётся. а не обновляется
 
 Возвращает:
-* bool
+* bool - true если трансформация успешна
 
 # ::stappler::db::Field::transform(stappler::db::Scheme const&,stappler::mem_pool::Value const&,stappler::mem_pool::Value&,bool) const
 
 ## BRIEF
 
+Выполняет трансформацию поля для его записи в БД
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет трансформацию поля для его записи в БД
 
 Параметры:
 * stappler::db::Scheme const&
 * stappler::mem_pool::Value const&
 * stappler::mem_pool::Value&
-* bool
+* bool - true если объект создаётся. а не обновляется
 
 Возвращает:
-* bool
+* bool - true если трансформация успешна
 
 # ::stappler::db::Field::operator bool() const
 
 ## BRIEF
 
+Проверяет, что для поля установлен слот
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, что для поля установлен слот
 
 Возвращает:
 * bool
@@ -1649,9 +2212,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Возвращает слот, может преобразовать его к конкретному типу слота
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает слот, может преобразовать его к конкретному типу слота
 
 Параметры шаблона:
 * typename SlotType
@@ -1663,9 +2230,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Возвращает описание поля
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает описание поля
 
 Возвращает:
 * stappler::mem_pool::Value
@@ -1674,9 +2245,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Создаёт поле из слота
+
 ## CONTENT
 
 Доступ: public
+
+Создаёт поле из слота
 
 Параметры:
 * stappler::db::Field::Slot const*
@@ -1686,9 +2261,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Конструктор копирования
+
 ## CONTENT
 
 Доступ: public
+
+Конструктор копирования. Поле хранит только указатель на слот, потому может свободно копироваться. Слот неизменен после инициализации, потому может использоваться в нескольких полях одной схемы.
 
 Параметры:
 * stappler::db::Field const&
@@ -1698,9 +2277,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Оператор копирования
+
 ## CONTENT
 
 Доступ: public
+
+Оператор копирования. Поле хранит только указатель на слот, потому может свободно копироваться. Слот неизменен после инициализации, потому может использоваться в нескольких полях одной схемы.
 
 Параметры:
 * stappler::db::Field const&
@@ -1712,9 +2295,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Конструктор перемещения
+
 ## CONTENT
 
 Доступ: public
+
+Конструктор перемещения. Поле хранит только указатель на слот, потому может свободно копироваться. Слот неизменен после инициализации, потому может использоваться в нескольких полях одной схемы.
 
 Параметры:
 * stappler::db::Field&&
@@ -1724,9 +2311,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Оператор перемещения
+
 ## CONTENT
 
 Доступ: public
+
+Оператор перемещения. Поле хранит только указатель на слот, потому может свободно копироваться. Слот неизменен после инициализации, потому может использоваться в нескольких полях одной схемы.
 
 Параметры:
 * stappler::db::Field&&
@@ -1738,9 +2329,13 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Слот для поля
+
 ## CONTENT
 
 Доступ: protected
+
+Слот для поля
 
 Тип: stappler::db::Field::Slot const*
 
@@ -1749,7 +2344,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Слот текстового поля
+
 ## CONTENT
+
+Слот текстового поля
 
 Базовые классы:
 * Field::Slot
@@ -1759,14 +2358,21 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
+Деструктор
 
 # ::stappler::db::FieldText::FieldText<typename>(stappler::mem_pool::String&&,stappler::db::Type,Args &&...)
 
 ## BRIEF
 
+Создаёт слот текстового поля
+
 ## CONTENT
+
+Создаёт слот текстового поля
 
 Параметры шаблона:
 * typename Args
@@ -1774,14 +2380,18 @@ Title: STStorageField.h
 Параметры:
 * stappler::mem_pool::String&&
 * stappler::db::Type
-* Args &&...
+* Args &&... -набор аргументов
 
 
 # ::stappler::db::FieldText::transformValue(stappler::db::Scheme const&,stappler::mem_pool::Value const&,stappler::mem_pool::Value&,bool) const
 
 ## BRIEF
 
+Трансформирует поле для записи
+
 ## CONTENT
+
+Трансформирует поле для записи
 
 Параметры:
 * stappler::db::Scheme const&
@@ -1796,7 +2406,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Добавляет данные поля к строке для хэша
+
 ## CONTENT
+
+Добавляет данные поля к строке для хэша
 
 Параметры:
 * stappler::mem_pool::StringStream&
@@ -1807,7 +2421,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Минимальная длина
+
 ## CONTENT
+
+Минимальная длина
 
 Тип: size_t
 
@@ -1816,7 +2434,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Максимальная длина
+
 ## CONTENT
+
+Максимальная длина
 
 Тип: size_t
 
@@ -1825,7 +2447,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Слот для поля пароля
+
 ## CONTENT
+
+Слот для поля пароля
 
 Базовые классы:
 * Field::Slot
@@ -1835,14 +2461,22 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
+
+Деструктор
 
 
 # ::stappler::db::FieldPassword::FieldPassword<typename>(stappler::mem_pool::String&&,Args &&...)
 
 ## BRIEF
 
+Создаёт слот для поля пароля
+
 ## CONTENT
+
+Создаёт слот для поля пароля
 
 Параметры шаблона:
 * typename Args
@@ -1856,7 +2490,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Трансформирует значение для записи
+
 ## CONTENT
+
+Трансформирует значение для записи
 
 Параметры:
 * stappler::db::Scheme const&
@@ -1871,7 +2509,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Добавляет данные поля к строке для хэша
+
 ## CONTENT
+
+Добавляет данные поля к строке для хэша
 
 Параметры:
 * stappler::mem_pool::StringStream&
@@ -1882,7 +2524,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Минимальная длина
+
 ## CONTENT
+
+Минимальная длина
 
 Тип: size_t
 
@@ -1891,7 +2537,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Максимальная длина
+
 ## CONTENT
+
+Максимальная длина
 
 Тип: size_t
 
@@ -1900,7 +2550,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Ключ для кодирования пароля
+
 ## CONTENT
+
+Ключ для кодирования пароля
 
 Тип: stappler::mem_pool::String
 
@@ -1909,7 +2563,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Слот для поля с нетипизированными данными со схемой сопоставления
+
 ## CONTENT
+
+Слот для поля с нетипизированными данными со схемой сопоставления
 
 Базовые классы:
 * Field::Slot
@@ -1919,14 +2577,22 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
+
+Деструктор
 
 
 # ::stappler::db::FieldExtra::FieldExtra<typename>(stappler::mem_pool::String&&,Args &&...)
 
 ## BRIEF
 
+Конструирует слот
+
 ## CONTENT
+
+Конструирует слот
 
 Параметры шаблона:
 * typename Args
@@ -1940,7 +2606,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Проверяет, есть ли значение по умолчанию
+
 ## CONTENT
+
+Проверяет, есть ли значение по умолчанию
 
 Возвращает:
 * bool
@@ -1949,7 +2619,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Возвращает значение по умолчанию
+
 ## CONTENT
+
+Возвращает значение по умолчанию
 
 Параметры:
 * stappler::mem_pool::Value const&
@@ -1961,7 +2635,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Трансформирует значение для записи
+
 ## CONTENT
+
+Трансформирует значение для записи
 
 Параметры:
 * stappler::db::Scheme const&
@@ -1976,7 +2654,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Добавляет данные поля к строке для хэша
+
 ## CONTENT
+
+Добавляет данные поля к строке для хэша
 
 Параметры:
 * stappler::mem_pool::StringStream&
@@ -1987,7 +2669,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Список полей для сопоставления
+
 ## CONTENT
+
+Список полей для сопоставления. Поле может содержать только указанные поля данных. Если поле помечено, как массив, сопоставляется массив поэлементно.
 
 Тип: Map<stappler::mem_pool::String, stappler::db::Field>
 
@@ -1996,7 +2682,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Слот поля внешнего файла
+
 ## CONTENT
+
+Слот поля внешнего файла
 
 Базовые классы:
 * Field::Slot
@@ -2006,14 +2696,21 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
+Деструктор
 
 # ::stappler::db::FieldFile::FieldFile<typename>(stappler::mem_pool::String&&,Args &&...)
 
 ## BRIEF
 
+Конструирует слот
+
 ## CONTENT
+
+Конструирует слот
 
 Параметры шаблона:
 * typename Args
@@ -2027,7 +2724,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Добавляет данные поля в строку для хэша
+
 ## CONTENT
+
+Добавляет данные поля в строку для хэша
 
 Параметры:
 * stappler::mem_pool::StringStream&
@@ -2038,7 +2739,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Максимальный размер файла
+
 ## CONTENT
+
+Максимальный размер файла
 
 Тип: size_t
 
@@ -2047,7 +2752,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Допустимые MIME-типы файла
+
 ## CONTENT
+
+Допустимые MIME-типы файла
 
 Тип: Vector<stappler::mem_pool::String>
 
@@ -2056,7 +2765,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Слот внешнего изображения
+
 ## CONTENT
+
+Слот внешнего изображения
 
 Базовые классы:
 * Field::Slot
@@ -2066,14 +2779,22 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
+
+Деструктор
 
 
 # ::stappler::db::FieldImage::FieldImage<typename>(stappler::mem_pool::String&&,Args &&...)
 
 ## BRIEF
 
+Конструирует слот
+
 ## CONTENT
+
+Конструирует слот
 
 Параметры шаблона:
 * typename Args
@@ -2087,7 +2808,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Добавляет данные поля в строку для хэша
+
 ## CONTENT
+
+Добавляет данные поля в строку для хэша
 
 Параметры:
 * stappler::mem_pool::StringStream&
@@ -2098,7 +2823,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Максимальный размер файоа
+
 ## CONTENT
+
+Максимальный размер файоа
 
 Тип: size_t
 
@@ -2107,7 +2836,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Допустимые MIME-типы файла
+
 ## CONTENT
+
+Допустимые MIME-типы файла
 
 Тип: Vector<stappler::mem_pool::String>
 
@@ -2116,7 +2849,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Максимальный размер изображения
+
 ## CONTENT
+
+Максимальный размер изображения
 
 Тип: stappler::db::MaxImageSize
 
@@ -2125,7 +2862,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Минимальный размер изображения
+
 ## CONTENT
+
+Минимальный размер изображения
 
 Тип: stappler::db::MinImageSize
 
@@ -2134,7 +2875,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Список автогенерируемых миниатюр
+
 ## CONTENT
+
+Список автогенерируемых миниатюр
 
 Тип: Vector<stappler::db::Thumbnail>
 
@@ -2143,7 +2888,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Внутренний флаг, является ли поле изображения основным
+
 ## CONTENT
+
+Внутренний флаг, является ли поле изображения основным. Поля миниатюр транслируются во внешнюю схему, флаг используется, чтобы отделять основные поля от дополнительных, созданных для миниатюр.
 
 Тип: bool
 
@@ -2152,7 +2901,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Слот поля объекта
+
 ## CONTENT
+
+Слот поля объекта. Такое поле связывает объект с объектом другой схемы. Форма связи определяется флагом ссылки и режимом действий при удалении.
 
 Базовые классы:
 * Field::Slot
@@ -2162,14 +2915,22 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
+
+Деструктор
 
 
 # ::stappler::db::FieldObject::FieldObject<typename>(stappler::mem_pool::String&&,stappler::db::Type,Args &&...)
 
 ## BRIEF
 
+Конструирует слот
+
 ## CONTENT
+
+Конструирует слот
 
 Параметры шаблона:
 * typename Args
@@ -2184,7 +2945,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Трансформирует значение для записи в БД
+
 ## CONTENT
+
+Трансформирует значение для записи в БД
 
 Параметры:
 * stappler::db::Scheme const&
@@ -2199,7 +2964,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Записывает данные поля в строку для хэша
+
 ## CONTENT
+
+Записывает данные поля в строку для хэша
 
 Параметры:
 * stappler::mem_pool::StringStream&
@@ -2210,7 +2979,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Внешняя схема для объекта
+
 ## CONTENT
+
+Внешняя схема для объекта
 
 Тип: stappler::db::Scheme const*
 
@@ -2219,7 +2992,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Режим действий при удалении связанного объекта
+
 ## CONTENT
+
+Режим действий при удалении связанного объекта
 
 Тип: stappler::db::RemovePolicy
 
@@ -2228,7 +3005,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Способ связи с полем внешней схемы
+
 ## CONTENT
+
+Способ связи с полем внешней схемы
 
 Тип: stappler::db::Linkage
 
@@ -2237,7 +3018,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Имя поля внешней схемы для ручной связи
+
 ## CONTENT
+
+Имя поля внешней схемы для ручной связи
 
 Тип: stappler::mem_pool::String
 
@@ -2246,7 +3031,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Слот поля-массива
+
 ## CONTENT
+
+Слот поля-массива
 
 Базовые классы:
 * Field::Slot
@@ -2256,14 +3045,22 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
+
+Деструктор
 
 
 # ::stappler::db::FieldArray::FieldArray<typename>(stappler::mem_pool::String&&,Args &&...)
 
 ## BRIEF
 
+Конструирует слот
+
 ## CONTENT
+
+Конструирует слот
 
 Параметры шаблона:
 * typename Args
@@ -2277,7 +3074,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Трансформирует значение для записи в БД
+
 ## CONTENT
+
+Трансформирует значение для записи в БД
 
 Параметры:
 * stappler::db::Scheme const&
@@ -2292,7 +3093,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Записывает данные поля в строку для хеша
+
 ## CONTENT
+
+Записывает данные поля в строку для хеша
 
 Параметры:
 * stappler::mem_pool::StringStream&
@@ -2303,7 +3108,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Поле, служащее для сопоставления элемента массива
+
 ## CONTENT
+
+Поле, служащее для сопоставления элемента массива. Это поле определяет тип хранимых элементов и их трансформацию. Только простые поля допустимы.
 
 Тип: stappler::db::Field
 
@@ -2312,7 +3121,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Слот поля отображения
+
 ## CONTENT
+
+Слот поля отображения. Отображение - автоматическое поле, в которое помещаются объекты другой схемы при их удовлетворении определённым условиям.
 
 Базовые классы:
 * Field::Slot
@@ -2322,7 +3135,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Опции дельта-запросов
+
 ## CONTENT
+
+Опции дельта-запросов
 
 Значения:
 * Delta
@@ -2332,14 +3149,22 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
+
+Деструктор
 
 
 # ::stappler::db::FieldView::FieldView<typename>(stappler::mem_pool::String&&,Args &&...)
 
 ## BRIEF
 
+Конструирует слот
+
 ## CONTENT
+
+Конструирует слот
 
 Параметры шаблона:
 * typename Args
@@ -2353,7 +3178,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Трансформирует значение для записи в БД
+
 ## CONTENT
+
+Трансформирует значение для записи в БД
 
 Параметры:
 * stappler::db::Scheme const&
@@ -2368,7 +3197,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Внешняя схема для обектов в отображении
+
 ## CONTENT
+
+Внешняя схема для обектов в отображении
 
 Тип: stappler::db::Scheme const*
 
@@ -2377,7 +3210,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Поля внешней схемы, требуемые для принятия решения о включении в отображение
+
 ## CONTENT
+
+Поля внешней схемы, требуемые для принятия решения о включении в отображение
 
 Тип: Vector<stappler::mem_pool::String>
 
@@ -2386,7 +3223,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Функция связи внешнего объекта с объектом, в котором нахходится поле-отображение
+
 ## CONTENT
+
+Функция связи внешнего объекта с объектом, в котором нахходится поле-отображение
 
 Тип: stappler::db::ViewLinkageFn
 
@@ -2395,7 +3236,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Функция фильтрации для вхождения отображения
+
 ## CONTENT
+
+Функция фильтрации для вхождения отображения
 
 Тип: stappler::db::ViewFn
 
@@ -2404,7 +3249,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Флаг доступности дельта-запросов
+
 ## CONTENT
+
+Флаг доступности дельта-запросов
 
 Тип: bool
 
@@ -2413,7 +3262,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Слот полнотекстового отображения
+
 ## CONTENT
+
+Слот полнотекстового отображения. Наполняется автоматически на основании функции вывода данных из других полей объекта. Позволяет выполнять полнотекстовые запросы, если БД это поддерживает.
 
 Базовые классы:
 * Field::Slot
@@ -2423,14 +3276,22 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
+
+Деструктор
 
 
 # ::stappler::db::FieldFullTextView::FieldFullTextView<typename>(stappler::mem_pool::String&&,Args &&...)
 
 ## BRIEF
 
+Конструирует слот
+
 ## CONTENT
+
+Конструирует слот
 
 Параметры шаблона:
 * typename Args
@@ -2444,7 +3305,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Трансформирует значение для записи в БД
+
 ## CONTENT
+
+Трансформирует значение для записи в БД
 
 Параметры:
 * stappler::db::Scheme const&
@@ -2459,7 +3324,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Разбирает значение для поиска в полнотекстовый запрос
+
 ## CONTENT
+
+Разбирает значение для поиска в полнотекстовый запрос
 
 Параметры:
 * stappler::mem_pool::Value const&
@@ -2471,7 +3340,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Требуемые для наполнения полнотекстового индекса поля
+
 ## CONTENT
+
+Требуемые для наполнения полнотекстового индекса поля
 
 Тип: Vector<stappler::mem_pool::String>
 
@@ -2480,7 +3353,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Функция для формирования полнотекстового индекса объекта
+
 ## CONTENT
+
+Функция для формирования полнотекстового индекса объекта
 
 Тип: stappler::db::FullTextViewFn
 
@@ -2489,16 +3366,24 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Функция для формирования запроса к полнотекстовому индексу
+
 ## CONTENT
 
 Тип: stappler::db::FullTextQueryFn
+
+Функция для формирования запроса к полнотекстовому индексу
 
 
 # ::stappler::db::FieldCustom
 
 ## BRIEF
 
+Слот пользовательского поля
+
 ## CONTENT
+
+Функция для формирования запроса к полнотекстовому индексу
 
 Базовые классы:
 * Field::Slot
@@ -2508,14 +3393,22 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
+
+Деструктор
 
 
 # ::stappler::db::FieldCustom::FieldCustom<typename>(stappler::mem_pool::String&&,Args &&...)
 
 ## BRIEF
 
+Конструирует слот
+
 ## CONTENT
+
+Конструирует слот
 
 Параметры шаблона:
 * typename Args
@@ -2529,7 +3422,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Функция для чтения поля из БД
+
 ## CONTENT
+
+Функция для чтения поля из БД
 
 Параметры:
 * stappler::db::ResultCursor const&
@@ -2542,7 +3439,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Функция для записи поля в БД
+
 ## CONTENT
+
+Функция для записи поля в БД
 
 Параметры:
 * stappler::db::QueryInterface&
@@ -2556,7 +3457,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Возвращает имя типа поля в БД
+
 ## CONTENT
+
+Возвращает имя типа поля в БД
 
 Возвращает:
 * stappler::StringView
@@ -2565,7 +3470,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Имя индекса для поля в БД
+
 ## CONTENT
+
+Имя индекса для поля в БД
 
 Возвращает:
 * stappler::mem_pool::String
@@ -2574,7 +3483,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Текстовое определение индекса
+
 ## CONTENT
+
+Имя индекса для поля в БД
 
 Возвращает:
 * stappler::mem_pool::String
@@ -2583,7 +3496,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Функция проверки доступности вариантов сравнения
+
 ## CONTENT
+
+Функция проверки доступности вариантов сравнения
 
 Параметры:
 * stappler::db::Comparation
@@ -2595,7 +3512,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Функция записи операции сравнения поля в запрос
+
 ## CONTENT
+
+Функция записи операции сравнения поля в запрос
 
 Параметры:
 * stappler::db::Scheme const&
@@ -2611,7 +3532,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Слот виртуального поля
+
 ## CONTENT
+
+Слот виртуального поля
 
 Базовые классы:
 * Field::Slot
@@ -2621,14 +3546,22 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
+
+Деструктор
 
 
 # ::stappler::db::FieldVirtual::FieldVirtual<typename>(stappler::mem_pool::String&&,Args &&...)
 
 ## BRIEF
 
+Конструирует слот
+
 ## CONTENT
+
+Конструирует слот
 
 Параметры шаблона:
 * typename Args
@@ -2642,7 +3575,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Записывает данные поля в строку для хэширования
+
 ## CONTENT
+
+Записывает данные поля в строку для хэширования
 
 Параметры:
 * stappler::mem_pool::StringStream&
@@ -2653,7 +3590,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Трансформирует поле как для записи в БД
+
 ## CONTENT
+
+Трансформирует поле как для записи в БД
 
 Параметры:
 * stappler::db::Scheme const&
@@ -2668,7 +3609,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Поля исходного объекта, требуемые для вывода значения виртуального поля
+
 ## CONTENT
+
+Поля исходного объекта, требуемые для вывода значения виртуального поля
 
 Тип: Vector<stappler::mem_pool::String>
 
@@ -2677,7 +3622,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Функция чтения виртуального поля
+
 ## CONTENT
+
+Функция чтения виртуального поля
 
 Тип: stappler::db::VirtualReadFn
 
@@ -2686,304 +3635,25 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Функция записи виртуального поля
+
 ## CONTENT
+
+Функция записи виртуального поля
 
 Тип: stappler::db::VirtualWriteFn
 
 
-# ::stappler::db::Field::Data<typename>(stappler::mem_pool::String&&,Args &&...)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Args
-
-Параметры:
-* stappler::mem_pool::String&&
-* Args &&...
-
-Возвращает:
-* stappler::db::Field
-
-# ::stappler::db::Field::Integer<typename>(stappler::mem_pool::String&&,Args &&...)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Args
-
-Параметры:
-* stappler::mem_pool::String&&
-* Args &&...
-
-Возвращает:
-* stappler::db::Field
-
-# ::stappler::db::Field::Float<typename>(stappler::mem_pool::String&&,Args &&...)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Args
-
-Параметры:
-* stappler::mem_pool::String&&
-* Args &&...
-
-Возвращает:
-* stappler::db::Field
-
-# ::stappler::db::Field::Boolean<typename>(stappler::mem_pool::String&&,Args &&...)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Args
-
-Параметры:
-* stappler::mem_pool::String&&
-* Args &&...
-
-Возвращает:
-* stappler::db::Field
-
-# ::stappler::db::Field::Text<typename>(stappler::mem_pool::String&&,Args &&...)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Args
-
-Параметры:
-* stappler::mem_pool::String&&
-* Args &&...
-
-Возвращает:
-* stappler::db::Field
-
-# ::stappler::db::Field::Bytes<typename>(stappler::mem_pool::String&&,Args &&...)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Args
-
-Параметры:
-* stappler::mem_pool::String&&
-* Args &&...
-
-Возвращает:
-* stappler::db::Field
-
-# ::stappler::db::Field::Password<typename>(stappler::mem_pool::String&&,Args &&...)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Args
-
-Параметры:
-* stappler::mem_pool::String&&
-* Args &&...
-
-Возвращает:
-* stappler::db::Field
-
-# ::stappler::db::Field::Extra<typename>(stappler::mem_pool::String&&,Args &&...)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Args
-
-Параметры:
-* stappler::mem_pool::String&&
-* Args &&...
-
-Возвращает:
-* stappler::db::Field
-
-# ::stappler::db::Field::Extra<typename>(stappler::mem_pool::String&&,stappler::InitializerList<Field>&&,Args &&...)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Args
-
-Параметры:
-* stappler::mem_pool::String&&
-* stappler::InitializerList<Field>&&
-* Args &&...
-
-Возвращает:
-* stappler::db::Field
-
-# ::stappler::db::Field::File<typename>(stappler::mem_pool::String&&,Args &&...)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Args
-
-Параметры:
-* stappler::mem_pool::String&&
-* Args &&...
-
-Возвращает:
-* stappler::db::Field
-
-# ::stappler::db::Field::Image<typename>(stappler::mem_pool::String&&,Args &&...)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Args
-
-Параметры:
-* stappler::mem_pool::String&&
-* Args &&...
-
-Возвращает:
-* stappler::db::Field
-
-# ::stappler::db::Field::Object<typename>(stappler::mem_pool::String&&,Args &&...)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Args
-
-Параметры:
-* stappler::mem_pool::String&&
-* Args &&...
-
-Возвращает:
-* stappler::db::Field
-
-# ::stappler::db::Field::Set<typename>(stappler::mem_pool::String&&,Args &&...)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Args
-
-Параметры:
-* stappler::mem_pool::String&&
-* Args &&...
-
-Возвращает:
-* stappler::db::Field
-
-# ::stappler::db::Field::Array<typename>(stappler::mem_pool::String&&,Args &&...)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Args
-
-Параметры:
-* stappler::mem_pool::String&&
-* Args &&...
-
-Возвращает:
-* stappler::db::Field
-
-# ::stappler::db::Field::View<typename>(stappler::mem_pool::String&&,Args &&...)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Args
-
-Параметры:
-* stappler::mem_pool::String&&
-* Args &&...
-
-Возвращает:
-* stappler::db::Field
-
-# ::stappler::db::Field::FullTextView<typename>(stappler::mem_pool::String&&,Args &&...)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Args
-
-Параметры:
-* stappler::mem_pool::String&&
-* Args &&...
-
-Возвращает:
-* stappler::db::Field
-
-# ::stappler::db::Field::Virtual<typename>(stappler::mem_pool::String&&,Args &&...)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Args
-
-Параметры:
-* stappler::mem_pool::String&&
-* Args &&...
-
-Возвращает:
-* stappler::db::Field
-
-# ::stappler::db::Field::Custom<typename>(stappler::db::FieldCustom*)
-
-## BRIEF
-
-## CONTENT
-
-Параметры шаблона:
-* typename Args
-
-Параметры:
-* stappler::db::FieldCustom*
-
-Возвращает:
-* stappler::db::Field
 
 # ::stappler::db::FieldOption<F,Flags>::FieldOption<F,Flags>
 
 ## BRIEF
 
+Вспомогательная структура для назначения аргумента
+
 ## CONTENT
+
+Вспомогательная структура для назначения аргумента
 
 Параметры шаблона:
 * typename F
@@ -2993,7 +3663,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Добавляет флаги к полю
+
 ## CONTENT
+
+Добавляет флаги к полю
 
 Параметры:
 * F&
@@ -3004,7 +3678,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Вспомогательная структура для назначения аргумента
+
 ## CONTENT
+
+Вспомогательная структура для назначения аргумента
 
 Параметры шаблона:
 * typename F
@@ -3014,7 +3692,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Назначает функцию для фильтрации
+
 ## CONTENT
+
+Назначает функцию для фильтрации
 
 Параметры:
 * F&
@@ -3025,7 +3707,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Вспомогательная структура для назначения аргумента
+
 ## CONTENT
+
+Вспомогательная структура для назначения аргумента
 
 Параметры шаблона:
 * typename F
@@ -3035,7 +3721,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Назначает функцию для фильтрации
+
 ## CONTENT
+
+Назначает функцию для фильтрации
 
 Параметры:
 * F&
@@ -3046,7 +3736,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Вспомогательная структура для назначения аргумента
+
 ## CONTENT
+
+Вспомогательная структура для назначения аргумента
 
 Параметры шаблона:
 * typename F
@@ -3056,7 +3750,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Назначает функцию для фильтрации
+
 ## CONTENT
+
+Назначает функцию для фильтрации
 
 Параметры:
 * F&
@@ -3067,7 +3765,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Вспомогательная структура для назначения аргумента
+
 ## CONTENT
+
+Вспомогательная структура для назначения аргумента
 
 Параметры шаблона:
 * typename F
@@ -3077,7 +3779,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Назначает функцию для фильтрации
+
 ## CONTENT
+
+Назначает функцию для фильтрации
 
 Параметры:
 * F&
@@ -3088,7 +3794,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Вспомогательная структура для назначения аргумента
+
 ## CONTENT
+
+Вспомогательная структура для назначения аргумента
 
 Параметры шаблона:
 * typename F
@@ -3098,7 +3808,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Назначает функцию для значения по умолчанию
+
 ## CONTENT
+
+Назначает функцию для значения по умолчанию
 
 Параметры:
 * F&
@@ -3109,7 +3823,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Вспомогательная структура для назначения аргумента
+
 ## CONTENT
+
+Вспомогательная структура для назначения аргумента
 
 Параметры шаблона:
 * typename F
@@ -3119,7 +3837,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Назначает функцию для значения по умолчанию
+
 ## CONTENT
+
+Назначает функцию для значения по умолчанию
 
 Параметры:
 * F&
@@ -3130,7 +3852,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Вспомогательная структура для назначения аргумента
+
 ## CONTENT
+
+Вспомогательная структура для назначения аргумента
 
 Параметры шаблона:
 * typename F
@@ -3140,7 +3866,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Назначает правило трансформации
+
 ## CONTENT
+
+Назначает правило трансформации
 
 Параметры:
 * F&
@@ -3151,7 +3881,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Вспомогательная структура для назначения аргумента
+
 ## CONTENT
+
+Вспомогательная структура для назначения аргумента
 
 Параметры шаблона:
 * typename F
@@ -3161,7 +3895,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Назначает текстовую внешнюю документацию для поля
+
 ## CONTENT
+
+Назначает текстовую внешнюю документацию для поля
 
 Параметры:
 * F&
@@ -3172,7 +3910,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Вспомогательная структура для назначения аргумента
+
 ## CONTENT
+
+Вспомогательная структура для назначения аргумента
 
 Параметры шаблона:
 * typename F
@@ -3182,7 +3924,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Назначает минимальную длину строки
+
 ## CONTENT
+
+Назначает минимальную длину строки
 
 Параметры:
 * F&
@@ -3193,7 +3939,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Вспомогательная структура для назначения аргумента
+
 ## CONTENT
+
+Вспомогательная структура для назначения аргумента
 
 Параметры шаблона:
 * typename F
@@ -3203,7 +3953,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Назначает максимальную длину строки
+
 ## CONTENT
+
+Назначает максимальную длину строки
 
 Параметры:
 * F&
@@ -3214,7 +3968,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Вспомогательная структура для назначения аргумента
+
 ## CONTENT
+
+Вспомогательная структура для назначения аргумента
 
 Параметры шаблона:
 * typename F
@@ -3224,7 +3982,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Назначает значение по умоланию
+
 ## CONTENT
+
+Назначает значение по умоланию
 
 Параметры:
 * F&
@@ -3235,7 +3997,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Вспомогательная структура для назначения аргумента
+
 ## CONTENT
+
+Вспомогательная структура для назначения аргумента
 
 Параметры шаблона:
 * typename F
@@ -3245,7 +4011,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Назначает код для сохранения паролей
+
 ## CONTENT
+
+Назначает ручную внешнюю ссылку для полей объектов и наборов
 
 Параметры:
 * F&
@@ -3256,7 +4026,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Вспомогательная структура для назначения аргумента
+
 ## CONTENT
+
+Вспомогательная структура для назначения аргумента
 
 Параметры шаблона:
 * typename F
@@ -3266,7 +4040,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Назначает ручную внешнюю ссылку для полей объектов и наборов
+
 ## CONTENT
+
+Назначает ручную внешнюю ссылку для полей объектов и наборов
 
 Параметры:
 * F&
@@ -3276,8 +4054,11 @@ Title: STStorageField.h
 # ::stappler::db::FieldOption<F,Vector<Field>>::FieldOption<F,Vector<Field>>
 
 ## BRIEF
+Вспомогательная структура для назначения аргумента
 
 ## CONTENT
+
+Вспомогательная структура для назначения аргумента
 
 Параметры шаблона:
 * typename F
@@ -3287,7 +4068,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Назначает набор полей для сопоставления типу `Extra`
+
 ## CONTENT
+
+Назначает набор полей для сопоставления типу `Extra`
 
 Параметры:
 * F&
@@ -3298,7 +4083,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Вспомогательная структура для назначения аргумента
+
 ## CONTENT
+
+Вспомогательная структура для назначения аргумента
 
 Параметры шаблона:
 * typename F
@@ -3308,7 +4097,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Делает поле автоматическим на основе определения
+
 ## CONTENT
+
+Делает поле автоматическим на основе определения
 
 Параметры:
 * F&
@@ -3319,7 +4112,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Вспомогательная структура для назначения аргумента
+
 ## CONTENT
+
+Вспомогательная структура для назначения аргумента
 
 Параметры шаблона:
 * typename F
@@ -3329,7 +4126,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Назначает набор полей для сопоставления типу `Extra`
+
 ## CONTENT
+
+Назначает набор полей для сопоставления типу `Extra`
 
 Параметры:
 * F&
@@ -3340,7 +4141,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Вспомогательная структура для назначения аргумента
+
 ## CONTENT
+
+Вспомогательная структура для назначения аргумента
 
 Параметры шаблона:
 * typename F
@@ -3350,7 +4155,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Назначает максимальный размер файла
+
 ## CONTENT
+
+Назначает максимальный размер файла
 
 Параметры:
 * F&
@@ -3361,7 +4170,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Вспомогательная структура для назначения аргумента
+
 ## CONTENT
+
+Вспомогательная структура для назначения аргумента
 
 Параметры шаблона:
 * typename F
@@ -3371,7 +4184,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Назначает список допустимых типов файла
+
 ## CONTENT
+
+Назначает список допустимых типов файла
 
 Параметры:
 * F&
@@ -3382,7 +4199,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Вспомогательная структура для назначения аргумента
+
 ## CONTENT
+
+Вспомогательная структура для назначения аргумента
 
 Параметры шаблона:
 * typename F
@@ -3392,7 +4213,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Назначает максимальный размер изображению
+
 ## CONTENT
+
+Назначает максимальный размер изображению
 
 Параметры:
 * F&
@@ -3403,7 +4228,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Вспомогательная структура для назначения аргумента
+
 ## CONTENT
+
+Вспомогательная структура для назначения аргумента
 
 Параметры шаблона:
 * typename F
@@ -3413,7 +4242,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Назначает минимальный размер изображению
+
 ## CONTENT
+
+Назначает минимальный размер изображению
 
 Параметры:
 * F&
@@ -3424,7 +4257,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Вспомогательная структура для назначения аргумента
+
 ## CONTENT
+
+Вспомогательная структура для назначения аргумента
 
 Параметры шаблона:
 * typename F
@@ -3434,7 +4271,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Назначает список миниатюр изображению
+
 ## CONTENT
+
+Назначает список миниатюр изображению
 
 Параметры:
 * F&
@@ -3445,7 +4286,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Вспомогательная структура для назначения аргумента
+
 ## CONTENT
+
+Вспомогательная структура для назначения аргумента
 
 Параметры шаблона:
 * typename F
@@ -3455,7 +4300,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Назначает режим действий при удалении связанного поля
+
 ## CONTENT
+
+Назначает режим действий при удалении связанного поля
 
 Параметры:
 * F&
@@ -3466,7 +4315,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Вспомогательная структура для назначения аргумента
+
 ## CONTENT
+
+Вспомогательная структура для назначения аргумента
 
 Параметры шаблона:
 * typename F
@@ -3476,28 +4329,40 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Назначает способ связи объектов для полей наборов и объектов
+
 ## CONTENT
+
+Назначает способ связи объектов для полей наборов и объектов
 
 Параметры:
 * F&
 * stappler::db::Linkage
 
 
-# ::stappler::db::FieldOption<F,constScheme*>::FieldOption<F,constScheme*>
+# ::stappler::db::FieldOption<F,const Scheme*>::FieldOption<F,const Scheme*>
 
 ## BRIEF
 
+Вспомогательная структура для назначения аргумента
+
 ## CONTENT
+
+Вспомогательная структура для назначения аргумента
 
 Параметры шаблона:
 * typename F
 
 
-# ::stappler::db::FieldOption<F,constScheme*>::assign(F&,stappler::db::Scheme const*)
+# ::stappler::db::FieldOption<F,const Scheme*>::assign(F&,stappler::db::Scheme const*)
 
 ## BRIEF
 
+Назначает внешнюю схему для полей объектов, наборов и отображений
+
 ## CONTENT
+
+Назначает внешнюю схему для полей объектов, наборов и отображений
 
 Параметры:
 * F&
@@ -3508,7 +4373,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Вспомогательная структура для назначения аргумента
+
 ## CONTENT
+
+Вспомогательная структура для назначения аргумента
 
 Параметры шаблона:
 * typename F
@@ -3518,28 +4387,40 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Назначает внешнюю схему для полей объектов, наборов и отображений
+
 ## CONTENT
+
+Назначает внешнюю схему для полей объектов, наборов и отображений
 
 Параметры:
 * F&
 * stappler::db::Scheme const&
 
 
-# ::stappler::db::FieldOption<F,constScheme>::FieldOption<F,constScheme>
+# ::stappler::db::FieldOption<F,const Scheme>::FieldOption<F,const Scheme>
 
 ## BRIEF
 
+Вспомогательная структура для назначения аргумента
+
 ## CONTENT
+
+Вспомогательная структура для назначения аргумента
 
 Параметры шаблона:
 * typename F
 
 
-# ::stappler::db::FieldOption<F,constScheme>::assign(F&,stappler::db::Scheme const&)
+# ::stappler::db::FieldOption<F,const Scheme>::assign(F&,stappler::db::Scheme const&)
 
 ## BRIEF
 
+Назначает внешнюю схему для полей объектов, наборов и отображений
+
 ## CONTENT
+
+Назначает внешнюю схему для полей объектов, наборов и отображений
 
 Параметры:
 * F&
@@ -3550,7 +4431,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Вспомогательная структура для назначения аргумента
+
 ## CONTENT
+
+Вспомогательная структура для назначения аргумента
 
 Параметры шаблона:
 * typename F
@@ -3560,7 +4445,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Назначает контрольное поле для поля массива
+
 ## CONTENT
+
+Назначает контрольное поле для поля массива
 
 Параметры:
 * F&
@@ -3571,14 +4460,22 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Вспомогательная структура для назначения аргумента
+
 ## CONTENT
+
+Вспомогательная структура для назначения аргумента
 
 
 # ::stappler::db::FieldOption<FieldArray,Type>::assign(stappler::db::FieldArray&,stappler::db::Type)
 
 ## BRIEF
 
+Назначает тип значения для поля массива
+
 ## CONTENT
+
+Назначает тип значения для поля массива
 
 Параметры:
 * stappler::db::FieldArray&
@@ -3589,14 +4486,22 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Вспомогательная структура для назначения аргумента
+
 ## CONTENT
+
+Вспомогательная структура для назначения аргумента
 
 
 # ::stappler::db::FieldOption<FieldView,Vector<String>>::assign(stappler::db::FieldView&,Vector<stappler::mem_pool::String>&&)
 
 ## BRIEF
 
+Назначает список требуемых полей для отображения
+
 ## CONTENT
+
+Назначает список требуемых полей для отображения
 
 Параметры:
 * stappler::db::FieldView&
@@ -3607,14 +4512,22 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Вспомогательная структура для назначения аргумента
+
 ## CONTENT
+
+Вспомогательная структура для назначения аргумента
 
 
 # ::stappler::db::FieldOption<FieldFullTextView,Vector<String>>::assign(stappler::db::FieldFullTextView&,Vector<stappler::mem_pool::String>&&)
 
 ## BRIEF
 
+Назначает список требуемых полей для полнотекстового отображения
+
 ## CONTENT
+
+Назначает список требуемых полей для полнотекстового отображения
 
 Параметры:
 * stappler::db::FieldFullTextView&
@@ -3625,7 +4538,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Вспомогательная структура для назначения аргумента
+
 ## CONTENT
+
+Вспомогательная структура для назначения аргумента
 
 Параметры шаблона:
 * typename F
@@ -3635,7 +4552,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Назначает функцию связи для отображения
+
 ## CONTENT
+
+Назначает функцию связи для отображения
 
 Параметры:
 * F&
@@ -3646,7 +4567,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Вспомогательная структура для назначения аргумента
+
 ## CONTENT
+
+Вспомогательная структура для назначения аргумента
 
 Параметры шаблона:
 * typename F
@@ -3656,7 +4581,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Назначает функцию фильтрации отображения
+
 ## CONTENT
+
+Назначает функцию фильтрации отображения
 
 Параметры:
 * F&
@@ -3667,7 +4596,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Вспомогательная структура для назначения аргумента
+
 ## CONTENT
+
+Вспомогательная структура для назначения аргумента
 
 Параметры шаблона:
 * typename F
@@ -3677,7 +4610,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Назначает функцию вывода полнотекстового индекса
+
 ## CONTENT
+
+Назначает функцию вывода полнотекстового индекса
 
 Параметры:
 * F&
@@ -3688,7 +4625,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Вспомогательная структура для назначения аргумента
+
 ## CONTENT
+
+Вспомогательная структура для назначения аргумента
 
 Параметры шаблона:
 * typename F
@@ -3698,7 +4639,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Назначает функцию вычисления полнотекстового запроса
+
 ## CONTENT
+
+Назначает функцию вычисления полнотекстового запроса
 
 Параметры:
 * F&
@@ -3709,7 +4654,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Вспомогательная структура для назначения аргумента
+
 ## CONTENT
+
+Вспомогательная структура для назначения аргумента
 
 Параметры шаблона:
 * typename F
@@ -3719,7 +4668,11 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Назначает режим дельта-запросов для отображения
+
 ## CONTENT
+
+Назначает режим дельта-запросов для отображения
 
 Параметры:
 * F&
@@ -3730,14 +4683,22 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Вспомогательная структура для назначения аргумента
+
 ## CONTENT
+
+Вспомогательная структура для назначения аргумента
 
 
 # ::stappler::db::FieldOption<FieldVirtual,Vector<String>>::assign(stappler::db::FieldVirtual&,Vector<stappler::mem_pool::String>&&)
 
 ## BRIEF
 
+Назначает список требуемых полей виртуальному полю
+
 ## CONTENT
+
+Назначает список требуемых полей виртуальному полю
 
 Параметры:
 * stappler::db::FieldVirtual&
@@ -3748,14 +4709,22 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Вспомогательная структура для назначения аргумента
+
 ## CONTENT
+
+Вспомогательная структура для назначения аргумента
 
 
 # ::stappler::db::FieldOption<FieldVirtual,VirtualReadFn>::assign(stappler::db::FieldVirtual&,stappler::db::VirtualReadFn&&)
 
 ## BRIEF
 
+Назначает функцию чтения виртуальному полю
+
 ## CONTENT
+
+Назначает функцию чтения виртуальному полю
 
 Параметры:
 * stappler::db::FieldVirtual&
@@ -3766,14 +4735,22 @@ Title: STStorageField.h
 
 ## BRIEF
 
+Вспомогательная структура для назначения аргумента
+
 ## CONTENT
+
+Вспомогательная структура для назначения аргумента
 
 
 # ::stappler::db::FieldOption<FieldVirtual,VirtualWriteFn>::assign(stappler::db::FieldVirtual&,stappler::db::VirtualWriteFn&&)
 
 ## BRIEF
 
+Назначает функцию записи виртуальному полю
+
 ## CONTENT
+
+Назначает функцию записи виртуальному полю
 
 Параметры:
 * stappler::db::FieldVirtual&

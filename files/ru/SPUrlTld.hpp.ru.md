@@ -1,17 +1,25 @@
 Title: SPUrlTld.hpp
 
 
-# LIBSTAPPLER_COMMON_UTILS_SPURLTLD_HPP_
+# STAPPLER_CORE_UTILS_SPURLTLD_HPP_
 
 ## BRIEF
 
+Заголовок списка известных интернационализованных доменов
+
 ## CONTENT
+
+Заголовок списка известных интернационализованных доменов
 
 
 # ::stappler::s_IdnTld
 
 ## BRIEF
 
+Список известных интернационализованных доменов
+
 ## CONTENT
+
+Список известных интернационализованных доменов
 
 Тип: char const*[132]

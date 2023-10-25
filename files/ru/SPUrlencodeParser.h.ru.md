@@ -1,8 +1,0 @@
-Title: SPUrlencodeParser.h
-
-
-# COMMON_UTILS_NETWORK_SPURLENCODEPARSER_H_
-
-## BRIEF
-
-## CONTENT
