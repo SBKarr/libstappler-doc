@@ -387,31 +387,6 @@
 								"kind": "builtin"
 							}
 						}, {
-							"_fullName": "::stappler::xenolith::vk::View::EngineOptions::flattenFrameRate",
-							"_kind": "member variable",
-							"_name": "flattenFrameRate",
-							"default_value": {
-								"expression": [{
-									"kind": "keyword",
-									"spelling": "false"
-								}],
-								"kind": "unexposed",
-								"type": {
-									"_typeName": "bool",
-									"builtin_type_kind": "bool",
-									"kind": "builtin"
-								}
-							},
-							"id": 3950590420,
-							"is_mutable": false,
-							"kind": "member variable",
-							"name": "flattenFrameRate",
-							"type": {
-								"_typeName": "bool",
-								"builtin_type_kind": "bool",
-								"kind": "builtin"
-							}
-						}, {
 							"_fullName": "::stappler::xenolith::vk::View::EngineOptions::followDisplayLink",
 							"_kind": "member variable",
 							"_name": "followDisplayLink",
@@ -1049,6 +1024,30 @@
 						},
 						"semantic_scope": "",
 						"signature": "(bool)"
+					}, {
+						"_fullName": "::stappler::xenolith::vk::View::close()",
+						"_kind": "member function",
+						"_name": "close",
+						"body_kind": "declaration",
+						"cv_qualifier": "none",
+						"id": 3444916636,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_override": true,
+						"is_variadic": false,
+						"is_virtual": true,
+						"kind": "member function",
+						"name": "close",
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "()"
 					}, {
 						"_fullName": "::stappler::xenolith::vk::View::run()",
 						"_kind": "member function",
@@ -2754,6 +2753,67 @@
 						"semantic_scope": "",
 						"signature": "()"
 					}, {
+						"_fullName": "::stappler::xenolith::vk::View::setRenderOnDemand(bool)",
+						"_kind": "member function",
+						"_name": "setRenderOnDemand",
+						"body_kind": "declaration",
+						"cv_qualifier": "none",
+						"id": 3607906084,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_override": true,
+						"is_variadic": false,
+						"is_virtual": true,
+						"kind": "member function",
+						"name": "setRenderOnDemand",
+						"parameters": [{
+							"_fullName": "value",
+							"_kind": "function parameter",
+							"_name": "value",
+							"id": 4105109168,
+							"kind": "function parameter",
+							"name": "value",
+							"type": {
+								"_typeName": "bool",
+								"builtin_type_kind": "bool",
+								"kind": "builtin"
+							}
+						}],
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(bool)"
+					}, {
+						"_fullName": "::stappler::xenolith::vk::View::isRenderOnDemand() const",
+						"_kind": "member function",
+						"_name": "isRenderOnDemand",
+						"body_kind": "declaration",
+						"cv_qualifier": "const",
+						"id": 3443363952,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_override": true,
+						"is_variadic": false,
+						"is_virtual": true,
+						"kind": "member function",
+						"name": "isRenderOnDemand",
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "bool",
+							"builtin_type_kind": "bool",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "() const"
+					}, {
 						"_fullName": "protected",
 						"_kind": "access specifier",
 						"_name": "protected",
@@ -3061,6 +3121,67 @@
 							"builtin_type_kind": "unsigned int",
 							"kind": "builtin"
 						}
+					}, {
+						"_fullName": "::stappler::xenolith::vk::View::FrameTimeInfo",
+						"_kind": "class",
+						"_name": "FrameTimeInfo",
+						"childs": [{
+							"_fullName": "::stappler::xenolith::vk::View::FrameTimeInfo::dt",
+							"_kind": "member variable",
+							"_name": "dt",
+							"id": 3013850373,
+							"is_mutable": false,
+							"kind": "member variable",
+							"name": "dt",
+							"type": {
+								"_typeName": "uint64_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "uint64_t"
+								}
+							}
+						}, {
+							"_fullName": "::stappler::xenolith::vk::View::FrameTimeInfo::avg",
+							"_kind": "member variable",
+							"_name": "avg",
+							"id": 3283844962,
+							"is_mutable": false,
+							"kind": "member variable",
+							"name": "avg",
+							"type": {
+								"_typeName": "uint64_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "uint64_t"
+								}
+							}
+						}, {
+							"_fullName": "::stappler::xenolith::vk::View::FrameTimeInfo::clock",
+							"_kind": "member variable",
+							"_name": "clock",
+							"id": 2343556072,
+							"is_mutable": false,
+							"kind": "member variable",
+							"name": "clock",
+							"type": {
+								"_typeName": "uint64_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "uint64_t"
+								}
+							}
+						}],
+						"class_kind": "struct",
+						"id": 1239206765,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_final": false,
+						"kind": "class",
+						"name": "FrameTimeInfo",
+						"scope": {
+							"name": "FrameTimeInfo"
+						},
+						"semantic_scope": ""
 					}, {
 						"_fullName": "::stappler::xenolith::vk::View::pollInput(bool)",
 						"_kind": "member function",
@@ -3875,63 +3996,98 @@
 																"_kind": "class",
 																"_name": "Object",
 																"bases": [{
-																	"_fullName": "Ref",
+																	"_fullName": "NamedRef",
 																	"_kind": "base class specifier",
-																	"_name": "Ref",
+																	"_name": "NamedRef",
 																	"access_specifier": "public",
-																	"id": 1165741041,
+																	"id": 2583947547,
 																	"is_virtual": false,
 																	"kind": "base class specifier",
-																	"name": "Ref",
+																	"name": "NamedRef",
 																	"type": {
-																		"_typeName": "stappler::mem_std::Ref",
+																		"_typeName": "stappler::NamedRef",
 																		"kind": "user_defined",
 																		"target": {
-																			"name": "stappler::mem_std::Ref",
+																			"name": "stappler::NamedRef",
 																			"objects": [{
-																				"_fullName": "::stappler::mem_std::Ref",
-																				"_kind": "type alias",
-																				"_name": "Ref",
-																				"id": 3010886988,
-																				"kind": "type alias",
-																				"name": "Ref",
-																				"underlying_type": {
-																					"_typeName": "RefBase<memory::StandartInterface>",
-																					"arguments_exposed": false,
-																					"kind": "template_instantiation",
-																					"primary_template": {
-																						"name": "RefBase",
-																						"objects": [{
-																							"_fullName": "::stappler::RefBase<typename>",
-																							"_kind": "class template",
-																							"_name": "RefBase",
-																							"class": {
+																				"_fullName": "::stappler::NamedRef",
+																				"_kind": "class",
+																				"_name": "NamedRef",
+																				"bases": [{
+																					"_fullName": "RefBase<memory::StandartInterface>",
+																					"_kind": "base class specifier",
+																					"_name": "RefBase<memory::StandartInterface>",
+																					"access_specifier": "public",
+																					"id": 1271245336,
+																					"is_virtual": false,
+																					"kind": "base class specifier",
+																					"name": "RefBase<memory::StandartInterface>",
+																					"type": {
+																						"_typeName": "RefBase<memory::StandartInterface>",
+																						"arguments_exposed": false,
+																						"kind": "template_instantiation",
+																						"primary_template": {
+																							"name": "RefBase",
+																							"objects": [{
 																								"_fullName": "::stappler::RefBase<typename>",
-																								"_kind": "class",
+																								"_kind": "class template",
 																								"_name": "RefBase",
-																								"bases": [{
-																									"_fullName": "Interface::AllocBaseType",
-																									"_kind": "base class specifier",
-																									"_name": "Interface::AllocBaseType",
-																									"access_specifier": "public",
-																									"id": 25533212,
-																									"is_virtual": false,
-																									"kind": "base class specifier",
-																									"name": "Interface::AllocBaseType",
-																									"type": {
-																										"_typeName": "Interface::AllocBaseType",
-																										"kind": "unexposed",
-																										"name": "Interface::AllocBaseType"
-																									}
-																								}],
-																								"class_kind": "class",
+																								"class": {
+																									"_fullName": "::stappler::RefBase<typename>",
+																									"_kind": "class",
+																									"_name": "RefBase",
+																									"bases": [{
+																										"_fullName": "Interface::AllocBaseType",
+																										"_kind": "base class specifier",
+																										"_name": "Interface::AllocBaseType",
+																										"access_specifier": "public",
+																										"id": 25533212,
+																										"is_virtual": false,
+																										"kind": "base class specifier",
+																										"name": "Interface::AllocBaseType",
+																										"type": {
+																											"_typeName": "Interface::AllocBaseType",
+																											"kind": "unexposed",
+																											"name": "Interface::AllocBaseType"
+																										}
+																									}],
+																									"class_kind": "class",
+																									"id": 2191419057,
+																									"is_declaration": false,
+																									"is_definition": true,
+																									"is_final": false,
+																									"kind": "class",
+																									"name": "RefBase",
+																									"scope": {
+																										"is_templated": true,
+																										"name": "RefBase",
+																										"template_parameters": [{
+																											"_fullName": "Interface",
+																											"_kind": "template type parameter",
+																											"_name": "Interface",
+																											"id": 2255344761,
+																											"is_variadic": false,
+																											"keyword": "typename",
+																											"kind": "template type parameter",
+																											"name": "Interface"
+																										}]
+																									},
+																									"semantic_scope": ""
+																								},
 																								"id": 2191419057,
-																								"is_declaration": false,
-																								"is_definition": true,
-																								"is_final": false,
-																								"kind": "class",
+																								"kind": "class template",
 																								"name": "RefBase",
-																								"scope": {
+																								"parameters": [{
+																									"_fullName": "Interface",
+																									"_kind": "template type parameter",
+																									"_name": "Interface",
+																									"id": 2255344761,
+																									"is_variadic": false,
+																									"keyword": "typename",
+																									"kind": "template type parameter",
+																									"name": "Interface"
+																								}],
+																								"scope":  {
 																									"is_templated": true,
 																									"name": "RefBase",
 																									"template_parameters": [{
@@ -3944,70 +4100,21 @@
 																										"kind": "template type parameter",
 																										"name": "Interface"
 																									}]
-																								},
-																								"semantic_scope": ""
-																							},
-																							"id": 2191419057,
-																							"kind": "class template",
-																							"name": "RefBase",
-																							"parameters": [{
-																								"_fullName": "Interface",
-																								"_kind": "template type parameter",
-																								"_name": "Interface",
-																								"id": 2255344761,
-																								"is_variadic": false,
-																								"keyword": "typename",
-																								"kind": "template type parameter",
-																								"name": "Interface"
-																							}],
-																							"scope":  {
-																								"is_templated": true,
-																								"name": "RefBase",
-																								"template_parameters": [{
-																									"_fullName": "Interface",
-																									"_kind": "template type parameter",
-																									"_name": "Interface",
-																									"id": 2255344761,
-																									"is_variadic": false,
-																									"keyword": "typename",
-																									"kind": "template type parameter",
-																									"name": "Interface"
-																								}]
-																							}
-																						}]
-																					},
-																					"unexposed_arguments": "memory::StandartInterface"
-																				}
-																			}]
-																		}
-																	}
-																}, {
-																	"_fullName": "ObjectInterface",
-																	"_kind": "base class specifier",
-																	"_name": "ObjectInterface",
-																	"access_specifier": "public",
-																	"id": 2074766780,
-																	"is_virtual": false,
-																	"kind": "base class specifier",
-																	"name": "ObjectInterface",
-																	"type": {
-																		"_typeName": "stappler::xenolith::core::ObjectInterface",
-																		"kind": "user_defined",
-																		"target": {
-																			"name": "stappler::xenolith::core::ObjectInterface",
-																			"objects": [{
-																				"_fullName": "::stappler::xenolith::core::ObjectInterface",
-																				"_kind": "class",
-																				"_name": "ObjectInterface",
+																								}
+																							}]
+																						},
+																						"unexposed_arguments": "memory::StandartInterface"
+																					}
+																				}],
 																				"class_kind": "class",
-																				"id": 3740112328,
+																				"id": 2162121619,
 																				"is_declaration": false,
 																				"is_definition": true,
 																				"is_final": false,
 																				"kind": "class",
-																				"name": "ObjectInterface",
+																				"name": "NamedRef",
 																				"scope": {
-																					"name": "ObjectInterface"
+																					"name": "NamedRef"
 																				},
 																				"semantic_scope": ""
 																			}]
@@ -4546,13 +4653,27 @@
 						"name": "updateFrameInterval",
 						"ref_qualifier": "none",
 						"return_type": {
-							"_typeName": "Pair<uint64_t, uint64_t>",
-							"arguments_exposed": false,
-							"kind": "template_instantiation",
-							"primary_template": {
-								"name": "Pair"
-							},
-							"unexposed_arguments": "uint64_t, uint64_t"
+							"_typeName": "stappler::xenolith::vk::View::FrameTimeInfo",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::xenolith::vk::View::FrameTimeInfo",
+								"objects": [{
+									"_fullName": "::stappler::xenolith::vk::View::FrameTimeInfo",
+									"_kind": "class",
+									"_name": "FrameTimeInfo",
+									"class_kind": "struct",
+									"id": 1239206765,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "FrameTimeInfo",
+									"scope": {
+										"name": "FrameTimeInfo"
+									},
+									"semantic_scope": ""
+								}]
+							}
 						},
 						"semantic_scope": "",
 						"signature": "()"
@@ -4933,9 +5054,9 @@
 							"kind": "builtin"
 						}
 					}, {
-						"_fullName": "::stappler::xenolith::vk::View::_blockDeprecation",
+						"_fullName": "::stappler::xenolith::vk::View::_blockSwapchainRecreation",
 						"_kind": "member variable",
-						"_name": "_blockDeprecation",
+						"_name": "_blockSwapchainRecreation",
 						"default_value": {
 							"expression": [{
 								"kind": "keyword",
@@ -4948,10 +5069,10 @@
 								"kind": "builtin"
 							}
 						},
-						"id": 3322098301,
+						"id": 2177114435,
 						"is_mutable": false,
 						"kind": "member variable",
-						"name": "_blockDeprecation",
+						"name": "_blockSwapchainRecreation",
 						"type": {
 							"_typeName": "bool",
 							"builtin_type_kind": "bool",
@@ -4981,6 +5102,35 @@
 							"_typeName": "bool",
 							"builtin_type_kind": "bool",
 							"kind": "builtin"
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::vk::View::_refId",
+						"_kind": "member variable",
+						"_name": "_refId",
+						"default_value": {
+							"expression": [{
+								"kind": "int_literal",
+								"spelling": "0"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "uint64_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "uint64_t"
+								}
+							}
+						},
+						"id": 16750499,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "_refId",
+						"type": {
+							"_typeName": "uint64_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "uint64_t"
+							}
 						}
 					}, {
 						"_fullName": "::stappler::xenolith::vk::View::_framesInProgress",
@@ -5120,6 +5270,35 @@
 						"is_mutable": false,
 						"kind": "member variable",
 						"name": "_scheduledTime",
+						"type": {
+							"_typeName": "uint64_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "uint64_t"
+							}
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::vk::View::_nextPresentWindow",
+						"_kind": "member variable",
+						"_name": "_nextPresentWindow",
+						"default_value": {
+							"expression": [{
+								"kind": "int_literal",
+								"spelling": "0"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "uint64_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "uint64_t"
+								}
+							}
+						},
+						"id": 1912664951,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "_nextPresentWindow",
 						"type": {
 							"_typeName": "uint64_t",
 							"kind": "user_defined",

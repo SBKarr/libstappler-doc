@@ -16750,10 +16750,10 @@
 		"line": 22,
 		"text": "\nCopyright (c) 2016-2022 Roman Katuntsev <sbkarr@stappler.org>\nCopyright (c) 2023 Stappler LLC <admin@stappler.dev>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n"
 	}, {
-		"line": 539,
+		"line": 546,
 		"text": "Value wrapper is a syntactic sugar struct, that allow you to create\nan alias type for some other type, that will be statically and uniquely\ndifferent from all other types\n\nMost common usage is type-based overload resolution, like\n\nusing FilePath = ValueWrapper<StringView, class FilePathFlag>;\nusing DataString =  ValueWrapper<StringView, class DataStringFlag>;\n\n...\n\nclass SomeClass {\n SomeClass(FilePath); // init with data from file\n SomeClass(DataString); // init with data from memory\n};\n\nAlso, ValueWrapper used in implementation of function with named arguments\nand function, that requires additional type-checking\n"
 	}, {
-		"line": 684,
+		"line": 691,
 		"text": "\nUpdates this vector towards the given target using a smoothing function.\nThe given response time determines the amount of smoothing (lag). A longer\nresponse time yields a smoother result and more lag. To force this vector to\nfollow the target closely, provide a response time that is very small relative\nto the given elapsed time."
 	}]
 }

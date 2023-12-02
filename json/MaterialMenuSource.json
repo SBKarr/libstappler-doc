@@ -1476,12 +1476,12 @@
 						"semantic_scope": "",
 						"signature": "() const"
 					}, {
-						"_fullName": "::stappler::xenolith::material2d::MenuSourceItem::onNodeAttached(stappler::xenolith::Node*)",
+						"_fullName": "::stappler::xenolith::material2d::MenuSourceItem::handleNodeAttached(stappler::xenolith::Node*)",
 						"_kind": "member function",
-						"_name": "onNodeAttached",
+						"_name": "handleNodeAttached",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 2660249725,
+						"id": 3701215470,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -1489,7 +1489,7 @@
 						"is_variadic": false,
 						"is_virtual": true,
 						"kind": "member function",
-						"name": "onNodeAttached",
+						"name": "handleNodeAttached",
 						"parameters": [{
 							"_fullName": "",
 							"_kind": "function parameter",
@@ -1642,12 +1642,12 @@
 						"semantic_scope": "",
 						"signature": "(stappler::xenolith::Node*)"
 					}, {
-						"_fullName": "::stappler::xenolith::material2d::MenuSourceItem::onNodeDetached(stappler::xenolith::Node*)",
+						"_fullName": "::stappler::xenolith::material2d::MenuSourceItem::handleNodeDetached(stappler::xenolith::Node*)",
 						"_kind": "member function",
-						"_name": "onNodeDetached",
+						"_name": "handleNodeDetached",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 572962014,
+						"id": 757300281,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -1655,7 +1655,7 @@
 						"is_variadic": false,
 						"is_virtual": true,
 						"kind": "member function",
-						"name": "onNodeDetached",
+						"name": "handleNodeDetached",
 						"parameters": [{
 							"_fullName": "",
 							"_kind": "function parameter",
@@ -2336,13 +2336,13 @@
 						"kind": "type alias",
 						"name": "FactoryFunction",
 						"underlying_type": {
-							"_typeName": "Function<Rc<stappler::xenolith::Node> ()>",
+							"_typeName": "Function<Rc<stappler::xenolith::Node> (stappler::xenolith::Node *, stappler::xenolith::material2d::MenuSourceCustom *)>",
 							"arguments_exposed": false,
 							"kind": "template_instantiation",
 							"primary_template": {
 								"name": "Function"
 							},
-							"unexposed_arguments": "Rc<stappler::xenolith::Node> ()"
+							"unexposed_arguments": "Rc<stappler::xenolith::Node> (stappler::xenolith::Node *, stappler::xenolith::material2d::MenuSourceCustom *)"
 						}
 					}, {
 						"_fullName": "::stappler::xenolith::material2d::MenuSourceCustom::HeightFunction",
@@ -2352,13 +2352,13 @@
 						"kind": "type alias",
 						"name": "HeightFunction",
 						"underlying_type": {
-							"_typeName": "Function<float (float)>",
+							"_typeName": "Function<float (stappler::xenolith::Node *, float)>",
 							"arguments_exposed": false,
 							"kind": "template_instantiation",
 							"primary_template": {
 								"name": "Function"
 							},
-							"unexposed_arguments": "float (float)"
+							"unexposed_arguments": "float (stappler::xenolith::Node *, float)"
 						}
 					}, {
 						"_fullName": "::stappler::xenolith::material2d::MenuSourceCustom::init()",
@@ -2438,13 +2438,13 @@
 												"kind": "type alias",
 												"name": "FactoryFunction",
 												"underlying_type": {
-													"_typeName": "Function<Rc<stappler::xenolith::Node> ()>",
+													"_typeName": "Function<Rc<stappler::xenolith::Node> (stappler::xenolith::Node *, stappler::xenolith::material2d::MenuSourceCustom *)>",
 													"arguments_exposed": false,
 													"kind": "template_instantiation",
 													"primary_template": {
 														"name": "Function"
 													},
-													"unexposed_arguments": "Rc<stappler::xenolith::Node> ()"
+													"unexposed_arguments": "Rc<stappler::xenolith::Node> (stappler::xenolith::Node *, stappler::xenolith::material2d::MenuSourceCustom *)"
 												}
 											}]
 										}
@@ -2527,13 +2527,13 @@
 												"kind": "type alias",
 												"name": "HeightFunction",
 												"underlying_type": {
-													"_typeName": "Function<float (float)>",
+													"_typeName": "Function<float (stappler::xenolith::Node *, float)>",
 													"arguments_exposed": false,
 													"kind": "template_instantiation",
 													"primary_template": {
 														"name": "Function"
 													},
-													"unexposed_arguments": "float (float)"
+													"unexposed_arguments": "float (stappler::xenolith::Node *, float)"
 												}
 											}]
 										}
@@ -2568,13 +2568,13 @@
 												"kind": "type alias",
 												"name": "FactoryFunction",
 												"underlying_type": {
-													"_typeName": "Function<Rc<stappler::xenolith::Node> ()>",
+													"_typeName": "Function<Rc<stappler::xenolith::Node> (stappler::xenolith::Node *, stappler::xenolith::material2d::MenuSourceCustom *)>",
 													"arguments_exposed": false,
 													"kind": "template_instantiation",
 													"primary_template": {
 														"name": "Function"
 													},
-													"unexposed_arguments": "Rc<stappler::xenolith::Node> ()"
+													"unexposed_arguments": "Rc<stappler::xenolith::Node> (stappler::xenolith::Node *, stappler::xenolith::material2d::MenuSourceCustom *)"
 												}
 											}]
 										}
@@ -2726,12 +2726,12 @@
 						"semantic_scope": "",
 						"signature": "() const"
 					}, {
-						"_fullName": "::stappler::xenolith::material2d::MenuSourceCustom::getHeight(float) const",
+						"_fullName": "::stappler::xenolith::material2d::MenuSourceCustom::getHeight(stappler::xenolith::Node*,float) const",
 						"_kind": "member function",
 						"_name": "getHeight",
 						"body_kind": "declaration",
 						"cv_qualifier": "const",
-						"id": 699208258,
+						"id": 4026724192,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -2741,6 +2741,148 @@
 						"kind": "member function",
 						"name": "getHeight",
 						"parameters": [{
+							"_fullName": "",
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 46947589,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::xenolith::Node*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::xenolith::Node",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::xenolith::Node",
+										"objects": [{
+											"_fullName": "::stappler::xenolith::Node",
+											"_kind": "class",
+											"_name": "Node",
+											"bases": [{
+												"_fullName": "Ref",
+												"_kind": "base class specifier",
+												"_name": "Ref",
+												"access_specifier": "public",
+												"id": 1165741041,
+												"is_virtual": false,
+												"kind": "base class specifier",
+												"name": "Ref",
+												"type": {
+													"_typeName": "stappler::mem_std::Ref",
+													"kind": "user_defined",
+													"target": {
+														"name": "stappler::mem_std::Ref",
+														"objects": [{
+															"_fullName": "::stappler::mem_std::Ref",
+															"_kind": "type alias",
+															"_name": "Ref",
+															"id": 3010886988,
+															"kind": "type alias",
+															"name": "Ref",
+															"underlying_type": {
+																"_typeName": "RefBase<memory::StandartInterface>",
+																"arguments_exposed": false,
+																"kind": "template_instantiation",
+																"primary_template": {
+																	"name": "RefBase",
+																	"objects": [{
+																		"_fullName": "::stappler::RefBase<typename>",
+																		"_kind": "class template",
+																		"_name": "RefBase",
+																		"class": {
+																			"_fullName": "::stappler::RefBase<typename>",
+																			"_kind": "class",
+																			"_name": "RefBase",
+																			"bases": [{
+																				"_fullName": "Interface::AllocBaseType",
+																				"_kind": "base class specifier",
+																				"_name": "Interface::AllocBaseType",
+																				"access_specifier": "public",
+																				"id": 25533212,
+																				"is_virtual": false,
+																				"kind": "base class specifier",
+																				"name": "Interface::AllocBaseType",
+																				"type": {
+																					"_typeName": "Interface::AllocBaseType",
+																					"kind": "unexposed",
+																					"name": "Interface::AllocBaseType"
+																				}
+																			}],
+																			"class_kind": "class",
+																			"id": 2191419057,
+																			"is_declaration": false,
+																			"is_definition": true,
+																			"is_final": false,
+																			"kind": "class",
+																			"name": "RefBase",
+																			"scope": {
+																				"is_templated": true,
+																				"name": "RefBase",
+																				"template_parameters": [{
+																					"_fullName": "Interface",
+																					"_kind": "template type parameter",
+																					"_name": "Interface",
+																					"id": 2255344761,
+																					"is_variadic": false,
+																					"keyword": "typename",
+																					"kind": "template type parameter",
+																					"name": "Interface"
+																				}]
+																			},
+																			"semantic_scope": ""
+																		},
+																		"id": 2191419057,
+																		"kind": "class template",
+																		"name": "RefBase",
+																		"parameters": [{
+																			"_fullName": "Interface",
+																			"_kind": "template type parameter",
+																			"_name": "Interface",
+																			"id": 2255344761,
+																			"is_variadic": false,
+																			"keyword": "typename",
+																			"kind": "template type parameter",
+																			"name": "Interface"
+																		}],
+																		"scope":  {
+																			"is_templated": true,
+																			"name": "RefBase",
+																			"template_parameters": [{
+																				"_fullName": "Interface",
+																				"_kind": "template type parameter",
+																				"_name": "Interface",
+																				"id": 2255344761,
+																				"is_variadic": false,
+																				"keyword": "typename",
+																				"kind": "template type parameter",
+																				"name": "Interface"
+																			}]
+																		}
+																	}]
+																},
+																"unexposed_arguments": "memory::StandartInterface"
+															}
+														}]
+													}
+												}
+											}],
+											"class_kind": "class",
+											"id": 697316651,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Node",
+											"scope": {
+												"name": "Node"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							}
+						}, {
 							"_fullName": "",
 							"_kind": "function parameter",
 							"_name": "",
@@ -2760,7 +2902,7 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(float) const"
+						"signature": "(stappler::xenolith::Node*,float) const"
 					}, {
 						"_fullName": "::stappler::xenolith::material2d::MenuSourceCustom::getHeightFunction() const",
 						"_kind": "member function",
@@ -2793,13 +2935,13 @@
 										"kind": "type alias",
 										"name": "HeightFunction",
 										"underlying_type": {
-											"_typeName": "Function<float (float)>",
+											"_typeName": "Function<float (stappler::xenolith::Node *, float)>",
 											"arguments_exposed": false,
 											"kind": "template_instantiation",
 											"primary_template": {
 												"name": "Function"
 											},
-											"unexposed_arguments": "float (float)"
+											"unexposed_arguments": "float (stappler::xenolith::Node *, float)"
 										}
 									}]
 								}
@@ -2840,13 +2982,13 @@
 										"kind": "type alias",
 										"name": "FactoryFunction",
 										"underlying_type": {
-											"_typeName": "Function<Rc<stappler::xenolith::Node> ()>",
+											"_typeName": "Function<Rc<stappler::xenolith::Node> (stappler::xenolith::Node *, stappler::xenolith::material2d::MenuSourceCustom *)>",
 											"arguments_exposed": false,
 											"kind": "template_instantiation",
 											"primary_template": {
 												"name": "Function"
 											},
-											"unexposed_arguments": "Rc<stappler::xenolith::Node> ()"
+											"unexposed_arguments": "Rc<stappler::xenolith::Node> (stappler::xenolith::Node *, stappler::xenolith::material2d::MenuSourceCustom *)"
 										}
 									}]
 								}
@@ -2911,13 +3053,13 @@
 										"kind": "type alias",
 										"name": "HeightFunction",
 										"underlying_type": {
-											"_typeName": "Function<float (float)>",
+											"_typeName": "Function<float (stappler::xenolith::Node *, float)>",
 											"arguments_exposed": false,
 											"kind": "template_instantiation",
 											"primary_template": {
 												"name": "Function"
 											},
-											"unexposed_arguments": "float (float)"
+											"unexposed_arguments": "float (stappler::xenolith::Node *, float)"
 										}
 									}]
 								}
@@ -2940,13 +3082,13 @@
 									"kind": "type alias",
 									"name": "HeightFunction",
 									"underlying_type": {
-										"_typeName": "Function<float (float)>",
+										"_typeName": "Function<float (stappler::xenolith::Node *, float)>",
 										"arguments_exposed": false,
 										"kind": "template_instantiation",
 										"primary_template": {
 											"name": "Function"
 										},
-										"unexposed_arguments": "float (float)"
+										"unexposed_arguments": "float (stappler::xenolith::Node *, float)"
 									}
 								}]
 							}
@@ -2974,13 +3116,13 @@
 										"kind": "type alias",
 										"name": "FactoryFunction",
 										"underlying_type": {
-											"_typeName": "Function<Rc<stappler::xenolith::Node> ()>",
+											"_typeName": "Function<Rc<stappler::xenolith::Node> (stappler::xenolith::Node *, stappler::xenolith::material2d::MenuSourceCustom *)>",
 											"arguments_exposed": false,
 											"kind": "template_instantiation",
 											"primary_template": {
 												"name": "Function"
 											},
-											"unexposed_arguments": "Rc<stappler::xenolith::Node> ()"
+											"unexposed_arguments": "Rc<stappler::xenolith::Node> (stappler::xenolith::Node *, stappler::xenolith::material2d::MenuSourceCustom *)"
 										}
 									}]
 								}
@@ -3003,13 +3145,13 @@
 									"kind": "type alias",
 									"name": "FactoryFunction",
 									"underlying_type": {
-										"_typeName": "Function<Rc<stappler::xenolith::Node> ()>",
+										"_typeName": "Function<Rc<stappler::xenolith::Node> (stappler::xenolith::Node *, stappler::xenolith::material2d::MenuSourceCustom *)>",
 										"arguments_exposed": false,
 										"kind": "template_instantiation",
 										"primary_template": {
 											"name": "Function"
 										},
-										"unexposed_arguments": "Rc<stappler::xenolith::Node> ()"
+										"unexposed_arguments": "Rc<stappler::xenolith::Node> (stappler::xenolith::Node *, stappler::xenolith::material2d::MenuSourceCustom *)"
 									}
 								}]
 							}
@@ -3260,13 +3402,13 @@
 									"kind": "type alias",
 									"name": "FactoryFunction",
 									"underlying_type": {
-										"_typeName": "Function<Rc<stappler::xenolith::Node> ()>",
+										"_typeName": "Function<Rc<stappler::xenolith::Node> (stappler::xenolith::Node *, stappler::xenolith::material2d::MenuSourceCustom *)>",
 										"arguments_exposed": false,
 										"kind": "template_instantiation",
 										"primary_template": {
 											"name": "Function"
 										},
-										"unexposed_arguments": "Rc<stappler::xenolith::Node> ()"
+										"unexposed_arguments": "Rc<stappler::xenolith::Node> (stappler::xenolith::Node *, stappler::xenolith::material2d::MenuSourceCustom *)"
 									}
 								}]
 							}
@@ -3291,13 +3433,13 @@
 									"kind": "type alias",
 									"name": "HeightFunction",
 									"underlying_type": {
-										"_typeName": "Function<float (float)>",
+										"_typeName": "Function<float (stappler::xenolith::Node *, float)>",
 										"arguments_exposed": false,
 										"kind": "template_instantiation",
 										"primary_template": {
 											"name": "Function"
 										},
-										"unexposed_arguments": "float (float)"
+										"unexposed_arguments": "float (stappler::xenolith::Node *, float)"
 									}
 								}]
 							}
@@ -3991,72 +4133,250 @@
 						}],
 						"ref_qualifier": "none",
 						"return_type": {
-							"_typeName": "Rc<stappler::xenolith::material2d::MenuSourceButton>",
-							"arguments_exposed": false,
-							"kind": "template_instantiation",
-							"primary_template": {
-								"name": "Rc",
-								"objects": [{
-									"_fullName": "::stappler::RcBase<typename>",
-									"_kind": "class template",
-									"_name": "RcBase",
-									"class": {
-										"_fullName": "::stappler::RcBase<typename>",
+							"_typeName": "stappler::xenolith::material2d::MenuSourceButton*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::xenolith::material2d::MenuSourceButton",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::material2d::MenuSourceButton",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::material2d::MenuSourceButton",
 										"_kind": "class",
-										"_name": "RcBase",
+										"_name": "MenuSourceButton",
+										"bases": [{
+											"_fullName": "MenuSourceItem",
+											"_kind": "base class specifier",
+											"_name": "MenuSourceItem",
+											"access_specifier": "public",
+											"id": 2840453149,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "MenuSourceItem",
+											"type": {
+												"_typeName": "stappler::xenolith::material2d::MenuSourceItem",
+												"kind": "user_defined",
+												"target": {
+													"name": "stappler::xenolith::material2d::MenuSourceItem",
+													"objects": [{
+														"_fullName": "::stappler::xenolith::material2d::MenuSourceItem",
+														"_kind": "class",
+														"_name": "MenuSourceItem",
+														"bases": [{
+															"_fullName": "Subscription",
+															"_kind": "base class specifier",
+															"_name": "Subscription",
+															"access_specifier": "public",
+															"id": 3183186245,
+															"is_virtual": false,
+															"kind": "base class specifier",
+															"name": "Subscription",
+															"type": {
+																"_typeName": "stappler::mem_std::Subscription",
+																"kind": "user_defined",
+																"target": {
+																	"name": "stappler::mem_std::Subscription",
+																	"objects": [{
+																		"_fullName": "::stappler::mem_std::Subscription",
+																		"_kind": "type alias",
+																		"_name": "Subscription",
+																		"id": 3227859981,
+																		"kind": "type alias",
+																		"name": "Subscription",
+																		"underlying_type": {
+																			"_typeName": "stappler::SubscriptionTemplate<memory::StandartInterface>",
+																			"arguments_exposed": false,
+																			"kind": "template_instantiation",
+																			"primary_template": {
+																				"name": "stappler::SubscriptionTemplate",
+																				"objects": [{
+																					"_fullName": "::stappler::SubscriptionTemplate<typename>",
+																					"_kind": "class template",
+																					"_name": "SubscriptionTemplate",
+																					"class": {
+																						"_fullName": "::stappler::SubscriptionTemplate<typename>",
+																						"_kind": "class",
+																						"_name": "SubscriptionTemplate",
+																						"bases": [{
+																							"_fullName": "RefBase<_Interface>",
+																							"_kind": "base class specifier",
+																							"_name": "RefBase<_Interface>",
+																							"access_specifier": "public",
+																							"id": 1919922344,
+																							"is_virtual": false,
+																							"kind": "base class specifier",
+																							"name": "RefBase<_Interface>",
+																							"type": {
+																								"_typeName": "RefBase<_Interface>",
+																								"arguments_exposed": false,
+																								"kind": "template_instantiation",
+																								"primary_template": {
+																									"name": "RefBase",
+																									"objects": [{
+																										"_fullName": "::stappler::RefBase<typename>",
+																										"_kind": "class template",
+																										"_name": "RefBase",
+																										"class": {
+																											"_fullName": "::stappler::RefBase<typename>",
+																											"_kind": "class",
+																											"_name": "RefBase",
+																											"bases": [{
+																												"_fullName": "Interface::AllocBaseType",
+																												"_kind": "base class specifier",
+																												"_name": "Interface::AllocBaseType",
+																												"access_specifier": "public",
+																												"id": 25533212,
+																												"is_virtual": false,
+																												"kind": "base class specifier",
+																												"name": "Interface::AllocBaseType",
+																												"type": {
+																													"_typeName": "Interface::AllocBaseType",
+																													"kind": "unexposed",
+																													"name": "Interface::AllocBaseType"
+																												}
+																											}],
+																											"class_kind": "class",
+																											"id": 2191419057,
+																											"is_declaration": false,
+																											"is_definition": true,
+																											"is_final": false,
+																											"kind": "class",
+																											"name": "RefBase",
+																											"scope": {
+																												"is_templated": true,
+																												"name": "RefBase",
+																												"template_parameters": [{
+																													"_fullName": "Interface",
+																													"_kind": "template type parameter",
+																													"_name": "Interface",
+																													"id": 2255344761,
+																													"is_variadic": false,
+																													"keyword": "typename",
+																													"kind": "template type parameter",
+																													"name": "Interface"
+																												}]
+																											},
+																											"semantic_scope": ""
+																										},
+																										"id": 2191419057,
+																										"kind": "class template",
+																										"name": "RefBase",
+																										"parameters": [{
+																											"_fullName": "Interface",
+																											"_kind": "template type parameter",
+																											"_name": "Interface",
+																											"id": 2255344761,
+																											"is_variadic": false,
+																											"keyword": "typename",
+																											"kind": "template type parameter",
+																											"name": "Interface"
+																										}],
+																										"scope":  {
+																											"is_templated": true,
+																											"name": "RefBase",
+																											"template_parameters": [{
+																												"_fullName": "Interface",
+																												"_kind": "template type parameter",
+																												"_name": "Interface",
+																												"id": 2255344761,
+																												"is_variadic": false,
+																												"keyword": "typename",
+																												"kind": "template type parameter",
+																												"name": "Interface"
+																											}]
+																										}
+																									}]
+																								},
+																								"unexposed_arguments": "_Interface"
+																							}
+																						}],
+																						"class_kind": "class",
+																						"id": 755268571,
+																						"is_declaration": false,
+																						"is_definition": true,
+																						"is_final": false,
+																						"kind": "class",
+																						"name": "SubscriptionTemplate",
+																						"scope": {
+																							"is_templated": true,
+																							"name": "SubscriptionTemplate",
+																							"template_parameters": [{
+																								"_fullName": "_Interface",
+																								"_kind": "template type parameter",
+																								"_name": "_Interface",
+																								"id": 2462272035,
+																								"is_variadic": false,
+																								"keyword": "typename",
+																								"kind": "template type parameter",
+																								"name": "_Interface"
+																							}]
+																						},
+																						"semantic_scope": ""
+																					},
+																					"id": 755268571,
+																					"kind": "class template",
+																					"name": "SubscriptionTemplate",
+																					"parameters": [{
+																						"_fullName": "_Interface",
+																						"_kind": "template type parameter",
+																						"_name": "_Interface",
+																						"id": 2462272035,
+																						"is_variadic": false,
+																						"keyword": "typename",
+																						"kind": "template type parameter",
+																						"name": "_Interface"
+																					}],
+																					"scope":  {
+																						"is_templated": true,
+																						"name": "SubscriptionTemplate",
+																						"template_parameters": [{
+																							"_fullName": "_Interface",
+																							"_kind": "template type parameter",
+																							"_name": "_Interface",
+																							"id": 2462272035,
+																							"is_variadic": false,
+																							"keyword": "typename",
+																							"kind": "template type parameter",
+																							"name": "_Interface"
+																						}]
+																					}
+																				}]
+																			},
+																			"unexposed_arguments": "memory::StandartInterface"
+																		}
+																	}]
+																}
+															}
+														}],
+														"class_kind": "class",
+														"id": 1207458091,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "MenuSourceItem",
+														"scope": {
+															"name": "MenuSourceItem"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}],
 										"class_kind": "class",
-										"id": 782220210,
+										"id": 2442288919,
 										"is_declaration": false,
 										"is_definition": true,
 										"is_final": false,
 										"kind": "class",
-										"name": "RcBase",
+										"name": "MenuSourceButton",
 										"scope": {
-											"is_templated": true,
-											"name": "RcBase",
-											"template_parameters": [{
-												"_fullName": "Base",
-												"_kind": "template type parameter",
-												"_name": "Base",
-												"id": 3435036189,
-												"is_variadic": false,
-												"keyword": "typename",
-												"kind": "template type parameter",
-												"name": "Base"
-											}]
+											"name": "MenuSourceButton"
 										},
 										"semantic_scope": ""
-									},
-									"id": 782220210,
-									"kind": "class template",
-									"name": "RcBase",
-									"parameters": [{
-										"_fullName": "Base",
-										"_kind": "template type parameter",
-										"_name": "Base",
-										"id": 3435036189,
-										"is_variadic": false,
-										"keyword": "typename",
-										"kind": "template type parameter",
-										"name": "Base"
-									}],
-									"scope":  {
-										"is_templated": true,
-										"name": "RcBase",
-										"template_parameters": [{
-											"_fullName": "Base",
-											"_kind": "template type parameter",
-											"_name": "Base",
-											"id": 3435036189,
-											"is_variadic": false,
-											"keyword": "typename",
-											"kind": "template type parameter",
-											"name": "Base"
-										}]
-									}
-								}]
-							},
-							"unexposed_arguments": "stappler::xenolith::material2d::MenuSourceButton"
+									}]
+								}
+							}
 						},
 						"semantic_scope": "",
 						"signature": "(stappler::StringView,stappler::xenolith::material2d::MenuSource::Callback&&)"
@@ -4355,72 +4675,250 @@
 						}],
 						"ref_qualifier": "none",
 						"return_type": {
-							"_typeName": "Rc<stappler::xenolith::material2d::MenuSourceButton>",
-							"arguments_exposed": false,
-							"kind": "template_instantiation",
-							"primary_template": {
-								"name": "Rc",
-								"objects": [{
-									"_fullName": "::stappler::RcBase<typename>",
-									"_kind": "class template",
-									"_name": "RcBase",
-									"class": {
-										"_fullName": "::stappler::RcBase<typename>",
+							"_typeName": "stappler::xenolith::material2d::MenuSourceButton*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::xenolith::material2d::MenuSourceButton",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::material2d::MenuSourceButton",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::material2d::MenuSourceButton",
 										"_kind": "class",
-										"_name": "RcBase",
+										"_name": "MenuSourceButton",
+										"bases": [{
+											"_fullName": "MenuSourceItem",
+											"_kind": "base class specifier",
+											"_name": "MenuSourceItem",
+											"access_specifier": "public",
+											"id": 2840453149,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "MenuSourceItem",
+											"type": {
+												"_typeName": "stappler::xenolith::material2d::MenuSourceItem",
+												"kind": "user_defined",
+												"target": {
+													"name": "stappler::xenolith::material2d::MenuSourceItem",
+													"objects": [{
+														"_fullName": "::stappler::xenolith::material2d::MenuSourceItem",
+														"_kind": "class",
+														"_name": "MenuSourceItem",
+														"bases": [{
+															"_fullName": "Subscription",
+															"_kind": "base class specifier",
+															"_name": "Subscription",
+															"access_specifier": "public",
+															"id": 3183186245,
+															"is_virtual": false,
+															"kind": "base class specifier",
+															"name": "Subscription",
+															"type": {
+																"_typeName": "stappler::mem_std::Subscription",
+																"kind": "user_defined",
+																"target": {
+																	"name": "stappler::mem_std::Subscription",
+																	"objects": [{
+																		"_fullName": "::stappler::mem_std::Subscription",
+																		"_kind": "type alias",
+																		"_name": "Subscription",
+																		"id": 3227859981,
+																		"kind": "type alias",
+																		"name": "Subscription",
+																		"underlying_type": {
+																			"_typeName": "stappler::SubscriptionTemplate<memory::StandartInterface>",
+																			"arguments_exposed": false,
+																			"kind": "template_instantiation",
+																			"primary_template": {
+																				"name": "stappler::SubscriptionTemplate",
+																				"objects": [{
+																					"_fullName": "::stappler::SubscriptionTemplate<typename>",
+																					"_kind": "class template",
+																					"_name": "SubscriptionTemplate",
+																					"class": {
+																						"_fullName": "::stappler::SubscriptionTemplate<typename>",
+																						"_kind": "class",
+																						"_name": "SubscriptionTemplate",
+																						"bases": [{
+																							"_fullName": "RefBase<_Interface>",
+																							"_kind": "base class specifier",
+																							"_name": "RefBase<_Interface>",
+																							"access_specifier": "public",
+																							"id": 1919922344,
+																							"is_virtual": false,
+																							"kind": "base class specifier",
+																							"name": "RefBase<_Interface>",
+																							"type": {
+																								"_typeName": "RefBase<_Interface>",
+																								"arguments_exposed": false,
+																								"kind": "template_instantiation",
+																								"primary_template": {
+																									"name": "RefBase",
+																									"objects": [{
+																										"_fullName": "::stappler::RefBase<typename>",
+																										"_kind": "class template",
+																										"_name": "RefBase",
+																										"class": {
+																											"_fullName": "::stappler::RefBase<typename>",
+																											"_kind": "class",
+																											"_name": "RefBase",
+																											"bases": [{
+																												"_fullName": "Interface::AllocBaseType",
+																												"_kind": "base class specifier",
+																												"_name": "Interface::AllocBaseType",
+																												"access_specifier": "public",
+																												"id": 25533212,
+																												"is_virtual": false,
+																												"kind": "base class specifier",
+																												"name": "Interface::AllocBaseType",
+																												"type": {
+																													"_typeName": "Interface::AllocBaseType",
+																													"kind": "unexposed",
+																													"name": "Interface::AllocBaseType"
+																												}
+																											}],
+																											"class_kind": "class",
+																											"id": 2191419057,
+																											"is_declaration": false,
+																											"is_definition": true,
+																											"is_final": false,
+																											"kind": "class",
+																											"name": "RefBase",
+																											"scope": {
+																												"is_templated": true,
+																												"name": "RefBase",
+																												"template_parameters": [{
+																													"_fullName": "Interface",
+																													"_kind": "template type parameter",
+																													"_name": "Interface",
+																													"id": 2255344761,
+																													"is_variadic": false,
+																													"keyword": "typename",
+																													"kind": "template type parameter",
+																													"name": "Interface"
+																												}]
+																											},
+																											"semantic_scope": ""
+																										},
+																										"id": 2191419057,
+																										"kind": "class template",
+																										"name": "RefBase",
+																										"parameters": [{
+																											"_fullName": "Interface",
+																											"_kind": "template type parameter",
+																											"_name": "Interface",
+																											"id": 2255344761,
+																											"is_variadic": false,
+																											"keyword": "typename",
+																											"kind": "template type parameter",
+																											"name": "Interface"
+																										}],
+																										"scope":  {
+																											"is_templated": true,
+																											"name": "RefBase",
+																											"template_parameters": [{
+																												"_fullName": "Interface",
+																												"_kind": "template type parameter",
+																												"_name": "Interface",
+																												"id": 2255344761,
+																												"is_variadic": false,
+																												"keyword": "typename",
+																												"kind": "template type parameter",
+																												"name": "Interface"
+																											}]
+																										}
+																									}]
+																								},
+																								"unexposed_arguments": "_Interface"
+																							}
+																						}],
+																						"class_kind": "class",
+																						"id": 755268571,
+																						"is_declaration": false,
+																						"is_definition": true,
+																						"is_final": false,
+																						"kind": "class",
+																						"name": "SubscriptionTemplate",
+																						"scope": {
+																							"is_templated": true,
+																							"name": "SubscriptionTemplate",
+																							"template_parameters": [{
+																								"_fullName": "_Interface",
+																								"_kind": "template type parameter",
+																								"_name": "_Interface",
+																								"id": 2462272035,
+																								"is_variadic": false,
+																								"keyword": "typename",
+																								"kind": "template type parameter",
+																								"name": "_Interface"
+																							}]
+																						},
+																						"semantic_scope": ""
+																					},
+																					"id": 755268571,
+																					"kind": "class template",
+																					"name": "SubscriptionTemplate",
+																					"parameters": [{
+																						"_fullName": "_Interface",
+																						"_kind": "template type parameter",
+																						"_name": "_Interface",
+																						"id": 2462272035,
+																						"is_variadic": false,
+																						"keyword": "typename",
+																						"kind": "template type parameter",
+																						"name": "_Interface"
+																					}],
+																					"scope":  {
+																						"is_templated": true,
+																						"name": "SubscriptionTemplate",
+																						"template_parameters": [{
+																							"_fullName": "_Interface",
+																							"_kind": "template type parameter",
+																							"_name": "_Interface",
+																							"id": 2462272035,
+																							"is_variadic": false,
+																							"keyword": "typename",
+																							"kind": "template type parameter",
+																							"name": "_Interface"
+																						}]
+																					}
+																				}]
+																			},
+																			"unexposed_arguments": "memory::StandartInterface"
+																		}
+																	}]
+																}
+															}
+														}],
+														"class_kind": "class",
+														"id": 1207458091,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "MenuSourceItem",
+														"scope": {
+															"name": "MenuSourceItem"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}],
 										"class_kind": "class",
-										"id": 782220210,
+										"id": 2442288919,
 										"is_declaration": false,
 										"is_definition": true,
 										"is_final": false,
 										"kind": "class",
-										"name": "RcBase",
+										"name": "MenuSourceButton",
 										"scope": {
-											"is_templated": true,
-											"name": "RcBase",
-											"template_parameters": [{
-												"_fullName": "Base",
-												"_kind": "template type parameter",
-												"_name": "Base",
-												"id": 3435036189,
-												"is_variadic": false,
-												"keyword": "typename",
-												"kind": "template type parameter",
-												"name": "Base"
-											}]
+											"name": "MenuSourceButton"
 										},
 										"semantic_scope": ""
-									},
-									"id": 782220210,
-									"kind": "class template",
-									"name": "RcBase",
-									"parameters": [{
-										"_fullName": "Base",
-										"_kind": "template type parameter",
-										"_name": "Base",
-										"id": 3435036189,
-										"is_variadic": false,
-										"keyword": "typename",
-										"kind": "template type parameter",
-										"name": "Base"
-									}],
-									"scope":  {
-										"is_templated": true,
-										"name": "RcBase",
-										"template_parameters": [{
-											"_fullName": "Base",
-											"_kind": "template type parameter",
-											"_name": "Base",
-											"id": 3435036189,
-											"is_variadic": false,
-											"keyword": "typename",
-											"kind": "template type parameter",
-											"name": "Base"
-										}]
-									}
-								}]
-							},
-							"unexposed_arguments": "stappler::xenolith::material2d::MenuSourceButton"
+									}]
+								}
+							}
 						},
 						"semantic_scope": "",
 						"signature": "(stappler::StringView,stappler::xenolith::IconName,stappler::xenolith::material2d::MenuSource::Callback&&)"
@@ -4727,72 +5225,250 @@
 						}],
 						"ref_qualifier": "none",
 						"return_type": {
-							"_typeName": "Rc<stappler::xenolith::material2d::MenuSourceButton>",
-							"arguments_exposed": false,
-							"kind": "template_instantiation",
-							"primary_template": {
-								"name": "Rc",
-								"objects": [{
-									"_fullName": "::stappler::RcBase<typename>",
-									"_kind": "class template",
-									"_name": "RcBase",
-									"class": {
-										"_fullName": "::stappler::RcBase<typename>",
+							"_typeName": "stappler::xenolith::material2d::MenuSourceButton*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::xenolith::material2d::MenuSourceButton",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::material2d::MenuSourceButton",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::material2d::MenuSourceButton",
 										"_kind": "class",
-										"_name": "RcBase",
+										"_name": "MenuSourceButton",
+										"bases": [{
+											"_fullName": "MenuSourceItem",
+											"_kind": "base class specifier",
+											"_name": "MenuSourceItem",
+											"access_specifier": "public",
+											"id": 2840453149,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "MenuSourceItem",
+											"type": {
+												"_typeName": "stappler::xenolith::material2d::MenuSourceItem",
+												"kind": "user_defined",
+												"target": {
+													"name": "stappler::xenolith::material2d::MenuSourceItem",
+													"objects": [{
+														"_fullName": "::stappler::xenolith::material2d::MenuSourceItem",
+														"_kind": "class",
+														"_name": "MenuSourceItem",
+														"bases": [{
+															"_fullName": "Subscription",
+															"_kind": "base class specifier",
+															"_name": "Subscription",
+															"access_specifier": "public",
+															"id": 3183186245,
+															"is_virtual": false,
+															"kind": "base class specifier",
+															"name": "Subscription",
+															"type": {
+																"_typeName": "stappler::mem_std::Subscription",
+																"kind": "user_defined",
+																"target": {
+																	"name": "stappler::mem_std::Subscription",
+																	"objects": [{
+																		"_fullName": "::stappler::mem_std::Subscription",
+																		"_kind": "type alias",
+																		"_name": "Subscription",
+																		"id": 3227859981,
+																		"kind": "type alias",
+																		"name": "Subscription",
+																		"underlying_type": {
+																			"_typeName": "stappler::SubscriptionTemplate<memory::StandartInterface>",
+																			"arguments_exposed": false,
+																			"kind": "template_instantiation",
+																			"primary_template": {
+																				"name": "stappler::SubscriptionTemplate",
+																				"objects": [{
+																					"_fullName": "::stappler::SubscriptionTemplate<typename>",
+																					"_kind": "class template",
+																					"_name": "SubscriptionTemplate",
+																					"class": {
+																						"_fullName": "::stappler::SubscriptionTemplate<typename>",
+																						"_kind": "class",
+																						"_name": "SubscriptionTemplate",
+																						"bases": [{
+																							"_fullName": "RefBase<_Interface>",
+																							"_kind": "base class specifier",
+																							"_name": "RefBase<_Interface>",
+																							"access_specifier": "public",
+																							"id": 1919922344,
+																							"is_virtual": false,
+																							"kind": "base class specifier",
+																							"name": "RefBase<_Interface>",
+																							"type": {
+																								"_typeName": "RefBase<_Interface>",
+																								"arguments_exposed": false,
+																								"kind": "template_instantiation",
+																								"primary_template": {
+																									"name": "RefBase",
+																									"objects": [{
+																										"_fullName": "::stappler::RefBase<typename>",
+																										"_kind": "class template",
+																										"_name": "RefBase",
+																										"class": {
+																											"_fullName": "::stappler::RefBase<typename>",
+																											"_kind": "class",
+																											"_name": "RefBase",
+																											"bases": [{
+																												"_fullName": "Interface::AllocBaseType",
+																												"_kind": "base class specifier",
+																												"_name": "Interface::AllocBaseType",
+																												"access_specifier": "public",
+																												"id": 25533212,
+																												"is_virtual": false,
+																												"kind": "base class specifier",
+																												"name": "Interface::AllocBaseType",
+																												"type": {
+																													"_typeName": "Interface::AllocBaseType",
+																													"kind": "unexposed",
+																													"name": "Interface::AllocBaseType"
+																												}
+																											}],
+																											"class_kind": "class",
+																											"id": 2191419057,
+																											"is_declaration": false,
+																											"is_definition": true,
+																											"is_final": false,
+																											"kind": "class",
+																											"name": "RefBase",
+																											"scope": {
+																												"is_templated": true,
+																												"name": "RefBase",
+																												"template_parameters": [{
+																													"_fullName": "Interface",
+																													"_kind": "template type parameter",
+																													"_name": "Interface",
+																													"id": 2255344761,
+																													"is_variadic": false,
+																													"keyword": "typename",
+																													"kind": "template type parameter",
+																													"name": "Interface"
+																												}]
+																											},
+																											"semantic_scope": ""
+																										},
+																										"id": 2191419057,
+																										"kind": "class template",
+																										"name": "RefBase",
+																										"parameters": [{
+																											"_fullName": "Interface",
+																											"_kind": "template type parameter",
+																											"_name": "Interface",
+																											"id": 2255344761,
+																											"is_variadic": false,
+																											"keyword": "typename",
+																											"kind": "template type parameter",
+																											"name": "Interface"
+																										}],
+																										"scope":  {
+																											"is_templated": true,
+																											"name": "RefBase",
+																											"template_parameters": [{
+																												"_fullName": "Interface",
+																												"_kind": "template type parameter",
+																												"_name": "Interface",
+																												"id": 2255344761,
+																												"is_variadic": false,
+																												"keyword": "typename",
+																												"kind": "template type parameter",
+																												"name": "Interface"
+																											}]
+																										}
+																									}]
+																								},
+																								"unexposed_arguments": "_Interface"
+																							}
+																						}],
+																						"class_kind": "class",
+																						"id": 755268571,
+																						"is_declaration": false,
+																						"is_definition": true,
+																						"is_final": false,
+																						"kind": "class",
+																						"name": "SubscriptionTemplate",
+																						"scope": {
+																							"is_templated": true,
+																							"name": "SubscriptionTemplate",
+																							"template_parameters": [{
+																								"_fullName": "_Interface",
+																								"_kind": "template type parameter",
+																								"_name": "_Interface",
+																								"id": 2462272035,
+																								"is_variadic": false,
+																								"keyword": "typename",
+																								"kind": "template type parameter",
+																								"name": "_Interface"
+																							}]
+																						},
+																						"semantic_scope": ""
+																					},
+																					"id": 755268571,
+																					"kind": "class template",
+																					"name": "SubscriptionTemplate",
+																					"parameters": [{
+																						"_fullName": "_Interface",
+																						"_kind": "template type parameter",
+																						"_name": "_Interface",
+																						"id": 2462272035,
+																						"is_variadic": false,
+																						"keyword": "typename",
+																						"kind": "template type parameter",
+																						"name": "_Interface"
+																					}],
+																					"scope":  {
+																						"is_templated": true,
+																						"name": "SubscriptionTemplate",
+																						"template_parameters": [{
+																							"_fullName": "_Interface",
+																							"_kind": "template type parameter",
+																							"_name": "_Interface",
+																							"id": 2462272035,
+																							"is_variadic": false,
+																							"keyword": "typename",
+																							"kind": "template type parameter",
+																							"name": "_Interface"
+																						}]
+																					}
+																				}]
+																			},
+																			"unexposed_arguments": "memory::StandartInterface"
+																		}
+																	}]
+																}
+															}
+														}],
+														"class_kind": "class",
+														"id": 1207458091,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "MenuSourceItem",
+														"scope": {
+															"name": "MenuSourceItem"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}],
 										"class_kind": "class",
-										"id": 782220210,
+										"id": 2442288919,
 										"is_declaration": false,
 										"is_definition": true,
 										"is_final": false,
 										"kind": "class",
-										"name": "RcBase",
+										"name": "MenuSourceButton",
 										"scope": {
-											"is_templated": true,
-											"name": "RcBase",
-											"template_parameters": [{
-												"_fullName": "Base",
-												"_kind": "template type parameter",
-												"_name": "Base",
-												"id": 3435036189,
-												"is_variadic": false,
-												"keyword": "typename",
-												"kind": "template type parameter",
-												"name": "Base"
-											}]
+											"name": "MenuSourceButton"
 										},
 										"semantic_scope": ""
-									},
-									"id": 782220210,
-									"kind": "class template",
-									"name": "RcBase",
-									"parameters": [{
-										"_fullName": "Base",
-										"_kind": "template type parameter",
-										"_name": "Base",
-										"id": 3435036189,
-										"is_variadic": false,
-										"keyword": "typename",
-										"kind": "template type parameter",
-										"name": "Base"
-									}],
-									"scope":  {
-										"is_templated": true,
-										"name": "RcBase",
-										"template_parameters": [{
-											"_fullName": "Base",
-											"_kind": "template type parameter",
-											"_name": "Base",
-											"id": 3435036189,
-											"is_variadic": false,
-											"keyword": "typename",
-											"kind": "template type parameter",
-											"name": "Base"
-										}]
-									}
-								}]
-							},
-							"unexposed_arguments": "stappler::xenolith::material2d::MenuSourceButton"
+									}]
+								}
+							}
 						},
 						"semantic_scope": "",
 						"signature": "(stappler::StringView,stappler::xenolith::IconName,Rc<stappler::xenolith::material2d::MenuSource>&&)"
@@ -4862,13 +5538,13 @@
 															"kind": "type alias",
 															"name": "FactoryFunction",
 															"underlying_type": {
-																"_typeName": "Function<Rc<stappler::xenolith::Node> ()>",
+																"_typeName": "Function<Rc<stappler::xenolith::Node> (stappler::xenolith::Node *, stappler::xenolith::material2d::MenuSourceCustom *)>",
 																"arguments_exposed": false,
 																"kind": "template_instantiation",
 																"primary_template": {
 																	"name": "Function"
 																},
-																"unexposed_arguments": "Rc<stappler::xenolith::Node> ()"
+																"unexposed_arguments": "Rc<stappler::xenolith::Node> (stappler::xenolith::Node *, stappler::xenolith::material2d::MenuSourceCustom *)"
 															}
 														}]
 													}
@@ -4906,72 +5582,250 @@
 						}],
 						"ref_qualifier": "none",
 						"return_type": {
-							"_typeName": "Rc<stappler::xenolith::material2d::MenuSourceCustom>",
-							"arguments_exposed": false,
-							"kind": "template_instantiation",
-							"primary_template": {
-								"name": "Rc",
-								"objects": [{
-									"_fullName": "::stappler::RcBase<typename>",
-									"_kind": "class template",
-									"_name": "RcBase",
-									"class": {
-										"_fullName": "::stappler::RcBase<typename>",
+							"_typeName": "stappler::xenolith::material2d::MenuSourceCustom*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::xenolith::material2d::MenuSourceCustom",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::material2d::MenuSourceCustom",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::material2d::MenuSourceCustom",
 										"_kind": "class",
-										"_name": "RcBase",
+										"_name": "MenuSourceCustom",
+										"bases": [{
+											"_fullName": "MenuSourceItem",
+											"_kind": "base class specifier",
+											"_name": "MenuSourceItem",
+											"access_specifier": "public",
+											"id": 2840453149,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "MenuSourceItem",
+											"type": {
+												"_typeName": "stappler::xenolith::material2d::MenuSourceItem",
+												"kind": "user_defined",
+												"target": {
+													"name": "stappler::xenolith::material2d::MenuSourceItem",
+													"objects": [{
+														"_fullName": "::stappler::xenolith::material2d::MenuSourceItem",
+														"_kind": "class",
+														"_name": "MenuSourceItem",
+														"bases": [{
+															"_fullName": "Subscription",
+															"_kind": "base class specifier",
+															"_name": "Subscription",
+															"access_specifier": "public",
+															"id": 3183186245,
+															"is_virtual": false,
+															"kind": "base class specifier",
+															"name": "Subscription",
+															"type": {
+																"_typeName": "stappler::mem_std::Subscription",
+																"kind": "user_defined",
+																"target": {
+																	"name": "stappler::mem_std::Subscription",
+																	"objects": [{
+																		"_fullName": "::stappler::mem_std::Subscription",
+																		"_kind": "type alias",
+																		"_name": "Subscription",
+																		"id": 3227859981,
+																		"kind": "type alias",
+																		"name": "Subscription",
+																		"underlying_type": {
+																			"_typeName": "stappler::SubscriptionTemplate<memory::StandartInterface>",
+																			"arguments_exposed": false,
+																			"kind": "template_instantiation",
+																			"primary_template": {
+																				"name": "stappler::SubscriptionTemplate",
+																				"objects": [{
+																					"_fullName": "::stappler::SubscriptionTemplate<typename>",
+																					"_kind": "class template",
+																					"_name": "SubscriptionTemplate",
+																					"class": {
+																						"_fullName": "::stappler::SubscriptionTemplate<typename>",
+																						"_kind": "class",
+																						"_name": "SubscriptionTemplate",
+																						"bases": [{
+																							"_fullName": "RefBase<_Interface>",
+																							"_kind": "base class specifier",
+																							"_name": "RefBase<_Interface>",
+																							"access_specifier": "public",
+																							"id": 1919922344,
+																							"is_virtual": false,
+																							"kind": "base class specifier",
+																							"name": "RefBase<_Interface>",
+																							"type": {
+																								"_typeName": "RefBase<_Interface>",
+																								"arguments_exposed": false,
+																								"kind": "template_instantiation",
+																								"primary_template": {
+																									"name": "RefBase",
+																									"objects": [{
+																										"_fullName": "::stappler::RefBase<typename>",
+																										"_kind": "class template",
+																										"_name": "RefBase",
+																										"class": {
+																											"_fullName": "::stappler::RefBase<typename>",
+																											"_kind": "class",
+																											"_name": "RefBase",
+																											"bases": [{
+																												"_fullName": "Interface::AllocBaseType",
+																												"_kind": "base class specifier",
+																												"_name": "Interface::AllocBaseType",
+																												"access_specifier": "public",
+																												"id": 25533212,
+																												"is_virtual": false,
+																												"kind": "base class specifier",
+																												"name": "Interface::AllocBaseType",
+																												"type": {
+																													"_typeName": "Interface::AllocBaseType",
+																													"kind": "unexposed",
+																													"name": "Interface::AllocBaseType"
+																												}
+																											}],
+																											"class_kind": "class",
+																											"id": 2191419057,
+																											"is_declaration": false,
+																											"is_definition": true,
+																											"is_final": false,
+																											"kind": "class",
+																											"name": "RefBase",
+																											"scope": {
+																												"is_templated": true,
+																												"name": "RefBase",
+																												"template_parameters": [{
+																													"_fullName": "Interface",
+																													"_kind": "template type parameter",
+																													"_name": "Interface",
+																													"id": 2255344761,
+																													"is_variadic": false,
+																													"keyword": "typename",
+																													"kind": "template type parameter",
+																													"name": "Interface"
+																												}]
+																											},
+																											"semantic_scope": ""
+																										},
+																										"id": 2191419057,
+																										"kind": "class template",
+																										"name": "RefBase",
+																										"parameters": [{
+																											"_fullName": "Interface",
+																											"_kind": "template type parameter",
+																											"_name": "Interface",
+																											"id": 2255344761,
+																											"is_variadic": false,
+																											"keyword": "typename",
+																											"kind": "template type parameter",
+																											"name": "Interface"
+																										}],
+																										"scope":  {
+																											"is_templated": true,
+																											"name": "RefBase",
+																											"template_parameters": [{
+																												"_fullName": "Interface",
+																												"_kind": "template type parameter",
+																												"_name": "Interface",
+																												"id": 2255344761,
+																												"is_variadic": false,
+																												"keyword": "typename",
+																												"kind": "template type parameter",
+																												"name": "Interface"
+																											}]
+																										}
+																									}]
+																								},
+																								"unexposed_arguments": "_Interface"
+																							}
+																						}],
+																						"class_kind": "class",
+																						"id": 755268571,
+																						"is_declaration": false,
+																						"is_definition": true,
+																						"is_final": false,
+																						"kind": "class",
+																						"name": "SubscriptionTemplate",
+																						"scope": {
+																							"is_templated": true,
+																							"name": "SubscriptionTemplate",
+																							"template_parameters": [{
+																								"_fullName": "_Interface",
+																								"_kind": "template type parameter",
+																								"_name": "_Interface",
+																								"id": 2462272035,
+																								"is_variadic": false,
+																								"keyword": "typename",
+																								"kind": "template type parameter",
+																								"name": "_Interface"
+																							}]
+																						},
+																						"semantic_scope": ""
+																					},
+																					"id": 755268571,
+																					"kind": "class template",
+																					"name": "SubscriptionTemplate",
+																					"parameters": [{
+																						"_fullName": "_Interface",
+																						"_kind": "template type parameter",
+																						"_name": "_Interface",
+																						"id": 2462272035,
+																						"is_variadic": false,
+																						"keyword": "typename",
+																						"kind": "template type parameter",
+																						"name": "_Interface"
+																					}],
+																					"scope":  {
+																						"is_templated": true,
+																						"name": "SubscriptionTemplate",
+																						"template_parameters": [{
+																							"_fullName": "_Interface",
+																							"_kind": "template type parameter",
+																							"_name": "_Interface",
+																							"id": 2462272035,
+																							"is_variadic": false,
+																							"keyword": "typename",
+																							"kind": "template type parameter",
+																							"name": "_Interface"
+																						}]
+																					}
+																				}]
+																			},
+																			"unexposed_arguments": "memory::StandartInterface"
+																		}
+																	}]
+																}
+															}
+														}],
+														"class_kind": "class",
+														"id": 1207458091,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "MenuSourceItem",
+														"scope": {
+															"name": "MenuSourceItem"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}],
 										"class_kind": "class",
-										"id": 782220210,
+										"id": 2357506024,
 										"is_declaration": false,
 										"is_definition": true,
 										"is_final": false,
 										"kind": "class",
-										"name": "RcBase",
+										"name": "MenuSourceCustom",
 										"scope": {
-											"is_templated": true,
-											"name": "RcBase",
-											"template_parameters": [{
-												"_fullName": "Base",
-												"_kind": "template type parameter",
-												"_name": "Base",
-												"id": 3435036189,
-												"is_variadic": false,
-												"keyword": "typename",
-												"kind": "template type parameter",
-												"name": "Base"
-											}]
+											"name": "MenuSourceCustom"
 										},
 										"semantic_scope": ""
-									},
-									"id": 782220210,
-									"kind": "class template",
-									"name": "RcBase",
-									"parameters": [{
-										"_fullName": "Base",
-										"_kind": "template type parameter",
-										"_name": "Base",
-										"id": 3435036189,
-										"is_variadic": false,
-										"keyword": "typename",
-										"kind": "template type parameter",
-										"name": "Base"
-									}],
-									"scope":  {
-										"is_templated": true,
-										"name": "RcBase",
-										"template_parameters": [{
-											"_fullName": "Base",
-											"_kind": "template type parameter",
-											"_name": "Base",
-											"id": 3435036189,
-											"is_variadic": false,
-											"keyword": "typename",
-											"kind": "template type parameter",
-											"name": "Base"
-										}]
-									}
-								}]
-							},
-							"unexposed_arguments": "stappler::xenolith::material2d::MenuSourceCustom"
+									}]
+								}
+							}
 						},
 						"semantic_scope": "",
 						"signature": "(float,stappler::xenolith::material2d::MenuSource::FactoryFunction const&,float)"
@@ -5029,13 +5883,13 @@
 															"kind": "type alias",
 															"name": "HeightFunction",
 															"underlying_type": {
-																"_typeName": "Function<float (float)>",
+																"_typeName": "Function<float (stappler::xenolith::Node *, float)>",
 																"arguments_exposed": false,
 																"kind": "template_instantiation",
 																"primary_template": {
 																	"name": "Function"
 																},
-																"unexposed_arguments": "float (float)"
+																"unexposed_arguments": "float (stappler::xenolith::Node *, float)"
 															}
 														}]
 													}
@@ -5085,13 +5939,13 @@
 															"kind": "type alias",
 															"name": "FactoryFunction",
 															"underlying_type": {
-																"_typeName": "Function<Rc<stappler::xenolith::Node> ()>",
+																"_typeName": "Function<Rc<stappler::xenolith::Node> (stappler::xenolith::Node *, stappler::xenolith::material2d::MenuSourceCustom *)>",
 																"arguments_exposed": false,
 																"kind": "template_instantiation",
 																"primary_template": {
 																	"name": "Function"
 																},
-																"unexposed_arguments": "Rc<stappler::xenolith::Node> ()"
+																"unexposed_arguments": "Rc<stappler::xenolith::Node> (stappler::xenolith::Node *, stappler::xenolith::material2d::MenuSourceCustom *)"
 															}
 														}]
 													}
@@ -5129,72 +5983,250 @@
 						}],
 						"ref_qualifier": "none",
 						"return_type": {
-							"_typeName": "Rc<stappler::xenolith::material2d::MenuSourceCustom>",
-							"arguments_exposed": false,
-							"kind": "template_instantiation",
-							"primary_template": {
-								"name": "Rc",
-								"objects": [{
-									"_fullName": "::stappler::RcBase<typename>",
-									"_kind": "class template",
-									"_name": "RcBase",
-									"class": {
-										"_fullName": "::stappler::RcBase<typename>",
+							"_typeName": "stappler::xenolith::material2d::MenuSourceCustom*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::xenolith::material2d::MenuSourceCustom",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::material2d::MenuSourceCustom",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::material2d::MenuSourceCustom",
 										"_kind": "class",
-										"_name": "RcBase",
+										"_name": "MenuSourceCustom",
+										"bases": [{
+											"_fullName": "MenuSourceItem",
+											"_kind": "base class specifier",
+											"_name": "MenuSourceItem",
+											"access_specifier": "public",
+											"id": 2840453149,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "MenuSourceItem",
+											"type": {
+												"_typeName": "stappler::xenolith::material2d::MenuSourceItem",
+												"kind": "user_defined",
+												"target": {
+													"name": "stappler::xenolith::material2d::MenuSourceItem",
+													"objects": [{
+														"_fullName": "::stappler::xenolith::material2d::MenuSourceItem",
+														"_kind": "class",
+														"_name": "MenuSourceItem",
+														"bases": [{
+															"_fullName": "Subscription",
+															"_kind": "base class specifier",
+															"_name": "Subscription",
+															"access_specifier": "public",
+															"id": 3183186245,
+															"is_virtual": false,
+															"kind": "base class specifier",
+															"name": "Subscription",
+															"type": {
+																"_typeName": "stappler::mem_std::Subscription",
+																"kind": "user_defined",
+																"target": {
+																	"name": "stappler::mem_std::Subscription",
+																	"objects": [{
+																		"_fullName": "::stappler::mem_std::Subscription",
+																		"_kind": "type alias",
+																		"_name": "Subscription",
+																		"id": 3227859981,
+																		"kind": "type alias",
+																		"name": "Subscription",
+																		"underlying_type": {
+																			"_typeName": "stappler::SubscriptionTemplate<memory::StandartInterface>",
+																			"arguments_exposed": false,
+																			"kind": "template_instantiation",
+																			"primary_template": {
+																				"name": "stappler::SubscriptionTemplate",
+																				"objects": [{
+																					"_fullName": "::stappler::SubscriptionTemplate<typename>",
+																					"_kind": "class template",
+																					"_name": "SubscriptionTemplate",
+																					"class": {
+																						"_fullName": "::stappler::SubscriptionTemplate<typename>",
+																						"_kind": "class",
+																						"_name": "SubscriptionTemplate",
+																						"bases": [{
+																							"_fullName": "RefBase<_Interface>",
+																							"_kind": "base class specifier",
+																							"_name": "RefBase<_Interface>",
+																							"access_specifier": "public",
+																							"id": 1919922344,
+																							"is_virtual": false,
+																							"kind": "base class specifier",
+																							"name": "RefBase<_Interface>",
+																							"type": {
+																								"_typeName": "RefBase<_Interface>",
+																								"arguments_exposed": false,
+																								"kind": "template_instantiation",
+																								"primary_template": {
+																									"name": "RefBase",
+																									"objects": [{
+																										"_fullName": "::stappler::RefBase<typename>",
+																										"_kind": "class template",
+																										"_name": "RefBase",
+																										"class": {
+																											"_fullName": "::stappler::RefBase<typename>",
+																											"_kind": "class",
+																											"_name": "RefBase",
+																											"bases": [{
+																												"_fullName": "Interface::AllocBaseType",
+																												"_kind": "base class specifier",
+																												"_name": "Interface::AllocBaseType",
+																												"access_specifier": "public",
+																												"id": 25533212,
+																												"is_virtual": false,
+																												"kind": "base class specifier",
+																												"name": "Interface::AllocBaseType",
+																												"type": {
+																													"_typeName": "Interface::AllocBaseType",
+																													"kind": "unexposed",
+																													"name": "Interface::AllocBaseType"
+																												}
+																											}],
+																											"class_kind": "class",
+																											"id": 2191419057,
+																											"is_declaration": false,
+																											"is_definition": true,
+																											"is_final": false,
+																											"kind": "class",
+																											"name": "RefBase",
+																											"scope": {
+																												"is_templated": true,
+																												"name": "RefBase",
+																												"template_parameters": [{
+																													"_fullName": "Interface",
+																													"_kind": "template type parameter",
+																													"_name": "Interface",
+																													"id": 2255344761,
+																													"is_variadic": false,
+																													"keyword": "typename",
+																													"kind": "template type parameter",
+																													"name": "Interface"
+																												}]
+																											},
+																											"semantic_scope": ""
+																										},
+																										"id": 2191419057,
+																										"kind": "class template",
+																										"name": "RefBase",
+																										"parameters": [{
+																											"_fullName": "Interface",
+																											"_kind": "template type parameter",
+																											"_name": "Interface",
+																											"id": 2255344761,
+																											"is_variadic": false,
+																											"keyword": "typename",
+																											"kind": "template type parameter",
+																											"name": "Interface"
+																										}],
+																										"scope":  {
+																											"is_templated": true,
+																											"name": "RefBase",
+																											"template_parameters": [{
+																												"_fullName": "Interface",
+																												"_kind": "template type parameter",
+																												"_name": "Interface",
+																												"id": 2255344761,
+																												"is_variadic": false,
+																												"keyword": "typename",
+																												"kind": "template type parameter",
+																												"name": "Interface"
+																											}]
+																										}
+																									}]
+																								},
+																								"unexposed_arguments": "_Interface"
+																							}
+																						}],
+																						"class_kind": "class",
+																						"id": 755268571,
+																						"is_declaration": false,
+																						"is_definition": true,
+																						"is_final": false,
+																						"kind": "class",
+																						"name": "SubscriptionTemplate",
+																						"scope": {
+																							"is_templated": true,
+																							"name": "SubscriptionTemplate",
+																							"template_parameters": [{
+																								"_fullName": "_Interface",
+																								"_kind": "template type parameter",
+																								"_name": "_Interface",
+																								"id": 2462272035,
+																								"is_variadic": false,
+																								"keyword": "typename",
+																								"kind": "template type parameter",
+																								"name": "_Interface"
+																							}]
+																						},
+																						"semantic_scope": ""
+																					},
+																					"id": 755268571,
+																					"kind": "class template",
+																					"name": "SubscriptionTemplate",
+																					"parameters": [{
+																						"_fullName": "_Interface",
+																						"_kind": "template type parameter",
+																						"_name": "_Interface",
+																						"id": 2462272035,
+																						"is_variadic": false,
+																						"keyword": "typename",
+																						"kind": "template type parameter",
+																						"name": "_Interface"
+																					}],
+																					"scope":  {
+																						"is_templated": true,
+																						"name": "SubscriptionTemplate",
+																						"template_parameters": [{
+																							"_fullName": "_Interface",
+																							"_kind": "template type parameter",
+																							"_name": "_Interface",
+																							"id": 2462272035,
+																							"is_variadic": false,
+																							"keyword": "typename",
+																							"kind": "template type parameter",
+																							"name": "_Interface"
+																						}]
+																					}
+																				}]
+																			},
+																			"unexposed_arguments": "memory::StandartInterface"
+																		}
+																	}]
+																}
+															}
+														}],
+														"class_kind": "class",
+														"id": 1207458091,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "MenuSourceItem",
+														"scope": {
+															"name": "MenuSourceItem"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}],
 										"class_kind": "class",
-										"id": 782220210,
+										"id": 2357506024,
 										"is_declaration": false,
 										"is_definition": true,
 										"is_final": false,
 										"kind": "class",
-										"name": "RcBase",
+										"name": "MenuSourceCustom",
 										"scope": {
-											"is_templated": true,
-											"name": "RcBase",
-											"template_parameters": [{
-												"_fullName": "Base",
-												"_kind": "template type parameter",
-												"_name": "Base",
-												"id": 3435036189,
-												"is_variadic": false,
-												"keyword": "typename",
-												"kind": "template type parameter",
-												"name": "Base"
-											}]
+											"name": "MenuSourceCustom"
 										},
 										"semantic_scope": ""
-									},
-									"id": 782220210,
-									"kind": "class template",
-									"name": "RcBase",
-									"parameters": [{
-										"_fullName": "Base",
-										"_kind": "template type parameter",
-										"_name": "Base",
-										"id": 3435036189,
-										"is_variadic": false,
-										"keyword": "typename",
-										"kind": "template type parameter",
-										"name": "Base"
-									}],
-									"scope":  {
-										"is_templated": true,
-										"name": "RcBase",
-										"template_parameters": [{
-											"_fullName": "Base",
-											"_kind": "template type parameter",
-											"_name": "Base",
-											"id": 3435036189,
-											"is_variadic": false,
-											"keyword": "typename",
-											"kind": "template type parameter",
-											"name": "Base"
-										}]
-									}
-								}]
-							},
-							"unexposed_arguments": "stappler::xenolith::material2d::MenuSourceCustom"
+									}]
+								}
+							}
 						},
 						"semantic_scope": "",
 						"signature": "(stappler::xenolith::material2d::MenuSource::HeightFunction const&,stappler::xenolith::material2d::MenuSource::FactoryFunction const&,float)"
@@ -5215,72 +6247,217 @@
 						"name": "addSeparator",
 						"ref_qualifier": "none",
 						"return_type": {
-							"_typeName": "Rc<stappler::xenolith::material2d::MenuSourceItem>",
-							"arguments_exposed": false,
-							"kind": "template_instantiation",
-							"primary_template": {
-								"name": "Rc",
-								"objects": [{
-									"_fullName": "::stappler::RcBase<typename>",
-									"_kind": "class template",
-									"_name": "RcBase",
-									"class": {
-										"_fullName": "::stappler::RcBase<typename>",
+							"_typeName": "stappler::xenolith::material2d::MenuSourceItem*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::xenolith::material2d::MenuSourceItem",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::material2d::MenuSourceItem",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::material2d::MenuSourceItem",
 										"_kind": "class",
-										"_name": "RcBase",
+										"_name": "MenuSourceItem",
+										"bases": [{
+											"_fullName": "Subscription",
+											"_kind": "base class specifier",
+											"_name": "Subscription",
+											"access_specifier": "public",
+											"id": 3183186245,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "Subscription",
+											"type": {
+												"_typeName": "stappler::mem_std::Subscription",
+												"kind": "user_defined",
+												"target": {
+													"name": "stappler::mem_std::Subscription",
+													"objects": [{
+														"_fullName": "::stappler::mem_std::Subscription",
+														"_kind": "type alias",
+														"_name": "Subscription",
+														"id": 3227859981,
+														"kind": "type alias",
+														"name": "Subscription",
+														"underlying_type": {
+															"_typeName": "stappler::SubscriptionTemplate<memory::StandartInterface>",
+															"arguments_exposed": false,
+															"kind": "template_instantiation",
+															"primary_template": {
+																"name": "stappler::SubscriptionTemplate",
+																"objects": [{
+																	"_fullName": "::stappler::SubscriptionTemplate<typename>",
+																	"_kind": "class template",
+																	"_name": "SubscriptionTemplate",
+																	"class": {
+																		"_fullName": "::stappler::SubscriptionTemplate<typename>",
+																		"_kind": "class",
+																		"_name": "SubscriptionTemplate",
+																		"bases": [{
+																			"_fullName": "RefBase<_Interface>",
+																			"_kind": "base class specifier",
+																			"_name": "RefBase<_Interface>",
+																			"access_specifier": "public",
+																			"id": 1919922344,
+																			"is_virtual": false,
+																			"kind": "base class specifier",
+																			"name": "RefBase<_Interface>",
+																			"type": {
+																				"_typeName": "RefBase<_Interface>",
+																				"arguments_exposed": false,
+																				"kind": "template_instantiation",
+																				"primary_template": {
+																					"name": "RefBase",
+																					"objects": [{
+																						"_fullName": "::stappler::RefBase<typename>",
+																						"_kind": "class template",
+																						"_name": "RefBase",
+																						"class": {
+																							"_fullName": "::stappler::RefBase<typename>",
+																							"_kind": "class",
+																							"_name": "RefBase",
+																							"bases": [{
+																								"_fullName": "Interface::AllocBaseType",
+																								"_kind": "base class specifier",
+																								"_name": "Interface::AllocBaseType",
+																								"access_specifier": "public",
+																								"id": 25533212,
+																								"is_virtual": false,
+																								"kind": "base class specifier",
+																								"name": "Interface::AllocBaseType",
+																								"type": {
+																									"_typeName": "Interface::AllocBaseType",
+																									"kind": "unexposed",
+																									"name": "Interface::AllocBaseType"
+																								}
+																							}],
+																							"class_kind": "class",
+																							"id": 2191419057,
+																							"is_declaration": false,
+																							"is_definition": true,
+																							"is_final": false,
+																							"kind": "class",
+																							"name": "RefBase",
+																							"scope": {
+																								"is_templated": true,
+																								"name": "RefBase",
+																								"template_parameters": [{
+																									"_fullName": "Interface",
+																									"_kind": "template type parameter",
+																									"_name": "Interface",
+																									"id": 2255344761,
+																									"is_variadic": false,
+																									"keyword": "typename",
+																									"kind": "template type parameter",
+																									"name": "Interface"
+																								}]
+																							},
+																							"semantic_scope": ""
+																						},
+																						"id": 2191419057,
+																						"kind": "class template",
+																						"name": "RefBase",
+																						"parameters": [{
+																							"_fullName": "Interface",
+																							"_kind": "template type parameter",
+																							"_name": "Interface",
+																							"id": 2255344761,
+																							"is_variadic": false,
+																							"keyword": "typename",
+																							"kind": "template type parameter",
+																							"name": "Interface"
+																						}],
+																						"scope":  {
+																							"is_templated": true,
+																							"name": "RefBase",
+																							"template_parameters": [{
+																								"_fullName": "Interface",
+																								"_kind": "template type parameter",
+																								"_name": "Interface",
+																								"id": 2255344761,
+																								"is_variadic": false,
+																								"keyword": "typename",
+																								"kind": "template type parameter",
+																								"name": "Interface"
+																							}]
+																						}
+																					}]
+																				},
+																				"unexposed_arguments": "_Interface"
+																			}
+																		}],
+																		"class_kind": "class",
+																		"id": 755268571,
+																		"is_declaration": false,
+																		"is_definition": true,
+																		"is_final": false,
+																		"kind": "class",
+																		"name": "SubscriptionTemplate",
+																		"scope": {
+																			"is_templated": true,
+																			"name": "SubscriptionTemplate",
+																			"template_parameters": [{
+																				"_fullName": "_Interface",
+																				"_kind": "template type parameter",
+																				"_name": "_Interface",
+																				"id": 2462272035,
+																				"is_variadic": false,
+																				"keyword": "typename",
+																				"kind": "template type parameter",
+																				"name": "_Interface"
+																			}]
+																		},
+																		"semantic_scope": ""
+																	},
+																	"id": 755268571,
+																	"kind": "class template",
+																	"name": "SubscriptionTemplate",
+																	"parameters": [{
+																		"_fullName": "_Interface",
+																		"_kind": "template type parameter",
+																		"_name": "_Interface",
+																		"id": 2462272035,
+																		"is_variadic": false,
+																		"keyword": "typename",
+																		"kind": "template type parameter",
+																		"name": "_Interface"
+																	}],
+																	"scope":  {
+																		"is_templated": true,
+																		"name": "SubscriptionTemplate",
+																		"template_parameters": [{
+																			"_fullName": "_Interface",
+																			"_kind": "template type parameter",
+																			"_name": "_Interface",
+																			"id": 2462272035,
+																			"is_variadic": false,
+																			"keyword": "typename",
+																			"kind": "template type parameter",
+																			"name": "_Interface"
+																		}]
+																	}
+																}]
+															},
+															"unexposed_arguments": "memory::StandartInterface"
+														}
+													}]
+												}
+											}
+										}],
 										"class_kind": "class",
-										"id": 782220210,
+										"id": 1207458091,
 										"is_declaration": false,
 										"is_definition": true,
 										"is_final": false,
 										"kind": "class",
-										"name": "RcBase",
+										"name": "MenuSourceItem",
 										"scope": {
-											"is_templated": true,
-											"name": "RcBase",
-											"template_parameters": [{
-												"_fullName": "Base",
-												"_kind": "template type parameter",
-												"_name": "Base",
-												"id": 3435036189,
-												"is_variadic": false,
-												"keyword": "typename",
-												"kind": "template type parameter",
-												"name": "Base"
-											}]
+											"name": "MenuSourceItem"
 										},
 										"semantic_scope": ""
-									},
-									"id": 782220210,
-									"kind": "class template",
-									"name": "RcBase",
-									"parameters": [{
-										"_fullName": "Base",
-										"_kind": "template type parameter",
-										"_name": "Base",
-										"id": 3435036189,
-										"is_variadic": false,
-										"keyword": "typename",
-										"kind": "template type parameter",
-										"name": "Base"
-									}],
-									"scope":  {
-										"is_templated": true,
-										"name": "RcBase",
-										"template_parameters": [{
-											"_fullName": "Base",
-											"_kind": "template type parameter",
-											"_name": "Base",
-											"id": 3435036189,
-											"is_variadic": false,
-											"keyword": "typename",
-											"kind": "template type parameter",
-											"name": "Base"
-										}]
-									}
-								}]
-							},
-							"unexposed_arguments": "stappler::xenolith::material2d::MenuSourceItem"
+									}]
+								}
+							}
 						},
 						"semantic_scope": "",
 						"signature": "()"

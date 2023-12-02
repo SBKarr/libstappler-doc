@@ -2257,6 +2257,331 @@
 						"semantic_scope": "",
 						"signature": "() const"
 					}, {
+						"_fullName": "::stappler::xenolith::basic2d::Layer::pushShadowCommands(stappler::xenolith::FrameInfo&,stappler::xenolith::NodeFlags,stappler::xenolith::Mat4 const&,SpanView<stappler::xenolith::basic2d::TransformVertexData>)",
+						"_kind": "member function",
+						"_name": "pushShadowCommands",
+						"body_kind": "declaration",
+						"cv_qualifier": "none",
+						"id": 2189196795,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_override": true,
+						"is_variadic": false,
+						"is_virtual": true,
+						"kind": "member function",
+						"name": "pushShadowCommands",
+						"parameters": [{
+							"_fullName": "",
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 46947589,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::xenolith::FrameInfo&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "stappler::xenolith::FrameInfo",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::xenolith::FrameInfo",
+										"objects": [{
+											"_fullName": "::stappler::xenolith::FrameInfo",
+											"_kind": "class",
+											"_name": "FrameInfo",
+											"class_kind": "struct",
+											"id": 962318048,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "FrameInfo",
+											"scope": {
+												"name": "FrameInfo"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}, {
+							"_fullName": "flags",
+							"_kind": "function parameter",
+							"_name": "flags",
+							"id": 2476191640,
+							"kind": "function parameter",
+							"name": "flags",
+							"type": {
+								"_typeName": "stappler::xenolith::NodeFlags",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::NodeFlags",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::NodeFlags",
+										"_kind": "enum",
+										"_name": "NodeFlags",
+										"has_explicit_type": false,
+										"id": 1096610839,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "NodeFlags",
+										"scope": {
+											"name": "NodeFlags"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
+						}, {
+							"_fullName": "",
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 46947589,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::xenolith::Mat4 const&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "stappler::xenolith::Mat4 const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "stappler::xenolith::Mat4",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::xenolith::Mat4",
+											"objects": [{
+												"_fullName": "::stappler::xenolith::Mat4",
+												"_kind": "type alias",
+												"_name": "Mat4",
+												"id": 905241342,
+												"kind": "type alias",
+												"name": "Mat4",
+												"underlying_type": {
+													"_typeName": "geom::Mat4",
+													"kind": "user_defined",
+													"target": {
+														"name": "geom::Mat4",
+														"objects": [{
+															"_fullName": "::stappler::geom::Mat4",
+															"_kind": "class",
+															"_name": "Mat4",
+															"attributes": [{
+																"arguments": [{
+																	"kind": "int_literal",
+																	"spelling": "16"
+																}],
+																"is_variadic": false,
+																"kind": "alignas_",
+																"name": "alignas"
+															}],
+															"class_kind": "class",
+															"comment": "\nDefines a 4 x 4 floating point matrix representing a 3D transformation.\n\nVectors are treated as columns, resulting in a matrix that is represented as follows,\nwhere x, y and z are the translation components of the matrix:\n\n    1  0  0  x\n    0  1  0  y\n    0  0  1  z\n    0  0  0  1\n\nThis matrix class is directly compatible with OpenGL since its elements are\nlaid out in memory exactly as they are expected by OpenGL.\nThe matrix uses column-major format such that array indices increase down column first.\nSince matrix multiplication is not commutative, multiplication must be done in the\ncorrect order when combining transformations. Suppose we have a translation\nmatrix T and a rotation matrix R. To first rotate an object around the origin\nand then translate it, you would multiply the two matrices as TR.\n\nLikewise, to first translate the object and then rotate it, you would do RT.\nSo generally, matrices must be multiplied in the reverse order in which you\nwant the transformations to take place (this also applies to\nthe scale, rotate, and translate methods below; these methods are convenience\nmethods for post-multiplying by a matrix representing a scale, rotation, or translation).\n\nIn the case of repeated local transformations (i.e. rotate around the Z-axis by 0.76 radians,\nthen translate by 2.1 along the X-axis, then ...), it is better to use the Transform class\n(which is optimized for that kind of usage).\n\n@see Transform\n",
+															"id": 3473668624,
+															"is_declaration": false,
+															"is_definition": true,
+															"is_final": false,
+															"kind": "class",
+															"name": "Mat4",
+															"scope": {
+																"name": "Mat4"
+															},
+															"semantic_scope": ""
+														}]
+													}
+												}
+											}]
+										}
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}, {
+							"_fullName": "",
+							"_kind": "function parameter",
+							"_name": "",
+							"default_value": {
+								"expression": [{
+									"kind": "identifier",
+									"spelling": "SpanView"
+								}, {
+									"kind": "punctuation",
+									"spelling": "<"
+								}, {
+									"kind": "identifier",
+									"spelling": "TransformVertexData"
+								}, {
+									"kind": "punctuation",
+									"spelling": ">"
+								}, {
+									"kind": "punctuation",
+									"spelling": "("
+								}, {
+									"kind": "punctuation",
+									"spelling": ")"
+								}],
+								"kind": "unexposed",
+								"type": {
+									"_typeName": "SpanView<stappler::xenolith::basic2d::TransformVertexData>",
+									"arguments_exposed": false,
+									"kind": "template_instantiation",
+									"primary_template": {
+										"name": "SpanView",
+										"objects": [{
+											"_fullName": "::stappler::SpanView<typename>",
+											"_kind": "class template",
+											"_name": "SpanView",
+											"class": {
+												"_fullName": "::stappler::SpanView<typename>",
+												"_kind": "class",
+												"_name": "SpanView",
+												"class_kind": "class",
+												"id": 2371948180,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "SpanView",
+												"scope": {
+													"is_templated": true,
+													"name": "SpanView",
+													"template_parameters": [{
+														"_fullName": "_Type",
+														"_kind": "template type parameter",
+														"_name": "_Type",
+														"id": 1327381061,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "_Type"
+													}]
+												},
+												"semantic_scope": ""
+											},
+											"id": 2371948180,
+											"kind": "class template",
+											"name": "SpanView",
+											"parameters": [{
+												"_fullName": "_Type",
+												"_kind": "template type parameter",
+												"_name": "_Type",
+												"id": 1327381061,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "_Type"
+											}],
+											"scope":  {
+												"is_templated": true,
+												"name": "SpanView",
+												"template_parameters": [{
+													"_fullName": "_Type",
+													"_kind": "template type parameter",
+													"_name": "_Type",
+													"id": 1327381061,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "_Type"
+												}]
+											}
+										}]
+									},
+									"unexposed_arguments": "stappler::xenolith::basic2d::TransformVertexData"
+								}
+							},
+							"id": 46947589,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "SpanView<stappler::xenolith::basic2d::TransformVertexData>",
+								"arguments_exposed": false,
+								"kind": "template_instantiation",
+								"primary_template": {
+									"name": "SpanView",
+									"objects": [{
+										"_fullName": "::stappler::SpanView<typename>",
+										"_kind": "class template",
+										"_name": "SpanView",
+										"class": {
+											"_fullName": "::stappler::SpanView<typename>",
+											"_kind": "class",
+											"_name": "SpanView",
+											"class_kind": "class",
+											"id": 2371948180,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "SpanView",
+											"scope": {
+												"is_templated": true,
+												"name": "SpanView",
+												"template_parameters": [{
+													"_fullName": "_Type",
+													"_kind": "template type parameter",
+													"_name": "_Type",
+													"id": 1327381061,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "_Type"
+												}]
+											},
+											"semantic_scope": ""
+										},
+										"id": 2371948180,
+										"kind": "class template",
+										"name": "SpanView",
+										"parameters": [{
+											"_fullName": "_Type",
+											"_kind": "template type parameter",
+											"_name": "_Type",
+											"id": 1327381061,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "_Type"
+										}],
+										"scope":  {
+											"is_templated": true,
+											"name": "SpanView",
+											"template_parameters": [{
+												"_fullName": "_Type",
+												"_kind": "template type parameter",
+												"_name": "_Type",
+												"id": 1327381061,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "_Type"
+											}]
+										}
+									}]
+								},
+								"unexposed_arguments": "stappler::xenolith::basic2d::TransformVertexData"
+							}
+						}],
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::xenolith::FrameInfo&,stappler::xenolith::NodeFlags,stappler::xenolith::Mat4 const&,SpanView<stappler::xenolith::basic2d::TransformVertexData>)"
+					}, {
 						"_fullName": "::stappler::xenolith::basic2d::Layer::_gradient",
 						"_kind": "member variable",
 						"_name": "_gradient",

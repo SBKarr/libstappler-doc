@@ -6007,61 +6007,164 @@
 				"semantic_scope": "",
 				"signature": "(memory::u16string&,char32_t)"
 			}, {
-				"_fullName": "::stappler::unicode::utf16Encode(std::basic_ostream<char16_t>&,char32_t)",
-				"_kind": "function",
+				"_fullName": "::stappler::unicode::utf16Encode<typename std::enable_if<std::is_class<std::ctype<char16_t>>::value>::type*>(std::basic_ostream<char16_t>&,char32_t)",
+				"_kind": "function template",
 				"_name": "utf16Encode",
-				"body_kind": "definition",
-				"id": 3656837637,
-				"is_consteval": false,
-				"is_constexpr": false,
-				"is_declaration": false,
-				"is_definition": true,
-				"is_variadic": false,
-				"kind": "function",
+				"childs": [{
+					"_fullName": "::stappler::unicode::utf16Encode<typename std::enable_if<std::is_class<std::ctype<char16_t>>::value>::type*>(std::basic_ostream<char16_t>&,char32_t)",
+					"_kind": "function",
+					"_name": "utf16Encode",
+					"body_kind": "definition",
+					"id": 1281703121,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "utf16Encode",
+					"parameters": [{
+						"_fullName": "out",
+						"_kind": "function parameter",
+						"_name": "out",
+						"id": 1528609455,
+						"kind": "function parameter",
+						"name": "out",
+						"type": {
+							"_typeName": "std::basic_ostream<char16_t>&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "std::basic_ostream<char16_t>",
+								"arguments_exposed": false,
+								"kind": "template_instantiation",
+								"primary_template": {
+									"name": "std::basic_ostream"
+								},
+								"unexposed_arguments": "char16_t"
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_fullName": "c",
+						"_kind": "function parameter",
+						"_name": "c",
+						"id": 4004515611,
+						"kind": "function parameter",
+						"name": "c",
+						"type": {
+							"_typeName": "char32_t",
+							"builtin_type_kind": "char32_t",
+							"kind": "builtin"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "uint8_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "uint8_t"
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(std::basic_ostream<char16_t>&,char32_t)"
+				}],
+				"function":  {
+					"_fullName": "::stappler::unicode::utf16Encode<typename std::enable_if<std::is_class<std::ctype<char16_t>>::value>::type*>(std::basic_ostream<char16_t>&,char32_t)",
+					"_kind": "function",
+					"_name": "utf16Encode",
+					"body_kind": "definition",
+					"id": 1281703121,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "utf16Encode",
+					"parameters": [{
+						"_fullName": "out",
+						"_kind": "function parameter",
+						"_name": "out",
+						"id": 1528609455,
+						"kind": "function parameter",
+						"name": "out",
+						"type": {
+							"_typeName": "std::basic_ostream<char16_t>&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "std::basic_ostream<char16_t>",
+								"arguments_exposed": false,
+								"kind": "template_instantiation",
+								"primary_template": {
+									"name": "std::basic_ostream"
+								},
+								"unexposed_arguments": "char16_t"
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_fullName": "c",
+						"_kind": "function parameter",
+						"_name": "c",
+						"id": 4004515611,
+						"kind": "function parameter",
+						"name": "c",
+						"type": {
+							"_typeName": "char32_t",
+							"builtin_type_kind": "char32_t",
+							"kind": "builtin"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "uint8_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "uint8_t"
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(std::basic_ostream<char16_t>&,char32_t)"
+				},
+				"id": 1281703121,
+				"kind": "function template",
 				"name": "utf16Encode",
 				"parameters": [{
-					"_fullName": "out",
-					"_kind": "function parameter",
-					"_name": "out",
-					"id": 1528609455,
-					"kind": "function parameter",
-					"name": "out",
+					"_fullName": "",
+					"_kind": "non type template parameter",
+					"_name": "",
+					"default_value": {
+						"expression": [{
+							"kind": "keyword",
+							"spelling": "nullptr"
+						}],
+						"kind": "unexposed",
+						"type": {
+							"_typeName": "typename std::enable_if<std::is_class<std::ctype<char16_t>>::value>::type*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "typename std::enable_if<std::is_class<std::ctype<char16_t>>::value>::type",
+								"kind": "user_defined",
+								"target": {
+									"name": "typename std::enable_if<std::is_class<std::ctype<char16_t>>::value>::type"
+								}
+							}
+						}
+					},
+					"id": 46947589,
+					"is_variadic": false,
+					"kind": "non type template parameter",
+					"name": "",
 					"type": {
-						"_typeName": "std::basic_ostream<char16_t>&",
-						"kind": "reference",
-						"referee": {
-							"_typeName": "std::basic_ostream<char16_t>",
-							"arguments_exposed": false,
-							"kind": "template_instantiation",
-							"primary_template": {
-								"name": "std::basic_ostream"
-							},
-							"unexposed_arguments": "char16_t"
-						},
-						"reference_kind": "lvalue"
+						"_typeName": "typename std::enable_if<std::is_class<std::ctype<char16_t>>::value>::type*",
+						"kind": "pointer",
+						"pointee": {
+							"_typeName": "typename std::enable_if<std::is_class<std::ctype<char16_t>>::value>::type",
+							"kind": "user_defined",
+							"target": {
+								"name": "typename std::enable_if<std::is_class<std::ctype<char16_t>>::value>::type"
+							}
+						}
 					}
-				}, {
-					"_fullName": "c",
-					"_kind": "function parameter",
-					"_name": "c",
-					"id": 4004515611,
-					"kind": "function parameter",
-					"name": "c",
-					"type": {
-						"_typeName": "char32_t",
-						"builtin_type_kind": "char32_t",
-						"kind": "builtin"
-					}
-				}],
-				"return_type":  {
-					"_typeName": "uint8_t",
-					"kind": "user_defined",
-					"target": {
-						"name": "uint8_t"
-					}
-				},
-				"semantic_scope": "",
-				"signature": "(std::basic_ostream<char16_t>&,char32_t)"
+				}]
 			}, {
 				"_fullName": "::stappler::unicode::isUtf8Surrogate(char)",
 				"_kind": "function",

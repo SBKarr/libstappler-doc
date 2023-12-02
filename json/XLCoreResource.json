@@ -12,6 +12,15 @@
 		"kind": "include directive",
 		"name": "XLCoreInfo.h"
 	}, {
+		"_fullName": "XLCoreObject.h",
+		"_kind": "include directive",
+		"_name": "XLCoreObject.h",
+		"id": 2921898603,
+		"include": "xenolith/core/XLCoreObject.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "XLCoreObject.h"
+	}, {
 		"_fullName": "XENOLITH_CORE_XLCORERESOURCE_H_",
 		"_kind": "macro definition",
 		"_name": "XENOLITH_CORE_XLCORERESOURCE_H_",
@@ -3041,12 +3050,12 @@
 						"semantic_scope": "",
 						"signature": "()"
 					}, {
-						"_fullName": "::stappler::xenolith::core::Builder::addBufferByRef(stappler::StringView,stappler::xenolith::core::BufferInfo&&,stappler::BytesView,Rc<stappler::xenolith::core::DataAtlas>&&)",
+						"_fullName": "::stappler::xenolith::core::Builder::addBufferByRef(stappler::StringView,stappler::xenolith::core::BufferInfo&&,stappler::BytesView,Rc<stappler::xenolith::core::DataAtlas>&&,stappler::xenolith::core::AccessType)",
 						"_kind": "member function",
 						"_name": "addBufferByRef",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 579340012,
+						"id": 2085922187,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -3871,6 +3880,82 @@
 								},
 								"reference_kind": "rvalue"
 							}
+						}, {
+							"_fullName": "",
+							"_kind": "function parameter",
+							"_name": "",
+							"default_value": {
+								"expression": [{
+									"kind": "identifier",
+									"spelling": "AccessType"
+								}, {
+									"kind": "punctuation",
+									"spelling": "::"
+								}, {
+									"kind": "identifier",
+									"spelling": "ShaderRead"
+								}],
+								"kind": "unexposed",
+								"type": {
+									"_typeName": "stappler::xenolith::core::AccessType",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::xenolith::core::AccessType",
+										"objects": [{
+											"_fullName": "::stappler::xenolith::core::AccessType",
+											"_kind": "enum",
+											"_name": "AccessType",
+											"has_explicit_type": false,
+											"id": 1354462768,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_scoped": true,
+											"kind": "enum",
+											"name": "AccessType",
+											"scope": {
+												"name": "AccessType"
+											},
+											"semantic_scope": "",
+											"underlying_type": {
+												"_typeName": "int",
+												"builtin_type_kind": "int",
+												"kind": "builtin"
+											}
+										}]
+									}
+								}
+							},
+							"id": 46947589,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::xenolith::core::AccessType",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::core::AccessType",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::core::AccessType",
+										"_kind": "enum",
+										"_name": "AccessType",
+										"has_explicit_type": false,
+										"id": 1354462768,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "AccessType",
+										"scope": {
+											"name": "AccessType"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
 						}],
 						"ref_qualifier": "none",
 						"return_type": {
@@ -4005,14 +4090,14 @@
 							}
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::StringView,stappler::xenolith::core::BufferInfo&&,stappler::BytesView,Rc<stappler::xenolith::core::DataAtlas>&&)"
+						"signature": "(stappler::StringView,stappler::xenolith::core::BufferInfo&&,stappler::BytesView,Rc<stappler::xenolith::core::DataAtlas>&&,stappler::xenolith::core::AccessType)"
 					}, {
-						"_fullName": "::stappler::xenolith::core::Builder::addBuffer(stappler::StringView,stappler::xenolith::core::BufferInfo&&,stappler::FilePath,Rc<stappler::xenolith::core::DataAtlas>&&)",
+						"_fullName": "::stappler::xenolith::core::Builder::addBuffer(stappler::StringView,stappler::xenolith::core::BufferInfo&&,stappler::FilePath,Rc<stappler::xenolith::core::DataAtlas>&&,stappler::xenolith::core::AccessType)",
 						"_kind": "member function",
 						"_name": "addBuffer",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 2726107743,
+						"id": 4042124759,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -4582,6 +4667,82 @@
 								},
 								"reference_kind": "rvalue"
 							}
+						}, {
+							"_fullName": "",
+							"_kind": "function parameter",
+							"_name": "",
+							"default_value": {
+								"expression": [{
+									"kind": "identifier",
+									"spelling": "AccessType"
+								}, {
+									"kind": "punctuation",
+									"spelling": "::"
+								}, {
+									"kind": "identifier",
+									"spelling": "ShaderRead"
+								}],
+								"kind": "unexposed",
+								"type": {
+									"_typeName": "stappler::xenolith::core::AccessType",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::xenolith::core::AccessType",
+										"objects": [{
+											"_fullName": "::stappler::xenolith::core::AccessType",
+											"_kind": "enum",
+											"_name": "AccessType",
+											"has_explicit_type": false,
+											"id": 1354462768,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_scoped": true,
+											"kind": "enum",
+											"name": "AccessType",
+											"scope": {
+												"name": "AccessType"
+											},
+											"semantic_scope": "",
+											"underlying_type": {
+												"_typeName": "int",
+												"builtin_type_kind": "int",
+												"kind": "builtin"
+											}
+										}]
+									}
+								}
+							},
+							"id": 46947589,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::xenolith::core::AccessType",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::core::AccessType",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::core::AccessType",
+										"_kind": "enum",
+										"_name": "AccessType",
+										"has_explicit_type": false,
+										"id": 1354462768,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "AccessType",
+										"scope": {
+											"name": "AccessType"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
 						}],
 						"ref_qualifier": "none",
 						"return_type": {
@@ -4716,14 +4877,14 @@
 							}
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::StringView,stappler::xenolith::core::BufferInfo&&,stappler::FilePath,Rc<stappler::xenolith::core::DataAtlas>&&)"
+						"signature": "(stappler::StringView,stappler::xenolith::core::BufferInfo&&,stappler::FilePath,Rc<stappler::xenolith::core::DataAtlas>&&,stappler::xenolith::core::AccessType)"
 					}, {
-						"_fullName": "::stappler::xenolith::core::Builder::addBuffer(stappler::StringView,stappler::xenolith::core::BufferInfo&&,stappler::BytesView,Rc<stappler::xenolith::core::DataAtlas>&&)",
+						"_fullName": "::stappler::xenolith::core::Builder::addBuffer(stappler::StringView,stappler::xenolith::core::BufferInfo&&,stappler::BytesView,Rc<stappler::xenolith::core::DataAtlas>&&,stappler::xenolith::core::AccessType)",
 						"_kind": "member function",
 						"_name": "addBuffer",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 3771409963,
+						"id": 3778818218,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -5548,6 +5709,82 @@
 								},
 								"reference_kind": "rvalue"
 							}
+						}, {
+							"_fullName": "",
+							"_kind": "function parameter",
+							"_name": "",
+							"default_value": {
+								"expression": [{
+									"kind": "identifier",
+									"spelling": "AccessType"
+								}, {
+									"kind": "punctuation",
+									"spelling": "::"
+								}, {
+									"kind": "identifier",
+									"spelling": "ShaderRead"
+								}],
+								"kind": "unexposed",
+								"type": {
+									"_typeName": "stappler::xenolith::core::AccessType",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::xenolith::core::AccessType",
+										"objects": [{
+											"_fullName": "::stappler::xenolith::core::AccessType",
+											"_kind": "enum",
+											"_name": "AccessType",
+											"has_explicit_type": false,
+											"id": 1354462768,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_scoped": true,
+											"kind": "enum",
+											"name": "AccessType",
+											"scope": {
+												"name": "AccessType"
+											},
+											"semantic_scope": "",
+											"underlying_type": {
+												"_typeName": "int",
+												"builtin_type_kind": "int",
+												"kind": "builtin"
+											}
+										}]
+									}
+								}
+							},
+							"id": 46947589,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::xenolith::core::AccessType",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::core::AccessType",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::core::AccessType",
+										"_kind": "enum",
+										"_name": "AccessType",
+										"has_explicit_type": false,
+										"id": 1354462768,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "AccessType",
+										"scope": {
+											"name": "AccessType"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
 						}],
 						"ref_qualifier": "none",
 						"return_type": {
@@ -5682,14 +5919,14 @@
 							}
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::StringView,stappler::xenolith::core::BufferInfo&&,stappler::BytesView,Rc<stappler::xenolith::core::DataAtlas>&&)"
+						"signature": "(stappler::StringView,stappler::xenolith::core::BufferInfo&&,stappler::BytesView,Rc<stappler::xenolith::core::DataAtlas>&&,stappler::xenolith::core::AccessType)"
 					}, {
-						"_fullName": "::stappler::xenolith::core::Builder::addBuffer(stappler::StringView,stappler::xenolith::core::BufferInfo&&,memory::function<void (uint8_t *, uint64_t, const BufferData::DataCallback &)> const&,Rc<stappler::xenolith::core::DataAtlas>&&)",
+						"_fullName": "::stappler::xenolith::core::Builder::addBuffer(stappler::StringView,stappler::xenolith::core::BufferInfo&&,memory::function<void (uint8_t *, uint64_t, const BufferData::DataCallback &)> const&,Rc<stappler::xenolith::core::DataAtlas>&&,stappler::xenolith::core::AccessType)",
 						"_kind": "member function",
 						"_name": "addBuffer",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 904664628,
+						"id": 3936350725,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -6367,6 +6604,82 @@
 								},
 								"reference_kind": "rvalue"
 							}
+						}, {
+							"_fullName": "",
+							"_kind": "function parameter",
+							"_name": "",
+							"default_value": {
+								"expression": [{
+									"kind": "identifier",
+									"spelling": "AccessType"
+								}, {
+									"kind": "punctuation",
+									"spelling": "::"
+								}, {
+									"kind": "identifier",
+									"spelling": "ShaderRead"
+								}],
+								"kind": "unexposed",
+								"type": {
+									"_typeName": "stappler::xenolith::core::AccessType",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::xenolith::core::AccessType",
+										"objects": [{
+											"_fullName": "::stappler::xenolith::core::AccessType",
+											"_kind": "enum",
+											"_name": "AccessType",
+											"has_explicit_type": false,
+											"id": 1354462768,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_scoped": true,
+											"kind": "enum",
+											"name": "AccessType",
+											"scope": {
+												"name": "AccessType"
+											},
+											"semantic_scope": "",
+											"underlying_type": {
+												"_typeName": "int",
+												"builtin_type_kind": "int",
+												"kind": "builtin"
+											}
+										}]
+									}
+								}
+							},
+							"id": 46947589,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::xenolith::core::AccessType",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::core::AccessType",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::core::AccessType",
+										"_kind": "enum",
+										"_name": "AccessType",
+										"has_explicit_type": false,
+										"id": 1354462768,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "AccessType",
+										"scope": {
+											"name": "AccessType"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
 						}],
 						"ref_qualifier": "none",
 						"return_type": {
@@ -6501,14 +6814,14 @@
 							}
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::StringView,stappler::xenolith::core::BufferInfo&&,memory::function<void (uint8_t *, uint64_t, const BufferData::DataCallback &)> const&,Rc<stappler::xenolith::core::DataAtlas>&&)"
+						"signature": "(stappler::StringView,stappler::xenolith::core::BufferInfo&&,memory::function<void (uint8_t *, uint64_t, const BufferData::DataCallback &)> const&,Rc<stappler::xenolith::core::DataAtlas>&&,stappler::xenolith::core::AccessType)"
 					}, {
-						"_fullName": "::stappler::xenolith::core::Builder::addImageByRef(stappler::StringView,stappler::xenolith::core::ImageInfo&&,stappler::BytesView)",
+						"_fullName": "::stappler::xenolith::core::Builder::addImageByRef(stappler::StringView,stappler::xenolith::core::ImageInfo&&,stappler::BytesView,stappler::xenolith::core::AttachmentLayout,stappler::xenolith::core::AccessType)",
 						"_kind": "member function",
 						"_name": "addImageByRef",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 198773705,
+						"id": 331890545,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -7190,6 +7503,162 @@
 									}]
 								}
 							}
+						}, {
+							"_fullName": "",
+							"_kind": "function parameter",
+							"_name": "",
+							"default_value": {
+								"expression": [{
+									"kind": "identifier",
+									"spelling": "AttachmentLayout"
+								}, {
+									"kind": "punctuation",
+									"spelling": "::"
+								}, {
+									"kind": "identifier",
+									"spelling": "ShaderReadOnlyOptimal"
+								}],
+								"kind": "unexposed",
+								"type": {
+									"_typeName": "stappler::xenolith::core::AttachmentLayout",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::xenolith::core::AttachmentLayout",
+										"objects": [{
+											"_fullName": "::stappler::xenolith::core::AttachmentLayout",
+											"_kind": "enum",
+											"_name": "AttachmentLayout",
+											"has_explicit_type": true,
+											"id": 506678819,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_scoped": true,
+											"kind": "enum",
+											"name": "AttachmentLayout",
+											"scope": {
+												"name": "AttachmentLayout"
+											},
+											"semantic_scope": "",
+											"underlying_type": {
+												"_typeName": "uint32_t",
+												"kind": "user_defined",
+												"target": {
+													"name": "uint32_t"
+												}
+											}
+										}]
+									}
+								}
+							},
+							"id": 46947589,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::xenolith::core::AttachmentLayout",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::core::AttachmentLayout",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::core::AttachmentLayout",
+										"_kind": "enum",
+										"_name": "AttachmentLayout",
+										"has_explicit_type": true,
+										"id": 506678819,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "AttachmentLayout",
+										"scope": {
+											"name": "AttachmentLayout"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "uint32_t",
+											"kind": "user_defined",
+											"target": {
+												"name": "uint32_t"
+											}
+										}
+									}]
+								}
+							}
+						}, {
+							"_fullName": "",
+							"_kind": "function parameter",
+							"_name": "",
+							"default_value": {
+								"expression": [{
+									"kind": "identifier",
+									"spelling": "AccessType"
+								}, {
+									"kind": "punctuation",
+									"spelling": "::"
+								}, {
+									"kind": "identifier",
+									"spelling": "ShaderRead"
+								}],
+								"kind": "unexposed",
+								"type": {
+									"_typeName": "stappler::xenolith::core::AccessType",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::xenolith::core::AccessType",
+										"objects": [{
+											"_fullName": "::stappler::xenolith::core::AccessType",
+											"_kind": "enum",
+											"_name": "AccessType",
+											"has_explicit_type": false,
+											"id": 1354462768,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_scoped": true,
+											"kind": "enum",
+											"name": "AccessType",
+											"scope": {
+												"name": "AccessType"
+											},
+											"semantic_scope": "",
+											"underlying_type": {
+												"_typeName": "int",
+												"builtin_type_kind": "int",
+												"kind": "builtin"
+											}
+										}]
+									}
+								}
+							},
+							"id": 46947589,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::xenolith::core::AccessType",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::core::AccessType",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::core::AccessType",
+										"_kind": "enum",
+										"_name": "AccessType",
+										"has_explicit_type": false,
+										"id": 1354462768,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "AccessType",
+										"scope": {
+											"name": "AccessType"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
 						}],
 						"ref_qualifier": "none",
 						"return_type": {
@@ -7356,14 +7825,14 @@
 							}
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::StringView,stappler::xenolith::core::ImageInfo&&,stappler::BytesView)"
+						"signature": "(stappler::StringView,stappler::xenolith::core::ImageInfo&&,stappler::BytesView,stappler::xenolith::core::AttachmentLayout,stappler::xenolith::core::AccessType)"
 					}, {
-						"_fullName": "::stappler::xenolith::core::Builder::addImage(stappler::StringView,stappler::xenolith::core::ImageInfo&&,stappler::FilePath)",
+						"_fullName": "::stappler::xenolith::core::Builder::addImage(stappler::StringView,stappler::xenolith::core::ImageInfo&&,stappler::FilePath,stappler::xenolith::core::AttachmentLayout,stappler::xenolith::core::AccessType)",
 						"_kind": "member function",
 						"_name": "addImage",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 3585269160,
+						"id": 2312461288,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -7790,6 +8259,162 @@
 									}]
 								}
 							}
+						}, {
+							"_fullName": "",
+							"_kind": "function parameter",
+							"_name": "",
+							"default_value": {
+								"expression": [{
+									"kind": "identifier",
+									"spelling": "AttachmentLayout"
+								}, {
+									"kind": "punctuation",
+									"spelling": "::"
+								}, {
+									"kind": "identifier",
+									"spelling": "ShaderReadOnlyOptimal"
+								}],
+								"kind": "unexposed",
+								"type": {
+									"_typeName": "stappler::xenolith::core::AttachmentLayout",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::xenolith::core::AttachmentLayout",
+										"objects": [{
+											"_fullName": "::stappler::xenolith::core::AttachmentLayout",
+											"_kind": "enum",
+											"_name": "AttachmentLayout",
+											"has_explicit_type": true,
+											"id": 506678819,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_scoped": true,
+											"kind": "enum",
+											"name": "AttachmentLayout",
+											"scope": {
+												"name": "AttachmentLayout"
+											},
+											"semantic_scope": "",
+											"underlying_type": {
+												"_typeName": "uint32_t",
+												"kind": "user_defined",
+												"target": {
+													"name": "uint32_t"
+												}
+											}
+										}]
+									}
+								}
+							},
+							"id": 46947589,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::xenolith::core::AttachmentLayout",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::core::AttachmentLayout",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::core::AttachmentLayout",
+										"_kind": "enum",
+										"_name": "AttachmentLayout",
+										"has_explicit_type": true,
+										"id": 506678819,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "AttachmentLayout",
+										"scope": {
+											"name": "AttachmentLayout"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "uint32_t",
+											"kind": "user_defined",
+											"target": {
+												"name": "uint32_t"
+											}
+										}
+									}]
+								}
+							}
+						}, {
+							"_fullName": "",
+							"_kind": "function parameter",
+							"_name": "",
+							"default_value": {
+								"expression": [{
+									"kind": "identifier",
+									"spelling": "AccessType"
+								}, {
+									"kind": "punctuation",
+									"spelling": "::"
+								}, {
+									"kind": "identifier",
+									"spelling": "ShaderRead"
+								}],
+								"kind": "unexposed",
+								"type": {
+									"_typeName": "stappler::xenolith::core::AccessType",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::xenolith::core::AccessType",
+										"objects": [{
+											"_fullName": "::stappler::xenolith::core::AccessType",
+											"_kind": "enum",
+											"_name": "AccessType",
+											"has_explicit_type": false,
+											"id": 1354462768,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_scoped": true,
+											"kind": "enum",
+											"name": "AccessType",
+											"scope": {
+												"name": "AccessType"
+											},
+											"semantic_scope": "",
+											"underlying_type": {
+												"_typeName": "int",
+												"builtin_type_kind": "int",
+												"kind": "builtin"
+											}
+										}]
+									}
+								}
+							},
+							"id": 46947589,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::xenolith::core::AccessType",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::core::AccessType",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::core::AccessType",
+										"_kind": "enum",
+										"_name": "AccessType",
+										"has_explicit_type": false,
+										"id": 1354462768,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "AccessType",
+										"scope": {
+											"name": "AccessType"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
 						}],
 						"ref_qualifier": "none",
 						"return_type": {
@@ -7956,14 +8581,14 @@
 							}
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::StringView,stappler::xenolith::core::ImageInfo&&,stappler::FilePath)"
+						"signature": "(stappler::StringView,stappler::xenolith::core::ImageInfo&&,stappler::FilePath,stappler::xenolith::core::AttachmentLayout,stappler::xenolith::core::AccessType)"
 					}, {
-						"_fullName": "::stappler::xenolith::core::Builder::addImage(stappler::StringView,stappler::xenolith::core::ImageInfo&&,stappler::BytesView)",
+						"_fullName": "::stappler::xenolith::core::Builder::addImage(stappler::StringView,stappler::xenolith::core::ImageInfo&&,stappler::BytesView,stappler::xenolith::core::AttachmentLayout,stappler::xenolith::core::AccessType)",
 						"_kind": "member function",
 						"_name": "addImage",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 1933955957,
+						"id": 2357370859,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -8645,6 +9270,162 @@
 									}]
 								}
 							}
+						}, {
+							"_fullName": "",
+							"_kind": "function parameter",
+							"_name": "",
+							"default_value": {
+								"expression": [{
+									"kind": "identifier",
+									"spelling": "AttachmentLayout"
+								}, {
+									"kind": "punctuation",
+									"spelling": "::"
+								}, {
+									"kind": "identifier",
+									"spelling": "ShaderReadOnlyOptimal"
+								}],
+								"kind": "unexposed",
+								"type": {
+									"_typeName": "stappler::xenolith::core::AttachmentLayout",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::xenolith::core::AttachmentLayout",
+										"objects": [{
+											"_fullName": "::stappler::xenolith::core::AttachmentLayout",
+											"_kind": "enum",
+											"_name": "AttachmentLayout",
+											"has_explicit_type": true,
+											"id": 506678819,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_scoped": true,
+											"kind": "enum",
+											"name": "AttachmentLayout",
+											"scope": {
+												"name": "AttachmentLayout"
+											},
+											"semantic_scope": "",
+											"underlying_type": {
+												"_typeName": "uint32_t",
+												"kind": "user_defined",
+												"target": {
+													"name": "uint32_t"
+												}
+											}
+										}]
+									}
+								}
+							},
+							"id": 46947589,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::xenolith::core::AttachmentLayout",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::core::AttachmentLayout",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::core::AttachmentLayout",
+										"_kind": "enum",
+										"_name": "AttachmentLayout",
+										"has_explicit_type": true,
+										"id": 506678819,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "AttachmentLayout",
+										"scope": {
+											"name": "AttachmentLayout"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "uint32_t",
+											"kind": "user_defined",
+											"target": {
+												"name": "uint32_t"
+											}
+										}
+									}]
+								}
+							}
+						}, {
+							"_fullName": "",
+							"_kind": "function parameter",
+							"_name": "",
+							"default_value": {
+								"expression": [{
+									"kind": "identifier",
+									"spelling": "AccessType"
+								}, {
+									"kind": "punctuation",
+									"spelling": "::"
+								}, {
+									"kind": "identifier",
+									"spelling": "ShaderRead"
+								}],
+								"kind": "unexposed",
+								"type": {
+									"_typeName": "stappler::xenolith::core::AccessType",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::xenolith::core::AccessType",
+										"objects": [{
+											"_fullName": "::stappler::xenolith::core::AccessType",
+											"_kind": "enum",
+											"_name": "AccessType",
+											"has_explicit_type": false,
+											"id": 1354462768,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_scoped": true,
+											"kind": "enum",
+											"name": "AccessType",
+											"scope": {
+												"name": "AccessType"
+											},
+											"semantic_scope": "",
+											"underlying_type": {
+												"_typeName": "int",
+												"builtin_type_kind": "int",
+												"kind": "builtin"
+											}
+										}]
+									}
+								}
+							},
+							"id": 46947589,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::xenolith::core::AccessType",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::core::AccessType",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::core::AccessType",
+										"_kind": "enum",
+										"_name": "AccessType",
+										"has_explicit_type": false,
+										"id": 1354462768,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "AccessType",
+										"scope": {
+											"name": "AccessType"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
 						}],
 						"ref_qualifier": "none",
 						"return_type": {
@@ -8811,14 +9592,14 @@
 							}
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::StringView,stappler::xenolith::core::ImageInfo&&,stappler::BytesView)"
+						"signature": "(stappler::StringView,stappler::xenolith::core::ImageInfo&&,stappler::BytesView,stappler::xenolith::core::AttachmentLayout,stappler::xenolith::core::AccessType)"
 					}, {
-						"_fullName": "::stappler::xenolith::core::Builder::addImage(stappler::StringView,stappler::xenolith::core::ImageInfo&&,memory::function<void (uint8_t *, uint64_t, const ImageData::DataCallback &)> const&)",
+						"_fullName": "::stappler::xenolith::core::Builder::addImage(stappler::StringView,stappler::xenolith::core::ImageInfo&&,memory::function<void (uint8_t *, uint64_t, const ImageData::DataCallback &)> const&,stappler::xenolith::core::AttachmentLayout,stappler::xenolith::core::AccessType)",
 						"_kind": "member function",
 						"_name": "addImage",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 2553587798,
+						"id": 3719176046,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -9353,6 +10134,162 @@
 								},
 								"reference_kind": "lvalue"
 							}
+						}, {
+							"_fullName": "",
+							"_kind": "function parameter",
+							"_name": "",
+							"default_value": {
+								"expression": [{
+									"kind": "identifier",
+									"spelling": "AttachmentLayout"
+								}, {
+									"kind": "punctuation",
+									"spelling": "::"
+								}, {
+									"kind": "identifier",
+									"spelling": "ShaderReadOnlyOptimal"
+								}],
+								"kind": "unexposed",
+								"type": {
+									"_typeName": "stappler::xenolith::core::AttachmentLayout",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::xenolith::core::AttachmentLayout",
+										"objects": [{
+											"_fullName": "::stappler::xenolith::core::AttachmentLayout",
+											"_kind": "enum",
+											"_name": "AttachmentLayout",
+											"has_explicit_type": true,
+											"id": 506678819,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_scoped": true,
+											"kind": "enum",
+											"name": "AttachmentLayout",
+											"scope": {
+												"name": "AttachmentLayout"
+											},
+											"semantic_scope": "",
+											"underlying_type": {
+												"_typeName": "uint32_t",
+												"kind": "user_defined",
+												"target": {
+													"name": "uint32_t"
+												}
+											}
+										}]
+									}
+								}
+							},
+							"id": 46947589,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::xenolith::core::AttachmentLayout",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::core::AttachmentLayout",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::core::AttachmentLayout",
+										"_kind": "enum",
+										"_name": "AttachmentLayout",
+										"has_explicit_type": true,
+										"id": 506678819,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "AttachmentLayout",
+										"scope": {
+											"name": "AttachmentLayout"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "uint32_t",
+											"kind": "user_defined",
+											"target": {
+												"name": "uint32_t"
+											}
+										}
+									}]
+								}
+							}
+						}, {
+							"_fullName": "",
+							"_kind": "function parameter",
+							"_name": "",
+							"default_value": {
+								"expression": [{
+									"kind": "identifier",
+									"spelling": "AccessType"
+								}, {
+									"kind": "punctuation",
+									"spelling": "::"
+								}, {
+									"kind": "identifier",
+									"spelling": "ShaderRead"
+								}],
+								"kind": "unexposed",
+								"type": {
+									"_typeName": "stappler::xenolith::core::AccessType",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::xenolith::core::AccessType",
+										"objects": [{
+											"_fullName": "::stappler::xenolith::core::AccessType",
+											"_kind": "enum",
+											"_name": "AccessType",
+											"has_explicit_type": false,
+											"id": 1354462768,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_scoped": true,
+											"kind": "enum",
+											"name": "AccessType",
+											"scope": {
+												"name": "AccessType"
+											},
+											"semantic_scope": "",
+											"underlying_type": {
+												"_typeName": "int",
+												"builtin_type_kind": "int",
+												"kind": "builtin"
+											}
+										}]
+									}
+								}
+							},
+							"id": 46947589,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::xenolith::core::AccessType",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::core::AccessType",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::core::AccessType",
+										"_kind": "enum",
+										"_name": "AccessType",
+										"has_explicit_type": false,
+										"id": 1354462768,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "AccessType",
+										"scope": {
+											"name": "AccessType"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
 						}],
 						"ref_qualifier": "none",
 						"return_type": {
@@ -9519,7 +10456,30 @@
 							}
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::StringView,stappler::xenolith::core::ImageInfo&&,memory::function<void (uint8_t *, uint64_t, const ImageData::DataCallback &)> const&)"
+						"signature": "(stappler::StringView,stappler::xenolith::core::ImageInfo&&,memory::function<void (uint8_t *, uint64_t, const ImageData::DataCallback &)> const&,stappler::xenolith::core::AttachmentLayout,stappler::xenolith::core::AccessType)"
+					}, {
+						"_fullName": "::stappler::xenolith::core::Builder::empty() const",
+						"_kind": "member function",
+						"_name": "empty",
+						"body_kind": "declaration",
+						"cv_qualifier": "const",
+						"id": 4110315730,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "empty",
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "bool",
+							"builtin_type_kind": "bool",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "() const"
 					}, {
 						"_fullName": "protected",
 						"_kind": "access specifier",

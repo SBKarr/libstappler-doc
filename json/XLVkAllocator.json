@@ -12,15 +12,6 @@
 		"kind": "include directive",
 		"name": "XLVkInfo.h"
 	}, {
-		"_fullName": "XLVkObject.h",
-		"_kind": "include directive",
-		"_name": "XLVkObject.h",
-		"id": 500163107,
-		"include": "xenolith/backend/vk/XLVkObject.h",
-		"include_kind": "local",
-		"kind": "include directive",
-		"name": "XLVkObject.h"
-	}, {
 		"_fullName": "XENOLITH_BACKEND_VK_XLVKALLOCATOR_H_",
 		"_kind": "macro definition",
 		"_name": "XENOLITH_BACKEND_VK_XLVKALLOCATOR_H_",
@@ -60,19 +51,51 @@
 					},
 					"semantic_scope": ""
 				}, {
-					"_fullName": "::stappler::xenolith::vk::DeviceBuffer",
+					"_fullName": "::stappler::xenolith::vk::DeviceMemory",
 					"_kind": "class",
-					"_name": "DeviceBuffer",
+					"_name": "DeviceMemory",
 					"childs": null,
 					"class_kind": "class",
-					"id": 316276138,
+					"id": 3146002152,
 					"is_declaration": true,
 					"is_definition": false,
 					"is_final": false,
 					"kind": "class",
-					"name": "DeviceBuffer",
+					"name": "DeviceMemory",
 					"scope": {
-						"name": "DeviceBuffer"
+						"name": "DeviceMemory"
+					},
+					"semantic_scope": ""
+				}, {
+					"_fullName": "::stappler::xenolith::vk::Image",
+					"_kind": "class",
+					"_name": "Image",
+					"childs": null,
+					"class_kind": "class",
+					"id": 1382465411,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_final": false,
+					"kind": "class",
+					"name": "Image",
+					"scope": {
+						"name": "Image"
+					},
+					"semantic_scope": ""
+				}, {
+					"_fullName": "::stappler::xenolith::vk::Buffer",
+					"_kind": "class",
+					"_name": "Buffer",
+					"childs": null,
+					"class_kind": "class",
+					"id": 971515796,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_final": false,
+					"kind": "class",
+					"name": "Buffer",
+					"scope": {
+						"name": "Buffer"
 					},
 					"semantic_scope": ""
 				}, {
@@ -5814,63 +5837,98 @@
 																			"_kind": "class",
 																			"_name": "Object",
 																			"bases": [{
-																				"_fullName": "Ref",
+																				"_fullName": "NamedRef",
 																				"_kind": "base class specifier",
-																				"_name": "Ref",
+																				"_name": "NamedRef",
 																				"access_specifier": "public",
-																				"id": 1165741041,
+																				"id": 2583947547,
 																				"is_virtual": false,
 																				"kind": "base class specifier",
-																				"name": "Ref",
+																				"name": "NamedRef",
 																				"type": {
-																					"_typeName": "stappler::mem_std::Ref",
+																					"_typeName": "stappler::NamedRef",
 																					"kind": "user_defined",
 																					"target": {
-																						"name": "stappler::mem_std::Ref",
+																						"name": "stappler::NamedRef",
 																						"objects": [{
-																							"_fullName": "::stappler::mem_std::Ref",
-																							"_kind": "type alias",
-																							"_name": "Ref",
-																							"id": 3010886988,
-																							"kind": "type alias",
-																							"name": "Ref",
-																							"underlying_type": {
-																								"_typeName": "RefBase<memory::StandartInterface>",
-																								"arguments_exposed": false,
-																								"kind": "template_instantiation",
-																								"primary_template": {
-																									"name": "RefBase",
-																									"objects": [{
-																										"_fullName": "::stappler::RefBase<typename>",
-																										"_kind": "class template",
-																										"_name": "RefBase",
-																										"class": {
+																							"_fullName": "::stappler::NamedRef",
+																							"_kind": "class",
+																							"_name": "NamedRef",
+																							"bases": [{
+																								"_fullName": "RefBase<memory::StandartInterface>",
+																								"_kind": "base class specifier",
+																								"_name": "RefBase<memory::StandartInterface>",
+																								"access_specifier": "public",
+																								"id": 1271245336,
+																								"is_virtual": false,
+																								"kind": "base class specifier",
+																								"name": "RefBase<memory::StandartInterface>",
+																								"type": {
+																									"_typeName": "RefBase<memory::StandartInterface>",
+																									"arguments_exposed": false,
+																									"kind": "template_instantiation",
+																									"primary_template": {
+																										"name": "RefBase",
+																										"objects": [{
 																											"_fullName": "::stappler::RefBase<typename>",
-																											"_kind": "class",
+																											"_kind": "class template",
 																											"_name": "RefBase",
-																											"bases": [{
-																												"_fullName": "Interface::AllocBaseType",
-																												"_kind": "base class specifier",
-																												"_name": "Interface::AllocBaseType",
-																												"access_specifier": "public",
-																												"id": 25533212,
-																												"is_virtual": false,
-																												"kind": "base class specifier",
-																												"name": "Interface::AllocBaseType",
-																												"type": {
-																													"_typeName": "Interface::AllocBaseType",
-																													"kind": "unexposed",
-																													"name": "Interface::AllocBaseType"
-																												}
-																											}],
-																											"class_kind": "class",
+																											"class": {
+																												"_fullName": "::stappler::RefBase<typename>",
+																												"_kind": "class",
+																												"_name": "RefBase",
+																												"bases": [{
+																													"_fullName": "Interface::AllocBaseType",
+																													"_kind": "base class specifier",
+																													"_name": "Interface::AllocBaseType",
+																													"access_specifier": "public",
+																													"id": 25533212,
+																													"is_virtual": false,
+																													"kind": "base class specifier",
+																													"name": "Interface::AllocBaseType",
+																													"type": {
+																														"_typeName": "Interface::AllocBaseType",
+																														"kind": "unexposed",
+																														"name": "Interface::AllocBaseType"
+																													}
+																												}],
+																												"class_kind": "class",
+																												"id": 2191419057,
+																												"is_declaration": false,
+																												"is_definition": true,
+																												"is_final": false,
+																												"kind": "class",
+																												"name": "RefBase",
+																												"scope": {
+																													"is_templated": true,
+																													"name": "RefBase",
+																													"template_parameters": [{
+																														"_fullName": "Interface",
+																														"_kind": "template type parameter",
+																														"_name": "Interface",
+																														"id": 2255344761,
+																														"is_variadic": false,
+																														"keyword": "typename",
+																														"kind": "template type parameter",
+																														"name": "Interface"
+																													}]
+																												},
+																												"semantic_scope": ""
+																											},
 																											"id": 2191419057,
-																											"is_declaration": false,
-																											"is_definition": true,
-																											"is_final": false,
-																											"kind": "class",
+																											"kind": "class template",
 																											"name": "RefBase",
-																											"scope": {
+																											"parameters": [{
+																												"_fullName": "Interface",
+																												"_kind": "template type parameter",
+																												"_name": "Interface",
+																												"id": 2255344761,
+																												"is_variadic": false,
+																												"keyword": "typename",
+																												"kind": "template type parameter",
+																												"name": "Interface"
+																											}],
+																											"scope":  {
 																												"is_templated": true,
 																												"name": "RefBase",
 																												"template_parameters": [{
@@ -5883,70 +5941,21 @@
 																													"kind": "template type parameter",
 																													"name": "Interface"
 																												}]
-																											},
-																											"semantic_scope": ""
-																										},
-																										"id": 2191419057,
-																										"kind": "class template",
-																										"name": "RefBase",
-																										"parameters": [{
-																											"_fullName": "Interface",
-																											"_kind": "template type parameter",
-																											"_name": "Interface",
-																											"id": 2255344761,
-																											"is_variadic": false,
-																											"keyword": "typename",
-																											"kind": "template type parameter",
-																											"name": "Interface"
-																										}],
-																										"scope":  {
-																											"is_templated": true,
-																											"name": "RefBase",
-																											"template_parameters": [{
-																												"_fullName": "Interface",
-																												"_kind": "template type parameter",
-																												"_name": "Interface",
-																												"id": 2255344761,
-																												"is_variadic": false,
-																												"keyword": "typename",
-																												"kind": "template type parameter",
-																												"name": "Interface"
-																											}]
-																										}
-																									}]
-																								},
-																								"unexposed_arguments": "memory::StandartInterface"
-																							}
-																						}]
-																					}
-																				}
-																			}, {
-																				"_fullName": "ObjectInterface",
-																				"_kind": "base class specifier",
-																				"_name": "ObjectInterface",
-																				"access_specifier": "public",
-																				"id": 2074766780,
-																				"is_virtual": false,
-																				"kind": "base class specifier",
-																				"name": "ObjectInterface",
-																				"type": {
-																					"_typeName": "stappler::xenolith::core::ObjectInterface",
-																					"kind": "user_defined",
-																					"target": {
-																						"name": "stappler::xenolith::core::ObjectInterface",
-																						"objects": [{
-																							"_fullName": "::stappler::xenolith::core::ObjectInterface",
-																							"_kind": "class",
-																							"_name": "ObjectInterface",
+																											}
+																										}]
+																									},
+																									"unexposed_arguments": "memory::StandartInterface"
+																								}
+																							}],
 																							"class_kind": "class",
-																							"id": 3740112328,
+																							"id": 2162121619,
 																							"is_declaration": false,
 																							"is_definition": true,
 																							"is_final": false,
 																							"kind": "class",
-																							"name": "ObjectInterface",
+																							"name": "NamedRef",
 																							"scope": {
-																								"name": "ObjectInterface"
+																								"name": "NamedRef"
 																							},
 																							"semantic_scope": ""
 																						}]
@@ -6113,63 +6122,98 @@
 																			"_kind": "class",
 																			"_name": "Object",
 																			"bases": [{
-																				"_fullName": "Ref",
+																				"_fullName": "NamedRef",
 																				"_kind": "base class specifier",
-																				"_name": "Ref",
+																				"_name": "NamedRef",
 																				"access_specifier": "public",
-																				"id": 1165741041,
+																				"id": 2583947547,
 																				"is_virtual": false,
 																				"kind": "base class specifier",
-																				"name": "Ref",
+																				"name": "NamedRef",
 																				"type": {
-																					"_typeName": "stappler::mem_std::Ref",
+																					"_typeName": "stappler::NamedRef",
 																					"kind": "user_defined",
 																					"target": {
-																						"name": "stappler::mem_std::Ref",
+																						"name": "stappler::NamedRef",
 																						"objects": [{
-																							"_fullName": "::stappler::mem_std::Ref",
-																							"_kind": "type alias",
-																							"_name": "Ref",
-																							"id": 3010886988,
-																							"kind": "type alias",
-																							"name": "Ref",
-																							"underlying_type": {
-																								"_typeName": "RefBase<memory::StandartInterface>",
-																								"arguments_exposed": false,
-																								"kind": "template_instantiation",
-																								"primary_template": {
-																									"name": "RefBase",
-																									"objects": [{
-																										"_fullName": "::stappler::RefBase<typename>",
-																										"_kind": "class template",
-																										"_name": "RefBase",
-																										"class": {
+																							"_fullName": "::stappler::NamedRef",
+																							"_kind": "class",
+																							"_name": "NamedRef",
+																							"bases": [{
+																								"_fullName": "RefBase<memory::StandartInterface>",
+																								"_kind": "base class specifier",
+																								"_name": "RefBase<memory::StandartInterface>",
+																								"access_specifier": "public",
+																								"id": 1271245336,
+																								"is_virtual": false,
+																								"kind": "base class specifier",
+																								"name": "RefBase<memory::StandartInterface>",
+																								"type": {
+																									"_typeName": "RefBase<memory::StandartInterface>",
+																									"arguments_exposed": false,
+																									"kind": "template_instantiation",
+																									"primary_template": {
+																										"name": "RefBase",
+																										"objects": [{
 																											"_fullName": "::stappler::RefBase<typename>",
-																											"_kind": "class",
+																											"_kind": "class template",
 																											"_name": "RefBase",
-																											"bases": [{
-																												"_fullName": "Interface::AllocBaseType",
-																												"_kind": "base class specifier",
-																												"_name": "Interface::AllocBaseType",
-																												"access_specifier": "public",
-																												"id": 25533212,
-																												"is_virtual": false,
-																												"kind": "base class specifier",
-																												"name": "Interface::AllocBaseType",
-																												"type": {
-																													"_typeName": "Interface::AllocBaseType",
-																													"kind": "unexposed",
-																													"name": "Interface::AllocBaseType"
-																												}
-																											}],
-																											"class_kind": "class",
+																											"class": {
+																												"_fullName": "::stappler::RefBase<typename>",
+																												"_kind": "class",
+																												"_name": "RefBase",
+																												"bases": [{
+																													"_fullName": "Interface::AllocBaseType",
+																													"_kind": "base class specifier",
+																													"_name": "Interface::AllocBaseType",
+																													"access_specifier": "public",
+																													"id": 25533212,
+																													"is_virtual": false,
+																													"kind": "base class specifier",
+																													"name": "Interface::AllocBaseType",
+																													"type": {
+																														"_typeName": "Interface::AllocBaseType",
+																														"kind": "unexposed",
+																														"name": "Interface::AllocBaseType"
+																													}
+																												}],
+																												"class_kind": "class",
+																												"id": 2191419057,
+																												"is_declaration": false,
+																												"is_definition": true,
+																												"is_final": false,
+																												"kind": "class",
+																												"name": "RefBase",
+																												"scope": {
+																													"is_templated": true,
+																													"name": "RefBase",
+																													"template_parameters": [{
+																														"_fullName": "Interface",
+																														"_kind": "template type parameter",
+																														"_name": "Interface",
+																														"id": 2255344761,
+																														"is_variadic": false,
+																														"keyword": "typename",
+																														"kind": "template type parameter",
+																														"name": "Interface"
+																													}]
+																												},
+																												"semantic_scope": ""
+																											},
 																											"id": 2191419057,
-																											"is_declaration": false,
-																											"is_definition": true,
-																											"is_final": false,
-																											"kind": "class",
+																											"kind": "class template",
 																											"name": "RefBase",
-																											"scope": {
+																											"parameters": [{
+																												"_fullName": "Interface",
+																												"_kind": "template type parameter",
+																												"_name": "Interface",
+																												"id": 2255344761,
+																												"is_variadic": false,
+																												"keyword": "typename",
+																												"kind": "template type parameter",
+																												"name": "Interface"
+																											}],
+																											"scope":  {
 																												"is_templated": true,
 																												"name": "RefBase",
 																												"template_parameters": [{
@@ -6182,70 +6226,21 @@
 																													"kind": "template type parameter",
 																													"name": "Interface"
 																												}]
-																											},
-																											"semantic_scope": ""
-																										},
-																										"id": 2191419057,
-																										"kind": "class template",
-																										"name": "RefBase",
-																										"parameters": [{
-																											"_fullName": "Interface",
-																											"_kind": "template type parameter",
-																											"_name": "Interface",
-																											"id": 2255344761,
-																											"is_variadic": false,
-																											"keyword": "typename",
-																											"kind": "template type parameter",
-																											"name": "Interface"
-																										}],
-																										"scope":  {
-																											"is_templated": true,
-																											"name": "RefBase",
-																											"template_parameters": [{
-																												"_fullName": "Interface",
-																												"_kind": "template type parameter",
-																												"_name": "Interface",
-																												"id": 2255344761,
-																												"is_variadic": false,
-																												"keyword": "typename",
-																												"kind": "template type parameter",
-																												"name": "Interface"
-																											}]
-																										}
-																									}]
-																								},
-																								"unexposed_arguments": "memory::StandartInterface"
-																							}
-																						}]
-																					}
-																				}
-																			}, {
-																				"_fullName": "ObjectInterface",
-																				"_kind": "base class specifier",
-																				"_name": "ObjectInterface",
-																				"access_specifier": "public",
-																				"id": 2074766780,
-																				"is_virtual": false,
-																				"kind": "base class specifier",
-																				"name": "ObjectInterface",
-																				"type": {
-																					"_typeName": "stappler::xenolith::core::ObjectInterface",
-																					"kind": "user_defined",
-																					"target": {
-																						"name": "stappler::xenolith::core::ObjectInterface",
-																						"objects": [{
-																							"_fullName": "::stappler::xenolith::core::ObjectInterface",
-																							"_kind": "class",
-																							"_name": "ObjectInterface",
+																											}
+																										}]
+																									},
+																									"unexposed_arguments": "memory::StandartInterface"
+																								}
+																							}],
 																							"class_kind": "class",
-																							"id": 3740112328,
+																							"id": 2162121619,
 																							"is_declaration": false,
 																							"is_definition": true,
 																							"is_final": false,
 																							"kind": "class",
-																							"name": "ObjectInterface",
+																							"name": "NamedRef",
 																							"scope": {
-																								"name": "ObjectInterface"
+																								"name": "NamedRef"
 																							},
 																							"semantic_scope": ""
 																						}]
@@ -7526,7 +7521,7 @@
 						}],
 						"ref_qualifier": "none",
 						"return_type": {
-							"_typeName": "Rc<stappler::xenolith::vk::DeviceBuffer>",
+							"_typeName": "Rc<stappler::xenolith::vk::Buffer>",
 							"arguments_exposed": false,
 							"kind": "template_instantiation",
 							"primary_template": {
@@ -7591,10 +7586,187 @@
 									}
 								}]
 							},
-							"unexposed_arguments": "stappler::xenolith::vk::DeviceBuffer"
+							"unexposed_arguments": "stappler::xenolith::vk::Buffer"
 						},
 						"semantic_scope": "",
 						"signature": "(stappler::xenolith::vk::AllocationUsage,stappler::xenolith::vk::BufferInfo const&)"
+					}, {
+						"_fullName": "::stappler::xenolith::vk::DeviceMemoryPool::spawn(stappler::xenolith::vk::AllocationUsage,stappler::xenolith::vk::ImageInfoData const&)",
+						"_kind": "member function",
+						"_name": "spawn",
+						"body_kind": "declaration",
+						"cv_qualifier": "none",
+						"id": 1251750691,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "spawn",
+						"parameters": [{
+							"_fullName": "type",
+							"_kind": "function parameter",
+							"_name": "type",
+							"id": 4107985162,
+							"kind": "function parameter",
+							"name": "type",
+							"type": {
+								"_typeName": "stappler::xenolith::vk::AllocationUsage",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::vk::AllocationUsage",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::vk::AllocationUsage",
+										"_kind": "enum",
+										"_name": "AllocationUsage",
+										"has_explicit_type": false,
+										"id": 1149812643,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "AllocationUsage",
+										"scope": {
+											"name": "AllocationUsage"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
+						}, {
+							"_fullName": "",
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 46947589,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::xenolith::vk::ImageInfoData const&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "stappler::xenolith::vk::ImageInfoData const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "stappler::xenolith::vk::ImageInfoData",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::xenolith::vk::ImageInfoData",
+											"objects": [{
+												"_fullName": "::stappler::xenolith::vk::ImageInfoData",
+												"_kind": "type alias",
+												"_name": "ImageInfoData",
+												"id": 3589291196,
+												"kind": "type alias",
+												"name": "ImageInfoData",
+												"underlying_type": {
+													"_typeName": "core::ImageInfoData",
+													"kind": "user_defined",
+													"target": {
+														"name": "core::ImageInfoData",
+														"objects": [{
+															"_fullName": "::stappler::xenolith::core::ImageInfoData",
+															"_kind": "class",
+															"_name": "ImageInfoData",
+															"class_kind": "struct",
+															"id": 2769190166,
+															"is_declaration": false,
+															"is_definition": true,
+															"is_final": false,
+															"kind": "class",
+															"name": "ImageInfoData",
+															"scope": {
+																"name": "ImageInfoData"
+															},
+															"semantic_scope": ""
+														}]
+													}
+												}
+											}]
+										}
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}],
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "Rc<stappler::xenolith::vk::Image>",
+							"arguments_exposed": false,
+							"kind": "template_instantiation",
+							"primary_template": {
+								"name": "Rc",
+								"objects": [{
+									"_fullName": "::stappler::RcBase<typename>",
+									"_kind": "class template",
+									"_name": "RcBase",
+									"class": {
+										"_fullName": "::stappler::RcBase<typename>",
+										"_kind": "class",
+										"_name": "RcBase",
+										"class_kind": "class",
+										"id": 782220210,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "RcBase",
+										"scope": {
+											"is_templated": true,
+											"name": "RcBase",
+											"template_parameters": [{
+												"_fullName": "Base",
+												"_kind": "template type parameter",
+												"_name": "Base",
+												"id": 3435036189,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Base"
+											}]
+										},
+										"semantic_scope": ""
+									},
+									"id": 782220210,
+									"kind": "class template",
+									"name": "RcBase",
+									"parameters": [{
+										"_fullName": "Base",
+										"_kind": "template type parameter",
+										"_name": "Base",
+										"id": 3435036189,
+										"is_variadic": false,
+										"keyword": "typename",
+										"kind": "template type parameter",
+										"name": "Base"
+									}],
+									"scope":  {
+										"is_templated": true,
+										"name": "RcBase",
+										"template_parameters": [{
+											"_fullName": "Base",
+											"_kind": "template type parameter",
+											"_name": "Base",
+											"id": 3435036189,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "Base"
+										}]
+									}
+								}]
+							},
+							"unexposed_arguments": "stappler::xenolith::vk::Image"
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::xenolith::vk::AllocationUsage,stappler::xenolith::vk::ImageInfoData const&)"
 					}, {
 						"_fullName": "::stappler::xenolith::vk::DeviceMemoryPool::spawnPersistent(stappler::xenolith::vk::AllocationUsage,stappler::xenolith::vk::BufferInfo const&)",
 						"_kind": "member function",
@@ -8166,37 +8338,6 @@
 						"semantic_scope": "",
 						"signature": "()"
 					}, {
-						"_fullName": "protected",
-						"_kind": "access specifier",
-						"_name": "protected",
-						"access_specifier": "protected",
-						"id": 1892155628,
-						"kind": "access specifier",
-						"name": "protected"
-					}, {
-						"_fullName": "",
-						"_kind": "friend",
-						"_name": "",
-						"entity": {
-							"_fullName": "::stappler::xenolith::vk::DeviceMemoryPool::DeviceBuffer",
-							"_kind": "class",
-							"_name": "DeviceBuffer",
-							"class_kind": "class",
-							"id": 2646973478,
-							"is_declaration": true,
-							"is_definition": false,
-							"is_final": false,
-							"kind": "class",
-							"name": "DeviceBuffer",
-							"scope": {
-								"name": "DeviceBuffer"
-							},
-							"semantic_scope": ""
-						},
-						"id": 46947589,
-						"kind": "friend",
-						"name": ""
-					}, {
 						"_fullName": "::stappler::xenolith::vk::DeviceMemoryPool::alloc(stappler::xenolith::vk::DeviceMemoryPool::MemData*,VkDeviceSize,VkDeviceSize,stappler::xenolith::vk::AllocationType,stappler::xenolith::vk::AllocationUsage)",
 						"_kind": "member function",
 						"_name": "alloc",
@@ -8430,6 +8571,14 @@
 						"semantic_scope": "",
 						"signature": "(Allocator::MemBlock&&)"
 					}, {
+						"_fullName": "protected",
+						"_kind": "access specifier",
+						"_name": "protected",
+						"access_specifier": "protected",
+						"id": 1892155628,
+						"kind": "access specifier",
+						"name": "protected"
+					}, {
 						"_fullName": "::stappler::xenolith::vk::DeviceMemoryPool::clear(stappler::xenolith::vk::DeviceMemoryPool::MemData*)",
 						"_kind": "member function",
 						"_name": "clear",
@@ -8644,13 +8793,30 @@
 						"kind": "member variable",
 						"name": "_buffers",
 						"type": {
-							"_typeName": "std::forward_list<Rc<DeviceBuffer>>",
+							"_typeName": "std::forward_list<Rc<Buffer>>",
 							"arguments_exposed": false,
 							"kind": "template_instantiation",
 							"primary_template": {
 								"name": "std::forward_list"
 							},
-							"unexposed_arguments": "Rc<DeviceBuffer>"
+							"unexposed_arguments": "Rc<Buffer>"
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::vk::DeviceMemoryPool::_images",
+						"_kind": "member variable",
+						"_name": "_images",
+						"id": 2779533807,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "_images",
+						"type": {
+							"_typeName": "std::forward_list<Rc<Image>>",
+							"arguments_exposed": false,
+							"kind": "template_instantiation",
+							"primary_template": {
+								"name": "std::forward_list"
+							},
+							"unexposed_arguments": "Rc<Image>"
 						}
 					}],
 					"class_kind": "class",

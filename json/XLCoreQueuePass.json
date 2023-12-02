@@ -3,15 +3,6 @@
 	"_kind": "file",
 	"_name": "xenolith/core/XLCoreQueuePass.h",
 	"childs": [{
-		"_fullName": "XLCoreQueueData.h",
-		"_kind": "include directive",
-		"_name": "XLCoreQueueData.h",
-		"id": 512279699,
-		"include": "xenolith/core/XLCoreQueueData.h",
-		"include_kind": "local",
-		"kind": "include directive",
-		"name": "XLCoreQueueData.h"
-	}, {
 		"_fullName": "XLCoreObject.h",
 		"_kind": "include directive",
 		"_name": "XLCoreObject.h",
@@ -20,6 +11,15 @@
 		"include_kind": "local",
 		"kind": "include directive",
 		"name": "XLCoreObject.h"
+	}, {
+		"_fullName": "XLCoreFrameQueue.h",
+		"_kind": "include directive",
+		"_name": "XLCoreFrameQueue.h",
+		"id": 1328338564,
+		"include": "xenolith/core/XLCoreFrameQueue.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "XLCoreFrameQueue.h"
 	}, {
 		"_fullName": "XENOLITH_CORE_XLCOREQUEUEPASS_H_",
 		"_kind": "macro definition",
@@ -910,6 +910,22 @@
 							}
 						}
 					}, {
+						"_fullName": "::stappler::xenolith::core::QueuePass::FrameHandleCallback",
+						"_kind": "type alias",
+						"_name": "FrameHandleCallback",
+						"id": 3074177588,
+						"kind": "type alias",
+						"name": "FrameHandleCallback",
+						"underlying_type": {
+							"_typeName": "Function<Rc<stappler::xenolith::core::QueuePass::QueuePassHandle> (stappler::xenolith::core::QueuePass &, const stappler::xenolith::core::QueuePass::FrameQueue &)>",
+							"arguments_exposed": false,
+							"kind": "template_instantiation",
+							"primary_template": {
+								"name": "Function"
+							},
+							"unexposed_arguments": "Rc<stappler::xenolith::core::QueuePass::QueuePassHandle> (stappler::xenolith::core::QueuePass &, const stappler::xenolith::core::QueuePass::FrameQueue &)"
+						}
+					}, {
 						"_fullName": "::stappler::xenolith::core::QueuePass::~QueuePass()",
 						"_kind": "destructor",
 						"_name": "~QueuePass",
@@ -1680,6 +1696,66 @@
 						},
 						"semantic_scope": "",
 						"signature": "(stappler::xenolith::core::QueuePass::FrameQueue const&)"
+					}, {
+						"_fullName": "::stappler::xenolith::core::QueuePass::setFrameHandleCallback(stappler::xenolith::core::QueuePass::FrameHandleCallback&&)",
+						"_kind": "member function",
+						"_name": "setFrameHandleCallback",
+						"body_kind": "declaration",
+						"cv_qualifier": "none",
+						"id": 689904875,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "setFrameHandleCallback",
+						"parameters": [{
+							"_fullName": "",
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 46947589,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::xenolith::core::QueuePass::FrameHandleCallback&&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "stappler::xenolith::core::QueuePass::FrameHandleCallback",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::xenolith::core::QueuePass::FrameHandleCallback",
+										"objects": [{
+											"_fullName": "::stappler::xenolith::core::QueuePass::FrameHandleCallback",
+											"_kind": "type alias",
+											"_name": "FrameHandleCallback",
+											"id": 3074177588,
+											"kind": "type alias",
+											"name": "FrameHandleCallback",
+											"underlying_type": {
+												"_typeName": "Function<Rc<stappler::xenolith::core::QueuePass::QueuePassHandle> (stappler::xenolith::core::QueuePass &, const stappler::xenolith::core::QueuePass::FrameQueue &)>",
+												"arguments_exposed": false,
+												"kind": "template_instantiation",
+												"primary_template": {
+													"name": "Function"
+												},
+												"unexposed_arguments": "Rc<stappler::xenolith::core::QueuePass::QueuePassHandle> (stappler::xenolith::core::QueuePass &, const stappler::xenolith::core::QueuePass::FrameQueue &)"
+											}
+										}]
+									}
+								},
+								"reference_kind": "rvalue"
+							}
+						}],
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::xenolith::core::QueuePass::FrameHandleCallback&&)"
 					}, {
 						"_fullName": "::stappler::xenolith::core::QueuePass::getOwner() const",
 						"_kind": "member function",
@@ -2840,6 +2916,38 @@
 								"name": "Function"
 							},
 							"unexposed_arguments": "stappler::xenolith::Extent2 (const stappler::xenolith::core::QueuePass::FrameQueue &)"
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::core::QueuePass::_frameHandleCallback",
+						"_kind": "member variable",
+						"_name": "_frameHandleCallback",
+						"id": 773649241,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "_frameHandleCallback",
+						"type": {
+							"_typeName": "FrameHandleCallback",
+							"kind": "user_defined",
+							"target": {
+								"name": "FrameHandleCallback",
+								"objects": [{
+									"_fullName": "::stappler::xenolith::core::QueuePass::FrameHandleCallback",
+									"_kind": "type alias",
+									"_name": "FrameHandleCallback",
+									"id": 3074177588,
+									"kind": "type alias",
+									"name": "FrameHandleCallback",
+									"underlying_type": {
+										"_typeName": "Function<Rc<stappler::xenolith::core::QueuePass::QueuePassHandle> (stappler::xenolith::core::QueuePass &, const stappler::xenolith::core::QueuePass::FrameQueue &)>",
+										"arguments_exposed": false,
+										"kind": "template_instantiation",
+										"primary_template": {
+											"name": "Function"
+										},
+										"unexposed_arguments": "Rc<stappler::xenolith::core::QueuePass::QueuePassHandle> (stappler::xenolith::core::QueuePass &, const stappler::xenolith::core::QueuePass::FrameQueue &)"
+									}
+								}]
+							}
 						}
 					}, {
 						"_fullName": "::stappler::xenolith::core::QueuePass::_data",
@@ -4326,6 +4434,56 @@
 						},
 						"semantic_scope": "",
 						"signature": "(stappler::xenolith::core::FramePassData&)"
+					}, {
+						"_fullName": "::stappler::xenolith::core::QueuePassHandle::getQueueData() const",
+						"_kind": "member function",
+						"_name": "getQueueData",
+						"body_kind": "declaration",
+						"cv_qualifier": "const",
+						"id": 2700938889,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"is_virtual": true,
+						"kind": "member function",
+						"name": "getQueueData",
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "stappler::xenolith::core::FramePassData const*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::xenolith::core::FramePassData const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::xenolith::core::FramePassData",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::xenolith::core::FramePassData",
+										"objects": [{
+											"_fullName": "::stappler::xenolith::core::FramePassData",
+											"_kind": "class",
+											"_name": "FramePassData",
+											"class_kind": "struct",
+											"id": 2327620728,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "FramePassData",
+											"scope": {
+												"name": "FramePassData"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							}
+						},
+						"semantic_scope": "",
+						"signature": "() const"
 					}, {
 						"_fullName": "::stappler::xenolith::core::QueuePassHandle::getName() const",
 						"_kind": "member function",
