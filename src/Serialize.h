@@ -54,7 +54,7 @@
 #include <cppast/cpp_function_type.hpp>
 #include <cppast/cpp_decltype_type.hpp>
 
-namespace stappler::doc {
+namespace STAPPLER_VERSIONIZED stappler::doc {
 
 using namespace stappler::mem_std;
 

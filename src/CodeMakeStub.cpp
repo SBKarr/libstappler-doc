@@ -22,7 +22,7 @@
 
 #include "Serialize.h"
 
-namespace stappler::doc {
+namespace STAPPLER_VERSIONIZED stappler::doc {
 
 static void addSymbol(Vector<SymbolInfo> &names, StringView name, StringView access, StringStream &out) {
 	names.emplace_back(SymbolInfo{name.str<Interface>(), access.str<Interface>()});
@@ -294,7 +294,7 @@ void writeStub(StringView out, SymbolsInfo &info, const Value &val) {
 		it = info.names.emplace(str, Vector<SymbolInfo>()).first;
 	}
 
-	std::cout << name << "\n";
+	// std::cout << name << "\n";
 
 	StringStream outData;
 	outData << "Title: " << fname << "\n";
@@ -316,7 +316,7 @@ void writeMap(SymbolsInfo &info, const Value &val) {
 		it = info.names.emplace(str, Vector<SymbolInfo>()).first;
 	}
 
-	std::cout << name << "\n";
+	// std::cout << name << "\n";
 
 	StringStream outData;
 	String access;

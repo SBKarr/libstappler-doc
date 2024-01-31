@@ -52,7 +52,7 @@ int parseOptionString(Value &ret, const StringView &str, int argc, const char * 
 	return 1;
 }
 
-SP_EXTERN_C int _spMain(argc, argv) {
+SP_EXTERN_C int main(int argc, const char *argv[]) {
 	auto opts = data::parseCommandLineOptions<Interface, Value>(argc, argv,
 			&parseOptionSwitch, &parseOptionString);
 	if (opts.first.getBool("help")) {

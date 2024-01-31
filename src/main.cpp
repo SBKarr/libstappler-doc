@@ -147,7 +147,7 @@ std::string generate_synopsis(const cppast::cpp_entity &e) {
 	return generator.result();
 }
 
-namespace stappler::doc {
+namespace STAPPLER_VERSIONIZED stappler::doc {
 
 constexpr auto HELP_STRING =
 	"Stappler Documentation tool\n"\
@@ -310,9 +310,14 @@ struct ParserStruct {
 		filesystem::readIntoBuffer(buf, fullPath, 0, 2_KiB - 1);
 
 		StringView r(reinterpret_cast<char *>(buf));
-		r.skipUntilString("\n///@ ", true);
-		if (r.starts_with("\n///@ ")) {
-			r += "\n///@ "_len;
+		if (!r.starts_with("///@ ")) {
+			r.skipUntilString("\n///@ ", true);
+			if (r.is('\n')) {
+				++ r;
+			}
+		}
+		if (r.starts_with("///@ ")) {
+			r += "///@ "_len;
 			StringView opts = r.readUntil<StringView::Chars<'\r', '\n'>>();
 			opts.split<StringView::Chars<','>>([&] (StringView v) {
 				v.trimChars<StringView::WhiteSpace>();

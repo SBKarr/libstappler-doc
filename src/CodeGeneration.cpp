@@ -22,7 +22,7 @@
 
 #include "Serialize.h"
 
-namespace stappler::doc {
+namespace STAPPLER_VERSIONIZED stappler::doc {
 
 static void writeTypePrefix(StringStream &output, const cppast::cpp_type& type);
 static void writeTypeSuffix(StringStream &output, const cppast::cpp_type& type);

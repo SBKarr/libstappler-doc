@@ -23,7 +23,7 @@
 #include "SPCommon.h"
 #include "Serialize.h"
 
-namespace stappler::doc {
+namespace STAPPLER_VERSIONIZED stappler::doc {
 
 // cppast signature bug workaround
 static size_t getFixedMaxParameterCount(const cppast::cpp_function_base &base) {
