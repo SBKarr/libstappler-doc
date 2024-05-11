@@ -1,7 +1,7 @@
 {
-	"_fullName": "xenolith/renderer/gui2d/XL2dActionAcceleratedMove.h",
+	"_fullName": "xenolith/renderer/basic2d/XL2dActionAcceleratedMove.h",
 	"_kind": "file",
-	"_name": "xenolith/renderer/gui2d/XL2dActionAcceleratedMove.h",
+	"_name": "xenolith/renderer/basic2d/XL2dActionAcceleratedMove.h",
 	"childs": [{
 		"_fullName": "XLAction.h",
 		"_kind": "include directive",
@@ -12,15 +12,15 @@
 		"kind": "include directive",
 		"name": "XLAction.h"
 	}, {
-		"_fullName": "XENOLITH_RENDERER_GUI2D_XL2DACTIONACCELERATEDMOVE_H_",
+		"_fullName": "XENOLITH_RENDERER_BASIC2D_XL2DACTIONACCELERATEDMOVE_H_",
 		"_kind": "macro definition",
-		"_name": "XENOLITH_RENDERER_GUI2D_XL2DACTIONACCELERATEDMOVE_H_",
-		"id": 801042878,
+		"_name": "XENOLITH_RENDERER_BASIC2D_XL2DACTIONACCELERATEDMOVE_H_",
+		"id": 3304362594,
 		"is_function_like": false,
 		"is_object_like": true,
 		"is_variadic": false,
 		"kind": "macro definition",
-		"name": "XENOLITH_RENDERER_GUI2D_XL2DACTIONACCELERATEDMOVE_H_",
+		"name": "XENOLITH_RENDERER_BASIC2D_XL2DACTIONACCELERATEDMOVE_H_",
 		"replacement": ""
 	}, {
 		"_fullName": "::stappler",
@@ -31,11 +31,11 @@
 			"_kind": "namespace",
 			"_name": "xenolith",
 			"childs": [{
-				"_fullName": "::stappler::xenolith::gui2d",
+				"_fullName": "::stappler::xenolith::basic2d",
 				"_kind": "namespace",
-				"_name": "gui2d",
+				"_name": "basic2d",
 				"childs": [{
-					"_fullName": "::stappler::xenolith::gui2d::ActionAcceleratedMove",
+					"_fullName": "::stappler::xenolith::basic2d::ActionAcceleratedMove",
 					"_kind": "class",
 					"_name": "ActionAcceleratedMove",
 					"bases": [{
@@ -221,12 +221,12 @@
 						"kind": "access specifier",
 						"name": "public"
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ActionAcceleratedMove::createBounce(float,stappler::xenolith::Vec2,stappler::xenolith::Vec2,stappler::xenolith::Vec2,float,Function<void (stappler::xenolith::Node *)>&&)",
+						"_fullName": "::stappler::xenolith::basic2d::ActionAcceleratedMove::createBounce(float,stappler::geom::Vec2,stappler::geom::Vec2,stappler::geom::Vec2,float,Function<void (stappler::xenolith::Node *)>&&)",
 						"_kind": "function",
 						"_name": "createBounce",
 						"body_kind": "declaration",
 						"comment": "Движение от начальной точки до указанной, действие завершается по достижении конечной точки",
-						"id": 1731774177,
+						"id": 129081047,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -254,42 +254,9 @@
 							"kind": "function parameter",
 							"name": "from",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Vec2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Vec2",
-										"_kind": "type alias",
-										"_name": "Vec2",
-										"id": 1910638286,
-										"kind": "type alias",
-										"name": "Vec2",
-										"underlying_type": {
-											"_typeName": "geom::Vec2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Vec2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Vec2",
-													"_kind": "class",
-													"_name": "Vec2",
-													"class_kind": "class",
-													"id": 16661423,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Vec2",
-													"scope": {
-														"name": "Vec2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Vec2"
 							}
 						}, {
 							"_fullName": "to",
@@ -299,42 +266,9 @@
 							"kind": "function parameter",
 							"name": "to",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Vec2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Vec2",
-										"_kind": "type alias",
-										"_name": "Vec2",
-										"id": 1910638286,
-										"kind": "type alias",
-										"name": "Vec2",
-										"underlying_type": {
-											"_typeName": "geom::Vec2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Vec2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Vec2",
-													"_kind": "class",
-													"_name": "Vec2",
-													"class_kind": "class",
-													"id": 16661423,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Vec2",
-													"scope": {
-														"name": "Vec2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Vec2"
 							}
 						}, {
 							"_fullName": "velocity",
@@ -353,84 +287,18 @@
 								}],
 								"kind": "unexposed",
 								"type": {
-									"_typeName": "stappler::xenolith::Vec2",
-									"kind": "user_defined",
-									"target": {
-										"name": "stappler::xenolith::Vec2",
-										"objects": [{
-											"_fullName": "::stappler::xenolith::Vec2",
-											"_kind": "type alias",
-											"_name": "Vec2",
-											"id": 1910638286,
-											"kind": "type alias",
-											"name": "Vec2",
-											"underlying_type": {
-												"_typeName": "geom::Vec2",
-												"kind": "user_defined",
-												"target": {
-													"name": "geom::Vec2",
-													"objects": [{
-														"_fullName": "::stappler::geom::Vec2",
-														"_kind": "class",
-														"_name": "Vec2",
-														"class_kind": "class",
-														"id": 16661423,
-														"is_declaration": false,
-														"is_definition": true,
-														"is_final": false,
-														"kind": "class",
-														"name": "Vec2",
-														"scope": {
-															"name": "Vec2"
-														},
-														"semantic_scope": ""
-													}]
-												}
-											}
-										}]
-									}
+									"_typeName": "stappler::geom::Vec2",
+									"kind": "unexposed",
+									"name": "stappler::geom::Vec2"
 								}
 							},
 							"id": 4292827369,
 							"kind": "function parameter",
 							"name": "velocity",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Vec2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Vec2",
-										"_kind": "type alias",
-										"_name": "Vec2",
-										"id": 1910638286,
-										"kind": "type alias",
-										"name": "Vec2",
-										"underlying_type": {
-											"_typeName": "geom::Vec2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Vec2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Vec2",
-													"_kind": "class",
-													"_name": "Vec2",
-													"class_kind": "class",
-													"id": 16661423,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Vec2",
-													"scope": {
-														"name": "Vec2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Vec2"
 							}
 						}, {
 							"_fullName": "bounceAcceleration",
@@ -568,17 +436,17 @@
 							"unexposed_arguments": "stappler::xenolith::ActionInterval"
 						},
 						"semantic_scope": "",
-						"signature": "(float,stappler::xenolith::Vec2,stappler::xenolith::Vec2,stappler::xenolith::Vec2,float,Function<void (stappler::xenolith::Node *)>&&)",
+						"signature": "(float,stappler::geom::Vec2,stappler::geom::Vec2,stappler::geom::Vec2,float,Function<void (stappler::xenolith::Node *)>&&)",
 						"storage_class": [
 							"static"
 						]
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ActionAcceleratedMove::createBounce(float,stappler::xenolith::Vec2,stappler::xenolith::Vec2,float,float,Function<void (stappler::xenolith::Node *)>&&)",
+						"_fullName": "::stappler::xenolith::basic2d::ActionAcceleratedMove::createBounce(float,stappler::geom::Vec2,stappler::geom::Vec2,float,float,Function<void (stappler::xenolith::Node *)>&&)",
 						"_kind": "function",
 						"_name": "createBounce",
 						"body_kind": "declaration",
 						"comment": "Движение от начальной точки до указанной, действие завершается по достижении конечной точки",
-						"id": 4235784928,
+						"id": 67196587,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -606,42 +474,9 @@
 							"kind": "function parameter",
 							"name": "from",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Vec2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Vec2",
-										"_kind": "type alias",
-										"_name": "Vec2",
-										"id": 1910638286,
-										"kind": "type alias",
-										"name": "Vec2",
-										"underlying_type": {
-											"_typeName": "geom::Vec2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Vec2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Vec2",
-													"_kind": "class",
-													"_name": "Vec2",
-													"class_kind": "class",
-													"id": 16661423,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Vec2",
-													"scope": {
-														"name": "Vec2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Vec2"
 							}
 						}, {
 							"_fullName": "to",
@@ -651,42 +486,9 @@
 							"kind": "function parameter",
 							"name": "to",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Vec2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Vec2",
-										"_kind": "type alias",
-										"_name": "Vec2",
-										"id": 1910638286,
-										"kind": "type alias",
-										"name": "Vec2",
-										"underlying_type": {
-											"_typeName": "geom::Vec2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Vec2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Vec2",
-													"_kind": "class",
-													"_name": "Vec2",
-													"class_kind": "class",
-													"id": 16661423,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Vec2",
-													"scope": {
-														"name": "Vec2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Vec2"
 							}
 						}, {
 							"_fullName": "velocity",
@@ -836,17 +638,17 @@
 							"unexposed_arguments": "stappler::xenolith::ActionInterval"
 						},
 						"semantic_scope": "",
-						"signature": "(float,stappler::xenolith::Vec2,stappler::xenolith::Vec2,float,float,Function<void (stappler::xenolith::Node *)>&&)",
+						"signature": "(float,stappler::geom::Vec2,stappler::geom::Vec2,float,float,Function<void (stappler::xenolith::Node *)>&&)",
 						"storage_class": [
 							"static"
 						]
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ActionAcceleratedMove::createFreeBounce(float,stappler::xenolith::Vec2,stappler::xenolith::Vec2,stappler::xenolith::Vec2,float,Function<void (stappler::xenolith::Node *)>&&)",
+						"_fullName": "::stappler::xenolith::basic2d::ActionAcceleratedMove::createFreeBounce(float,stappler::geom::Vec2,stappler::geom::Vec2,stappler::geom::Vec2,float,Function<void (stappler::xenolith::Node *)>&&)",
 						"_kind": "function",
 						"_name": "createFreeBounce",
 						"body_kind": "declaration",
 						"comment": "Движение от начальной точки до указанной, действие завершается при сбросе скорости до 0",
-						"id": 2292072196,
+						"id": 2065284654,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -874,42 +676,9 @@
 							"kind": "function parameter",
 							"name": "from",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Vec2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Vec2",
-										"_kind": "type alias",
-										"_name": "Vec2",
-										"id": 1910638286,
-										"kind": "type alias",
-										"name": "Vec2",
-										"underlying_type": {
-											"_typeName": "geom::Vec2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Vec2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Vec2",
-													"_kind": "class",
-													"_name": "Vec2",
-													"class_kind": "class",
-													"id": 16661423,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Vec2",
-													"scope": {
-														"name": "Vec2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Vec2"
 							}
 						}, {
 							"_fullName": "to",
@@ -919,42 +688,9 @@
 							"kind": "function parameter",
 							"name": "to",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Vec2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Vec2",
-										"_kind": "type alias",
-										"_name": "Vec2",
-										"id": 1910638286,
-										"kind": "type alias",
-										"name": "Vec2",
-										"underlying_type": {
-											"_typeName": "geom::Vec2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Vec2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Vec2",
-													"_kind": "class",
-													"_name": "Vec2",
-													"class_kind": "class",
-													"id": 16661423,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Vec2",
-													"scope": {
-														"name": "Vec2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Vec2"
 							}
 						}, {
 							"_fullName": "velocity",
@@ -973,84 +709,18 @@
 								}],
 								"kind": "unexposed",
 								"type": {
-									"_typeName": "stappler::xenolith::Vec2",
-									"kind": "user_defined",
-									"target": {
-										"name": "stappler::xenolith::Vec2",
-										"objects": [{
-											"_fullName": "::stappler::xenolith::Vec2",
-											"_kind": "type alias",
-											"_name": "Vec2",
-											"id": 1910638286,
-											"kind": "type alias",
-											"name": "Vec2",
-											"underlying_type": {
-												"_typeName": "geom::Vec2",
-												"kind": "user_defined",
-												"target": {
-													"name": "geom::Vec2",
-													"objects": [{
-														"_fullName": "::stappler::geom::Vec2",
-														"_kind": "class",
-														"_name": "Vec2",
-														"class_kind": "class",
-														"id": 16661423,
-														"is_declaration": false,
-														"is_definition": true,
-														"is_final": false,
-														"kind": "class",
-														"name": "Vec2",
-														"scope": {
-															"name": "Vec2"
-														},
-														"semantic_scope": ""
-													}]
-												}
-											}
-										}]
-									}
+									"_typeName": "stappler::geom::Vec2",
+									"kind": "unexposed",
+									"name": "stappler::geom::Vec2"
 								}
 							},
 							"id": 4292827369,
 							"kind": "function parameter",
 							"name": "velocity",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Vec2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Vec2",
-										"_kind": "type alias",
-										"_name": "Vec2",
-										"id": 1910638286,
-										"kind": "type alias",
-										"name": "Vec2",
-										"underlying_type": {
-											"_typeName": "geom::Vec2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Vec2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Vec2",
-													"_kind": "class",
-													"_name": "Vec2",
-													"class_kind": "class",
-													"id": 16661423,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Vec2",
-													"scope": {
-														"name": "Vec2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Vec2"
 							}
 						}, {
 							"_fullName": "bounceAcceleration",
@@ -1188,17 +858,17 @@
 							"unexposed_arguments": "stappler::xenolith::ActionInterval"
 						},
 						"semantic_scope": "",
-						"signature": "(float,stappler::xenolith::Vec2,stappler::xenolith::Vec2,stappler::xenolith::Vec2,float,Function<void (stappler::xenolith::Node *)>&&)",
+						"signature": "(float,stappler::geom::Vec2,stappler::geom::Vec2,stappler::geom::Vec2,float,Function<void (stappler::xenolith::Node *)>&&)",
 						"storage_class": [
 							"static"
 						]
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ActionAcceleratedMove::createWithBounds(float,stappler::xenolith::Vec2,stappler::xenolith::Vec2,stappler::xenolith::Rect const&,Function<void (stappler::xenolith::Node *)>&&)",
+						"_fullName": "::stappler::xenolith::basic2d::ActionAcceleratedMove::createWithBounds(float,stappler::geom::Vec2,stappler::geom::Vec2,const stappler::geom::Rect&,Function<void (stappler::xenolith::Node *)>&&)",
 						"_kind": "function",
 						"_name": "createWithBounds",
 						"body_kind": "declaration",
 						"comment": "Движение от начальной точки в направлении вектора скорости, действие завершается при границ",
-						"id": 2760284232,
+						"id": 827450268,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -1226,42 +896,9 @@
 							"kind": "function parameter",
 							"name": "from",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Vec2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Vec2",
-										"_kind": "type alias",
-										"_name": "Vec2",
-										"id": 1910638286,
-										"kind": "type alias",
-										"name": "Vec2",
-										"underlying_type": {
-											"_typeName": "geom::Vec2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Vec2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Vec2",
-													"_kind": "class",
-													"_name": "Vec2",
-													"class_kind": "class",
-													"id": 16661423,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Vec2",
-													"scope": {
-														"name": "Vec2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Vec2"
 							}
 						}, {
 							"_fullName": "velocity",
@@ -1271,42 +908,9 @@
 							"kind": "function parameter",
 							"name": "velocity",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Vec2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Vec2",
-										"_kind": "type alias",
-										"_name": "Vec2",
-										"id": 1910638286,
-										"kind": "type alias",
-										"name": "Vec2",
-										"underlying_type": {
-											"_typeName": "geom::Vec2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Vec2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Vec2",
-													"_kind": "class",
-													"_name": "Vec2",
-													"class_kind": "class",
-													"id": 16661423,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Vec2",
-													"scope": {
-														"name": "Vec2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Vec2"
 							}
 						}, {
 							"_fullName": "bounds",
@@ -1316,50 +920,12 @@
 							"kind": "function parameter",
 							"name": "bounds",
 							"type": {
-								"_typeName": "stappler::xenolith::Rect const&",
+								"_typeName": "const stappler::geom::Rect&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "stappler::xenolith::Rect const",
-									"cv_qualifier": "const",
-									"kind": "cv_qualified",
-									"type": {
-										"_typeName": "stappler::xenolith::Rect",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::xenolith::Rect",
-											"objects": [{
-												"_fullName": "::stappler::xenolith::Rect",
-												"_kind": "type alias",
-												"_name": "Rect",
-												"id": 1186107623,
-												"kind": "type alias",
-												"name": "Rect",
-												"underlying_type": {
-													"_typeName": "geom::Rect",
-													"kind": "user_defined",
-													"target": {
-														"name": "geom::Rect",
-														"objects": [{
-															"_fullName": "::stappler::geom::Rect",
-															"_kind": "class",
-															"_name": "Rect",
-															"class_kind": "struct",
-															"id": 4019440438,
-															"is_declaration": false,
-															"is_definition": true,
-															"is_final": false,
-															"kind": "class",
-															"name": "Rect",
-															"scope": {
-																"name": "Rect"
-															},
-															"semantic_scope": ""
-														}]
-													}
-												}
-											}]
-										}
-									}
+									"_typeName": "const stappler::geom::Rect",
+									"kind": "unexposed",
+									"name": "const stappler::geom::Rect"
 								},
 								"reference_kind": "lvalue"
 							}
@@ -1475,17 +1041,17 @@
 							"unexposed_arguments": "stappler::xenolith::ActionInterval"
 						},
 						"semantic_scope": "",
-						"signature": "(float,stappler::xenolith::Vec2,stappler::xenolith::Vec2,stappler::xenolith::Rect const&,Function<void (stappler::xenolith::Node *)>&&)",
+						"signature": "(float,stappler::geom::Vec2,stappler::geom::Vec2,const stappler::geom::Rect&,Function<void (stappler::xenolith::Node *)>&&)",
 						"storage_class": [
 							"static"
 						]
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ActionAcceleratedMove::createDecceleration(stappler::xenolith::Vec2,stappler::xenolith::Vec2,float,float,Function<void (stappler::xenolith::Node *)>&&)",
+						"_fullName": "::stappler::xenolith::basic2d::ActionAcceleratedMove::createDecceleration(stappler::geom::Vec2,stappler::geom::Vec2,float,float,Function<void (stappler::xenolith::Node *)>&&)",
 						"_kind": "function",
 						"_name": "createDecceleration",
 						"body_kind": "declaration",
 						"comment": "отрезок пути до полной остановки (скорость и ускорение направлены в разные стороны)",
-						"id": 648161020,
+						"id": 2134845784,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -1501,42 +1067,9 @@
 							"kind": "function parameter",
 							"name": "normal",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Vec2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Vec2",
-										"_kind": "type alias",
-										"_name": "Vec2",
-										"id": 1910638286,
-										"kind": "type alias",
-										"name": "Vec2",
-										"underlying_type": {
-											"_typeName": "geom::Vec2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Vec2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Vec2",
-													"_kind": "class",
-													"_name": "Vec2",
-													"class_kind": "class",
-													"id": 16661423,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Vec2",
-													"scope": {
-														"name": "Vec2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Vec2"
 							}
 						}, {
 							"_fullName": "startPoint",
@@ -1546,42 +1079,9 @@
 							"kind": "function parameter",
 							"name": "startPoint",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Vec2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Vec2",
-										"_kind": "type alias",
-										"_name": "Vec2",
-										"id": 1910638286,
-										"kind": "type alias",
-										"name": "Vec2",
-										"underlying_type": {
-											"_typeName": "geom::Vec2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Vec2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Vec2",
-													"_kind": "class",
-													"_name": "Vec2",
-													"class_kind": "class",
-													"id": 16661423,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Vec2",
-													"scope": {
-														"name": "Vec2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Vec2"
 							}
 						}, {
 							"_fullName": "startVelocity",
@@ -1651,7 +1151,7 @@
 							}
 						}],
 						"return_type":  {
-							"_typeName": "Rc<stappler::xenolith::gui2d::ActionAcceleratedMove>",
+							"_typeName": "Rc<stappler::xenolith::basic2d::ActionAcceleratedMove>",
 							"arguments_exposed": false,
 							"kind": "template_instantiation",
 							"primary_template": {
@@ -1716,20 +1216,20 @@
 									}
 								}]
 							},
-							"unexposed_arguments": "stappler::xenolith::gui2d::ActionAcceleratedMove"
+							"unexposed_arguments": "stappler::xenolith::basic2d::ActionAcceleratedMove"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::Vec2,stappler::xenolith::Vec2,float,float,Function<void (stappler::xenolith::Node *)>&&)",
+						"signature": "(stappler::geom::Vec2,stappler::geom::Vec2,float,float,Function<void (stappler::xenolith::Node *)>&&)",
 						"storage_class": [
 							"static"
 						]
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ActionAcceleratedMove::createDecceleration(stappler::xenolith::Vec2,stappler::xenolith::Vec2,float,Function<void (stappler::xenolith::Node *)>&&)",
+						"_fullName": "::stappler::xenolith::basic2d::ActionAcceleratedMove::createDecceleration(stappler::geom::Vec2,stappler::geom::Vec2,float,Function<void (stappler::xenolith::Node *)>&&)",
 						"_kind": "function",
 						"_name": "createDecceleration",
 						"body_kind": "declaration",
 						"comment": "отрезок пути до полной остановки (скорость и ускорение направлены в разные стороны)",
-						"id": 4127375862,
+						"id": 3102637670,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -1745,42 +1245,9 @@
 							"kind": "function parameter",
 							"name": "startPoint",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Vec2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Vec2",
-										"_kind": "type alias",
-										"_name": "Vec2",
-										"id": 1910638286,
-										"kind": "type alias",
-										"name": "Vec2",
-										"underlying_type": {
-											"_typeName": "geom::Vec2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Vec2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Vec2",
-													"_kind": "class",
-													"_name": "Vec2",
-													"class_kind": "class",
-													"id": 16661423,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Vec2",
-													"scope": {
-														"name": "Vec2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Vec2"
 							}
 						}, {
 							"_fullName": "endPoint",
@@ -1790,42 +1257,9 @@
 							"kind": "function parameter",
 							"name": "endPoint",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Vec2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Vec2",
-										"_kind": "type alias",
-										"_name": "Vec2",
-										"id": 1910638286,
-										"kind": "type alias",
-										"name": "Vec2",
-										"underlying_type": {
-											"_typeName": "geom::Vec2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Vec2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Vec2",
-													"_kind": "class",
-													"_name": "Vec2",
-													"class_kind": "class",
-													"id": 16661423,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Vec2",
-													"scope": {
-														"name": "Vec2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Vec2"
 							}
 						}, {
 							"_fullName": "acceleration",
@@ -1883,7 +1317,7 @@
 							}
 						}],
 						"return_type":  {
-							"_typeName": "Rc<stappler::xenolith::gui2d::ActionAcceleratedMove>",
+							"_typeName": "Rc<stappler::xenolith::basic2d::ActionAcceleratedMove>",
 							"arguments_exposed": false,
 							"kind": "template_instantiation",
 							"primary_template": {
@@ -1948,20 +1382,20 @@
 									}
 								}]
 							},
-							"unexposed_arguments": "stappler::xenolith::gui2d::ActionAcceleratedMove"
+							"unexposed_arguments": "stappler::xenolith::basic2d::ActionAcceleratedMove"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::Vec2,stappler::xenolith::Vec2,float,Function<void (stappler::xenolith::Node *)>&&)",
+						"signature": "(stappler::geom::Vec2,stappler::geom::Vec2,float,Function<void (stappler::xenolith::Node *)>&&)",
 						"storage_class": [
 							"static"
 						]
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ActionAcceleratedMove::createAccelerationTo(stappler::xenolith::Vec2,stappler::xenolith::Vec2,float,float,float,Function<void (stappler::xenolith::Node *)>&&)",
+						"_fullName": "::stappler::xenolith::basic2d::ActionAcceleratedMove::createAccelerationTo(stappler::geom::Vec2,stappler::geom::Vec2,float,float,float,Function<void (stappler::xenolith::Node *)>&&)",
 						"_kind": "function",
 						"_name": "createAccelerationTo",
 						"body_kind": "declaration",
 						"comment": "ускорение до достижения конечной скорости",
-						"id": 1203993103,
+						"id": 3343491714,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -1977,42 +1411,9 @@
 							"kind": "function parameter",
 							"name": "normal",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Vec2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Vec2",
-										"_kind": "type alias",
-										"_name": "Vec2",
-										"id": 1910638286,
-										"kind": "type alias",
-										"name": "Vec2",
-										"underlying_type": {
-											"_typeName": "geom::Vec2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Vec2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Vec2",
-													"_kind": "class",
-													"_name": "Vec2",
-													"class_kind": "class",
-													"id": 16661423,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Vec2",
-													"scope": {
-														"name": "Vec2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Vec2"
 							}
 						}, {
 							"_fullName": "startPoint",
@@ -2022,42 +1423,9 @@
 							"kind": "function parameter",
 							"name": "startPoint",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Vec2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Vec2",
-										"_kind": "type alias",
-										"_name": "Vec2",
-										"id": 1910638286,
-										"kind": "type alias",
-										"name": "Vec2",
-										"underlying_type": {
-											"_typeName": "geom::Vec2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Vec2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Vec2",
-													"_kind": "class",
-													"_name": "Vec2",
-													"class_kind": "class",
-													"id": 16661423,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Vec2",
-													"scope": {
-														"name": "Vec2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Vec2"
 							}
 						}, {
 							"_fullName": "startVelocity",
@@ -2139,7 +1507,7 @@
 							}
 						}],
 						"return_type":  {
-							"_typeName": "Rc<stappler::xenolith::gui2d::ActionAcceleratedMove>",
+							"_typeName": "Rc<stappler::xenolith::basic2d::ActionAcceleratedMove>",
 							"arguments_exposed": false,
 							"kind": "template_instantiation",
 							"primary_template": {
@@ -2204,20 +1572,20 @@
 									}
 								}]
 							},
-							"unexposed_arguments": "stappler::xenolith::gui2d::ActionAcceleratedMove"
+							"unexposed_arguments": "stappler::xenolith::basic2d::ActionAcceleratedMove"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::Vec2,stappler::xenolith::Vec2,float,float,float,Function<void (stappler::xenolith::Node *)>&&)",
+						"signature": "(stappler::geom::Vec2,stappler::geom::Vec2,float,float,float,Function<void (stappler::xenolith::Node *)>&&)",
 						"storage_class": [
 							"static"
 						]
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ActionAcceleratedMove::createAccelerationTo(stappler::xenolith::Vec2,stappler::xenolith::Vec2,float,float,Function<void (stappler::xenolith::Node *)>&&)",
+						"_fullName": "::stappler::xenolith::basic2d::ActionAcceleratedMove::createAccelerationTo(stappler::geom::Vec2,stappler::geom::Vec2,float,float,Function<void (stappler::xenolith::Node *)>&&)",
 						"_kind": "function",
 						"_name": "createAccelerationTo",
 						"body_kind": "declaration",
 						"comment": "ускорение до достижения конечной точки",
-						"id": 811031355,
+						"id": 497289478,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -2233,42 +1601,9 @@
 							"kind": "function parameter",
 							"name": "startPoint",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Vec2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Vec2",
-										"_kind": "type alias",
-										"_name": "Vec2",
-										"id": 1910638286,
-										"kind": "type alias",
-										"name": "Vec2",
-										"underlying_type": {
-											"_typeName": "geom::Vec2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Vec2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Vec2",
-													"_kind": "class",
-													"_name": "Vec2",
-													"class_kind": "class",
-													"id": 16661423,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Vec2",
-													"scope": {
-														"name": "Vec2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Vec2"
 							}
 						}, {
 							"_fullName": "endPoint",
@@ -2278,42 +1613,9 @@
 							"kind": "function parameter",
 							"name": "endPoint",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Vec2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Vec2",
-										"_kind": "type alias",
-										"_name": "Vec2",
-										"id": 1910638286,
-										"kind": "type alias",
-										"name": "Vec2",
-										"underlying_type": {
-											"_typeName": "geom::Vec2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Vec2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Vec2",
-													"_kind": "class",
-													"_name": "Vec2",
-													"class_kind": "class",
-													"id": 16661423,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Vec2",
-													"scope": {
-														"name": "Vec2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Vec2"
 							}
 						}, {
 							"_fullName": "startVelocity",
@@ -2383,7 +1685,7 @@
 							}
 						}],
 						"return_type":  {
-							"_typeName": "Rc<stappler::xenolith::gui2d::ActionAcceleratedMove>",
+							"_typeName": "Rc<stappler::xenolith::basic2d::ActionAcceleratedMove>",
 							"arguments_exposed": false,
 							"kind": "template_instantiation",
 							"primary_template": {
@@ -2448,20 +1750,20 @@
 									}
 								}]
 							},
-							"unexposed_arguments": "stappler::xenolith::gui2d::ActionAcceleratedMove"
+							"unexposed_arguments": "stappler::xenolith::basic2d::ActionAcceleratedMove"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::Vec2,stappler::xenolith::Vec2,float,float,Function<void (stappler::xenolith::Node *)>&&)",
+						"signature": "(stappler::geom::Vec2,stappler::geom::Vec2,float,float,Function<void (stappler::xenolith::Node *)>&&)",
 						"storage_class": [
 							"static"
 						]
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ActionAcceleratedMove::createWithDuration(float,stappler::xenolith::Vec2,stappler::xenolith::Vec2,float,float,Function<void (stappler::xenolith::Node *)>&&)",
+						"_fullName": "::stappler::xenolith::basic2d::ActionAcceleratedMove::createWithDuration(float,stappler::geom::Vec2,stappler::geom::Vec2,float,float,Function<void (stappler::xenolith::Node *)>&&)",
 						"_kind": "function",
 						"_name": "createWithDuration",
 						"body_kind": "declaration",
 						"comment": "ускоренное движение по времени",
-						"id": 3906625796,
+						"id": 4065701051,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -2489,42 +1791,9 @@
 							"kind": "function parameter",
 							"name": "normal",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Vec2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Vec2",
-										"_kind": "type alias",
-										"_name": "Vec2",
-										"id": 1910638286,
-										"kind": "type alias",
-										"name": "Vec2",
-										"underlying_type": {
-											"_typeName": "geom::Vec2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Vec2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Vec2",
-													"_kind": "class",
-													"_name": "Vec2",
-													"class_kind": "class",
-													"id": 16661423,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Vec2",
-													"scope": {
-														"name": "Vec2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Vec2"
 							}
 						}, {
 							"_fullName": "startPoint",
@@ -2534,42 +1803,9 @@
 							"kind": "function parameter",
 							"name": "startPoint",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Vec2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Vec2",
-										"_kind": "type alias",
-										"_name": "Vec2",
-										"id": 1910638286,
-										"kind": "type alias",
-										"name": "Vec2",
-										"underlying_type": {
-											"_typeName": "geom::Vec2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Vec2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Vec2",
-													"_kind": "class",
-													"_name": "Vec2",
-													"class_kind": "class",
-													"id": 16661423,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Vec2",
-													"scope": {
-														"name": "Vec2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Vec2"
 							}
 						}, {
 							"_fullName": "startVelocity",
@@ -2639,7 +1875,7 @@
 							}
 						}],
 						"return_type":  {
-							"_typeName": "Rc<stappler::xenolith::gui2d::ActionAcceleratedMove>",
+							"_typeName": "Rc<stappler::xenolith::basic2d::ActionAcceleratedMove>",
 							"arguments_exposed": false,
 							"kind": "template_instantiation",
 							"primary_template": {
@@ -2704,19 +1940,19 @@
 									}
 								}]
 							},
-							"unexposed_arguments": "stappler::xenolith::gui2d::ActionAcceleratedMove"
+							"unexposed_arguments": "stappler::xenolith::basic2d::ActionAcceleratedMove"
 						},
 						"semantic_scope": "",
-						"signature": "(float,stappler::xenolith::Vec2,stappler::xenolith::Vec2,float,float,Function<void (stappler::xenolith::Node *)>&&)",
+						"signature": "(float,stappler::geom::Vec2,stappler::geom::Vec2,float,float,Function<void (stappler::xenolith::Node *)>&&)",
 						"storage_class": [
 							"static"
 						]
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ActionAcceleratedMove::~ActionAcceleratedMove()",
+						"_fullName": "::stappler::xenolith::basic2d::ActionAcceleratedMove::~ActionAcceleratedMove()",
 						"_kind": "destructor",
 						"_name": "~ActionAcceleratedMove",
 						"body_kind": "definition",
-						"id": 355325879,
+						"id": 4007171378,
 						"is_declaration": false,
 						"is_definition": true,
 						"is_override": true,
@@ -2727,12 +1963,12 @@
 						"semantic_scope": "",
 						"signature": "()"
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ActionAcceleratedMove::initDecceleration(stappler::xenolith::Vec2,stappler::xenolith::Vec2,float,float,Function<void (stappler::xenolith::Node *)>&&)",
+						"_fullName": "::stappler::xenolith::basic2d::ActionAcceleratedMove::initDecceleration(stappler::geom::Vec2,stappler::geom::Vec2,float,float,Function<void (stappler::xenolith::Node *)>&&)",
 						"_kind": "member function",
 						"_name": "initDecceleration",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 2199686062,
+						"id": 2921714914,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -2749,42 +1985,9 @@
 							"kind": "function parameter",
 							"name": "normal",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Vec2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Vec2",
-										"_kind": "type alias",
-										"_name": "Vec2",
-										"id": 1910638286,
-										"kind": "type alias",
-										"name": "Vec2",
-										"underlying_type": {
-											"_typeName": "geom::Vec2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Vec2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Vec2",
-													"_kind": "class",
-													"_name": "Vec2",
-													"class_kind": "class",
-													"id": 16661423,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Vec2",
-													"scope": {
-														"name": "Vec2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Vec2"
 							}
 						}, {
 							"_fullName": "startPoint",
@@ -2794,42 +1997,9 @@
 							"kind": "function parameter",
 							"name": "startPoint",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Vec2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Vec2",
-										"_kind": "type alias",
-										"_name": "Vec2",
-										"id": 1910638286,
-										"kind": "type alias",
-										"name": "Vec2",
-										"underlying_type": {
-											"_typeName": "geom::Vec2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Vec2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Vec2",
-													"_kind": "class",
-													"_name": "Vec2",
-													"class_kind": "class",
-													"id": 16661423,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Vec2",
-													"scope": {
-														"name": "Vec2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Vec2"
 							}
 						}, {
 							"_fullName": "startVelocity",
@@ -2905,14 +2075,14 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::Vec2,stappler::xenolith::Vec2,float,float,Function<void (stappler::xenolith::Node *)>&&)"
+						"signature": "(stappler::geom::Vec2,stappler::geom::Vec2,float,float,Function<void (stappler::xenolith::Node *)>&&)"
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ActionAcceleratedMove::initDecceleration(stappler::xenolith::Vec2,stappler::xenolith::Vec2,float,Function<void (stappler::xenolith::Node *)>&&)",
+						"_fullName": "::stappler::xenolith::basic2d::ActionAcceleratedMove::initDecceleration(stappler::geom::Vec2,stappler::geom::Vec2,float,Function<void (stappler::xenolith::Node *)>&&)",
 						"_kind": "member function",
 						"_name": "initDecceleration",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 4025683883,
+						"id": 2672963040,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -2929,42 +2099,9 @@
 							"kind": "function parameter",
 							"name": "startPoint",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Vec2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Vec2",
-										"_kind": "type alias",
-										"_name": "Vec2",
-										"id": 1910638286,
-										"kind": "type alias",
-										"name": "Vec2",
-										"underlying_type": {
-											"_typeName": "geom::Vec2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Vec2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Vec2",
-													"_kind": "class",
-													"_name": "Vec2",
-													"class_kind": "class",
-													"id": 16661423,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Vec2",
-													"scope": {
-														"name": "Vec2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Vec2"
 							}
 						}, {
 							"_fullName": "endPoint",
@@ -2974,42 +2111,9 @@
 							"kind": "function parameter",
 							"name": "endPoint",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Vec2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Vec2",
-										"_kind": "type alias",
-										"_name": "Vec2",
-										"id": 1910638286,
-										"kind": "type alias",
-										"name": "Vec2",
-										"underlying_type": {
-											"_typeName": "geom::Vec2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Vec2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Vec2",
-													"_kind": "class",
-													"_name": "Vec2",
-													"class_kind": "class",
-													"id": 16661423,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Vec2",
-													"scope": {
-														"name": "Vec2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Vec2"
 							}
 						}, {
 							"_fullName": "acceleration",
@@ -3073,14 +2177,14 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::Vec2,stappler::xenolith::Vec2,float,Function<void (stappler::xenolith::Node *)>&&)"
+						"signature": "(stappler::geom::Vec2,stappler::geom::Vec2,float,Function<void (stappler::xenolith::Node *)>&&)"
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ActionAcceleratedMove::initAccelerationTo(stappler::xenolith::Vec2,stappler::xenolith::Vec2,float,float,float,Function<void (stappler::xenolith::Node *)>&&)",
+						"_fullName": "::stappler::xenolith::basic2d::ActionAcceleratedMove::initAccelerationTo(stappler::geom::Vec2,stappler::geom::Vec2,float,float,float,Function<void (stappler::xenolith::Node *)>&&)",
 						"_kind": "member function",
 						"_name": "initAccelerationTo",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 1629153380,
+						"id": 2426062894,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -3097,42 +2201,9 @@
 							"kind": "function parameter",
 							"name": "normal",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Vec2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Vec2",
-										"_kind": "type alias",
-										"_name": "Vec2",
-										"id": 1910638286,
-										"kind": "type alias",
-										"name": "Vec2",
-										"underlying_type": {
-											"_typeName": "geom::Vec2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Vec2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Vec2",
-													"_kind": "class",
-													"_name": "Vec2",
-													"class_kind": "class",
-													"id": 16661423,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Vec2",
-													"scope": {
-														"name": "Vec2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Vec2"
 							}
 						}, {
 							"_fullName": "startPoint",
@@ -3142,42 +2213,9 @@
 							"kind": "function parameter",
 							"name": "startPoint",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Vec2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Vec2",
-										"_kind": "type alias",
-										"_name": "Vec2",
-										"id": 1910638286,
-										"kind": "type alias",
-										"name": "Vec2",
-										"underlying_type": {
-											"_typeName": "geom::Vec2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Vec2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Vec2",
-													"_kind": "class",
-													"_name": "Vec2",
-													"class_kind": "class",
-													"id": 16661423,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Vec2",
-													"scope": {
-														"name": "Vec2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Vec2"
 							}
 						}, {
 							"_fullName": "startVelocity",
@@ -3265,14 +2303,14 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::Vec2,stappler::xenolith::Vec2,float,float,float,Function<void (stappler::xenolith::Node *)>&&)"
+						"signature": "(stappler::geom::Vec2,stappler::geom::Vec2,float,float,float,Function<void (stappler::xenolith::Node *)>&&)"
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ActionAcceleratedMove::initAccelerationTo(stappler::xenolith::Vec2,stappler::xenolith::Vec2,float,float,Function<void (stappler::xenolith::Node *)>&&)",
+						"_fullName": "::stappler::xenolith::basic2d::ActionAcceleratedMove::initAccelerationTo(stappler::geom::Vec2,stappler::geom::Vec2,float,float,Function<void (stappler::xenolith::Node *)>&&)",
 						"_kind": "member function",
 						"_name": "initAccelerationTo",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 1236461059,
+						"id": 3193957891,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -3289,42 +2327,9 @@
 							"kind": "function parameter",
 							"name": "startPoint",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Vec2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Vec2",
-										"_kind": "type alias",
-										"_name": "Vec2",
-										"id": 1910638286,
-										"kind": "type alias",
-										"name": "Vec2",
-										"underlying_type": {
-											"_typeName": "geom::Vec2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Vec2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Vec2",
-													"_kind": "class",
-													"_name": "Vec2",
-													"class_kind": "class",
-													"id": 16661423,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Vec2",
-													"scope": {
-														"name": "Vec2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Vec2"
 							}
 						}, {
 							"_fullName": "endPoint",
@@ -3334,42 +2339,9 @@
 							"kind": "function parameter",
 							"name": "endPoint",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Vec2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Vec2",
-										"_kind": "type alias",
-										"_name": "Vec2",
-										"id": 1910638286,
-										"kind": "type alias",
-										"name": "Vec2",
-										"underlying_type": {
-											"_typeName": "geom::Vec2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Vec2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Vec2",
-													"_kind": "class",
-													"_name": "Vec2",
-													"class_kind": "class",
-													"id": 16661423,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Vec2",
-													"scope": {
-														"name": "Vec2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Vec2"
 							}
 						}, {
 							"_fullName": "startVelocity",
@@ -3445,14 +2417,14 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::Vec2,stappler::xenolith::Vec2,float,float,Function<void (stappler::xenolith::Node *)>&&)"
+						"signature": "(stappler::geom::Vec2,stappler::geom::Vec2,float,float,Function<void (stappler::xenolith::Node *)>&&)"
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ActionAcceleratedMove::initWithDuration(float,stappler::xenolith::Vec2,stappler::xenolith::Vec2,float,float,Function<void (stappler::xenolith::Node *)>&&)",
+						"_fullName": "::stappler::xenolith::basic2d::ActionAcceleratedMove::initWithDuration(float,stappler::geom::Vec2,stappler::geom::Vec2,float,float,Function<void (stappler::xenolith::Node *)>&&)",
 						"_kind": "member function",
 						"_name": "initWithDuration",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 3162235576,
+						"id": 311010260,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -3481,42 +2453,9 @@
 							"kind": "function parameter",
 							"name": "normal",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Vec2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Vec2",
-										"_kind": "type alias",
-										"_name": "Vec2",
-										"id": 1910638286,
-										"kind": "type alias",
-										"name": "Vec2",
-										"underlying_type": {
-											"_typeName": "geom::Vec2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Vec2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Vec2",
-													"_kind": "class",
-													"_name": "Vec2",
-													"class_kind": "class",
-													"id": 16661423,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Vec2",
-													"scope": {
-														"name": "Vec2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Vec2"
 							}
 						}, {
 							"_fullName": "startPoint",
@@ -3526,42 +2465,9 @@
 							"kind": "function parameter",
 							"name": "startPoint",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Vec2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Vec2",
-										"_kind": "type alias",
-										"_name": "Vec2",
-										"id": 1910638286,
-										"kind": "type alias",
-										"name": "Vec2",
-										"underlying_type": {
-											"_typeName": "geom::Vec2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Vec2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Vec2",
-													"_kind": "class",
-													"_name": "Vec2",
-													"class_kind": "class",
-													"id": 16661423,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Vec2",
-													"scope": {
-														"name": "Vec2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Vec2"
 							}
 						}, {
 							"_fullName": "startVelocity",
@@ -3637,14 +2543,14 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(float,stappler::xenolith::Vec2,stappler::xenolith::Vec2,float,float,Function<void (stappler::xenolith::Node *)>&&)"
+						"signature": "(float,stappler::geom::Vec2,stappler::geom::Vec2,float,float,Function<void (stappler::xenolith::Node *)>&&)"
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ActionAcceleratedMove::getDuration() const",
+						"_fullName": "::stappler::xenolith::basic2d::ActionAcceleratedMove::getDuration() const",
 						"_kind": "member function",
 						"_name": "getDuration",
 						"body_kind": "declaration",
 						"cv_qualifier": "const",
-						"id": 1311829256,
+						"id": 354392381,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -3662,12 +2568,12 @@
 						"semantic_scope": "",
 						"signature": "() const"
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ActionAcceleratedMove::getPosition(float) const",
+						"_fullName": "::stappler::xenolith::basic2d::ActionAcceleratedMove::getPosition(float) const",
 						"_kind": "member function",
 						"_name": "getPosition",
 						"body_kind": "declaration",
 						"cv_qualifier": "const",
-						"id": 1707103576,
+						"id": 3157403831,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -3691,52 +2597,19 @@
 						}],
 						"ref_qualifier": "none",
 						"return_type": {
-							"_typeName": "stappler::xenolith::Vec2",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::Vec2",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::Vec2",
-									"_kind": "type alias",
-									"_name": "Vec2",
-									"id": 1910638286,
-									"kind": "type alias",
-									"name": "Vec2",
-									"underlying_type": {
-										"_typeName": "geom::Vec2",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::Vec2",
-											"objects": [{
-												"_fullName": "::stappler::geom::Vec2",
-												"_kind": "class",
-												"_name": "Vec2",
-												"class_kind": "class",
-												"id": 16661423,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "Vec2",
-												"scope": {
-													"name": "Vec2"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::Vec2",
+							"kind": "unexposed",
+							"name": "stappler::geom::Vec2"
 						},
 						"semantic_scope": "",
 						"signature": "(float) const"
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ActionAcceleratedMove::getStartPosition() const",
+						"_fullName": "::stappler::xenolith::basic2d::ActionAcceleratedMove::getStartPosition() const",
 						"_kind": "member function",
 						"_name": "getStartPosition",
 						"body_kind": "definition",
 						"cv_qualifier": "const",
-						"id": 3539127629,
+						"id": 3766976840,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": false,
@@ -3747,62 +2620,24 @@
 						"name": "getStartPosition",
 						"ref_qualifier": "none",
 						"return_type": {
-							"_typeName": "stappler::xenolith::Vec2 const&",
+							"_typeName": "const stappler::geom::Vec2&",
 							"kind": "reference",
 							"referee": {
-								"_typeName": "stappler::xenolith::Vec2 const",
-								"cv_qualifier": "const",
-								"kind": "cv_qualified",
-								"type": {
-									"_typeName": "stappler::xenolith::Vec2",
-									"kind": "user_defined",
-									"target": {
-										"name": "stappler::xenolith::Vec2",
-										"objects": [{
-											"_fullName": "::stappler::xenolith::Vec2",
-											"_kind": "type alias",
-											"_name": "Vec2",
-											"id": 1910638286,
-											"kind": "type alias",
-											"name": "Vec2",
-											"underlying_type": {
-												"_typeName": "geom::Vec2",
-												"kind": "user_defined",
-												"target": {
-													"name": "geom::Vec2",
-													"objects": [{
-														"_fullName": "::stappler::geom::Vec2",
-														"_kind": "class",
-														"_name": "Vec2",
-														"class_kind": "class",
-														"id": 16661423,
-														"is_declaration": false,
-														"is_definition": true,
-														"is_final": false,
-														"kind": "class",
-														"name": "Vec2",
-														"scope": {
-															"name": "Vec2"
-														},
-														"semantic_scope": ""
-													}]
-												}
-											}
-										}]
-									}
-								}
+								"_typeName": "const stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "const stappler::geom::Vec2"
 							},
 							"reference_kind": "lvalue"
 						},
 						"semantic_scope": "",
 						"signature": "() const"
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ActionAcceleratedMove::getEndPosition() const",
+						"_fullName": "::stappler::xenolith::basic2d::ActionAcceleratedMove::getEndPosition() const",
 						"_kind": "member function",
 						"_name": "getEndPosition",
 						"body_kind": "definition",
 						"cv_qualifier": "const",
-						"id": 1235900299,
+						"id": 1659990422,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": false,
@@ -3813,62 +2648,24 @@
 						"name": "getEndPosition",
 						"ref_qualifier": "none",
 						"return_type": {
-							"_typeName": "stappler::xenolith::Vec2 const&",
+							"_typeName": "const stappler::geom::Vec2&",
 							"kind": "reference",
 							"referee": {
-								"_typeName": "stappler::xenolith::Vec2 const",
-								"cv_qualifier": "const",
-								"kind": "cv_qualified",
-								"type": {
-									"_typeName": "stappler::xenolith::Vec2",
-									"kind": "user_defined",
-									"target": {
-										"name": "stappler::xenolith::Vec2",
-										"objects": [{
-											"_fullName": "::stappler::xenolith::Vec2",
-											"_kind": "type alias",
-											"_name": "Vec2",
-											"id": 1910638286,
-											"kind": "type alias",
-											"name": "Vec2",
-											"underlying_type": {
-												"_typeName": "geom::Vec2",
-												"kind": "user_defined",
-												"target": {
-													"name": "geom::Vec2",
-													"objects": [{
-														"_fullName": "::stappler::geom::Vec2",
-														"_kind": "class",
-														"_name": "Vec2",
-														"class_kind": "class",
-														"id": 16661423,
-														"is_declaration": false,
-														"is_definition": true,
-														"is_final": false,
-														"kind": "class",
-														"name": "Vec2",
-														"scope": {
-															"name": "Vec2"
-														},
-														"semantic_scope": ""
-													}]
-												}
-											}
-										}]
-									}
-								}
+								"_typeName": "const stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "const stappler::geom::Vec2"
 							},
 							"reference_kind": "lvalue"
 						},
 						"semantic_scope": "",
 						"signature": "() const"
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ActionAcceleratedMove::getNormal() const",
+						"_fullName": "::stappler::xenolith::basic2d::ActionAcceleratedMove::getNormal() const",
 						"_kind": "member function",
 						"_name": "getNormal",
 						"body_kind": "definition",
 						"cv_qualifier": "const",
-						"id": 892700717,
+						"id": 241562935,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": false,
@@ -3879,62 +2676,24 @@
 						"name": "getNormal",
 						"ref_qualifier": "none",
 						"return_type": {
-							"_typeName": "stappler::xenolith::Vec2 const&",
+							"_typeName": "const stappler::geom::Vec2&",
 							"kind": "reference",
 							"referee": {
-								"_typeName": "stappler::xenolith::Vec2 const",
-								"cv_qualifier": "const",
-								"kind": "cv_qualified",
-								"type": {
-									"_typeName": "stappler::xenolith::Vec2",
-									"kind": "user_defined",
-									"target": {
-										"name": "stappler::xenolith::Vec2",
-										"objects": [{
-											"_fullName": "::stappler::xenolith::Vec2",
-											"_kind": "type alias",
-											"_name": "Vec2",
-											"id": 1910638286,
-											"kind": "type alias",
-											"name": "Vec2",
-											"underlying_type": {
-												"_typeName": "geom::Vec2",
-												"kind": "user_defined",
-												"target": {
-													"name": "geom::Vec2",
-													"objects": [{
-														"_fullName": "::stappler::geom::Vec2",
-														"_kind": "class",
-														"_name": "Vec2",
-														"class_kind": "class",
-														"id": 16661423,
-														"is_declaration": false,
-														"is_definition": true,
-														"is_final": false,
-														"kind": "class",
-														"name": "Vec2",
-														"scope": {
-															"name": "Vec2"
-														},
-														"semantic_scope": ""
-													}]
-												}
-											}
-										}]
-									}
-								}
+								"_typeName": "const stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "const stappler::geom::Vec2"
 							},
 							"reference_kind": "lvalue"
 						},
 						"semantic_scope": "",
 						"signature": "() const"
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ActionAcceleratedMove::getStartVelocity() const",
+						"_fullName": "::stappler::xenolith::basic2d::ActionAcceleratedMove::getStartVelocity() const",
 						"_kind": "member function",
 						"_name": "getStartVelocity",
 						"body_kind": "definition",
 						"cv_qualifier": "const",
-						"id": 751030386,
+						"id": 285968288,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": false,
@@ -3952,12 +2711,12 @@
 						"semantic_scope": "",
 						"signature": "() const"
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ActionAcceleratedMove::getEndVelocity() const",
+						"_fullName": "::stappler::xenolith::basic2d::ActionAcceleratedMove::getEndVelocity() const",
 						"_kind": "member function",
 						"_name": "getEndVelocity",
 						"body_kind": "definition",
 						"cv_qualifier": "const",
-						"id": 1446040616,
+						"id": 1637320617,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": false,
@@ -3975,12 +2734,12 @@
 						"semantic_scope": "",
 						"signature": "() const"
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ActionAcceleratedMove::getCurrentVelocity() const",
+						"_fullName": "::stappler::xenolith::basic2d::ActionAcceleratedMove::getCurrentVelocity() const",
 						"_kind": "member function",
 						"_name": "getCurrentVelocity",
 						"body_kind": "declaration",
 						"cv_qualifier": "const",
-						"id": 3373543716,
+						"id": 170108035,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -3998,12 +2757,12 @@
 						"semantic_scope": "",
 						"signature": "() const"
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ActionAcceleratedMove::startWithTarget(stappler::xenolith::Node*)",
+						"_fullName": "::stappler::xenolith::basic2d::ActionAcceleratedMove::startWithTarget(stappler::xenolith::Node*)",
 						"_kind": "member function",
 						"_name": "startWithTarget",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 3975720710,
+						"id": 3625508333,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -4165,12 +2924,12 @@
 						"semantic_scope": "",
 						"signature": "(stappler::xenolith::Node*)"
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ActionAcceleratedMove::update(float)",
+						"_fullName": "::stappler::xenolith::basic2d::ActionAcceleratedMove::update(float)",
 						"_kind": "member function",
 						"_name": "update",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 56545095,
+						"id": 3332873568,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -4202,12 +2961,12 @@
 						"semantic_scope": "",
 						"signature": "(float)"
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ActionAcceleratedMove::setCallback(Function<void (stappler::xenolith::Node *)>&&)",
+						"_fullName": "::stappler::xenolith::basic2d::ActionAcceleratedMove::setCallback(Function<void (stappler::xenolith::Node *)>&&)",
 						"_kind": "member function",
 						"_name": "setCallback",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 1311965730,
+						"id": 3760204101,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -4255,10 +3014,10 @@
 						"kind": "access specifier",
 						"name": "protected"
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ActionAcceleratedMove::_accDuration",
+						"_fullName": "::stappler::xenolith::basic2d::ActionAcceleratedMove::_accDuration",
 						"_kind": "member variable",
 						"_name": "_accDuration",
-						"id": 116123219,
+						"id": 927147804,
 						"is_mutable": false,
 						"kind": "member variable",
 						"name": "_accDuration",
@@ -4268,10 +3027,10 @@
 							"kind": "builtin"
 						}
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ActionAcceleratedMove::_acceleration",
+						"_fullName": "::stappler::xenolith::basic2d::ActionAcceleratedMove::_acceleration",
 						"_kind": "member variable",
 						"_name": "_acceleration",
-						"id": 3818009951,
+						"id": 3310455726,
 						"is_mutable": false,
 						"kind": "member variable",
 						"name": "_acceleration",
@@ -4281,10 +3040,10 @@
 							"kind": "builtin"
 						}
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ActionAcceleratedMove::_startVelocity",
+						"_fullName": "::stappler::xenolith::basic2d::ActionAcceleratedMove::_startVelocity",
 						"_kind": "member variable",
 						"_name": "_startVelocity",
-						"id": 3933750763,
+						"id": 186942703,
 						"is_mutable": false,
 						"kind": "member variable",
 						"name": "_startVelocity",
@@ -4294,10 +3053,10 @@
 							"kind": "builtin"
 						}
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ActionAcceleratedMove::_endVelocity",
+						"_fullName": "::stappler::xenolith::basic2d::ActionAcceleratedMove::_endVelocity",
 						"_kind": "member variable",
 						"_name": "_endVelocity",
-						"id": 1900112579,
+						"id": 2934544472,
 						"is_mutable": false,
 						"kind": "member variable",
 						"name": "_endVelocity",
@@ -4307,150 +3066,51 @@
 							"kind": "builtin"
 						}
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ActionAcceleratedMove::_normalPoint",
+						"_fullName": "::stappler::xenolith::basic2d::ActionAcceleratedMove::_normalPoint",
 						"_kind": "member variable",
 						"_name": "_normalPoint",
-						"id": 355433558,
+						"id": 145926794,
 						"is_mutable": false,
 						"kind": "member variable",
 						"name": "_normalPoint",
 						"type": {
-							"_typeName": "stappler::xenolith::Vec2",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::Vec2",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::Vec2",
-									"_kind": "type alias",
-									"_name": "Vec2",
-									"id": 1910638286,
-									"kind": "type alias",
-									"name": "Vec2",
-									"underlying_type": {
-										"_typeName": "geom::Vec2",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::Vec2",
-											"objects": [{
-												"_fullName": "::stappler::geom::Vec2",
-												"_kind": "class",
-												"_name": "Vec2",
-												"class_kind": "class",
-												"id": 16661423,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "Vec2",
-												"scope": {
-													"name": "Vec2"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::Vec2",
+							"kind": "unexposed",
+							"name": "stappler::geom::Vec2"
 						}
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ActionAcceleratedMove::_startPoint",
+						"_fullName": "::stappler::xenolith::basic2d::ActionAcceleratedMove::_startPoint",
 						"_kind": "member variable",
 						"_name": "_startPoint",
-						"id": 3464387717,
+						"id": 2562221547,
 						"is_mutable": false,
 						"kind": "member variable",
 						"name": "_startPoint",
 						"type": {
-							"_typeName": "stappler::xenolith::Vec2",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::Vec2",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::Vec2",
-									"_kind": "type alias",
-									"_name": "Vec2",
-									"id": 1910638286,
-									"kind": "type alias",
-									"name": "Vec2",
-									"underlying_type": {
-										"_typeName": "geom::Vec2",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::Vec2",
-											"objects": [{
-												"_fullName": "::stappler::geom::Vec2",
-												"_kind": "class",
-												"_name": "Vec2",
-												"class_kind": "class",
-												"id": 16661423,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "Vec2",
-												"scope": {
-													"name": "Vec2"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::Vec2",
+							"kind": "unexposed",
+							"name": "stappler::geom::Vec2"
 						}
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ActionAcceleratedMove::_endPoint",
+						"_fullName": "::stappler::xenolith::basic2d::ActionAcceleratedMove::_endPoint",
 						"_kind": "member variable",
 						"_name": "_endPoint",
-						"id": 1294007131,
+						"id": 2937393295,
 						"is_mutable": false,
 						"kind": "member variable",
 						"name": "_endPoint",
 						"type": {
-							"_typeName": "stappler::xenolith::Vec2",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::Vec2",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::Vec2",
-									"_kind": "type alias",
-									"_name": "Vec2",
-									"id": 1910638286,
-									"kind": "type alias",
-									"name": "Vec2",
-									"underlying_type": {
-										"_typeName": "geom::Vec2",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::Vec2",
-											"objects": [{
-												"_fullName": "::stappler::geom::Vec2",
-												"_kind": "class",
-												"_name": "Vec2",
-												"class_kind": "class",
-												"id": 16661423,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "Vec2",
-												"scope": {
-													"name": "Vec2"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::Vec2",
+							"kind": "unexposed",
+							"name": "stappler::geom::Vec2"
 						}
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ActionAcceleratedMove::computeEndPoint()",
+						"_fullName": "::stappler::xenolith::basic2d::ActionAcceleratedMove::computeEndPoint()",
 						"_kind": "member function",
 						"_name": "computeEndPoint",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 1538406833,
+						"id": 3232225481,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -4461,52 +3121,19 @@
 						"name": "computeEndPoint",
 						"ref_qualifier": "none",
 						"return_type": {
-							"_typeName": "stappler::xenolith::Vec2",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::Vec2",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::Vec2",
-									"_kind": "type alias",
-									"_name": "Vec2",
-									"id": 1910638286,
-									"kind": "type alias",
-									"name": "Vec2",
-									"underlying_type": {
-										"_typeName": "geom::Vec2",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::Vec2",
-											"objects": [{
-												"_fullName": "::stappler::geom::Vec2",
-												"_kind": "class",
-												"_name": "Vec2",
-												"class_kind": "class",
-												"id": 16661423,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "Vec2",
-												"scope": {
-													"name": "Vec2"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::Vec2",
+							"kind": "unexposed",
+							"name": "stappler::geom::Vec2"
 						},
 						"semantic_scope": "",
 						"signature": "()"
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ActionAcceleratedMove::computeNormalPoint()",
+						"_fullName": "::stappler::xenolith::basic2d::ActionAcceleratedMove::computeNormalPoint()",
 						"_kind": "member function",
 						"_name": "computeNormalPoint",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 1075242372,
+						"id": 737345147,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -4517,52 +3144,19 @@
 						"name": "computeNormalPoint",
 						"ref_qualifier": "none",
 						"return_type": {
-							"_typeName": "stappler::xenolith::Vec2",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::Vec2",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::Vec2",
-									"_kind": "type alias",
-									"_name": "Vec2",
-									"id": 1910638286,
-									"kind": "type alias",
-									"name": "Vec2",
-									"underlying_type": {
-										"_typeName": "geom::Vec2",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::Vec2",
-											"objects": [{
-												"_fullName": "::stappler::geom::Vec2",
-												"_kind": "class",
-												"_name": "Vec2",
-												"class_kind": "class",
-												"id": 16661423,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "Vec2",
-												"scope": {
-													"name": "Vec2"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::Vec2",
+							"kind": "unexposed",
+							"name": "stappler::geom::Vec2"
 						},
 						"semantic_scope": "",
 						"signature": "()"
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ActionAcceleratedMove::computeEndVelocity()",
+						"_fullName": "::stappler::xenolith::basic2d::ActionAcceleratedMove::computeEndVelocity()",
 						"_kind": "member function",
 						"_name": "computeEndVelocity",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 595236146,
+						"id": 3155917528,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -4580,10 +3174,10 @@
 						"semantic_scope": "",
 						"signature": "()"
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ActionAcceleratedMove::_callback",
+						"_fullName": "::stappler::xenolith::basic2d::ActionAcceleratedMove::_callback",
 						"_kind": "member variable",
 						"_name": "_callback",
-						"id": 917769292,
+						"id": 3085232213,
 						"is_mutable": false,
 						"kind": "member variable",
 						"name": "_callback",
@@ -4598,7 +3192,7 @@
 						}
 					}],
 					"class_kind": "class",
-					"id": 1102511375,
+					"id": 424905461,
 					"is_declaration": false,
 					"is_definition": true,
 					"is_final": false,
@@ -4609,14 +3203,14 @@
 					},
 					"semantic_scope": ""
 				}],
-				"id": 3420207034,
+				"id": 245581775,
 				"is_anonymous": false,
 				"is_inline": false,
 				"is_nested": true,
 				"kind": "namespace",
-				"name": "gui2d",
+				"name": "basic2d",
 				"scope": {
-					"name": "gui2d"
+					"name": "basic2d"
 				}
 			}],
 			"id": 2324754634,
@@ -4639,9 +3233,9 @@
 			"name": "stappler"
 		}
 	}],
-	"id": 2005454456,
+	"id": 3822520984,
 	"kind": "file",
-	"name": "xenolith/renderer/gui2d/XL2dActionAcceleratedMove.h",
+	"name": "xenolith/renderer/basic2d/XL2dActionAcceleratedMove.h",
 	"unmatched_comments": [{
 		"line": 21,
 		"text": "\nCopyright (c) 2023 Stappler LLC <admin@stappler.dev>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n"

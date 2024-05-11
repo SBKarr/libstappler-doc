@@ -29,6 +29,13 @@ Title: XL2dVectorResult.h
 ## CONTENT
 
 
+# ::stappler::xenolith::basic2d::PathWriter
+
+## BRIEF
+
+## CONTENT
+
+
 # ::stappler::xenolith::basic2d::VectorCanvasResult
 
 ## BRIEF
@@ -63,7 +70,7 @@ Title: XL2dVectorResult.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::Color4F
+Тип: stappler::geom::Color4F
 
 
 # ::stappler::xenolith::basic2d::VectorCanvasResult::targetSize
@@ -72,7 +79,7 @@ Title: XL2dVectorResult.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::Size2
+Тип: stappler::geom::Size2
 
 
 # ::stappler::xenolith::basic2d::VectorCanvasResult::targetTransform
@@ -81,17 +88,17 @@ Title: XL2dVectorResult.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::Mat4
+Тип: stappler::geom::Mat4
 
 
-# ::stappler::xenolith::basic2d::VectorCanvasResult::updateColor(stappler::xenolith::Color4F const&)
+# ::stappler::xenolith::basic2d::VectorCanvasResult::updateColor(const stappler::geom::Color4F&)
 
 ## BRIEF
 
 ## CONTENT
 
 Параметры:
-* stappler::xenolith::Color4F const&
+* const stappler::geom::Color4F&
 
 
 # ::stappler::xenolith::basic2d::VectorCanvasDeferredResult
@@ -151,7 +158,7 @@ Title: XL2dVectorResult.h
 * Rc<stappler::xenolith::basic2d::VectorCanvasResult>&&
 
 
-# ::stappler::xenolith::basic2d::VectorCanvasDeferredResult::updateColor(stappler::xenolith::Color4F const&)
+# ::stappler::xenolith::basic2d::VectorCanvasDeferredResult::updateColor(const stappler::geom::Color4F&)
 
 ## BRIEF
 
@@ -160,7 +167,7 @@ Title: XL2dVectorResult.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Color4F const&
+* const stappler::geom::Color4F&
 
 
 # ::stappler::xenolith::basic2d::VectorCanvasDeferredResult::getResult() const

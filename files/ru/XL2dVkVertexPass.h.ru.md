@@ -127,38 +127,6 @@ Title: XL2dVkVertexPass.h
 * Function<void (bool)>&&
 
 
-# ::stappler::xenolith::basic2d::vk::VertexAttachmentHandle::isDescriptorDirty(stappler::xenolith::core::AttachmentHandle::PassHandle const&,stappler::xenolith::vk::PipelineDescriptor const&,uint32_t,bool) const
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-Параметры:
-* stappler::xenolith::core::AttachmentHandle::PassHandle const&
-* stappler::xenolith::vk::PipelineDescriptor const&
-* uint32_t
-* bool
-
-Возвращает:
-* bool
-
-# ::stappler::xenolith::basic2d::vk::VertexAttachmentHandle::writeDescriptor(core::QueuePassHandle const&,stappler::xenolith::vk::DescriptorBufferInfo&)
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-Параметры:
-* core::QueuePassHandle const&
-* stappler::xenolith::vk::DescriptorBufferInfo&
-
-Возвращает:
-* bool
-
 # ::stappler::xenolith::basic2d::vk::VertexAttachmentHandle::getVertexData() const
 
 ## BRIEF
@@ -179,7 +147,7 @@ Title: XL2dVkVertexPass.h
 Доступ: public
 
 Возвращает:
-* Rc<stappler::xenolith::vk::DeviceBuffer> const&
+* Rc<stappler::xenolith::vk::Buffer> const&
 
 # ::stappler::xenolith::basic2d::vk::VertexAttachmentHandle::getIndexes() const
 
@@ -190,7 +158,7 @@ Title: XL2dVkVertexPass.h
 Доступ: public
 
 Возвращает:
-* Rc<stappler::xenolith::vk::DeviceBuffer> const&
+* Rc<stappler::xenolith::vk::Buffer> const&
 
 # ::stappler::xenolith::basic2d::vk::VertexAttachmentHandle::popCommands() const
 
@@ -248,7 +216,7 @@ Title: XL2dVkVertexPass.h
 
 Доступ: protected
 
-Тип: Rc<stappler::xenolith::vk::DeviceBuffer>
+Тип: Rc<stappler::xenolith::vk::Buffer>
 
 
 # ::stappler::xenolith::basic2d::vk::VertexAttachmentHandle::_vertexes
@@ -259,7 +227,7 @@ Title: XL2dVkVertexPass.h
 
 Доступ: protected
 
-Тип: Rc<stappler::xenolith::vk::DeviceBuffer>
+Тип: Rc<stappler::xenolith::vk::Buffer>
 
 
 # ::stappler::xenolith::basic2d::vk::VertexAttachmentHandle::_transforms
@@ -270,7 +238,7 @@ Title: XL2dVkVertexPass.h
 
 Доступ: protected
 
-Тип: Rc<stappler::xenolith::vk::DeviceBuffer>
+Тип: Rc<stappler::xenolith::vk::Buffer>
 
 
 # ::stappler::xenolith::basic2d::vk::VertexAttachmentHandle::_spans
@@ -429,17 +397,6 @@ Title: XL2dVkVertexPass.h
 
 
 # ::stappler::xenolith::basic2d::vk::VertexPass::_depth2d
-
-## BRIEF
-
-## CONTENT
-
-Доступ: protected
-
-Тип: stappler::xenolith::core::QueuePass::AttachmentData const*
-
-
-# ::stappler::xenolith::basic2d::vk::VertexPass::_depth3d
 
 ## BRIEF
 

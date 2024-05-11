@@ -18,7 +18,7 @@ Title: XLFontDeferredRequest.h
 * Ref
 
 
-# ::stappler::xenolith::font::DeferredRequest::runFontRenderer(thread::TaskQueue&,Rc<stappler::xenolith::font::FontLibrary> const&,Vector<stappler::xenolith::font::FontUpdateRequest> const&,Function<void (uint32_t, const stappler::xenolith::font::CharTexture &)>&&,Function<void ()>&&)
+# ::stappler::xenolith::font::DeferredRequest::runFontRenderer(thread::TaskQueue&,Rc<stappler::xenolith::font::FontExtension> const&,Vector<stappler::xenolith::font::FontUpdateRequest> const&,Function<void (uint32_t, const stappler::font::CharTexture &)>&&,Function<void ()>&&)
 
 ## BRIEF
 
@@ -26,9 +26,9 @@ Title: XLFontDeferredRequest.h
 
 Параметры:
 * thread::TaskQueue&
-* Rc<stappler::xenolith::font::FontLibrary> const&
+* Rc<stappler::xenolith::font::FontExtension> const&
 * Vector<stappler::xenolith::font::FontUpdateRequest> const&
-* Function<void (uint32_t, const stappler::xenolith::font::CharTexture &)>&&
+* Function<void (uint32_t, const stappler::font::CharTexture &)>&&
 * Function<void ()>&&
 
 
@@ -39,14 +39,14 @@ Title: XLFontDeferredRequest.h
 ## CONTENT
 
 
-# ::stappler::xenolith::font::DeferredRequest::DeferredRequest(Rc<stappler::xenolith::font::FontLibrary> const&,Vector<stappler::xenolith::font::FontUpdateRequest> const&)
+# ::stappler::xenolith::font::DeferredRequest::DeferredRequest(Rc<stappler::xenolith::font::FontExtension> const&,Vector<stappler::xenolith::font::FontUpdateRequest> const&)
 
 ## BRIEF
 
 ## CONTENT
 
 Параметры:
-* Rc<stappler::xenolith::font::FontLibrary> const&
+* Rc<stappler::xenolith::font::FontExtension> const&
 * Vector<stappler::xenolith::font::FontUpdateRequest> const&
 
 
@@ -102,13 +102,13 @@ Title: XLFontDeferredRequest.h
 Тип: Vector<Pair<uint32_t, char16_t>>
 
 
-# ::stappler::xenolith::font::DeferredRequest::library
+# ::stappler::xenolith::font::DeferredRequest::ext
 
 ## BRIEF
 
 ## CONTENT
 
-Тип: Rc<font::FontLibrary>
+Тип: Rc<font::FontExtension>
 
 
 # ::stappler::xenolith::font::DeferredRequest::onTexture

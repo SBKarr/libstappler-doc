@@ -17,137 +17,6 @@ Title: SPStringView.h
 
 Также, заголовок определяет возможность использовать функции обратного вызова (вида `Callback<void(StringView)>`) для вывода строк вместо потока. В определённых случаях такое использование вывода в поток значительно эффективнее. Многие функции `SPString.h` позволяют передавать в качестве потока произвольный аргумент для использования этой функции
 
-# ::stappler::const_char_ptr
-
-## BRIEF
-
-Тип указателя для однобайтовой строки
-
-## CONTENT
-
-Тип указателя для однобайтовой строки
-
-# ::stappler::const_char16_ptr
-
-## BRIEF
-
-Тип указателя для двухбайтовой строки
-
-## CONTENT
-
-Тип указателя для двухбайтовой строки
-
-
-# ::stappler::StringView_readNumber<typename>(stappler::const_char_ptr&,size_t&,int)
-
-## BRIEF
-
-Читает число указанного типа из строки
-
-## CONTENT
-
-Читает число указанного типа из строки
-
-Параметры шаблона:
-* typename T - тип числа, поддерживаются базовые целочисленные типы и типы с плавающей точкой)
-
-Параметры:
-* stappler::const_char_ptr& - ссылка на указатель, из которого читается число. При успешном чтении указатель смещается.
-* size_t& - длина строки для чтения. При успешном чтении соотвествующе уменьшается
-* int - размерность для чтения (10 - десятичная система)
-
-Возвращает:
-* Result<T> - опциональный тип результата (см `SPCore.h`)
-
-# ::stappler::StringView_readNumber<typename>(stappler::const_char16_ptr&,size_t&,int)
-
-## BRIEF
-
-Читает число указанного типа из строки
-
-## CONTENT
-
-Читает число указанного типа из строки
-
-Параметры шаблона:
-* typename T - тип числа, поддерживаются базовые целочисленные типы и типы с плавающей точкой)
-
-Параметры:
-* stappler::const_char16_ptr& - ссылка на указатель, из которого читается число. При успешном чтении указатель смещается.
-* size_t& - длина строки для чтения. При успешном чтении соотвествующе уменьшается
-* int - размерность для чтения (10 - десятичная система)
-
-Возвращает:
-* Result<T> - опциональный тип результата (см `SPCore.h`)
-
-# ::stappler::ReaderClassBase<typename>
-
-## BRIEF
-
-Вспомогательный тип, упрощающий доступ к типам масок символов
-
-## CONTENT
-
-Вспомогательный тип, упрощающий доступ к типам масок символов
-
-Параметры шаблона:
-* typename CharType - используемый тип символа
-
-
-# ::stappler::ReaderClassBase<typename>::Chars<CharType...>
-
-## BRIEF
-
-Тип набора символов
-
-## CONTENT
-
-Тип набора символов
-
-Параметры шаблона:
-* CharType Args
-
-
-# ::stappler::ReaderClassBase<typename>::Range<CharType,CharType>
-
-## BRIEF
-
-Тип диапазона символов
-
-## CONTENT
-
-Тип диапазона символов
-
-Параметры шаблона:
-* CharType First
-* CharType Last
-
-
-# ::stappler::ReaderClassBase<typename>::GroupId
-
-## BRIEF
-
-Идентификатор предустановленной группы символов
-
-## CONTENT
-
-Идентификатор предустановленной группы символов
-
-
-# ::stappler::ReaderClassBase<typename>::Group<GroupId>
-
-## BRIEF
-
-Тип группы символов
-
-## CONTENT
-
-Тип группы символов
-
-Параметры шаблона:
-* GroupId G
-
-
 # ::stappler::StringViewBase<typename>
 
 ## BRIEF
@@ -693,42 +562,6 @@ Title: SPStringView.h
 
 Возвращает:
 * Self&
-
-# ::stappler::StringViewBase<typename>::operator==(stappler::StringViewBase::Self const&) const
-
-## BRIEF
-
-Сравнивает два отображения
-
-## CONTENT
-
-Доступ: public
-
-Сравнивает два отображения
-
-Параметры:
-* stappler::StringViewBase::Self const&
-
-Возвращает:
-* bool
-
-# ::stappler::StringViewBase<typename>::operator!=(stappler::StringViewBase::Self const&) const
-
-## BRIEF
-
-Сравнивает два отображения
-
-## CONTENT
-
-Доступ: public
-
-Сравнивает два отображения
-
-Параметры:
-* stappler::StringViewBase::Self const&
-
-Возвращает:
-* bool
 
 # ::stappler::StringViewBase<typename>::is(stappler::StringViewBase::CharType const&) const
 
@@ -2195,42 +2028,6 @@ Title: SPStringView.h
 Возвращает:
 * Self&
 
-# ::stappler::StringViewUtf8::operator==(stappler::StringViewUtf8::Self const&) const
-
-## BRIEF
-
-Сравнивает два отображения
-
-## CONTENT
-
-Доступ: public
-
-Сравнивает два отображения
-
-Параметры:
-* stappler::StringViewUtf8::Self const&
-
-Возвращает:
-* bool
-
-# ::stappler::StringViewUtf8::operator!=(stappler::StringViewUtf8::Self const&) const
-
-## BRIEF
-
-Сравнивает два отображения
-
-## CONTENT
-
-Доступ: public
-
-Сравнивает два отображения
-
-Параметры:
-* stappler::StringViewUtf8::Self const&
-
-Возвращает:
-* bool
-
 # ::stappler::StringViewUtf8::is(char const&) const
 
 ## BRIEF
@@ -2317,24 +2114,6 @@ Title: SPStringView.h
 
 Параметры:
 * stappler::StringViewUtf8::Self const&
-
-Возвращает:
-* bool
-
-# ::stappler::StringViewUtf8::is<char16_t>() const
-
-## BRIEF
-
-Проверяет, является ли символ из шаблона первым символом отображения с учётом кодировки
-
-## CONTENT
-
-Доступ: public
-
-Проверяет, является ли символ из шаблона первым символом отображения с учётом кодировки. Декодирует первый символ отображения в символ юникода и сравнивает с ним.
-
-Параметры шаблона:
-* char16_t C
 
 Возвращает:
 * bool
@@ -2606,24 +2385,6 @@ Title: SPStringView.h
 
 Возвращает:
 * MatchCharType
-
-# ::stappler::StringViewUtf8::foreach<typename>(Callback const&)
-
-## BRIEF
-
-Обходит все символы юникода с помощью функции обратного вызова
-
-## CONTENT
-
-Доступ: public
-
-Обходит все символы юникода с помощью функции обратного вызова. Функция вызывается последовательно для каждого декодированного символа юникода (`MatchCharType`)
-
-Параметры шаблона:
-* typename Callback
-
-Параметры:
-* Callback const&
 
 
 # ::stappler::StringViewUtf8::code_size() const
@@ -3044,50 +2805,6 @@ Title: SPStringView.h
 Псевдоним для стандатного 16-битного строкового отображения
 
 
-# ::stappler::string::compare<typename,typename,typename>(L const&,R const&)
-
-## BRIEF
-
-Лексикографически сравнивает два строковых контейнера с использованием `std::char_traits<CharType>::compare`
-
-## CONTENT
-
-Лексикографически сравнивает два строковых контейнера с использованием `std::char_traits<CharType>::compare`
-
-Параметры шаблона:
-* typename L - тип первого контейнера
-* typename R - тип первого контейнера
-* typename CharType - тип символа
-
-Параметры:
-* L const&
-* R const&
-
-Возвращает:
-* int - результат сравнения: -1, 0 или 1
-
-# ::stappler::string::compareCaseInsensivive<typename,typename,typename>(L const&,R const&)
-
-## BRIEF
-
-Лексикографически сравнивает два строковых контейнера с использованием `std::char_traits<CharType>::compare` игнорируя регистр
-
-## CONTENT
-
-Лексикографически сравнивает два строковых контейнера с использованием `std::char_traits<CharType>::compare` игнорируя регистр
-
-Параметры шаблона:
-* typename L - тип первого контейнера
-* typename R - тип первого контейнера
-* typename CharType - тип символа
-
-Параметры:
-* L const&
-* R const&
-
-Возвращает:
-* int - результат сравнения: -1, 0 или 1
-
 # ::stappler::string::length<typename>(_CharT const*)
 
 ## BRIEF
@@ -3244,1592 +2961,7 @@ Title: SPStringView.h
 Возвращает:
 * bool
 
-# ::stappler::operator==<typename>(typename memory::StandartInterface::BasicStringType<C> const&,StringViewBase<C> const&)
-
-## BRIEF
-
-Сравнивает содержимое двух контейнеров
-
-## CONTENT
-
-Сравнивает содержимое двух контейнеров
-
-Параметры шаблона:
-* typename C
-
-Параметры:
-* typename memory::StandartInterface::BasicStringType<C> const&
-* StringViewBase<C> const&
-
-Возвращает:
-* bool
-
-# ::stappler::operator!=<typename>(typename memory::StandartInterface::BasicStringType<C> const&,StringViewBase<C> const&)
-
-## BRIEF
-
-Сравнивает содержимое двух контейнеров
-
-## CONTENT
-
-Сравнивает содержимое двух контейнеров
-
-Параметры шаблона:
-* typename C
-
-Параметры:
-* typename memory::StandartInterface::BasicStringType<C> const&
-* StringViewBase<C> const&
-
-Возвращает:
-* bool
-
-# ::stappler::operator><typename>(typename memory::StandartInterface::BasicStringType<C> const&,StringViewBase<C> const&)
-
-## BRIEF
-
-Лексикографически сравнивает содержимое двух контейнеров
-
-## CONTENT
-
-Лексикографически сравнивает содержимое двух контейнеров
-
-Параметры шаблона:
-* typename C
-
-Параметры:
-* typename memory::StandartInterface::BasicStringType<C> const&
-* StringViewBase<C> const&
-
-Возвращает:
-* bool
-
-# ::stappler::operator>=<typename>(typename memory::StandartInterface::BasicStringType<C> const&,StringViewBase<C> const&)
-
-## BRIEF
-
-Лексикографически сравнивает содержимое двух контейнеров
-
-## CONTENT
-
-Лексикографически сравнивает содержимое двух контейнеров
-
-Параметры шаблона:
-* typename C
-
-Параметры:
-* typename memory::StandartInterface::BasicStringType<C> const&
-* StringViewBase<C> const&
-
-Возвращает:
-* bool
-
-# ::stappler::operator<<typename>(typename memory::StandartInterface::BasicStringType<C> const&,StringViewBase<C> const&)
-
-## BRIEF
-
-Лексикографически сравнивает содержимое двух контейнеров
-
-## CONTENT
-
-Лексикографически сравнивает содержимое двух контейнеров
-
-Параметры шаблона:
-* typename C
-
-Параметры:
-* typename memory::StandartInterface::BasicStringType<C> const&
-* StringViewBase<C> const&
-
-Возвращает:
-* bool
-
-# ::stappler::operator<=<typename>(typename memory::StandartInterface::BasicStringType<C> const&,StringViewBase<C> const&)
-
-## BRIEF
-
-Лексикографически сравнивает содержимое двух контейнеров
-
-## CONTENT
-
-Лексикографически сравнивает содержимое двух контейнеров
-
-Параметры шаблона:
-* typename C
-
-Параметры:
-* typename memory::StandartInterface::BasicStringType<C> const&
-* StringViewBase<C> const&
-
-Возвращает:
-* bool
-
-# ::stappler::operator==<typename>(StringViewBase<C> const&,typename memory::StandartInterface::BasicStringType<C> const&)
-
-## BRIEF
-
-Сравнивает содержимое двух контейнеров
-
-## CONTENT
-
-Сравнивает содержимое двух контейнеров
-
-Параметры шаблона:
-* typename C
-
-Параметры:
-* StringViewBase<C> const&
-* typename memory::StandartInterface::BasicStringType<C> const&
-
-Возвращает:
-* bool
-
-# ::stappler::operator!=<typename>(StringViewBase<C> const&,typename memory::StandartInterface::BasicStringType<C> const&)
-
-## BRIEF
-
-Сравнивает содержимое двух контейнеров
-
-## CONTENT
-
-Сравнивает содержимое двух контейнеров
-
-Параметры шаблона:
-* typename C
-
-Параметры:
-* StringViewBase<C> const&
-* typename memory::StandartInterface::BasicStringType<C> const&
-
-Возвращает:
-* bool
-
-# ::stappler::operator><typename>(StringViewBase<C> const&,typename memory::StandartInterface::BasicStringType<C> const&)
-
-## BRIEF
-
-Лексикографически сравнивает содержимое двух контейнеров
-
-## CONTENT
-
-Лексикографически сравнивает содержимое двух контейнеров
-
-Параметры шаблона:
-* typename C
-
-Параметры:
-* StringViewBase<C> const&
-* typename memory::StandartInterface::BasicStringType<C> const&
-
-Возвращает:
-* bool
-
-# ::stappler::operator>=<typename>(StringViewBase<C> const&,typename memory::StandartInterface::BasicStringType<C> const&)
-
-## BRIEF
-
-Лексикографически сравнивает содержимое двух контейнеров
-
-## CONTENT
-
-Лексикографически сравнивает содержимое двух контейнеров
-
-Параметры шаблона:
-* typename C
-
-Параметры:
-* StringViewBase<C> const&
-* typename memory::StandartInterface::BasicStringType<C> const&
-
-Возвращает:
-* bool
-
-# ::stappler::operator<<typename>(StringViewBase<C> const&,typename memory::StandartInterface::BasicStringType<C> const&)
-
-## BRIEF
-
-Лексикографически сравнивает содержимое двух контейнеров
-
-## CONTENT
-
-Лексикографически сравнивает содержимое двух контейнеров
-
-Параметры шаблона:
-* typename C
-
-Параметры:
-* StringViewBase<C> const&
-* typename memory::StandartInterface::BasicStringType<C> const&
-
-Возвращает:
-* bool
-
-# ::stappler::operator<=<typename>(StringViewBase<C> const&,typename memory::StandartInterface::BasicStringType<C> const&)
-
-## BRIEF
-
-Лексикографически сравнивает содержимое двух контейнеров
-
-## CONTENT
-
-Лексикографически сравнивает содержимое двух контейнеров
-
-Параметры шаблона:
-* typename C
-
-Параметры:
-* StringViewBase<C> const&
-* typename memory::StandartInterface::BasicStringType<C> const&
-
-Возвращает:
-* bool
-
-# ::stappler::operator==<typename>(typename memory::PoolInterface::BasicStringType<C> const&,StringViewBase<C> const&)
-
-## BRIEF
-
-Сравнивает содержимое двух контейнеров
-
-## CONTENT
-
-Сравнивает содержимое двух контейнеров
-
-Параметры шаблона:
-* typename C
-
-Параметры:
-* typename memory::PoolInterface::BasicStringType<C> const&
-* StringViewBase<C> const&
-
-Возвращает:
-* bool
-
-# ::stappler::operator!=<typename>(typename memory::PoolInterface::BasicStringType<C> const&,StringViewBase<C> const&)
-
-## BRIEF
-
-Сравнивает содержимое двух контейнеров
-
-## CONTENT
-
-Сравнивает содержимое двух контейнеров
-
-Параметры шаблона:
-* typename C
-
-Параметры:
-* typename memory::PoolInterface::BasicStringType<C> const&
-* StringViewBase<C> const&
-
-Возвращает:
-* bool
-
-# ::stappler::operator><typename>(typename memory::PoolInterface::BasicStringType<C> const&,StringViewBase<C> const&)
-
-## BRIEF
-
-Лексикографически сравнивает содержимое двух контейнеров
-
-## CONTENT
-
-Лексикографически сравнивает содержимое двух контейнеров
-
-Параметры шаблона:
-* typename C
-
-Параметры:
-* typename memory::PoolInterface::BasicStringType<C> const&
-* StringViewBase<C> const&
-
-Возвращает:
-* bool
-
-# ::stappler::operator>=<typename>(typename memory::PoolInterface::BasicStringType<C> const&,StringViewBase<C> const&)
-
-## BRIEF
-
-Лексикографически сравнивает содержимое двух контейнеров
-
-## CONTENT
-
-Лексикографически сравнивает содержимое двух контейнеров
-
-Параметры шаблона:
-* typename C
-
-Параметры:
-* typename memory::PoolInterface::BasicStringType<C> const&
-* StringViewBase<C> const&
-
-Возвращает:
-* bool
-
-# ::stappler::operator<<typename>(typename memory::PoolInterface::BasicStringType<C> const&,StringViewBase<C> const&)
-
-## BRIEF
-
-Лексикографически сравнивает содержимое двух контейнеров
-
-## CONTENT
-
-Лексикографически сравнивает содержимое двух контейнеров
-
-Параметры шаблона:
-* typename C
-
-Параметры:
-* typename memory::PoolInterface::BasicStringType<C> const&
-* StringViewBase<C> const&
-
-Возвращает:
-* bool
-
-# ::stappler::operator<=<typename>(typename memory::PoolInterface::BasicStringType<C> const&,StringViewBase<C> const&)
-
-## BRIEF
-
-Лексикографически сравнивает содержимое двух контейнеров
-
-## CONTENT
-
-Лексикографически сравнивает содержимое двух контейнеров
-
-Параметры шаблона:
-* typename C
-
-Параметры:
-* typename memory::PoolInterface::BasicStringType<C> const&
-* StringViewBase<C> const&
-
-Возвращает:
-* bool
-
-# ::stappler::operator==<typename>(StringViewBase<C> const&,typename memory::PoolInterface::BasicStringType<C> const&)
-
-## BRIEF
-
-Сравнивает содержимое двух контейнеров
-
-## CONTENT
-
-Сравнивает содержимое двух контейнеров
-
-Параметры шаблона:
-* typename C
-
-Параметры:
-* StringViewBase<C> const&
-* typename memory::PoolInterface::BasicStringType<C> const&
-
-Возвращает:
-* bool
-
-# ::stappler::operator!=<typename>(StringViewBase<C> const&,typename memory::PoolInterface::BasicStringType<C> const&)
-
-## BRIEF
-
-Сравнивает содержимое двух контейнеров
-
-## CONTENT
-
-Сравнивает содержимое двух контейнеров
-
-Параметры шаблона:
-* typename C
-
-Параметры:
-* StringViewBase<C> const&
-* typename memory::PoolInterface::BasicStringType<C> const&
-
-Возвращает:
-* bool
-
-# ::stappler::operator><typename>(StringViewBase<C> const&,typename memory::PoolInterface::BasicStringType<C> const&)
-
-## BRIEF
-
-Лексикографически сравнивает содержимое двух контейнеров
-
-## CONTENT
-
-Лексикографически сравнивает содержимое двух контейнеров
-
-Параметры шаблона:
-* typename C
-
-Параметры:
-* StringViewBase<C> const&
-* typename memory::PoolInterface::BasicStringType<C> const&
-
-Возвращает:
-* bool
-
-# ::stappler::operator>=<typename>(StringViewBase<C> const&,typename memory::PoolInterface::BasicStringType<C> const&)
-
-## BRIEF
-
-Лексикографически сравнивает содержимое двух контейнеров
-
-## CONTENT
-
-Лексикографически сравнивает содержимое двух контейнеров
-
-Параметры шаблона:
-* typename C
-
-Параметры:
-* StringViewBase<C> const&
-* typename memory::PoolInterface::BasicStringType<C> const&
-
-Возвращает:
-* bool
-
-# ::stappler::operator<<typename>(StringViewBase<C> const&,typename memory::PoolInterface::BasicStringType<C> const&)
-
-## BRIEF
-
-Лексикографически сравнивает содержимое двух контейнеров
-
-## CONTENT
-
-Лексикографически сравнивает содержимое двух контейнеров
-
-Параметры шаблона:
-* typename C
-
-Параметры:
-* StringViewBase<C> const&
-* typename memory::PoolInterface::BasicStringType<C> const&
-
-Возвращает:
-* bool
-
-# ::stappler::operator<=<typename>(StringViewBase<C> const&,typename memory::PoolInterface::BasicStringType<C> const&)
-
-## BRIEF
-
-Лексикографически сравнивает содержимое двух контейнеров
-
-## CONTENT
-
-Лексикографически сравнивает содержимое двух контейнеров
-
-Параметры шаблона:
-* typename C
-
-Параметры:
-* StringViewBase<C> const&
-* typename memory::PoolInterface::BasicStringType<C> const&
-
-Возвращает:
-* bool
-
-# ::stappler::operator+<typename>(typename memory::StandartInterface::BasicStringType<C> const&,StringViewBase<C> const&)
-
-## BRIEF
-
-Соединяет строку со строковым отобраежением
-
-## CONTENT
-
-Соединяет строку со строковым отобраежением, получая новую строку
-
-Параметры шаблона:
-* typename C
-
-Параметры:
-* typename memory::StandartInterface::BasicStringType<C> const&
-* StringViewBase<C> const&
-
-Возвращает:
-* typename memory::StandartInterface::BasicStringType<C>
-
-# ::stappler::operator+<typename>(StringViewBase<C> const&,typename memory::StandartInterface::BasicStringType<C> const&)
-
-## BRIEF
-
-Соединяет строку со строковым отобраежением
-
-## CONTENT
-
-Соединяет строку со строковым отобраежением, получая новую строку
-
-Параметры шаблона:
-* typename C
-
-Параметры:
-* StringViewBase<C> const&
-* typename memory::StandartInterface::BasicStringType<C> const&
-
-Возвращает:
-* typename memory::StandartInterface::BasicStringType<C>
-
-# ::stappler::operator+<typename>(typename memory::PoolInterface::BasicStringType<C> const&,StringViewBase<C> const&)
-
-## BRIEF
-
-Соединяет строку со строковым отобраежением
-
-## CONTENT
-
-Соединяет строку со строковым отобраежением, получая новую строку
-
-Параметры шаблона:
-* typename C
-
-Параметры:
-* typename memory::PoolInterface::BasicStringType<C> const&
-* StringViewBase<C> const&
-
-Возвращает:
-* typename memory::PoolInterface::BasicStringType<C>
-
-# ::stappler::operator+<typename>(StringViewBase<C> const&,typename memory::PoolInterface::BasicStringType<C> const&)
-
-## BRIEF
-
-Соединяет строку со строковым отобраежением
-
-## CONTENT
-
-Соединяет строку со строковым отобраежением, получая новую строку
-
-Параметры шаблона:
-* typename C
-
-Параметры:
-* StringViewBase<C> const&
-* typename memory::PoolInterface::BasicStringType<C> const&
-
-Возвращает:
-* typename memory::PoolInterface::BasicStringType<C>
-
-# ::stappler::operator+<typename>(typename memory::StandartInterface::BasicStringType<C>&&,StringViewBase<C> const&)
-
-## BRIEF
-
-Соединяет строку со строковым отобраежением
-
-## CONTENT
-
-Соединяет строку со строковым отобраежением, получая новую строку
-
-Параметры шаблона:
-* typename C
-
-Параметры:
-* typename memory::StandartInterface::BasicStringType<C>&&
-* StringViewBase<C> const&
-
-Возвращает:
-* typename memory::StandartInterface::BasicStringType<C>
-
-# ::stappler::operator+<typename>(StringViewBase<C> const&,typename memory::StandartInterface::BasicStringType<C>&&)
-
-## BRIEF
-
-Соединяет строку со строковым отобраежением
-
-## CONTENT
-
-Соединяет строку со строковым отобраежением, получая новую строку
-
-Параметры шаблона:
-* typename C
-
-Параметры:
-* StringViewBase<C> const&
-* typename memory::StandartInterface::BasicStringType<C>&&
-
-Возвращает:
-* typename memory::StandartInterface::BasicStringType<C>
-
-# ::stappler::operator+<typename>(typename memory::PoolInterface::BasicStringType<C>&&,StringViewBase<C> const&)
-
-## BRIEF
-
-Соединяет строку со строковым отобраежением
-
-## CONTENT
-
-Соединяет строку со строковым отобраежением, получая новую строку
-
-Параметры шаблона:
-* typename C
-
-Параметры:
-* typename memory::PoolInterface::BasicStringType<C>&&
-* StringViewBase<C> const&
-
-Возвращает:
-* typename memory::PoolInterface::BasicStringType<C>
-
-# ::stappler::operator+<typename>(StringViewBase<C> const&,typename memory::PoolInterface::BasicStringType<C>&&)
-
-## BRIEF
-
-Соединяет строку со строковым отобраежением
-
-## CONTENT
-
-Соединяет строку со строковым отобраежением, получая новую строку
-
-Параметры шаблона:
-* typename C
-
-Параметры:
-* StringViewBase<C> const&
-* typename memory::PoolInterface::BasicStringType<C>&&
-
-Возвращает:
-* typename memory::PoolInterface::BasicStringType<C>
-
-# ::stappler::operator<<(Callback<void (StringViewBase<char>)> const&,char const*)
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента
-
-Параметры:
-* Callback<void (StringViewBase<char>)> const&
-* char const*
-
-Возвращает:
-* Callback<void (StringViewBase<char>)> const&
-
-# ::stappler::operator<<<size_t>(Callback<void (StringViewBase<char>)> const&,char const[N])
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента
-
-Параметры шаблона:
-* size_t N
-
-Параметры:
-* Callback<void (StringViewBase<char>)> const&
-* char const[N]
-
-Возвращает:
-* Callback<void (StringViewBase<char>)> const&
-
-# ::stappler::operator<<(Callback<void (StringViewBase<char>)> const&,StringViewBase<char>)
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента
-
-Параметры:
-* Callback<void (StringViewBase<char>)> const&
-* StringViewBase<char>
-
-Возвращает:
-* Callback<void (StringViewBase<char>)> const&
-
-# ::stappler::operator<<(Callback<void (StringViewBase<char>)> const&,double)
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
-
-Параметры:
-* Callback<void (StringViewBase<char>)> const&
-* double
-
-Возвращает:
-* Callback<void (StringViewBase<char>)> const&
-
-# ::stappler::operator<<(Callback<void (StringViewBase<char>)> const&,int64_t)
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
-
-Параметры:
-* Callback<void (StringViewBase<char>)> const&
-* int64_t
-
-Возвращает:
-* Callback<void (StringViewBase<char>)> const&
-
-# ::stappler::operator<<(Callback<void (StringViewBase<char>)> const&,uint64_t)
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
-
-Параметры:
-* Callback<void (StringViewBase<char>)> const&
-* uint64_t
-
-Возвращает:
-* Callback<void (StringViewBase<char>)> const&
-
-# ::stappler::operator<<(Callback<void (StringViewBase<char16_t>)> const&,char16_t const*)
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента
-
-Параметры:
-* Callback<void (StringViewBase<char16_t>)> const&
-* char16_t const*
-
-Возвращает:
-* Callback<void (StringViewBase<char16_t>)> const&
-
-# ::stappler::operator<<<size_t>(Callback<void (StringViewBase<char16_t>)> const&,char16_t const[N])
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента
-
-Параметры шаблона:
-* size_t N
-
-Параметры:
-* Callback<void (StringViewBase<char16_t>)> const&
-* char16_t const[N]
-
-Возвращает:
-* Callback<void (StringViewBase<char16_t>)> const&
-
-# ::stappler::operator<<(Callback<void (StringViewBase<char16_t>)> const&,StringViewBase<char16_t>)
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента
-
-Параметры:
-* Callback<void (StringViewBase<char16_t>)> const&
-* StringViewBase<char16_t>
-
-Возвращает:
-* Callback<void (StringViewBase<char16_t>)> const&
-
-# ::stappler::operator<<(Callback<void (StringViewBase<char16_t>)> const&,double)
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
-
-Параметры:
-* Callback<void (StringViewBase<char16_t>)> const&
-* double
-
-Возвращает:
-* Callback<void (StringViewBase<char16_t>)> const&
-
-# ::stappler::operator<<(Callback<void (StringViewBase<char16_t>)> const&,int64_t)
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
-
-Параметры:
-* Callback<void (StringViewBase<char16_t>)> const&
-* int64_t
-
-Возвращает:
-* Callback<void (StringViewBase<char16_t>)> const&
-
-# ::stappler::operator<<(Callback<void (StringViewBase<char16_t>)> const&,uint64_t)
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
-
-Параметры:
-* Callback<void (StringViewBase<char16_t>)> const&
-* uint64_t
-
-Возвращает:
-* Callback<void (StringViewBase<char16_t>)> const&
-
-# ::stappler::operator<<(Callback<void (stappler::StringViewUtf8)> const&,char const*)
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента
-
-Параметры:
-* Callback<void (stappler::StringViewUtf8)> const&
-* char const*
-
-Возвращает:
-* Callback<void (stappler::StringViewUtf8)> const&
-
-# ::stappler::operator<<<size_t>(Callback<void (stappler::StringViewUtf8)> const&,char const[N])
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента
-
-Параметры шаблона:
-* size_t N
-
-Параметры:
-* Callback<void (stappler::StringViewUtf8)> const&
-* char const[N]
-
-Возвращает:
-* Callback<void (stappler::StringViewUtf8)> const&
-
-# ::stappler::operator<<(Callback<void (stappler::StringViewUtf8)> const&,stappler::StringViewUtf8)
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента
-
-Параметры:
-* Callback<void (stappler::StringViewUtf8)> const&
-* stappler::StringViewUtf8
-
-Возвращает:
-* Callback<void (stappler::StringViewUtf8)> const&
-
-# ::stappler::operator<<(Callback<void (stappler::StringViewUtf8)> const&,double)
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
-
-Параметры:
-* Callback<void (stappler::StringViewUtf8)> const&
-* double
-
-Возвращает:
-* Callback<void (stappler::StringViewUtf8)> const&
-
-# ::stappler::operator<<(Callback<void (stappler::StringViewUtf8)> const&,int64_t)
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
-
-Параметры:
-* Callback<void (stappler::StringViewUtf8)> const&
-* int64_t
-
-Возвращает:
-* Callback<void (stappler::StringViewUtf8)> const&
-
-# ::stappler::operator<<(Callback<void (stappler::StringViewUtf8)> const&,uint64_t)
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
-
-Параметры:
-* Callback<void (stappler::StringViewUtf8)> const&
-* uint64_t
-
-Возвращает:
-* Callback<void (stappler::StringViewUtf8)> const&
-
-# ::stappler::operator<<(std::function<void (StringViewBase<char>)> const&,char const*)
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента
-
-Параметры:
-* std::function<void (StringViewBase<char>)> const&
-* char const*
-
-Возвращает:
-* std::function<void (StringViewBase<char>)> const&
-
-# ::stappler::operator<<<size_t>(std::function<void (StringViewBase<char>)> const&,char const[N])
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента
-
-Параметры шаблона:
-* size_t N
-
-Параметры:
-* std::function<void (StringViewBase<char>)> const&
-* char const[N]
-
-Возвращает:
-* std::function<void (StringViewBase<char>)> const&
-
-# ::stappler::operator<<(std::function<void (StringViewBase<char>)> const&,StringViewBase<char>)
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента
-
-Параметры:
-* std::function<void (StringViewBase<char>)> const&
-* StringViewBase<char>
-
-Возвращает:
-* std::function<void (StringViewBase<char>)> const&
-
-# ::stappler::operator<<(std::function<void (StringViewBase<char>)> const&,double)
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
-
-Параметры:
-* std::function<void (StringViewBase<char>)> const&
-* double
-
-Возвращает:
-* std::function<void (StringViewBase<char>)> const&
-
-# ::stappler::operator<<(std::function<void (StringViewBase<char>)> const&,int64_t)
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
-
-Параметры:
-* std::function<void (StringViewBase<char>)> const&
-* int64_t
-
-Возвращает:
-* std::function<void (StringViewBase<char>)> const&
-
-# ::stappler::operator<<(std::function<void (StringViewBase<char>)> const&,uint64_t)
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
-
-Параметры:
-* std::function<void (StringViewBase<char>)> const&
-* uint64_t
-
-Возвращает:
-* std::function<void (StringViewBase<char>)> const&
-
-# ::stappler::operator<<(std::function<void (StringViewBase<char16_t>)> const&,char16_t const*)
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента
-
-Параметры:
-* std::function<void (StringViewBase<char16_t>)> const&
-* char16_t const*
-
-Возвращает:
-* std::function<void (StringViewBase<char16_t>)> const&
-
-# ::stappler::operator<<<size_t>(std::function<void (StringViewBase<char16_t>)> const&,char16_t const[N])
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента
-
-Параметры шаблона:
-* size_t N
-
-Параметры:
-* std::function<void (StringViewBase<char16_t>)> const&
-* char16_t const[N]
-
-Возвращает:
-* std::function<void (StringViewBase<char16_t>)> const&
-
-# ::stappler::operator<<(std::function<void (StringViewBase<char16_t>)> const&,StringViewBase<char16_t>)
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента
-
-Параметры:
-* std::function<void (StringViewBase<char16_t>)> const&
-* StringViewBase<char16_t>
-
-Возвращает:
-* std::function<void (StringViewBase<char16_t>)> const&
-
-# ::stappler::operator<<(std::function<void (StringViewBase<char16_t>)> const&,double)
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
-
-Параметры:
-* std::function<void (StringViewBase<char16_t>)> const&
-* double
-
-Возвращает:
-* std::function<void (StringViewBase<char16_t>)> const&
-
-# ::stappler::operator<<(std::function<void (StringViewBase<char16_t>)> const&,int64_t)
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
-
-Параметры:
-* std::function<void (StringViewBase<char16_t>)> const&
-* int64_t
-
-Возвращает:
-* std::function<void (StringViewBase<char16_t>)> const&
-
-# ::stappler::operator<<(std::function<void (StringViewBase<char16_t>)> const&,uint64_t)
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
-
-Параметры:
-* std::function<void (StringViewBase<char16_t>)> const&
-* uint64_t
-
-Возвращает:
-* std::function<void (StringViewBase<char16_t>)> const&
-
-# ::stappler::operator<<(std::function<void (StringViewUtf8)> const&,char const*)
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента
-
-Параметры:
-* std::function<void (StringViewUtf8)> const&
-* char const*
-
-Возвращает:
-* std::function<void (StringViewUtf8)> const&
-
-# ::stappler::operator<<<size_t>(std::function<void (StringViewUtf8)> const&,char const[N])
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента
-
-Параметры шаблона:
-* size_t N
-
-Параметры:
-* std::function<void (StringViewUtf8)> const&
-* char const[N]
-
-Возвращает:
-* std::function<void (StringViewUtf8)> const&
-
-# ::stappler::operator<<(std::function<void (StringViewUtf8)> const&,stappler::StringViewUtf8)
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента
-
-Параметры:
-* std::function<void (StringViewUtf8)> const&
-* stappler::StringViewUtf8
-
-Возвращает:
-* std::function<void (StringViewUtf8)> const&
-
-# ::stappler::operator<<(std::function<void (StringViewUtf8)> const&,double)
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
-
-Параметры:
-* std::function<void (StringViewUtf8)> const&
-* double
-
-Возвращает:
-* std::function<void (StringViewUtf8)> const&
-
-# ::stappler::operator<<(std::function<void (StringViewUtf8)> const&,int64_t)
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
-
-Параметры:
-* std::function<void (StringViewUtf8)> const&
-* int64_t
-
-Возвращает:
-* std::function<void (StringViewUtf8)> const&
-
-# ::stappler::operator<<(std::function<void (StringViewUtf8)> const&,uint64_t)
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
-
-Параметры:
-* std::function<void (StringViewUtf8)> const&
-* uint64_t
-
-Возвращает:
-* std::function<void (StringViewUtf8)> const&
-
-# ::stappler::operator<<(memory::function<void (StringViewBase<char>)> const&,char const*)
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента
-
-Параметры:
-* memory::function<void (StringViewBase<char>)> const&
-* char const*
-
-Возвращает:
-* memory::function<void (StringViewBase<char>)> const&
-
-# ::stappler::operator<<<size_t>(memory::function<void (StringViewBase<char>)> const&,char const[N])
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента
-
-Параметры шаблона:
-* size_t N
-
-Параметры:
-* memory::function<void (StringViewBase<char>)> const&
-* char const[N]
-
-Возвращает:
-* memory::function<void (StringViewBase<char>)> const&
-
-# ::stappler::operator<<(memory::function<void (StringViewBase<char>)> const&,StringViewBase<char>)
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента
-
-Параметры:
-* memory::function<void (StringViewBase<char>)> const&
-* StringViewBase<char>
-
-Возвращает:
-* memory::function<void (StringViewBase<char>)> const&
-
-# ::stappler::operator<<(memory::function<void (StringViewBase<char>)> const&,double)
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
-
-Параметры:
-* memory::function<void (StringViewBase<char>)> const&
-* double
-
-Возвращает:
-* memory::function<void (StringViewBase<char>)> const&
-
-# ::stappler::operator<<(memory::function<void (StringViewBase<char>)> const&,int64_t)
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
-
-Параметры:
-* memory::function<void (StringViewBase<char>)> const&
-* int64_t
-
-Возвращает:
-* memory::function<void (StringViewBase<char>)> const&
-
-# ::stappler::operator<<(memory::function<void (StringViewBase<char>)> const&,uint64_t)
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
-
-Параметры:
-* memory::function<void (StringViewBase<char>)> const&
-* uint64_t
-
-Возвращает:
-* memory::function<void (StringViewBase<char>)> const&
-
-# ::stappler::operator<<(memory::function<void (StringViewBase<char16_t>)> const&,char16_t const*)
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента
-
-Параметры:
-* memory::function<void (StringViewBase<char16_t>)> const&
-* char16_t const*
-
-Возвращает:
-* memory::function<void (StringViewBase<char16_t>)> const&
-
-# ::stappler::operator<<<size_t>(memory::function<void (StringViewBase<char16_t>)> const&,char16_t const[N])
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента
-
-Параметры шаблона:
-* size_t N
-
-Параметры:
-* memory::function<void (StringViewBase<char16_t>)> const&
-* char16_t const[N]
-
-Возвращает:
-* memory::function<void (StringViewBase<char16_t>)> const&
-
-# ::stappler::operator<<(memory::function<void (StringViewBase<char16_t>)> const&,StringViewBase<char16_t>)
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента
-
-Параметры:
-* memory::function<void (StringViewBase<char16_t>)> const&
-* StringViewBase<char16_t>
-
-Возвращает:
-* memory::function<void (StringViewBase<char16_t>)> const&
-
-# ::stappler::operator<<(memory::function<void (StringViewBase<char16_t>)> const&,double)
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
-
-Параметры:
-* memory::function<void (StringViewBase<char16_t>)> const&
-* double
-
-Возвращает:
-* memory::function<void (StringViewBase<char16_t>)> const&
-
-# ::stappler::operator<<(memory::function<void (StringViewBase<char16_t>)> const&,int64_t)
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
-
-Параметры:
-* memory::function<void (StringViewBase<char16_t>)> const&
-* int64_t
-
-Возвращает:
-* memory::function<void (StringViewBase<char16_t>)> const&
-
-# ::stappler::operator<<(memory::function<void (StringViewBase<char16_t>)> const&,uint64_t)
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
-
-Параметры:
-* memory::function<void (StringViewBase<char16_t>)> const&
-* uint64_t
-
-Возвращает:
-* memory::function<void (StringViewBase<char16_t>)> const&
-
-# ::stappler::operator<<(memory::function<void (StringViewUtf8)> const&,char const*)
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента
-
-Параметры:
-* memory::function<void (StringViewUtf8)> const&
-* char const*
-
-Возвращает:
-* memory::function<void (StringViewUtf8)> const&
-
-# ::stappler::operator<<<size_t>(memory::function<void (StringViewUtf8)> const&,char const[N])
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента
-
-Параметры шаблона:
-* size_t N
-
-Параметры:
-* memory::function<void (StringViewUtf8)> const&
-* char const[N]
-
-Возвращает:
-* memory::function<void (StringViewUtf8)> const&
-
-# ::stappler::operator<<(memory::function<void (StringViewUtf8)> const&,stappler::StringViewUtf8)
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента
-
-Параметры:
-* memory::function<void (StringViewUtf8)> const&
-* stappler::StringViewUtf8
-
-Возвращает:
-* memory::function<void (StringViewUtf8)> const&
-
-# ::stappler::operator<<(memory::function<void (StringViewUtf8)> const&,double)
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
-
-Параметры:
-* memory::function<void (StringViewUtf8)> const&
-* double
-
-Возвращает:
-* memory::function<void (StringViewUtf8)> const&
-
-# ::stappler::operator<<(memory::function<void (StringViewUtf8)> const&,int64_t)
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
-
-Параметры:
-* memory::function<void (StringViewUtf8)> const&
-* int64_t
-
-Возвращает:
-* memory::function<void (StringViewUtf8)> const&
-
-# ::stappler::operator<<(memory::function<void (StringViewUtf8)> const&,uint64_t)
-
-## BRIEF
-
-Использует функцию как поток для вывода аргумента
-
-## CONTENT
-
-Использует функцию как поток для вывода аргумента, конвертирует аргумент в строку
-
-Параметры:
-* memory::function<void (StringViewUtf8)> const&
-* int64_t
-
-Возвращает:
-* memory::function<void (StringViewUtf8)> const&
-
-# ::std::hash<stappler::StringView>::hash<stappler::StringView>
+# ::std::hash<::stappler::StringView>::hash<::stappler::StringView>
 
 ## BRIEF
 
@@ -4839,7 +2971,7 @@ Title: SPStringView.h
 
 Вспомогательная структура для вычисления стандартного хэша
 
-# ::std::hash<stappler::StringView>::hash()
+# ::std::hash<::stappler::StringView>::hash()
 
 ## BRIEF
 
@@ -4850,7 +2982,7 @@ Title: SPStringView.h
 Конструктор по умолчанию
 
 
-# ::std::hash<stappler::StringView>::operator()(stappler::StringView const&) const
+# ::std::hash<::stappler::StringView>::operator()(::stappler::StringView const&) const
 
 ## BRIEF
 
@@ -4866,7 +2998,7 @@ Title: SPStringView.h
 Возвращает:
 * std::size_t
 
-# ::std::hash<stappler::StringViewUtf8>::hash<stappler::StringViewUtf8>
+# ::std::hash<::stappler::StringViewUtf8>::hash<::stappler::StringViewUtf8>
 
 ## BRIEF
 
@@ -4877,7 +3009,7 @@ Title: SPStringView.h
 Вспомогательная структура для вычисления стандартного хэша
 
 
-# ::std::hash<stappler::StringViewUtf8>::hash()
+# ::std::hash<::stappler::StringViewUtf8>::hash()
 
 ## BRIEF
 
@@ -4888,7 +3020,7 @@ Title: SPStringView.h
 Конструктор по умолчанию
 
 
-# ::std::hash<stappler::StringViewUtf8>::operator()(stappler::StringViewUtf8 const&) const
+# ::std::hash<::stappler::StringViewUtf8>::operator()(::stappler::StringViewUtf8 const&) const
 
 ## BRIEF
 
@@ -4904,7 +3036,7 @@ Title: SPStringView.h
 Возвращает:
 * std::size_t
 
-# ::std::hash<stappler::WideStringView>::hash<stappler::WideStringView>
+# ::std::hash<::stappler::WideStringView>::hash<::stappler::WideStringView>
 
 ## BRIEF
 
@@ -4915,7 +3047,7 @@ Title: SPStringView.h
 Вспомогательная структура для вычисления стандартного хэша
 
 
-# ::std::hash<stappler::WideStringView>::hash()
+# ::std::hash<::stappler::WideStringView>::hash()
 
 ## BRIEF
 
@@ -4926,7 +3058,7 @@ Title: SPStringView.h
 Конструктор по умолчанию
 
 
-# ::std::hash<stappler::WideStringView>::operator()(stappler::WideStringView const&) const
+# ::std::hash<::stappler::WideStringView>::operator()(::stappler::WideStringView const&) const
 
 ## BRIEF
 
@@ -4941,3 +3073,1536 @@ Title: SPStringView.h
 
 Возвращает:
 * std::size_t
+
+# ::stappler::platform::tolower<typename>(stappler::StringView)
+
+## BRIEF
+
+Конвертирует строку в нижний регистр
+
+## CONTENT
+
+Конвертирует строку в нижний регистр. Использует функции платформы. Использует правила юникода.
+
+Параметры шаблона:
+* typename Interface - интерфейс памяти
+
+Параметры:
+* stappler::StringView
+
+Возвращает:
+* typename Interface::StringType
+
+# ::stappler::platform::toupper<typename>(stappler::StringView)
+
+## BRIEF
+
+Конвертирует строку в верхний регистр
+
+## CONTENT
+
+Конвертирует строку в верхний регистр. Использует функции платформы. Использует правила юникода.
+
+Параметры шаблона:
+* typename Interface - интерфейс памяти
+
+Параметры:
+* stappler::StringView
+
+Возвращает:
+* typename Interface::StringType
+
+# ::stappler::platform::totitle<typename>(stappler::StringView)
+
+## BRIEF
+
+Конвертирует первые символы слов в заглавные
+
+## CONTENT
+
+Конвертирует первые символы слов в заглавные. Использует функции платформы. Использует правила юникода.
+
+Параметры шаблона:
+* typename Interface - интерфейс памяти
+
+Параметры:
+* stappler::StringView
+
+Возвращает:
+* typename Interface::StringType
+
+# ::stappler::platform::tolower<typename>(stappler::WideStringView)
+
+## BRIEF
+
+Конвертирует строку в нижний регистр
+
+## CONTENT
+
+Конвертирует строку в нижний регистр. Использует функции платформы. Использует правила юникода.
+
+Параметры шаблона:
+* typename Interface - интерфейс памяти
+
+Параметры:
+* stappler::WideStringView
+
+Возвращает:
+* typename Interface::WideStringType
+
+
+# ::stappler::platform::toupper<typename>(stappler::WideStringView)
+
+## BRIEF
+
+Конвертирует строку в верхний регистр
+
+## CONTENT
+
+Конвертирует строку в верхний регистр. Использует функции платформы. Использует правила юникода.
+
+Параметры шаблона:
+* typename Interface - интерфейс памяти
+
+Параметры:
+* stappler::WideStringView
+
+Возвращает:
+* typename Interface::WideStringType
+
+# ::stappler::platform::totitle<typename>(stappler::WideStringView)
+
+## BRIEF
+
+Конвертирует первые символы слов в заглавные
+
+## CONTENT
+
+Конвертирует первые символы слов в заглавные. Использует функции платформы. Использует правила юникода.
+
+Параметры шаблона:
+* typename Interface - интерфейс памяти
+
+Параметры:
+* stappler::WideStringView
+
+Возвращает:
+* typename Interface::WideStringType
+
+# ::stappler::platform::compare_u(stappler::StringView,stappler::StringView)
+
+## BRIEF
+
+Сравнивает строки в зависимости от регистра с учётом юникода
+
+## CONTENT
+
+Сравнивает строки в зависимости от регистра с учётом юникода
+
+Параметры:
+* stappler::StringView
+* stappler::StringView
+
+Возвращает:
+* int - результат лексикографического сравнения
+
+# ::stappler::platform::compare_u(stappler::WideStringView,stappler::WideStringView)
+
+## BRIEF
+
+Сравнивает строки в зависимости от регистра с учётом юникода
+
+## CONTENT
+
+Сравнивает строки в зависимости от регистра с учётом юникода
+
+Параметры:
+* stappler::WideStringView
+* stappler::WideStringView
+
+Возвращает:
+* int - результат лексикографического сравнения
+
+# ::stappler::platform::caseCompare_u(stappler::StringView,stappler::StringView)
+
+## BRIEF
+
+Сравнивает строки вне зависимости от регистра в С локали
+
+## CONTENT
+
+Сравнивает строки вне зависимости от регистра в С локали
+
+Параметры:
+* stappler::StringView
+* stappler::StringView
+
+Возвращает:
+* int - результат лексикографического сравнения
+
+# ::stappler::platform::caseCompare_u(stappler::WideStringView,stappler::WideStringView)
+
+## BRIEF
+
+Сравнивает строки вне зависимости от регистра с учётом юникода
+
+## CONTENT
+
+Сравнивает строки вне зависимости от регистра с учётом юникода
+
+Параметры:
+* stappler::WideStringView
+* stappler::WideStringView
+
+Возвращает:
+* int - результат лексикографического сравнения
+
+# ::stappler::operator==<typename>(StringViewBase<C> const&,StringViewBase<C> const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры шаблона:
+* typename C
+
+Параметры:
+* StringViewBase<C> const&
+* StringViewBase<C> const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator!=<typename>(StringViewBase<C> const&,StringViewBase<C> const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры шаблона:
+* typename C
+
+Параметры:
+* StringViewBase<C> const&
+* StringViewBase<C> const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator==<typename>(memory::StandartInterface::BasicStringType<C> const&,StringViewBase<C> const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры шаблона:
+* typename C
+
+Параметры:
+* memory::StandartInterface::BasicStringType<C> const&
+* StringViewBase<C> const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator!=<typename>(memory::StandartInterface::BasicStringType<C> const&,StringViewBase<C> const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры шаблона:
+* typename C
+
+Параметры:
+* memory::StandartInterface::BasicStringType<C> const&
+* StringViewBase<C> const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator><typename>(memory::StandartInterface::BasicStringType<C> const&,StringViewBase<C> const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры шаблона:
+* typename C
+
+Параметры:
+* memory::StandartInterface::BasicStringType<C> const&
+* StringViewBase<C> const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator>=<typename>(memory::StandartInterface::BasicStringType<C> const&,StringViewBase<C> const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры шаблона:
+* typename C
+
+Параметры:
+* memory::StandartInterface::BasicStringType<C> const&
+* StringViewBase<C> const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator<<typename>(memory::StandartInterface::BasicStringType<C> const&,StringViewBase<C> const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры шаблона:
+* typename C
+
+Параметры:
+* memory::StandartInterface::BasicStringType<C> const&
+* StringViewBase<C> const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator<=<typename>(memory::StandartInterface::BasicStringType<C> const&,StringViewBase<C> const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры шаблона:
+* typename C
+
+Параметры:
+* memory::StandartInterface::BasicStringType<C> const&
+* StringViewBase<C> const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator==<typename>(StringViewBase<C> const&,memory::StandartInterface::BasicStringType<C> const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры шаблона:
+* typename C
+
+Параметры:
+* StringViewBase<C> const&
+* memory::StandartInterface::BasicStringType<C> const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator!=<typename>(StringViewBase<C> const&,memory::StandartInterface::BasicStringType<C> const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры шаблона:
+* typename C
+
+Параметры:
+* StringViewBase<C> const&
+* memory::StandartInterface::BasicStringType<C> const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator><typename>(StringViewBase<C> const&,memory::StandartInterface::BasicStringType<C> const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры шаблона:
+* typename C
+
+Параметры:
+* StringViewBase<C> const&
+* memory::StandartInterface::BasicStringType<C> const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator>=<typename>(StringViewBase<C> const&,memory::StandartInterface::BasicStringType<C> const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры шаблона:
+* typename C
+
+Параметры:
+* StringViewBase<C> const&
+* memory::StandartInterface::BasicStringType<C> const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator<<typename>(StringViewBase<C> const&,memory::StandartInterface::BasicStringType<C> const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры шаблона:
+* typename C
+
+Параметры:
+* StringViewBase<C> const&
+* memory::StandartInterface::BasicStringType<C> const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator<=<typename>(StringViewBase<C> const&,memory::StandartInterface::BasicStringType<C> const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры шаблона:
+* typename C
+
+Параметры:
+* StringViewBase<C> const&
+* memory::StandartInterface::BasicStringType<C> const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator==<typename>(memory::PoolInterface::BasicStringType<C> const&,StringViewBase<C> const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры шаблона:
+* typename C
+
+Параметры:
+* memory::PoolInterface::BasicStringType<C> const&
+* StringViewBase<C> const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator!=<typename>(memory::PoolInterface::BasicStringType<C> const&,StringViewBase<C> const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры шаблона:
+* typename C
+
+Параметры:
+* memory::PoolInterface::BasicStringType<C> const&
+* StringViewBase<C> const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator><typename>(memory::PoolInterface::BasicStringType<C> const&,StringViewBase<C> const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры шаблона:
+* typename C
+
+Параметры:
+* memory::PoolInterface::BasicStringType<C> const&
+* StringViewBase<C> const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator>=<typename>(memory::PoolInterface::BasicStringType<C> const&,StringViewBase<C> const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры шаблона:
+* typename C
+
+Параметры:
+* memory::PoolInterface::BasicStringType<C> const&
+* StringViewBase<C> const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator<<typename>(memory::PoolInterface::BasicStringType<C> const&,StringViewBase<C> const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры шаблона:
+* typename C
+
+Параметры:
+* memory::PoolInterface::BasicStringType<C> const&
+* StringViewBase<C> const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator<=<typename>(memory::PoolInterface::BasicStringType<C> const&,StringViewBase<C> const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры шаблона:
+* typename C
+
+Параметры:
+* memory::PoolInterface::BasicStringType<C> const&
+* StringViewBase<C> const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator==<typename>(StringViewBase<C> const&,memory::PoolInterface::BasicStringType<C> const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры шаблона:
+* typename C
+
+Параметры:
+* StringViewBase<C> const&
+* memory::PoolInterface::BasicStringType<C> const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator!=<typename>(StringViewBase<C> const&,memory::PoolInterface::BasicStringType<C> const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры шаблона:
+* typename C
+
+Параметры:
+* StringViewBase<C> const&
+* memory::PoolInterface::BasicStringType<C> const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator><typename>(StringViewBase<C> const&,memory::PoolInterface::BasicStringType<C> const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры шаблона:
+* typename C
+
+Параметры:
+* StringViewBase<C> const&
+* memory::PoolInterface::BasicStringType<C> const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator>=<typename>(StringViewBase<C> const&,memory::PoolInterface::BasicStringType<C> const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры шаблона:
+* typename C
+
+Параметры:
+* StringViewBase<C> const&
+* memory::PoolInterface::BasicStringType<C> const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator<<typename>(StringViewBase<C> const&,memory::PoolInterface::BasicStringType<C> const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры шаблона:
+* typename C
+
+Параметры:
+* StringViewBase<C> const&
+* memory::PoolInterface::BasicStringType<C> const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator<=<typename>(StringViewBase<C> const&,memory::PoolInterface::BasicStringType<C> const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры шаблона:
+* typename C
+
+Параметры:
+* StringViewBase<C> const&
+* memory::PoolInterface::BasicStringType<C> const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator==(stappler::StringViewUtf8 const&,stappler::StringViewUtf8 const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры:
+* stappler::StringViewUtf8 const&
+* stappler::StringViewUtf8 const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator!=(stappler::StringViewUtf8 const&,stappler::StringViewUtf8 const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры:
+* stappler::StringViewUtf8 const&
+* stappler::StringViewUtf8 const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator>(stappler::StringViewUtf8 const&,stappler::StringViewUtf8 const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры:
+* stappler::StringViewUtf8 const&
+* stappler::StringViewUtf8 const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator>=(stappler::StringViewUtf8 const&,stappler::StringViewUtf8 const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры:
+* stappler::StringViewUtf8 const&
+* stappler::StringViewUtf8 const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator<(stappler::StringViewUtf8 const&,stappler::StringViewUtf8 const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры:
+* stappler::StringViewUtf8 const&
+* stappler::StringViewUtf8 const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator<=(stappler::StringViewUtf8 const&,stappler::StringViewUtf8 const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры:
+* stappler::StringViewUtf8 const&
+* stappler::StringViewUtf8 const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator==(memory::StandartInterface::BasicStringType<char> const&,stappler::StringViewUtf8 const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры:
+* memory::StandartInterface::BasicStringType<char> const&
+* stappler::StringViewUtf8 const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator!=(memory::StandartInterface::BasicStringType<char> const&,stappler::StringViewUtf8 const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры:
+* memory::StandartInterface::BasicStringType<char> const&
+* stappler::StringViewUtf8 const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator>(memory::StandartInterface::BasicStringType<char> const&,stappler::StringViewUtf8 const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры:
+* memory::StandartInterface::BasicStringType<char> const&
+* stappler::StringViewUtf8 const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator>=(memory::StandartInterface::BasicStringType<char> const&,stappler::StringViewUtf8 const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры:
+* memory::StandartInterface::BasicStringType<char> const&
+* stappler::StringViewUtf8 const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator<(memory::StandartInterface::BasicStringType<char> const&,stappler::StringViewUtf8 const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры:
+* memory::StandartInterface::BasicStringType<char> const&
+* stappler::StringViewUtf8 const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator<=(memory::StandartInterface::BasicStringType<char> const&,stappler::StringViewUtf8 const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры:
+* memory::StandartInterface::BasicStringType<char> const&
+* stappler::StringViewUtf8 const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator==(stappler::StringViewUtf8 const&,memory::StandartInterface::BasicStringType<char> const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры:
+* stappler::StringViewUtf8 const&
+* memory::StandartInterface::BasicStringType<char> const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator!=(stappler::StringViewUtf8 const&,memory::StandartInterface::BasicStringType<char> const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры:
+* stappler::StringViewUtf8 const&
+* memory::StandartInterface::BasicStringType<char> const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator>(stappler::StringViewUtf8 const&,memory::StandartInterface::BasicStringType<char> const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры:
+* stappler::StringViewUtf8 const&
+* memory::StandartInterface::BasicStringType<char> const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator>=(stappler::StringViewUtf8 const&,memory::StandartInterface::BasicStringType<char> const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры:
+* stappler::StringViewUtf8 const&
+* memory::StandartInterface::BasicStringType<char> const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator<(stappler::StringViewUtf8 const&,memory::StandartInterface::BasicStringType<char> const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры:
+* stappler::StringViewUtf8 const&
+* memory::StandartInterface::BasicStringType<char> const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator<=(stappler::StringViewUtf8 const&,memory::StandartInterface::BasicStringType<char> const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры:
+* stappler::StringViewUtf8 const&
+* memory::StandartInterface::BasicStringType<char> const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator==(memory::PoolInterface::BasicStringType<char> const&,stappler::StringViewUtf8 const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры:
+* memory::PoolInterface::BasicStringType<char> const&
+* stappler::StringViewUtf8 const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator!=(memory::PoolInterface::BasicStringType<char> const&,stappler::StringViewUtf8 const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры:
+* memory::PoolInterface::BasicStringType<char> const&
+* stappler::StringViewUtf8 const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator>(memory::PoolInterface::BasicStringType<char> const&,stappler::StringViewUtf8 const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры:
+* memory::PoolInterface::BasicStringType<char> const&
+* stappler::StringViewUtf8 const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator>=(memory::PoolInterface::BasicStringType<char> const&,stappler::StringViewUtf8 const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры:
+* memory::PoolInterface::BasicStringType<char> const&
+* stappler::StringViewUtf8 const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator<(memory::PoolInterface::BasicStringType<char> const&,stappler::StringViewUtf8 const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры:
+* memory::PoolInterface::BasicStringType<char> const&
+* stappler::StringViewUtf8 const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator<=(memory::PoolInterface::BasicStringType<char> const&,stappler::StringViewUtf8 const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры:
+* memory::PoolInterface::BasicStringType<char> const&
+* stappler::StringViewUtf8 const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator==(stappler::StringViewUtf8 const&,memory::PoolInterface::BasicStringType<char> const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры:
+* stappler::StringViewUtf8 const&
+* memory::PoolInterface::BasicStringType<char> const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator!=(stappler::StringViewUtf8 const&,memory::PoolInterface::BasicStringType<char> const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры:
+* stappler::StringViewUtf8 const&
+* memory::PoolInterface::BasicStringType<char> const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator>(stappler::StringViewUtf8 const&,memory::PoolInterface::BasicStringType<char> const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры:
+* stappler::StringViewUtf8 const&
+* memory::PoolInterface::BasicStringType<char> const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator>=(stappler::StringViewUtf8 const&,memory::PoolInterface::BasicStringType<char> const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры:
+* stappler::StringViewUtf8 const&
+* memory::PoolInterface::BasicStringType<char> const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator<(stappler::StringViewUtf8 const&,memory::PoolInterface::BasicStringType<char> const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры:
+* stappler::StringViewUtf8 const&
+* memory::PoolInterface::BasicStringType<char> const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator<=(stappler::StringViewUtf8 const&,memory::PoolInterface::BasicStringType<char> const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры:
+* stappler::StringViewUtf8 const&
+* memory::PoolInterface::BasicStringType<char> const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator==<typename>(StringViewBase<C> const&,C const*)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры шаблона:
+* typename C
+
+Параметры:
+* StringViewBase<C> const&
+* C const*
+
+Возвращает:
+* bool
+
+# ::stappler::operator!=<typename>(StringViewBase<C> const&,C const*)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры шаблона:
+* typename C
+
+Параметры:
+* StringViewBase<C> const&
+* C const*
+
+Возвращает:
+* bool
+
+# ::stappler::operator==<typename>(C const*,StringViewBase<C> const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры шаблона:
+* typename C
+
+Параметры:
+* C const*
+* StringViewBase<C> const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator!=<typename>(C const*,StringViewBase<C> const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры шаблона:
+* typename C
+
+Параметры:
+* C const*
+* StringViewBase<C> const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator==(stappler::StringViewUtf8 const&,char const*)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры:
+* stappler::StringViewUtf8 const&
+* char const*
+
+Возвращает:
+* bool
+
+# ::stappler::operator!=(stappler::StringViewUtf8 const&,char const*)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры:
+* stappler::StringViewUtf8 const&
+* char const*
+
+Возвращает:
+* bool
+
+# ::stappler::operator==(char const*,stappler::StringViewUtf8 const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры:
+* char const*
+* stappler::StringViewUtf8 const&
+
+Возвращает:
+* bool
+
+# ::stappler::operator!=(char const*,stappler::StringViewUtf8 const&)
+
+## BRIEF
+
+Сравнивает две строки
+
+## CONTENT
+
+Сравнивает две строки
+
+Параметры:
+* char const*
+* stappler::StringViewUtf8 const&
+
+Возвращает:
+* bool
+
+# ::stappler::StringViewBase<typename>::ptolower_c(memory::pool_t*) const
+
+## BRIEF
+
+Дублирует строку из пула, приводя её к нижнему регистру в С локали
+
+## CONTENT
+
+Дублирует строку из пула, приводя её к нижнему регистру в С локали
+
+Параметры:
+* memory::pool_t*
+
+Возвращает:
+* Self
+
+# ::stappler::StringViewBase<typename>::ptoupper_c(memory::pool_t*) const
+
+## BRIEF
+
+Дублирует строку из пула, приводя её к верхнему регистру в С локали
+
+## CONTENT
+
+Дублирует строку из пула, приводя её к верхнему регистру в С локали
+
+Параметры:
+* memory::pool_t*
+
+Возвращает:
+* Self
+
+# ::stappler::StringViewUtf8::foreach<typename>(Callback const&) const
+
+## BRIEF
+
+Выполняет функтор для каждого символа юникода
+
+## CONTENT
+
+Выполняет функтор для каждого символа юникода в строке. Символ имеет тип char32_t.
+
+Параметры шаблона:
+* typename Callback
+
+Параметры:
+* Callback const&
+
+# ::stappler::string::compare_c<typename,typename,typename>(L const&,R const&)
+
+## BRIEF
+
+Сравнивает строки в С локали
+
+## CONTENT
+
+Сравнивает строки в С локали
+
+Параметры шаблона:
+* typename L
+* typename R
+* typename CharType
+
+Параметры:
+* L const&
+* R const&
+
+Возвращает:
+* int - результат лексикографического сравнения
+
+# ::stappler::string::compare_u<typename,typename,typename>(L const&,R const&)
+
+## BRIEF
+
+Сравнивает строки с учётом юникода
+
+## CONTENT
+
+Сравнивает строки с учётом юникода
+
+Параметры шаблона:
+* typename L
+* typename R
+* typename CharType
+
+Параметры:
+* L const&
+* R const&
+
+Возвращает:
+* int - результат лексикографического сравнения
+
+# ::stappler::string::_strncasecmp(char const*,char const*,size_t)
+
+## BRIEF
+
+Сравнивает 8-битные строки независимо от регистра посимвольно
+
+## CONTENT
+
+Сравнивает 8-битные строки независимо от регистра посимвольно
+
+Параметры:
+* char const*
+* char const*
+* size_t
+
+Возвращает:
+* int - результат лексикографического сравнения
+
+# ::stappler::string::_strncasecmp(char16_t const*,char16_t const*,size_t)
+
+## BRIEF
+
+Сравнивает 16-битные строки независимо от регистра посимвольно
+
+## CONTENT
+
+Сравнивает 16-битные строки независимо от регистра посимвольно
+
+Параметры:
+* char16_t const*
+* char16_t const*
+* size_t
+
+Возвращает:
+* int - результат лексикографического сравнения
+
+# ::stappler::string::caseCompare_c<typename,typename,typename>(L const&,R const&)
+
+## BRIEF
+
+Сравнивает две строки независимго от регистра в С локали
+
+## CONTENT
+
+Сравнивает две строки независимго от регистра в С локали
+
+Параметры шаблона:
+* typename L
+* typename R
+* typename CharType
+
+Параметры:
+* L const&
+* R const&
+
+Возвращает:
+* int - результат лексикографического сравнения
+
+# ::stappler::string::caseCompare_u<typename,typename,typename>(L const&,R const&)
+
+## BRIEF
+
+Сравнивает две строки независимго от регистра с учётом юникода
+
+## CONTENT
+
+Сравнивает две строки независимго от регистра с учётом юникода
+
+Параметры шаблона:
+* typename L
+* typename R
+* typename CharType
+
+Параметры:
+* L const&
+* R const&
+
+Возвращает:
+* int - результат лексикографического сравнения

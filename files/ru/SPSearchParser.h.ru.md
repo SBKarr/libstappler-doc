@@ -146,7 +146,7 @@ Title: SPSearchParser.h
 Тип языка токена
 
 
-# ::stappler::search::SearchData::Rank
+# ::stappler::search::SearchRank
 
 ## BRIEF
 
@@ -163,6 +163,15 @@ Title: SPSearchParser.h
 * D
 * Unknown
 
+# ::stappler::search::SearchData::Rank
+
+## BRIEF
+
+Псевдоним типа ранга поискового токена
+
+## CONTENT
+
+Псевдоним типа ранга поискового токена
 
 # ::stappler::search::SearchData::Type
 
@@ -219,19 +228,6 @@ Title: SPSearchParser.h
 Тип: stappler::search::SearchData::Rank
 
 
-# ::stappler::search::SearchData::type
-
-## BRIEF
-
-Способ передачи в СУБД
-
-## CONTENT
-
-Способ передачи в СУБД
-
-Тип: stappler::search::SearchData::Type
-
-
 # ::stappler::search::SearchData::getLanguage() const
 
 ## BRIEF
@@ -261,223 +257,6 @@ Title: SPSearchParser.h
 * And - логическое И
 * Or - логическое ИЛИ
 * Follow - операция следования слов
-
-
-# ::stappler::search::SearchQuery
-
-## BRIEF
-
-Структура поискового запроса
-
-## CONTENT
-
-Структура поискового запроса
-
-
-# ::stappler::search::SearchQuery::Block
-
-## BRIEF
-
-Тип замыкания блока
-
-## CONTENT
-
-Тип замыкания блока
-
-Значения:
-* None - нет
-* Parentesis - скобки (для логических выражений)
-* Quoted - кавычки (для текстовых выражений)
-
-
-# ::stappler::search::SearchQuery::Format
-
-## BRIEF
-
-Формат записи запроса
-
-## CONTENT
-
-Формат записи запроса
-
-Значения:
-* Stappler - собственный формат
-* Postgresql - формат, распознаваемый Postgresql
-
-
-# ::stappler::search::SearchQuery::block
-
-## BRIEF
-
-Тип замыкания блока
-
-## CONTENT
-
-Тип замыкания блока
-
-Тип: stappler::search::SearchQuery::Block
-
-
-# ::stappler::search::SearchQuery::offset
-
-## BRIEF
-
-Допустимое смещение для слов операции
-
-## CONTENT
-
-Допустимое смещение для слов операции. Например, расстояние между словами при следовании, в словах.
-
-Тип: size_t
-
-
-# ::stappler::search::SearchQuery::op
-
-## BRIEF
-
-Операция в узле дерева
-
-## CONTENT
-
-Операция в узле дерева
-
-Тип: stappler::search::SearchOp
-
-
-# ::stappler::search::SearchQuery::value
-
-## BRIEF
-
-Значение токена
-
-## CONTENT
-
-Значение токена
-
-Тип: stappler::mem_pool::String
-
-
-# ::stappler::search::SearchQuery::source
-
-## BRIEF
-
-Исходный текст токена
-
-## CONTENT
-
-Исходный текст токена
-
-Тип: stappler::StringView
-
-
-# ::stappler::search::SearchQuery::args
-
-## BRIEF
-
-Листья текущего элемента дерева
-
-## CONTENT
-
-Листья текущего элемента дерева. Для оптимизации операции комплектуются по последовательности. Так, три последовательных слова будут записаны в качестве трёх листьев одного элемента.
-
-Тип: Vector<stappler::search::SearchQuery>
-
-
-# ::stappler::search::SearchQuery::SearchQuery()
-
-## BRIEF
-
-Конструктор по умолчанию
-
-## CONTENT
-
-Конструктор по умолчанию
-
-
-# ::stappler::search::SearchQuery::SearchQuery(stappler::StringView,size_t,stappler::StringView)
-
-## BRIEF
-
-Конструктор листового элемента
-
-## CONTENT
-
-Конструктор листового элемента
-
-Параметры:
-* stappler::StringView - токен
-* size_t - допустимое смещение для операции
-* stappler::StringView - исходный текст токена
-
-
-# ::stappler::search::SearchQuery::SearchQuery(stappler::search::SearchOp,stappler::StringView)
-
-## BRIEF
-
-Конструктор корневого элемента или элеммента операции
-
-## CONTENT
-
-Конструктор корневого элемента или элеммента операции
-
-Параметры:
-* stappler::search::SearchOp - операция
-* stappler::StringView - исходный текст токена
-
-
-# ::stappler::search::SearchQuery::clear()
-
-## BRIEF
-
-Очищает элемент запроса
-
-## CONTENT
-
-Очищает элемент запроса
-
-
-# ::stappler::search::SearchQuery::encode(Callback<void (stappler::StringView)> const&,stappler::search::SearchQuery::Format) const
-
-## BRIEF
-
-Кодирует низлежащее дерево в заданный формат
-
-## CONTENT
-
-Кодирует низлежащее дерево в заданный формат
-
-Параметры:
-* Callback<void (stappler::StringView)> const& - функция возврата результата
-* stappler::search::SearchQuery::Format - формат
-
-
-# ::stappler::search::SearchQuery::describe(std::ostream&,size_t) const
-
-## BRIEF
-
-Выводит в поток отладочное описание структуры запроса
-
-## CONTENT
-
-Выводит в поток отладочное описание структуры запроса
-
-Параметры:
-* std::ostream&
-* size_t
-
-
-# ::stappler::search::SearchQuery::foreach(Callback<void (stappler::StringView, stappler::StringView)> const&) const
-
-## BRIEF
-
-Обходит низлежащее дерево, возвращая токены и исходные строки
-
-## CONTENT
-
-Обходит низлежащее дерево, возвращая токены и исходные строки. Используется для формирования вектора запроса при создании поисковых заголовков.
-
-Параметры:
-* Callback<void (stappler::StringView, stappler::StringView)> const&
 
 
 # ::stappler::search::isStopword(stappler::StringView const&,stappler::search::Language)

@@ -124,15 +124,6 @@ Title: XLAsset.h
 * Ref
 
 
-# ::stappler::xenolith::storage::AssetLock::VersionData
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-
 # ::stappler::xenolith::storage::AssetLock::~AssetLock()
 
 ## BRIEF
@@ -241,7 +232,18 @@ Title: XLAsset.h
 Возвращает:
 * Rc<stappler::xenolith::storage::Asset> const&
 
-# ::stappler::xenolith::storage::AssetLock::AssetLock(Rc<stappler::xenolith::storage::Asset>&&,stappler::xenolith::storage::AssetLock::VersionData const&,Function<void (const stappler::xenolith::storage::AssetLock::VersionData &)>&&)
+# ::stappler::xenolith::storage::AssetLock::getOwner() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* stappler::mem_std::Ref*
+
+# ::stappler::xenolith::storage::AssetLock::AssetLock(Rc<stappler::xenolith::storage::Asset>&&,stappler::xenolith::storage::AssetVersionData const&,Function<void (const stappler::xenolith::storage::AssetVersionData &)>&&,stappler::mem_std::Ref*)
 
 ## BRIEF
 
@@ -251,8 +253,9 @@ Title: XLAsset.h
 
 Параметры:
 * Rc<stappler::xenolith::storage::Asset>&&
-* stappler::xenolith::storage::AssetLock::VersionData const&
-* Function<void (const stappler::xenolith::storage::AssetLock::VersionData &)>&&
+* stappler::xenolith::storage::AssetVersionData const&
+* Function<void (const stappler::xenolith::storage::AssetVersionData &)>&&
+* stappler::mem_std::Ref*
 
 
 # ::stappler::xenolith::storage::AssetLock::_lockedVersion
@@ -263,7 +266,7 @@ Title: XLAsset.h
 
 Доступ: protected
 
-Тип: VersionData
+Тип: stappler::xenolith::storage::AssetVersionData
 
 
 # ::stappler::xenolith::storage::AssetLock::_releaseFunction
@@ -274,7 +277,7 @@ Title: XLAsset.h
 
 Доступ: protected
 
-Тип: Function<void (const stappler::xenolith::storage::AssetLock::VersionData &)>
+Тип: Function<void (const stappler::xenolith::storage::AssetVersionData &)>
 
 
 # ::stappler::xenolith::storage::AssetLock::_asset
@@ -286,6 +289,17 @@ Title: XLAsset.h
 Доступ: protected
 
 Тип: Rc<stappler::xenolith::storage::Asset>
+
+
+# ::stappler::xenolith::storage::AssetLock::_owner
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: Rc<stappler::mem_std::Ref>
 
 
 # ::stappler::xenolith::storage::Asset
@@ -346,18 +360,7 @@ Title: XLAsset.h
 Доступ: public
 
 
-# ::stappler::xenolith::storage::Asset::getReadableVersion() const
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-Возвращает:
-* VersionData*
-
-# ::stappler::xenolith::storage::Asset::lockVersion(int64_t)
+# ::stappler::xenolith::storage::Asset::lockVersion(int64_t,stappler::mem_std::Ref*)
 
 ## BRIEF
 
@@ -367,6 +370,21 @@ Title: XLAsset.h
 
 Параметры:
 * int64_t
+* stappler::mem_std::Ref*
+
+Возвращает:
+* Rc<stappler::xenolith::storage::AssetLock>
+
+# ::stappler::xenolith::storage::Asset::lockReadableVersion(stappler::mem_std::Ref*)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* stappler::mem_std::Ref*
 
 Возвращает:
 * Rc<stappler::xenolith::storage::AssetLock>
@@ -426,6 +444,17 @@ Title: XLAsset.h
 Возвращает:
 * stappler::TimeInterval
 
+# ::stappler::xenolith::storage::Asset::getContentType() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* stappler::StringView
+
 # ::stappler::xenolith::storage::Asset::download()
 
 ## BRIEF
@@ -458,6 +487,17 @@ Title: XLAsset.h
 Доступ: public
 
 
+# ::stappler::xenolith::storage::Asset::isDownloadAvailable() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* bool
+
 # ::stappler::xenolith::storage::Asset::isDownloadInProgress() const
 
 ## BRIEF
@@ -479,6 +519,17 @@ Title: XLAsset.h
 
 Возвращает:
 * float
+
+# ::stappler::xenolith::storage::Asset::getReadableVersionId() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* int64_t
 
 # ::stappler::xenolith::storage::Asset::isStorageDirty() const
 
@@ -549,7 +600,7 @@ Title: XLAsset.h
 Возвращает:
 * stappler::mem_std::Value
 
-# ::stappler::xenolith::storage::Asset::update(stappler::xenolith::storage::Asset::Update)
+# ::stappler::xenolith::storage::Asset::getReadableVersion() const
 
 ## BRIEF
 
@@ -557,9 +608,8 @@ Title: XLAsset.h
 
 Доступ: protected
 
-Параметры:
-* stappler::xenolith::storage::Asset::Update
-
+Возвращает:
+* VersionData*
 
 # ::stappler::xenolith::storage::Asset::parseVersions(db::Value const&)
 
@@ -829,3 +879,14 @@ Title: XLAsset.h
 Доступ: protected
 
 Тип: bool
+
+
+# ::stappler::xenolith::storage::Asset::_mutex
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: stappler::mem_std::Mutex

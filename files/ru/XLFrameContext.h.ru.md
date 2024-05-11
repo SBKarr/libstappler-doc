@@ -100,7 +100,7 @@ Title: XLFrameContext.h
 Возвращает:
 * uint64_t
 
-# ::stappler::xenolith::FrameContext::acquireMaterial(stappler::xenolith::MaterialInfo const&,Vector<core::MaterialImage>&&,bool)
+# ::stappler::xenolith::FrameContext::acquireMaterial(stappler::xenolith::MaterialInfo const&,Vector<core::MaterialImage>&&,stappler::mem_std::Ref*,bool)
 
 ## BRIEF
 
@@ -111,6 +111,7 @@ Title: XLFrameContext.h
 Параметры:
 * stappler::xenolith::MaterialInfo const&
 * Vector<core::MaterialImage>&&
+* stappler::mem_std::Ref*
 * bool
 
 Возвращает:
@@ -269,20 +270,6 @@ Title: XLFrameContext.h
 
 Возвращает:
 * core::ImageViewInfo
-
-# ::stappler::xenolith::FrameContext::getDataForMaterial(stappler::xenolith::MaterialInfo const&) const
-
-## BRIEF
-
-## CONTENT
-
-Доступ: protected
-
-Параметры:
-* stappler::xenolith::MaterialInfo const&
-
-Возвращает:
-* stappler::mem_std::Bytes
 
 # ::stappler::xenolith::FrameContext::getPipelineForMaterial(stappler::xenolith::MaterialInfo const&) const
 

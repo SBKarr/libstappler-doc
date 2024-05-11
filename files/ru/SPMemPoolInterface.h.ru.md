@@ -321,29 +321,6 @@ Title: SPMemPoolInterface.h
 Синоним для флагов создания пула памяти
 
 
-# ::stappler::mempool::base::pool::Info
-
-## BRIEF
-
-Информационный тег пула памяти
-
-## CONTENT
-
-Информационный тег пула памяти
-
-Значения:
-* Pool - простой пул
-* Request - пул текущего запроса
-* Connection - пул текущего соединения
-* Server - общий пул сервера
-* Template - пул шаблона
-* Config - общий пул конфигурации
-* Task - пул асинхронного задания
-* SharedObject - пул разделяемого объекта
-* Socket - пул сокета
-* Broadcast - пул широковещательного сообщения
-
-
 # ::stappler::mempool::base::pool::initialize()
 
 ## BRIEF
@@ -874,3 +851,44 @@ Title: SPMemPoolInterface.h
 Параметры:
 * void*
 * void(*)(void*,stappler::mempool::base::pool_t*)
+
+# ::stappler::mempool::base::app_root_pool
+
+## BRIEF
+
+Псевдоним для запроса базового пула текущего потока
+
+## CONTENT
+
+Псевдоним для запроса базового пула текущего потока. Используется при создании пула памяти. Имеет значение nullptr.
+
+Тип: pool_t* const
+
+# ::stappler::mempool::base::pool::pre_cleanup_register(stappler::mempool::base::pool_t*,void*,stappler::mempool::base::cleanup_fn)
+
+## BRIEF
+
+Регистрирует функцию очистки, которая будет вызвана на раннем этапе
+
+## CONTENT
+
+Регистрирует функцию очистки, которая будет вызвана на раннем этапе: до удаления дочерних пулов памяти и любых других манипуляций с памятью пула.
+
+Параметры:
+* stappler::mempool::base::pool_t* - целевой пул памяти
+* void* - пользовательские данные
+* stappler::mempool::base::cleanup_fn - функция для вызова
+
+# ::stappler::mempool::base::pool::pre_cleanup_register(stappler::mempool::base::pool_t*,memory::function<void ()>&&)
+
+## BRIEF
+
+Регистрирует функцию очистки, которая будет вызвана на раннем этапе
+
+## CONTENT
+
+Регистрирует функцию очистки, которая будет вызвана на раннем этапе: до удаления дочерних пулов памяти и любых других манипуляций с памятью пула.
+
+Параметры:
+* stappler::mempool::base::pool_t* - целевой пул памяти
+* memory::function<void ()>&& - функция для вызова

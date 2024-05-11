@@ -52,34 +52,34 @@ Title: MaterialFlexibleLayout.h
 * float
 
 
-# ::stappler::xenolith::material2d::FlexibleLayout::NodeParams::setPosition(stappler::xenolith::Vec2 const&)
+# ::stappler::xenolith::material2d::FlexibleLayout::NodeParams::setPosition(const stappler::geom::Vec2&)
 
 ## BRIEF
 
 ## CONTENT
 
 Параметры:
-* stappler::xenolith::Vec2 const&
+* const stappler::geom::Vec2&
 
 
-# ::stappler::xenolith::material2d::FlexibleLayout::NodeParams::setAnchorPoint(stappler::xenolith::Vec2 const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::xenolith::Vec2 const&
-
-
-# ::stappler::xenolith::material2d::FlexibleLayout::NodeParams::setContentSize(stappler::xenolith::Size2 const&)
+# ::stappler::xenolith::material2d::FlexibleLayout::NodeParams::setAnchorPoint(const stappler::geom::Vec2&)
 
 ## BRIEF
 
 ## CONTENT
 
 Параметры:
-* stappler::xenolith::Size2 const&
+* const stappler::geom::Vec2&
+
+
+# ::stappler::xenolith::material2d::FlexibleLayout::NodeParams::setContentSize(const stappler::geom::Size2&)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* const stappler::geom::Size2&
 
 
 # ::stappler::xenolith::material2d::FlexibleLayout::NodeParams::setVisible(bool)
@@ -117,7 +117,7 @@ Title: MaterialFlexibleLayout.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::Vec2
+Тип: stappler::geom::Vec2
 
 
 # ::stappler::xenolith::material2d::FlexibleLayout::NodeParams::anchorPoint
@@ -126,7 +126,7 @@ Title: MaterialFlexibleLayout.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::Vec2
+Тип: stappler::geom::Vec2
 
 
 # ::stappler::xenolith::material2d::FlexibleLayout::NodeParams::contentSize
@@ -135,7 +135,7 @@ Title: MaterialFlexibleLayout.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::Size2
+Тип: stappler::geom::Size2
 
 
 # ::stappler::xenolith::material2d::FlexibleLayout::NodeParams::visible
@@ -223,7 +223,7 @@ Title: MaterialFlexibleLayout.h
 Возвращает:
 * T*
 
-# ::stappler::xenolith::material2d::FlexibleLayout::setBaseNode(stappler::xenolith::gui2d::ScrollView*,stappler::xenolith::ZOrder)
+# ::stappler::xenolith::material2d::FlexibleLayout::setBaseNode(stappler::xenolith::basic2d::ScrollView*,stappler::xenolith::ZOrder)
 
 ## BRIEF
 
@@ -232,11 +232,11 @@ Title: MaterialFlexibleLayout.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::gui2d::ScrollView*
+* stappler::xenolith::basic2d::ScrollView*
 * stappler::xenolith::ZOrder
 
 
-# ::stappler::xenolith::material2d::FlexibleLayout::setFlexibleNode(stappler::xenolith::Node*,stappler::xenolith::ZOrder)
+# ::stappler::xenolith::material2d::FlexibleLayout::setFlexibleNode(stappler::xenolith::material2d::Surface*,stappler::xenolith::ZOrder)
 
 ## BRIEF
 
@@ -245,7 +245,7 @@ Title: MaterialFlexibleLayout.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Node*
+* stappler::xenolith::material2d::Surface*
 * stappler::xenolith::ZOrder
 
 
@@ -520,6 +520,28 @@ Title: MaterialFlexibleLayout.h
 * float
 
 
+# ::stappler::xenolith::material2d::FlexibleLayout::getDecorationStatus() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* stappler::xenolith::basic2d::DecorationStatus
+
+# ::stappler::xenolith::material2d::FlexibleLayout::getAppBar() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* stappler::xenolith::material2d::AppBar*
+
 # ::stappler::xenolith::material2d::FlexibleLayout::updateFlexParams()
 
 ## BRIEF
@@ -566,7 +588,7 @@ Title: MaterialFlexibleLayout.h
 * stappler::xenolith::material2d::FlexibleLayout::NodeParams const&
 
 
-# ::stappler::xenolith::material2d::FlexibleLayout::onBaseNode(stappler::xenolith::material2d::FlexibleLayout::NodeParams const&,stappler::xenolith::Padding const&,float)
+# ::stappler::xenolith::material2d::FlexibleLayout::onBaseNode(stappler::xenolith::material2d::FlexibleLayout::NodeParams const&,const stappler::geom::Padding&,float)
 
 ## BRIEF
 
@@ -576,7 +598,7 @@ Title: MaterialFlexibleLayout.h
 
 Параметры:
 * stappler::xenolith::material2d::FlexibleLayout::NodeParams const&
-* stappler::xenolith::Padding const&
+* const stappler::geom::Padding&
 * float
 
 
@@ -635,28 +657,6 @@ Title: MaterialFlexibleLayout.h
 Тип: float
 
 
-# ::stappler::xenolith::material2d::FlexibleLayout::_flexibleMinHeight
-
-## BRIEF
-
-## CONTENT
-
-Доступ: protected
-
-Тип: float
-
-
-# ::stappler::xenolith::material2d::FlexibleLayout::_flexibleMaxHeight
-
-## BRIEF
-
-## CONTENT
-
-Доступ: protected
-
-Тип: float
-
-
 # ::stappler::xenolith::material2d::FlexibleLayout::_baseNodePadding
 
 ## BRIEF
@@ -669,6 +669,50 @@ Title: MaterialFlexibleLayout.h
 
 
 # ::stappler::xenolith::material2d::FlexibleLayout::_flexibleExtraSpace
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: float
+
+
+# ::stappler::xenolith::material2d::FlexibleLayout::_targetFlexibleMinHeight
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: float
+
+
+# ::stappler::xenolith::material2d::FlexibleLayout::_targetFlexibleMaxHeight
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: float
+
+
+# ::stappler::xenolith::material2d::FlexibleLayout::_realFlexibleMinHeight
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: float
+
+
+# ::stappler::xenolith::material2d::FlexibleLayout::_realFlexibleMaxHeight
 
 ## BRIEF
 
@@ -698,7 +742,7 @@ Title: MaterialFlexibleLayout.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::Node*
+Тип: stappler::xenolith::material2d::Surface*
 
 
 # ::stappler::xenolith::material2d::FlexibleLayout::_baseNode
@@ -709,4 +753,15 @@ Title: MaterialFlexibleLayout.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::gui2d::ScrollView*
+Тип: stappler::xenolith::basic2d::ScrollView*
+
+
+# ::stappler::xenolith::material2d::FlexibleLayout::_appBar
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: stappler::xenolith::material2d::AppBar*

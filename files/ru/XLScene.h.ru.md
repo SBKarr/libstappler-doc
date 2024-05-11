@@ -257,7 +257,7 @@ Title: XLScene.h
 Доступ: public
 
 Возвращает:
-* stappler::xenolith::Size2 const&
+* const stappler::geom::Size2&
 
 # ::stappler::xenolith::Scene::setClipContent(bool)
 

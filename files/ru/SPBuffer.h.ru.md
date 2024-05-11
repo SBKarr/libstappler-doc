@@ -1172,3 +1172,47 @@ Title: SPBuffer.h
 
 Параметры:
 * void*
+
+# ::stappler::BufferTemplate<typename>::putStrings<typename,std::enable_if_t<string::detail::IsFastToStringAvailable<Args...>::value>*...>(Args &&...)
+
+## BRIEF
+
+Добавляет строковые значения в буфер
+
+## CONTENT
+
+Доступ: public
+
+Добавляет строковые значения в буфер. Тип значения вычисляется автоматически. Если тип недоступен для быстрой конвертации  - последует ошибка компиляции.
+
+Параметры шаблона:
+* typename Args
+* std::enable_if_t<string::detail::IsFastToStringAvailable<Args...>::value>* 
+
+Параметры:
+* Args &&...
+
+Возвращает:
+* stappler::StringView - отображение для записанных строк
+
+# ::stappler::BufferTemplate<typename>::resetWithStrings<typename,std::enable_if_t<string::detail::IsFastToStringAvailable<Args...>::value>*...>(Args &&...)
+
+## BRIEF
+
+Очищает буфер и наполняет его контентом из строковых значений
+
+## CONTENT
+
+Доступ: public
+
+Очищает буфер и наполняет его контентом из строковых значений. Тип значения вычисляется автоматически. Если тип недоступен для быстрой конвертации  - последует ошибка компиляции.
+
+Параметры шаблона:
+* typename Args
+* std::enable_if_t<string::detail::IsFastToStringAvailable<Args...>::value>* 
+
+Параметры:
+* Args &&...
+
+Возвращает:
+* stappler::StringView - отображение для записанных строк

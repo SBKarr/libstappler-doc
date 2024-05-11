@@ -301,6 +301,17 @@ Title: XLVkSwapchain.h
 Возвращает:
 * uint32_t
 
+# ::stappler::xenolith::vk::SwapchainHandle::getPresentedFramesCount() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* uint64_t
+
 # ::stappler::xenolith::vk::SwapchainHandle::getImages() const
 
 ## BRIEF
@@ -596,7 +607,7 @@ Title: XLVkSwapchain.h
 Тип: Vector<Rc<stappler::xenolith::vk::Semaphore>>
 
 
-# ::stappler::xenolith::vk::SwapchainHandle::_presentSemaphore
+# ::stappler::xenolith::vk::SwapchainHandle::_presentSemaphores
 
 ## BRIEF
 
@@ -604,7 +615,7 @@ Title: XLVkSwapchain.h
 
 Доступ: protected
 
-Тип: Rc<stappler::xenolith::vk::Semaphore>
+Тип: Vector<Rc<stappler::xenolith::vk::Semaphore>>
 
 
 # ::stappler::xenolith::vk::SwapchainHandle::_surface

@@ -235,13 +235,16 @@ Title: XLVkGuiViewImpl.h
 Возвращает:
 * bool
 
-# ::stappler::xenolith::vk::platform::ViewImpl::wakeup()
+# ::stappler::xenolith::vk::platform::ViewImpl::wakeup(std::unique_lock<Mutex>&)
 
 ## BRIEF
 
 ## CONTENT
 
 Доступ: public
+
+Параметры:
+* std::unique_lock<Mutex>&
 
 
 # ::stappler::xenolith::vk::platform::ViewImpl::updateTextCursor(uint32_t,uint32_t)
@@ -381,6 +384,32 @@ Title: XLVkGuiViewImpl.h
 ## CONTENT
 
 Доступ: public
+
+
+# ::stappler::xenolith::vk::platform::ViewImpl::readFromClipboard(Function<void (stappler::BytesView, stappler::StringView)>&&,stappler::mem_std::Ref*)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* Function<void (stappler::BytesView, stappler::StringView)>&&
+* stappler::mem_std::Ref*
+
+
+# ::stappler::xenolith::vk::platform::ViewImpl::writeToClipboard(stappler::BytesView,stappler::StringView)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* stappler::BytesView
+* stappler::StringView
 
 
 # ::stappler::xenolith::vk::platform::ViewImpl::pollInput(bool)

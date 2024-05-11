@@ -21,7 +21,7 @@ Title: XLVkQueuePass.h
 
 ## CONTENT
 
-Тип: Rc<stappler::xenolith::vk::DeviceBuffer>
+Тип: Rc<stappler::xenolith::vk::Buffer>
 
 
 # ::stappler::xenolith::vk::MaterialBuffers::targetBuffer
@@ -95,20 +95,6 @@ Title: XLVkQueuePass.h
 Возвращает:
 * stappler::xenolith::vk::QueueOperations
 
-# ::stappler::xenolith::vk::QueuePass::makeFrameHandle(stappler::xenolith::core::QueuePass::FrameQueue const&)
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-Параметры:
-* stappler::xenolith::core::QueuePass::FrameQueue const&
-
-Возвращает:
-* Rc<stappler::xenolith::core::QueuePass::QueuePassHandle>
-
 # ::stappler::xenolith::vk::QueuePass::_queueOps
 
 ## BRIEF
@@ -130,7 +116,7 @@ Title: XLVkQueuePass.h
 * core::QueuePassHandle
 
 
-# ::stappler::xenolith::vk::QueuePassHandle::rotateScissor(core::FrameContraints const&,stappler::xenolith::URect const&)
+# ::stappler::xenolith::vk::QueuePassHandle::rotateScissor(core::FrameContraints const&,const stappler::geom::URect&)
 
 ## BRIEF
 
@@ -140,10 +126,136 @@ Title: XLVkQueuePass.h
 
 Параметры:
 * core::FrameContraints const&
-* stappler::xenolith::URect const&
+* const stappler::geom::URect&
 
 Возвращает:
 * VkRect2D
+
+# ::stappler::xenolith::vk::QueuePassHandle::ImageInputOutputBarrier
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+
+# ::stappler::xenolith::vk::QueuePassHandle::ImageInputOutputBarrier::input
+
+## BRIEF
+
+## CONTENT
+
+Тип: vk::ImageMemoryBarrier
+
+
+# ::stappler::xenolith::vk::QueuePassHandle::ImageInputOutputBarrier::output
+
+## BRIEF
+
+## CONTENT
+
+Тип: vk::ImageMemoryBarrier
+
+
+# ::stappler::xenolith::vk::QueuePassHandle::ImageInputOutputBarrier::inputFrom
+
+## BRIEF
+
+## CONTENT
+
+Тип: core::PipelineStage
+
+
+# ::stappler::xenolith::vk::QueuePassHandle::ImageInputOutputBarrier::inputTo
+
+## BRIEF
+
+## CONTENT
+
+Тип: core::PipelineStage
+
+
+# ::stappler::xenolith::vk::QueuePassHandle::ImageInputOutputBarrier::outputFrom
+
+## BRIEF
+
+## CONTENT
+
+Тип: core::PipelineStage
+
+
+# ::stappler::xenolith::vk::QueuePassHandle::ImageInputOutputBarrier::outputTo
+
+## BRIEF
+
+## CONTENT
+
+Тип: core::PipelineStage
+
+
+# ::stappler::xenolith::vk::QueuePassHandle::BufferInputOutputBarrier
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+
+# ::stappler::xenolith::vk::QueuePassHandle::BufferInputOutputBarrier::input
+
+## BRIEF
+
+## CONTENT
+
+Тип: vk::BufferMemoryBarrier
+
+
+# ::stappler::xenolith::vk::QueuePassHandle::BufferInputOutputBarrier::output
+
+## BRIEF
+
+## CONTENT
+
+Тип: vk::BufferMemoryBarrier
+
+
+# ::stappler::xenolith::vk::QueuePassHandle::BufferInputOutputBarrier::inputFrom
+
+## BRIEF
+
+## CONTENT
+
+Тип: core::PipelineStage
+
+
+# ::stappler::xenolith::vk::QueuePassHandle::BufferInputOutputBarrier::inputTo
+
+## BRIEF
+
+## CONTENT
+
+Тип: core::PipelineStage
+
+
+# ::stappler::xenolith::vk::QueuePassHandle::BufferInputOutputBarrier::outputFrom
+
+## BRIEF
+
+## CONTENT
+
+Тип: core::PipelineStage
+
+
+# ::stappler::xenolith::vk::QueuePassHandle::BufferInputOutputBarrier::outputTo
+
+## BRIEF
+
+## CONTENT
+
+Тип: core::PipelineStage
+
 
 # ::stappler::xenolith::vk::QueuePassHandle::~QueuePassHandle()
 
@@ -216,6 +328,52 @@ Title: XLVkQueuePass.h
 
 Возвращает:
 * stappler::xenolith::vk::QueueOperations
+
+# ::stappler::xenolith::vk::QueuePassHandle::getImageInputOutputBarrier(stappler::xenolith::vk::Device*,stappler::xenolith::vk::Image*,stappler::xenolith::vk::ImageAttachmentHandle&) const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* stappler::xenolith::vk::Device*
+* stappler::xenolith::vk::Image*
+* stappler::xenolith::vk::ImageAttachmentHandle&
+
+Возвращает:
+* stappler::xenolith::vk::QueuePassHandle::ImageInputOutputBarrier
+
+# ::stappler::xenolith::vk::QueuePassHandle::getBufferInputOutputBarrier(stappler::xenolith::vk::Device*,stappler::xenolith::vk::Buffer*,stappler::xenolith::vk::BufferAttachmentHandle&,VkDeviceSize,VkDeviceSize) const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* stappler::xenolith::vk::Device*
+* stappler::xenolith::vk::Buffer*
+* stappler::xenolith::vk::BufferAttachmentHandle&
+* VkDeviceSize
+* VkDeviceSize
+
+Возвращает:
+* stappler::xenolith::vk::QueuePassHandle::BufferInputOutputBarrier
+
+# ::stappler::xenolith::vk::QueuePassHandle::setQueueIdleMode(DeviceQueue::IdleMode)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* DeviceQueue::IdleMode
+
 
 # ::stappler::xenolith::vk::QueuePassHandle::doPrepareCommands(stappler::xenolith::core::QueuePassHandle::FrameHandle&)
 
@@ -306,6 +464,77 @@ Title: XLVkQueuePass.h
 
 Возвращает:
 * stappler::xenolith::vk::MaterialBuffers
+
+# ::stappler::xenolith::vk::QueuePassHandle::getComputePipelineByName(uint32_t,stappler::StringView) const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Параметры:
+* uint32_t
+* stappler::StringView
+
+Возвращает:
+* vk::ComputePipeline*
+
+# ::stappler::xenolith::vk::QueuePassHandle::getComputePipelineBySubName(uint32_t,stappler::StringView) const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Параметры:
+* uint32_t
+* stappler::StringView
+
+Возвращает:
+* vk::ComputePipeline*
+
+# ::stappler::xenolith::vk::QueuePassHandle::getGraphicPipelineByName(uint32_t,stappler::StringView) const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Параметры:
+* uint32_t
+* stappler::StringView
+
+Возвращает:
+* vk::GraphicPipeline*
+
+# ::stappler::xenolith::vk::QueuePassHandle::getGraphicPipelineBySubName(uint32_t,stappler::StringView) const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Параметры:
+* uint32_t
+* stappler::StringView
+
+Возвращает:
+* vk::GraphicPipeline*
+
+# ::stappler::xenolith::vk::QueuePassHandle::_queueIdleMode
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: DeviceQueue::IdleMode
+
 
 # ::stappler::xenolith::vk::QueuePassHandle::_onPrepared
 

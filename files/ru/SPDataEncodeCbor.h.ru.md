@@ -298,7 +298,20 @@ Title: SPDataEncodeCbor.h
 Параметры:
 * const typename ValueType::StringType&
 
+# ::stappler::data::cbor::Encoder<typename>::write(stappler::StringView const&)
 
+## BRIEF
+
+Записывает символьную строку
+
+## CONTENT
+
+Доступ: public
+
+Записывает символьную строку
+
+Параметры:
+* stappler::StringView const&
 # ::stappler::data::cbor::Encoder<typename>::write(const typename ValueType::BytesType&)
 
 ## BRIEF

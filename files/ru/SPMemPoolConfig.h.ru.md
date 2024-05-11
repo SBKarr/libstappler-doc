@@ -12,7 +12,7 @@ Title: SPMemPoolConfig.h
 Заголовок параметров конфигурации системы пулов памяти
 
 
-# ::stappler::mempool::apr::SPAprDefined
+# ::stappler::mempool::apr::SP_APR_COMPATIBLE
 
 ## BRIEF
 

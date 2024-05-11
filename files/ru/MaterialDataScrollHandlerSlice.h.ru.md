@@ -90,9 +90,9 @@ Title: MaterialDataScrollHandlerSlice.h
 * stappler::xenolith::material2d::DataScroll::Handler::Request
 
 Возвращает:
-* stappler::xenolith::Vec2
+* stappler::geom::Vec2
 
-# ::stappler::xenolith::material2d::DataScrollHandlerSlice::onItem(stappler::mem_std::Value&&,stappler::xenolith::Vec2 const&)
+# ::stappler::xenolith::material2d::DataScrollHandlerSlice::onItem(stappler::mem_std::Value&&,const stappler::geom::Vec2&)
 
 ## BRIEF
 
@@ -102,7 +102,7 @@ Title: MaterialDataScrollHandlerSlice.h
 
 Параметры:
 * stappler::mem_std::Value&&
-* stappler::xenolith::Vec2 const&
+* const stappler::geom::Vec2&
 
 Возвращает:
 * Rc<DataScroll::Item>
@@ -115,7 +115,7 @@ Title: MaterialDataScrollHandlerSlice.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::Vec2
+Тип: stappler::geom::Vec2
 
 
 # ::stappler::xenolith::material2d::DataScrollHandlerSlice::_originBack
@@ -126,7 +126,7 @@ Title: MaterialDataScrollHandlerSlice.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::Vec2
+Тип: stappler::geom::Vec2
 
 
 # ::stappler::xenolith::material2d::DataScrollHandlerSlice::_dataCallback

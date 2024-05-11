@@ -12,6 +12,15 @@
 		"kind": "include directive",
 		"name": "XLCore.h"
 	}, {
+		"_fullName": "SPDso.h",
+		"_kind": "include directive",
+		"_name": "SPDso.h",
+		"id": 2116684965,
+		"include": "core/core/utils/SPDso.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "SPDso.h"
+	}, {
 		"_fullName": "XENOLITH_CORE_XLCOREINSTANCE_H_",
 		"_kind": "macro definition",
 		"_name": "XENOLITH_CORE_XLCOREINSTANCE_H_",
@@ -500,11 +509,11 @@
 							}
 						}
 					}, {
-						"_fullName": "::stappler::xenolith::core::Instance::Instance(stappler::xenolith::core::Instance::TerminateCallback&&,Rc<stappler::mem_std::Ref>&&)",
+						"_fullName": "::stappler::xenolith::core::Instance::Instance(stappler::Dso&&,stappler::xenolith::core::Instance::TerminateCallback&&,Rc<stappler::mem_std::Ref>&&)",
 						"_kind": "constructor",
 						"_name": "Instance",
 						"body_kind": "declaration",
-						"id": 2384584035,
+						"id": 3339051539,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -514,6 +523,41 @@
 						"kind": "constructor",
 						"name": "Instance",
 						"parameters": [{
+							"_fullName": "",
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 46947589,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::Dso&&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "stappler::Dso",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::Dso",
+										"objects": [{
+											"_fullName": "::stappler::Dso",
+											"_kind": "class",
+											"_name": "Dso",
+											"class_kind": "class",
+											"id": 2090862796,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Dso",
+											"scope": {
+												"name": "Dso"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								},
+								"reference_kind": "rvalue"
+							}
+						}, {
 							"_fullName": "",
 							"_kind": "function parameter",
 							"_name": "",
@@ -631,7 +675,7 @@
 							}
 						}],
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::core::Instance::TerminateCallback&&,Rc<stappler::mem_std::Ref>&&)"
+						"signature": "(stappler::Dso&&,stappler::xenolith::core::Instance::TerminateCallback&&,Rc<stappler::mem_std::Ref>&&)"
 					}, {
 						"_fullName": "::stappler::xenolith::core::Instance::~Instance()",
 						"_kind": "destructor",
@@ -1797,6 +1841,37 @@
 						"id": 1892155628,
 						"kind": "access specifier",
 						"name": "protected"
+					}, {
+						"_fullName": "::stappler::xenolith::core::Instance::_dsoModule",
+						"_kind": "member variable",
+						"_name": "_dsoModule",
+						"id": 1353540898,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "_dsoModule",
+						"type": {
+							"_typeName": "stappler::Dso",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::Dso",
+								"objects": [{
+									"_fullName": "::stappler::Dso",
+									"_kind": "class",
+									"_name": "Dso",
+									"class_kind": "class",
+									"id": 2090862796,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "Dso",
+									"scope": {
+										"name": "Dso"
+									},
+									"semantic_scope": ""
+								}]
+							}
+						}
 					}, {
 						"_fullName": "::stappler::xenolith::core::Instance::_terminate",
 						"_kind": "member variable",

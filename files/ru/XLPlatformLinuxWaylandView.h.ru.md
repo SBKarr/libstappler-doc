@@ -371,7 +371,7 @@ Title: XLPlatformLinuxWaylandView.h
 Тип: 
 
 
-# ::stappler::xenolith::platform::WaylandView::WaylandView(stappler::xenolith::platform::WaylandLibrary*,stappler::xenolith::platform::ViewInterface*,stappler::StringView,stappler::StringView,stappler::xenolith::URect)
+# ::stappler::xenolith::platform::WaylandView::WaylandView(stappler::xenolith::platform::WaylandLibrary*,stappler::xenolith::platform::ViewInterface*,stappler::StringView,stappler::StringView,stappler::geom::URect)
 
 ## BRIEF
 
@@ -384,7 +384,7 @@ Title: XLPlatformLinuxWaylandView.h
 * stappler::xenolith::platform::ViewInterface*
 * stappler::StringView
 * stappler::StringView
-* stappler::xenolith::URect
+* stappler::geom::URect
 
 
 # ::stappler::xenolith::platform::WaylandView::~WaylandView()
@@ -777,6 +777,32 @@ Title: XLPlatformLinuxWaylandView.h
 * uint32_t
 
 
+# ::stappler::xenolith::platform::WaylandView::readFromClipboard(Function<void (stappler::BytesView, stappler::StringView)>&&,stappler::mem_std::Ref*)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* Function<void (stappler::BytesView, stappler::StringView)>&&
+* stappler::mem_std::Ref*
+
+
+# ::stappler::xenolith::platform::WaylandView::writeToClipboard(stappler::BytesView,stappler::StringView)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* stappler::BytesView
+* stappler::StringView
+
+
 # ::stappler::xenolith::platform::WaylandView::createDecorations()
 
 ## BRIEF
@@ -784,17 +810,6 @@ Title: XLPlatformLinuxWaylandView.h
 ## CONTENT
 
 Доступ: protected
-
-
-# ::stappler::xenolith::platform::WaylandView::_display
-
-## BRIEF
-
-## CONTENT
-
-Доступ: protected
-
-Тип: Rc<stappler::xenolith::platform::WaylandDisplay>
 
 
 # ::stappler::xenolith::platform::WaylandView::_view
@@ -806,17 +821,6 @@ Title: XLPlatformLinuxWaylandView.h
 Доступ: protected
 
 Тип: stappler::xenolith::platform::ViewInterface*
-
-
-# ::stappler::xenolith::platform::WaylandView::_surface
-
-## BRIEF
-
-## CONTENT
-
-Доступ: protected
-
-Тип: wl_surface*
 
 
 # ::stappler::xenolith::platform::WaylandView::_xdgSurface
@@ -849,7 +853,7 @@ Title: XLPlatformLinuxWaylandView.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::Extent2
+Тип: stappler::geom::Extent2
 
 
 # ::stappler::xenolith::platform::WaylandView::_commitedExtent
@@ -860,7 +864,7 @@ Title: XLPlatformLinuxWaylandView.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::Extent2
+Тип: stappler::geom::Extent2
 
 
 # ::stappler::xenolith::platform::WaylandView::_continuousRendering

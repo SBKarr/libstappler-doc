@@ -1,14 +1,14 @@
 Title: XL2dScrollController.h
 
 
-# XENOLITH_RENDERER_GUI2D_XL2DSCROLLCONTROLLER_H_
+# XENOLITH_RENDERER_BASIC2D_XL2DSCROLLCONTROLLER_H_
 
 ## BRIEF
 
 ## CONTENT
 
 
-# ::stappler::xenolith::gui2d::ScrollController
+# ::stappler::xenolith::basic2d::ScrollController
 
 ## BRIEF
 
@@ -18,7 +18,7 @@ Title: XL2dScrollController.h
 * Component
 
 
-# ::stappler::xenolith::gui2d::ScrollController::NodeFunction
+# ::stappler::xenolith::basic2d::ScrollController::NodeFunction
 
 ## BRIEF
 
@@ -27,7 +27,7 @@ Title: XL2dScrollController.h
 Доступ: public
 
 
-# ::stappler::xenolith::gui2d::ScrollController::RebuildCallback
+# ::stappler::xenolith::basic2d::ScrollController::RebuildCallback
 
 ## BRIEF
 
@@ -36,7 +36,7 @@ Title: XL2dScrollController.h
 Доступ: public
 
 
-# ::stappler::xenolith::gui2d::ScrollController::Item
+# ::stappler::xenolith::basic2d::ScrollController::Item
 
 ## BRIEF
 
@@ -45,48 +45,48 @@ Title: XL2dScrollController.h
 Доступ: public
 
 
-# ::stappler::xenolith::gui2d::ScrollController::Item::Item(stappler::xenolith::gui2d::ScrollController::NodeFunction&&,stappler::xenolith::Vec2,stappler::xenolith::Size2,stappler::xenolith::ZOrder,stappler::StringView)
+# ::stappler::xenolith::basic2d::ScrollController::Item::Item(stappler::xenolith::basic2d::ScrollController::NodeFunction&&,stappler::geom::Vec2,stappler::geom::Size2,stappler::xenolith::ZOrder,stappler::StringView)
 
 ## BRIEF
 
 ## CONTENT
 
 Параметры:
-* stappler::xenolith::gui2d::ScrollController::NodeFunction&&
-* stappler::xenolith::Vec2
-* stappler::xenolith::Size2
+* stappler::xenolith::basic2d::ScrollController::NodeFunction&&
+* stappler::geom::Vec2
+* stappler::geom::Size2
 * stappler::xenolith::ZOrder
 * stappler::StringView
 
 
-# ::stappler::xenolith::gui2d::ScrollController::Item::nodeFunction
+# ::stappler::xenolith::basic2d::ScrollController::Item::nodeFunction
 
 ## BRIEF
 
 ## CONTENT
 
-Тип: stappler::xenolith::gui2d::ScrollController::NodeFunction
+Тип: stappler::xenolith::basic2d::ScrollController::NodeFunction
 
 
-# ::stappler::xenolith::gui2d::ScrollController::Item::size
-
-## BRIEF
-
-## CONTENT
-
-Тип: stappler::xenolith::Size2
-
-
-# ::stappler::xenolith::gui2d::ScrollController::Item::pos
+# ::stappler::xenolith::basic2d::ScrollController::Item::size
 
 ## BRIEF
 
 ## CONTENT
 
-Тип: stappler::xenolith::Vec2
+Тип: stappler::geom::Size2
 
 
-# ::stappler::xenolith::gui2d::ScrollController::Item::zIndex
+# ::stappler::xenolith::basic2d::ScrollController::Item::pos
+
+## BRIEF
+
+## CONTENT
+
+Тип: stappler::geom::Vec2
+
+
+# ::stappler::xenolith::basic2d::ScrollController::Item::zIndex
 
 ## BRIEF
 
@@ -95,7 +95,7 @@ Title: XL2dScrollController.h
 Тип: stappler::xenolith::ZOrder
 
 
-# ::stappler::xenolith::gui2d::ScrollController::Item::name
+# ::stappler::xenolith::basic2d::ScrollController::Item::name
 
 ## BRIEF
 
@@ -104,7 +104,7 @@ Title: XL2dScrollController.h
 Тип: stappler::mem_std::String
 
 
-# ::stappler::xenolith::gui2d::ScrollController::Item::node
+# ::stappler::xenolith::basic2d::ScrollController::Item::node
 
 ## BRIEF
 
@@ -113,16 +113,16 @@ Title: XL2dScrollController.h
 Тип: stappler::xenolith::Node*
 
 
-# ::stappler::xenolith::gui2d::ScrollController::Item::handle
+# ::stappler::xenolith::basic2d::ScrollController::Item::handle
 
 ## BRIEF
 
 ## CONTENT
 
-Тип: stappler::xenolith::gui2d::ScrollItemHandle*
+Тип: stappler::xenolith::basic2d::ScrollItemHandle*
 
 
-# ::stappler::xenolith::gui2d::ScrollController::~ScrollController()
+# ::stappler::xenolith::basic2d::ScrollController::~ScrollController()
 
 ## BRIEF
 
@@ -131,7 +131,7 @@ Title: XL2dScrollController.h
 Доступ: public
 
 
-# ::stappler::xenolith::gui2d::ScrollController::onAdded(stappler::xenolith::Node*)
+# ::stappler::xenolith::basic2d::ScrollController::onAdded(stappler::xenolith::Node*)
 
 ## BRIEF
 
@@ -143,7 +143,7 @@ Title: XL2dScrollController.h
 * stappler::xenolith::Node*
 
 
-# ::stappler::xenolith::gui2d::ScrollController::onRemoved()
+# ::stappler::xenolith::basic2d::ScrollController::onRemoved()
 
 ## BRIEF
 
@@ -152,7 +152,7 @@ Title: XL2dScrollController.h
 Доступ: public
 
 
-# ::stappler::xenolith::gui2d::ScrollController::onContentSizeDirty()
+# ::stappler::xenolith::basic2d::ScrollController::onContentSizeDirty()
 
 ## BRIEF
 
@@ -161,7 +161,7 @@ Title: XL2dScrollController.h
 Доступ: public
 
 
-# ::stappler::xenolith::gui2d::ScrollController::onScrollPosition(bool)
+# ::stappler::xenolith::basic2d::ScrollController::onScrollPosition(bool)
 
 ## BRIEF
 
@@ -173,7 +173,7 @@ Title: XL2dScrollController.h
 * bool
 
 
-# ::stappler::xenolith::gui2d::ScrollController::onScroll(float,bool)
+# ::stappler::xenolith::basic2d::ScrollController::onScroll(float,bool)
 
 ## BRIEF
 
@@ -186,7 +186,7 @@ Title: XL2dScrollController.h
 * bool
 
 
-# ::stappler::xenolith::gui2d::ScrollController::onOverscroll(float)
+# ::stappler::xenolith::basic2d::ScrollController::onOverscroll(float)
 
 ## BRIEF
 
@@ -198,7 +198,7 @@ Title: XL2dScrollController.h
 * float
 
 
-# ::stappler::xenolith::gui2d::ScrollController::getScrollMin()
+# ::stappler::xenolith::basic2d::ScrollController::getScrollMin()
 
 ## BRIEF
 
@@ -209,7 +209,7 @@ Title: XL2dScrollController.h
 Возвращает:
 * float
 
-# ::stappler::xenolith::gui2d::ScrollController::getScrollMax()
+# ::stappler::xenolith::basic2d::ScrollController::getScrollMax()
 
 ## BRIEF
 
@@ -220,7 +220,7 @@ Title: XL2dScrollController.h
 Возвращает:
 * float
 
-# ::stappler::xenolith::gui2d::ScrollController::getRoot() const
+# ::stappler::xenolith::basic2d::ScrollController::getRoot() const
 
 ## BRIEF
 
@@ -231,7 +231,7 @@ Title: XL2dScrollController.h
 Возвращает:
 * stappler::xenolith::Node*
 
-# ::stappler::xenolith::gui2d::ScrollController::getScroll() const
+# ::stappler::xenolith::basic2d::ScrollController::getScroll() const
 
 ## BRIEF
 
@@ -240,18 +240,9 @@ Title: XL2dScrollController.h
 Доступ: public
 
 Возвращает:
-* stappler::xenolith::gui2d::ScrollViewBase*
+* stappler::xenolith::basic2d::ScrollViewBase*
 
-# ::stappler::xenolith::gui2d::ScrollController::clear()
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-
-# ::stappler::xenolith::gui2d::ScrollController::update(float,float)
+# ::stappler::xenolith::basic2d::ScrollController::clear()
 
 ## BRIEF
 
@@ -259,12 +250,8 @@ Title: XL2dScrollController.h
 
 Доступ: public
 
-Параметры:
-* float
-* float
 
-
-# ::stappler::xenolith::gui2d::ScrollController::reset(float,float)
+# ::stappler::xenolith::basic2d::ScrollController::update(float,float)
 
 ## BRIEF
 
@@ -277,7 +264,20 @@ Title: XL2dScrollController.h
 * float
 
 
-# ::stappler::xenolith::gui2d::ScrollController::setScrollableArea(float,float)
+# ::stappler::xenolith::basic2d::ScrollController::reset(float,float)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* float
+* float
+
+
+# ::stappler::xenolith::basic2d::ScrollController::setScrollableArea(float,float)
 
 ## BRIEF
 
@@ -292,7 +292,7 @@ Title: XL2dScrollController.h
 Возвращает:
 * bool
 
-# ::stappler::xenolith::gui2d::ScrollController::getScrollableAreaOffset() const
+# ::stappler::xenolith::basic2d::ScrollController::getScrollableAreaOffset() const
 
 ## BRIEF
 
@@ -303,7 +303,7 @@ Title: XL2dScrollController.h
 Возвращает:
 * float
 
-# ::stappler::xenolith::gui2d::ScrollController::getScrollableAreaSize() const
+# ::stappler::xenolith::basic2d::ScrollController::getScrollableAreaSize() const
 
 ## BRIEF
 
@@ -314,7 +314,7 @@ Title: XL2dScrollController.h
 Возвращает:
 * float
 
-# ::stappler::xenolith::gui2d::ScrollController::rebuildObjects()
+# ::stappler::xenolith::basic2d::ScrollController::rebuildObjects()
 
 ## BRIEF
 
@@ -325,7 +325,7 @@ Title: XL2dScrollController.h
 Возвращает:
 * bool
 
-# ::stappler::xenolith::gui2d::ScrollController::size() const
+# ::stappler::xenolith::basic2d::ScrollController::size() const
 
 ## BRIEF
 
@@ -336,7 +336,7 @@ Title: XL2dScrollController.h
 Возвращает:
 * size_t
 
-# ::stappler::xenolith::gui2d::ScrollController::addItem(stappler::xenolith::gui2d::ScrollController::NodeFunction&&,stappler::xenolith::Size2,stappler::xenolith::Vec2,stappler::xenolith::ZOrder,stappler::StringView)
+# ::stappler::xenolith::basic2d::ScrollController::addItem(stappler::xenolith::basic2d::ScrollController::NodeFunction&&,stappler::geom::Size2,stappler::geom::Vec2,stappler::xenolith::ZOrder,stappler::StringView)
 
 ## BRIEF
 
@@ -345,16 +345,16 @@ Title: XL2dScrollController.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::gui2d::ScrollController::NodeFunction&&
-* stappler::xenolith::Size2
-* stappler::xenolith::Vec2
+* stappler::xenolith::basic2d::ScrollController::NodeFunction&&
+* stappler::geom::Size2
+* stappler::geom::Vec2
 * stappler::xenolith::ZOrder
 * stappler::StringView
 
 Возвращает:
 * size_t
 
-# ::stappler::xenolith::gui2d::ScrollController::addItem(stappler::xenolith::gui2d::ScrollController::NodeFunction&&,float,float,stappler::xenolith::ZOrder,stappler::StringView)
+# ::stappler::xenolith::basic2d::ScrollController::addItem(stappler::xenolith::basic2d::ScrollController::NodeFunction&&,float,float,stappler::xenolith::ZOrder,stappler::StringView)
 
 ## BRIEF
 
@@ -363,25 +363,8 @@ Title: XL2dScrollController.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::gui2d::ScrollController::NodeFunction&&
+* stappler::xenolith::basic2d::ScrollController::NodeFunction&&
 * float
-* float
-* stappler::xenolith::ZOrder
-* stappler::StringView
-
-Возвращает:
-* size_t
-
-# ::stappler::xenolith::gui2d::ScrollController::addItem(stappler::xenolith::gui2d::ScrollController::NodeFunction&&,float,stappler::xenolith::ZOrder,stappler::StringView)
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-Параметры:
-* stappler::xenolith::gui2d::ScrollController::NodeFunction&&
 * float
 * stappler::xenolith::ZOrder
 * stappler::StringView
@@ -389,7 +372,7 @@ Title: XL2dScrollController.h
 Возвращает:
 * size_t
 
-# ::stappler::xenolith::gui2d::ScrollController::addPlaceholder(stappler::xenolith::Size2,stappler::xenolith::Vec2)
+# ::stappler::xenolith::basic2d::ScrollController::addItem(stappler::xenolith::basic2d::ScrollController::NodeFunction&&,float,stappler::xenolith::ZOrder,stappler::StringView)
 
 ## BRIEF
 
@@ -398,13 +381,30 @@ Title: XL2dScrollController.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Size2
-* stappler::xenolith::Vec2
+* stappler::xenolith::basic2d::ScrollController::NodeFunction&&
+* float
+* stappler::xenolith::ZOrder
+* stappler::StringView
 
 Возвращает:
 * size_t
 
-# ::stappler::xenolith::gui2d::ScrollController::addPlaceholder(float,float)
+# ::stappler::xenolith::basic2d::ScrollController::addPlaceholder(stappler::geom::Size2,stappler::geom::Vec2)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* stappler::geom::Size2
+* stappler::geom::Vec2
+
+Возвращает:
+* size_t
+
+# ::stappler::xenolith::basic2d::ScrollController::addPlaceholder(float,float)
 
 ## BRIEF
 
@@ -419,7 +419,7 @@ Title: XL2dScrollController.h
 Возвращает:
 * size_t
 
-# ::stappler::xenolith::gui2d::ScrollController::addPlaceholder(float)
+# ::stappler::xenolith::basic2d::ScrollController::addPlaceholder(float)
 
 ## BRIEF
 
@@ -433,7 +433,7 @@ Title: XL2dScrollController.h
 Возвращает:
 * size_t
 
-# ::stappler::xenolith::gui2d::ScrollController::getItem(size_t)
+# ::stappler::xenolith::basic2d::ScrollController::getItem(size_t)
 
 ## BRIEF
 
@@ -445,9 +445,9 @@ Title: XL2dScrollController.h
 * size_t
 
 Возвращает:
-* stappler::xenolith::gui2d::ScrollController::Item const*
+* stappler::xenolith::basic2d::ScrollController::Item const*
 
-# ::stappler::xenolith::gui2d::ScrollController::getItem(stappler::xenolith::Node*)
+# ::stappler::xenolith::basic2d::ScrollController::getItem(stappler::xenolith::Node*)
 
 ## BRIEF
 
@@ -459,9 +459,9 @@ Title: XL2dScrollController.h
 * stappler::xenolith::Node*
 
 Возвращает:
-* stappler::xenolith::gui2d::ScrollController::Item const*
+* stappler::xenolith::basic2d::ScrollController::Item const*
 
-# ::stappler::xenolith::gui2d::ScrollController::getItem(stappler::StringView)
+# ::stappler::xenolith::basic2d::ScrollController::getItem(stappler::StringView)
 
 ## BRIEF
 
@@ -473,9 +473,9 @@ Title: XL2dScrollController.h
 * stappler::StringView
 
 Возвращает:
-* stappler::xenolith::gui2d::ScrollController::Item const*
+* stappler::xenolith::basic2d::ScrollController::Item const*
 
-# ::stappler::xenolith::gui2d::ScrollController::getItemIndex(stappler::xenolith::Node*)
+# ::stappler::xenolith::basic2d::ScrollController::getItemIndex(stappler::xenolith::Node*)
 
 ## BRIEF
 
@@ -489,7 +489,7 @@ Title: XL2dScrollController.h
 Возвращает:
 * size_t
 
-# ::stappler::xenolith::gui2d::ScrollController::getItems() const
+# ::stappler::xenolith::basic2d::ScrollController::getItems() const
 
 ## BRIEF
 
@@ -498,9 +498,9 @@ Title: XL2dScrollController.h
 Доступ: public
 
 Возвращает:
-* Vector<stappler::xenolith::gui2d::ScrollController::Item> const&
+* Vector<stappler::xenolith::basic2d::ScrollController::Item> const&
 
-# ::stappler::xenolith::gui2d::ScrollController::getItems()
+# ::stappler::xenolith::basic2d::ScrollController::getItems()
 
 ## BRIEF
 
@@ -509,9 +509,9 @@ Title: XL2dScrollController.h
 Доступ: public
 
 Возвращает:
-* Vector<stappler::xenolith::gui2d::ScrollController::Item>&
+* Vector<stappler::xenolith::basic2d::ScrollController::Item>&
 
-# ::stappler::xenolith::gui2d::ScrollController::setScrollRelativeValue(float)
+# ::stappler::xenolith::basic2d::ScrollController::setScrollRelativeValue(float)
 
 ## BRIEF
 
@@ -523,7 +523,7 @@ Title: XL2dScrollController.h
 * float
 
 
-# ::stappler::xenolith::gui2d::ScrollController::getNodeByName(stappler::StringView) const
+# ::stappler::xenolith::basic2d::ScrollController::getNodeByName(stappler::StringView) const
 
 ## BRIEF
 
@@ -537,7 +537,7 @@ Title: XL2dScrollController.h
 Возвращает:
 * stappler::xenolith::Node*
 
-# ::stappler::xenolith::gui2d::ScrollController::getFrontNode() const
+# ::stappler::xenolith::basic2d::ScrollController::getFrontNode() const
 
 ## BRIEF
 
@@ -548,7 +548,7 @@ Title: XL2dScrollController.h
 Возвращает:
 * stappler::xenolith::Node*
 
-# ::stappler::xenolith::gui2d::ScrollController::getBackNode() const
+# ::stappler::xenolith::basic2d::ScrollController::getBackNode() const
 
 ## BRIEF
 
@@ -559,7 +559,7 @@ Title: XL2dScrollController.h
 Возвращает:
 * stappler::xenolith::Node*
 
-# ::stappler::xenolith::gui2d::ScrollController::getNodes() const
+# ::stappler::xenolith::basic2d::ScrollController::getNodes() const
 
 ## BRIEF
 
@@ -570,7 +570,7 @@ Title: XL2dScrollController.h
 Возвращает:
 * Vector<Rc<stappler::xenolith::Node>>
 
-# ::stappler::xenolith::gui2d::ScrollController::getNextItemPosition() const
+# ::stappler::xenolith::basic2d::ScrollController::getNextItemPosition() const
 
 ## BRIEF
 
@@ -581,7 +581,7 @@ Title: XL2dScrollController.h
 Возвращает:
 * float
 
-# ::stappler::xenolith::gui2d::ScrollController::setKeepNodes(bool)
+# ::stappler::xenolith::basic2d::ScrollController::setKeepNodes(bool)
 
 ## BRIEF
 
@@ -593,7 +593,7 @@ Title: XL2dScrollController.h
 * bool
 
 
-# ::stappler::xenolith::gui2d::ScrollController::isKeepNodes() const
+# ::stappler::xenolith::basic2d::ScrollController::isKeepNodes() const
 
 ## BRIEF
 
@@ -604,7 +604,7 @@ Title: XL2dScrollController.h
 Возвращает:
 * bool
 
-# ::stappler::xenolith::gui2d::ScrollController::resizeItem(stappler::xenolith::gui2d::ScrollController::Item const*,float,bool)
+# ::stappler::xenolith::basic2d::ScrollController::resizeItem(stappler::xenolith::basic2d::ScrollController::Item const*,float,bool)
 
 ## BRIEF
 
@@ -613,12 +613,12 @@ Title: XL2dScrollController.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::gui2d::ScrollController::Item const*
+* stappler::xenolith::basic2d::ScrollController::Item const*
 * float
 * bool
 
 
-# ::stappler::xenolith::gui2d::ScrollController::setAnimationPadding(float)
+# ::stappler::xenolith::basic2d::ScrollController::setAnimationPadding(float)
 
 ## BRIEF
 
@@ -630,7 +630,7 @@ Title: XL2dScrollController.h
 * float
 
 
-# ::stappler::xenolith::gui2d::ScrollController::dropAnimationPadding()
+# ::stappler::xenolith::basic2d::ScrollController::dropAnimationPadding()
 
 ## BRIEF
 
@@ -639,7 +639,7 @@ Title: XL2dScrollController.h
 Доступ: public
 
 
-# ::stappler::xenolith::gui2d::ScrollController::updateAnimationPadding(float)
+# ::stappler::xenolith::basic2d::ScrollController::updateAnimationPadding(float)
 
 ## BRIEF
 
@@ -651,7 +651,7 @@ Title: XL2dScrollController.h
 * float
 
 
-# ::stappler::xenolith::gui2d::ScrollController::setRebuildCallback(stappler::xenolith::gui2d::ScrollController::RebuildCallback const&)
+# ::stappler::xenolith::basic2d::ScrollController::setRebuildCallback(stappler::xenolith::basic2d::ScrollController::RebuildCallback const&)
 
 ## BRIEF
 
@@ -660,10 +660,10 @@ Title: XL2dScrollController.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::gui2d::ScrollController::RebuildCallback const&
+* stappler::xenolith::basic2d::ScrollController::RebuildCallback const&
 
 
-# ::stappler::xenolith::gui2d::ScrollController::getRebuildCallback() const
+# ::stappler::xenolith::basic2d::ScrollController::getRebuildCallback() const
 
 ## BRIEF
 
@@ -674,7 +674,7 @@ Title: XL2dScrollController.h
 Возвращает:
 * RebuildCallback&
 
-# ::stappler::xenolith::gui2d::ScrollController::onNextObject(stappler::xenolith::gui2d::ScrollController::Item&,float,float)
+# ::stappler::xenolith::basic2d::ScrollController::onNextObject(stappler::xenolith::basic2d::ScrollController::Item&,float,float)
 
 ## BRIEF
 
@@ -683,12 +683,12 @@ Title: XL2dScrollController.h
 Доступ: protected
 
 Параметры:
-* stappler::xenolith::gui2d::ScrollController::Item&
+* stappler::xenolith::basic2d::ScrollController::Item&
 * float
 * float
 
 
-# ::stappler::xenolith::gui2d::ScrollController::addScrollNode(stappler::xenolith::gui2d::ScrollController::Item&)
+# ::stappler::xenolith::basic2d::ScrollController::addScrollNode(stappler::xenolith::basic2d::ScrollController::Item&)
 
 ## BRIEF
 
@@ -697,22 +697,10 @@ Title: XL2dScrollController.h
 Доступ: protected
 
 Параметры:
-* stappler::xenolith::gui2d::ScrollController::Item&
+* stappler::xenolith::basic2d::ScrollController::Item&
 
 
-# ::stappler::xenolith::gui2d::ScrollController::updateScrollNode(stappler::xenolith::gui2d::ScrollController::Item&)
-
-## BRIEF
-
-## CONTENT
-
-Доступ: protected
-
-Параметры:
-* stappler::xenolith::gui2d::ScrollController::Item&
-
-
-# ::stappler::xenolith::gui2d::ScrollController::removeScrollNode(stappler::xenolith::gui2d::ScrollController::Item&)
+# ::stappler::xenolith::basic2d::ScrollController::updateScrollNode(stappler::xenolith::basic2d::ScrollController::Item&)
 
 ## BRIEF
 
@@ -721,10 +709,10 @@ Title: XL2dScrollController.h
 Доступ: protected
 
 Параметры:
-* stappler::xenolith::gui2d::ScrollController::Item&
+* stappler::xenolith::basic2d::ScrollController::Item&
 
 
-# ::stappler::xenolith::gui2d::ScrollController::_scroll
+# ::stappler::xenolith::basic2d::ScrollController::removeScrollNode(stappler::xenolith::basic2d::ScrollController::Item&)
 
 ## BRIEF
 
@@ -732,10 +720,22 @@ Title: XL2dScrollController.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::gui2d::ScrollViewBase*
+Параметры:
+* stappler::xenolith::basic2d::ScrollController::Item&
 
 
-# ::stappler::xenolith::gui2d::ScrollController::_root
+# ::stappler::xenolith::basic2d::ScrollController::_scroll
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: stappler::xenolith::basic2d::ScrollViewBase*
+
+
+# ::stappler::xenolith::basic2d::ScrollController::_root
 
 ## BRIEF
 
@@ -746,7 +746,7 @@ Title: XL2dScrollController.h
 Тип: stappler::xenolith::Node*
 
 
-# ::stappler::xenolith::gui2d::ScrollController::_scrollAreaOffset
+# ::stappler::xenolith::basic2d::ScrollController::_scrollAreaOffset
 
 ## BRIEF
 
@@ -757,7 +757,7 @@ Title: XL2dScrollController.h
 Тип: float
 
 
-# ::stappler::xenolith::gui2d::ScrollController::_scrollAreaSize
+# ::stappler::xenolith::basic2d::ScrollController::_scrollAreaSize
 
 ## BRIEF
 
@@ -768,7 +768,7 @@ Title: XL2dScrollController.h
 Тип: float
 
 
-# ::stappler::xenolith::gui2d::ScrollController::_currentMin
+# ::stappler::xenolith::basic2d::ScrollController::_currentMin
 
 ## BRIEF
 
@@ -779,7 +779,7 @@ Title: XL2dScrollController.h
 Тип: float
 
 
-# ::stappler::xenolith::gui2d::ScrollController::_currentMax
+# ::stappler::xenolith::basic2d::ScrollController::_currentMax
 
 ## BRIEF
 
@@ -790,7 +790,7 @@ Title: XL2dScrollController.h
 Тип: float
 
 
-# ::stappler::xenolith::gui2d::ScrollController::_windowBegin
+# ::stappler::xenolith::basic2d::ScrollController::_windowBegin
 
 ## BRIEF
 
@@ -801,7 +801,7 @@ Title: XL2dScrollController.h
 Тип: float
 
 
-# ::stappler::xenolith::gui2d::ScrollController::_windowEnd
+# ::stappler::xenolith::basic2d::ScrollController::_windowEnd
 
 ## BRIEF
 
@@ -812,7 +812,7 @@ Title: XL2dScrollController.h
 Тип: float
 
 
-# ::stappler::xenolith::gui2d::ScrollController::_currentPosition
+# ::stappler::xenolith::basic2d::ScrollController::_currentPosition
 
 ## BRIEF
 
@@ -823,7 +823,7 @@ Title: XL2dScrollController.h
 Тип: float
 
 
-# ::stappler::xenolith::gui2d::ScrollController::_currentSize
+# ::stappler::xenolith::basic2d::ScrollController::_currentSize
 
 ## BRIEF
 
@@ -834,7 +834,7 @@ Title: XL2dScrollController.h
 Тип: float
 
 
-# ::stappler::xenolith::gui2d::ScrollController::_nodes
+# ::stappler::xenolith::basic2d::ScrollController::_nodes
 
 ## BRIEF
 
@@ -842,10 +842,10 @@ Title: XL2dScrollController.h
 
 Доступ: protected
 
-Тип: Vector<stappler::xenolith::gui2d::ScrollController::Item>
+Тип: Vector<stappler::xenolith::basic2d::ScrollController::Item>
 
 
-# ::stappler::xenolith::gui2d::ScrollController::_infoDirty
+# ::stappler::xenolith::basic2d::ScrollController::_infoDirty
 
 ## BRIEF
 
@@ -856,7 +856,7 @@ Title: XL2dScrollController.h
 Тип: bool
 
 
-# ::stappler::xenolith::gui2d::ScrollController::_keepNodes
+# ::stappler::xenolith::basic2d::ScrollController::_keepNodes
 
 ## BRIEF
 
@@ -867,7 +867,7 @@ Title: XL2dScrollController.h
 Тип: bool
 
 
-# ::stappler::xenolith::gui2d::ScrollController::_animationPadding
+# ::stappler::xenolith::basic2d::ScrollController::_animationPadding
 
 ## BRIEF
 
@@ -878,7 +878,7 @@ Title: XL2dScrollController.h
 Тип: float
 
 
-# ::stappler::xenolith::gui2d::ScrollController::_savedSize
+# ::stappler::xenolith::basic2d::ScrollController::_savedSize
 
 ## BRIEF
 
@@ -889,7 +889,7 @@ Title: XL2dScrollController.h
 Тип: float
 
 
-# ::stappler::xenolith::gui2d::ScrollController::_callback
+# ::stappler::xenolith::basic2d::ScrollController::_callback
 
 ## BRIEF
 

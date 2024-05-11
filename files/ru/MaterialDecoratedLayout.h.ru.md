@@ -8,6 +8,160 @@ Title: MaterialDecoratedLayout.h
 ## CONTENT
 
 
+# ::stappler::xenolith::material2d::ViewDecorationFlags
+
+## BRIEF
+
+## CONTENT
+
+Значения:
+* None
+* Visible
+* Tracked
+
+
+# ::stappler::xenolith::material2d::operator|(stappler::xenolith::material2d::ViewDecorationFlags const&,stappler::xenolith::material2d::ViewDecorationFlags const&)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* stappler::xenolith::material2d::ViewDecorationFlags const&
+* stappler::xenolith::material2d::ViewDecorationFlags const&
+
+Возвращает:
+* stappler::xenolith::material2d::ViewDecorationFlags
+
+# ::stappler::xenolith::material2d::operator&(stappler::xenolith::material2d::ViewDecorationFlags const&,stappler::xenolith::material2d::ViewDecorationFlags const&)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* stappler::xenolith::material2d::ViewDecorationFlags const&
+* stappler::xenolith::material2d::ViewDecorationFlags const&
+
+Возвращает:
+* stappler::xenolith::material2d::ViewDecorationFlags
+
+# ::stappler::xenolith::material2d::operator^(stappler::xenolith::material2d::ViewDecorationFlags const&,stappler::xenolith::material2d::ViewDecorationFlags const&)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* stappler::xenolith::material2d::ViewDecorationFlags const&
+* stappler::xenolith::material2d::ViewDecorationFlags const&
+
+Возвращает:
+* stappler::xenolith::material2d::ViewDecorationFlags
+
+# ::stappler::xenolith::material2d::operator|=(stappler::xenolith::material2d::ViewDecorationFlags&,stappler::xenolith::material2d::ViewDecorationFlags const&)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* stappler::xenolith::material2d::ViewDecorationFlags&
+* stappler::xenolith::material2d::ViewDecorationFlags const&
+
+Возвращает:
+* stappler::xenolith::material2d::ViewDecorationFlags&
+
+# ::stappler::xenolith::material2d::operator&=(stappler::xenolith::material2d::ViewDecorationFlags&,stappler::xenolith::material2d::ViewDecorationFlags const&)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* stappler::xenolith::material2d::ViewDecorationFlags&
+* stappler::xenolith::material2d::ViewDecorationFlags const&
+
+Возвращает:
+* stappler::xenolith::material2d::ViewDecorationFlags&
+
+# ::stappler::xenolith::material2d::operator^=(stappler::xenolith::material2d::ViewDecorationFlags&,stappler::xenolith::material2d::ViewDecorationFlags const&)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* stappler::xenolith::material2d::ViewDecorationFlags&
+* stappler::xenolith::material2d::ViewDecorationFlags const&
+
+Возвращает:
+* stappler::xenolith::material2d::ViewDecorationFlags&
+
+# ::stappler::xenolith::material2d::operator==(stappler::xenolith::material2d::ViewDecorationFlags const&,std::underlying_type<ViewDecorationFlags>::type const&)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* stappler::xenolith::material2d::ViewDecorationFlags const&
+* std::underlying_type<ViewDecorationFlags>::type const&
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::material2d::operator==(std::underlying_type<ViewDecorationFlags>::type const&,stappler::xenolith::material2d::ViewDecorationFlags const&)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* std::underlying_type<ViewDecorationFlags>::type const&
+* stappler::xenolith::material2d::ViewDecorationFlags const&
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::material2d::operator!=(stappler::xenolith::material2d::ViewDecorationFlags const&,std::underlying_type<ViewDecorationFlags>::type const&)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* stappler::xenolith::material2d::ViewDecorationFlags const&
+* std::underlying_type<ViewDecorationFlags>::type const&
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::material2d::operator!=(std::underlying_type<ViewDecorationFlags>::type const&,stappler::xenolith::material2d::ViewDecorationFlags const&)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* std::underlying_type<ViewDecorationFlags>::type const&
+* stappler::xenolith::material2d::ViewDecorationFlags const&
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::material2d::operator~(stappler::xenolith::material2d::ViewDecorationFlags const&)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* stappler::xenolith::material2d::ViewDecorationFlags const&
+
+Возвращает:
+* stappler::xenolith::material2d::ViewDecorationFlags
+
 # ::stappler::xenolith::material2d::DecoratedLayout
 
 ## BRIEF
@@ -50,6 +204,21 @@ Title: MaterialDecoratedLayout.h
 Доступ: public
 
 
+# ::stappler::xenolith::material2d::DecoratedLayout::visitDraw(stappler::xenolith::FrameInfo&,stappler::xenolith::NodeFlags)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* stappler::xenolith::FrameInfo&
+* stappler::xenolith::NodeFlags
+
+Возвращает:
+* bool
+
 # ::stappler::xenolith::material2d::DecoratedLayout::setDecorationColorRole(stappler::xenolith::material2d::ColorRole)
 
 ## BRIEF
@@ -73,7 +242,7 @@ Title: MaterialDecoratedLayout.h
 Возвращает:
 * stappler::xenolith::material2d::ColorRole
 
-# ::stappler::xenolith::material2d::DecoratedLayout::setViewDecorationTracked(bool)
+# ::stappler::xenolith::material2d::DecoratedLayout::setDecorationElevation(stappler::xenolith::material2d::Elevation)
 
 ## BRIEF
 
@@ -82,10 +251,10 @@ Title: MaterialDecoratedLayout.h
 Доступ: public
 
 Параметры:
-* bool
+* stappler::xenolith::material2d::Elevation
 
 
-# ::stappler::xenolith::material2d::DecoratedLayout::isViewDecorationTracked() const
+# ::stappler::xenolith::material2d::DecoratedLayout::getDecorationElevation() const
 
 ## BRIEF
 
@@ -94,7 +263,30 @@ Title: MaterialDecoratedLayout.h
 Доступ: public
 
 Возвращает:
-* bool
+* stappler::xenolith::material2d::Elevation
+
+# ::stappler::xenolith::material2d::DecoratedLayout::setViewDecorationFlags(stappler::xenolith::material2d::ViewDecorationFlags)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* stappler::xenolith::material2d::ViewDecorationFlags
+
+
+# ::stappler::xenolith::material2d::DecoratedLayout::getViewDecorationFlags() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* stappler::xenolith::material2d::ViewDecorationFlags
 
 # ::stappler::xenolith::material2d::DecoratedLayout::onForeground(stappler::xenolith::basic2d::SceneContent2d*,stappler::xenolith::basic2d::SceneLayout2d*)
 
@@ -120,6 +312,17 @@ Title: MaterialDecoratedLayout.h
 Возвращает:
 * stappler::xenolith::material2d::LayerSurface*
 
+# ::stappler::xenolith::material2d::DecoratedLayout::getMaxDepthIndex() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* float
+
 # ::stappler::xenolith::material2d::DecoratedLayout::updateStatusBar(stappler::xenolith::material2d::SurfaceStyleData const&)
 
 ## BRIEF
@@ -130,6 +333,17 @@ Title: MaterialDecoratedLayout.h
 
 Параметры:
 * stappler::xenolith::material2d::SurfaceStyleData const&
+
+
+# ::stappler::xenolith::material2d::DecoratedLayout::_decorationRoot
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: stappler::xenolith::Node*
 
 
 # ::stappler::xenolith::material2d::DecoratedLayout::_decorationLeft
@@ -187,7 +401,7 @@ Title: MaterialDecoratedLayout.h
 Тип: stappler::xenolith::material2d::LayerSurface*
 
 
-# ::stappler::xenolith::material2d::DecoratedLayout::_viewDecorationTracked
+# ::stappler::xenolith::material2d::DecoratedLayout::_viewDecoration
 
 ## BRIEF
 
@@ -195,15 +409,4 @@ Title: MaterialDecoratedLayout.h
 
 Доступ: protected
 
-Тип: bool
-
-
-# ::stappler::xenolith::material2d::DecoratedLayout::_decorationStyleTracked
-
-## BRIEF
-
-## CONTENT
-
-Доступ: protected
-
-Тип: bool
+Тип: stappler::xenolith::material2d::ViewDecorationFlags

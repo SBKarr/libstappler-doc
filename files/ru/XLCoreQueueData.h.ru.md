@@ -5,21 +5,33 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Заголовок данных типов очереди
+
 ## CONTENT
+
+Заголовок данных типов очереди
 
 
 # ::stappler::xenolith::core::ProgramDescriptorBinding
 
 ## BRIEF
 
+Тип дескриптора в укладке
+
 ## CONTENT
+
+Тип дескриптора в укладке
 
 
 # ::stappler::xenolith::core::ProgramDescriptorBinding::set
 
 ## BRIEF
 
+Индекс набора
+
 ## CONTENT
+
+Индекс набора
 
 Тип: uint32_t
 
@@ -28,7 +40,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Индекс дескриптора
+
 ## CONTENT
+
+Индекс дескриптора
 
 Тип: uint32_t
 
@@ -37,7 +53,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Тип дескриптора
+
 ## CONTENT
+
+Тип дескриптора
 
 Тип: stappler::xenolith::core::DescriptorType
 
@@ -46,7 +66,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Число дескрипторов в массиве
+
 ## CONTENT
+
+Число дескрипторов в массиве
 
 Тип: uint32_t
 
@@ -55,14 +79,22 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Параметры блока командных констант
+
 ## CONTENT
+
+Параметры блока командных констант
 
 
 # ::stappler::xenolith::core::ProgramPushConstantBlock::offset
 
 ## BRIEF
 
+Смещение блока
+
 ## CONTENT
+
+Смещение блока
 
 Тип: uint32_t
 
@@ -71,7 +103,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Размер блока
+
 ## CONTENT
+
+Размер блока
 
 Тип: uint32_t
 
@@ -80,14 +116,22 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Параметры точки входа в подпрограмме
+
 ## CONTENT
+
+Параметры точки входа в подпрограмме
 
 
 # ::stappler::xenolith::core::ProgramEntryPointBlock::id
 
 ## BRIEF
 
+Идентификатор
+
 ## CONTENT
+
+Идентификатор
 
 Тип: uint32_t
 
@@ -96,7 +140,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Имя символа
+
 ## CONTENT
+
+Имя символа
 
 Тип: memory::string
 
@@ -105,7 +153,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Число элементов локальной группы
+
 ## CONTENT
+
+Число элементов локальной группы
 
 Тип: uint32_t
 
@@ -114,7 +166,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Число элементов локальной группы
+
 ## CONTENT
+
+Число элементов локальной группы
 
 Тип: uint32_t
 
@@ -123,7 +179,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Число элементов локальной группы
+
 ## CONTENT
+
+Число элементов локальной группы
 
 Тип: uint32_t
 
@@ -132,7 +192,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Параметры подпрограммы
+
 ## CONTENT
+
+Параметры подпрограммы
 
 Базовые классы:
 * NamedMem
@@ -142,7 +206,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Стадия исполнения
+
 ## CONTENT
+
+Стадия исполнения
 
 Тип: stappler::xenolith::core::ProgramStage
 
@@ -151,7 +219,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Используемые дескрипторы
+
 ## CONTENT
+
+Используемые дескрипторы
 
 Тип: memory::vector<ProgramDescriptorBinding>
 
@@ -160,7 +232,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Используемые командные константы
+
 ## CONTENT
+
+Используемые командные константы
 
 Тип: memory::vector<ProgramPushConstantBlock>
 
@@ -169,7 +245,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Точки входа
+
 ## CONTENT
+
+Точки входа
 
 Тип: memory::vector<ProgramEntryPointBlock>
 
@@ -178,7 +258,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Данные подпрограммы
+
 ## CONTENT
+
+Данные подпрограммы
 
 Базовые классы:
 * ProgramInfo
@@ -188,14 +272,22 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Функция доступа к данным
+
 ## CONTENT
+
+Функция доступа к данным
 
 
 # ::stappler::xenolith::core::ProgramData::data
 
 ## BRIEF
 
+Данные подпрограммы
+
 ## CONTENT
+
+Данные подпрограммы
 
 Тип: SpanView<uint32_t>
 
@@ -204,7 +296,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Функция получения данных
+
 ## CONTENT
+
+Функция получения данных
 
 Тип: memory::function<void (const DataCallback &)>
 
@@ -213,7 +309,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Собранная подпрограмма на стороне устройства
+
 ## CONTENT
+
+Собранная подпрограмма на стороне устройства
 
 Тип: Rc<stappler::xenolith::core::Shader>
 
@@ -222,7 +322,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Получает параметры подпрограммы из кода
+
 ## CONTENT
+
+Получает параметры подпрограммы из кода
 
 Параметры:
 * SpanView<uint32_t>
@@ -232,14 +336,22 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Параметры специализации для подпрограммы
+
 ## CONTENT
+
+Параметры специализации для подпрограммы
 
 
 # ::stappler::xenolith::core::SpecializationInfo::data
 
 ## BRIEF
 
+Подпрограмма
+
 ## CONTENT
+
+Подпрограмма
 
 Тип: stappler::xenolith::core::ProgramData const*
 
@@ -248,44 +360,64 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Набор констант специализации
+
 ## CONTENT
 
-Тип: memory::vector<PredefinedConstant>
+Набор констант специализации
+
+Тип: memory::vector<SpecializationConstant>
 
 
 # ::stappler::xenolith::core::SpecializationInfo::SpecializationInfo()
 
 ## BRIEF
 
+Конструктор
+
 ## CONTENT
+
+Конструктор
 
 
 # ::stappler::xenolith::core::SpecializationInfo::SpecializationInfo(stappler::xenolith::core::ProgramData const*)
 
 ## BRIEF
 
+Конструктор
+
 ## CONTENT
+
+Конструктор
 
 Параметры:
 * stappler::xenolith::core::ProgramData const*
 
 
-# ::stappler::xenolith::core::SpecializationInfo::SpecializationInfo(stappler::xenolith::core::ProgramData const*,SpanView<stappler::xenolith::core::PredefinedConstant>)
+# ::stappler::xenolith::core::SpecializationInfo::SpecializationInfo(stappler::xenolith::core::ProgramData const*,SpanView<stappler::xenolith::core::SpecializationConstant>)
 
 ## BRIEF
 
+Конструктор
+
 ## CONTENT
+
+Конструктор
 
 Параметры:
 * stappler::xenolith::core::ProgramData const*
-* SpanView<stappler::xenolith::core::PredefinedConstant>
+* SpanView<stappler::xenolith::core::SpecializationConstant>
 
 
 # ::stappler::xenolith::core::GraphicPipelineInfo
 
 ## BRIEF
 
+Параметры графического пайплайна
+
 ## CONTENT
+
+Параметры графического пайплайна
 
 Базовые классы:
 * NamedMem
@@ -295,7 +427,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Специализации используемых подпрограмм
+
 ## CONTENT
+
+Специализации используемых подпрограмм
 
 Тип: memory::vector<SpecializationInfo>
 
@@ -304,7 +440,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Флаги динамических параметров
+
 ## CONTENT
+
+Флаги динамических параметров
 
 Тип: stappler::xenolith::core::DynamicState
 
@@ -313,7 +453,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Параметры материала
+
 ## CONTENT
+
+Параметры материала
 
 Тип: stappler::xenolith::core::PipelineMaterialInfo
 
@@ -322,7 +466,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Проверяет, рисует ли пайплайн только непрозрачные структуоры
+
 ## CONTENT
+
+Проверяет, рисует ли пайплайн только непрозрачные структуоры
 
 Возвращает:
 * bool
@@ -331,7 +479,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Данные графического пайплайна
+
 ## CONTENT
+
+Данные графического пайплайна
 
 Базовые классы:
 * GraphicPipelineInfo
@@ -341,7 +493,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Подпроход
+
 ## CONTENT
+
+Подпроход
 
 Тип: stappler::xenolith::core::SubpassData const*
 
@@ -350,7 +506,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Используемая укладка дескрипторов
+
 ## CONTENT
+
+Используемая укладка дескрипторов
 
 Тип: stappler::xenolith::core::PipelineLayoutData const*
 
@@ -359,7 +519,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Собранный пайплайн
+
 ## CONTENT
+
+Собранный пайплайн
 
 Тип: Rc<stappler::xenolith::core::GraphicPipeline>
 
@@ -368,7 +532,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Параметры вычислительного пайплайна
+
 ## CONTENT
+
+Параметры вычислительного пайплайна
 
 Базовые классы:
 * NamedMem
@@ -378,7 +546,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Используемая подпрограмма
+
 ## CONTENT
+
+Используемая подпрограмма
 
 Тип: stappler::xenolith::core::SpecializationInfo
 
@@ -387,7 +559,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Данные вычислительного пайплайна
+
 ## CONTENT
+
+Данные вычислительного пайплайна
 
 Базовые классы:
 * ComputePipelineInfo
@@ -397,7 +573,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Подпроход
+
 ## CONTENT
+
+Подпроход
 
 Тип: stappler::xenolith::core::SubpassData const*
 
@@ -406,7 +586,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Укладка дескрипторов
+
 ## CONTENT
+
+Укладка дескрипторов
 
 Тип: stappler::xenolith::core::PipelineLayoutData const*
 
@@ -415,7 +599,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Собранный пайплайн
+
 ## CONTENT
+
+Собранный пайплайн
 
 Тип: Rc<stappler::xenolith::core::ComputePipeline>
 
@@ -424,7 +612,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Тип дескриптора пайплайна
+
 ## CONTENT
+
+Тип дескриптора пайплайна
 
 Базовые классы:
 * NamedMem
@@ -434,7 +626,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Исходный набор дескрипторов
+
 ## CONTENT
+
+Исходный набор дескрипторов
 
 Тип: stappler::xenolith::core::DescriptorSetData const*
 
@@ -443,7 +639,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Соответствующее вложение
+
 ## CONTENT
+
+Соответствующее вложение
 
 Тип: stappler::xenolith::core::AttachmentPassData const*
 
@@ -452,7 +652,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Тип дескриптора
+
 ## CONTENT
+
+Тип дескриптора
 
 Тип: stappler::xenolith::core::DescriptorType
 
@@ -461,7 +665,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Флаги стадий подпрограммы
+
 ## CONTENT
+
+Флаги стадий подпрограммы
 
 Тип: stappler::xenolith::core::ProgramStage
 
@@ -470,7 +678,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Укладка вложения изображения
+
 ## CONTENT
+
+Укладка вложения изображения
 
 Тип: stappler::xenolith::core::AttachmentLayout
 
@@ -479,7 +691,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Число элементов
+
 ## CONTENT
+
+Число элементов
 
 Тип: uint32_t
 
@@ -488,7 +704,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Индекс дескриптора
+
 ## CONTENT
+
+Индекс дескриптора
 
 Тип: uint32_t
 
@@ -497,7 +717,24 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Флаг доступности обновления после связывания
+
 ## CONTENT
+
+Флаг доступности обновления после связывания
+
+Тип: bool
+
+
+# ::stappler::xenolith::core::PipelineDescriptor::countIsPredefined
+
+## BRIEF
+
+Флаг предопределённого размера
+
+## CONTENT
+
+Флаг предопределённого размера. В противном случае определяется из данных подпрограммы.
 
 Тип: bool
 
@@ -506,7 +743,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Поколение привязки
+
 ## CONTENT
+
+Поколение привязки
 
 Тип: uint64_t
 
@@ -515,14 +756,22 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Структура зависимости подпроходов
+
 ## CONTENT
+
+Структура зависимости подпроходов. См. VkSubpassDependency
 
 
 # ::stappler::xenolith::core::SubpassDependency::External
 
 ## BRIEF
 
+Константа внешней зависимости
+
 ## CONTENT
+
+Константа внешней зависимости
 
 Тип: uint32_t const
 
@@ -531,7 +780,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Исходный подпроход
+
 ## CONTENT
+
+Исходный подпроход
 
 Тип: uint32_t
 
@@ -540,7 +793,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Исходная стадия зависимости
+
 ## CONTENT
+
+Исходная стадия зависимости
 
 Тип: stappler::xenolith::core::PipelineStage
 
@@ -549,7 +806,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Исходные флаги доступа
+
 ## CONTENT
+
+Исходные флаги доступа
 
 Тип: stappler::xenolith::core::AccessType
 
@@ -558,7 +819,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Целевой подпроход
+
 ## CONTENT
+
+Целевой подпроход
 
 Тип: uint32_t
 
@@ -567,7 +832,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Стадии целевого подпрохода
+
 ## CONTENT
+
+Стадии целевого подпрохода
 
 Тип: stappler::xenolith::core::PipelineStage
 
@@ -576,7 +845,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Целевые флаги доступа
+
 ## CONTENT
+
+Целевые флаги доступа
 
 Тип: stappler::xenolith::core::AccessType
 
@@ -585,7 +858,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Зависимость ограничена регионом
+
 ## CONTENT
+
+Зависимость ограничена регионом
 
 Тип: bool
 
@@ -594,7 +871,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Кодирует зависимость в число
+
 ## CONTENT
+
+Кодирует зависимость в число
 
 Возвращает:
 * uint64_t
@@ -603,7 +884,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Оператор сравнения
+
 ## CONTENT
+
+Оператор сравнения
 
 Параметры:
 * stappler::xenolith::core::SubpassDependency const&
@@ -616,7 +901,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Оператор сравнения
+
 ## CONTENT
+
+Оператор сравнения
 
 Параметры:
 * stappler::xenolith::core::SubpassDependency const&
@@ -629,7 +918,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Оператор сравнения
+
 ## CONTENT
+
+Оператор сравнения
 
 Параметры:
 * stappler::xenolith::core::SubpassDependency const&
@@ -642,14 +935,22 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Параметры зависимости вложения
+
 ## CONTENT
+
+Параметры зависимости вложения
 
 
 # ::stappler::xenolith::core::AttachmentDependencyInfo::initialUsageStage
 
 ## BRIEF
 
+Начальная стадия использования вложения
+
 ## CONTENT
+
+Начальная стадия использования вложения
 
 Тип: stappler::xenolith::core::PipelineStage
 
@@ -658,7 +959,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Начальные флаги доступа
+
 ## CONTENT
+
+Начальные флаги доступа
 
 Тип: stappler::xenolith::core::AccessType
 
@@ -667,7 +972,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Последняя стадия использования вложения
+
 ## CONTENT
+
+Последняя стадия использования вложения
 
 Тип: stappler::xenolith::core::PipelineStage
 
@@ -676,7 +985,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Завершающие флаги доступа
+
 ## CONTENT
+
+Завершающие флаги доступа
 
 Тип: stappler::xenolith::core::AccessType
 
@@ -685,7 +998,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Состояние прохода, после которого вложение может быть использовано следующим проходом
+
 ## CONTENT
+
+Состояние прохода, после которого вложение может быть использовано следующим проходом
 
 Тип: stappler::xenolith::core::FrameRenderPassState
 
@@ -694,16 +1011,40 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Состояние прохода, после которого вложение должно быть подконтрольно проходу
+
 ## CONTENT
+
+Состояние прохода, после которого вложение должно быть подконтрольно проходу. Более ранние состояния, таким образом, могут быть обработаны до получения доступа к вложению.
 
 Тип: stappler::xenolith::core::FrameRenderPassState
 
+# ::stappler::xenolith::core::AttachmentDependencyInfo::make(stappler::xenolith::core::PipelineStage,stappler::xenolith::core::AccessType)
+
+## BRIEF
+
+Создаёт зависимость
+
+## CONTENT
+
+Создаёт зависимость
+
+Параметры:
+* stappler::xenolith::core::PipelineStage
+* stappler::xenolith::core::AccessType
+
+Возвращает:
+* stappler::xenolith::core::AttachmentDependencyInfo
 
 # ::stappler::xenolith::core::AttachmentSubpassData
 
 ## BRIEF
 
+Данные подпрохода для вложения
+
 ## CONTENT
+
+Данные подпрохода для вложения
 
 Базовые классы:
 * NamedMem
@@ -713,7 +1054,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Данные прохода вложения
+
 ## CONTENT
+
+Данные прохода вложения
 
 Тип: stappler::xenolith::core::AttachmentPassData const*
 
@@ -722,7 +1067,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Данные подпрохода
+
 ## CONTENT
+
+Данные подпрохода
 
 Тип: stappler::xenolith::core::SubpassData const*
 
@@ -731,7 +1080,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Укладка для изображения
+
 ## CONTENT
+
+Укладка для изображения
 
 Тип: stappler::xenolith::core::AttachmentLayout
 
@@ -740,7 +1093,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Флаги использования вложения в подпроходе
+
 ## CONTENT
+
+Флаги использования вложения в подпроходе
 
 Тип: stappler::xenolith::core::AttachmentUsage
 
@@ -749,7 +1106,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Операции в подпроходе
+
 ## CONTENT
+
+Операции в подпроходе
 
 Тип: stappler::xenolith::core::AttachmentOps
 
@@ -758,16 +1119,37 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Зависимость подпрохода
+
 ## CONTENT
 
+Зависимость подпрохода
+
 Тип: stappler::xenolith::core::AttachmentDependencyInfo
+
+
+# ::stappler::xenolith::core::AttachmentSubpassData::blendInfo
+
+## BRIEF
+
+Выделенные параметры смешивания для подпрохода
+
+## CONTENT
+
+Выделенные параметры смешивания для подпрохода
+
+Тип: stappler::xenolith::core::BlendInfo
 
 
 # ::stappler::xenolith::core::AttachmentPassData
 
 ## BRIEF
 
+Данные прохода для вложения
+
 ## CONTENT
+
+Данные прохода для вложения
 
 Базовые классы:
 * NamedMem
@@ -777,7 +1159,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Данные вложения
+
 ## CONTENT
+
+Данные вложения
 
 Тип: stappler::xenolith::core::AttachmentData const*
 
@@ -786,7 +1172,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Проход
+
 ## CONTENT
+
+Проход
 
 Тип: stappler::xenolith::core::QueuePassData const*
 
@@ -795,7 +1185,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Индекс вложения
+
 ## CONTENT
+
+Индекс вложения
 
 Тип: uint32_t
 
@@ -804,7 +1198,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Операции в проходе
+
 ## CONTENT
+
+Операции в проходе. Операции из подпроходов добавляются автоматически.
 
 Тип: stappler::xenolith::core::AttachmentOps
 
@@ -813,7 +1211,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Начальная укладка изображения
+
 ## CONTENT
+
+Начальная укладка изображения. Может быть предустановлена или вычислена автоматически: как первая укладка использования или последняя укладка из предыдущего прохода для вложения.
 
 Тип: stappler::xenolith::core::AttachmentLayout
 
@@ -822,7 +1224,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Конечная укладка изображения
+
 ## CONTENT
+
+Конечная укладка изображения. Может быть предустановлена или вычислена автоматически: как последняя укладка использования или последняя укладка в очереди.
 
 Тип: stappler::xenolith::core::AttachmentLayout
 
@@ -831,7 +1237,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Операция загрузки данных изображения
+
 ## CONTENT
+
+Операция загрузки данных изображения
 
 Тип: stappler::xenolith::core::AttachmentLoadOp
 
@@ -840,7 +1250,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Операция сохранения данных изображения
+
 ## CONTENT
+
+Операция сохранения данных изображения
 
 Тип: stappler::xenolith::core::AttachmentStoreOp
 
@@ -849,7 +1263,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Операция загрузки данных трафарета
+
 ## CONTENT
+
+Операция загрузки данных трафарета
 
 Тип: stappler::xenolith::core::AttachmentLoadOp
 
@@ -858,7 +1276,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Операция сохранения данных трафарета
+
 ## CONTENT
+
+Операция сохранения данных трафарета
 
 Тип: stappler::xenolith::core::AttachmentStoreOp
 
@@ -867,7 +1289,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Режим доступа к цвету
+
 ## CONTENT
+
+Режим доступа к цвету
 
 Тип: stappler::xenolith::core::ColorMode
 
@@ -876,7 +1302,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Зависимости прохода
+
 ## CONTENT
+
+Зависимости прохода
 
 Тип: stappler::xenolith::core::AttachmentDependencyInfo
 
@@ -885,7 +1315,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Дескрипторы вложения
+
 ## CONTENT
+
+Дескрипторы вложения
 
 Тип: memory::vector<PipelineDescriptor *>
 
@@ -894,7 +1328,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Подпроходы вложения
+
 ## CONTENT
+
+Подпроходы вложения
 
 Тип: memory::vector<AttachmentSubpassData *>
 
@@ -903,7 +1341,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Данные вложения
+
 ## CONTENT
+
+Данные вложения
 
 Базовые классы:
 * NamedMem
@@ -913,7 +1355,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Данные очереди
+
 ## CONTENT
+
+Данные очереди
 
 Тип: stappler::xenolith::core::QueueData const*
 
@@ -922,16 +1368,23 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Идентификатор вложения
+
 ## CONTENT
 
-Тип: uint64_t
+Идентификатор вложения
 
+Тип: uint64_t
 
 # ::stappler::xenolith::core::AttachmentData::ops
 
 ## BRIEF
 
+Операции над сложением
+
 ## CONTENT
+
+Операции над сложением
 
 Тип: stappler::xenolith::core::AttachmentOps
 
@@ -940,7 +1393,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Тип вложения
+
 ## CONTENT
+
+Тип вложения
 
 Тип: stappler::xenolith::core::AttachmentType
 
@@ -949,16 +1406,37 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Флаги использования
+
 ## CONTENT
 
+Флаги использования
+
 Тип: stappler::xenolith::core::AttachmentUsage
+
+
+# ::stappler::xenolith::core::AttachmentData::outputState
+
+## BRIEF
+
+Состояние прохода, на котором вложение более не используется
+
+## CONTENT
+
+Состояние прохода, на котором вложение более не используется
+
+Тип: stappler::xenolith::core::FrameRenderPassState
 
 
 # ::stappler::xenolith::core::AttachmentData::passes
 
 ## BRIEF
 
+Проходы вложения
+
 ## CONTENT
+
+Проходы вложения
 
 Тип: memory::vector<AttachmentPassData *>
 
@@ -967,7 +1445,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Объект вложения
+
 ## CONTENT
+
+Объект вложения
 
 Тип: Rc<stappler::xenolith::core::Attachment>
 
@@ -976,7 +1458,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Флаг внутреннего использования вложения
+
 ## CONTENT
+
+Флаг внутреннего использования вложения
 
 Тип: bool
 
@@ -985,7 +1471,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Данные набора дескрипторов
+
 ## CONTENT
+
+Данные набора дескрипторов
 
 Базовые классы:
 * NamedMem
@@ -995,7 +1485,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Укладка дескрипторов
+
 ## CONTENT
+
+Укладка дескрипторов
 
 Тип: stappler::xenolith::core::PipelineLayoutData const*
 
@@ -1004,7 +1498,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Индекс набора
+
 ## CONTENT
+
+Индекс набора
 
 Тип: uint32_t
 
@@ -1013,7 +1511,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Дескрипторы
+
 ## CONTENT
+
+Дескрипторы
 
 Тип: memory::vector<PipelineDescriptor *>
 
@@ -1022,7 +1524,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Укладка дескрипторов
+
 ## CONTENT
+
+Укладка дескрипторов
 
 Базовые классы:
 * NamedMem
@@ -1032,7 +1538,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Проход
+
 ## CONTENT
+
+Проход
 
 Тип: stappler::xenolith::core::QueuePassData const*
 
@@ -1041,7 +1551,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Индексы
+
 ## CONTENT
+
+Индексы
 
 Тип: uint32_t
 
@@ -1050,7 +1564,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Флаг использования наборов текстур
+
 ## CONTENT
+
+Флаг использования наборов текстур
 
 Тип: bool
 
@@ -1059,7 +1577,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Наборы дескрипторов
+
 ## CONTENT
+
+Наборы дескрипторов
 
 Тип: memory::vector<DescriptorSetData *>
 
@@ -1068,7 +1590,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Графические пайплайны, использующие укладку
+
 ## CONTENT
+
+Графические пайплайны, использующие укладку
 
 Тип: memory::vector<const GraphicPipelineData *>
 
@@ -1077,7 +1603,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Вычислительные пайплайны, использующие укладку
+
 ## CONTENT
+
+Вычислительные пайплайны, использующие укладку
 
 Тип: memory::vector<const ComputePipelineData *>
 
@@ -1086,7 +1616,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Данные подпрохода
+
 ## CONTENT
+
+Данные подпрохода
 
 Базовые классы:
 * NamedMem
@@ -1096,14 +1630,21 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Конструктор
+
 ## CONTENT
 
+Конструктор
 
 # ::stappler::xenolith::core::SubpassData::SubpassData(stappler::xenolith::core::SubpassData const&)
 
 ## BRIEF
 
+Конструктор копирования
+
 ## CONTENT
+
+Конструктор копирования
 
 Параметры:
 * stappler::xenolith::core::SubpassData const&
@@ -1113,7 +1654,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Конструктор перемещения
+
 ## CONTENT
+
+Конструктор перемещения
 
 Параметры:
 * stappler::xenolith::core::SubpassData&&
@@ -1123,7 +1668,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Оператор копирования
+
 ## CONTENT
+
+Оператор копирования
 
 Параметры:
 * stappler::xenolith::core::SubpassData const&
@@ -1135,7 +1684,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Оператор перемещения
+
 ## CONTENT
+
+Оператор перемещения
 
 Параметры:
 * stappler::xenolith::core::SubpassData&&
@@ -1147,7 +1700,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Данные прохода
+
 ## CONTENT
+
+Данные прохода
 
 Тип: stappler::xenolith::core::QueuePassData const*
 
@@ -1156,7 +1713,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Индекс подпрохода
+
 ## CONTENT
+
+Индекс подпрохода
 
 Тип: uint32_t
 
@@ -1165,7 +1726,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Графические пайплайны в подпроходе
+
 ## CONTENT
+
+Графические пайплайны в подпроходе
 
 Тип: HashTable<stappler::xenolith::core::GraphicPipelineData *>
 
@@ -1174,7 +1739,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Вычислительные пайплайны в подпроходе
+
 ## CONTENT
+
+Вычислительные пайплайны в подпроходе
 
 Тип: HashTable<stappler::xenolith::core::ComputePipelineData *>
 
@@ -1183,7 +1752,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Входящие изображения
+
 ## CONTENT
+
+Входящие изображения
 
 Тип: memory::vector<const AttachmentSubpassData *>
 
@@ -1192,7 +1765,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Исходящие изображения
+
 ## CONTENT
+
+Исходящие изображения
 
 Тип: memory::vector<const AttachmentSubpassData *>
 
@@ -1201,7 +1778,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Вложения для сведения мультисемплинга
+
 ## CONTENT
+
+Вложения для сведения мультисемплинга
 
 Тип: memory::vector<const AttachmentSubpassData *>
 
@@ -1210,7 +1791,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Вложения глубины и трафарета
+
 ## CONTENT
+
+Вложения глубины и трафарета
 
 Тип: stappler::xenolith::core::AttachmentSubpassData const*
 
@@ -1219,23 +1804,61 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Вложения для хранения в подпроходе
+
 ## CONTENT
 
+Вложения для хранения в подпроходе
+
 Тип: memory::vector<uint32_t>
+
+
+# ::stappler::xenolith::core::SubpassData::prepareCallback
+
+## BRIEF
+
+Функция подготовки подпрохода
+
+## CONTENT
+
+Функция подготовки подпрохода
+
+Тип: memory::function<void (const SubpassData &, FrameQueue &)>
+
+
+# ::stappler::xenolith::core::SubpassData::commandsCallback
+
+## BRIEF
+
+Функция записи команд
+
+## CONTENT
+
+Функция записи команд
+
+Тип: memory::function<void (const SubpassData &, FrameQueue &, CommandBuffer &)>
 
 
 # ::stappler::xenolith::core::RenderOrdering
 
 ## BRIEF
 
+Тип для упорядочивания проходов
+
 ## CONTENT
+
+Тип для упорядочивания проходов
 
 
 # ::stappler::xenolith::core::RenderOrderingLowest
 
 ## BRIEF
 
+Минимальный приоритет
+
 ## CONTENT
+
+Минимальный приоритет
 
 Тип: RenderOrdering
 
@@ -1244,16 +1867,163 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Максимальный приоритет
+
 ## CONTENT
 
+Максимальный приоритет
+
 Тип: RenderOrdering
+
+
+# ::stappler::xenolith::core::QueuePassRequirements
+
+## BRIEF
+
+Требования для запуска прохода
+
+## CONTENT
+
+Требования для запуска прохода
+
+
+# ::stappler::xenolith::core::QueuePassRequirements::data
+
+## BRIEF
+
+Проход
+
+## CONTENT
+
+Проход
+
+Тип: stappler::xenolith::core::QueuePassData const*
+
+
+# ::stappler::xenolith::core::QueuePassRequirements::requiredState
+
+## BRIEF
+
+Требуемое для работы вложения состояние прохода
+
+## CONTENT
+
+Требуемое для работы вложения состояние прохода
+
+Тип: stappler::xenolith::core::FrameRenderPassState
+
+
+# ::stappler::xenolith::core::QueuePassRequirements::lockedState
+
+## BRIEF
+
+Состояние прохода, на котором вложения должны быть готовы
+
+## CONTENT
+
+Состояние прохода, на котором вложения должны быть готовы
+
+Тип: stappler::xenolith::core::FrameRenderPassState
+
+
+# ::stappler::xenolith::core::QueuePassRequirements::QueuePassRequirements()
+
+## BRIEF
+
+Конструктор
+
+## CONTENT
+
+Конструктор
+
+# ::stappler::xenolith::core::QueuePassRequirements::QueuePassRequirements(stappler::xenolith::core::QueuePassData const&,stappler::xenolith::core::FrameRenderPassState,stappler::xenolith::core::FrameRenderPassState)
+
+## BRIEF
+
+Конструктор
+
+## CONTENT
+
+Конструктор
+
+Параметры:
+* stappler::xenolith::core::QueuePassData const&
+* stappler::xenolith::core::FrameRenderPassState
+* stappler::xenolith::core::FrameRenderPassState
+
+
+# ::stappler::xenolith::core::QueuePassDependency
+
+## BRIEF
+
+Тип зависимости между проходами
+
+## CONTENT
+
+Тип зависимости между проходами
+
+
+# ::stappler::xenolith::core::QueuePassDependency::source
+
+## BRIEF
+
+Исходный проход
+
+## CONTENT
+
+Исходный проход
+
+Тип: stappler::xenolith::core::QueuePassData const*
+
+
+# ::stappler::xenolith::core::QueuePassDependency::target
+
+## BRIEF
+
+Целевой проход
+
+## CONTENT
+
+Целевой проход
+
+Тип: stappler::xenolith::core::QueuePassData const*
+
+
+# ::stappler::xenolith::core::QueuePassDependency::attachments
+
+## BRIEF
+
+Вложения, по которым работает зависимость
+
+## CONTENT
+
+Вложения, по которым работает зависимость
+
+Тип: memory::vector<const AttachmentData *>
+
+
+# ::stappler::xenolith::core::QueuePassDependency::stageFlags
+
+## BRIEF
+
+Флаги стадий, по которым работает зависимость.
+
+## CONTENT
+
+Флаги стадий, по которым работает зависимость.
+
+Тип: stappler::xenolith::core::PipelineStage
 
 
 # ::stappler::xenolith::core::QueuePassData
 
 ## BRIEF
 
+Данные прохода очереди исполнения
+
 ## CONTENT
+
+Данные прохода очереди исполнения
 
 Базовые классы:
 * NamedMem
@@ -1263,14 +2033,22 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Конструктор
+
 ## CONTENT
+
+Конструктор
 
 
 # ::stappler::xenolith::core::QueuePassData::QueuePassData(stappler::xenolith::core::QueuePassData const&)
 
 ## BRIEF
 
+Конструктор копирования
+
 ## CONTENT
+
+Конструктор копирования
 
 Параметры:
 * stappler::xenolith::core::QueuePassData const&
@@ -1280,7 +2058,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Конструктор перемещения
+
 ## CONTENT
+
+Конструктор перемещения
 
 Параметры:
 * stappler::xenolith::core::QueuePassData&&
@@ -1290,7 +2072,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Оператор копирования
+
 ## CONTENT
+
+Оператор копирования
 
 Параметры:
 * stappler::xenolith::core::QueuePassData const&
@@ -1302,7 +2088,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Оператор перемещения
+
 ## CONTENT
+
+Оператор перемещения
 
 Параметры:
 * stappler::xenolith::core::QueuePassData&&
@@ -1314,7 +2104,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Очередь
+
 ## CONTENT
+
+Очередь
 
 Тип: stappler::xenolith::core::QueueData const*
 
@@ -1323,7 +2117,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Вложения
+
 ## CONTENT
+
+Вложения
 
 Тип: memory::vector<const AttachmentPassData *>
 
@@ -1332,7 +2130,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Подпроходы
+
 ## CONTENT
+
+Подпроходы
 
 Тип: memory::vector<const SubpassData *>
 
@@ -1341,7 +2143,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Укладки дескрипторов
+
 ## CONTENT
+
+Укладки дескрипторов
 
 Тип: memory::vector<const PipelineLayoutData *>
 
@@ -1350,16 +2156,63 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Зависимости подпроходов
+
 ## CONTENT
 
+Зависимости подпроходов
+
 Тип: memory::vector<SubpassDependency>
+
+
+# ::stappler::xenolith::core::QueuePassData::sourceQueueDependencies
+
+## BRIEF
+
+Зависимости, где очередь выступает как исходная
+
+## CONTENT
+
+Зависимости, где очередь выступает как исходная
+
+Тип: memory::vector<QueuePassDependency *>
+
+
+# ::stappler::xenolith::core::QueuePassData::targetQueueDependencies
+
+## BRIEF
+
+Зависимости, где очередь выступает как целевая
+
+## CONTENT
+
+Зависимости, где очередь выступает как целевая
+
+Тип: memory::vector<QueuePassDependency *>
+
+
+# ::stappler::xenolith::core::QueuePassData::required
+
+## BRIEF
+
+Требуемые зависимости
+
+## CONTENT
+
+Требуемые зависимости
+
+Тип: memory::vector<QueuePassRequirements>
 
 
 # ::stappler::xenolith::core::QueuePassData::type
 
 ## BRIEF
 
+Тип прохода
+
 ## CONTENT
+
+Тип прохода
 
 Тип: stappler::xenolith::core::PassType
 
@@ -1368,7 +2221,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Приоритет исполнения
+
 ## CONTENT
+
+Приоритет исполнения
 
 Тип: stappler::xenolith::core::RenderOrdering
 
@@ -1377,7 +2234,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Флаг доступности обновления дескрипторов после связывания
+
 ## CONTENT
+
+Флаг доступности обновления дескрипторов после связывания
 
 Тип: bool
 
@@ -1386,7 +2247,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Объект прохода
+
 ## CONTENT
+
+Объект прохода
 
 Тип: Rc<stappler::xenolith::core::QueuePass>
 
@@ -1395,16 +2260,50 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Проход на устройстве
+
 ## CONTENT
 
+Проход на устройстве
+
 Тип: Rc<stappler::xenolith::core::RenderPass>
+
+
+# ::stappler::xenolith::core::QueuePassData::submittedCallbacks
+
+## BRIEF
+
+Функции для отправки прохода на исполнение
+
+## CONTENT
+
+Функции для отправки прохода на исполнение
+
+Тип: memory::vector<memory::function<void (const QueuePassData &, FrameQueue &, bool)>>
+
+
+# ::stappler::xenolith::core::QueuePassData::completeCallbacks
+
+## BRIEF
+
+Функции завершения
+
+## CONTENT
+
+Функции завершения
+
+Тип: memory::vector<memory::function<void (const QueuePassData &, FrameQueue &, bool)>>
 
 
 # ::stappler::xenolith::core::QueueData
 
 ## BRIEF
 
+Данные очереди исполнения
+
 ## CONTENT
+
+Данные очереди исполнения
 
 Базовые классы:
 * NamedMem
@@ -1414,7 +2313,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Пул памяти для ресурсов очереди
+
 ## CONTENT
+
+Пул памяти для ресурсов очереди
 
 Тип: memory::pool_t*
 
@@ -1423,7 +2326,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Входящие вложения
+
 ## CONTENT
+
+Входящие вложения
 
 Тип: memory::vector<AttachmentData *>
 
@@ -1432,7 +2339,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Исходящие вложения
+
 ## CONTENT
+
+Исходящие вложения
 
 Тип: memory::vector<AttachmentData *>
 
@@ -1441,7 +2352,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Вложения
+
 ## CONTENT
+
+Вложения
 
 Тип: HashTable<stappler::xenolith::core::AttachmentData *>
 
@@ -1450,7 +2365,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Проходы
+
 ## CONTENT
+
+Проходы
 
 Тип: HashTable<stappler::xenolith::core::QueuePassData *>
 
@@ -1459,7 +2378,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Подпрограммы
+
 ## CONTENT
+
+Подпрограммы
 
 Тип: HashTable<stappler::xenolith::core::ProgramData *>
 
@@ -1468,7 +2391,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Графические пайплайны
+
 ## CONTENT
+
+Графические пайплайны
 
 Тип: HashTable<stappler::xenolith::core::GraphicPipelineData *>
 
@@ -1477,7 +2404,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Вычислительные пайплайны
+
 ## CONTENT
+
+Вычислительные пайплайны
 
 Тип: HashTable<stappler::xenolith::core::ComputePipelineData *>
 
@@ -1486,7 +2417,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Связанные ресурсы
+
 ## CONTENT
+
+Связанные ресурсы
 
 Тип: HashTable<Rc<stappler::xenolith::core::Resource>>
 
@@ -1495,7 +2430,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Функция начала кадра
+
 ## CONTENT
+
+Функция начала кадра
 
 Тип: Function<void (stappler::xenolith::core::FrameRequest &)>
 
@@ -1504,7 +2443,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Функция завершения кадра
+
 ## CONTENT
+
+Функция завершения кадра
 
 Тип: Function<void (stappler::xenolith::core::FrameRequest &)>
 
@@ -1513,7 +2456,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Функция завершения работы очереди
+
 ## CONTENT
+
+Функция завершения работы очереди
 
 Тип: Function<void ()>
 
@@ -1522,7 +2469,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Вложенный ресурс
+
 ## CONTENT
+
+Вложенный ресурс
 
 Тип: Rc<stappler::xenolith::core::Resource>
 
@@ -1531,7 +2482,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Флаг компиляции
+
 ## CONTENT
+
+Флаг компиляции
 
 Тип: bool
 
@@ -1540,7 +2495,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Текущий порядковый номер кадра
+
 ## CONTENT
+
+Текущий порядковый номер кадра
 
 Тип: uint64_t
 
@@ -1549,16 +2508,37 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Объект очереди
+
 ## CONTENT
 
+Объект очереди
+
 Тип: stappler::xenolith::core::Queue*
+
+
+# ::stappler::xenolith::core::QueueData::defaultSyncPassState
+
+## BRIEF
+
+Стандартная стадия для завершения работы прохода
+
+## CONTENT
+
+Стандартная стадия для завершения работы прохода
+
+Тип: stappler::xenolith::core::FrameRenderPassState
 
 
 # ::stappler::xenolith::core::QueueData::typedInput
 
 ## BRIEF
 
+Типы входящих вложений
+
 ## CONTENT
+
+Типы входящих вложений
 
 Тип: memory::map<std::type_index, Attachment *>
 
@@ -1567,23 +2547,47 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Типы исходящих вложений
+
 ## CONTENT
 
+Типы исходящих вложений
+
 Тип: memory::map<std::type_index, Attachment *>
+
+
+# ::stappler::xenolith::core::QueueData::passDependencies
+
+## BRIEF
+
+Зависимости между проходами
+
+## CONTENT
+
+Зависимости между проходами
+
+Тип: memory::vector<QueuePassDependency>
 
 
 # ::stappler::xenolith::core::QueueData::clear()
 
 ## BRIEF
 
+Очищает данные
+
 ## CONTENT
 
+Очищает данные
 
 # ::stappler::xenolith::core::getDescriptorTypeName(stappler::xenolith::core::DescriptorType)
 
 ## BRIEF
 
+Возвращает название типа дескриптора
+
 ## CONTENT
+
+Возвращает название типа дескриптора
 
 Параметры:
 * stappler::xenolith::core::DescriptorType
@@ -1595,7 +2599,11 @@ Title: XLCoreQueueData.h
 
 ## BRIEF
 
+Возвращает текстовое описание стадий
+
 ## CONTENT
+
+Возвращает текстовое описание стадий
 
 Параметры:
 * stappler::xenolith::core::ProgramStage

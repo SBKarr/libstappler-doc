@@ -741,6 +741,17 @@ Title: XLVkDevice.h
 Тип: bool
 
 
+# ::stappler::xenolith::vk::Device::_updateAfterBindEnabled
+
+## BRIEF
+
+## CONTENT
+
+Доступ: private
+
+Тип: bool
+
+
 # ::stappler::xenolith::vk::Device::_immutableSamplers
 
 ## BRIEF

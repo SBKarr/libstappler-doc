@@ -725,24 +725,6 @@ Title: SPCrypto.h
 Возвращает:
 * stappler::crypto::PrivateKey&
 
-# ::stappler::crypto::PrivateKey::generate(stappler::crypto::KeyBits)
-
-## BRIEF
-
-Создаёт новый RSA ключ
-
-## CONTENT
-
-Доступ: public
-
-Создаёт новый RSA ключ
-
-Параметры:
-* stappler::crypto::KeyBits - длина ключа
-
-Возвращает:
-* bool - true если ключ успешно создан
-
 # ::stappler::crypto::PrivateKey::import(stappler::BytesView,stappler::CoderSource const&)
 
 ## BRIEF
@@ -837,7 +819,7 @@ Title: SPCrypto.h
 Возвращает:
 * bool - true если ключ пригоден к работе
 
-# ::stappler::crypto::PrivateKey::exportPem(Callback<void (const uint8_t *, size_t)> const&,stappler::crypto::KeyFormat,stappler::CoderSource const&) const
+# ::stappler::crypto::PrivateKey::exportPem(Callback<void (stappler::BytesView)> const&,stappler::crypto::KeyFormat,stappler::CoderSource const&) const
 
 ## BRIEF
 
@@ -850,14 +832,14 @@ Title: SPCrypto.h
 Доступ: public
 
 Параметры:
-* Callback<void (const uint8_t *, size_t)> const& - обратный вызов, в который будет передан результат экспорта (указатель на данные и их размер)
+* Callback<void (stappler::BytesView)> const& - обратный вызов, в который будет передан результат экспорта (указатель на данные и их размер)
 * stappler::crypto::KeyFormat - Формат ключа PKCS
 * stappler::CoderSource const& - Пароль для шифрования ключа (постой - не шифровать ключ)
 
 Возвращает:
 * bool - true если ключ успешно экспортирован
 
-# ::stappler::crypto::PrivateKey::exportPem(Callback<void (const uint8_t *, size_t)> const&,stappler::CoderSource const&) const
+# ::stappler::crypto::PrivateKey::exportPem(Callback<void (stappler::BytesView)> const&,stappler::CoderSource const&) const
 
 ## BRIEF
 
@@ -870,13 +852,13 @@ Title: SPCrypto.h
 Экспортирует ключ в формате PEM, использует PKCS8
 
 Параметры:
-* Callback<void (const uint8_t *, size_t)> const& - обратный вызов, в который будет передан результат экспорта (указатель на данные и их размер)
+* Callback<void (stappler::BytesView)> const& - обратный вызов, в который будет передан результат экспорта (указатель на данные и их размер)
 * stappler::CoderSource const& - Пароль для шифрования ключа (постой - не шифровать ключ)
 
 Возвращает:
 * bool - true если ключ успешно экспортирован
 
-# ::stappler::crypto::PrivateKey::exportDer(Callback<void (const uint8_t *, size_t)> const&,stappler::crypto::KeyFormat,stappler::CoderSource const&) const
+# ::stappler::crypto::PrivateKey::exportDer(Callback<void (stappler::BytesView)> const&,stappler::crypto::KeyFormat,stappler::CoderSource const&) const
 
 ## BRIEF
 
@@ -889,14 +871,14 @@ Title: SPCrypto.h
 Экспортирует ключ в формате DER
 
 Параметры:
-* Callback<void (const uint8_t *, size_t)> const& - обратный вызов, в который будет передан результат экспорта (указатель на данные и их размер)
+* Callback<void (stappler::BytesView)> const& - обратный вызов, в который будет передан результат экспорта (указатель на данные и их размер)
 * stappler::crypto::KeyFormat - Формат ключа PKCS
 * stappler::CoderSource const& - Пароль для шифрования ключа (постой - не шифровать ключ)
 
 Возвращает:
 * bool - true если ключ успешно экспортирован
 
-# ::stappler::crypto::PrivateKey::exportDer(Callback<void (const uint8_t *, size_t)> const&,stappler::CoderSource const&) const
+# ::stappler::crypto::PrivateKey::exportDer(Callback<void (stappler::BytesView)> const&,stappler::CoderSource const&) const
 
 ## BRIEF
 
@@ -909,13 +891,13 @@ Title: SPCrypto.h
 Экспортирует ключ в формате DER, использует PKCS8
 
 Параметры:
-* Callback<void (const uint8_t *, size_t)> const& - обратный вызов, в который будет передан результат экспорта (указатель на данные и их размер)
+* Callback<void (stappler::BytesView)> const& - обратный вызов, в который будет передан результат экспорта (указатель на данные и их размер)
 * stappler::CoderSource const& - Пароль для шифрования ключа (постой - не шифровать ключ)
 
 Возвращает:
 * bool - true если ключ успешно экспортирован
 
-# ::stappler::crypto::PrivateKey::sign(Callback<void (const uint8_t *, size_t)> const&,stappler::CoderSource const&,stappler::crypto::SignAlgorithm) const
+# ::stappler::crypto::PrivateKey::sign(Callback<void (stappler::BytesView)> const&,stappler::CoderSource const&,stappler::crypto::SignAlgorithm) const
 
 ## BRIEF
 
@@ -928,7 +910,7 @@ Title: SPCrypto.h
 Генерирует подпись для блока данных
 
 Параметры:
-* Callback<void (const uint8_t *, size_t)> const& - обратный вызов, в который будет передан результат подписи (указатель на данные и их размер)
+* Callback<void (stappler::BytesView)> const& - обратный вызов, в который будет передан результат подписи (указатель на данные и их размер)
 * stappler::CoderSource const& - данные для подписи
 * stappler::crypto::SignAlgorithm - алгоритм подписи
 
@@ -955,29 +937,6 @@ Title: SPCrypto.h
 Возвращает:
 * bool - true если подпись верна
 
-# ::stappler::crypto::PrivateKey::fingerprint(Callback<void (const uint8_t *, size_t)> const&,stappler::CoderSource const&) const
-
-## BRIEF
-
-Подписывает данные, используя характерный отпечаток ключа и данных
-
-## CONTENT
-
-Доступ: public
-
-Подписывает данные, используя характерный отпечаток ключа и данных. Для алгоритмов RSA идентично обычной подписи с соотвествующим ключу алгоритмом.
-
-Эллиптическая криптография (в т.ч. ГОСТ) предполагает случайность данных подписи. В этом случае блок энтропии генерируется на основе данных ключа и исходных данных для подписи, чтобы этот блок энтропии мог быть восстановлен при необходимости.
-
-Такая подпись не должна использоваться для целей верификации, только для цели подтвержения владения ключом при расшифровке криптоблоков. Использовние такй подписи для целей верификации с алгоритмами эллиптической криптографии может скомпрометировать личный ключ.
-
-Параметры:
-* Callback<void (const uint8_t *, size_t)> const& - обратный вызов, в который будет передан результат подписи (указатель на данные и их размер)
-* stappler::CoderSource const& - данные для подписи
-
-Возвращает:
-* bool - true если подпись успешна
-
 # ::stappler::crypto::PrivateKey::isSupported(stappler::crypto::KeyFormat) const
 
 ## BRIEF
@@ -995,46 +954,6 @@ Title: SPCrypto.h
 
 Возвращает:
 * bool
-
-# ::stappler::crypto::PrivateKey::encrypt(Callback<void (const uint8_t *, size_t)> const&,stappler::CoderSource const&)
-
-## BRIEF
-
-Зашифровать блок данных с использованием ключа
-
-## CONTENT
-
-Доступ: public
-
-Зашифровать блок данных с использованием ключа. Такое шифрование для RSA крайне затратно, а для эллиптической криптографии ограничено блоком в 32 байта для шифрования бочного ключа.
-
-Используется для согласования блочных ключей
-
-Параметры:
-* Callback<void (const uint8_t *, size_t)> const& - обратный вызов, в который будет передан результат шифрования (указатель на данные и их размер)
-* stappler::CoderSource const& - данные для шифрования
-
-Возвращает:
-* bool - true если шифрование успешно
-
-# ::stappler::crypto::PrivateKey::decrypt(Callback<void (const uint8_t *, size_t)> const&,stappler::CoderSource const&)
-
-## BRIEF
-
-Расшифровать блок данных с использованием ключа
-
-## CONTENT
-
-Доступ: public
-
-Расшифровать блок данных с использованием ключа
-
-Параметры:
-* Callback<void (const uint8_t *, size_t)> const& - обратный вызов, в который будет передан результат расшифровки (указатель на данные и их размер)
-* stappler::CoderSource const& - данные для расшифровки
-
-Возвращает:
-* bool - true если расшифровка успешна (в т.ч. даже если ключ неверен)
 
 # ::stappler::crypto::PrivateKey::_loaded
 
@@ -1298,7 +1217,7 @@ Title: SPCrypto.h
 Возвращает:
 * bool
 
-# ::stappler::crypto::PublicKey::exportPem(Callback<void (const uint8_t *, size_t)> const&) const
+# ::stappler::crypto::PublicKey::exportPem(Callback<void (stappler::BytesView)> const&) const
 
 ## BRIEF
 
@@ -1311,12 +1230,12 @@ Title: SPCrypto.h
 Экспортирует ключ в формате PEM
 
 Параметры:
-* Callback<void (const uint8_t *, size_t)> const& - функция обратного вызова, вызывается с данными экспортированного ключа: указатель на начало данных и длина данных
+* Callback<void (stappler::BytesView)> const& - функция обратного вызова, вызывается с данными экспортированного ключа: указатель на начало данных и длина данных
 
 Возвращает:
 * bool - true если ключ успешно экспортирован
 
-# ::stappler::crypto::PublicKey::exportDer(Callback<void (const uint8_t *, size_t)> const&) const
+# ::stappler::crypto::PublicKey::exportDer(Callback<void (stappler::BytesView)> const&) const
 
 ## BRIEF
 
@@ -1329,7 +1248,7 @@ Title: SPCrypto.h
 Экспортирует ключ в формате DER
 
 Параметры:
-* Callback<void (const uint8_t *, size_t)> const& - функция обратного вызова, вызывается с данными экспортированного ключа: указатель на начало данных и длина данных
+* Callback<void (stappler::BytesView)> const& - функция обратного вызова, вызывается с данными экспортированного ключа: указатель на начало данных и длина данных
 
 Возвращает:
 * bool - true если ключ успешно экспортирован
@@ -1354,7 +1273,7 @@ Title: SPCrypto.h
 Возвращает:
 * bool - true если подпись соотвествует ключу
 
-# ::stappler::crypto::PublicKey::encrypt(Callback<void (const uint8_t *, size_t)> const&,stappler::CoderSource const&)
+# ::stappler::crypto::PublicKey::encrypt(Callback<void (stappler::BytesView)> const&,stappler::CoderSource const&)
 
 ## BRIEF
 
@@ -1369,7 +1288,7 @@ Title: SPCrypto.h
 Используется для согласования блочных ключей
 
 Параметры:
-* Callback<void (const uint8_t *, size_t)> const& - обратный вызов, в который будет передан результат шифрования (указатель на данные и их размер)
+* Callback<void (stappler::BytesView)> const& - обратный вызов, в который будет передан результат шифрования (указатель на данные и их размер)
 * stappler::CoderSource const& - данные для шифрования
 
 Возвращает:
@@ -1467,7 +1386,7 @@ Title: SPCrypto.h
 Возвращает:
 * bool
 
-# ::stappler::crypto::encryptBlock(stappler::crypto::BlockKey256 const&,stappler::BytesView,Callback<void (const uint8_t *, size_t)> const&)
+# ::stappler::crypto::encryptBlock(stappler::crypto::BlockKey256 const&,stappler::BytesView,Callback<void (stappler::BytesView)> const&)
 
 ## BRIEF
 
@@ -1480,12 +1399,12 @@ Title: SPCrypto.h
 Параметры:
 * stappler::crypto::BlockKey256 const& - используемый ключ
 * stappler::BytesView - данные для шифрования
-* Callback<void (const uint8_t *, size_t)> const& - вызов, возвращающий зашифрованные данные (указатель на начало, размер блока)
+* Callback<void (stappler::BytesView)> const& - вызов, возвращающий зашифрованные данные (указатель на начало, размер блока)
 
 Возвращает:
 * bool - true если операция успешна
 
-# ::stappler::crypto::encryptBlock(stappler::crypto::Backend,stappler::crypto::BlockKey256 const&,stappler::BytesView,Callback<void (const uint8_t *, size_t)> const&)
+# ::stappler::crypto::encryptBlock(stappler::crypto::Backend,stappler::crypto::BlockKey256 const&,stappler::BytesView,Callback<void (stappler::BytesView)> const&)
 
 ## BRIEF
 
@@ -1499,12 +1418,12 @@ Title: SPCrypto.h
 * stappler::crypto::Backend - используемая библиотека
 * stappler::crypto::BlockKey256 const& - используемый ключ
 * stappler::BytesView - данные для шифрования
-* Callback<void (const uint8_t *, size_t)> const& - вызов, возвращающий зашифрованные данные (указатель на начало, размер блока)
+* Callback<void (stappler::BytesView)> const& - вызов, возвращающий зашифрованные данные (указатель на начало, размер блока)
 
 Возвращает:
 * bool - true если операция успешна
 
-# ::stappler::crypto::decryptBlock(stappler::crypto::BlockKey256 const&,stappler::BytesView,Callback<void (const uint8_t *, size_t)> const&)
+# ::stappler::crypto::decryptBlock(stappler::crypto::BlockKey256 const&,stappler::BytesView,Callback<void (stappler::BytesView)> const&)
 
 ## BRIEF
 
@@ -1517,12 +1436,12 @@ Title: SPCrypto.h
 Параметры:
 * stappler::crypto::BlockKey256 const& - используемый ключ
 * stappler::BytesView - данные шифроблока
-* Callback<void (const uint8_t *, size_t)> const& - вызов, возвращающий расшифрованные данные (указатель на начало, размер блока)
+* Callback<void (stappler::BytesView)> const& - вызов, возвращающий расшифрованные данные (указатель на начало, размер блока)
 
 Возвращает:
 * bool - true если операция успешна
 
-# ::stappler::crypto::decryptBlock(stappler::crypto::Backend,stappler::crypto::BlockKey256 const&,stappler::BytesView,Callback<void (const uint8_t *, size_t)> const&)
+# ::stappler::crypto::decryptBlock(stappler::crypto::Backend,stappler::crypto::BlockKey256 const&,stappler::BytesView,Callback<void (stappler::BytesView)> const&)
 
 ## BRIEF
 
@@ -1536,7 +1455,7 @@ Title: SPCrypto.h
 * stappler::crypto::Backend - используемая библиотека
 * stappler::crypto::BlockKey256 const& - используемый ключ
 * stappler::BytesView - данные шифроблока
-* Callback<void (const uint8_t *, size_t)> const& - вызов, возвращающий расшифрованные данные (указатель на начало, размер блока)
+* Callback<void (stappler::BytesView)> const& - вызов, возвращающий расшифрованные данные (указатель на начало, размер блока)
 
 Возвращает:
 * bool - true если операция успешна
@@ -1770,3 +1689,203 @@ Title: SPCrypto.h
 
 Возвращает:
 * Sha512::Buf
+
+# ::stappler::crypto::KeyContext::padding
+
+## BRIEF
+
+Дополнительное место под контекст ключа криптобиблиотеки
+
+## CONTENT
+
+Дополнительное место под контекст ключа криптобиблиотеки
+
+Тип: uint32_t
+
+# ::stappler::crypto::PrivateKey::PrivateKey(stappler::crypto::PrivateKey&&)
+
+## BRIEF
+
+Конструктор перемещения
+
+## CONTENT
+
+Доступ: public
+
+Конструктор перемещения
+
+Параметры:
+* stappler::crypto::PrivateKey&&
+
+
+# ::stappler::crypto::PrivateKey::operator=(stappler::crypto::PrivateKey&&)
+
+## BRIEF
+
+Оператор перемещения
+
+## CONTENT
+
+Доступ: public
+
+Оператор перемещения
+
+Параметры:
+* stappler::crypto::PrivateKey&&
+
+Возвращает:
+* stappler::crypto::PrivateKey&
+
+# ::stappler::crypto::PrivateKey::generate(stappler::crypto::KeyType)
+
+## BRIEF
+
+Создаёт новый ключ определённого типа
+
+## CONTENT
+
+Доступ: public
+
+Создаёт новый ключ определённого типа
+
+Параметры:
+* stappler::crypto::KeyType - требуемый тип ключа
+
+Возвращает:
+* bool - true если ключ успешно создан
+
+# ::stappler::crypto::PrivateKey::generate(stappler::crypto::KeyBits,stappler::crypto::KeyType)
+
+## BRIEF
+
+Создаёт новый ключ определённого типа
+
+## CONTENT
+
+Доступ: public
+
+Создаёт новый ключ определённого типа с требуемым размером, если такой тип ключа поддерживает размер
+
+Параметры:
+* stappler::crypto::KeyBits - число битов в ключе
+* stappler::crypto::KeyType - требуемый тип ключа
+
+Возвращает:
+* bool - true если ключ успешно создан
+
+
+# ::stappler::crypto::PrivateKey::fingerprint(Callback<void (stappler::BytesView)> const&,stappler::CoderSource const&) const
+
+## BRIEF
+
+Подписывает данные, используя характерный отпечаток ключа и данных
+
+## CONTENT
+
+Доступ: public
+
+Подписывает данные, используя характерный отпечаток ключа и данных. Для алгоритмов RSA идентично обычной подписи с соотвествующим ключу алгоритмом.
+
+Эллиптическая криптография (в т.ч. ГОСТ) предполагает случайность данных подписи. В этом случае блок энтропии генерируется на основе данных ключа и исходных данных для подписи, чтобы этот блок энтропии мог быть восстановлен при необходимости.
+
+Такая подпись не должна использоваться для целей верификации, только для цели подтвержения владения ключом при расшифровке криптоблоков. Использовние такй подписи для целей верификации с алгоритмами эллиптической криптографии может скомпрометировать личный ключ.
+
+Параметры:
+* Callback<void (stappler::BytesView)> const& - функция, получающая результат подписи
+* stappler::CoderSource const& - данные для подписи
+
+Возвращает:
+* bool - true если подпись успешна
+
+# ::stappler::crypto::PrivateKey::isGenerateSupported(stappler::crypto::KeyType) const
+
+## BRIEF
+
+Проверяет, возможно ли сгенерировать ключ заданного типа
+
+## CONTENT
+
+Доступ: public
+
+Проверяет, возможно ли сгенерировать ключ заданного типа
+
+Параметры:
+* stappler::crypto::KeyType - тип ключа
+
+Возвращает:
+* bool - true если возможно
+
+# ::stappler::crypto::PublicKey::PublicKey(stappler::crypto::PublicKey&&)
+
+## BRIEF
+
+Конструктуор перемещения
+
+## CONTENT
+
+Доступ: public
+
+Конструктуор перемещения
+
+Параметры:
+* stappler::crypto::PublicKey&&
+
+# ::stappler::crypto::PublicKey::operator=(stappler::crypto::PublicKey&&)
+
+## BRIEF
+
+Оператор перемещения
+
+## CONTENT
+
+Доступ: public
+
+Оператор перемещения
+
+Параметры:
+* stappler::crypto::PublicKey&&
+
+Возвращает:
+* stappler::crypto::PublicKey&
+
+# ::stappler::crypto::PrivateKey::encrypt(Callback<void (stappler::BytesView)> const&,stappler::CoderSource const&)
+
+## BRIEF
+
+Шифрует блок данных с использованием ключа
+
+## CONTENT
+
+Доступ: public
+
+Шифрует блок данных с использованием ключа. Такое шифрование для RSA крайне затратно, а для эллиптической криптографии ограничено блоком в 32 байта для шифрования бочного ключа.
+
+Используется для согласования блочных ключей
+
+Параметры:
+* Callback<void (stappler::BytesView)> const& - обратный вызов, в который будет передан результат шифрования (указатель на данные и их размер)
+* stappler::CoderSource const& - данные для шифрования
+
+Возвращает:
+* bool - true если шифрование успешно
+
+# ::stappler::crypto::PrivateKey::decrypt(Callback<void (stappler::BytesView)> const&,stappler::CoderSource const&)
+
+## BRIEF
+
+Дешифрует блок данных с использованием ключа
+
+## CONTENT
+
+Доступ: public
+
+Дешифрует блок данных с использованием ключа. Такое шифрование для RSA крайне затратно, а для эллиптической криптографии ограничено блоком в 32 байта для шифрования бочного ключа.
+
+Используется для согласования блочных ключей
+
+Параметры:
+* Callback<void (stappler::BytesView)> const& - обратный вызов, в который будет передан результат шифрования (указатель на данные и их размер)
+* stappler::CoderSource const& - данные для шифрования
+
+Возвращает:
+* bool - true если шифрование успешно

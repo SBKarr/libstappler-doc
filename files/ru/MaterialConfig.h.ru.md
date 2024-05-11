@@ -6,10 +6,3 @@ Title: MaterialConfig.h
 ## BRIEF
 
 ## CONTENT
-
-
-# ::stappler::xenolith::material2d::Cam16Float
-
-## BRIEF
-
-## CONTENT

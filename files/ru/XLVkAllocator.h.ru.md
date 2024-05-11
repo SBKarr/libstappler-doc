@@ -197,6 +197,15 @@ Title: XLVkAllocator.h
 Тип: void*
 
 
+# ::stappler::xenolith::vk::Allocator::MemNode::mappingProtection
+
+## BRIEF
+
+## CONTENT
+
+Тип: stappler::mem_std::Mutex*
+
+
 # ::stappler::xenolith::vk::Allocator::MemNode::operator bool() const
 
 ## BRIEF
@@ -267,6 +276,15 @@ Title: XLVkAllocator.h
 ## CONTENT
 
 Тип: void*
+
+
+# ::stappler::xenolith::vk::Allocator::MemBlock::mappingProtection
+
+## BRIEF
+
+## CONTENT
+
+Тип: stappler::mem_std::Mutex*
 
 
 # ::stappler::xenolith::vk::Allocator::MemBlock::operator bool() const
@@ -610,6 +628,17 @@ Title: XLVkAllocator.h
 
 Возвращает:
 * VkDeviceSize
+
+# ::stappler::xenolith::vk::Allocator::getMutex() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* stappler::mem_std::Mutex&
 
 # ::stappler::xenolith::vk::Allocator::getType(uint32_t) const
 
@@ -1040,7 +1069,22 @@ Title: XLVkAllocator.h
 * stappler::xenolith::vk::BufferInfo const&
 
 Возвращает:
-* Rc<stappler::xenolith::vk::DeviceBuffer>
+* Rc<stappler::xenolith::vk::Buffer>
+
+# ::stappler::xenolith::vk::DeviceMemoryPool::spawn(stappler::xenolith::vk::AllocationUsage,stappler::xenolith::vk::ImageInfoData const&)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* stappler::xenolith::vk::AllocationUsage
+* stappler::xenolith::vk::ImageInfoData const&
+
+Возвращает:
+* Rc<stappler::xenolith::vk::Image>
 
 # ::stappler::xenolith::vk::DeviceMemoryPool::spawnPersistent(stappler::xenolith::vk::AllocationUsage,stappler::xenolith::vk::BufferInfo const&)
 
@@ -1096,7 +1140,7 @@ Title: XLVkAllocator.h
 
 ## CONTENT
 
-Доступ: protected
+Доступ: public
 
 Параметры:
 * stappler::xenolith::vk::DeviceMemoryPool::MemData*
@@ -1114,7 +1158,7 @@ Title: XLVkAllocator.h
 
 ## CONTENT
 
-Доступ: protected
+Доступ: public
 
 Параметры:
 * Allocator::MemBlock&&
@@ -1176,6 +1220,17 @@ Title: XLVkAllocator.h
 Тип: Map<int64_t, stappler::xenolith::vk::DeviceMemoryPool::MemData>
 
 
+# ::stappler::xenolith::vk::DeviceMemoryPool::_mappingProtection
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: Map<VkDeviceMemory, stappler::mem_std::Mutex *>
+
+
 # ::stappler::xenolith::vk::DeviceMemoryPool::_buffers
 
 ## BRIEF
@@ -1184,10 +1239,21 @@ Title: XLVkAllocator.h
 
 Доступ: protected
 
-Тип: std::forward_list<Rc<DeviceBuffer>>
+Тип: std::forward_list<Rc<Buffer>>
 
 
-# ::std::operator<<(std::ostream&,stappler::xenolith::vk::AllocationUsage)
+# ::stappler::xenolith::vk::DeviceMemoryPool::_images
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: std::forward_list<Rc<Image>>
+
+
+# ::std::operator<<(std::ostream&,::stappler::xenolith::vk::AllocationUsage)
 
 ## BRIEF
 
@@ -1195,7 +1261,7 @@ Title: XLVkAllocator.h
 
 Параметры:
 * std::ostream&
-* stappler::xenolith::vk::AllocationUsage
+* ::stappler::xenolith::vk::AllocationUsage
 
 Возвращает:
 * std::ostream&

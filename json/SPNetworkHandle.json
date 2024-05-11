@@ -140,6 +140,41 @@
 						"kind": "access specifier",
 						"name": "public"
 					}, {
+						"_fullName": "::stappler::network::Handle<typename>::Method",
+						"_kind": "type alias",
+						"_name": "Method",
+						"id": 3613016607,
+						"kind": "type alias",
+						"name": "Method",
+						"underlying_type": {
+							"_typeName": "network::Method",
+							"kind": "user_defined",
+							"target": {
+								"name": "network::Method",
+								"objects": [{
+									"_fullName": "::stappler::network::Method",
+									"_kind": "enum",
+									"_name": "Method",
+									"has_explicit_type": false,
+									"id": 2011428677,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_scoped": true,
+									"kind": "enum",
+									"name": "Method",
+									"scope": {
+										"name": "Method"
+									},
+									"semantic_scope": "",
+									"underlying_type": {
+										"_typeName": "int",
+										"builtin_type_kind": "int",
+										"kind": "builtin"
+									}
+								}]
+							}
+						}
+					}, {
 						"_fullName": "::stappler::network::Handle<typename>::DataType",
 						"_kind": "type alias",
 						"_name": "DataType",
@@ -701,12 +736,12 @@
 						"semantic_scope": "",
 						"signature": "(Handle<Interface>&&)"
 					}, {
-						"_fullName": "::stappler::network::Handle<typename>::init(stappler::network::Method,stappler::StringView)",
+						"_fullName": "::stappler::network::Handle<typename>::init(stappler::network::Handle::Method,stappler::StringView)",
 						"_kind": "member function",
 						"_name": "init",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 1644059109,
+						"id": 2613935381,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -723,29 +758,44 @@
 							"kind": "function parameter",
 							"name": "method",
 							"type": {
-								"_typeName": "stappler::network::Method",
+								"_typeName": "stappler::network::Handle::Method",
 								"kind": "user_defined",
 								"target": {
-									"name": "stappler::network::Method",
+									"name": "stappler::network::Handle::Method",
 									"objects": [{
-										"_fullName": "::stappler::network::Method",
-										"_kind": "enum",
+										"_fullName": "::stappler::network::Handle<typename>::Method",
+										"_kind": "type alias",
 										"_name": "Method",
-										"has_explicit_type": false,
-										"id": 2011428677,
-										"is_declaration": false,
-										"is_definition": true,
-										"is_scoped": true,
-										"kind": "enum",
+										"id": 3613016607,
+										"kind": "type alias",
 										"name": "Method",
-										"scope": {
-											"name": "Method"
-										},
-										"semantic_scope": "",
 										"underlying_type": {
-											"_typeName": "int",
-											"builtin_type_kind": "int",
-											"kind": "builtin"
+											"_typeName": "network::Method",
+											"kind": "user_defined",
+											"target": {
+												"name": "network::Method",
+												"objects": [{
+													"_fullName": "::stappler::network::Method",
+													"_kind": "enum",
+													"_name": "Method",
+													"has_explicit_type": false,
+													"id": 2011428677,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_scoped": true,
+													"kind": "enum",
+													"name": "Method",
+													"scope": {
+														"name": "Method"
+													},
+													"semantic_scope": "",
+													"underlying_type": {
+														"_typeName": "int",
+														"builtin_type_kind": "int",
+														"kind": "builtin"
+													}
+												}]
+											}
 										}
 									}]
 								}
@@ -926,7 +976,7 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::network::Method,stappler::StringView)"
+						"signature": "(stappler::network::Handle::Method,stappler::StringView)"
 					}, {
 						"_fullName": "::stappler::network::Handle<typename>::perform()",
 						"_kind": "member function",
@@ -5614,12 +5664,12 @@
 						"kind": "access specifier",
 						"name": "public"
 					}, {
-						"_fullName": "::stappler::network::MultiHandle<typename>::addHandle(Handle<Interface>*,void*)",
+						"_fullName": "::stappler::network::MultiHandle<typename>::addHandle(Handle<Interface>*,RefBase<Interface>*)",
 						"_kind": "member function",
 						"_name": "addHandle",
 						"body_kind": "definition",
 						"cv_qualifier": "none",
-						"id": 3307966004,
+						"id": 1549215443,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": false,
@@ -5808,12 +5858,90 @@
 							"kind": "function parameter",
 							"name": "userdata",
 							"type": {
-								"_typeName": "void*",
+								"_typeName": "RefBase<Interface>*",
 								"kind": "pointer",
 								"pointee": {
-									"_typeName": "void",
-									"builtin_type_kind": "void",
-									"kind": "builtin"
+									"_typeName": "RefBase<Interface>",
+									"arguments_exposed": false,
+									"kind": "template_instantiation",
+									"primary_template": {
+										"name": "RefBase",
+										"objects": [{
+											"_fullName": "::stappler::RefBase<typename>",
+											"_kind": "class template",
+											"_name": "RefBase",
+											"class": {
+												"_fullName": "::stappler::RefBase<typename>",
+												"_kind": "class",
+												"_name": "RefBase",
+												"bases": [{
+													"_fullName": "Interface::AllocBaseType",
+													"_kind": "base class specifier",
+													"_name": "Interface::AllocBaseType",
+													"access_specifier": "public",
+													"id": 25533212,
+													"is_virtual": false,
+													"kind": "base class specifier",
+													"name": "Interface::AllocBaseType",
+													"type": {
+														"_typeName": "Interface::AllocBaseType",
+														"kind": "unexposed",
+														"name": "Interface::AllocBaseType"
+													}
+												}],
+												"class_kind": "class",
+												"id": 2191419057,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "RefBase",
+												"scope": {
+													"is_templated": true,
+													"name": "RefBase",
+													"template_parameters": [{
+														"_fullName": "Interface",
+														"_kind": "template type parameter",
+														"_name": "Interface",
+														"id": 2255344761,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "Interface"
+													}]
+												},
+												"semantic_scope": ""
+											},
+											"id": 2191419057,
+											"kind": "class template",
+											"name": "RefBase",
+											"parameters": [{
+												"_fullName": "Interface",
+												"_kind": "template type parameter",
+												"_name": "Interface",
+												"id": 2255344761,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Interface"
+											}],
+											"scope":  {
+												"is_templated": true,
+												"name": "RefBase",
+												"template_parameters": [{
+													"_fullName": "Interface",
+													"_kind": "template type parameter",
+													"_name": "Interface",
+													"id": 2255344761,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "Interface"
+												}]
+											}
+										}]
+									},
+									"unexposed_arguments": "Interface"
 								}
 							}
 						}],
@@ -5824,14 +5952,14 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(Handle<Interface>*,void*)"
+						"signature": "(Handle<Interface>*,RefBase<Interface>*)"
 					}, {
-						"_fullName": "::stappler::network::MultiHandle<typename>::perform(Callback<bool (Handle<Interface> *, void *)> const&)",
+						"_fullName": "::stappler::network::MultiHandle<typename>::perform(Callback<bool (Handle<Interface> *, RefBase<Interface> *)> const&)",
 						"_kind": "member function",
 						"_name": "perform",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 828491939,
+						"id": 1187778747,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -5848,14 +5976,14 @@
 							"kind": "function parameter",
 							"name": "",
 							"type": {
-								"_typeName": "Callback<bool (Handle<Interface> *, void *)> const&",
+								"_typeName": "Callback<bool (Handle<Interface> *, RefBase<Interface> *)> const&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "Callback<bool (Handle<Interface> *, void *)> const",
+									"_typeName": "Callback<bool (Handle<Interface> *, RefBase<Interface> *)> const",
 									"cv_qualifier": "const",
 									"kind": "cv_qualified",
 									"type": {
-										"_typeName": "Callback<bool (Handle<Interface> *, void *)>",
+										"_typeName": "Callback<bool (Handle<Interface> *, RefBase<Interface> *)>",
 										"arguments_exposed": false,
 										"kind": "template_instantiation",
 										"primary_template": {
@@ -5955,7 +6083,7 @@
 												}
 											}]
 										},
-										"unexposed_arguments": "bool (Handle<Interface> *, void *)"
+										"unexposed_arguments": "bool (Handle<Interface> *, RefBase<Interface> *)"
 									}
 								},
 								"reference_kind": "lvalue"
@@ -5968,7 +6096,7 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(Callback<bool (Handle<Interface> *, void *)> const&)"
+						"signature": "(Callback<bool (Handle<Interface> *, RefBase<Interface> *)> const&)"
 					}, {
 						"_fullName": "protected",
 						"_kind": "access specifier",
@@ -5986,9 +6114,9 @@
 						"kind": "member variable",
 						"name": "pending",
 						"type": {
-							"_typeName": "typename Interface::template VectorType<Pair<Handle<Interface> *, void *>>",
+							"_typeName": "typename Interface::template VectorType<Pair<Handle<Interface> *, Rc<RefBase<Interface>>>>",
 							"kind": "unexposed",
-							"name": "typename Interface::template VectorType<Pair<Handle<Interface> *, void *>>"
+							"name": "typename Interface::template VectorType<Pair<Handle<Interface> *, Rc<RefBase<Interface>>>>"
 						}
 					}],
 					"class_kind": "class",

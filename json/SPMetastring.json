@@ -110,20 +110,18 @@
 						"body_kind": "definition",
 						"id": 1918307275,
 						"is_consteval": false,
-						"is_constexpr": true,
+						"is_constexpr": false,
 						"is_declaration": false,
 						"is_definition": true,
 						"is_variadic": false,
 						"kind": "function",
 						"name": "std_string",
 						"return_type": {
-							"_typeName": "std::array<char, sizeof...(Chars)>",
-							"arguments_exposed": false,
-							"kind": "template_instantiation",
-							"primary_template": {
-								"name": "std::array"
-							},
-							"unexposed_arguments": "char, sizeof...(Chars)"
+							"_typeName": "std::string",
+							"kind": "user_defined",
+							"target": {
+								"name": "std::string"
+							}
 						},
 						"semantic_scope": "",
 						"signature": "()",
@@ -137,20 +135,127 @@
 						"body_kind": "definition",
 						"id": 2412942037,
 						"is_consteval": false,
-						"is_constexpr": true,
+						"is_constexpr": false,
 						"is_declaration": false,
 						"is_definition": true,
 						"is_variadic": false,
 						"kind": "function",
 						"name": "memory_string",
 						"return_type": {
-							"_typeName": "std::array<char, sizeof...(Chars)>",
-							"arguments_exposed": false,
-							"kind": "template_instantiation",
-							"primary_template": {
-								"name": "std::array"
-							},
-							"unexposed_arguments": "char, sizeof...(Chars)"
+							"_typeName": "memory::string",
+							"kind": "user_defined",
+							"target": {
+								"name": "memory::string",
+								"objects": [{
+									"_fullName": "::stappler::memory::string",
+									"_kind": "type alias",
+									"_name": "string",
+									"id": 3410524537,
+									"kind": "type alias",
+									"name": "string",
+									"underlying_type": {
+										"_typeName": "basic_string<char>",
+										"arguments_exposed": false,
+										"kind": "template_instantiation",
+										"primary_template": {
+											"name": "basic_string",
+											"objects": [{
+												"_fullName": "::stappler::memory::basic_string<typename>",
+												"_kind": "class template",
+												"_name": "basic_string",
+												"class": {
+													"_fullName": "::stappler::memory::basic_string<typename>",
+													"_kind": "class",
+													"_name": "basic_string",
+													"bases": [{
+														"_fullName": "AllocPool",
+														"_kind": "base class specifier",
+														"_name": "AllocPool",
+														"access_specifier": "public",
+														"id": 972079861,
+														"is_virtual": false,
+														"kind": "base class specifier",
+														"name": "AllocPool",
+														"type": {
+															"_typeName": "stappler::memory::AllocPool",
+															"kind": "user_defined",
+															"target": {
+																"name": "stappler::memory::AllocPool",
+																"objects": [{
+																	"_fullName": "::stappler::memory::AllocPool",
+																	"_kind": "class",
+																	"_name": "AllocPool",
+																	"class_kind": "struct",
+																	"id": 3030388899,
+																	"is_declaration": false,
+																	"is_definition": true,
+																	"is_final": false,
+																	"kind": "class",
+																	"name": "AllocPool",
+																	"scope": {
+																		"name": "AllocPool"
+																	},
+																	"semantic_scope": ""
+																}]
+															}
+														}
+													}],
+													"class_kind": "class",
+													"id": 243140886,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "basic_string",
+													"scope": {
+														"is_templated": true,
+														"name": "basic_string",
+														"template_parameters": [{
+															"_fullName": "CharType",
+															"_kind": "template type parameter",
+															"_name": "CharType",
+															"id": 4185085980,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "CharType"
+														}]
+													},
+													"semantic_scope": ""
+												},
+												"id": 243140886,
+												"kind": "class template",
+												"name": "basic_string",
+												"parameters": [{
+													"_fullName": "CharType",
+													"_kind": "template type parameter",
+													"_name": "CharType",
+													"id": 4185085980,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "CharType"
+												}],
+												"scope":  {
+													"is_templated": true,
+													"name": "basic_string",
+													"template_parameters": [{
+														"_fullName": "CharType",
+														"_kind": "template type parameter",
+														"_name": "CharType",
+														"id": 4185085980,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "CharType"
+													}]
+												}
+											}]
+										},
+										"unexposed_arguments": "char"
+									}
+								}]
+							}
 						},
 						"semantic_scope": "",
 						"signature": "()",
@@ -243,6 +348,31 @@
 							"kind": "user_defined",
 							"target": {
 								"name": "std::string"
+							}
+						},
+						"semantic_scope": "",
+						"signature": "() const"
+					}, {
+						"_fullName": "::stappler::metastring::metastring<char...>::to_std_ustring() const",
+						"_kind": "member function",
+						"_name": "to_std_ustring",
+						"body_kind": "definition",
+						"cv_qualifier": "const",
+						"id": 3788799561,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "to_std_ustring",
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "std::u16string",
+							"kind": "user_defined",
+							"target": {
+								"name": "std::u16string"
 							}
 						},
 						"semantic_scope": "",
@@ -375,6 +505,140 @@
 											}]
 										},
 										"unexposed_arguments": "char"
+									}
+								}]
+							}
+						},
+						"semantic_scope": "",
+						"signature": "() const"
+					}, {
+						"_fullName": "::stappler::metastring::metastring<char...>::to_memory_ustring() const",
+						"_kind": "member function",
+						"_name": "to_memory_ustring",
+						"body_kind": "definition",
+						"cv_qualifier": "const",
+						"id": 4115577574,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "to_memory_ustring",
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "memory::u16string",
+							"kind": "user_defined",
+							"target": {
+								"name": "memory::u16string",
+								"objects": [{
+									"_fullName": "::stappler::memory::u16string",
+									"_kind": "type alias",
+									"_name": "u16string",
+									"id": 1712569190,
+									"kind": "type alias",
+									"name": "u16string",
+									"underlying_type": {
+										"_typeName": "basic_string<char16_t>",
+										"arguments_exposed": false,
+										"kind": "template_instantiation",
+										"primary_template": {
+											"name": "basic_string",
+											"objects": [{
+												"_fullName": "::stappler::memory::basic_string<typename>",
+												"_kind": "class template",
+												"_name": "basic_string",
+												"class": {
+													"_fullName": "::stappler::memory::basic_string<typename>",
+													"_kind": "class",
+													"_name": "basic_string",
+													"bases": [{
+														"_fullName": "AllocPool",
+														"_kind": "base class specifier",
+														"_name": "AllocPool",
+														"access_specifier": "public",
+														"id": 972079861,
+														"is_virtual": false,
+														"kind": "base class specifier",
+														"name": "AllocPool",
+														"type": {
+															"_typeName": "stappler::memory::AllocPool",
+															"kind": "user_defined",
+															"target": {
+																"name": "stappler::memory::AllocPool",
+																"objects": [{
+																	"_fullName": "::stappler::memory::AllocPool",
+																	"_kind": "class",
+																	"_name": "AllocPool",
+																	"class_kind": "struct",
+																	"id": 3030388899,
+																	"is_declaration": false,
+																	"is_definition": true,
+																	"is_final": false,
+																	"kind": "class",
+																	"name": "AllocPool",
+																	"scope": {
+																		"name": "AllocPool"
+																	},
+																	"semantic_scope": ""
+																}]
+															}
+														}
+													}],
+													"class_kind": "class",
+													"id": 243140886,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "basic_string",
+													"scope": {
+														"is_templated": true,
+														"name": "basic_string",
+														"template_parameters": [{
+															"_fullName": "CharType",
+															"_kind": "template type parameter",
+															"_name": "CharType",
+															"id": 4185085980,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "CharType"
+														}]
+													},
+													"semantic_scope": ""
+												},
+												"id": 243140886,
+												"kind": "class template",
+												"name": "basic_string",
+												"parameters": [{
+													"_fullName": "CharType",
+													"_kind": "template type parameter",
+													"_name": "CharType",
+													"id": 4185085980,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "CharType"
+												}],
+												"scope":  {
+													"is_templated": true,
+													"name": "basic_string",
+													"template_parameters": [{
+														"_fullName": "CharType",
+														"_kind": "template type parameter",
+														"_name": "CharType",
+														"id": 4185085980,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "CharType"
+													}]
+												}
+											}]
+										},
+										"unexposed_arguments": "char16_t"
 									}
 								}]
 							}

@@ -22,6 +22,15 @@ Title: XLNodeInfo.h
 ## CONTENT
 
 
+# ::stappler::xenolith::StateIdNone
+
+## BRIEF
+
+## CONTENT
+
+Тип: StateId
+
+
 # ::stappler::xenolith::InvalidTag
 
 ## BRIEF
@@ -485,7 +494,7 @@ Title: XLNodeInfo.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::URect
+Тип: stappler::geom::URect
 
 
 # ::stappler::xenolith::DrawStateValues::scissor
@@ -494,7 +503,16 @@ Title: XLNodeInfo.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::URect
+Тип: stappler::geom::URect
+
+
+# ::stappler::xenolith::DrawStateValues::data
+
+## BRIEF
+
+## CONTENT
+
+Тип: Rc<stappler::mem_std::Ref>
 
 
 # ::stappler::xenolith::DrawStateValues::operator==(stappler::xenolith::DrawStateValues const&) const

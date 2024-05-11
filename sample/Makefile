@@ -29,7 +29,8 @@ LOCAL_EXECUTABLE := sampleapp
 
 LOCAL_MODULES_PATHS = \
 	$(STAPPLER_ROOT)/core/stappler-modules.mk \
-	$(STAPPLER_ROOT)/xenolith/xenolith-modules.mk
+	$(STAPPLER_ROOT)/xenolith/xenolith-modules.mk \
+	$(STAPPLER_ROOT)/extra/webserver/webserver-modules.mk
 
 LOCAL_MODULES ?= \
 	stappler_core \
@@ -44,6 +45,10 @@ LOCAL_MODULES ?= \
 	stappler_threads \
 	stappler_network \
 	stappler_backtrace \
+	stappler_search \
+	stappler_webserver_pug \
+	stappler_webserver_webserver \
+	xenolith_font \
 	xenolith_backend_vkgui \
 	xenolith_resources_assets \
 	xenolith_renderer_material2d

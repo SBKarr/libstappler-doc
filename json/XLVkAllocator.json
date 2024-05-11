@@ -833,6 +833,73 @@
 								}
 							}
 						}, {
+							"_fullName": "::stappler::xenolith::vk::Allocator::MemNode::mappingProtection",
+							"_kind": "member variable",
+							"_name": "mappingProtection",
+							"default_value": {
+								"expression": [{
+									"kind": "keyword",
+									"spelling": "nullptr"
+								}],
+								"kind": "unexposed",
+								"type": {
+									"_typeName": "stappler::mem_std::Mutex*",
+									"kind": "pointer",
+									"pointee": {
+										"_typeName": "stappler::mem_std::Mutex",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::mem_std::Mutex",
+											"objects": [{
+												"_fullName": "::stappler::mem_std::Mutex",
+												"_kind": "type alias",
+												"_name": "Mutex",
+												"id": 1473924434,
+												"kind": "type alias",
+												"name": "Mutex",
+												"underlying_type": {
+													"_typeName": "std::mutex",
+													"kind": "user_defined",
+													"target": {
+														"name": "std::mutex"
+													}
+												}
+											}]
+										}
+									}
+								}
+							},
+							"id": 4252908032,
+							"is_mutable": false,
+							"kind": "member variable",
+							"name": "mappingProtection",
+							"type": {
+								"_typeName": "stappler::mem_std::Mutex*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::mem_std::Mutex",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::mem_std::Mutex",
+										"objects": [{
+											"_fullName": "::stappler::mem_std::Mutex",
+											"_kind": "type alias",
+											"_name": "Mutex",
+											"id": 1473924434,
+											"kind": "type alias",
+											"name": "Mutex",
+											"underlying_type": {
+												"_typeName": "std::mutex",
+												"kind": "user_defined",
+												"target": {
+													"name": "std::mutex"
+												}
+											}
+										}]
+									}
+								}
+							}
+						}, {
 							"_fullName": "::stappler::xenolith::vk::Allocator::MemNode::operator bool() const",
 							"_kind": "conversion operator",
 							"_name": "operator bool",
@@ -843,7 +910,7 @@
 							"is_constexpr": false,
 							"is_declaration": false,
 							"is_definition": true,
-							"is_explicit": false,
+							"is_explicit": true,
 							"is_variadic": false,
 							"is_virtual": false,
 							"kind": "conversion operator",
@@ -1047,6 +1114,73 @@
 								}
 							}
 						}, {
+							"_fullName": "::stappler::xenolith::vk::Allocator::MemBlock::mappingProtection",
+							"_kind": "member variable",
+							"_name": "mappingProtection",
+							"default_value": {
+								"expression": [{
+									"kind": "keyword",
+									"spelling": "nullptr"
+								}],
+								"kind": "unexposed",
+								"type": {
+									"_typeName": "stappler::mem_std::Mutex*",
+									"kind": "pointer",
+									"pointee": {
+										"_typeName": "stappler::mem_std::Mutex",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::mem_std::Mutex",
+											"objects": [{
+												"_fullName": "::stappler::mem_std::Mutex",
+												"_kind": "type alias",
+												"_name": "Mutex",
+												"id": 1473924434,
+												"kind": "type alias",
+												"name": "Mutex",
+												"underlying_type": {
+													"_typeName": "std::mutex",
+													"kind": "user_defined",
+													"target": {
+														"name": "std::mutex"
+													}
+												}
+											}]
+										}
+									}
+								}
+							},
+							"id": 3135948334,
+							"is_mutable": false,
+							"kind": "member variable",
+							"name": "mappingProtection",
+							"type": {
+								"_typeName": "stappler::mem_std::Mutex*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::mem_std::Mutex",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::mem_std::Mutex",
+										"objects": [{
+											"_fullName": "::stappler::mem_std::Mutex",
+											"_kind": "type alias",
+											"_name": "Mutex",
+											"id": 1473924434,
+											"kind": "type alias",
+											"name": "Mutex",
+											"underlying_type": {
+												"_typeName": "std::mutex",
+												"kind": "user_defined",
+												"target": {
+													"name": "std::mutex"
+												}
+											}
+										}]
+									}
+								}
+							}
+						}, {
 							"_fullName": "::stappler::xenolith::vk::Allocator::MemBlock::operator bool() const",
 							"_kind": "conversion operator",
 							"_name": "operator bool",
@@ -1057,7 +1191,7 @@
 							"is_constexpr": false,
 							"is_declaration": false,
 							"is_definition": true,
-							"is_explicit": false,
+							"is_explicit": true,
 							"is_variadic": false,
 							"is_virtual": false,
 							"kind": "conversion operator",
@@ -2510,6 +2644,51 @@
 							"target": {
 								"name": "VkDeviceSize"
 							}
+						},
+						"semantic_scope": "",
+						"signature": "() const"
+					}, {
+						"_fullName": "::stappler::xenolith::vk::Allocator::getMutex() const",
+						"_kind": "member function",
+						"_name": "getMutex",
+						"body_kind": "definition",
+						"cv_qualifier": "const",
+						"id": 3207136249,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "getMutex",
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "stappler::mem_std::Mutex&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::mem_std::Mutex",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::mem_std::Mutex",
+									"objects": [{
+										"_fullName": "::stappler::mem_std::Mutex",
+										"_kind": "type alias",
+										"_name": "Mutex",
+										"id": 1473924434,
+										"kind": "type alias",
+										"name": "Mutex",
+										"underlying_type": {
+											"_typeName": "std::mutex",
+											"kind": "user_defined",
+											"target": {
+												"name": "std::mutex"
+											}
+										}
+									}]
+								}
+							},
+							"reference_kind": "lvalue"
 						},
 						"semantic_scope": "",
 						"signature": "() const"
@@ -6306,7 +6485,7 @@
 						"_kind": "member variable",
 						"_name": "_mutex",
 						"id": 3912588324,
-						"is_mutable": false,
+						"is_mutable": true,
 						"kind": "member variable",
 						"name": "_mutex",
 						"type": {
@@ -8785,6 +8964,23 @@
 							"unexposed_arguments": "int64_t, stappler::xenolith::vk::DeviceMemoryPool::MemData"
 						}
 					}, {
+						"_fullName": "::stappler::xenolith::vk::DeviceMemoryPool::_mappingProtection",
+						"_kind": "member variable",
+						"_name": "_mappingProtection",
+						"id": 3158330297,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "_mappingProtection",
+						"type": {
+							"_typeName": "Map<VkDeviceMemory, stappler::mem_std::Mutex *>",
+							"arguments_exposed": false,
+							"kind": "template_instantiation",
+							"primary_template": {
+								"name": "Map"
+							},
+							"unexposed_arguments": "VkDeviceMemory, stappler::mem_std::Mutex *"
+						}
+					}, {
 						"_fullName": "::stappler::xenolith::vk::DeviceMemoryPool::_buffers",
 						"_kind": "member variable",
 						"_name": "_buffers",
@@ -8865,11 +9061,11 @@
 		"_kind": "namespace",
 		"_name": "std",
 		"childs": [{
-			"_fullName": "::std::operator<<(std::ostream&,stappler::xenolith::vk::AllocationUsage)",
+			"_fullName": "::std::operator<<(std::ostream&,::stappler::xenolith::vk::AllocationUsage)",
 			"_kind": "function",
 			"_name": "operator<<",
 			"body_kind": "definition",
-			"id": 3596531911,
+			"id": 353161418,
 			"is_consteval": false,
 			"is_constexpr": false,
 			"is_declaration": false,
@@ -8904,10 +9100,10 @@
 				"kind": "function parameter",
 				"name": "usage",
 				"type": {
-					"_typeName": "stappler::xenolith::vk::AllocationUsage",
+					"_typeName": "::stappler::xenolith::vk::AllocationUsage",
 					"kind": "user_defined",
 					"target": {
-						"name": "stappler::xenolith::vk::AllocationUsage",
+						"name": "::stappler::xenolith::vk::AllocationUsage",
 						"objects": [{
 							"_fullName": "::stappler::xenolith::vk::AllocationUsage",
 							"_kind": "enum",
@@ -8945,7 +9141,7 @@
 				"reference_kind": "lvalue"
 			},
 			"semantic_scope": "",
-			"signature": "(std::ostream&,stappler::xenolith::vk::AllocationUsage)"
+			"signature": "(std::ostream&,::stappler::xenolith::vk::AllocationUsage)"
 		}],
 		"id": 170532387,
 		"is_anonymous": false,

@@ -8,41 +8,32 @@ Title: XL2dGlslSdfData.h
 ## CONTENT
 
 
-# ::stappler::glsl::Circle2DData
+# ::stappler::glsl::Sdf2DObjectData
 
 ## BRIEF
 
 ## CONTENT
 
 
-# ::stappler::glsl::Circle2DData::bbMin
+# ::stappler::glsl::Sdf2DObjectData::object
 
 ## BRIEF
 
 ## CONTENT
 
-Тип: stappler::glsl::vec2
+Тип: stappler::glsl::uint
 
 
-# ::stappler::glsl::Circle2DData::bbMax
-
-## BRIEF
-
-## CONTENT
-
-Тип: stappler::glsl::vec2
-
-
-# ::stappler::glsl::Circle2DData::origin
+# ::stappler::glsl::Sdf2DObjectData::transform
 
 ## BRIEF
 
 ## CONTENT
 
-Тип: stappler::glsl::vec2
+Тип: stappler::glsl::uint
 
 
-# ::stappler::glsl::Circle2DData::radius
+# ::stappler::glsl::Sdf2DObjectData::value
 
 ## BRIEF
 
@@ -51,7 +42,7 @@ Title: XL2dGlslSdfData.h
 Тип: float
 
 
-# ::stappler::glsl::Circle2DData::value
+# ::stappler::glsl::Sdf2DObjectData::opacity
 
 ## BRIEF
 
@@ -60,16 +51,88 @@ Title: XL2dGlslSdfData.h
 Тип: float
 
 
-# ::stappler::glsl::Circle2DData::opacity
+# ::stappler::glsl::Sdf2DObjectData::bbMin
 
 ## BRIEF
 
 ## CONTENT
 
-Тип: float
+Тип: stappler::glsl::vec2
 
 
-# ::stappler::glsl::Circle2DData::transform
+# ::stappler::glsl::Sdf2DObjectData::bbMax
+
+## BRIEF
+
+## CONTENT
+
+Тип: stappler::glsl::vec2
+
+
+# ::stappler::glsl::Sdf2DObjectData::a
+
+## BRIEF
+
+## CONTENT
+
+Тип: stappler::glsl::vec2
+
+
+# ::stappler::glsl::Sdf2DObjectData::b
+
+## BRIEF
+
+## CONTENT
+
+Тип: stappler::glsl::vec2
+
+
+# ::stappler::glsl::Sdf2DObjectData::c
+
+## BRIEF
+
+## CONTENT
+
+Тип: stappler::glsl::vec2
+
+
+# ::stappler::glsl::Sdf2DObjectData::d
+
+## BRIEF
+
+## CONTENT
+
+Тип: stappler::glsl::vec2
+
+
+# ::stappler::glsl::Sdf2DObjectData::type
+
+## BRIEF
+
+## CONTENT
+
+Тип: stappler::glsl::uint
+
+
+# ::stappler::glsl::Sdf2DObjectData::padding0
+
+## BRIEF
+
+## CONTENT
+
+Тип: stappler::glsl::uint
+
+
+# ::stappler::glsl::Sdf2DObjectData::origin
+
+## BRIEF
+
+## CONTENT
+
+Тип: stappler::glsl::uint
+
+
+# ::stappler::glsl::Sdf2DObjectData::count
 
 ## BRIEF
 
@@ -113,76 +176,6 @@ Title: XL2dGlslSdfData.h
 
 
 # ::stappler::glsl::Circle2DIndex::opacity
-
-## BRIEF
-
-## CONTENT
-
-Тип: float
-
-
-# ::stappler::glsl::Triangle2DData
-
-## BRIEF
-
-## CONTENT
-
-
-# ::stappler::glsl::Triangle2DData::bbMin
-
-## BRIEF
-
-## CONTENT
-
-Тип: stappler::glsl::vec2
-
-
-# ::stappler::glsl::Triangle2DData::bbMax
-
-## BRIEF
-
-## CONTENT
-
-Тип: stappler::glsl::vec2
-
-
-# ::stappler::glsl::Triangle2DData::a
-
-## BRIEF
-
-## CONTENT
-
-Тип: stappler::glsl::vec2
-
-
-# ::stappler::glsl::Triangle2DData::b
-
-## BRIEF
-
-## CONTENT
-
-Тип: stappler::glsl::vec2
-
-
-# ::stappler::glsl::Triangle2DData::c
-
-## BRIEF
-
-## CONTENT
-
-Тип: stappler::glsl::vec2
-
-
-# ::stappler::glsl::Triangle2DData::value
-
-## BRIEF
-
-## CONTENT
-
-Тип: float
-
-
-# ::stappler::glsl::Triangle2DData::opacity
 
 ## BRIEF
 
@@ -252,85 +245,6 @@ Title: XL2dGlslSdfData.h
 Тип: float
 
 
-# ::stappler::glsl::Rect2DData
-
-## BRIEF
-
-## CONTENT
-
-
-# ::stappler::glsl::Rect2DData::bbMin
-
-## BRIEF
-
-## CONTENT
-
-Тип: stappler::glsl::vec2
-
-
-# ::stappler::glsl::Rect2DData::bbMax
-
-## BRIEF
-
-## CONTENT
-
-Тип: stappler::glsl::vec2
-
-
-# ::stappler::glsl::Rect2DData::origin
-
-## BRIEF
-
-## CONTENT
-
-Тип: stappler::glsl::vec2
-
-
-# ::stappler::glsl::Rect2DData::size
-
-## BRIEF
-
-## CONTENT
-
-Тип: stappler::glsl::vec2
-
-
-# ::stappler::glsl::Rect2DData::value
-
-## BRIEF
-
-## CONTENT
-
-Тип: float
-
-
-# ::stappler::glsl::Rect2DData::opacity
-
-## BRIEF
-
-## CONTENT
-
-Тип: float
-
-
-# ::stappler::glsl::Rect2DData::transform
-
-## BRIEF
-
-## CONTENT
-
-Тип: stappler::glsl::uint
-
-
-# ::stappler::glsl::Rect2DData::padding
-
-## BRIEF
-
-## CONTENT
-
-Тип: stappler::glsl::uint
-
-
 # ::stappler::glsl::Rect2DIndex
 
 ## BRIEF
@@ -374,94 +288,6 @@ Title: XL2dGlslSdfData.h
 Тип: float
 
 
-# ::stappler::glsl::RoundedRect2DData
-
-## BRIEF
-
-## CONTENT
-
-
-# ::stappler::glsl::RoundedRect2DData::bbMin
-
-## BRIEF
-
-## CONTENT
-
-Тип: stappler::glsl::vec2
-
-
-# ::stappler::glsl::RoundedRect2DData::bbMax
-
-## BRIEF
-
-## CONTENT
-
-Тип: stappler::glsl::vec2
-
-
-# ::stappler::glsl::RoundedRect2DData::origin
-
-## BRIEF
-
-## CONTENT
-
-Тип: stappler::glsl::vec2
-
-
-# ::stappler::glsl::RoundedRect2DData::size
-
-## BRIEF
-
-## CONTENT
-
-Тип: stappler::glsl::vec2
-
-
-# ::stappler::glsl::RoundedRect2DData::corners
-
-## BRIEF
-
-## CONTENT
-
-Тип: stappler::glsl::vec4
-
-
-# ::stappler::glsl::RoundedRect2DData::value
-
-## BRIEF
-
-## CONTENT
-
-Тип: float
-
-
-# ::stappler::glsl::RoundedRect2DData::opacity
-
-## BRIEF
-
-## CONTENT
-
-Тип: float
-
-
-# ::stappler::glsl::RoundedRect2DData::transform
-
-## BRIEF
-
-## CONTENT
-
-Тип: stappler::glsl::uint
-
-
-# ::stappler::glsl::RoundedRect2DData::padding
-
-## BRIEF
-
-## CONTENT
-
-Тип: stappler::glsl::uint
-
-
 # ::stappler::glsl::RoundedRect2DIndex
 
 ## BRIEF
@@ -497,67 +323,6 @@ Title: XL2dGlslSdfData.h
 
 
 # ::stappler::glsl::RoundedRect2DIndex::opacity
-
-## BRIEF
-
-## CONTENT
-
-Тип: float
-
-
-# ::stappler::glsl::Polygon2DData
-
-## BRIEF
-
-## CONTENT
-
-
-# ::stappler::glsl::Polygon2DData::bbMin
-
-## BRIEF
-
-## CONTENT
-
-Тип: stappler::glsl::vec2
-
-
-# ::stappler::glsl::Polygon2DData::bbMax
-
-## BRIEF
-
-## CONTENT
-
-Тип: stappler::glsl::vec2
-
-
-# ::stappler::glsl::Polygon2DData::origin
-
-## BRIEF
-
-## CONTENT
-
-Тип: stappler::glsl::uint
-
-
-# ::stappler::glsl::Polygon2DData::count
-
-## BRIEF
-
-## CONTENT
-
-Тип: stappler::glsl::uint
-
-
-# ::stappler::glsl::Polygon2DData::value
-
-## BRIEF
-
-## CONTENT
-
-Тип: float
-
-
-# ::stappler::glsl::Polygon2DData::opacity
 
 ## BRIEF
 

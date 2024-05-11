@@ -3,6 +3,15 @@
 	"_kind": "file",
 	"_name": "xenolith/platform/linux/XLPlatformLinuxDbus.h",
 	"childs": [{
+		"_fullName": "SPCore.h",
+		"_kind": "include directive",
+		"_name": "SPCore.h",
+		"id": 3778583496,
+		"include": "core/core/SPCore.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "SPCore.h"
+	}, {
 		"_fullName": "XLCommon.h",
 		"_kind": "include directive",
 		"_name": "XLCommon.h",
@@ -23,402 +32,6 @@
 		"name": "XENOLITH_PLATFORM_LINUX_XLPLATFORMLINUXDBUS_H_",
 		"replacement": ""
 	}, {
-		"_fullName": "::NMState",
-		"_kind": "enum",
-		"_name": "NMState",
-		"childs": [{
-			"_fullName": "::NMState::NM_STATE_UNKNOWN",
-			"_kind": "enum value",
-			"_name": "NM_STATE_UNKNOWN",
-			"id": 28181526,
-			"kind": "enum value",
-			"name": "NM_STATE_UNKNOWN",
-			"value": {
-				"expression": [{
-					"kind": "int_literal",
-					"spelling": "0"
-				}],
-				"kind": "unexposed",
-				"type": {
-					"_typeName": "unsigned int",
-					"builtin_type_kind": "unsigned int",
-					"kind": "builtin"
-				}
-			}
-		}, {
-			"_fullName": "::NMState::NM_STATE_ASLEEP",
-			"_kind": "enum value",
-			"_name": "NM_STATE_ASLEEP",
-			"id": 705728832,
-			"kind": "enum value",
-			"name": "NM_STATE_ASLEEP",
-			"value": {
-				"expression": [{
-					"kind": "int_literal",
-					"spelling": "10"
-				}],
-				"kind": "unexposed",
-				"type": {
-					"_typeName": "unsigned int",
-					"builtin_type_kind": "unsigned int",
-					"kind": "builtin"
-				}
-			}
-		}, {
-			"_fullName": "::NMState::NM_STATE_DISCONNECTED",
-			"_kind": "enum value",
-			"_name": "NM_STATE_DISCONNECTED",
-			"id": 791570915,
-			"kind": "enum value",
-			"name": "NM_STATE_DISCONNECTED",
-			"value": {
-				"expression": [{
-					"kind": "int_literal",
-					"spelling": "20"
-				}],
-				"kind": "unexposed",
-				"type": {
-					"_typeName": "unsigned int",
-					"builtin_type_kind": "unsigned int",
-					"kind": "builtin"
-				}
-			}
-		}, {
-			"_fullName": "::NMState::NM_STATE_DISCONNECTING",
-			"_kind": "enum value",
-			"_name": "NM_STATE_DISCONNECTING",
-			"id": 4012577291,
-			"kind": "enum value",
-			"name": "NM_STATE_DISCONNECTING",
-			"value": {
-				"expression": [{
-					"kind": "int_literal",
-					"spelling": "30"
-				}],
-				"kind": "unexposed",
-				"type": {
-					"_typeName": "unsigned int",
-					"builtin_type_kind": "unsigned int",
-					"kind": "builtin"
-				}
-			}
-		}, {
-			"_fullName": "::NMState::NM_STATE_CONNECTING",
-			"_kind": "enum value",
-			"_name": "NM_STATE_CONNECTING",
-			"id": 3104296603,
-			"kind": "enum value",
-			"name": "NM_STATE_CONNECTING",
-			"value": {
-				"expression": [{
-					"kind": "int_literal",
-					"spelling": "40"
-				}],
-				"kind": "unexposed",
-				"type": {
-					"_typeName": "unsigned int",
-					"builtin_type_kind": "unsigned int",
-					"kind": "builtin"
-				}
-			}
-		}, {
-			"_fullName": "::NMState::NM_STATE_CONNECTED_LOCAL",
-			"_kind": "enum value",
-			"_name": "NM_STATE_CONNECTED_LOCAL",
-			"id": 3586835096,
-			"kind": "enum value",
-			"name": "NM_STATE_CONNECTED_LOCAL",
-			"value": {
-				"expression": [{
-					"kind": "int_literal",
-					"spelling": "50"
-				}],
-				"kind": "unexposed",
-				"type": {
-					"_typeName": "unsigned int",
-					"builtin_type_kind": "unsigned int",
-					"kind": "builtin"
-				}
-			}
-		}, {
-			"_fullName": "::NMState::NM_STATE_CONNECTED_SITE",
-			"_kind": "enum value",
-			"_name": "NM_STATE_CONNECTED_SITE",
-			"id": 2141714526,
-			"kind": "enum value",
-			"name": "NM_STATE_CONNECTED_SITE",
-			"value": {
-				"expression": [{
-					"kind": "int_literal",
-					"spelling": "60"
-				}],
-				"kind": "unexposed",
-				"type": {
-					"_typeName": "unsigned int",
-					"builtin_type_kind": "unsigned int",
-					"kind": "builtin"
-				}
-			}
-		}, {
-			"_fullName": "::NMState::NM_STATE_CONNECTED_GLOBAL",
-			"_kind": "enum value",
-			"_name": "NM_STATE_CONNECTED_GLOBAL",
-			"id": 3524935786,
-			"kind": "enum value",
-			"name": "NM_STATE_CONNECTED_GLOBAL",
-			"value": {
-				"expression": [{
-					"kind": "int_literal",
-					"spelling": "70"
-				}],
-				"kind": "unexposed",
-				"type": {
-					"_typeName": "unsigned int",
-					"builtin_type_kind": "unsigned int",
-					"kind": "builtin"
-				}
-			}
-		}],
-		"has_explicit_type": false,
-		"id": 3261309328,
-		"is_declaration": false,
-		"is_definition": true,
-		"is_scoped": false,
-		"kind": "enum",
-		"name": "NMState",
-		"semantic_scope": "",
-		"underlying_type": {
-			"_typeName": "unsigned int",
-			"builtin_type_kind": "unsigned int",
-			"kind": "builtin"
-		}
-	}, {
-		"_fullName": "::NMConnectivityState",
-		"_kind": "enum",
-		"_name": "NMConnectivityState",
-		"childs": [{
-			"_fullName": "::NMConnectivityState::NM_CONNECTIVITY_UNKNOWN",
-			"_kind": "enum value",
-			"_name": "NM_CONNECTIVITY_UNKNOWN",
-			"id": 1474109167,
-			"kind": "enum value",
-			"name": "NM_CONNECTIVITY_UNKNOWN",
-			"value": {
-				"expression": [{
-					"kind": "int_literal",
-					"spelling": "1"
-				}],
-				"kind": "unexposed",
-				"type": {
-					"_typeName": "unsigned int",
-					"builtin_type_kind": "unsigned int",
-					"kind": "builtin"
-				}
-			}
-		}, {
-			"_fullName": "::NMConnectivityState::NM_CONNECTIVITY_NONE",
-			"_kind": "enum value",
-			"_name": "NM_CONNECTIVITY_NONE",
-			"id": 3727004234,
-			"kind": "enum value",
-			"name": "NM_CONNECTIVITY_NONE",
-			"value": {
-				"expression": [{
-					"kind": "int_literal",
-					"spelling": "2"
-				}],
-				"kind": "unexposed",
-				"type": {
-					"_typeName": "unsigned int",
-					"builtin_type_kind": "unsigned int",
-					"kind": "builtin"
-				}
-			}
-		}, {
-			"_fullName": "::NMConnectivityState::NM_CONNECTIVITY_PORTAL",
-			"_kind": "enum value",
-			"_name": "NM_CONNECTIVITY_PORTAL",
-			"id": 4025618070,
-			"kind": "enum value",
-			"name": "NM_CONNECTIVITY_PORTAL",
-			"value": {
-				"expression": [{
-					"kind": "int_literal",
-					"spelling": "3"
-				}],
-				"kind": "unexposed",
-				"type": {
-					"_typeName": "unsigned int",
-					"builtin_type_kind": "unsigned int",
-					"kind": "builtin"
-				}
-			}
-		}, {
-			"_fullName": "::NMConnectivityState::NM_CONNECTIVITY_LIMITED",
-			"_kind": "enum value",
-			"_name": "NM_CONNECTIVITY_LIMITED",
-			"id": 2473747551,
-			"kind": "enum value",
-			"name": "NM_CONNECTIVITY_LIMITED",
-			"value": {
-				"expression": [{
-					"kind": "int_literal",
-					"spelling": "4"
-				}],
-				"kind": "unexposed",
-				"type": {
-					"_typeName": "unsigned int",
-					"builtin_type_kind": "unsigned int",
-					"kind": "builtin"
-				}
-			}
-		}, {
-			"_fullName": "::NMConnectivityState::NM_CONNECTIVITY_FULL",
-			"_kind": "enum value",
-			"_name": "NM_CONNECTIVITY_FULL",
-			"id": 3658703438,
-			"kind": "enum value",
-			"name": "NM_CONNECTIVITY_FULL",
-			"value": {
-				"expression": [{
-					"kind": "int_literal",
-					"spelling": "5"
-				}],
-				"kind": "unexposed",
-				"type": {
-					"_typeName": "unsigned int",
-					"builtin_type_kind": "unsigned int",
-					"kind": "builtin"
-				}
-			}
-		}],
-		"has_explicit_type": false,
-		"id": 3592042955,
-		"is_declaration": false,
-		"is_definition": true,
-		"is_scoped": false,
-		"kind": "enum",
-		"name": "NMConnectivityState",
-		"semantic_scope": "",
-		"underlying_type": {
-			"_typeName": "unsigned int",
-			"builtin_type_kind": "unsigned int",
-			"kind": "builtin"
-		}
-	}, {
-		"_fullName": "::NMMetered",
-		"_kind": "enum",
-		"_name": "NMMetered",
-		"childs": [{
-			"_fullName": "::NMMetered::NM_METERED_UNKNOWN",
-			"_kind": "enum value",
-			"_name": "NM_METERED_UNKNOWN",
-			"id": 4080244693,
-			"kind": "enum value",
-			"name": "NM_METERED_UNKNOWN",
-			"value": {
-				"expression": [{
-					"kind": "int_literal",
-					"spelling": "0"
-				}],
-				"kind": "unexposed",
-				"type": {
-					"_typeName": "unsigned int",
-					"builtin_type_kind": "unsigned int",
-					"kind": "builtin"
-				}
-			}
-		}, {
-			"_fullName": "::NMMetered::NM_METERED_YES",
-			"_kind": "enum value",
-			"_name": "NM_METERED_YES",
-			"id": 3698272172,
-			"kind": "enum value",
-			"name": "NM_METERED_YES",
-			"value": {
-				"expression": [{
-					"kind": "int_literal",
-					"spelling": "1"
-				}],
-				"kind": "unexposed",
-				"type": {
-					"_typeName": "unsigned int",
-					"builtin_type_kind": "unsigned int",
-					"kind": "builtin"
-				}
-			}
-		}, {
-			"_fullName": "::NMMetered::NM_METERED_NO",
-			"_kind": "enum value",
-			"_name": "NM_METERED_NO",
-			"id": 711925717,
-			"kind": "enum value",
-			"name": "NM_METERED_NO",
-			"value": {
-				"expression": [{
-					"kind": "int_literal",
-					"spelling": "2"
-				}],
-				"kind": "unexposed",
-				"type": {
-					"_typeName": "unsigned int",
-					"builtin_type_kind": "unsigned int",
-					"kind": "builtin"
-				}
-			}
-		}, {
-			"_fullName": "::NMMetered::NM_METERED_GUESS_YES",
-			"_kind": "enum value",
-			"_name": "NM_METERED_GUESS_YES",
-			"id": 3266420185,
-			"kind": "enum value",
-			"name": "NM_METERED_GUESS_YES",
-			"value": {
-				"expression": [{
-					"kind": "int_literal",
-					"spelling": "3"
-				}],
-				"kind": "unexposed",
-				"type": {
-					"_typeName": "unsigned int",
-					"builtin_type_kind": "unsigned int",
-					"kind": "builtin"
-				}
-			}
-		}, {
-			"_fullName": "::NMMetered::NM_METERED_GUESS_NO",
-			"_kind": "enum value",
-			"_name": "NM_METERED_GUESS_NO",
-			"id": 1162547612,
-			"kind": "enum value",
-			"name": "NM_METERED_GUESS_NO",
-			"value": {
-				"expression": [{
-					"kind": "int_literal",
-					"spelling": "4"
-				}],
-				"kind": "unexposed",
-				"type": {
-					"_typeName": "unsigned int",
-					"builtin_type_kind": "unsigned int",
-					"kind": "builtin"
-				}
-			}
-		}],
-		"has_explicit_type": false,
-		"id": 275753147,
-		"is_declaration": false,
-		"is_definition": true,
-		"is_scoped": false,
-		"kind": "enum",
-		"name": "NMMetered",
-		"semantic_scope": "",
-		"underlying_type": {
-			"_typeName": "unsigned int",
-			"builtin_type_kind": "unsigned int",
-			"kind": "builtin"
-		}
-	}, {
 		"_fullName": "::stappler",
 		"_kind": "namespace",
 		"_name": "stappler",
@@ -431,6 +44,402 @@
 				"_kind": "namespace",
 				"_name": "platform",
 				"childs": [{
+					"_fullName": "::stappler::xenolith::platform::NMState",
+					"_kind": "enum",
+					"_name": "NMState",
+					"childs": [{
+						"_fullName": "::stappler::xenolith::platform::NMState::NM_STATE_UNKNOWN",
+						"_kind": "enum value",
+						"_name": "NM_STATE_UNKNOWN",
+						"id": 3749509846,
+						"kind": "enum value",
+						"name": "NM_STATE_UNKNOWN",
+						"value": {
+							"expression": [{
+								"kind": "int_literal",
+								"spelling": "0"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "unsigned int",
+								"builtin_type_kind": "unsigned int",
+								"kind": "builtin"
+							}
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::platform::NMState::NM_STATE_ASLEEP",
+						"_kind": "enum value",
+						"_name": "NM_STATE_ASLEEP",
+						"id": 2595203009,
+						"kind": "enum value",
+						"name": "NM_STATE_ASLEEP",
+						"value": {
+							"expression": [{
+								"kind": "int_literal",
+								"spelling": "10"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "unsigned int",
+								"builtin_type_kind": "unsigned int",
+								"kind": "builtin"
+							}
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::platform::NMState::NM_STATE_DISCONNECTED",
+						"_kind": "enum value",
+						"_name": "NM_STATE_DISCONNECTED",
+						"id": 3916065348,
+						"kind": "enum value",
+						"name": "NM_STATE_DISCONNECTED",
+						"value": {
+							"expression": [{
+								"kind": "int_literal",
+								"spelling": "20"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "unsigned int",
+								"builtin_type_kind": "unsigned int",
+								"kind": "builtin"
+							}
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::platform::NMState::NM_STATE_DISCONNECTING",
+						"_kind": "enum value",
+						"_name": "NM_STATE_DISCONNECTING",
+						"id": 243498113,
+						"kind": "enum value",
+						"name": "NM_STATE_DISCONNECTING",
+						"value": {
+							"expression": [{
+								"kind": "int_literal",
+								"spelling": "30"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "unsigned int",
+								"builtin_type_kind": "unsigned int",
+								"kind": "builtin"
+							}
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::platform::NMState::NM_STATE_CONNECTING",
+						"_kind": "enum value",
+						"_name": "NM_STATE_CONNECTING",
+						"id": 3795584980,
+						"kind": "enum value",
+						"name": "NM_STATE_CONNECTING",
+						"value": {
+							"expression": [{
+								"kind": "int_literal",
+								"spelling": "40"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "unsigned int",
+								"builtin_type_kind": "unsigned int",
+								"kind": "builtin"
+							}
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::platform::NMState::NM_STATE_CONNECTED_LOCAL",
+						"_kind": "enum value",
+						"_name": "NM_STATE_CONNECTED_LOCAL",
+						"id": 3740742771,
+						"kind": "enum value",
+						"name": "NM_STATE_CONNECTED_LOCAL",
+						"value": {
+							"expression": [{
+								"kind": "int_literal",
+								"spelling": "50"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "unsigned int",
+								"builtin_type_kind": "unsigned int",
+								"kind": "builtin"
+							}
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::platform::NMState::NM_STATE_CONNECTED_SITE",
+						"_kind": "enum value",
+						"_name": "NM_STATE_CONNECTED_SITE",
+						"id": 3624212044,
+						"kind": "enum value",
+						"name": "NM_STATE_CONNECTED_SITE",
+						"value": {
+							"expression": [{
+								"kind": "int_literal",
+								"spelling": "60"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "unsigned int",
+								"builtin_type_kind": "unsigned int",
+								"kind": "builtin"
+							}
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::platform::NMState::NM_STATE_CONNECTED_GLOBAL",
+						"_kind": "enum value",
+						"_name": "NM_STATE_CONNECTED_GLOBAL",
+						"id": 512523926,
+						"kind": "enum value",
+						"name": "NM_STATE_CONNECTED_GLOBAL",
+						"value": {
+							"expression": [{
+								"kind": "int_literal",
+								"spelling": "70"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "unsigned int",
+								"builtin_type_kind": "unsigned int",
+								"kind": "builtin"
+							}
+						}
+					}],
+					"has_explicit_type": false,
+					"id": 375179242,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_scoped": false,
+					"kind": "enum",
+					"name": "NMState",
+					"semantic_scope": "",
+					"underlying_type": {
+						"_typeName": "unsigned int",
+						"builtin_type_kind": "unsigned int",
+						"kind": "builtin"
+					}
+				}, {
+					"_fullName": "::stappler::xenolith::platform::NMConnectivityState",
+					"_kind": "enum",
+					"_name": "NMConnectivityState",
+					"childs": [{
+						"_fullName": "::stappler::xenolith::platform::NMConnectivityState::NM_CONNECTIVITY_UNKNOWN",
+						"_kind": "enum value",
+						"_name": "NM_CONNECTIVITY_UNKNOWN",
+						"id": 3250631564,
+						"kind": "enum value",
+						"name": "NM_CONNECTIVITY_UNKNOWN",
+						"value": {
+							"expression": [{
+								"kind": "int_literal",
+								"spelling": "1"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "unsigned int",
+								"builtin_type_kind": "unsigned int",
+								"kind": "builtin"
+							}
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::platform::NMConnectivityState::NM_CONNECTIVITY_NONE",
+						"_kind": "enum value",
+						"_name": "NM_CONNECTIVITY_NONE",
+						"id": 546758425,
+						"kind": "enum value",
+						"name": "NM_CONNECTIVITY_NONE",
+						"value": {
+							"expression": [{
+								"kind": "int_literal",
+								"spelling": "2"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "unsigned int",
+								"builtin_type_kind": "unsigned int",
+								"kind": "builtin"
+							}
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::platform::NMConnectivityState::NM_CONNECTIVITY_PORTAL",
+						"_kind": "enum value",
+						"_name": "NM_CONNECTIVITY_PORTAL",
+						"id": 1831814854,
+						"kind": "enum value",
+						"name": "NM_CONNECTIVITY_PORTAL",
+						"value": {
+							"expression": [{
+								"kind": "int_literal",
+								"spelling": "3"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "unsigned int",
+								"builtin_type_kind": "unsigned int",
+								"kind": "builtin"
+							}
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::platform::NMConnectivityState::NM_CONNECTIVITY_LIMITED",
+						"_kind": "enum value",
+						"_name": "NM_CONNECTIVITY_LIMITED",
+						"id": 2166663947,
+						"kind": "enum value",
+						"name": "NM_CONNECTIVITY_LIMITED",
+						"value": {
+							"expression": [{
+								"kind": "int_literal",
+								"spelling": "4"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "unsigned int",
+								"builtin_type_kind": "unsigned int",
+								"kind": "builtin"
+							}
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::platform::NMConnectivityState::NM_CONNECTIVITY_FULL",
+						"_kind": "enum value",
+						"_name": "NM_CONNECTIVITY_FULL",
+						"id": 1913647021,
+						"kind": "enum value",
+						"name": "NM_CONNECTIVITY_FULL",
+						"value": {
+							"expression": [{
+								"kind": "int_literal",
+								"spelling": "5"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "unsigned int",
+								"builtin_type_kind": "unsigned int",
+								"kind": "builtin"
+							}
+						}
+					}],
+					"has_explicit_type": false,
+					"id": 1267340679,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_scoped": false,
+					"kind": "enum",
+					"name": "NMConnectivityState",
+					"semantic_scope": "",
+					"underlying_type": {
+						"_typeName": "unsigned int",
+						"builtin_type_kind": "unsigned int",
+						"kind": "builtin"
+					}
+				}, {
+					"_fullName": "::stappler::xenolith::platform::NMMetered",
+					"_kind": "enum",
+					"_name": "NMMetered",
+					"childs": [{
+						"_fullName": "::stappler::xenolith::platform::NMMetered::NM_METERED_UNKNOWN",
+						"_kind": "enum value",
+						"_name": "NM_METERED_UNKNOWN",
+						"id": 3088802678,
+						"kind": "enum value",
+						"name": "NM_METERED_UNKNOWN",
+						"value": {
+							"expression": [{
+								"kind": "int_literal",
+								"spelling": "0"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "unsigned int",
+								"builtin_type_kind": "unsigned int",
+								"kind": "builtin"
+							}
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::platform::NMMetered::NM_METERED_YES",
+						"_kind": "enum value",
+						"_name": "NM_METERED_YES",
+						"id": 3931375569,
+						"kind": "enum value",
+						"name": "NM_METERED_YES",
+						"value": {
+							"expression": [{
+								"kind": "int_literal",
+								"spelling": "1"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "unsigned int",
+								"builtin_type_kind": "unsigned int",
+								"kind": "builtin"
+							}
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::platform::NMMetered::NM_METERED_NO",
+						"_kind": "enum value",
+						"_name": "NM_METERED_NO",
+						"id": 2774556635,
+						"kind": "enum value",
+						"name": "NM_METERED_NO",
+						"value": {
+							"expression": [{
+								"kind": "int_literal",
+								"spelling": "2"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "unsigned int",
+								"builtin_type_kind": "unsigned int",
+								"kind": "builtin"
+							}
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::platform::NMMetered::NM_METERED_GUESS_YES",
+						"_kind": "enum value",
+						"_name": "NM_METERED_GUESS_YES",
+						"id": 155472555,
+						"kind": "enum value",
+						"name": "NM_METERED_GUESS_YES",
+						"value": {
+							"expression": [{
+								"kind": "int_literal",
+								"spelling": "3"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "unsigned int",
+								"builtin_type_kind": "unsigned int",
+								"kind": "builtin"
+							}
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::platform::NMMetered::NM_METERED_GUESS_NO",
+						"_kind": "enum value",
+						"_name": "NM_METERED_GUESS_NO",
+						"id": 2751027652,
+						"kind": "enum value",
+						"name": "NM_METERED_GUESS_NO",
+						"value": {
+							"expression": [{
+								"kind": "int_literal",
+								"spelling": "4"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "unsigned int",
+								"builtin_type_kind": "unsigned int",
+								"kind": "builtin"
+							}
+						}
+					}],
+					"has_explicit_type": false,
+					"id": 1981753788,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_scoped": false,
+					"kind": "enum",
+					"name": "NMMetered",
+					"semantic_scope": "",
+					"underlying_type": {
+						"_typeName": "unsigned int",
+						"builtin_type_kind": "unsigned int",
+						"kind": "builtin"
+					}
+				}, {
 					"_fullName": "::stappler::xenolith::platform::DBusInterface",
 					"_kind": "class",
 					"_name": "DBusInterface",
@@ -883,16 +892,16 @@
 							}],
 							"kind": "unexposed",
 							"type": {
-								"_typeName": "NMMetered",
+								"_typeName": "stappler::xenolith::platform::NMMetered",
 								"kind": "user_defined",
 								"target": {
-									"name": "NMMetered",
+									"name": "stappler::xenolith::platform::NMMetered",
 									"objects": [{
-										"_fullName": "::NMMetered",
+										"_fullName": "::stappler::xenolith::platform::NMMetered",
 										"_kind": "enum",
 										"_name": "NMMetered",
 										"has_explicit_type": false,
-										"id": 275753147,
+										"id": 1981753788,
 										"is_declaration": false,
 										"is_definition": true,
 										"is_scoped": false,
@@ -913,16 +922,16 @@
 						"kind": "member variable",
 						"name": "metered",
 						"type": {
-							"_typeName": "NMMetered",
+							"_typeName": "stappler::xenolith::platform::NMMetered",
 							"kind": "user_defined",
 							"target": {
-								"name": "NMMetered",
+								"name": "stappler::xenolith::platform::NMMetered",
 								"objects": [{
-									"_fullName": "::NMMetered",
+									"_fullName": "::stappler::xenolith::platform::NMMetered",
 									"_kind": "enum",
 									"_name": "NMMetered",
 									"has_explicit_type": false,
-									"id": 275753147,
+									"id": 1981753788,
 									"is_declaration": false,
 									"is_definition": true,
 									"is_scoped": false,
@@ -954,16 +963,16 @@
 							}],
 							"kind": "unexposed",
 							"type": {
-								"_typeName": "NMState",
+								"_typeName": "stappler::xenolith::platform::NMState",
 								"kind": "user_defined",
 								"target": {
-									"name": "NMState",
+									"name": "stappler::xenolith::platform::NMState",
 									"objects": [{
-										"_fullName": "::NMState",
+										"_fullName": "::stappler::xenolith::platform::NMState",
 										"_kind": "enum",
 										"_name": "NMState",
 										"has_explicit_type": false,
-										"id": 3261309328,
+										"id": 375179242,
 										"is_declaration": false,
 										"is_definition": true,
 										"is_scoped": false,
@@ -984,16 +993,16 @@
 						"kind": "member variable",
 						"name": "state",
 						"type": {
-							"_typeName": "NMState",
+							"_typeName": "stappler::xenolith::platform::NMState",
 							"kind": "user_defined",
 							"target": {
-								"name": "NMState",
+								"name": "stappler::xenolith::platform::NMState",
 								"objects": [{
-									"_fullName": "::NMState",
+									"_fullName": "::stappler::xenolith::platform::NMState",
 									"_kind": "enum",
 									"_name": "NMState",
 									"has_explicit_type": false,
-									"id": 3261309328,
+									"id": 375179242,
 									"is_declaration": false,
 									"is_definition": true,
 									"is_scoped": false,
@@ -1025,16 +1034,16 @@
 							}],
 							"kind": "unexposed",
 							"type": {
-								"_typeName": "NMConnectivityState",
+								"_typeName": "stappler::xenolith::platform::NMConnectivityState",
 								"kind": "user_defined",
 								"target": {
-									"name": "NMConnectivityState",
+									"name": "stappler::xenolith::platform::NMConnectivityState",
 									"objects": [{
-										"_fullName": "::NMConnectivityState",
+										"_fullName": "::stappler::xenolith::platform::NMConnectivityState",
 										"_kind": "enum",
 										"_name": "NMConnectivityState",
 										"has_explicit_type": false,
-										"id": 3592042955,
+										"id": 1267340679,
 										"is_declaration": false,
 										"is_definition": true,
 										"is_scoped": false,
@@ -1055,16 +1064,16 @@
 						"kind": "member variable",
 						"name": "connectivity",
 						"type": {
-							"_typeName": "NMConnectivityState",
+							"_typeName": "stappler::xenolith::platform::NMConnectivityState",
 							"kind": "user_defined",
 							"target": {
-								"name": "NMConnectivityState",
+								"name": "stappler::xenolith::platform::NMConnectivityState",
 								"objects": [{
-									"_fullName": "::NMConnectivityState",
+									"_fullName": "::stappler::xenolith::platform::NMConnectivityState",
 									"_kind": "enum",
 									"_name": "NMConnectivityState",
 									"has_explicit_type": false,
-									"id": 3592042955,
+									"id": 1267340679,
 									"is_declaration": false,
 									"is_definition": true,
 									"is_scoped": false,

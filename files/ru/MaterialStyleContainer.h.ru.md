@@ -92,6 +92,18 @@ Title: MaterialStyleContainer.h
 Доступ: public
 
 
+# ::stappler::xenolith::material2d::StyleContainer::setPrimaryScheme(stappler::xenolith::material2d::ColorScheme&&)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* stappler::xenolith::material2d::ColorScheme&&
+
+
 # ::stappler::xenolith::material2d::StyleContainer::setPrimaryScheme(stappler::xenolith::material2d::ThemeType,stappler::xenolith::material2d::CorePalette const&)
 
 ## BRIEF
@@ -105,7 +117,7 @@ Title: MaterialStyleContainer.h
 * stappler::xenolith::material2d::CorePalette const&
 
 
-# ::stappler::xenolith::material2d::StyleContainer::setPrimaryScheme(stappler::xenolith::material2d::ThemeType,stappler::xenolith::Color4F const&,bool)
+# ::stappler::xenolith::material2d::StyleContainer::setPrimaryScheme(stappler::xenolith::material2d::ThemeType,const stappler::geom::Color4F&,bool)
 
 ## BRIEF
 
@@ -115,11 +127,11 @@ Title: MaterialStyleContainer.h
 
 Параметры:
 * stappler::xenolith::material2d::ThemeType
-* stappler::xenolith::Color4F const&
+* const stappler::geom::Color4F&
 * bool
 
 
-# ::stappler::xenolith::material2d::StyleContainer::setPrimaryScheme(stappler::xenolith::material2d::ThemeType,stappler::xenolith::material2d::ColorHCT const&,bool)
+# ::stappler::xenolith::material2d::StyleContainer::setPrimaryScheme(stappler::xenolith::material2d::ThemeType,const stappler::geom::ColorHCT&,bool)
 
 ## BRIEF
 
@@ -129,7 +141,7 @@ Title: MaterialStyleContainer.h
 
 Параметры:
 * stappler::xenolith::material2d::ThemeType
-* stappler::xenolith::material2d::ColorHCT const&
+* const stappler::geom::ColorHCT&
 * bool
 
 
@@ -143,6 +155,21 @@ Title: MaterialStyleContainer.h
 
 Возвращает:
 * stappler::xenolith::material2d::ColorScheme const&
+
+# ::stappler::xenolith::material2d::StyleContainer::setScheme(uint32_t,stappler::xenolith::material2d::ColorScheme&&)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* uint32_t
+* stappler::xenolith::material2d::ColorScheme&&
+
+Возвращает:
+* stappler::xenolith::material2d::ColorScheme const*
 
 # ::stappler::xenolith::material2d::StyleContainer::setScheme(uint32_t,stappler::xenolith::material2d::ThemeType,stappler::xenolith::material2d::CorePalette const&)
 
@@ -160,7 +187,7 @@ Title: MaterialStyleContainer.h
 Возвращает:
 * stappler::xenolith::material2d::ColorScheme const*
 
-# ::stappler::xenolith::material2d::StyleContainer::setScheme(uint32_t,stappler::xenolith::material2d::ThemeType,stappler::xenolith::Color4F const&,bool)
+# ::stappler::xenolith::material2d::StyleContainer::setScheme(uint32_t,stappler::xenolith::material2d::ThemeType,const stappler::geom::Color4F&,bool)
 
 ## BRIEF
 
@@ -171,13 +198,13 @@ Title: MaterialStyleContainer.h
 Параметры:
 * uint32_t
 * stappler::xenolith::material2d::ThemeType
-* stappler::xenolith::Color4F const&
+* const stappler::geom::Color4F&
 * bool
 
 Возвращает:
 * stappler::xenolith::material2d::ColorScheme const*
 
-# ::stappler::xenolith::material2d::StyleContainer::setScheme(uint32_t,stappler::xenolith::material2d::ThemeType,stappler::xenolith::material2d::ColorHCT const&,bool)
+# ::stappler::xenolith::material2d::StyleContainer::setScheme(uint32_t,stappler::xenolith::material2d::ThemeType,const stappler::geom::ColorHCT&,bool)
 
 ## BRIEF
 
@@ -188,7 +215,7 @@ Title: MaterialStyleContainer.h
 Параметры:
 * uint32_t
 * stappler::xenolith::material2d::ThemeType
-* stappler::xenolith::material2d::ColorHCT const&
+* const stappler::geom::ColorHCT&
 * bool
 
 Возвращает:

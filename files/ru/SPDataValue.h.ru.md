@@ -3129,53 +3129,10 @@ Title: SPDataValue.h
 
 Доступ: public
 
+Проверяет значение на пустоту. Может использоваться только в логических операциях.
+
 Возвращает:
 * bool - true если значение пустое
-
-# ::stappler::data::ValueTemplate<typename>::operator int32_t() const
-
-## BRIEF
-
-Конвертирование значения в целочисленное запрещено
-
-## CONTENT
-
-Доступ: public
-
-Конвертирование значения в целочисленное запрещено
-
-Возвращает:
-* int32_t
-
-# ::stappler::data::ValueTemplate<typename>::operator int64_t() const
-
-## BRIEF
-
-Конвертирование значения в целочисленное запрещено
-
-## CONTENT
-
-Доступ: public
-
-Конвертирование значения в целочисленное запрещено
-
-Возвращает:
-* int64_t
-
-# ::stappler::data::ValueTemplate<typename>::operator size_t() const
-
-## BRIEF
-
-Конвертирование значения в целочисленное запрещено
-
-## CONTENT
-
-Доступ: public
-
-Конвертирование значения в целочисленное запрещено
-
-Возвращает:
-* size_t
 
 # ::stappler::data::ValueTemplate<typename>::asInteger() const
 

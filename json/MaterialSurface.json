@@ -1297,6 +1297,94 @@
 						"semantic_scope": "",
 						"signature": "(stappler::xenolith::FrameInfo&,stappler::xenolith::NodeFlags)"
 					}, {
+						"_fullName": "::stappler::xenolith::material2d::Surface::getHeightLimits(bool) const",
+						"_kind": "member function",
+						"_name": "getHeightLimits",
+						"body_kind": "declaration",
+						"cv_qualifier": "const",
+						"id": 1494994674,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"is_virtual": true,
+						"kind": "member function",
+						"name": "getHeightLimits",
+						"parameters": [{
+							"_fullName": "flex",
+							"_kind": "function parameter",
+							"_name": "flex",
+							"id": 413847854,
+							"kind": "function parameter",
+							"name": "flex",
+							"type": {
+								"_typeName": "bool",
+								"builtin_type_kind": "bool",
+								"kind": "builtin"
+							}
+						}],
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "Pair<float, float>",
+							"arguments_exposed": false,
+							"kind": "template_instantiation",
+							"primary_template": {
+								"name": "Pair"
+							},
+							"unexposed_arguments": "float, float"
+						},
+						"semantic_scope": "",
+						"signature": "(bool) const"
+					}, {
+						"_fullName": "::stappler::xenolith::material2d::Surface::setHeightLimits(float,float)",
+						"_kind": "member function",
+						"_name": "setHeightLimits",
+						"body_kind": "declaration",
+						"cv_qualifier": "none",
+						"id": 656075332,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"is_virtual": true,
+						"kind": "member function",
+						"name": "setHeightLimits",
+						"parameters": [{
+							"_fullName": "min",
+							"_kind": "function parameter",
+							"_name": "min",
+							"id": 1171363572,
+							"kind": "function parameter",
+							"name": "min",
+							"type": {
+								"_typeName": "float",
+								"builtin_type_kind": "float",
+								"kind": "builtin"
+							}
+						}, {
+							"_fullName": "max",
+							"_kind": "function parameter",
+							"_name": "max",
+							"id": 2606951577,
+							"kind": "function parameter",
+							"name": "max",
+							"type": {
+								"_typeName": "float",
+								"builtin_type_kind": "float",
+								"kind": "builtin"
+							}
+						}],
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(float,float)"
+					}, {
 						"_fullName": "protected",
 						"_kind": "access specifier",
 						"_name": "protected",
@@ -1305,12 +1393,12 @@
 						"kind": "access specifier",
 						"name": "protected"
 					}, {
-						"_fullName": "::stappler::xenolith::material2d::Surface::applyStyle(stappler::xenolith::material2d::SurfaceStyleData const&)",
+						"_fullName": "::stappler::xenolith::material2d::Surface::applyStyle(stappler::xenolith::material2d::StyleContainer*,stappler::xenolith::material2d::SurfaceStyleData const&)",
 						"_kind": "member function",
 						"_name": "applyStyle",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 578099778,
+						"id": 607718709,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -1320,6 +1408,181 @@
 						"kind": "member function",
 						"name": "applyStyle",
 						"parameters": [{
+							"_fullName": "",
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 46947589,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::xenolith::material2d::StyleContainer*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::xenolith::material2d::StyleContainer",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::xenolith::material2d::StyleContainer",
+										"objects": [{
+											"_fullName": "::stappler::xenolith::material2d::StyleContainer",
+											"_kind": "class",
+											"_name": "StyleContainer",
+											"bases": [{
+												"_fullName": "Component",
+												"_kind": "base class specifier",
+												"_name": "Component",
+												"access_specifier": "public",
+												"id": 2536025541,
+												"is_virtual": false,
+												"kind": "base class specifier",
+												"name": "Component",
+												"type": {
+													"_typeName": "stappler::xenolith::Component",
+													"kind": "user_defined",
+													"target": {
+														"name": "stappler::xenolith::Component",
+														"objects": [{
+															"_fullName": "::stappler::xenolith::Component",
+															"_kind": "class",
+															"_name": "Component",
+															"bases": [{
+																"_fullName": "Ref",
+																"_kind": "base class specifier",
+																"_name": "Ref",
+																"access_specifier": "public",
+																"id": 1165741041,
+																"is_virtual": false,
+																"kind": "base class specifier",
+																"name": "Ref",
+																"type": {
+																	"_typeName": "stappler::mem_std::Ref",
+																	"kind": "user_defined",
+																	"target": {
+																		"name": "stappler::mem_std::Ref",
+																		"objects": [{
+																			"_fullName": "::stappler::mem_std::Ref",
+																			"_kind": "type alias",
+																			"_name": "Ref",
+																			"id": 3010886988,
+																			"kind": "type alias",
+																			"name": "Ref",
+																			"underlying_type": {
+																				"_typeName": "RefBase<memory::StandartInterface>",
+																				"arguments_exposed": false,
+																				"kind": "template_instantiation",
+																				"primary_template": {
+																					"name": "RefBase",
+																					"objects": [{
+																						"_fullName": "::stappler::RefBase<typename>",
+																						"_kind": "class template",
+																						"_name": "RefBase",
+																						"class": {
+																							"_fullName": "::stappler::RefBase<typename>",
+																							"_kind": "class",
+																							"_name": "RefBase",
+																							"bases": [{
+																								"_fullName": "Interface::AllocBaseType",
+																								"_kind": "base class specifier",
+																								"_name": "Interface::AllocBaseType",
+																								"access_specifier": "public",
+																								"id": 25533212,
+																								"is_virtual": false,
+																								"kind": "base class specifier",
+																								"name": "Interface::AllocBaseType",
+																								"type": {
+																									"_typeName": "Interface::AllocBaseType",
+																									"kind": "unexposed",
+																									"name": "Interface::AllocBaseType"
+																								}
+																							}],
+																							"class_kind": "class",
+																							"id": 2191419057,
+																							"is_declaration": false,
+																							"is_definition": true,
+																							"is_final": false,
+																							"kind": "class",
+																							"name": "RefBase",
+																							"scope": {
+																								"is_templated": true,
+																								"name": "RefBase",
+																								"template_parameters": [{
+																									"_fullName": "Interface",
+																									"_kind": "template type parameter",
+																									"_name": "Interface",
+																									"id": 2255344761,
+																									"is_variadic": false,
+																									"keyword": "typename",
+																									"kind": "template type parameter",
+																									"name": "Interface"
+																								}]
+																							},
+																							"semantic_scope": ""
+																						},
+																						"id": 2191419057,
+																						"kind": "class template",
+																						"name": "RefBase",
+																						"parameters": [{
+																							"_fullName": "Interface",
+																							"_kind": "template type parameter",
+																							"_name": "Interface",
+																							"id": 2255344761,
+																							"is_variadic": false,
+																							"keyword": "typename",
+																							"kind": "template type parameter",
+																							"name": "Interface"
+																						}],
+																						"scope":  {
+																							"is_templated": true,
+																							"name": "RefBase",
+																							"template_parameters": [{
+																								"_fullName": "Interface",
+																								"_kind": "template type parameter",
+																								"_name": "Interface",
+																								"id": 2255344761,
+																								"is_variadic": false,
+																								"keyword": "typename",
+																								"kind": "template type parameter",
+																								"name": "Interface"
+																							}]
+																						}
+																					}]
+																				},
+																				"unexposed_arguments": "memory::StandartInterface"
+																			}
+																		}]
+																	}
+																}
+															}],
+															"class_kind": "class",
+															"id": 392902943,
+															"is_declaration": false,
+															"is_definition": true,
+															"is_final": false,
+															"kind": "class",
+															"name": "Component",
+															"scope": {
+																"name": "Component"
+															},
+															"semantic_scope": ""
+														}]
+													}
+												}
+											}],
+											"class_kind": "class",
+											"id": 2557903839,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "StyleContainer",
+											"scope": {
+												"name": "StyleContainer"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							}
+						}, {
 							"_fullName": "",
 							"_kind": "function parameter",
 							"_name": "",
@@ -1367,7 +1630,7 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::material2d::SurfaceStyleData const&)"
+						"signature": "(stappler::xenolith::material2d::StyleContainer*,stappler::xenolith::material2d::SurfaceStyleData const&)"
 					}, {
 						"_fullName": "::stappler::xenolith::material2d::Surface::updateBackgroundImage(stappler::xenolith::basic2d::VectorImage*,stappler::xenolith::material2d::SurfaceStyleData const&,float)",
 						"_kind": "member function",
@@ -2093,12 +2356,12 @@
 						"semantic_scope": "",
 						"signature": "() const"
 					}, {
-						"_fullName": "::stappler::xenolith::material2d::Surface::pushShadowCommands(stappler::xenolith::FrameInfo&,stappler::xenolith::NodeFlags,stappler::xenolith::Mat4 const&,SpanView<stappler::xenolith::basic2d::TransformVertexData>)",
+						"_fullName": "::stappler::xenolith::material2d::Surface::pushShadowCommands(stappler::xenolith::FrameInfo&,stappler::xenolith::NodeFlags,const stappler::geom::Mat4&,SpanView<stappler::xenolith::basic2d::TransformVertexData>)",
 						"_kind": "member function",
 						"_name": "pushShadowCommands",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 765621864,
+						"id": 2099232903,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -2186,60 +2449,12 @@
 							"kind": "function parameter",
 							"name": "",
 							"type": {
-								"_typeName": "stappler::xenolith::Mat4 const&",
+								"_typeName": "const stappler::geom::Mat4&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "stappler::xenolith::Mat4 const",
-									"cv_qualifier": "const",
-									"kind": "cv_qualified",
-									"type": {
-										"_typeName": "stappler::xenolith::Mat4",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::xenolith::Mat4",
-											"objects": [{
-												"_fullName": "::stappler::xenolith::Mat4",
-												"_kind": "type alias",
-												"_name": "Mat4",
-												"id": 905241342,
-												"kind": "type alias",
-												"name": "Mat4",
-												"underlying_type": {
-													"_typeName": "geom::Mat4",
-													"kind": "user_defined",
-													"target": {
-														"name": "geom::Mat4",
-														"objects": [{
-															"_fullName": "::stappler::geom::Mat4",
-															"_kind": "class",
-															"_name": "Mat4",
-															"attributes": [{
-																"arguments": [{
-																	"kind": "int_literal",
-																	"spelling": "16"
-																}],
-																"is_variadic": false,
-																"kind": "alignas_",
-																"name": "alignas"
-															}],
-															"class_kind": "class",
-															"comment": "\nDefines a 4 x 4 floating point matrix representing a 3D transformation.\n\nVectors are treated as columns, resulting in a matrix that is represented as follows,\nwhere x, y and z are the translation components of the matrix:\n\n    1  0  0  x\n    0  1  0  y\n    0  0  1  z\n    0  0  0  1\n\nThis matrix class is directly compatible with OpenGL since its elements are\nlaid out in memory exactly as they are expected by OpenGL.\nThe matrix uses column-major format such that array indices increase down column first.\nSince matrix multiplication is not commutative, multiplication must be done in the\ncorrect order when combining transformations. Suppose we have a translation\nmatrix T and a rotation matrix R. To first rotate an object around the origin\nand then translate it, you would multiply the two matrices as TR.\n\nLikewise, to first translate the object and then rotate it, you would do RT.\nSo generally, matrices must be multiplied in the reverse order in which you\nwant the transformations to take place (this also applies to\nthe scale, rotate, and translate methods below; these methods are convenience\nmethods for post-multiplying by a matrix representing a scale, rotation, or translation).\n\nIn the case of repeated local transformations (i.e. rotate around the Z-axis by 0.76 radians,\nthen translate by 2.1 along the X-axis, then ...), it is better to use the Transform class\n(which is optimized for that kind of usage).\n\n@see Transform\n",
-															"id": 3473668624,
-															"is_declaration": false,
-															"is_definition": true,
-															"is_final": false,
-															"kind": "class",
-															"name": "Mat4",
-															"scope": {
-																"name": "Mat4"
-															},
-															"semantic_scope": ""
-														}]
-													}
-												}
-											}]
-										}
-									}
+									"_typeName": "const stappler::geom::Mat4",
+									"kind": "unexposed",
+									"name": "const stappler::geom::Mat4"
 								},
 								"reference_kind": "lvalue"
 							}
@@ -2416,7 +2631,7 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::FrameInfo&,stappler::xenolith::NodeFlags,stappler::xenolith::Mat4 const&,SpanView<stappler::xenolith::basic2d::TransformVertexData>)"
+						"signature": "(stappler::xenolith::FrameInfo&,stappler::xenolith::NodeFlags,const stappler::geom::Mat4&,SpanView<stappler::xenolith::basic2d::TransformVertexData>)"
 					}, {
 						"_fullName": "::stappler::xenolith::material2d::Surface::_interior",
 						"_kind": "member variable",
@@ -3171,6 +3386,68 @@
 						"type": {
 							"_typeName": "bool",
 							"builtin_type_kind": "bool",
+							"kind": "builtin"
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::material2d::Surface::_minHeight",
+						"_kind": "member variable",
+						"_name": "_minHeight",
+						"default_value": {
+							"expression": [{
+								"kind": "identifier",
+								"spelling": "nan"
+							}, {
+								"kind": "punctuation",
+								"spelling": "("
+							}, {
+								"kind": "punctuation",
+								"spelling": ")"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "float",
+								"builtin_type_kind": "float",
+								"kind": "builtin"
+							}
+						},
+						"id": 2195040038,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "_minHeight",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::material2d::Surface::_maxHeight",
+						"_kind": "member variable",
+						"_name": "_maxHeight",
+						"default_value": {
+							"expression": [{
+								"kind": "identifier",
+								"spelling": "nan"
+							}, {
+								"kind": "punctuation",
+								"spelling": "("
+							}, {
+								"kind": "punctuation",
+								"spelling": ")"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "float",
+								"builtin_type_kind": "float",
+								"kind": "builtin"
+							}
+						},
+						"id": 3287482291,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "_maxHeight",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
 							"kind": "builtin"
 						}
 					}],

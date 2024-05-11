@@ -12,6 +12,15 @@
 		"kind": "include directive",
 		"name": "XLCommon.h"
 	}, {
+		"_fullName": "SPDso.h",
+		"_kind": "include directive",
+		"_name": "SPDso.h",
+		"id": 2116684965,
+		"include": "core/core/utils/SPDso.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "SPDso.h"
+	}, {
 		"_fullName": "xkbcommon/xkbcommon.h",
 		"_kind": "include directive",
 		"_name": "xkbcommon/xkbcommon.h",
@@ -3234,12 +3243,12 @@
 						"kind": "access specifier",
 						"name": "protected"
 					}, {
-						"_fullName": "::stappler::xenolith::platform::XkbLibrary::open(void*)",
+						"_fullName": "::stappler::xenolith::platform::XkbLibrary::open(stappler::Dso&)",
 						"_kind": "member function",
 						"_name": "open",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 562131068,
+						"id": 897125701,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -3256,13 +3265,32 @@
 							"kind": "function parameter",
 							"name": "",
 							"type": {
-								"_typeName": "void*",
-								"kind": "pointer",
-								"pointee": {
-									"_typeName": "void",
-									"builtin_type_kind": "void",
-									"kind": "builtin"
-								}
+								"_typeName": "stappler::Dso&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "stappler::Dso",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::Dso",
+										"objects": [{
+											"_fullName": "::stappler::Dso",
+											"_kind": "class",
+											"_name": "Dso",
+											"class_kind": "class",
+											"id": 2090862796,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Dso",
+											"scope": {
+												"name": "Dso"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								},
+								"reference_kind": "lvalue"
 							}
 						}],
 						"ref_qualifier": "none",
@@ -3272,7 +3300,7 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(void*)"
+						"signature": "(stappler::Dso&)"
 					}, {
 						"_fullName": "::stappler::xenolith::platform::XkbLibrary::openAux()",
 						"_kind": "member function",
@@ -3300,66 +3328,62 @@
 						"_fullName": "::stappler::xenolith::platform::XkbLibrary::_handle",
 						"_kind": "member variable",
 						"_name": "_handle",
-						"default_value": {
-							"expression": [{
-								"kind": "keyword",
-								"spelling": "nullptr"
-							}],
-							"kind": "unexposed",
-							"type": {
-								"_typeName": "void*",
-								"kind": "pointer",
-								"pointee": {
-									"_typeName": "void",
-									"builtin_type_kind": "void",
-									"kind": "builtin"
-								}
-							}
-						},
 						"id": 3608191708,
 						"is_mutable": false,
 						"kind": "member variable",
 						"name": "_handle",
 						"type": {
-							"_typeName": "void*",
-							"kind": "pointer",
-							"pointee": {
-								"_typeName": "void",
-								"builtin_type_kind": "void",
-								"kind": "builtin"
+							"_typeName": "stappler::Dso",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::Dso",
+								"objects": [{
+									"_fullName": "::stappler::Dso",
+									"_kind": "class",
+									"_name": "Dso",
+									"class_kind": "class",
+									"id": 2090862796,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "Dso",
+									"scope": {
+										"name": "Dso"
+									},
+									"semantic_scope": ""
+								}]
 							}
 						}
 					}, {
 						"_fullName": "::stappler::xenolith::platform::XkbLibrary::_x11",
 						"_kind": "member variable",
 						"_name": "_x11",
-						"default_value": {
-							"expression": [{
-								"kind": "keyword",
-								"spelling": "nullptr"
-							}],
-							"kind": "unexposed",
-							"type": {
-								"_typeName": "void*",
-								"kind": "pointer",
-								"pointee": {
-									"_typeName": "void",
-									"builtin_type_kind": "void",
-									"kind": "builtin"
-								}
-							}
-						},
 						"id": 303872591,
 						"is_mutable": false,
 						"kind": "member variable",
 						"name": "_x11",
 						"type": {
-							"_typeName": "void*",
-							"kind": "pointer",
-							"pointee": {
-								"_typeName": "void",
-								"builtin_type_kind": "void",
-								"kind": "builtin"
+							"_typeName": "stappler::Dso",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::Dso",
+								"objects": [{
+									"_fullName": "::stappler::Dso",
+									"_kind": "class",
+									"_name": "Dso",
+									"class_kind": "class",
+									"id": 2090862796,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "Dso",
+									"scope": {
+										"name": "Dso"
+									},
+									"semantic_scope": ""
+								}]
 							}
 						}
 					}, {

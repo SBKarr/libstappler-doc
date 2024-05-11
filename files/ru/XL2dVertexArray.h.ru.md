@@ -63,14 +63,14 @@ Title: XL2dVertexArray.h
 Тип: size_t
 
 
-# ::stappler::xenolith::basic2d::VertexArray::Quad::setTextureRect(stappler::xenolith::Rect const&,float,float,bool,bool,bool)
+# ::stappler::xenolith::basic2d::VertexArray::Quad::setTextureRect(const stappler::geom::Rect&,float,float,bool,bool,bool)
 
 ## BRIEF
 
 ## CONTENT
 
 Параметры:
-* stappler::xenolith::Rect const&
+* const stappler::geom::Rect&
 * float
 * float
 * bool
@@ -80,70 +80,70 @@ Title: XL2dVertexArray.h
 Возвращает:
 * stappler::xenolith::basic2d::VertexArray::Quad&
 
-# ::stappler::xenolith::basic2d::VertexArray::Quad::setTexturePoints(stappler::xenolith::Vec2 const&,stappler::xenolith::Vec2 const&,stappler::xenolith::Vec2 const&,stappler::xenolith::Vec2 const&,float,float)
+# ::stappler::xenolith::basic2d::VertexArray::Quad::setTexturePoints(const stappler::geom::Vec2&,const stappler::geom::Vec2&,const stappler::geom::Vec2&,const stappler::geom::Vec2&,float,float)
 
 ## BRIEF
 
 ## CONTENT
 
 Параметры:
-* stappler::xenolith::Vec2 const&
-* stappler::xenolith::Vec2 const&
-* stappler::xenolith::Vec2 const&
-* stappler::xenolith::Vec2 const&
+* const stappler::geom::Vec2&
+* const stappler::geom::Vec2&
+* const stappler::geom::Vec2&
+* const stappler::geom::Vec2&
 * float
 * float
 
 Возвращает:
 * stappler::xenolith::basic2d::VertexArray::Quad&
 
-# ::stappler::xenolith::basic2d::VertexArray::Quad::setGeometry(stappler::xenolith::Vec4 const&,stappler::xenolith::Size2 const&,stappler::xenolith::Mat4 const&)
+# ::stappler::xenolith::basic2d::VertexArray::Quad::setGeometry(const stappler::geom::Vec4&,const stappler::geom::Size2&,const stappler::geom::Mat4&)
 
 ## BRIEF
 
 ## CONTENT
 
 Параметры:
-* stappler::xenolith::Vec4 const&
-* stappler::xenolith::Size2 const&
-* stappler::xenolith::Mat4 const&
+* const stappler::geom::Vec4&
+* const stappler::geom::Size2&
+* const stappler::geom::Mat4&
 
 Возвращает:
 * stappler::xenolith::basic2d::VertexArray::Quad&
 
-# ::stappler::xenolith::basic2d::VertexArray::Quad::setGeometry(stappler::xenolith::Vec4 const&,stappler::xenolith::Size2 const&)
+# ::stappler::xenolith::basic2d::VertexArray::Quad::setGeometry(const stappler::geom::Vec4&,const stappler::geom::Size2&)
 
 ## BRIEF
 
 ## CONTENT
 
 Параметры:
-* stappler::xenolith::Vec4 const&
-* stappler::xenolith::Size2 const&
+* const stappler::geom::Vec4&
+* const stappler::geom::Size2&
 
 Возвращает:
 * stappler::xenolith::basic2d::VertexArray::Quad&
 
-# ::stappler::xenolith::basic2d::VertexArray::Quad::setColor(stappler::xenolith::Color4F const&)
+# ::stappler::xenolith::basic2d::VertexArray::Quad::setColor(const stappler::geom::Color4F&)
 
 ## BRIEF
 
 ## CONTENT
 
 Параметры:
-* stappler::xenolith::Color4F const&
+* const stappler::geom::Color4F&
 
 Возвращает:
 * stappler::xenolith::basic2d::VertexArray::Quad&
 
-# ::stappler::xenolith::basic2d::VertexArray::Quad::setColor(SpanView<stappler::xenolith::Color4F>)
+# ::stappler::xenolith::basic2d::VertexArray::Quad::setColor(SpanView<stappler::geom::Color4F>)
 
 ## BRIEF
 
 ## CONTENT
 
 Параметры:
-* SpanView<stappler::xenolith::Color4F>
+* SpanView<stappler::geom::Color4F>
 
 Возвращает:
 * stappler::xenolith::basic2d::VertexArray::Quad&
@@ -160,7 +160,7 @@ Title: XL2dVertexArray.h
 Возвращает:
 * stappler::xenolith::basic2d::VertexArray::Quad&
 
-# ::stappler::xenolith::basic2d::VertexArray::Quad::drawChar(font::Metrics const&,font::CharLayout const&,int16_t,int16_t,stappler::xenolith::Color4B const&,font::TextDecoration,uint16_t)
+# ::stappler::xenolith::basic2d::VertexArray::Quad::drawChar(font::Metrics const&,char16_t,int16_t,int16_t,const stappler::geom::Color4B&,font::TextDecoration,uint16_t)
 
 ## BRIEF
 
@@ -168,17 +168,17 @@ Title: XL2dVertexArray.h
 
 Параметры:
 * font::Metrics const&
-* font::CharLayout const&
+* char16_t
 * int16_t
 * int16_t
-* stappler::xenolith::Color4B const&
+* const stappler::geom::Color4B&
 * font::TextDecoration
 * uint16_t
 
 Возвращает:
 * stappler::xenolith::basic2d::VertexArray::Quad&
 
-# ::stappler::xenolith::basic2d::VertexArray::Quad::drawUnderlineRect(int16_t,int16_t,uint16_t,uint16_t,stappler::xenolith::Color4B const&)
+# ::stappler::xenolith::basic2d::VertexArray::Quad::drawUnderlineRect(int16_t,int16_t,uint16_t,uint16_t,const stappler::geom::Color4B&)
 
 ## BRIEF
 
@@ -189,7 +189,7 @@ Title: XL2dVertexArray.h
 * int16_t
 * uint16_t
 * uint16_t
-* stappler::xenolith::Color4B const&
+* const stappler::geom::Color4B&
 
 Возвращает:
 * stappler::xenolith::basic2d::VertexArray::Quad&
@@ -313,7 +313,7 @@ Title: XL2dVertexArray.h
 Возвращает:
 * stappler::xenolith::basic2d::VertexArray::Quad
 
-# ::stappler::xenolith::basic2d::VertexArray::updateColor(stappler::xenolith::Color4F const&)
+# ::stappler::xenolith::basic2d::VertexArray::updateColor(const stappler::geom::Color4F&)
 
 ## BRIEF
 
@@ -322,23 +322,10 @@ Title: XL2dVertexArray.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Color4F const&
+* const stappler::geom::Color4F&
 
 
-# ::stappler::xenolith::basic2d::VertexArray::updateColor(stappler::xenolith::Color4F const&,Vector<stappler::xenolith::ColorMask> const&)
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-Параметры:
-* stappler::xenolith::Color4F const&
-* Vector<stappler::xenolith::ColorMask> const&
-
-
-# ::stappler::xenolith::basic2d::VertexArray::updateColorQuads(stappler::xenolith::Color4F const&,Vector<stappler::xenolith::ColorMask> const&)
+# ::stappler::xenolith::basic2d::VertexArray::updateColor(const stappler::geom::Color4F&,Vector<stappler::geom::ColorMask> const&)
 
 ## BRIEF
 
@@ -347,8 +334,21 @@ Title: XL2dVertexArray.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Color4F const&
-* Vector<stappler::xenolith::ColorMask> const&
+* const stappler::geom::Color4F&
+* Vector<stappler::geom::ColorMask> const&
+
+
+# ::stappler::xenolith::basic2d::VertexArray::updateColorQuads(const stappler::geom::Color4F&,Vector<stappler::geom::ColorMask> const&)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* const stappler::geom::Color4F&
+* Vector<stappler::geom::ColorMask> const&
 
 
 # ::stappler::xenolith::basic2d::VertexArray::getVertexCount() const

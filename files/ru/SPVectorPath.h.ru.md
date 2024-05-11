@@ -1,7 +1,7 @@
 Title: SPVectorPath.h
 
 
-# STAPPLER_VG_SPVECTORPATH_H_
+# CORE_VG_SPVECTORPATH_H_
 
 ## BRIEF
 
@@ -142,330 +142,6 @@ Title: SPVectorPath.h
 
 Тип для соединения линий обводки
 
-
-# ::stappler::vg::VectorPath::Params
-
-## BRIEF
-
-Структура параметров пути
-
-## CONTENT
-
-Доступ: public
-
-Структура параметров пути
-
-
-# ::stappler::vg::VectorPath::Params::transform
-
-## BRIEF
-
-Матрица трансформации
-
-## CONTENT
-
-Матрица трансформации
-
-Тип: stappler::geom::Mat4
-
-
-# ::stappler::vg::VectorPath::Params::fillColor
-
-## BRIEF
-
-Цвет заливки
-
-## CONTENT
-
-Цвет заливки
-
-Тип: stappler::geom::Color4B
-
-
-# ::stappler::vg::VectorPath::Params::strokeColor
-
-## BRIEF
-
-Цвет обводки
-
-## CONTENT
-
-Цвет обводки
-
-Тип: stappler::geom::Color4B
-
-
-# ::stappler::vg::VectorPath::Params::style
-
-## BRIEF
-
-Способ рисования объекта
-
-## CONTENT
-
-Способ рисования объекта
-
-Тип: stappler::vg::VectorPath::DrawStyle
-
-
-# ::stappler::vg::VectorPath::Params::strokeWidth
-
-## BRIEF
-
-Ширина обводки
-
-## CONTENT
-
-Ширина обводки
-
-Тип: float
-
-
-# ::stappler::vg::VectorPath::Params::winding
-
-## BRIEF
-
-Способ заливки
-
-## CONTENT
-
-Способ заливки
-
-Тип: stappler::vg::VectorPath::Winding
-
-
-# ::stappler::vg::VectorPath::Params::lineCup
-
-## BRIEF
-
-Маркер завершения для обводки
-
-## CONTENT
-
-Маркер завершения для обводки
-
-Тип: stappler::vg::VectorPath::LineCup
-
-
-# ::stappler::vg::VectorPath::Params::lineJoin
-
-## BRIEF
-
-Маркер соединения линий обводки
-
-## CONTENT
-
-Маркер соединения линий обводки
-
-Тип: stappler::vg::VectorPath::LineJoin
-
-
-# ::stappler::vg::VectorPath::Params::miterLimit
-
-## BRIEF
-
-Предел для усечения острых углов в обводке
-
-## CONTENT
-
-Предел для усечения острых углов в обводке
-
-Тип: float
-
-
-# ::stappler::vg::VectorPath::Params::isAntialiased
-
-## BRIEF
-
-Флаг включённого вершинного антиалиасинга
-
-## CONTENT
-
-Флаг включённого вершинного антиалиасинга
-
-Тип: bool
-
-
-# ::stappler::vg::VectorPath::CommandData
-
-## BRIEF
-
-Данные команды рисования пути
-
-## CONTENT
-
-Доступ: public
-
-Данные команды рисования пути. Команда ассоциируется с от нуля до трёх таких ячеек данных при кодировании.
-
-
-# ::stappler::vg::VectorPath::CommandData::
-
-## BRIEF
-
-Безымянная структура для хранения данных
-
-## CONTENT
-
-Безымянная структура для хранения данных
-
-
-# ::stappler::vg::VectorPath::CommandData::x
-
-## BRIEF
-
-Координата x точки
-
-## CONTENT
-
-Тип: float
-
-Координата x точки
-
-
-# ::stappler::vg::VectorPath::CommandData::y
-
-## BRIEF
-
-Координата y точки
-
-## CONTENT
-
-Тип: float
-
-Координата y точки
-
-
-# ::stappler::vg::VectorPath::CommandData::p
-
-## BRIEF
-
-Структура для хранения точки
-
-## CONTENT
-
-Структура для хранения точки
-
-Тип: 
-
-
-# ::stappler::vg::VectorPath::CommandData::
-
-## BRIEF
-
-Безымянная структура для хранения данных
-
-## CONTENT
-
-Безымянная структура для хранения данных
-
-
-# ::stappler::vg::VectorPath::CommandData::v
-
-## BRIEF
-
-Угол поворота эллипса для дуги
-
-## CONTENT
-
-Угол поворота эллипса для дуги
-
-Тип: float
-
-
-# ::stappler::vg::VectorPath::CommandData::a
-
-## BRIEF
-
-Флаг перевёрнутой дуги
-
-## CONTENT
-
-Флаг перевёрнутой дуги
-
-Тип: bool
-
-
-# ::stappler::vg::VectorPath::CommandData::b
-
-## BRIEF
-
-Флаг большей части дуги
-
-## CONTENT
-
-Тип: bool
-
-
-Флаг большей части дуги
-
-
-# ::stappler::vg::VectorPath::CommandData::f
-
-## BRIEF
-
-Структура для хранения данных дуги
-
-## CONTENT
-
-Структура для хранения данных дуги
-
-Тип: 
-
-
-# ::stappler::vg::VectorPath::CommandData::CommandData(float,float)
-
-## BRIEF
-
-Создаёт данные для точки
-
-## CONTENT
-
-Создаёт данные для точки
-
-Параметры:
-* float
-* float
-
-
-# ::stappler::vg::VectorPath::CommandData::CommandData(float,bool,bool)
-
-## BRIEF
-
-Создаёт данные для параметров дуги
-
-## CONTENT
-
-Создаёт данные для параметров дуги
-
-Параметры:
-* float
-* bool
-* bool
-
-
-# ::stappler::vg::VectorPath::Command
-
-## BRIEF
-
-Тип команды отрисовки
-
-## CONTENT
-
-Доступ: public
-
-
-Тип команды отрисовки
-
-Значения:
-* MoveTo - перемещение к началу нового контура
-* LineTo - прямая линия
-* QuadTo - квадратичная кривая Безье
-* CubicTo - кубическая кривая Безье
-* ArcTo - дуга до точки
-* ClosePath - заверение пути
-
-
 # ::stappler::vg::VectorPath::VectorPath()
 
 ## BRIEF
@@ -578,7 +254,7 @@ Title: SPVectorPath.h
 Возвращает:
 * bool - true при успешной инициализации
 
-# ::stappler::vg::VectorPath::init(stappler::StringView const&)
+# ::stappler::vg::VectorPath::init(stappler::StringView)
 
 ## BRIEF
 
@@ -631,6 +307,78 @@ Title: SPVectorPath.h
 
 Возвращает:
 * bool - true при успешной инициализации
+
+# ::stappler::vg::VectorPath::init(PathData<memory::StandartInterface> const&)
+
+## BRIEF
+
+Создаёт путь из предопределённых данных пути
+
+## CONTENT
+
+Доступ: public
+
+Создаёт путь из предопределённых данных пути
+
+Параметры:
+* PathData<memory::StandartInterface> const&
+
+Возвращает:
+* bool
+
+# ::stappler::vg::VectorPath::init(PathData<memory::PoolInterface> const&)
+
+## BRIEF
+
+Создаёт путь из предопределённых данных пути
+
+## CONTENT
+
+Доступ: public
+
+Создаёт путь из предопределённых данных пути
+
+Параметры:
+* PathData<memory::PoolInterface> const&
+
+Возвращает:
+* bool
+
+# ::stappler::vg::VectorPath::openForWriting(Callback<void (stappler::vg::PathWriter &)> const&)
+
+## BRIEF
+
+Открывает путь на запись, передаёт в функтор интерфейс записи
+
+## CONTENT
+
+Доступ: public
+
+Открывает путь на запись, передаёт в функтор интерфейс записи
+
+Параметры:
+* Callback<void (stappler::vg::PathWriter &)> const&
+
+Возвращает:
+* stappler::vg::VectorPath&
+
+# ::stappler::vg::VectorPath::setParams(stappler::vg::PathParams const&)
+
+## BRIEF
+
+Устанавливает графические параметры пути
+
+## CONTENT
+
+Доступ: public
+
+Устанавливает графические параметры пути
+
+Параметры:
+* stappler::vg::PathParams const&
+
+Возвращает:
+* stappler::vg::VectorPath&
 
 # ::stappler::vg::VectorPath::addPath(stappler::vg::VectorPath const&)
 
@@ -700,387 +448,6 @@ Title: SPVectorPath.h
 
 Возвращает:
 * size_t
-
-# ::stappler::vg::VectorPath::moveTo(float,float)
-
-## BRIEF
-
-Начинает новый контур на указанной точке
-
-## CONTENT
-
-Доступ: public
-
-Начинает новый контур на указанной точке
-
-Параметры:
-* float - x
-* float - y
-
-Возвращает:
-* stappler::vg::VectorPath&
-
-# ::stappler::vg::VectorPath::moveTo(stappler::geom::Vec2 const&)
-
-## BRIEF
-
-Начинает новый контур на указанной точке
-
-## CONTENT
-
-Доступ: public
-
-Начинает новый контур на указанной точке
-
-Параметры:
-* stappler::geom::Vec2 const&
-
-Возвращает:
-* stappler::vg::VectorPath&
-
-# ::stappler::vg::VectorPath::lineTo(float,float)
-
-## BRIEF
-
-Создаёт прямую линию до точки
-
-## CONTENT
-
-Доступ: public
-
-Создаёт прямую линию до точки
-
-Параметры:
-* float - x
-* float - y
-
-Возвращает:
-* stappler::vg::VectorPath&
-
-# ::stappler::vg::VectorPath::lineTo(stappler::geom::Vec2 const&)
-
-## BRIEF
-
-Создаёт прямую линию до точки
-
-## CONTENT
-
-Доступ: public
-
-Создаёт прямую линию до точки
-
-Параметры:
-* stappler::geom::Vec2 const&
-
-Возвращает:
-* stappler::vg::VectorPath&
-
-# ::stappler::vg::VectorPath::quadTo(float,float,float,float)
-
-## BRIEF
-
-Создаёт квадратичную кривую Безье до точки
-
-## CONTENT
-
-Доступ: public
-
-Создаёт квадратичную кривую Безье до точки
-
-Параметры:
-* float - cx
-* float - cy
-* float - x
-* float - y
-
-Возвращает:
-* stappler::vg::VectorPath&
-
-# ::stappler::vg::VectorPath::quadTo(stappler::geom::Vec2 const&,stappler::geom::Vec2 const&)
-
-## BRIEF
-
-Создаёт квадратичную кривую Безье до точки
-
-## CONTENT
-
-Доступ: public
-
-Создаёт квадратичную кривую Безье до точки
-
-Параметры:
-* stappler::geom::Vec2 const& - контрольная точка
-* stappler::geom::Vec2 const& - целевая точка
-
-Возвращает:
-* stappler::vg::VectorPath&
-
-# ::stappler::vg::VectorPath::cubicTo(float,float,float,float,float,float)
-
-## BRIEF
-
-Создаёт кубическую кривую Безье до точки
-
-## CONTENT
-
-Доступ: public
-
-Создаёт кубическую кривую Безье до точки
-
-Параметры:
-* float - c1x
-* float - c1y
-* float - c2x
-* float - c2y
-* float - x
-* float - y
-
-Возвращает:
-* stappler::vg::VectorPath&
-
-# ::stappler::vg::VectorPath::cubicTo(stappler::geom::Vec2 const&,stappler::geom::Vec2 const&,stappler::geom::Vec2 const&)
-
-## BRIEF
-
-Создаёт кубическую кривую Безье до точки
-
-## CONTENT
-
-Доступ: public
-
-Создаёт кубическую кривую Безье до точки
-
-Параметры:
-* stappler::geom::Vec2 const& - первая контрольная точка
-* stappler::geom::Vec2 const& - вторая контрольная точка
-* stappler::geom::Vec2 const& - целевая точка
-
-Возвращает:
-* stappler::vg::VectorPath&
-
-# ::stappler::vg::VectorPath::arcTo(float,float,float,bool,bool,float,float)
-
-## BRIEF
-
-Создаёт эллиптическую дугу до точки
-
-## CONTENT
-
-Доступ: public
-
-Создаёт эллиптическую дугу до точки
-
-Параметры:
-* float - rx
-* float - ry
-* float - поворот элипса
-* bool - флаг переворота дуги
-* bool - флаг большого семента дуги
-* float - x
-* float - y
-
-Возвращает:
-* stappler::vg::VectorPath&
-
-# ::stappler::vg::VectorPath::arcTo(stappler::geom::Vec2 const&,float,bool,bool,stappler::geom::Vec2 const&)
-
-## BRIEF
-
-Создаёт эллиптическую дугу до точки
-
-## CONTENT
-
-Доступ: public
-
-Создаёт эллиптическую дугу до точки
-
-Доступ: public
-
-Параметры:
-* stappler::geom::Vec2 const& - радиусы эллипса
-* float - поворот элипса
-* bool - флаг переворота дуги
-* bool - флаг большого семента дуги
-* stappler::geom::Vec2 const& - целевая точка
-
-Возвращает:
-* stappler::vg::VectorPath&
-
-# ::stappler::vg::VectorPath::closePath()
-
-## BRIEF
-
-Завершает текущий контур
-
-## CONTENT
-
-Доступ: public
-
-Завершает текущий контур
-
-Возвращает:
-* stappler::vg::VectorPath&
-
-# ::stappler::vg::VectorPath::addRect(stappler::geom::Rect const&)
-
-## BRIEF
-
-Добавляет контур прямоугольника
-
-## CONTENT
-
-Доступ: public
-
-Добавляет контур прямоугольника
-
-Параметры:
-* stappler::geom::Rect const&
-
-Возвращает:
-* stappler::vg::VectorPath&
-
-# ::stappler::vg::VectorPath::addRect(stappler::geom::Rect const&,float,float)
-
-## BRIEF
-
-Добавляет контур прямоугольника со скруглёнными углами
-
-## CONTENT
-
-Доступ: public
-
-Добавляет контур прямоугольника со скруглёнными углами
-
-Параметры:
-* stappler::geom::Rect const&
-* float - радиус скругления по x
-* float - радиус скругления по y
-
-Возвращает:
-* stappler::vg::VectorPath&
-
-# ::stappler::vg::VectorPath::addRect(float,float,float,float)
-
-## BRIEF
-
-Добавляет контур прямоугольника
-
-## CONTENT
-
-Доступ: public
-
-Добавляет контур прямоугольника
-
-Параметры:
-* float - x
-* float - y
-* float - ширина
-* float - высота
-
-Возвращает:
-* stappler::vg::VectorPath&
-
-# ::stappler::vg::VectorPath::addOval(stappler::geom::Rect const&)
-
-## BRIEF
-
-Добавляет контур эллипса, вписанного в прямоугольник
-
-## CONTENT
-
-Доступ: public
-
-Добавляет контур эллипса, вписанного в прямоугольник
-
-Параметры:
-* stappler::geom::Rect const&
-
-Возвращает:
-* stappler::vg::VectorPath&
-
-# ::stappler::vg::VectorPath::addCircle(float,float,float)
-
-## BRIEF
-
-Добавляет контур круга
-
-## CONTENT
-
-Доступ: public
-
-Добавляет контур круга
-
-Параметры:
-* float - x
-* float - y
-* float - радиус
-
-Возвращает:
-* stappler::vg::VectorPath&
-
-# ::stappler::vg::VectorPath::addEllipse(float,float,float,float)
-
-## BRIEF
-
-Добавляет контур эллипса
-
-## CONTENT
-
-Доступ: public
-
-Добавляет контур эллипса
-
-Параметры:
-* float - x
-* float - y
-* float - радиус по x
-* float - радиус по y
-
-Возвращает:
-* stappler::vg::VectorPath&
-
-# ::stappler::vg::VectorPath::addArc(stappler::geom::Rect const&,float,float)
-
-## BRIEF
-
-Добавляет контур сектора эллипса
-
-## CONTENT
-
-Доступ: public
-
-Добавляет контур сектора эллипса
-
-Параметры:
-* stappler::geom::Rect const& - ограничивающий прямоугольник
-* float - наальный угол в радианах
-* float - угол поворота от начального в радианах
-
-Возвращает:
-* stappler::vg::VectorPath&
-
-# ::stappler::vg::VectorPath::addRect(float,float,float,float,float,float)
-
-## BRIEF
-
-Добавляет прямоугольник со скруглёнными углами
-
-## CONTENT
-
-Доступ: public
-
-Добавляет прямоугольник со скруглёнными углами
-
-Параметры:
-* float - x
-* float - y
-* float - ширина
-* float - высота
-* float - радиус скругления по x
-* float - радиус скругления по y
-
-Возвращает:
-* stappler::vg::VectorPath&
 
 # ::stappler::vg::VectorPath::setFillColor(stappler::geom::Color4B const&)
 
@@ -1589,24 +956,6 @@ Title: SPVectorPath.h
 Возвращает:
 * stappler::vg::VectorPath&
 
-# ::stappler::vg::VectorPath::setParams(stappler::vg::VectorPath::Params const&)
-
-## BRIEF
-
-Устанавливает параметры для пути
-
-## CONTENT
-
-Доступ: public
-
-Устанавливает параметры для пути
-
-Параметры:
-* stappler::vg::VectorPath::Params const&
-
-Возвращает:
-* stappler::vg::VectorPath&
-
 # ::stappler::vg::VectorPath::getParams() const
 
 ## BRIEF
@@ -1617,7 +966,7 @@ Title: SPVectorPath.h
 
 Доступ: public
 
-Устанавливает параметры для пути
+Возвращает параметры для пути
 
 Возвращает:
 * stappler::vg::VectorPath::Params
@@ -1637,7 +986,7 @@ Title: SPVectorPath.h
 Возвращает:
 * bool
 
-# ::stappler::vg::VectorPath::reserve(size_t,size_t)
+# ::stappler::vg::VectorPath::reserve(size_t)
 
 ## BRIEF
 
@@ -1651,8 +1000,21 @@ Title: SPVectorPath.h
 
 Параметры:
 * size_t - число команд
-* size_t - число слотов для данных команд
 
+# ::stappler::vg::VectorPath::getWriter()
+
+## BRIEF
+
+Создаёт и возвращает интерфейс записи пути
+
+## CONTENT
+
+Доступ: protected
+
+Создаёт и возвращает интерфейс записи пути для `openForWriting`
+
+Возвращает:
+* stappler::vg::PathWriter
 
 # ::stappler::vg::VectorPath::getCommands() const
 
@@ -1762,46 +1124,16 @@ Title: SPVectorPath.h
 Возвращает:
 * size_t
 
-# ::stappler::vg::VectorPath::_points
+# ::stappler::vg::VectorPath::_data
 
 ## BRIEF
 
-Слоты данных команд
+Данные пути
 
 ## CONTENT
 
 Доступ: protected
 
-Слоты данных команд
+Данные пути
 
-Тип: Interface::VectorType<CommandData>
-
-
-# ::stappler::vg::VectorPath::_commands
-
-## BRIEF
-
-Список команд
-
-## CONTENT
-
-Доступ: protected
-
-Список команд
-
-Тип: Interface::VectorType<Command>
-
-
-# ::stappler::vg::VectorPath::_params
-
-## BRIEF
-
-Параметры пути
-
-## CONTENT
-
-Доступ: protected
-
-Параметры пути
-
-Тип: stappler::vg::VectorPath::Params
+Тип: PathData<stappler::vg::Interface>

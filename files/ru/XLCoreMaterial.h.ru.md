@@ -5,21 +5,32 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Заголовок общей системы материалов
+
 ## CONTENT
 
+Заголовок общей системы материалов
 
 # ::stappler::xenolith::core::MaterialId
 
 ## BRIEF
 
+Тип идентификатора материала
+
 ## CONTENT
+
+Тип идентификатора материала
 
 
 # ::stappler::xenolith::core::MaterialInputData
 
 ## BRIEF
 
+Данные для загрузки материалов
+
 ## CONTENT
+
+Данные для загрузки материалов
 
 Базовые классы:
 * AttachmentInputData
@@ -29,7 +40,11 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Вложение для хранения материалов
+
 ## CONTENT
+
+Вложение для хранения материалов
 
 Тип: stappler::xenolith::core::MaterialAttachment const*
 
@@ -38,7 +53,11 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Материалы для добавления или обновления
+
 ## CONTENT
+
+Материалы для добавления или обновления
 
 Тип: Vector<Rc<stappler::xenolith::core::Material>>
 
@@ -47,7 +66,11 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Материалы для удаления
+
 ## CONTENT
+
+Материалы для удаления
 
 Тип: Vector<stappler::xenolith::core::MaterialId>
 
@@ -56,7 +79,11 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Обновленные материалы динамических изображений
+
 ## CONTENT
+
+Обновленные материалы динамических изображений
 
 Тип: Vector<stappler::xenolith::core::MaterialId>
 
@@ -65,7 +92,11 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Функция для вызова при завершении обновления
+
 ## CONTENT
+
+Функция для вызова при завершении обновления
 
 Тип: Function<void ()>
 
@@ -74,14 +105,21 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Тип изображения для материала
+
 ## CONTENT
 
+Тип изображения для материала
 
 # ::stappler::xenolith::core::MaterialImage::image
 
 ## BRIEF
 
+Данные изображения
+
 ## CONTENT
+
+Данные изображения
 
 Тип: stappler::xenolith::core::ImageData const*
 
@@ -90,7 +128,11 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Динамическое изображение
+
 ## CONTENT
+
+Динамическое изображение
 
 Тип: Rc<stappler::xenolith::core::DynamicImageInstance>
 
@@ -99,7 +141,11 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Параметры отображения
+
 ## CONTENT
+
+Параметры отображения
 
 Тип: stappler::xenolith::core::ImageViewInfo
 
@@ -108,7 +154,11 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Отображение
+
 ## CONTENT
+
+Отображение
 
 Тип: Rc<stappler::xenolith::core::ImageView>
 
@@ -117,7 +167,11 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Индекс семплера
+
 ## CONTENT
+
+Индекс семплера
 
 Тип: uint16_t
 
@@ -126,7 +180,11 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Индекс набора, в котором находится материал
+
 ## CONTENT
+
+Индекс набора, в котором находится материал
 
 Тип: uint32_t
 
@@ -135,7 +193,11 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Индекс дескриптора изображения
+
 ## CONTENT
+
+Индекс дескриптора изображения
 
 Тип: uint32_t
 
@@ -144,7 +206,11 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Проверяет, может ли изображения использовать дескрипторы совместно с другим
+
 ## CONTENT
+
+Проверяет, может ли изображения использовать дескрипторы совместно с другим. Оптимизация числа дескрипторов
 
 Параметры:
 * stappler::xenolith::core::MaterialImage const&
@@ -156,7 +222,11 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Набор материалов
+
 ## CONTENT
+
+Набор материалов. Набор неизменен весь срок своей жизни кроме момента настройки. При обновлении создаётся новый набор.
 
 Базовые классы:
 * Ref
@@ -166,44 +236,60 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Тип слота изображения
+
 ## CONTENT
 
 Доступ: public
+
+Тип слота изображения
 
 
 # ::stappler::xenolith::core::MaterialSet::EncodeCallback
 
 ## BRIEF
 
+Функция для кодирования данных материала
+
 ## CONTENT
 
 Доступ: public
+
+Функция для кодирования данных материала
 
 
 # ::stappler::xenolith::core::MaterialSet::~MaterialSet()
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::core::MaterialSet::init(stappler::xenolith::core::BufferInfo const&,stappler::xenolith::core::MaterialSet::EncodeCallback const&,uint32_t,uint32_t,uint32_t,stappler::xenolith::core::MaterialAttachment const*)
 
 ## BRIEF
 
+Создаёт набор материалов
+
 ## CONTENT
 
 Доступ: public
 
+Создаёт набор материалов
+
 Параметры:
-* stappler::xenolith::core::BufferInfo const&
-* stappler::xenolith::core::MaterialSet::EncodeCallback const&
-* uint32_t
-* uint32_t
-* uint32_t
-* stappler::xenolith::core::MaterialAttachment const*
+* stappler::xenolith::core::BufferInfo const& - параметры буфера материалов
+* stappler::xenolith::core::MaterialSet::EncodeCallback const& - функция кодирования данных
+* uint32_t - размер одного материала в буфере
+* uint32_t - число изобраений
+* uint32_t - число буферов
+* stappler::xenolith::core::MaterialAttachment const* - вложение для материалов
 
 Возвращает:
 * bool
@@ -212,9 +298,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Копирует набор
+
 ## CONTENT
 
 Доступ: public
+
+Копирует набор
 
 Параметры:
 * Rc<stappler::xenolith::core::MaterialSet> const&
@@ -226,9 +316,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Записывает данные материала в буфер
+
 ## CONTENT
 
 Доступ: public
+
+Записывает данные материала в буфер
 
 Параметры:
 * uint8_t*
@@ -241,50 +335,66 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Очищает набор
+
 ## CONTENT
 
 Доступ: public
+
+Очищает набор
 
 
 # ::stappler::xenolith::core::MaterialSet::updateMaterials(Rc<stappler::xenolith::core::MaterialInputData> const&,Callback<Rc<stappler::xenolith::core::ImageView> (const stappler::xenolith::core::MaterialImage &)> const&)
 
 ## BRIEF
 
+Обновляет материалы в наборе
+
 ## CONTENT
 
 Доступ: public
 
+Обновляет материалы в наборе
+
 Параметры:
 * Rc<stappler::xenolith::core::MaterialInputData> const&
-* Callback<Rc<stappler::xenolith::core::ImageView> (const stappler::xenolith::core::MaterialImage &)> const&
+* Callback<Rc<stappler::xenolith::core::ImageView> (const stappler::xenolith::core::MaterialImage &)> const& - функция для создания отображений изображений
 
 Возвращает:
-* Vector<Rc<stappler::xenolith::core::Material>>
+* Vector<Rc<stappler::xenolith::core::Material>> - обновлеённые материалы в наборе
 
 # ::stappler::xenolith::core::MaterialSet::updateMaterials(Vector<Rc<stappler::xenolith::core::Material>> const&,SpanView<stappler::xenolith::core::MaterialId>,SpanView<stappler::xenolith::core::MaterialId>,Callback<Rc<stappler::xenolith::core::ImageView> (const stappler::xenolith::core::MaterialImage &)> const&)
 
 ## BRIEF
 
+Обновляет материалы в наборе
+
 ## CONTENT
 
 Доступ: public
 
+Обновляет материалы в наборе
+
 Параметры:
-* Vector<Rc<stappler::xenolith::core::Material>> const&
-* SpanView<stappler::xenolith::core::MaterialId>
-* SpanView<stappler::xenolith::core::MaterialId>
-* Callback<Rc<stappler::xenolith::core::ImageView> (const stappler::xenolith::core::MaterialImage &)> const&
+* Vector<Rc<stappler::xenolith::core::Material>> const& - новые материалы
+* SpanView<stappler::xenolith::core::MaterialId> - материалы для удаления
+* SpanView<stappler::xenolith::core::MaterialId> - динамические материалы
+* Callback<Rc<stappler::xenolith::core::ImageView> (const stappler::xenolith::core::MaterialImage &)> const& - функция для создания отображений изображений
 
 Возвращает:
-* Vector<Rc<stappler::xenolith::core::Material>>
+* Vector<Rc<stappler::xenolith::core::Material>> - обновлеённые материалы в наборе
 
 # ::stappler::xenolith::core::MaterialSet::getInfo() const
 
 ## BRIEF
 
+Возвращает параметры буфера
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает параметры буфера
 
 Возвращает:
 * stappler::xenolith::core::BufferInfo const&
@@ -293,9 +403,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Вовращает размер одного материала в буфере
+
 ## CONTENT
 
 Доступ: public
+
+Вовращает размер одного материала в буфере
 
 Возвращает:
 * uint32_t
@@ -304,9 +418,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Число изображений
+
 ## CONTENT
 
 Доступ: public
+
+Число изображений
 
 Возвращает:
 * uint32_t
@@ -315,9 +433,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Поколение набора
+
 ## CONTENT
 
 Доступ: public
+
+Поколение набора
 
 Возвращает:
 * uint64_t
@@ -326,9 +448,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Возвращает активные материалы
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает активные материалы
 
 Возвращает:
 * HashMap<stappler::xenolith::core::MaterialId, Rc<stappler::xenolith::core::Material>> const&
@@ -337,9 +463,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Устанавливает буфер материалов
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает буфер материалов
 
 Параметры:
 * Rc<stappler::xenolith::core::BufferObject>&&
@@ -350,9 +480,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Возвращает буфер материалов
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает буфер материалов
 
 Возвращает:
 * Rc<stappler::xenolith::core::BufferObject>
@@ -361,9 +495,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Возвращает порядок упаковки материалов
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает порядок упаковки материалов
 
 Возвращает:
 * HashMap<stappler::xenolith::core::MaterialId, uint32_t> const&
@@ -372,9 +510,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Возвращает данные укладки материалов
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает данные укладки материалов
 
 Возвращает:
 * Vector<stappler::xenolith::core::MaterialLayout>&
@@ -383,9 +525,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Возвращает укладку по индексу
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает укладку по индексу
 
 Параметры:
 * uint32_t
@@ -397,9 +543,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Возвращает материал по идентификатору
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает материал по идентификатору
 
 Параметры:
 * stappler::xenolith::core::MaterialId
@@ -411,9 +561,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Возвращает порядковый номер материала
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает порядковый номер материала
 
 Параметры:
 * stappler::xenolith::core::MaterialId
@@ -425,9 +579,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Удаляет материал из набора
+
 ## CONTENT
 
 Доступ: protected
+
+Удаляет материал из набора
 
 Параметры:
 * stappler::xenolith::core::Material*
@@ -437,9 +595,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Заполняет изображения материала
+
 ## CONTENT
 
 Доступ: protected
+
+Заполняет изображения материала
 
 Параметры:
 * stappler::xenolith::core::Material*
@@ -451,9 +613,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Параметры буфера
+
 ## CONTENT
 
 Доступ: protected
+
+Параметры буфера
 
 Тип: stappler::xenolith::core::BufferInfo
 
@@ -462,9 +628,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Функция кодирования материала
+
 ## CONTENT
 
 Доступ: protected
+
+Функция кодирования материала
 
 Тип: EncodeCallback
 
@@ -473,9 +643,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Размер одного материала в буфере
+
 ## CONTENT
 
 Доступ: protected
+
+Размер одного материала в буфере
 
 Тип: uint32_t
 
@@ -484,9 +658,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Число изображений
+
 ## CONTENT
 
 Доступ: protected
+
+Число изображений
 
 Тип: uint32_t
 
@@ -495,9 +673,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Число буферов
+
 ## CONTENT
 
 Доступ: protected
+
+Число буферов
 
 Тип: uint32_t
 
@@ -506,9 +688,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Поколение набора
+
 ## CONTENT
 
 Доступ: protected
+
+Поколение набора
 
 Тип: uint32_t
 
@@ -517,9 +703,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Материалы
+
 ## CONTENT
 
 Доступ: protected
+
+Материалы
 
 Тип: HashMap<stappler::xenolith::core::MaterialId, Rc<stappler::xenolith::core::Material>>
 
@@ -528,9 +718,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Порядок упаковки материалов
+
 ## CONTENT
 
 Доступ: protected
+
+Порядок упаковки материалов
 
 Тип: HashMap<stappler::xenolith::core::MaterialId, uint32_t>
 
@@ -539,9 +733,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Укладки материалов
+
 ## CONTENT
 
 Доступ: protected
+
+Укладки материалов
 
 Тип: Vector<stappler::xenolith::core::MaterialLayout>
 
@@ -550,9 +748,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Буфер материалов
+
 ## CONTENT
 
 Доступ: protected
+
+Буфер материалов
 
 Тип: Rc<stappler::xenolith::core::BufferObject>
 
@@ -561,9 +763,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Исходное вложение
+
 ## CONTENT
 
 Доступ: protected
+
+Исходное вложение
 
 Тип: stappler::xenolith::core::MaterialAttachment const*
 
@@ -572,7 +778,11 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Объект материала
+
 ## CONTENT
+
+Объект материала. Объект неизменен во время работы.
 
 Базовые классы:
 * Ref
@@ -582,9 +792,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Начальный идентификатор
+
 ## CONTENT
 
 Доступ: public
+
+Начальный идентификатор
 
 Тип: auto const
 
@@ -593,104 +807,132 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Данные используемого пайплайна
+
 ## CONTENT
 
 Доступ: public
+
+Данные используемого пайплайна
 
 
 # ::stappler::xenolith::core::Material::~Material()
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
 
+Деструктор
 
-# ::stappler::xenolith::core::Material::init(stappler::xenolith::core::MaterialId,stappler::xenolith::core::Material::PipelineData const*,Vector<stappler::xenolith::core::MaterialImage>&&,stappler::mem_std::Bytes&&)
+
+# ::stappler::xenolith::core::Material::init(stappler::xenolith::core::MaterialId,stappler::xenolith::core::Material::PipelineData const*,Vector<stappler::xenolith::core::MaterialImage>&&,Rc<stappler::mem_std::Ref>&&)
 
 ## BRIEF
 
+Создаёт материал
+
 ## CONTENT
 
 Доступ: public
 
+Создаёт материал
+
 Параметры:
-* stappler::xenolith::core::MaterialId
+* stappler::xenolith::core::MaterialId - идентификатор
 * stappler::xenolith::core::Material::PipelineData const*
 * Vector<stappler::xenolith::core::MaterialImage>&&
-* stappler::mem_std::Bytes&&
+* Rc<stappler::mem_std::Ref>&&
 
 Возвращает:
 * bool
 
-# ::stappler::xenolith::core::Material::init(stappler::xenolith::core::MaterialId,stappler::xenolith::core::Material::PipelineData const*,Rc<stappler::xenolith::core::DynamicImageInstance> const&,stappler::mem_std::Bytes&&)
+# ::stappler::xenolith::core::Material::init(stappler::xenolith::core::MaterialId,stappler::xenolith::core::Material::PipelineData const*,Rc<stappler::xenolith::core::DynamicImageInstance> const&,Rc<stappler::mem_std::Ref>&&)
 
 ## BRIEF
+
+Создаёт материал
 
 ## CONTENT
 
 Доступ: public
 
+Создаёт материал
+
 Параметры:
-* stappler::xenolith::core::MaterialId
+* stappler::xenolith::core::MaterialId - идентификатор
 * stappler::xenolith::core::Material::PipelineData const*
 * Rc<stappler::xenolith::core::DynamicImageInstance> const&
-* stappler::mem_std::Bytes&&
+* Rc<stappler::mem_std::Ref>&&
 
 Возвращает:
 * bool
 
-# ::stappler::xenolith::core::Material::init(stappler::xenolith::core::MaterialId,stappler::xenolith::core::Material::PipelineData const*,stappler::xenolith::core::ImageData const*,stappler::mem_std::Bytes&&,bool)
+# ::stappler::xenolith::core::Material::init(stappler::xenolith::core::MaterialId,stappler::xenolith::core::Material::PipelineData const*,stappler::xenolith::core::ImageData const*,Rc<stappler::mem_std::Ref>&&,bool)
 
 ## BRIEF
+
+Создаёт материал
 
 ## CONTENT
 
 Доступ: public
 
+Создаёт материал
+
 Параметры:
-* stappler::xenolith::core::MaterialId
+* stappler::xenolith::core::MaterialId - идентификатор
 * stappler::xenolith::core::Material::PipelineData const*
 * stappler::xenolith::core::ImageData const*
-* stappler::mem_std::Bytes&&
+* Rc<stappler::mem_std::Ref>&&
 * bool
 
 Возвращает:
 * bool
 
-# ::stappler::xenolith::core::Material::init(stappler::xenolith::core::MaterialId,stappler::xenolith::core::Material::PipelineData const*,stappler::xenolith::core::ImageData const*,stappler::xenolith::core::ColorMode,stappler::mem_std::Bytes&&,bool)
+# ::stappler::xenolith::core::Material::init(stappler::xenolith::core::MaterialId,stappler::xenolith::core::Material::PipelineData const*,stappler::xenolith::core::ImageData const*,stappler::xenolith::core::ColorMode,Rc<stappler::mem_std::Ref>&&,bool)
 
 ## BRIEF
+
+Создаёт материал
 
 ## CONTENT
 
 Доступ: public
 
+Создаёт материал
+
 Параметры:
-* stappler::xenolith::core::MaterialId
+* stappler::xenolith::core::MaterialId - идентификатор
 * stappler::xenolith::core::Material::PipelineData const*
 * stappler::xenolith::core::ImageData const*
 * stappler::xenolith::core::ColorMode
-* stappler::mem_std::Bytes&&
+* Rc<stappler::mem_std::Ref>&&
 * bool
 
 Возвращает:
 * bool
 
-# ::stappler::xenolith::core::Material::init(stappler::xenolith::core::Material const*,Rc<stappler::xenolith::core::ImageObject>&&,Rc<stappler::xenolith::core::DataAtlas>&&,stappler::mem_std::Bytes&&)
+# ::stappler::xenolith::core::Material::init(stappler::xenolith::core::Material const*,Rc<stappler::xenolith::core::ImageObject>&&,Rc<stappler::xenolith::core::DataAtlas>&&,Rc<stappler::mem_std::Ref>&&)
 
 ## BRIEF
+
+Создаёт материал, копируя другой материал
 
 ## CONTENT
 
 Доступ: public
+
+Создаёт материал, копируя другой материал
 
 Параметры:
 * stappler::xenolith::core::Material const*
 * Rc<stappler::xenolith::core::ImageObject>&&
 * Rc<stappler::xenolith::core::DataAtlas>&&
-* stappler::mem_std::Bytes&&
+* Rc<stappler::mem_std::Ref>&&
 
 Возвращает:
 * bool
@@ -699,9 +941,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Создаёт материал, копируя другой материал
+
 ## CONTENT
 
 Доступ: public
+
+Создаёт материал, копируя другой материал
 
 Параметры:
 * stappler::xenolith::core::Material const*
@@ -714,9 +960,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Возвращает идентиикатор
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает идентиикатор
 
 Возвращает:
 * stappler::xenolith::core::MaterialId
@@ -725,9 +975,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Возвращает используемый пайплайн
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает используемый пайплайн
 
 Возвращает:
 * PipelineData*
@@ -736,31 +990,28 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Возвращает изображения
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает изображения
 
 Возвращает:
 * Vector<stappler::xenolith::core::MaterialImage> const&
-
-# ::stappler::xenolith::core::Material::getData() const
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-Возвращает:
-* stappler::BytesView
 
 # ::stappler::xenolith::core::Material::getLayoutIndex() const
 
 ## BRIEF
 
+Возвращает индекс укладки
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает индекс укладки
 
 Возвращает:
 * uint32_t
@@ -769,9 +1020,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Устанавливает индекс укладки
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает индекс укладки
 
 Параметры:
 * uint32_t
@@ -781,9 +1036,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Возвращает связанный атлас
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает связанный атлас
 
 Возвращает:
 * Rc<stappler::xenolith::core::DataAtlas> const&
@@ -792,9 +1051,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Возвращает вложенные в материал данные
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает вложенные в материал данные
 
 Возвращает:
 * stappler::xenolith::core::ImageData const*
@@ -803,9 +1066,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Флаг изменений
+
 ## CONTENT
 
 Доступ: protected
+
+Флаг изменений
 
 Тип: bool
 
@@ -814,9 +1081,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Идентификатор
+
 ## CONTENT
 
 Доступ: protected
+
+Идентификатор
 
 Тип: stappler::xenolith::core::MaterialId
 
@@ -825,9 +1096,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Индекс укладки
+
 ## CONTENT
 
 Доступ: protected
+
+Индекс укладки
 
 Тип: uint32_t
 
@@ -836,9 +1111,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Пайплайн
+
 ## CONTENT
 
 Доступ: protected
+
+Пайплайн
 
 Тип: PipelineData*
 
@@ -847,9 +1126,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Изображения
+
 ## CONTENT
 
 Доступ: protected
+
+Изображения
 
 Тип: Vector<stappler::xenolith::core::MaterialImage>
 
@@ -858,9 +1141,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Атлас
+
 ## CONTENT
 
 Доступ: protected
+
+Атлас
 
 Тип: Rc<stappler::xenolith::core::DataAtlas>
 
@@ -869,20 +1156,28 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Пользовательские данные
+
 ## CONTENT
 
 Доступ: protected
 
-Тип: stappler::mem_std::Bytes
+Пользовательские данные
+
+Тип: Rc<stappler::mem_std::Ref>
 
 
 # ::stappler::xenolith::core::Material::_ownedData
 
 ## BRIEF
 
+Данные, которыми владеет материал
+
 ## CONTENT
 
 Доступ: protected
+
+Данные, которыми владеет материал
 
 Тип: stappler::xenolith::core::ImageData const*
 
@@ -891,7 +1186,11 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Вложение для использования материалов
+
 ## CONTENT
+
+Вложение для использования материалов
 
 Базовые классы:
 * BufferAttachment
@@ -901,24 +1200,32 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::core::MaterialAttachment::init(stappler::xenolith::core::Attachment::AttachmentBuilder&,stappler::xenolith::core::BufferInfo const&,MaterialSet::EncodeCallback&&,uint32_t)
 
 ## BRIEF
 
+Создаёт вложение
+
 ## CONTENT
 
 Доступ: public
 
+Создаёт вложение
+
 Параметры:
 * stappler::xenolith::core::Attachment::AttachmentBuilder&
-* stappler::xenolith::core::BufferInfo const&
-* MaterialSet::EncodeCallback&&
-* uint32_t
+* stappler::xenolith::core::BufferInfo const& - параметры буфера
+* MaterialSet::EncodeCallback&& - функция кодирования материала
+* uint32_t - размер одного материала в буфере
 
 Возвращает:
 * bool
@@ -927,9 +1234,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Добавляет предустановленные материалы
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет предустановленные материалы
 
 Параметры:
 * Vector<Rc<stappler::xenolith::core::Material>>&&
@@ -939,9 +1250,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Возвращает текущий набор материалов
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает текущий набор материалов
 
 Возвращает:
 * Rc<stappler::xenolith::core::MaterialSet> const&
@@ -950,9 +1265,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Устанавливает текущий набор материалов
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает текущий набор материалов
 
 Параметры:
 * Rc<stappler::xenolith::core::MaterialSet> const&
@@ -962,9 +1281,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Возвращает предустановленные материалы
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает предустановленные материалы
 
 Возвращает:
 * Vector<Rc<stappler::xenolith::core::Material>> const&
@@ -973,9 +1296,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Создаёт новый набор материалов
+
 ## CONTENT
 
 Доступ: public
+
+Создаёт новый набор материалов
 
 Параметры:
 * stappler::xenolith::core::Device const&
@@ -987,9 +1314,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Клонирует текущий набор материалов
+
 ## CONTENT
 
 Доступ: public
+
+Клонирует текущий набор материалов
 
 Параметры:
 * Rc<stappler::xenolith::core::MaterialSet> const&
@@ -997,26 +1328,17 @@ Title: XLCoreMaterial.h
 Возвращает:
 * Rc<stappler::xenolith::core::MaterialSet>
 
-# ::stappler::xenolith::core::MaterialAttachment::sortDescriptors(stappler::xenolith::core::Attachment::RenderQueue&,stappler::xenolith::core::Device&)
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-Параметры:
-* stappler::xenolith::core::Attachment::RenderQueue&
-* stappler::xenolith::core::Device&
-
-
 # ::stappler::xenolith::core::MaterialAttachment::addDynamicTracker(stappler::xenolith::core::MaterialId,Rc<stappler::xenolith::core::DynamicImage> const&) const
 
 ## BRIEF
 
+Добавляет отслеживание динамического материала
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет отслеживание динамического материала
 
 Параметры:
 * stappler::xenolith::core::MaterialId
@@ -1027,9 +1349,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Отключает отслеживание динамического материала
+
 ## CONTENT
 
 Доступ: public
+
+Отключает отслеживание динамического материала
 
 Параметры:
 * stappler::xenolith::core::MaterialId
@@ -1040,9 +1366,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Обновляет динамическое изображение
+
 ## CONTENT
 
 Доступ: public
+
+Обновляет динамическое изображение
 
 Параметры:
 * stappler::xenolith::core::Loop&
@@ -1054,9 +1384,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Возвращает следующий доступный идентификатор материалов
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает следующий доступный идентификатор материалов
 
 Возвращает:
 * stappler::xenolith::core::MaterialId
@@ -1065,9 +1399,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Устанавливает очередь для компиляции материалов
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает очередь для компиляции материалов
 
 Параметры:
 * stappler::xenolith::core::Queue*
@@ -1077,9 +1415,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Возвращает очередь для компиляции материалов
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает очередь для компиляции материалов
 
 Возвращает:
 * stappler::xenolith::core::Queue*
@@ -1088,16 +1430,23 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Структура отслеживания динамического изображения
+
 ## CONTENT
 
 Доступ: protected
 
+Структура отслеживания динамического изображения
 
 # ::stappler::xenolith::core::MaterialAttachment::DynamicImageTracker::refCount
 
 ## BRIEF
 
+Число ссылок
+
 ## CONTENT
+
+Число ссылок
 
 Тип: uint32_t
 
@@ -1106,7 +1455,11 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Связанные материалы
+
 ## CONTENT
+
+Связанные материалы
 
 Тип: Map<stappler::xenolith::core::MaterialId, uint32_t>
 
@@ -1115,9 +1468,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Очередь компиляции
+
 ## CONTENT
 
 Доступ: protected
+
+Очередь компиляции
 
 Тип: stappler::xenolith::core::Queue*
 
@@ -1126,9 +1483,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Последний доступный идентификатор материала
+
 ## CONTENT
 
 Доступ: protected
+
+Последний доступный идентификатор материала
 
 Тип: std::atomic<MaterialId>
 
@@ -1137,9 +1498,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Размер объекта материала
+
 ## CONTENT
 
 Доступ: protected
+
+Размер объекта материала
 
 Тип: uint32_t
 
@@ -1148,9 +1513,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Функция кодирования материалов
+
 ## CONTENT
 
 Доступ: protected
+
+Функция кодирования материалов
 
 Тип: MaterialSet::EncodeCallback
 
@@ -1159,9 +1528,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Текущий набор материалов
+
 ## CONTENT
 
 Доступ: protected
+
+Текущий набор материалов
 
 Тип: Rc<stappler::xenolith::core::MaterialSet>
 
@@ -1170,9 +1543,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Предустановленные материалы
+
 ## CONTENT
 
 Доступ: protected
+
+Предустановленные материалы
 
 Тип: Vector<Rc<stappler::xenolith::core::Material>>
 
@@ -1181,9 +1558,13 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Мутекс
+
 ## CONTENT
 
 Доступ: protected
+
+Мутекс
 
 Тип: stappler::mem_std::Mutex
 
@@ -1192,8 +1573,12 @@ Title: XLCoreMaterial.h
 
 ## BRIEF
 
+Отслеживатели динамических изображений
+
 ## CONTENT
 
 Доступ: protected
+
+Отслеживатели динамических изображений
 
 Тип: Map<Rc<stappler::xenolith::core::DynamicImage>, stappler::xenolith::core::MaterialAttachment::DynamicImageTracker>

@@ -91,7 +91,7 @@ Title: XLVkInfo.h
 
 ## CONTENT
 
-Тип: VkPhysicalDeviceVulkan12Features
+Тип: VkPhysicalDeviceVulkan13Features
 
 
 # ::stappler::xenolith::vk::DeviceInfo::Features::device12

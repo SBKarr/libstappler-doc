@@ -5,14 +5,21 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Перечислимые типы
+
 ## CONTENT
 
+Перечислимые типы
 
 # ::stappler::xenolith::core::FrameRenderPassState
 
 ## BRIEF
 
+Состояние конечного автомата прохода рендеринга
+
 ## CONTENT
+
+Состояние конечного автомата прохода рендеринга
 
 Значения:
 * Initial
@@ -30,7 +37,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Состояние конечного автомата вложения
+
 ## CONTENT
+
+Состояние конечного автомата вложения
 
 Значения:
 * Initial
@@ -49,7 +60,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Тип вложения
+
 ## CONTENT
+
+Тип вложения
 
 Значения:
 * Image
@@ -61,7 +76,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Стадия пайплайна
+
 ## CONTENT
+
+Стадия пайплайна. Копирует VkPipelineStageFlagBits
 
 Значения:
 * None
@@ -97,7 +116,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::PipelineStage const&
@@ -110,7 +133,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::PipelineStage const&
@@ -123,7 +150,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::PipelineStage const&
@@ -136,7 +167,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::PipelineStage&
@@ -149,7 +184,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::PipelineStage&
@@ -162,7 +201,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::PipelineStage&
@@ -175,7 +218,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::PipelineStage const&
@@ -188,7 +235,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * std::underlying_type<PipelineStage>::type const&
@@ -201,7 +252,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::PipelineStage const&
@@ -214,7 +269,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * std::underlying_type<PipelineStage>::type const&
@@ -227,7 +286,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::PipelineStage const&
@@ -239,7 +302,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Тип доступа к данным
+
 ## CONTENT
+
+Тип доступа к данным. Копирует VkAccessFlag
 
 Значения:
 * None
@@ -277,7 +344,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::AccessType const&
@@ -290,7 +361,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::AccessType const&
@@ -303,7 +378,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::AccessType const&
@@ -316,7 +395,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::AccessType&
@@ -329,7 +412,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::AccessType&
@@ -342,7 +429,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::AccessType&
@@ -355,7 +446,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::AccessType const&
@@ -368,7 +463,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * std::underlying_type<AccessType>::type const&
@@ -381,7 +480,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::AccessType const&
@@ -394,7 +497,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * std::underlying_type<AccessType>::type const&
@@ -407,7 +514,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::AccessType const&
@@ -419,7 +530,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Операции, выполняемые над вложением во время прохода и очереди
+
 ## CONTENT
+
+Операции, выполняемые над вложением во время прохода и очереди
 
 Значения:
 * Undefined
@@ -433,7 +548,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::AttachmentOps const&
@@ -446,7 +565,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::AttachmentOps const&
@@ -459,7 +582,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::AttachmentOps const&
@@ -472,7 +599,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::AttachmentOps&
@@ -485,7 +616,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::AttachmentOps&
@@ -498,7 +633,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::AttachmentOps&
@@ -511,7 +650,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::AttachmentOps const&
@@ -524,7 +667,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * std::underlying_type<AttachmentOps>::type const&
@@ -537,7 +684,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::AttachmentOps const&
@@ -550,7 +701,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * std::underlying_type<AttachmentOps>::type const&
@@ -563,7 +718,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::AttachmentOps const&
@@ -575,7 +734,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Операция начальной загрузки вложения
+
 ## CONTENT
+
+Операция начальной загрузки вложения. Копирует VkAttachmentLoadOp
 
 Значения:
 * Load
@@ -587,7 +750,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Операция сохранения вложения
+
 ## CONTENT
+
+Операция сохранения вложения. Копирует VkAttachmentStoreOp
 
 Значения:
 * Store
@@ -598,7 +765,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Способ использования вложения
+
 ## CONTENT
+
+Способ использования вложения
 
 Значения:
 * None
@@ -614,7 +785,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::AttachmentUsage const&
@@ -627,7 +802,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::AttachmentUsage const&
@@ -640,7 +819,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::AttachmentUsage const&
@@ -653,7 +836,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::AttachmentUsage&
@@ -666,7 +853,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::AttachmentUsage&
@@ -679,7 +870,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::AttachmentUsage&
@@ -692,7 +887,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::AttachmentUsage const&
@@ -705,7 +904,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * std::underlying_type<AttachmentUsage>::type const&
@@ -718,7 +921,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::AttachmentUsage const&
@@ -731,7 +938,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * std::underlying_type<AttachmentUsage>::type const&
@@ -744,7 +955,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::AttachmentUsage const&
@@ -756,7 +971,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Тип дескриптора
+
 ## CONTENT
+
+Тип дескриптора. Копирует VkDescriptorType
 
 Значения:
 * Sampler
@@ -778,7 +997,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Стадия исполнения подпрограммы
+
 ## CONTENT
+
+Стадия исполнения подпрограммы. Копирует VkShaderStageFlagBits
 
 Значения:
 * None
@@ -802,7 +1025,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::ProgramStage const&
@@ -815,7 +1042,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::ProgramStage const&
@@ -828,7 +1059,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::ProgramStage const&
@@ -841,7 +1076,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::ProgramStage&
@@ -854,7 +1093,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::ProgramStage&
@@ -867,7 +1110,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::ProgramStage&
@@ -880,7 +1127,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::ProgramStage const&
@@ -893,7 +1144,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * std::underlying_type<ProgramStage>::type const&
@@ -906,7 +1161,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::ProgramStage const&
@@ -919,7 +1178,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * std::underlying_type<ProgramStage>::type const&
@@ -932,7 +1195,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::ProgramStage const&
@@ -944,7 +1211,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Способ укладки изображения в памяти устройства
+
 ## CONTENT
+
+Способ укладки изображения в памяти устройства. Копирует VkImageLayout
 
 Значения:
 * Undefined
@@ -970,36 +1241,194 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Тип прохода исполнения
+
 ## CONTENT
 
+Тип прохода исполнения
+
 Значения:
-* Graphics
-* Compute
-* Transfer
-* Generic
+* Graphics - графический
+* Compute - вычислительный
+* Transfer - трансферный
+* Generic - пользовательский
 
 
 # ::stappler::xenolith::core::PredefinedConstant
 
 ## BRIEF
 
+Тип предопределённой внутри устройства константы
+
 ## CONTENT
 
+Тип предопределённой внутри устройства константы
+
 Значения:
-* SamplersArraySize
-* SamplersDescriptorIdx
-* TexturesArraySize
-* TexturesDescriptorIdx
-* BuffersArraySize
-* BuffersDescriptorIdx
-* CurrentSamplerIdx
+* SamplersArraySize - число семплеров
+* SamplersDescriptorIdx - индекс дескриптора семплеров
+* TexturesArraySize - размер массива укладки текстур
+* TexturesDescriptorIdx - индекс привязки массива текстур
+* BuffersArraySize - размер массива дополнительных буферов
+* BuffersDescriptorIdx - индекс привязки дополнительных бферов
+* CurrentSamplerIdx - текущий используемый семплер по умолчанию
+
+
+# ::stappler::xenolith::core::SpecializationConstant
+
+## BRIEF
+
+Структура константы специализации
+
+## CONTENT
+
+Структура константы специализации
+
+
+# ::stappler::xenolith::core::SpecializationConstant::Type
+
+## BRIEF
+
+Тип константы
+
+## CONTENT
+
+Тип константы
+
+Значения:
+* Int
+* Float
+* Predefined
+
+
+# ::stappler::xenolith::core::SpecializationConstant::type
+
+## BRIEF
+
+Тип константы
+
+## CONTENT
+
+Тип константы
+
+Тип: stappler::xenolith::core::SpecializationConstant::Type
+
+
+# ::stappler::xenolith::core::SpecializationConstant::
+
+## BRIEF
+
+Объединение данных
+
+## CONTENT
+
+Объединение данных
+
+
+# ::stappler::xenolith::core::SpecializationConstant::intValue
+
+## BRIEF
+
+Целое число
+
+## CONTENT
+
+Целое число
+
+Тип: int
+
+
+# ::stappler::xenolith::core::SpecializationConstant::floatValue
+
+## BRIEF
+
+Число с плавающей точкой
+
+## CONTENT
+
+Число с плавающей точкой
+
+Тип: float
+
+
+# ::stappler::xenolith::core::SpecializationConstant::predefinedValue
+
+## BRIEF
+
+Предопределённое значение
+
+## CONTENT
+
+Предопределённое значение
+
+Тип: stappler::xenolith::core::PredefinedConstant
+
+
+# ::stappler::xenolith::core::SpecializationConstant::SpecializationConstant(int)
+
+## BRIEF
+
+Конструктор
+
+## CONTENT
+
+Конструктор
+
+Параметры:
+* int
+
+
+# ::stappler::xenolith::core::SpecializationConstant::SpecializationConstant(uint32_t)
+
+## BRIEF
+
+Конструктор
+
+## CONTENT
+
+Конструктор
+
+Параметры:
+* uint32_t
+
+
+# ::stappler::xenolith::core::SpecializationConstant::SpecializationConstant(float)
+
+## BRIEF
+
+Конструктор
+
+## CONTENT
+
+Конструктор
+
+Параметры:
+* float
+
+
+# ::stappler::xenolith::core::SpecializationConstant::SpecializationConstant(stappler::xenolith::core::PredefinedConstant)
+
+## BRIEF
+
+Конструктор
+
+## CONTENT
+
+Конструктор
+
+Параметры:
+* stappler::xenolith::core::PredefinedConstant
 
 
 # ::stappler::xenolith::core::DynamicState
 
 ## BRIEF
 
+Флаги динамических режимов
+
 ## CONTENT
+
+Флаги динамических режимов
 
 Значения:
 * None
@@ -1012,7 +1441,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::DynamicState const&
@@ -1025,7 +1458,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::DynamicState const&
@@ -1038,7 +1475,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::DynamicState const&
@@ -1051,7 +1492,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::DynamicState&
@@ -1064,7 +1509,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::DynamicState&
@@ -1077,7 +1526,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::DynamicState&
@@ -1090,7 +1543,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::DynamicState const&
@@ -1103,7 +1560,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * std::underlying_type<DynamicState>::type const&
@@ -1116,7 +1577,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::DynamicState const&
@@ -1129,7 +1594,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * std::underlying_type<DynamicState>::type const&
@@ -1142,7 +1611,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::DynamicState const&
@@ -1154,7 +1627,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Флаги создания буфера
+
 ## CONTENT
+
+Флаги создания буфера. Копирует VkBufferCreateFlagBits
 
 Значения:
 * None
@@ -1168,7 +1645,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::BufferFlags const&
@@ -1181,7 +1662,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::BufferFlags const&
@@ -1194,7 +1679,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::BufferFlags const&
@@ -1207,7 +1696,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::BufferFlags&
@@ -1220,7 +1713,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::BufferFlags&
@@ -1233,7 +1730,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::BufferFlags&
@@ -1246,7 +1747,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::BufferFlags const&
@@ -1259,7 +1764,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * std::underlying_type<BufferFlags>::type const&
@@ -1272,7 +1781,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::BufferFlags const&
@@ -1285,7 +1798,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * std::underlying_type<BufferFlags>::type const&
@@ -1298,7 +1815,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::BufferFlags const&
@@ -1310,7 +1831,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Флаги использования буфера
+
 ## CONTENT
+
+Флаги использования буфера. Копирует VkBufferUsageFlagBits
 
 Значения:
 * None
@@ -1336,7 +1861,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::BufferUsage const&
@@ -1349,7 +1878,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::BufferUsage const&
@@ -1362,7 +1895,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::BufferUsage const&
@@ -1375,7 +1912,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::BufferUsage&
@@ -1388,7 +1929,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::BufferUsage&
@@ -1401,7 +1946,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::BufferUsage&
@@ -1414,7 +1963,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::BufferUsage const&
@@ -1427,7 +1980,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * std::underlying_type<BufferUsage>::type const&
@@ -1440,7 +1997,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::BufferUsage const&
@@ -1453,7 +2014,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * std::underlying_type<BufferUsage>::type const&
@@ -1466,7 +2031,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::BufferUsage const&
@@ -1478,7 +2047,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Флаги создания изображения
+
 ## CONTENT
+
+Флаги создания изображения. Копирует VkImageCreateFlagBits.
 
 Значения:
 * None
@@ -1500,7 +2073,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::ImageFlags const&
@@ -1513,7 +2090,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::ImageFlags const&
@@ -1526,7 +2107,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::ImageFlags const&
@@ -1539,7 +2124,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::ImageFlags&
@@ -1552,7 +2141,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::ImageFlags&
@@ -1565,7 +2158,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::ImageFlags&
@@ -1578,7 +2175,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::ImageFlags const&
@@ -1591,7 +2192,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * std::underlying_type<ImageFlags>::type const&
@@ -1604,7 +2209,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::ImageFlags const&
@@ -1617,7 +2226,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * std::underlying_type<ImageFlags>::type const&
@@ -1630,7 +2243,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::ImageFlags const&
@@ -1642,7 +2259,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Число точек в пикселе изображения
+
 ## CONTENT
+
+Число точек в пикселе изображения (для MSAA и подобного). Копирует VkSampleCountFlagBits.
 
 Значения:
 * None
@@ -1659,7 +2280,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::SampleCount const&
@@ -1672,7 +2297,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::SampleCount const&
@@ -1685,7 +2314,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::SampleCount const&
@@ -1698,7 +2331,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::SampleCount&
@@ -1711,7 +2348,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::SampleCount&
@@ -1724,7 +2365,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::SampleCount&
@@ -1737,7 +2382,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::SampleCount const&
@@ -1750,7 +2399,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * std::underlying_type<SampleCount>::type const&
@@ -1763,7 +2416,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::SampleCount const&
@@ -1776,7 +2433,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * std::underlying_type<SampleCount>::type const&
@@ -1789,7 +2450,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::SampleCount const&
@@ -1801,7 +2466,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Тип размерности изображения
+
 ## CONTENT
+
+Тип размерности изображения. Копирует VkImageType.
 
 Значения:
 * Image1D
@@ -1813,7 +2482,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Тип размерности отображения изображения
+
 ## CONTENT
+
+Тип размерности отображения изображения. Копирует VkImageViewType.
 
 Значения:
 * ImageView1D
@@ -1829,7 +2502,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Формат изображения
+
 ## CONTENT
+
+Формат изображения. Копирует VkFormat.
 
 Значения:
 * Undefined
@@ -2085,7 +2762,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Тип цветового пространства
+
 ## CONTENT
+
+Тип цветового пространства. Копирует VkColorSpaceKHR.
 
 Значения:
 * SRGB_NONLINEAR_KHR
@@ -2110,7 +2791,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Способ совмещения альфаканала с системным
+
 ## CONTENT
+
+Способ совмещения альфаканала с системным. Копирует VkCompositeAlphaFlagBitsKHR.
 
 Значения:
 * None
@@ -2124,7 +2809,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::CompositeAlphaFlags const&
@@ -2137,7 +2826,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::CompositeAlphaFlags const&
@@ -2150,7 +2843,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::CompositeAlphaFlags const&
@@ -2163,7 +2860,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::CompositeAlphaFlags&
@@ -2176,7 +2877,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::CompositeAlphaFlags&
@@ -2189,7 +2894,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::CompositeAlphaFlags&
@@ -2202,7 +2911,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::CompositeAlphaFlags const&
@@ -2215,7 +2928,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * std::underlying_type<CompositeAlphaFlags>::type const&
@@ -2228,7 +2945,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::CompositeAlphaFlags const&
@@ -2241,7 +2962,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * std::underlying_type<CompositeAlphaFlags>::type const&
@@ -2254,7 +2979,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::CompositeAlphaFlags const&
@@ -2266,7 +2995,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Режим структурирования изображения
+
 ## CONTENT
+
+Режим структурирования изображения. Копирует VkImageTiling.
 
 Значения:
 * Optimal
@@ -2277,7 +3010,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Флаги использования изображения
+
 ## CONTENT
+
+Флаги использования изображения. Копирует VkImageUsageFlagBits.
 
 Значения:
 * None
@@ -2295,7 +3032,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::ImageUsage const&
@@ -2308,7 +3049,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::ImageUsage const&
@@ -2321,7 +3066,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::ImageUsage const&
@@ -2334,7 +3083,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::ImageUsage&
@@ -2347,7 +3100,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::ImageUsage&
@@ -2360,7 +3117,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::ImageUsage&
@@ -2373,7 +3134,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::ImageUsage const&
@@ -2386,7 +3151,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * std::underlying_type<ImageUsage>::type const&
@@ -2399,7 +3168,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::ImageUsage const&
@@ -2412,7 +3185,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * std::underlying_type<ImageUsage>::type const&
@@ -2425,7 +3202,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::ImageUsage const&
@@ -2437,7 +3218,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Способ презентации изображения
+
 ## CONTENT
+
+Способ презентации изображения
 
 Значения:
 * Unsupported
@@ -2451,33 +3236,47 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Режим хранения данных вложения
+
 ## CONTENT
 
+Режим хранения данных вложения
+
 Значения:
-* Transient
-* FrameStateless
-* ObjectStateless
-* Stateful
+* Transient - переходный, не хранится вне кадра
+* FrameStateless - не имеет состояния вне кадра. Имеет состояние на уровне кадра.
+* ObjectStateless - не имеет состояния на уровне объекта в целом
+* Stateful - имеет постоянно хранимое состояние
 
 
 # ::stappler::xenolith::core::ImageHints
 
 ## BRIEF
 
+Вспомогательные флаги для изображения
+
 ## CONTENT
+
+Вспомогательные флаги для изображения
 
 Значения:
 * None
-* Opaque
-* FixedSize
-* DoNotCache
+* Opaque - считать изображение непрозрачным
+* FixedSize - изображение фиксированного размера (не изменять под кадр)
+* DoNotCache - не кешировать изображение
+* ReadOnly - изображение доступно только для чтения
+* Static - изображение хранится статически
 
 
 # ::stappler::xenolith::core::operator|(stappler::xenolith::core::ImageHints const&,stappler::xenolith::core::ImageHints const&)
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::ImageHints const&
@@ -2490,7 +3289,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::ImageHints const&
@@ -2503,7 +3306,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::ImageHints const&
@@ -2516,7 +3323,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::ImageHints&
@@ -2529,7 +3340,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::ImageHints&
@@ -2542,7 +3357,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::ImageHints&
@@ -2555,7 +3374,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::ImageHints const&
@@ -2568,7 +3391,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * std::underlying_type<ImageHints>::type const&
@@ -2581,7 +3408,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::ImageHints const&
@@ -2594,7 +3425,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * std::underlying_type<ImageHints>::type const&
@@ -2607,7 +3442,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::ImageHints const&
@@ -2619,23 +3458,31 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Указатель на цветовой компонент
+
 ## CONTENT
 
+Указатель на цветовой компонент. Копирует VkComponentSwizzle.
+
 Значения:
-* Identity
-* Zero
-* One
-* R
-* G
-* B
-* A
+* Identity - не менять
+* Zero - всегда 0
+* One - всегда полный цвет
+* R - канал красного
+* G - канал зелёного
+* B - канал синего
+* A - альфаканал
 
 
 # ::stappler::xenolith::core::Filter
 
 ## BRIEF
 
+Тип фильтрации для семплера
+
 ## CONTENT
+
+Тип фильтрации для семплера. Копирует VkFilter.
 
 Значения:
 * Nearest
@@ -2647,7 +3494,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Дальностный фильтр семплера
+
 ## CONTENT
+
+Дальностный фильтр семплера. Копирует VkSamplerMipmapMode.
 
 Значения:
 * Nearest
@@ -2658,7 +3509,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Тип адресации семплера
+
 ## CONTENT
+
+Тип адресации семплера. Копирует VkSamplerAddressMode.
 
 Значения:
 * Repeat
@@ -2671,7 +3526,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Операция сравнения
+
 ## CONTENT
+
+Операция сравнения. Копирует VkCompareOp.
 
 Значения:
 * Never
@@ -2688,7 +3547,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Способ смещивания цвета
+
 ## CONTENT
+
+Способ смещивания цвета. Копирует VkBlendFactor.
 
 Значения:
 * Zero
@@ -2707,7 +3570,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Операция смешивания
+
 ## CONTENT
+
+Операция смешивания. Копирует VkBlendOp.
 
 Значения:
 * Add
@@ -2721,7 +3588,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Флаги цветового компонента
+
 ## CONTENT
+
+Флаги цветового компонента
 
 Значения:
 * R
@@ -2735,7 +3606,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Операция для трафарета
+
 ## CONTENT
+
+Операция для трафарета
 
 Значения:
 * Keep
@@ -2752,7 +3627,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::ColorComponentFlags const&
@@ -2765,7 +3644,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::ColorComponentFlags const&
@@ -2778,7 +3661,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::ColorComponentFlags const&
@@ -2791,7 +3678,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::ColorComponentFlags&
@@ -2804,7 +3695,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::ColorComponentFlags&
@@ -2817,7 +3712,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::ColorComponentFlags&
@@ -2830,7 +3729,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::ColorComponentFlags const&
@@ -2843,7 +3746,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * std::underlying_type<ColorComponentFlags>::type const&
@@ -2856,7 +3763,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::ColorComponentFlags const&
@@ -2869,7 +3780,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * std::underlying_type<ColorComponentFlags>::type const&
@@ -2882,7 +3797,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::ColorComponentFlags const&
@@ -2894,7 +3813,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Способ трансфроманции поверхности для отрисовки
+
 ## CONTENT
+
+Способ трансфроманции поверхности для отрисовки
 
 Значения:
 * None
@@ -2915,7 +3838,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::SurfaceTransformFlags const&
@@ -2928,7 +3855,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::SurfaceTransformFlags const&
@@ -2941,7 +3872,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::SurfaceTransformFlags const&
@@ -2954,7 +3889,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::SurfaceTransformFlags&
@@ -2967,7 +3906,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::SurfaceTransformFlags&
@@ -2980,7 +3923,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::SurfaceTransformFlags&
@@ -2993,7 +3940,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::SurfaceTransformFlags const&
@@ -3006,7 +3957,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * std::underlying_type<SurfaceTransformFlags>::type const&
@@ -3019,7 +3974,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::SurfaceTransformFlags const&
@@ -3032,7 +3991,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * std::underlying_type<SurfaceTransformFlags>::type const&
@@ -3045,7 +4008,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::SurfaceTransformFlags const&
@@ -3057,7 +4024,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Удаляет дополнительные флаги из флагов трансформации
+
 ## CONTENT
+
+Удаляет дополнительные флаги из флагов трансформации
 
 Параметры:
 * stappler::xenolith::core::SurfaceTransformFlags
@@ -3069,20 +4040,28 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Уровень рендеринга объекта
+
 ## CONTENT
 
+Уровень рендеринга объекта
+
 Значения:
-* Default
-* Solid
-* Surface
-* Transparent
+* Default - вычисляется приложением
+* Solid - непрозрачные объекты
+* Surface - прозначные объекты, находящиеся на поверхности непрозрачных
+* Transparent - прочие прозрачные объекты
 
 
 # ::stappler::xenolith::core::ObjectType
 
 ## BRIEF
 
+Тип объекта графического устройства
+
 ## CONTENT
+
+Тип объекта графического устройства
 
 Значения:
 * Unknown
@@ -3112,7 +4091,11 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Базовый формат пикселя
+
 ## CONTENT
+
+Базовый формат пикселя
 
 Значения:
 * Unknown
@@ -3129,11 +4112,15 @@ Title: XLCoreEnum.h
 
 ## BRIEF
 
+Тип отсчёта времени
+
 ## CONTENT
+
+Тип отсчёта времени
 
 Значения:
 * Default
-* Monotonic
-* Realtime
-* Process
-* Thread
+* Monotonic - стандартные монотонные часы
+* Realtime - часы реального времени
+* Process - часы процесса
+* Thread - часы потока

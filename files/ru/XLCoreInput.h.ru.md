@@ -5,14 +5,22 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Заголовок параметров входящих данных от устройств ввода
+
 ## CONTENT
+
+Заголовок параметров входящих данных от устройств ввода
 
 
 # ::stappler::xenolith::core::InputFlags
 
 ## BRIEF
 
+Флаги ввода
+
 ## CONTENT
+
+Флаги ввода
 
 Значения:
 * None
@@ -25,7 +33,11 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::InputFlags const&
@@ -38,7 +50,11 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::InputFlags const&
@@ -51,7 +67,11 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::InputFlags const&
@@ -64,7 +84,11 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::InputFlags&
@@ -77,7 +101,11 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::InputFlags&
@@ -90,7 +118,11 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::InputFlags&
@@ -103,7 +135,11 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::InputFlags const&
@@ -116,7 +152,11 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * std::underlying_type<InputFlags>::type const&
@@ -129,7 +169,11 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::InputFlags const&
@@ -142,7 +186,11 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * std::underlying_type<InputFlags>::type const&
@@ -155,7 +203,11 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::InputFlags const&
@@ -167,7 +219,11 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Использованная для ввода кнопка манипулятора
+
 ## CONTENT
+
+Использованная для ввода кнопка манипулятора
 
 Значения:
 * None
@@ -194,7 +250,11 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Флаги клавиш-модификаторов ввода
+
 ## CONTENT
+
+Флаги клавиш-модификаторов ввода
 
 Значения:
 * None
@@ -220,11 +280,19 @@ Title: XLCoreInput.h
 * AltR
 * Mod3L
 * Mod3R
+* Mod4L
+* Mod4R
 * ScrollLock
 * Command
 * Meta
 * Function
 * Sym
+* Win
+* WinL
+* WinR
+* Menu
+* MenuL
+* MenuR
 * ValueFalse
 * ValueTrue
 * Unmanaged
@@ -234,7 +302,11 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::InputModifier const&
@@ -247,7 +319,11 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::InputModifier const&
@@ -260,7 +336,11 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::InputModifier const&
@@ -273,7 +353,11 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::InputModifier&
@@ -286,7 +370,11 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::InputModifier&
@@ -299,7 +387,11 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::InputModifier&
@@ -312,7 +404,11 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::InputModifier const&
@@ -325,7 +421,11 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * std::underlying_type<InputModifier>::type const&
@@ -338,7 +438,11 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::InputModifier const&
@@ -351,7 +455,11 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * std::underlying_type<InputModifier>::type const&
@@ -364,7 +472,11 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Автоматически созданный оператор битовых флагов
+
 ## CONTENT
+
+Автоматически созданный оператор битовых флагов
 
 Параметры:
 * stappler::xenolith::core::InputModifier const&
@@ -376,7 +488,21 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Базовый код клавиш ввода
+
 ## CONTENT
+
+Базовый код клавиш ввода
+
+Код основан на аналогичном для GLFW.
+
+Код создан для использования в 128-битной маске. Неопределённый символ имеет код 0.
+
+Коды для BACKSPACE, TAB, ENTER, ESCAPE, DELETE соответствуют ASCII, поскольку платформы могут посылать эти символы без управляющего кода.
+
+Все печатные символы в диапазоне [32-96]. APOSTROPHE смещён на позицию 43 вместо 39, чтобы цисловые коды составляли единый блок [KP_0, KP_0 + 9].
+
+Имена кодов основаны на QWERTY, но соответсвуют физическим позициям на клавиатуре, а не символу. То есть, InputKeyCode::S соотвествует клавише AC02, символу 'S' в QWERTY и 'O' в Dworak. Имена клавиш в коде имеют соотвествующую метку клавиши для XKB.
 
 Значения:
 * Unknown
@@ -507,20 +633,27 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Статус композиции символа при композиционном вводе
+
 ## CONTENT
 
 Значения:
-* Nothing
-* Composed
-* Composing
-* Disabled
+* Nothing - ввод без композиции
+* Composed - завершающий символ композиции
+* Composing - промежуточный символ композиции
+* Disabled - композиция не удалась
+* Forced - передан явно полный символ композиции
 
 
 # ::stappler::xenolith::core::InputEventName
 
 ## BRIEF
 
+Имя события ввода
+
 ## CONTENT
+
+Имя события ввода
 
 Значения:
 * None
@@ -544,14 +677,22 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Базовые данные события ввода
+
 ## CONTENT
+
+Базовые данные события ввода
 
 
 # ::stappler::xenolith::core::InputEventData::BoolEvent(stappler::xenolith::core::InputEventName,bool)
 
 ## BRIEF
 
+Создаёт событие, связанное с булевым значением
+
 ## CONTENT
+
+Создаёт событие, связанное с булевым значением
 
 Параметры:
 * stappler::xenolith::core::InputEventName
@@ -560,16 +701,39 @@ Title: XLCoreInput.h
 Возвращает:
 * stappler::xenolith::core::InputEventData
 
-# ::stappler::xenolith::core::InputEventData::BoolEvent(stappler::xenolith::core::InputEventName,bool,stappler::xenolith::Vec2 const&)
+# ::stappler::xenolith::core::InputEventData::BoolEvent(stappler::xenolith::core::InputEventName,bool,const stappler::geom::Vec2&)
 
 ## BRIEF
 
+Создаёт событие, связанное с булевым значением и координатами
+
 ## CONTENT
+
+Создаёт событие, связанное с булевым значением и координатами
 
 Параметры:
 * stappler::xenolith::core::InputEventName
 * bool
-* stappler::xenolith::Vec2 const&
+* const stappler::geom::Vec2&
+
+Возвращает:
+* stappler::xenolith::core::InputEventData
+
+# ::stappler::xenolith::core::InputEventData::BoolEvent(stappler::xenolith::core::InputEventName,bool,stappler::xenolith::core::InputModifier,const stappler::geom::Vec2&)
+
+## BRIEF
+
+Создаёт событие, связанное с булевым значением и координатами
+
+## CONTENT
+
+Создаёт событие, связанное с булевым значением и координатами
+
+Параметры:
+* stappler::xenolith::core::InputEventName
+* bool
+* stappler::xenolith::core::InputModifier
+* const stappler::geom::Vec2&
 
 Возвращает:
 * stappler::xenolith::core::InputEventData
@@ -578,7 +742,11 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Идентификатор источника события или цепочки событий
+
 ## CONTENT
+
+Идентификатор источника события или цепочки событий. Роль зависит от платформы.
 
 Тип: uint32_t
 
@@ -587,7 +755,11 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Имя события
+
 ## CONTENT
+
+Имя события
 
 Тип: stappler::xenolith::core::InputEventName
 
@@ -596,7 +768,11 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Кнопка манипулятора
+
 ## CONTENT
+
+Кнопка манипулятора
 
 Тип: stappler::xenolith::core::InputMouseButton
 
@@ -605,7 +781,11 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Модификаторы
+
 ## CONTENT
+
+Модификаторы
 
 Тип: stappler::xenolith::core::InputModifier
 
@@ -614,7 +794,11 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Координата
+
 ## CONTENT
+
+Координата
 
 Тип: float
 
@@ -623,7 +807,11 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Координата
+
 ## CONTENT
+
+Координата
 
 Тип: float
 
@@ -632,21 +820,22 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
-## CONTENT
-
-
-# ::stappler::xenolith::core::InputEventData::
-
-## BRIEF
+Объединение дополнительной информации
 
 ## CONTENT
+
+Объединение дополнительной информации
 
 
 # ::stappler::xenolith::core::InputEventData::valueX
 
 ## BRIEF
 
+Дополнительная координата
+
 ## CONTENT
+
+Дополнительная координата
 
 Тип: float
 
@@ -655,7 +844,11 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Дополнительная координата
+
 ## CONTENT
+
+Дополнительная координата
 
 Тип: float
 
@@ -664,7 +857,11 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Плотность пикселей для ввода
+
 ## CONTENT
+
+Плотность пикселей для ввода
 
 Тип: float
 
@@ -673,23 +870,24 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Тип ввода для точки
+
 ## CONTENT
+
+Тип ввода для точки
 
 Тип: 
-
-
-# ::stappler::xenolith::core::InputEventData::
-
-## BRIEF
-
-## CONTENT
 
 
 # ::stappler::xenolith::core::InputEventData::keycode
 
 ## BRIEF
 
+Код символа клавиатуры
+
 ## CONTENT
+
+Код символа клавиатуры
 
 Тип: stappler::xenolith::core::InputKeyCode
 
@@ -698,7 +896,11 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Статус композиции
+
 ## CONTENT
+
+Статус композиции
 
 Тип: stappler::xenolith::core::InputKeyComposeState
 
@@ -707,7 +909,11 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Платформозависимый уникальный код символа
+
 ## CONTENT
+
+Платформозависимый уникальный код символа
 
 Тип: uint32_t
 
@@ -716,7 +922,11 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Соответсвующий символ юникода
+
 ## CONTENT
+
+Соответсвующий символ юникода
 
 Тип: char32_t
 
@@ -725,7 +935,11 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Структура для ввода символов
+
 ## CONTENT
+
+Структура для ввода символов
 
 Тип: 
 
@@ -734,7 +948,11 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Оператор сравнения
+
 ## CONTENT
+
+Оператор сравнения
 
 Параметры:
 * uint32_t const&
@@ -746,7 +964,11 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Оператор сравнения
+
 ## CONTENT
+
+Оператор сравнения
 
 Параметры:
 * uint32_t const&
@@ -758,7 +980,11 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Получает булево значение события
+
 ## CONTENT
+
+Получает булево значение события
 
 Возвращает:
 * bool
@@ -767,7 +993,11 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Проверяет, имеет ли событие данные позиции
+
 ## CONTENT
+
+Проверяет, имеет ли событие данные позиции
 
 Возвращает:
 * bool
@@ -776,7 +1006,11 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Проверяет, имеет ли событие дполнительные данные в виде точки
+
 ## CONTENT
+
+Проверяет, имеет ли событие дполнительные данные в виде точки
 
 Возвращает:
 * bool
@@ -785,28 +1019,475 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Проверяет, имеет ли событие дполнительные данные в виде кода символа
+
 ## CONTENT
 
+Проверяет, имеет ли событие дполнительные данные в виде кода символа
 Возвращает:
 * bool
 
-# ::stappler::xenolith::core::InputEventData::operator<=>(stappler::xenolith::core::InputEventData const&)
+# ::stappler::xenolith::core::InputEventData::operator==(stappler::xenolith::core::InputEventData const&) const
 
 ## BRIEF
 
+Оператор сравнения
+
 ## CONTENT
+
+Оператор сравнения
 
 Параметры:
 * stappler::xenolith::core::InputEventData const&
 
 Возвращает:
-* std::partial_ordering
+* bool
+
+# ::stappler::xenolith::core::InputEventData::operator!=(stappler::xenolith::core::InputEventData const&) const
+
+## BRIEF
+
+Оператор сравнения
+
+## CONTENT
+
+Оператор сравнения
+
+Параметры:
+* stappler::xenolith::core::InputEventData const&
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::core::InputEventData::operator<(stappler::xenolith::core::InputEventData const&) const
+
+## BRIEF
+
+Оператор сравнения
+
+## CONTENT
+
+Оператор сравнения
+
+Параметры:
+* stappler::xenolith::core::InputEventData const&
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::core::TextInputType
+
+## BRIEF
+
+Тип соотвествия для ввода текста
+
+## CONTENT
+
+Тип соотвествия для ввода текста. Подсказка для экранной клавиатуры.
+
+Значения:
+* Empty
+* Date_Date
+* Date_DateTime
+* Date_Time
+* Date
+* Number_Numbers
+* Number_Decimial
+* Number_Signed
+* Number
+* Phone
+* Text_Text
+* Text_Search
+* Text_Punctuation
+* Text_Email
+* Text_Url
+* Text
+* Default
+* ClassMask
+* PasswordBit
+* MultiLineBit
+* AutoCorrectionBit
+* ReturnKeyMask
+* ReturnKeyDefault
+* ReturnKeyGo
+* ReturnKeyGoogle
+* ReturnKeyJoin
+* ReturnKeyNext
+* ReturnKeyRoute
+* ReturnKeySearch
+* ReturnKeySend
+* ReturnKeyYahoo
+* ReturnKeyDone
+* ReturnKeyEmergencyCall
+
+
+# ::stappler::xenolith::core::operator|(stappler::xenolith::core::TextInputType const&,stappler::xenolith::core::TextInputType const&)
+
+## BRIEF
+
+Автоматически созданный оператор битового флага
+
+## CONTENT
+
+Автоматически созданный оператор битового флага
+
+Параметры:
+* stappler::xenolith::core::TextInputType const&
+* stappler::xenolith::core::TextInputType const&
+
+Возвращает:
+* stappler::xenolith::core::TextInputType
+
+# ::stappler::xenolith::core::operator&(stappler::xenolith::core::TextInputType const&,stappler::xenolith::core::TextInputType const&)
+
+## BRIEF
+
+Автоматически созданный оператор битового флага
+
+## CONTENT
+
+Автоматически созданный оператор битового флага
+
+Параметры:
+* stappler::xenolith::core::TextInputType const&
+* stappler::xenolith::core::TextInputType const&
+
+Возвращает:
+* stappler::xenolith::core::TextInputType
+
+# ::stappler::xenolith::core::operator^(stappler::xenolith::core::TextInputType const&,stappler::xenolith::core::TextInputType const&)
+
+## BRIEF
+
+Автоматически созданный оператор битового флага
+
+## CONTENT
+
+Автоматически созданный оператор битового флага
+
+Параметры:
+* stappler::xenolith::core::TextInputType const&
+* stappler::xenolith::core::TextInputType const&
+
+Возвращает:
+* stappler::xenolith::core::TextInputType
+
+# ::stappler::xenolith::core::operator|=(stappler::xenolith::core::TextInputType&,stappler::xenolith::core::TextInputType const&)
+
+## BRIEF
+
+Автоматически созданный оператор битового флага
+
+## CONTENT
+
+Автоматически созданный оператор битового флага
+
+Параметры:
+* stappler::xenolith::core::TextInputType&
+* stappler::xenolith::core::TextInputType const&
+
+Возвращает:
+* stappler::xenolith::core::TextInputType&
+
+# ::stappler::xenolith::core::operator&=(stappler::xenolith::core::TextInputType&,stappler::xenolith::core::TextInputType const&)
+
+## BRIEF
+
+Автоматически созданный оператор битового флага
+
+## CONTENT
+
+Автоматически созданный оператор битового флага
+
+Параметры:
+* stappler::xenolith::core::TextInputType&
+* stappler::xenolith::core::TextInputType const&
+
+Возвращает:
+* stappler::xenolith::core::TextInputType&
+
+# ::stappler::xenolith::core::operator^=(stappler::xenolith::core::TextInputType&,stappler::xenolith::core::TextInputType const&)
+
+## BRIEF
+
+Автоматически созданный оператор битового флага
+
+## CONTENT
+
+Автоматически созданный оператор битового флага
+
+Параметры:
+* stappler::xenolith::core::TextInputType&
+* stappler::xenolith::core::TextInputType const&
+
+Возвращает:
+* stappler::xenolith::core::TextInputType&
+
+# ::stappler::xenolith::core::operator==(stappler::xenolith::core::TextInputType const&,std::underlying_type<TextInputType>::type const&)
+
+## BRIEF
+
+Автоматически созданный оператор битового флага
+
+## CONTENT
+
+Автоматически созданный оператор битового флага
+
+Параметры:
+* stappler::xenolith::core::TextInputType const&
+* std::underlying_type<TextInputType>::type const&
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::core::operator==(std::underlying_type<TextInputType>::type const&,stappler::xenolith::core::TextInputType const&)
+
+## BRIEF
+
+Автоматически созданный оператор битового флага
+
+## CONTENT
+
+Автоматически созданный оператор битового флага
+
+Параметры:
+* std::underlying_type<TextInputType>::type const&
+* stappler::xenolith::core::TextInputType const&
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::core::operator!=(stappler::xenolith::core::TextInputType const&,std::underlying_type<TextInputType>::type const&)
+
+## BRIEF
+
+Автоматически созданный оператор битового флага
+
+## CONTENT
+
+Автоматически созданный оператор битового флага
+
+Параметры:
+* stappler::xenolith::core::TextInputType const&
+* std::underlying_type<TextInputType>::type const&
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::core::operator!=(std::underlying_type<TextInputType>::type const&,stappler::xenolith::core::TextInputType const&)
+
+## BRIEF
+
+Автоматически созданный оператор битового флага
+
+## CONTENT
+
+Автоматически созданный оператор битового флага
+
+Параметры:
+* std::underlying_type<TextInputType>::type const&
+* stappler::xenolith::core::TextInputType const&
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::core::operator~(stappler::xenolith::core::TextInputType const&)
+
+## BRIEF
+
+Автоматически созданный оператор битового флага
+
+## CONTENT
+
+Автоматически созданный оператор битового флага
+
+Параметры:
+* stappler::xenolith::core::TextInputType const&
+
+Возвращает:
+* stappler::xenolith::core::TextInputType
+
+# ::stappler::xenolith::core::TextCursorPosition
+
+## BRIEF
+
+Тип позиции курсора в тексте
+
+## CONTENT
+
+Тип позиции курсора в тексте
+
+
+# ::stappler::xenolith::core::TextCursorLength
+
+## BRIEF
+
+Тип длины курсора в тексте
+
+## CONTENT
+
+Тип длины курсора в тексте
+
+
+# ::stappler::xenolith::core::TextCursor
+
+## BRIEF
+
+Текстовый курсор
+
+## CONTENT
+
+Текстовый курсор
+
+
+# ::stappler::xenolith::core::TextCursor::InvalidCursor
+
+## BRIEF
+
+Значение ошибочного курсора
+
+## CONTENT
+
+Значение ошибочного курсора
+
+Тип: stappler::xenolith::core::TextCursor const
+
+
+# ::stappler::xenolith::core::TextCursor::start
+
+## BRIEF
+
+Начальная позиция
+
+## CONTENT
+
+Начальная позиция
+
+Тип: uint32_t
+
+
+# ::stappler::xenolith::core::TextCursor::length
+
+## BRIEF
+
+Длина курсора
+
+## CONTENT
+
+Длина курсора
+
+Тип: uint32_t
+
+
+# ::stappler::xenolith::core::TextCursor::TextCursor()
+
+## BRIEF
+
+Конструктор
+
+## CONTENT
+
+Конструктор
+
+
+# ::stappler::xenolith::core::TextCursor::TextCursor(uint32_t)
+
+## BRIEF
+
+Конструктор из позиции
+
+## CONTENT
+
+Конструктор из позиции
+
+Параметры:
+* uint32_t
+
+
+# ::stappler::xenolith::core::TextCursor::TextCursor(uint32_t,uint32_t)
+
+## BRIEF
+
+Конструктор из позиции и длины
+
+## CONTENT
+
+Конструктор из позиции и длины
+
+Параметры:
+* uint32_t
+* uint32_t
+
+
+# ::stappler::xenolith::core::TextCursor::TextCursor(stappler::xenolith::core::TextCursorPosition)
+
+## BRIEF
+
+Конструктор из позиции
+
+## CONTENT
+
+Конструктор из позиции
+
+Параметры:
+* stappler::xenolith::core::TextCursorPosition
+
+
+# ::stappler::xenolith::core::TextCursor::TextCursor(stappler::xenolith::core::TextCursorPosition,stappler::xenolith::core::TextCursorLength)
+
+## BRIEF
+
+Конструктор из позиции и длины
+
+## CONTENT
+
+Конструктор из позиции и длины
+
+Параметры:
+* stappler::xenolith::core::TextCursorPosition
+* stappler::xenolith::core::TextCursorLength
+
+
+# ::stappler::xenolith::core::TextCursor::TextCursor(stappler::xenolith::core::TextCursorPosition,stappler::xenolith::core::TextCursorPosition)
+
+## BRIEF
+
+Конструктор из двух позиций
+
+## CONTENT
+
+Конструктор из двух позиций
+
+Параметры:
+* stappler::xenolith::core::TextCursorPosition
+* stappler::xenolith::core::TextCursorPosition
+
+
+# ::stappler::xenolith::core::TextCursor::operator==(stappler::xenolith::core::TextCursor const&) const
+
+## BRIEF
+
+Оператор сравнения
+
+## CONTENT
+
+Оператор сравнения
+
+Параметры:
+* stappler::xenolith::core::TextCursor const&
+
+Возвращает:
+* bool
 
 # ::stappler::xenolith::core::getInputKeyCodeName(stappler::xenolith::core::InputKeyCode)
 
 ## BRIEF
 
+Возвращает имя клавиши
+
 ## CONTENT
+
+Возвращает имя клавиши
 
 Параметры:
 * stappler::xenolith::core::InputKeyCode
@@ -818,7 +1499,11 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Возвращает код клавиши
+
 ## CONTENT
+
+Возвращает код клавиши
 
 Параметры:
 * stappler::xenolith::core::InputKeyCode
@@ -830,7 +1515,11 @@ Title: XLCoreInput.h
 
 ## BRIEF
 
+Возвращает имя события
+
 ## CONTENT
+
+Возвращает имя события
 
 Параметры:
 * stappler::xenolith::core::InputEventName
@@ -838,28 +1527,68 @@ Title: XLCoreInput.h
 Возвращает:
 * stappler::StringView
 
-# ::std::operator<<(std::ostream&,stappler::xenolith::core::InputKeyCode)
+# ::stappler::xenolith::core::getInputButtonName(stappler::xenolith::core::InputMouseButton)
 
 ## BRIEF
 
+Возвращает имя кнопки
+
 ## CONTENT
+
+Возвращает имя кнопки
+
+Параметры:
+* stappler::xenolith::core::InputMouseButton
+
+Возвращает:
+* stappler::StringView
+
+# ::stappler::xenolith::core::getInputModifiersNames(stappler::xenolith::core::InputModifier)
+
+## BRIEF
+
+Возвращает список модификаторов
+
+## CONTENT
+
+Возвращает список модификаторов
+
+Параметры:
+* stappler::xenolith::core::InputModifier
+
+Возвращает:
+* stappler::mem_std::String
+
+# ::std::operator<<(std::ostream&,::stappler::xenolith::core::InputKeyCode)
+
+## BRIEF
+
+Оператор вывода в поток
+
+## CONTENT
+
+Оператор вывода в поток
 
 Параметры:
 * std::ostream&
-* stappler::xenolith::core::InputKeyCode
+* ::stappler::xenolith::core::InputKeyCode
 
 Возвращает:
 * std::ostream&
 
-# ::std::operator<<(std::ostream&,stappler::xenolith::core::InputEventName)
+# ::std::operator<<(std::ostream&,::stappler::xenolith::core::InputEventName)
 
 ## BRIEF
 
+Оператор вывода в поток
+
 ## CONTENT
+
+Оператор вывода в поток
 
 Параметры:
 * std::ostream&
-* stappler::xenolith::core::InputEventName
+* ::stappler::xenolith::core::InputEventName
 
 Возвращает:
 * std::ostream&

@@ -8,7 +8,7 @@ Title: XLPlatformLinuxDbus.h
 ## CONTENT
 
 
-# ::NMState
+# ::stappler::xenolith::platform::NMState
 
 ## BRIEF
 
@@ -25,7 +25,7 @@ Title: XLPlatformLinuxDbus.h
 * NM_STATE_CONNECTED_GLOBAL
 
 
-# ::NMConnectivityState
+# ::stappler::xenolith::platform::NMConnectivityState
 
 ## BRIEF
 
@@ -39,7 +39,7 @@ Title: XLPlatformLinuxDbus.h
 * NM_CONNECTIVITY_FULL
 
 
-# ::NMMetered
+# ::stappler::xenolith::platform::NMMetered
 
 ## BRIEF
 
@@ -169,7 +169,7 @@ Title: XLPlatformLinuxDbus.h
 
 ## CONTENT
 
-Тип: NMMetered
+Тип: stappler::xenolith::platform::NMMetered
 
 
 # ::stappler::xenolith::platform::NetworkState::state
@@ -178,7 +178,7 @@ Title: XLPlatformLinuxDbus.h
 
 ## CONTENT
 
-Тип: NMState
+Тип: stappler::xenolith::platform::NMState
 
 
 # ::stappler::xenolith::platform::NetworkState::connectivity
@@ -187,7 +187,7 @@ Title: XLPlatformLinuxDbus.h
 
 ## CONTENT
 
-Тип: NMConnectivityState
+Тип: stappler::xenolith::platform::NMConnectivityState
 
 
 # ::stappler::xenolith::platform::NetworkState::primaryConnectionType

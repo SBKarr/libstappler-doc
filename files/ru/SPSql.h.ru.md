@@ -545,41 +545,6 @@ deleteQuery.remove("table", "alias")
 Параметры:
 * memory::string const&
 
-
-# ::stappler::sql::Query<typename,typename>::Field::Field(stappler::StringView const&,bool)
-
-## BRIEF
-
-Создаёт идентификатор именованного поля
-
-## CONTENT
-
-Создаёт идентификатор именованного поля
-
-Параметры:
-* stappler::StringView const&
-* bool - true если необходимо использовать имя как простой текст (без кавычек имени)
-
-
-# ::stappler::sql::Query<typename,typename>::Field::Field<typename,typename>(SourceString&&,FieldString&&)
-
-## BRIEF
-
-Создаёт идентификатор именованного поля с пространством имён
-
-## CONTENT
-
-Создаёт идентификатор именованного поля с пространством имён
-
-Параметры шаблона:
-* typename SourceString
-* typename FieldString
-
-Параметры:
-* SourceString&& - идентификатор пространства имён
-* FieldString&& - имя поля
-
-
 # ::stappler::sql::Query<typename,typename>::Field::as(char const*)
 
 ## BRIEF
@@ -3271,3 +3236,114 @@ deleteQuery.remove("table", "alias")
 * Query<Binder, Interface>&
 * Binder&
 * Callback<void (typename Query<Binder, Interface>::Select &)> const&
+
+# ::stappler::sql::SimpleBinder<typename>::writeBindArray(std::ostream&,data::ValueTemplate<Interface> const&)
+
+## BRIEF
+
+Связывает массив с запросом
+
+## CONTENT
+
+Связывает массив с запросом
+
+Параметры:
+* std::ostream&
+* data::ValueTemplate<Interface> const&
+
+# ::stappler::sql::Query<typename,typename>::Field::Flags
+
+## BRIEF
+
+Флаги привязки данных поля
+
+## CONTENT
+
+Флаги привязки данных поля
+
+Значения:
+* None
+* PlainText - привязывать имя поля как текст без форматирования как имени поля
+
+# ::stappler::sql::Query<typename,typename>::Field::Field(stappler::StringView const&,stappler::sql::Query::Field::Flags)
+
+## BRIEF
+
+Создаёт поле на основе названия и флагов
+
+## CONTENT
+
+Создаёт поле на основе названия и флагов
+
+Параметры:
+* stappler::StringView const&
+* stappler::sql::Query::Field::Flags
+
+# ::stappler::sql::Query<typename,typename>::Field::Field(stappler::StringView const&,stappler::StringView const&)
+
+## BRIEF
+
+Создаёт поле на основе схемы и имени
+
+## CONTENT
+
+
+Создаёт поле на основе схемы и имени
+
+Параметры:
+* stappler::StringView const& - схема (пространство имён)
+* stappler::StringView const& - имя поля
+
+# ::stappler::sql::Query<typename,typename>::writeBindArray<typename>(Value&&)
+
+## BRIEF
+
+Связывает массив с запросом
+
+## CONTENT
+
+Доступ: public
+
+Связывает массив с запросом
+
+Параметры шаблона:
+* typename Value
+
+Параметры:
+* Value&&
+
+# ::stappler::sql::BinderTraits<typename,typename,typename>::writeBindArray<typename>(Query<Binder, Interface>&,Binder&,V&&)
+
+## BRIEF
+
+Связывает массив с запросом
+
+## CONTENT
+
+Связывает массив с запросом
+
+Параметры шаблона:
+* typename V
+
+Параметры:
+* Query<Binder, Interface>&
+* Binder&
+* V&&
+
+# ::stappler::sql::Query<typename,typename>::writeBindArray<typename>(Value&&)
+
+## BRIEF
+
+Связывает массив с запросом
+
+## CONTENT
+
+Связывает массив с запросом
+
+Параметры шаблона:
+* typename Value
+* typename Binder
+* typename Interface
+
+Параметры:
+* Value&&

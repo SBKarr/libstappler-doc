@@ -113,6 +113,18 @@ Title: XLComponent.h
 * stappler::xenolith::NodeFlags
 
 
+# ::stappler::xenolith::Component::update(stappler::xenolith::UpdateTime const&)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* stappler::xenolith::UpdateTime const&
+
+
 # ::stappler::xenolith::Component::onContentSizeDirty()
 
 ## BRIEF
@@ -122,7 +134,7 @@ Title: XLComponent.h
 Доступ: public
 
 
-# ::stappler::xenolith::Component::onTransformDirty(stappler::xenolith::Mat4 const&)
+# ::stappler::xenolith::Component::onTransformDirty(const stappler::geom::Mat4&)
 
 ## BRIEF
 
@@ -131,7 +143,7 @@ Title: XLComponent.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Mat4 const&
+* const stappler::geom::Mat4&
 
 
 # ::stappler::xenolith::Component::onReorderChildDirty()
@@ -175,6 +187,24 @@ Title: XLComponent.h
 
 Параметры:
 * bool
+
+
+# ::stappler::xenolith::Component::scheduleUpdate()
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+
+# ::stappler::xenolith::Component::unscheduleUpdate()
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
 
 
 # ::stappler::xenolith::Component::getOwner() const
@@ -234,6 +264,17 @@ Title: XLComponent.h
 
 
 # ::stappler::xenolith::Component::_running
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: bool
+
+
+# ::stappler::xenolith::Component::_scheduled
 
 ## BRIEF
 

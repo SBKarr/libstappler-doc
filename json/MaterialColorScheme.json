@@ -3,14 +3,23 @@
 	"_kind": "file",
 	"_name": "xenolith/renderer/material2d/base/MaterialColorScheme.h",
 	"childs": [{
-		"_fullName": "MaterialColorHCT.h",
+		"_fullName": "MaterialConfig.h",
 		"_kind": "include directive",
-		"_name": "MaterialColorHCT.h",
-		"id": 690517862,
-		"include": "xenolith/renderer/material2d/base/MaterialColorHCT.h",
+		"_name": "MaterialConfig.h",
+		"id": 2987333962,
+		"include": "xenolith/renderer/material2d/base/MaterialConfig.h",
 		"include_kind": "local",
 		"kind": "include directive",
-		"name": "MaterialColorHCT.h"
+		"name": "MaterialConfig.h"
+	}, {
+		"_fullName": "SPColorHCT.h",
+		"_kind": "include directive",
+		"_name": "SPColorHCT.h",
+		"id": 1023709911,
+		"include": "core/geom/SPColorHCT.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "SPColorHCT.h"
 	}, {
 		"_fullName": "XENOLITH_RENDERER_MATERIAL2D_BASE_MATERIALCOLORSCHEME_H_",
 		"_kind": "macro definition",
@@ -52,6 +61,13 @@
 						"id": 159413022,
 						"kind": "enum value",
 						"name": "DarkTheme"
+					}, {
+						"_fullName": "::stappler::xenolith::material2d::ThemeType::Custom",
+						"_kind": "enum value",
+						"_name": "Custom",
+						"id": 4229747017,
+						"kind": "enum value",
+						"name": "Custom"
 					}],
 					"has_explicit_type": false,
 					"id": 2902815341,
@@ -277,6 +293,13 @@
 						"kind": "enum value",
 						"name": "InversePrimary"
 					}, {
+						"_fullName": "::stappler::xenolith::material2d::ColorRole::Undefined",
+						"_kind": "enum value",
+						"_name": "Undefined",
+						"id": 26924160,
+						"kind": "enum value",
+						"name": "Undefined"
+					}, {
 						"_fullName": "::stappler::xenolith::material2d::ColorRole::Max",
 						"_kind": "enum value",
 						"_name": "Max",
@@ -321,11 +344,11 @@
 						"semantic_scope": "",
 						"signature": "()"
 					}, {
-						"_fullName": "::stappler::xenolith::material2d::TonalPalette::TonalPalette(stappler::xenolith::Color4F const&)",
+						"_fullName": "::stappler::xenolith::material2d::TonalPalette::TonalPalette(const stappler::geom::Color4F&)",
 						"_kind": "constructor",
 						"_name": "TonalPalette",
 						"body_kind": "definition",
-						"id": 3589666075,
+						"id": 1352345725,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": false,
@@ -342,72 +365,24 @@
 							"kind": "function parameter",
 							"name": "color",
 							"type": {
-								"_typeName": "stappler::xenolith::Color4F const&",
+								"_typeName": "const stappler::geom::Color4F&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "stappler::xenolith::Color4F const",
-									"cv_qualifier": "const",
-									"kind": "cv_qualified",
-									"type": {
-										"_typeName": "stappler::xenolith::Color4F",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::xenolith::Color4F",
-											"objects": [{
-												"_fullName": "::stappler::xenolith::Color4F",
-												"_kind": "type alias",
-												"_name": "Color4F",
-												"id": 2730567930,
-												"kind": "type alias",
-												"name": "Color4F",
-												"underlying_type": {
-													"_typeName": "geom::Color4F",
-													"kind": "user_defined",
-													"target": {
-														"name": "geom::Color4F",
-														"objects": [{
-															"_fullName": "::stappler::geom::Color4F",
-															"_kind": "class",
-															"_name": "Color4F",
-															"attributes": [{
-																"arguments": [{
-																	"kind": "int_literal",
-																	"spelling": "16"
-																}],
-																"is_variadic": false,
-																"kind": "alignas_",
-																"name": "alignas"
-															}],
-															"class_kind": "struct",
-															"comment": "\nRGBA color composed of 4 floats.\n",
-															"id": 1425630790,
-															"is_declaration": false,
-															"is_definition": true,
-															"is_final": false,
-															"kind": "class",
-															"name": "Color4F",
-															"scope": {
-																"name": "Color4F"
-															},
-															"semantic_scope": ""
-														}]
-													}
-												}
-											}]
-										}
-									}
+									"_typeName": "const stappler::geom::Color4F",
+									"kind": "unexposed",
+									"name": "const stappler::geom::Color4F"
 								},
 								"reference_kind": "lvalue"
 							}
 						}],
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::Color4F const&)"
+						"signature": "(const stappler::geom::Color4F&)"
 					}, {
-						"_fullName": "::stappler::xenolith::material2d::TonalPalette::TonalPalette(stappler::xenolith::material2d::Cam16 const&)",
+						"_fullName": "::stappler::xenolith::material2d::TonalPalette::TonalPalette(geom::Cam16 const&)",
 						"_kind": "constructor",
 						"_name": "TonalPalette",
 						"body_kind": "definition",
-						"id": 359794081,
+						"id": 3830335914,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": false,
@@ -424,23 +399,23 @@
 							"kind": "function parameter",
 							"name": "cam",
 							"type": {
-								"_typeName": "stappler::xenolith::material2d::Cam16 const&",
+								"_typeName": "geom::Cam16 const&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "stappler::xenolith::material2d::Cam16 const",
+									"_typeName": "geom::Cam16 const",
 									"cv_qualifier": "const",
 									"kind": "cv_qualified",
 									"type": {
-										"_typeName": "stappler::xenolith::material2d::Cam16",
+										"_typeName": "geom::Cam16",
 										"kind": "user_defined",
 										"target": {
-											"name": "stappler::xenolith::material2d::Cam16",
+											"name": "geom::Cam16",
 											"objects": [{
-												"_fullName": "::stappler::xenolith::material2d::Cam16",
+												"_fullName": "::stappler::geom::Cam16",
 												"_kind": "class",
 												"_name": "Cam16",
 												"class_kind": "struct",
-												"id": 888519848,
+												"id": 2583123290,
 												"is_declaration": false,
 												"is_definition": true,
 												"is_final": false,
@@ -458,13 +433,13 @@
 							}
 						}],
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::material2d::Cam16 const&)"
+						"signature": "(geom::Cam16 const&)"
 					}, {
-						"_fullName": "::stappler::xenolith::material2d::TonalPalette::TonalPalette(stappler::xenolith::material2d::Cam16Float,stappler::xenolith::material2d::Cam16Float)",
+						"_fullName": "::stappler::xenolith::material2d::TonalPalette::TonalPalette(geom::Cam16Float,geom::Cam16Float)",
 						"_kind": "constructor",
 						"_name": "TonalPalette",
 						"body_kind": "definition",
-						"id": 484979815,
+						"id": 157621367,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": false,
@@ -481,15 +456,15 @@
 							"kind": "function parameter",
 							"name": "hue",
 							"type": {
-								"_typeName": "stappler::xenolith::material2d::Cam16Float",
+								"_typeName": "geom::Cam16Float",
 								"kind": "user_defined",
 								"target": {
-									"name": "stappler::xenolith::material2d::Cam16Float",
+									"name": "geom::Cam16Float",
 									"objects": [{
-										"_fullName": "::stappler::xenolith::material2d::Cam16Float",
+										"_fullName": "::stappler::geom::Cam16Float",
 										"_kind": "type alias",
 										"_name": "Cam16Float",
-										"id": 4260579719,
+										"id": 95480490,
 										"kind": "type alias",
 										"name": "Cam16Float",
 										"underlying_type": {
@@ -508,15 +483,15 @@
 							"kind": "function parameter",
 							"name": "chroma",
 							"type": {
-								"_typeName": "stappler::xenolith::material2d::Cam16Float",
+								"_typeName": "geom::Cam16Float",
 								"kind": "user_defined",
 								"target": {
-									"name": "stappler::xenolith::material2d::Cam16Float",
+									"name": "geom::Cam16Float",
 									"objects": [{
-										"_fullName": "::stappler::xenolith::material2d::Cam16Float",
+										"_fullName": "::stappler::geom::Cam16Float",
 										"_kind": "type alias",
 										"_name": "Cam16Float",
-										"id": 4260579719,
+										"id": 95480490,
 										"kind": "type alias",
 										"name": "Cam16Float",
 										"underlying_type": {
@@ -529,14 +504,14 @@
 							}
 						}],
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::material2d::Cam16Float,stappler::xenolith::material2d::Cam16Float)"
+						"signature": "(geom::Cam16Float,geom::Cam16Float)"
 					}, {
-						"_fullName": "::stappler::xenolith::material2d::TonalPalette::get(stappler::xenolith::material2d::Cam16Float,float) const",
+						"_fullName": "::stappler::xenolith::material2d::TonalPalette::get(geom::Cam16Float,float) const",
 						"_kind": "member function",
 						"_name": "get",
 						"body_kind": "definition",
 						"cv_qualifier": "const",
-						"id": 1123371832,
+						"id": 830482164,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": false,
@@ -553,15 +528,15 @@
 							"kind": "function parameter",
 							"name": "tone",
 							"type": {
-								"_typeName": "stappler::xenolith::material2d::Cam16Float",
+								"_typeName": "geom::Cam16Float",
 								"kind": "user_defined",
 								"target": {
-									"name": "stappler::xenolith::material2d::Cam16Float",
+									"name": "geom::Cam16Float",
 									"objects": [{
-										"_fullName": "::stappler::xenolith::material2d::Cam16Float",
+										"_fullName": "::stappler::geom::Cam16Float",
 										"_kind": "type alias",
 										"_name": "Cam16Float",
-										"id": 4260579719,
+										"id": 95480490,
 										"kind": "type alias",
 										"name": "Cam16Float",
 										"underlying_type": {
@@ -599,62 +574,19 @@
 						}],
 						"ref_qualifier": "none",
 						"return_type": {
-							"_typeName": "stappler::xenolith::Color4F",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::Color4F",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::Color4F",
-									"_kind": "type alias",
-									"_name": "Color4F",
-									"id": 2730567930,
-									"kind": "type alias",
-									"name": "Color4F",
-									"underlying_type": {
-										"_typeName": "geom::Color4F",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::Color4F",
-											"objects": [{
-												"_fullName": "::stappler::geom::Color4F",
-												"_kind": "class",
-												"_name": "Color4F",
-												"attributes": [{
-													"arguments": [{
-														"kind": "int_literal",
-														"spelling": "16"
-													}],
-													"is_variadic": false,
-													"kind": "alignas_",
-													"name": "alignas"
-												}],
-												"class_kind": "struct",
-												"comment": "\nRGBA color composed of 4 floats.\n",
-												"id": 1425630790,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "Color4F",
-												"scope": {
-													"name": "Color4F"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::Color4F",
+							"kind": "unexposed",
+							"name": "stappler::geom::Color4F"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::material2d::Cam16Float,float) const"
+						"signature": "(geom::Cam16Float,float) const"
 					}, {
-						"_fullName": "::stappler::xenolith::material2d::TonalPalette::hct(stappler::xenolith::material2d::Cam16Float,float) const",
+						"_fullName": "::stappler::xenolith::material2d::TonalPalette::hct(geom::Cam16Float,float) const",
 						"_kind": "member function",
 						"_name": "hct",
 						"body_kind": "definition",
 						"cv_qualifier": "const",
-						"id": 3251760772,
+						"id": 3592759011,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": false,
@@ -671,15 +603,15 @@
 							"kind": "function parameter",
 							"name": "tone",
 							"type": {
-								"_typeName": "stappler::xenolith::material2d::Cam16Float",
+								"_typeName": "geom::Cam16Float",
 								"kind": "user_defined",
 								"target": {
-									"name": "stappler::xenolith::material2d::Cam16Float",
+									"name": "geom::Cam16Float",
 									"objects": [{
-										"_fullName": "::stappler::xenolith::material2d::Cam16Float",
+										"_fullName": "::stappler::geom::Cam16Float",
 										"_kind": "type alias",
 										"_name": "Cam16Float",
-										"id": 4260579719,
+										"id": 95480490,
 										"kind": "type alias",
 										"name": "Cam16Float",
 										"underlying_type": {
@@ -717,46 +649,19 @@
 						}],
 						"ref_qualifier": "none",
 						"return_type": {
-							"_typeName": "stappler::xenolith::material2d::ColorHCT",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::material2d::ColorHCT",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::material2d::ColorHCT",
-									"_kind": "class",
-									"_name": "ColorHCT",
-									"attributes": [{
-										"arguments": [{
-											"kind": "int_literal",
-											"spelling": "16"
-										}],
-										"is_variadic": false,
-										"kind": "alignas_",
-										"name": "alignas"
-									}],
-									"class_kind": "struct",
-									"id": 2099399143,
-									"is_declaration": false,
-									"is_definition": true,
-									"is_final": false,
-									"kind": "class",
-									"name": "ColorHCT",
-									"scope": {
-										"name": "ColorHCT"
-									},
-									"semantic_scope": ""
-								}]
-							}
+							"_typeName": "stappler::geom::ColorHCT",
+							"kind": "unexposed",
+							"name": "stappler::geom::ColorHCT"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::material2d::Cam16Float,float) const"
+						"signature": "(geom::Cam16Float,float) const"
 					}, {
-						"_fullName": "::stappler::xenolith::material2d::TonalPalette::values(stappler::xenolith::material2d::Cam16Float,float) const",
+						"_fullName": "::stappler::xenolith::material2d::TonalPalette::values(geom::Cam16Float,float) const",
 						"_kind": "member function",
 						"_name": "values",
 						"body_kind": "definition",
 						"cv_qualifier": "const",
-						"id": 1494061489,
+						"id": 1482789924,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": false,
@@ -773,15 +678,15 @@
 							"kind": "function parameter",
 							"name": "tone",
 							"type": {
-								"_typeName": "stappler::xenolith::material2d::Cam16Float",
+								"_typeName": "geom::Cam16Float",
 								"kind": "user_defined",
 								"target": {
-									"name": "stappler::xenolith::material2d::Cam16Float",
+									"name": "geom::Cam16Float",
 									"objects": [{
-										"_fullName": "::stappler::xenolith::material2d::Cam16Float",
+										"_fullName": "::stappler::geom::Cam16Float",
 										"_kind": "type alias",
 										"_name": "Cam16Float",
-										"id": 4260579719,
+										"id": 95480490,
 										"kind": "type alias",
 										"name": "Cam16Float",
 										"underlying_type": {
@@ -824,7 +729,7 @@
 							"target": {
 								"name": "ColorHCT::Values",
 								"objects": [{
-									"_fullName": "::stappler::xenolith::material2d::ColorHCT::Values",
+									"_fullName": "::stappler::geom::ColorHCT::Values",
 									"_kind": "class",
 									"_name": "Values",
 									"attributes": [{
@@ -837,7 +742,7 @@
 										"name": "alignas"
 									}],
 									"class_kind": "struct",
-									"id": 504462825,
+									"id": 3287688117,
 									"is_declaration": false,
 									"is_definition": true,
 									"is_final": false,
@@ -851,13 +756,19 @@
 							}
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::material2d::Cam16Float,float) const"
+						"signature": "(geom::Cam16Float,float) const"
 					}, {
 						"_fullName": "::stappler::xenolith::material2d::TonalPalette::hue",
 						"_kind": "member variable",
 						"_name": "hue",
 						"default_value": {
 							"expression": [{
+								"kind": "identifier",
+								"spelling": "geom"
+							}, {
+								"kind": "punctuation",
+								"spelling": "::"
+							}, {
 								"kind": "identifier",
 								"spelling": "Cam16Float"
 							}, {
@@ -872,15 +783,15 @@
 							}],
 							"kind": "unexposed",
 							"type": {
-								"_typeName": "stappler::xenolith::material2d::Cam16Float",
+								"_typeName": "geom::Cam16Float",
 								"kind": "user_defined",
 								"target": {
-									"name": "stappler::xenolith::material2d::Cam16Float",
+									"name": "geom::Cam16Float",
 									"objects": [{
-										"_fullName": "::stappler::xenolith::material2d::Cam16Float",
+										"_fullName": "::stappler::geom::Cam16Float",
 										"_kind": "type alias",
 										"_name": "Cam16Float",
-										"id": 4260579719,
+										"id": 95480490,
 										"kind": "type alias",
 										"name": "Cam16Float",
 										"underlying_type": {
@@ -897,15 +808,15 @@
 						"kind": "member variable",
 						"name": "hue",
 						"type": {
-							"_typeName": "stappler::xenolith::material2d::Cam16Float",
+							"_typeName": "geom::Cam16Float",
 							"kind": "user_defined",
 							"target": {
-								"name": "stappler::xenolith::material2d::Cam16Float",
+								"name": "geom::Cam16Float",
 								"objects": [{
-									"_fullName": "::stappler::xenolith::material2d::Cam16Float",
+									"_fullName": "::stappler::geom::Cam16Float",
 									"_kind": "type alias",
 									"_name": "Cam16Float",
-									"id": 4260579719,
+									"id": 95480490,
 									"kind": "type alias",
 									"name": "Cam16Float",
 									"underlying_type": {
@@ -923,6 +834,12 @@
 						"default_value": {
 							"expression": [{
 								"kind": "identifier",
+								"spelling": "geom"
+							}, {
+								"kind": "punctuation",
+								"spelling": "::"
+							}, {
+								"kind": "identifier",
 								"spelling": "Cam16Float"
 							}, {
 								"kind": "punctuation",
@@ -936,15 +853,15 @@
 							}],
 							"kind": "unexposed",
 							"type": {
-								"_typeName": "stappler::xenolith::material2d::Cam16Float",
+								"_typeName": "geom::Cam16Float",
 								"kind": "user_defined",
 								"target": {
-									"name": "stappler::xenolith::material2d::Cam16Float",
+									"name": "geom::Cam16Float",
 									"objects": [{
-										"_fullName": "::stappler::xenolith::material2d::Cam16Float",
+										"_fullName": "::stappler::geom::Cam16Float",
 										"_kind": "type alias",
 										"_name": "Cam16Float",
-										"id": 4260579719,
+										"id": 95480490,
 										"kind": "type alias",
 										"name": "Cam16Float",
 										"underlying_type": {
@@ -961,15 +878,15 @@
 						"kind": "member variable",
 						"name": "chroma",
 						"type": {
-							"_typeName": "stappler::xenolith::material2d::Cam16Float",
+							"_typeName": "geom::Cam16Float",
 							"kind": "user_defined",
 							"target": {
-								"name": "stappler::xenolith::material2d::Cam16Float",
+								"name": "geom::Cam16Float",
 								"objects": [{
-									"_fullName": "::stappler::xenolith::material2d::Cam16Float",
+									"_fullName": "::stappler::geom::Cam16Float",
 									"_kind": "type alias",
 									"_name": "Cam16Float",
-									"id": 4260579719,
+									"id": 95480490,
 									"kind": "type alias",
 									"name": "Cam16Float",
 									"underlying_type": {
@@ -1013,11 +930,11 @@
 						"semantic_scope": "",
 						"signature": "()"
 					}, {
-						"_fullName": "::stappler::xenolith::material2d::CorePalette::CorePalette(stappler::xenolith::Color4F const&,bool)",
+						"_fullName": "::stappler::xenolith::material2d::CorePalette::CorePalette(const stappler::geom::Color4F&,bool)",
 						"_kind": "constructor",
 						"_name": "CorePalette",
 						"body_kind": "declaration",
-						"id": 3294070214,
+						"id": 1897168042,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -1034,60 +951,12 @@
 							"kind": "function parameter",
 							"name": "",
 							"type": {
-								"_typeName": "stappler::xenolith::Color4F const&",
+								"_typeName": "const stappler::geom::Color4F&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "stappler::xenolith::Color4F const",
-									"cv_qualifier": "const",
-									"kind": "cv_qualified",
-									"type": {
-										"_typeName": "stappler::xenolith::Color4F",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::xenolith::Color4F",
-											"objects": [{
-												"_fullName": "::stappler::xenolith::Color4F",
-												"_kind": "type alias",
-												"_name": "Color4F",
-												"id": 2730567930,
-												"kind": "type alias",
-												"name": "Color4F",
-												"underlying_type": {
-													"_typeName": "geom::Color4F",
-													"kind": "user_defined",
-													"target": {
-														"name": "geom::Color4F",
-														"objects": [{
-															"_fullName": "::stappler::geom::Color4F",
-															"_kind": "class",
-															"_name": "Color4F",
-															"attributes": [{
-																"arguments": [{
-																	"kind": "int_literal",
-																	"spelling": "16"
-																}],
-																"is_variadic": false,
-																"kind": "alignas_",
-																"name": "alignas"
-															}],
-															"class_kind": "struct",
-															"comment": "\nRGBA color composed of 4 floats.\n",
-															"id": 1425630790,
-															"is_declaration": false,
-															"is_definition": true,
-															"is_final": false,
-															"kind": "class",
-															"name": "Color4F",
-															"scope": {
-																"name": "Color4F"
-															},
-															"semantic_scope": ""
-														}]
-													}
-												}
-											}]
-										}
-									}
+									"_typeName": "const stappler::geom::Color4F",
+									"kind": "unexposed",
+									"name": "const stappler::geom::Color4F"
 								},
 								"reference_kind": "lvalue"
 							}
@@ -1105,13 +974,13 @@
 							}
 						}],
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::Color4F const&,bool)"
+						"signature": "(const stappler::geom::Color4F&,bool)"
 					}, {
-						"_fullName": "::stappler::xenolith::material2d::CorePalette::CorePalette(stappler::xenolith::material2d::Cam16 const&,bool)",
+						"_fullName": "::stappler::xenolith::material2d::CorePalette::CorePalette(geom::Cam16 const&,bool)",
 						"_kind": "constructor",
 						"_name": "CorePalette",
 						"body_kind": "declaration",
-						"id": 1267811415,
+						"id": 2376737211,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -1128,23 +997,23 @@
 							"kind": "function parameter",
 							"name": "",
 							"type": {
-								"_typeName": "stappler::xenolith::material2d::Cam16 const&",
+								"_typeName": "geom::Cam16 const&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "stappler::xenolith::material2d::Cam16 const",
+									"_typeName": "geom::Cam16 const",
 									"cv_qualifier": "const",
 									"kind": "cv_qualified",
 									"type": {
-										"_typeName": "stappler::xenolith::material2d::Cam16",
+										"_typeName": "geom::Cam16",
 										"kind": "user_defined",
 										"target": {
-											"name": "stappler::xenolith::material2d::Cam16",
+											"name": "geom::Cam16",
 											"objects": [{
-												"_fullName": "::stappler::xenolith::material2d::Cam16",
+												"_fullName": "::stappler::geom::Cam16",
 												"_kind": "class",
 												"_name": "Cam16",
 												"class_kind": "struct",
-												"id": 888519848,
+												"id": 2583123290,
 												"is_declaration": false,
 												"is_definition": true,
 												"is_final": false,
@@ -1174,13 +1043,13 @@
 							}
 						}],
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::material2d::Cam16 const&,bool)"
+						"signature": "(geom::Cam16 const&,bool)"
 					}, {
-						"_fullName": "::stappler::xenolith::material2d::CorePalette::CorePalette(stappler::xenolith::material2d::Cam16Float,stappler::xenolith::material2d::Cam16Float,bool)",
+						"_fullName": "::stappler::xenolith::material2d::CorePalette::CorePalette(geom::Cam16Float,geom::Cam16Float,bool)",
 						"_kind": "constructor",
 						"_name": "CorePalette",
 						"body_kind": "declaration",
-						"id": 4279522585,
+						"id": 2831180081,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -1197,15 +1066,15 @@
 							"kind": "function parameter",
 							"name": "hue",
 							"type": {
-								"_typeName": "stappler::xenolith::material2d::Cam16Float",
+								"_typeName": "geom::Cam16Float",
 								"kind": "user_defined",
 								"target": {
-									"name": "stappler::xenolith::material2d::Cam16Float",
+									"name": "geom::Cam16Float",
 									"objects": [{
-										"_fullName": "::stappler::xenolith::material2d::Cam16Float",
+										"_fullName": "::stappler::geom::Cam16Float",
 										"_kind": "type alias",
 										"_name": "Cam16Float",
-										"id": 4260579719,
+										"id": 95480490,
 										"kind": "type alias",
 										"name": "Cam16Float",
 										"underlying_type": {
@@ -1224,15 +1093,15 @@
 							"kind": "function parameter",
 							"name": "chroma",
 							"type": {
-								"_typeName": "stappler::xenolith::material2d::Cam16Float",
+								"_typeName": "geom::Cam16Float",
 								"kind": "user_defined",
 								"target": {
-									"name": "stappler::xenolith::material2d::Cam16Float",
+									"name": "geom::Cam16Float",
 									"objects": [{
-										"_fullName": "::stappler::xenolith::material2d::Cam16Float",
+										"_fullName": "::stappler::geom::Cam16Float",
 										"_kind": "type alias",
 										"_name": "Cam16Float",
-										"id": 4260579719,
+										"id": 95480490,
 										"kind": "type alias",
 										"name": "Cam16Float",
 										"underlying_type": {
@@ -1257,7 +1126,7 @@
 							}
 						}],
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::material2d::Cam16Float,stappler::xenolith::material2d::Cam16Float,bool)"
+						"signature": "(geom::Cam16Float,geom::Cam16Float,bool)"
 					}, {
 						"_fullName": "::stappler::xenolith::material2d::CorePalette::primary",
 						"_kind": "member variable",
@@ -1688,11 +1557,11 @@
 						"semantic_scope": "",
 						"signature": "(stappler::xenolith::material2d::ThemeType,stappler::xenolith::material2d::CorePalette const&)"
 					}, {
-						"_fullName": "::stappler::xenolith::material2d::ColorScheme::ColorScheme(stappler::xenolith::material2d::ThemeType,stappler::xenolith::Color4F const&,bool)",
+						"_fullName": "::stappler::xenolith::material2d::ColorScheme::ColorScheme(stappler::xenolith::material2d::ThemeType,const stappler::geom::Color4F&,bool)",
 						"_kind": "constructor",
 						"_name": "ColorScheme",
 						"body_kind": "declaration",
-						"id": 4188112345,
+						"id": 825976703,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -1744,60 +1613,12 @@
 							"kind": "function parameter",
 							"name": "",
 							"type": {
-								"_typeName": "stappler::xenolith::Color4F const&",
+								"_typeName": "const stappler::geom::Color4F&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "stappler::xenolith::Color4F const",
-									"cv_qualifier": "const",
-									"kind": "cv_qualified",
-									"type": {
-										"_typeName": "stappler::xenolith::Color4F",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::xenolith::Color4F",
-											"objects": [{
-												"_fullName": "::stappler::xenolith::Color4F",
-												"_kind": "type alias",
-												"_name": "Color4F",
-												"id": 2730567930,
-												"kind": "type alias",
-												"name": "Color4F",
-												"underlying_type": {
-													"_typeName": "geom::Color4F",
-													"kind": "user_defined",
-													"target": {
-														"name": "geom::Color4F",
-														"objects": [{
-															"_fullName": "::stappler::geom::Color4F",
-															"_kind": "class",
-															"_name": "Color4F",
-															"attributes": [{
-																"arguments": [{
-																	"kind": "int_literal",
-																	"spelling": "16"
-																}],
-																"is_variadic": false,
-																"kind": "alignas_",
-																"name": "alignas"
-															}],
-															"class_kind": "struct",
-															"comment": "\nRGBA color composed of 4 floats.\n",
-															"id": 1425630790,
-															"is_declaration": false,
-															"is_definition": true,
-															"is_final": false,
-															"kind": "class",
-															"name": "Color4F",
-															"scope": {
-																"name": "Color4F"
-															},
-															"semantic_scope": ""
-														}]
-													}
-												}
-											}]
-										}
-									}
+									"_typeName": "const stappler::geom::Color4F",
+									"kind": "unexposed",
+									"name": "const stappler::geom::Color4F"
 								},
 								"reference_kind": "lvalue"
 							}
@@ -1815,13 +1636,13 @@
 							}
 						}],
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::material2d::ThemeType,stappler::xenolith::Color4F const&,bool)"
+						"signature": "(stappler::xenolith::material2d::ThemeType,const stappler::geom::Color4F&,bool)"
 					}, {
-						"_fullName": "::stappler::xenolith::material2d::ColorScheme::ColorScheme(stappler::xenolith::material2d::ThemeType,stappler::xenolith::material2d::ColorHCT const&,bool)",
+						"_fullName": "::stappler::xenolith::material2d::ColorScheme::ColorScheme(stappler::xenolith::material2d::ThemeType,const stappler::geom::ColorHCT&,bool)",
 						"_kind": "constructor",
 						"_name": "ColorScheme",
 						"body_kind": "declaration",
-						"id": 3377327848,
+						"id": 1015863692,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -1873,44 +1694,12 @@
 							"kind": "function parameter",
 							"name": "",
 							"type": {
-								"_typeName": "stappler::xenolith::material2d::ColorHCT const&",
+								"_typeName": "const stappler::geom::ColorHCT&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "stappler::xenolith::material2d::ColorHCT const",
-									"cv_qualifier": "const",
-									"kind": "cv_qualified",
-									"type": {
-										"_typeName": "stappler::xenolith::material2d::ColorHCT",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::xenolith::material2d::ColorHCT",
-											"objects": [{
-												"_fullName": "::stappler::xenolith::material2d::ColorHCT",
-												"_kind": "class",
-												"_name": "ColorHCT",
-												"attributes": [{
-													"arguments": [{
-														"kind": "int_literal",
-														"spelling": "16"
-													}],
-													"is_variadic": false,
-													"kind": "alignas_",
-													"name": "alignas"
-												}],
-												"class_kind": "struct",
-												"id": 2099399143,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "ColorHCT",
-												"scope": {
-													"name": "ColorHCT"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
+									"_typeName": "const stappler::geom::ColorHCT",
+									"kind": "unexposed",
+									"name": "const stappler::geom::ColorHCT"
 								},
 								"reference_kind": "lvalue"
 							}
@@ -1928,7 +1717,7 @@
 							}
 						}],
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::material2d::ThemeType,stappler::xenolith::material2d::ColorHCT const&,bool)"
+						"signature": "(stappler::xenolith::material2d::ThemeType,const stappler::geom::ColorHCT&,bool)"
 					}, {
 						"_fullName": "::stappler::xenolith::material2d::ColorScheme::set(stappler::xenolith::material2d::ThemeType,stappler::xenolith::material2d::CorePalette const&)",
 						"_kind": "member function",
@@ -2030,12 +1819,12 @@
 						"semantic_scope": "",
 						"signature": "(stappler::xenolith::material2d::ThemeType,stappler::xenolith::material2d::CorePalette const&)"
 					}, {
-						"_fullName": "::stappler::xenolith::material2d::ColorScheme::set(stappler::xenolith::material2d::ThemeType,stappler::xenolith::Color4F const&,bool)",
+						"_fullName": "::stappler::xenolith::material2d::ColorScheme::set(stappler::xenolith::material2d::ThemeType,const stappler::geom::Color4F&,bool)",
 						"_kind": "member function",
 						"_name": "set",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 3146499833,
+						"id": 988343869,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -2087,60 +1876,12 @@
 							"kind": "function parameter",
 							"name": "",
 							"type": {
-								"_typeName": "stappler::xenolith::Color4F const&",
+								"_typeName": "const stappler::geom::Color4F&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "stappler::xenolith::Color4F const",
-									"cv_qualifier": "const",
-									"kind": "cv_qualified",
-									"type": {
-										"_typeName": "stappler::xenolith::Color4F",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::xenolith::Color4F",
-											"objects": [{
-												"_fullName": "::stappler::xenolith::Color4F",
-												"_kind": "type alias",
-												"_name": "Color4F",
-												"id": 2730567930,
-												"kind": "type alias",
-												"name": "Color4F",
-												"underlying_type": {
-													"_typeName": "geom::Color4F",
-													"kind": "user_defined",
-													"target": {
-														"name": "geom::Color4F",
-														"objects": [{
-															"_fullName": "::stappler::geom::Color4F",
-															"_kind": "class",
-															"_name": "Color4F",
-															"attributes": [{
-																"arguments": [{
-																	"kind": "int_literal",
-																	"spelling": "16"
-																}],
-																"is_variadic": false,
-																"kind": "alignas_",
-																"name": "alignas"
-															}],
-															"class_kind": "struct",
-															"comment": "\nRGBA color composed of 4 floats.\n",
-															"id": 1425630790,
-															"is_declaration": false,
-															"is_definition": true,
-															"is_final": false,
-															"kind": "class",
-															"name": "Color4F",
-															"scope": {
-																"name": "Color4F"
-															},
-															"semantic_scope": ""
-														}]
-													}
-												}
-											}]
-										}
-									}
+									"_typeName": "const stappler::geom::Color4F",
+									"kind": "unexposed",
+									"name": "const stappler::geom::Color4F"
 								},
 								"reference_kind": "lvalue"
 							}
@@ -2164,14 +1905,14 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::material2d::ThemeType,stappler::xenolith::Color4F const&,bool)"
+						"signature": "(stappler::xenolith::material2d::ThemeType,const stappler::geom::Color4F&,bool)"
 					}, {
-						"_fullName": "::stappler::xenolith::material2d::ColorScheme::set(stappler::xenolith::material2d::ThemeType,stappler::xenolith::material2d::ColorHCT const&,bool)",
+						"_fullName": "::stappler::xenolith::material2d::ColorScheme::set(stappler::xenolith::material2d::ThemeType,const stappler::geom::ColorHCT&,bool)",
 						"_kind": "member function",
 						"_name": "set",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 2062927200,
+						"id": 1769717754,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -2223,44 +1964,12 @@
 							"kind": "function parameter",
 							"name": "",
 							"type": {
-								"_typeName": "stappler::xenolith::material2d::ColorHCT const&",
+								"_typeName": "const stappler::geom::ColorHCT&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "stappler::xenolith::material2d::ColorHCT const",
-									"cv_qualifier": "const",
-									"kind": "cv_qualified",
-									"type": {
-										"_typeName": "stappler::xenolith::material2d::ColorHCT",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::xenolith::material2d::ColorHCT",
-											"objects": [{
-												"_fullName": "::stappler::xenolith::material2d::ColorHCT",
-												"_kind": "class",
-												"_name": "ColorHCT",
-												"attributes": [{
-													"arguments": [{
-														"kind": "int_literal",
-														"spelling": "16"
-													}],
-													"is_variadic": false,
-													"kind": "alignas_",
-													"name": "alignas"
-												}],
-												"class_kind": "struct",
-												"id": 2099399143,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "ColorHCT",
-												"scope": {
-													"name": "ColorHCT"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
+									"_typeName": "const stappler::geom::ColorHCT",
+									"kind": "unexposed",
+									"name": "const stappler::geom::ColorHCT"
 								},
 								"reference_kind": "lvalue"
 							}
@@ -2284,7 +1993,7 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::material2d::ThemeType,stappler::xenolith::material2d::ColorHCT const&,bool)"
+						"signature": "(stappler::xenolith::material2d::ThemeType,const stappler::geom::ColorHCT&,bool)"
 					}, {
 						"_fullName": "::stappler::xenolith::material2d::ColorScheme::get(stappler::xenolith::material2d::ColorRole) const",
 						"_kind": "member function",
@@ -2338,52 +2047,9 @@
 						}],
 						"ref_qualifier": "none",
 						"return_type": {
-							"_typeName": "stappler::xenolith::Color4F",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::Color4F",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::Color4F",
-									"_kind": "type alias",
-									"_name": "Color4F",
-									"id": 2730567930,
-									"kind": "type alias",
-									"name": "Color4F",
-									"underlying_type": {
-										"_typeName": "geom::Color4F",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::Color4F",
-											"objects": [{
-												"_fullName": "::stappler::geom::Color4F",
-												"_kind": "class",
-												"_name": "Color4F",
-												"attributes": [{
-													"arguments": [{
-														"kind": "int_literal",
-														"spelling": "16"
-													}],
-													"is_variadic": false,
-													"kind": "alignas_",
-													"name": "alignas"
-												}],
-												"class_kind": "struct",
-												"comment": "\nRGBA color composed of 4 floats.\n",
-												"id": 1425630790,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "Color4F",
-												"scope": {
-													"name": "Color4F"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::Color4F",
+							"kind": "unexposed",
+							"name": "stappler::geom::Color4F"
 						},
 						"semantic_scope": "",
 						"signature": "(stappler::xenolith::material2d::ColorRole) const"
@@ -2440,52 +2106,9 @@
 						}],
 						"ref_qualifier": "none",
 						"return_type": {
-							"_typeName": "stappler::xenolith::Color4F",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::Color4F",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::Color4F",
-									"_kind": "type alias",
-									"_name": "Color4F",
-									"id": 2730567930,
-									"kind": "type alias",
-									"name": "Color4F",
-									"underlying_type": {
-										"_typeName": "geom::Color4F",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::Color4F",
-											"objects": [{
-												"_fullName": "::stappler::geom::Color4F",
-												"_kind": "class",
-												"_name": "Color4F",
-												"attributes": [{
-													"arguments": [{
-														"kind": "int_literal",
-														"spelling": "16"
-													}],
-													"is_variadic": false,
-													"kind": "alignas_",
-													"name": "alignas"
-												}],
-												"class_kind": "struct",
-												"comment": "\nRGBA color composed of 4 floats.\n",
-												"id": 1425630790,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "Color4F",
-												"scope": {
-													"name": "Color4F"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::Color4F",
+							"kind": "unexposed",
+							"name": "stappler::geom::Color4F"
 						},
 						"semantic_scope": "",
 						"signature": "(stappler::xenolith::material2d::ColorRole) const"
@@ -2566,36 +2189,9 @@
 						}],
 						"ref_qualifier": "none",
 						"return_type": {
-							"_typeName": "stappler::xenolith::material2d::ColorHCT",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::material2d::ColorHCT",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::material2d::ColorHCT",
-									"_kind": "class",
-									"_name": "ColorHCT",
-									"attributes": [{
-										"arguments": [{
-											"kind": "int_literal",
-											"spelling": "16"
-										}],
-										"is_variadic": false,
-										"kind": "alignas_",
-										"name": "alignas"
-									}],
-									"class_kind": "struct",
-									"id": 2099399143,
-									"is_declaration": false,
-									"is_definition": true,
-									"is_final": false,
-									"kind": "class",
-									"name": "ColorHCT",
-									"scope": {
-										"name": "ColorHCT"
-									},
-									"semantic_scope": ""
-								}]
-							}
+							"_typeName": "stappler::geom::ColorHCT",
+							"kind": "unexposed",
+							"name": "stappler::geom::ColorHCT"
 						},
 						"semantic_scope": "",
 						"signature": "(stappler::xenolith::material2d::ColorRole,float) const"
@@ -2681,7 +2277,7 @@
 							"target": {
 								"name": "ColorHCT::Values",
 								"objects": [{
-									"_fullName": "::stappler::xenolith::material2d::ColorHCT::Values",
+									"_fullName": "::stappler::geom::ColorHCT::Values",
 									"_kind": "class",
 									"_name": "Values",
 									"attributes": [{
@@ -2694,7 +2290,7 @@
 										"name": "alignas"
 									}],
 									"class_kind": "struct",
-									"id": 504462825,
+									"id": 3287688117,
 									"is_declaration": false,
 									"is_definition": true,
 									"is_final": false,

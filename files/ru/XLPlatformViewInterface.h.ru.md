@@ -78,7 +78,7 @@ Title: XLPlatformViewInterface.h
 Доступ: public
 
 Возвращает:
-* stappler::xenolith::Extent2
+* stappler::geom::Extent2
 
 # ::stappler::xenolith::platform::ViewInterface::isInputEnabled() const
 
@@ -156,7 +156,7 @@ Title: XLPlatformViewInterface.h
 Доступ: public
 
 
-# ::stappler::xenolith::platform::ViewInterface::setContentPadding(stappler::xenolith::Padding const&)
+# ::stappler::xenolith::platform::ViewInterface::setContentPadding(const stappler::geom::Padding&)
 
 ## BRIEF
 
@@ -165,7 +165,7 @@ Title: XLPlatformViewInterface.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Padding const&
+* const stappler::geom::Padding&
 
 
 # ::stappler::xenolith::platform::ViewInterface::getBackButtonCounter() const
@@ -178,6 +178,32 @@ Title: XLPlatformViewInterface.h
 
 Возвращает:
 * uint64_t
+
+# ::stappler::xenolith::platform::ViewInterface::readFromClipboard(Function<void (stappler::BytesView, stappler::StringView)>&&,stappler::mem_std::Ref*)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* Function<void (stappler::BytesView, stappler::StringView)>&&
+* stappler::mem_std::Ref*
+
+
+# ::stappler::xenolith::platform::ViewInterface::writeToClipboard(stappler::BytesView,stappler::StringView)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* stappler::BytesView
+* stappler::StringView
+
 
 # ::stappler::xenolith::platform::ViewInterfaceRef
 

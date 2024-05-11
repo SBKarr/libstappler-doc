@@ -245,6 +245,21 @@ Title: XLVkTextureSet.h
 * Function<void (const stappler::xenolith::vk::ImageInfoData &, stappler::BytesView)>&&
 
 
+# ::stappler::xenolith::vk::TextureSetLayout::readBuffer(stappler::xenolith::vk::Device&,stappler::xenolith::vk::Loop&,Rc<stappler::xenolith::vk::Buffer> const&,Function<void (const stappler::xenolith::vk::BufferInfo &, stappler::BytesView)>&&)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* stappler::xenolith::vk::Device&
+* stappler::xenolith::vk::Loop&
+* Rc<stappler::xenolith::vk::Buffer> const&
+* Function<void (const stappler::xenolith::vk::BufferInfo &, stappler::BytesView)>&&
+
+
 # ::stappler::xenolith::vk::TextureSetLayout::writeDefaults(stappler::xenolith::vk::CommandBuffer&)
 
 ## BRIEF
@@ -273,7 +288,7 @@ Title: XLVkTextureSet.h
 * Rc<stappler::xenolith::vk::Image> const&
 
 
-# ::stappler::xenolith::vk::TextureSetLayout::writeImageRead(stappler::xenolith::vk::Device&,stappler::xenolith::vk::CommandBuffer&,uint32_t,Rc<stappler::xenolith::vk::Image> const&,stappler::xenolith::vk::TextureSetLayout::AttachmentLayout,Rc<stappler::xenolith::vk::DeviceBuffer> const&)
+# ::stappler::xenolith::vk::TextureSetLayout::writeImageRead(stappler::xenolith::vk::Device&,stappler::xenolith::vk::CommandBuffer&,uint32_t,Rc<stappler::xenolith::vk::Image> const&,stappler::xenolith::vk::TextureSetLayout::AttachmentLayout,Rc<stappler::xenolith::vk::Buffer> const&)
 
 ## BRIEF
 
@@ -287,7 +302,23 @@ Title: XLVkTextureSet.h
 * uint32_t
 * Rc<stappler::xenolith::vk::Image> const&
 * stappler::xenolith::vk::TextureSetLayout::AttachmentLayout
-* Rc<stappler::xenolith::vk::DeviceBuffer> const&
+* Rc<stappler::xenolith::vk::Buffer> const&
+
+
+# ::stappler::xenolith::vk::TextureSetLayout::writeBufferRead(stappler::xenolith::vk::Device&,stappler::xenolith::vk::CommandBuffer&,uint32_t,Rc<stappler::xenolith::vk::Buffer> const&,Rc<stappler::xenolith::vk::Buffer> const&)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Параметры:
+* stappler::xenolith::vk::Device&
+* stappler::xenolith::vk::CommandBuffer&
+* uint32_t
+* Rc<stappler::xenolith::vk::Buffer> const&
+* Rc<stappler::xenolith::vk::Buffer> const&
 
 
 # ::stappler::xenolith::vk::TextureSetLayout::_partiallyBound

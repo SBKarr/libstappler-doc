@@ -353,6 +353,65 @@
 					"semantic_scope": "",
 					"signature": "(stappler::xenolith::DynamicStateNode::StateApplyMode)"
 				}, {
+					"_fullName": "::stappler::xenolith::DynamicStateNode::isIgnoreParentState() const",
+					"_kind": "member function",
+					"_name": "isIgnoreParentState",
+					"body_kind": "definition",
+					"cv_qualifier": "const",
+					"id": 3423997511,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": true,
+					"kind": "member function",
+					"name": "isIgnoreParentState",
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "() const"
+				}, {
+					"_fullName": "::stappler::xenolith::DynamicStateNode::setIgnoreParentState(bool)",
+					"_kind": "member function",
+					"_name": "setIgnoreParentState",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 1156733214,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": true,
+					"kind": "member function",
+					"name": "setIgnoreParentState",
+					"parameters": [{
+						"_fullName": "",
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 46947589,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "bool",
+							"builtin_type_kind": "bool",
+							"kind": "builtin"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(bool)"
+				}, {
 					"_fullName": "::stappler::xenolith::DynamicStateNode::visitDraw(stappler::xenolith::FrameInfo&,stappler::xenolith::NodeFlags)",
 					"_kind": "member function",
 					"_name": "visitDraw",
@@ -448,12 +507,12 @@
 					"semantic_scope": "",
 					"signature": "(stappler::xenolith::FrameInfo&,stappler::xenolith::NodeFlags)"
 				}, {
-					"_fullName": "::stappler::xenolith::DynamicStateNode::enableScissor(stappler::xenolith::Padding)",
+					"_fullName": "::stappler::xenolith::DynamicStateNode::enableScissor(stappler::geom::Padding)",
 					"_kind": "member function",
 					"_name": "enableScissor",
 					"body_kind": "declaration",
 					"cv_qualifier": "none",
-					"id": 2304036762,
+					"id": 1236011432,
 					"is_consteval": false,
 					"is_constexpr": false,
 					"is_declaration": true,
@@ -479,84 +538,18 @@
 							}],
 							"kind": "unexposed",
 							"type": {
-								"_typeName": "stappler::xenolith::Padding",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Padding",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Padding",
-										"_kind": "type alias",
-										"_name": "Padding",
-										"id": 232642206,
-										"kind": "type alias",
-										"name": "Padding",
-										"underlying_type": {
-											"_typeName": "geom::Padding",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Padding",
-												"objects": [{
-													"_fullName": "::stappler::geom::Padding",
-													"_kind": "class",
-													"_name": "Padding",
-													"class_kind": "struct",
-													"id": 2717367825,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Padding",
-													"scope": {
-														"name": "Padding"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Padding",
+								"kind": "unexposed",
+								"name": "stappler::geom::Padding"
 							}
 						},
 						"id": 1542742259,
 						"kind": "function parameter",
 						"name": "outline",
 						"type": {
-							"_typeName": "stappler::xenolith::Padding",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::Padding",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::Padding",
-									"_kind": "type alias",
-									"_name": "Padding",
-									"id": 232642206,
-									"kind": "type alias",
-									"name": "Padding",
-									"underlying_type": {
-										"_typeName": "geom::Padding",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::Padding",
-											"objects": [{
-												"_fullName": "::stappler::geom::Padding",
-												"_kind": "class",
-												"_name": "Padding",
-												"class_kind": "struct",
-												"id": 2717367825,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "Padding",
-												"scope": {
-													"name": "Padding"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::Padding",
+							"kind": "unexposed",
+							"name": "stappler::geom::Padding"
 						}
 					}],
 					"ref_qualifier": "none",
@@ -566,7 +559,7 @@
 						"kind": "builtin"
 					},
 					"semantic_scope": "",
-					"signature": "(stappler::xenolith::Padding)"
+					"signature": "(stappler::geom::Padding)"
 				}, {
 					"_fullName": "::stappler::xenolith::DynamicStateNode::disableScissor()",
 					"_kind": "member function",
@@ -614,12 +607,12 @@
 					"semantic_scope": "",
 					"signature": "() const"
 				}, {
-					"_fullName": "::stappler::xenolith::DynamicStateNode::setScissorOutlone(stappler::xenolith::Padding)",
+					"_fullName": "::stappler::xenolith::DynamicStateNode::setScissorOutlone(stappler::geom::Padding)",
 					"_kind": "member function",
 					"_name": "setScissorOutlone",
 					"body_kind": "definition",
 					"cv_qualifier": "none",
-					"id": 852658070,
+					"id": 3120914204,
 					"is_consteval": false,
 					"is_constexpr": false,
 					"is_declaration": false,
@@ -636,42 +629,9 @@
 						"kind": "function parameter",
 						"name": "value",
 						"type": {
-							"_typeName": "stappler::xenolith::Padding",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::Padding",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::Padding",
-									"_kind": "type alias",
-									"_name": "Padding",
-									"id": 232642206,
-									"kind": "type alias",
-									"name": "Padding",
-									"underlying_type": {
-										"_typeName": "geom::Padding",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::Padding",
-											"objects": [{
-												"_fullName": "::stappler::geom::Padding",
-												"_kind": "class",
-												"_name": "Padding",
-												"class_kind": "struct",
-												"id": 2717367825,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "Padding",
-												"scope": {
-													"name": "Padding"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::Padding",
+							"kind": "unexposed",
+							"name": "stappler::geom::Padding"
 						}
 					}],
 					"ref_qualifier": "none",
@@ -681,7 +641,7 @@
 						"kind": "builtin"
 					},
 					"semantic_scope": "",
-					"signature": "(stappler::xenolith::Padding)"
+					"signature": "(stappler::geom::Padding)"
 				}, {
 					"_fullName": "::stappler::xenolith::DynamicStateNode::getScissorOutline() const",
 					"_kind": "member function",
@@ -699,42 +659,9 @@
 					"name": "getScissorOutline",
 					"ref_qualifier": "none",
 					"return_type": {
-						"_typeName": "stappler::xenolith::Padding",
-						"kind": "user_defined",
-						"target": {
-							"name": "stappler::xenolith::Padding",
-							"objects": [{
-								"_fullName": "::stappler::xenolith::Padding",
-								"_kind": "type alias",
-								"_name": "Padding",
-								"id": 232642206,
-								"kind": "type alias",
-								"name": "Padding",
-								"underlying_type": {
-									"_typeName": "geom::Padding",
-									"kind": "user_defined",
-									"target": {
-										"name": "geom::Padding",
-										"objects": [{
-											"_fullName": "::stappler::geom::Padding",
-											"_kind": "class",
-											"_name": "Padding",
-											"class_kind": "struct",
-											"id": 2717367825,
-											"is_declaration": false,
-											"is_definition": true,
-											"is_final": false,
-											"kind": "class",
-											"name": "Padding",
-											"scope": {
-												"name": "Padding"
-											},
-											"semantic_scope": ""
-										}]
-									}
-								}
-							}]
-						}
+						"_typeName": "stappler::geom::Padding",
+						"kind": "unexposed",
+						"name": "stappler::geom::Padding"
 					},
 					"semantic_scope": "",
 					"signature": "() const"
@@ -1028,6 +955,31 @@
 						}
 					}
 				}, {
+					"_fullName": "::stappler::xenolith::DynamicStateNode::_ignoreParentState",
+					"_kind": "member variable",
+					"_name": "_ignoreParentState",
+					"default_value": {
+						"expression": [{
+							"kind": "keyword",
+							"spelling": "false"
+						}],
+						"kind": "unexposed",
+						"type": {
+							"_typeName": "bool",
+							"builtin_type_kind": "bool",
+							"kind": "builtin"
+						}
+					},
+					"id": 1687839234,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "_ignoreParentState",
+					"type": {
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
+						"kind": "builtin"
+					}
+				}, {
 					"_fullName": "::stappler::xenolith::DynamicStateNode::_scissorEnabled",
 					"_kind": "member variable",
 					"_name": "_scissorEnabled",
@@ -1061,42 +1013,9 @@
 					"kind": "member variable",
 					"name": "_scissorOutline",
 					"type": {
-						"_typeName": "stappler::xenolith::Padding",
-						"kind": "user_defined",
-						"target": {
-							"name": "stappler::xenolith::Padding",
-							"objects": [{
-								"_fullName": "::stappler::xenolith::Padding",
-								"_kind": "type alias",
-								"_name": "Padding",
-								"id": 232642206,
-								"kind": "type alias",
-								"name": "Padding",
-								"underlying_type": {
-									"_typeName": "geom::Padding",
-									"kind": "user_defined",
-									"target": {
-										"name": "geom::Padding",
-										"objects": [{
-											"_fullName": "::stappler::geom::Padding",
-											"_kind": "class",
-											"_name": "Padding",
-											"class_kind": "struct",
-											"id": 2717367825,
-											"is_declaration": false,
-											"is_definition": true,
-											"is_final": false,
-											"kind": "class",
-											"name": "Padding",
-											"scope": {
-												"name": "Padding"
-											},
-											"semantic_scope": ""
-										}]
-									}
-								}
-							}]
-						}
+						"_typeName": "stappler::geom::Padding",
+						"kind": "unexposed",
+						"name": "stappler::geom::Padding"
 					}
 				}],
 				"class_kind": "class",

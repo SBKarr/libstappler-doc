@@ -87,7 +87,7 @@ Title: MaterialDataScroll.h
 Доступ: public
 
 
-# ::stappler::xenolith::material2d::DataScroll::init(stappler::xenolith::material2d::DataSource*,stappler::xenolith::gui2d::ScrollViewBase::Layout)
+# ::stappler::xenolith::material2d::DataScroll::init(stappler::xenolith::material2d::DataSource*,stappler::xenolith::basic2d::ScrollViewBase::Layout)
 
 ## BRIEF
 
@@ -97,7 +97,7 @@ Title: MaterialDataScroll.h
 
 Параметры:
 * stappler::xenolith::material2d::DataSource*
-* stappler::xenolith::gui2d::ScrollViewBase::Layout
+* stappler::xenolith::basic2d::ScrollViewBase::Layout
 
 Возвращает:
 * bool
@@ -845,7 +845,7 @@ Title: MaterialDataScroll.h
 Доступ: public
 
 
-# ::stappler::xenolith::material2d::Loader::onEnter(stappler::xenolith::Scene*)
+# ::stappler::xenolith::material2d::Loader::onEnter(xenolith::Scene*)
 
 ## BRIEF
 
@@ -854,7 +854,7 @@ Title: MaterialDataScroll.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Scene*
+* xenolith::Scene*
 
 
 # ::stappler::xenolith::material2d::Loader::onExit()
@@ -907,7 +907,7 @@ Title: MaterialDataScroll.h
 Доступ: public
 
 
-# ::stappler::xenolith::material2d::Item::init(stappler::mem_std::Value&&,stappler::xenolith::Vec2,stappler::xenolith::Size2)
+# ::stappler::xenolith::material2d::Item::init(stappler::mem_std::Value&&,stappler::geom::Vec2,stappler::geom::Size2)
 
 ## BRIEF
 
@@ -917,8 +917,8 @@ Title: MaterialDataScroll.h
 
 Параметры:
 * stappler::mem_std::Value&&
-* stappler::xenolith::Vec2
-* stappler::xenolith::Size2
+* stappler::geom::Vec2
+* stappler::geom::Size2
 
 Возвращает:
 * bool
@@ -943,7 +943,7 @@ Title: MaterialDataScroll.h
 Доступ: public
 
 Возвращает:
-* stappler::xenolith::Size2
+* stappler::geom::Size2
 
 # ::stappler::xenolith::material2d::Item::getPosition() const
 
@@ -954,21 +954,9 @@ Title: MaterialDataScroll.h
 Доступ: public
 
 Возвращает:
-* stappler::xenolith::Vec2
+* stappler::geom::Vec2
 
-# ::stappler::xenolith::material2d::Item::setPosition(stappler::xenolith::Vec2)
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-Параметры:
-* stappler::xenolith::Vec2
-
-
-# ::stappler::xenolith::material2d::Item::setContentSize(stappler::xenolith::Size2)
+# ::stappler::xenolith::material2d::Item::setPosition(stappler::geom::Vec2)
 
 ## BRIEF
 
@@ -977,7 +965,19 @@ Title: MaterialDataScroll.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Size2
+* stappler::geom::Vec2
+
+
+# ::stappler::xenolith::material2d::Item::setContentSize(stappler::geom::Size2)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* stappler::geom::Size2
 
 
 # ::stappler::xenolith::material2d::Item::setId(uint64_t)
@@ -1045,7 +1045,7 @@ Title: MaterialDataScroll.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::Size2
+Тип: stappler::geom::Size2
 
 
 # ::stappler::xenolith::material2d::Item::_position
@@ -1056,7 +1056,7 @@ Title: MaterialDataScroll.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::Vec2
+Тип: stappler::geom::Vec2
 
 
 # ::stappler::xenolith::material2d::Item::_data
@@ -1191,7 +1191,7 @@ Title: MaterialDataScroll.h
 Доступ: public
 
 Возвращает:
-* stappler::xenolith::Size2
+* stappler::geom::Size2
 
 # ::stappler::xenolith::material2d::Handler::getScroll() const
 
@@ -1227,7 +1227,7 @@ Title: MaterialDataScroll.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::Size2
+Тип: stappler::geom::Size2
 
 
 # ::stappler::xenolith::material2d::Handler::_layout

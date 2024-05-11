@@ -122,7 +122,7 @@ Title: XLVkPlatform.h
 * vk::LoaderTable
 
 
-# ::stappler::xenolith::vk::platform::FunctionTable::createInstance(Callback<bool (stappler::xenolith::vk::platform::VulkanInstanceData &, const stappler::xenolith::vk::platform::VulkanInstanceInfo &)> const&,Instance::TerminateCallback&&) const
+# ::stappler::xenolith::vk::platform::FunctionTable::createInstance(Callback<bool (stappler::xenolith::vk::platform::VulkanInstanceData &, const stappler::xenolith::vk::platform::VulkanInstanceInfo &)> const&,stappler::Dso&&,Instance::TerminateCallback&&) const
 
 ## BRIEF
 
@@ -132,6 +132,7 @@ Title: XLVkPlatform.h
 
 Параметры:
 * Callback<bool (stappler::xenolith::vk::platform::VulkanInstanceData &, const stappler::xenolith::vk::platform::VulkanInstanceInfo &)> const&
+* stappler::Dso&&
 * Instance::TerminateCallback&&
 
 Возвращает:
@@ -189,7 +190,7 @@ Title: XLVkPlatform.h
 Возвращает:
 * bool
 
-# ::stappler::xenolith::vk::platform::FunctionTable::doCreateInstance(stappler::xenolith::vk::platform::VulkanInstanceData&,Instance::TerminateCallback&&) const
+# ::stappler::xenolith::vk::platform::FunctionTable::doCreateInstance(stappler::xenolith::vk::platform::VulkanInstanceData&,stappler::Dso&&,Instance::TerminateCallback&&) const
 
 ## BRIEF
 
@@ -199,6 +200,7 @@ Title: XLVkPlatform.h
 
 Параметры:
 * stappler::xenolith::vk::platform::VulkanInstanceData&
+* stappler::Dso&&
 * Instance::TerminateCallback&&
 
 Возвращает:

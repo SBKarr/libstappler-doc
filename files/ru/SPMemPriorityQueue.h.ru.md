@@ -753,6 +753,31 @@ Title: SPMemPriorityQueue.h
 Возвращает:
 * bool - true если элемент успешно взят из очереди  функтор был вызван
 
+# ::stappler::memory::PriorityQueue<typename>::pop_prefix(std::unique_lock<LockInterface>&,callback<void (stappler::memory::PriorityQueue::PriorityType, Value &&)> const&)
+
+## BRIEF
+
+## BRIEF
+
+Убирает элемент из очереди и вызывает функтор с его значением
+
+## CONTENT
+
+Доступ: public
+
+Убирает элемент из очереди и вызывает функтор с его значением. Перемещает значение элемента во временное хранилище, убирает элемент из очереди, затем вызывает функтор с перемещённым значением.
+
+Оптимизировано для быстрого оператора перемещения и длительной функции обработки.
+
+Используется в случае внешнего алгоритма блокировки потока.
+
+Параметры:
+* std::unique_lock<LockInterface>& - внешняя блокировка для удержания
+* callback<void (stappler::memory::PriorityQueue::PriorityType, Value &&)> const& - функтор для вызова
+
+Возвращает:
+* bool - true если элемент успешно взят из очереди  функтор был вызван
+
 # ::stappler::memory::PriorityQueue<typename>::pop_direct(callback<void (stappler::memory::PriorityQueue::PriorityType, Value &&)> const&)
 
 ## BRIEF
@@ -771,6 +796,26 @@ Title: SPMemPriorityQueue.h
 Возвращает:
 * bool - true если элемент успешно взят из очереди  функтор был вызван
 
+# ::stappler::memory::PriorityQueue<typename>::pop_direct(std::unique_lock<LockInterface>&,callback<void (stappler::memory::PriorityQueue::PriorityType, Value &&)> const&)
+
+## BRIEF
+
+Вызывает функтор со значением первого элемента в очереди, затем убирает его из очереди
+
+## CONTENT
+
+Доступ: public
+
+Вызывает функтор со значением первого элемента в очереди, затем убирает его из очереди. Используется в случае отсуствия быстрого оператора перемещения. Блокирует память элемента вне очереди до завершения вызова функтора.
+
+Используется в случае внешнего алгоритма блокировки потока.
+
+Параметры:
+* std::unique_lock<LockInterface>& - внешняя блокировка для удержания
+* callback<void (stappler::memory::PriorityQueue::PriorityType, Value &&)> const& - функтор для вызова
+
+Возвращает:
+* bool - true если элемент успешно взят из очереди  функтор был вызван
 
 # ::stappler::memory::PriorityQueue<typename>::foreach(callback<void (stappler::memory::PriorityQueue::PriorityType, const Value &)> const&)
 
@@ -829,6 +874,24 @@ Title: SPMemPriorityQueue.h
 * Изъятие из очереди (блокирует)
 * Работа с элементом на стороне приложения
 * Удаление (блокирует)
+
+Возвращает:
+* stappler::memory::PriorityQueue::Node*
+
+# ::stappler::memory::PriorityQueue<typename>::popNode(std::unique_lock<LockInterface>&)
+
+## BRIEF
+
+Забирает первый элемент из очереди
+
+## CONTENT
+
+Доступ: protected
+
+Забирает первый элемент из очереди. Использует внешнюю блокировку потока.
+
+Параметры:
+* std::unique_lock<LockInterface>&
 
 Возвращает:
 * stappler::memory::PriorityQueue::Node*

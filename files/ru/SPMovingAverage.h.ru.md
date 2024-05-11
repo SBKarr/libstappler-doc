@@ -12,7 +12,7 @@ Title: SPMovingAverage.h
 Заголовок структуры плавающего среднего
 
 
-# ::stappler::math::MovingAverage<size_t,typename>
+# ::stappler::math::MovingAverage<uint64_t,typename>
 
 ## BRIEF
 
@@ -27,7 +27,7 @@ Title: SPMovingAverage.h
 * typename T - тип значения для вычисления
 
 
-# ::stappler::math::MovingAverage<size_t,typename>::dropValues()
+# ::stappler::math::MovingAverage<uint64_t,typename>::dropValues()
 
 ## BRIEF
 
@@ -40,7 +40,7 @@ Title: SPMovingAverage.h
 Очищает буфер значений
 
 
-# ::stappler::math::MovingAverage<size_t,typename>::addValue(T)
+# ::stappler::math::MovingAverage<uint64_t,typename>::addValue(T)
 
 ## BRIEF
 
@@ -56,7 +56,7 @@ Title: SPMovingAverage.h
 * T - значение для добавления
 
 
-# ::stappler::math::MovingAverage<size_t,typename>::getAverage() const
+# ::stappler::math::MovingAverage<uint64_t,typename>::getAverage() const
 
 ## BRIEF
 
@@ -71,7 +71,7 @@ Title: SPMovingAverage.h
 Возвращает:
 * T - текущее плавающее среднее
 
-# ::stappler::math::MovingAverage<size_t,typename>::step(T)
+# ::stappler::math::MovingAverage<uint64_t,typename>::step(T)
 
 ## BRIEF
 
@@ -87,7 +87,7 @@ Title: SPMovingAverage.h
 Возвращает:
 * T - новое значение среднего
 
-# ::stappler::math::MovingAverage<size_t,typename>::range()
+# ::stappler::math::MovingAverage<uint64_t,typename>::range()
 
 ## BRIEF
 
@@ -103,7 +103,7 @@ Title: SPMovingAverage.h
 * T - разница между минимальным и максимальным значениями в буфере
 
 
-# ::stappler::math::MovingAverage<size_t,typename>::size() const
+# ::stappler::math::MovingAverage<uint64_t,typename>::size() const
 
 ## BRIEF
 
@@ -118,7 +118,7 @@ Title: SPMovingAverage.h
 Возвращает:
 * size_t
 
-# ::stappler::math::MovingAverage<size_t,typename>::reset(T const&)
+# ::stappler::math::MovingAverage<uint64_t,typename>::reset(T const&)
 
 ## BRIEF
 
@@ -134,7 +134,7 @@ Title: SPMovingAverage.h
 * T const&
 
 
-# ::stappler::math::MovingAverage<size_t,typename>::MovingAverage()
+# ::stappler::math::MovingAverage<uint64_t,typename>::MovingAverage()
 
 ## BRIEF
 
@@ -147,7 +147,7 @@ Title: SPMovingAverage.h
 Конструктор по умолчанию, создаёт пустую структуру
 
 
-# ::stappler::math::MovingAverage<size_t,typename>::_current
+# ::stappler::math::MovingAverage<uint64_t,typename>::_current
 
 ## BRIEF
 
@@ -162,7 +162,7 @@ Title: SPMovingAverage.h
 Тип: size_t
 
 
-# ::stappler::math::MovingAverage<size_t,typename>::_values
+# ::stappler::math::MovingAverage<uint64_t,typename>::_values
 
 ## BRIEF
 

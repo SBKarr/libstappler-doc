@@ -1,14 +1,14 @@
 Title: XL2dActionAcceleratedMove.h
 
 
-# XENOLITH_RENDERER_GUI2D_XL2DACTIONACCELERATEDMOVE_H_
+# XENOLITH_RENDERER_BASIC2D_XL2DACTIONACCELERATEDMOVE_H_
 
 ## BRIEF
 
 ## CONTENT
 
 
-# ::stappler::xenolith::gui2d::ActionAcceleratedMove
+# ::stappler::xenolith::basic2d::ActionAcceleratedMove
 
 ## BRIEF
 
@@ -18,7 +18,7 @@ Title: XL2dActionAcceleratedMove.h
 * ActionInterval
 
 
-# ::stappler::xenolith::gui2d::ActionAcceleratedMove::createBounce(float,stappler::xenolith::Vec2,stappler::xenolith::Vec2,stappler::xenolith::Vec2,float,Function<void (stappler::xenolith::Node *)>&&)
+# ::stappler::xenolith::basic2d::ActionAcceleratedMove::createBounce(float,stappler::geom::Vec2,stappler::geom::Vec2,stappler::geom::Vec2,float,Function<void (stappler::xenolith::Node *)>&&)
 
 ## BRIEF
 
@@ -28,16 +28,16 @@ Title: XL2dActionAcceleratedMove.h
 
 Параметры:
 * float
-* stappler::xenolith::Vec2
-* stappler::xenolith::Vec2
-* stappler::xenolith::Vec2
+* stappler::geom::Vec2
+* stappler::geom::Vec2
+* stappler::geom::Vec2
 * float
 * Function<void (stappler::xenolith::Node *)>&&
 
 Возвращает:
 * Rc<stappler::xenolith::ActionInterval>
 
-# ::stappler::xenolith::gui2d::ActionAcceleratedMove::createBounce(float,stappler::xenolith::Vec2,stappler::xenolith::Vec2,float,float,Function<void (stappler::xenolith::Node *)>&&)
+# ::stappler::xenolith::basic2d::ActionAcceleratedMove::createBounce(float,stappler::geom::Vec2,stappler::geom::Vec2,float,float,Function<void (stappler::xenolith::Node *)>&&)
 
 ## BRIEF
 
@@ -47,8 +47,8 @@ Title: XL2dActionAcceleratedMove.h
 
 Параметры:
 * float
-* stappler::xenolith::Vec2
-* stappler::xenolith::Vec2
+* stappler::geom::Vec2
+* stappler::geom::Vec2
 * float
 * float
 * Function<void (stappler::xenolith::Node *)>&&
@@ -56,7 +56,7 @@ Title: XL2dActionAcceleratedMove.h
 Возвращает:
 * Rc<stappler::xenolith::ActionInterval>
 
-# ::stappler::xenolith::gui2d::ActionAcceleratedMove::createFreeBounce(float,stappler::xenolith::Vec2,stappler::xenolith::Vec2,stappler::xenolith::Vec2,float,Function<void (stappler::xenolith::Node *)>&&)
+# ::stappler::xenolith::basic2d::ActionAcceleratedMove::createFreeBounce(float,stappler::geom::Vec2,stappler::geom::Vec2,stappler::geom::Vec2,float,Function<void (stappler::xenolith::Node *)>&&)
 
 ## BRIEF
 
@@ -66,16 +66,16 @@ Title: XL2dActionAcceleratedMove.h
 
 Параметры:
 * float
-* stappler::xenolith::Vec2
-* stappler::xenolith::Vec2
-* stappler::xenolith::Vec2
+* stappler::geom::Vec2
+* stappler::geom::Vec2
+* stappler::geom::Vec2
 * float
 * Function<void (stappler::xenolith::Node *)>&&
 
 Возвращает:
 * Rc<stappler::xenolith::ActionInterval>
 
-# ::stappler::xenolith::gui2d::ActionAcceleratedMove::createWithBounds(float,stappler::xenolith::Vec2,stappler::xenolith::Vec2,stappler::xenolith::Rect const&,Function<void (stappler::xenolith::Node *)>&&)
+# ::stappler::xenolith::basic2d::ActionAcceleratedMove::createWithBounds(float,stappler::geom::Vec2,stappler::geom::Vec2,const stappler::geom::Rect&,Function<void (stappler::xenolith::Node *)>&&)
 
 ## BRIEF
 
@@ -85,15 +85,15 @@ Title: XL2dActionAcceleratedMove.h
 
 Параметры:
 * float
-* stappler::xenolith::Vec2
-* stappler::xenolith::Vec2
-* stappler::xenolith::Rect const&
+* stappler::geom::Vec2
+* stappler::geom::Vec2
+* const stappler::geom::Rect&
 * Function<void (stappler::xenolith::Node *)>&&
 
 Возвращает:
 * Rc<stappler::xenolith::ActionInterval>
 
-# ::stappler::xenolith::gui2d::ActionAcceleratedMove::createDecceleration(stappler::xenolith::Vec2,stappler::xenolith::Vec2,float,float,Function<void (stappler::xenolith::Node *)>&&)
+# ::stappler::xenolith::basic2d::ActionAcceleratedMove::createDecceleration(stappler::geom::Vec2,stappler::geom::Vec2,float,float,Function<void (stappler::xenolith::Node *)>&&)
 
 ## BRIEF
 
@@ -102,16 +102,16 @@ Title: XL2dActionAcceleratedMove.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Vec2
-* stappler::xenolith::Vec2
+* stappler::geom::Vec2
+* stappler::geom::Vec2
 * float
 * float
 * Function<void (stappler::xenolith::Node *)>&&
 
 Возвращает:
-* Rc<stappler::xenolith::gui2d::ActionAcceleratedMove>
+* Rc<stappler::xenolith::basic2d::ActionAcceleratedMove>
 
-# ::stappler::xenolith::gui2d::ActionAcceleratedMove::createDecceleration(stappler::xenolith::Vec2,stappler::xenolith::Vec2,float,Function<void (stappler::xenolith::Node *)>&&)
+# ::stappler::xenolith::basic2d::ActionAcceleratedMove::createDecceleration(stappler::geom::Vec2,stappler::geom::Vec2,float,Function<void (stappler::xenolith::Node *)>&&)
 
 ## BRIEF
 
@@ -120,34 +120,15 @@ Title: XL2dActionAcceleratedMove.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Vec2
-* stappler::xenolith::Vec2
+* stappler::geom::Vec2
+* stappler::geom::Vec2
 * float
 * Function<void (stappler::xenolith::Node *)>&&
 
 Возвращает:
-* Rc<stappler::xenolith::gui2d::ActionAcceleratedMove>
+* Rc<stappler::xenolith::basic2d::ActionAcceleratedMove>
 
-# ::stappler::xenolith::gui2d::ActionAcceleratedMove::createAccelerationTo(stappler::xenolith::Vec2,stappler::xenolith::Vec2,float,float,float,Function<void (stappler::xenolith::Node *)>&&)
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-Параметры:
-* stappler::xenolith::Vec2
-* stappler::xenolith::Vec2
-* float
-* float
-* float
-* Function<void (stappler::xenolith::Node *)>&&
-
-Возвращает:
-* Rc<stappler::xenolith::gui2d::ActionAcceleratedMove>
-
-# ::stappler::xenolith::gui2d::ActionAcceleratedMove::createAccelerationTo(stappler::xenolith::Vec2,stappler::xenolith::Vec2,float,float,Function<void (stappler::xenolith::Node *)>&&)
+# ::stappler::xenolith::basic2d::ActionAcceleratedMove::createAccelerationTo(stappler::geom::Vec2,stappler::geom::Vec2,float,float,float,Function<void (stappler::xenolith::Node *)>&&)
 
 ## BRIEF
 
@@ -156,16 +137,17 @@ Title: XL2dActionAcceleratedMove.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Vec2
-* stappler::xenolith::Vec2
+* stappler::geom::Vec2
+* stappler::geom::Vec2
+* float
 * float
 * float
 * Function<void (stappler::xenolith::Node *)>&&
 
 Возвращает:
-* Rc<stappler::xenolith::gui2d::ActionAcceleratedMove>
+* Rc<stappler::xenolith::basic2d::ActionAcceleratedMove>
 
-# ::stappler::xenolith::gui2d::ActionAcceleratedMove::createWithDuration(float,stappler::xenolith::Vec2,stappler::xenolith::Vec2,float,float,Function<void (stappler::xenolith::Node *)>&&)
+# ::stappler::xenolith::basic2d::ActionAcceleratedMove::createAccelerationTo(stappler::geom::Vec2,stappler::geom::Vec2,float,float,Function<void (stappler::xenolith::Node *)>&&)
 
 ## BRIEF
 
@@ -174,26 +156,16 @@ Title: XL2dActionAcceleratedMove.h
 Доступ: public
 
 Параметры:
-* float
-* stappler::xenolith::Vec2
-* stappler::xenolith::Vec2
+* stappler::geom::Vec2
+* stappler::geom::Vec2
 * float
 * float
 * Function<void (stappler::xenolith::Node *)>&&
 
 Возвращает:
-* Rc<stappler::xenolith::gui2d::ActionAcceleratedMove>
+* Rc<stappler::xenolith::basic2d::ActionAcceleratedMove>
 
-# ::stappler::xenolith::gui2d::ActionAcceleratedMove::~ActionAcceleratedMove()
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-
-# ::stappler::xenolith::gui2d::ActionAcceleratedMove::initDecceleration(stappler::xenolith::Vec2,stappler::xenolith::Vec2,float,float,Function<void (stappler::xenolith::Node *)>&&)
+# ::stappler::xenolith::basic2d::ActionAcceleratedMove::createWithDuration(float,stappler::geom::Vec2,stappler::geom::Vec2,float,float,Function<void (stappler::xenolith::Node *)>&&)
 
 ## BRIEF
 
@@ -202,16 +174,26 @@ Title: XL2dActionAcceleratedMove.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Vec2
-* stappler::xenolith::Vec2
+* float
+* stappler::geom::Vec2
+* stappler::geom::Vec2
 * float
 * float
 * Function<void (stappler::xenolith::Node *)>&&
 
 Возвращает:
-* bool
+* Rc<stappler::xenolith::basic2d::ActionAcceleratedMove>
 
-# ::stappler::xenolith::gui2d::ActionAcceleratedMove::initDecceleration(stappler::xenolith::Vec2,stappler::xenolith::Vec2,float,Function<void (stappler::xenolith::Node *)>&&)
+# ::stappler::xenolith::basic2d::ActionAcceleratedMove::~ActionAcceleratedMove()
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+
+# ::stappler::xenolith::basic2d::ActionAcceleratedMove::initDecceleration(stappler::geom::Vec2,stappler::geom::Vec2,float,float,Function<void (stappler::xenolith::Node *)>&&)
 
 ## BRIEF
 
@@ -220,26 +202,8 @@ Title: XL2dActionAcceleratedMove.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Vec2
-* stappler::xenolith::Vec2
-* float
-* Function<void (stappler::xenolith::Node *)>&&
-
-Возвращает:
-* bool
-
-# ::stappler::xenolith::gui2d::ActionAcceleratedMove::initAccelerationTo(stappler::xenolith::Vec2,stappler::xenolith::Vec2,float,float,float,Function<void (stappler::xenolith::Node *)>&&)
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-Параметры:
-* stappler::xenolith::Vec2
-* stappler::xenolith::Vec2
-* float
+* stappler::geom::Vec2
+* stappler::geom::Vec2
 * float
 * float
 * Function<void (stappler::xenolith::Node *)>&&
@@ -247,7 +211,7 @@ Title: XL2dActionAcceleratedMove.h
 Возвращает:
 * bool
 
-# ::stappler::xenolith::gui2d::ActionAcceleratedMove::initAccelerationTo(stappler::xenolith::Vec2,stappler::xenolith::Vec2,float,float,Function<void (stappler::xenolith::Node *)>&&)
+# ::stappler::xenolith::basic2d::ActionAcceleratedMove::initDecceleration(stappler::geom::Vec2,stappler::geom::Vec2,float,Function<void (stappler::xenolith::Node *)>&&)
 
 ## BRIEF
 
@@ -256,8 +220,26 @@ Title: XL2dActionAcceleratedMove.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Vec2
-* stappler::xenolith::Vec2
+* stappler::geom::Vec2
+* stappler::geom::Vec2
+* float
+* Function<void (stappler::xenolith::Node *)>&&
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::basic2d::ActionAcceleratedMove::initAccelerationTo(stappler::geom::Vec2,stappler::geom::Vec2,float,float,float,Function<void (stappler::xenolith::Node *)>&&)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* stappler::geom::Vec2
+* stappler::geom::Vec2
+* float
 * float
 * float
 * Function<void (stappler::xenolith::Node *)>&&
@@ -265,7 +247,7 @@ Title: XL2dActionAcceleratedMove.h
 Возвращает:
 * bool
 
-# ::stappler::xenolith::gui2d::ActionAcceleratedMove::initWithDuration(float,stappler::xenolith::Vec2,stappler::xenolith::Vec2,float,float,Function<void (stappler::xenolith::Node *)>&&)
+# ::stappler::xenolith::basic2d::ActionAcceleratedMove::initAccelerationTo(stappler::geom::Vec2,stappler::geom::Vec2,float,float,Function<void (stappler::xenolith::Node *)>&&)
 
 ## BRIEF
 
@@ -274,9 +256,8 @@ Title: XL2dActionAcceleratedMove.h
 Доступ: public
 
 Параметры:
-* float
-* stappler::xenolith::Vec2
-* stappler::xenolith::Vec2
+* stappler::geom::Vec2
+* stappler::geom::Vec2
 * float
 * float
 * Function<void (stappler::xenolith::Node *)>&&
@@ -284,7 +265,26 @@ Title: XL2dActionAcceleratedMove.h
 Возвращает:
 * bool
 
-# ::stappler::xenolith::gui2d::ActionAcceleratedMove::getDuration() const
+# ::stappler::xenolith::basic2d::ActionAcceleratedMove::initWithDuration(float,stappler::geom::Vec2,stappler::geom::Vec2,float,float,Function<void (stappler::xenolith::Node *)>&&)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* float
+* stappler::geom::Vec2
+* stappler::geom::Vec2
+* float
+* float
+* Function<void (stappler::xenolith::Node *)>&&
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::basic2d::ActionAcceleratedMove::getDuration() const
 
 ## BRIEF
 
@@ -295,7 +295,7 @@ Title: XL2dActionAcceleratedMove.h
 Возвращает:
 * float
 
-# ::stappler::xenolith::gui2d::ActionAcceleratedMove::getPosition(float) const
+# ::stappler::xenolith::basic2d::ActionAcceleratedMove::getPosition(float) const
 
 ## BRIEF
 
@@ -307,20 +307,9 @@ Title: XL2dActionAcceleratedMove.h
 * float
 
 Возвращает:
-* stappler::xenolith::Vec2
+* stappler::geom::Vec2
 
-# ::stappler::xenolith::gui2d::ActionAcceleratedMove::getStartPosition() const
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-Возвращает:
-* stappler::xenolith::Vec2 const&
-
-# ::stappler::xenolith::gui2d::ActionAcceleratedMove::getEndPosition() const
+# ::stappler::xenolith::basic2d::ActionAcceleratedMove::getStartPosition() const
 
 ## BRIEF
 
@@ -329,20 +318,9 @@ Title: XL2dActionAcceleratedMove.h
 Доступ: public
 
 Возвращает:
-* stappler::xenolith::Vec2 const&
+* const stappler::geom::Vec2&
 
-# ::stappler::xenolith::gui2d::ActionAcceleratedMove::getNormal() const
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-Возвращает:
-* stappler::xenolith::Vec2 const&
-
-# ::stappler::xenolith::gui2d::ActionAcceleratedMove::getStartVelocity() const
+# ::stappler::xenolith::basic2d::ActionAcceleratedMove::getEndPosition() const
 
 ## BRIEF
 
@@ -351,9 +329,20 @@ Title: XL2dActionAcceleratedMove.h
 Доступ: public
 
 Возвращает:
-* float
+* const stappler::geom::Vec2&
 
-# ::stappler::xenolith::gui2d::ActionAcceleratedMove::getEndVelocity() const
+# ::stappler::xenolith::basic2d::ActionAcceleratedMove::getNormal() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* const stappler::geom::Vec2&
+
+# ::stappler::xenolith::basic2d::ActionAcceleratedMove::getStartVelocity() const
 
 ## BRIEF
 
@@ -364,7 +353,7 @@ Title: XL2dActionAcceleratedMove.h
 Возвращает:
 * float
 
-# ::stappler::xenolith::gui2d::ActionAcceleratedMove::getCurrentVelocity() const
+# ::stappler::xenolith::basic2d::ActionAcceleratedMove::getEndVelocity() const
 
 ## BRIEF
 
@@ -375,7 +364,18 @@ Title: XL2dActionAcceleratedMove.h
 Возвращает:
 * float
 
-# ::stappler::xenolith::gui2d::ActionAcceleratedMove::startWithTarget(stappler::xenolith::Node*)
+# ::stappler::xenolith::basic2d::ActionAcceleratedMove::getCurrentVelocity() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* float
+
+# ::stappler::xenolith::basic2d::ActionAcceleratedMove::startWithTarget(stappler::xenolith::Node*)
 
 ## BRIEF
 
@@ -387,7 +387,7 @@ Title: XL2dActionAcceleratedMove.h
 * stappler::xenolith::Node*
 
 
-# ::stappler::xenolith::gui2d::ActionAcceleratedMove::update(float)
+# ::stappler::xenolith::basic2d::ActionAcceleratedMove::update(float)
 
 ## BRIEF
 
@@ -399,7 +399,7 @@ Title: XL2dActionAcceleratedMove.h
 * float
 
 
-# ::stappler::xenolith::gui2d::ActionAcceleratedMove::setCallback(Function<void (stappler::xenolith::Node *)>&&)
+# ::stappler::xenolith::basic2d::ActionAcceleratedMove::setCallback(Function<void (stappler::xenolith::Node *)>&&)
 
 ## BRIEF
 
@@ -411,7 +411,7 @@ Title: XL2dActionAcceleratedMove.h
 * Function<void (stappler::xenolith::Node *)>&&
 
 
-# ::stappler::xenolith::gui2d::ActionAcceleratedMove::_accDuration
+# ::stappler::xenolith::basic2d::ActionAcceleratedMove::_accDuration
 
 ## BRIEF
 
@@ -422,7 +422,7 @@ Title: XL2dActionAcceleratedMove.h
 Тип: float
 
 
-# ::stappler::xenolith::gui2d::ActionAcceleratedMove::_acceleration
+# ::stappler::xenolith::basic2d::ActionAcceleratedMove::_acceleration
 
 ## BRIEF
 
@@ -433,7 +433,7 @@ Title: XL2dActionAcceleratedMove.h
 Тип: float
 
 
-# ::stappler::xenolith::gui2d::ActionAcceleratedMove::_startVelocity
+# ::stappler::xenolith::basic2d::ActionAcceleratedMove::_startVelocity
 
 ## BRIEF
 
@@ -444,7 +444,7 @@ Title: XL2dActionAcceleratedMove.h
 Тип: float
 
 
-# ::stappler::xenolith::gui2d::ActionAcceleratedMove::_endVelocity
+# ::stappler::xenolith::basic2d::ActionAcceleratedMove::_endVelocity
 
 ## BRIEF
 
@@ -455,7 +455,7 @@ Title: XL2dActionAcceleratedMove.h
 Тип: float
 
 
-# ::stappler::xenolith::gui2d::ActionAcceleratedMove::_normalPoint
+# ::stappler::xenolith::basic2d::ActionAcceleratedMove::_normalPoint
 
 ## BRIEF
 
@@ -463,21 +463,10 @@ Title: XL2dActionAcceleratedMove.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::Vec2
+Тип: stappler::geom::Vec2
 
 
-# ::stappler::xenolith::gui2d::ActionAcceleratedMove::_startPoint
-
-## BRIEF
-
-## CONTENT
-
-Доступ: protected
-
-Тип: stappler::xenolith::Vec2
-
-
-# ::stappler::xenolith::gui2d::ActionAcceleratedMove::_endPoint
+# ::stappler::xenolith::basic2d::ActionAcceleratedMove::_startPoint
 
 ## BRIEF
 
@@ -485,10 +474,21 @@ Title: XL2dActionAcceleratedMove.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::Vec2
+Тип: stappler::geom::Vec2
 
 
-# ::stappler::xenolith::gui2d::ActionAcceleratedMove::computeEndPoint()
+# ::stappler::xenolith::basic2d::ActionAcceleratedMove::_endPoint
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: stappler::geom::Vec2
+
+
+# ::stappler::xenolith::basic2d::ActionAcceleratedMove::computeEndPoint()
 
 ## BRIEF
 
@@ -497,9 +497,9 @@ Title: XL2dActionAcceleratedMove.h
 Доступ: protected
 
 Возвращает:
-* stappler::xenolith::Vec2
+* stappler::geom::Vec2
 
-# ::stappler::xenolith::gui2d::ActionAcceleratedMove::computeNormalPoint()
+# ::stappler::xenolith::basic2d::ActionAcceleratedMove::computeNormalPoint()
 
 ## BRIEF
 
@@ -508,9 +508,9 @@ Title: XL2dActionAcceleratedMove.h
 Доступ: protected
 
 Возвращает:
-* stappler::xenolith::Vec2
+* stappler::geom::Vec2
 
-# ::stappler::xenolith::gui2d::ActionAcceleratedMove::computeEndVelocity()
+# ::stappler::xenolith::basic2d::ActionAcceleratedMove::computeEndVelocity()
 
 ## BRIEF
 
@@ -521,7 +521,7 @@ Title: XL2dActionAcceleratedMove.h
 Возвращает:
 * float
 
-# ::stappler::xenolith::gui2d::ActionAcceleratedMove::_callback
+# ::stappler::xenolith::basic2d::ActionAcceleratedMove::_callback
 
 ## BRIEF
 

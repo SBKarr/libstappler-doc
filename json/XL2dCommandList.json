@@ -263,22 +263,7 @@
 						"default_value": {
 							"expression": [{
 								"kind": "identifier",
-								"spelling": "maxOf"
-							}, {
-								"kind": "punctuation",
-								"spelling": "<"
-							}, {
-								"kind": "identifier",
-								"spelling": "StateId"
-							}, {
-								"kind": "punctuation",
-								"spelling": ">"
-							}, {
-								"kind": "punctuation",
-								"spelling": "("
-							}, {
-								"kind": "punctuation",
-								"spelling": ")"
+								"spelling": "StateIdNone"
 							}],
 							"kind": "unexposed",
 							"type": {
@@ -721,52 +706,9 @@
 						"kind": "member variable",
 						"name": "viewTransform",
 						"type": {
-							"_typeName": "stappler::xenolith::Mat4",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::Mat4",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::Mat4",
-									"_kind": "type alias",
-									"_name": "Mat4",
-									"id": 905241342,
-									"kind": "type alias",
-									"name": "Mat4",
-									"underlying_type": {
-										"_typeName": "geom::Mat4",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::Mat4",
-											"objects": [{
-												"_fullName": "::stappler::geom::Mat4",
-												"_kind": "class",
-												"_name": "Mat4",
-												"attributes": [{
-													"arguments": [{
-														"kind": "int_literal",
-														"spelling": "16"
-													}],
-													"is_variadic": false,
-													"kind": "alignas_",
-													"name": "alignas"
-												}],
-												"class_kind": "class",
-												"comment": "\nDefines a 4 x 4 floating point matrix representing a 3D transformation.\n\nVectors are treated as columns, resulting in a matrix that is represented as follows,\nwhere x, y and z are the translation components of the matrix:\n\n    1  0  0  x\n    0  1  0  y\n    0  0  1  z\n    0  0  0  1\n\nThis matrix class is directly compatible with OpenGL since its elements are\nlaid out in memory exactly as they are expected by OpenGL.\nThe matrix uses column-major format such that array indices increase down column first.\nSince matrix multiplication is not commutative, multiplication must be done in the\ncorrect order when combining transformations. Suppose we have a translation\nmatrix T and a rotation matrix R. To first rotate an object around the origin\nand then translate it, you would multiply the two matrices as TR.\n\nLikewise, to first translate the object and then rotate it, you would do RT.\nSo generally, matrices must be multiplied in the reverse order in which you\nwant the transformations to take place (this also applies to\nthe scale, rotate, and translate methods below; these methods are convenience\nmethods for post-multiplying by a matrix representing a scale, rotation, or translation).\n\nIn the case of repeated local transformations (i.e. rotate around the Z-axis by 0.76 radians,\nthen translate by 2.1 along the X-axis, then ...), it is better to use the Transform class\n(which is optimized for that kind of usage).\n\n@see Transform\n",
-												"id": 3473668624,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "Mat4",
-												"scope": {
-													"name": "Mat4"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::Mat4",
+							"kind": "unexposed",
+							"name": "stappler::geom::Mat4"
 						}
 					}, {
 						"_fullName": "::stappler::xenolith::basic2d::CmdDeferred::modelTransform",
@@ -777,52 +719,9 @@
 						"kind": "member variable",
 						"name": "modelTransform",
 						"type": {
-							"_typeName": "stappler::xenolith::Mat4",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::Mat4",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::Mat4",
-									"_kind": "type alias",
-									"_name": "Mat4",
-									"id": 905241342,
-									"kind": "type alias",
-									"name": "Mat4",
-									"underlying_type": {
-										"_typeName": "geom::Mat4",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::Mat4",
-											"objects": [{
-												"_fullName": "::stappler::geom::Mat4",
-												"_kind": "class",
-												"_name": "Mat4",
-												"attributes": [{
-													"arguments": [{
-														"kind": "int_literal",
-														"spelling": "16"
-													}],
-													"is_variadic": false,
-													"kind": "alignas_",
-													"name": "alignas"
-												}],
-												"class_kind": "class",
-												"comment": "\nDefines a 4 x 4 floating point matrix representing a 3D transformation.\n\nVectors are treated as columns, resulting in a matrix that is represented as follows,\nwhere x, y and z are the translation components of the matrix:\n\n    1  0  0  x\n    0  1  0  y\n    0  0  1  z\n    0  0  0  1\n\nThis matrix class is directly compatible with OpenGL since its elements are\nlaid out in memory exactly as they are expected by OpenGL.\nThe matrix uses column-major format such that array indices increase down column first.\nSince matrix multiplication is not commutative, multiplication must be done in the\ncorrect order when combining transformations. Suppose we have a translation\nmatrix T and a rotation matrix R. To first rotate an object around the origin\nand then translate it, you would multiply the two matrices as TR.\n\nLikewise, to first translate the object and then rotate it, you would do RT.\nSo generally, matrices must be multiplied in the reverse order in which you\nwant the transformations to take place (this also applies to\nthe scale, rotate, and translate methods below; these methods are convenience\nmethods for post-multiplying by a matrix representing a scale, rotation, or translation).\n\nIn the case of repeated local transformations (i.e. rotate around the Z-axis by 0.76 radians,\nthen translate by 2.1 along the X-axis, then ...), it is better to use the Transform class\n(which is optimized for that kind of usage).\n\n@see Transform\n",
-												"id": 3473668624,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "Mat4",
-												"scope": {
-													"name": "Mat4"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::Mat4",
+							"kind": "unexposed",
+							"name": "stappler::geom::Mat4"
 						}
 					}, {
 						"_fullName": "::stappler::xenolith::basic2d::CmdDeferred::normalized",
@@ -1208,52 +1107,9 @@
 						"kind": "member variable",
 						"name": "viewTransform",
 						"type": {
-							"_typeName": "stappler::xenolith::Mat4",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::Mat4",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::Mat4",
-									"_kind": "type alias",
-									"_name": "Mat4",
-									"id": 905241342,
-									"kind": "type alias",
-									"name": "Mat4",
-									"underlying_type": {
-										"_typeName": "geom::Mat4",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::Mat4",
-											"objects": [{
-												"_fullName": "::stappler::geom::Mat4",
-												"_kind": "class",
-												"_name": "Mat4",
-												"attributes": [{
-													"arguments": [{
-														"kind": "int_literal",
-														"spelling": "16"
-													}],
-													"is_variadic": false,
-													"kind": "alignas_",
-													"name": "alignas"
-												}],
-												"class_kind": "class",
-												"comment": "\nDefines a 4 x 4 floating point matrix representing a 3D transformation.\n\nVectors are treated as columns, resulting in a matrix that is represented as follows,\nwhere x, y and z are the translation components of the matrix:\n\n    1  0  0  x\n    0  1  0  y\n    0  0  1  z\n    0  0  0  1\n\nThis matrix class is directly compatible with OpenGL since its elements are\nlaid out in memory exactly as they are expected by OpenGL.\nThe matrix uses column-major format such that array indices increase down column first.\nSince matrix multiplication is not commutative, multiplication must be done in the\ncorrect order when combining transformations. Suppose we have a translation\nmatrix T and a rotation matrix R. To first rotate an object around the origin\nand then translate it, you would multiply the two matrices as TR.\n\nLikewise, to first translate the object and then rotate it, you would do RT.\nSo generally, matrices must be multiplied in the reverse order in which you\nwant the transformations to take place (this also applies to\nthe scale, rotate, and translate methods below; these methods are convenience\nmethods for post-multiplying by a matrix representing a scale, rotation, or translation).\n\nIn the case of repeated local transformations (i.e. rotate around the Z-axis by 0.76 radians,\nthen translate by 2.1 along the X-axis, then ...), it is better to use the Transform class\n(which is optimized for that kind of usage).\n\n@see Transform\n",
-												"id": 3473668624,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "Mat4",
-												"scope": {
-													"name": "Mat4"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::Mat4",
+							"kind": "unexposed",
+							"name": "stappler::geom::Mat4"
 						}
 					}, {
 						"_fullName": "::stappler::xenolith::basic2d::CmdShadowDeferred::modelTransform",
@@ -1264,52 +1120,9 @@
 						"kind": "member variable",
 						"name": "modelTransform",
 						"type": {
-							"_typeName": "stappler::xenolith::Mat4",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::Mat4",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::Mat4",
-									"_kind": "type alias",
-									"_name": "Mat4",
-									"id": 905241342,
-									"kind": "type alias",
-									"name": "Mat4",
-									"underlying_type": {
-										"_typeName": "geom::Mat4",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::Mat4",
-											"objects": [{
-												"_fullName": "::stappler::geom::Mat4",
-												"_kind": "class",
-												"_name": "Mat4",
-												"attributes": [{
-													"arguments": [{
-														"kind": "int_literal",
-														"spelling": "16"
-													}],
-													"is_variadic": false,
-													"kind": "alignas_",
-													"name": "alignas"
-												}],
-												"class_kind": "class",
-												"comment": "\nDefines a 4 x 4 floating point matrix representing a 3D transformation.\n\nVectors are treated as columns, resulting in a matrix that is represented as follows,\nwhere x, y and z are the translation components of the matrix:\n\n    1  0  0  x\n    0  1  0  y\n    0  0  1  z\n    0  0  0  1\n\nThis matrix class is directly compatible with OpenGL since its elements are\nlaid out in memory exactly as they are expected by OpenGL.\nThe matrix uses column-major format such that array indices increase down column first.\nSince matrix multiplication is not commutative, multiplication must be done in the\ncorrect order when combining transformations. Suppose we have a translation\nmatrix T and a rotation matrix R. To first rotate an object around the origin\nand then translate it, you would multiply the two matrices as TR.\n\nLikewise, to first translate the object and then rotate it, you would do RT.\nSo generally, matrices must be multiplied in the reverse order in which you\nwant the transformations to take place (this also applies to\nthe scale, rotate, and translate methods below; these methods are convenience\nmethods for post-multiplying by a matrix representing a scale, rotation, or translation).\n\nIn the case of repeated local transformations (i.e. rotate around the Z-axis by 0.76 radians,\nthen translate by 2.1 along the X-axis, then ...), it is better to use the Transform class\n(which is optimized for that kind of usage).\n\n@see Transform\n",
-												"id": 3473668624,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "Mat4",
-												"scope": {
-													"name": "Mat4"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::Mat4",
+							"kind": "unexposed",
+							"name": "stappler::geom::Mat4"
 						}
 					}, {
 						"_fullName": "::stappler::xenolith::basic2d::CmdShadowDeferred::normalized",
@@ -1361,52 +1174,9 @@
 						"kind": "member variable",
 						"name": "modelTransform",
 						"type": {
-							"_typeName": "stappler::xenolith::Mat4",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::Mat4",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::Mat4",
-									"_kind": "type alias",
-									"_name": "Mat4",
-									"id": 905241342,
-									"kind": "type alias",
-									"name": "Mat4",
-									"underlying_type": {
-										"_typeName": "geom::Mat4",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::Mat4",
-											"objects": [{
-												"_fullName": "::stappler::geom::Mat4",
-												"_kind": "class",
-												"_name": "Mat4",
-												"attributes": [{
-													"arguments": [{
-														"kind": "int_literal",
-														"spelling": "16"
-													}],
-													"is_variadic": false,
-													"kind": "alignas_",
-													"name": "alignas"
-												}],
-												"class_kind": "class",
-												"comment": "\nDefines a 4 x 4 floating point matrix representing a 3D transformation.\n\nVectors are treated as columns, resulting in a matrix that is represented as follows,\nwhere x, y and z are the translation components of the matrix:\n\n    1  0  0  x\n    0  1  0  y\n    0  0  1  z\n    0  0  0  1\n\nThis matrix class is directly compatible with OpenGL since its elements are\nlaid out in memory exactly as they are expected by OpenGL.\nThe matrix uses column-major format such that array indices increase down column first.\nSince matrix multiplication is not commutative, multiplication must be done in the\ncorrect order when combining transformations. Suppose we have a translation\nmatrix T and a rotation matrix R. To first rotate an object around the origin\nand then translate it, you would multiply the two matrices as TR.\n\nLikewise, to first translate the object and then rotate it, you would do RT.\nSo generally, matrices must be multiplied in the reverse order in which you\nwant the transformations to take place (this also applies to\nthe scale, rotate, and translate methods below; these methods are convenience\nmethods for post-multiplying by a matrix representing a scale, rotation, or translation).\n\nIn the case of repeated local transformations (i.e. rotate around the Z-axis by 0.76 radians,\nthen translate by 2.1 along the X-axis, then ...), it is better to use the Transform class\n(which is optimized for that kind of usage).\n\n@see Transform\n",
-												"id": 3473668624,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "Mat4",
-												"scope": {
-													"name": "Mat4"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::Mat4",
+							"kind": "unexposed",
+							"name": "stappler::geom::Mat4"
 						}
 					}, {
 						"_fullName": "::stappler::xenolith::basic2d::CmdSdfGroup2D::state",
@@ -1627,12 +1397,12 @@
 							"unexposed_arguments": "SdfPrimitive2DHeader"
 						}
 					}, {
-						"_fullName": "::stappler::xenolith::basic2d::CmdSdfGroup2D::addCircle2D(stappler::xenolith::Vec2,float)",
+						"_fullName": "::stappler::xenolith::basic2d::CmdSdfGroup2D::addCircle2D(stappler::geom::Vec2,float)",
 						"_kind": "member function",
 						"_name": "addCircle2D",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 3111912595,
+						"id": 2039806918,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -1649,42 +1419,9 @@
 							"kind": "function parameter",
 							"name": "origin",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Vec2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Vec2",
-										"_kind": "type alias",
-										"_name": "Vec2",
-										"id": 1910638286,
-										"kind": "type alias",
-										"name": "Vec2",
-										"underlying_type": {
-											"_typeName": "geom::Vec2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Vec2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Vec2",
-													"_kind": "class",
-													"_name": "Vec2",
-													"class_kind": "class",
-													"id": 16661423,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Vec2",
-													"scope": {
-														"name": "Vec2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Vec2"
 							}
 						}, {
 							"_fullName": "r",
@@ -1706,14 +1443,14 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::Vec2,float)"
+						"signature": "(stappler::geom::Vec2,float)"
 					}, {
-						"_fullName": "::stappler::xenolith::basic2d::CmdSdfGroup2D::addRect2D(stappler::xenolith::Rect)",
+						"_fullName": "::stappler::xenolith::basic2d::CmdSdfGroup2D::addRect2D(stappler::geom::Rect)",
 						"_kind": "member function",
 						"_name": "addRect2D",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 1727488233,
+						"id": 3728902884,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -1730,42 +1467,9 @@
 							"kind": "function parameter",
 							"name": "rect",
 							"type": {
-								"_typeName": "stappler::xenolith::Rect",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Rect",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Rect",
-										"_kind": "type alias",
-										"_name": "Rect",
-										"id": 1186107623,
-										"kind": "type alias",
-										"name": "Rect",
-										"underlying_type": {
-											"_typeName": "geom::Rect",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Rect",
-												"objects": [{
-													"_fullName": "::stappler::geom::Rect",
-													"_kind": "class",
-													"_name": "Rect",
-													"class_kind": "struct",
-													"id": 4019440438,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Rect",
-													"scope": {
-														"name": "Rect"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Rect",
+								"kind": "unexposed",
+								"name": "stappler::geom::Rect"
 							}
 						}],
 						"ref_qualifier": "none",
@@ -1775,14 +1479,14 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::Rect)"
+						"signature": "(stappler::geom::Rect)"
 					}, {
-						"_fullName": "::stappler::xenolith::basic2d::CmdSdfGroup2D::addRoundedRect2D(stappler::xenolith::Rect,float)",
+						"_fullName": "::stappler::xenolith::basic2d::CmdSdfGroup2D::addRoundedRect2D(stappler::geom::Rect,float)",
 						"_kind": "member function",
 						"_name": "addRoundedRect2D",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 2915116363,
+						"id": 2263354521,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -1799,42 +1503,9 @@
 							"kind": "function parameter",
 							"name": "rect",
 							"type": {
-								"_typeName": "stappler::xenolith::Rect",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Rect",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Rect",
-										"_kind": "type alias",
-										"_name": "Rect",
-										"id": 1186107623,
-										"kind": "type alias",
-										"name": "Rect",
-										"underlying_type": {
-											"_typeName": "geom::Rect",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Rect",
-												"objects": [{
-													"_fullName": "::stappler::geom::Rect",
-													"_kind": "class",
-													"_name": "Rect",
-													"class_kind": "struct",
-													"id": 4019440438,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Rect",
-													"scope": {
-														"name": "Rect"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Rect",
+								"kind": "unexposed",
+								"name": "stappler::geom::Rect"
 							}
 						}, {
 							"_fullName": "r",
@@ -1856,14 +1527,14 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::Rect,float)"
+						"signature": "(stappler::geom::Rect,float)"
 					}, {
-						"_fullName": "::stappler::xenolith::basic2d::CmdSdfGroup2D::addRoundedRect2D(stappler::xenolith::Rect,stappler::xenolith::Vec4)",
+						"_fullName": "::stappler::xenolith::basic2d::CmdSdfGroup2D::addRoundedRect2D(stappler::geom::Rect,stappler::geom::Vec4)",
 						"_kind": "member function",
 						"_name": "addRoundedRect2D",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 907087847,
+						"id": 3832892067,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -1880,42 +1551,9 @@
 							"kind": "function parameter",
 							"name": "rect",
 							"type": {
-								"_typeName": "stappler::xenolith::Rect",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Rect",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Rect",
-										"_kind": "type alias",
-										"_name": "Rect",
-										"id": 1186107623,
-										"kind": "type alias",
-										"name": "Rect",
-										"underlying_type": {
-											"_typeName": "geom::Rect",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Rect",
-												"objects": [{
-													"_fullName": "::stappler::geom::Rect",
-													"_kind": "class",
-													"_name": "Rect",
-													"class_kind": "struct",
-													"id": 4019440438,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Rect",
-													"scope": {
-														"name": "Rect"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Rect",
+								"kind": "unexposed",
+								"name": "stappler::geom::Rect"
 							}
 						}, {
 							"_fullName": "r",
@@ -1925,51 +1563,9 @@
 							"kind": "function parameter",
 							"name": "r",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec4",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Vec4",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Vec4",
-										"_kind": "type alias",
-										"_name": "Vec4",
-										"id": 748103113,
-										"kind": "type alias",
-										"name": "Vec4",
-										"underlying_type": {
-											"_typeName": "geom::Vec4",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Vec4",
-												"objects": [{
-													"_fullName": "::stappler::geom::Vec4",
-													"_kind": "class",
-													"_name": "Vec4",
-													"attributes": [{
-														"arguments": [{
-															"kind": "int_literal",
-															"spelling": "16"
-														}],
-														"is_variadic": false,
-														"kind": "alignas_",
-														"name": "alignas"
-													}],
-													"class_kind": "class",
-													"id": 2114633745,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Vec4",
-													"scope": {
-														"name": "Vec4"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Vec4",
+								"kind": "unexposed",
+								"name": "stappler::geom::Vec4"
 							}
 						}],
 						"ref_qualifier": "none",
@@ -1979,14 +1575,14 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::Rect,stappler::xenolith::Vec4)"
+						"signature": "(stappler::geom::Rect,stappler::geom::Vec4)"
 					}, {
-						"_fullName": "::stappler::xenolith::basic2d::CmdSdfGroup2D::addTriangle2D(stappler::xenolith::Vec2,stappler::xenolith::Vec2,stappler::xenolith::Vec2,stappler::xenolith::Vec2)",
+						"_fullName": "::stappler::xenolith::basic2d::CmdSdfGroup2D::addTriangle2D(stappler::geom::Vec2,stappler::geom::Vec2,stappler::geom::Vec2,stappler::geom::Vec2)",
 						"_kind": "member function",
 						"_name": "addTriangle2D",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 1558703499,
+						"id": 964276825,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -2003,42 +1599,9 @@
 							"kind": "function parameter",
 							"name": "origin",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Vec2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Vec2",
-										"_kind": "type alias",
-										"_name": "Vec2",
-										"id": 1910638286,
-										"kind": "type alias",
-										"name": "Vec2",
-										"underlying_type": {
-											"_typeName": "geom::Vec2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Vec2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Vec2",
-													"_kind": "class",
-													"_name": "Vec2",
-													"class_kind": "class",
-													"id": 16661423,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Vec2",
-													"scope": {
-														"name": "Vec2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Vec2"
 							}
 						}, {
 							"_fullName": "a",
@@ -2048,42 +1611,9 @@
 							"kind": "function parameter",
 							"name": "a",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Vec2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Vec2",
-										"_kind": "type alias",
-										"_name": "Vec2",
-										"id": 1910638286,
-										"kind": "type alias",
-										"name": "Vec2",
-										"underlying_type": {
-											"_typeName": "geom::Vec2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Vec2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Vec2",
-													"_kind": "class",
-													"_name": "Vec2",
-													"class_kind": "class",
-													"id": 16661423,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Vec2",
-													"scope": {
-														"name": "Vec2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Vec2"
 							}
 						}, {
 							"_fullName": "b",
@@ -2093,42 +1623,9 @@
 							"kind": "function parameter",
 							"name": "b",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Vec2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Vec2",
-										"_kind": "type alias",
-										"_name": "Vec2",
-										"id": 1910638286,
-										"kind": "type alias",
-										"name": "Vec2",
-										"underlying_type": {
-											"_typeName": "geom::Vec2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Vec2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Vec2",
-													"_kind": "class",
-													"_name": "Vec2",
-													"class_kind": "class",
-													"id": 16661423,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Vec2",
-													"scope": {
-														"name": "Vec2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Vec2"
 							}
 						}, {
 							"_fullName": "c",
@@ -2138,42 +1635,9 @@
 							"kind": "function parameter",
 							"name": "c",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Vec2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Vec2",
-										"_kind": "type alias",
-										"_name": "Vec2",
-										"id": 1910638286,
-										"kind": "type alias",
-										"name": "Vec2",
-										"underlying_type": {
-											"_typeName": "geom::Vec2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Vec2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Vec2",
-													"_kind": "class",
-													"_name": "Vec2",
-													"class_kind": "class",
-													"id": 16661423,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Vec2",
-													"scope": {
-														"name": "Vec2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Vec2"
 							}
 						}],
 						"ref_qualifier": "none",
@@ -2183,14 +1647,14 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::Vec2,stappler::xenolith::Vec2,stappler::xenolith::Vec2,stappler::xenolith::Vec2)"
+						"signature": "(stappler::geom::Vec2,stappler::geom::Vec2,stappler::geom::Vec2,stappler::geom::Vec2)"
 					}, {
-						"_fullName": "::stappler::xenolith::basic2d::CmdSdfGroup2D::addPolygon2D(SpanView<stappler::xenolith::Vec2>)",
+						"_fullName": "::stappler::xenolith::basic2d::CmdSdfGroup2D::addPolygon2D(SpanView<stappler::geom::Vec2>)",
 						"_kind": "member function",
 						"_name": "addPolygon2D",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 2646267317,
+						"id": 1668212953,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -2207,7 +1671,7 @@
 							"kind": "function parameter",
 							"name": "",
 							"type": {
-								"_typeName": "SpanView<stappler::xenolith::Vec2>",
+								"_typeName": "SpanView<stappler::geom::Vec2>",
 								"arguments_exposed": false,
 								"kind": "template_instantiation",
 								"primary_template": {
@@ -2272,7 +1736,7 @@
 										}
 									}]
 								},
-								"unexposed_arguments": "stappler::xenolith::Vec2"
+								"unexposed_arguments": "stappler::geom::Vec2"
 							}
 						}],
 						"ref_qualifier": "none",
@@ -2282,7 +1746,7 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(SpanView<stappler::xenolith::Vec2>)"
+						"signature": "(SpanView<stappler::geom::Vec2>)"
 					}],
 					"class_kind": "struct",
 					"id": 2693532731,
@@ -2962,12 +2426,12 @@
 						"semantic_scope": "",
 						"signature": "(Rc<stappler::xenolith::PoolRef> const&)"
 					}, {
-						"_fullName": "::stappler::xenolith::basic2d::CommandList::pushVertexArray(Rc<stappler::xenolith::basic2d::VertexData>&&,stappler::xenolith::Mat4 const&,SpanView<stappler::xenolith::ZOrder>,core::MaterialId,stappler::xenolith::StateId,stappler::xenolith::RenderingLevel,float,stappler::xenolith::CommandFlags)",
+						"_fullName": "::stappler::xenolith::basic2d::CommandList::pushVertexArray(Rc<stappler::xenolith::basic2d::VertexData>&&,const stappler::geom::Mat4&,SpanView<stappler::xenolith::ZOrder>,core::MaterialId,stappler::xenolith::StateId,stappler::xenolith::RenderingLevel,float,stappler::xenolith::CommandFlags)",
 						"_kind": "member function",
 						"_name": "pushVertexArray",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 1898671656,
+						"id": 1528171458,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -3064,60 +2528,12 @@
 							"kind": "function parameter",
 							"name": "",
 							"type": {
-								"_typeName": "stappler::xenolith::Mat4 const&",
+								"_typeName": "const stappler::geom::Mat4&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "stappler::xenolith::Mat4 const",
-									"cv_qualifier": "const",
-									"kind": "cv_qualified",
-									"type": {
-										"_typeName": "stappler::xenolith::Mat4",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::xenolith::Mat4",
-											"objects": [{
-												"_fullName": "::stappler::xenolith::Mat4",
-												"_kind": "type alias",
-												"_name": "Mat4",
-												"id": 905241342,
-												"kind": "type alias",
-												"name": "Mat4",
-												"underlying_type": {
-													"_typeName": "geom::Mat4",
-													"kind": "user_defined",
-													"target": {
-														"name": "geom::Mat4",
-														"objects": [{
-															"_fullName": "::stappler::geom::Mat4",
-															"_kind": "class",
-															"_name": "Mat4",
-															"attributes": [{
-																"arguments": [{
-																	"kind": "int_literal",
-																	"spelling": "16"
-																}],
-																"is_variadic": false,
-																"kind": "alignas_",
-																"name": "alignas"
-															}],
-															"class_kind": "class",
-															"comment": "\nDefines a 4 x 4 floating point matrix representing a 3D transformation.\n\nVectors are treated as columns, resulting in a matrix that is represented as follows,\nwhere x, y and z are the translation components of the matrix:\n\n    1  0  0  x\n    0  1  0  y\n    0  0  1  z\n    0  0  0  1\n\nThis matrix class is directly compatible with OpenGL since its elements are\nlaid out in memory exactly as they are expected by OpenGL.\nThe matrix uses column-major format such that array indices increase down column first.\nSince matrix multiplication is not commutative, multiplication must be done in the\ncorrect order when combining transformations. Suppose we have a translation\nmatrix T and a rotation matrix R. To first rotate an object around the origin\nand then translate it, you would multiply the two matrices as TR.\n\nLikewise, to first translate the object and then rotate it, you would do RT.\nSo generally, matrices must be multiplied in the reverse order in which you\nwant the transformations to take place (this also applies to\nthe scale, rotate, and translate methods below; these methods are convenience\nmethods for post-multiplying by a matrix representing a scale, rotation, or translation).\n\nIn the case of repeated local transformations (i.e. rotate around the Z-axis by 0.76 radians,\nthen translate by 2.1 along the X-axis, then ...), it is better to use the Transform class\n(which is optimized for that kind of usage).\n\n@see Transform\n",
-															"id": 3473668624,
-															"is_declaration": false,
-															"is_definition": true,
-															"is_final": false,
-															"kind": "class",
-															"name": "Mat4",
-															"scope": {
-																"name": "Mat4"
-															},
-															"semantic_scope": ""
-														}]
-													}
-												}
-											}]
-										}
-									}
+									"_typeName": "const stappler::geom::Mat4",
+									"kind": "unexposed",
+									"name": "const stappler::geom::Mat4"
 								},
 								"reference_kind": "lvalue"
 							}
@@ -3404,7 +2820,7 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(Rc<stappler::xenolith::basic2d::VertexData>&&,stappler::xenolith::Mat4 const&,SpanView<stappler::xenolith::ZOrder>,core::MaterialId,stappler::xenolith::StateId,stappler::xenolith::RenderingLevel,float,stappler::xenolith::CommandFlags)"
+						"signature": "(Rc<stappler::xenolith::basic2d::VertexData>&&,const stappler::geom::Mat4&,SpanView<stappler::xenolith::ZOrder>,core::MaterialId,stappler::xenolith::StateId,stappler::xenolith::RenderingLevel,float,stappler::xenolith::CommandFlags)"
 					}, {
 						"_fullName": "::stappler::xenolith::basic2d::CommandList::pushVertexArray(SpanView<stappler::xenolith::basic2d::TransformVertexData>,SpanView<stappler::xenolith::ZOrder>,core::MaterialId,stappler::xenolith::StateId,stappler::xenolith::RenderingLevel,float,stappler::xenolith::CommandFlags)",
 						"_kind": "member function",
@@ -3780,12 +3196,12 @@
 						"semantic_scope": "",
 						"signature": "(SpanView<stappler::xenolith::basic2d::TransformVertexData>,SpanView<stappler::xenolith::ZOrder>,core::MaterialId,stappler::xenolith::StateId,stappler::xenolith::RenderingLevel,float,stappler::xenolith::CommandFlags)"
 					}, {
-						"_fullName": "::stappler::xenolith::basic2d::CommandList::pushDeferredVertexResult(Rc<stappler::xenolith::basic2d::DeferredVertexResult> const&,stappler::xenolith::Mat4 const&,stappler::xenolith::Mat4 const&,bool,SpanView<stappler::xenolith::ZOrder>,core::MaterialId,stappler::xenolith::StateId,stappler::xenolith::RenderingLevel,float,stappler::xenolith::CommandFlags)",
+						"_fullName": "::stappler::xenolith::basic2d::CommandList::pushDeferredVertexResult(Rc<stappler::xenolith::basic2d::DeferredVertexResult> const&,const stappler::geom::Mat4&,const stappler::geom::Mat4&,bool,SpanView<stappler::xenolith::ZOrder>,core::MaterialId,stappler::xenolith::StateId,stappler::xenolith::RenderingLevel,float,stappler::xenolith::CommandFlags)",
 						"_kind": "member function",
 						"_name": "pushDeferredVertexResult",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 854256601,
+						"id": 2883061066,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -3887,60 +3303,12 @@
 							"kind": "function parameter",
 							"name": "view",
 							"type": {
-								"_typeName": "stappler::xenolith::Mat4 const&",
+								"_typeName": "const stappler::geom::Mat4&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "stappler::xenolith::Mat4 const",
-									"cv_qualifier": "const",
-									"kind": "cv_qualified",
-									"type": {
-										"_typeName": "stappler::xenolith::Mat4",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::xenolith::Mat4",
-											"objects": [{
-												"_fullName": "::stappler::xenolith::Mat4",
-												"_kind": "type alias",
-												"_name": "Mat4",
-												"id": 905241342,
-												"kind": "type alias",
-												"name": "Mat4",
-												"underlying_type": {
-													"_typeName": "geom::Mat4",
-													"kind": "user_defined",
-													"target": {
-														"name": "geom::Mat4",
-														"objects": [{
-															"_fullName": "::stappler::geom::Mat4",
-															"_kind": "class",
-															"_name": "Mat4",
-															"attributes": [{
-																"arguments": [{
-																	"kind": "int_literal",
-																	"spelling": "16"
-																}],
-																"is_variadic": false,
-																"kind": "alignas_",
-																"name": "alignas"
-															}],
-															"class_kind": "class",
-															"comment": "\nDefines a 4 x 4 floating point matrix representing a 3D transformation.\n\nVectors are treated as columns, resulting in a matrix that is represented as follows,\nwhere x, y and z are the translation components of the matrix:\n\n    1  0  0  x\n    0  1  0  y\n    0  0  1  z\n    0  0  0  1\n\nThis matrix class is directly compatible with OpenGL since its elements are\nlaid out in memory exactly as they are expected by OpenGL.\nThe matrix uses column-major format such that array indices increase down column first.\nSince matrix multiplication is not commutative, multiplication must be done in the\ncorrect order when combining transformations. Suppose we have a translation\nmatrix T and a rotation matrix R. To first rotate an object around the origin\nand then translate it, you would multiply the two matrices as TR.\n\nLikewise, to first translate the object and then rotate it, you would do RT.\nSo generally, matrices must be multiplied in the reverse order in which you\nwant the transformations to take place (this also applies to\nthe scale, rotate, and translate methods below; these methods are convenience\nmethods for post-multiplying by a matrix representing a scale, rotation, or translation).\n\nIn the case of repeated local transformations (i.e. rotate around the Z-axis by 0.76 radians,\nthen translate by 2.1 along the X-axis, then ...), it is better to use the Transform class\n(which is optimized for that kind of usage).\n\n@see Transform\n",
-															"id": 3473668624,
-															"is_declaration": false,
-															"is_definition": true,
-															"is_final": false,
-															"kind": "class",
-															"name": "Mat4",
-															"scope": {
-																"name": "Mat4"
-															},
-															"semantic_scope": ""
-														}]
-													}
-												}
-											}]
-										}
-									}
+									"_typeName": "const stappler::geom::Mat4",
+									"kind": "unexposed",
+									"name": "const stappler::geom::Mat4"
 								},
 								"reference_kind": "lvalue"
 							}
@@ -3952,60 +3320,12 @@
 							"kind": "function parameter",
 							"name": "model",
 							"type": {
-								"_typeName": "stappler::xenolith::Mat4 const&",
+								"_typeName": "const stappler::geom::Mat4&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "stappler::xenolith::Mat4 const",
-									"cv_qualifier": "const",
-									"kind": "cv_qualified",
-									"type": {
-										"_typeName": "stappler::xenolith::Mat4",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::xenolith::Mat4",
-											"objects": [{
-												"_fullName": "::stappler::xenolith::Mat4",
-												"_kind": "type alias",
-												"_name": "Mat4",
-												"id": 905241342,
-												"kind": "type alias",
-												"name": "Mat4",
-												"underlying_type": {
-													"_typeName": "geom::Mat4",
-													"kind": "user_defined",
-													"target": {
-														"name": "geom::Mat4",
-														"objects": [{
-															"_fullName": "::stappler::geom::Mat4",
-															"_kind": "class",
-															"_name": "Mat4",
-															"attributes": [{
-																"arguments": [{
-																	"kind": "int_literal",
-																	"spelling": "16"
-																}],
-																"is_variadic": false,
-																"kind": "alignas_",
-																"name": "alignas"
-															}],
-															"class_kind": "class",
-															"comment": "\nDefines a 4 x 4 floating point matrix representing a 3D transformation.\n\nVectors are treated as columns, resulting in a matrix that is represented as follows,\nwhere x, y and z are the translation components of the matrix:\n\n    1  0  0  x\n    0  1  0  y\n    0  0  1  z\n    0  0  0  1\n\nThis matrix class is directly compatible with OpenGL since its elements are\nlaid out in memory exactly as they are expected by OpenGL.\nThe matrix uses column-major format such that array indices increase down column first.\nSince matrix multiplication is not commutative, multiplication must be done in the\ncorrect order when combining transformations. Suppose we have a translation\nmatrix T and a rotation matrix R. To first rotate an object around the origin\nand then translate it, you would multiply the two matrices as TR.\n\nLikewise, to first translate the object and then rotate it, you would do RT.\nSo generally, matrices must be multiplied in the reverse order in which you\nwant the transformations to take place (this also applies to\nthe scale, rotate, and translate methods below; these methods are convenience\nmethods for post-multiplying by a matrix representing a scale, rotation, or translation).\n\nIn the case of repeated local transformations (i.e. rotate around the Z-axis by 0.76 radians,\nthen translate by 2.1 along the X-axis, then ...), it is better to use the Transform class\n(which is optimized for that kind of usage).\n\n@see Transform\n",
-															"id": 3473668624,
-															"is_declaration": false,
-															"is_definition": true,
-															"is_final": false,
-															"kind": "class",
-															"name": "Mat4",
-															"scope": {
-																"name": "Mat4"
-															},
-															"semantic_scope": ""
-														}]
-													}
-												}
-											}]
-										}
-									}
+									"_typeName": "const stappler::geom::Mat4",
+									"kind": "unexposed",
+									"name": "const stappler::geom::Mat4"
 								},
 								"reference_kind": "lvalue"
 							}
@@ -4304,14 +3624,14 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(Rc<stappler::xenolith::basic2d::DeferredVertexResult> const&,stappler::xenolith::Mat4 const&,stappler::xenolith::Mat4 const&,bool,SpanView<stappler::xenolith::ZOrder>,core::MaterialId,stappler::xenolith::StateId,stappler::xenolith::RenderingLevel,float,stappler::xenolith::CommandFlags)"
+						"signature": "(Rc<stappler::xenolith::basic2d::DeferredVertexResult> const&,const stappler::geom::Mat4&,const stappler::geom::Mat4&,bool,SpanView<stappler::xenolith::ZOrder>,core::MaterialId,stappler::xenolith::StateId,stappler::xenolith::RenderingLevel,float,stappler::xenolith::CommandFlags)"
 					}, {
-						"_fullName": "::stappler::xenolith::basic2d::CommandList::pushShadowArray(Rc<stappler::xenolith::basic2d::VertexData>&&,stappler::xenolith::Mat4 const&,stappler::xenolith::StateId,float)",
+						"_fullName": "::stappler::xenolith::basic2d::CommandList::pushShadowArray(Rc<stappler::xenolith::basic2d::VertexData>&&,const stappler::geom::Mat4&,stappler::xenolith::StateId,float)",
 						"_kind": "member function",
 						"_name": "pushShadowArray",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 1885232504,
+						"id": 1081720246,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -4408,60 +3728,12 @@
 							"kind": "function parameter",
 							"name": "",
 							"type": {
-								"_typeName": "stappler::xenolith::Mat4 const&",
+								"_typeName": "const stappler::geom::Mat4&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "stappler::xenolith::Mat4 const",
-									"cv_qualifier": "const",
-									"kind": "cv_qualified",
-									"type": {
-										"_typeName": "stappler::xenolith::Mat4",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::xenolith::Mat4",
-											"objects": [{
-												"_fullName": "::stappler::xenolith::Mat4",
-												"_kind": "type alias",
-												"_name": "Mat4",
-												"id": 905241342,
-												"kind": "type alias",
-												"name": "Mat4",
-												"underlying_type": {
-													"_typeName": "geom::Mat4",
-													"kind": "user_defined",
-													"target": {
-														"name": "geom::Mat4",
-														"objects": [{
-															"_fullName": "::stappler::geom::Mat4",
-															"_kind": "class",
-															"_name": "Mat4",
-															"attributes": [{
-																"arguments": [{
-																	"kind": "int_literal",
-																	"spelling": "16"
-																}],
-																"is_variadic": false,
-																"kind": "alignas_",
-																"name": "alignas"
-															}],
-															"class_kind": "class",
-															"comment": "\nDefines a 4 x 4 floating point matrix representing a 3D transformation.\n\nVectors are treated as columns, resulting in a matrix that is represented as follows,\nwhere x, y and z are the translation components of the matrix:\n\n    1  0  0  x\n    0  1  0  y\n    0  0  1  z\n    0  0  0  1\n\nThis matrix class is directly compatible with OpenGL since its elements are\nlaid out in memory exactly as they are expected by OpenGL.\nThe matrix uses column-major format such that array indices increase down column first.\nSince matrix multiplication is not commutative, multiplication must be done in the\ncorrect order when combining transformations. Suppose we have a translation\nmatrix T and a rotation matrix R. To first rotate an object around the origin\nand then translate it, you would multiply the two matrices as TR.\n\nLikewise, to first translate the object and then rotate it, you would do RT.\nSo generally, matrices must be multiplied in the reverse order in which you\nwant the transformations to take place (this also applies to\nthe scale, rotate, and translate methods below; these methods are convenience\nmethods for post-multiplying by a matrix representing a scale, rotation, or translation).\n\nIn the case of repeated local transformations (i.e. rotate around the Z-axis by 0.76 radians,\nthen translate by 2.1 along the X-axis, then ...), it is better to use the Transform class\n(which is optimized for that kind of usage).\n\n@see Transform\n",
-															"id": 3473668624,
-															"is_declaration": false,
-															"is_definition": true,
-															"is_final": false,
-															"kind": "class",
-															"name": "Mat4",
-															"scope": {
-																"name": "Mat4"
-															},
-															"semantic_scope": ""
-														}]
-													}
-												}
-											}]
-										}
-									}
+									"_typeName": "const stappler::geom::Mat4",
+									"kind": "unexposed",
+									"name": "const stappler::geom::Mat4"
 								},
 								"reference_kind": "lvalue"
 							}
@@ -4514,7 +3786,7 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(Rc<stappler::xenolith::basic2d::VertexData>&&,stappler::xenolith::Mat4 const&,stappler::xenolith::StateId,float)"
+						"signature": "(Rc<stappler::xenolith::basic2d::VertexData>&&,const stappler::geom::Mat4&,stappler::xenolith::StateId,float)"
 					}, {
 						"_fullName": "::stappler::xenolith::basic2d::CommandList::pushShadowArray(SpanView<stappler::xenolith::basic2d::TransformVertexData>,stappler::xenolith::StateId,float)",
 						"_kind": "member function",
@@ -4656,12 +3928,12 @@
 						"semantic_scope": "",
 						"signature": "(SpanView<stappler::xenolith::basic2d::TransformVertexData>,stappler::xenolith::StateId,float)"
 					}, {
-						"_fullName": "::stappler::xenolith::basic2d::CommandList::pushDeferredShadow(Rc<stappler::xenolith::basic2d::DeferredVertexResult> const&,stappler::xenolith::Mat4 const&,stappler::xenolith::Mat4 const&,stappler::xenolith::StateId,bool,float)",
+						"_fullName": "::stappler::xenolith::basic2d::CommandList::pushDeferredShadow(Rc<stappler::xenolith::basic2d::DeferredVertexResult> const&,const stappler::geom::Mat4&,const stappler::geom::Mat4&,stappler::xenolith::StateId,bool,float)",
 						"_kind": "member function",
 						"_name": "pushDeferredShadow",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 979005146,
+						"id": 1569910326,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -4763,60 +4035,12 @@
 							"kind": "function parameter",
 							"name": "view",
 							"type": {
-								"_typeName": "stappler::xenolith::Mat4 const&",
+								"_typeName": "const stappler::geom::Mat4&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "stappler::xenolith::Mat4 const",
-									"cv_qualifier": "const",
-									"kind": "cv_qualified",
-									"type": {
-										"_typeName": "stappler::xenolith::Mat4",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::xenolith::Mat4",
-											"objects": [{
-												"_fullName": "::stappler::xenolith::Mat4",
-												"_kind": "type alias",
-												"_name": "Mat4",
-												"id": 905241342,
-												"kind": "type alias",
-												"name": "Mat4",
-												"underlying_type": {
-													"_typeName": "geom::Mat4",
-													"kind": "user_defined",
-													"target": {
-														"name": "geom::Mat4",
-														"objects": [{
-															"_fullName": "::stappler::geom::Mat4",
-															"_kind": "class",
-															"_name": "Mat4",
-															"attributes": [{
-																"arguments": [{
-																	"kind": "int_literal",
-																	"spelling": "16"
-																}],
-																"is_variadic": false,
-																"kind": "alignas_",
-																"name": "alignas"
-															}],
-															"class_kind": "class",
-															"comment": "\nDefines a 4 x 4 floating point matrix representing a 3D transformation.\n\nVectors are treated as columns, resulting in a matrix that is represented as follows,\nwhere x, y and z are the translation components of the matrix:\n\n    1  0  0  x\n    0  1  0  y\n    0  0  1  z\n    0  0  0  1\n\nThis matrix class is directly compatible with OpenGL since its elements are\nlaid out in memory exactly as they are expected by OpenGL.\nThe matrix uses column-major format such that array indices increase down column first.\nSince matrix multiplication is not commutative, multiplication must be done in the\ncorrect order when combining transformations. Suppose we have a translation\nmatrix T and a rotation matrix R. To first rotate an object around the origin\nand then translate it, you would multiply the two matrices as TR.\n\nLikewise, to first translate the object and then rotate it, you would do RT.\nSo generally, matrices must be multiplied in the reverse order in which you\nwant the transformations to take place (this also applies to\nthe scale, rotate, and translate methods below; these methods are convenience\nmethods for post-multiplying by a matrix representing a scale, rotation, or translation).\n\nIn the case of repeated local transformations (i.e. rotate around the Z-axis by 0.76 radians,\nthen translate by 2.1 along the X-axis, then ...), it is better to use the Transform class\n(which is optimized for that kind of usage).\n\n@see Transform\n",
-															"id": 3473668624,
-															"is_declaration": false,
-															"is_definition": true,
-															"is_final": false,
-															"kind": "class",
-															"name": "Mat4",
-															"scope": {
-																"name": "Mat4"
-															},
-															"semantic_scope": ""
-														}]
-													}
-												}
-											}]
-										}
-									}
+									"_typeName": "const stappler::geom::Mat4",
+									"kind": "unexposed",
+									"name": "const stappler::geom::Mat4"
 								},
 								"reference_kind": "lvalue"
 							}
@@ -4828,60 +4052,12 @@
 							"kind": "function parameter",
 							"name": "model",
 							"type": {
-								"_typeName": "stappler::xenolith::Mat4 const&",
+								"_typeName": "const stappler::geom::Mat4&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "stappler::xenolith::Mat4 const",
-									"cv_qualifier": "const",
-									"kind": "cv_qualified",
-									"type": {
-										"_typeName": "stappler::xenolith::Mat4",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::xenolith::Mat4",
-											"objects": [{
-												"_fullName": "::stappler::xenolith::Mat4",
-												"_kind": "type alias",
-												"_name": "Mat4",
-												"id": 905241342,
-												"kind": "type alias",
-												"name": "Mat4",
-												"underlying_type": {
-													"_typeName": "geom::Mat4",
-													"kind": "user_defined",
-													"target": {
-														"name": "geom::Mat4",
-														"objects": [{
-															"_fullName": "::stappler::geom::Mat4",
-															"_kind": "class",
-															"_name": "Mat4",
-															"attributes": [{
-																"arguments": [{
-																	"kind": "int_literal",
-																	"spelling": "16"
-																}],
-																"is_variadic": false,
-																"kind": "alignas_",
-																"name": "alignas"
-															}],
-															"class_kind": "class",
-															"comment": "\nDefines a 4 x 4 floating point matrix representing a 3D transformation.\n\nVectors are treated as columns, resulting in a matrix that is represented as follows,\nwhere x, y and z are the translation components of the matrix:\n\n    1  0  0  x\n    0  1  0  y\n    0  0  1  z\n    0  0  0  1\n\nThis matrix class is directly compatible with OpenGL since its elements are\nlaid out in memory exactly as they are expected by OpenGL.\nThe matrix uses column-major format such that array indices increase down column first.\nSince matrix multiplication is not commutative, multiplication must be done in the\ncorrect order when combining transformations. Suppose we have a translation\nmatrix T and a rotation matrix R. To first rotate an object around the origin\nand then translate it, you would multiply the two matrices as TR.\n\nLikewise, to first translate the object and then rotate it, you would do RT.\nSo generally, matrices must be multiplied in the reverse order in which you\nwant the transformations to take place (this also applies to\nthe scale, rotate, and translate methods below; these methods are convenience\nmethods for post-multiplying by a matrix representing a scale, rotation, or translation).\n\nIn the case of repeated local transformations (i.e. rotate around the Z-axis by 0.76 radians,\nthen translate by 2.1 along the X-axis, then ...), it is better to use the Transform class\n(which is optimized for that kind of usage).\n\n@see Transform\n",
-															"id": 3473668624,
-															"is_declaration": false,
-															"is_definition": true,
-															"is_final": false,
-															"kind": "class",
-															"name": "Mat4",
-															"scope": {
-																"name": "Mat4"
-															},
-															"semantic_scope": ""
-														}]
-													}
-												}
-											}]
-										}
-									}
+									"_typeName": "const stappler::geom::Mat4",
+									"kind": "unexposed",
+									"name": "const stappler::geom::Mat4"
 								},
 								"reference_kind": "lvalue"
 							}
@@ -4946,14 +4122,14 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(Rc<stappler::xenolith::basic2d::DeferredVertexResult> const&,stappler::xenolith::Mat4 const&,stappler::xenolith::Mat4 const&,stappler::xenolith::StateId,bool,float)"
+						"signature": "(Rc<stappler::xenolith::basic2d::DeferredVertexResult> const&,const stappler::geom::Mat4&,const stappler::geom::Mat4&,stappler::xenolith::StateId,bool,float)"
 					}, {
-						"_fullName": "::stappler::xenolith::basic2d::CommandList::pushSdfGroup(stappler::xenolith::Mat4 const&,stappler::xenolith::StateId,float,Callback<void (stappler::xenolith::basic2d::CmdSdfGroup2D &)> const&)",
+						"_fullName": "::stappler::xenolith::basic2d::CommandList::pushSdfGroup(const stappler::geom::Mat4&,stappler::xenolith::StateId,float,Callback<void (stappler::xenolith::basic2d::CmdSdfGroup2D &)> const&)",
 						"_kind": "member function",
 						"_name": "pushSdfGroup",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 4014379352,
+						"id": 1541752464,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -4970,60 +4146,12 @@
 							"kind": "function parameter",
 							"name": "model",
 							"type": {
-								"_typeName": "stappler::xenolith::Mat4 const&",
+								"_typeName": "const stappler::geom::Mat4&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "stappler::xenolith::Mat4 const",
-									"cv_qualifier": "const",
-									"kind": "cv_qualified",
-									"type": {
-										"_typeName": "stappler::xenolith::Mat4",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::xenolith::Mat4",
-											"objects": [{
-												"_fullName": "::stappler::xenolith::Mat4",
-												"_kind": "type alias",
-												"_name": "Mat4",
-												"id": 905241342,
-												"kind": "type alias",
-												"name": "Mat4",
-												"underlying_type": {
-													"_typeName": "geom::Mat4",
-													"kind": "user_defined",
-													"target": {
-														"name": "geom::Mat4",
-														"objects": [{
-															"_fullName": "::stappler::geom::Mat4",
-															"_kind": "class",
-															"_name": "Mat4",
-															"attributes": [{
-																"arguments": [{
-																	"kind": "int_literal",
-																	"spelling": "16"
-																}],
-																"is_variadic": false,
-																"kind": "alignas_",
-																"name": "alignas"
-															}],
-															"class_kind": "class",
-															"comment": "\nDefines a 4 x 4 floating point matrix representing a 3D transformation.\n\nVectors are treated as columns, resulting in a matrix that is represented as follows,\nwhere x, y and z are the translation components of the matrix:\n\n    1  0  0  x\n    0  1  0  y\n    0  0  1  z\n    0  0  0  1\n\nThis matrix class is directly compatible with OpenGL since its elements are\nlaid out in memory exactly as they are expected by OpenGL.\nThe matrix uses column-major format such that array indices increase down column first.\nSince matrix multiplication is not commutative, multiplication must be done in the\ncorrect order when combining transformations. Suppose we have a translation\nmatrix T and a rotation matrix R. To first rotate an object around the origin\nand then translate it, you would multiply the two matrices as TR.\n\nLikewise, to first translate the object and then rotate it, you would do RT.\nSo generally, matrices must be multiplied in the reverse order in which you\nwant the transformations to take place (this also applies to\nthe scale, rotate, and translate methods below; these methods are convenience\nmethods for post-multiplying by a matrix representing a scale, rotation, or translation).\n\nIn the case of repeated local transformations (i.e. rotate around the Z-axis by 0.76 radians,\nthen translate by 2.1 along the X-axis, then ...), it is better to use the Transform class\n(which is optimized for that kind of usage).\n\n@see Transform\n",
-															"id": 3473668624,
-															"is_declaration": false,
-															"is_definition": true,
-															"is_final": false,
-															"kind": "class",
-															"name": "Mat4",
-															"scope": {
-																"name": "Mat4"
-															},
-															"semantic_scope": ""
-														}]
-													}
-												}
-											}]
-										}
-									}
+									"_typeName": "const stappler::geom::Mat4",
+									"kind": "unexposed",
+									"name": "const stappler::geom::Mat4"
 								},
 								"reference_kind": "lvalue"
 							}
@@ -5161,7 +4289,7 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::Mat4 const&,stappler::xenolith::StateId,float,Callback<void (stappler::xenolith::basic2d::CmdSdfGroup2D &)> const&)"
+						"signature": "(const stappler::geom::Mat4&,stappler::xenolith::StateId,float,Callback<void (stappler::xenolith::basic2d::CmdSdfGroup2D &)> const&)"
 					}, {
 						"_fullName": "::stappler::xenolith::basic2d::CommandList::getFirst() const",
 						"_kind": "member function",
@@ -5282,6 +4410,31 @@
 							"_typeName": "bool",
 							"builtin_type_kind": "bool",
 							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "() const"
+					}, {
+						"_fullName": "::stappler::xenolith::basic2d::CommandList::size() const",
+						"_kind": "member function",
+						"_name": "size",
+						"body_kind": "definition",
+						"cv_qualifier": "const",
+						"id": 784434630,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "size",
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
 						},
 						"semantic_scope": "",
 						"signature": "() const"
@@ -5563,6 +4716,35 @@
 										"semantic_scope": ""
 									}]
 								}
+							}
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::basic2d::CommandList::_size",
+						"_kind": "member variable",
+						"_name": "_size",
+						"default_value": {
+							"expression": [{
+								"kind": "int_literal",
+								"spelling": "0"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "size_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "size_t"
+								}
+							}
+						},
+						"id": 3615171906,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "_size",
+						"type": {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
 							}
 						}
 					}],

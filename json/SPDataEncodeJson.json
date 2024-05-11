@@ -44,15 +44,15 @@
 				"_kind": "namespace",
 				"_name": "json",
 				"childs": [{
-					"_fullName": "::stappler::data::json::encodeString<typename>(std::ostream&,StringType const&)",
+					"_fullName": "::stappler::data::json::encodeString<typename>(Callback<void (stappler::StringView)> const&,StringType const&)",
 					"_kind": "function template",
 					"_name": "encodeString",
 					"childs": [{
-						"_fullName": "::stappler::data::json::encodeString<typename>(std::ostream&,StringType const&)",
+						"_fullName": "::stappler::data::json::encodeString<typename>(Callback<void (stappler::StringView)> const&,StringType const&)",
 						"_kind": "function",
 						"_name": "encodeString",
 						"body_kind": "definition",
-						"id": 3597666458,
+						"id": 2325208707,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": false,
@@ -68,13 +68,219 @@
 							"kind": "function parameter",
 							"name": "stream",
 							"type": {
-								"_typeName": "std::ostream&",
+								"_typeName": "Callback<void (stappler::StringView)> const&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "std::ostream",
-									"kind": "user_defined",
-									"target": {
-										"name": "std::ostream"
+									"_typeName": "Callback<void (stappler::StringView)> const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "Callback<void (stappler::StringView)>",
+										"arguments_exposed": false,
+										"kind": "template_instantiation",
+										"primary_template": {
+											"name": "Callback",
+											"objects": [{
+												"_fullName": "::stappler::memory::callback<ReturnType(ArgumentTypes...)>::callback<ReturnType(ArgumentTypes...)>",
+												"_kind": "class template specialization",
+												"_name": "callback",
+												"arguments_exposed": false,
+												"class": {
+													"_fullName": "::stappler::memory::callback<ReturnType(ArgumentTypes...)>::callback<ReturnType(ArgumentTypes...)>",
+													"_kind": "class",
+													"_name": "callback",
+													"bases": [{
+														"_fullName": "AllocPool",
+														"_kind": "base class specifier",
+														"_name": "AllocPool",
+														"access_specifier": "public",
+														"id": 972079861,
+														"is_virtual": false,
+														"kind": "base class specifier",
+														"name": "AllocPool",
+														"type": {
+															"_typeName": "stappler::memory::AllocPool",
+															"kind": "user_defined",
+															"target": {
+																"name": "stappler::memory::AllocPool",
+																"objects": [{
+																	"_fullName": "::stappler::memory::AllocPool",
+																	"_kind": "class",
+																	"_name": "AllocPool",
+																	"class_kind": "struct",
+																	"id": 3030388899,
+																	"is_declaration": false,
+																	"is_definition": true,
+																	"is_final": false,
+																	"kind": "class",
+																	"name": "AllocPool",
+																	"scope": {
+																		"name": "AllocPool"
+																	},
+																	"semantic_scope": ""
+																}]
+															}
+														}
+													}],
+													"class_kind": "class",
+													"id": 1605912956,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "callback",
+													"scope": {
+														"is_templated": true,
+														"name": "callback",
+														"template_parameters": [{
+															"_fullName": "ReturnType",
+															"_kind": "template type parameter",
+															"_name": "ReturnType",
+															"id": 3798530772,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "ReturnType"
+														}, {
+															"_fullName": "ArgumentTypes",
+															"_kind": "template type parameter",
+															"_name": "ArgumentTypes",
+															"id": 120775233,
+															"is_variadic": true,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "ArgumentTypes"
+														}]
+													},
+													"semantic_scope": ""
+												},
+												"id": 1605912956,
+												"is_full_specialization": false,
+												"kind": "class template specialization",
+												"name": "callback",
+												"parameters": [{
+													"_fullName": "ReturnType",
+													"_kind": "template type parameter",
+													"_name": "ReturnType",
+													"id": 3798530772,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "ReturnType"
+												}, {
+													"_fullName": "ArgumentTypes",
+													"_kind": "template type parameter",
+													"_name": "ArgumentTypes",
+													"id": 120775233,
+													"is_variadic": true,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "ArgumentTypes"
+												}],
+												"primary_template":  {
+													"name": "callback",
+													"objects": [{
+														"_fullName": "::stappler::memory::callback<typename>",
+														"_kind": "class template",
+														"_name": "callback",
+														"class": {
+															"_fullName": "::stappler::memory::callback<typename>",
+															"_kind": "class",
+															"_name": "callback",
+															"class_kind": "class",
+															"id": 3310519973,
+															"is_declaration": true,
+															"is_definition": false,
+															"is_final": false,
+															"kind": "class",
+															"name": "callback",
+															"scope": {
+																"is_templated": true,
+																"name": "callback",
+																"template_parameters": [{
+																	"_fullName": "UnusedType",
+																	"_kind": "template type parameter",
+																	"_name": "UnusedType",
+																	"id": 3305497932,
+																	"is_variadic": false,
+																	"keyword": "typename",
+																	"kind": "template type parameter",
+																	"name": "UnusedType"
+																}]
+															},
+															"semantic_scope": ""
+														},
+														"id": 3310519973,
+														"kind": "class template",
+														"name": "callback",
+														"parameters": [{
+															"_fullName": "UnusedType",
+															"_kind": "template type parameter",
+															"_name": "UnusedType",
+															"id": 3305497932,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "UnusedType"
+														}],
+														"scope":  {
+															"is_templated": true,
+															"name": "callback",
+															"template_parameters": [{
+																"_fullName": "UnusedType",
+																"_kind": "template type parameter",
+																"_name": "UnusedType",
+																"id": 3305497932,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "UnusedType"
+															}]
+														}
+													}]
+												},
+												"scope":  {
+													"is_templated": true,
+													"name": "callback",
+													"template_parameters": [{
+														"_fullName": "ReturnType",
+														"_kind": "template type parameter",
+														"_name": "ReturnType",
+														"id": 3798530772,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "ReturnType"
+													}, {
+														"_fullName": "ArgumentTypes",
+														"_kind": "template type parameter",
+														"_name": "ArgumentTypes",
+														"id": 120775233,
+														"is_variadic": true,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "ArgumentTypes"
+													}]
+												},
+												"unexposed_arguments":  [{
+													"kind": "identifier",
+													"spelling": "ReturnType"
+												}, {
+													"kind": "punctuation",
+													"spelling": "("
+												}, {
+													"kind": "identifier",
+													"spelling": "ArgumentTypes"
+												}, {
+													"kind": "punctuation",
+													"spelling": "..."
+												}, {
+													"kind": "punctuation",
+													"spelling": ")"
+												}]
+											}]
+										},
+										"unexposed_arguments": "void (stappler::StringView)"
 									}
 								},
 								"reference_kind": "lvalue"
@@ -120,14 +326,14 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(std::ostream&,StringType const&)"
+						"signature": "(Callback<void (stappler::StringView)> const&,StringType const&)"
 					}],
 					"function":  {
-						"_fullName": "::stappler::data::json::encodeString<typename>(std::ostream&,StringType const&)",
+						"_fullName": "::stappler::data::json::encodeString<typename>(Callback<void (stappler::StringView)> const&,StringType const&)",
 						"_kind": "function",
 						"_name": "encodeString",
 						"body_kind": "definition",
-						"id": 3597666458,
+						"id": 2325208707,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": false,
@@ -143,13 +349,219 @@
 							"kind": "function parameter",
 							"name": "stream",
 							"type": {
-								"_typeName": "std::ostream&",
+								"_typeName": "Callback<void (stappler::StringView)> const&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "std::ostream",
-									"kind": "user_defined",
-									"target": {
-										"name": "std::ostream"
+									"_typeName": "Callback<void (stappler::StringView)> const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "Callback<void (stappler::StringView)>",
+										"arguments_exposed": false,
+										"kind": "template_instantiation",
+										"primary_template": {
+											"name": "Callback",
+											"objects": [{
+												"_fullName": "::stappler::memory::callback<ReturnType(ArgumentTypes...)>::callback<ReturnType(ArgumentTypes...)>",
+												"_kind": "class template specialization",
+												"_name": "callback",
+												"arguments_exposed": false,
+												"class": {
+													"_fullName": "::stappler::memory::callback<ReturnType(ArgumentTypes...)>::callback<ReturnType(ArgumentTypes...)>",
+													"_kind": "class",
+													"_name": "callback",
+													"bases": [{
+														"_fullName": "AllocPool",
+														"_kind": "base class specifier",
+														"_name": "AllocPool",
+														"access_specifier": "public",
+														"id": 972079861,
+														"is_virtual": false,
+														"kind": "base class specifier",
+														"name": "AllocPool",
+														"type": {
+															"_typeName": "stappler::memory::AllocPool",
+															"kind": "user_defined",
+															"target": {
+																"name": "stappler::memory::AllocPool",
+																"objects": [{
+																	"_fullName": "::stappler::memory::AllocPool",
+																	"_kind": "class",
+																	"_name": "AllocPool",
+																	"class_kind": "struct",
+																	"id": 3030388899,
+																	"is_declaration": false,
+																	"is_definition": true,
+																	"is_final": false,
+																	"kind": "class",
+																	"name": "AllocPool",
+																	"scope": {
+																		"name": "AllocPool"
+																	},
+																	"semantic_scope": ""
+																}]
+															}
+														}
+													}],
+													"class_kind": "class",
+													"id": 1605912956,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "callback",
+													"scope": {
+														"is_templated": true,
+														"name": "callback",
+														"template_parameters": [{
+															"_fullName": "ReturnType",
+															"_kind": "template type parameter",
+															"_name": "ReturnType",
+															"id": 3798530772,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "ReturnType"
+														}, {
+															"_fullName": "ArgumentTypes",
+															"_kind": "template type parameter",
+															"_name": "ArgumentTypes",
+															"id": 120775233,
+															"is_variadic": true,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "ArgumentTypes"
+														}]
+													},
+													"semantic_scope": ""
+												},
+												"id": 1605912956,
+												"is_full_specialization": false,
+												"kind": "class template specialization",
+												"name": "callback",
+												"parameters": [{
+													"_fullName": "ReturnType",
+													"_kind": "template type parameter",
+													"_name": "ReturnType",
+													"id": 3798530772,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "ReturnType"
+												}, {
+													"_fullName": "ArgumentTypes",
+													"_kind": "template type parameter",
+													"_name": "ArgumentTypes",
+													"id": 120775233,
+													"is_variadic": true,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "ArgumentTypes"
+												}],
+												"primary_template":  {
+													"name": "callback",
+													"objects": [{
+														"_fullName": "::stappler::memory::callback<typename>",
+														"_kind": "class template",
+														"_name": "callback",
+														"class": {
+															"_fullName": "::stappler::memory::callback<typename>",
+															"_kind": "class",
+															"_name": "callback",
+															"class_kind": "class",
+															"id": 3310519973,
+															"is_declaration": true,
+															"is_definition": false,
+															"is_final": false,
+															"kind": "class",
+															"name": "callback",
+															"scope": {
+																"is_templated": true,
+																"name": "callback",
+																"template_parameters": [{
+																	"_fullName": "UnusedType",
+																	"_kind": "template type parameter",
+																	"_name": "UnusedType",
+																	"id": 3305497932,
+																	"is_variadic": false,
+																	"keyword": "typename",
+																	"kind": "template type parameter",
+																	"name": "UnusedType"
+																}]
+															},
+															"semantic_scope": ""
+														},
+														"id": 3310519973,
+														"kind": "class template",
+														"name": "callback",
+														"parameters": [{
+															"_fullName": "UnusedType",
+															"_kind": "template type parameter",
+															"_name": "UnusedType",
+															"id": 3305497932,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "UnusedType"
+														}],
+														"scope":  {
+															"is_templated": true,
+															"name": "callback",
+															"template_parameters": [{
+																"_fullName": "UnusedType",
+																"_kind": "template type parameter",
+																"_name": "UnusedType",
+																"id": 3305497932,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "UnusedType"
+															}]
+														}
+													}]
+												},
+												"scope":  {
+													"is_templated": true,
+													"name": "callback",
+													"template_parameters": [{
+														"_fullName": "ReturnType",
+														"_kind": "template type parameter",
+														"_name": "ReturnType",
+														"id": 3798530772,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "ReturnType"
+													}, {
+														"_fullName": "ArgumentTypes",
+														"_kind": "template type parameter",
+														"_name": "ArgumentTypes",
+														"id": 120775233,
+														"is_variadic": true,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "ArgumentTypes"
+													}]
+												},
+												"unexposed_arguments":  [{
+													"kind": "identifier",
+													"spelling": "ReturnType"
+												}, {
+													"kind": "punctuation",
+													"spelling": "("
+												}, {
+													"kind": "identifier",
+													"spelling": "ArgumentTypes"
+												}, {
+													"kind": "punctuation",
+													"spelling": "..."
+												}, {
+													"kind": "punctuation",
+													"spelling": ")"
+												}]
+											}]
+										},
+										"unexposed_arguments": "void (stappler::StringView)"
 									}
 								},
 								"reference_kind": "lvalue"
@@ -195,9 +607,9 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(std::ostream&,StringType const&)"
+						"signature": "(Callback<void (stappler::StringView)> const&,StringType const&)"
 					},
-					"id": 3597666458,
+					"id": 2325208707,
 					"kind": "function template",
 					"name": "encodeString",
 					"parameters": [{
@@ -348,11 +760,11 @@
 								"unexposed_arguments": "Interface"
 							}
 						}, {
-							"_fullName": "::stappler::data::json::RawEncoder<typename>::RawEncoder(std::ostream*)",
+							"_fullName": "::stappler::data::json::RawEncoder<typename>::RawEncoder(Callback<void (stappler::StringView)> const*)",
 							"_kind": "constructor",
 							"_name": "RawEncoder",
 							"body_kind": "definition",
-							"id": 3466636851,
+							"id": 2318841363,
 							"is_consteval": false,
 							"is_constexpr": false,
 							"is_declaration": false,
@@ -369,19 +781,225 @@
 								"kind": "function parameter",
 								"name": "s",
 								"type": {
-									"_typeName": "std::ostream*",
+									"_typeName": "Callback<void (stappler::StringView)> const*",
 									"kind": "pointer",
 									"pointee": {
-										"_typeName": "std::ostream",
-										"kind": "user_defined",
-										"target": {
-											"name": "std::ostream"
+										"_typeName": "Callback<void (stappler::StringView)> const",
+										"cv_qualifier": "const",
+										"kind": "cv_qualified",
+										"type": {
+											"_typeName": "Callback<void (stappler::StringView)>",
+											"arguments_exposed": false,
+											"kind": "template_instantiation",
+											"primary_template": {
+												"name": "Callback",
+												"objects": [{
+													"_fullName": "::stappler::memory::callback<ReturnType(ArgumentTypes...)>::callback<ReturnType(ArgumentTypes...)>",
+													"_kind": "class template specialization",
+													"_name": "callback",
+													"arguments_exposed": false,
+													"class": {
+														"_fullName": "::stappler::memory::callback<ReturnType(ArgumentTypes...)>::callback<ReturnType(ArgumentTypes...)>",
+														"_kind": "class",
+														"_name": "callback",
+														"bases": [{
+															"_fullName": "AllocPool",
+															"_kind": "base class specifier",
+															"_name": "AllocPool",
+															"access_specifier": "public",
+															"id": 972079861,
+															"is_virtual": false,
+															"kind": "base class specifier",
+															"name": "AllocPool",
+															"type": {
+																"_typeName": "stappler::memory::AllocPool",
+																"kind": "user_defined",
+																"target": {
+																	"name": "stappler::memory::AllocPool",
+																	"objects": [{
+																		"_fullName": "::stappler::memory::AllocPool",
+																		"_kind": "class",
+																		"_name": "AllocPool",
+																		"class_kind": "struct",
+																		"id": 3030388899,
+																		"is_declaration": false,
+																		"is_definition": true,
+																		"is_final": false,
+																		"kind": "class",
+																		"name": "AllocPool",
+																		"scope": {
+																			"name": "AllocPool"
+																		},
+																		"semantic_scope": ""
+																	}]
+																}
+															}
+														}],
+														"class_kind": "class",
+														"id": 1605912956,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "callback",
+														"scope": {
+															"is_templated": true,
+															"name": "callback",
+															"template_parameters": [{
+																"_fullName": "ReturnType",
+																"_kind": "template type parameter",
+																"_name": "ReturnType",
+																"id": 3798530772,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "ReturnType"
+															}, {
+																"_fullName": "ArgumentTypes",
+																"_kind": "template type parameter",
+																"_name": "ArgumentTypes",
+																"id": 120775233,
+																"is_variadic": true,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "ArgumentTypes"
+															}]
+														},
+														"semantic_scope": ""
+													},
+													"id": 1605912956,
+													"is_full_specialization": false,
+													"kind": "class template specialization",
+													"name": "callback",
+													"parameters": [{
+														"_fullName": "ReturnType",
+														"_kind": "template type parameter",
+														"_name": "ReturnType",
+														"id": 3798530772,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "ReturnType"
+													}, {
+														"_fullName": "ArgumentTypes",
+														"_kind": "template type parameter",
+														"_name": "ArgumentTypes",
+														"id": 120775233,
+														"is_variadic": true,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "ArgumentTypes"
+													}],
+													"primary_template":  {
+														"name": "callback",
+														"objects": [{
+															"_fullName": "::stappler::memory::callback<typename>",
+															"_kind": "class template",
+															"_name": "callback",
+															"class": {
+																"_fullName": "::stappler::memory::callback<typename>",
+																"_kind": "class",
+																"_name": "callback",
+																"class_kind": "class",
+																"id": 3310519973,
+																"is_declaration": true,
+																"is_definition": false,
+																"is_final": false,
+																"kind": "class",
+																"name": "callback",
+																"scope": {
+																	"is_templated": true,
+																	"name": "callback",
+																	"template_parameters": [{
+																		"_fullName": "UnusedType",
+																		"_kind": "template type parameter",
+																		"_name": "UnusedType",
+																		"id": 3305497932,
+																		"is_variadic": false,
+																		"keyword": "typename",
+																		"kind": "template type parameter",
+																		"name": "UnusedType"
+																	}]
+																},
+																"semantic_scope": ""
+															},
+															"id": 3310519973,
+															"kind": "class template",
+															"name": "callback",
+															"parameters": [{
+																"_fullName": "UnusedType",
+																"_kind": "template type parameter",
+																"_name": "UnusedType",
+																"id": 3305497932,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "UnusedType"
+															}],
+															"scope":  {
+																"is_templated": true,
+																"name": "callback",
+																"template_parameters": [{
+																	"_fullName": "UnusedType",
+																	"_kind": "template type parameter",
+																	"_name": "UnusedType",
+																	"id": 3305497932,
+																	"is_variadic": false,
+																	"keyword": "typename",
+																	"kind": "template type parameter",
+																	"name": "UnusedType"
+																}]
+															}
+														}]
+													},
+													"scope":  {
+														"is_templated": true,
+														"name": "callback",
+														"template_parameters": [{
+															"_fullName": "ReturnType",
+															"_kind": "template type parameter",
+															"_name": "ReturnType",
+															"id": 3798530772,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "ReturnType"
+														}, {
+															"_fullName": "ArgumentTypes",
+															"_kind": "template type parameter",
+															"_name": "ArgumentTypes",
+															"id": 120775233,
+															"is_variadic": true,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "ArgumentTypes"
+														}]
+													},
+													"unexposed_arguments":  [{
+														"kind": "identifier",
+														"spelling": "ReturnType"
+													}, {
+														"kind": "punctuation",
+														"spelling": "("
+													}, {
+														"kind": "identifier",
+														"spelling": "ArgumentTypes"
+													}, {
+														"kind": "punctuation",
+														"spelling": "..."
+													}, {
+														"kind": "punctuation",
+														"spelling": ")"
+													}]
+												}]
+											},
+											"unexposed_arguments": "void (stappler::StringView)"
 										}
 									}
 								}
 							}],
 							"semantic_scope": "",
-							"signature": "(std::ostream*)"
+							"signature": "(Callback<void (stappler::StringView)> const*)"
 						}, {
 							"_fullName": "::stappler::data::json::RawEncoder<typename>::writeData(char const*,size_t)",
 							"_kind": "member function",
@@ -1006,13 +1624,219 @@
 								}],
 								"kind": "unexposed",
 								"type": {
-									"_typeName": "std::ostream*",
+									"_typeName": "Callback<void (stappler::StringView)> const*",
 									"kind": "pointer",
 									"pointee": {
-										"_typeName": "std::ostream",
-										"kind": "user_defined",
-										"target": {
-											"name": "std::ostream"
+										"_typeName": "Callback<void (stappler::StringView)> const",
+										"cv_qualifier": "const",
+										"kind": "cv_qualified",
+										"type": {
+											"_typeName": "Callback<void (stappler::StringView)>",
+											"arguments_exposed": false,
+											"kind": "template_instantiation",
+											"primary_template": {
+												"name": "Callback",
+												"objects": [{
+													"_fullName": "::stappler::memory::callback<ReturnType(ArgumentTypes...)>::callback<ReturnType(ArgumentTypes...)>",
+													"_kind": "class template specialization",
+													"_name": "callback",
+													"arguments_exposed": false,
+													"class": {
+														"_fullName": "::stappler::memory::callback<ReturnType(ArgumentTypes...)>::callback<ReturnType(ArgumentTypes...)>",
+														"_kind": "class",
+														"_name": "callback",
+														"bases": [{
+															"_fullName": "AllocPool",
+															"_kind": "base class specifier",
+															"_name": "AllocPool",
+															"access_specifier": "public",
+															"id": 972079861,
+															"is_virtual": false,
+															"kind": "base class specifier",
+															"name": "AllocPool",
+															"type": {
+																"_typeName": "stappler::memory::AllocPool",
+																"kind": "user_defined",
+																"target": {
+																	"name": "stappler::memory::AllocPool",
+																	"objects": [{
+																		"_fullName": "::stappler::memory::AllocPool",
+																		"_kind": "class",
+																		"_name": "AllocPool",
+																		"class_kind": "struct",
+																		"id": 3030388899,
+																		"is_declaration": false,
+																		"is_definition": true,
+																		"is_final": false,
+																		"kind": "class",
+																		"name": "AllocPool",
+																		"scope": {
+																			"name": "AllocPool"
+																		},
+																		"semantic_scope": ""
+																	}]
+																}
+															}
+														}],
+														"class_kind": "class",
+														"id": 1605912956,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "callback",
+														"scope": {
+															"is_templated": true,
+															"name": "callback",
+															"template_parameters": [{
+																"_fullName": "ReturnType",
+																"_kind": "template type parameter",
+																"_name": "ReturnType",
+																"id": 3798530772,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "ReturnType"
+															}, {
+																"_fullName": "ArgumentTypes",
+																"_kind": "template type parameter",
+																"_name": "ArgumentTypes",
+																"id": 120775233,
+																"is_variadic": true,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "ArgumentTypes"
+															}]
+														},
+														"semantic_scope": ""
+													},
+													"id": 1605912956,
+													"is_full_specialization": false,
+													"kind": "class template specialization",
+													"name": "callback",
+													"parameters": [{
+														"_fullName": "ReturnType",
+														"_kind": "template type parameter",
+														"_name": "ReturnType",
+														"id": 3798530772,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "ReturnType"
+													}, {
+														"_fullName": "ArgumentTypes",
+														"_kind": "template type parameter",
+														"_name": "ArgumentTypes",
+														"id": 120775233,
+														"is_variadic": true,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "ArgumentTypes"
+													}],
+													"primary_template":  {
+														"name": "callback",
+														"objects": [{
+															"_fullName": "::stappler::memory::callback<typename>",
+															"_kind": "class template",
+															"_name": "callback",
+															"class": {
+																"_fullName": "::stappler::memory::callback<typename>",
+																"_kind": "class",
+																"_name": "callback",
+																"class_kind": "class",
+																"id": 3310519973,
+																"is_declaration": true,
+																"is_definition": false,
+																"is_final": false,
+																"kind": "class",
+																"name": "callback",
+																"scope": {
+																	"is_templated": true,
+																	"name": "callback",
+																	"template_parameters": [{
+																		"_fullName": "UnusedType",
+																		"_kind": "template type parameter",
+																		"_name": "UnusedType",
+																		"id": 3305497932,
+																		"is_variadic": false,
+																		"keyword": "typename",
+																		"kind": "template type parameter",
+																		"name": "UnusedType"
+																	}]
+																},
+																"semantic_scope": ""
+															},
+															"id": 3310519973,
+															"kind": "class template",
+															"name": "callback",
+															"parameters": [{
+																"_fullName": "UnusedType",
+																"_kind": "template type parameter",
+																"_name": "UnusedType",
+																"id": 3305497932,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "UnusedType"
+															}],
+															"scope":  {
+																"is_templated": true,
+																"name": "callback",
+																"template_parameters": [{
+																	"_fullName": "UnusedType",
+																	"_kind": "template type parameter",
+																	"_name": "UnusedType",
+																	"id": 3305497932,
+																	"is_variadic": false,
+																	"keyword": "typename",
+																	"kind": "template type parameter",
+																	"name": "UnusedType"
+																}]
+															}
+														}]
+													},
+													"scope":  {
+														"is_templated": true,
+														"name": "callback",
+														"template_parameters": [{
+															"_fullName": "ReturnType",
+															"_kind": "template type parameter",
+															"_name": "ReturnType",
+															"id": 3798530772,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "ReturnType"
+														}, {
+															"_fullName": "ArgumentTypes",
+															"_kind": "template type parameter",
+															"_name": "ArgumentTypes",
+															"id": 120775233,
+															"is_variadic": true,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "ArgumentTypes"
+														}]
+													},
+													"unexposed_arguments":  [{
+														"kind": "identifier",
+														"spelling": "ReturnType"
+													}, {
+														"kind": "punctuation",
+														"spelling": "("
+													}, {
+														"kind": "identifier",
+														"spelling": "ArgumentTypes"
+													}, {
+														"kind": "punctuation",
+														"spelling": "..."
+													}, {
+														"kind": "punctuation",
+														"spelling": ")"
+													}]
+												}]
+											},
+											"unexposed_arguments": "void (stappler::StringView)"
 										}
 									}
 								}
@@ -1022,13 +1846,219 @@
 							"kind": "member variable",
 							"name": "stream",
 							"type": {
-								"_typeName": "std::ostream*",
+								"_typeName": "Callback<void (stappler::StringView)> const*",
 								"kind": "pointer",
 								"pointee": {
-									"_typeName": "std::ostream",
-									"kind": "user_defined",
-									"target": {
-										"name": "std::ostream"
+									"_typeName": "Callback<void (stappler::StringView)> const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "Callback<void (stappler::StringView)>",
+										"arguments_exposed": false,
+										"kind": "template_instantiation",
+										"primary_template": {
+											"name": "Callback",
+											"objects": [{
+												"_fullName": "::stappler::memory::callback<ReturnType(ArgumentTypes...)>::callback<ReturnType(ArgumentTypes...)>",
+												"_kind": "class template specialization",
+												"_name": "callback",
+												"arguments_exposed": false,
+												"class": {
+													"_fullName": "::stappler::memory::callback<ReturnType(ArgumentTypes...)>::callback<ReturnType(ArgumentTypes...)>",
+													"_kind": "class",
+													"_name": "callback",
+													"bases": [{
+														"_fullName": "AllocPool",
+														"_kind": "base class specifier",
+														"_name": "AllocPool",
+														"access_specifier": "public",
+														"id": 972079861,
+														"is_virtual": false,
+														"kind": "base class specifier",
+														"name": "AllocPool",
+														"type": {
+															"_typeName": "stappler::memory::AllocPool",
+															"kind": "user_defined",
+															"target": {
+																"name": "stappler::memory::AllocPool",
+																"objects": [{
+																	"_fullName": "::stappler::memory::AllocPool",
+																	"_kind": "class",
+																	"_name": "AllocPool",
+																	"class_kind": "struct",
+																	"id": 3030388899,
+																	"is_declaration": false,
+																	"is_definition": true,
+																	"is_final": false,
+																	"kind": "class",
+																	"name": "AllocPool",
+																	"scope": {
+																		"name": "AllocPool"
+																	},
+																	"semantic_scope": ""
+																}]
+															}
+														}
+													}],
+													"class_kind": "class",
+													"id": 1605912956,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "callback",
+													"scope": {
+														"is_templated": true,
+														"name": "callback",
+														"template_parameters": [{
+															"_fullName": "ReturnType",
+															"_kind": "template type parameter",
+															"_name": "ReturnType",
+															"id": 3798530772,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "ReturnType"
+														}, {
+															"_fullName": "ArgumentTypes",
+															"_kind": "template type parameter",
+															"_name": "ArgumentTypes",
+															"id": 120775233,
+															"is_variadic": true,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "ArgumentTypes"
+														}]
+													},
+													"semantic_scope": ""
+												},
+												"id": 1605912956,
+												"is_full_specialization": false,
+												"kind": "class template specialization",
+												"name": "callback",
+												"parameters": [{
+													"_fullName": "ReturnType",
+													"_kind": "template type parameter",
+													"_name": "ReturnType",
+													"id": 3798530772,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "ReturnType"
+												}, {
+													"_fullName": "ArgumentTypes",
+													"_kind": "template type parameter",
+													"_name": "ArgumentTypes",
+													"id": 120775233,
+													"is_variadic": true,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "ArgumentTypes"
+												}],
+												"primary_template":  {
+													"name": "callback",
+													"objects": [{
+														"_fullName": "::stappler::memory::callback<typename>",
+														"_kind": "class template",
+														"_name": "callback",
+														"class": {
+															"_fullName": "::stappler::memory::callback<typename>",
+															"_kind": "class",
+															"_name": "callback",
+															"class_kind": "class",
+															"id": 3310519973,
+															"is_declaration": true,
+															"is_definition": false,
+															"is_final": false,
+															"kind": "class",
+															"name": "callback",
+															"scope": {
+																"is_templated": true,
+																"name": "callback",
+																"template_parameters": [{
+																	"_fullName": "UnusedType",
+																	"_kind": "template type parameter",
+																	"_name": "UnusedType",
+																	"id": 3305497932,
+																	"is_variadic": false,
+																	"keyword": "typename",
+																	"kind": "template type parameter",
+																	"name": "UnusedType"
+																}]
+															},
+															"semantic_scope": ""
+														},
+														"id": 3310519973,
+														"kind": "class template",
+														"name": "callback",
+														"parameters": [{
+															"_fullName": "UnusedType",
+															"_kind": "template type parameter",
+															"_name": "UnusedType",
+															"id": 3305497932,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "UnusedType"
+														}],
+														"scope":  {
+															"is_templated": true,
+															"name": "callback",
+															"template_parameters": [{
+																"_fullName": "UnusedType",
+																"_kind": "template type parameter",
+																"_name": "UnusedType",
+																"id": 3305497932,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "UnusedType"
+															}]
+														}
+													}]
+												},
+												"scope":  {
+													"is_templated": true,
+													"name": "callback",
+													"template_parameters": [{
+														"_fullName": "ReturnType",
+														"_kind": "template type parameter",
+														"_name": "ReturnType",
+														"id": 3798530772,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "ReturnType"
+													}, {
+														"_fullName": "ArgumentTypes",
+														"_kind": "template type parameter",
+														"_name": "ArgumentTypes",
+														"id": 120775233,
+														"is_variadic": true,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "ArgumentTypes"
+													}]
+												},
+												"unexposed_arguments":  [{
+													"kind": "identifier",
+													"spelling": "ReturnType"
+												}, {
+													"kind": "punctuation",
+													"spelling": "("
+												}, {
+													"kind": "identifier",
+													"spelling": "ArgumentTypes"
+												}, {
+													"kind": "punctuation",
+													"spelling": "..."
+												}, {
+													"kind": "punctuation",
+													"spelling": ")"
+												}]
+											}]
+										},
+										"unexposed_arguments": "void (stappler::StringView)"
 									}
 								}
 							}
@@ -1263,11 +2293,11 @@
 								"unexposed_arguments": "Interface"
 							}
 						}, {
-							"_fullName": "::stappler::data::json::PrettyEncoder<typename>::PrettyEncoder(std::ostream*,bool)",
+							"_fullName": "::stappler::data::json::PrettyEncoder<typename>::PrettyEncoder(Callback<void (stappler::StringView)> const*,bool)",
 							"_kind": "constructor",
 							"_name": "PrettyEncoder",
 							"body_kind": "definition",
-							"id": 2550179550,
+							"id": 4210364828,
 							"is_consteval": false,
 							"is_constexpr": false,
 							"is_declaration": false,
@@ -1284,13 +2314,219 @@
 								"kind": "function parameter",
 								"name": "s",
 								"type": {
-									"_typeName": "std::ostream*",
+									"_typeName": "Callback<void (stappler::StringView)> const*",
 									"kind": "pointer",
 									"pointee": {
-										"_typeName": "std::ostream",
-										"kind": "user_defined",
-										"target": {
-											"name": "std::ostream"
+										"_typeName": "Callback<void (stappler::StringView)> const",
+										"cv_qualifier": "const",
+										"kind": "cv_qualified",
+										"type": {
+											"_typeName": "Callback<void (stappler::StringView)>",
+											"arguments_exposed": false,
+											"kind": "template_instantiation",
+											"primary_template": {
+												"name": "Callback",
+												"objects": [{
+													"_fullName": "::stappler::memory::callback<ReturnType(ArgumentTypes...)>::callback<ReturnType(ArgumentTypes...)>",
+													"_kind": "class template specialization",
+													"_name": "callback",
+													"arguments_exposed": false,
+													"class": {
+														"_fullName": "::stappler::memory::callback<ReturnType(ArgumentTypes...)>::callback<ReturnType(ArgumentTypes...)>",
+														"_kind": "class",
+														"_name": "callback",
+														"bases": [{
+															"_fullName": "AllocPool",
+															"_kind": "base class specifier",
+															"_name": "AllocPool",
+															"access_specifier": "public",
+															"id": 972079861,
+															"is_virtual": false,
+															"kind": "base class specifier",
+															"name": "AllocPool",
+															"type": {
+																"_typeName": "stappler::memory::AllocPool",
+																"kind": "user_defined",
+																"target": {
+																	"name": "stappler::memory::AllocPool",
+																	"objects": [{
+																		"_fullName": "::stappler::memory::AllocPool",
+																		"_kind": "class",
+																		"_name": "AllocPool",
+																		"class_kind": "struct",
+																		"id": 3030388899,
+																		"is_declaration": false,
+																		"is_definition": true,
+																		"is_final": false,
+																		"kind": "class",
+																		"name": "AllocPool",
+																		"scope": {
+																			"name": "AllocPool"
+																		},
+																		"semantic_scope": ""
+																	}]
+																}
+															}
+														}],
+														"class_kind": "class",
+														"id": 1605912956,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "callback",
+														"scope": {
+															"is_templated": true,
+															"name": "callback",
+															"template_parameters": [{
+																"_fullName": "ReturnType",
+																"_kind": "template type parameter",
+																"_name": "ReturnType",
+																"id": 3798530772,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "ReturnType"
+															}, {
+																"_fullName": "ArgumentTypes",
+																"_kind": "template type parameter",
+																"_name": "ArgumentTypes",
+																"id": 120775233,
+																"is_variadic": true,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "ArgumentTypes"
+															}]
+														},
+														"semantic_scope": ""
+													},
+													"id": 1605912956,
+													"is_full_specialization": false,
+													"kind": "class template specialization",
+													"name": "callback",
+													"parameters": [{
+														"_fullName": "ReturnType",
+														"_kind": "template type parameter",
+														"_name": "ReturnType",
+														"id": 3798530772,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "ReturnType"
+													}, {
+														"_fullName": "ArgumentTypes",
+														"_kind": "template type parameter",
+														"_name": "ArgumentTypes",
+														"id": 120775233,
+														"is_variadic": true,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "ArgumentTypes"
+													}],
+													"primary_template":  {
+														"name": "callback",
+														"objects": [{
+															"_fullName": "::stappler::memory::callback<typename>",
+															"_kind": "class template",
+															"_name": "callback",
+															"class": {
+																"_fullName": "::stappler::memory::callback<typename>",
+																"_kind": "class",
+																"_name": "callback",
+																"class_kind": "class",
+																"id": 3310519973,
+																"is_declaration": true,
+																"is_definition": false,
+																"is_final": false,
+																"kind": "class",
+																"name": "callback",
+																"scope": {
+																	"is_templated": true,
+																	"name": "callback",
+																	"template_parameters": [{
+																		"_fullName": "UnusedType",
+																		"_kind": "template type parameter",
+																		"_name": "UnusedType",
+																		"id": 3305497932,
+																		"is_variadic": false,
+																		"keyword": "typename",
+																		"kind": "template type parameter",
+																		"name": "UnusedType"
+																	}]
+																},
+																"semantic_scope": ""
+															},
+															"id": 3310519973,
+															"kind": "class template",
+															"name": "callback",
+															"parameters": [{
+																"_fullName": "UnusedType",
+																"_kind": "template type parameter",
+																"_name": "UnusedType",
+																"id": 3305497932,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "UnusedType"
+															}],
+															"scope":  {
+																"is_templated": true,
+																"name": "callback",
+																"template_parameters": [{
+																	"_fullName": "UnusedType",
+																	"_kind": "template type parameter",
+																	"_name": "UnusedType",
+																	"id": 3305497932,
+																	"is_variadic": false,
+																	"keyword": "typename",
+																	"kind": "template type parameter",
+																	"name": "UnusedType"
+																}]
+															}
+														}]
+													},
+													"scope":  {
+														"is_templated": true,
+														"name": "callback",
+														"template_parameters": [{
+															"_fullName": "ReturnType",
+															"_kind": "template type parameter",
+															"_name": "ReturnType",
+															"id": 3798530772,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "ReturnType"
+														}, {
+															"_fullName": "ArgumentTypes",
+															"_kind": "template type parameter",
+															"_name": "ArgumentTypes",
+															"id": 120775233,
+															"is_variadic": true,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "ArgumentTypes"
+														}]
+													},
+													"unexposed_arguments":  [{
+														"kind": "identifier",
+														"spelling": "ReturnType"
+													}, {
+														"kind": "punctuation",
+														"spelling": "("
+													}, {
+														"kind": "identifier",
+														"spelling": "ArgumentTypes"
+													}, {
+														"kind": "punctuation",
+														"spelling": "..."
+													}, {
+														"kind": "punctuation",
+														"spelling": ")"
+													}]
+												}]
+											},
+											"unexposed_arguments": "void (stappler::StringView)"
 										}
 									}
 								}
@@ -1320,7 +2556,7 @@
 								}
 							}],
 							"semantic_scope": "",
-							"signature": "(std::ostream*,bool)"
+							"signature": "(Callback<void (stappler::StringView)> const*,bool)"
 						}, {
 							"_fullName": "::stappler::data::json::PrettyEncoder<typename>::write(stappler::nullptr_t)",
 							"_kind": "member function",
@@ -2082,18 +3318,448 @@
 							"_fullName": "::stappler::data::json::PrettyEncoder<typename>::stream",
 							"_kind": "member variable",
 							"_name": "stream",
+							"default_value": {
+								"expression": [{
+									"kind": "keyword",
+									"spelling": "nullptr"
+								}],
+								"kind": "unexposed",
+								"type": {
+									"_typeName": "Callback<void (stappler::StringView)> const*",
+									"kind": "pointer",
+									"pointee": {
+										"_typeName": "Callback<void (stappler::StringView)> const",
+										"cv_qualifier": "const",
+										"kind": "cv_qualified",
+										"type": {
+											"_typeName": "Callback<void (stappler::StringView)>",
+											"arguments_exposed": false,
+											"kind": "template_instantiation",
+											"primary_template": {
+												"name": "Callback",
+												"objects": [{
+													"_fullName": "::stappler::memory::callback<ReturnType(ArgumentTypes...)>::callback<ReturnType(ArgumentTypes...)>",
+													"_kind": "class template specialization",
+													"_name": "callback",
+													"arguments_exposed": false,
+													"class": {
+														"_fullName": "::stappler::memory::callback<ReturnType(ArgumentTypes...)>::callback<ReturnType(ArgumentTypes...)>",
+														"_kind": "class",
+														"_name": "callback",
+														"bases": [{
+															"_fullName": "AllocPool",
+															"_kind": "base class specifier",
+															"_name": "AllocPool",
+															"access_specifier": "public",
+															"id": 972079861,
+															"is_virtual": false,
+															"kind": "base class specifier",
+															"name": "AllocPool",
+															"type": {
+																"_typeName": "stappler::memory::AllocPool",
+																"kind": "user_defined",
+																"target": {
+																	"name": "stappler::memory::AllocPool",
+																	"objects": [{
+																		"_fullName": "::stappler::memory::AllocPool",
+																		"_kind": "class",
+																		"_name": "AllocPool",
+																		"class_kind": "struct",
+																		"id": 3030388899,
+																		"is_declaration": false,
+																		"is_definition": true,
+																		"is_final": false,
+																		"kind": "class",
+																		"name": "AllocPool",
+																		"scope": {
+																			"name": "AllocPool"
+																		},
+																		"semantic_scope": ""
+																	}]
+																}
+															}
+														}],
+														"class_kind": "class",
+														"id": 1605912956,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "callback",
+														"scope": {
+															"is_templated": true,
+															"name": "callback",
+															"template_parameters": [{
+																"_fullName": "ReturnType",
+																"_kind": "template type parameter",
+																"_name": "ReturnType",
+																"id": 3798530772,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "ReturnType"
+															}, {
+																"_fullName": "ArgumentTypes",
+																"_kind": "template type parameter",
+																"_name": "ArgumentTypes",
+																"id": 120775233,
+																"is_variadic": true,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "ArgumentTypes"
+															}]
+														},
+														"semantic_scope": ""
+													},
+													"id": 1605912956,
+													"is_full_specialization": false,
+													"kind": "class template specialization",
+													"name": "callback",
+													"parameters": [{
+														"_fullName": "ReturnType",
+														"_kind": "template type parameter",
+														"_name": "ReturnType",
+														"id": 3798530772,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "ReturnType"
+													}, {
+														"_fullName": "ArgumentTypes",
+														"_kind": "template type parameter",
+														"_name": "ArgumentTypes",
+														"id": 120775233,
+														"is_variadic": true,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "ArgumentTypes"
+													}],
+													"primary_template":  {
+														"name": "callback",
+														"objects": [{
+															"_fullName": "::stappler::memory::callback<typename>",
+															"_kind": "class template",
+															"_name": "callback",
+															"class": {
+																"_fullName": "::stappler::memory::callback<typename>",
+																"_kind": "class",
+																"_name": "callback",
+																"class_kind": "class",
+																"id": 3310519973,
+																"is_declaration": true,
+																"is_definition": false,
+																"is_final": false,
+																"kind": "class",
+																"name": "callback",
+																"scope": {
+																	"is_templated": true,
+																	"name": "callback",
+																	"template_parameters": [{
+																		"_fullName": "UnusedType",
+																		"_kind": "template type parameter",
+																		"_name": "UnusedType",
+																		"id": 3305497932,
+																		"is_variadic": false,
+																		"keyword": "typename",
+																		"kind": "template type parameter",
+																		"name": "UnusedType"
+																	}]
+																},
+																"semantic_scope": ""
+															},
+															"id": 3310519973,
+															"kind": "class template",
+															"name": "callback",
+															"parameters": [{
+																"_fullName": "UnusedType",
+																"_kind": "template type parameter",
+																"_name": "UnusedType",
+																"id": 3305497932,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "UnusedType"
+															}],
+															"scope":  {
+																"is_templated": true,
+																"name": "callback",
+																"template_parameters": [{
+																	"_fullName": "UnusedType",
+																	"_kind": "template type parameter",
+																	"_name": "UnusedType",
+																	"id": 3305497932,
+																	"is_variadic": false,
+																	"keyword": "typename",
+																	"kind": "template type parameter",
+																	"name": "UnusedType"
+																}]
+															}
+														}]
+													},
+													"scope":  {
+														"is_templated": true,
+														"name": "callback",
+														"template_parameters": [{
+															"_fullName": "ReturnType",
+															"_kind": "template type parameter",
+															"_name": "ReturnType",
+															"id": 3798530772,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "ReturnType"
+														}, {
+															"_fullName": "ArgumentTypes",
+															"_kind": "template type parameter",
+															"_name": "ArgumentTypes",
+															"id": 120775233,
+															"is_variadic": true,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "ArgumentTypes"
+														}]
+													},
+													"unexposed_arguments":  [{
+														"kind": "identifier",
+														"spelling": "ReturnType"
+													}, {
+														"kind": "punctuation",
+														"spelling": "("
+													}, {
+														"kind": "identifier",
+														"spelling": "ArgumentTypes"
+													}, {
+														"kind": "punctuation",
+														"spelling": "..."
+													}, {
+														"kind": "punctuation",
+														"spelling": ")"
+													}]
+												}]
+											},
+											"unexposed_arguments": "void (stappler::StringView)"
+										}
+									}
+								}
+							},
 							"id": 2321904658,
 							"is_mutable": false,
 							"kind": "member variable",
 							"name": "stream",
 							"type": {
-								"_typeName": "std::ostream*",
+								"_typeName": "Callback<void (stappler::StringView)> const*",
 								"kind": "pointer",
 								"pointee": {
-									"_typeName": "std::ostream",
-									"kind": "user_defined",
-									"target": {
-										"name": "std::ostream"
+									"_typeName": "Callback<void (stappler::StringView)> const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "Callback<void (stappler::StringView)>",
+										"arguments_exposed": false,
+										"kind": "template_instantiation",
+										"primary_template": {
+											"name": "Callback",
+											"objects": [{
+												"_fullName": "::stappler::memory::callback<ReturnType(ArgumentTypes...)>::callback<ReturnType(ArgumentTypes...)>",
+												"_kind": "class template specialization",
+												"_name": "callback",
+												"arguments_exposed": false,
+												"class": {
+													"_fullName": "::stappler::memory::callback<ReturnType(ArgumentTypes...)>::callback<ReturnType(ArgumentTypes...)>",
+													"_kind": "class",
+													"_name": "callback",
+													"bases": [{
+														"_fullName": "AllocPool",
+														"_kind": "base class specifier",
+														"_name": "AllocPool",
+														"access_specifier": "public",
+														"id": 972079861,
+														"is_virtual": false,
+														"kind": "base class specifier",
+														"name": "AllocPool",
+														"type": {
+															"_typeName": "stappler::memory::AllocPool",
+															"kind": "user_defined",
+															"target": {
+																"name": "stappler::memory::AllocPool",
+																"objects": [{
+																	"_fullName": "::stappler::memory::AllocPool",
+																	"_kind": "class",
+																	"_name": "AllocPool",
+																	"class_kind": "struct",
+																	"id": 3030388899,
+																	"is_declaration": false,
+																	"is_definition": true,
+																	"is_final": false,
+																	"kind": "class",
+																	"name": "AllocPool",
+																	"scope": {
+																		"name": "AllocPool"
+																	},
+																	"semantic_scope": ""
+																}]
+															}
+														}
+													}],
+													"class_kind": "class",
+													"id": 1605912956,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "callback",
+													"scope": {
+														"is_templated": true,
+														"name": "callback",
+														"template_parameters": [{
+															"_fullName": "ReturnType",
+															"_kind": "template type parameter",
+															"_name": "ReturnType",
+															"id": 3798530772,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "ReturnType"
+														}, {
+															"_fullName": "ArgumentTypes",
+															"_kind": "template type parameter",
+															"_name": "ArgumentTypes",
+															"id": 120775233,
+															"is_variadic": true,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "ArgumentTypes"
+														}]
+													},
+													"semantic_scope": ""
+												},
+												"id": 1605912956,
+												"is_full_specialization": false,
+												"kind": "class template specialization",
+												"name": "callback",
+												"parameters": [{
+													"_fullName": "ReturnType",
+													"_kind": "template type parameter",
+													"_name": "ReturnType",
+													"id": 3798530772,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "ReturnType"
+												}, {
+													"_fullName": "ArgumentTypes",
+													"_kind": "template type parameter",
+													"_name": "ArgumentTypes",
+													"id": 120775233,
+													"is_variadic": true,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "ArgumentTypes"
+												}],
+												"primary_template":  {
+													"name": "callback",
+													"objects": [{
+														"_fullName": "::stappler::memory::callback<typename>",
+														"_kind": "class template",
+														"_name": "callback",
+														"class": {
+															"_fullName": "::stappler::memory::callback<typename>",
+															"_kind": "class",
+															"_name": "callback",
+															"class_kind": "class",
+															"id": 3310519973,
+															"is_declaration": true,
+															"is_definition": false,
+															"is_final": false,
+															"kind": "class",
+															"name": "callback",
+															"scope": {
+																"is_templated": true,
+																"name": "callback",
+																"template_parameters": [{
+																	"_fullName": "UnusedType",
+																	"_kind": "template type parameter",
+																	"_name": "UnusedType",
+																	"id": 3305497932,
+																	"is_variadic": false,
+																	"keyword": "typename",
+																	"kind": "template type parameter",
+																	"name": "UnusedType"
+																}]
+															},
+															"semantic_scope": ""
+														},
+														"id": 3310519973,
+														"kind": "class template",
+														"name": "callback",
+														"parameters": [{
+															"_fullName": "UnusedType",
+															"_kind": "template type parameter",
+															"_name": "UnusedType",
+															"id": 3305497932,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "UnusedType"
+														}],
+														"scope":  {
+															"is_templated": true,
+															"name": "callback",
+															"template_parameters": [{
+																"_fullName": "UnusedType",
+																"_kind": "template type parameter",
+																"_name": "UnusedType",
+																"id": 3305497932,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "UnusedType"
+															}]
+														}
+													}]
+												},
+												"scope":  {
+													"is_templated": true,
+													"name": "callback",
+													"template_parameters": [{
+														"_fullName": "ReturnType",
+														"_kind": "template type parameter",
+														"_name": "ReturnType",
+														"id": 3798530772,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "ReturnType"
+													}, {
+														"_fullName": "ArgumentTypes",
+														"_kind": "template type parameter",
+														"_name": "ArgumentTypes",
+														"id": 120775233,
+														"is_variadic": true,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "ArgumentTypes"
+													}]
+												},
+												"unexposed_arguments":  [{
+													"kind": "identifier",
+													"spelling": "ReturnType"
+												}, {
+													"kind": "punctuation",
+													"spelling": "("
+												}, {
+													"kind": "identifier",
+													"spelling": "ArgumentTypes"
+												}, {
+													"kind": "punctuation",
+													"spelling": "..."
+												}, {
+													"kind": "punctuation",
+													"spelling": ")"
+												}]
+											}]
+										},
+										"unexposed_arguments": "void (stappler::StringView)"
 									}
 								}
 							}
@@ -2373,15 +4039,15 @@
 						}]
 					}
 				}, {
-					"_fullName": "::stappler::data::json::write<typename>(std::ostream&,ValueTemplate<Interface> const&,bool,bool)",
+					"_fullName": "::stappler::data::json::write<typename>(Callback<void (stappler::StringView)> const&,ValueTemplate<Interface> const&,bool,bool)",
 					"_kind": "function template",
 					"_name": "write",
 					"childs": [{
-						"_fullName": "::stappler::data::json::write<typename>(std::ostream&,ValueTemplate<Interface> const&,bool,bool)",
+						"_fullName": "::stappler::data::json::write<typename>(Callback<void (stappler::StringView)> const&,ValueTemplate<Interface> const&,bool,bool)",
 						"_kind": "function",
 						"_name": "write",
 						"body_kind": "definition",
-						"id": 1728559071,
+						"id": 1024952206,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": false,
@@ -2397,13 +4063,219 @@
 							"kind": "function parameter",
 							"name": "stream",
 							"type": {
-								"_typeName": "std::ostream&",
+								"_typeName": "Callback<void (stappler::StringView)> const&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "std::ostream",
-									"kind": "user_defined",
-									"target": {
-										"name": "std::ostream"
+									"_typeName": "Callback<void (stappler::StringView)> const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "Callback<void (stappler::StringView)>",
+										"arguments_exposed": false,
+										"kind": "template_instantiation",
+										"primary_template": {
+											"name": "Callback",
+											"objects": [{
+												"_fullName": "::stappler::memory::callback<ReturnType(ArgumentTypes...)>::callback<ReturnType(ArgumentTypes...)>",
+												"_kind": "class template specialization",
+												"_name": "callback",
+												"arguments_exposed": false,
+												"class": {
+													"_fullName": "::stappler::memory::callback<ReturnType(ArgumentTypes...)>::callback<ReturnType(ArgumentTypes...)>",
+													"_kind": "class",
+													"_name": "callback",
+													"bases": [{
+														"_fullName": "AllocPool",
+														"_kind": "base class specifier",
+														"_name": "AllocPool",
+														"access_specifier": "public",
+														"id": 972079861,
+														"is_virtual": false,
+														"kind": "base class specifier",
+														"name": "AllocPool",
+														"type": {
+															"_typeName": "stappler::memory::AllocPool",
+															"kind": "user_defined",
+															"target": {
+																"name": "stappler::memory::AllocPool",
+																"objects": [{
+																	"_fullName": "::stappler::memory::AllocPool",
+																	"_kind": "class",
+																	"_name": "AllocPool",
+																	"class_kind": "struct",
+																	"id": 3030388899,
+																	"is_declaration": false,
+																	"is_definition": true,
+																	"is_final": false,
+																	"kind": "class",
+																	"name": "AllocPool",
+																	"scope": {
+																		"name": "AllocPool"
+																	},
+																	"semantic_scope": ""
+																}]
+															}
+														}
+													}],
+													"class_kind": "class",
+													"id": 1605912956,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "callback",
+													"scope": {
+														"is_templated": true,
+														"name": "callback",
+														"template_parameters": [{
+															"_fullName": "ReturnType",
+															"_kind": "template type parameter",
+															"_name": "ReturnType",
+															"id": 3798530772,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "ReturnType"
+														}, {
+															"_fullName": "ArgumentTypes",
+															"_kind": "template type parameter",
+															"_name": "ArgumentTypes",
+															"id": 120775233,
+															"is_variadic": true,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "ArgumentTypes"
+														}]
+													},
+													"semantic_scope": ""
+												},
+												"id": 1605912956,
+												"is_full_specialization": false,
+												"kind": "class template specialization",
+												"name": "callback",
+												"parameters": [{
+													"_fullName": "ReturnType",
+													"_kind": "template type parameter",
+													"_name": "ReturnType",
+													"id": 3798530772,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "ReturnType"
+												}, {
+													"_fullName": "ArgumentTypes",
+													"_kind": "template type parameter",
+													"_name": "ArgumentTypes",
+													"id": 120775233,
+													"is_variadic": true,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "ArgumentTypes"
+												}],
+												"primary_template":  {
+													"name": "callback",
+													"objects": [{
+														"_fullName": "::stappler::memory::callback<typename>",
+														"_kind": "class template",
+														"_name": "callback",
+														"class": {
+															"_fullName": "::stappler::memory::callback<typename>",
+															"_kind": "class",
+															"_name": "callback",
+															"class_kind": "class",
+															"id": 3310519973,
+															"is_declaration": true,
+															"is_definition": false,
+															"is_final": false,
+															"kind": "class",
+															"name": "callback",
+															"scope": {
+																"is_templated": true,
+																"name": "callback",
+																"template_parameters": [{
+																	"_fullName": "UnusedType",
+																	"_kind": "template type parameter",
+																	"_name": "UnusedType",
+																	"id": 3305497932,
+																	"is_variadic": false,
+																	"keyword": "typename",
+																	"kind": "template type parameter",
+																	"name": "UnusedType"
+																}]
+															},
+															"semantic_scope": ""
+														},
+														"id": 3310519973,
+														"kind": "class template",
+														"name": "callback",
+														"parameters": [{
+															"_fullName": "UnusedType",
+															"_kind": "template type parameter",
+															"_name": "UnusedType",
+															"id": 3305497932,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "UnusedType"
+														}],
+														"scope":  {
+															"is_templated": true,
+															"name": "callback",
+															"template_parameters": [{
+																"_fullName": "UnusedType",
+																"_kind": "template type parameter",
+																"_name": "UnusedType",
+																"id": 3305497932,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "UnusedType"
+															}]
+														}
+													}]
+												},
+												"scope":  {
+													"is_templated": true,
+													"name": "callback",
+													"template_parameters": [{
+														"_fullName": "ReturnType",
+														"_kind": "template type parameter",
+														"_name": "ReturnType",
+														"id": 3798530772,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "ReturnType"
+													}, {
+														"_fullName": "ArgumentTypes",
+														"_kind": "template type parameter",
+														"_name": "ArgumentTypes",
+														"id": 120775233,
+														"is_variadic": true,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "ArgumentTypes"
+													}]
+												},
+												"unexposed_arguments":  [{
+													"kind": "identifier",
+													"spelling": "ReturnType"
+												}, {
+													"kind": "punctuation",
+													"spelling": "("
+												}, {
+													"kind": "identifier",
+													"spelling": "ArgumentTypes"
+												}, {
+													"kind": "punctuation",
+													"spelling": "..."
+												}, {
+													"kind": "punctuation",
+													"spelling": ")"
+												}]
+											}]
+										},
+										"unexposed_arguments": "void (stappler::StringView)"
 									}
 								},
 								"reference_kind": "lvalue"
@@ -2551,14 +4423,14 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(std::ostream&,ValueTemplate<Interface> const&,bool,bool)"
+						"signature": "(Callback<void (stappler::StringView)> const&,ValueTemplate<Interface> const&,bool,bool)"
 					}],
 					"function":  {
-						"_fullName": "::stappler::data::json::write<typename>(std::ostream&,ValueTemplate<Interface> const&,bool,bool)",
+						"_fullName": "::stappler::data::json::write<typename>(Callback<void (stappler::StringView)> const&,ValueTemplate<Interface> const&,bool,bool)",
 						"_kind": "function",
 						"_name": "write",
 						"body_kind": "definition",
-						"id": 1728559071,
+						"id": 1024952206,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": false,
@@ -2574,13 +4446,219 @@
 							"kind": "function parameter",
 							"name": "stream",
 							"type": {
-								"_typeName": "std::ostream&",
+								"_typeName": "Callback<void (stappler::StringView)> const&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "std::ostream",
-									"kind": "user_defined",
-									"target": {
-										"name": "std::ostream"
+									"_typeName": "Callback<void (stappler::StringView)> const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "Callback<void (stappler::StringView)>",
+										"arguments_exposed": false,
+										"kind": "template_instantiation",
+										"primary_template": {
+											"name": "Callback",
+											"objects": [{
+												"_fullName": "::stappler::memory::callback<ReturnType(ArgumentTypes...)>::callback<ReturnType(ArgumentTypes...)>",
+												"_kind": "class template specialization",
+												"_name": "callback",
+												"arguments_exposed": false,
+												"class": {
+													"_fullName": "::stappler::memory::callback<ReturnType(ArgumentTypes...)>::callback<ReturnType(ArgumentTypes...)>",
+													"_kind": "class",
+													"_name": "callback",
+													"bases": [{
+														"_fullName": "AllocPool",
+														"_kind": "base class specifier",
+														"_name": "AllocPool",
+														"access_specifier": "public",
+														"id": 972079861,
+														"is_virtual": false,
+														"kind": "base class specifier",
+														"name": "AllocPool",
+														"type": {
+															"_typeName": "stappler::memory::AllocPool",
+															"kind": "user_defined",
+															"target": {
+																"name": "stappler::memory::AllocPool",
+																"objects": [{
+																	"_fullName": "::stappler::memory::AllocPool",
+																	"_kind": "class",
+																	"_name": "AllocPool",
+																	"class_kind": "struct",
+																	"id": 3030388899,
+																	"is_declaration": false,
+																	"is_definition": true,
+																	"is_final": false,
+																	"kind": "class",
+																	"name": "AllocPool",
+																	"scope": {
+																		"name": "AllocPool"
+																	},
+																	"semantic_scope": ""
+																}]
+															}
+														}
+													}],
+													"class_kind": "class",
+													"id": 1605912956,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "callback",
+													"scope": {
+														"is_templated": true,
+														"name": "callback",
+														"template_parameters": [{
+															"_fullName": "ReturnType",
+															"_kind": "template type parameter",
+															"_name": "ReturnType",
+															"id": 3798530772,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "ReturnType"
+														}, {
+															"_fullName": "ArgumentTypes",
+															"_kind": "template type parameter",
+															"_name": "ArgumentTypes",
+															"id": 120775233,
+															"is_variadic": true,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "ArgumentTypes"
+														}]
+													},
+													"semantic_scope": ""
+												},
+												"id": 1605912956,
+												"is_full_specialization": false,
+												"kind": "class template specialization",
+												"name": "callback",
+												"parameters": [{
+													"_fullName": "ReturnType",
+													"_kind": "template type parameter",
+													"_name": "ReturnType",
+													"id": 3798530772,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "ReturnType"
+												}, {
+													"_fullName": "ArgumentTypes",
+													"_kind": "template type parameter",
+													"_name": "ArgumentTypes",
+													"id": 120775233,
+													"is_variadic": true,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "ArgumentTypes"
+												}],
+												"primary_template":  {
+													"name": "callback",
+													"objects": [{
+														"_fullName": "::stappler::memory::callback<typename>",
+														"_kind": "class template",
+														"_name": "callback",
+														"class": {
+															"_fullName": "::stappler::memory::callback<typename>",
+															"_kind": "class",
+															"_name": "callback",
+															"class_kind": "class",
+															"id": 3310519973,
+															"is_declaration": true,
+															"is_definition": false,
+															"is_final": false,
+															"kind": "class",
+															"name": "callback",
+															"scope": {
+																"is_templated": true,
+																"name": "callback",
+																"template_parameters": [{
+																	"_fullName": "UnusedType",
+																	"_kind": "template type parameter",
+																	"_name": "UnusedType",
+																	"id": 3305497932,
+																	"is_variadic": false,
+																	"keyword": "typename",
+																	"kind": "template type parameter",
+																	"name": "UnusedType"
+																}]
+															},
+															"semantic_scope": ""
+														},
+														"id": 3310519973,
+														"kind": "class template",
+														"name": "callback",
+														"parameters": [{
+															"_fullName": "UnusedType",
+															"_kind": "template type parameter",
+															"_name": "UnusedType",
+															"id": 3305497932,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "UnusedType"
+														}],
+														"scope":  {
+															"is_templated": true,
+															"name": "callback",
+															"template_parameters": [{
+																"_fullName": "UnusedType",
+																"_kind": "template type parameter",
+																"_name": "UnusedType",
+																"id": 3305497932,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "UnusedType"
+															}]
+														}
+													}]
+												},
+												"scope":  {
+													"is_templated": true,
+													"name": "callback",
+													"template_parameters": [{
+														"_fullName": "ReturnType",
+														"_kind": "template type parameter",
+														"_name": "ReturnType",
+														"id": 3798530772,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "ReturnType"
+													}, {
+														"_fullName": "ArgumentTypes",
+														"_kind": "template type parameter",
+														"_name": "ArgumentTypes",
+														"id": 120775233,
+														"is_variadic": true,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "ArgumentTypes"
+													}]
+												},
+												"unexposed_arguments":  [{
+													"kind": "identifier",
+													"spelling": "ReturnType"
+												}, {
+													"kind": "punctuation",
+													"spelling": "("
+												}, {
+													"kind": "identifier",
+													"spelling": "ArgumentTypes"
+												}, {
+													"kind": "punctuation",
+													"spelling": "..."
+												}, {
+													"kind": "punctuation",
+													"spelling": ")"
+												}]
+											}]
+										},
+										"unexposed_arguments": "void (stappler::StringView)"
 									}
 								},
 								"reference_kind": "lvalue"
@@ -2728,9 +4806,9 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(std::ostream&,ValueTemplate<Interface> const&,bool,bool)"
+						"signature": "(Callback<void (stappler::StringView)> const&,ValueTemplate<Interface> const&,bool,bool)"
 					},
-					"id": 1728559071,
+					"id": 1024952206,
 					"kind": "function template",
 					"name": "write",
 					"parameters": [{

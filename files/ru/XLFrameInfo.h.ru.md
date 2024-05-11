@@ -123,6 +123,15 @@ Title: XLFrameInfo.h
 Тип: memory::set<const core::AttachmentData *>
 
 
+# ::stappler::xenolith::FrameInfo::focusValue
+
+## BRIEF
+
+## CONTENT
+
+Тип: uint32_t
+
+
 # ::stappler::xenolith::FrameInfo::currentContext
 
 ## BRIEF

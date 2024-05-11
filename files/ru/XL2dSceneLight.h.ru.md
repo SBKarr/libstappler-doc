@@ -38,7 +38,7 @@ Title: XL2dSceneLight.h
 Доступ: public
 
 
-# ::stappler::xenolith::basic2d::SceneLight::init(stappler::xenolith::basic2d::SceneLightType,stappler::xenolith::Vec4 const&,stappler::xenolith::Color4F const&,stappler::xenolith::Vec4 const&)
+# ::stappler::xenolith::basic2d::SceneLight::init(stappler::xenolith::basic2d::SceneLightType,const stappler::geom::Vec4&,const stappler::geom::Color4F&,const stappler::geom::Vec4&)
 
 ## BRIEF
 
@@ -48,14 +48,14 @@ Title: XL2dSceneLight.h
 
 Параметры:
 * stappler::xenolith::basic2d::SceneLightType
-* stappler::xenolith::Vec4 const&
-* stappler::xenolith::Color4F const&
-* stappler::xenolith::Vec4 const&
+* const stappler::geom::Vec4&
+* const stappler::geom::Color4F&
+* const stappler::geom::Vec4&
 
 Возвращает:
 * bool
 
-# ::stappler::xenolith::basic2d::SceneLight::init(stappler::xenolith::basic2d::SceneLightType,stappler::xenolith::Vec2 const&,float,stappler::xenolith::Color4F const&,stappler::xenolith::Vec4 const&)
+# ::stappler::xenolith::basic2d::SceneLight::init(stappler::xenolith::basic2d::SceneLightType,const stappler::geom::Vec2&,float,const stappler::geom::Color4F&,const stappler::geom::Vec4&)
 
 ## BRIEF
 
@@ -65,10 +65,10 @@ Title: XL2dSceneLight.h
 
 Параметры:
 * stappler::xenolith::basic2d::SceneLightType
-* stappler::xenolith::Vec2 const&
+* const stappler::geom::Vec2&
 * float
-* stappler::xenolith::Color4F const&
-* stappler::xenolith::Vec4 const&
+* const stappler::geom::Color4F&
+* const stappler::geom::Vec4&
 
 Возвращает:
 * bool
@@ -105,7 +105,7 @@ Title: XL2dSceneLight.h
 Возвращает:
 * stappler::xenolith::basic2d::SceneLightType
 
-# ::stappler::xenolith::basic2d::SceneLight::setNormal(stappler::xenolith::Vec4 const&)
+# ::stappler::xenolith::basic2d::SceneLight::setNormal(const stappler::geom::Vec4&)
 
 ## BRIEF
 
@@ -114,7 +114,7 @@ Title: XL2dSceneLight.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Vec4 const&
+* const stappler::geom::Vec4&
 
 
 # ::stappler::xenolith::basic2d::SceneLight::getNormal() const
@@ -126,9 +126,9 @@ Title: XL2dSceneLight.h
 Доступ: public
 
 Возвращает:
-* stappler::xenolith::Vec4 const&
+* const stappler::geom::Vec4&
 
-# ::stappler::xenolith::basic2d::SceneLight::setColor(stappler::xenolith::Color4F const&)
+# ::stappler::xenolith::basic2d::SceneLight::setColor(const stappler::geom::Color4F&)
 
 ## BRIEF
 
@@ -137,7 +137,7 @@ Title: XL2dSceneLight.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Color4F const&
+* const stappler::geom::Color4F&
 
 
 # ::stappler::xenolith::basic2d::SceneLight::getColor() const
@@ -149,9 +149,9 @@ Title: XL2dSceneLight.h
 Доступ: public
 
 Возвращает:
-* stappler::xenolith::Color4F const&
+* const stappler::geom::Color4F&
 
-# ::stappler::xenolith::basic2d::SceneLight::setData(stappler::xenolith::Vec4 const&)
+# ::stappler::xenolith::basic2d::SceneLight::setData(const stappler::geom::Vec4&)
 
 ## BRIEF
 
@@ -160,7 +160,7 @@ Title: XL2dSceneLight.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Vec4 const&
+* const stappler::geom::Vec4&
 
 
 # ::stappler::xenolith::basic2d::SceneLight::getData() const
@@ -172,7 +172,7 @@ Title: XL2dSceneLight.h
 Доступ: public
 
 Возвращает:
-* stappler::xenolith::Vec4 const&
+* const stappler::geom::Vec4&
 
 # ::stappler::xenolith::basic2d::SceneLight::getName() const
 
@@ -284,7 +284,7 @@ Title: XL2dSceneLight.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::Vec4
+Тип: stappler::geom::Vec4
 
 
 # ::stappler::xenolith::basic2d::SceneLight::_color
@@ -295,7 +295,7 @@ Title: XL2dSceneLight.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::Color4F
+Тип: stappler::geom::Color4F
 
 
 # ::stappler::xenolith::basic2d::SceneLight::_data
@@ -306,7 +306,7 @@ Title: XL2dSceneLight.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::Vec4
+Тип: stappler::geom::Vec4
 
 
 # ::stappler::xenolith::basic2d::SceneLight::_softShadow
@@ -339,7 +339,7 @@ Title: XL2dSceneLight.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::Vec2
+Тип: stappler::geom::Vec2
 
 
 # ::stappler::xenolith::basic2d::SceneLight::_k

@@ -18,6 +18,33 @@ Title: XLInputDispatcher.h
 * PoolRef
 
 
+# ::stappler::xenolith::InputListenerStorage::Rec
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+
+# ::stappler::xenolith::InputListenerStorage::Rec::listener
+
+## BRIEF
+
+## CONTENT
+
+Тип: stappler::xenolith::InputListener*
+
+
+# ::stappler::xenolith::InputListenerStorage::Rec::focus
+
+## BRIEF
+
+## CONTENT
+
+Тип: uint32_t
+
+
 # ::stappler::xenolith::InputListenerStorage::~InputListenerStorage()
 
 ## BRIEF
@@ -60,7 +87,7 @@ Title: XLInputDispatcher.h
 * stappler::xenolith::InputListenerStorage const*
 
 
-# ::stappler::xenolith::InputListenerStorage::addListener(stappler::xenolith::InputListener*)
+# ::stappler::xenolith::InputListenerStorage::addListener(stappler::xenolith::InputListener*,uint32_t)
 
 ## BRIEF
 
@@ -70,9 +97,10 @@ Title: XLInputDispatcher.h
 
 Параметры:
 * stappler::xenolith::InputListener*
+* uint32_t
 
 
-# ::stappler::xenolith::InputListenerStorage::foreach<typename>(Callback const&)
+# ::stappler::xenolith::InputListenerStorage::foreach<typename>(Callback const&,bool)
 
 ## BRIEF
 
@@ -85,6 +113,7 @@ Title: XLInputDispatcher.h
 
 Параметры:
 * Callback const&
+* bool
 
 Возвращает:
 * bool
@@ -97,7 +126,7 @@ Title: XLInputDispatcher.h
 
 Доступ: protected
 
-Тип: memory::vector<InputListener *>*
+Тип: memory::vector<Rec>*
 
 
 # ::stappler::xenolith::InputListenerStorage::_sceneEvents
@@ -108,7 +137,7 @@ Title: XLInputDispatcher.h
 
 Доступ: protected
 
-Тип: memory::vector<InputListener *>*
+Тип: memory::vector<Rec>*
 
 
 # ::stappler::xenolith::InputListenerStorage::_postSceneEvents
@@ -119,7 +148,18 @@ Title: XLInputDispatcher.h
 
 Доступ: protected
 
-Тип: memory::vector<InputListener *>*
+Тип: memory::vector<Rec>*
+
+
+# ::stappler::xenolith::InputListenerStorage::_maxFocusValue
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: uint32_t
 
 
 # ::stappler::xenolith::InputDispatcher
@@ -296,6 +336,17 @@ Title: XLInputDispatcher.h
 Возвращает:
 * bool
 
+# ::stappler::xenolith::InputDispatcher::hasActiveInput() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* bool
+
 # ::stappler::xenolith::InputDispatcher::getEventInfo(stappler::xenolith::InputEventData const&) const
 
 ## BRIEF
@@ -366,6 +417,15 @@ Title: XLInputDispatcher.h
 ## CONTENT
 
 Тип: Vector<const stappler::xenolith::InputListener *>
+
+
+# ::stappler::xenolith::InputDispatcher::EventHandlersInfo::isKeyEvent
+
+## BRIEF
+
+## CONTENT
+
+Тип: bool
 
 
 # ::stappler::xenolith::InputDispatcher::EventHandlersInfo::handle(bool)
@@ -448,6 +508,20 @@ Title: XLInputDispatcher.h
 Параметры:
 * stappler::xenolith::InputEventData const&
 * bool
+
+
+# ::stappler::xenolith::InputDispatcher::cancelTouchEvents(float,float,stappler::xenolith::InputModifier)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Параметры:
+* float
+* float
+* stappler::xenolith::InputModifier
 
 
 # ::stappler::xenolith::InputDispatcher::_currentTime
@@ -546,7 +620,7 @@ Title: XLInputDispatcher.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::Vec2
+Тип: stappler::geom::Vec2
 
 
 # ::stappler::xenolith::InputDispatcher::_inBackground
@@ -582,7 +656,7 @@ Title: XLInputDispatcher.h
 Тип: bool
 
 
-# ::stappler::xenolith::InputListenerStorage::foreach<typename>(Callback const&)
+# ::stappler::xenolith::InputListenerStorage::foreach<typename>(Callback const&,bool)
 
 ## BRIEF
 
@@ -593,6 +667,7 @@ Title: XLInputDispatcher.h
 
 Параметры:
 * Callback const&
+* bool
 
 Возвращает:
 * bool

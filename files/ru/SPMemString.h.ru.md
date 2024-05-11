@@ -3679,7 +3679,7 @@ Title: SPMemString.h
 Синоним для невладеющией 8-битной строки (устаревший)
 
 
-# ::operator""_weak(char const*,size_t)
+# ::stappler::operator""_weak(char const*,size_t)
 
 ## BRIEF
 
@@ -3696,7 +3696,7 @@ Title: SPMemString.h
 Возвращает:
 * stappler::memory::basic_string<char>
 
-# ::std::hash<stappler::memory::basic_string<char>>::hash<stappler::memory::basic_string<char>>
+# ::std::hash<::stappler::memory::basic_string<char>>::hash<::stappler::memory::basic_string<char>>
 
 ## BRIEF
 
@@ -3707,7 +3707,7 @@ Title: SPMemString.h
 Специализация стандартной хэш-функции для строки
 
 
-# ::std::hash<stappler::memory::basic_string<char>>::operator()(stappler::memory::basic_string<char> const&) const
+# ::std::hash<::stappler::memory::basic_string<char>>::operator()(::stappler::memory::basic_string<char> const&) const
 
 ## BRIEF
 
@@ -3723,7 +3723,7 @@ Title: SPMemString.h
 Возвращает:
 * std::size_t - вычисленный хэш
 
-# ::std::hash<stappler::memory::basic_string<char16_t>>::hash<stappler::memory::basic_string<char16_t>>
+# ::std::hash<::stappler::memory::basic_string<char16_t>>::hash<::stappler::memory::basic_string<char16_t>>
 
 ## BRIEF
 
@@ -3733,8 +3733,7 @@ Title: SPMemString.h
 
 Специализация стандартной хэш-функции для строки
 
-
-# ::std::hash<stappler::memory::basic_string<char16_t>>::operator()(stappler::memory::basic_string<char16_t> const&) const
+# ::std::hash<::stappler::memory::basic_string<char16_t>>::operator()(::stappler::memory::basic_string<char16_t> const&) const
 
 ## BRIEF
 

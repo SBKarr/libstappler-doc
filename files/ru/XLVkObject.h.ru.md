@@ -8,6 +8,204 @@ Title: XLVkObject.h
 ## CONTENT
 
 
+# ::stappler::xenolith::vk::DeviceMemoryInfo
+
+## BRIEF
+
+## CONTENT
+
+
+# ::stappler::xenolith::vk::DeviceMemoryInfo::size
+
+## BRIEF
+
+## CONTENT
+
+Тип: VkDeviceSize
+
+
+# ::stappler::xenolith::vk::DeviceMemoryInfo::alignment
+
+## BRIEF
+
+## CONTENT
+
+Тип: VkDeviceSize
+
+
+# ::stappler::xenolith::vk::DeviceMemoryInfo::memoryType
+
+## BRIEF
+
+## CONTENT
+
+Тип: uint32_t
+
+
+# ::stappler::xenolith::vk::DeviceMemoryInfo::dedicated
+
+## BRIEF
+
+## CONTENT
+
+Тип: bool
+
+
+# ::stappler::xenolith::vk::DeviceMemoryAccess
+
+## BRIEF
+
+## CONTENT
+
+Значения:
+* None
+* Invalidate
+* Flush
+* Full
+
+
+# ::stappler::xenolith::vk::operator|(stappler::xenolith::vk::DeviceMemoryAccess const&,stappler::xenolith::vk::DeviceMemoryAccess const&)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* stappler::xenolith::vk::DeviceMemoryAccess const&
+* stappler::xenolith::vk::DeviceMemoryAccess const&
+
+Возвращает:
+* stappler::xenolith::vk::DeviceMemoryAccess
+
+# ::stappler::xenolith::vk::operator&(stappler::xenolith::vk::DeviceMemoryAccess const&,stappler::xenolith::vk::DeviceMemoryAccess const&)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* stappler::xenolith::vk::DeviceMemoryAccess const&
+* stappler::xenolith::vk::DeviceMemoryAccess const&
+
+Возвращает:
+* stappler::xenolith::vk::DeviceMemoryAccess
+
+# ::stappler::xenolith::vk::operator^(stappler::xenolith::vk::DeviceMemoryAccess const&,stappler::xenolith::vk::DeviceMemoryAccess const&)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* stappler::xenolith::vk::DeviceMemoryAccess const&
+* stappler::xenolith::vk::DeviceMemoryAccess const&
+
+Возвращает:
+* stappler::xenolith::vk::DeviceMemoryAccess
+
+# ::stappler::xenolith::vk::operator|=(stappler::xenolith::vk::DeviceMemoryAccess&,stappler::xenolith::vk::DeviceMemoryAccess const&)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* stappler::xenolith::vk::DeviceMemoryAccess&
+* stappler::xenolith::vk::DeviceMemoryAccess const&
+
+Возвращает:
+* stappler::xenolith::vk::DeviceMemoryAccess&
+
+# ::stappler::xenolith::vk::operator&=(stappler::xenolith::vk::DeviceMemoryAccess&,stappler::xenolith::vk::DeviceMemoryAccess const&)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* stappler::xenolith::vk::DeviceMemoryAccess&
+* stappler::xenolith::vk::DeviceMemoryAccess const&
+
+Возвращает:
+* stappler::xenolith::vk::DeviceMemoryAccess&
+
+# ::stappler::xenolith::vk::operator^=(stappler::xenolith::vk::DeviceMemoryAccess&,stappler::xenolith::vk::DeviceMemoryAccess const&)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* stappler::xenolith::vk::DeviceMemoryAccess&
+* stappler::xenolith::vk::DeviceMemoryAccess const&
+
+Возвращает:
+* stappler::xenolith::vk::DeviceMemoryAccess&
+
+# ::stappler::xenolith::vk::operator==(stappler::xenolith::vk::DeviceMemoryAccess const&,std::underlying_type<DeviceMemoryAccess>::type const&)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* stappler::xenolith::vk::DeviceMemoryAccess const&
+* std::underlying_type<DeviceMemoryAccess>::type const&
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::vk::operator==(std::underlying_type<DeviceMemoryAccess>::type const&,stappler::xenolith::vk::DeviceMemoryAccess const&)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* std::underlying_type<DeviceMemoryAccess>::type const&
+* stappler::xenolith::vk::DeviceMemoryAccess const&
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::vk::operator!=(stappler::xenolith::vk::DeviceMemoryAccess const&,std::underlying_type<DeviceMemoryAccess>::type const&)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* stappler::xenolith::vk::DeviceMemoryAccess const&
+* std::underlying_type<DeviceMemoryAccess>::type const&
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::vk::operator!=(std::underlying_type<DeviceMemoryAccess>::type const&,stappler::xenolith::vk::DeviceMemoryAccess const&)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* std::underlying_type<DeviceMemoryAccess>::type const&
+* stappler::xenolith::vk::DeviceMemoryAccess const&
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::vk::operator~(stappler::xenolith::vk::DeviceMemoryAccess const&)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* stappler::xenolith::vk::DeviceMemoryAccess const&
+
+Возвращает:
+* stappler::xenolith::vk::DeviceMemoryAccess
+
 # ::stappler::xenolith::vk::DeviceMemory
 
 ## BRIEF
@@ -27,7 +225,7 @@ Title: XLVkObject.h
 Доступ: public
 
 
-# ::stappler::xenolith::vk::DeviceMemory::init(stappler::xenolith::vk::Device&,VkDeviceMemory)
+# ::stappler::xenolith::vk::DeviceMemory::init(stappler::xenolith::vk::Allocator*,stappler::xenolith::vk::DeviceMemoryInfo,VkDeviceMemory,stappler::xenolith::vk::AllocationUsage)
 
 ## BRIEF
 
@@ -36,11 +234,62 @@ Title: XLVkObject.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::vk::Device&
+* stappler::xenolith::vk::Allocator*
+* stappler::xenolith::vk::DeviceMemoryInfo
 * VkDeviceMemory
+* stappler::xenolith::vk::AllocationUsage
 
 Возвращает:
 * bool
+
+# ::stappler::xenolith::vk::DeviceMemory::init(stappler::xenolith::vk::DeviceMemoryPool*,Allocator::MemBlock&&,stappler::xenolith::vk::AllocationUsage)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* stappler::xenolith::vk::DeviceMemoryPool*
+* Allocator::MemBlock&&
+* stappler::xenolith::vk::AllocationUsage
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::vk::DeviceMemory::isPersistentMapped() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::vk::DeviceMemory::getPersistentMappedRegion() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* uint8_t*
+
+# ::stappler::xenolith::vk::DeviceMemory::getInfo() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* stappler::xenolith::vk::DeviceMemoryInfo const&
 
 # ::stappler::xenolith::vk::DeviceMemory::getMemory() const
 
@@ -53,6 +302,130 @@ Title: XLVkObject.h
 Возвращает:
 * VkDeviceMemory
 
+# ::stappler::xenolith::vk::DeviceMemory::getUsage() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* stappler::xenolith::vk::AllocationUsage
+
+# ::stappler::xenolith::vk::DeviceMemory::getPool() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* stappler::xenolith::vk::DeviceMemoryPool*
+
+# ::stappler::xenolith::vk::DeviceMemory::getBlockOffset() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* VkDeviceSize
+
+# ::stappler::xenolith::vk::DeviceMemory::isMappable() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::vk::DeviceMemory::map(Callback<void (uint8_t *, VkDeviceSize)> const&,VkDeviceSize,VkDeviceSize,stappler::xenolith::vk::DeviceMemoryAccess)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* Callback<void (uint8_t *, VkDeviceSize)> const&
+* VkDeviceSize
+* VkDeviceSize
+* stappler::xenolith::vk::DeviceMemoryAccess
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::vk::DeviceMemory::invalidateMappedRegion(VkDeviceSize,VkDeviceSize)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* VkDeviceSize
+* VkDeviceSize
+
+
+# ::stappler::xenolith::vk::DeviceMemory::flushMappedRegion(VkDeviceSize,VkDeviceSize)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* VkDeviceSize
+* VkDeviceSize
+
+
+# ::stappler::xenolith::vk::DeviceMemory::calculateMappedMemoryRange(VkDeviceSize,VkDeviceSize) const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Параметры:
+* VkDeviceSize
+* VkDeviceSize
+
+Возвращает:
+* VkMappedMemoryRange
+
+# ::stappler::xenolith::vk::DeviceMemory::_info
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: stappler::xenolith::vk::DeviceMemoryInfo
+
+
+# ::stappler::xenolith::vk::DeviceMemory::_pool
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: stappler::xenolith::vk::DeviceMemoryPool*
+
+
 # ::stappler::xenolith::vk::DeviceMemory::_memory
 
 ## BRIEF
@@ -62,6 +435,72 @@ Title: XLVkObject.h
 Доступ: protected
 
 Тип: VkDeviceMemory
+
+
+# ::stappler::xenolith::vk::DeviceMemory::_usage
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: stappler::xenolith::vk::AllocationUsage
+
+
+# ::stappler::xenolith::vk::DeviceMemory::_memBlock
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: Allocator::MemBlock
+
+
+# ::stappler::xenolith::vk::DeviceMemory::_allocator
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: Rc<stappler::xenolith::vk::Allocator>
+
+
+# ::stappler::xenolith::vk::DeviceMemory::_mappedOffset
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: VkDeviceSize
+
+
+# ::stappler::xenolith::vk::DeviceMemory::_mappedSize
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: VkDeviceSize
+
+
+# ::stappler::xenolith::vk::DeviceMemory::_mappingProtectionMutex
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: stappler::mem_std::Mutex
 
 
 # ::stappler::xenolith::vk::Image
@@ -214,6 +653,8 @@ Title: XLVkObject.h
 * Rc<stappler::xenolith::vk::DeviceMemory>&&
 * VkDeviceSize
 
+Возвращает:
+* bool
 
 # ::stappler::xenolith::vk::Image::_memory
 
@@ -267,7 +708,7 @@ Title: XLVkObject.h
 Доступ: public
 
 
-# ::stappler::xenolith::vk::Buffer::init(stappler::xenolith::vk::Device&,VkBuffer,stappler::xenolith::vk::BufferInfo const&,Rc<stappler::xenolith::vk::DeviceMemory>&&)
+# ::stappler::xenolith::vk::Buffer::init(stappler::xenolith::vk::Device&,VkBuffer,stappler::xenolith::vk::BufferInfo const&,Rc<stappler::xenolith::vk::DeviceMemory>&&,VkDeviceSize)
 
 ## BRIEF
 
@@ -280,6 +721,7 @@ Title: XLVkObject.h
 * VkBuffer
 * stappler::xenolith::vk::BufferInfo const&
 * Rc<stappler::xenolith::vk::DeviceMemory>&&
+* VkDeviceSize
 
 Возвращает:
 * bool
@@ -294,17 +736,6 @@ Title: XLVkObject.h
 
 Возвращает:
 * VkBuffer
-
-# ::stappler::xenolith::vk::Buffer::getPool() const
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-Возвращает:
-* stappler::xenolith::vk::DeviceMemoryPool*
 
 # ::stappler::xenolith::vk::Buffer::getMemory() const
 
@@ -361,6 +792,121 @@ Title: XLVkObject.h
 * Rc<stappler::xenolith::vk::DeviceMemory>&&
 * VkDeviceSize
 
+Возвращает:
+* bool
+
+# ::stappler::xenolith::vk::Buffer::map(Callback<void (uint8_t *, VkDeviceSize)> const&,VkDeviceSize,VkDeviceSize,stappler::xenolith::vk::DeviceMemoryAccess)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* Callback<void (uint8_t *, VkDeviceSize)> const&
+* VkDeviceSize
+* VkDeviceSize
+* stappler::xenolith::vk::DeviceMemoryAccess
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::vk::Buffer::getPersistentMappedRegion(bool)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* bool
+
+Возвращает:
+* uint8_t*
+
+# ::stappler::xenolith::vk::Buffer::invalidateMappedRegion(VkDeviceSize,VkDeviceSize)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* VkDeviceSize
+* VkDeviceSize
+
+
+# ::stappler::xenolith::vk::Buffer::flushMappedRegion(VkDeviceSize,VkDeviceSize)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* VkDeviceSize
+* VkDeviceSize
+
+
+# ::stappler::xenolith::vk::Buffer::setData(stappler::BytesView,VkDeviceSize)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* stappler::BytesView
+* VkDeviceSize
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::vk::Buffer::getData(VkDeviceSize,VkDeviceSize)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* VkDeviceSize
+* VkDeviceSize
+
+Возвращает:
+* stappler::mem_std::Bytes
+
+# ::stappler::xenolith::vk::Buffer::reserveBlock(uint64_t,uint64_t)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* uint64_t
+* uint64_t
+
+Возвращает:
+* uint64_t
+
+# ::stappler::xenolith::vk::Buffer::getReservedSize() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* uint64_t
 
 # ::stappler::xenolith::vk::Buffer::_memory
 
@@ -371,6 +917,17 @@ Title: XLVkObject.h
 Доступ: protected
 
 Тип: Rc<stappler::xenolith::vk::DeviceMemory>
+
+
+# ::stappler::xenolith::vk::Buffer::_memoryOffset
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: VkDeviceSize
 
 
 # ::stappler::xenolith::vk::Buffer::_buffer
@@ -395,7 +952,7 @@ Title: XLVkObject.h
 Тип: std::optional<BufferMemoryBarrier>
 
 
-# ::stappler::xenolith::vk::Buffer::_pool
+# ::stappler::xenolith::vk::Buffer::_targetOffset
 
 ## BRIEF
 
@@ -403,7 +960,7 @@ Title: XLVkObject.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::vk::DeviceMemoryPool*
+Тип: std::atomic<uint64_t>
 
 
 # ::stappler::xenolith::vk::ImageView

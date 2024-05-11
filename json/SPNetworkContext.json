@@ -51,34 +51,112 @@
 						"_fullName": "::stappler::network::Context<typename>::userdata",
 						"_kind": "member variable",
 						"_name": "userdata",
-						"default_value": {
-							"expression": [{
-								"kind": "keyword",
-								"spelling": "nullptr"
-							}],
-							"kind": "unexposed",
-							"type": {
-								"_typeName": "void*",
-								"kind": "pointer",
-								"pointee": {
-									"_typeName": "void",
-									"builtin_type_kind": "void",
-									"kind": "builtin"
-								}
-							}
-						},
 						"id": 1693234694,
 						"is_mutable": false,
 						"kind": "member variable",
 						"name": "userdata",
 						"type": {
-							"_typeName": "void*",
-							"kind": "pointer",
-							"pointee": {
-								"_typeName": "void",
-								"builtin_type_kind": "void",
-								"kind": "builtin"
-							}
+							"_typeName": "Rc<RefBase<Interface>>",
+							"arguments_exposed": false,
+							"kind": "template_instantiation",
+							"primary_template": {
+								"name": "Rc",
+								"objects": [{
+									"_fullName": "::stappler::Rc<typename>",
+									"_kind": "alias template",
+									"_name": "Rc",
+									"id": 1633316855,
+									"kind": "alias template",
+									"name": "Rc",
+									"parameters": [{
+										"_fullName": "T",
+										"_kind": "template type parameter",
+										"_name": "T",
+										"id": 1306257776,
+										"is_variadic": false,
+										"keyword": "typename",
+										"kind": "template type parameter",
+										"name": "T"
+									}],
+									"type_alias":  {
+										"_fullName": "::stappler::Rc<typename>",
+										"_kind": "type alias",
+										"_name": "Rc",
+										"id": 1633316855,
+										"kind": "type alias",
+										"name": "Rc",
+										"underlying_type": {
+											"_typeName": "RcBase<T>",
+											"arguments_exposed": false,
+											"kind": "template_instantiation",
+											"primary_template": {
+												"name": "RcBase",
+												"objects": [{
+													"_fullName": "::stappler::RcBase<typename>",
+													"_kind": "class template",
+													"_name": "RcBase",
+													"class": {
+														"_fullName": "::stappler::RcBase<typename>",
+														"_kind": "class",
+														"_name": "RcBase",
+														"class_kind": "class",
+														"id": 782220210,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "RcBase",
+														"scope": {
+															"is_templated": true,
+															"name": "RcBase",
+															"template_parameters": [{
+																"_fullName": "Base",
+																"_kind": "template type parameter",
+																"_name": "Base",
+																"id": 3435036189,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "Base"
+															}]
+														},
+														"semantic_scope": ""
+													},
+													"id": 782220210,
+													"kind": "class template",
+													"name": "RcBase",
+													"parameters": [{
+														"_fullName": "Base",
+														"_kind": "template type parameter",
+														"_name": "Base",
+														"id": 3435036189,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "Base"
+													}],
+													"scope":  {
+														"is_templated": true,
+														"name": "RcBase",
+														"template_parameters": [{
+															"_fullName": "Base",
+															"_kind": "template type parameter",
+															"_name": "Base",
+															"id": 3435036189,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "Base"
+														}]
+													}
+												}]
+											},
+											"unexposed_arguments": "T"
+										}
+									}
+								}]
+							},
+							"unexposed_arguments": "RefBase<Interface>"
 						}
 					}, {
 						"_fullName": "::stappler::network::Context<typename>::curl",

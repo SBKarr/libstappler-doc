@@ -537,3 +537,135 @@ Title: SPMemInterface.h
 
 Возвращает:
 * T
+
+# ::stappler::InterfaceObject<typename>
+
+## BRIEF
+
+Вспомогательный тип для объектов, использующих конкретный интерфейс памяти
+
+## CONTENT
+
+Вспомогательный тип для объектов, использующих конкретный интерфейс памяти. Импортирует в тип псевдонимы контейнеров, соотвествующих интерфейсу памяти.
+
+Параметры шаблона:
+* typename InterfaceType - целевой интерфейс памяти
+
+# ::stappler::InterfaceObject<typename>::Interface
+
+## BRIEF
+
+Тип интерфейса памяти
+
+## CONTENT
+
+Тип интерфейса памяти
+
+# ::stappler::InterfaceObject<typename>::String
+
+## BRIEF
+
+Тип строкового контейнера
+
+## CONTENT
+
+Тип строкового контейнера
+
+# ::stappler::InterfaceObject<typename>::WideString
+
+## BRIEF
+
+Тип строкового контейнера для 16-битных символов
+
+## CONTENT
+
+Тип строкового контейнера для 16-битных символов
+
+
+# ::stappler::InterfaceObject<typename>::Bytes
+
+## BRIEF
+
+Тип байтового контейнера
+
+## CONTENT
+
+Тип байтового контейнера
+
+# ::stappler::InterfaceObject<typename>::BasicString<typename>
+
+## BRIEF
+
+Обобщённый тип строкового контейнера
+
+## CONTENT
+
+Обобщённый тип строкового контейнера
+
+Параметры шаблона:
+* typename Value
+
+# ::stappler::InterfaceObject<typename>::Vector<typename>
+
+## BRIEF
+
+Тип вектора
+
+## CONTENT
+
+Тип вектора
+
+Параметры шаблона:
+* typename Value
+
+# ::stappler::InterfaceObject<typename>::Map<typename,typename,typename>
+
+## BRIEF
+
+Тип хранилища ключ-значение
+
+## CONTENT
+
+Тип хранилища ключ-значение
+
+Параметры шаблона:
+* typename K
+* typename V
+* typename Compare
+
+# ::stappler::InterfaceObject<typename>::Set<typename,typename>
+
+## BRIEF
+
+Тип набора
+
+## CONTENT
+
+Тип набора
+
+Параметры шаблона:
+* typename T
+* typename Compare
+
+# ::stappler::InterfaceObject<typename>::Function<typename>
+
+## BRIEF
+
+Тип функционального контейнера
+
+## CONTENT
+
+Тип функционального контейнера
+
+Параметры шаблона:
+* typename T
+
+# ::stappler::InterfaceObject<typename>::StringStream
+
+## BRIEF
+
+Тип строкового выходного потока
+
+## CONTENT
+
+Тип строкового выходного потока

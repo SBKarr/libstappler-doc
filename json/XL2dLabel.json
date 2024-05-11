@@ -12,6 +12,15 @@
 		"kind": "include directive",
 		"name": "XL2dSprite.h"
 	}, {
+		"_fullName": "XLCoreInput.h",
+		"_kind": "include directive",
+		"_name": "XLCoreInput.h",
+		"id": 2325367565,
+		"include": "xenolith/core/XLCoreInput.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "XLCoreInput.h"
+	}, {
 		"_fullName": "XLFontLabelBase.h",
 		"_kind": "include directive",
 		"_name": "XLFontLabelBase.h",
@@ -257,13 +266,13 @@
 						"kind": "member variable",
 						"name": "colorMap",
 						"type": {
-							"_typeName": "Vector<stappler::xenolith::ColorMask>",
+							"_typeName": "Vector<stappler::geom::ColorMask>",
 							"arguments_exposed": false,
 							"kind": "template_instantiation",
 							"primary_template": {
 								"name": "Vector"
 							},
-							"unexposed_arguments": "stappler::xenolith::ColorMask"
+							"unexposed_arguments": "stappler::geom::ColorMask"
 						}
 					}],
 					"class_kind": "struct",
@@ -682,12 +691,12 @@
 						"semantic_scope": "",
 						"signature": "(Rc<stappler::xenolith::basic2d::LabelResult>&&)"
 					}, {
-						"_fullName": "::stappler::xenolith::basic2d::LabelDeferredResult::updateColor(stappler::xenolith::Color4F const&)",
+						"_fullName": "::stappler::xenolith::basic2d::LabelDeferredResult::updateColor(const stappler::geom::Color4F&)",
 						"_kind": "member function",
 						"_name": "updateColor",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 2491252937,
+						"id": 4293301129,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -704,60 +713,12 @@
 							"kind": "function parameter",
 							"name": "",
 							"type": {
-								"_typeName": "stappler::xenolith::Color4F const&",
+								"_typeName": "const stappler::geom::Color4F&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "stappler::xenolith::Color4F const",
-									"cv_qualifier": "const",
-									"kind": "cv_qualified",
-									"type": {
-										"_typeName": "stappler::xenolith::Color4F",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::xenolith::Color4F",
-											"objects": [{
-												"_fullName": "::stappler::xenolith::Color4F",
-												"_kind": "type alias",
-												"_name": "Color4F",
-												"id": 2730567930,
-												"kind": "type alias",
-												"name": "Color4F",
-												"underlying_type": {
-													"_typeName": "geom::Color4F",
-													"kind": "user_defined",
-													"target": {
-														"name": "geom::Color4F",
-														"objects": [{
-															"_fullName": "::stappler::geom::Color4F",
-															"_kind": "class",
-															"_name": "Color4F",
-															"attributes": [{
-																"arguments": [{
-																	"kind": "int_literal",
-																	"spelling": "16"
-																}],
-																"is_variadic": false,
-																"kind": "alignas_",
-																"name": "alignas"
-															}],
-															"class_kind": "struct",
-															"comment": "\nRGBA color composed of 4 floats.\n",
-															"id": 1425630790,
-															"is_declaration": false,
-															"is_definition": true,
-															"is_final": false,
-															"kind": "class",
-															"name": "Color4F",
-															"scope": {
-																"name": "Color4F"
-															},
-															"semantic_scope": ""
-														}]
-													}
-												}
-											}]
-										}
-									}
+									"_typeName": "const stappler::geom::Color4F",
+									"kind": "unexposed",
+									"name": "const stappler::geom::Color4F"
 								},
 								"reference_kind": "lvalue"
 							}
@@ -769,7 +730,7 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::Color4F const&)"
+						"signature": "(const stappler::geom::Color4F&)"
 					}, {
 						"_fullName": "::stappler::xenolith::basic2d::LabelDeferredResult::getResult() const",
 						"_kind": "member function",
@@ -1275,168 +1236,230 @@
 						"kind": "access specifier",
 						"name": "public"
 					}, {
-						"_fullName": "::stappler::xenolith::basic2d::Label::FormatSpec",
+						"_fullName": "::stappler::xenolith::basic2d::Label::TextLayout",
 						"_kind": "type alias",
-						"_name": "FormatSpec",
-						"id": 3922754943,
+						"_name": "TextLayout",
+						"id": 3626737006,
 						"kind": "type alias",
-						"name": "FormatSpec",
+						"name": "TextLayout",
 						"underlying_type": {
-							"_typeName": "font::FormatSpec",
+							"_typeName": "font::TextLayout",
 							"kind": "user_defined",
 							"target": {
-								"name": "font::FormatSpec",
+								"name": "font::TextLayout",
 								"objects": [{
-									"_fullName": "::stappler::xenolith::font::FormatSpec",
+									"_fullName": "::stappler::xenolith::font::TextLayout",
 									"_kind": "class",
-									"_name": "FormatSpec",
+									"_name": "TextLayout",
 									"bases": [{
-										"_fullName": "Ref",
+										"_fullName": "RefBase<memory::StandartInterface>",
 										"_kind": "base class specifier",
-										"_name": "Ref",
+										"_name": "RefBase<memory::StandartInterface>",
 										"access_specifier": "public",
-										"id": 1165741041,
+										"id": 1271245336,
 										"is_virtual": false,
 										"kind": "base class specifier",
-										"name": "Ref",
+										"name": "RefBase<memory::StandartInterface>",
 										"type": {
-											"_typeName": "stappler::mem_std::Ref",
-											"kind": "user_defined",
-											"target": {
-												"name": "stappler::mem_std::Ref",
+											"_typeName": "RefBase<memory::StandartInterface>",
+											"arguments_exposed": false,
+											"kind": "template_instantiation",
+											"primary_template": {
+												"name": "RefBase",
 												"objects": [{
-													"_fullName": "::stappler::mem_std::Ref",
-													"_kind": "type alias",
-													"_name": "Ref",
-													"id": 3010886988,
-													"kind": "type alias",
-													"name": "Ref",
-													"underlying_type": {
-														"_typeName": "RefBase<memory::StandartInterface>",
-														"arguments_exposed": false,
-														"kind": "template_instantiation",
-														"primary_template": {
+													"_fullName": "::stappler::RefBase<typename>",
+													"_kind": "class template",
+													"_name": "RefBase",
+													"class": {
+														"_fullName": "::stappler::RefBase<typename>",
+														"_kind": "class",
+														"_name": "RefBase",
+														"bases": [{
+															"_fullName": "Interface::AllocBaseType",
+															"_kind": "base class specifier",
+															"_name": "Interface::AllocBaseType",
+															"access_specifier": "public",
+															"id": 25533212,
+															"is_virtual": false,
+															"kind": "base class specifier",
+															"name": "Interface::AllocBaseType",
+															"type": {
+																"_typeName": "Interface::AllocBaseType",
+																"kind": "unexposed",
+																"name": "Interface::AllocBaseType"
+															}
+														}],
+														"class_kind": "class",
+														"id": 2191419057,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "RefBase",
+														"scope": {
+															"is_templated": true,
 															"name": "RefBase",
-															"objects": [{
-																"_fullName": "::stappler::RefBase<typename>",
-																"_kind": "class template",
-																"_name": "RefBase",
-																"class": {
-																	"_fullName": "::stappler::RefBase<typename>",
-																	"_kind": "class",
-																	"_name": "RefBase",
-																	"bases": [{
-																		"_fullName": "Interface::AllocBaseType",
-																		"_kind": "base class specifier",
-																		"_name": "Interface::AllocBaseType",
-																		"access_specifier": "public",
-																		"id": 25533212,
-																		"is_virtual": false,
-																		"kind": "base class specifier",
-																		"name": "Interface::AllocBaseType",
-																		"type": {
-																			"_typeName": "Interface::AllocBaseType",
-																			"kind": "unexposed",
-																			"name": "Interface::AllocBaseType"
-																		}
-																	}],
-																	"class_kind": "class",
-																	"id": 2191419057,
-																	"is_declaration": false,
-																	"is_definition": true,
-																	"is_final": false,
-																	"kind": "class",
-																	"name": "RefBase",
-																	"scope": {
-																		"is_templated": true,
-																		"name": "RefBase",
-																		"template_parameters": [{
-																			"_fullName": "Interface",
-																			"_kind": "template type parameter",
-																			"_name": "Interface",
-																			"id": 2255344761,
-																			"is_variadic": false,
-																			"keyword": "typename",
-																			"kind": "template type parameter",
-																			"name": "Interface"
-																		}]
-																	},
-																	"semantic_scope": ""
-																},
-																"id": 2191419057,
-																"kind": "class template",
-																"name": "RefBase",
-																"parameters": [{
-																	"_fullName": "Interface",
-																	"_kind": "template type parameter",
-																	"_name": "Interface",
-																	"id": 2255344761,
-																	"is_variadic": false,
-																	"keyword": "typename",
-																	"kind": "template type parameter",
-																	"name": "Interface"
-																}],
-																"scope":  {
-																	"is_templated": true,
-																	"name": "RefBase",
-																	"template_parameters": [{
-																		"_fullName": "Interface",
-																		"_kind": "template type parameter",
-																		"_name": "Interface",
-																		"id": 2255344761,
-																		"is_variadic": false,
-																		"keyword": "typename",
-																		"kind": "template type parameter",
-																		"name": "Interface"
-																	}]
-																}
+															"template_parameters": [{
+																"_fullName": "Interface",
+																"_kind": "template type parameter",
+																"_name": "Interface",
+																"id": 2255344761,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "Interface"
 															}]
 														},
-														"unexposed_arguments": "memory::StandartInterface"
+														"semantic_scope": ""
+													},
+													"id": 2191419057,
+													"kind": "class template",
+													"name": "RefBase",
+													"parameters": [{
+														"_fullName": "Interface",
+														"_kind": "template type parameter",
+														"_name": "Interface",
+														"id": 2255344761,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "Interface"
+													}],
+													"scope":  {
+														"is_templated": true,
+														"name": "RefBase",
+														"template_parameters": [{
+															"_fullName": "Interface",
+															"_kind": "template type parameter",
+															"_name": "Interface",
+															"id": 2255344761,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "Interface"
+														}]
 													}
 												}]
-											}
+											},
+											"unexposed_arguments": "memory::StandartInterface"
+										}
+									}, {
+										"_fullName": "InterfaceObject<memory::StandartInterface>",
+										"_kind": "base class specifier",
+										"_name": "InterfaceObject<memory::StandartInterface>",
+										"access_specifier": "public",
+										"id": 2641774538,
+										"is_virtual": false,
+										"kind": "base class specifier",
+										"name": "InterfaceObject<memory::StandartInterface>",
+										"type": {
+											"_typeName": "InterfaceObject<memory::StandartInterface>",
+											"arguments_exposed": false,
+											"kind": "template_instantiation",
+											"primary_template": {
+												"name": "InterfaceObject",
+												"objects": [{
+													"_fullName": "::stappler::InterfaceObject<typename>",
+													"_kind": "class template",
+													"_name": "InterfaceObject",
+													"class": {
+														"_fullName": "::stappler::InterfaceObject<typename>",
+														"_kind": "class",
+														"_name": "InterfaceObject",
+														"class_kind": "struct",
+														"id": 4021175825,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "InterfaceObject",
+														"scope": {
+															"is_templated": true,
+															"name": "InterfaceObject",
+															"template_parameters": [{
+																"_fullName": "InterfaceType",
+																"_kind": "template type parameter",
+																"_name": "InterfaceType",
+																"id": 210942648,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "InterfaceType"
+															}]
+														},
+														"semantic_scope": ""
+													},
+													"id": 4021175825,
+													"kind": "class template",
+													"name": "InterfaceObject",
+													"parameters": [{
+														"_fullName": "InterfaceType",
+														"_kind": "template type parameter",
+														"_name": "InterfaceType",
+														"id": 210942648,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "InterfaceType"
+													}],
+													"scope":  {
+														"is_templated": true,
+														"name": "InterfaceObject",
+														"template_parameters": [{
+															"_fullName": "InterfaceType",
+															"_kind": "template type parameter",
+															"_name": "InterfaceType",
+															"id": 210942648,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "InterfaceType"
+														}]
+													}
+												}]
+											},
+											"unexposed_arguments": "memory::StandartInterface"
 										}
 									}],
 									"class_kind": "class",
-									"id": 4177988041,
+									"id": 2912114761,
 									"is_declaration": false,
 									"is_definition": true,
 									"is_final": false,
 									"kind": "class",
-									"name": "FormatSpec",
+									"name": "TextLayout",
 									"scope": {
-										"name": "FormatSpec"
+										"name": "TextLayout"
 									},
 									"semantic_scope": ""
 								}]
 							}
 						}
 					}, {
-						"_fullName": "::stappler::xenolith::basic2d::Label::LineSpec",
+						"_fullName": "::stappler::xenolith::basic2d::Label::LineLayout",
 						"_kind": "type alias",
-						"_name": "LineSpec",
-						"id": 3205427129,
+						"_name": "LineLayout",
+						"id": 1100974338,
 						"kind": "type alias",
-						"name": "LineSpec",
+						"name": "LineLayout",
 						"underlying_type": {
-							"_typeName": "font::LineSpec",
+							"_typeName": "font::LineLayoutData",
 							"kind": "user_defined",
 							"target": {
-								"name": "font::LineSpec",
+								"name": "font::LineLayoutData",
 								"objects": [{
-									"_fullName": "::stappler::xenolith::font::LineSpec",
+									"_fullName": "::stappler::font::LineLayoutData",
 									"_kind": "class",
-									"_name": "LineSpec",
+									"_name": "LineLayoutData",
 									"class_kind": "struct",
-									"id": 179370706,
+									"id": 3550766366,
 									"is_declaration": false,
 									"is_definition": true,
-									"is_final": false,
+									"is_final": true,
 									"kind": "class",
-									"name": "LineSpec",
+									"name": "LineLayoutData",
 									"scope": {
-										"name": "LineSpec"
+										"name": "LineLayoutData"
 									},
 									"semantic_scope": ""
 								}]
@@ -1455,52 +1478,37 @@
 							"target": {
 								"name": "font::TextAlign",
 								"objects": [{
-									"_fullName": "::stappler::xenolith::font::TextAlign",
-									"_kind": "type alias",
+									"_fullName": "::stappler::font::TextAlign",
+									"_kind": "enum",
 									"_name": "TextAlign",
-									"id": 1964769504,
-									"kind": "type alias",
+									"has_explicit_type": true,
+									"id": 3341365647,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_scoped": true,
+									"kind": "enum",
 									"name": "TextAlign",
+									"scope": {
+										"name": "TextAlign"
+									},
+									"semantic_scope": "",
 									"underlying_type": {
-										"_typeName": "geom::TextAlign",
+										"_typeName": "EnumSize",
 										"kind": "user_defined",
 										"target": {
-											"name": "geom::TextAlign",
+											"name": "EnumSize",
 											"objects": [{
-												"_fullName": "::stappler::geom::TextAlign",
-												"_kind": "enum",
-												"_name": "TextAlign",
-												"has_explicit_type": true,
-												"id": 251367584,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_scoped": true,
-												"kind": "enum",
-												"name": "TextAlign",
-												"scope": {
-													"name": "TextAlign"
-												},
-												"semantic_scope": "",
+												"_fullName": "::stappler::font::EnumSize",
+												"_kind": "type alias",
+												"_name": "EnumSize",
+												"id": 856387209,
+												"kind": "type alias",
+												"name": "EnumSize",
 												"underlying_type": {
-													"_typeName": "EnumSize",
+													"_typeName": "uint8_t",
 													"kind": "user_defined",
 													"target": {
-														"name": "EnumSize",
-														"objects": [{
-															"_fullName": "::stappler::geom::EnumSize",
-															"_kind": "type alias",
-															"_name": "EnumSize",
-															"id": 3885594728,
-															"kind": "type alias",
-															"name": "EnumSize",
-															"underlying_type": {
-																"_typeName": "uint8_t",
-																"kind": "user_defined",
-																"target": {
-																	"name": "uint8_t"
-																}
-															}
-														}]
+														"name": "uint8_t"
 													}
 												}
 											}]
@@ -1807,12 +1815,12 @@
 							"semantic_scope": "",
 							"signature": "()"
 						}, {
-							"_fullName": "::stappler::xenolith::basic2d::Label::Selection::emplaceRect(stappler::xenolith::Rect const&)",
+							"_fullName": "::stappler::xenolith::basic2d::Label::Selection::emplaceRect(const stappler::geom::Rect&)",
 							"_kind": "member function",
 							"_name": "emplaceRect",
 							"body_kind": "declaration",
 							"cv_qualifier": "none",
-							"id": 1609678916,
+							"id": 2414943078,
 							"is_consteval": false,
 							"is_constexpr": false,
 							"is_declaration": true,
@@ -1829,50 +1837,12 @@
 								"kind": "function parameter",
 								"name": "",
 								"type": {
-									"_typeName": "stappler::xenolith::Rect const&",
+									"_typeName": "const stappler::geom::Rect&",
 									"kind": "reference",
 									"referee": {
-										"_typeName": "stappler::xenolith::Rect const",
-										"cv_qualifier": "const",
-										"kind": "cv_qualified",
-										"type": {
-											"_typeName": "stappler::xenolith::Rect",
-											"kind": "user_defined",
-											"target": {
-												"name": "stappler::xenolith::Rect",
-												"objects": [{
-													"_fullName": "::stappler::xenolith::Rect",
-													"_kind": "type alias",
-													"_name": "Rect",
-													"id": 1186107623,
-													"kind": "type alias",
-													"name": "Rect",
-													"underlying_type": {
-														"_typeName": "geom::Rect",
-														"kind": "user_defined",
-														"target": {
-															"name": "geom::Rect",
-															"objects": [{
-																"_fullName": "::stappler::geom::Rect",
-																"_kind": "class",
-																"_name": "Rect",
-																"class_kind": "struct",
-																"id": 4019440438,
-																"is_declaration": false,
-																"is_definition": true,
-																"is_final": false,
-																"kind": "class",
-																"name": "Rect",
-																"scope": {
-																	"name": "Rect"
-																},
-																"semantic_scope": ""
-															}]
-														}
-													}
-												}]
-											}
-										}
+										"_typeName": "const stappler::geom::Rect",
+										"kind": "unexposed",
+										"name": "const stappler::geom::Rect"
 									},
 									"reference_kind": "lvalue"
 								}
@@ -1884,7 +1854,7 @@
 								"kind": "builtin"
 							},
 							"semantic_scope": "",
-							"signature": "(stappler::xenolith::Rect const&)"
+							"signature": "(const stappler::geom::Rect&)"
 						}, {
 							"_fullName": "::stappler::xenolith::basic2d::Label::Selection::updateColor()",
 							"_kind": "member function",
@@ -2122,11 +2092,11 @@
 						},
 						"semantic_scope": ""
 					}, {
-						"_fullName": "::stappler::xenolith::basic2d::Label::writeQuads(stappler::xenolith::basic2d::VertexArray&,stappler::xenolith::basic2d::Label::FormatSpec*,Vector<stappler::xenolith::ColorMask>&)",
+						"_fullName": "::stappler::xenolith::basic2d::Label::writeQuads(stappler::xenolith::basic2d::VertexArray&,font::TextLayoutData<memory::StandartInterface> const*,Vector<stappler::geom::ColorMask>&)",
 						"_kind": "function",
 						"_name": "writeQuads",
 						"body_kind": "declaration",
-						"id": 1436131063,
+						"id": 903173698,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -2285,152 +2255,94 @@
 							"kind": "function parameter",
 							"name": "format",
 							"type": {
-								"_typeName": "stappler::xenolith::basic2d::Label::FormatSpec*",
+								"_typeName": "font::TextLayoutData<memory::StandartInterface> const*",
 								"kind": "pointer",
 								"pointee": {
-									"_typeName": "stappler::xenolith::basic2d::Label::FormatSpec",
-									"kind": "user_defined",
-									"target": {
-										"name": "stappler::xenolith::basic2d::Label::FormatSpec",
-										"objects": [{
-											"_fullName": "::stappler::xenolith::basic2d::Label::FormatSpec",
-											"_kind": "type alias",
-											"_name": "FormatSpec",
-											"id": 3922754943,
-											"kind": "type alias",
-											"name": "FormatSpec",
-											"underlying_type": {
-												"_typeName": "font::FormatSpec",
-												"kind": "user_defined",
-												"target": {
-													"name": "font::FormatSpec",
-													"objects": [{
-														"_fullName": "::stappler::xenolith::font::FormatSpec",
-														"_kind": "class",
-														"_name": "FormatSpec",
-														"bases": [{
-															"_fullName": "Ref",
-															"_kind": "base class specifier",
-															"_name": "Ref",
-															"access_specifier": "public",
-															"id": 1165741041,
-															"is_virtual": false,
-															"kind": "base class specifier",
-															"name": "Ref",
-															"type": {
-																"_typeName": "stappler::mem_std::Ref",
-																"kind": "user_defined",
-																"target": {
-																	"name": "stappler::mem_std::Ref",
-																	"objects": [{
-																		"_fullName": "::stappler::mem_std::Ref",
-																		"_kind": "type alias",
-																		"_name": "Ref",
-																		"id": 3010886988,
-																		"kind": "type alias",
-																		"name": "Ref",
-																		"underlying_type": {
-																			"_typeName": "RefBase<memory::StandartInterface>",
-																			"arguments_exposed": false,
-																			"kind": "template_instantiation",
-																			"primary_template": {
-																				"name": "RefBase",
-																				"objects": [{
-																					"_fullName": "::stappler::RefBase<typename>",
-																					"_kind": "class template",
-																					"_name": "RefBase",
-																					"class": {
-																						"_fullName": "::stappler::RefBase<typename>",
-																						"_kind": "class",
-																						"_name": "RefBase",
-																						"bases": [{
-																							"_fullName": "Interface::AllocBaseType",
-																							"_kind": "base class specifier",
-																							"_name": "Interface::AllocBaseType",
-																							"access_specifier": "public",
-																							"id": 25533212,
-																							"is_virtual": false,
-																							"kind": "base class specifier",
-																							"name": "Interface::AllocBaseType",
-																							"type": {
-																								"_typeName": "Interface::AllocBaseType",
-																								"kind": "unexposed",
-																								"name": "Interface::AllocBaseType"
-																							}
-																						}],
-																						"class_kind": "class",
-																						"id": 2191419057,
-																						"is_declaration": false,
-																						"is_definition": true,
-																						"is_final": false,
-																						"kind": "class",
-																						"name": "RefBase",
-																						"scope": {
-																							"is_templated": true,
-																							"name": "RefBase",
-																							"template_parameters": [{
-																								"_fullName": "Interface",
-																								"_kind": "template type parameter",
-																								"_name": "Interface",
-																								"id": 2255344761,
-																								"is_variadic": false,
-																								"keyword": "typename",
-																								"kind": "template type parameter",
-																								"name": "Interface"
-																							}]
-																						},
-																						"semantic_scope": ""
-																					},
-																					"id": 2191419057,
-																					"kind": "class template",
-																					"name": "RefBase",
-																					"parameters": [{
-																						"_fullName": "Interface",
-																						"_kind": "template type parameter",
-																						"_name": "Interface",
-																						"id": 2255344761,
-																						"is_variadic": false,
-																						"keyword": "typename",
-																						"kind": "template type parameter",
-																						"name": "Interface"
-																					}],
-																					"scope":  {
-																						"is_templated": true,
-																						"name": "RefBase",
-																						"template_parameters": [{
-																							"_fullName": "Interface",
-																							"_kind": "template type parameter",
-																							"_name": "Interface",
-																							"id": 2255344761,
-																							"is_variadic": false,
-																							"keyword": "typename",
-																							"kind": "template type parameter",
-																							"name": "Interface"
-																						}]
-																					}
-																				}]
-																			},
-																			"unexposed_arguments": "memory::StandartInterface"
-																		}
-																	}]
-																}
-															}
-														}],
-														"class_kind": "class",
-														"id": 4177988041,
-														"is_declaration": false,
-														"is_definition": true,
-														"is_final": false,
-														"kind": "class",
-														"name": "FormatSpec",
-														"scope": {
-															"name": "FormatSpec"
-														},
-														"semantic_scope": ""
+									"_typeName": "font::TextLayoutData<memory::StandartInterface> const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "font::TextLayoutData<memory::StandartInterface>",
+										"arguments_exposed": false,
+										"kind": "template_instantiation",
+										"primary_template": {
+											"name": "font::TextLayoutData",
+											"objects": [{
+												"_fullName": "::stappler::font::TextLayoutData<typename>",
+												"_kind": "class template",
+												"_name": "TextLayoutData",
+												"class": {
+													"_fullName": "::stappler::font::TextLayoutData<typename>",
+													"_kind": "class",
+													"_name": "TextLayoutData",
+													"bases": [{
+														"_fullName": "Interface::AllocBaseType",
+														"_kind": "base class specifier",
+														"_name": "Interface::AllocBaseType",
+														"access_specifier": "public",
+														"id": 25533212,
+														"is_virtual": false,
+														"kind": "base class specifier",
+														"name": "Interface::AllocBaseType",
+														"type": {
+															"_typeName": "Interface::AllocBaseType",
+															"kind": "unexposed",
+															"name": "Interface::AllocBaseType"
+														}
+													}],
+													"class_kind": "struct",
+													"id": 1528990921,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "TextLayoutData",
+													"scope": {
+														"is_templated": true,
+														"name": "TextLayoutData",
+														"template_parameters": [{
+															"_fullName": "Interface",
+															"_kind": "template type parameter",
+															"_name": "Interface",
+															"id": 2255344761,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "Interface"
+														}]
+													},
+													"semantic_scope": ""
+												},
+												"id": 1528990921,
+												"kind": "class template",
+												"name": "TextLayoutData",
+												"parameters": [{
+													"_fullName": "Interface",
+													"_kind": "template type parameter",
+													"_name": "Interface",
+													"id": 2255344761,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "Interface"
+												}],
+												"scope":  {
+													"is_templated": true,
+													"name": "TextLayoutData",
+													"template_parameters": [{
+														"_fullName": "Interface",
+														"_kind": "template type parameter",
+														"_name": "Interface",
+														"id": 2255344761,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "Interface"
 													}]
 												}
-											}
-										}]
+											}]
+										},
+										"unexposed_arguments": "memory::StandartInterface"
 									}
 								}
 							}
@@ -2442,16 +2354,16 @@
 							"kind": "function parameter",
 							"name": "colorMap",
 							"type": {
-								"_typeName": "Vector<stappler::xenolith::ColorMask>&",
+								"_typeName": "Vector<stappler::geom::ColorMask>&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "Vector<stappler::xenolith::ColorMask>",
+									"_typeName": "Vector<stappler::geom::ColorMask>",
 									"arguments_exposed": false,
 									"kind": "template_instantiation",
 									"primary_template": {
 										"name": "Vector"
 									},
-									"unexposed_arguments": "stappler::xenolith::ColorMask"
+									"unexposed_arguments": "stappler::geom::ColorMask"
 								},
 								"reference_kind": "lvalue"
 							}
@@ -2462,16 +2374,303 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::basic2d::VertexArray&,stappler::xenolith::basic2d::Label::FormatSpec*,Vector<stappler::xenolith::ColorMask>&)",
+						"signature": "(stappler::xenolith::basic2d::VertexArray&,font::TextLayoutData<memory::StandartInterface> const*,Vector<stappler::geom::ColorMask>&)",
 						"storage_class": [
 							"static"
 						]
 					}, {
-						"_fullName": "::stappler::xenolith::basic2d::Label::writeResult(stappler::xenolith::basic2d::Label::FormatSpec*,stappler::xenolith::Color4F const&)",
+						"_fullName": "::stappler::xenolith::basic2d::Label::writeQuads(stappler::xenolith::basic2d::VertexArray&,font::TextLayoutData<memory::PoolInterface> const*,Vector<stappler::geom::ColorMask>&)",
+						"_kind": "function",
+						"_name": "writeQuads",
+						"body_kind": "declaration",
+						"id": 1042816019,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "writeQuads",
+						"parameters": [{
+							"_fullName": "vertexes",
+							"_kind": "function parameter",
+							"_name": "vertexes",
+							"id": 1728651901,
+							"kind": "function parameter",
+							"name": "vertexes",
+							"type": {
+								"_typeName": "stappler::xenolith::basic2d::VertexArray&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "stappler::xenolith::basic2d::VertexArray",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::xenolith::basic2d::VertexArray",
+										"objects": [{
+											"_fullName": "::stappler::xenolith::basic2d::VertexArray",
+											"_kind": "class",
+											"_name": "VertexArray",
+											"bases": [{
+												"_fullName": "Ref",
+												"_kind": "base class specifier",
+												"_name": "Ref",
+												"access_specifier": "public",
+												"id": 1165741041,
+												"is_virtual": false,
+												"kind": "base class specifier",
+												"name": "Ref",
+												"type": {
+													"_typeName": "stappler::mem_std::Ref",
+													"kind": "user_defined",
+													"target": {
+														"name": "stappler::mem_std::Ref",
+														"objects": [{
+															"_fullName": "::stappler::mem_std::Ref",
+															"_kind": "type alias",
+															"_name": "Ref",
+															"id": 3010886988,
+															"kind": "type alias",
+															"name": "Ref",
+															"underlying_type": {
+																"_typeName": "RefBase<memory::StandartInterface>",
+																"arguments_exposed": false,
+																"kind": "template_instantiation",
+																"primary_template": {
+																	"name": "RefBase",
+																	"objects": [{
+																		"_fullName": "::stappler::RefBase<typename>",
+																		"_kind": "class template",
+																		"_name": "RefBase",
+																		"class": {
+																			"_fullName": "::stappler::RefBase<typename>",
+																			"_kind": "class",
+																			"_name": "RefBase",
+																			"bases": [{
+																				"_fullName": "Interface::AllocBaseType",
+																				"_kind": "base class specifier",
+																				"_name": "Interface::AllocBaseType",
+																				"access_specifier": "public",
+																				"id": 25533212,
+																				"is_virtual": false,
+																				"kind": "base class specifier",
+																				"name": "Interface::AllocBaseType",
+																				"type": {
+																					"_typeName": "Interface::AllocBaseType",
+																					"kind": "unexposed",
+																					"name": "Interface::AllocBaseType"
+																				}
+																			}],
+																			"class_kind": "class",
+																			"id": 2191419057,
+																			"is_declaration": false,
+																			"is_definition": true,
+																			"is_final": false,
+																			"kind": "class",
+																			"name": "RefBase",
+																			"scope": {
+																				"is_templated": true,
+																				"name": "RefBase",
+																				"template_parameters": [{
+																					"_fullName": "Interface",
+																					"_kind": "template type parameter",
+																					"_name": "Interface",
+																					"id": 2255344761,
+																					"is_variadic": false,
+																					"keyword": "typename",
+																					"kind": "template type parameter",
+																					"name": "Interface"
+																				}]
+																			},
+																			"semantic_scope": ""
+																		},
+																		"id": 2191419057,
+																		"kind": "class template",
+																		"name": "RefBase",
+																		"parameters": [{
+																			"_fullName": "Interface",
+																			"_kind": "template type parameter",
+																			"_name": "Interface",
+																			"id": 2255344761,
+																			"is_variadic": false,
+																			"keyword": "typename",
+																			"kind": "template type parameter",
+																			"name": "Interface"
+																		}],
+																		"scope":  {
+																			"is_templated": true,
+																			"name": "RefBase",
+																			"template_parameters": [{
+																				"_fullName": "Interface",
+																				"_kind": "template type parameter",
+																				"_name": "Interface",
+																				"id": 2255344761,
+																				"is_variadic": false,
+																				"keyword": "typename",
+																				"kind": "template type parameter",
+																				"name": "Interface"
+																			}]
+																		}
+																	}]
+																},
+																"unexposed_arguments": "memory::StandartInterface"
+															}
+														}]
+													}
+												}
+											}],
+											"class_kind": "class",
+											"id": 1009234963,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "VertexArray",
+											"scope": {
+												"name": "VertexArray"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}, {
+							"_fullName": "format",
+							"_kind": "function parameter",
+							"_name": "format",
+							"id": 2172775893,
+							"kind": "function parameter",
+							"name": "format",
+							"type": {
+								"_typeName": "font::TextLayoutData<memory::PoolInterface> const*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "font::TextLayoutData<memory::PoolInterface> const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "font::TextLayoutData<memory::PoolInterface>",
+										"arguments_exposed": false,
+										"kind": "template_instantiation",
+										"primary_template": {
+											"name": "font::TextLayoutData",
+											"objects": [{
+												"_fullName": "::stappler::font::TextLayoutData<typename>",
+												"_kind": "class template",
+												"_name": "TextLayoutData",
+												"class": {
+													"_fullName": "::stappler::font::TextLayoutData<typename>",
+													"_kind": "class",
+													"_name": "TextLayoutData",
+													"bases": [{
+														"_fullName": "Interface::AllocBaseType",
+														"_kind": "base class specifier",
+														"_name": "Interface::AllocBaseType",
+														"access_specifier": "public",
+														"id": 25533212,
+														"is_virtual": false,
+														"kind": "base class specifier",
+														"name": "Interface::AllocBaseType",
+														"type": {
+															"_typeName": "Interface::AllocBaseType",
+															"kind": "unexposed",
+															"name": "Interface::AllocBaseType"
+														}
+													}],
+													"class_kind": "struct",
+													"id": 1528990921,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "TextLayoutData",
+													"scope": {
+														"is_templated": true,
+														"name": "TextLayoutData",
+														"template_parameters": [{
+															"_fullName": "Interface",
+															"_kind": "template type parameter",
+															"_name": "Interface",
+															"id": 2255344761,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "Interface"
+														}]
+													},
+													"semantic_scope": ""
+												},
+												"id": 1528990921,
+												"kind": "class template",
+												"name": "TextLayoutData",
+												"parameters": [{
+													"_fullName": "Interface",
+													"_kind": "template type parameter",
+													"_name": "Interface",
+													"id": 2255344761,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "Interface"
+												}],
+												"scope":  {
+													"is_templated": true,
+													"name": "TextLayoutData",
+													"template_parameters": [{
+														"_fullName": "Interface",
+														"_kind": "template type parameter",
+														"_name": "Interface",
+														"id": 2255344761,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "Interface"
+													}]
+												}
+											}]
+										},
+										"unexposed_arguments": "memory::PoolInterface"
+									}
+								}
+							}
+						}, {
+							"_fullName": "colorMap",
+							"_kind": "function parameter",
+							"_name": "colorMap",
+							"id": 1043800671,
+							"kind": "function parameter",
+							"name": "colorMap",
+							"type": {
+								"_typeName": "Vector<stappler::geom::ColorMask>&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "Vector<stappler::geom::ColorMask>",
+									"arguments_exposed": false,
+									"kind": "template_instantiation",
+									"primary_template": {
+										"name": "Vector"
+									},
+									"unexposed_arguments": "stappler::geom::ColorMask"
+								},
+								"reference_kind": "lvalue"
+							}
+						}],
+						"return_type":  {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::xenolith::basic2d::VertexArray&,font::TextLayoutData<memory::PoolInterface> const*,Vector<stappler::geom::ColorMask>&)",
+						"storage_class": [
+							"static"
+						]
+					}, {
+						"_fullName": "::stappler::xenolith::basic2d::Label::writeResult(stappler::xenolith::basic2d::Label::TextLayout*,const stappler::geom::Color4F&)",
 						"_kind": "function",
 						"_name": "writeResult",
 						"body_kind": "declaration",
-						"id": 1154380169,
+						"id": 3833180803,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -2487,146 +2686,208 @@
 							"kind": "function parameter",
 							"name": "format",
 							"type": {
-								"_typeName": "stappler::xenolith::basic2d::Label::FormatSpec*",
+								"_typeName": "stappler::xenolith::basic2d::Label::TextLayout*",
 								"kind": "pointer",
 								"pointee": {
-									"_typeName": "stappler::xenolith::basic2d::Label::FormatSpec",
+									"_typeName": "stappler::xenolith::basic2d::Label::TextLayout",
 									"kind": "user_defined",
 									"target": {
-										"name": "stappler::xenolith::basic2d::Label::FormatSpec",
+										"name": "stappler::xenolith::basic2d::Label::TextLayout",
 										"objects": [{
-											"_fullName": "::stappler::xenolith::basic2d::Label::FormatSpec",
+											"_fullName": "::stappler::xenolith::basic2d::Label::TextLayout",
 											"_kind": "type alias",
-											"_name": "FormatSpec",
-											"id": 3922754943,
+											"_name": "TextLayout",
+											"id": 3626737006,
 											"kind": "type alias",
-											"name": "FormatSpec",
+											"name": "TextLayout",
 											"underlying_type": {
-												"_typeName": "font::FormatSpec",
+												"_typeName": "font::TextLayout",
 												"kind": "user_defined",
 												"target": {
-													"name": "font::FormatSpec",
+													"name": "font::TextLayout",
 													"objects": [{
-														"_fullName": "::stappler::xenolith::font::FormatSpec",
+														"_fullName": "::stappler::xenolith::font::TextLayout",
 														"_kind": "class",
-														"_name": "FormatSpec",
+														"_name": "TextLayout",
 														"bases": [{
-															"_fullName": "Ref",
+															"_fullName": "RefBase<memory::StandartInterface>",
 															"_kind": "base class specifier",
-															"_name": "Ref",
+															"_name": "RefBase<memory::StandartInterface>",
 															"access_specifier": "public",
-															"id": 1165741041,
+															"id": 1271245336,
 															"is_virtual": false,
 															"kind": "base class specifier",
-															"name": "Ref",
+															"name": "RefBase<memory::StandartInterface>",
 															"type": {
-																"_typeName": "stappler::mem_std::Ref",
-																"kind": "user_defined",
-																"target": {
-																	"name": "stappler::mem_std::Ref",
+																"_typeName": "RefBase<memory::StandartInterface>",
+																"arguments_exposed": false,
+																"kind": "template_instantiation",
+																"primary_template": {
+																	"name": "RefBase",
 																	"objects": [{
-																		"_fullName": "::stappler::mem_std::Ref",
-																		"_kind": "type alias",
-																		"_name": "Ref",
-																		"id": 3010886988,
-																		"kind": "type alias",
-																		"name": "Ref",
-																		"underlying_type": {
-																			"_typeName": "RefBase<memory::StandartInterface>",
-																			"arguments_exposed": false,
-																			"kind": "template_instantiation",
-																			"primary_template": {
+																		"_fullName": "::stappler::RefBase<typename>",
+																		"_kind": "class template",
+																		"_name": "RefBase",
+																		"class": {
+																			"_fullName": "::stappler::RefBase<typename>",
+																			"_kind": "class",
+																			"_name": "RefBase",
+																			"bases": [{
+																				"_fullName": "Interface::AllocBaseType",
+																				"_kind": "base class specifier",
+																				"_name": "Interface::AllocBaseType",
+																				"access_specifier": "public",
+																				"id": 25533212,
+																				"is_virtual": false,
+																				"kind": "base class specifier",
+																				"name": "Interface::AllocBaseType",
+																				"type": {
+																					"_typeName": "Interface::AllocBaseType",
+																					"kind": "unexposed",
+																					"name": "Interface::AllocBaseType"
+																				}
+																			}],
+																			"class_kind": "class",
+																			"id": 2191419057,
+																			"is_declaration": false,
+																			"is_definition": true,
+																			"is_final": false,
+																			"kind": "class",
+																			"name": "RefBase",
+																			"scope": {
+																				"is_templated": true,
 																				"name": "RefBase",
-																				"objects": [{
-																					"_fullName": "::stappler::RefBase<typename>",
-																					"_kind": "class template",
-																					"_name": "RefBase",
-																					"class": {
-																						"_fullName": "::stappler::RefBase<typename>",
-																						"_kind": "class",
-																						"_name": "RefBase",
-																						"bases": [{
-																							"_fullName": "Interface::AllocBaseType",
-																							"_kind": "base class specifier",
-																							"_name": "Interface::AllocBaseType",
-																							"access_specifier": "public",
-																							"id": 25533212,
-																							"is_virtual": false,
-																							"kind": "base class specifier",
-																							"name": "Interface::AllocBaseType",
-																							"type": {
-																								"_typeName": "Interface::AllocBaseType",
-																								"kind": "unexposed",
-																								"name": "Interface::AllocBaseType"
-																							}
-																						}],
-																						"class_kind": "class",
-																						"id": 2191419057,
-																						"is_declaration": false,
-																						"is_definition": true,
-																						"is_final": false,
-																						"kind": "class",
-																						"name": "RefBase",
-																						"scope": {
-																							"is_templated": true,
-																							"name": "RefBase",
-																							"template_parameters": [{
-																								"_fullName": "Interface",
-																								"_kind": "template type parameter",
-																								"_name": "Interface",
-																								"id": 2255344761,
-																								"is_variadic": false,
-																								"keyword": "typename",
-																								"kind": "template type parameter",
-																								"name": "Interface"
-																							}]
-																						},
-																						"semantic_scope": ""
-																					},
-																					"id": 2191419057,
-																					"kind": "class template",
-																					"name": "RefBase",
-																					"parameters": [{
-																						"_fullName": "Interface",
-																						"_kind": "template type parameter",
-																						"_name": "Interface",
-																						"id": 2255344761,
-																						"is_variadic": false,
-																						"keyword": "typename",
-																						"kind": "template type parameter",
-																						"name": "Interface"
-																					}],
-																					"scope":  {
-																						"is_templated": true,
-																						"name": "RefBase",
-																						"template_parameters": [{
-																							"_fullName": "Interface",
-																							"_kind": "template type parameter",
-																							"_name": "Interface",
-																							"id": 2255344761,
-																							"is_variadic": false,
-																							"keyword": "typename",
-																							"kind": "template type parameter",
-																							"name": "Interface"
-																						}]
-																					}
+																				"template_parameters": [{
+																					"_fullName": "Interface",
+																					"_kind": "template type parameter",
+																					"_name": "Interface",
+																					"id": 2255344761,
+																					"is_variadic": false,
+																					"keyword": "typename",
+																					"kind": "template type parameter",
+																					"name": "Interface"
 																				}]
 																			},
-																			"unexposed_arguments": "memory::StandartInterface"
+																			"semantic_scope": ""
+																		},
+																		"id": 2191419057,
+																		"kind": "class template",
+																		"name": "RefBase",
+																		"parameters": [{
+																			"_fullName": "Interface",
+																			"_kind": "template type parameter",
+																			"_name": "Interface",
+																			"id": 2255344761,
+																			"is_variadic": false,
+																			"keyword": "typename",
+																			"kind": "template type parameter",
+																			"name": "Interface"
+																		}],
+																		"scope":  {
+																			"is_templated": true,
+																			"name": "RefBase",
+																			"template_parameters": [{
+																				"_fullName": "Interface",
+																				"_kind": "template type parameter",
+																				"_name": "Interface",
+																				"id": 2255344761,
+																				"is_variadic": false,
+																				"keyword": "typename",
+																				"kind": "template type parameter",
+																				"name": "Interface"
+																			}]
 																		}
 																	}]
-																}
+																},
+																"unexposed_arguments": "memory::StandartInterface"
+															}
+														}, {
+															"_fullName": "InterfaceObject<memory::StandartInterface>",
+															"_kind": "base class specifier",
+															"_name": "InterfaceObject<memory::StandartInterface>",
+															"access_specifier": "public",
+															"id": 2641774538,
+															"is_virtual": false,
+															"kind": "base class specifier",
+															"name": "InterfaceObject<memory::StandartInterface>",
+															"type": {
+																"_typeName": "InterfaceObject<memory::StandartInterface>",
+																"arguments_exposed": false,
+																"kind": "template_instantiation",
+																"primary_template": {
+																	"name": "InterfaceObject",
+																	"objects": [{
+																		"_fullName": "::stappler::InterfaceObject<typename>",
+																		"_kind": "class template",
+																		"_name": "InterfaceObject",
+																		"class": {
+																			"_fullName": "::stappler::InterfaceObject<typename>",
+																			"_kind": "class",
+																			"_name": "InterfaceObject",
+																			"class_kind": "struct",
+																			"id": 4021175825,
+																			"is_declaration": false,
+																			"is_definition": true,
+																			"is_final": false,
+																			"kind": "class",
+																			"name": "InterfaceObject",
+																			"scope": {
+																				"is_templated": true,
+																				"name": "InterfaceObject",
+																				"template_parameters": [{
+																					"_fullName": "InterfaceType",
+																					"_kind": "template type parameter",
+																					"_name": "InterfaceType",
+																					"id": 210942648,
+																					"is_variadic": false,
+																					"keyword": "typename",
+																					"kind": "template type parameter",
+																					"name": "InterfaceType"
+																				}]
+																			},
+																			"semantic_scope": ""
+																		},
+																		"id": 4021175825,
+																		"kind": "class template",
+																		"name": "InterfaceObject",
+																		"parameters": [{
+																			"_fullName": "InterfaceType",
+																			"_kind": "template type parameter",
+																			"_name": "InterfaceType",
+																			"id": 210942648,
+																			"is_variadic": false,
+																			"keyword": "typename",
+																			"kind": "template type parameter",
+																			"name": "InterfaceType"
+																		}],
+																		"scope":  {
+																			"is_templated": true,
+																			"name": "InterfaceObject",
+																			"template_parameters": [{
+																				"_fullName": "InterfaceType",
+																				"_kind": "template type parameter",
+																				"_name": "InterfaceType",
+																				"id": 210942648,
+																				"is_variadic": false,
+																				"keyword": "typename",
+																				"kind": "template type parameter",
+																				"name": "InterfaceType"
+																			}]
+																		}
+																	}]
+																},
+																"unexposed_arguments": "memory::StandartInterface"
 															}
 														}],
 														"class_kind": "class",
-														"id": 4177988041,
+														"id": 2912114761,
 														"is_declaration": false,
 														"is_definition": true,
 														"is_final": false,
 														"kind": "class",
-														"name": "FormatSpec",
+														"name": "TextLayout",
 														"scope": {
-															"name": "FormatSpec"
+															"name": "TextLayout"
 														},
 														"semantic_scope": ""
 													}]
@@ -2644,60 +2905,12 @@
 							"kind": "function parameter",
 							"name": "",
 							"type": {
-								"_typeName": "stappler::xenolith::Color4F const&",
+								"_typeName": "const stappler::geom::Color4F&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "stappler::xenolith::Color4F const",
-									"cv_qualifier": "const",
-									"kind": "cv_qualified",
-									"type": {
-										"_typeName": "stappler::xenolith::Color4F",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::xenolith::Color4F",
-											"objects": [{
-												"_fullName": "::stappler::xenolith::Color4F",
-												"_kind": "type alias",
-												"_name": "Color4F",
-												"id": 2730567930,
-												"kind": "type alias",
-												"name": "Color4F",
-												"underlying_type": {
-													"_typeName": "geom::Color4F",
-													"kind": "user_defined",
-													"target": {
-														"name": "geom::Color4F",
-														"objects": [{
-															"_fullName": "::stappler::geom::Color4F",
-															"_kind": "class",
-															"_name": "Color4F",
-															"attributes": [{
-																"arguments": [{
-																	"kind": "int_literal",
-																	"spelling": "16"
-																}],
-																"is_variadic": false,
-																"kind": "alignas_",
-																"name": "alignas"
-															}],
-															"class_kind": "struct",
-															"comment": "\nRGBA color composed of 4 floats.\n",
-															"id": 1425630790,
-															"is_declaration": false,
-															"is_definition": true,
-															"is_final": false,
-															"kind": "class",
-															"name": "Color4F",
-															"scope": {
-																"name": "Color4F"
-															},
-															"semantic_scope": ""
-														}]
-													}
-												}
-											}]
-										}
-									}
+									"_typeName": "const stappler::geom::Color4F",
+									"kind": "unexposed",
+									"name": "const stappler::geom::Color4F"
 								},
 								"reference_kind": "lvalue"
 							}
@@ -2771,7 +2984,7 @@
 							"unexposed_arguments": "stappler::xenolith::basic2d::LabelResult"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::basic2d::Label::FormatSpec*,stappler::xenolith::Color4F const&)",
+						"signature": "(stappler::xenolith::basic2d::Label::TextLayout*,const stappler::geom::Color4F&)",
 						"storage_class": [
 							"static"
 						]
@@ -3236,52 +3449,37 @@
 												"target": {
 													"name": "font::TextAlign",
 													"objects": [{
-														"_fullName": "::stappler::xenolith::font::TextAlign",
-														"_kind": "type alias",
+														"_fullName": "::stappler::font::TextAlign",
+														"_kind": "enum",
 														"_name": "TextAlign",
-														"id": 1964769504,
-														"kind": "type alias",
+														"has_explicit_type": true,
+														"id": 3341365647,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_scoped": true,
+														"kind": "enum",
 														"name": "TextAlign",
+														"scope": {
+															"name": "TextAlign"
+														},
+														"semantic_scope": "",
 														"underlying_type": {
-															"_typeName": "geom::TextAlign",
+															"_typeName": "EnumSize",
 															"kind": "user_defined",
 															"target": {
-																"name": "geom::TextAlign",
+																"name": "EnumSize",
 																"objects": [{
-																	"_fullName": "::stappler::geom::TextAlign",
-																	"_kind": "enum",
-																	"_name": "TextAlign",
-																	"has_explicit_type": true,
-																	"id": 251367584,
-																	"is_declaration": false,
-																	"is_definition": true,
-																	"is_scoped": true,
-																	"kind": "enum",
-																	"name": "TextAlign",
-																	"scope": {
-																		"name": "TextAlign"
-																	},
-																	"semantic_scope": "",
+																	"_fullName": "::stappler::font::EnumSize",
+																	"_kind": "type alias",
+																	"_name": "EnumSize",
+																	"id": 856387209,
+																	"kind": "type alias",
+																	"name": "EnumSize",
 																	"underlying_type": {
-																		"_typeName": "EnumSize",
+																		"_typeName": "uint8_t",
 																		"kind": "user_defined",
 																		"target": {
-																			"name": "EnumSize",
-																			"objects": [{
-																				"_fullName": "::stappler::geom::EnumSize",
-																				"_kind": "type alias",
-																				"_name": "EnumSize",
-																				"id": 3885594728,
-																				"kind": "type alias",
-																				"name": "EnumSize",
-																				"underlying_type": {
-																					"_typeName": "uint8_t",
-																					"kind": "user_defined",
-																					"target": {
-																						"name": "uint8_t"
-																					}
-																				}
-																			}]
+																			"name": "uint8_t"
 																		}
 																	}
 																}]
@@ -3315,52 +3513,37 @@
 											"target": {
 												"name": "font::TextAlign",
 												"objects": [{
-													"_fullName": "::stappler::xenolith::font::TextAlign",
-													"_kind": "type alias",
+													"_fullName": "::stappler::font::TextAlign",
+													"_kind": "enum",
 													"_name": "TextAlign",
-													"id": 1964769504,
-													"kind": "type alias",
+													"has_explicit_type": true,
+													"id": 3341365647,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_scoped": true,
+													"kind": "enum",
 													"name": "TextAlign",
+													"scope": {
+														"name": "TextAlign"
+													},
+													"semantic_scope": "",
 													"underlying_type": {
-														"_typeName": "geom::TextAlign",
+														"_typeName": "EnumSize",
 														"kind": "user_defined",
 														"target": {
-															"name": "geom::TextAlign",
+															"name": "EnumSize",
 															"objects": [{
-																"_fullName": "::stappler::geom::TextAlign",
-																"_kind": "enum",
-																"_name": "TextAlign",
-																"has_explicit_type": true,
-																"id": 251367584,
-																"is_declaration": false,
-																"is_definition": true,
-																"is_scoped": true,
-																"kind": "enum",
-																"name": "TextAlign",
-																"scope": {
-																	"name": "TextAlign"
-																},
-																"semantic_scope": "",
+																"_fullName": "::stappler::font::EnumSize",
+																"_kind": "type alias",
+																"_name": "EnumSize",
+																"id": 856387209,
+																"kind": "type alias",
+																"name": "EnumSize",
 																"underlying_type": {
-																	"_typeName": "EnumSize",
+																	"_typeName": "uint8_t",
 																	"kind": "user_defined",
 																	"target": {
-																		"name": "EnumSize",
-																		"objects": [{
-																			"_fullName": "::stappler::geom::EnumSize",
-																			"_kind": "type alias",
-																			"_name": "EnumSize",
-																			"id": 3885594728,
-																			"kind": "type alias",
-																			"name": "EnumSize",
-																			"underlying_type": {
-																				"_typeName": "uint8_t",
-																				"kind": "user_defined",
-																				"target": {
-																					"name": "uint8_t"
-																				}
-																			}
-																		}]
+																		"name": "uint8_t"
 																	}
 																}
 															}]
@@ -4057,52 +4240,37 @@
 												"target": {
 													"name": "font::TextAlign",
 													"objects": [{
-														"_fullName": "::stappler::xenolith::font::TextAlign",
-														"_kind": "type alias",
+														"_fullName": "::stappler::font::TextAlign",
+														"_kind": "enum",
 														"_name": "TextAlign",
-														"id": 1964769504,
-														"kind": "type alias",
+														"has_explicit_type": true,
+														"id": 3341365647,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_scoped": true,
+														"kind": "enum",
 														"name": "TextAlign",
+														"scope": {
+															"name": "TextAlign"
+														},
+														"semantic_scope": "",
 														"underlying_type": {
-															"_typeName": "geom::TextAlign",
+															"_typeName": "EnumSize",
 															"kind": "user_defined",
 															"target": {
-																"name": "geom::TextAlign",
+																"name": "EnumSize",
 																"objects": [{
-																	"_fullName": "::stappler::geom::TextAlign",
-																	"_kind": "enum",
-																	"_name": "TextAlign",
-																	"has_explicit_type": true,
-																	"id": 251367584,
-																	"is_declaration": false,
-																	"is_definition": true,
-																	"is_scoped": true,
-																	"kind": "enum",
-																	"name": "TextAlign",
-																	"scope": {
-																		"name": "TextAlign"
-																	},
-																	"semantic_scope": "",
+																	"_fullName": "::stappler::font::EnumSize",
+																	"_kind": "type alias",
+																	"_name": "EnumSize",
+																	"id": 856387209,
+																	"kind": "type alias",
+																	"name": "EnumSize",
 																	"underlying_type": {
-																		"_typeName": "EnumSize",
+																		"_typeName": "uint8_t",
 																		"kind": "user_defined",
 																		"target": {
-																			"name": "EnumSize",
-																			"objects": [{
-																				"_fullName": "::stappler::geom::EnumSize",
-																				"_kind": "type alias",
-																				"_name": "EnumSize",
-																				"id": 3885594728,
-																				"kind": "type alias",
-																				"name": "EnumSize",
-																				"underlying_type": {
-																					"_typeName": "uint8_t",
-																					"kind": "user_defined",
-																					"target": {
-																						"name": "uint8_t"
-																					}
-																				}
-																			}]
+																			"name": "uint8_t"
 																		}
 																	}
 																}]
@@ -4136,52 +4304,37 @@
 											"target": {
 												"name": "font::TextAlign",
 												"objects": [{
-													"_fullName": "::stappler::xenolith::font::TextAlign",
-													"_kind": "type alias",
+													"_fullName": "::stappler::font::TextAlign",
+													"_kind": "enum",
 													"_name": "TextAlign",
-													"id": 1964769504,
-													"kind": "type alias",
+													"has_explicit_type": true,
+													"id": 3341365647,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_scoped": true,
+													"kind": "enum",
 													"name": "TextAlign",
+													"scope": {
+														"name": "TextAlign"
+													},
+													"semantic_scope": "",
 													"underlying_type": {
-														"_typeName": "geom::TextAlign",
+														"_typeName": "EnumSize",
 														"kind": "user_defined",
 														"target": {
-															"name": "geom::TextAlign",
+															"name": "EnumSize",
 															"objects": [{
-																"_fullName": "::stappler::geom::TextAlign",
-																"_kind": "enum",
-																"_name": "TextAlign",
-																"has_explicit_type": true,
-																"id": 251367584,
-																"is_declaration": false,
-																"is_definition": true,
-																"is_scoped": true,
-																"kind": "enum",
-																"name": "TextAlign",
-																"scope": {
-																	"name": "TextAlign"
-																},
-																"semantic_scope": "",
+																"_fullName": "::stappler::font::EnumSize",
+																"_kind": "type alias",
+																"_name": "EnumSize",
+																"id": 856387209,
+																"kind": "type alias",
+																"name": "EnumSize",
 																"underlying_type": {
-																	"_typeName": "EnumSize",
+																	"_typeName": "uint8_t",
 																	"kind": "user_defined",
 																	"target": {
-																		"name": "EnumSize",
-																		"objects": [{
-																			"_fullName": "::stappler::geom::EnumSize",
-																			"_kind": "type alias",
-																			"_name": "EnumSize",
-																			"id": 3885594728,
-																			"kind": "type alias",
-																			"name": "EnumSize",
-																			"underlying_type": {
-																				"_typeName": "uint8_t",
-																				"kind": "user_defined",
-																				"target": {
-																					"name": "uint8_t"
-																				}
-																			}
-																		}]
+																		"name": "uint8_t"
 																	}
 																}
 															}]
@@ -4657,52 +4810,37 @@
 												"target": {
 													"name": "font::TextAlign",
 													"objects": [{
-														"_fullName": "::stappler::xenolith::font::TextAlign",
-														"_kind": "type alias",
+														"_fullName": "::stappler::font::TextAlign",
+														"_kind": "enum",
 														"_name": "TextAlign",
-														"id": 1964769504,
-														"kind": "type alias",
+														"has_explicit_type": true,
+														"id": 3341365647,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_scoped": true,
+														"kind": "enum",
 														"name": "TextAlign",
+														"scope": {
+															"name": "TextAlign"
+														},
+														"semantic_scope": "",
 														"underlying_type": {
-															"_typeName": "geom::TextAlign",
+															"_typeName": "EnumSize",
 															"kind": "user_defined",
 															"target": {
-																"name": "geom::TextAlign",
+																"name": "EnumSize",
 																"objects": [{
-																	"_fullName": "::stappler::geom::TextAlign",
-																	"_kind": "enum",
-																	"_name": "TextAlign",
-																	"has_explicit_type": true,
-																	"id": 251367584,
-																	"is_declaration": false,
-																	"is_definition": true,
-																	"is_scoped": true,
-																	"kind": "enum",
-																	"name": "TextAlign",
-																	"scope": {
-																		"name": "TextAlign"
-																	},
-																	"semantic_scope": "",
+																	"_fullName": "::stappler::font::EnumSize",
+																	"_kind": "type alias",
+																	"_name": "EnumSize",
+																	"id": 856387209,
+																	"kind": "type alias",
+																	"name": "EnumSize",
 																	"underlying_type": {
-																		"_typeName": "EnumSize",
+																		"_typeName": "uint8_t",
 																		"kind": "user_defined",
 																		"target": {
-																			"name": "EnumSize",
-																			"objects": [{
-																				"_fullName": "::stappler::geom::EnumSize",
-																				"_kind": "type alias",
-																				"_name": "EnumSize",
-																				"id": 3885594728,
-																				"kind": "type alias",
-																				"name": "EnumSize",
-																				"underlying_type": {
-																					"_typeName": "uint8_t",
-																					"kind": "user_defined",
-																					"target": {
-																						"name": "uint8_t"
-																					}
-																				}
-																			}]
+																			"name": "uint8_t"
 																		}
 																	}
 																}]
@@ -4736,52 +4874,37 @@
 											"target": {
 												"name": "font::TextAlign",
 												"objects": [{
-													"_fullName": "::stappler::xenolith::font::TextAlign",
-													"_kind": "type alias",
+													"_fullName": "::stappler::font::TextAlign",
+													"_kind": "enum",
 													"_name": "TextAlign",
-													"id": 1964769504,
-													"kind": "type alias",
+													"has_explicit_type": true,
+													"id": 3341365647,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_scoped": true,
+													"kind": "enum",
 													"name": "TextAlign",
+													"scope": {
+														"name": "TextAlign"
+													},
+													"semantic_scope": "",
 													"underlying_type": {
-														"_typeName": "geom::TextAlign",
+														"_typeName": "EnumSize",
 														"kind": "user_defined",
 														"target": {
-															"name": "geom::TextAlign",
+															"name": "EnumSize",
 															"objects": [{
-																"_fullName": "::stappler::geom::TextAlign",
-																"_kind": "enum",
-																"_name": "TextAlign",
-																"has_explicit_type": true,
-																"id": 251367584,
-																"is_declaration": false,
-																"is_definition": true,
-																"is_scoped": true,
-																"kind": "enum",
-																"name": "TextAlign",
-																"scope": {
-																	"name": "TextAlign"
-																},
-																"semantic_scope": "",
+																"_fullName": "::stappler::font::EnumSize",
+																"_kind": "type alias",
+																"_name": "EnumSize",
+																"id": 856387209,
+																"kind": "type alias",
+																"name": "EnumSize",
 																"underlying_type": {
-																	"_typeName": "EnumSize",
+																	"_typeName": "uint8_t",
 																	"kind": "user_defined",
 																	"target": {
-																		"name": "EnumSize",
-																		"objects": [{
-																			"_fullName": "::stappler::geom::EnumSize",
-																			"_kind": "type alias",
-																			"_name": "EnumSize",
-																			"id": 3885594728,
-																			"kind": "type alias",
-																			"name": "EnumSize",
-																			"underlying_type": {
-																				"_typeName": "uint8_t",
-																				"kind": "user_defined",
-																				"target": {
-																					"name": "uint8_t"
-																				}
-																			}
-																		}]
+																		"name": "uint8_t"
 																	}
 																}
 															}]
@@ -4965,12 +5088,12 @@
 						"semantic_scope": "",
 						"signature": "()"
 					}, {
-						"_fullName": "::stappler::xenolith::basic2d::Label::onTransformDirty(stappler::xenolith::Mat4 const&)",
+						"_fullName": "::stappler::xenolith::basic2d::Label::onTransformDirty(const stappler::geom::Mat4&)",
 						"_kind": "member function",
 						"_name": "onTransformDirty",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 1132300259,
+						"id": 2319150484,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -4988,60 +5111,12 @@
 							"kind": "function parameter",
 							"name": "",
 							"type": {
-								"_typeName": "stappler::xenolith::Mat4 const&",
+								"_typeName": "const stappler::geom::Mat4&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "stappler::xenolith::Mat4 const",
-									"cv_qualifier": "const",
-									"kind": "cv_qualified",
-									"type": {
-										"_typeName": "stappler::xenolith::Mat4",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::xenolith::Mat4",
-											"objects": [{
-												"_fullName": "::stappler::xenolith::Mat4",
-												"_kind": "type alias",
-												"_name": "Mat4",
-												"id": 905241342,
-												"kind": "type alias",
-												"name": "Mat4",
-												"underlying_type": {
-													"_typeName": "geom::Mat4",
-													"kind": "user_defined",
-													"target": {
-														"name": "geom::Mat4",
-														"objects": [{
-															"_fullName": "::stappler::geom::Mat4",
-															"_kind": "class",
-															"_name": "Mat4",
-															"attributes": [{
-																"arguments": [{
-																	"kind": "int_literal",
-																	"spelling": "16"
-																}],
-																"is_variadic": false,
-																"kind": "alignas_",
-																"name": "alignas"
-															}],
-															"class_kind": "class",
-															"comment": "\nDefines a 4 x 4 floating point matrix representing a 3D transformation.\n\nVectors are treated as columns, resulting in a matrix that is represented as follows,\nwhere x, y and z are the translation components of the matrix:\n\n    1  0  0  x\n    0  1  0  y\n    0  0  1  z\n    0  0  0  1\n\nThis matrix class is directly compatible with OpenGL since its elements are\nlaid out in memory exactly as they are expected by OpenGL.\nThe matrix uses column-major format such that array indices increase down column first.\nSince matrix multiplication is not commutative, multiplication must be done in the\ncorrect order when combining transformations. Suppose we have a translation\nmatrix T and a rotation matrix R. To first rotate an object around the origin\nand then translate it, you would multiply the two matrices as TR.\n\nLikewise, to first translate the object and then rotate it, you would do RT.\nSo generally, matrices must be multiplied in the reverse order in which you\nwant the transformations to take place (this also applies to\nthe scale, rotate, and translate methods below; these methods are convenience\nmethods for post-multiplying by a matrix representing a scale, rotation, or translation).\n\nIn the case of repeated local transformations (i.e. rotate around the Z-axis by 0.76 radians,\nthen translate by 2.1 along the X-axis, then ...), it is better to use the Transform class\n(which is optimized for that kind of usage).\n\n@see Transform\n",
-															"id": 3473668624,
-															"is_declaration": false,
-															"is_definition": true,
-															"is_final": false,
-															"kind": "class",
-															"name": "Mat4",
-															"scope": {
-																"name": "Mat4"
-															},
-															"semantic_scope": ""
-														}]
-													}
-												}
-											}]
-										}
-									}
+									"_typeName": "const stappler::geom::Mat4",
+									"kind": "unexposed",
+									"name": "const stappler::geom::Mat4"
 								},
 								"reference_kind": "lvalue"
 							}
@@ -5053,14 +5128,14 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::Mat4 const&)"
+						"signature": "(const stappler::geom::Mat4&)"
 					}, {
-						"_fullName": "::stappler::xenolith::basic2d::Label::onGlobalTransformDirty(stappler::xenolith::Mat4 const&)",
+						"_fullName": "::stappler::xenolith::basic2d::Label::onGlobalTransformDirty(const stappler::geom::Mat4&)",
 						"_kind": "member function",
 						"_name": "onGlobalTransformDirty",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 2010809961,
+						"id": 2317485972,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -5078,60 +5153,12 @@
 							"kind": "function parameter",
 							"name": "",
 							"type": {
-								"_typeName": "stappler::xenolith::Mat4 const&",
+								"_typeName": "const stappler::geom::Mat4&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "stappler::xenolith::Mat4 const",
-									"cv_qualifier": "const",
-									"kind": "cv_qualified",
-									"type": {
-										"_typeName": "stappler::xenolith::Mat4",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::xenolith::Mat4",
-											"objects": [{
-												"_fullName": "::stappler::xenolith::Mat4",
-												"_kind": "type alias",
-												"_name": "Mat4",
-												"id": 905241342,
-												"kind": "type alias",
-												"name": "Mat4",
-												"underlying_type": {
-													"_typeName": "geom::Mat4",
-													"kind": "user_defined",
-													"target": {
-														"name": "geom::Mat4",
-														"objects": [{
-															"_fullName": "::stappler::geom::Mat4",
-															"_kind": "class",
-															"_name": "Mat4",
-															"attributes": [{
-																"arguments": [{
-																	"kind": "int_literal",
-																	"spelling": "16"
-																}],
-																"is_variadic": false,
-																"kind": "alignas_",
-																"name": "alignas"
-															}],
-															"class_kind": "class",
-															"comment": "\nDefines a 4 x 4 floating point matrix representing a 3D transformation.\n\nVectors are treated as columns, resulting in a matrix that is represented as follows,\nwhere x, y and z are the translation components of the matrix:\n\n    1  0  0  x\n    0  1  0  y\n    0  0  1  z\n    0  0  0  1\n\nThis matrix class is directly compatible with OpenGL since its elements are\nlaid out in memory exactly as they are expected by OpenGL.\nThe matrix uses column-major format such that array indices increase down column first.\nSince matrix multiplication is not commutative, multiplication must be done in the\ncorrect order when combining transformations. Suppose we have a translation\nmatrix T and a rotation matrix R. To first rotate an object around the origin\nand then translate it, you would multiply the two matrices as TR.\n\nLikewise, to first translate the object and then rotate it, you would do RT.\nSo generally, matrices must be multiplied in the reverse order in which you\nwant the transformations to take place (this also applies to\nthe scale, rotate, and translate methods below; these methods are convenience\nmethods for post-multiplying by a matrix representing a scale, rotation, or translation).\n\nIn the case of repeated local transformations (i.e. rotate around the Z-axis by 0.76 radians,\nthen translate by 2.1 along the X-axis, then ...), it is better to use the Transform class\n(which is optimized for that kind of usage).\n\n@see Transform\n",
-															"id": 3473668624,
-															"is_declaration": false,
-															"is_definition": true,
-															"is_final": false,
-															"kind": "class",
-															"name": "Mat4",
-															"scope": {
-																"name": "Mat4"
-															},
-															"semantic_scope": ""
-														}]
-													}
-												}
-											}]
-										}
-									}
+									"_typeName": "const stappler::geom::Mat4",
+									"kind": "unexposed",
+									"name": "const stappler::geom::Mat4"
 								},
 								"reference_kind": "lvalue"
 							}
@@ -5143,7 +5170,7 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::Mat4 const&)"
+						"signature": "(const stappler::geom::Mat4&)"
 					}, {
 						"_fullName": "::stappler::xenolith::basic2d::Label::setAdjustValue(uint8_t)",
 						"_kind": "member function",
@@ -5312,35 +5339,35 @@
 						}],
 						"ref_qualifier": "none",
 						"return_type": {
-							"_typeName": "LineSpec",
+							"_typeName": "LineLayout",
 							"kind": "user_defined",
 							"target": {
-								"name": "LineSpec",
+								"name": "LineLayout",
 								"objects": [{
-									"_fullName": "::stappler::xenolith::basic2d::Label::LineSpec",
+									"_fullName": "::stappler::xenolith::basic2d::Label::LineLayout",
 									"_kind": "type alias",
-									"_name": "LineSpec",
-									"id": 3205427129,
+									"_name": "LineLayout",
+									"id": 1100974338,
 									"kind": "type alias",
-									"name": "LineSpec",
+									"name": "LineLayout",
 									"underlying_type": {
-										"_typeName": "font::LineSpec",
+										"_typeName": "font::LineLayoutData",
 										"kind": "user_defined",
 										"target": {
-											"name": "font::LineSpec",
+											"name": "font::LineLayoutData",
 											"objects": [{
-												"_fullName": "::stappler::xenolith::font::LineSpec",
+												"_fullName": "::stappler::font::LineLayoutData",
 												"_kind": "class",
-												"_name": "LineSpec",
+												"_name": "LineLayoutData",
 												"class_kind": "struct",
-												"id": 179370706,
+												"id": 3550766366,
 												"is_declaration": false,
 												"is_definition": true,
-												"is_final": false,
+												"is_final": true,
 												"kind": "class",
-												"name": "LineSpec",
+												"name": "LineLayoutData",
 												"scope": {
-													"name": "LineSpec"
+													"name": "LineLayoutData"
 												},
 												"semantic_scope": ""
 											}]
@@ -5432,42 +5459,9 @@
 						}],
 						"ref_qualifier": "none",
 						"return_type": {
-							"_typeName": "stappler::xenolith::Vec2",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::Vec2",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::Vec2",
-									"_kind": "type alias",
-									"_name": "Vec2",
-									"id": 1910638286,
-									"kind": "type alias",
-									"name": "Vec2",
-									"underlying_type": {
-										"_typeName": "geom::Vec2",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::Vec2",
-											"objects": [{
-												"_fullName": "::stappler::geom::Vec2",
-												"_kind": "class",
-												"_name": "Vec2",
-												"class_kind": "class",
-												"id": 16661423,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "Vec2",
-												"scope": {
-													"name": "Vec2"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::Vec2",
+							"kind": "unexposed",
+							"name": "stappler::geom::Vec2"
 						},
 						"semantic_scope": "",
 						"signature": "(uint32_t,bool) const"
@@ -5488,52 +5482,19 @@
 						"name": "getCursorOrigin",
 						"ref_qualifier": "none",
 						"return_type": {
-							"_typeName": "stappler::xenolith::Vec2",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::Vec2",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::Vec2",
-									"_kind": "type alias",
-									"_name": "Vec2",
-									"id": 1910638286,
-									"kind": "type alias",
-									"name": "Vec2",
-									"underlying_type": {
-										"_typeName": "geom::Vec2",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::Vec2",
-											"objects": [{
-												"_fullName": "::stappler::geom::Vec2",
-												"_kind": "class",
-												"_name": "Vec2",
-												"class_kind": "class",
-												"id": 16661423,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "Vec2",
-												"scope": {
-													"name": "Vec2"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::Vec2",
+							"kind": "unexposed",
+							"name": "stappler::geom::Vec2"
 						},
 						"semantic_scope": "",
 						"signature": "() const"
 					}, {
-						"_fullName": "::stappler::xenolith::basic2d::Label::getCharIndex(stappler::xenolith::Vec2 const&,FormatSpec::SelectMode) const",
+						"_fullName": "::stappler::xenolith::basic2d::Label::getCharIndex(const stappler::geom::Vec2&,font::CharSelectMode) const",
 						"_kind": "member function",
 						"_name": "getCharIndex",
 						"body_kind": "declaration",
 						"cv_qualifier": "const",
-						"id": 2665438721,
+						"id": 4114873760,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -5550,50 +5511,12 @@
 							"kind": "function parameter",
 							"name": "",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2 const&",
+								"_typeName": "const stappler::geom::Vec2&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "stappler::xenolith::Vec2 const",
-									"cv_qualifier": "const",
-									"kind": "cv_qualified",
-									"type": {
-										"_typeName": "stappler::xenolith::Vec2",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::xenolith::Vec2",
-											"objects": [{
-												"_fullName": "::stappler::xenolith::Vec2",
-												"_kind": "type alias",
-												"_name": "Vec2",
-												"id": 1910638286,
-												"kind": "type alias",
-												"name": "Vec2",
-												"underlying_type": {
-													"_typeName": "geom::Vec2",
-													"kind": "user_defined",
-													"target": {
-														"name": "geom::Vec2",
-														"objects": [{
-															"_fullName": "::stappler::geom::Vec2",
-															"_kind": "class",
-															"_name": "Vec2",
-															"class_kind": "class",
-															"id": 16661423,
-															"is_declaration": false,
-															"is_definition": true,
-															"is_final": false,
-															"kind": "class",
-															"name": "Vec2",
-															"scope": {
-																"name": "Vec2"
-															},
-															"semantic_scope": ""
-														}]
-													}
-												}
-											}]
-										}
-									}
+									"_typeName": "const stappler::geom::Vec2",
+									"kind": "unexposed",
+									"name": "const stappler::geom::Vec2"
 								},
 								"reference_kind": "lvalue"
 							}
@@ -5604,7 +5527,13 @@
 							"default_value": {
 								"expression": [{
 									"kind": "identifier",
-									"spelling": "FormatSpec"
+									"spelling": "font"
+								}, {
+									"kind": "punctuation",
+									"spelling": "::"
+								}, {
+									"kind": "identifier",
+									"spelling": "CharSelectMode"
 								}, {
 									"kind": "punctuation",
 									"spelling": "::"
@@ -5614,25 +5543,28 @@
 								}],
 								"kind": "unexposed",
 								"type": {
-									"_typeName": "FormatSpec::SelectMode",
+									"_typeName": "font::CharSelectMode",
 									"kind": "user_defined",
 									"target": {
-										"name": "FormatSpec::SelectMode",
+										"name": "font::CharSelectMode",
 										"objects": [{
-											"_fullName": "::stappler::xenolith::font::FormatSpec::SelectMode",
+											"_fullName": "::stappler::font::CharSelectMode",
 											"_kind": "enum",
-											"_name": "SelectMode",
+											"_name": "CharSelectMode",
 											"has_explicit_type": false,
-											"id": 456697200,
+											"id": 332500613,
 											"is_declaration": false,
 											"is_definition": true,
-											"is_scoped": false,
+											"is_scoped": true,
 											"kind": "enum",
-											"name": "SelectMode",
+											"name": "CharSelectMode",
+											"scope": {
+												"name": "CharSelectMode"
+											},
 											"semantic_scope": "",
 											"underlying_type": {
-												"_typeName": "unsigned int",
-												"builtin_type_kind": "unsigned int",
+												"_typeName": "int",
+												"builtin_type_kind": "int",
 												"kind": "builtin"
 											}
 										}]
@@ -5643,25 +5575,28 @@
 							"kind": "function parameter",
 							"name": "",
 							"type": {
-								"_typeName": "FormatSpec::SelectMode",
+								"_typeName": "font::CharSelectMode",
 								"kind": "user_defined",
 								"target": {
-									"name": "FormatSpec::SelectMode",
+									"name": "font::CharSelectMode",
 									"objects": [{
-										"_fullName": "::stappler::xenolith::font::FormatSpec::SelectMode",
+										"_fullName": "::stappler::font::CharSelectMode",
 										"_kind": "enum",
-										"_name": "SelectMode",
+										"_name": "CharSelectMode",
 										"has_explicit_type": false,
-										"id": 456697200,
+										"id": 332500613,
 										"is_declaration": false,
 										"is_definition": true,
-										"is_scoped": false,
+										"is_scoped": true,
 										"kind": "enum",
-										"name": "SelectMode",
+										"name": "CharSelectMode",
+										"scope": {
+											"name": "CharSelectMode"
+										},
 										"semantic_scope": "",
 										"underlying_type": {
-											"_typeName": "unsigned int",
-											"builtin_type_kind": "unsigned int",
+											"_typeName": "int",
+											"builtin_type_kind": "int",
 											"kind": "builtin"
 										}
 									}]
@@ -5679,7 +5614,7 @@
 							"unexposed_arguments": "uint32_t, bool"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::Vec2 const&,FormatSpec::SelectMode) const"
+						"signature": "(const stappler::geom::Vec2&,font::CharSelectMode) const"
 					}, {
 						"_fullName": "::stappler::xenolith::basic2d::Label::selectWord(uint32_t) const",
 						"_kind": "member function",
@@ -5914,12 +5849,12 @@
 						"semantic_scope": "",
 						"signature": "() const"
 					}, {
-						"_fullName": "::stappler::xenolith::basic2d::Label::setSelectionColor(stappler::xenolith::Color4F const&)",
+						"_fullName": "::stappler::xenolith::basic2d::Label::setSelectionColor(const stappler::geom::Color4F&)",
 						"_kind": "member function",
 						"_name": "setSelectionColor",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 2452634330,
+						"id": 1943162283,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -5936,60 +5871,12 @@
 							"kind": "function parameter",
 							"name": "",
 							"type": {
-								"_typeName": "stappler::xenolith::Color4F const&",
+								"_typeName": "const stappler::geom::Color4F&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "stappler::xenolith::Color4F const",
-									"cv_qualifier": "const",
-									"kind": "cv_qualified",
-									"type": {
-										"_typeName": "stappler::xenolith::Color4F",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::xenolith::Color4F",
-											"objects": [{
-												"_fullName": "::stappler::xenolith::Color4F",
-												"_kind": "type alias",
-												"_name": "Color4F",
-												"id": 2730567930,
-												"kind": "type alias",
-												"name": "Color4F",
-												"underlying_type": {
-													"_typeName": "geom::Color4F",
-													"kind": "user_defined",
-													"target": {
-														"name": "geom::Color4F",
-														"objects": [{
-															"_fullName": "::stappler::geom::Color4F",
-															"_kind": "class",
-															"_name": "Color4F",
-															"attributes": [{
-																"arguments": [{
-																	"kind": "int_literal",
-																	"spelling": "16"
-																}],
-																"is_variadic": false,
-																"kind": "alignas_",
-																"name": "alignas"
-															}],
-															"class_kind": "struct",
-															"comment": "\nRGBA color composed of 4 floats.\n",
-															"id": 1425630790,
-															"is_declaration": false,
-															"is_definition": true,
-															"is_final": false,
-															"kind": "class",
-															"name": "Color4F",
-															"scope": {
-																"name": "Color4F"
-															},
-															"semantic_scope": ""
-														}]
-													}
-												}
-											}]
-										}
-									}
+									"_typeName": "const stappler::geom::Color4F",
+									"kind": "unexposed",
+									"name": "const stappler::geom::Color4F"
 								},
 								"reference_kind": "lvalue"
 							}
@@ -6001,7 +5888,7 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::Color4F const&)"
+						"signature": "(const stappler::geom::Color4F&)"
 					}, {
 						"_fullName": "::stappler::xenolith::basic2d::Label::getSelectionColor() const",
 						"_kind": "member function",
@@ -6019,52 +5906,9 @@
 						"name": "getSelectionColor",
 						"ref_qualifier": "none",
 						"return_type": {
-							"_typeName": "stappler::xenolith::Color4F",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::Color4F",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::Color4F",
-									"_kind": "type alias",
-									"_name": "Color4F",
-									"id": 2730567930,
-									"kind": "type alias",
-									"name": "Color4F",
-									"underlying_type": {
-										"_typeName": "geom::Color4F",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::Color4F",
-											"objects": [{
-												"_fullName": "::stappler::geom::Color4F",
-												"_kind": "class",
-												"_name": "Color4F",
-												"attributes": [{
-													"arguments": [{
-														"kind": "int_literal",
-														"spelling": "16"
-													}],
-													"is_variadic": false,
-													"kind": "alignas_",
-													"name": "alignas"
-												}],
-												"class_kind": "struct",
-												"comment": "\nRGBA color composed of 4 floats.\n",
-												"id": 1425630790,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "Color4F",
-												"scope": {
-													"name": "Color4F"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::Color4F",
+							"kind": "unexposed",
+							"name": "stappler::geom::Color4F"
 						},
 						"semantic_scope": "",
 						"signature": "() const"
@@ -6164,12 +6008,12 @@
 						"semantic_scope": "",
 						"signature": "() const"
 					}, {
-						"_fullName": "::stappler::xenolith::basic2d::Label::setMarkedColor(stappler::xenolith::Color4F const&)",
+						"_fullName": "::stappler::xenolith::basic2d::Label::setMarkedColor(const stappler::geom::Color4F&)",
 						"_kind": "member function",
 						"_name": "setMarkedColor",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 308711908,
+						"id": 3327110046,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -6186,60 +6030,12 @@
 							"kind": "function parameter",
 							"name": "",
 							"type": {
-								"_typeName": "stappler::xenolith::Color4F const&",
+								"_typeName": "const stappler::geom::Color4F&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "stappler::xenolith::Color4F const",
-									"cv_qualifier": "const",
-									"kind": "cv_qualified",
-									"type": {
-										"_typeName": "stappler::xenolith::Color4F",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::xenolith::Color4F",
-											"objects": [{
-												"_fullName": "::stappler::xenolith::Color4F",
-												"_kind": "type alias",
-												"_name": "Color4F",
-												"id": 2730567930,
-												"kind": "type alias",
-												"name": "Color4F",
-												"underlying_type": {
-													"_typeName": "geom::Color4F",
-													"kind": "user_defined",
-													"target": {
-														"name": "geom::Color4F",
-														"objects": [{
-															"_fullName": "::stappler::geom::Color4F",
-															"_kind": "class",
-															"_name": "Color4F",
-															"attributes": [{
-																"arguments": [{
-																	"kind": "int_literal",
-																	"spelling": "16"
-																}],
-																"is_variadic": false,
-																"kind": "alignas_",
-																"name": "alignas"
-															}],
-															"class_kind": "struct",
-															"comment": "\nRGBA color composed of 4 floats.\n",
-															"id": 1425630790,
-															"is_declaration": false,
-															"is_definition": true,
-															"is_final": false,
-															"kind": "class",
-															"name": "Color4F",
-															"scope": {
-																"name": "Color4F"
-															},
-															"semantic_scope": ""
-														}]
-													}
-												}
-											}]
-										}
-									}
+									"_typeName": "const stappler::geom::Color4F",
+									"kind": "unexposed",
+									"name": "const stappler::geom::Color4F"
 								},
 								"reference_kind": "lvalue"
 							}
@@ -6251,7 +6047,7 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::Color4F const&)"
+						"signature": "(const stappler::geom::Color4F&)"
 					}, {
 						"_fullName": "::stappler::xenolith::basic2d::Label::getMarkedColor() const",
 						"_kind": "member function",
@@ -6269,52 +6065,9 @@
 						"name": "getMarkedColor",
 						"ref_qualifier": "none",
 						"return_type": {
-							"_typeName": "stappler::xenolith::Color4F",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::Color4F",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::Color4F",
-									"_kind": "type alias",
-									"_name": "Color4F",
-									"id": 2730567930,
-									"kind": "type alias",
-									"name": "Color4F",
-									"underlying_type": {
-										"_typeName": "geom::Color4F",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::Color4F",
-											"objects": [{
-												"_fullName": "::stappler::geom::Color4F",
-												"_kind": "class",
-												"_name": "Color4F",
-												"attributes": [{
-													"arguments": [{
-														"kind": "int_literal",
-														"spelling": "16"
-													}],
-													"is_variadic": false,
-													"kind": "alignas_",
-													"name": "alignas"
-												}],
-												"class_kind": "struct",
-												"comment": "\nRGBA color composed of 4 floats.\n",
-												"id": 1425630790,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "Color4F",
-												"scope": {
-													"name": "Color4F"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::Color4F",
+							"kind": "unexposed",
+							"name": "stappler::geom::Color4F"
 						},
 						"semantic_scope": "",
 						"signature": "() const"
@@ -6527,12 +6280,12 @@
 							}]
 						}
 					}, {
-						"_fullName": "::stappler::xenolith::basic2d::Label::runDeferred(thread::TaskQueue&,stappler::xenolith::basic2d::Label::FormatSpec*,stappler::xenolith::Color4F const&)",
+						"_fullName": "::stappler::xenolith::basic2d::Label::runDeferred(thread::TaskQueue&,stappler::xenolith::basic2d::Label::TextLayout*,const stappler::geom::Color4F&)",
 						"_kind": "member function",
 						"_name": "runDeferred",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 2454531132,
+						"id": 3634158158,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -6677,146 +6430,208 @@
 							"kind": "function parameter",
 							"name": "format",
 							"type": {
-								"_typeName": "stappler::xenolith::basic2d::Label::FormatSpec*",
+								"_typeName": "stappler::xenolith::basic2d::Label::TextLayout*",
 								"kind": "pointer",
 								"pointee": {
-									"_typeName": "stappler::xenolith::basic2d::Label::FormatSpec",
+									"_typeName": "stappler::xenolith::basic2d::Label::TextLayout",
 									"kind": "user_defined",
 									"target": {
-										"name": "stappler::xenolith::basic2d::Label::FormatSpec",
+										"name": "stappler::xenolith::basic2d::Label::TextLayout",
 										"objects": [{
-											"_fullName": "::stappler::xenolith::basic2d::Label::FormatSpec",
+											"_fullName": "::stappler::xenolith::basic2d::Label::TextLayout",
 											"_kind": "type alias",
-											"_name": "FormatSpec",
-											"id": 3922754943,
+											"_name": "TextLayout",
+											"id": 3626737006,
 											"kind": "type alias",
-											"name": "FormatSpec",
+											"name": "TextLayout",
 											"underlying_type": {
-												"_typeName": "font::FormatSpec",
+												"_typeName": "font::TextLayout",
 												"kind": "user_defined",
 												"target": {
-													"name": "font::FormatSpec",
+													"name": "font::TextLayout",
 													"objects": [{
-														"_fullName": "::stappler::xenolith::font::FormatSpec",
+														"_fullName": "::stappler::xenolith::font::TextLayout",
 														"_kind": "class",
-														"_name": "FormatSpec",
+														"_name": "TextLayout",
 														"bases": [{
-															"_fullName": "Ref",
+															"_fullName": "RefBase<memory::StandartInterface>",
 															"_kind": "base class specifier",
-															"_name": "Ref",
+															"_name": "RefBase<memory::StandartInterface>",
 															"access_specifier": "public",
-															"id": 1165741041,
+															"id": 1271245336,
 															"is_virtual": false,
 															"kind": "base class specifier",
-															"name": "Ref",
+															"name": "RefBase<memory::StandartInterface>",
 															"type": {
-																"_typeName": "stappler::mem_std::Ref",
-																"kind": "user_defined",
-																"target": {
-																	"name": "stappler::mem_std::Ref",
+																"_typeName": "RefBase<memory::StandartInterface>",
+																"arguments_exposed": false,
+																"kind": "template_instantiation",
+																"primary_template": {
+																	"name": "RefBase",
 																	"objects": [{
-																		"_fullName": "::stappler::mem_std::Ref",
-																		"_kind": "type alias",
-																		"_name": "Ref",
-																		"id": 3010886988,
-																		"kind": "type alias",
-																		"name": "Ref",
-																		"underlying_type": {
-																			"_typeName": "RefBase<memory::StandartInterface>",
-																			"arguments_exposed": false,
-																			"kind": "template_instantiation",
-																			"primary_template": {
+																		"_fullName": "::stappler::RefBase<typename>",
+																		"_kind": "class template",
+																		"_name": "RefBase",
+																		"class": {
+																			"_fullName": "::stappler::RefBase<typename>",
+																			"_kind": "class",
+																			"_name": "RefBase",
+																			"bases": [{
+																				"_fullName": "Interface::AllocBaseType",
+																				"_kind": "base class specifier",
+																				"_name": "Interface::AllocBaseType",
+																				"access_specifier": "public",
+																				"id": 25533212,
+																				"is_virtual": false,
+																				"kind": "base class specifier",
+																				"name": "Interface::AllocBaseType",
+																				"type": {
+																					"_typeName": "Interface::AllocBaseType",
+																					"kind": "unexposed",
+																					"name": "Interface::AllocBaseType"
+																				}
+																			}],
+																			"class_kind": "class",
+																			"id": 2191419057,
+																			"is_declaration": false,
+																			"is_definition": true,
+																			"is_final": false,
+																			"kind": "class",
+																			"name": "RefBase",
+																			"scope": {
+																				"is_templated": true,
 																				"name": "RefBase",
-																				"objects": [{
-																					"_fullName": "::stappler::RefBase<typename>",
-																					"_kind": "class template",
-																					"_name": "RefBase",
-																					"class": {
-																						"_fullName": "::stappler::RefBase<typename>",
-																						"_kind": "class",
-																						"_name": "RefBase",
-																						"bases": [{
-																							"_fullName": "Interface::AllocBaseType",
-																							"_kind": "base class specifier",
-																							"_name": "Interface::AllocBaseType",
-																							"access_specifier": "public",
-																							"id": 25533212,
-																							"is_virtual": false,
-																							"kind": "base class specifier",
-																							"name": "Interface::AllocBaseType",
-																							"type": {
-																								"_typeName": "Interface::AllocBaseType",
-																								"kind": "unexposed",
-																								"name": "Interface::AllocBaseType"
-																							}
-																						}],
-																						"class_kind": "class",
-																						"id": 2191419057,
-																						"is_declaration": false,
-																						"is_definition": true,
-																						"is_final": false,
-																						"kind": "class",
-																						"name": "RefBase",
-																						"scope": {
-																							"is_templated": true,
-																							"name": "RefBase",
-																							"template_parameters": [{
-																								"_fullName": "Interface",
-																								"_kind": "template type parameter",
-																								"_name": "Interface",
-																								"id": 2255344761,
-																								"is_variadic": false,
-																								"keyword": "typename",
-																								"kind": "template type parameter",
-																								"name": "Interface"
-																							}]
-																						},
-																						"semantic_scope": ""
-																					},
-																					"id": 2191419057,
-																					"kind": "class template",
-																					"name": "RefBase",
-																					"parameters": [{
-																						"_fullName": "Interface",
-																						"_kind": "template type parameter",
-																						"_name": "Interface",
-																						"id": 2255344761,
-																						"is_variadic": false,
-																						"keyword": "typename",
-																						"kind": "template type parameter",
-																						"name": "Interface"
-																					}],
-																					"scope":  {
-																						"is_templated": true,
-																						"name": "RefBase",
-																						"template_parameters": [{
-																							"_fullName": "Interface",
-																							"_kind": "template type parameter",
-																							"_name": "Interface",
-																							"id": 2255344761,
-																							"is_variadic": false,
-																							"keyword": "typename",
-																							"kind": "template type parameter",
-																							"name": "Interface"
-																						}]
-																					}
+																				"template_parameters": [{
+																					"_fullName": "Interface",
+																					"_kind": "template type parameter",
+																					"_name": "Interface",
+																					"id": 2255344761,
+																					"is_variadic": false,
+																					"keyword": "typename",
+																					"kind": "template type parameter",
+																					"name": "Interface"
 																				}]
 																			},
-																			"unexposed_arguments": "memory::StandartInterface"
+																			"semantic_scope": ""
+																		},
+																		"id": 2191419057,
+																		"kind": "class template",
+																		"name": "RefBase",
+																		"parameters": [{
+																			"_fullName": "Interface",
+																			"_kind": "template type parameter",
+																			"_name": "Interface",
+																			"id": 2255344761,
+																			"is_variadic": false,
+																			"keyword": "typename",
+																			"kind": "template type parameter",
+																			"name": "Interface"
+																		}],
+																		"scope":  {
+																			"is_templated": true,
+																			"name": "RefBase",
+																			"template_parameters": [{
+																				"_fullName": "Interface",
+																				"_kind": "template type parameter",
+																				"_name": "Interface",
+																				"id": 2255344761,
+																				"is_variadic": false,
+																				"keyword": "typename",
+																				"kind": "template type parameter",
+																				"name": "Interface"
+																			}]
 																		}
 																	}]
-																}
+																},
+																"unexposed_arguments": "memory::StandartInterface"
+															}
+														}, {
+															"_fullName": "InterfaceObject<memory::StandartInterface>",
+															"_kind": "base class specifier",
+															"_name": "InterfaceObject<memory::StandartInterface>",
+															"access_specifier": "public",
+															"id": 2641774538,
+															"is_virtual": false,
+															"kind": "base class specifier",
+															"name": "InterfaceObject<memory::StandartInterface>",
+															"type": {
+																"_typeName": "InterfaceObject<memory::StandartInterface>",
+																"arguments_exposed": false,
+																"kind": "template_instantiation",
+																"primary_template": {
+																	"name": "InterfaceObject",
+																	"objects": [{
+																		"_fullName": "::stappler::InterfaceObject<typename>",
+																		"_kind": "class template",
+																		"_name": "InterfaceObject",
+																		"class": {
+																			"_fullName": "::stappler::InterfaceObject<typename>",
+																			"_kind": "class",
+																			"_name": "InterfaceObject",
+																			"class_kind": "struct",
+																			"id": 4021175825,
+																			"is_declaration": false,
+																			"is_definition": true,
+																			"is_final": false,
+																			"kind": "class",
+																			"name": "InterfaceObject",
+																			"scope": {
+																				"is_templated": true,
+																				"name": "InterfaceObject",
+																				"template_parameters": [{
+																					"_fullName": "InterfaceType",
+																					"_kind": "template type parameter",
+																					"_name": "InterfaceType",
+																					"id": 210942648,
+																					"is_variadic": false,
+																					"keyword": "typename",
+																					"kind": "template type parameter",
+																					"name": "InterfaceType"
+																				}]
+																			},
+																			"semantic_scope": ""
+																		},
+																		"id": 4021175825,
+																		"kind": "class template",
+																		"name": "InterfaceObject",
+																		"parameters": [{
+																			"_fullName": "InterfaceType",
+																			"_kind": "template type parameter",
+																			"_name": "InterfaceType",
+																			"id": 210942648,
+																			"is_variadic": false,
+																			"keyword": "typename",
+																			"kind": "template type parameter",
+																			"name": "InterfaceType"
+																		}],
+																		"scope":  {
+																			"is_templated": true,
+																			"name": "InterfaceObject",
+																			"template_parameters": [{
+																				"_fullName": "InterfaceType",
+																				"_kind": "template type parameter",
+																				"_name": "InterfaceType",
+																				"id": 210942648,
+																				"is_variadic": false,
+																				"keyword": "typename",
+																				"kind": "template type parameter",
+																				"name": "InterfaceType"
+																			}]
+																		}
+																	}]
+																},
+																"unexposed_arguments": "memory::StandartInterface"
 															}
 														}],
 														"class_kind": "class",
-														"id": 4177988041,
+														"id": 2912114761,
 														"is_declaration": false,
 														"is_definition": true,
 														"is_final": false,
 														"kind": "class",
-														"name": "FormatSpec",
+														"name": "TextLayout",
 														"scope": {
-															"name": "FormatSpec"
+															"name": "TextLayout"
 														},
 														"semantic_scope": ""
 													}]
@@ -6834,60 +6649,12 @@
 							"kind": "function parameter",
 							"name": "color",
 							"type": {
-								"_typeName": "stappler::xenolith::Color4F const&",
+								"_typeName": "const stappler::geom::Color4F&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "stappler::xenolith::Color4F const",
-									"cv_qualifier": "const",
-									"kind": "cv_qualified",
-									"type": {
-										"_typeName": "stappler::xenolith::Color4F",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::xenolith::Color4F",
-											"objects": [{
-												"_fullName": "::stappler::xenolith::Color4F",
-												"_kind": "type alias",
-												"_name": "Color4F",
-												"id": 2730567930,
-												"kind": "type alias",
-												"name": "Color4F",
-												"underlying_type": {
-													"_typeName": "geom::Color4F",
-													"kind": "user_defined",
-													"target": {
-														"name": "geom::Color4F",
-														"objects": [{
-															"_fullName": "::stappler::geom::Color4F",
-															"_kind": "class",
-															"_name": "Color4F",
-															"attributes": [{
-																"arguments": [{
-																	"kind": "int_literal",
-																	"spelling": "16"
-																}],
-																"is_variadic": false,
-																"kind": "alignas_",
-																"name": "alignas"
-															}],
-															"class_kind": "struct",
-															"comment": "\nRGBA color composed of 4 floats.\n",
-															"id": 1425630790,
-															"is_declaration": false,
-															"is_definition": true,
-															"is_final": false,
-															"kind": "class",
-															"name": "Color4F",
-															"scope": {
-																"name": "Color4F"
-															},
-															"semantic_scope": ""
-														}]
-													}
-												}
-											}]
-										}
-									}
+									"_typeName": "const stappler::geom::Color4F",
+									"kind": "unexposed",
+									"name": "const stappler::geom::Color4F"
 								},
 								"reference_kind": "lvalue"
 							}
@@ -6962,7 +6729,250 @@
 							"unexposed_arguments": "stappler::xenolith::basic2d::LabelDeferredResult"
 						},
 						"semantic_scope": "",
-						"signature": "(thread::TaskQueue&,stappler::xenolith::basic2d::Label::FormatSpec*,stappler::xenolith::Color4F const&)"
+						"signature": "(thread::TaskQueue&,stappler::xenolith::basic2d::Label::TextLayout*,const stappler::geom::Color4F&)"
+					}, {
+						"_fullName": "::stappler::xenolith::basic2d::Label::applyLayout(stappler::xenolith::basic2d::Label::TextLayout*)",
+						"_kind": "member function",
+						"_name": "applyLayout",
+						"body_kind": "declaration",
+						"cv_qualifier": "none",
+						"id": 1580299410,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"is_virtual": true,
+						"kind": "member function",
+						"name": "applyLayout",
+						"parameters": [{
+							"_fullName": "",
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 46947589,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::xenolith::basic2d::Label::TextLayout*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::xenolith::basic2d::Label::TextLayout",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::xenolith::basic2d::Label::TextLayout",
+										"objects": [{
+											"_fullName": "::stappler::xenolith::basic2d::Label::TextLayout",
+											"_kind": "type alias",
+											"_name": "TextLayout",
+											"id": 3626737006,
+											"kind": "type alias",
+											"name": "TextLayout",
+											"underlying_type": {
+												"_typeName": "font::TextLayout",
+												"kind": "user_defined",
+												"target": {
+													"name": "font::TextLayout",
+													"objects": [{
+														"_fullName": "::stappler::xenolith::font::TextLayout",
+														"_kind": "class",
+														"_name": "TextLayout",
+														"bases": [{
+															"_fullName": "RefBase<memory::StandartInterface>",
+															"_kind": "base class specifier",
+															"_name": "RefBase<memory::StandartInterface>",
+															"access_specifier": "public",
+															"id": 1271245336,
+															"is_virtual": false,
+															"kind": "base class specifier",
+															"name": "RefBase<memory::StandartInterface>",
+															"type": {
+																"_typeName": "RefBase<memory::StandartInterface>",
+																"arguments_exposed": false,
+																"kind": "template_instantiation",
+																"primary_template": {
+																	"name": "RefBase",
+																	"objects": [{
+																		"_fullName": "::stappler::RefBase<typename>",
+																		"_kind": "class template",
+																		"_name": "RefBase",
+																		"class": {
+																			"_fullName": "::stappler::RefBase<typename>",
+																			"_kind": "class",
+																			"_name": "RefBase",
+																			"bases": [{
+																				"_fullName": "Interface::AllocBaseType",
+																				"_kind": "base class specifier",
+																				"_name": "Interface::AllocBaseType",
+																				"access_specifier": "public",
+																				"id": 25533212,
+																				"is_virtual": false,
+																				"kind": "base class specifier",
+																				"name": "Interface::AllocBaseType",
+																				"type": {
+																					"_typeName": "Interface::AllocBaseType",
+																					"kind": "unexposed",
+																					"name": "Interface::AllocBaseType"
+																				}
+																			}],
+																			"class_kind": "class",
+																			"id": 2191419057,
+																			"is_declaration": false,
+																			"is_definition": true,
+																			"is_final": false,
+																			"kind": "class",
+																			"name": "RefBase",
+																			"scope": {
+																				"is_templated": true,
+																				"name": "RefBase",
+																				"template_parameters": [{
+																					"_fullName": "Interface",
+																					"_kind": "template type parameter",
+																					"_name": "Interface",
+																					"id": 2255344761,
+																					"is_variadic": false,
+																					"keyword": "typename",
+																					"kind": "template type parameter",
+																					"name": "Interface"
+																				}]
+																			},
+																			"semantic_scope": ""
+																		},
+																		"id": 2191419057,
+																		"kind": "class template",
+																		"name": "RefBase",
+																		"parameters": [{
+																			"_fullName": "Interface",
+																			"_kind": "template type parameter",
+																			"_name": "Interface",
+																			"id": 2255344761,
+																			"is_variadic": false,
+																			"keyword": "typename",
+																			"kind": "template type parameter",
+																			"name": "Interface"
+																		}],
+																		"scope":  {
+																			"is_templated": true,
+																			"name": "RefBase",
+																			"template_parameters": [{
+																				"_fullName": "Interface",
+																				"_kind": "template type parameter",
+																				"_name": "Interface",
+																				"id": 2255344761,
+																				"is_variadic": false,
+																				"keyword": "typename",
+																				"kind": "template type parameter",
+																				"name": "Interface"
+																			}]
+																		}
+																	}]
+																},
+																"unexposed_arguments": "memory::StandartInterface"
+															}
+														}, {
+															"_fullName": "InterfaceObject<memory::StandartInterface>",
+															"_kind": "base class specifier",
+															"_name": "InterfaceObject<memory::StandartInterface>",
+															"access_specifier": "public",
+															"id": 2641774538,
+															"is_virtual": false,
+															"kind": "base class specifier",
+															"name": "InterfaceObject<memory::StandartInterface>",
+															"type": {
+																"_typeName": "InterfaceObject<memory::StandartInterface>",
+																"arguments_exposed": false,
+																"kind": "template_instantiation",
+																"primary_template": {
+																	"name": "InterfaceObject",
+																	"objects": [{
+																		"_fullName": "::stappler::InterfaceObject<typename>",
+																		"_kind": "class template",
+																		"_name": "InterfaceObject",
+																		"class": {
+																			"_fullName": "::stappler::InterfaceObject<typename>",
+																			"_kind": "class",
+																			"_name": "InterfaceObject",
+																			"class_kind": "struct",
+																			"id": 4021175825,
+																			"is_declaration": false,
+																			"is_definition": true,
+																			"is_final": false,
+																			"kind": "class",
+																			"name": "InterfaceObject",
+																			"scope": {
+																				"is_templated": true,
+																				"name": "InterfaceObject",
+																				"template_parameters": [{
+																					"_fullName": "InterfaceType",
+																					"_kind": "template type parameter",
+																					"_name": "InterfaceType",
+																					"id": 210942648,
+																					"is_variadic": false,
+																					"keyword": "typename",
+																					"kind": "template type parameter",
+																					"name": "InterfaceType"
+																				}]
+																			},
+																			"semantic_scope": ""
+																		},
+																		"id": 4021175825,
+																		"kind": "class template",
+																		"name": "InterfaceObject",
+																		"parameters": [{
+																			"_fullName": "InterfaceType",
+																			"_kind": "template type parameter",
+																			"_name": "InterfaceType",
+																			"id": 210942648,
+																			"is_variadic": false,
+																			"keyword": "typename",
+																			"kind": "template type parameter",
+																			"name": "InterfaceType"
+																		}],
+																		"scope":  {
+																			"is_templated": true,
+																			"name": "InterfaceObject",
+																			"template_parameters": [{
+																				"_fullName": "InterfaceType",
+																				"_kind": "template type parameter",
+																				"_name": "InterfaceType",
+																				"id": 210942648,
+																				"is_variadic": false,
+																				"keyword": "typename",
+																				"kind": "template type parameter",
+																				"name": "InterfaceType"
+																			}]
+																		}
+																	}]
+																},
+																"unexposed_arguments": "memory::StandartInterface"
+															}
+														}],
+														"class_kind": "class",
+														"id": 2912114761,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "TextLayout",
+														"scope": {
+															"name": "TextLayout"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}]
+									}
+								}
+							}
+						}],
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::xenolith::basic2d::Label::TextLayout*)"
 					}, {
 						"_fullName": "::stappler::xenolith::basic2d::Label::updateLabel()",
 						"_kind": "member function",
@@ -7128,12 +7138,12 @@
 						"semantic_scope": "",
 						"signature": "()"
 					}, {
-						"_fullName": "::stappler::xenolith::basic2d::Label::updateQuadsForeground(font::FontController*,stappler::xenolith::basic2d::Label::FormatSpec*,Vector<stappler::xenolith::ColorMask>&)",
+						"_fullName": "::stappler::xenolith::basic2d::Label::updateQuadsForeground(font::FontController*,stappler::xenolith::basic2d::Label::TextLayout*,Vector<stappler::geom::ColorMask>&)",
 						"_kind": "member function",
 						"_name": "updateQuadsForeground",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 2107823870,
+						"id": 2519660827,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -7325,146 +7335,208 @@
 							"kind": "function parameter",
 							"name": "",
 							"type": {
-								"_typeName": "stappler::xenolith::basic2d::Label::FormatSpec*",
+								"_typeName": "stappler::xenolith::basic2d::Label::TextLayout*",
 								"kind": "pointer",
 								"pointee": {
-									"_typeName": "stappler::xenolith::basic2d::Label::FormatSpec",
+									"_typeName": "stappler::xenolith::basic2d::Label::TextLayout",
 									"kind": "user_defined",
 									"target": {
-										"name": "stappler::xenolith::basic2d::Label::FormatSpec",
+										"name": "stappler::xenolith::basic2d::Label::TextLayout",
 										"objects": [{
-											"_fullName": "::stappler::xenolith::basic2d::Label::FormatSpec",
+											"_fullName": "::stappler::xenolith::basic2d::Label::TextLayout",
 											"_kind": "type alias",
-											"_name": "FormatSpec",
-											"id": 3922754943,
+											"_name": "TextLayout",
+											"id": 3626737006,
 											"kind": "type alias",
-											"name": "FormatSpec",
+											"name": "TextLayout",
 											"underlying_type": {
-												"_typeName": "font::FormatSpec",
+												"_typeName": "font::TextLayout",
 												"kind": "user_defined",
 												"target": {
-													"name": "font::FormatSpec",
+													"name": "font::TextLayout",
 													"objects": [{
-														"_fullName": "::stappler::xenolith::font::FormatSpec",
+														"_fullName": "::stappler::xenolith::font::TextLayout",
 														"_kind": "class",
-														"_name": "FormatSpec",
+														"_name": "TextLayout",
 														"bases": [{
-															"_fullName": "Ref",
+															"_fullName": "RefBase<memory::StandartInterface>",
 															"_kind": "base class specifier",
-															"_name": "Ref",
+															"_name": "RefBase<memory::StandartInterface>",
 															"access_specifier": "public",
-															"id": 1165741041,
+															"id": 1271245336,
 															"is_virtual": false,
 															"kind": "base class specifier",
-															"name": "Ref",
+															"name": "RefBase<memory::StandartInterface>",
 															"type": {
-																"_typeName": "stappler::mem_std::Ref",
-																"kind": "user_defined",
-																"target": {
-																	"name": "stappler::mem_std::Ref",
+																"_typeName": "RefBase<memory::StandartInterface>",
+																"arguments_exposed": false,
+																"kind": "template_instantiation",
+																"primary_template": {
+																	"name": "RefBase",
 																	"objects": [{
-																		"_fullName": "::stappler::mem_std::Ref",
-																		"_kind": "type alias",
-																		"_name": "Ref",
-																		"id": 3010886988,
-																		"kind": "type alias",
-																		"name": "Ref",
-																		"underlying_type": {
-																			"_typeName": "RefBase<memory::StandartInterface>",
-																			"arguments_exposed": false,
-																			"kind": "template_instantiation",
-																			"primary_template": {
+																		"_fullName": "::stappler::RefBase<typename>",
+																		"_kind": "class template",
+																		"_name": "RefBase",
+																		"class": {
+																			"_fullName": "::stappler::RefBase<typename>",
+																			"_kind": "class",
+																			"_name": "RefBase",
+																			"bases": [{
+																				"_fullName": "Interface::AllocBaseType",
+																				"_kind": "base class specifier",
+																				"_name": "Interface::AllocBaseType",
+																				"access_specifier": "public",
+																				"id": 25533212,
+																				"is_virtual": false,
+																				"kind": "base class specifier",
+																				"name": "Interface::AllocBaseType",
+																				"type": {
+																					"_typeName": "Interface::AllocBaseType",
+																					"kind": "unexposed",
+																					"name": "Interface::AllocBaseType"
+																				}
+																			}],
+																			"class_kind": "class",
+																			"id": 2191419057,
+																			"is_declaration": false,
+																			"is_definition": true,
+																			"is_final": false,
+																			"kind": "class",
+																			"name": "RefBase",
+																			"scope": {
+																				"is_templated": true,
 																				"name": "RefBase",
-																				"objects": [{
-																					"_fullName": "::stappler::RefBase<typename>",
-																					"_kind": "class template",
-																					"_name": "RefBase",
-																					"class": {
-																						"_fullName": "::stappler::RefBase<typename>",
-																						"_kind": "class",
-																						"_name": "RefBase",
-																						"bases": [{
-																							"_fullName": "Interface::AllocBaseType",
-																							"_kind": "base class specifier",
-																							"_name": "Interface::AllocBaseType",
-																							"access_specifier": "public",
-																							"id": 25533212,
-																							"is_virtual": false,
-																							"kind": "base class specifier",
-																							"name": "Interface::AllocBaseType",
-																							"type": {
-																								"_typeName": "Interface::AllocBaseType",
-																								"kind": "unexposed",
-																								"name": "Interface::AllocBaseType"
-																							}
-																						}],
-																						"class_kind": "class",
-																						"id": 2191419057,
-																						"is_declaration": false,
-																						"is_definition": true,
-																						"is_final": false,
-																						"kind": "class",
-																						"name": "RefBase",
-																						"scope": {
-																							"is_templated": true,
-																							"name": "RefBase",
-																							"template_parameters": [{
-																								"_fullName": "Interface",
-																								"_kind": "template type parameter",
-																								"_name": "Interface",
-																								"id": 2255344761,
-																								"is_variadic": false,
-																								"keyword": "typename",
-																								"kind": "template type parameter",
-																								"name": "Interface"
-																							}]
-																						},
-																						"semantic_scope": ""
-																					},
-																					"id": 2191419057,
-																					"kind": "class template",
-																					"name": "RefBase",
-																					"parameters": [{
-																						"_fullName": "Interface",
-																						"_kind": "template type parameter",
-																						"_name": "Interface",
-																						"id": 2255344761,
-																						"is_variadic": false,
-																						"keyword": "typename",
-																						"kind": "template type parameter",
-																						"name": "Interface"
-																					}],
-																					"scope":  {
-																						"is_templated": true,
-																						"name": "RefBase",
-																						"template_parameters": [{
-																							"_fullName": "Interface",
-																							"_kind": "template type parameter",
-																							"_name": "Interface",
-																							"id": 2255344761,
-																							"is_variadic": false,
-																							"keyword": "typename",
-																							"kind": "template type parameter",
-																							"name": "Interface"
-																						}]
-																					}
+																				"template_parameters": [{
+																					"_fullName": "Interface",
+																					"_kind": "template type parameter",
+																					"_name": "Interface",
+																					"id": 2255344761,
+																					"is_variadic": false,
+																					"keyword": "typename",
+																					"kind": "template type parameter",
+																					"name": "Interface"
 																				}]
 																			},
-																			"unexposed_arguments": "memory::StandartInterface"
+																			"semantic_scope": ""
+																		},
+																		"id": 2191419057,
+																		"kind": "class template",
+																		"name": "RefBase",
+																		"parameters": [{
+																			"_fullName": "Interface",
+																			"_kind": "template type parameter",
+																			"_name": "Interface",
+																			"id": 2255344761,
+																			"is_variadic": false,
+																			"keyword": "typename",
+																			"kind": "template type parameter",
+																			"name": "Interface"
+																		}],
+																		"scope":  {
+																			"is_templated": true,
+																			"name": "RefBase",
+																			"template_parameters": [{
+																				"_fullName": "Interface",
+																				"_kind": "template type parameter",
+																				"_name": "Interface",
+																				"id": 2255344761,
+																				"is_variadic": false,
+																				"keyword": "typename",
+																				"kind": "template type parameter",
+																				"name": "Interface"
+																			}]
 																		}
 																	}]
-																}
+																},
+																"unexposed_arguments": "memory::StandartInterface"
+															}
+														}, {
+															"_fullName": "InterfaceObject<memory::StandartInterface>",
+															"_kind": "base class specifier",
+															"_name": "InterfaceObject<memory::StandartInterface>",
+															"access_specifier": "public",
+															"id": 2641774538,
+															"is_virtual": false,
+															"kind": "base class specifier",
+															"name": "InterfaceObject<memory::StandartInterface>",
+															"type": {
+																"_typeName": "InterfaceObject<memory::StandartInterface>",
+																"arguments_exposed": false,
+																"kind": "template_instantiation",
+																"primary_template": {
+																	"name": "InterfaceObject",
+																	"objects": [{
+																		"_fullName": "::stappler::InterfaceObject<typename>",
+																		"_kind": "class template",
+																		"_name": "InterfaceObject",
+																		"class": {
+																			"_fullName": "::stappler::InterfaceObject<typename>",
+																			"_kind": "class",
+																			"_name": "InterfaceObject",
+																			"class_kind": "struct",
+																			"id": 4021175825,
+																			"is_declaration": false,
+																			"is_definition": true,
+																			"is_final": false,
+																			"kind": "class",
+																			"name": "InterfaceObject",
+																			"scope": {
+																				"is_templated": true,
+																				"name": "InterfaceObject",
+																				"template_parameters": [{
+																					"_fullName": "InterfaceType",
+																					"_kind": "template type parameter",
+																					"_name": "InterfaceType",
+																					"id": 210942648,
+																					"is_variadic": false,
+																					"keyword": "typename",
+																					"kind": "template type parameter",
+																					"name": "InterfaceType"
+																				}]
+																			},
+																			"semantic_scope": ""
+																		},
+																		"id": 4021175825,
+																		"kind": "class template",
+																		"name": "InterfaceObject",
+																		"parameters": [{
+																			"_fullName": "InterfaceType",
+																			"_kind": "template type parameter",
+																			"_name": "InterfaceType",
+																			"id": 210942648,
+																			"is_variadic": false,
+																			"keyword": "typename",
+																			"kind": "template type parameter",
+																			"name": "InterfaceType"
+																		}],
+																		"scope":  {
+																			"is_templated": true,
+																			"name": "InterfaceObject",
+																			"template_parameters": [{
+																				"_fullName": "InterfaceType",
+																				"_kind": "template type parameter",
+																				"_name": "InterfaceType",
+																				"id": 210942648,
+																				"is_variadic": false,
+																				"keyword": "typename",
+																				"kind": "template type parameter",
+																				"name": "InterfaceType"
+																			}]
+																		}
+																	}]
+																},
+																"unexposed_arguments": "memory::StandartInterface"
 															}
 														}],
 														"class_kind": "class",
-														"id": 4177988041,
+														"id": 2912114761,
 														"is_declaration": false,
 														"is_definition": true,
 														"is_final": false,
 														"kind": "class",
-														"name": "FormatSpec",
+														"name": "TextLayout",
 														"scope": {
-															"name": "FormatSpec"
+															"name": "TextLayout"
 														},
 														"semantic_scope": ""
 													}]
@@ -7482,16 +7554,16 @@
 							"kind": "function parameter",
 							"name": "",
 							"type": {
-								"_typeName": "Vector<stappler::xenolith::ColorMask>&",
+								"_typeName": "Vector<stappler::geom::ColorMask>&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "Vector<stappler::xenolith::ColorMask>",
+									"_typeName": "Vector<stappler::geom::ColorMask>",
 									"arguments_exposed": false,
 									"kind": "template_instantiation",
 									"primary_template": {
 										"name": "Vector"
 									},
-									"unexposed_arguments": "stappler::xenolith::ColorMask"
+									"unexposed_arguments": "stappler::geom::ColorMask"
 								},
 								"reference_kind": "lvalue"
 							}
@@ -7503,7 +7575,7 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(font::FontController*,stappler::xenolith::basic2d::Label::FormatSpec*,Vector<stappler::xenolith::ColorMask>&)"
+						"signature": "(font::FontController*,stappler::xenolith::basic2d::Label::TextLayout*,Vector<stappler::geom::ColorMask>&)"
 					}, {
 						"_fullName": "::stappler::xenolith::basic2d::Label::checkVertexDirty() const",
 						"_kind": "member function",
@@ -7742,12 +7814,12 @@
 						"semantic_scope": "",
 						"signature": "(stappler::xenolith::FrameInfo&,stappler::xenolith::NodeFlags)"
 					}, {
-						"_fullName": "::stappler::xenolith::basic2d::Label::updateLabelScale(stappler::xenolith::Mat4 const&)",
+						"_fullName": "::stappler::xenolith::basic2d::Label::updateLabelScale(const stappler::geom::Mat4&)",
 						"_kind": "member function",
 						"_name": "updateLabelScale",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 298483475,
+						"id": 1252053302,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -7764,60 +7836,12 @@
 							"kind": "function parameter",
 							"name": "parent",
 							"type": {
-								"_typeName": "stappler::xenolith::Mat4 const&",
+								"_typeName": "const stappler::geom::Mat4&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "stappler::xenolith::Mat4 const",
-									"cv_qualifier": "const",
-									"kind": "cv_qualified",
-									"type": {
-										"_typeName": "stappler::xenolith::Mat4",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::xenolith::Mat4",
-											"objects": [{
-												"_fullName": "::stappler::xenolith::Mat4",
-												"_kind": "type alias",
-												"_name": "Mat4",
-												"id": 905241342,
-												"kind": "type alias",
-												"name": "Mat4",
-												"underlying_type": {
-													"_typeName": "geom::Mat4",
-													"kind": "user_defined",
-													"target": {
-														"name": "geom::Mat4",
-														"objects": [{
-															"_fullName": "::stappler::geom::Mat4",
-															"_kind": "class",
-															"_name": "Mat4",
-															"attributes": [{
-																"arguments": [{
-																	"kind": "int_literal",
-																	"spelling": "16"
-																}],
-																"is_variadic": false,
-																"kind": "alignas_",
-																"name": "alignas"
-															}],
-															"class_kind": "class",
-															"comment": "\nDefines a 4 x 4 floating point matrix representing a 3D transformation.\n\nVectors are treated as columns, resulting in a matrix that is represented as follows,\nwhere x, y and z are the translation components of the matrix:\n\n    1  0  0  x\n    0  1  0  y\n    0  0  1  z\n    0  0  0  1\n\nThis matrix class is directly compatible with OpenGL since its elements are\nlaid out in memory exactly as they are expected by OpenGL.\nThe matrix uses column-major format such that array indices increase down column first.\nSince matrix multiplication is not commutative, multiplication must be done in the\ncorrect order when combining transformations. Suppose we have a translation\nmatrix T and a rotation matrix R. To first rotate an object around the origin\nand then translate it, you would multiply the two matrices as TR.\n\nLikewise, to first translate the object and then rotate it, you would do RT.\nSo generally, matrices must be multiplied in the reverse order in which you\nwant the transformations to take place (this also applies to\nthe scale, rotate, and translate methods below; these methods are convenience\nmethods for post-multiplying by a matrix representing a scale, rotation, or translation).\n\nIn the case of repeated local transformations (i.e. rotate around the Z-axis by 0.76 radians,\nthen translate by 2.1 along the X-axis, then ...), it is better to use the Transform class\n(which is optimized for that kind of usage).\n\n@see Transform\n",
-															"id": 3473668624,
-															"is_declaration": false,
-															"is_definition": true,
-															"is_final": false,
-															"kind": "class",
-															"name": "Mat4",
-															"scope": {
-																"name": "Mat4"
-															},
-															"semantic_scope": ""
-														}]
-													}
-												}
-											}]
-										}
-									}
+									"_typeName": "const stappler::geom::Mat4",
+									"kind": "unexposed",
+									"name": "const stappler::geom::Mat4"
 								},
 								"reference_kind": "lvalue"
 							}
@@ -7829,7 +7853,7 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::Mat4 const&)"
+						"signature": "(const stappler::geom::Mat4&)"
 					}, {
 						"_fullName": "::stappler::xenolith::basic2d::Label::_listener",
 						"_kind": "member variable",
@@ -8394,7 +8418,7 @@
 						"kind": "member variable",
 						"name": "_format",
 						"type": {
-							"_typeName": "Rc<stappler::xenolith::basic2d::Label::FormatSpec>",
+							"_typeName": "Rc<stappler::xenolith::basic2d::Label::TextLayout>",
 							"arguments_exposed": false,
 							"kind": "template_instantiation",
 							"primary_template": {
@@ -8459,7 +8483,7 @@
 									}
 								}]
 							},
-							"unexposed_arguments": "stappler::xenolith::basic2d::Label::FormatSpec"
+							"unexposed_arguments": "stappler::xenolith::basic2d::Label::TextLayout"
 						}
 					}, {
 						"_fullName": "::stappler::xenolith::basic2d::Label::_colorMap",
@@ -8470,13 +8494,13 @@
 						"kind": "member variable",
 						"name": "_colorMap",
 						"type": {
-							"_typeName": "Vector<stappler::xenolith::ColorMask>",
+							"_typeName": "Vector<stappler::geom::ColorMask>",
 							"arguments_exposed": false,
 							"kind": "template_instantiation",
 							"primary_template": {
 								"name": "Vector"
 							},
-							"unexposed_arguments": "stappler::xenolith::ColorMask"
+							"unexposed_arguments": "stappler::geom::ColorMask"
 						}
 					}, {
 						"_fullName": "::stappler::xenolith::basic2d::Label::_deferred",

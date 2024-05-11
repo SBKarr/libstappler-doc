@@ -1,14 +1,14 @@
 Title: XL2dImageLayer.h
 
 
-# XENOLITH_RENDERER_GUI2D_XL2DIMAGELAYER_H_
+# XENOLITH_RENDERER_BASIC2D_XL2DIMAGELAYER_H_
 
 ## BRIEF
 
 ## CONTENT
 
 
-# ::stappler::xenolith::gui2d::ImageLayer
+# ::stappler::xenolith::basic2d::ImageLayer
 
 ## BRIEF
 
@@ -18,7 +18,7 @@ Title: XL2dImageLayer.h
 * Node
 
 
-# ::stappler::xenolith::gui2d::ImageLayer::GetMaxScaleFactor()
+# ::stappler::xenolith::basic2d::ImageLayer::GetMaxScaleFactor()
 
 ## BRIEF
 
@@ -29,7 +29,7 @@ Title: XL2dImageLayer.h
 Возвращает:
 * float
 
-# ::stappler::xenolith::gui2d::ImageLayer::~ImageLayer()
+# ::stappler::xenolith::basic2d::ImageLayer::~ImageLayer()
 
 ## BRIEF
 
@@ -38,7 +38,7 @@ Title: XL2dImageLayer.h
 Доступ: public
 
 
-# ::stappler::xenolith::gui2d::ImageLayer::init()
+# ::stappler::xenolith::basic2d::ImageLayer::init()
 
 ## BRIEF
 
@@ -49,7 +49,7 @@ Title: XL2dImageLayer.h
 Возвращает:
 * bool
 
-# ::stappler::xenolith::gui2d::ImageLayer::onContentSizeDirty()
+# ::stappler::xenolith::basic2d::ImageLayer::onContentSizeDirty()
 
 ## BRIEF
 
@@ -58,7 +58,7 @@ Title: XL2dImageLayer.h
 Доступ: public
 
 
-# ::stappler::xenolith::gui2d::ImageLayer::onTransformDirty(stappler::xenolith::Mat4 const&)
+# ::stappler::xenolith::basic2d::ImageLayer::onTransformDirty(const stappler::geom::Mat4&)
 
 ## BRIEF
 
@@ -67,10 +67,10 @@ Title: XL2dImageLayer.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Mat4 const&
+* const stappler::geom::Mat4&
 
 
-# ::stappler::xenolith::gui2d::ImageLayer::setTexture(Rc<stappler::xenolith::Texture>&&)
+# ::stappler::xenolith::basic2d::ImageLayer::setTexture(Rc<stappler::xenolith::Texture>&&)
 
 ## BRIEF
 
@@ -82,7 +82,7 @@ Title: XL2dImageLayer.h
 * Rc<stappler::xenolith::Texture>&&
 
 
-# ::stappler::xenolith::gui2d::ImageLayer::getTexture() const
+# ::stappler::xenolith::basic2d::ImageLayer::getTexture() const
 
 ## BRIEF
 
@@ -93,7 +93,7 @@ Title: XL2dImageLayer.h
 Возвращает:
 * Rc<stappler::xenolith::Texture> const&
 
-# ::stappler::xenolith::gui2d::ImageLayer::setActionCallback(Function<void ()>&&)
+# ::stappler::xenolith::basic2d::ImageLayer::setActionCallback(Function<void ()>&&)
 
 ## BRIEF
 
@@ -105,7 +105,7 @@ Title: XL2dImageLayer.h
 * Function<void ()>&&
 
 
-# ::stappler::xenolith::gui2d::ImageLayer::getTexturePosition() const
+# ::stappler::xenolith::basic2d::ImageLayer::getTexturePosition() const
 
 ## BRIEF
 
@@ -114,9 +114,9 @@ Title: XL2dImageLayer.h
 Доступ: public
 
 Возвращает:
-* stappler::xenolith::Vec2
+* stappler::geom::Vec2
 
-# ::stappler::xenolith::gui2d::ImageLayer::setScaleDisabled(bool)
+# ::stappler::xenolith::basic2d::ImageLayer::setScaleDisabled(bool)
 
 ## BRIEF
 
@@ -128,7 +128,7 @@ Title: XL2dImageLayer.h
 * bool
 
 
-# ::stappler::xenolith::gui2d::ImageLayer::handleTap(stappler::xenolith::Vec2,int)
+# ::stappler::xenolith::basic2d::ImageLayer::setImageSize(stappler::geom::Size2)
 
 ## BRIEF
 
@@ -137,13 +137,25 @@ Title: XL2dImageLayer.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Vec2
+* stappler::geom::Size2
+
+
+# ::stappler::xenolith::basic2d::ImageLayer::handleTap(stappler::geom::Vec2,int)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* stappler::geom::Vec2
 * int
 
 Возвращает:
 * bool
 
-# ::stappler::xenolith::gui2d::ImageLayer::handleSwipeBegin(stappler::xenolith::Vec2)
+# ::stappler::xenolith::basic2d::ImageLayer::handleSwipeBegin(stappler::geom::Vec2)
 
 ## BRIEF
 
@@ -152,12 +164,12 @@ Title: XL2dImageLayer.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Vec2
+* stappler::geom::Vec2
 
 Возвращает:
 * bool
 
-# ::stappler::xenolith::gui2d::ImageLayer::handleSwipe(stappler::xenolith::Vec2)
+# ::stappler::xenolith::basic2d::ImageLayer::handleSwipe(stappler::geom::Vec2)
 
 ## BRIEF
 
@@ -166,12 +178,12 @@ Title: XL2dImageLayer.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Vec2
+* stappler::geom::Vec2
 
 Возвращает:
 * bool
 
-# ::stappler::xenolith::gui2d::ImageLayer::handleSwipeEnd(stappler::xenolith::Vec2)
+# ::stappler::xenolith::basic2d::ImageLayer::handleSwipeEnd(stappler::geom::Vec2)
 
 ## BRIEF
 
@@ -180,12 +192,12 @@ Title: XL2dImageLayer.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Vec2
+* stappler::geom::Vec2
 
 Возвращает:
 * bool
 
-# ::stappler::xenolith::gui2d::ImageLayer::handlePinch(stappler::xenolith::Vec2,float,float,bool)
+# ::stappler::xenolith::basic2d::ImageLayer::handlePinch(stappler::geom::Vec2,float,float,bool)
 
 ## BRIEF
 
@@ -194,7 +206,7 @@ Title: XL2dImageLayer.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Vec2
+* stappler::geom::Vec2
 * float
 * float
 * bool
@@ -202,7 +214,18 @@ Title: XL2dImageLayer.h
 Возвращает:
 * bool
 
-# ::stappler::xenolith::gui2d::ImageLayer::getCorrectRect(stappler::xenolith::Size2)
+# ::stappler::xenolith::basic2d::ImageLayer::getRoot() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* stappler::xenolith::Node*
+
+# ::stappler::xenolith::basic2d::ImageLayer::getCorrectRect(stappler::geom::Size2)
 
 ## BRIEF
 
@@ -211,12 +234,12 @@ Title: XL2dImageLayer.h
 Доступ: protected
 
 Параметры:
-* stappler::xenolith::Size2
+* stappler::geom::Size2
 
 Возвращает:
-* stappler::xenolith::Rect
+* stappler::geom::Rect
 
-# ::stappler::xenolith::gui2d::ImageLayer::getCorrectPosition(stappler::xenolith::Size2,stappler::xenolith::Vec2)
+# ::stappler::xenolith::basic2d::ImageLayer::getCorrectPosition(stappler::geom::Size2,stappler::geom::Vec2)
 
 ## BRIEF
 
@@ -225,13 +248,13 @@ Title: XL2dImageLayer.h
 Доступ: protected
 
 Параметры:
-* stappler::xenolith::Size2
-* stappler::xenolith::Vec2
+* stappler::geom::Size2
+* stappler::geom::Vec2
 
 Возвращает:
-* stappler::xenolith::Vec2
+* stappler::geom::Vec2
 
-# ::stappler::xenolith::gui2d::ImageLayer::getContainerSize() const
+# ::stappler::xenolith::basic2d::ImageLayer::getContainerSize() const
 
 ## BRIEF
 
@@ -240,9 +263,9 @@ Title: XL2dImageLayer.h
 Доступ: protected
 
 Возвращает:
-* stappler::xenolith::Size2
+* stappler::geom::Size2
 
-# ::stappler::xenolith::gui2d::ImageLayer::getContainerSizeForScale(float) const
+# ::stappler::xenolith::basic2d::ImageLayer::getContainerSizeForScale(float) const
 
 ## BRIEF
 
@@ -254,9 +277,9 @@ Title: XL2dImageLayer.h
 * float
 
 Возвращает:
-* stappler::xenolith::Size2
+* stappler::geom::Size2
 
-# ::stappler::xenolith::gui2d::ImageLayer::_gestureListener
+# ::stappler::xenolith::basic2d::ImageLayer::_gestureListener
 
 ## BRIEF
 
@@ -267,7 +290,7 @@ Title: XL2dImageLayer.h
 Тип: stappler::xenolith::InputListener*
 
 
-# ::stappler::xenolith::gui2d::ImageLayer::_root
+# ::stappler::xenolith::basic2d::ImageLayer::_root
 
 ## BRIEF
 
@@ -278,7 +301,7 @@ Title: XL2dImageLayer.h
 Тип: stappler::xenolith::Node*
 
 
-# ::stappler::xenolith::gui2d::ImageLayer::_image
+# ::stappler::xenolith::basic2d::ImageLayer::_image
 
 ## BRIEF
 
@@ -289,7 +312,7 @@ Title: XL2dImageLayer.h
 Тип: stappler::xenolith::basic2d::Sprite*
 
 
-# ::stappler::xenolith::gui2d::ImageLayer::_prevContentSize
+# ::stappler::xenolith::basic2d::ImageLayer::_imageSize
 
 ## BRIEF
 
@@ -297,21 +320,10 @@ Title: XL2dImageLayer.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::Size2
+Тип: stappler::geom::Size2
 
 
-# ::stappler::xenolith::gui2d::ImageLayer::_globalScale
-
-## BRIEF
-
-## CONTENT
-
-Доступ: protected
-
-Тип: stappler::xenolith::Vec2
-
-
-# ::stappler::xenolith::gui2d::ImageLayer::_minScale
+# ::stappler::xenolith::basic2d::ImageLayer::_prevContentSize
 
 ## BRIEF
 
@@ -319,10 +331,10 @@ Title: XL2dImageLayer.h
 
 Доступ: protected
 
-Тип: float
+Тип: stappler::geom::Size2
 
 
-# ::stappler::xenolith::gui2d::ImageLayer::_maxScale
+# ::stappler::xenolith::basic2d::ImageLayer::_globalScale
 
 ## BRIEF
 
@@ -330,10 +342,10 @@ Title: XL2dImageLayer.h
 
 Доступ: protected
 
-Тип: float
+Тип: stappler::geom::Vec2
 
 
-# ::stappler::xenolith::gui2d::ImageLayer::_scaleSource
+# ::stappler::xenolith::basic2d::ImageLayer::_minScale
 
 ## BRIEF
 
@@ -344,7 +356,29 @@ Title: XL2dImageLayer.h
 Тип: float
 
 
-# ::stappler::xenolith::gui2d::ImageLayer::_scaleDisabled
+# ::stappler::xenolith::basic2d::ImageLayer::_maxScale
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: float
+
+
+# ::stappler::xenolith::basic2d::ImageLayer::_scaleSource
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: float
+
+
+# ::stappler::xenolith::basic2d::ImageLayer::_imageSizePredefined
 
 ## BRIEF
 
@@ -355,7 +389,7 @@ Title: XL2dImageLayer.h
 Тип: bool
 
 
-# ::stappler::xenolith::gui2d::ImageLayer::_hasPinch
+# ::stappler::xenolith::basic2d::ImageLayer::_scaleDisabled
 
 ## BRIEF
 
@@ -366,7 +400,7 @@ Title: XL2dImageLayer.h
 Тип: bool
 
 
-# ::stappler::xenolith::gui2d::ImageLayer::_textureDirty
+# ::stappler::xenolith::basic2d::ImageLayer::_hasPinch
 
 ## BRIEF
 
@@ -377,7 +411,18 @@ Title: XL2dImageLayer.h
 Тип: bool
 
 
-# ::stappler::xenolith::gui2d::ImageLayer::_actionCallback
+# ::stappler::xenolith::basic2d::ImageLayer::_textureDirty
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: bool
+
+
+# ::stappler::xenolith::basic2d::ImageLayer::_actionCallback
 
 ## BRIEF
 

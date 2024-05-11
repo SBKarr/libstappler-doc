@@ -207,6 +207,19 @@ Title: MaterialSurfaceStyle.h
 * stappler::xenolith::material2d::ActivityState
 
 
+# ::stappler::xenolith::material2d::SurfaceStyle::setup<typename>(T const&)
+
+## BRIEF
+
+## CONTENT
+
+Параметры шаблона:
+* typename T
+
+Параметры:
+* T const&
+
+
 # ::stappler::xenolith::material2d::SurfaceStyle::define<typename>(T&&)
 
 ## BRIEF
@@ -235,7 +248,7 @@ Title: MaterialSurfaceStyle.h
 * Args &&...
 
 
-# ::stappler::xenolith::material2d::SurfaceStyle::apply(stappler::xenolith::material2d::SurfaceStyleData&,stappler::xenolith::Size2 const&,stappler::xenolith::material2d::StyleContainer const*,stappler::xenolith::material2d::SurfaceInterior const*)
+# ::stappler::xenolith::material2d::SurfaceStyle::apply(stappler::xenolith::material2d::SurfaceStyleData&,const stappler::geom::Size2&,stappler::xenolith::material2d::StyleContainer const*,stappler::xenolith::material2d::SurfaceInterior const*)
 
 ## BRIEF
 
@@ -243,7 +256,7 @@ Title: MaterialSurfaceStyle.h
 
 Параметры:
 * stappler::xenolith::material2d::SurfaceStyleData&
-* stappler::xenolith::Size2 const&
+* const stappler::geom::Size2&
 * stappler::xenolith::material2d::StyleContainer const*
 * stappler::xenolith::material2d::SurfaceInterior const*
 
@@ -391,7 +404,7 @@ Title: MaterialSurfaceStyle.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::Color4F
+Тип: stappler::geom::Color4F
 
 
 # ::stappler::xenolith::material2d::SurfaceStyleData::colorElevation
@@ -400,7 +413,7 @@ Title: MaterialSurfaceStyle.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::Color4F
+Тип: stappler::geom::Color4F
 
 
 # ::stappler::xenolith::material2d::SurfaceStyleData::colorHCT
@@ -409,7 +422,7 @@ Title: MaterialSurfaceStyle.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::material2d::ColorHCT
+Тип: stappler::geom::ColorHCT
 
 
 # ::stappler::xenolith::material2d::SurfaceStyleData::colorBackground
@@ -418,7 +431,7 @@ Title: MaterialSurfaceStyle.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::material2d::ColorHCT
+Тип: stappler::geom::ColorHCT
 
 
 # ::stappler::xenolith::material2d::SurfaceStyleData::colorOn
@@ -427,7 +440,7 @@ Title: MaterialSurfaceStyle.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::material2d::ColorHCT
+Тип: stappler::geom::ColorHCT
 
 
 # ::stappler::xenolith::material2d::SurfaceStyleData::cornerRadius

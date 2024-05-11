@@ -86,7 +86,7 @@ Title: XLVkInstance.h
 Доступ: public
 
 
-# ::stappler::xenolith::vk::Instance::Instance(VkInstance,PFN_vkGetInstanceProcAddr const,uint32_t,Vector<stappler::StringView>&&,stappler::xenolith::core::Instance::TerminateCallback&&,stappler::xenolith::vk::Instance::PresentSupportCallback&&,bool,Rc<stappler::mem_std::Ref>&&)
+# ::stappler::xenolith::vk::Instance::Instance(VkInstance,PFN_vkGetInstanceProcAddr const,uint32_t,Vector<stappler::StringView>&&,stappler::Dso&&,stappler::xenolith::core::Instance::TerminateCallback&&,stappler::xenolith::vk::Instance::PresentSupportCallback&&,bool,Rc<stappler::mem_std::Ref>&&)
 
 ## BRIEF
 
@@ -99,6 +99,7 @@ Title: XLVkInstance.h
 * PFN_vkGetInstanceProcAddr const
 * uint32_t
 * Vector<stappler::StringView>&&
+* stappler::Dso&&
 * stappler::xenolith::core::Instance::TerminateCallback&&
 * stappler::xenolith::vk::Instance::PresentSupportCallback&&
 * bool
@@ -205,6 +206,20 @@ Title: XLVkInstance.h
 
 Возвращает:
 * uint32_t
+
+# ::stappler::xenolith::vk::Instance::makeFontQueue(stappler::StringView) const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* stappler::StringView
+
+Возвращает:
+* Rc<core::Queue>
 
 # ::stappler::xenolith::vk::Instance::makeView(stappler::xenolith::Application&,core::Device const&,stappler::xenolith::ViewInfo&&) const
 

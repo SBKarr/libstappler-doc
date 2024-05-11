@@ -1809,7 +1809,7 @@ Title: XLPlatformLinuxWayland.h
 Возвращает:
 * bool
 
-# ::stappler::xenolith::platform::WaylandLibrary::open(void*)
+# ::stappler::xenolith::platform::WaylandLibrary::open(stappler::Dso&)
 
 ## BRIEF
 
@@ -1818,12 +1818,12 @@ Title: XLPlatformLinuxWayland.h
 Доступ: protected
 
 Параметры:
-* void*
+* stappler::Dso&
 
 Возвращает:
 * bool
 
-# ::stappler::xenolith::platform::WaylandLibrary::openWaylandCursor(void*)
+# ::stappler::xenolith::platform::WaylandLibrary::openWaylandCursor(stappler::Dso&)
 
 ## BRIEF
 
@@ -1832,7 +1832,7 @@ Title: XLPlatformLinuxWayland.h
 Доступ: protected
 
 Параметры:
-* void*
+* stappler::Dso&
 
 Возвращает:
 * bool
@@ -1857,7 +1857,7 @@ Title: XLPlatformLinuxWayland.h
 
 Доступ: protected
 
-Тип: void*
+Тип: stappler::Dso
 
 
 # ::stappler::xenolith::platform::WaylandLibrary::_cursor
@@ -1868,7 +1868,7 @@ Title: XLPlatformLinuxWayland.h
 
 Доступ: protected
 
-Тип: void*
+Тип: stappler::Dso
 
 
 # ::stappler::xenolith::platform::WaylandLibrary::_pending
@@ -2668,7 +2668,7 @@ Title: XLPlatformLinuxWayland.h
 Возвращает:
 * bool
 
-# ::stappler::xenolith::platform::WaylandShm::allocateDecorations(stappler::xenolith::platform::WaylandShm::ShadowBuffers*,uint32_t,uint32_t,stappler::xenolith::Color3B const&,stappler::xenolith::Color3B const&)
+# ::stappler::xenolith::platform::WaylandShm::allocateDecorations(stappler::xenolith::platform::WaylandShm::ShadowBuffers*,uint32_t,uint32_t,const stappler::geom::Color3B&,const stappler::geom::Color3B&)
 
 ## BRIEF
 
@@ -2678,8 +2678,8 @@ Title: XLPlatformLinuxWayland.h
 * stappler::xenolith::platform::WaylandShm::ShadowBuffers*
 * uint32_t
 * uint32_t
-* stappler::xenolith::Color3B const&
-* stappler::xenolith::Color3B const&
+* const stappler::geom::Color3B&
+* const stappler::geom::Color3B&
 
 Возвращает:
 * bool

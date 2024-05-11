@@ -28,81 +28,6 @@ Title: SPSearchConfiguration.h
 * memory::AllocPool
 
 
-# ::stappler::search::Configuration::Map<typename,typename>
-
-## BRIEF
-
-Тип хранилища ключ-значение
-
-## CONTENT
-
-Доступ: public
-
-Тип хранилища ключ-значение
-
-Параметры шаблона:
-* typename K
-* typename V
-
-
-# ::stappler::search::Configuration::Vector<typename>
-
-## BRIEF
-
-Тип вектора
-
-## CONTENT
-
-Доступ: public
-
-Тип вектора
-
-Параметры шаблона:
-* typename T
-
-
-# ::stappler::search::Configuration::Set<typename>
-
-## BRIEF
-
-Тип набора уникальных значений
-
-## CONTENT
-
-Доступ: public
-
-Тип набора уникальных значений
-
-Параметры шаблона:
-* typename T
-
-
-# ::stappler::search::Configuration::String
-
-## BRIEF
-
-Тип строки
-
-## CONTENT
-
-Доступ: public
-
-Тип строки
-
-
-# ::stappler::search::Configuration::StringStream
-
-## BRIEF
-
-Тип строкового потока
-
-## CONTENT
-
-Доступ: public
-
-Тип строкового потока
-
-
 # ::stappler::search::Configuration::StemmerCallback
 
 ## BRIEF
@@ -139,19 +64,6 @@ Title: SPSearchConfiguration.h
 Доступ: public
 
 Тип функции фильтрации стеммера
-
-
-# ::stappler::search::Configuration::SearchVector
-
-## BRIEF
-
-Тип поискового вектора
-
-## CONTENT
-
-Доступ: public
-
-Тип поискового вектора
 
 
 # ::stappler::search::Configuration::WordMap
@@ -334,6 +246,17 @@ Title: SPSearchConfiguration.h
 
 Тип: Function<void (stappler::StringView, stappler::StringView)>
 
+# ::stappler::search::Configuration::~Configuration()
+
+## BRIEF
+
+Деструктор типа
+
+## CONTENT
+
+Доступ: public
+
+Деструктор типа
 
 # ::stappler::search::Configuration::Configuration()
 
@@ -561,7 +484,7 @@ Title: SPSearchConfiguration.h
 * StringView - коренной элемент слова
 * ParserToken - тип токена, определённый для слова
 
-# ::stappler::search::Configuration::makeHeadline(stappler::search::Configuration::HeadlineConfig const&,stappler::StringView const&,Vector<stappler::search::Configuration::String> const&) const
+# ::stappler::search::Configuration::makeHeadline(stappler::search::Configuration::HeadlineConfig const&,stappler::StringView const&,Vector<stappler::mem_pool::String> const&) const
 
 ## BRIEF
 
@@ -576,12 +499,12 @@ Title: SPSearchConfiguration.h
 Параметры:
 * stappler::search::Configuration::HeadlineConfig const& - конфигурация заголовков
 * stappler::StringView const& - исходный текст
-* Vector<stappler::search::Configuration::String> const& - вектор запрошенных слов
+* Vector<stappler::mem_pool::String> const& - вектор запрошенных слов
 
 Возвращает:
-* String - строка сгенерированных заголовков
+* stappler::mem_pool::String - строка сгенерированных заголовков
 
-# ::stappler::search::Configuration::makeHtmlHeadlines(stappler::search::Configuration::HeadlineConfig const&,stappler::StringView const&,Vector<stappler::search::Configuration::String> const&,size_t) const
+# ::stappler::search::Configuration::makeHtmlHeadlines(stappler::search::Configuration::HeadlineConfig const&,stappler::StringView const&,Vector<stappler::mem_pool::String> const&,size_t) const
 
 ## BRIEF
 
@@ -596,13 +519,13 @@ Title: SPSearchConfiguration.h
 Параметры:
 * stappler::search::Configuration::HeadlineConfig const& - конфигурация заголовков
 * stappler::StringView const& - исходный текст
-* Vector<stappler::search::Configuration::String> const& - вектор запрошенных слов
+* Vector<stappler::mem_pool::String> const& - вектор запрошенных слов
 * size_t - максимальное число фрагментов для создания
 
 Возвращает:
-* String - строка сгенерированных заголовков
+* stappler::mem_pool::String - строка сгенерированных заголовков
 
-# ::stappler::search::Configuration::makeHeadlines(stappler::search::Configuration::HeadlineConfig const&,Callback<void (const Function<bool (const stappler::StringView &, const stappler::StringView &)>)> const&,Vector<stappler::search::Configuration::String> const&,size_t) const
+# ::stappler::search::Configuration::makeHeadlines(stappler::search::Configuration::HeadlineConfig const&,Callback<void (const Function<bool (const stappler::StringView &, const stappler::StringView &)>)> const&,Vector<stappler::mem_pool::String> const&,size_t) const
 
 ## BRIEF
 
@@ -617,11 +540,29 @@ Title: SPSearchConfiguration.h
 Параметры:
 * stappler::search::Configuration::HeadlineConfig const& - конфигурация заголовков
 * Callback<void (const Function<bool (const stappler::StringView &, const stappler::StringView &)>)> const& - функция, возвращающая фрагменты текста из исходного материала
-* Vector<stappler::search::Configuration::String> const& - вектор запрошенных слов
+* Vector<stappler::mem_pool::String> const&- вектор запрошенных слов
 * size_t - максимальное число фрагментов для создания
 
 Возвращает:
-* String - строка сгенерированных заголовков
+* stappler::mem_pool::String - строка сгенерированных заголовков
+
+# ::stappler::search::Configuration::stemQuery(stappler::search::SearchQuery const&) const
+
+## BRIEF
+
+Вычленяет корни из поисковых данных
+
+## CONTENT
+
+Доступ: public
+
+Вычленяет корни из поисковых данных. Создаёт исходный материал для порождения заголовков поиска.
+
+Параметры:
+* stappler::search::SearchQuery const&
+
+Возвращает:
+* Vector<stappler::mem_pool::String>
 
 # ::stappler::search::Configuration::stemQuery(Vector<stappler::search::SearchData> const&) const
 
@@ -639,9 +580,9 @@ Title: SPSearchConfiguration.h
 * Vector<stappler::search::SearchData> const&
 
 Возвращает:
-* Vector<stappler::search::Configuration::String>
+* Vector<stappler::mem_pool::String>
 
-# ::stappler::search::Configuration::makeSearchVector(stappler::search::Configuration::SearchVector&,stappler::StringView,SearchData::Rank,size_t,Callback<void (stappler::StringView, stappler::StringView, stappler::search::ParserToken)> const&) const
+# ::stappler::search::Configuration::makeSearchVector(stappler::search::SearchVector&,stappler::StringView,SearchData::Rank,size_t,Callback<void (stappler::StringView, stappler::StringView, stappler::search::ParserToken)> const&) const
 
 ## BRIEF
 
@@ -654,7 +595,7 @@ Title: SPSearchConfiguration.h
 Создаёт вектор поискового индекса из фразы. Вектор поискового индекса сопоставляет корень слова с вектором его вхождений в текст.
 
 Параметры:
-* stappler::search::Configuration::SearchVector& - целевеой поисковой вектор. Функцию можно вызывать много раз для заполнения одного вектора
+* stappler::search::SearchVector& - целевеой поисковой вектор. Функцию можно вызывать много раз для заполнения одного вектора
 * stappler::StringView - фраза для разбора
 * SearchData::Rank - градация значимости для текущей строки
 * size_t - текущее положение в тексте документа для формирования индекса вхождения слова
@@ -663,7 +604,7 @@ Title: SPSearchConfiguration.h
 Возвращает:
 * size_t - индекс слова, следующий за последним. Для использовании в одном индексе, этот результат нужно передать в следующий запрос `makeSearchVector`
 
-# ::stappler::search::Configuration::encodeSearchVector(stappler::search::Configuration::SearchVector const&,SearchData::Rank) const
+# ::stappler::search::Configuration::encodeSearchVectorPostgres(stappler::search::SearchVector const&,SearchData::Rank) const
 
 ## BRIEF
 
@@ -673,16 +614,34 @@ Title: SPSearchConfiguration.h
 
 Доступ: public
 
-Кодирует поисковой вектор в строку
+Кодирует поисковой вектор в строку. Использует формат PostgreSQL.
 
 Параметры:
-* stappler::search::Configuration::SearchVector const&
-* SearchData::Rank - базовая радация значимости
+* stappler::search::SearchVector const&
+* SearchData::Rank
 
 Возвращает:
-* String
+* stappler::mem_pool::String
 
-# ::stappler::search::Configuration::parseQuery(stappler::StringView) const
+# ::stappler::search::Configuration::encodeSearchVectorData(stappler::search::SearchVector const&,SearchData::Rank) const
+
+## BRIEF
+Кодирует поисковой вектор в буфер
+
+## CONTENT
+
+Доступ: public
+
+Кодирует поисковой вектор в буфер. Использует свой бинарный формат.
+
+Параметры:
+* stappler::search::SearchVector const&
+* SearchData::Rank
+
+Возвращает:
+* stappler::mem_pool::Bytes
+
+# ::stappler::search::Configuration::parseQuery(stappler::StringView,bool,stappler::StringView*) const
 
 ## BRIEF
 
@@ -694,13 +653,17 @@ Title: SPSearchConfiguration.h
 
 Разбирает поисковой запрос из строки. Создаёт бинарное дерево запроса с соотвествующими операциями.
 
+Поддерживаемые операции: '|' - или, "точное соотвествие", (группировка с помощью скобок), !исключение слова из запроса.
+
 Параметры:
 * stappler::StringView - строка запроса
+* bool - true - останавливаться при ошибке в форме запроса. Иначе, пытается разпознать запрос до конца
+* stappler::StringView* - указатель на строку для хранения ошибки (опционально).
 
 Возвращает:
 * stappler::search::SearchQuery - бинарное дерево запроса
 
-# ::stappler::search::Configuration::isMatch(stappler::search::Configuration::SearchVector const&,stappler::StringView) const
+# ::stappler::search::Configuration::isMatch(stappler::search::SearchVector const&,stappler::StringView) const
 
 ## BRIEF
 
@@ -713,13 +676,13 @@ Title: SPSearchConfiguration.h
 Проверяет, соотвествует ли поисковой вектор запросу
 
 Параметры:
-* stappler::search::Configuration::SearchVector const&
+* stappler::search::SearchVector const&
 * stappler::StringView - запрос в виде строки
 
 Возвращает:
 * bool - true если запрос соотвествует вектору
 
-# ::stappler::search::Configuration::isMatch(stappler::search::Configuration::SearchVector const&,stappler::search::SearchQuery const&) const
+# ::stappler::search::Configuration::isMatch(stappler::search::SearchVector const&,stappler::search::SearchQuery const&) const
 
 ## BRIEF
 
@@ -732,7 +695,7 @@ Title: SPSearchConfiguration.h
 Проверяет, соотвествует ли поисковой вектор запросу
 
 Параметры:
-* stappler::search::Configuration::SearchVector const&
+* stappler::search::SearchVector const&
 * stappler::search::SearchQuery const&
 
 Возвращает:
@@ -757,91 +720,32 @@ Title: SPSearchConfiguration.h
 Возвращает:
 * stappler::search::StemmerEnv*
 
-# ::stappler::search::Configuration::_language
+# ::stappler::search::Configuration::doStemQuery(Vector<stappler::mem_pool::String>,stappler::search::SearchQuery const&) const
 
 ## BRIEF
 
-Текущий выбранный язык
+Рабочая функция разделения запроса на части
 
 ## CONTENT
 
 Доступ: protected
 
-Текущий выбранный язык
+Рабочая функция разделения запроса на части
 
-Тип: stappler::search::Language
+Параметры:
+* Vector<stappler::mem_pool::String>
+* stappler::search::SearchQuery const&
 
-
-# ::stappler::search::Configuration::_primary
+# ::stappler::search::Configuration::data
 
 ## BRIEF
 
-Контекст стеммера для основного языка
+Непрозрачный блок данных конфигурации
 
 ## CONTENT
 
 Доступ: protected
 
-Контекст стеммера для основного языка
+Непрозрачный блок данных конфигурации
 
-Тип: stappler::search::StemmerEnv*
-
-
-# ::stappler::search::Configuration::_secondary
-
-## BRIEF
-
-Контекст стеммера для вторичного языка
-
-## CONTENT
-
-Доступ: protected
-
-Контекст стеммера для вторичного языка. Контекст вторичного языка имеет смысл, если необходимо разбирать тексты, имеющие разную систему письменности (например, латиницу и кириллицу). В таком случае, для каждой системы письменности будут использоваться свои правила стеммера.
-
-Тип: stappler::search::StemmerEnv*
-
-
-# ::stappler::search::Configuration::_stemmers
-
-## BRIEF
-
-Выделенные стеммеры для токенов
-
-## CONTENT
-
-Доступ: protected
-
-Выделенные стеммеры для токенов
-
-Тип: Map<stappler::search::ParserToken, stappler::search::Configuration::StemmerCallback>
-
-
-# ::stappler::search::Configuration::_preStem
-
-## BRIEF
-
-Функция фильтрации стеммера
-
-## CONTENT
-
-Доступ: protected
-
-Функция фильтрации стеммера
-
-Тип: PreStemCallback
-
-
-# ::stappler::search::Configuration::_customStopwords
-
-## BRIEF
-
-Дополнительные слова-исключения
-
-## CONTENT
-
-Доступ: protected
-
-Дополнительные слова-исключения
-
-Тип: stappler::StringView const*
+Тип: stappler::search::Configuration::Data*

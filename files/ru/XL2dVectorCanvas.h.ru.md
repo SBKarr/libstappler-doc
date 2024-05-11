@@ -48,7 +48,7 @@ Title: XL2dVectorCanvas.h
 Доступ: public
 
 
-# ::stappler::xenolith::basic2d::VectorCanvas::init(bool,float,stappler::xenolith::Color4F)
+# ::stappler::xenolith::basic2d::VectorCanvas::init(bool,float,stappler::geom::Color4F)
 
 ## BRIEF
 
@@ -59,12 +59,12 @@ Title: XL2dVectorCanvas.h
 Параметры:
 * bool
 * float
-* stappler::xenolith::Color4F
+* stappler::geom::Color4F
 
 Возвращает:
 * bool
 
-# ::stappler::xenolith::basic2d::VectorCanvas::setColor(stappler::xenolith::Color4F)
+# ::stappler::xenolith::basic2d::VectorCanvas::setColor(stappler::geom::Color4F)
 
 ## BRIEF
 
@@ -73,7 +73,7 @@ Title: XL2dVectorCanvas.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Color4F
+* stappler::geom::Color4F
 
 
 # ::stappler::xenolith::basic2d::VectorCanvas::getColor() const
@@ -85,7 +85,7 @@ Title: XL2dVectorCanvas.h
 Доступ: public
 
 Возвращает:
-* stappler::xenolith::Color4F
+* stappler::geom::Color4F
 
 # ::stappler::xenolith::basic2d::VectorCanvas::setQuality(float)
 
@@ -110,7 +110,42 @@ Title: XL2dVectorCanvas.h
 Возвращает:
 * float
 
-# ::stappler::xenolith::basic2d::VectorCanvas::draw(Rc<stappler::xenolith::basic2d::VectorImageData>&&,stappler::xenolith::Size2)
+# ::stappler::xenolith::basic2d::VectorCanvas::setRelocateRule(geom::Tesselator::RelocateRule)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* geom::Tesselator::RelocateRule
+
+
+# ::stappler::xenolith::basic2d::VectorCanvas::getRelocateRule() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* geom::Tesselator::RelocateRule
+
+# ::stappler::xenolith::basic2d::VectorCanvas::setVerbose(bool)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* bool
+
+
+# ::stappler::xenolith::basic2d::VectorCanvas::draw(Rc<stappler::xenolith::basic2d::VectorImageData>&&,stappler::geom::Size2)
 
 ## BRIEF
 
@@ -120,7 +155,7 @@ Title: XL2dVectorCanvas.h
 
 Параметры:
 * Rc<stappler::xenolith::basic2d::VectorImageData>&&
-* stappler::xenolith::Size2
+* stappler::geom::Size2
 
 Возвращает:
 * Rc<stappler::xenolith::basic2d::VectorCanvasResult>

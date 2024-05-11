@@ -1,7 +1,7 @@
 Title: SPGeometry.h
 
 
-# STAPPLER_GEOM_SPGEOMETRY_H_
+# CORE_GEOM_SPGEOMETRY_H_
 
 ## BRIEF
 
@@ -10,6 +10,137 @@ Title: SPGeometry.h
 ## CONTENT
 
 Заголовок базовых геометрических типов. Определяет типы Size2, Size3, Extent2, Extent3, Rect, UVec2, URect
+
+# ::stappler::geom::Metric
+
+## BRIEF
+
+Структура метрики размера
+
+## CONTENT
+
+Структура метрики размера. Используется в качестве описания размеров для шрифтов и парамтеров отступов на веб-страницах.
+
+# ::stappler::geom::Metric::Units
+
+## BRIEF
+
+Размерность метрики
+
+## CONTENT
+
+Размерность метрики
+
+Значения:
+* Percent - проценты (считаются 0.0 - 1.0)
+* Px - экранные пиксели
+* Em - отношение к родительскому элементу (1.0 - 100%)
+* Rem - отношение к основному элементу документа
+* Auto - определяется автоматически
+* Dpi - плотность пикселей
+* Dppx - пиксели в учётом плотности
+* Contain - вписан в родительский элементы
+* Cover - описан вокруг родительского эдемента
+* Vw - отношение к ширине экрана
+* Vh - отношение к высоте экрана
+* VMin
+* VMax
+
+
+# ::stappler::geom::Metric::isAuto() const
+
+## BRIEF
+
+Проверяет, используется ли автоматический размер
+
+## CONTENT
+
+Проверяет, используется ли автоматический размер
+
+Возвращает:
+* bool
+
+# ::stappler::geom::Metric::isFixed() const
+
+## BRIEF
+
+Проверяет, используется ли фиксирвоанный размер
+
+## CONTENT
+
+Проверяет, используется ли фиксирвоанный размер
+
+Возвращает:
+* bool
+
+# ::stappler::geom::Metric::value
+
+## BRIEF
+
+Значение размера
+
+## CONTENT
+
+Значение размера
+
+Тип: float
+
+
+# ::stappler::geom::Metric::metric
+
+## BRIEF
+
+Размерность метрики
+
+## CONTENT
+
+Размерность метрики
+
+Тип: stappler::geom::Metric::Units
+
+
+# ::stappler::geom::Metric::Metric(float,stappler::geom::Metric::Units)
+
+## BRIEF
+
+Создаёт метрику
+
+## CONTENT
+
+Создаёт метрику
+
+Параметры:
+* float - значение
+* stappler::geom::Metric::Units - размерность
+
+
+# ::stappler::geom::Metric::Metric()
+
+## BRIEF
+
+Создаёт метрику с автоматическим размером
+
+## CONTENT
+
+Создаёт метрику с автоматическим размером
+
+# ::stappler::geom::Metric::readStyleValue(stappler::StringView,bool,bool)
+
+## BRIEF
+
+Читает метрику из значения CSS
+
+## CONTENT
+
+Читает метрику из значения CSS
+
+Параметры:
+* stappler::StringView - строка для чтения
+* bool - true - читает экранные метрики, false - общие
+* bool - true - допускать пустые значеня
+
+Возвращает:
+* bool - true если метрика успешно прочитана
 
 # ::stappler::geom::Size2
 
@@ -689,38 +820,6 @@ Title: SPGeometry.h
 Возвращает:
 * stappler::geom::Extent2& - ссылка на себя
 
-# ::stappler::geom::Extent2::operator==(stappler::geom::Extent2 const&) const
-
-## BRIEF
-
-Сравнивает два размера
-
-## CONTENT
-
-Сравнивает два размера
-
-Параметры:
-* stappler::geom::Extent2 const&
-
-Возвращает:
-* bool - true если размеры совпадают
-
-# ::stappler::geom::Extent2::operator!=(stappler::geom::Extent2 const&) const
-
-## BRIEF
-
-Сравнивает два размера
-
-## CONTENT
-
-Сравнивает два размера
-
-Параметры:
-* stappler::geom::Extent2 const&
-
-Возвращает:
-* bool - true если размеры не совпадают
-
 # ::stappler::geom::Extent2::operator<=>(stappler::geom::Extent2 const&) const
 
 ## BRIEF
@@ -969,38 +1068,6 @@ Title: SPGeometry.h
 
 Возвращает:
 * stappler::geom::Extent3& - ссылка на себя
-
-# ::stappler::geom::Extent3::operator==(stappler::geom::Extent3 const&) const
-
-## BRIEF
-
-Сравнивает два размера
-
-## CONTENT
-
-Сравнивает два размера
-
-Параметры:
-* stappler::geom::Extent3 const&
-
-Возвращает:
-* bool - true если размеры совпадают
-
-# ::stappler::geom::Extent3::operator!=(stappler::geom::Extent3 const&) const
-
-## BRIEF
-
-Сравнивает два размера
-
-## CONTENT
-
-Сравнивает два размера
-
-Параметры:
-* stappler::geom::Extent3 const&
-
-Возвращает:
-* bool - true если размеры не совпадают
 
 # ::stappler::geom::Extent3::operator<=>(stappler::geom::Extent3 const&) const
 
@@ -1263,22 +1330,6 @@ Title: SPGeometry.h
 Возвращает:
 * bool - true если прямоугольники равны
 
-# ::stappler::geom::Rect::containsPoint(stappler::geom::Vec2 const&) const
-
-## BRIEF
-
-Проверяет, содержит ли прямоугольник заданную точку
-
-## CONTENT
-
-Проверяет, содержит ли прямоугольник заданную точку
-
-Параметры:
-* stappler::geom::Vec2 const& - двумерная точка
-
-Возвращает:
-* bool - true если точка лежит внутри или на границе прямоугольника
-
 # ::stappler::geom::Rect::intersectsRect(stappler::geom::Rect const&) const
 
 ## BRIEF
@@ -1420,38 +1471,6 @@ Title: SPGeometry.h
 * uint32_t - высота
 
 
-# ::stappler::geom::UVec2::operator==(stappler::geom::UVec2 const&) const
-
-## BRIEF
-
-Сравнивает две точки
-
-## CONTENT
-
-Сравнивает две точки
-
-Параметры:
-* stappler::geom::UVec2 const&
-
-Возвращает:
-* bool - true если точки равны
-
-# ::stappler::geom::UVec2::operator!=(stappler::geom::UVec2 const&) const
-
-## BRIEF
-
-Сравнивает две точки
-
-## CONTENT
-
-Сравнивает две точки
-
-Параметры:
-* stappler::geom::UVec2 const&
-
-Возвращает:
-* bool - true если точки не равны
-
 # ::stappler::geom::URect
 
 ## BRIEF
@@ -1522,38 +1541,6 @@ Title: SPGeometry.h
 
 Возвращает:
 * stappler::geom::UVec2 - исходная точка прямоугольника
-
-# ::stappler::geom::URect::operator==(stappler::geom::URect const&) const
-
-## BRIEF
-
-Сравнивает два прямоугольника
-
-## CONTENT
-
-Сравнивает два прямоугольника
-
-Параметры:
-* stappler::geom::URect const&
-
-Возвращает:
-* bool - true если прямоугольники совпадают
-
-# ::stappler::geom::URect::operator!=(stappler::geom::URect const&) const
-
-## BRIEF
-
-Сравнивает два прямоугольника
-
-## CONTENT
-
-Сравнивает два прямоугольника
-
-Параметры:
-* stappler::geom::URect const&
-
-Возвращает:
-* bool - true если прямоугольники совпадают
 
 # ::stappler::geom::URect::getMaxX() const
 
@@ -1783,3 +1770,220 @@ Title: SPGeometry.h
 
 Возвращает:
 * std::ostream&
+
+# ::stappler::geom::Metric::operator==(stappler::geom::Metric const&) const
+
+## BRIEF
+
+Сравнивает две метрики
+
+## CONTENT
+
+Сравнивает две метрики
+
+Параметры:
+* stappler::geom::Metric const&
+
+Возвращает:
+* bool - true если метрики совпадают
+
+# ::stappler::geom::Metric::operator!=(stappler::geom::Metric const&) const
+
+## BRIEF
+
+Сравнивает две метрики
+
+## CONTENT
+
+Сравнивает две метрики
+
+Параметры:
+* stappler::geom::Metric const&
+
+Возвращает:
+* bool - true если две метрики не совпадают
+
+# ::stappler::geom::Rect::containsPoint(stappler::geom::Vec2 const&,float) const
+
+## BRIEF
+
+Проверяет, попадает ли точка в прямоугольник с некоторым допуском
+
+## CONTENT
+
+Проверяет, попадает ли точка в прямоугольник с некоторым допуском
+
+Параметры:
+* stappler::geom::Vec2 const&
+* float - допуск для попадания точки
+
+Возвращает:
+* bool - true если точка лежит в прямоугольнике, расширенном на допуск
+
+# ::stappler::geom::UVec2::operator<=>(stappler::geom::UVec2 const&) const
+
+## BRIEF
+
+Универсальный оператор сравнения
+
+## CONTENT
+
+Универсальный оператор сравнения
+
+Параметры:
+* stappler::geom::UVec2 const&
+
+Возвращает:
+* auto
+
+# ::stappler::geom::UVec3
+
+## BRIEF
+
+Структура трёхмерной целочисленной точки
+
+## CONTENT
+
+Структура трёхмерной целочисленной точки
+
+# ::stappler::geom::UVec3::x
+
+## BRIEF
+
+Значение координаты x
+
+## CONTENT
+
+Значение координаты x
+
+Тип: uint32_t
+
+# ::stappler::geom::UVec3::y
+
+## BRIEF
+
+Значение координаты y
+
+## CONTENT
+
+Значение координаты y
+
+Тип: uint32_t
+
+# ::stappler::geom::UVec3::z
+
+## BRIEF
+
+Значение координаты z
+
+## CONTENT
+
+Значение координаты z
+
+Тип: uint32_t
+
+# ::stappler::geom::UVec3::operator<=>(stappler::geom::UVec3 const&) const
+
+## BRIEF
+
+Универсальный оператор сравнения
+
+## CONTENT
+
+Универсальный оператор сравнения
+
+Параметры:
+* stappler::geom::UVec3 const&
+
+Возвращает:
+* auto
+
+# ::stappler::geom::UVec4
+
+## BRIEF
+
+Структура четырёхмерной целочисленной точки
+
+## CONTENT
+
+Структура четырёхмерной целочисленной точки
+
+# ::stappler::geom::UVec4::x
+
+## BRIEF
+
+Значение координаты x
+
+## CONTENT
+
+Значение координаты x
+
+Тип: uint32_t
+
+# ::stappler::geom::UVec4::y
+
+## BRIEF
+
+Значение координаты y
+
+## CONTENT
+
+Значение координаты y
+
+Тип: uint32_t
+
+# ::stappler::geom::UVec4::z
+
+## BRIEF
+
+Значение координаты z
+
+## CONTENT
+
+Значение координаты z
+
+Тип: uint32_t
+
+# ::stappler::geom::UVec4::w
+
+## BRIEF
+
+Значение координаты w
+
+## CONTENT
+
+Значение координаты w
+
+Тип: uint32_t
+
+# ::stappler::geom::UVec4::operator<=>(stappler::geom::UVec4 const&) const
+
+## BRIEF
+
+Универсальный оператор сравнения
+
+## CONTENT
+
+Универсальный оператор сравнения
+
+Параметры:
+* stappler::geom::UVec4 const&
+
+Возвращает:
+* auto
+
+# ::stappler::geom::URect::operator<=>(stappler::geom::URect const&) const
+
+## BRIEF
+
+Универсальный оператор сравнения
+
+## CONTENT
+
+Универсальный оператор сравнения
+
+Параметры:
+* stappler::geom::URect const&
+
+Возвращает:
+* auto

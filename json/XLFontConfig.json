@@ -16,10 +16,19 @@
 		"_kind": "include directive",
 		"_name": "SPFontStyle.h",
 		"id": 2296947514,
-		"include": "core/geom/SPFontStyle.h",
+		"include": "core/font/SPFontStyle.h",
 		"include_kind": "local",
 		"kind": "include directive",
 		"name": "SPFontStyle.h"
+	}, {
+		"_fullName": "SPFontFace.h",
+		"_kind": "include directive",
+		"_name": "SPFontFace.h",
+		"id": 3877547437,
+		"include": "core/font/SPFontFace.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "SPFontFace.h"
 	}, {
 		"_fullName": "XENOLITH_FONT_XLFONTCONFIG_H_",
 		"_kind": "macro definition",
@@ -44,47 +53,6 @@
 				"_kind": "namespace",
 				"_name": "config",
 				"childs": [{
-					"_fullName": "::stappler::xenolith::config::FontPreloadGroups",
-					"_kind": "variable",
-					"_name": "FontPreloadGroups",
-					"default_value": {
-						"expression": [{
-							"kind": "keyword",
-							"spelling": "false"
-						}],
-						"kind": "unexposed",
-						"type": {
-							"_typeName": "bool const",
-							"cv_qualifier": "const",
-							"kind": "cv_qualified",
-							"type": {
-								"_typeName": "bool",
-								"builtin_type_kind": "bool",
-								"kind": "builtin"
-							}
-						}
-					},
-					"id": 1293618704,
-					"is_constexpr": true,
-					"is_declaration": false,
-					"is_definition": true,
-					"kind": "variable",
-					"name": "FontPreloadGroups",
-					"semantic_scope": "",
-					"storage_class": [
-						"static"
-					],
-					"type":  {
-						"_typeName": "bool const",
-						"cv_qualifier": "const",
-						"kind": "cv_qualified",
-						"type": {
-							"_typeName": "bool",
-							"builtin_type_kind": "bool",
-							"kind": "builtin"
-						}
-					}
-				}, {
 					"_fullName": "::stappler::xenolith::config::MaxFastLocaleChars",
 					"_kind": "variable",
 					"_name": "MaxFastLocaleChars",
@@ -181,1312 +149,223 @@
 				"_kind": "namespace",
 				"_name": "font",
 				"childs": [{
-					"_fullName": "::stappler::xenolith::font::FontLayoutParameters",
-					"_kind": "type alias",
-					"_name": "FontLayoutParameters",
-					"id": 24501444,
-					"kind": "type alias",
-					"name": "FontLayoutParameters",
-					"underlying_type": {
-						"_typeName": "geom::FontLayoutParameters",
-						"kind": "user_defined",
-						"target": {
-							"name": "geom::FontLayoutParameters",
-							"objects": [{
-								"_fullName": "::stappler::geom::FontLayoutParameters",
-								"_kind": "class",
-								"_name": "FontLayoutParameters",
-								"class_kind": "struct",
-								"id": 4147058309,
-								"is_declaration": false,
-								"is_definition": true,
-								"is_final": false,
-								"kind": "class",
-								"name": "FontLayoutParameters",
-								"scope": {
-									"name": "FontLayoutParameters"
-								},
-								"semantic_scope": ""
-							}]
-						}
-					}
-				}, {
-					"_fullName": "::stappler::xenolith::font::FontSpecializationVector",
-					"_kind": "type alias",
-					"_name": "FontSpecializationVector",
-					"id": 2371003138,
-					"kind": "type alias",
-					"name": "FontSpecializationVector",
-					"underlying_type": {
-						"_typeName": "geom::FontSpecializationVector",
-						"kind": "user_defined",
-						"target": {
-							"name": "geom::FontSpecializationVector",
-							"objects": [{
-								"_fullName": "::stappler::geom::FontSpecializationVector",
-								"_kind": "class",
-								"_name": "FontSpecializationVector",
-								"bases": [{
-									"_fullName": "FontLayoutParameters",
-									"_kind": "base class specifier",
-									"_name": "FontLayoutParameters",
-									"access_specifier": "public",
-									"id": 2095709512,
-									"is_virtual": false,
-									"kind": "base class specifier",
-									"name": "FontLayoutParameters",
-									"type": {
-										"_typeName": "stappler::geom::FontLayoutParameters",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::geom::FontLayoutParameters",
-											"objects": [{
-												"_fullName": "::stappler::geom::FontLayoutParameters",
-												"_kind": "class",
-												"_name": "FontLayoutParameters",
-												"class_kind": "struct",
-												"id": 4147058309,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "FontLayoutParameters",
-												"scope": {
-													"name": "FontLayoutParameters"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}],
-								"class_kind": "struct",
-								"id": 2969827423,
-								"is_declaration": false,
-								"is_definition": true,
-								"is_final": false,
-								"kind": "class",
-								"name": "FontSpecializationVector",
-								"scope": {
-									"name": "FontSpecializationVector"
-								},
-								"semantic_scope": ""
-							}]
-						}
-					}
-				}, {
-					"_fullName": "::stappler::xenolith::font::FontParameters",
-					"_kind": "type alias",
-					"_name": "FontParameters",
-					"id": 1651315451,
-					"kind": "type alias",
-					"name": "FontParameters",
-					"underlying_type": {
-						"_typeName": "geom::FontParameters",
-						"kind": "user_defined",
-						"target": {
-							"name": "geom::FontParameters",
-							"objects": [{
-								"_fullName": "::stappler::geom::FontParameters",
-								"_kind": "class",
-								"_name": "FontParameters",
-								"bases": [{
-									"_fullName": "FontSpecializationVector",
-									"_kind": "base class specifier",
-									"_name": "FontSpecializationVector",
-									"access_specifier": "public",
-									"id": 3595526932,
-									"is_virtual": false,
-									"kind": "base class specifier",
-									"name": "FontSpecializationVector",
-									"type": {
-										"_typeName": "stappler::geom::FontSpecializationVector",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::geom::FontSpecializationVector",
-											"objects": [{
-												"_fullName": "::stappler::geom::FontSpecializationVector",
-												"_kind": "class",
-												"_name": "FontSpecializationVector",
-												"bases": [{
-													"_fullName": "FontLayoutParameters",
-													"_kind": "base class specifier",
-													"_name": "FontLayoutParameters",
-													"access_specifier": "public",
-													"id": 2095709512,
-													"is_virtual": false,
-													"kind": "base class specifier",
-													"name": "FontLayoutParameters",
-													"type": {
-														"_typeName": "stappler::geom::FontLayoutParameters",
-														"kind": "user_defined",
-														"target": {
-															"name": "stappler::geom::FontLayoutParameters",
-															"objects": [{
-																"_fullName": "::stappler::geom::FontLayoutParameters",
-																"_kind": "class",
-																"_name": "FontLayoutParameters",
-																"class_kind": "struct",
-																"id": 4147058309,
-																"is_declaration": false,
-																"is_definition": true,
-																"is_final": false,
-																"kind": "class",
-																"name": "FontLayoutParameters",
-																"scope": {
-																	"name": "FontLayoutParameters"
-																},
-																"semantic_scope": ""
-															}]
-														}
-													}
-												}],
-												"class_kind": "struct",
-												"id": 2969827423,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "FontSpecializationVector",
-												"scope": {
-													"name": "FontSpecializationVector"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}],
-								"class_kind": "struct",
-								"id": 1706176906,
-								"is_declaration": false,
-								"is_definition": true,
-								"is_final": false,
-								"kind": "class",
-								"name": "FontParameters",
-								"scope": {
-									"name": "FontParameters"
-								},
-								"semantic_scope": ""
-							}]
-						}
-					}
-				}, {
-					"_fullName": "::stappler::xenolith::font::FontVariableAxis",
-					"_kind": "type alias",
-					"_name": "FontVariableAxis",
-					"id": 3360363632,
-					"kind": "type alias",
-					"name": "FontVariableAxis",
-					"underlying_type": {
-						"_typeName": "geom::FontVariableAxis",
-						"kind": "user_defined",
-						"target": {
-							"name": "geom::FontVariableAxis",
-							"objects": [{
-								"_fullName": "::stappler::geom::FontVariableAxis",
-								"_kind": "enum",
-								"_name": "FontVariableAxis",
-								"has_explicit_type": false,
-								"id": 4257207571,
-								"is_declaration": false,
-								"is_definition": true,
-								"is_scoped": true,
-								"kind": "enum",
-								"name": "FontVariableAxis",
-								"scope": {
-									"name": "FontVariableAxis"
-								},
-								"semantic_scope": "",
-								"underlying_type": {
-									"_typeName": "int",
-									"builtin_type_kind": "int",
-									"kind": "builtin"
-								}
-							}]
-						}
-					}
-				}, {
-					"_fullName": "::stappler::xenolith::font::FontWeight",
-					"_kind": "type alias",
-					"_name": "FontWeight",
-					"id": 3325287754,
-					"kind": "type alias",
-					"name": "FontWeight",
-					"underlying_type": {
-						"_typeName": "geom::FontWeight",
-						"kind": "user_defined",
-						"target": {
-							"name": "geom::FontWeight",
-							"objects": [{
-								"_fullName": "::stappler::geom::FontWeight",
-								"_kind": "class",
-								"_name": "FontWeight",
-								"bases": [{
-									"_fullName": "ValueWrapper<uint16_t,class FontWeightFlag>",
-									"_kind": "base class specifier",
-									"_name": "ValueWrapper<uint16_t,class FontWeightFlag>",
-									"access_specifier": "public",
-									"id": 3854593273,
-									"is_virtual": false,
-									"kind": "base class specifier",
-									"name": "ValueWrapper<uint16_t,class FontWeightFlag>",
-									"type": {
-										"_typeName": "ValueWrapper<uint16_t, class FontWeightFlag>",
-										"arguments_exposed": false,
-										"kind": "template_instantiation",
-										"primary_template": {
-											"name": "ValueWrapper",
-											"objects": [{
-												"_fullName": "::stappler::ValueWrapper<class,class>",
-												"_kind": "class template",
-												"_name": "ValueWrapper",
-												"class": {
-													"_fullName": "::stappler::ValueWrapper<class,class>",
-													"_kind": "class",
-													"_name": "ValueWrapper",
-													"class_kind": "struct",
-													"id": 538408585,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "ValueWrapper",
-													"scope": {
-														"is_templated": true,
-														"name": "ValueWrapper",
-														"template_parameters": [{
-															"_fullName": "T",
-															"_kind": "template type parameter",
-															"_name": "T",
-															"id": 1306257776,
-															"is_variadic": false,
-															"keyword": "class",
-															"kind": "template type parameter",
-															"name": "T"
-														}, {
-															"_fullName": "Flag",
-															"_kind": "template type parameter",
-															"_name": "Flag",
-															"id": 1755376243,
-															"is_variadic": false,
-															"keyword": "class",
-															"kind": "template type parameter",
-															"name": "Flag"
-														}]
-													},
-													"semantic_scope": ""
-												},
-												"id": 538408585,
-												"kind": "class template",
-												"name": "ValueWrapper",
-												"parameters": [{
-													"_fullName": "T",
-													"_kind": "template type parameter",
-													"_name": "T",
-													"id": 1306257776,
-													"is_variadic": false,
-													"keyword": "class",
-													"kind": "template type parameter",
-													"name": "T"
-												}, {
-													"_fullName": "Flag",
-													"_kind": "template type parameter",
-													"_name": "Flag",
-													"id": 1755376243,
-													"is_variadic": false,
-													"keyword": "class",
-													"kind": "template type parameter",
-													"name": "Flag"
-												}],
-												"scope":  {
-													"is_templated": true,
-													"name": "ValueWrapper",
-													"template_parameters": [{
-														"_fullName": "T",
-														"_kind": "template type parameter",
-														"_name": "T",
-														"id": 1306257776,
-														"is_variadic": false,
-														"keyword": "class",
-														"kind": "template type parameter",
-														"name": "T"
-													}, {
-														"_fullName": "Flag",
-														"_kind": "template type parameter",
-														"_name": "Flag",
-														"id": 1755376243,
-														"is_variadic": false,
-														"keyword": "class",
-														"kind": "template type parameter",
-														"name": "Flag"
-													}]
-												}
-											}]
-										},
-										"unexposed_arguments": "uint16_t, class FontWeightFlag"
-									}
-								}],
-								"class_kind": "struct",
-								"id": 1012543996,
-								"is_declaration": false,
-								"is_definition": true,
-								"is_final": false,
-								"kind": "class",
-								"name": "FontWeight",
-								"scope": {
-									"name": "FontWeight"
-								},
-								"semantic_scope": ""
-							}]
-						}
-					}
-				}, {
-					"_fullName": "::stappler::xenolith::font::FontStretch",
-					"_kind": "type alias",
-					"_name": "FontStretch",
-					"id": 3228434685,
-					"kind": "type alias",
-					"name": "FontStretch",
-					"underlying_type": {
-						"_typeName": "geom::FontStretch",
-						"kind": "user_defined",
-						"target": {
-							"name": "geom::FontStretch",
-							"objects": [{
-								"_fullName": "::stappler::geom::FontStretch",
-								"_kind": "class",
-								"_name": "FontStretch",
-								"bases": [{
-									"_fullName": "ValueWrapper<uint16_t,class FontStretchFlag>",
-									"_kind": "base class specifier",
-									"_name": "ValueWrapper<uint16_t,class FontStretchFlag>",
-									"access_specifier": "public",
-									"id": 2713473271,
-									"is_virtual": false,
-									"kind": "base class specifier",
-									"name": "ValueWrapper<uint16_t,class FontStretchFlag>",
-									"type": {
-										"_typeName": "ValueWrapper<uint16_t, class FontStretchFlag>",
-										"arguments_exposed": false,
-										"kind": "template_instantiation",
-										"primary_template": {
-											"name": "ValueWrapper",
-											"objects": [{
-												"_fullName": "::stappler::ValueWrapper<class,class>",
-												"_kind": "class template",
-												"_name": "ValueWrapper",
-												"class": {
-													"_fullName": "::stappler::ValueWrapper<class,class>",
-													"_kind": "class",
-													"_name": "ValueWrapper",
-													"class_kind": "struct",
-													"id": 538408585,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "ValueWrapper",
-													"scope": {
-														"is_templated": true,
-														"name": "ValueWrapper",
-														"template_parameters": [{
-															"_fullName": "T",
-															"_kind": "template type parameter",
-															"_name": "T",
-															"id": 1306257776,
-															"is_variadic": false,
-															"keyword": "class",
-															"kind": "template type parameter",
-															"name": "T"
-														}, {
-															"_fullName": "Flag",
-															"_kind": "template type parameter",
-															"_name": "Flag",
-															"id": 1755376243,
-															"is_variadic": false,
-															"keyword": "class",
-															"kind": "template type parameter",
-															"name": "Flag"
-														}]
-													},
-													"semantic_scope": ""
-												},
-												"id": 538408585,
-												"kind": "class template",
-												"name": "ValueWrapper",
-												"parameters": [{
-													"_fullName": "T",
-													"_kind": "template type parameter",
-													"_name": "T",
-													"id": 1306257776,
-													"is_variadic": false,
-													"keyword": "class",
-													"kind": "template type parameter",
-													"name": "T"
-												}, {
-													"_fullName": "Flag",
-													"_kind": "template type parameter",
-													"_name": "Flag",
-													"id": 1755376243,
-													"is_variadic": false,
-													"keyword": "class",
-													"kind": "template type parameter",
-													"name": "Flag"
-												}],
-												"scope":  {
-													"is_templated": true,
-													"name": "ValueWrapper",
-													"template_parameters": [{
-														"_fullName": "T",
-														"_kind": "template type parameter",
-														"_name": "T",
-														"id": 1306257776,
-														"is_variadic": false,
-														"keyword": "class",
-														"kind": "template type parameter",
-														"name": "T"
-													}, {
-														"_fullName": "Flag",
-														"_kind": "template type parameter",
-														"_name": "Flag",
-														"id": 1755376243,
-														"is_variadic": false,
-														"keyword": "class",
-														"kind": "template type parameter",
-														"name": "Flag"
-													}]
-												}
-											}]
-										},
-										"unexposed_arguments": "uint16_t, class FontStretchFlag"
-									}
-								}],
-								"class_kind": "struct",
-								"id": 4083739392,
-								"is_declaration": false,
-								"is_definition": true,
-								"is_final": false,
-								"kind": "class",
-								"name": "FontStretch",
-								"scope": {
-									"name": "FontStretch"
-								},
-								"semantic_scope": ""
-							}]
-						}
-					}
-				}, {
-					"_fullName": "::stappler::xenolith::font::FontGrade",
-					"_kind": "type alias",
-					"_name": "FontGrade",
-					"id": 1874695351,
-					"kind": "type alias",
-					"name": "FontGrade",
-					"underlying_type": {
-						"_typeName": "geom::FontGrade",
-						"kind": "user_defined",
-						"target": {
-							"name": "geom::FontGrade",
-							"objects": [{
-								"_fullName": "::stappler::geom::FontGrade",
-								"_kind": "class",
-								"_name": "FontGrade",
-								"bases": [{
-									"_fullName": "ValueWrapper<int16_t,class FontGradeFlag>",
-									"_kind": "base class specifier",
-									"_name": "ValueWrapper<int16_t,class FontGradeFlag>",
-									"access_specifier": "public",
-									"id": 1410770531,
-									"is_virtual": false,
-									"kind": "base class specifier",
-									"name": "ValueWrapper<int16_t,class FontGradeFlag>",
-									"type": {
-										"_typeName": "ValueWrapper<int16_t, class FontGradeFlag>",
-										"arguments_exposed": false,
-										"kind": "template_instantiation",
-										"primary_template": {
-											"name": "ValueWrapper",
-											"objects": [{
-												"_fullName": "::stappler::ValueWrapper<class,class>",
-												"_kind": "class template",
-												"_name": "ValueWrapper",
-												"class": {
-													"_fullName": "::stappler::ValueWrapper<class,class>",
-													"_kind": "class",
-													"_name": "ValueWrapper",
-													"class_kind": "struct",
-													"id": 538408585,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "ValueWrapper",
-													"scope": {
-														"is_templated": true,
-														"name": "ValueWrapper",
-														"template_parameters": [{
-															"_fullName": "T",
-															"_kind": "template type parameter",
-															"_name": "T",
-															"id": 1306257776,
-															"is_variadic": false,
-															"keyword": "class",
-															"kind": "template type parameter",
-															"name": "T"
-														}, {
-															"_fullName": "Flag",
-															"_kind": "template type parameter",
-															"_name": "Flag",
-															"id": 1755376243,
-															"is_variadic": false,
-															"keyword": "class",
-															"kind": "template type parameter",
-															"name": "Flag"
-														}]
-													},
-													"semantic_scope": ""
-												},
-												"id": 538408585,
-												"kind": "class template",
-												"name": "ValueWrapper",
-												"parameters": [{
-													"_fullName": "T",
-													"_kind": "template type parameter",
-													"_name": "T",
-													"id": 1306257776,
-													"is_variadic": false,
-													"keyword": "class",
-													"kind": "template type parameter",
-													"name": "T"
-												}, {
-													"_fullName": "Flag",
-													"_kind": "template type parameter",
-													"_name": "Flag",
-													"id": 1755376243,
-													"is_variadic": false,
-													"keyword": "class",
-													"kind": "template type parameter",
-													"name": "Flag"
-												}],
-												"scope":  {
-													"is_templated": true,
-													"name": "ValueWrapper",
-													"template_parameters": [{
-														"_fullName": "T",
-														"_kind": "template type parameter",
-														"_name": "T",
-														"id": 1306257776,
-														"is_variadic": false,
-														"keyword": "class",
-														"kind": "template type parameter",
-														"name": "T"
-													}, {
-														"_fullName": "Flag",
-														"_kind": "template type parameter",
-														"_name": "Flag",
-														"id": 1755376243,
-														"is_variadic": false,
-														"keyword": "class",
-														"kind": "template type parameter",
-														"name": "Flag"
-													}]
-												}
-											}]
-										},
-										"unexposed_arguments": "int16_t, class FontGradeFlag"
-									}
-								}],
-								"class_kind": "struct",
-								"id": 32889300,
-								"is_declaration": false,
-								"is_definition": true,
-								"is_final": false,
-								"kind": "class",
-								"name": "FontGrade",
-								"scope": {
-									"name": "FontGrade"
-								},
-								"semantic_scope": ""
-							}]
-						}
-					}
-				}, {
-					"_fullName": "::stappler::xenolith::font::FontStyle",
-					"_kind": "type alias",
-					"_name": "FontStyle",
-					"id": 2245567324,
-					"kind": "type alias",
-					"name": "FontStyle",
-					"underlying_type": {
-						"_typeName": "geom::FontStyle",
-						"kind": "user_defined",
-						"target": {
-							"name": "geom::FontStyle",
-							"objects": [{
-								"_fullName": "::stappler::geom::FontStyle",
-								"_kind": "class",
-								"_name": "FontStyle",
-								"bases": [{
-									"_fullName": "ValueWrapper<int16_t,class FontStyleFlag>",
-									"_kind": "base class specifier",
-									"_name": "ValueWrapper<int16_t,class FontStyleFlag>",
-									"access_specifier": "public",
-									"id": 346659899,
-									"is_virtual": false,
-									"kind": "base class specifier",
-									"name": "ValueWrapper<int16_t,class FontStyleFlag>",
-									"type": {
-										"_typeName": "ValueWrapper<int16_t, class FontStyleFlag>",
-										"arguments_exposed": false,
-										"kind": "template_instantiation",
-										"primary_template": {
-											"name": "ValueWrapper",
-											"objects": [{
-												"_fullName": "::stappler::ValueWrapper<class,class>",
-												"_kind": "class template",
-												"_name": "ValueWrapper",
-												"class": {
-													"_fullName": "::stappler::ValueWrapper<class,class>",
-													"_kind": "class",
-													"_name": "ValueWrapper",
-													"class_kind": "struct",
-													"id": 538408585,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "ValueWrapper",
-													"scope": {
-														"is_templated": true,
-														"name": "ValueWrapper",
-														"template_parameters": [{
-															"_fullName": "T",
-															"_kind": "template type parameter",
-															"_name": "T",
-															"id": 1306257776,
-															"is_variadic": false,
-															"keyword": "class",
-															"kind": "template type parameter",
-															"name": "T"
-														}, {
-															"_fullName": "Flag",
-															"_kind": "template type parameter",
-															"_name": "Flag",
-															"id": 1755376243,
-															"is_variadic": false,
-															"keyword": "class",
-															"kind": "template type parameter",
-															"name": "Flag"
-														}]
-													},
-													"semantic_scope": ""
-												},
-												"id": 538408585,
-												"kind": "class template",
-												"name": "ValueWrapper",
-												"parameters": [{
-													"_fullName": "T",
-													"_kind": "template type parameter",
-													"_name": "T",
-													"id": 1306257776,
-													"is_variadic": false,
-													"keyword": "class",
-													"kind": "template type parameter",
-													"name": "T"
-												}, {
-													"_fullName": "Flag",
-													"_kind": "template type parameter",
-													"_name": "Flag",
-													"id": 1755376243,
-													"is_variadic": false,
-													"keyword": "class",
-													"kind": "template type parameter",
-													"name": "Flag"
-												}],
-												"scope":  {
-													"is_templated": true,
-													"name": "ValueWrapper",
-													"template_parameters": [{
-														"_fullName": "T",
-														"_kind": "template type parameter",
-														"_name": "T",
-														"id": 1306257776,
-														"is_variadic": false,
-														"keyword": "class",
-														"kind": "template type parameter",
-														"name": "T"
-													}, {
-														"_fullName": "Flag",
-														"_kind": "template type parameter",
-														"_name": "Flag",
-														"id": 1755376243,
-														"is_variadic": false,
-														"keyword": "class",
-														"kind": "template type parameter",
-														"name": "Flag"
-													}]
-												}
-											}]
-										},
-										"unexposed_arguments": "int16_t, class FontStyleFlag"
-									}
-								}],
-								"class_kind": "struct",
-								"id": 785689895,
-								"is_declaration": false,
-								"is_definition": true,
-								"is_final": false,
-								"kind": "class",
-								"name": "FontStyle",
-								"scope": {
-									"name": "FontStyle"
-								},
-								"semantic_scope": ""
-							}]
-						}
-					}
-				}, {
-					"_fullName": "::stappler::xenolith::font::FontVariant",
-					"_kind": "type alias",
-					"_name": "FontVariant",
-					"id": 2770038325,
-					"kind": "type alias",
-					"name": "FontVariant",
-					"underlying_type": {
-						"_typeName": "geom::FontVariant",
-						"kind": "user_defined",
-						"target": {
-							"name": "geom::FontVariant",
-							"objects": [{
-								"_fullName": "::stappler::geom::FontVariant",
-								"_kind": "enum",
-								"_name": "FontVariant",
-								"has_explicit_type": true,
-								"id": 2150043350,
-								"is_declaration": false,
-								"is_definition": true,
-								"is_scoped": true,
-								"kind": "enum",
-								"name": "FontVariant",
-								"scope": {
-									"name": "FontVariant"
-								},
-								"semantic_scope": "",
-								"underlying_type": {
-									"_typeName": "EnumSize",
-									"kind": "user_defined",
-									"target": {
-										"name": "EnumSize",
-										"objects": [{
-											"_fullName": "::stappler::geom::EnumSize",
-											"_kind": "type alias",
-											"_name": "EnumSize",
-											"id": 3885594728,
-											"kind": "type alias",
-											"name": "EnumSize",
-											"underlying_type": {
-												"_typeName": "uint8_t",
-												"kind": "user_defined",
-												"target": {
-													"name": "uint8_t"
-												}
-											}
-										}]
-									}
-								}
-							}]
-						}
-					}
-				}, {
-					"_fullName": "::stappler::xenolith::font::FontSize",
-					"_kind": "type alias",
-					"_name": "FontSize",
-					"id": 1705937731,
-					"kind": "type alias",
-					"name": "FontSize",
-					"underlying_type": {
-						"_typeName": "geom::FontSize",
-						"kind": "user_defined",
-						"target": {
-							"name": "geom::FontSize",
-							"objects": [{
-								"_fullName": "::stappler::geom::FontSize",
-								"_kind": "class",
-								"_name": "FontSize",
-								"class_kind": "struct",
-								"id": 2184185660,
-								"is_declaration": false,
-								"is_definition": true,
-								"is_final": false,
-								"kind": "class",
-								"name": "FontSize",
-								"scope": {
-									"name": "FontSize"
-								},
-								"semantic_scope": ""
-							}]
-						}
-					}
-				}, {
-					"_fullName": "::stappler::xenolith::font::CharTexture",
-					"_kind": "type alias",
-					"_name": "CharTexture",
-					"id": 3112974778,
-					"kind": "type alias",
-					"name": "CharTexture",
-					"underlying_type": {
-						"_typeName": "geom::CharTexture",
-						"kind": "user_defined",
-						"target": {
-							"name": "geom::CharTexture",
-							"objects": [{
-								"_fullName": "::stappler::geom::CharTexture",
-								"_kind": "class",
-								"_name": "CharTexture",
-								"class_kind": "struct",
-								"id": 1195096839,
-								"is_declaration": false,
-								"is_definition": true,
-								"is_final": true,
-								"kind": "class",
-								"name": "CharTexture",
-								"scope": {
-									"name": "CharTexture"
-								},
-								"semantic_scope": ""
-							}]
-						}
-					}
-				}, {
-					"_fullName": "::stappler::xenolith::font::CharLayout",
-					"_kind": "type alias",
-					"_name": "CharLayout",
-					"id": 3106559898,
-					"kind": "type alias",
-					"name": "CharLayout",
-					"underlying_type": {
-						"_typeName": "geom::CharLayout",
-						"kind": "user_defined",
-						"target": {
-							"name": "geom::CharLayout",
-							"objects": [{
-								"_fullName": "::stappler::geom::CharLayout",
-								"_kind": "class",
-								"_name": "CharLayout",
-								"class_kind": "struct",
-								"id": 3786873703,
-								"is_declaration": false,
-								"is_definition": true,
-								"is_final": true,
-								"kind": "class",
-								"name": "CharLayout",
-								"scope": {
-									"name": "CharLayout"
-								},
-								"semantic_scope": ""
-							}]
-						}
-					}
-				}, {
-					"_fullName": "::stappler::xenolith::font::CharSpec",
-					"_kind": "type alias",
-					"_name": "CharSpec",
-					"id": 4264353707,
-					"kind": "type alias",
-					"name": "CharSpec",
-					"underlying_type": {
-						"_typeName": "geom::CharSpec",
-						"kind": "user_defined",
-						"target": {
-							"name": "geom::CharSpec",
-							"objects": [{
-								"_fullName": "::stappler::geom::CharSpec",
-								"_kind": "class",
-								"_name": "CharSpec",
-								"class_kind": "struct",
-								"id": 1246969996,
-								"is_declaration": false,
-								"is_definition": true,
-								"is_final": true,
-								"kind": "class",
-								"name": "CharSpec",
-								"scope": {
-									"name": "CharSpec"
-								},
-								"semantic_scope": ""
-							}]
-						}
-					}
-				}, {
-					"_fullName": "::stappler::xenolith::font::Metrics",
-					"_kind": "type alias",
-					"_name": "Metrics",
-					"id": 3500698692,
-					"kind": "type alias",
-					"name": "Metrics",
-					"underlying_type": {
-						"_typeName": "geom::FontMetrics",
-						"kind": "user_defined",
-						"target": {
-							"name": "geom::FontMetrics",
-							"objects": [{
-								"_fullName": "::stappler::geom::FontMetrics",
-								"_kind": "class",
-								"_name": "FontMetrics",
-								"class_kind": "struct",
-								"id": 37568067,
-								"is_declaration": false,
-								"is_definition": true,
-								"is_final": true,
-								"kind": "class",
-								"name": "FontMetrics",
-								"scope": {
-									"name": "FontMetrics"
-								},
-								"semantic_scope": ""
-							}]
-						}
-					}
-				}, {
-					"_fullName": "::stappler::xenolith::font::TextDecoration",
-					"_kind": "type alias",
-					"_name": "TextDecoration",
-					"id": 3784139487,
-					"kind": "type alias",
-					"name": "TextDecoration",
-					"underlying_type": {
-						"_typeName": "geom::TextDecoration",
-						"kind": "user_defined",
-						"target": {
-							"name": "geom::TextDecoration",
-							"objects": [{
-								"_fullName": "::stappler::geom::TextDecoration",
-								"_kind": "enum",
-								"_name": "TextDecoration",
-								"has_explicit_type": true,
-								"id": 2622910195,
-								"is_declaration": false,
-								"is_definition": true,
-								"is_scoped": true,
-								"kind": "enum",
-								"name": "TextDecoration",
-								"scope": {
-									"name": "TextDecoration"
-								},
-								"semantic_scope": "",
-								"underlying_type": {
-									"_typeName": "EnumSize",
-									"kind": "user_defined",
-									"target": {
-										"name": "EnumSize",
-										"objects": [{
-											"_fullName": "::stappler::geom::EnumSize",
-											"_kind": "type alias",
-											"_name": "EnumSize",
-											"id": 3885594728,
-											"kind": "type alias",
-											"name": "EnumSize",
-											"underlying_type": {
-												"_typeName": "uint8_t",
-												"kind": "user_defined",
-												"target": {
-													"name": "uint8_t"
-												}
-											}
-										}]
-									}
-								}
-							}]
-						}
-					}
-				}, {
-					"_fullName": "::stappler::xenolith::font::TextAlign",
-					"_kind": "type alias",
-					"_name": "TextAlign",
-					"id": 1964769504,
-					"kind": "type alias",
-					"name": "TextAlign",
-					"underlying_type": {
-						"_typeName": "geom::TextAlign",
-						"kind": "user_defined",
-						"target": {
-							"name": "geom::TextAlign",
-							"objects": [{
-								"_fullName": "::stappler::geom::TextAlign",
-								"_kind": "enum",
-								"_name": "TextAlign",
-								"has_explicit_type": true,
-								"id": 251367584,
-								"is_declaration": false,
-								"is_definition": true,
-								"is_scoped": true,
-								"kind": "enum",
-								"name": "TextAlign",
-								"scope": {
-									"name": "TextAlign"
-								},
-								"semantic_scope": "",
-								"underlying_type": {
-									"_typeName": "EnumSize",
-									"kind": "user_defined",
-									"target": {
-										"name": "EnumSize",
-										"objects": [{
-											"_fullName": "::stappler::geom::EnumSize",
-											"_kind": "type alias",
-											"_name": "EnumSize",
-											"id": 3885594728,
-											"kind": "type alias",
-											"name": "EnumSize",
-											"underlying_type": {
-												"_typeName": "uint8_t",
-												"kind": "user_defined",
-												"target": {
-													"name": "uint8_t"
-												}
-											}
-										}]
-									}
-								}
-							}]
-						}
-					}
-				}, {
-					"_fullName": "::stappler::xenolith::font::TextParameters",
-					"_kind": "type alias",
-					"_name": "TextParameters",
-					"id": 2505001359,
-					"kind": "type alias",
-					"name": "TextParameters",
-					"underlying_type": {
-						"_typeName": "geom::TextParameters",
-						"kind": "user_defined",
-						"target": {
-							"name": "geom::TextParameters",
-							"objects": [{
-								"_fullName": "::stappler::geom::TextParameters",
-								"_kind": "class",
-								"_name": "TextParameters",
-								"class_kind": "struct",
-								"id": 2925063771,
-								"is_declaration": false,
-								"is_definition": true,
-								"is_final": false,
-								"kind": "class",
-								"name": "TextParameters",
-								"scope": {
-									"name": "TextParameters"
-								},
-								"semantic_scope": ""
-							}]
-						}
-					}
-				}, {
-					"_fullName": "::stappler::xenolith::font::TextTransform",
-					"_kind": "type alias",
-					"_name": "TextTransform",
-					"id": 3763789840,
-					"kind": "type alias",
-					"name": "TextTransform",
-					"underlying_type": {
-						"_typeName": "geom::TextTransform",
-						"kind": "user_defined",
-						"target": {
-							"name": "geom::TextTransform",
-							"objects": [{
-								"_fullName": "::stappler::geom::TextTransform",
-								"_kind": "enum",
-								"_name": "TextTransform",
-								"has_explicit_type": true,
-								"id": 1942895197,
-								"is_declaration": false,
-								"is_definition": true,
-								"is_scoped": true,
-								"kind": "enum",
-								"name": "TextTransform",
-								"scope": {
-									"name": "TextTransform"
-								},
-								"semantic_scope": "",
-								"underlying_type": {
-									"_typeName": "EnumSize",
-									"kind": "user_defined",
-									"target": {
-										"name": "EnumSize",
-										"objects": [{
-											"_fullName": "::stappler::geom::EnumSize",
-											"_kind": "type alias",
-											"_name": "EnumSize",
-											"id": 3885594728,
-											"kind": "type alias",
-											"name": "EnumSize",
-											"underlying_type": {
-												"_typeName": "uint8_t",
-												"kind": "user_defined",
-												"target": {
-													"name": "uint8_t"
-												}
-											}
-										}]
-									}
-								}
-							}]
-						}
-					}
-				}, {
-					"_fullName": "::stappler::xenolith::font::VerticalAlign",
-					"_kind": "type alias",
-					"_name": "VerticalAlign",
-					"id": 1768233466,
-					"kind": "type alias",
-					"name": "VerticalAlign",
-					"underlying_type": {
-						"_typeName": "geom::VerticalAlign",
-						"kind": "user_defined",
-						"target": {
-							"name": "geom::VerticalAlign",
-							"objects": [{
-								"_fullName": "::stappler::geom::VerticalAlign",
-								"_kind": "enum",
-								"_name": "VerticalAlign",
-								"has_explicit_type": true,
-								"id": 2112750687,
-								"is_declaration": false,
-								"is_definition": true,
-								"is_scoped": true,
-								"kind": "enum",
-								"name": "VerticalAlign",
-								"scope": {
-									"name": "VerticalAlign"
-								},
-								"semantic_scope": "",
-								"underlying_type": {
-									"_typeName": "EnumSize",
-									"kind": "user_defined",
-									"target": {
-										"name": "EnumSize",
-										"objects": [{
-											"_fullName": "::stappler::geom::EnumSize",
-											"_kind": "type alias",
-											"_name": "EnumSize",
-											"id": 3885594728,
-											"kind": "type alias",
-											"name": "EnumSize",
-											"underlying_type": {
-												"_typeName": "uint8_t",
-												"kind": "user_defined",
-												"target": {
-													"name": "uint8_t"
-												}
-											}
-										}]
-									}
-								}
-							}]
-						}
-					}
-				}, {
-					"_fullName": "::stappler::xenolith::font::WhiteSpace",
-					"_kind": "type alias",
-					"_name": "WhiteSpace",
-					"id": 3583248620,
-					"kind": "type alias",
-					"name": "WhiteSpace",
-					"underlying_type": {
-						"_typeName": "geom::WhiteSpace",
-						"kind": "user_defined",
-						"target": {
-							"name": "geom::WhiteSpace",
-							"objects": [{
-								"_fullName": "::stappler::geom::WhiteSpace",
-								"_kind": "enum",
-								"_name": "WhiteSpace",
-								"has_explicit_type": true,
-								"id": 2040785157,
-								"is_declaration": false,
-								"is_definition": true,
-								"is_scoped": true,
-								"kind": "enum",
-								"name": "WhiteSpace",
-								"scope": {
-									"name": "WhiteSpace"
-								},
-								"semantic_scope": "",
-								"underlying_type": {
-									"_typeName": "EnumSize",
-									"kind": "user_defined",
-									"target": {
-										"name": "EnumSize",
-										"objects": [{
-											"_fullName": "::stappler::geom::EnumSize",
-											"_kind": "type alias",
-											"_name": "EnumSize",
-											"id": 3885594728,
-											"kind": "type alias",
-											"name": "EnumSize",
-											"underlying_type": {
-												"_typeName": "uint8_t",
-												"kind": "user_defined",
-												"target": {
-													"name": "uint8_t"
-												}
-											}
-										}]
-									}
-								}
-							}]
-						}
-					}
-				}, {
-					"_fullName": "::stappler::xenolith::font::Hyphens",
-					"_kind": "type alias",
-					"_name": "Hyphens",
-					"id": 2769973730,
-					"kind": "type alias",
-					"name": "Hyphens",
-					"underlying_type": {
-						"_typeName": "geom::Hyphens",
-						"kind": "user_defined",
-						"target": {
-							"name": "geom::Hyphens",
-							"objects": [{
-								"_fullName": "::stappler::geom::Hyphens",
-								"_kind": "enum",
-								"_name": "Hyphens",
-								"has_explicit_type": true,
-								"id": 2716559600,
-								"is_declaration": false,
-								"is_definition": true,
-								"is_scoped": true,
-								"kind": "enum",
-								"name": "Hyphens",
-								"scope": {
-									"name": "Hyphens"
-								},
-								"semantic_scope": "",
-								"underlying_type": {
-									"_typeName": "EnumSize",
-									"kind": "user_defined",
-									"target": {
-										"name": "EnumSize",
-										"objects": [{
-											"_fullName": "::stappler::geom::EnumSize",
-											"_kind": "type alias",
-											"_name": "EnumSize",
-											"id": 3885594728,
-											"kind": "type alias",
-											"name": "EnumSize",
-											"underlying_type": {
-												"_typeName": "uint8_t",
-												"kind": "user_defined",
-												"target": {
-													"name": "uint8_t"
-												}
-											}
-										}]
-									}
-								}
-							}]
-						}
+					"_fullName": "",
+					"_kind": "using directive",
+					"_name": "",
+					"id": 46947589,
+					"kind": "using directive",
+					"name": "",
+					"target": {
+						"name": "stappler::font",
+						"objects": [{
+							"_fullName": "::stappler::font",
+							"_kind": "namespace",
+							"_name": "font",
+							"id": 2611688916,
+							"is_anonymous": false,
+							"is_inline": false,
+							"is_nested": true,
+							"kind": "namespace",
+							"name": "font",
+							"scope": {
+								"name": "font"
+							}
+						}, {
+							"_fullName": "::stappler::font",
+							"_kind": "namespace",
+							"_name": "font",
+							"id": 2611688916,
+							"is_anonymous": false,
+							"is_inline": false,
+							"is_nested": true,
+							"kind": "namespace",
+							"name": "font",
+							"scope": {
+								"name": "font"
+							}
+						}, {
+							"_fullName": "::stappler::font",
+							"_kind": "namespace",
+							"_name": "font",
+							"id": 2611688916,
+							"is_anonymous": false,
+							"is_inline": false,
+							"is_nested": true,
+							"kind": "namespace",
+							"name": "font",
+							"scope": {
+								"name": "font"
+							}
+						}, {
+							"_fullName": "::stappler::font",
+							"_kind": "namespace",
+							"_name": "font",
+							"id": 2611688916,
+							"is_anonymous": false,
+							"is_inline": false,
+							"is_nested": true,
+							"kind": "namespace",
+							"name": "font",
+							"scope": {
+								"name": "font"
+							}
+						}, {
+							"_fullName": "::stappler::font",
+							"_kind": "namespace",
+							"_name": "font",
+							"id": 2611688916,
+							"is_anonymous": false,
+							"is_inline": false,
+							"is_nested": true,
+							"kind": "namespace",
+							"name": "font",
+							"scope": {
+								"name": "font"
+							}
+						}, {
+							"_fullName": "::stappler::font",
+							"_kind": "namespace",
+							"_name": "font",
+							"id": 2611688916,
+							"is_anonymous": false,
+							"is_inline": false,
+							"is_nested": true,
+							"kind": "namespace",
+							"name": "font",
+							"scope": {
+								"name": "font"
+							}
+						}, {
+							"_fullName": "::stappler::font",
+							"_kind": "namespace",
+							"_name": "font",
+							"id": 2611688916,
+							"is_anonymous": false,
+							"is_inline": false,
+							"is_nested": true,
+							"kind": "namespace",
+							"name": "font",
+							"scope": {
+								"name": "font"
+							}
+						}, {
+							"_fullName": "::stappler::font",
+							"_kind": "namespace",
+							"_name": "font",
+							"id": 2611688916,
+							"is_anonymous": false,
+							"is_inline": false,
+							"is_nested": true,
+							"kind": "namespace",
+							"name": "font",
+							"scope": {
+								"name": "font"
+							}
+						}, {
+							"_fullName": "::stappler::font",
+							"_kind": "namespace",
+							"_name": "font",
+							"id": 2611688916,
+							"is_anonymous": false,
+							"is_inline": false,
+							"is_nested": true,
+							"kind": "namespace",
+							"name": "font",
+							"scope": {
+								"name": "font"
+							}
+						}, {
+							"_fullName": "::stappler::font",
+							"_kind": "namespace",
+							"_name": "font",
+							"id": 2611688916,
+							"is_anonymous": false,
+							"is_inline": false,
+							"is_nested": true,
+							"kind": "namespace",
+							"name": "font",
+							"scope": {
+								"name": "font"
+							}
+						}, {
+							"_fullName": "::stappler::font",
+							"_kind": "namespace",
+							"_name": "font",
+							"id": 2611688916,
+							"is_anonymous": false,
+							"is_inline": false,
+							"is_nested": true,
+							"kind": "namespace",
+							"name": "font",
+							"scope": {
+								"name": "font"
+							}
+						}, {
+							"_fullName": "::stappler::font",
+							"_kind": "namespace",
+							"_name": "font",
+							"id": 2611688916,
+							"is_anonymous": false,
+							"is_inline": false,
+							"is_nested": true,
+							"kind": "namespace",
+							"name": "font",
+							"scope": {
+								"name": "font"
+							}
+						}, {
+							"_fullName": "::stappler::font",
+							"_kind": "namespace",
+							"_name": "font",
+							"id": 2611688916,
+							"is_anonymous": false,
+							"is_inline": false,
+							"is_nested": true,
+							"kind": "namespace",
+							"name": "font",
+							"scope": {
+								"name": "font"
+							}
+						}, {
+							"_fullName": "::stappler::font",
+							"_kind": "namespace",
+							"_name": "font",
+							"id": 2611688916,
+							"is_anonymous": false,
+							"is_inline": false,
+							"is_nested": true,
+							"kind": "namespace",
+							"name": "font",
+							"scope": {
+								"name": "font"
+							}
+						}, {
+							"_fullName": "::stappler::font",
+							"_kind": "namespace",
+							"_name": "font",
+							"id": 2611688916,
+							"is_anonymous": false,
+							"is_inline": false,
+							"is_nested": true,
+							"kind": "namespace",
+							"name": "font",
+							"scope": {
+								"name": "font"
+							}
+						}, {
+							"_fullName": "::stappler::font",
+							"_kind": "namespace",
+							"_name": "font",
+							"id": 2611688916,
+							"is_anonymous": false,
+							"is_inline": false,
+							"is_nested": true,
+							"kind": "namespace",
+							"name": "font",
+							"scope": {
+								"name": "font"
+							}
+						}]
 					}
 				}],
 				"id": 2596281808,

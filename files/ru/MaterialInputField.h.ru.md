@@ -114,6 +114,27 @@ Title: MaterialInputField.h
 Возвращает:
 * bool
 
+# ::stappler::xenolith::material2d::InputField::onEnter(xenolith::Scene*)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* xenolith::Scene*
+
+
+# ::stappler::xenolith::material2d::InputField::onExit()
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+
 # ::stappler::xenolith::material2d::InputField::onContentSizeDirty()
 
 ## BRIEF
@@ -215,6 +236,29 @@ Title: MaterialInputField.h
 Возвращает:
 * stappler::xenolith::IconName
 
+# ::stappler::xenolith::material2d::InputField::setEnabled(bool)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* bool
+
+
+# ::stappler::xenolith::material2d::InputField::isEnabled() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* bool
+
 # ::stappler::xenolith::material2d::InputField::getInputString() const
 
 ## BRIEF
@@ -225,6 +269,168 @@ Title: MaterialInputField.h
 
 Возвращает:
 * stappler::WideStringView
+
+# ::stappler::xenolith::material2d::InputField::setInputType(stappler::xenolith::TextInputType)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* stappler::xenolith::TextInputType
+
+
+# ::stappler::xenolith::material2d::InputField::getInputType() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* stappler::xenolith::TextInputType
+
+# ::stappler::xenolith::material2d::InputField::setPasswordMode(stappler::xenolith::material2d::InputFieldPasswordMode)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* stappler::xenolith::material2d::InputFieldPasswordMode
+
+
+# ::stappler::xenolith::material2d::InputField::getPasswordMode() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* stappler::xenolith::material2d::InputFieldPasswordMode
+
+# ::stappler::xenolith::material2d::InputField::handleTap(const stappler::geom::Vec2&)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Параметры:
+* const stappler::geom::Vec2&
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::material2d::InputField::handlePressBegin(const stappler::geom::Vec2&)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Параметры:
+* const stappler::geom::Vec2&
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::material2d::InputField::handleLongPress(const stappler::geom::Vec2&,uint32_t)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Параметры:
+* const stappler::geom::Vec2&
+* uint32_t
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::material2d::InputField::handlePressEnd(const stappler::geom::Vec2&)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Параметры:
+* const stappler::geom::Vec2&
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::material2d::InputField::handlePressCancel(const stappler::geom::Vec2&)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Параметры:
+* const stappler::geom::Vec2&
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::material2d::InputField::handleSwipeBegin(const stappler::geom::Vec2&,const stappler::geom::Vec2&)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Параметры:
+* const stappler::geom::Vec2&
+* const stappler::geom::Vec2&
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::material2d::InputField::handleSwipe(const stappler::geom::Vec2&,const stappler::geom::Vec2&,const stappler::geom::Vec2&)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Параметры:
+* const stappler::geom::Vec2&
+* const stappler::geom::Vec2&
+* const stappler::geom::Vec2&
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::material2d::InputField::handleSwipeEnd(const stappler::geom::Vec2&)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Параметры:
+* const stappler::geom::Vec2&
+
+Возвращает:
+* bool
 
 # ::stappler::xenolith::material2d::InputField::updateActivityState()
 
@@ -244,7 +450,16 @@ Title: MaterialInputField.h
 Доступ: protected
 
 
-# ::stappler::xenolith::material2d::InputField::acquireInput(stappler::xenolith::Vec2 const&)
+# ::stappler::xenolith::material2d::InputField::acquireInputFromContainer()
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+
+# ::stappler::xenolith::material2d::InputField::acquireInput(const stappler::geom::Vec2&)
 
 ## BRIEF
 
@@ -253,7 +468,19 @@ Title: MaterialInputField.h
 Доступ: protected
 
 Параметры:
-* stappler::xenolith::Vec2 const&
+* const stappler::geom::Vec2&
+
+
+# ::stappler::xenolith::material2d::InputField::updateCursorForLocation(const stappler::geom::Vec2&)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Параметры:
+* const stappler::geom::Vec2&
 
 
 # ::stappler::xenolith::material2d::InputField::handleTextInput(stappler::WideStringView,stappler::xenolith::TextCursor,stappler::xenolith::TextCursor)
@@ -270,7 +497,7 @@ Title: MaterialInputField.h
 * stappler::xenolith::TextCursor
 
 
-# ::stappler::xenolith::material2d::InputField::handleKeyboardEnabled(bool,stappler::xenolith::Rect const&,float)
+# ::stappler::xenolith::material2d::InputField::handleKeyboardEnabled(bool,const stappler::geom::Rect&,float)
 
 ## BRIEF
 
@@ -280,7 +507,7 @@ Title: MaterialInputField.h
 
 Параметры:
 * bool
-* stappler::xenolith::Rect const&
+* const stappler::geom::Rect&
 * float
 
 
@@ -521,6 +748,50 @@ Title: MaterialInputField.h
 
 
 # ::stappler::xenolith::material2d::InputField::_focused
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: bool
+
+
+# ::stappler::xenolith::material2d::InputField::_pointerSwipeCaptured
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: bool
+
+
+# ::stappler::xenolith::material2d::InputField::_containerSwipeCaptured
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: bool
+
+
+# ::stappler::xenolith::material2d::InputField::_rangeSelectionAllowed
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: bool
+
+
+# ::stappler::xenolith::material2d::InputField::_isLongPress
 
 ## BRIEF
 

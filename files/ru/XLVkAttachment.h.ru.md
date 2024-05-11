@@ -27,6 +27,20 @@ Title: XLVkAttachment.h
 Доступ: public
 
 
+# ::stappler::xenolith::vk::BufferAttachment::makeFrameHandle(stappler::xenolith::core::Attachment::FrameQueue const&)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* stappler::xenolith::core::Attachment::FrameQueue const&
+
+Возвращает:
+* Rc<stappler::xenolith::core::Attachment::AttachmentHandle>
+
 # ::stappler::xenolith::vk::ImageAttachment
 
 ## BRIEF
@@ -70,6 +84,51 @@ Title: XLVkAttachment.h
 * core::AttachmentHandle
 
 
+# ::stappler::xenolith::vk::BufferAttachmentHandle::BufferView
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+
+# ::stappler::xenolith::vk::BufferAttachmentHandle::BufferView::buffer
+
+## BRIEF
+
+## CONTENT
+
+Тип: Rc<stappler::xenolith::vk::Buffer>
+
+
+# ::stappler::xenolith::vk::BufferAttachmentHandle::BufferView::offset
+
+## BRIEF
+
+## CONTENT
+
+Тип: VkDeviceSize
+
+
+# ::stappler::xenolith::vk::BufferAttachmentHandle::BufferView::size
+
+## BRIEF
+
+## CONTENT
+
+Тип: VkDeviceSize
+
+
+# ::stappler::xenolith::vk::BufferAttachmentHandle::BufferView::dirty
+
+## BRIEF
+
+## CONTENT
+
+Тип: bool
+
+
 # ::stappler::xenolith::vk::BufferAttachmentHandle::~BufferAttachmentHandle()
 
 ## BRIEF
@@ -93,6 +152,84 @@ Title: XLVkAttachment.h
 
 Возвращает:
 * bool
+
+# ::stappler::xenolith::vk::BufferAttachmentHandle::isDescriptorDirty(stappler::xenolith::core::AttachmentHandle::PassHandle const&,stappler::xenolith::vk::PipelineDescriptor const&,uint32_t,bool) const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* stappler::xenolith::core::AttachmentHandle::PassHandle const&
+* stappler::xenolith::vk::PipelineDescriptor const&
+* uint32_t
+* bool
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::vk::BufferAttachmentHandle::clearBufferViews()
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+
+# ::stappler::xenolith::vk::BufferAttachmentHandle::addBufferView(stappler::xenolith::vk::Buffer*,VkDeviceSize,VkDeviceSize,bool)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* stappler::xenolith::vk::Buffer*
+* VkDeviceSize
+* VkDeviceSize
+* bool
+
+
+# ::stappler::xenolith::vk::BufferAttachmentHandle::addBufferView(Rc<stappler::xenolith::vk::Buffer>&&,VkDeviceSize,VkDeviceSize,bool)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* Rc<stappler::xenolith::vk::Buffer>&&
+* VkDeviceSize
+* VkDeviceSize
+* bool
+
+
+# ::stappler::xenolith::vk::BufferAttachmentHandle::getBuffers() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* SpanView<stappler::xenolith::vk::BufferAttachmentHandle::BufferView>
+
+# ::stappler::xenolith::vk::BufferAttachmentHandle::_buffers
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: Vector<stappler::xenolith::vk::BufferAttachmentHandle::BufferView>
+
 
 # ::stappler::xenolith::vk::ImageAttachmentHandle
 

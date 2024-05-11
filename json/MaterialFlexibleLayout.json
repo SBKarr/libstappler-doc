@@ -12,11 +12,20 @@
 		"kind": "include directive",
 		"name": "MaterialDecoratedLayout.h"
 	}, {
+		"_fullName": "MaterialSurface.h",
+		"_kind": "include directive",
+		"_name": "MaterialSurface.h",
+		"id": 3036242668,
+		"include": "xenolith/renderer/material2d/base/MaterialSurface.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "MaterialSurface.h"
+	}, {
 		"_fullName": "XL2dScrollView.h",
 		"_kind": "include directive",
 		"_name": "XL2dScrollView.h",
 		"id": 1749882798,
-		"include": "xenolith/renderer/gui2d/XL2dScrollView.h",
+		"include": "xenolith/renderer/basic2d/XL2dScrollView.h",
 		"include_kind": "local",
 		"kind": "include directive",
 		"name": "XL2dScrollView.h"
@@ -44,6 +53,22 @@
 				"_kind": "namespace",
 				"_name": "material2d",
 				"childs": [{
+					"_fullName": "::stappler::xenolith::material2d::AppBar",
+					"_kind": "class",
+					"_name": "AppBar",
+					"childs": null,
+					"class_kind": "class",
+					"id": 4118421422,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_final": false,
+					"kind": "class",
+					"name": "AppBar",
+					"scope": {
+						"name": "AppBar"
+					},
+					"semantic_scope": ""
+				}, {
 					"_fullName": "::stappler::xenolith::material2d::FlexibleLayout",
 					"_kind": "class",
 					"_name": "FlexibleLayout",
@@ -485,12 +510,12 @@
 							"semantic_scope": "",
 							"signature": "(float,float)"
 						}, {
-							"_fullName": "::stappler::xenolith::material2d::FlexibleLayout::NodeParams::setPosition(stappler::xenolith::Vec2 const&)",
+							"_fullName": "::stappler::xenolith::material2d::FlexibleLayout::NodeParams::setPosition(const stappler::geom::Vec2&)",
 							"_kind": "member function",
 							"_name": "setPosition",
 							"body_kind": "declaration",
 							"cv_qualifier": "none",
-							"id": 2818137832,
+							"id": 1215314201,
 							"is_consteval": false,
 							"is_constexpr": false,
 							"is_declaration": true,
@@ -507,50 +532,12 @@
 								"kind": "function parameter",
 								"name": "pos",
 								"type": {
-									"_typeName": "stappler::xenolith::Vec2 const&",
+									"_typeName": "const stappler::geom::Vec2&",
 									"kind": "reference",
 									"referee": {
-										"_typeName": "stappler::xenolith::Vec2 const",
-										"cv_qualifier": "const",
-										"kind": "cv_qualified",
-										"type": {
-											"_typeName": "stappler::xenolith::Vec2",
-											"kind": "user_defined",
-											"target": {
-												"name": "stappler::xenolith::Vec2",
-												"objects": [{
-													"_fullName": "::stappler::xenolith::Vec2",
-													"_kind": "type alias",
-													"_name": "Vec2",
-													"id": 1910638286,
-													"kind": "type alias",
-													"name": "Vec2",
-													"underlying_type": {
-														"_typeName": "geom::Vec2",
-														"kind": "user_defined",
-														"target": {
-															"name": "geom::Vec2",
-															"objects": [{
-																"_fullName": "::stappler::geom::Vec2",
-																"_kind": "class",
-																"_name": "Vec2",
-																"class_kind": "class",
-																"id": 16661423,
-																"is_declaration": false,
-																"is_definition": true,
-																"is_final": false,
-																"kind": "class",
-																"name": "Vec2",
-																"scope": {
-																	"name": "Vec2"
-																},
-																"semantic_scope": ""
-															}]
-														}
-													}
-												}]
-											}
-										}
+										"_typeName": "const stappler::geom::Vec2",
+										"kind": "unexposed",
+										"name": "const stappler::geom::Vec2"
 									},
 									"reference_kind": "lvalue"
 								}
@@ -562,14 +549,14 @@
 								"kind": "builtin"
 							},
 							"semantic_scope": "",
-							"signature": "(stappler::xenolith::Vec2 const&)"
+							"signature": "(const stappler::geom::Vec2&)"
 						}, {
-							"_fullName": "::stappler::xenolith::material2d::FlexibleLayout::NodeParams::setAnchorPoint(stappler::xenolith::Vec2 const&)",
+							"_fullName": "::stappler::xenolith::material2d::FlexibleLayout::NodeParams::setAnchorPoint(const stappler::geom::Vec2&)",
 							"_kind": "member function",
 							"_name": "setAnchorPoint",
 							"body_kind": "declaration",
 							"cv_qualifier": "none",
-							"id": 358688496,
+							"id": 1015792926,
 							"is_consteval": false,
 							"is_constexpr": false,
 							"is_declaration": true,
@@ -586,50 +573,12 @@
 								"kind": "function parameter",
 								"name": "pt",
 								"type": {
-									"_typeName": "stappler::xenolith::Vec2 const&",
+									"_typeName": "const stappler::geom::Vec2&",
 									"kind": "reference",
 									"referee": {
-										"_typeName": "stappler::xenolith::Vec2 const",
-										"cv_qualifier": "const",
-										"kind": "cv_qualified",
-										"type": {
-											"_typeName": "stappler::xenolith::Vec2",
-											"kind": "user_defined",
-											"target": {
-												"name": "stappler::xenolith::Vec2",
-												"objects": [{
-													"_fullName": "::stappler::xenolith::Vec2",
-													"_kind": "type alias",
-													"_name": "Vec2",
-													"id": 1910638286,
-													"kind": "type alias",
-													"name": "Vec2",
-													"underlying_type": {
-														"_typeName": "geom::Vec2",
-														"kind": "user_defined",
-														"target": {
-															"name": "geom::Vec2",
-															"objects": [{
-																"_fullName": "::stappler::geom::Vec2",
-																"_kind": "class",
-																"_name": "Vec2",
-																"class_kind": "class",
-																"id": 16661423,
-																"is_declaration": false,
-																"is_definition": true,
-																"is_final": false,
-																"kind": "class",
-																"name": "Vec2",
-																"scope": {
-																	"name": "Vec2"
-																},
-																"semantic_scope": ""
-															}]
-														}
-													}
-												}]
-											}
-										}
+										"_typeName": "const stappler::geom::Vec2",
+										"kind": "unexposed",
+										"name": "const stappler::geom::Vec2"
 									},
 									"reference_kind": "lvalue"
 								}
@@ -641,14 +590,14 @@
 								"kind": "builtin"
 							},
 							"semantic_scope": "",
-							"signature": "(stappler::xenolith::Vec2 const&)"
+							"signature": "(const stappler::geom::Vec2&)"
 						}, {
-							"_fullName": "::stappler::xenolith::material2d::FlexibleLayout::NodeParams::setContentSize(stappler::xenolith::Size2 const&)",
+							"_fullName": "::stappler::xenolith::material2d::FlexibleLayout::NodeParams::setContentSize(const stappler::geom::Size2&)",
 							"_kind": "member function",
 							"_name": "setContentSize",
 							"body_kind": "declaration",
 							"cv_qualifier": "none",
-							"id": 765170650,
+							"id": 3471366595,
 							"is_consteval": false,
 							"is_constexpr": false,
 							"is_declaration": true,
@@ -665,50 +614,12 @@
 								"kind": "function parameter",
 								"name": "size",
 								"type": {
-									"_typeName": "stappler::xenolith::Size2 const&",
+									"_typeName": "const stappler::geom::Size2&",
 									"kind": "reference",
 									"referee": {
-										"_typeName": "stappler::xenolith::Size2 const",
-										"cv_qualifier": "const",
-										"kind": "cv_qualified",
-										"type": {
-											"_typeName": "stappler::xenolith::Size2",
-											"kind": "user_defined",
-											"target": {
-												"name": "stappler::xenolith::Size2",
-												"objects": [{
-													"_fullName": "::stappler::xenolith::Size2",
-													"_kind": "type alias",
-													"_name": "Size2",
-													"id": 3876930682,
-													"kind": "type alias",
-													"name": "Size2",
-													"underlying_type": {
-														"_typeName": "geom::Size2",
-														"kind": "user_defined",
-														"target": {
-															"name": "geom::Size2",
-															"objects": [{
-																"_fullName": "::stappler::geom::Size2",
-																"_kind": "class",
-																"_name": "Size2",
-																"class_kind": "struct",
-																"id": 1488533902,
-																"is_declaration": false,
-																"is_definition": true,
-																"is_final": false,
-																"kind": "class",
-																"name": "Size2",
-																"scope": {
-																	"name": "Size2"
-																},
-																"semantic_scope": ""
-															}]
-														}
-													}
-												}]
-											}
-										}
+										"_typeName": "const stappler::geom::Size2",
+										"kind": "unexposed",
+										"name": "const stappler::geom::Size2"
 									},
 									"reference_kind": "lvalue"
 								}
@@ -720,7 +631,7 @@
 								"kind": "builtin"
 							},
 							"semantic_scope": "",
-							"signature": "(stappler::xenolith::Size2 const&)"
+							"signature": "(const stappler::geom::Size2&)"
 						}, {
 							"_fullName": "::stappler::xenolith::material2d::FlexibleLayout::NodeParams::setVisible(bool)",
 							"_kind": "member function",
@@ -997,42 +908,9 @@
 							"kind": "member variable",
 							"name": "position",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Vec2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Vec2",
-										"_kind": "type alias",
-										"_name": "Vec2",
-										"id": 1910638286,
-										"kind": "type alias",
-										"name": "Vec2",
-										"underlying_type": {
-											"_typeName": "geom::Vec2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Vec2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Vec2",
-													"_kind": "class",
-													"_name": "Vec2",
-													"class_kind": "class",
-													"id": 16661423,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Vec2",
-													"scope": {
-														"name": "Vec2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Vec2"
 							}
 						}, {
 							"_fullName": "::stappler::xenolith::material2d::FlexibleLayout::NodeParams::anchorPoint",
@@ -1043,42 +921,9 @@
 							"kind": "member variable",
 							"name": "anchorPoint",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Vec2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Vec2",
-										"_kind": "type alias",
-										"_name": "Vec2",
-										"id": 1910638286,
-										"kind": "type alias",
-										"name": "Vec2",
-										"underlying_type": {
-											"_typeName": "geom::Vec2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Vec2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Vec2",
-													"_kind": "class",
-													"_name": "Vec2",
-													"class_kind": "class",
-													"id": 16661423,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Vec2",
-													"scope": {
-														"name": "Vec2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Vec2"
 							}
 						}, {
 							"_fullName": "::stappler::xenolith::material2d::FlexibleLayout::NodeParams::contentSize",
@@ -1089,42 +934,9 @@
 							"kind": "member variable",
 							"name": "contentSize",
 							"type": {
-								"_typeName": "stappler::xenolith::Size2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Size2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Size2",
-										"_kind": "type alias",
-										"_name": "Size2",
-										"id": 3876930682,
-										"kind": "type alias",
-										"name": "Size2",
-										"underlying_type": {
-											"_typeName": "geom::Size2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Size2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Size2",
-													"_kind": "class",
-													"_name": "Size2",
-													"class_kind": "struct",
-													"id": 1488533902,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Size2",
-													"scope": {
-														"name": "Size2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Size2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Size2"
 							}
 						}, {
 							"_fullName": "::stappler::xenolith::material2d::FlexibleLayout::NodeParams::visible",
@@ -1987,12 +1799,12 @@
 							"name": "Args"
 						}]
 					}, {
-						"_fullName": "::stappler::xenolith::material2d::FlexibleLayout::setBaseNode(stappler::xenolith::gui2d::ScrollView*,stappler::xenolith::ZOrder)",
+						"_fullName": "::stappler::xenolith::material2d::FlexibleLayout::setBaseNode(stappler::xenolith::basic2d::ScrollView*,stappler::xenolith::ZOrder)",
 						"_kind": "member function",
 						"_name": "setBaseNode",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 2427296752,
+						"id": 4189103387,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -2009,15 +1821,15 @@
 							"kind": "function parameter",
 							"name": "node",
 							"type": {
-								"_typeName": "stappler::xenolith::gui2d::ScrollView*",
+								"_typeName": "stappler::xenolith::basic2d::ScrollView*",
 								"kind": "pointer",
 								"pointee": {
-									"_typeName": "stappler::xenolith::gui2d::ScrollView",
+									"_typeName": "stappler::xenolith::basic2d::ScrollView",
 									"kind": "user_defined",
 									"target": {
-										"name": "stappler::xenolith::gui2d::ScrollView",
+										"name": "stappler::xenolith::basic2d::ScrollView",
 										"objects": [{
-											"_fullName": "::stappler::xenolith::gui2d::ScrollView",
+											"_fullName": "::stappler::xenolith::basic2d::ScrollView",
 											"_kind": "class",
 											"_name": "ScrollView",
 											"bases": [{
@@ -2030,12 +1842,12 @@
 												"kind": "base class specifier",
 												"name": "ScrollViewBase",
 												"type": {
-													"_typeName": "stappler::xenolith::gui2d::ScrollViewBase",
+													"_typeName": "stappler::xenolith::basic2d::ScrollViewBase",
 													"kind": "user_defined",
 													"target": {
-														"name": "stappler::xenolith::gui2d::ScrollViewBase",
+														"name": "stappler::xenolith::basic2d::ScrollViewBase",
 														"objects": [{
-															"_fullName": "::stappler::xenolith::gui2d::ScrollViewBase",
+															"_fullName": "::stappler::xenolith::basic2d::ScrollViewBase",
 															"_kind": "class",
 															"_name": "ScrollViewBase",
 															"bases": [{
@@ -2213,7 +2025,7 @@
 																}
 															}],
 															"class_kind": "class",
-															"id": 2727002385,
+															"id": 918255557,
 															"is_declaration": false,
 															"is_definition": true,
 															"is_final": false,
@@ -2228,7 +2040,7 @@
 												}
 											}],
 											"class_kind": "class",
-											"id": 2321895137,
+											"id": 2123753621,
 											"is_declaration": false,
 											"is_definition": true,
 											"is_final": false,
@@ -2493,14 +2305,14 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::gui2d::ScrollView*,stappler::xenolith::ZOrder)"
+						"signature": "(stappler::xenolith::basic2d::ScrollView*,stappler::xenolith::ZOrder)"
 					}, {
-						"_fullName": "::stappler::xenolith::material2d::FlexibleLayout::setFlexibleNode(stappler::xenolith::Node*,stappler::xenolith::ZOrder)",
+						"_fullName": "::stappler::xenolith::material2d::FlexibleLayout::setFlexibleNode(stappler::xenolith::material2d::Surface*,stappler::xenolith::ZOrder)",
 						"_kind": "member function",
 						"_name": "setFlexibleNode",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 943879362,
+						"id": 4190531537,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -2517,134 +2329,266 @@
 							"kind": "function parameter",
 							"name": "",
 							"type": {
-								"_typeName": "stappler::xenolith::Node*",
+								"_typeName": "stappler::xenolith::material2d::Surface*",
 								"kind": "pointer",
 								"pointee": {
-									"_typeName": "stappler::xenolith::Node",
+									"_typeName": "stappler::xenolith::material2d::Surface",
 									"kind": "user_defined",
 									"target": {
-										"name": "stappler::xenolith::Node",
+										"name": "stappler::xenolith::material2d::Surface",
 										"objects": [{
-											"_fullName": "::stappler::xenolith::Node",
+											"_fullName": "::stappler::xenolith::material2d::Surface",
 											"_kind": "class",
-											"_name": "Node",
+											"_name": "Surface",
 											"bases": [{
-												"_fullName": "Ref",
+												"_fullName": "VectorSprite",
 												"_kind": "base class specifier",
-												"_name": "Ref",
+												"_name": "VectorSprite",
 												"access_specifier": "public",
-												"id": 1165741041,
+												"id": 2320869402,
 												"is_virtual": false,
 												"kind": "base class specifier",
-												"name": "Ref",
+												"name": "VectorSprite",
 												"type": {
-													"_typeName": "stappler::mem_std::Ref",
+													"_typeName": "stappler::xenolith::basic2d::VectorSprite",
 													"kind": "user_defined",
 													"target": {
-														"name": "stappler::mem_std::Ref",
+														"name": "stappler::xenolith::basic2d::VectorSprite",
 														"objects": [{
-															"_fullName": "::stappler::mem_std::Ref",
-															"_kind": "type alias",
-															"_name": "Ref",
-															"id": 3010886988,
-															"kind": "type alias",
-															"name": "Ref",
-															"underlying_type": {
-																"_typeName": "RefBase<memory::StandartInterface>",
-																"arguments_exposed": false,
-																"kind": "template_instantiation",
-																"primary_template": {
-																	"name": "RefBase",
-																	"objects": [{
-																		"_fullName": "::stappler::RefBase<typename>",
-																		"_kind": "class template",
-																		"_name": "RefBase",
-																		"class": {
-																			"_fullName": "::stappler::RefBase<typename>",
+															"_fullName": "::stappler::xenolith::basic2d::VectorSprite",
+															"_kind": "class",
+															"_name": "VectorSprite",
+															"bases": [{
+																"_fullName": "Sprite",
+																"_kind": "base class specifier",
+																"_name": "Sprite",
+																"access_specifier": "public",
+																"id": 1737950589,
+																"is_virtual": false,
+																"kind": "base class specifier",
+																"name": "Sprite",
+																"type": {
+																	"_typeName": "stappler::xenolith::basic2d::Sprite",
+																	"kind": "user_defined",
+																	"target": {
+																		"name": "stappler::xenolith::basic2d::Sprite",
+																		"objects": [{
+																			"_fullName": "::stappler::xenolith::basic2d::Sprite",
 																			"_kind": "class",
-																			"_name": "RefBase",
+																			"_name": "Sprite",
 																			"bases": [{
-																				"_fullName": "Interface::AllocBaseType",
+																				"_fullName": "DynamicStateNode",
 																				"_kind": "base class specifier",
-																				"_name": "Interface::AllocBaseType",
+																				"_name": "DynamicStateNode",
 																				"access_specifier": "public",
-																				"id": 25533212,
+																				"id": 1495522334,
 																				"is_virtual": false,
 																				"kind": "base class specifier",
-																				"name": "Interface::AllocBaseType",
+																				"name": "DynamicStateNode",
 																				"type": {
-																					"_typeName": "Interface::AllocBaseType",
-																					"kind": "unexposed",
-																					"name": "Interface::AllocBaseType"
+																					"_typeName": "stappler::xenolith::DynamicStateNode",
+																					"kind": "user_defined",
+																					"target": {
+																						"name": "stappler::xenolith::DynamicStateNode",
+																						"objects": [{
+																							"_fullName": "::stappler::xenolith::DynamicStateNode",
+																							"_kind": "class",
+																							"_name": "DynamicStateNode",
+																							"bases": [{
+																								"_fullName": "Node",
+																								"_kind": "base class specifier",
+																								"_name": "Node",
+																								"access_specifier": "public",
+																								"id": 421274683,
+																								"is_virtual": false,
+																								"kind": "base class specifier",
+																								"name": "Node",
+																								"type": {
+																									"_typeName": "stappler::xenolith::Node",
+																									"kind": "user_defined",
+																									"target": {
+																										"name": "stappler::xenolith::Node",
+																										"objects": [{
+																											"_fullName": "::stappler::xenolith::Node",
+																											"_kind": "class",
+																											"_name": "Node",
+																											"bases": [{
+																												"_fullName": "Ref",
+																												"_kind": "base class specifier",
+																												"_name": "Ref",
+																												"access_specifier": "public",
+																												"id": 1165741041,
+																												"is_virtual": false,
+																												"kind": "base class specifier",
+																												"name": "Ref",
+																												"type": {
+																													"_typeName": "stappler::mem_std::Ref",
+																													"kind": "user_defined",
+																													"target": {
+																														"name": "stappler::mem_std::Ref",
+																														"objects": [{
+																															"_fullName": "::stappler::mem_std::Ref",
+																															"_kind": "type alias",
+																															"_name": "Ref",
+																															"id": 3010886988,
+																															"kind": "type alias",
+																															"name": "Ref",
+																															"underlying_type": {
+																																"_typeName": "RefBase<memory::StandartInterface>",
+																																"arguments_exposed": false,
+																																"kind": "template_instantiation",
+																																"primary_template": {
+																																	"name": "RefBase",
+																																	"objects": [{
+																																		"_fullName": "::stappler::RefBase<typename>",
+																																		"_kind": "class template",
+																																		"_name": "RefBase",
+																																		"class": {
+																																			"_fullName": "::stappler::RefBase<typename>",
+																																			"_kind": "class",
+																																			"_name": "RefBase",
+																																			"bases": [{
+																																				"_fullName": "Interface::AllocBaseType",
+																																				"_kind": "base class specifier",
+																																				"_name": "Interface::AllocBaseType",
+																																				"access_specifier": "public",
+																																				"id": 25533212,
+																																				"is_virtual": false,
+																																				"kind": "base class specifier",
+																																				"name": "Interface::AllocBaseType",
+																																				"type": {
+																																					"_typeName": "Interface::AllocBaseType",
+																																					"kind": "unexposed",
+																																					"name": "Interface::AllocBaseType"
+																																				}
+																																			}],
+																																			"class_kind": "class",
+																																			"id": 2191419057,
+																																			"is_declaration": false,
+																																			"is_definition": true,
+																																			"is_final": false,
+																																			"kind": "class",
+																																			"name": "RefBase",
+																																			"scope": {
+																																				"is_templated": true,
+																																				"name": "RefBase",
+																																				"template_parameters": [{
+																																					"_fullName": "Interface",
+																																					"_kind": "template type parameter",
+																																					"_name": "Interface",
+																																					"id": 2255344761,
+																																					"is_variadic": false,
+																																					"keyword": "typename",
+																																					"kind": "template type parameter",
+																																					"name": "Interface"
+																																				}]
+																																			},
+																																			"semantic_scope": ""
+																																		},
+																																		"id": 2191419057,
+																																		"kind": "class template",
+																																		"name": "RefBase",
+																																		"parameters": [{
+																																			"_fullName": "Interface",
+																																			"_kind": "template type parameter",
+																																			"_name": "Interface",
+																																			"id": 2255344761,
+																																			"is_variadic": false,
+																																			"keyword": "typename",
+																																			"kind": "template type parameter",
+																																			"name": "Interface"
+																																		}],
+																																		"scope":  {
+																																			"is_templated": true,
+																																			"name": "RefBase",
+																																			"template_parameters": [{
+																																				"_fullName": "Interface",
+																																				"_kind": "template type parameter",
+																																				"_name": "Interface",
+																																				"id": 2255344761,
+																																				"is_variadic": false,
+																																				"keyword": "typename",
+																																				"kind": "template type parameter",
+																																				"name": "Interface"
+																																			}]
+																																		}
+																																	}]
+																																},
+																																"unexposed_arguments": "memory::StandartInterface"
+																															}
+																														}]
+																													}
+																												}
+																											}],
+																											"class_kind": "class",
+																											"id": 697316651,
+																											"is_declaration": false,
+																											"is_definition": true,
+																											"is_final": false,
+																											"kind": "class",
+																											"name": "Node",
+																											"scope": {
+																												"name": "Node"
+																											},
+																											"semantic_scope": ""
+																										}]
+																									}
+																								}
+																							}],
+																							"class_kind": "class",
+																							"id": 647377790,
+																							"is_declaration": false,
+																							"is_definition": true,
+																							"is_final": false,
+																							"kind": "class",
+																							"name": "DynamicStateNode",
+																							"scope": {
+																								"name": "DynamicStateNode"
+																							},
+																							"semantic_scope": ""
+																						}]
+																					}
 																				}
 																			}],
 																			"class_kind": "class",
-																			"id": 2191419057,
+																			"id": 964191972,
 																			"is_declaration": false,
 																			"is_definition": true,
 																			"is_final": false,
 																			"kind": "class",
-																			"name": "RefBase",
+																			"name": "Sprite",
 																			"scope": {
-																				"is_templated": true,
-																				"name": "RefBase",
-																				"template_parameters": [{
-																					"_fullName": "Interface",
-																					"_kind": "template type parameter",
-																					"_name": "Interface",
-																					"id": 2255344761,
-																					"is_variadic": false,
-																					"keyword": "typename",
-																					"kind": "template type parameter",
-																					"name": "Interface"
-																				}]
+																				"name": "Sprite"
 																			},
 																			"semantic_scope": ""
-																		},
-																		"id": 2191419057,
-																		"kind": "class template",
-																		"name": "RefBase",
-																		"parameters": [{
-																			"_fullName": "Interface",
-																			"_kind": "template type parameter",
-																			"_name": "Interface",
-																			"id": 2255344761,
-																			"is_variadic": false,
-																			"keyword": "typename",
-																			"kind": "template type parameter",
-																			"name": "Interface"
-																		}],
-																		"scope":  {
-																			"is_templated": true,
-																			"name": "RefBase",
-																			"template_parameters": [{
-																				"_fullName": "Interface",
-																				"_kind": "template type parameter",
-																				"_name": "Interface",
-																				"id": 2255344761,
-																				"is_variadic": false,
-																				"keyword": "typename",
-																				"kind": "template type parameter",
-																				"name": "Interface"
-																			}]
-																		}
-																	}]
-																},
-																"unexposed_arguments": "memory::StandartInterface"
-															}
+																		}]
+																	}
+																}
+															}],
+															"class_kind": "class",
+															"id": 4254953925,
+															"is_declaration": false,
+															"is_definition": true,
+															"is_final": false,
+															"kind": "class",
+															"name": "VectorSprite",
+															"scope": {
+																"name": "VectorSprite"
+															},
+															"semantic_scope": ""
 														}]
 													}
 												}
 											}],
 											"class_kind": "class",
-											"id": 697316651,
+											"id": 3609776072,
 											"is_declaration": false,
 											"is_definition": true,
 											"is_final": false,
 											"kind": "class",
-											"name": "Node",
+											"name": "Surface",
 											"scope": {
-												"name": "Node"
+												"name": "Surface"
 											},
 											"semantic_scope": ""
 										}]
@@ -2902,7 +2846,7 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::Node*,stappler::xenolith::ZOrder)"
+						"signature": "(stappler::xenolith::material2d::Surface*,stappler::xenolith::ZOrder)"
 					}, {
 						"_fullName": "::stappler::xenolith::material2d::FlexibleLayout::setFlexibleAutoComplete(bool)",
 						"_kind": "member function",
@@ -4443,6 +4387,324 @@
 						"semantic_scope": "",
 						"signature": "() const"
 					}, {
+						"_fullName": "::stappler::xenolith::material2d::FlexibleLayout::getAppBar() const",
+						"_kind": "member function",
+						"_name": "getAppBar",
+						"body_kind": "definition",
+						"cv_qualifier": "const",
+						"id": 1356845899,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "getAppBar",
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "stappler::xenolith::material2d::AppBar*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::xenolith::material2d::AppBar",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::material2d::AppBar",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::material2d::AppBar",
+										"_kind": "class",
+										"_name": "AppBar",
+										"bases": [{
+											"_fullName": "Surface",
+											"_kind": "base class specifier",
+											"_name": "Surface",
+											"access_specifier": "public",
+											"id": 2460756081,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "Surface",
+											"type": {
+												"_typeName": "stappler::xenolith::material2d::Surface",
+												"kind": "user_defined",
+												"target": {
+													"name": "stappler::xenolith::material2d::Surface",
+													"objects": [{
+														"_fullName": "::stappler::xenolith::material2d::Surface",
+														"_kind": "class",
+														"_name": "Surface",
+														"bases": [{
+															"_fullName": "VectorSprite",
+															"_kind": "base class specifier",
+															"_name": "VectorSprite",
+															"access_specifier": "public",
+															"id": 2320869402,
+															"is_virtual": false,
+															"kind": "base class specifier",
+															"name": "VectorSprite",
+															"type": {
+																"_typeName": "stappler::xenolith::basic2d::VectorSprite",
+																"kind": "user_defined",
+																"target": {
+																	"name": "stappler::xenolith::basic2d::VectorSprite",
+																	"objects": [{
+																		"_fullName": "::stappler::xenolith::basic2d::VectorSprite",
+																		"_kind": "class",
+																		"_name": "VectorSprite",
+																		"bases": [{
+																			"_fullName": "Sprite",
+																			"_kind": "base class specifier",
+																			"_name": "Sprite",
+																			"access_specifier": "public",
+																			"id": 1737950589,
+																			"is_virtual": false,
+																			"kind": "base class specifier",
+																			"name": "Sprite",
+																			"type": {
+																				"_typeName": "stappler::xenolith::basic2d::Sprite",
+																				"kind": "user_defined",
+																				"target": {
+																					"name": "stappler::xenolith::basic2d::Sprite",
+																					"objects": [{
+																						"_fullName": "::stappler::xenolith::basic2d::Sprite",
+																						"_kind": "class",
+																						"_name": "Sprite",
+																						"bases": [{
+																							"_fullName": "DynamicStateNode",
+																							"_kind": "base class specifier",
+																							"_name": "DynamicStateNode",
+																							"access_specifier": "public",
+																							"id": 1495522334,
+																							"is_virtual": false,
+																							"kind": "base class specifier",
+																							"name": "DynamicStateNode",
+																							"type": {
+																								"_typeName": "stappler::xenolith::DynamicStateNode",
+																								"kind": "user_defined",
+																								"target": {
+																									"name": "stappler::xenolith::DynamicStateNode",
+																									"objects": [{
+																										"_fullName": "::stappler::xenolith::DynamicStateNode",
+																										"_kind": "class",
+																										"_name": "DynamicStateNode",
+																										"bases": [{
+																											"_fullName": "Node",
+																											"_kind": "base class specifier",
+																											"_name": "Node",
+																											"access_specifier": "public",
+																											"id": 421274683,
+																											"is_virtual": false,
+																											"kind": "base class specifier",
+																											"name": "Node",
+																											"type": {
+																												"_typeName": "stappler::xenolith::Node",
+																												"kind": "user_defined",
+																												"target": {
+																													"name": "stappler::xenolith::Node",
+																													"objects": [{
+																														"_fullName": "::stappler::xenolith::Node",
+																														"_kind": "class",
+																														"_name": "Node",
+																														"bases": [{
+																															"_fullName": "Ref",
+																															"_kind": "base class specifier",
+																															"_name": "Ref",
+																															"access_specifier": "public",
+																															"id": 1165741041,
+																															"is_virtual": false,
+																															"kind": "base class specifier",
+																															"name": "Ref",
+																															"type": {
+																																"_typeName": "stappler::mem_std::Ref",
+																																"kind": "user_defined",
+																																"target": {
+																																	"name": "stappler::mem_std::Ref",
+																																	"objects": [{
+																																		"_fullName": "::stappler::mem_std::Ref",
+																																		"_kind": "type alias",
+																																		"_name": "Ref",
+																																		"id": 3010886988,
+																																		"kind": "type alias",
+																																		"name": "Ref",
+																																		"underlying_type": {
+																																			"_typeName": "RefBase<memory::StandartInterface>",
+																																			"arguments_exposed": false,
+																																			"kind": "template_instantiation",
+																																			"primary_template": {
+																																				"name": "RefBase",
+																																				"objects": [{
+																																					"_fullName": "::stappler::RefBase<typename>",
+																																					"_kind": "class template",
+																																					"_name": "RefBase",
+																																					"class": {
+																																						"_fullName": "::stappler::RefBase<typename>",
+																																						"_kind": "class",
+																																						"_name": "RefBase",
+																																						"bases": [{
+																																							"_fullName": "Interface::AllocBaseType",
+																																							"_kind": "base class specifier",
+																																							"_name": "Interface::AllocBaseType",
+																																							"access_specifier": "public",
+																																							"id": 25533212,
+																																							"is_virtual": false,
+																																							"kind": "base class specifier",
+																																							"name": "Interface::AllocBaseType",
+																																							"type": {
+																																								"_typeName": "Interface::AllocBaseType",
+																																								"kind": "unexposed",
+																																								"name": "Interface::AllocBaseType"
+																																							}
+																																						}],
+																																						"class_kind": "class",
+																																						"id": 2191419057,
+																																						"is_declaration": false,
+																																						"is_definition": true,
+																																						"is_final": false,
+																																						"kind": "class",
+																																						"name": "RefBase",
+																																						"scope": {
+																																							"is_templated": true,
+																																							"name": "RefBase",
+																																							"template_parameters": [{
+																																								"_fullName": "Interface",
+																																								"_kind": "template type parameter",
+																																								"_name": "Interface",
+																																								"id": 2255344761,
+																																								"is_variadic": false,
+																																								"keyword": "typename",
+																																								"kind": "template type parameter",
+																																								"name": "Interface"
+																																							}]
+																																						},
+																																						"semantic_scope": ""
+																																					},
+																																					"id": 2191419057,
+																																					"kind": "class template",
+																																					"name": "RefBase",
+																																					"parameters": [{
+																																						"_fullName": "Interface",
+																																						"_kind": "template type parameter",
+																																						"_name": "Interface",
+																																						"id": 2255344761,
+																																						"is_variadic": false,
+																																						"keyword": "typename",
+																																						"kind": "template type parameter",
+																																						"name": "Interface"
+																																					}],
+																																					"scope":  {
+																																						"is_templated": true,
+																																						"name": "RefBase",
+																																						"template_parameters": [{
+																																							"_fullName": "Interface",
+																																							"_kind": "template type parameter",
+																																							"_name": "Interface",
+																																							"id": 2255344761,
+																																							"is_variadic": false,
+																																							"keyword": "typename",
+																																							"kind": "template type parameter",
+																																							"name": "Interface"
+																																						}]
+																																					}
+																																				}]
+																																			},
+																																			"unexposed_arguments": "memory::StandartInterface"
+																																		}
+																																	}]
+																																}
+																															}
+																														}],
+																														"class_kind": "class",
+																														"id": 697316651,
+																														"is_declaration": false,
+																														"is_definition": true,
+																														"is_final": false,
+																														"kind": "class",
+																														"name": "Node",
+																														"scope": {
+																															"name": "Node"
+																														},
+																														"semantic_scope": ""
+																													}]
+																												}
+																											}
+																										}],
+																										"class_kind": "class",
+																										"id": 647377790,
+																										"is_declaration": false,
+																										"is_definition": true,
+																										"is_final": false,
+																										"kind": "class",
+																										"name": "DynamicStateNode",
+																										"scope": {
+																											"name": "DynamicStateNode"
+																										},
+																										"semantic_scope": ""
+																									}]
+																								}
+																							}
+																						}],
+																						"class_kind": "class",
+																						"id": 964191972,
+																						"is_declaration": false,
+																						"is_definition": true,
+																						"is_final": false,
+																						"kind": "class",
+																						"name": "Sprite",
+																						"scope": {
+																							"name": "Sprite"
+																						},
+																						"semantic_scope": ""
+																					}]
+																				}
+																			}
+																		}],
+																		"class_kind": "class",
+																		"id": 4254953925,
+																		"is_declaration": false,
+																		"is_definition": true,
+																		"is_final": false,
+																		"kind": "class",
+																		"name": "VectorSprite",
+																		"scope": {
+																			"name": "VectorSprite"
+																		},
+																		"semantic_scope": ""
+																	}]
+																}
+															}
+														}],
+														"class_kind": "class",
+														"id": 3609776072,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "Surface",
+														"scope": {
+															"name": "Surface"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}],
+										"class_kind": "class",
+										"id": 4118421422,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "AppBar",
+										"scope": {
+											"name": "AppBar"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						},
+						"semantic_scope": "",
+						"signature": "() const"
+					}, {
 						"_fullName": "protected",
 						"_kind": "access specifier",
 						"_name": "protected",
@@ -4650,12 +4912,12 @@
 						"semantic_scope": "",
 						"signature": "(stappler::xenolith::material2d::FlexibleLayout::NodeParams const&)"
 					}, {
-						"_fullName": "::stappler::xenolith::material2d::FlexibleLayout::onBaseNode(stappler::xenolith::material2d::FlexibleLayout::NodeParams const&,stappler::xenolith::Padding const&,float)",
+						"_fullName": "::stappler::xenolith::material2d::FlexibleLayout::onBaseNode(stappler::xenolith::material2d::FlexibleLayout::NodeParams const&,const stappler::geom::Padding&,float)",
 						"_kind": "member function",
 						"_name": "onBaseNode",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 2179214159,
+						"id": 1615948714,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -4712,50 +4974,12 @@
 							"kind": "function parameter",
 							"name": "",
 							"type": {
-								"_typeName": "stappler::xenolith::Padding const&",
+								"_typeName": "const stappler::geom::Padding&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "stappler::xenolith::Padding const",
-									"cv_qualifier": "const",
-									"kind": "cv_qualified",
-									"type": {
-										"_typeName": "stappler::xenolith::Padding",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::xenolith::Padding",
-											"objects": [{
-												"_fullName": "::stappler::xenolith::Padding",
-												"_kind": "type alias",
-												"_name": "Padding",
-												"id": 232642206,
-												"kind": "type alias",
-												"name": "Padding",
-												"underlying_type": {
-													"_typeName": "geom::Padding",
-													"kind": "user_defined",
-													"target": {
-														"name": "geom::Padding",
-														"objects": [{
-															"_fullName": "::stappler::geom::Padding",
-															"_kind": "class",
-															"_name": "Padding",
-															"class_kind": "struct",
-															"id": 2717367825,
-															"is_declaration": false,
-															"is_definition": true,
-															"is_final": false,
-															"kind": "class",
-															"name": "Padding",
-															"scope": {
-																"name": "Padding"
-															},
-															"semantic_scope": ""
-														}]
-													}
-												}
-											}]
-										}
-									}
+									"_typeName": "const stappler::geom::Padding",
+									"kind": "unexposed",
+									"name": "const stappler::geom::Padding"
 								},
 								"reference_kind": "lvalue"
 							}
@@ -4779,7 +5003,7 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::material2d::FlexibleLayout::NodeParams const&,stappler::xenolith::Padding const&,float)"
+						"signature": "(stappler::xenolith::material2d::FlexibleLayout::NodeParams const&,const stappler::geom::Padding&,float)"
 					}, {
 						"_fullName": "::stappler::xenolith::material2d::FlexibleLayout::AutoCompleteTag()",
 						"_kind": "function",
@@ -4904,56 +5128,6 @@
 							"kind": "builtin"
 						}
 					}, {
-						"_fullName": "::stappler::xenolith::material2d::FlexibleLayout::_flexibleMinHeight",
-						"_kind": "member variable",
-						"_name": "_flexibleMinHeight",
-						"default_value": {
-							"expression": [{
-								"kind": "float_literal",
-								"spelling": "0.0f"
-							}],
-							"kind": "unexposed",
-							"type": {
-								"_typeName": "float",
-								"builtin_type_kind": "float",
-								"kind": "builtin"
-							}
-						},
-						"id": 763216665,
-						"is_mutable": false,
-						"kind": "member variable",
-						"name": "_flexibleMinHeight",
-						"type": {
-							"_typeName": "float",
-							"builtin_type_kind": "float",
-							"kind": "builtin"
-						}
-					}, {
-						"_fullName": "::stappler::xenolith::material2d::FlexibleLayout::_flexibleMaxHeight",
-						"_kind": "member variable",
-						"_name": "_flexibleMaxHeight",
-						"default_value": {
-							"expression": [{
-								"kind": "float_literal",
-								"spelling": "0.0f"
-							}],
-							"kind": "unexposed",
-							"type": {
-								"_typeName": "float",
-								"builtin_type_kind": "float",
-								"kind": "builtin"
-							}
-						},
-						"id": 1164453836,
-						"is_mutable": false,
-						"kind": "member variable",
-						"name": "_flexibleMaxHeight",
-						"type": {
-							"_typeName": "float",
-							"builtin_type_kind": "float",
-							"kind": "builtin"
-						}
-					}, {
 						"_fullName": "::stappler::xenolith::material2d::FlexibleLayout::_baseNodePadding",
 						"_kind": "member variable",
 						"_name": "_baseNodePadding",
@@ -4998,6 +5172,106 @@
 						"is_mutable": false,
 						"kind": "member variable",
 						"name": "_flexibleExtraSpace",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::material2d::FlexibleLayout::_targetFlexibleMinHeight",
+						"_kind": "member variable",
+						"_name": "_targetFlexibleMinHeight",
+						"default_value": {
+							"expression": [{
+								"kind": "float_literal",
+								"spelling": "0.0f"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "float",
+								"builtin_type_kind": "float",
+								"kind": "builtin"
+							}
+						},
+						"id": 1891014207,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "_targetFlexibleMinHeight",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::material2d::FlexibleLayout::_targetFlexibleMaxHeight",
+						"_kind": "member variable",
+						"_name": "_targetFlexibleMaxHeight",
+						"default_value": {
+							"expression": [{
+								"kind": "float_literal",
+								"spelling": "0.0f"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "float",
+								"builtin_type_kind": "float",
+								"kind": "builtin"
+							}
+						},
+						"id": 2245300195,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "_targetFlexibleMaxHeight",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::material2d::FlexibleLayout::_realFlexibleMinHeight",
+						"_kind": "member variable",
+						"_name": "_realFlexibleMinHeight",
+						"default_value": {
+							"expression": [{
+								"kind": "float_literal",
+								"spelling": "0.0f"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "float",
+								"builtin_type_kind": "float",
+								"kind": "builtin"
+							}
+						},
+						"id": 3776868795,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "_realFlexibleMinHeight",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::material2d::FlexibleLayout::_realFlexibleMaxHeight",
+						"_kind": "member variable",
+						"_name": "_realFlexibleMaxHeight",
+						"default_value": {
+							"expression": [{
+								"kind": "float_literal",
+								"spelling": "0.0f"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "float",
+								"builtin_type_kind": "float",
+								"kind": "builtin"
+							}
+						},
+						"id": 1945645975,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "_realFlexibleMaxHeight",
 						"type": {
 							"_typeName": "float",
 							"builtin_type_kind": "float",
@@ -5077,134 +5351,266 @@
 							}],
 							"kind": "unexposed",
 							"type": {
-								"_typeName": "stappler::xenolith::Node*",
+								"_typeName": "stappler::xenolith::material2d::Surface*",
 								"kind": "pointer",
 								"pointee": {
-									"_typeName": "stappler::xenolith::Node",
+									"_typeName": "stappler::xenolith::material2d::Surface",
 									"kind": "user_defined",
 									"target": {
-										"name": "stappler::xenolith::Node",
+										"name": "stappler::xenolith::material2d::Surface",
 										"objects": [{
-											"_fullName": "::stappler::xenolith::Node",
+											"_fullName": "::stappler::xenolith::material2d::Surface",
 											"_kind": "class",
-											"_name": "Node",
+											"_name": "Surface",
 											"bases": [{
-												"_fullName": "Ref",
+												"_fullName": "VectorSprite",
 												"_kind": "base class specifier",
-												"_name": "Ref",
+												"_name": "VectorSprite",
 												"access_specifier": "public",
-												"id": 1165741041,
+												"id": 2320869402,
 												"is_virtual": false,
 												"kind": "base class specifier",
-												"name": "Ref",
+												"name": "VectorSprite",
 												"type": {
-													"_typeName": "stappler::mem_std::Ref",
+													"_typeName": "stappler::xenolith::basic2d::VectorSprite",
 													"kind": "user_defined",
 													"target": {
-														"name": "stappler::mem_std::Ref",
+														"name": "stappler::xenolith::basic2d::VectorSprite",
 														"objects": [{
-															"_fullName": "::stappler::mem_std::Ref",
-															"_kind": "type alias",
-															"_name": "Ref",
-															"id": 3010886988,
-															"kind": "type alias",
-															"name": "Ref",
-															"underlying_type": {
-																"_typeName": "RefBase<memory::StandartInterface>",
-																"arguments_exposed": false,
-																"kind": "template_instantiation",
-																"primary_template": {
-																	"name": "RefBase",
-																	"objects": [{
-																		"_fullName": "::stappler::RefBase<typename>",
-																		"_kind": "class template",
-																		"_name": "RefBase",
-																		"class": {
-																			"_fullName": "::stappler::RefBase<typename>",
+															"_fullName": "::stappler::xenolith::basic2d::VectorSprite",
+															"_kind": "class",
+															"_name": "VectorSprite",
+															"bases": [{
+																"_fullName": "Sprite",
+																"_kind": "base class specifier",
+																"_name": "Sprite",
+																"access_specifier": "public",
+																"id": 1737950589,
+																"is_virtual": false,
+																"kind": "base class specifier",
+																"name": "Sprite",
+																"type": {
+																	"_typeName": "stappler::xenolith::basic2d::Sprite",
+																	"kind": "user_defined",
+																	"target": {
+																		"name": "stappler::xenolith::basic2d::Sprite",
+																		"objects": [{
+																			"_fullName": "::stappler::xenolith::basic2d::Sprite",
 																			"_kind": "class",
-																			"_name": "RefBase",
+																			"_name": "Sprite",
 																			"bases": [{
-																				"_fullName": "Interface::AllocBaseType",
+																				"_fullName": "DynamicStateNode",
 																				"_kind": "base class specifier",
-																				"_name": "Interface::AllocBaseType",
+																				"_name": "DynamicStateNode",
 																				"access_specifier": "public",
-																				"id": 25533212,
+																				"id": 1495522334,
 																				"is_virtual": false,
 																				"kind": "base class specifier",
-																				"name": "Interface::AllocBaseType",
+																				"name": "DynamicStateNode",
 																				"type": {
-																					"_typeName": "Interface::AllocBaseType",
-																					"kind": "unexposed",
-																					"name": "Interface::AllocBaseType"
+																					"_typeName": "stappler::xenolith::DynamicStateNode",
+																					"kind": "user_defined",
+																					"target": {
+																						"name": "stappler::xenolith::DynamicStateNode",
+																						"objects": [{
+																							"_fullName": "::stappler::xenolith::DynamicStateNode",
+																							"_kind": "class",
+																							"_name": "DynamicStateNode",
+																							"bases": [{
+																								"_fullName": "Node",
+																								"_kind": "base class specifier",
+																								"_name": "Node",
+																								"access_specifier": "public",
+																								"id": 421274683,
+																								"is_virtual": false,
+																								"kind": "base class specifier",
+																								"name": "Node",
+																								"type": {
+																									"_typeName": "stappler::xenolith::Node",
+																									"kind": "user_defined",
+																									"target": {
+																										"name": "stappler::xenolith::Node",
+																										"objects": [{
+																											"_fullName": "::stappler::xenolith::Node",
+																											"_kind": "class",
+																											"_name": "Node",
+																											"bases": [{
+																												"_fullName": "Ref",
+																												"_kind": "base class specifier",
+																												"_name": "Ref",
+																												"access_specifier": "public",
+																												"id": 1165741041,
+																												"is_virtual": false,
+																												"kind": "base class specifier",
+																												"name": "Ref",
+																												"type": {
+																													"_typeName": "stappler::mem_std::Ref",
+																													"kind": "user_defined",
+																													"target": {
+																														"name": "stappler::mem_std::Ref",
+																														"objects": [{
+																															"_fullName": "::stappler::mem_std::Ref",
+																															"_kind": "type alias",
+																															"_name": "Ref",
+																															"id": 3010886988,
+																															"kind": "type alias",
+																															"name": "Ref",
+																															"underlying_type": {
+																																"_typeName": "RefBase<memory::StandartInterface>",
+																																"arguments_exposed": false,
+																																"kind": "template_instantiation",
+																																"primary_template": {
+																																	"name": "RefBase",
+																																	"objects": [{
+																																		"_fullName": "::stappler::RefBase<typename>",
+																																		"_kind": "class template",
+																																		"_name": "RefBase",
+																																		"class": {
+																																			"_fullName": "::stappler::RefBase<typename>",
+																																			"_kind": "class",
+																																			"_name": "RefBase",
+																																			"bases": [{
+																																				"_fullName": "Interface::AllocBaseType",
+																																				"_kind": "base class specifier",
+																																				"_name": "Interface::AllocBaseType",
+																																				"access_specifier": "public",
+																																				"id": 25533212,
+																																				"is_virtual": false,
+																																				"kind": "base class specifier",
+																																				"name": "Interface::AllocBaseType",
+																																				"type": {
+																																					"_typeName": "Interface::AllocBaseType",
+																																					"kind": "unexposed",
+																																					"name": "Interface::AllocBaseType"
+																																				}
+																																			}],
+																																			"class_kind": "class",
+																																			"id": 2191419057,
+																																			"is_declaration": false,
+																																			"is_definition": true,
+																																			"is_final": false,
+																																			"kind": "class",
+																																			"name": "RefBase",
+																																			"scope": {
+																																				"is_templated": true,
+																																				"name": "RefBase",
+																																				"template_parameters": [{
+																																					"_fullName": "Interface",
+																																					"_kind": "template type parameter",
+																																					"_name": "Interface",
+																																					"id": 2255344761,
+																																					"is_variadic": false,
+																																					"keyword": "typename",
+																																					"kind": "template type parameter",
+																																					"name": "Interface"
+																																				}]
+																																			},
+																																			"semantic_scope": ""
+																																		},
+																																		"id": 2191419057,
+																																		"kind": "class template",
+																																		"name": "RefBase",
+																																		"parameters": [{
+																																			"_fullName": "Interface",
+																																			"_kind": "template type parameter",
+																																			"_name": "Interface",
+																																			"id": 2255344761,
+																																			"is_variadic": false,
+																																			"keyword": "typename",
+																																			"kind": "template type parameter",
+																																			"name": "Interface"
+																																		}],
+																																		"scope":  {
+																																			"is_templated": true,
+																																			"name": "RefBase",
+																																			"template_parameters": [{
+																																				"_fullName": "Interface",
+																																				"_kind": "template type parameter",
+																																				"_name": "Interface",
+																																				"id": 2255344761,
+																																				"is_variadic": false,
+																																				"keyword": "typename",
+																																				"kind": "template type parameter",
+																																				"name": "Interface"
+																																			}]
+																																		}
+																																	}]
+																																},
+																																"unexposed_arguments": "memory::StandartInterface"
+																															}
+																														}]
+																													}
+																												}
+																											}],
+																											"class_kind": "class",
+																											"id": 697316651,
+																											"is_declaration": false,
+																											"is_definition": true,
+																											"is_final": false,
+																											"kind": "class",
+																											"name": "Node",
+																											"scope": {
+																												"name": "Node"
+																											},
+																											"semantic_scope": ""
+																										}]
+																									}
+																								}
+																							}],
+																							"class_kind": "class",
+																							"id": 647377790,
+																							"is_declaration": false,
+																							"is_definition": true,
+																							"is_final": false,
+																							"kind": "class",
+																							"name": "DynamicStateNode",
+																							"scope": {
+																								"name": "DynamicStateNode"
+																							},
+																							"semantic_scope": ""
+																						}]
+																					}
 																				}
 																			}],
 																			"class_kind": "class",
-																			"id": 2191419057,
+																			"id": 964191972,
 																			"is_declaration": false,
 																			"is_definition": true,
 																			"is_final": false,
 																			"kind": "class",
-																			"name": "RefBase",
+																			"name": "Sprite",
 																			"scope": {
-																				"is_templated": true,
-																				"name": "RefBase",
-																				"template_parameters": [{
-																					"_fullName": "Interface",
-																					"_kind": "template type parameter",
-																					"_name": "Interface",
-																					"id": 2255344761,
-																					"is_variadic": false,
-																					"keyword": "typename",
-																					"kind": "template type parameter",
-																					"name": "Interface"
-																				}]
+																				"name": "Sprite"
 																			},
 																			"semantic_scope": ""
-																		},
-																		"id": 2191419057,
-																		"kind": "class template",
-																		"name": "RefBase",
-																		"parameters": [{
-																			"_fullName": "Interface",
-																			"_kind": "template type parameter",
-																			"_name": "Interface",
-																			"id": 2255344761,
-																			"is_variadic": false,
-																			"keyword": "typename",
-																			"kind": "template type parameter",
-																			"name": "Interface"
-																		}],
-																		"scope":  {
-																			"is_templated": true,
-																			"name": "RefBase",
-																			"template_parameters": [{
-																				"_fullName": "Interface",
-																				"_kind": "template type parameter",
-																				"_name": "Interface",
-																				"id": 2255344761,
-																				"is_variadic": false,
-																				"keyword": "typename",
-																				"kind": "template type parameter",
-																				"name": "Interface"
-																			}]
-																		}
-																	}]
-																},
-																"unexposed_arguments": "memory::StandartInterface"
-															}
+																		}]
+																	}
+																}
+															}],
+															"class_kind": "class",
+															"id": 4254953925,
+															"is_declaration": false,
+															"is_definition": true,
+															"is_final": false,
+															"kind": "class",
+															"name": "VectorSprite",
+															"scope": {
+																"name": "VectorSprite"
+															},
+															"semantic_scope": ""
 														}]
 													}
 												}
 											}],
 											"class_kind": "class",
-											"id": 697316651,
+											"id": 3609776072,
 											"is_declaration": false,
 											"is_definition": true,
 											"is_final": false,
 											"kind": "class",
-											"name": "Node",
+											"name": "Surface",
 											"scope": {
-												"name": "Node"
+												"name": "Surface"
 											},
 											"semantic_scope": ""
 										}]
@@ -5217,134 +5623,266 @@
 						"kind": "member variable",
 						"name": "_flexibleNode",
 						"type": {
-							"_typeName": "stappler::xenolith::Node*",
+							"_typeName": "stappler::xenolith::material2d::Surface*",
 							"kind": "pointer",
 							"pointee": {
-								"_typeName": "stappler::xenolith::Node",
+								"_typeName": "stappler::xenolith::material2d::Surface",
 								"kind": "user_defined",
 								"target": {
-									"name": "stappler::xenolith::Node",
+									"name": "stappler::xenolith::material2d::Surface",
 									"objects": [{
-										"_fullName": "::stappler::xenolith::Node",
+										"_fullName": "::stappler::xenolith::material2d::Surface",
 										"_kind": "class",
-										"_name": "Node",
+										"_name": "Surface",
 										"bases": [{
-											"_fullName": "Ref",
+											"_fullName": "VectorSprite",
 											"_kind": "base class specifier",
-											"_name": "Ref",
+											"_name": "VectorSprite",
 											"access_specifier": "public",
-											"id": 1165741041,
+											"id": 2320869402,
 											"is_virtual": false,
 											"kind": "base class specifier",
-											"name": "Ref",
+											"name": "VectorSprite",
 											"type": {
-												"_typeName": "stappler::mem_std::Ref",
+												"_typeName": "stappler::xenolith::basic2d::VectorSprite",
 												"kind": "user_defined",
 												"target": {
-													"name": "stappler::mem_std::Ref",
+													"name": "stappler::xenolith::basic2d::VectorSprite",
 													"objects": [{
-														"_fullName": "::stappler::mem_std::Ref",
-														"_kind": "type alias",
-														"_name": "Ref",
-														"id": 3010886988,
-														"kind": "type alias",
-														"name": "Ref",
-														"underlying_type": {
-															"_typeName": "RefBase<memory::StandartInterface>",
-															"arguments_exposed": false,
-															"kind": "template_instantiation",
-															"primary_template": {
-																"name": "RefBase",
-																"objects": [{
-																	"_fullName": "::stappler::RefBase<typename>",
-																	"_kind": "class template",
-																	"_name": "RefBase",
-																	"class": {
-																		"_fullName": "::stappler::RefBase<typename>",
+														"_fullName": "::stappler::xenolith::basic2d::VectorSprite",
+														"_kind": "class",
+														"_name": "VectorSprite",
+														"bases": [{
+															"_fullName": "Sprite",
+															"_kind": "base class specifier",
+															"_name": "Sprite",
+															"access_specifier": "public",
+															"id": 1737950589,
+															"is_virtual": false,
+															"kind": "base class specifier",
+															"name": "Sprite",
+															"type": {
+																"_typeName": "stappler::xenolith::basic2d::Sprite",
+																"kind": "user_defined",
+																"target": {
+																	"name": "stappler::xenolith::basic2d::Sprite",
+																	"objects": [{
+																		"_fullName": "::stappler::xenolith::basic2d::Sprite",
 																		"_kind": "class",
-																		"_name": "RefBase",
+																		"_name": "Sprite",
 																		"bases": [{
-																			"_fullName": "Interface::AllocBaseType",
+																			"_fullName": "DynamicStateNode",
 																			"_kind": "base class specifier",
-																			"_name": "Interface::AllocBaseType",
+																			"_name": "DynamicStateNode",
 																			"access_specifier": "public",
-																			"id": 25533212,
+																			"id": 1495522334,
 																			"is_virtual": false,
 																			"kind": "base class specifier",
-																			"name": "Interface::AllocBaseType",
+																			"name": "DynamicStateNode",
 																			"type": {
-																				"_typeName": "Interface::AllocBaseType",
-																				"kind": "unexposed",
-																				"name": "Interface::AllocBaseType"
+																				"_typeName": "stappler::xenolith::DynamicStateNode",
+																				"kind": "user_defined",
+																				"target": {
+																					"name": "stappler::xenolith::DynamicStateNode",
+																					"objects": [{
+																						"_fullName": "::stappler::xenolith::DynamicStateNode",
+																						"_kind": "class",
+																						"_name": "DynamicStateNode",
+																						"bases": [{
+																							"_fullName": "Node",
+																							"_kind": "base class specifier",
+																							"_name": "Node",
+																							"access_specifier": "public",
+																							"id": 421274683,
+																							"is_virtual": false,
+																							"kind": "base class specifier",
+																							"name": "Node",
+																							"type": {
+																								"_typeName": "stappler::xenolith::Node",
+																								"kind": "user_defined",
+																								"target": {
+																									"name": "stappler::xenolith::Node",
+																									"objects": [{
+																										"_fullName": "::stappler::xenolith::Node",
+																										"_kind": "class",
+																										"_name": "Node",
+																										"bases": [{
+																											"_fullName": "Ref",
+																											"_kind": "base class specifier",
+																											"_name": "Ref",
+																											"access_specifier": "public",
+																											"id": 1165741041,
+																											"is_virtual": false,
+																											"kind": "base class specifier",
+																											"name": "Ref",
+																											"type": {
+																												"_typeName": "stappler::mem_std::Ref",
+																												"kind": "user_defined",
+																												"target": {
+																													"name": "stappler::mem_std::Ref",
+																													"objects": [{
+																														"_fullName": "::stappler::mem_std::Ref",
+																														"_kind": "type alias",
+																														"_name": "Ref",
+																														"id": 3010886988,
+																														"kind": "type alias",
+																														"name": "Ref",
+																														"underlying_type": {
+																															"_typeName": "RefBase<memory::StandartInterface>",
+																															"arguments_exposed": false,
+																															"kind": "template_instantiation",
+																															"primary_template": {
+																																"name": "RefBase",
+																																"objects": [{
+																																	"_fullName": "::stappler::RefBase<typename>",
+																																	"_kind": "class template",
+																																	"_name": "RefBase",
+																																	"class": {
+																																		"_fullName": "::stappler::RefBase<typename>",
+																																		"_kind": "class",
+																																		"_name": "RefBase",
+																																		"bases": [{
+																																			"_fullName": "Interface::AllocBaseType",
+																																			"_kind": "base class specifier",
+																																			"_name": "Interface::AllocBaseType",
+																																			"access_specifier": "public",
+																																			"id": 25533212,
+																																			"is_virtual": false,
+																																			"kind": "base class specifier",
+																																			"name": "Interface::AllocBaseType",
+																																			"type": {
+																																				"_typeName": "Interface::AllocBaseType",
+																																				"kind": "unexposed",
+																																				"name": "Interface::AllocBaseType"
+																																			}
+																																		}],
+																																		"class_kind": "class",
+																																		"id": 2191419057,
+																																		"is_declaration": false,
+																																		"is_definition": true,
+																																		"is_final": false,
+																																		"kind": "class",
+																																		"name": "RefBase",
+																																		"scope": {
+																																			"is_templated": true,
+																																			"name": "RefBase",
+																																			"template_parameters": [{
+																																				"_fullName": "Interface",
+																																				"_kind": "template type parameter",
+																																				"_name": "Interface",
+																																				"id": 2255344761,
+																																				"is_variadic": false,
+																																				"keyword": "typename",
+																																				"kind": "template type parameter",
+																																				"name": "Interface"
+																																			}]
+																																		},
+																																		"semantic_scope": ""
+																																	},
+																																	"id": 2191419057,
+																																	"kind": "class template",
+																																	"name": "RefBase",
+																																	"parameters": [{
+																																		"_fullName": "Interface",
+																																		"_kind": "template type parameter",
+																																		"_name": "Interface",
+																																		"id": 2255344761,
+																																		"is_variadic": false,
+																																		"keyword": "typename",
+																																		"kind": "template type parameter",
+																																		"name": "Interface"
+																																	}],
+																																	"scope":  {
+																																		"is_templated": true,
+																																		"name": "RefBase",
+																																		"template_parameters": [{
+																																			"_fullName": "Interface",
+																																			"_kind": "template type parameter",
+																																			"_name": "Interface",
+																																			"id": 2255344761,
+																																			"is_variadic": false,
+																																			"keyword": "typename",
+																																			"kind": "template type parameter",
+																																			"name": "Interface"
+																																		}]
+																																	}
+																																}]
+																															},
+																															"unexposed_arguments": "memory::StandartInterface"
+																														}
+																													}]
+																												}
+																											}
+																										}],
+																										"class_kind": "class",
+																										"id": 697316651,
+																										"is_declaration": false,
+																										"is_definition": true,
+																										"is_final": false,
+																										"kind": "class",
+																										"name": "Node",
+																										"scope": {
+																											"name": "Node"
+																										},
+																										"semantic_scope": ""
+																									}]
+																								}
+																							}
+																						}],
+																						"class_kind": "class",
+																						"id": 647377790,
+																						"is_declaration": false,
+																						"is_definition": true,
+																						"is_final": false,
+																						"kind": "class",
+																						"name": "DynamicStateNode",
+																						"scope": {
+																							"name": "DynamicStateNode"
+																						},
+																						"semantic_scope": ""
+																					}]
+																				}
 																			}
 																		}],
 																		"class_kind": "class",
-																		"id": 2191419057,
+																		"id": 964191972,
 																		"is_declaration": false,
 																		"is_definition": true,
 																		"is_final": false,
 																		"kind": "class",
-																		"name": "RefBase",
+																		"name": "Sprite",
 																		"scope": {
-																			"is_templated": true,
-																			"name": "RefBase",
-																			"template_parameters": [{
-																				"_fullName": "Interface",
-																				"_kind": "template type parameter",
-																				"_name": "Interface",
-																				"id": 2255344761,
-																				"is_variadic": false,
-																				"keyword": "typename",
-																				"kind": "template type parameter",
-																				"name": "Interface"
-																			}]
+																			"name": "Sprite"
 																		},
 																		"semantic_scope": ""
-																	},
-																	"id": 2191419057,
-																	"kind": "class template",
-																	"name": "RefBase",
-																	"parameters": [{
-																		"_fullName": "Interface",
-																		"_kind": "template type parameter",
-																		"_name": "Interface",
-																		"id": 2255344761,
-																		"is_variadic": false,
-																		"keyword": "typename",
-																		"kind": "template type parameter",
-																		"name": "Interface"
-																	}],
-																	"scope":  {
-																		"is_templated": true,
-																		"name": "RefBase",
-																		"template_parameters": [{
-																			"_fullName": "Interface",
-																			"_kind": "template type parameter",
-																			"_name": "Interface",
-																			"id": 2255344761,
-																			"is_variadic": false,
-																			"keyword": "typename",
-																			"kind": "template type parameter",
-																			"name": "Interface"
-																		}]
-																	}
-																}]
-															},
-															"unexposed_arguments": "memory::StandartInterface"
-														}
+																	}]
+																}
+															}
+														}],
+														"class_kind": "class",
+														"id": 4254953925,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "VectorSprite",
+														"scope": {
+															"name": "VectorSprite"
+														},
+														"semantic_scope": ""
 													}]
 												}
 											}
 										}],
 										"class_kind": "class",
-										"id": 697316651,
+										"id": 3609776072,
 										"is_declaration": false,
 										"is_definition": true,
 										"is_final": false,
 										"kind": "class",
-										"name": "Node",
+										"name": "Surface",
 										"scope": {
-											"name": "Node"
+											"name": "Surface"
 										},
 										"semantic_scope": ""
 									}]
@@ -5362,15 +5900,15 @@
 							}],
 							"kind": "unexposed",
 							"type": {
-								"_typeName": "stappler::xenolith::gui2d::ScrollView*",
+								"_typeName": "stappler::xenolith::basic2d::ScrollView*",
 								"kind": "pointer",
 								"pointee": {
-									"_typeName": "stappler::xenolith::gui2d::ScrollView",
+									"_typeName": "stappler::xenolith::basic2d::ScrollView",
 									"kind": "user_defined",
 									"target": {
-										"name": "stappler::xenolith::gui2d::ScrollView",
+										"name": "stappler::xenolith::basic2d::ScrollView",
 										"objects": [{
-											"_fullName": "::stappler::xenolith::gui2d::ScrollView",
+											"_fullName": "::stappler::xenolith::basic2d::ScrollView",
 											"_kind": "class",
 											"_name": "ScrollView",
 											"bases": [{
@@ -5383,12 +5921,12 @@
 												"kind": "base class specifier",
 												"name": "ScrollViewBase",
 												"type": {
-													"_typeName": "stappler::xenolith::gui2d::ScrollViewBase",
+													"_typeName": "stappler::xenolith::basic2d::ScrollViewBase",
 													"kind": "user_defined",
 													"target": {
-														"name": "stappler::xenolith::gui2d::ScrollViewBase",
+														"name": "stappler::xenolith::basic2d::ScrollViewBase",
 														"objects": [{
-															"_fullName": "::stappler::xenolith::gui2d::ScrollViewBase",
+															"_fullName": "::stappler::xenolith::basic2d::ScrollViewBase",
 															"_kind": "class",
 															"_name": "ScrollViewBase",
 															"bases": [{
@@ -5566,7 +6104,7 @@
 																}
 															}],
 															"class_kind": "class",
-															"id": 2727002385,
+															"id": 918255557,
 															"is_declaration": false,
 															"is_definition": true,
 															"is_final": false,
@@ -5581,7 +6119,7 @@
 												}
 											}],
 											"class_kind": "class",
-											"id": 2321895137,
+											"id": 2123753621,
 											"is_declaration": false,
 											"is_definition": true,
 											"is_final": false,
@@ -5601,15 +6139,15 @@
 						"kind": "member variable",
 						"name": "_baseNode",
 						"type": {
-							"_typeName": "stappler::xenolith::gui2d::ScrollView*",
+							"_typeName": "stappler::xenolith::basic2d::ScrollView*",
 							"kind": "pointer",
 							"pointee": {
-								"_typeName": "stappler::xenolith::gui2d::ScrollView",
+								"_typeName": "stappler::xenolith::basic2d::ScrollView",
 								"kind": "user_defined",
 								"target": {
-									"name": "stappler::xenolith::gui2d::ScrollView",
+									"name": "stappler::xenolith::basic2d::ScrollView",
 									"objects": [{
-										"_fullName": "::stappler::xenolith::gui2d::ScrollView",
+										"_fullName": "::stappler::xenolith::basic2d::ScrollView",
 										"_kind": "class",
 										"_name": "ScrollView",
 										"bases": [{
@@ -5622,12 +6160,12 @@
 											"kind": "base class specifier",
 											"name": "ScrollViewBase",
 											"type": {
-												"_typeName": "stappler::xenolith::gui2d::ScrollViewBase",
+												"_typeName": "stappler::xenolith::basic2d::ScrollViewBase",
 												"kind": "user_defined",
 												"target": {
-													"name": "stappler::xenolith::gui2d::ScrollViewBase",
+													"name": "stappler::xenolith::basic2d::ScrollViewBase",
 													"objects": [{
-														"_fullName": "::stappler::xenolith::gui2d::ScrollViewBase",
+														"_fullName": "::stappler::xenolith::basic2d::ScrollViewBase",
 														"_kind": "class",
 														"_name": "ScrollViewBase",
 														"bases": [{
@@ -5805,7 +6343,7 @@
 															}
 														}],
 														"class_kind": "class",
-														"id": 2727002385,
+														"id": 918255557,
 														"is_declaration": false,
 														"is_definition": true,
 														"is_final": false,
@@ -5820,7 +6358,7 @@
 											}
 										}],
 										"class_kind": "class",
-										"id": 2321895137,
+										"id": 2123753621,
 										"is_declaration": false,
 										"is_definition": true,
 										"is_final": false,
@@ -5828,6 +6366,621 @@
 										"name": "ScrollView",
 										"scope": {
 											"name": "ScrollView"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::material2d::FlexibleLayout::_appBar",
+						"_kind": "member variable",
+						"_name": "_appBar",
+						"default_value": {
+							"expression": [{
+								"kind": "keyword",
+								"spelling": "nullptr"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "stappler::xenolith::material2d::AppBar*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::xenolith::material2d::AppBar",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::xenolith::material2d::AppBar",
+										"objects": [{
+											"_fullName": "::stappler::xenolith::material2d::AppBar",
+											"_kind": "class",
+											"_name": "AppBar",
+											"bases": [{
+												"_fullName": "Surface",
+												"_kind": "base class specifier",
+												"_name": "Surface",
+												"access_specifier": "public",
+												"id": 2460756081,
+												"is_virtual": false,
+												"kind": "base class specifier",
+												"name": "Surface",
+												"type": {
+													"_typeName": "stappler::xenolith::material2d::Surface",
+													"kind": "user_defined",
+													"target": {
+														"name": "stappler::xenolith::material2d::Surface",
+														"objects": [{
+															"_fullName": "::stappler::xenolith::material2d::Surface",
+															"_kind": "class",
+															"_name": "Surface",
+															"bases": [{
+																"_fullName": "VectorSprite",
+																"_kind": "base class specifier",
+																"_name": "VectorSprite",
+																"access_specifier": "public",
+																"id": 2320869402,
+																"is_virtual": false,
+																"kind": "base class specifier",
+																"name": "VectorSprite",
+																"type": {
+																	"_typeName": "stappler::xenolith::basic2d::VectorSprite",
+																	"kind": "user_defined",
+																	"target": {
+																		"name": "stappler::xenolith::basic2d::VectorSprite",
+																		"objects": [{
+																			"_fullName": "::stappler::xenolith::basic2d::VectorSprite",
+																			"_kind": "class",
+																			"_name": "VectorSprite",
+																			"bases": [{
+																				"_fullName": "Sprite",
+																				"_kind": "base class specifier",
+																				"_name": "Sprite",
+																				"access_specifier": "public",
+																				"id": 1737950589,
+																				"is_virtual": false,
+																				"kind": "base class specifier",
+																				"name": "Sprite",
+																				"type": {
+																					"_typeName": "stappler::xenolith::basic2d::Sprite",
+																					"kind": "user_defined",
+																					"target": {
+																						"name": "stappler::xenolith::basic2d::Sprite",
+																						"objects": [{
+																							"_fullName": "::stappler::xenolith::basic2d::Sprite",
+																							"_kind": "class",
+																							"_name": "Sprite",
+																							"bases": [{
+																								"_fullName": "DynamicStateNode",
+																								"_kind": "base class specifier",
+																								"_name": "DynamicStateNode",
+																								"access_specifier": "public",
+																								"id": 1495522334,
+																								"is_virtual": false,
+																								"kind": "base class specifier",
+																								"name": "DynamicStateNode",
+																								"type": {
+																									"_typeName": "stappler::xenolith::DynamicStateNode",
+																									"kind": "user_defined",
+																									"target": {
+																										"name": "stappler::xenolith::DynamicStateNode",
+																										"objects": [{
+																											"_fullName": "::stappler::xenolith::DynamicStateNode",
+																											"_kind": "class",
+																											"_name": "DynamicStateNode",
+																											"bases": [{
+																												"_fullName": "Node",
+																												"_kind": "base class specifier",
+																												"_name": "Node",
+																												"access_specifier": "public",
+																												"id": 421274683,
+																												"is_virtual": false,
+																												"kind": "base class specifier",
+																												"name": "Node",
+																												"type": {
+																													"_typeName": "stappler::xenolith::Node",
+																													"kind": "user_defined",
+																													"target": {
+																														"name": "stappler::xenolith::Node",
+																														"objects": [{
+																															"_fullName": "::stappler::xenolith::Node",
+																															"_kind": "class",
+																															"_name": "Node",
+																															"bases": [{
+																																"_fullName": "Ref",
+																																"_kind": "base class specifier",
+																																"_name": "Ref",
+																																"access_specifier": "public",
+																																"id": 1165741041,
+																																"is_virtual": false,
+																																"kind": "base class specifier",
+																																"name": "Ref",
+																																"type": {
+																																	"_typeName": "stappler::mem_std::Ref",
+																																	"kind": "user_defined",
+																																	"target": {
+																																		"name": "stappler::mem_std::Ref",
+																																		"objects": [{
+																																			"_fullName": "::stappler::mem_std::Ref",
+																																			"_kind": "type alias",
+																																			"_name": "Ref",
+																																			"id": 3010886988,
+																																			"kind": "type alias",
+																																			"name": "Ref",
+																																			"underlying_type": {
+																																				"_typeName": "RefBase<memory::StandartInterface>",
+																																				"arguments_exposed": false,
+																																				"kind": "template_instantiation",
+																																				"primary_template": {
+																																					"name": "RefBase",
+																																					"objects": [{
+																																						"_fullName": "::stappler::RefBase<typename>",
+																																						"_kind": "class template",
+																																						"_name": "RefBase",
+																																						"class": {
+																																							"_fullName": "::stappler::RefBase<typename>",
+																																							"_kind": "class",
+																																							"_name": "RefBase",
+																																							"bases": [{
+																																								"_fullName": "Interface::AllocBaseType",
+																																								"_kind": "base class specifier",
+																																								"_name": "Interface::AllocBaseType",
+																																								"access_specifier": "public",
+																																								"id": 25533212,
+																																								"is_virtual": false,
+																																								"kind": "base class specifier",
+																																								"name": "Interface::AllocBaseType",
+																																								"type": {
+																																									"_typeName": "Interface::AllocBaseType",
+																																									"kind": "unexposed",
+																																									"name": "Interface::AllocBaseType"
+																																								}
+																																							}],
+																																							"class_kind": "class",
+																																							"id": 2191419057,
+																																							"is_declaration": false,
+																																							"is_definition": true,
+																																							"is_final": false,
+																																							"kind": "class",
+																																							"name": "RefBase",
+																																							"scope": {
+																																								"is_templated": true,
+																																								"name": "RefBase",
+																																								"template_parameters": [{
+																																									"_fullName": "Interface",
+																																									"_kind": "template type parameter",
+																																									"_name": "Interface",
+																																									"id": 2255344761,
+																																									"is_variadic": false,
+																																									"keyword": "typename",
+																																									"kind": "template type parameter",
+																																									"name": "Interface"
+																																								}]
+																																							},
+																																							"semantic_scope": ""
+																																						},
+																																						"id": 2191419057,
+																																						"kind": "class template",
+																																						"name": "RefBase",
+																																						"parameters": [{
+																																							"_fullName": "Interface",
+																																							"_kind": "template type parameter",
+																																							"_name": "Interface",
+																																							"id": 2255344761,
+																																							"is_variadic": false,
+																																							"keyword": "typename",
+																																							"kind": "template type parameter",
+																																							"name": "Interface"
+																																						}],
+																																						"scope":  {
+																																							"is_templated": true,
+																																							"name": "RefBase",
+																																							"template_parameters": [{
+																																								"_fullName": "Interface",
+																																								"_kind": "template type parameter",
+																																								"_name": "Interface",
+																																								"id": 2255344761,
+																																								"is_variadic": false,
+																																								"keyword": "typename",
+																																								"kind": "template type parameter",
+																																								"name": "Interface"
+																																							}]
+																																						}
+																																					}]
+																																				},
+																																				"unexposed_arguments": "memory::StandartInterface"
+																																			}
+																																		}]
+																																	}
+																																}
+																															}],
+																															"class_kind": "class",
+																															"id": 697316651,
+																															"is_declaration": false,
+																															"is_definition": true,
+																															"is_final": false,
+																															"kind": "class",
+																															"name": "Node",
+																															"scope": {
+																																"name": "Node"
+																															},
+																															"semantic_scope": ""
+																														}]
+																													}
+																												}
+																											}],
+																											"class_kind": "class",
+																											"id": 647377790,
+																											"is_declaration": false,
+																											"is_definition": true,
+																											"is_final": false,
+																											"kind": "class",
+																											"name": "DynamicStateNode",
+																											"scope": {
+																												"name": "DynamicStateNode"
+																											},
+																											"semantic_scope": ""
+																										}]
+																									}
+																								}
+																							}],
+																							"class_kind": "class",
+																							"id": 964191972,
+																							"is_declaration": false,
+																							"is_definition": true,
+																							"is_final": false,
+																							"kind": "class",
+																							"name": "Sprite",
+																							"scope": {
+																								"name": "Sprite"
+																							},
+																							"semantic_scope": ""
+																						}]
+																					}
+																				}
+																			}],
+																			"class_kind": "class",
+																			"id": 4254953925,
+																			"is_declaration": false,
+																			"is_definition": true,
+																			"is_final": false,
+																			"kind": "class",
+																			"name": "VectorSprite",
+																			"scope": {
+																				"name": "VectorSprite"
+																			},
+																			"semantic_scope": ""
+																		}]
+																	}
+																}
+															}],
+															"class_kind": "class",
+															"id": 3609776072,
+															"is_declaration": false,
+															"is_definition": true,
+															"is_final": false,
+															"kind": "class",
+															"name": "Surface",
+															"scope": {
+																"name": "Surface"
+															},
+															"semantic_scope": ""
+														}]
+													}
+												}
+											}],
+											"class_kind": "class",
+											"id": 4118421422,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "AppBar",
+											"scope": {
+												"name": "AppBar"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							}
+						},
+						"id": 624632388,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "_appBar",
+						"type": {
+							"_typeName": "stappler::xenolith::material2d::AppBar*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::xenolith::material2d::AppBar",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::material2d::AppBar",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::material2d::AppBar",
+										"_kind": "class",
+										"_name": "AppBar",
+										"bases": [{
+											"_fullName": "Surface",
+											"_kind": "base class specifier",
+											"_name": "Surface",
+											"access_specifier": "public",
+											"id": 2460756081,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "Surface",
+											"type": {
+												"_typeName": "stappler::xenolith::material2d::Surface",
+												"kind": "user_defined",
+												"target": {
+													"name": "stappler::xenolith::material2d::Surface",
+													"objects": [{
+														"_fullName": "::stappler::xenolith::material2d::Surface",
+														"_kind": "class",
+														"_name": "Surface",
+														"bases": [{
+															"_fullName": "VectorSprite",
+															"_kind": "base class specifier",
+															"_name": "VectorSprite",
+															"access_specifier": "public",
+															"id": 2320869402,
+															"is_virtual": false,
+															"kind": "base class specifier",
+															"name": "VectorSprite",
+															"type": {
+																"_typeName": "stappler::xenolith::basic2d::VectorSprite",
+																"kind": "user_defined",
+																"target": {
+																	"name": "stappler::xenolith::basic2d::VectorSprite",
+																	"objects": [{
+																		"_fullName": "::stappler::xenolith::basic2d::VectorSprite",
+																		"_kind": "class",
+																		"_name": "VectorSprite",
+																		"bases": [{
+																			"_fullName": "Sprite",
+																			"_kind": "base class specifier",
+																			"_name": "Sprite",
+																			"access_specifier": "public",
+																			"id": 1737950589,
+																			"is_virtual": false,
+																			"kind": "base class specifier",
+																			"name": "Sprite",
+																			"type": {
+																				"_typeName": "stappler::xenolith::basic2d::Sprite",
+																				"kind": "user_defined",
+																				"target": {
+																					"name": "stappler::xenolith::basic2d::Sprite",
+																					"objects": [{
+																						"_fullName": "::stappler::xenolith::basic2d::Sprite",
+																						"_kind": "class",
+																						"_name": "Sprite",
+																						"bases": [{
+																							"_fullName": "DynamicStateNode",
+																							"_kind": "base class specifier",
+																							"_name": "DynamicStateNode",
+																							"access_specifier": "public",
+																							"id": 1495522334,
+																							"is_virtual": false,
+																							"kind": "base class specifier",
+																							"name": "DynamicStateNode",
+																							"type": {
+																								"_typeName": "stappler::xenolith::DynamicStateNode",
+																								"kind": "user_defined",
+																								"target": {
+																									"name": "stappler::xenolith::DynamicStateNode",
+																									"objects": [{
+																										"_fullName": "::stappler::xenolith::DynamicStateNode",
+																										"_kind": "class",
+																										"_name": "DynamicStateNode",
+																										"bases": [{
+																											"_fullName": "Node",
+																											"_kind": "base class specifier",
+																											"_name": "Node",
+																											"access_specifier": "public",
+																											"id": 421274683,
+																											"is_virtual": false,
+																											"kind": "base class specifier",
+																											"name": "Node",
+																											"type": {
+																												"_typeName": "stappler::xenolith::Node",
+																												"kind": "user_defined",
+																												"target": {
+																													"name": "stappler::xenolith::Node",
+																													"objects": [{
+																														"_fullName": "::stappler::xenolith::Node",
+																														"_kind": "class",
+																														"_name": "Node",
+																														"bases": [{
+																															"_fullName": "Ref",
+																															"_kind": "base class specifier",
+																															"_name": "Ref",
+																															"access_specifier": "public",
+																															"id": 1165741041,
+																															"is_virtual": false,
+																															"kind": "base class specifier",
+																															"name": "Ref",
+																															"type": {
+																																"_typeName": "stappler::mem_std::Ref",
+																																"kind": "user_defined",
+																																"target": {
+																																	"name": "stappler::mem_std::Ref",
+																																	"objects": [{
+																																		"_fullName": "::stappler::mem_std::Ref",
+																																		"_kind": "type alias",
+																																		"_name": "Ref",
+																																		"id": 3010886988,
+																																		"kind": "type alias",
+																																		"name": "Ref",
+																																		"underlying_type": {
+																																			"_typeName": "RefBase<memory::StandartInterface>",
+																																			"arguments_exposed": false,
+																																			"kind": "template_instantiation",
+																																			"primary_template": {
+																																				"name": "RefBase",
+																																				"objects": [{
+																																					"_fullName": "::stappler::RefBase<typename>",
+																																					"_kind": "class template",
+																																					"_name": "RefBase",
+																																					"class": {
+																																						"_fullName": "::stappler::RefBase<typename>",
+																																						"_kind": "class",
+																																						"_name": "RefBase",
+																																						"bases": [{
+																																							"_fullName": "Interface::AllocBaseType",
+																																							"_kind": "base class specifier",
+																																							"_name": "Interface::AllocBaseType",
+																																							"access_specifier": "public",
+																																							"id": 25533212,
+																																							"is_virtual": false,
+																																							"kind": "base class specifier",
+																																							"name": "Interface::AllocBaseType",
+																																							"type": {
+																																								"_typeName": "Interface::AllocBaseType",
+																																								"kind": "unexposed",
+																																								"name": "Interface::AllocBaseType"
+																																							}
+																																						}],
+																																						"class_kind": "class",
+																																						"id": 2191419057,
+																																						"is_declaration": false,
+																																						"is_definition": true,
+																																						"is_final": false,
+																																						"kind": "class",
+																																						"name": "RefBase",
+																																						"scope": {
+																																							"is_templated": true,
+																																							"name": "RefBase",
+																																							"template_parameters": [{
+																																								"_fullName": "Interface",
+																																								"_kind": "template type parameter",
+																																								"_name": "Interface",
+																																								"id": 2255344761,
+																																								"is_variadic": false,
+																																								"keyword": "typename",
+																																								"kind": "template type parameter",
+																																								"name": "Interface"
+																																							}]
+																																						},
+																																						"semantic_scope": ""
+																																					},
+																																					"id": 2191419057,
+																																					"kind": "class template",
+																																					"name": "RefBase",
+																																					"parameters": [{
+																																						"_fullName": "Interface",
+																																						"_kind": "template type parameter",
+																																						"_name": "Interface",
+																																						"id": 2255344761,
+																																						"is_variadic": false,
+																																						"keyword": "typename",
+																																						"kind": "template type parameter",
+																																						"name": "Interface"
+																																					}],
+																																					"scope":  {
+																																						"is_templated": true,
+																																						"name": "RefBase",
+																																						"template_parameters": [{
+																																							"_fullName": "Interface",
+																																							"_kind": "template type parameter",
+																																							"_name": "Interface",
+																																							"id": 2255344761,
+																																							"is_variadic": false,
+																																							"keyword": "typename",
+																																							"kind": "template type parameter",
+																																							"name": "Interface"
+																																						}]
+																																					}
+																																				}]
+																																			},
+																																			"unexposed_arguments": "memory::StandartInterface"
+																																		}
+																																	}]
+																																}
+																															}
+																														}],
+																														"class_kind": "class",
+																														"id": 697316651,
+																														"is_declaration": false,
+																														"is_definition": true,
+																														"is_final": false,
+																														"kind": "class",
+																														"name": "Node",
+																														"scope": {
+																															"name": "Node"
+																														},
+																														"semantic_scope": ""
+																													}]
+																												}
+																											}
+																										}],
+																										"class_kind": "class",
+																										"id": 647377790,
+																										"is_declaration": false,
+																										"is_definition": true,
+																										"is_final": false,
+																										"kind": "class",
+																										"name": "DynamicStateNode",
+																										"scope": {
+																											"name": "DynamicStateNode"
+																										},
+																										"semantic_scope": ""
+																									}]
+																								}
+																							}
+																						}],
+																						"class_kind": "class",
+																						"id": 964191972,
+																						"is_declaration": false,
+																						"is_definition": true,
+																						"is_final": false,
+																						"kind": "class",
+																						"name": "Sprite",
+																						"scope": {
+																							"name": "Sprite"
+																						},
+																						"semantic_scope": ""
+																					}]
+																				}
+																			}
+																		}],
+																		"class_kind": "class",
+																		"id": 4254953925,
+																		"is_declaration": false,
+																		"is_definition": true,
+																		"is_final": false,
+																		"kind": "class",
+																		"name": "VectorSprite",
+																		"scope": {
+																			"name": "VectorSprite"
+																		},
+																		"semantic_scope": ""
+																	}]
+																}
+															}
+														}],
+														"class_kind": "class",
+														"id": 3609776072,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "Surface",
+														"scope": {
+															"name": "Surface"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}],
+										"class_kind": "class",
+										"id": 4118421422,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "AppBar",
+										"scope": {
+											"name": "AppBar"
 										},
 										"semantic_scope": ""
 									}]
@@ -5882,6 +7035,6 @@
 	"name": "xenolith/renderer/material2d/layout/MaterialFlexibleLayout.h",
 	"unmatched_comments": [{
 		"line": 21,
-		"text": "\nCopyright (c) 2023 Stappler LLC <admin@stappler.dev>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n"
+		"text": "\nCopyright (c) 2023-2024 Stappler LLC <admin@stappler.dev>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n"
 	}]
 }

@@ -208,3 +208,59 @@ Title: XL2dFrameContext.h
 Доступ: protected
 
 Тип: bool
+
+
+# ::stappler::xenolith::basic2d::StateData
+
+## BRIEF
+
+## CONTENT
+
+Базовые классы:
+* Ref
+
+
+# ::stappler::xenolith::basic2d::StateData::~StateData()
+
+## BRIEF
+
+## CONTENT
+
+
+# ::stappler::xenolith::basic2d::StateData::init()
+
+## BRIEF
+
+## CONTENT
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::basic2d::StateData::init(stappler::xenolith::basic2d::StateData*)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* stappler::xenolith::basic2d::StateData*
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::basic2d::StateData::transform
+
+## BRIEF
+
+## CONTENT
+
+Тип: stappler::geom::Mat4
+
+
+# ::stappler::xenolith::basic2d::StateData::gradient
+
+## BRIEF
+
+## CONTENT
+
+Тип: Rc<stappler::xenolith::basic2d::LinearGradientData>

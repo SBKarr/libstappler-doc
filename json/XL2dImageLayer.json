@@ -1,16 +1,16 @@
 {
-	"_fullName": "xenolith/renderer/gui2d/XL2dImageLayer.h",
+	"_fullName": "xenolith/renderer/basic2d/XL2dImageLayer.h",
 	"_kind": "file",
-	"_name": "xenolith/renderer/gui2d/XL2dImageLayer.h",
+	"_name": "xenolith/renderer/basic2d/XL2dImageLayer.h",
 	"childs": [{
-		"_fullName": "XL2dGui.h",
+		"_fullName": "XL2d.h",
 		"_kind": "include directive",
-		"_name": "XL2dGui.h",
-		"id": 22013888,
-		"include": "xenolith/renderer/gui2d/XL2dGui.h",
+		"_name": "XL2d.h",
+		"id": 893802368,
+		"include": "xenolith/renderer/basic2d/XL2d.h",
 		"include_kind": "local",
 		"kind": "include directive",
-		"name": "XL2dGui.h"
+		"name": "XL2d.h"
 	}, {
 		"_fullName": "XL2dSprite.h",
 		"_kind": "include directive",
@@ -21,15 +21,15 @@
 		"kind": "include directive",
 		"name": "XL2dSprite.h"
 	}, {
-		"_fullName": "XENOLITH_RENDERER_GUI2D_XL2DIMAGELAYER_H_",
+		"_fullName": "XENOLITH_RENDERER_BASIC2D_XL2DIMAGELAYER_H_",
 		"_kind": "macro definition",
-		"_name": "XENOLITH_RENDERER_GUI2D_XL2DIMAGELAYER_H_",
-		"id": 1723620713,
+		"_name": "XENOLITH_RENDERER_BASIC2D_XL2DIMAGELAYER_H_",
+		"id": 1483522229,
 		"is_function_like": false,
 		"is_object_like": true,
 		"is_variadic": false,
 		"kind": "macro definition",
-		"name": "XENOLITH_RENDERER_GUI2D_XL2DIMAGELAYER_H_",
+		"name": "XENOLITH_RENDERER_BASIC2D_XL2DIMAGELAYER_H_",
 		"replacement": ""
 	}, {
 		"_fullName": "::stappler",
@@ -40,11 +40,11 @@
 			"_kind": "namespace",
 			"_name": "xenolith",
 			"childs": [{
-				"_fullName": "::stappler::xenolith::gui2d",
+				"_fullName": "::stappler::xenolith::basic2d",
 				"_kind": "namespace",
-				"_name": "gui2d",
+				"_name": "basic2d",
 				"childs": [{
-					"_fullName": "::stappler::xenolith::gui2d::ImageLayer",
+					"_fullName": "::stappler::xenolith::basic2d::ImageLayer",
 					"_kind": "class",
 					"_name": "ImageLayer",
 					"bases": [{
@@ -197,11 +197,11 @@
 						"kind": "access specifier",
 						"name": "public"
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ImageLayer::GetMaxScaleFactor()",
+						"_fullName": "::stappler::xenolith::basic2d::ImageLayer::GetMaxScaleFactor()",
 						"_kind": "function",
 						"_name": "GetMaxScaleFactor",
 						"body_kind": "definition",
-						"id": 1690578386,
+						"id": 2792840505,
 						"is_consteval": false,
 						"is_constexpr": true,
 						"is_declaration": false,
@@ -220,11 +220,11 @@
 							"static"
 						]
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ImageLayer::~ImageLayer()",
+						"_fullName": "::stappler::xenolith::basic2d::ImageLayer::~ImageLayer()",
 						"_kind": "destructor",
 						"_name": "~ImageLayer",
 						"body_kind": "declaration",
-						"id": 2963386940,
+						"id": 3327969698,
 						"is_declaration": true,
 						"is_definition": false,
 						"is_override": true,
@@ -235,12 +235,12 @@
 						"semantic_scope": "",
 						"signature": "()"
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ImageLayer::init()",
+						"_fullName": "::stappler::xenolith::basic2d::ImageLayer::init()",
 						"_kind": "member function",
 						"_name": "init",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 2416454761,
+						"id": 3469489774,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -259,12 +259,12 @@
 						"semantic_scope": "",
 						"signature": "()"
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ImageLayer::onContentSizeDirty()",
+						"_fullName": "::stappler::xenolith::basic2d::ImageLayer::onContentSizeDirty()",
 						"_kind": "member function",
 						"_name": "onContentSizeDirty",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 8649977,
+						"id": 1246353765,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -283,12 +283,12 @@
 						"semantic_scope": "",
 						"signature": "()"
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ImageLayer::onTransformDirty(stappler::xenolith::Mat4 const&)",
+						"_fullName": "::stappler::xenolith::basic2d::ImageLayer::onTransformDirty(const stappler::geom::Mat4&)",
 						"_kind": "member function",
 						"_name": "onTransformDirty",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 543945985,
+						"id": 3493414397,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -306,60 +306,12 @@
 							"kind": "function parameter",
 							"name": "",
 							"type": {
-								"_typeName": "stappler::xenolith::Mat4 const&",
+								"_typeName": "const stappler::geom::Mat4&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "stappler::xenolith::Mat4 const",
-									"cv_qualifier": "const",
-									"kind": "cv_qualified",
-									"type": {
-										"_typeName": "stappler::xenolith::Mat4",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::xenolith::Mat4",
-											"objects": [{
-												"_fullName": "::stappler::xenolith::Mat4",
-												"_kind": "type alias",
-												"_name": "Mat4",
-												"id": 905241342,
-												"kind": "type alias",
-												"name": "Mat4",
-												"underlying_type": {
-													"_typeName": "geom::Mat4",
-													"kind": "user_defined",
-													"target": {
-														"name": "geom::Mat4",
-														"objects": [{
-															"_fullName": "::stappler::geom::Mat4",
-															"_kind": "class",
-															"_name": "Mat4",
-															"attributes": [{
-																"arguments": [{
-																	"kind": "int_literal",
-																	"spelling": "16"
-																}],
-																"is_variadic": false,
-																"kind": "alignas_",
-																"name": "alignas"
-															}],
-															"class_kind": "class",
-															"comment": "\nDefines a 4 x 4 floating point matrix representing a 3D transformation.\n\nVectors are treated as columns, resulting in a matrix that is represented as follows,\nwhere x, y and z are the translation components of the matrix:\n\n    1  0  0  x\n    0  1  0  y\n    0  0  1  z\n    0  0  0  1\n\nThis matrix class is directly compatible with OpenGL since its elements are\nlaid out in memory exactly as they are expected by OpenGL.\nThe matrix uses column-major format such that array indices increase down column first.\nSince matrix multiplication is not commutative, multiplication must be done in the\ncorrect order when combining transformations. Suppose we have a translation\nmatrix T and a rotation matrix R. To first rotate an object around the origin\nand then translate it, you would multiply the two matrices as TR.\n\nLikewise, to first translate the object and then rotate it, you would do RT.\nSo generally, matrices must be multiplied in the reverse order in which you\nwant the transformations to take place (this also applies to\nthe scale, rotate, and translate methods below; these methods are convenience\nmethods for post-multiplying by a matrix representing a scale, rotation, or translation).\n\nIn the case of repeated local transformations (i.e. rotate around the Z-axis by 0.76 radians,\nthen translate by 2.1 along the X-axis, then ...), it is better to use the Transform class\n(which is optimized for that kind of usage).\n\n@see Transform\n",
-															"id": 3473668624,
-															"is_declaration": false,
-															"is_definition": true,
-															"is_final": false,
-															"kind": "class",
-															"name": "Mat4",
-															"scope": {
-																"name": "Mat4"
-															},
-															"semantic_scope": ""
-														}]
-													}
-												}
-											}]
-										}
-									}
+									"_typeName": "const stappler::geom::Mat4",
+									"kind": "unexposed",
+									"name": "const stappler::geom::Mat4"
 								},
 								"reference_kind": "lvalue"
 							}
@@ -371,14 +323,14 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::Mat4 const&)"
+						"signature": "(const stappler::geom::Mat4&)"
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ImageLayer::setTexture(Rc<stappler::xenolith::Texture>&&)",
+						"_fullName": "::stappler::xenolith::basic2d::ImageLayer::setTexture(Rc<stappler::xenolith::Texture>&&)",
 						"_kind": "member function",
 						"_name": "setTexture",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 296103618,
+						"id": 2673196835,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -477,12 +429,12 @@
 						"semantic_scope": "",
 						"signature": "(Rc<stappler::xenolith::Texture>&&)"
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ImageLayer::getTexture() const",
+						"_fullName": "::stappler::xenolith::basic2d::ImageLayer::getTexture() const",
 						"_kind": "member function",
 						"_name": "getTexture",
 						"body_kind": "declaration",
 						"cv_qualifier": "const",
-						"id": 877775604,
+						"id": 1429292180,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -573,12 +525,12 @@
 						"semantic_scope": "",
 						"signature": "() const"
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ImageLayer::setActionCallback(Function<void ()>&&)",
+						"_fullName": "::stappler::xenolith::basic2d::ImageLayer::setActionCallback(Function<void ()>&&)",
 						"_kind": "member function",
 						"_name": "setActionCallback",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 1968752206,
+						"id": 2330915676,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -618,12 +570,12 @@
 						"semantic_scope": "",
 						"signature": "(Function<void ()>&&)"
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ImageLayer::getTexturePosition() const",
+						"_fullName": "::stappler::xenolith::basic2d::ImageLayer::getTexturePosition() const",
 						"_kind": "member function",
 						"_name": "getTexturePosition",
 						"body_kind": "declaration",
 						"cv_qualifier": "const",
-						"id": 1752669265,
+						"id": 3417288870,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -634,52 +586,19 @@
 						"name": "getTexturePosition",
 						"ref_qualifier": "none",
 						"return_type": {
-							"_typeName": "stappler::xenolith::Vec2",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::Vec2",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::Vec2",
-									"_kind": "type alias",
-									"_name": "Vec2",
-									"id": 1910638286,
-									"kind": "type alias",
-									"name": "Vec2",
-									"underlying_type": {
-										"_typeName": "geom::Vec2",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::Vec2",
-											"objects": [{
-												"_fullName": "::stappler::geom::Vec2",
-												"_kind": "class",
-												"_name": "Vec2",
-												"class_kind": "class",
-												"id": 16661423,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "Vec2",
-												"scope": {
-													"name": "Vec2"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::Vec2",
+							"kind": "unexposed",
+							"name": "stappler::geom::Vec2"
 						},
 						"semantic_scope": "",
 						"signature": "() const"
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ImageLayer::setScaleDisabled(bool)",
+						"_fullName": "::stappler::xenolith::basic2d::ImageLayer::setScaleDisabled(bool)",
 						"_kind": "member function",
 						"_name": "setScaleDisabled",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 2128977069,
+						"id": 3943122166,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -710,12 +629,48 @@
 						"semantic_scope": "",
 						"signature": "(bool)"
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ImageLayer::handleTap(stappler::xenolith::Vec2,int)",
+						"_fullName": "::stappler::xenolith::basic2d::ImageLayer::setImageSize(stappler::geom::Size2)",
+						"_kind": "member function",
+						"_name": "setImageSize",
+						"body_kind": "declaration",
+						"cv_qualifier": "none",
+						"id": 1965926631,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"is_virtual": true,
+						"kind": "member function",
+						"name": "setImageSize",
+						"parameters": [{
+							"_fullName": "",
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 46947589,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::geom::Size2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Size2"
+							}
+						}],
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::geom::Size2)"
+					}, {
+						"_fullName": "::stappler::xenolith::basic2d::ImageLayer::handleTap(stappler::geom::Vec2,int)",
 						"_kind": "member function",
 						"_name": "handleTap",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 328554785,
+						"id": 1491025413,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -732,42 +687,9 @@
 							"kind": "function parameter",
 							"name": "point",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Vec2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Vec2",
-										"_kind": "type alias",
-										"_name": "Vec2",
-										"id": 1910638286,
-										"kind": "type alias",
-										"name": "Vec2",
-										"underlying_type": {
-											"_typeName": "geom::Vec2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Vec2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Vec2",
-													"_kind": "class",
-													"_name": "Vec2",
-													"class_kind": "class",
-													"id": 16661423,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Vec2",
-													"scope": {
-														"name": "Vec2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Vec2"
 							}
 						}, {
 							"_fullName": "count",
@@ -789,14 +711,14 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::Vec2,int)"
+						"signature": "(stappler::geom::Vec2,int)"
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ImageLayer::handleSwipeBegin(stappler::xenolith::Vec2)",
+						"_fullName": "::stappler::xenolith::basic2d::ImageLayer::handleSwipeBegin(stappler::geom::Vec2)",
 						"_kind": "member function",
 						"_name": "handleSwipeBegin",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 3062649865,
+						"id": 1335979879,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -813,42 +735,9 @@
 							"kind": "function parameter",
 							"name": "point",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Vec2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Vec2",
-										"_kind": "type alias",
-										"_name": "Vec2",
-										"id": 1910638286,
-										"kind": "type alias",
-										"name": "Vec2",
-										"underlying_type": {
-											"_typeName": "geom::Vec2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Vec2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Vec2",
-													"_kind": "class",
-													"_name": "Vec2",
-													"class_kind": "class",
-													"id": 16661423,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Vec2",
-													"scope": {
-														"name": "Vec2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Vec2"
 							}
 						}],
 						"ref_qualifier": "none",
@@ -858,14 +747,14 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::Vec2)"
+						"signature": "(stappler::geom::Vec2)"
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ImageLayer::handleSwipe(stappler::xenolith::Vec2)",
+						"_fullName": "::stappler::xenolith::basic2d::ImageLayer::handleSwipe(stappler::geom::Vec2)",
 						"_kind": "member function",
 						"_name": "handleSwipe",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 53519612,
+						"id": 302650708,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -882,42 +771,9 @@
 							"kind": "function parameter",
 							"name": "delta",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Vec2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Vec2",
-										"_kind": "type alias",
-										"_name": "Vec2",
-										"id": 1910638286,
-										"kind": "type alias",
-										"name": "Vec2",
-										"underlying_type": {
-											"_typeName": "geom::Vec2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Vec2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Vec2",
-													"_kind": "class",
-													"_name": "Vec2",
-													"class_kind": "class",
-													"id": 16661423,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Vec2",
-													"scope": {
-														"name": "Vec2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Vec2"
 							}
 						}],
 						"ref_qualifier": "none",
@@ -927,14 +783,14 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::Vec2)"
+						"signature": "(stappler::geom::Vec2)"
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ImageLayer::handleSwipeEnd(stappler::xenolith::Vec2)",
+						"_fullName": "::stappler::xenolith::basic2d::ImageLayer::handleSwipeEnd(stappler::geom::Vec2)",
 						"_kind": "member function",
 						"_name": "handleSwipeEnd",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 1783326565,
+						"id": 2104036648,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -951,42 +807,9 @@
 							"kind": "function parameter",
 							"name": "velocity",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Vec2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Vec2",
-										"_kind": "type alias",
-										"_name": "Vec2",
-										"id": 1910638286,
-										"kind": "type alias",
-										"name": "Vec2",
-										"underlying_type": {
-											"_typeName": "geom::Vec2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Vec2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Vec2",
-													"_kind": "class",
-													"_name": "Vec2",
-													"class_kind": "class",
-													"id": 16661423,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Vec2",
-													"scope": {
-														"name": "Vec2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Vec2"
 							}
 						}],
 						"ref_qualifier": "none",
@@ -996,14 +819,14 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::Vec2)"
+						"signature": "(stappler::geom::Vec2)"
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ImageLayer::handlePinch(stappler::xenolith::Vec2,float,float,bool)",
+						"_fullName": "::stappler::xenolith::basic2d::ImageLayer::handlePinch(stappler::geom::Vec2,float,float,bool)",
 						"_kind": "member function",
 						"_name": "handlePinch",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 883741999,
+						"id": 1893013097,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -1020,42 +843,9 @@
 							"kind": "function parameter",
 							"name": "point",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Vec2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Vec2",
-										"_kind": "type alias",
-										"_name": "Vec2",
-										"id": 1910638286,
-										"kind": "type alias",
-										"name": "Vec2",
-										"underlying_type": {
-											"_typeName": "geom::Vec2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Vec2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Vec2",
-													"_kind": "class",
-													"_name": "Vec2",
-													"class_kind": "class",
-													"id": 16661423,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Vec2",
-													"scope": {
-														"name": "Vec2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Vec2"
 							}
 						}, {
 							"_fullName": "scale",
@@ -1101,7 +891,160 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::Vec2,float,float,bool)"
+						"signature": "(stappler::geom::Vec2,float,float,bool)"
+					}, {
+						"_fullName": "::stappler::xenolith::basic2d::ImageLayer::getRoot() const",
+						"_kind": "member function",
+						"_name": "getRoot",
+						"body_kind": "definition",
+						"cv_qualifier": "const",
+						"id": 2917726711,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "getRoot",
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "stappler::xenolith::Node*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::xenolith::Node",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::Node",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::Node",
+										"_kind": "class",
+										"_name": "Node",
+										"bases": [{
+											"_fullName": "Ref",
+											"_kind": "base class specifier",
+											"_name": "Ref",
+											"access_specifier": "public",
+											"id": 1165741041,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "Ref",
+											"type": {
+												"_typeName": "stappler::mem_std::Ref",
+												"kind": "user_defined",
+												"target": {
+													"name": "stappler::mem_std::Ref",
+													"objects": [{
+														"_fullName": "::stappler::mem_std::Ref",
+														"_kind": "type alias",
+														"_name": "Ref",
+														"id": 3010886988,
+														"kind": "type alias",
+														"name": "Ref",
+														"underlying_type": {
+															"_typeName": "RefBase<memory::StandartInterface>",
+															"arguments_exposed": false,
+															"kind": "template_instantiation",
+															"primary_template": {
+																"name": "RefBase",
+																"objects": [{
+																	"_fullName": "::stappler::RefBase<typename>",
+																	"_kind": "class template",
+																	"_name": "RefBase",
+																	"class": {
+																		"_fullName": "::stappler::RefBase<typename>",
+																		"_kind": "class",
+																		"_name": "RefBase",
+																		"bases": [{
+																			"_fullName": "Interface::AllocBaseType",
+																			"_kind": "base class specifier",
+																			"_name": "Interface::AllocBaseType",
+																			"access_specifier": "public",
+																			"id": 25533212,
+																			"is_virtual": false,
+																			"kind": "base class specifier",
+																			"name": "Interface::AllocBaseType",
+																			"type": {
+																				"_typeName": "Interface::AllocBaseType",
+																				"kind": "unexposed",
+																				"name": "Interface::AllocBaseType"
+																			}
+																		}],
+																		"class_kind": "class",
+																		"id": 2191419057,
+																		"is_declaration": false,
+																		"is_definition": true,
+																		"is_final": false,
+																		"kind": "class",
+																		"name": "RefBase",
+																		"scope": {
+																			"is_templated": true,
+																			"name": "RefBase",
+																			"template_parameters": [{
+																				"_fullName": "Interface",
+																				"_kind": "template type parameter",
+																				"_name": "Interface",
+																				"id": 2255344761,
+																				"is_variadic": false,
+																				"keyword": "typename",
+																				"kind": "template type parameter",
+																				"name": "Interface"
+																			}]
+																		},
+																		"semantic_scope": ""
+																	},
+																	"id": 2191419057,
+																	"kind": "class template",
+																	"name": "RefBase",
+																	"parameters": [{
+																		"_fullName": "Interface",
+																		"_kind": "template type parameter",
+																		"_name": "Interface",
+																		"id": 2255344761,
+																		"is_variadic": false,
+																		"keyword": "typename",
+																		"kind": "template type parameter",
+																		"name": "Interface"
+																	}],
+																	"scope":  {
+																		"is_templated": true,
+																		"name": "RefBase",
+																		"template_parameters": [{
+																			"_fullName": "Interface",
+																			"_kind": "template type parameter",
+																			"_name": "Interface",
+																			"id": 2255344761,
+																			"is_variadic": false,
+																			"keyword": "typename",
+																			"kind": "template type parameter",
+																			"name": "Interface"
+																		}]
+																	}
+																}]
+															},
+															"unexposed_arguments": "memory::StandartInterface"
+														}
+													}]
+												}
+											}
+										}],
+										"class_kind": "class",
+										"id": 697316651,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Node",
+										"scope": {
+											"name": "Node"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						},
+						"semantic_scope": "",
+						"signature": "() const"
 					}, {
 						"_fullName": "protected",
 						"_kind": "access specifier",
@@ -1111,12 +1054,12 @@
 						"kind": "access specifier",
 						"name": "protected"
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ImageLayer::getCorrectRect(stappler::xenolith::Size2)",
+						"_fullName": "::stappler::xenolith::basic2d::ImageLayer::getCorrectRect(stappler::geom::Size2)",
 						"_kind": "member function",
 						"_name": "getCorrectRect",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 1655428267,
+						"id": 2130257845,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -1133,92 +1076,26 @@
 							"kind": "function parameter",
 							"name": "containerSize",
 							"type": {
-								"_typeName": "stappler::xenolith::Size2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Size2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Size2",
-										"_kind": "type alias",
-										"_name": "Size2",
-										"id": 3876930682,
-										"kind": "type alias",
-										"name": "Size2",
-										"underlying_type": {
-											"_typeName": "geom::Size2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Size2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Size2",
-													"_kind": "class",
-													"_name": "Size2",
-													"class_kind": "struct",
-													"id": 1488533902,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Size2",
-													"scope": {
-														"name": "Size2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Size2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Size2"
 							}
 						}],
 						"ref_qualifier": "none",
 						"return_type": {
-							"_typeName": "stappler::xenolith::Rect",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::Rect",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::Rect",
-									"_kind": "type alias",
-									"_name": "Rect",
-									"id": 1186107623,
-									"kind": "type alias",
-									"name": "Rect",
-									"underlying_type": {
-										"_typeName": "geom::Rect",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::Rect",
-											"objects": [{
-												"_fullName": "::stappler::geom::Rect",
-												"_kind": "class",
-												"_name": "Rect",
-												"class_kind": "struct",
-												"id": 4019440438,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "Rect",
-												"scope": {
-													"name": "Rect"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::Rect",
+							"kind": "unexposed",
+							"name": "stappler::geom::Rect"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::Size2)"
+						"signature": "(stappler::geom::Size2)"
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ImageLayer::getCorrectPosition(stappler::xenolith::Size2,stappler::xenolith::Vec2)",
+						"_fullName": "::stappler::xenolith::basic2d::ImageLayer::getCorrectPosition(stappler::geom::Size2,stappler::geom::Vec2)",
 						"_kind": "member function",
 						"_name": "getCorrectPosition",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 1186227431,
+						"id": 3143681157,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -1235,42 +1112,9 @@
 							"kind": "function parameter",
 							"name": "containerSize",
 							"type": {
-								"_typeName": "stappler::xenolith::Size2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Size2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Size2",
-										"_kind": "type alias",
-										"_name": "Size2",
-										"id": 3876930682,
-										"kind": "type alias",
-										"name": "Size2",
-										"underlying_type": {
-											"_typeName": "geom::Size2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Size2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Size2",
-													"_kind": "class",
-													"_name": "Size2",
-													"class_kind": "struct",
-													"id": 1488533902,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Size2",
-													"scope": {
-														"name": "Size2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Size2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Size2"
 							}
 						}, {
 							"_fullName": "point",
@@ -1280,92 +1124,26 @@
 							"kind": "function parameter",
 							"name": "point",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Vec2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Vec2",
-										"_kind": "type alias",
-										"_name": "Vec2",
-										"id": 1910638286,
-										"kind": "type alias",
-										"name": "Vec2",
-										"underlying_type": {
-											"_typeName": "geom::Vec2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Vec2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Vec2",
-													"_kind": "class",
-													"_name": "Vec2",
-													"class_kind": "class",
-													"id": 16661423,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Vec2",
-													"scope": {
-														"name": "Vec2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Vec2"
 							}
 						}],
 						"ref_qualifier": "none",
 						"return_type": {
-							"_typeName": "stappler::xenolith::Vec2",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::Vec2",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::Vec2",
-									"_kind": "type alias",
-									"_name": "Vec2",
-									"id": 1910638286,
-									"kind": "type alias",
-									"name": "Vec2",
-									"underlying_type": {
-										"_typeName": "geom::Vec2",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::Vec2",
-											"objects": [{
-												"_fullName": "::stappler::geom::Vec2",
-												"_kind": "class",
-												"_name": "Vec2",
-												"class_kind": "class",
-												"id": 16661423,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "Vec2",
-												"scope": {
-													"name": "Vec2"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::Vec2",
+							"kind": "unexposed",
+							"name": "stappler::geom::Vec2"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::Size2,stappler::xenolith::Vec2)"
+						"signature": "(stappler::geom::Size2,stappler::geom::Vec2)"
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ImageLayer::getContainerSize() const",
+						"_fullName": "::stappler::xenolith::basic2d::ImageLayer::getContainerSize() const",
 						"_kind": "member function",
 						"_name": "getContainerSize",
 						"body_kind": "declaration",
 						"cv_qualifier": "const",
-						"id": 2010328579,
+						"id": 3753233173,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -1376,52 +1154,19 @@
 						"name": "getContainerSize",
 						"ref_qualifier": "none",
 						"return_type": {
-							"_typeName": "stappler::xenolith::Size2",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::Size2",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::Size2",
-									"_kind": "type alias",
-									"_name": "Size2",
-									"id": 3876930682,
-									"kind": "type alias",
-									"name": "Size2",
-									"underlying_type": {
-										"_typeName": "geom::Size2",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::Size2",
-											"objects": [{
-												"_fullName": "::stappler::geom::Size2",
-												"_kind": "class",
-												"_name": "Size2",
-												"class_kind": "struct",
-												"id": 1488533902,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "Size2",
-												"scope": {
-													"name": "Size2"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::Size2",
+							"kind": "unexposed",
+							"name": "stappler::geom::Size2"
 						},
 						"semantic_scope": "",
 						"signature": "() const"
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ImageLayer::getContainerSizeForScale(float) const",
+						"_fullName": "::stappler::xenolith::basic2d::ImageLayer::getContainerSizeForScale(float) const",
 						"_kind": "member function",
 						"_name": "getContainerSizeForScale",
 						"body_kind": "declaration",
 						"cv_qualifier": "const",
-						"id": 2968547583,
+						"id": 4191437684,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -1445,47 +1190,14 @@
 						}],
 						"ref_qualifier": "none",
 						"return_type": {
-							"_typeName": "stappler::xenolith::Size2",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::Size2",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::Size2",
-									"_kind": "type alias",
-									"_name": "Size2",
-									"id": 3876930682,
-									"kind": "type alias",
-									"name": "Size2",
-									"underlying_type": {
-										"_typeName": "geom::Size2",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::Size2",
-											"objects": [{
-												"_fullName": "::stappler::geom::Size2",
-												"_kind": "class",
-												"_name": "Size2",
-												"class_kind": "struct",
-												"id": 1488533902,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "Size2",
-												"scope": {
-													"name": "Size2"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::Size2",
+							"kind": "unexposed",
+							"name": "stappler::geom::Size2"
 						},
 						"semantic_scope": "",
 						"signature": "(float) const"
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ImageLayer::_gestureListener",
+						"_fullName": "::stappler::xenolith::basic2d::ImageLayer::_gestureListener",
 						"_kind": "member variable",
 						"_name": "_gestureListener",
 						"default_value": {
@@ -1630,7 +1342,7 @@
 								}
 							}
 						},
-						"id": 206047581,
+						"id": 4266169446,
 						"is_mutable": false,
 						"kind": "member variable",
 						"name": "_gestureListener",
@@ -1770,7 +1482,7 @@
 							}
 						}
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ImageLayer::_root",
+						"_fullName": "::stappler::xenolith::basic2d::ImageLayer::_root",
 						"_kind": "member variable",
 						"_name": "_root",
 						"default_value": {
@@ -1915,7 +1627,7 @@
 								}
 							}
 						},
-						"id": 1870742539,
+						"id": 1220073312,
 						"is_mutable": false,
 						"kind": "member variable",
 						"name": "_root",
@@ -2055,7 +1767,7 @@
 							}
 						}
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ImageLayer::_image",
+						"_fullName": "::stappler::xenolith::basic2d::ImageLayer::_image",
 						"_kind": "member variable",
 						"_name": "_image",
 						"default_value": {
@@ -2266,7 +1978,7 @@
 								}
 							}
 						},
-						"id": 2393173810,
+						"id": 3460747984,
 						"is_mutable": false,
 						"kind": "member variable",
 						"name": "_image",
@@ -2472,99 +2184,46 @@
 							}
 						}
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ImageLayer::_prevContentSize",
+						"_fullName": "::stappler::xenolith::basic2d::ImageLayer::_imageSize",
+						"_kind": "member variable",
+						"_name": "_imageSize",
+						"id": 558295745,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "_imageSize",
+						"type": {
+							"_typeName": "stappler::geom::Size2",
+							"kind": "unexposed",
+							"name": "stappler::geom::Size2"
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::basic2d::ImageLayer::_prevContentSize",
 						"_kind": "member variable",
 						"_name": "_prevContentSize",
-						"id": 2575471663,
+						"id": 419004094,
 						"is_mutable": false,
 						"kind": "member variable",
 						"name": "_prevContentSize",
 						"type": {
-							"_typeName": "stappler::xenolith::Size2",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::Size2",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::Size2",
-									"_kind": "type alias",
-									"_name": "Size2",
-									"id": 3876930682,
-									"kind": "type alias",
-									"name": "Size2",
-									"underlying_type": {
-										"_typeName": "geom::Size2",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::Size2",
-											"objects": [{
-												"_fullName": "::stappler::geom::Size2",
-												"_kind": "class",
-												"_name": "Size2",
-												"class_kind": "struct",
-												"id": 1488533902,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "Size2",
-												"scope": {
-													"name": "Size2"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::Size2",
+							"kind": "unexposed",
+							"name": "stappler::geom::Size2"
 						}
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ImageLayer::_globalScale",
+						"_fullName": "::stappler::xenolith::basic2d::ImageLayer::_globalScale",
 						"_kind": "member variable",
 						"_name": "_globalScale",
-						"id": 3109049805,
+						"id": 1642390940,
 						"is_mutable": false,
 						"kind": "member variable",
 						"name": "_globalScale",
 						"type": {
-							"_typeName": "stappler::xenolith::Vec2",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::Vec2",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::Vec2",
-									"_kind": "type alias",
-									"_name": "Vec2",
-									"id": 1910638286,
-									"kind": "type alias",
-									"name": "Vec2",
-									"underlying_type": {
-										"_typeName": "geom::Vec2",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::Vec2",
-											"objects": [{
-												"_fullName": "::stappler::geom::Vec2",
-												"_kind": "class",
-												"_name": "Vec2",
-												"class_kind": "class",
-												"id": 16661423,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "Vec2",
-												"scope": {
-													"name": "Vec2"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::Vec2",
+							"kind": "unexposed",
+							"name": "stappler::geom::Vec2"
 						}
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ImageLayer::_minScale",
+						"_fullName": "::stappler::xenolith::basic2d::ImageLayer::_minScale",
 						"_kind": "member variable",
 						"_name": "_minScale",
 						"default_value": {
@@ -2579,7 +2238,7 @@
 								"kind": "builtin"
 							}
 						},
-						"id": 2877121837,
+						"id": 3032694957,
 						"is_mutable": false,
 						"kind": "member variable",
 						"name": "_minScale",
@@ -2589,7 +2248,7 @@
 							"kind": "builtin"
 						}
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ImageLayer::_maxScale",
+						"_fullName": "::stappler::xenolith::basic2d::ImageLayer::_maxScale",
 						"_kind": "member variable",
 						"_name": "_maxScale",
 						"default_value": {
@@ -2604,7 +2263,7 @@
 								"kind": "builtin"
 							}
 						},
-						"id": 1480426182,
+						"id": 3857200177,
 						"is_mutable": false,
 						"kind": "member variable",
 						"name": "_maxScale",
@@ -2614,10 +2273,10 @@
 							"kind": "builtin"
 						}
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ImageLayer::_scaleSource",
+						"_fullName": "::stappler::xenolith::basic2d::ImageLayer::_scaleSource",
 						"_kind": "member variable",
 						"_name": "_scaleSource",
-						"id": 2500964119,
+						"id": 3023190476,
 						"is_mutable": false,
 						"kind": "member variable",
 						"name": "_scaleSource",
@@ -2627,7 +2286,32 @@
 							"kind": "builtin"
 						}
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ImageLayer::_scaleDisabled",
+						"_fullName": "::stappler::xenolith::basic2d::ImageLayer::_imageSizePredefined",
+						"_kind": "member variable",
+						"_name": "_imageSizePredefined",
+						"default_value": {
+							"expression": [{
+								"kind": "keyword",
+								"spelling": "false"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "bool",
+								"builtin_type_kind": "bool",
+								"kind": "builtin"
+							}
+						},
+						"id": 2254430368,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "_imageSizePredefined",
+						"type": {
+							"_typeName": "bool",
+							"builtin_type_kind": "bool",
+							"kind": "builtin"
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::basic2d::ImageLayer::_scaleDisabled",
 						"_kind": "member variable",
 						"_name": "_scaleDisabled",
 						"default_value": {
@@ -2642,7 +2326,7 @@
 								"kind": "builtin"
 							}
 						},
-						"id": 3861410095,
+						"id": 3779088823,
 						"is_mutable": false,
 						"kind": "member variable",
 						"name": "_scaleDisabled",
@@ -2652,7 +2336,7 @@
 							"kind": "builtin"
 						}
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ImageLayer::_hasPinch",
+						"_fullName": "::stappler::xenolith::basic2d::ImageLayer::_hasPinch",
 						"_kind": "member variable",
 						"_name": "_hasPinch",
 						"default_value": {
@@ -2667,7 +2351,7 @@
 								"kind": "builtin"
 							}
 						},
-						"id": 3274316150,
+						"id": 2022540029,
 						"is_mutable": false,
 						"kind": "member variable",
 						"name": "_hasPinch",
@@ -2677,7 +2361,7 @@
 							"kind": "builtin"
 						}
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ImageLayer::_textureDirty",
+						"_fullName": "::stappler::xenolith::basic2d::ImageLayer::_textureDirty",
 						"_kind": "member variable",
 						"_name": "_textureDirty",
 						"default_value": {
@@ -2692,7 +2376,7 @@
 								"kind": "builtin"
 							}
 						},
-						"id": 1736884531,
+						"id": 1757786538,
 						"is_mutable": false,
 						"kind": "member variable",
 						"name": "_textureDirty",
@@ -2702,10 +2386,10 @@
 							"kind": "builtin"
 						}
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::ImageLayer::_actionCallback",
+						"_fullName": "::stappler::xenolith::basic2d::ImageLayer::_actionCallback",
 						"_kind": "member variable",
 						"_name": "_actionCallback",
-						"id": 1141969422,
+						"id": 473226262,
 						"is_mutable": false,
 						"kind": "member variable",
 						"name": "_actionCallback",
@@ -2720,7 +2404,7 @@
 						}
 					}],
 					"class_kind": "class",
-					"id": 3763183669,
+					"id": 3506856091,
 					"is_declaration": false,
 					"is_definition": true,
 					"is_final": false,
@@ -2731,14 +2415,14 @@
 					},
 					"semantic_scope": ""
 				}],
-				"id": 3420207034,
+				"id": 245581775,
 				"is_anonymous": false,
 				"is_inline": false,
 				"is_nested": true,
 				"kind": "namespace",
-				"name": "gui2d",
+				"name": "basic2d",
 				"scope": {
-					"name": "gui2d"
+					"name": "basic2d"
 				}
 			}],
 			"id": 2324754634,
@@ -2761,9 +2445,9 @@
 			"name": "stappler"
 		}
 	}],
-	"id": 3423402588,
+	"id": 581309405,
 	"kind": "file",
-	"name": "xenolith/renderer/gui2d/XL2dImageLayer.h",
+	"name": "xenolith/renderer/basic2d/XL2dImageLayer.h",
 	"unmatched_comments": [{
 		"line": 21,
 		"text": "\nCopyright (c) 2023 Stappler LLC <admin@stappler.dev>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n"

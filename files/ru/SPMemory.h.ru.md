@@ -513,7 +513,6 @@ Title: SPMemory.h
 Возвращает:
 * bool
 
-
 # ::stappler::mem_pool::perform<typename>(Callback const&,memory::pool_t*)
 
 ## BRIEF
@@ -534,6 +533,67 @@ Title: SPMemory.h
 Возвращает:
 * auto - результат работы функтора
 
+# ::stappler::mem_pool::perform<typename>(Callback const&,memory::pool_t*,uint32_t,void*)
+
+## BRIEF
+
+Выполняет функтор в контексте пула памяти
+
+## CONTENT
+
+Выполняет функтор в контексте пула памяти
+
+Параметры шаблона:
+* typename Callback - тип функтора
+
+Параметры:
+* Callback const& - объект функтора
+* memory::pool_t* - пул памяти
+* uint32_t - опционально, числовой тег для хранения вместе с пулом памяти
+* void* - опционально, непрозрачный указатель для хранения вместе с пулом памяти
+
+Возвращает:
+* auto - результат работы функтора
+
+# ::stappler::mem_pool::perform_temporary<typename>(Callback const&,memory::pool_t*)
+
+## BRIEF
+
+Выполняет функтор в контексте временного пула памяти
+
+## CONTENT
+
+Выполняет функтор в контексте временного пула памяти. Пул создаётся с указанным в качестве родительского, и уничтожается после вызова функтора.
+
+Параметры шаблона:
+* typename Callback - тип функтора
+
+Параметры:
+* Callback const& - объект функтора
+* memory::pool_t* - исходный пул памяти
+
+Возвращает:
+* auto - результат работы функтора
+
+# ::stappler::mem_std::perform_temporary<typename>(Callback const&,memory::pool_t*)
+
+## BRIEF
+
+Выполняет функтор в контексте временного пула памяти
+
+## CONTENT
+
+Выполняет функтор в контексте временного пула памяти. Пул создаётся с указанным в качестве родительского, и уничтожается после вызова функтора.
+
+Параметры шаблона:
+* typename Callback - тип функтора
+
+Параметры:
+* Callback const& - объект функтора
+* memory::pool_t* - исходный пул памяти
+
+Возвращает:
+* auto - результат работы функтора
 
 # ::stappler::mem_pool::exists_ordered<typename>(Vector<T>&,T const&)
 
@@ -554,7 +614,6 @@ Title: SPMemory.h
 
 Возвращает:
 * bool - true если объект есть в векторе
-
 
 # ::stappler::mem_std::HashMap<typename,typename>
 
@@ -625,3 +684,412 @@ Title: SPMemory.h
 
 Возвращает:
 * bool - true если объект есть в векторе
+
+
+# ::stappler::VectorAdapter<typename>
+
+## BRIEF
+
+Адаптер для использования вектора независимо от интерфейса памяти
+
+## CONTENT
+
+Адаптер для использования вектора независимо от интерфейса памяти
+
+Параметры шаблона:
+* typename T - тип хранимого в векторе значения
+
+# ::stappler::VectorAdapter<typename>::size() const
+
+## BRIEF
+
+Возвращает число элементов в контейнере
+
+## CONTENT
+
+Доступ: public
+
+Возвращает число элементов в контейнере
+
+Возвращает:
+* size_t
+
+# ::stappler::VectorAdapter<typename>::back() const
+
+## BRIEF
+
+Возвращает последний элеммент в контейнере
+
+## CONTENT
+
+Доступ: public
+
+Возвращает последний элеммент в контейнере
+
+Возвращает:
+* T& - ссылка на последний элемент
+
+# ::stappler::VectorAdapter<typename>::front() const
+
+## BRIEF
+
+Возвращает первый элеммент в контейнере
+
+## CONTENT
+
+Доступ: public
+
+Возвращает первый элеммент в контейнере
+
+Возвращает:
+* T& - ссылка на первый элемент
+
+# ::stappler::VectorAdapter<typename>::empty() const
+
+## BRIEF
+
+Проверяет контейнер на пустоту
+
+## CONTENT
+
+Доступ: public
+
+Проверяет контейнер на пустоту
+
+Возвращает:
+* bool - true если контейнер пуст
+
+# ::stappler::VectorAdapter<typename>::at(size_t) const
+
+## BRIEF
+
+Возвращает элемент по индексу
+
+## CONTENT
+
+Доступ: public
+
+Возвращает элемент по индексу. Поведение не определено. если индекс превышает размер.
+
+Параметры:
+* size_t - индекс элемента
+
+Возвращает:
+* T& - ссылка на элемент
+
+# ::stappler::VectorAdapter<typename>::emplace_back(T&&) const
+
+## BRIEF
+
+Добавляет элемент в конец контейнера
+
+## CONTENT
+
+Доступ: public
+
+Добавляет элемент в конец контейнера. Использует перемещение по возможности.
+
+Параметры:
+* T&& - новых элемент
+
+Возвращает:
+* T& - ссылка на новый элемент в контейнере
+
+# ::stappler::VectorAdapter<typename>::begin() const
+
+## BRIEF
+
+Возвращает указатель на начало контейнера
+
+## CONTENT
+
+Доступ: public
+
+Возвращает указатель на начало контейнера. Можно использвоать как итератор.
+
+Возвращает:
+* T*
+
+# ::stappler::VectorAdapter<typename>::end() const
+
+## BRIEF
+
+Возвращает указатель на конец контейнера
+
+## CONTENT
+
+Доступ: public
+
+Возвращает указатель на конец контейнера
+
+Возвращает:
+* T*
+
+# ::stappler::VectorAdapter<typename>::clear() const
+
+## BRIEF
+
+Удаляет все элементы из контейнера
+
+## CONTENT
+
+Доступ: public
+
+Удаляет все элементы из контейнера
+
+# ::stappler::VectorAdapter<typename>::reserve(size_t) const
+
+## BRIEF
+
+Резервирует место под элементы в контейнере
+
+## CONTENT
+
+Доступ: public
+
+Резервирует место под элементы в контейнере
+
+Параметры:
+* size_t - число элементов, которые должен вмещать контейнер
+
+# ::stappler::VectorAdapter<typename>::resize(size_t) const
+
+## BRIEF
+
+Изменяет размер контейнера, добавляя или удаляя элементы
+
+## CONTENT
+
+Доступ: public
+
+Изменяет размер контейнера, добавляя или удаляя элементы
+
+Параметры:
+* size_t - новый размер контейнера
+
+# ::stappler::VectorAdapter<typename>::operator bool() const
+
+## BRIEF
+
+Проверяет, доступен ли реальный контейнер через адаптер
+
+## CONTENT
+
+Доступ: public
+
+Проверяет, доступен ли реальный контейнер через адаптер
+
+Возвращает:
+* bool - true если адаптер можно использовать
+
+# ::stappler::VectorAdapter<typename>::VectorAdapter()
+
+## BRIEF
+
+Конструктор по-умолчанию
+
+## CONTENT
+
+Доступ: public
+
+Конструктор по-умолчанию. Не имеет доступа к реальному контейнеру.
+
+# ::stappler::VectorAdapter<typename>::VectorAdapter(memory::StandartInterface::VectorType<T>&)
+
+## BRIEF
+
+Создаёт адаптер для вектора из стандартной библиотеки
+
+## CONTENT
+
+Доступ: public
+
+Создаёт адаптер для вектора из стандартной библиотеки
+
+Параметры:
+* memory::StandartInterface::VectorType<T>&
+
+
+# ::stappler::VectorAdapter<typename>::VectorAdapter(memory::PoolInterface::VectorType<T>&)
+
+## BRIEF
+
+Создаёт адаптер для вектора на основе пулов памяти
+
+## CONTENT
+
+Доступ: public
+
+Создаёт адаптер для вектора на основе пулов памяти
+
+Параметры:
+* memory::PoolInterface::VectorType<T>&
+
+# ::stappler::VectorAdapter<typename>::target
+
+## BRIEF
+
+Непрозрачный указатель на реальный контейнер
+
+## CONTENT
+
+Доступ: public
+
+Непрозрачный указатель на реальный контейнер
+
+Тип: void*
+
+# ::stappler::VectorAdapter<typename>::size_fn
+
+## BRIEF
+
+Функция размера
+
+## CONTENT
+
+Доступ: public
+
+Функция размера
+
+Тип: size_t(*)(void*)
+
+# ::stappler::VectorAdapter<typename>::back_fn
+
+## BRIEF
+
+Функция получения последнего элемента
+
+## CONTENT
+
+Доступ: public
+
+Функция получения последнего элемента
+
+Тип: T&(*)(void*)
+
+# ::stappler::VectorAdapter<typename>::front_fn
+
+## BRIEF
+
+Функция получения первого элемента
+
+## CONTENT
+
+Доступ: public
+
+Функция получения первого элемента
+
+Тип: T&(*)(void*)
+
+# ::stappler::VectorAdapter<typename>::empty_fn
+
+## BRIEF
+
+Функция проверки на пустоту
+
+## CONTENT
+
+Доступ: public
+
+Функция проверки на пустоту
+
+Тип: bool(*)(void*)
+
+# ::stappler::VectorAdapter<typename>::at_fn
+
+## BRIEF
+
+Функция получения элемента
+
+## CONTENT
+
+Доступ: public
+
+Функция получения элемента
+
+Тип: T&(*)(void*,size_t)
+
+# ::stappler::VectorAdapter<typename>::emplace_back_fn
+
+## BRIEF
+
+Функция добавления элемента
+
+## CONTENT
+
+Доступ: public
+
+Функция добавления элемента
+
+Тип: T&(*)(void*,T&&)
+
+# ::stappler::VectorAdapter<typename>::begin_fn
+
+## BRIEF
+
+Функция получения начала контейнера
+
+## CONTENT
+
+Доступ: public
+
+Функция получения начала контейнера
+
+Тип: T*(*)(void*)
+
+# ::stappler::VectorAdapter<typename>::end_fn
+
+## BRIEF
+
+Функция получения конца контейнера
+
+## CONTENT
+
+Доступ: public
+
+Функция получения конца контейнера
+
+Тип: T*(*)(void*)
+
+# ::stappler::VectorAdapter<typename>::clear_fn
+
+## BRIEF
+
+Функция очистки контейнера
+
+## CONTENT
+
+Доступ: public
+
+Функция очистки контейнера
+
+Тип: void(*)(void*)
+
+# ::stappler::VectorAdapter<typename>::reserve_fn
+
+## BRIEF
+
+Функция резервирования размера
+
+## CONTENT
+
+Доступ: public
+
+Функция резервирования размера
+
+Тип: void(*)(void*,size_t)
+
+# ::stappler::VectorAdapter<typename>::resize_fn
+
+## BRIEF
+
+Функция изменения размера
+
+## CONTENT
+
+Доступ: public
+
+Функция изменения размера
+
+Тип: void(*)(void*,size_t)
+

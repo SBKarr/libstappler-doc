@@ -85,13 +85,13 @@
 					"kind": "member variable",
 					"name": "onKeyboard",
 					"type": {
-						"_typeName": "Function<void (bool, const stappler::xenolith::Rect &, float)>",
+						"_typeName": "Function<void (bool, const stappler::geom::Rect &, float)>",
 						"arguments_exposed": false,
 						"kind": "template_instantiation",
 						"primary_template": {
 							"name": "Function"
 						},
-						"unexposed_arguments": "void (bool, const stappler::xenolith::Rect &, float)"
+						"unexposed_arguments": "void (bool, const stappler::geom::Rect &, float)"
 					}
 				}, {
 					"_fullName": "::stappler::xenolith::TextInputHandler::onInput",
@@ -1866,95 +1866,6 @@
 					"semantic_scope": "",
 					"signature": "() const"
 				}, {
-					"_fullName": "::stappler::xenolith::TextInputHandler::isKeyboardVisible() const",
-					"_kind": "member function",
-					"_name": "isKeyboardVisible",
-					"body_kind": "declaration",
-					"cv_qualifier": "const",
-					"id": 2004177317,
-					"is_consteval": false,
-					"is_constexpr": false,
-					"is_declaration": true,
-					"is_definition": false,
-					"is_variadic": false,
-					"is_virtual": false,
-					"kind": "member function",
-					"name": "isKeyboardVisible",
-					"ref_qualifier": "none",
-					"return_type": {
-						"_typeName": "bool",
-						"builtin_type_kind": "bool",
-						"kind": "builtin"
-					},
-					"semantic_scope": "",
-					"signature": "() const"
-				}, {
-					"_fullName": "::stappler::xenolith::TextInputHandler::getKeyboardRect() const",
-					"_kind": "member function",
-					"_name": "getKeyboardRect",
-					"body_kind": "declaration",
-					"cv_qualifier": "const",
-					"id": 4207087298,
-					"is_consteval": false,
-					"is_constexpr": false,
-					"is_declaration": true,
-					"is_definition": false,
-					"is_variadic": false,
-					"is_virtual": false,
-					"kind": "member function",
-					"name": "getKeyboardRect",
-					"ref_qualifier": "none",
-					"return_type": {
-						"_typeName": "stappler::xenolith::Rect const&",
-						"kind": "reference",
-						"referee": {
-							"_typeName": "stappler::xenolith::Rect const",
-							"cv_qualifier": "const",
-							"kind": "cv_qualified",
-							"type": {
-								"_typeName": "stappler::xenolith::Rect",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Rect",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Rect",
-										"_kind": "type alias",
-										"_name": "Rect",
-										"id": 1186107623,
-										"kind": "type alias",
-										"name": "Rect",
-										"underlying_type": {
-											"_typeName": "geom::Rect",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Rect",
-												"objects": [{
-													"_fullName": "::stappler::geom::Rect",
-													"_kind": "class",
-													"_name": "Rect",
-													"class_kind": "struct",
-													"id": 4019440438,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Rect",
-													"scope": {
-														"name": "Rect"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
-							}
-						},
-						"reference_kind": "lvalue"
-					},
-					"semantic_scope": "",
-					"signature": "() const"
-				}, {
 					"_fullName": "::stappler::xenolith::TextInputHandler::isActive() const",
 					"_kind": "member function",
 					"_name": "isActive",
@@ -3430,133 +3341,6 @@
 					},
 					"semantic_scope": "",
 					"signature": "(stappler::xenolith::TextCursor)"
-				}, {
-					"_fullName": "::stappler::xenolith::TextInputManager::onKeyboardEnabled(stappler::xenolith::Rect const&,float)",
-					"_kind": "member function",
-					"_name": "onKeyboardEnabled",
-					"body_kind": "declaration",
-					"cv_qualifier": "none",
-					"id": 3408542671,
-					"is_consteval": false,
-					"is_constexpr": false,
-					"is_declaration": true,
-					"is_definition": false,
-					"is_variadic": false,
-					"is_virtual": false,
-					"kind": "member function",
-					"name": "onKeyboardEnabled",
-					"parameters": [{
-						"_fullName": "rect",
-						"_kind": "function parameter",
-						"_name": "rect",
-						"id": 855264945,
-						"kind": "function parameter",
-						"name": "rect",
-						"type": {
-							"_typeName": "stappler::xenolith::Rect const&",
-							"kind": "reference",
-							"referee": {
-								"_typeName": "stappler::xenolith::Rect const",
-								"cv_qualifier": "const",
-								"kind": "cv_qualified",
-								"type": {
-									"_typeName": "stappler::xenolith::Rect",
-									"kind": "user_defined",
-									"target": {
-										"name": "stappler::xenolith::Rect",
-										"objects": [{
-											"_fullName": "::stappler::xenolith::Rect",
-											"_kind": "type alias",
-											"_name": "Rect",
-											"id": 1186107623,
-											"kind": "type alias",
-											"name": "Rect",
-											"underlying_type": {
-												"_typeName": "geom::Rect",
-												"kind": "user_defined",
-												"target": {
-													"name": "geom::Rect",
-													"objects": [{
-														"_fullName": "::stappler::geom::Rect",
-														"_kind": "class",
-														"_name": "Rect",
-														"class_kind": "struct",
-														"id": 4019440438,
-														"is_declaration": false,
-														"is_definition": true,
-														"is_final": false,
-														"kind": "class",
-														"name": "Rect",
-														"scope": {
-															"name": "Rect"
-														},
-														"semantic_scope": ""
-													}]
-												}
-											}
-										}]
-									}
-								}
-							},
-							"reference_kind": "lvalue"
-						}
-					}, {
-						"_fullName": "duration",
-						"_kind": "function parameter",
-						"_name": "duration",
-						"id": 3343771455,
-						"kind": "function parameter",
-						"name": "duration",
-						"type": {
-							"_typeName": "float",
-							"builtin_type_kind": "float",
-							"kind": "builtin"
-						}
-					}],
-					"ref_qualifier": "none",
-					"return_type": {
-						"_typeName": "void",
-						"builtin_type_kind": "void",
-						"kind": "builtin"
-					},
-					"semantic_scope": "",
-					"signature": "(stappler::xenolith::Rect const&,float)"
-				}, {
-					"_fullName": "::stappler::xenolith::TextInputManager::onKeyboardDisabled(float)",
-					"_kind": "member function",
-					"_name": "onKeyboardDisabled",
-					"body_kind": "declaration",
-					"cv_qualifier": "none",
-					"id": 3185723832,
-					"is_consteval": false,
-					"is_constexpr": false,
-					"is_declaration": true,
-					"is_definition": false,
-					"is_variadic": false,
-					"is_virtual": false,
-					"kind": "member function",
-					"name": "onKeyboardDisabled",
-					"parameters": [{
-						"_fullName": "duration",
-						"_kind": "function parameter",
-						"_name": "duration",
-						"id": 3343771455,
-						"kind": "function parameter",
-						"name": "duration",
-						"type": {
-							"_typeName": "float",
-							"builtin_type_kind": "float",
-							"kind": "builtin"
-						}
-					}],
-					"ref_qualifier": "none",
-					"return_type": {
-						"_typeName": "void",
-						"builtin_type_kind": "void",
-						"kind": "builtin"
-					},
-					"semantic_scope": "",
-					"signature": "(float)"
 				}, {
 					"_fullName": "::stappler::xenolith::TextInputManager::setInputEnabled(bool)",
 					"_kind": "member function",
@@ -5067,29 +4851,6 @@
 					"semantic_scope": "",
 					"signature": "() const"
 				}, {
-					"_fullName": "::stappler::xenolith::TextInputManager::isKeyboardVisible() const",
-					"_kind": "member function",
-					"_name": "isKeyboardVisible",
-					"body_kind": "definition",
-					"cv_qualifier": "const",
-					"id": 170078364,
-					"is_consteval": false,
-					"is_constexpr": false,
-					"is_declaration": false,
-					"is_definition": true,
-					"is_variadic": false,
-					"is_virtual": false,
-					"kind": "member function",
-					"name": "isKeyboardVisible",
-					"ref_qualifier": "none",
-					"return_type": {
-						"_typeName": "bool",
-						"builtin_type_kind": "bool",
-						"kind": "builtin"
-					},
-					"semantic_scope": "",
-					"signature": "() const"
-				}, {
 					"_fullName": "::stappler::xenolith::TextInputManager::isInputEnabled() const",
 					"_kind": "member function",
 					"_name": "isInputEnabled",
@@ -5109,95 +4870,6 @@
 						"_typeName": "bool",
 						"builtin_type_kind": "bool",
 						"kind": "builtin"
-					},
-					"semantic_scope": "",
-					"signature": "() const"
-				}, {
-					"_fullName": "::stappler::xenolith::TextInputManager::getKeyboardDuration() const",
-					"_kind": "member function",
-					"_name": "getKeyboardDuration",
-					"body_kind": "definition",
-					"cv_qualifier": "const",
-					"id": 3894819376,
-					"is_consteval": false,
-					"is_constexpr": false,
-					"is_declaration": false,
-					"is_definition": true,
-					"is_variadic": false,
-					"is_virtual": false,
-					"kind": "member function",
-					"name": "getKeyboardDuration",
-					"ref_qualifier": "none",
-					"return_type": {
-						"_typeName": "float",
-						"builtin_type_kind": "float",
-						"kind": "builtin"
-					},
-					"semantic_scope": "",
-					"signature": "() const"
-				}, {
-					"_fullName": "::stappler::xenolith::TextInputManager::getKeyboardRect() const",
-					"_kind": "member function",
-					"_name": "getKeyboardRect",
-					"body_kind": "definition",
-					"cv_qualifier": "const",
-					"id": 821842269,
-					"is_consteval": false,
-					"is_constexpr": false,
-					"is_declaration": false,
-					"is_definition": true,
-					"is_variadic": false,
-					"is_virtual": false,
-					"kind": "member function",
-					"name": "getKeyboardRect",
-					"ref_qualifier": "none",
-					"return_type": {
-						"_typeName": "stappler::xenolith::Rect const&",
-						"kind": "reference",
-						"referee": {
-							"_typeName": "stappler::xenolith::Rect const",
-							"cv_qualifier": "const",
-							"kind": "cv_qualified",
-							"type": {
-								"_typeName": "stappler::xenolith::Rect",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Rect",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Rect",
-										"_kind": "type alias",
-										"_name": "Rect",
-										"id": 1186107623,
-										"kind": "type alias",
-										"name": "Rect",
-										"underlying_type": {
-											"_typeName": "geom::Rect",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Rect",
-												"objects": [{
-													"_fullName": "::stappler::geom::Rect",
-													"_kind": "class",
-													"_name": "Rect",
-													"class_kind": "struct",
-													"id": 4019440438,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Rect",
-													"scope": {
-														"name": "Rect"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
-							}
-						},
-						"reference_kind": "lvalue"
 					},
 					"semantic_scope": "",
 					"signature": "() const"
@@ -5755,77 +5427,6 @@
 						}
 					}
 				}, {
-					"_fullName": "::stappler::xenolith::TextInputManager::_keyboardRect",
-					"_kind": "member variable",
-					"_name": "_keyboardRect",
-					"id": 3351807981,
-					"is_mutable": false,
-					"kind": "member variable",
-					"name": "_keyboardRect",
-					"type": {
-						"_typeName": "stappler::xenolith::Rect",
-						"kind": "user_defined",
-						"target": {
-							"name": "stappler::xenolith::Rect",
-							"objects": [{
-								"_fullName": "::stappler::xenolith::Rect",
-								"_kind": "type alias",
-								"_name": "Rect",
-								"id": 1186107623,
-								"kind": "type alias",
-								"name": "Rect",
-								"underlying_type": {
-									"_typeName": "geom::Rect",
-									"kind": "user_defined",
-									"target": {
-										"name": "geom::Rect",
-										"objects": [{
-											"_fullName": "::stappler::geom::Rect",
-											"_kind": "class",
-											"_name": "Rect",
-											"class_kind": "struct",
-											"id": 4019440438,
-											"is_declaration": false,
-											"is_definition": true,
-											"is_final": false,
-											"kind": "class",
-											"name": "Rect",
-											"scope": {
-												"name": "Rect"
-											},
-											"semantic_scope": ""
-										}]
-									}
-								}
-							}]
-						}
-					}
-				}, {
-					"_fullName": "::stappler::xenolith::TextInputManager::_keyboardDuration",
-					"_kind": "member variable",
-					"_name": "_keyboardDuration",
-					"default_value": {
-						"expression": [{
-							"kind": "float_literal",
-							"spelling": "0.0f"
-						}],
-						"kind": "unexposed",
-						"type": {
-							"_typeName": "float",
-							"builtin_type_kind": "float",
-							"kind": "builtin"
-						}
-					},
-					"id": 1650988206,
-					"is_mutable": false,
-					"kind": "member variable",
-					"name": "_keyboardDuration",
-					"type": {
-						"_typeName": "float",
-						"builtin_type_kind": "float",
-						"kind": "builtin"
-					}
-				}, {
 					"_fullName": "::stappler::xenolith::TextInputManager::_isInputEnabled",
 					"_kind": "member variable",
 					"_name": "_isInputEnabled",
@@ -5845,31 +5446,6 @@
 					"is_mutable": false,
 					"kind": "member variable",
 					"name": "_isInputEnabled",
-					"type": {
-						"_typeName": "bool",
-						"builtin_type_kind": "bool",
-						"kind": "builtin"
-					}
-				}, {
-					"_fullName": "::stappler::xenolith::TextInputManager::_isKeyboardVisible",
-					"_kind": "member variable",
-					"_name": "_isKeyboardVisible",
-					"default_value": {
-						"expression": [{
-							"kind": "keyword",
-							"spelling": "false"
-						}],
-						"kind": "unexposed",
-						"type": {
-							"_typeName": "bool",
-							"builtin_type_kind": "bool",
-							"kind": "builtin"
-						}
-					},
-					"id": 1386085228,
-					"is_mutable": false,
-					"kind": "member variable",
-					"name": "_isKeyboardVisible",
 					"type": {
 						"_typeName": "bool",
 						"builtin_type_kind": "bool",

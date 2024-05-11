@@ -1,16 +1,16 @@
 {
-	"_fullName": "xenolith/renderer/gui2d/XL2dLayerRounded.h",
+	"_fullName": "xenolith/renderer/basic2d/XL2dLayerRounded.h",
 	"_kind": "file",
-	"_name": "xenolith/renderer/gui2d/XL2dLayerRounded.h",
+	"_name": "xenolith/renderer/basic2d/XL2dLayerRounded.h",
 	"childs": [{
-		"_fullName": "XL2dGui.h",
+		"_fullName": "XL2d.h",
 		"_kind": "include directive",
-		"_name": "XL2dGui.h",
-		"id": 22013888,
-		"include": "xenolith/renderer/gui2d/XL2dGui.h",
+		"_name": "XL2d.h",
+		"id": 893802368,
+		"include": "xenolith/renderer/basic2d/XL2d.h",
 		"include_kind": "local",
 		"kind": "include directive",
-		"name": "XL2dGui.h"
+		"name": "XL2d.h"
 	}, {
 		"_fullName": "XL2dVectorSprite.h",
 		"_kind": "include directive",
@@ -21,15 +21,15 @@
 		"kind": "include directive",
 		"name": "XL2dVectorSprite.h"
 	}, {
-		"_fullName": "XENOLITH_RENDERER_GUI2D_XL2DLAYERROUNDED_H_",
+		"_fullName": "XENOLITH_RENDERER_BASIC2D_XL2DLAYERROUNDED_H_",
 		"_kind": "macro definition",
-		"_name": "XENOLITH_RENDERER_GUI2D_XL2DLAYERROUNDED_H_",
-		"id": 2668737673,
+		"_name": "XENOLITH_RENDERER_BASIC2D_XL2DLAYERROUNDED_H_",
+		"id": 2506626147,
 		"is_function_like": false,
 		"is_object_like": true,
 		"is_variadic": false,
 		"kind": "macro definition",
-		"name": "XENOLITH_RENDERER_GUI2D_XL2DLAYERROUNDED_H_",
+		"name": "XENOLITH_RENDERER_BASIC2D_XL2DLAYERROUNDED_H_",
 		"replacement": ""
 	}, {
 		"_fullName": "::stappler",
@@ -40,11 +40,11 @@
 			"_kind": "namespace",
 			"_name": "xenolith",
 			"childs": [{
-				"_fullName": "::stappler::xenolith::gui2d",
+				"_fullName": "::stappler::xenolith::basic2d",
 				"_kind": "namespace",
-				"_name": "gui2d",
+				"_name": "basic2d",
 				"childs": [{
-					"_fullName": "::stappler::xenolith::gui2d::LayerRounded",
+					"_fullName": "::stappler::xenolith::basic2d::LayerRounded",
 					"_kind": "class",
 					"_name": "LayerRounded",
 					"bases": [{
@@ -296,11 +296,11 @@
 						"kind": "access specifier",
 						"name": "public"
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::LayerRounded::~LayerRounded()",
+						"_fullName": "::stappler::xenolith::basic2d::LayerRounded::~LayerRounded()",
 						"_kind": "destructor",
 						"_name": "~LayerRounded",
 						"body_kind": "definition",
-						"id": 1293629343,
+						"id": 4273712143,
 						"is_declaration": false,
 						"is_definition": true,
 						"is_override": true,
@@ -311,12 +311,12 @@
 						"semantic_scope": "",
 						"signature": "()"
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::LayerRounded::init(stappler::xenolith::Color4F const&,float)",
+						"_fullName": "::stappler::xenolith::basic2d::LayerRounded::init(const stappler::geom::Color4F&,float)",
 						"_kind": "member function",
 						"_name": "init",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 685776222,
+						"id": 784445822,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -333,60 +333,12 @@
 							"kind": "function parameter",
 							"name": "",
 							"type": {
-								"_typeName": "stappler::xenolith::Color4F const&",
+								"_typeName": "const stappler::geom::Color4F&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "stappler::xenolith::Color4F const",
-									"cv_qualifier": "const",
-									"kind": "cv_qualified",
-									"type": {
-										"_typeName": "stappler::xenolith::Color4F",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::xenolith::Color4F",
-											"objects": [{
-												"_fullName": "::stappler::xenolith::Color4F",
-												"_kind": "type alias",
-												"_name": "Color4F",
-												"id": 2730567930,
-												"kind": "type alias",
-												"name": "Color4F",
-												"underlying_type": {
-													"_typeName": "geom::Color4F",
-													"kind": "user_defined",
-													"target": {
-														"name": "geom::Color4F",
-														"objects": [{
-															"_fullName": "::stappler::geom::Color4F",
-															"_kind": "class",
-															"_name": "Color4F",
-															"attributes": [{
-																"arguments": [{
-																	"kind": "int_literal",
-																	"spelling": "16"
-																}],
-																"is_variadic": false,
-																"kind": "alignas_",
-																"name": "alignas"
-															}],
-															"class_kind": "struct",
-															"comment": "\nRGBA color composed of 4 floats.\n",
-															"id": 1425630790,
-															"is_declaration": false,
-															"is_definition": true,
-															"is_final": false,
-															"kind": "class",
-															"name": "Color4F",
-															"scope": {
-																"name": "Color4F"
-															},
-															"semantic_scope": ""
-														}]
-													}
-												}
-											}]
-										}
-									}
+									"_typeName": "const stappler::geom::Color4F",
+									"kind": "unexposed",
+									"name": "const stappler::geom::Color4F"
 								},
 								"reference_kind": "lvalue"
 							}
@@ -410,14 +362,14 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::Color4F const&,float)"
+						"signature": "(const stappler::geom::Color4F&,float)"
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::LayerRounded::onContentSizeDirty()",
+						"_fullName": "::stappler::xenolith::basic2d::LayerRounded::onContentSizeDirty()",
 						"_kind": "member function",
 						"_name": "onContentSizeDirty",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 2058862367,
+						"id": 3475844746,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -436,12 +388,12 @@
 						"semantic_scope": "",
 						"signature": "()"
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::LayerRounded::setBorderRadius(float)",
+						"_fullName": "::stappler::xenolith::basic2d::LayerRounded::setBorderRadius(float)",
 						"_kind": "member function",
 						"_name": "setBorderRadius",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 565992502,
+						"id": 4146465862,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -472,12 +424,12 @@
 						"semantic_scope": "",
 						"signature": "(float)"
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::LayerRounded::getBorderRadius() const",
+						"_fullName": "::stappler::xenolith::basic2d::LayerRounded::getBorderRadius() const",
 						"_kind": "member function",
 						"_name": "getBorderRadius",
 						"body_kind": "definition",
 						"cv_qualifier": "const",
-						"id": 3322582226,
+						"id": 3221254511,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": false,
@@ -495,12 +447,12 @@
 						"semantic_scope": "",
 						"signature": "() const"
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::LayerRounded::setPathColor(stappler::xenolith::Color4B const&,bool)",
+						"_fullName": "::stappler::xenolith::basic2d::LayerRounded::setPathColor(const stappler::geom::Color4B&,bool)",
 						"_kind": "member function",
 						"_name": "setPathColor",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 2842415748,
+						"id": 2764194593,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -517,51 +469,12 @@
 							"kind": "function parameter",
 							"name": "",
 							"type": {
-								"_typeName": "stappler::xenolith::Color4B const&",
+								"_typeName": "const stappler::geom::Color4B&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "stappler::xenolith::Color4B const",
-									"cv_qualifier": "const",
-									"kind": "cv_qualified",
-									"type": {
-										"_typeName": "stappler::xenolith::Color4B",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::xenolith::Color4B",
-											"objects": [{
-												"_fullName": "::stappler::xenolith::Color4B",
-												"_kind": "type alias",
-												"_name": "Color4B",
-												"id": 2746318835,
-												"kind": "type alias",
-												"name": "Color4B",
-												"underlying_type": {
-													"_typeName": "geom::Color4B",
-													"kind": "user_defined",
-													"target": {
-														"name": "geom::Color4B",
-														"objects": [{
-															"_fullName": "::stappler::geom::Color4B",
-															"_kind": "class",
-															"_name": "Color4B",
-															"class_kind": "struct",
-															"comment": "\nRGBA color composed of 4 bytes.\n",
-															"id": 1045138403,
-															"is_declaration": false,
-															"is_definition": true,
-															"is_final": false,
-															"kind": "class",
-															"name": "Color4B",
-															"scope": {
-																"name": "Color4B"
-															},
-															"semantic_scope": ""
-														}]
-													}
-												}
-											}]
-										}
-									}
+									"_typeName": "const stappler::geom::Color4B",
+									"kind": "unexposed",
+									"name": "const stappler::geom::Color4B"
 								},
 								"reference_kind": "lvalue"
 							}
@@ -585,14 +498,14 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::Color4B const&,bool)"
+						"signature": "(const stappler::geom::Color4B&,bool)"
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::LayerRounded::getPathColor() const",
+						"_fullName": "::stappler::xenolith::basic2d::LayerRounded::getPathColor() const",
 						"_kind": "member function",
 						"_name": "getPathColor",
 						"body_kind": "declaration",
 						"cv_qualifier": "const",
-						"id": 2176019805,
+						"id": 1075921956,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -603,51 +516,12 @@
 						"name": "getPathColor",
 						"ref_qualifier": "none",
 						"return_type": {
-							"_typeName": "stappler::xenolith::Color4B const&",
+							"_typeName": "const stappler::geom::Color4B&",
 							"kind": "reference",
 							"referee": {
-								"_typeName": "stappler::xenolith::Color4B const",
-								"cv_qualifier": "const",
-								"kind": "cv_qualified",
-								"type": {
-									"_typeName": "stappler::xenolith::Color4B",
-									"kind": "user_defined",
-									"target": {
-										"name": "stappler::xenolith::Color4B",
-										"objects": [{
-											"_fullName": "::stappler::xenolith::Color4B",
-											"_kind": "type alias",
-											"_name": "Color4B",
-											"id": 2746318835,
-											"kind": "type alias",
-											"name": "Color4B",
-											"underlying_type": {
-												"_typeName": "geom::Color4B",
-												"kind": "user_defined",
-												"target": {
-													"name": "geom::Color4B",
-													"objects": [{
-														"_fullName": "::stappler::geom::Color4B",
-														"_kind": "class",
-														"_name": "Color4B",
-														"class_kind": "struct",
-														"comment": "\nRGBA color composed of 4 bytes.\n",
-														"id": 1045138403,
-														"is_declaration": false,
-														"is_definition": true,
-														"is_final": false,
-														"kind": "class",
-														"name": "Color4B",
-														"scope": {
-															"name": "Color4B"
-														},
-														"semantic_scope": ""
-													}]
-												}
-											}
-										}]
-									}
-								}
+								"_typeName": "const stappler::geom::Color4B",
+								"kind": "unexposed",
+								"name": "const stappler::geom::Color4B"
 							},
 							"reference_kind": "lvalue"
 						},
@@ -895,7 +769,7 @@
 							}]
 						}
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::LayerRounded::_pathColor",
+						"_fullName": "::stappler::xenolith::basic2d::LayerRounded::_pathColor",
 						"_kind": "member variable",
 						"_name": "_pathColor",
 						"default_value": {
@@ -911,90 +785,22 @@
 							}],
 							"kind": "unexposed",
 							"type": {
-								"_typeName": "stappler::xenolith::Color4B",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Color4B",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Color4B",
-										"_kind": "type alias",
-										"_name": "Color4B",
-										"id": 2746318835,
-										"kind": "type alias",
-										"name": "Color4B",
-										"underlying_type": {
-											"_typeName": "geom::Color4B",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Color4B",
-												"objects": [{
-													"_fullName": "::stappler::geom::Color4B",
-													"_kind": "class",
-													"_name": "Color4B",
-													"class_kind": "struct",
-													"comment": "\nRGBA color composed of 4 bytes.\n",
-													"id": 1045138403,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Color4B",
-													"scope": {
-														"name": "Color4B"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Color4B",
+								"kind": "unexposed",
+								"name": "stappler::geom::Color4B"
 							}
 						},
-						"id": 3402336336,
+						"id": 1658469926,
 						"is_mutable": false,
 						"kind": "member variable",
 						"name": "_pathColor",
 						"type": {
-							"_typeName": "stappler::xenolith::Color4B",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::Color4B",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::Color4B",
-									"_kind": "type alias",
-									"_name": "Color4B",
-									"id": 2746318835,
-									"kind": "type alias",
-									"name": "Color4B",
-									"underlying_type": {
-										"_typeName": "geom::Color4B",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::Color4B",
-											"objects": [{
-												"_fullName": "::stappler::geom::Color4B",
-												"_kind": "class",
-												"_name": "Color4B",
-												"class_kind": "struct",
-												"comment": "\nRGBA color composed of 4 bytes.\n",
-												"id": 1045138403,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "Color4B",
-												"scope": {
-													"name": "Color4B"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::Color4B",
+							"kind": "unexposed",
+							"name": "stappler::geom::Color4B"
 						}
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::LayerRounded::_borderRadius",
+						"_fullName": "::stappler::xenolith::basic2d::LayerRounded::_borderRadius",
 						"_kind": "member variable",
 						"_name": "_borderRadius",
 						"default_value": {
@@ -1009,7 +815,7 @@
 								"kind": "builtin"
 							}
 						},
-						"id": 202431507,
+						"id": 4036864683,
 						"is_mutable": false,
 						"kind": "member variable",
 						"name": "_borderRadius",
@@ -1019,7 +825,7 @@
 							"kind": "builtin"
 						}
 					}, {
-						"_fullName": "::stappler::xenolith::gui2d::LayerRounded::_realBorderRadius",
+						"_fullName": "::stappler::xenolith::basic2d::LayerRounded::_realBorderRadius",
 						"_kind": "member variable",
 						"_name": "_realBorderRadius",
 						"default_value": {
@@ -1034,7 +840,7 @@
 								"kind": "builtin"
 							}
 						},
-						"id": 3225576279,
+						"id": 3775403955,
 						"is_mutable": false,
 						"kind": "member variable",
 						"name": "_realBorderRadius",
@@ -1045,7 +851,7 @@
 						}
 					}],
 					"class_kind": "class",
-					"id": 2430771777,
+					"id": 320731118,
 					"is_declaration": false,
 					"is_definition": true,
 					"is_final": false,
@@ -1056,14 +862,14 @@
 					},
 					"semantic_scope": ""
 				}],
-				"id": 3420207034,
+				"id": 245581775,
 				"is_anonymous": false,
 				"is_inline": false,
 				"is_nested": true,
 				"kind": "namespace",
-				"name": "gui2d",
+				"name": "basic2d",
 				"scope": {
-					"name": "gui2d"
+					"name": "basic2d"
 				}
 			}],
 			"id": 2324754634,
@@ -1086,9 +892,9 @@
 			"name": "stappler"
 		}
 	}],
-	"id": 3606028884,
+	"id": 327495750,
 	"kind": "file",
-	"name": "xenolith/renderer/gui2d/XL2dLayerRounded.h",
+	"name": "xenolith/renderer/basic2d/XL2dLayerRounded.h",
 	"unmatched_comments": [{
 		"line": 21,
 		"text": "\nCopyright (c) 2023 Stappler LLC <admin@stappler.dev>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n"

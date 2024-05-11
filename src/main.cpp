@@ -304,7 +304,7 @@ struct ParserStruct {
 		return true;
 	}
 
-	void processFile(const cppast::libclang_compile_config &config, const String &fullPath) {
+	static bool shouldParseFile(const String &fullPath) {
 		bool parse = true;
 		uint8_t buf[2_KiB] = { 0 };
 		filesystem::readIntoBuffer(buf, fullPath, 0, 2_KiB - 1);
@@ -326,8 +326,11 @@ struct ParserStruct {
 				}
 			});
 		}
+		return parse;
+	}
 
-		if (!parse) {
+	void processFile(const cppast::libclang_compile_config &config, const String &fullPath) {
+		if (!shouldParseFile(fullPath)) {
 			std::unique_lock<Mutex> lock(mutex);
 			parsedFiles.emplace(fullPath);
 			return;
@@ -409,8 +412,10 @@ struct ParserStruct {
 			auto data = static_cast<data_t*>(ptr);
 
 			data->queue->perform(Rc<thread::Task>::create([=] (const thread::Task &) -> bool {
-				cppast::libclang_compile_config config(data->database, file);
-				data->parser.parse(std::move(file), std::move(config));
+				if (shouldParseFile(file)) {
+					cppast::libclang_compile_config config(data->database, file);
+					data->parser.parse(std::move(file), std::move(config));
+				}
 				return true;
 			}, [] (const thread::Task &, bool) {
 

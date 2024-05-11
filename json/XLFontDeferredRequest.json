@@ -3,14 +3,14 @@
 	"_kind": "file",
 	"_name": "xenolith/font/XLFontDeferredRequest.h",
 	"childs": [{
-		"_fullName": "XLFontLibrary.h",
+		"_fullName": "XLFontExtension.h",
 		"_kind": "include directive",
-		"_name": "XLFontLibrary.h",
-		"id": 94554198,
-		"include": "xenolith/font/XLFontLibrary.h",
+		"_name": "XLFontExtension.h",
+		"id": 4107930675,
+		"include": "xenolith/font/XLFontExtension.h",
 		"include_kind": "local",
 		"kind": "include directive",
-		"name": "XLFontLibrary.h"
+		"name": "XLFontExtension.h"
 	}, {
 		"_fullName": "XENOLITH_FONT_XLFONTDEFERREDREQUEST_H_",
 		"_kind": "macro definition",
@@ -147,11 +147,11 @@
 						}
 					}],
 					"childs":  [{
-						"_fullName": "::stappler::xenolith::font::DeferredRequest::runFontRenderer(thread::TaskQueue&,Rc<stappler::xenolith::font::FontLibrary> const&,Vector<stappler::xenolith::font::FontUpdateRequest> const&,Function<void (uint32_t, const stappler::xenolith::font::CharTexture &)>&&,Function<void ()>&&)",
+						"_fullName": "::stappler::xenolith::font::DeferredRequest::runFontRenderer(thread::TaskQueue&,Rc<stappler::xenolith::font::FontExtension> const&,Vector<stappler::xenolith::font::FontUpdateRequest> const&,Function<void (uint32_t, const stappler::font::CharTexture &)>&&,Function<void ()>&&)",
 						"_kind": "function",
 						"_name": "runFontRenderer",
 						"body_kind": "declaration",
-						"id": 4265988862,
+						"id": 2574378489,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -295,14 +295,14 @@
 							"kind": "function parameter",
 							"name": "",
 							"type": {
-								"_typeName": "Rc<stappler::xenolith::font::FontLibrary> const&",
+								"_typeName": "Rc<stappler::xenolith::font::FontExtension> const&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "Rc<stappler::xenolith::font::FontLibrary> const",
+									"_typeName": "Rc<stappler::xenolith::font::FontExtension> const",
 									"cv_qualifier": "const",
 									"kind": "cv_qualified",
 									"type": {
-										"_typeName": "Rc<stappler::xenolith::font::FontLibrary>",
+										"_typeName": "Rc<stappler::xenolith::font::FontExtension>",
 										"arguments_exposed": false,
 										"kind": "template_instantiation",
 										"primary_template": {
@@ -367,7 +367,7 @@
 												}
 											}]
 										},
-										"unexposed_arguments": "stappler::xenolith::font::FontLibrary"
+										"unexposed_arguments": "stappler::xenolith::font::FontExtension"
 									}
 								},
 								"reference_kind": "lvalue"
@@ -406,16 +406,16 @@
 							"kind": "function parameter",
 							"name": "",
 							"type": {
-								"_typeName": "Function<void (uint32_t, const stappler::xenolith::font::CharTexture &)>&&",
+								"_typeName": "Function<void (uint32_t, const stappler::font::CharTexture &)>&&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "Function<void (uint32_t, const stappler::xenolith::font::CharTexture &)>",
+									"_typeName": "Function<void (uint32_t, const stappler::font::CharTexture &)>",
 									"arguments_exposed": false,
 									"kind": "template_instantiation",
 									"primary_template": {
 										"name": "Function"
 									},
-									"unexposed_arguments": "void (uint32_t, const stappler::xenolith::font::CharTexture &)"
+									"unexposed_arguments": "void (uint32_t, const stappler::font::CharTexture &)"
 								},
 								"reference_kind": "rvalue"
 							}
@@ -447,7 +447,7 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(thread::TaskQueue&,Rc<stappler::xenolith::font::FontLibrary> const&,Vector<stappler::xenolith::font::FontUpdateRequest> const&,Function<void (uint32_t, const stappler::xenolith::font::CharTexture &)>&&,Function<void ()>&&)",
+						"signature": "(thread::TaskQueue&,Rc<stappler::xenolith::font::FontExtension> const&,Vector<stappler::xenolith::font::FontUpdateRequest> const&,Function<void (uint32_t, const stappler::font::CharTexture &)>&&,Function<void ()>&&)",
 						"storage_class": [
 							"static"
 						]
@@ -467,11 +467,11 @@
 						"semantic_scope": "",
 						"signature": "()"
 					}, {
-						"_fullName": "::stappler::xenolith::font::DeferredRequest::DeferredRequest(Rc<stappler::xenolith::font::FontLibrary> const&,Vector<stappler::xenolith::font::FontUpdateRequest> const&)",
+						"_fullName": "::stappler::xenolith::font::DeferredRequest::DeferredRequest(Rc<stappler::xenolith::font::FontExtension> const&,Vector<stappler::xenolith::font::FontUpdateRequest> const&)",
 						"_kind": "constructor",
 						"_name": "DeferredRequest",
 						"body_kind": "declaration",
-						"id": 3734114980,
+						"id": 2560743155,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -488,14 +488,14 @@
 							"kind": "function parameter",
 							"name": "lib",
 							"type": {
-								"_typeName": "Rc<stappler::xenolith::font::FontLibrary> const&",
+								"_typeName": "Rc<stappler::xenolith::font::FontExtension> const&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "Rc<stappler::xenolith::font::FontLibrary> const",
+									"_typeName": "Rc<stappler::xenolith::font::FontExtension> const",
 									"cv_qualifier": "const",
 									"kind": "cv_qualified",
 									"type": {
-										"_typeName": "Rc<stappler::xenolith::font::FontLibrary>",
+										"_typeName": "Rc<stappler::xenolith::font::FontExtension>",
 										"arguments_exposed": false,
 										"kind": "template_instantiation",
 										"primary_template": {
@@ -560,7 +560,7 @@
 												}
 											}]
 										},
-										"unexposed_arguments": "stappler::xenolith::font::FontLibrary"
+										"unexposed_arguments": "stappler::xenolith::font::FontExtension"
 									}
 								},
 								"reference_kind": "lvalue"
@@ -593,7 +593,7 @@
 							}
 						}],
 						"semantic_scope": "",
-						"signature": "(Rc<stappler::xenolith::font::FontLibrary> const&,Vector<stappler::xenolith::font::FontUpdateRequest> const&)"
+						"signature": "(Rc<stappler::xenolith::font::FontExtension> const&,Vector<stappler::xenolith::font::FontUpdateRequest> const&)"
 					}, {
 						"_fullName": "::stappler::xenolith::font::DeferredRequest::runThread()",
 						"_kind": "member function",
@@ -747,15 +747,15 @@
 							"unexposed_arguments": "Pair<uint32_t, char16_t>"
 						}
 					}, {
-						"_fullName": "::stappler::xenolith::font::DeferredRequest::library",
+						"_fullName": "::stappler::xenolith::font::DeferredRequest::ext",
 						"_kind": "member variable",
-						"_name": "library",
-						"id": 433502564,
+						"_name": "ext",
+						"id": 33790433,
 						"is_mutable": false,
 						"kind": "member variable",
-						"name": "library",
+						"name": "ext",
 						"type": {
-							"_typeName": "Rc<font::FontLibrary>",
+							"_typeName": "Rc<font::FontExtension>",
 							"arguments_exposed": false,
 							"kind": "template_instantiation",
 							"primary_template": {
@@ -820,7 +820,7 @@
 									}
 								}]
 							},
-							"unexposed_arguments": "font::FontLibrary"
+							"unexposed_arguments": "font::FontExtension"
 						}
 					}, {
 						"_fullName": "::stappler::xenolith::font::DeferredRequest::onTexture",

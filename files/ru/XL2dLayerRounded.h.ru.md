@@ -1,14 +1,14 @@
 Title: XL2dLayerRounded.h
 
 
-# XENOLITH_RENDERER_GUI2D_XL2DLAYERROUNDED_H_
+# XENOLITH_RENDERER_BASIC2D_XL2DLAYERROUNDED_H_
 
 ## BRIEF
 
 ## CONTENT
 
 
-# ::stappler::xenolith::gui2d::LayerRounded
+# ::stappler::xenolith::basic2d::LayerRounded
 
 ## BRIEF
 
@@ -18,7 +18,7 @@ Title: XL2dLayerRounded.h
 * VectorSprite
 
 
-# ::stappler::xenolith::gui2d::LayerRounded::~LayerRounded()
+# ::stappler::xenolith::basic2d::LayerRounded::~LayerRounded()
 
 ## BRIEF
 
@@ -27,7 +27,7 @@ Title: XL2dLayerRounded.h
 Доступ: public
 
 
-# ::stappler::xenolith::gui2d::LayerRounded::init(stappler::xenolith::Color4F const&,float)
+# ::stappler::xenolith::basic2d::LayerRounded::init(const stappler::geom::Color4F&,float)
 
 ## BRIEF
 
@@ -36,13 +36,13 @@ Title: XL2dLayerRounded.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Color4F const&
+* const stappler::geom::Color4F&
 * float
 
 Возвращает:
 * bool
 
-# ::stappler::xenolith::gui2d::LayerRounded::onContentSizeDirty()
+# ::stappler::xenolith::basic2d::LayerRounded::onContentSizeDirty()
 
 ## BRIEF
 
@@ -51,7 +51,7 @@ Title: XL2dLayerRounded.h
 Доступ: public
 
 
-# ::stappler::xenolith::gui2d::LayerRounded::setBorderRadius(float)
+# ::stappler::xenolith::basic2d::LayerRounded::setBorderRadius(float)
 
 ## BRIEF
 
@@ -63,7 +63,7 @@ Title: XL2dLayerRounded.h
 * float
 
 
-# ::stappler::xenolith::gui2d::LayerRounded::getBorderRadius() const
+# ::stappler::xenolith::basic2d::LayerRounded::getBorderRadius() const
 
 ## BRIEF
 
@@ -74,7 +74,7 @@ Title: XL2dLayerRounded.h
 Возвращает:
 * float
 
-# ::stappler::xenolith::gui2d::LayerRounded::setPathColor(stappler::xenolith::Color4B const&,bool)
+# ::stappler::xenolith::basic2d::LayerRounded::setPathColor(const stappler::geom::Color4B&,bool)
 
 ## BRIEF
 
@@ -83,11 +83,11 @@ Title: XL2dLayerRounded.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Color4B const&
+* const stappler::geom::Color4B&
 * bool
 
 
-# ::stappler::xenolith::gui2d::LayerRounded::getPathColor() const
+# ::stappler::xenolith::basic2d::LayerRounded::getPathColor() const
 
 ## BRIEF
 
@@ -96,9 +96,9 @@ Title: XL2dLayerRounded.h
 Доступ: public
 
 Возвращает:
-* stappler::xenolith::Color4B const&
+* const stappler::geom::Color4B&
 
-# ::stappler::xenolith::gui2d::LayerRounded::_pathColor
+# ::stappler::xenolith::basic2d::LayerRounded::_pathColor
 
 ## BRIEF
 
@@ -106,10 +106,10 @@ Title: XL2dLayerRounded.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::Color4B
+Тип: stappler::geom::Color4B
 
 
-# ::stappler::xenolith::gui2d::LayerRounded::_borderRadius
+# ::stappler::xenolith::basic2d::LayerRounded::_borderRadius
 
 ## BRIEF
 
@@ -120,7 +120,7 @@ Title: XL2dLayerRounded.h
 Тип: float
 
 
-# ::stappler::xenolith::gui2d::LayerRounded::_realBorderRadius
+# ::stappler::xenolith::basic2d::LayerRounded::_realBorderRadius
 
 ## BRIEF
 

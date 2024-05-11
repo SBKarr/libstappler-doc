@@ -1399,3 +1399,17 @@ Title: SPBytesView.h
 Возвращает:
 * bool
 
+# ::stappler::BytesViewTemplate<stappler::Endian>::toStringView() const
+
+## BRIEF
+
+Возвращает данные как отображение строки
+
+## CONTENT
+
+Доступ: public
+
+Возвращает данные как отображение строки
+
+Возвращает:
+* stappler::StringView

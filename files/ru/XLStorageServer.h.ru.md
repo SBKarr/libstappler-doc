@@ -57,6 +57,17 @@ Title: XLStorageServer.h
 Доступ: public
 
 
+# ::stappler::xenolith::storage::Server::onBroadcast
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Тип: stappler::xenolith::EventHeader
+
+
 # ::stappler::xenolith::storage::Server::~Server()
 
 ## BRIEF
@@ -160,7 +171,7 @@ Title: XLStorageServer.h
 Возвращает:
 * bool
 
-# ::stappler::xenolith::storage::Server::get(stappler::CoderSource,stappler::xenolith::storage::Server::DataCallback&&)
+# ::stappler::xenolith::storage::Server::get(stappler::CoderSource,stappler::xenolith::storage::Server::DataCallback&&) const
 
 ## BRIEF
 
@@ -175,7 +186,7 @@ Title: XLStorageServer.h
 Возвращает:
 * bool
 
-# ::stappler::xenolith::storage::Server::set(stappler::CoderSource,stappler::mem_std::Value&&,stappler::xenolith::storage::Server::DataCallback&&)
+# ::stappler::xenolith::storage::Server::set(stappler::CoderSource,stappler::mem_std::Value&&,stappler::xenolith::storage::Server::DataCallback&&) const
 
 ## BRIEF
 
@@ -191,7 +202,7 @@ Title: XLStorageServer.h
 Возвращает:
 * bool
 
-# ::stappler::xenolith::storage::Server::clear(stappler::CoderSource,stappler::xenolith::storage::Server::DataCallback&&)
+# ::stappler::xenolith::storage::Server::clear(stappler::CoderSource,stappler::xenolith::storage::Server::DataCallback&&) const
 
 ## BRIEF
 
@@ -742,93 +753,3 @@ Title: XLStorageServer.h
 Доступ: protected
 
 Тип: stappler::xenolith::storage::Server::ServerData*
-
-
-# ::stappler::xenolith::storage::StorageRoot
-
-## BRIEF
-
-## CONTENT
-
-Базовые классы:
-* db::StorageRoot
-
-
-# ::stappler::xenolith::storage::StorageRoot::onBroadcast
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-Тип: stappler::xenolith::EventHeader
-
-
-# ::stappler::xenolith::storage::StorageRoot::scheduleAyncDbTask(db::Callback<db::Function<void (const db::Transaction &)> (db::pool_t *)> const&)
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-Параметры:
-* db::Callback<db::Function<void (const db::Transaction &)> (db::pool_t *)> const&
-
-
-# ::stappler::xenolith::storage::StorageRoot::getDocuemntRoot() const
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-Возвращает:
-* db::String
-
-# ::stappler::xenolith::storage::StorageRoot::getFileScheme() const
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-Возвращает:
-* db::Scheme const*
-
-# ::stappler::xenolith::storage::StorageRoot::getUserScheme() const
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-Возвращает:
-* db::Scheme const*
-
-# ::stappler::xenolith::storage::StorageRoot::onLocalBroadcast(db::Value const&)
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-Параметры:
-* db::Value const&
-
-
-# ::stappler::xenolith::storage::StorageRoot::onStorageTransaction(db::Transaction&)
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-Параметры:
-* db::Transaction&

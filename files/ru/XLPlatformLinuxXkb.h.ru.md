@@ -430,7 +430,7 @@ Title: XLPlatformLinuxXkb.h
 Тип: xkb_state*(*)(xkb_keymap*,xcb_connection_t*,int32_t)
 
 
-# ::stappler::xenolith::platform::XkbLibrary::open(void*)
+# ::stappler::xenolith::platform::XkbLibrary::open(stappler::Dso&)
 
 ## BRIEF
 
@@ -439,7 +439,7 @@ Title: XLPlatformLinuxXkb.h
 Доступ: protected
 
 Параметры:
-* void*
+* stappler::Dso&
 
 Возвращает:
 * bool
@@ -461,7 +461,7 @@ Title: XLPlatformLinuxXkb.h
 
 Доступ: protected
 
-Тип: void*
+Тип: stappler::Dso
 
 
 # ::stappler::xenolith::platform::XkbLibrary::_x11
@@ -472,7 +472,7 @@ Title: XLPlatformLinuxXkb.h
 
 Доступ: protected
 
-Тип: void*
+Тип: stappler::Dso
 
 
 # ::stappler::xenolith::platform::XkbLibrary::_context

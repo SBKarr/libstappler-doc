@@ -72,6 +72,303 @@ Title: XLPlatformLinuxXcbView.h
 Тип: Vector<uint16_t>
 
 
+# ::stappler::xenolith::platform::XcbView::ModeInfo
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+
+# ::stappler::xenolith::platform::XcbView::ModeInfo::id
+
+## BRIEF
+
+## CONTENT
+
+Тип: uint32_t
+
+
+# ::stappler::xenolith::platform::XcbView::ModeInfo::width
+
+## BRIEF
+
+## CONTENT
+
+Тип: uint16_t
+
+
+# ::stappler::xenolith::platform::XcbView::ModeInfo::height
+
+## BRIEF
+
+## CONTENT
+
+Тип: uint16_t
+
+
+# ::stappler::xenolith::platform::XcbView::ModeInfo::rate
+
+## BRIEF
+
+## CONTENT
+
+Тип: uint16_t
+
+
+# ::stappler::xenolith::platform::XcbView::ModeInfo::name
+
+## BRIEF
+
+## CONTENT
+
+Тип: stappler::mem_std::String
+
+
+# ::stappler::xenolith::platform::XcbView::CrtcInfo
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+
+# ::stappler::xenolith::platform::XcbView::CrtcInfo::crtc
+
+## BRIEF
+
+## CONTENT
+
+Тип: xcb_randr_crtc_t
+
+
+# ::stappler::xenolith::platform::XcbView::CrtcInfo::x
+
+## BRIEF
+
+## CONTENT
+
+Тип: int16_t
+
+
+# ::stappler::xenolith::platform::XcbView::CrtcInfo::y
+
+## BRIEF
+
+## CONTENT
+
+Тип: int16_t
+
+
+# ::stappler::xenolith::platform::XcbView::CrtcInfo::width
+
+## BRIEF
+
+## CONTENT
+
+Тип: uint16_t
+
+
+# ::stappler::xenolith::platform::XcbView::CrtcInfo::height
+
+## BRIEF
+
+## CONTENT
+
+Тип: uint16_t
+
+
+# ::stappler::xenolith::platform::XcbView::CrtcInfo::mode
+
+## BRIEF
+
+## CONTENT
+
+Тип: xcb_randr_mode_t
+
+
+# ::stappler::xenolith::platform::XcbView::CrtcInfo::rotation
+
+## BRIEF
+
+## CONTENT
+
+Тип: uint16_t
+
+
+# ::stappler::xenolith::platform::XcbView::CrtcInfo::rotations
+
+## BRIEF
+
+## CONTENT
+
+Тип: uint16_t
+
+
+# ::stappler::xenolith::platform::XcbView::CrtcInfo::outputs
+
+## BRIEF
+
+## CONTENT
+
+Тип: Vector<xcb_randr_output_t>
+
+
+# ::stappler::xenolith::platform::XcbView::CrtcInfo::possible
+
+## BRIEF
+
+## CONTENT
+
+Тип: Vector<xcb_randr_output_t>
+
+
+# ::stappler::xenolith::platform::XcbView::OutputInfo
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+
+# ::stappler::xenolith::platform::XcbView::OutputInfo::output
+
+## BRIEF
+
+## CONTENT
+
+Тип: xcb_randr_output_t
+
+
+# ::stappler::xenolith::platform::XcbView::OutputInfo::crtc
+
+## BRIEF
+
+## CONTENT
+
+Тип: xcb_randr_crtc_t
+
+
+# ::stappler::xenolith::platform::XcbView::OutputInfo::modes
+
+## BRIEF
+
+## CONTENT
+
+Тип: Vector<xcb_randr_mode_t>
+
+
+# ::stappler::xenolith::platform::XcbView::OutputInfo::name
+
+## BRIEF
+
+## CONTENT
+
+Тип: stappler::mem_std::String
+
+
+# ::stappler::xenolith::platform::XcbView::ScreenInfoData
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+
+# ::stappler::xenolith::platform::XcbView::ScreenInfoData::currentCrtcs
+
+## BRIEF
+
+## CONTENT
+
+Тип: Vector<xcb_randr_crtc_t>
+
+
+# ::stappler::xenolith::platform::XcbView::ScreenInfoData::currentOutputs
+
+## BRIEF
+
+## CONTENT
+
+Тип: Vector<xcb_randr_output_t>
+
+
+# ::stappler::xenolith::platform::XcbView::ScreenInfoData::currentModeInfo
+
+## BRIEF
+
+## CONTENT
+
+Тип: Vector<stappler::xenolith::platform::XcbView::ModeInfo>
+
+
+# ::stappler::xenolith::platform::XcbView::ScreenInfoData::modeInfo
+
+## BRIEF
+
+## CONTENT
+
+Тип: Vector<stappler::xenolith::platform::XcbView::ModeInfo>
+
+
+# ::stappler::xenolith::platform::XcbView::ScreenInfoData::screenInfo
+
+## BRIEF
+
+## CONTENT
+
+Тип: Vector<stappler::xenolith::platform::XcbView::ScreenInfo>
+
+
+# ::stappler::xenolith::platform::XcbView::ScreenInfoData::crtcInfo
+
+## BRIEF
+
+## CONTENT
+
+Тип: Vector<stappler::xenolith::platform::XcbView::CrtcInfo>
+
+
+# ::stappler::xenolith::platform::XcbView::ScreenInfoData::primaryOutput
+
+## BRIEF
+
+## CONTENT
+
+Тип: stappler::xenolith::platform::XcbView::OutputInfo
+
+
+# ::stappler::xenolith::platform::XcbView::ScreenInfoData::primaryCrtc
+
+## BRIEF
+
+## CONTENT
+
+Тип: stappler::xenolith::platform::XcbView::CrtcInfo
+
+
+# ::stappler::xenolith::platform::XcbView::ScreenInfoData::primaryMode
+
+## BRIEF
+
+## CONTENT
+
+Тип: stappler::xenolith::platform::XcbView::ModeInfo
+
+
+# ::stappler::xenolith::platform::XcbView::ScreenInfoData::config
+
+## BRIEF
+
+## CONTENT
+
+Тип: xcb_timestamp_t
+
+
 # ::stappler::xenolith::platform::XcbView::ReportError(int)
 
 ## BRIEF
@@ -84,7 +381,7 @@ Title: XLPlatformLinuxXcbView.h
 * int
 
 
-# ::stappler::xenolith::platform::XcbView::XcbView(stappler::xenolith::platform::XcbLibrary*,stappler::xenolith::platform::ViewInterface*,stappler::StringView,stappler::StringView,stappler::xenolith::URect)
+# ::stappler::xenolith::platform::XcbView::XcbView(stappler::xenolith::platform::XcbLibrary*,stappler::xenolith::platform::ViewInterface*,stappler::StringView,stappler::StringView,stappler::geom::URect)
 
 ## BRIEF
 
@@ -97,7 +394,7 @@ Title: XLPlatformLinuxXcbView.h
 * stappler::xenolith::platform::ViewInterface*
 * stappler::StringView
 * stappler::StringView
-* stappler::xenolith::URect
+* stappler::geom::URect
 
 
 # ::stappler::xenolith::platform::XcbView::~XcbView()
@@ -187,6 +484,32 @@ Title: XLPlatformLinuxXcbView.h
 Возвращает:
 * uint32_t
 
+# ::stappler::xenolith::platform::XcbView::readFromClipboard(Function<void (stappler::BytesView, stappler::StringView)>&&,stappler::mem_std::Ref*)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* Function<void (stappler::BytesView, stappler::StringView)>&&
+* stappler::mem_std::Ref*
+
+
+# ::stappler::xenolith::platform::XcbView::writeToClipboard(stappler::BytesView,stappler::StringView)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* stappler::BytesView
+* stappler::StringView
+
+
 # ::stappler::xenolith::platform::XcbView::getScreenInfo() const
 
 ## BRIEF
@@ -196,7 +519,7 @@ Title: XLPlatformLinuxXcbView.h
 Доступ: protected
 
 Возвращает:
-* Vector<stappler::xenolith::platform::XcbView::ScreenInfo>
+* stappler::xenolith::platform::XcbView::ScreenInfoData
 
 # ::stappler::xenolith::platform::XcbView::initXkb()
 
@@ -296,6 +619,44 @@ Title: XLPlatformLinuxXcbView.h
 Возвращает:
 * core::InputKeyCode
 
+# ::stappler::xenolith::platform::XcbView::notifyClipboard(stappler::BytesView)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Параметры:
+* stappler::BytesView
+
+
+# ::stappler::xenolith::platform::XcbView::writeTargetToProperty(xcb_selection_request_event_t*)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Параметры:
+* xcb_selection_request_event_t*
+
+Возвращает:
+* xcb_atom_t
+
+# ::stappler::xenolith::platform::XcbView::handleSelectionRequest(xcb_selection_request_event_t*)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Параметры:
+* xcb_selection_request_event_t*
+
+
 # ::stappler::xenolith::platform::XcbView::_xcb
 
 ## BRIEF
@@ -381,7 +742,7 @@ Title: XLPlatformLinuxXcbView.h
 
 Доступ: protected
 
-Тип: xcb_atom_t[4]
+Тип: xcb_atom_t[12]
 
 
 # ::stappler::xenolith::platform::XcbView::_width
@@ -483,6 +844,17 @@ Title: XLPlatformLinuxXcbView.h
 Тип: bool
 
 
+# ::stappler::xenolith::platform::XcbView::_randrEnabled
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: bool
+
+
 # ::stappler::xenolith::platform::XcbView::_xkbDeviceId
 
 ## BRIEF
@@ -506,6 +878,17 @@ Title: XLPlatformLinuxXcbView.h
 
 
 # ::stappler::xenolith::platform::XcbView::_xkbFirstError
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: uint8_t
+
+
+# ::stappler::xenolith::platform::XcbView::_randrFirstEvent
 
 ## BRIEF
 
@@ -569,3 +952,47 @@ Title: XLPlatformLinuxXcbView.h
 Доступ: protected
 
 Тип: stappler::mem_std::String
+
+
+# ::stappler::xenolith::platform::XcbView::_screenInfo
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: stappler::xenolith::platform::XcbView::ScreenInfoData
+
+
+# ::stappler::xenolith::platform::XcbView::_clipboardCallback
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: Function<void (stappler::BytesView, stappler::StringView)>
+
+
+# ::stappler::xenolith::platform::XcbView::_clipboardTarget
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: Rc<stappler::mem_std::Ref>
+
+
+# ::stappler::xenolith::platform::XcbView::_clipboardSelection
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: stappler::mem_std::Bytes

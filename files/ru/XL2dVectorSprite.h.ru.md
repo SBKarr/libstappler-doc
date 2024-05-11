@@ -105,7 +105,7 @@ Title: XL2dVectorSprite.h
 Возвращает:
 * bool
 
-# ::stappler::xenolith::basic2d::VectorSprite::init(stappler::xenolith::Size2,stappler::StringView)
+# ::stappler::xenolith::basic2d::VectorSprite::init(stappler::geom::Size2,stappler::StringView)
 
 ## BRIEF
 
@@ -114,13 +114,13 @@ Title: XL2dVectorSprite.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Size2
+* stappler::geom::Size2
 * stappler::StringView
 
 Возвращает:
 * bool
 
-# ::stappler::xenolith::basic2d::VectorSprite::init(stappler::xenolith::Size2,stappler::xenolith::basic2d::VectorPath&&)
+# ::stappler::xenolith::basic2d::VectorSprite::init(stappler::geom::Size2,stappler::xenolith::basic2d::VectorPath&&)
 
 ## BRIEF
 
@@ -129,13 +129,13 @@ Title: XL2dVectorSprite.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Size2
+* stappler::geom::Size2
 * stappler::xenolith::basic2d::VectorPath&&
 
 Возвращает:
 * bool
 
-# ::stappler::xenolith::basic2d::VectorSprite::init(stappler::xenolith::Size2)
+# ::stappler::xenolith::basic2d::VectorSprite::init(stappler::geom::Size2)
 
 ## BRIEF
 
@@ -144,7 +144,7 @@ Title: XL2dVectorSprite.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Size2
+* stappler::geom::Size2
 
 Возвращает:
 * bool
@@ -191,7 +191,7 @@ Title: XL2dVectorSprite.h
 Возвращает:
 * bool
 
-# ::stappler::xenolith::basic2d::VectorSprite::addPath(stappler::StringView,stappler::StringView,stappler::xenolith::Mat4)
+# ::stappler::xenolith::basic2d::VectorSprite::addPath(stappler::StringView,stappler::StringView,stappler::geom::Mat4)
 
 ## BRIEF
 
@@ -202,12 +202,12 @@ Title: XL2dVectorSprite.h
 Параметры:
 * stappler::StringView
 * stappler::StringView
-* stappler::xenolith::Mat4
+* stappler::geom::Mat4
 
 Возвращает:
 * Rc<stappler::xenolith::basic2d::VectorPathRef>
 
-# ::stappler::xenolith::basic2d::VectorSprite::addPath(stappler::xenolith::basic2d::VectorPath const&,stappler::StringView,stappler::StringView,stappler::xenolith::Mat4)
+# ::stappler::xenolith::basic2d::VectorSprite::addPath(stappler::xenolith::basic2d::VectorPath const&,stappler::StringView,stappler::StringView,stappler::geom::Mat4)
 
 ## BRIEF
 
@@ -219,12 +219,12 @@ Title: XL2dVectorSprite.h
 * stappler::xenolith::basic2d::VectorPath const&
 * stappler::StringView
 * stappler::StringView
-* stappler::xenolith::Mat4
+* stappler::geom::Mat4
 
 Возвращает:
 * Rc<stappler::xenolith::basic2d::VectorPathRef>
 
-# ::stappler::xenolith::basic2d::VectorSprite::addPath(stappler::xenolith::basic2d::VectorPath&&,stappler::StringView,stappler::StringView,stappler::xenolith::Mat4)
+# ::stappler::xenolith::basic2d::VectorSprite::addPath(stappler::xenolith::basic2d::VectorPath&&,stappler::StringView,stappler::StringView,stappler::geom::Mat4)
 
 ## BRIEF
 
@@ -236,7 +236,7 @@ Title: XL2dVectorSprite.h
 * stappler::xenolith::basic2d::VectorPath&&
 * stappler::StringView
 * stappler::StringView
-* stappler::xenolith::Mat4
+* stappler::geom::Mat4
 
 Возвращает:
 * Rc<stappler::xenolith::basic2d::VectorPathRef>
@@ -334,7 +334,7 @@ Title: XL2dVectorSprite.h
 Возвращает:
 * float
 
-# ::stappler::xenolith::basic2d::VectorSprite::onTransformDirty(stappler::xenolith::Mat4 const&)
+# ::stappler::xenolith::basic2d::VectorSprite::onTransformDirty(const stappler::geom::Mat4&)
 
 ## BRIEF
 
@@ -343,7 +343,7 @@ Title: XL2dVectorSprite.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Mat4 const&
+* const stappler::geom::Mat4&
 
 
 # ::stappler::xenolith::basic2d::VectorSprite::visitDraw(stappler::xenolith::FrameInfo&,stappler::xenolith::NodeFlags)
@@ -429,7 +429,7 @@ Title: XL2dVectorSprite.h
 Возвращает:
 * bool
 
-# ::stappler::xenolith::basic2d::VectorSprite::pushShadowCommands(stappler::xenolith::FrameInfo&,stappler::xenolith::NodeFlags,stappler::xenolith::Mat4 const&,SpanView<stappler::xenolith::basic2d::TransformVertexData>)
+# ::stappler::xenolith::basic2d::VectorSprite::pushShadowCommands(stappler::xenolith::FrameInfo&,stappler::xenolith::NodeFlags,const stappler::geom::Mat4&,SpanView<stappler::xenolith::basic2d::TransformVertexData>)
 
 ## BRIEF
 
@@ -440,7 +440,7 @@ Title: XL2dVectorSprite.h
 Параметры:
 * stappler::xenolith::FrameInfo&
 * stappler::xenolith::NodeFlags
-* stappler::xenolith::Mat4 const&
+* const stappler::geom::Mat4&
 * SpanView<stappler::xenolith::basic2d::TransformVertexData>
 
 
@@ -547,7 +547,7 @@ Title: XL2dVectorSprite.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::Size2
+Тип: stappler::geom::Size2
 
 
 # ::stappler::xenolith::basic2d::VectorSprite::_targetTransform
@@ -558,7 +558,7 @@ Title: XL2dVectorSprite.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::Mat4
+Тип: stappler::geom::Mat4
 
 
 # ::stappler::xenolith::basic2d::VectorSprite::_image

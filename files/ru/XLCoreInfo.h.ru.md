@@ -5,49 +5,76 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Заголовок типов параметров различных объектов
+
 ## CONTENT
+
+Заголовок типов параметров различных объектов
 
 
 # ::stappler::xenolith::core::MipLevels
 
 ## BRIEF
 
+Число уровней размерности изображений
+
 ## CONTENT
+
+Число уровней размерности изображений
 
 
 # ::stappler::xenolith::core::ArrayLayers
 
 ## BRIEF
 
+Число слоёв в изображении
+
 ## CONTENT
+
+Число слоёв в изображении
 
 
 # ::stappler::xenolith::core::Extent1
 
 ## BRIEF
 
+Тип одномерного размера
+
 ## CONTENT
+
+Тип одномерного размера
 
 
 # ::stappler::xenolith::core::BaseArrayLayer
 
 ## BRIEF
 
+Тип базового слоя изображения
+
 ## CONTENT
 
+Тип базового слоя изображения
 
 # ::stappler::xenolith::core::SamplerInfo
 
 ## BRIEF
 
+Параметры семплера
+
 ## CONTENT
+
+Параметры семплера
 
 
 # ::stappler::xenolith::core::SamplerInfo::magFilter
 
 ## BRIEF
 
+Фильтр на увеличение
+
 ## CONTENT
+
+Фильтр на увеличение
 
 Тип: stappler::xenolith::core::Filter
 
@@ -56,7 +83,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Фильтр на уменьшение
+
 ## CONTENT
+
+Фильтр на уменьшение
 
 Тип: stappler::xenolith::core::Filter
 
@@ -65,7 +96,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Способ выборки из других размерностей
+
 ## CONTENT
+
+Способ выборки из других размерностей
 
 Тип: stappler::xenolith::core::SamplerMipmapMode
 
@@ -74,7 +109,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Схема адресации по горизонтали
+
 ## CONTENT
+
+Схема адресации по горизонтали
 
 Тип: stappler::xenolith::core::SamplerAddressMode
 
@@ -83,7 +122,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Схема адресации по вертикали
+
 ## CONTENT
+
+Схема адресации по вертикали
 
 Тип: stappler::xenolith::core::SamplerAddressMode
 
@@ -92,7 +135,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Схема адресации по глубине
+
 ## CONTENT
+
+Схема адресации по глубине
 
 Тип: stappler::xenolith::core::SamplerAddressMode
 
@@ -101,7 +148,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Допустимый параметр ошибки
+
 ## CONTENT
+
+Допустимый параметр ошибки
 
 Тип: float
 
@@ -110,7 +161,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Флаг анизотропной фильтрации
+
 ## CONTENT
+
+Флаг анизотропной фильтрации
 
 Тип: bool
 
@@ -119,7 +174,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Максимальное значение анизотропного фильтра
+
 ## CONTENT
+
+Максимальное значение анизотропного фильтра
 
 Тип: float
 
@@ -128,7 +187,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Флаг использования сравнительной операции
+
 ## CONTENT
+
+Флаг использования сравнительной операции
 
 Тип: bool
 
@@ -137,7 +200,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Тип сравнительной операции
+
 ## CONTENT
+
+Тип сравнительной операции
 
 Тип: stappler::xenolith::core::CompareOp
 
@@ -146,7 +213,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Минимальный уровень детализации
+
 ## CONTENT
+
+Минимальный уровень детализации
 
 Тип: float
 
@@ -155,40 +226,24 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Максимальный уровень детализации
+
 ## CONTENT
+
+Максимальный уровень детализации
 
 Тип: float
 
-
-# ::stappler::xenolith::core::SamplerInfo::operator==(stappler::xenolith::core::SamplerInfo const&) const
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::xenolith::core::SamplerInfo const&
-
-Возвращает:
-* bool
-
-# ::stappler::xenolith::core::SamplerInfo::operator!=(stappler::xenolith::core::SamplerInfo const&) const
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::xenolith::core::SamplerInfo const&
-
-Возвращает:
-* bool
 
 # ::stappler::xenolith::core::SamplerInfo::operator<=>(stappler::xenolith::core::SamplerInfo const&) const
 
 ## BRIEF
 
+Сравнительный оператор
+
 ## CONTENT
+
+Сравнительный оператор
 
 Параметры:
 * stappler::xenolith::core::SamplerInfo const&
@@ -200,28 +255,44 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Тип принудительных флагов буфера
+
 ## CONTENT
+
+Тип принудительных флагов буфера. Заставляет игнорировать ранее установленные флаги.
 
 
 # ::stappler::xenolith::core::ForceBufferUsage
 
 ## BRIEF
 
+Тип принудительных флагов использования буфера
+
 ## CONTENT
+
+Тип принудительных флагов использования буфера. Заставляет игнорировать ранее установленные флаги.
 
 
 # ::stappler::xenolith::core::BufferPersistent
 
 ## BRIEF
 
+Тип постоянства буфера
+
 ## CONTENT
+
+Тип постоянства буфера
 
 
 # ::stappler::xenolith::core::BufferInfo
 
 ## BRIEF
 
+Параметры буфера
+
 ## CONTENT
+
+Параметры буфера
 
 Базовые классы:
 * NamedMem
@@ -231,7 +302,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Флаги буфера
+
 ## CONTENT
+
+Флаги буфера
 
 Тип: stappler::xenolith::core::BufferFlags
 
@@ -240,7 +315,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Флаги использования
+
 ## CONTENT
+
+Флаги использования
 
 Тип: stappler::xenolith::core::BufferUsage
 
@@ -249,7 +328,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Тип прохода для буфера
+
 ## CONTENT
+
+Тип прохода для буфера
 
 Тип: stappler::xenolith::core::PassType
 
@@ -258,7 +341,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Размер буфера
+
 ## CONTENT
+
+Размер буфера
 
 Тип: uint64_t
 
@@ -267,7 +354,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Флаг постоянства
+
 ## CONTENT
+
+Флаг постоянства
 
 Тип: bool
 
@@ -276,14 +367,22 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Конструктор
+
 ## CONTENT
+
+Конструктор
 
 
 # ::stappler::xenolith::core::BufferInfo::BufferInfo<typename>(Args &&...)
 
 ## BRIEF
 
+Конструктор из типизированных параметров
+
 ## CONTENT
+
+Конструктор из типизированных параметров
 
 Параметры шаблона:
 * typename Args
@@ -296,7 +395,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Назначает параметр
+
 ## CONTENT
+
+Назначает параметр
 
 Параметры:
 * stappler::xenolith::core::BufferInfo const&
@@ -306,7 +409,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Назначает параметр
+
 ## CONTENT
+
+Назначает параметр
 
 Параметры:
 * stappler::xenolith::core::BufferFlags
@@ -316,7 +423,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Назначает параметр
+
 ## CONTENT
+
+Назначает параметр
 
 Параметры:
 * stappler::xenolith::core::ForceBufferFlags
@@ -326,7 +437,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Назначает параметр
+
 ## CONTENT
+
+Назначает параметр
 
 Параметры:
 * stappler::xenolith::core::BufferUsage
@@ -336,7 +451,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Назначает параметр
+
 ## CONTENT
+
+Назначает параметр
 
 Параметры:
 * stappler::xenolith::core::ForceBufferUsage
@@ -346,7 +465,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Назначает размер
+
 ## CONTENT
+
+Назначает размер
 
 Параметры:
 * uint64_t
@@ -356,7 +479,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Назначает параметр
+
 ## CONTENT
+
+Назначает параметр
 
 Параметры:
 * stappler::xenolith::core::BufferPersistent
@@ -366,7 +493,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Назначает параметр
+
 ## CONTENT
+
+Назначает параметр
 
 Параметры:
 * stappler::xenolith::core::PassType
@@ -376,7 +507,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Вспомогательная функция параметров
+
 ## CONTENT
+
+Вспомогательная функция параметров
 
 Параметры шаблона:
 * typename T
@@ -389,7 +524,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Вспомогательная функция параметров
+
 ## CONTENT
+
+Вспомогательная функция параметров
 
 Параметры шаблона:
 * typename T
@@ -404,7 +543,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Возвращает текстовое описание параметров
+
 ## CONTENT
+
+Возвращает текстовое описание параметров
 
 Возвращает:
 * stappler::mem_std::String
@@ -413,42 +556,75 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Тип данных буфера
+
 ## CONTENT
 
+Тип данных буфера
+
 Базовые классы:
-* BufferInfo
+* BufferInfo - параметры буфера
 
 
 # ::stappler::xenolith::core::BufferData::DataCallback
 
 ## BRIEF
 
+Функция для получения данных
+
 ## CONTENT
+
+Функция для получения данных
 
 
 # ::stappler::xenolith::core::BufferData::data
 
 ## BRIEF
 
+Предустановленные данные
+
 ## CONTENT
+
+Предустановленные данные
 
 Тип: stappler::BytesView
 
 
-# ::stappler::xenolith::core::BufferData::callback
+# ::stappler::xenolith::core::BufferData::memCallback
 
 ## BRIEF
 
+Функция возврата данных (для пулов памяти)
+
 ## CONTENT
 
+Функция возврата данных (для пулов памяти)
+
 Тип: memory::function<void (uint8_t *, uint64_t, const DataCallback &)>
+
+
+# ::stappler::xenolith::core::BufferData::stdCallback
+
+## BRIEF
+
+Функция возврата данных (для стандартной библиотеки)
+
+## CONTENT
+
+Функция возврата данных (для стандартной библиотеки)
+
+Тип: std::function<void (uint8_t *, uint64_t, const DataCallback &)>
 
 
 # ::stappler::xenolith::core::BufferData::buffer
 
 ## BRIEF
 
+Объект буфера
+
 ## CONTENT
+
+Объект буфера
 
 Тип: Rc<stappler::xenolith::core::BufferObject>
 
@@ -457,7 +633,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Связанный атлас данных
+
 ## CONTENT
+
+Связанный атлас данных
 
 Тип: Rc<stappler::xenolith::core::DataAtlas>
 
@@ -466,37 +646,86 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Исходный ресурс
+
 ## CONTENT
+
+Исходный ресурс
 
 Тип: stappler::xenolith::core::Resource const*
 
+
+# ::stappler::xenolith::core::BufferData::targetAccess
+
+## BRIEF
+
+Флаги целевого доступа к буферу
+
+## CONTENT
+
+Флаги целевого доступа к буферу
+
+Тип: core::AccessType
+
+
+# ::stappler::xenolith::core::BufferData::writeData(uint8_t*,size_t) const
+
+## BRIEF
+
+Записывает данные буфера в предоставленную память
+
+## CONTENT
+
+Записывает данные буфера в предоставленную память
+
+Параметры:
+* uint8_t*
+* size_t
+
+Возвращает:
+* size_t
 
 # ::stappler::xenolith::core::ForceImageFlags
 
 ## BRIEF
 
+Принудительные флаги изображения
+
 ## CONTENT
+
+Принудительные флаги изображения. Заставляет игнорировать ранее установленные флаги
 
 
 # ::stappler::xenolith::core::ForceImageUsage
 
 ## BRIEF
 
+Принудительные флаги использования изображения
+
 ## CONTENT
+
+Принудительные флаги использования изображения. Заставляет игнорировать ранее установленные флаги
 
 
 # ::stappler::xenolith::core::ImageInfoData
 
 ## BRIEF
 
+Данные параметров изображения
+
 ## CONTENT
 
+Данные параметров изображения
 
 # ::stappler::xenolith::core::ImageInfoData::format
 
 ## BRIEF
 
+Формат изображения
+
 ## CONTENT
+
+Формат изображения
 
 Тип: stappler::xenolith::core::ImageFormat
 
@@ -505,7 +734,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Флаги изображения
+
 ## CONTENT
+
+Флаги изображения
 
 Тип: stappler::xenolith::core::ImageFlags
 
@@ -514,7 +747,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Тип изображения
+
 ## CONTENT
+
+Тип изображения
 
 Тип: stappler::xenolith::core::ImageType
 
@@ -523,16 +760,24 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Размерность изображения
+
 ## CONTENT
 
-Тип: stappler::xenolith::Extent3
+Размерность изображения
+
+Тип: stappler::geom::Extent3
 
 
 # ::stappler::xenolith::core::ImageInfoData::mipLevels
 
 ## BRIEF
 
+Уровни размерности
+
 ## CONTENT
+
+Уровни размерности
 
 Тип: stappler::xenolith::core::MipLevels
 
@@ -541,7 +786,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Число слоёв
+
 ## CONTENT
+
+Число слоёв
 
 Тип: stappler::xenolith::core::ArrayLayers
 
@@ -550,7 +799,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Число значений в одном пикселе
+
 ## CONTENT
+
+Число значений в одном пикселе
 
 Тип: stappler::xenolith::core::SampleCount
 
@@ -559,7 +812,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Тип хранения в памяти
+
 ## CONTENT
+
+Тип хранения в памяти
 
 Тип: stappler::xenolith::core::ImageTiling
 
@@ -568,7 +825,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Флаги использования
+
 ## CONTENT
+
+Флаги использования
 
 Тип: stappler::xenolith::core::ImageUsage
 
@@ -577,7 +838,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Тип прохода для изображения
+
 ## CONTENT
+
+Тип прохода для изображения
 
 Тип: stappler::xenolith::core::PassType
 
@@ -586,7 +851,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Дополнительные флаги
+
 ## CONTENT
+
+Дополнительные флаги
 
 Тип: stappler::xenolith::core::ImageHints
 
@@ -595,43 +864,27 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
-## CONTENT
-
-Параметры:
-* stappler::xenolith::core::ImageViewInfo const&
-
-Возвращает:
-* stappler::xenolith::core::ImageViewInfo
-
-# ::stappler::xenolith::core::ImageInfoData::operator==(stappler::xenolith::core::ImageInfoData const&) const
-
-## BRIEF
+Получает параметры для отображения изображения
 
 ## CONTENT
 
-Параметры:
-* stappler::xenolith::core::ImageInfoData const&
-
-Возвращает:
-* bool
-
-# ::stappler::xenolith::core::ImageInfoData::operator!=(stappler::xenolith::core::ImageInfoData const&) const
-
-## BRIEF
-
-## CONTENT
+Получает параметры для отображения изображения
 
 Параметры:
-* stappler::xenolith::core::ImageInfoData const&
+* stappler::xenolith::core::ImageViewInfo const& - исходные параметры
 
 Возвращает:
-* bool
+* stappler::xenolith::core::ImageViewInfo - подходящие изображению параметры
 
 # ::stappler::xenolith::core::ImageInfoData::operator<=>(stappler::xenolith::core::ImageInfoData const&) const
 
 ## BRIEF
 
+Оператор сравнения
+
 ## CONTENT
+
+Оператор сравнения
 
 Параметры:
 * stappler::xenolith::core::ImageInfoData const&
@@ -643,7 +896,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Параметры изображения
+
 ## CONTENT
+
+Параметры изображения
 
 Базовые классы:
 * NamedMem
@@ -654,14 +911,22 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Конструктор
+
 ## CONTENT
+
+Конструктор
 
 
 # ::stappler::xenolith::core::ImageInfo::ImageInfo<typename>(Args &&...)
 
 ## BRIEF
 
+Конструктор из типизированных значений
+
 ## CONTENT
+
+Конструктор из типизированных значений
 
 Параметры шаблона:
 * typename Args
@@ -674,37 +939,53 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Устанавливает параметр
+
 ## CONTENT
+
+Устанавливает параметр
 
 Параметры:
 * stappler::xenolith::core::Extent1
 
 
-# ::stappler::xenolith::core::ImageInfo::setup(stappler::xenolith::Extent2)
+# ::stappler::xenolith::core::ImageInfo::setup(stappler::geom::Extent2)
 
 ## BRIEF
 
+Устанавливает параметр
+
 ## CONTENT
 
+Устанавливает параметр
+
 Параметры:
-* stappler::xenolith::Extent2
+* stappler::geom::Extent2
 
 
-# ::stappler::xenolith::core::ImageInfo::setup(stappler::xenolith::Extent3)
+# ::stappler::xenolith::core::ImageInfo::setup(stappler::geom::Extent3)
 
 ## BRIEF
 
+Устанавливает параметр
+
 ## CONTENT
 
+Устанавливает параметр
+
 Параметры:
-* stappler::xenolith::Extent3
+* stappler::geom::Extent3
 
 
 # ::stappler::xenolith::core::ImageInfo::setup(stappler::xenolith::core::ImageFlags)
 
 ## BRIEF
 
+Устанавливает параметр
+
 ## CONTENT
+
+Устанавливает параметр
 
 Параметры:
 * stappler::xenolith::core::ImageFlags
@@ -714,7 +995,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Устанавливает параметр
+
 ## CONTENT
+
+Устанавливает параметр
 
 Параметры:
 * stappler::xenolith::core::ForceImageFlags
@@ -724,7 +1009,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Устанавливает параметр
+
 ## CONTENT
+
+Устанавливает параметр
 
 Параметры:
 * stappler::xenolith::core::ImageType
@@ -734,7 +1023,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Устанавливает параметр
+
 ## CONTENT
+
+Устанавливает параметр
 
 Параметры:
 * stappler::xenolith::core::MipLevels
@@ -744,7 +1037,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Устанавливает параметр
+
 ## CONTENT
+
+Устанавливает параметр
 
 Параметры:
 * stappler::xenolith::core::ArrayLayers
@@ -754,7 +1051,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Устанавливает параметр
+
 ## CONTENT
+
+Устанавливает параметр
 
 Параметры:
 * stappler::xenolith::core::SampleCount
@@ -764,7 +1065,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Устанавливает параметр
+
 ## CONTENT
+
+Устанавливает параметр
 
 Параметры:
 * stappler::xenolith::core::ImageTiling
@@ -774,7 +1079,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Устанавливает параметр
+
 ## CONTENT
+
+Устанавливает параметр
 
 Параметры:
 * stappler::xenolith::core::ImageUsage
@@ -784,7 +1093,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Устанавливает параметр
+
 ## CONTENT
+
+Устанавливает параметр
 
 Параметры:
 * stappler::xenolith::core::ForceImageUsage
@@ -794,7 +1107,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Устанавливает параметр
+
 ## CONTENT
+
+Устанавливает параметр
 
 Параметры:
 * stappler::xenolith::core::ImageFormat
@@ -804,7 +1121,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Устанавливает параметр
+
 ## CONTENT
+
+Устанавливает параметр
 
 Параметры:
 * stappler::xenolith::core::PassType
@@ -814,7 +1135,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Устанавливает параметр
+
 ## CONTENT
+
+Устанавливает параметр
 
 Параметры:
 * stappler::xenolith::core::ImageHints
@@ -824,7 +1149,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Устанавливает параметр
+
 ## CONTENT
+
+Устанавливает параметр
 
 Параметры:
 * stappler::StringView
@@ -834,7 +1163,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Вспомогательная функция чтения параметров
+
 ## CONTENT
+
+Вспомогательная функция чтения параметров
 
 Параметры шаблона:
 * typename T
@@ -847,7 +1180,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Вспомогательная функция чтения параметров
+
 ## CONTENT
+
+Вспомогательная функция чтения параметров
 
 Параметры шаблона:
 * typename T
@@ -862,7 +1199,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Проверяет, совместимы ли параметры с заданными
+
 ## CONTENT
+
+Проверяет, совместимы ли параметры с заданными
 
 Параметры:
 * stappler::xenolith::core::ImageInfo const&
@@ -874,7 +1215,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Возвращает текстовое описание параметров
+
 ## CONTENT
+
+Возвращает текстовое описание параметров
 
 Возвращает:
 * stappler::mem_std::String
@@ -883,7 +1228,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Данные изображения
+
 ## CONTENT
+
+Данные изображения
 
 Базовые классы:
 * ImageInfo
@@ -893,14 +1242,22 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Функция получения данных
+
 ## CONTENT
+
+Функция получения данных
 
 
 # ::stappler::xenolith::core::ImageData::data
 
 ## BRIEF
 
+Предустановленные данные
+
 ## CONTENT
+
+Предустановленные данные
 
 Тип: stappler::BytesView
 
@@ -909,7 +1266,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Функция предоставления данных
+
 ## CONTENT
+
+Функция предоставления данных
 
 Тип: memory::function<void (uint8_t *, uint64_t, const DataCallback &)>
 
@@ -918,7 +1279,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Функция предоставления данных
+
 ## CONTENT
+
+Функция предоставления данных
 
 Тип: std::function<void (uint8_t *, uint64_t, const DataCallback &)>
 
@@ -927,7 +1292,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Готовое изображение
+
 ## CONTENT
+
+Готовое изображение
 
 Тип: Rc<stappler::xenolith::core::ImageObject>
 
@@ -936,7 +1305,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Связанный атлас значений
+
 ## CONTENT
+
+Связанный атлас значений
 
 Тип: Rc<stappler::xenolith::core::DataAtlas>
 
@@ -945,51 +1318,122 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Исходный ресурс
+
 ## CONTENT
+
+Исходный ресурс
 
 Тип: stappler::xenolith::core::Resource const*
 
+
+# ::stappler::xenolith::core::ImageData::targetAccess
+
+## BRIEF
+
+Вычесленные целевые флаги доступа
+
+## CONTENT
+
+Вычесленные целевые флаги доступа
+
+Тип: core::AccessType
+
+
+# ::stappler::xenolith::core::ImageData::targetLayout
+
+## BRIEF
+
+Целевая укладка изображения в памяти устройства
+
+## CONTENT
+
+Целевая укладка изображения в памяти устройства
+
+Тип: core::AttachmentLayout
+
+
+# ::stappler::xenolith::core::ImageData::writeData(uint8_t*,size_t) const
+
+## BRIEF
+
+Записывает данные изображения в буфер в памяти
+
+## CONTENT
+
+Записывает данные изображения в буфер в памяти
+
+Параметры:
+* uint8_t*
+* size_t
+
+Возвращает:
+* size_t
 
 # ::stappler::xenolith::core::ComponentMappingR
 
 ## BRIEF
 
+Тип цвета для канала R
+
 ## CONTENT
+
+Тип цвета для канала R
 
 
 # ::stappler::xenolith::core::ComponentMappingG
 
 ## BRIEF
 
+Тип цвета для канала G
+
 ## CONTENT
+
+Тип цвета для канала G
 
 
 # ::stappler::xenolith::core::ComponentMappingB
 
 ## BRIEF
 
+Тип цвета для канала B
+
 ## CONTENT
+
+Тип цвета для канала B
 
 
 # ::stappler::xenolith::core::ComponentMappingA
 
 ## BRIEF
 
+Тип цвета для канала A
+
 ## CONTENT
+
+Тип цвета для канала A
 
 
 # ::stappler::xenolith::core::ImageViewInfo
 
 ## BRIEF
 
+Параметры отображения изображения
+
 ## CONTENT
+
+Параметры отображения изображения
 
 
 # ::stappler::xenolith::core::ImageViewInfo::format
 
 ## BRIEF
 
+Формат изображения
+
 ## CONTENT
+
+Формат изображения
 
 Тип: stappler::xenolith::core::ImageFormat
 
@@ -998,7 +1442,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Тип отображения
+
 ## CONTENT
+
+Тип отображения
 
 Тип: stappler::xenolith::core::ImageViewType
 
@@ -1007,7 +1455,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Источник цвета для R
+
 ## CONTENT
+
+Источник цвета для R
 
 Тип: stappler::xenolith::core::ComponentMapping
 
@@ -1016,7 +1468,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Источник цвета для G
+
 ## CONTENT
+
+Источник цвета для G
 
 Тип: stappler::xenolith::core::ComponentMapping
 
@@ -1025,7 +1481,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Источник цвета для B
+
 ## CONTENT
+
+Источник цвета для B
 
 Тип: stappler::xenolith::core::ComponentMapping
 
@@ -1034,7 +1494,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Источник цвета для A
+
 ## CONTENT
+
+Источник цвета для A
 
 Тип: stappler::xenolith::core::ComponentMapping
 
@@ -1043,7 +1507,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Начальный слой для чтения
+
 ## CONTENT
+
+Начальный слой для чтения
 
 Тип: stappler::xenolith::core::BaseArrayLayer
 
@@ -1052,7 +1520,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Число слоёв для чтения
+
 ## CONTENT
+
+Число слоёв для чтения
 
 Тип: stappler::xenolith::core::ArrayLayers
 
@@ -1061,14 +1533,22 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Конструктор
+
 ## CONTENT
+
+Конструктор
 
 
 # ::stappler::xenolith::core::ImageViewInfo::ImageViewInfo(stappler::xenolith::core::ImageViewInfo const&)
 
 ## BRIEF
 
+Конструктор копирования
+
 ## CONTENT
+
+Конструктор копирования
 
 Параметры:
 * stappler::xenolith::core::ImageViewInfo const&
@@ -1078,7 +1558,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Конструктор перемещения
+
 ## CONTENT
+
+Конструктор перемещения
 
 Параметры:
 * stappler::xenolith::core::ImageViewInfo&&
@@ -1088,7 +1572,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Оператор копирования
+
 ## CONTENT
+
+Оператор копирования
 
 Параметры:
 * stappler::xenolith::core::ImageViewInfo const&
@@ -1100,7 +1588,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Оператор перемещения
+
 ## CONTENT
+
+Оператор перемещения
 
 Параметры:
 * stappler::xenolith::core::ImageViewInfo&&
@@ -1112,7 +1604,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Конструктор из типизированных параметров
+
 ## CONTENT
+
+Конструктор из типизированных параметров
 
 Параметры шаблона:
 * typename Args
@@ -1125,7 +1621,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Устанавливает параметр
+
 ## CONTENT
+
+Устанавливает параметр
 
 Параметры:
 * stappler::xenolith::core::ImageViewInfo const&
@@ -1135,7 +1635,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Устанавливает параметр
+
 ## CONTENT
+
+Устанавливает параметр
 
 Параметры:
 * stappler::xenolith::core::ImageInfoData const&
@@ -1145,7 +1649,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Устанавливает параметр
+
 ## CONTENT
+
+Устанавливает параметр
 
 Параметры:
 * stappler::xenolith::core::ImageViewType
@@ -1155,7 +1663,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Устанавливает параметр
+
 ## CONTENT
+
+Устанавливает параметр
 
 Параметры:
 * stappler::xenolith::core::ImageFormat
@@ -1165,7 +1677,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Устанавливает параметр
+
 ## CONTENT
+
+Устанавливает параметр
 
 Параметры:
 * stappler::xenolith::core::ArrayLayers
@@ -1175,7 +1691,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Устанавливает параметр
+
 ## CONTENT
+
+Устанавливает параметр
 
 Параметры:
 * stappler::xenolith::core::BaseArrayLayer
@@ -1185,7 +1705,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Устанавливает параметр
+
 ## CONTENT
+
+Устанавливает параметр
 
 Параметры:
 * stappler::xenolith::core::ComponentMappingR
@@ -1195,7 +1719,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Устанавливает параметр
+
 ## CONTENT
+
+Устанавливает параметр
 
 Параметры:
 * stappler::xenolith::core::ComponentMappingG
@@ -1205,7 +1733,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Устанавливает параметр
+
 ## CONTENT
+
+Устанавливает параметр
 
 Параметры:
 * stappler::xenolith::core::ComponentMappingB
@@ -1215,7 +1747,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Устанавливает параметр
+
 ## CONTENT
+
+Устанавливает параметр
 
 Параметры:
 * stappler::xenolith::core::ComponentMappingA
@@ -1225,7 +1761,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Устанавливает параметр
+
 ## CONTENT
+
+Устанавливает параметр
 
 Параметры:
 * stappler::xenolith::core::ColorMode
@@ -1236,7 +1776,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Устанавливает тип отображения с учётом числоа слоёв и типа изображения
+
 ## CONTENT
+
+Устанавливает тип отображения с учётом числоа слоёв и типа изображения
 
 Параметры:
 * stappler::xenolith::core::ImageType
@@ -1247,7 +1791,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Возвращает цветовой режим
+
 ## CONTENT
+
+Возвращает цветовой режим
 
 Возвращает:
 * stappler::xenolith::core::ColorMode
@@ -1256,7 +1804,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Вспомогательная функция чтения параметров
+
 ## CONTENT
+
+Вспомогательная функция чтения параметров
 
 Параметры шаблона:
 * typename T
@@ -1269,7 +1821,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Вспомогательная функция чтения параметров
+
 ## CONTENT
+
+Вспомогательная функция чтения параметров
 
 Параметры шаблона:
 * typename T
@@ -1284,7 +1840,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Проверяет, совместимы ли параметры отображения с изображением
+
 ## CONTENT
+
+Проверяет, совместимы ли параметры отображения с изображением
 
 Параметры:
 * stappler::xenolith::core::ImageInfo const&
@@ -1296,40 +1856,24 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Возвращает текстовое описание параметров
+
 ## CONTENT
+
+Возвращает текстовое описание параметров
 
 Возвращает:
 * stappler::mem_std::String
-
-# ::stappler::xenolith::core::ImageViewInfo::operator==(stappler::xenolith::core::ImageViewInfo const&) const
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::xenolith::core::ImageViewInfo const&
-
-Возвращает:
-* bool
-
-# ::stappler::xenolith::core::ImageViewInfo::operator!=(stappler::xenolith::core::ImageViewInfo const&) const
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::xenolith::core::ImageViewInfo const&
-
-Возвращает:
-* bool
 
 # ::stappler::xenolith::core::ImageViewInfo::operator<=>(stappler::xenolith::core::ImageViewInfo const&) const
 
 ## BRIEF
 
+Оператор сравнения
+
 ## CONTENT
+
+Оператор сравнения
 
 Параметры:
 * stappler::xenolith::core::ImageViewInfo const&
@@ -1341,32 +1885,48 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Ограничительные значения кадра
+
 ## CONTENT
+
+Ограничительные значения кадра
 
 
 # ::stappler::xenolith::core::FrameContraints::extent
 
 ## BRIEF
 
+Размер выходного изображения
+
 ## CONTENT
 
-Тип: stappler::xenolith::Extent3
+Размер выходного изображения
+
+Тип: stappler::geom::Extent3
 
 
 # ::stappler::xenolith::core::FrameContraints::contentPadding
 
 ## BRIEF
 
+Системные отступы в конечном изображении
+
 ## CONTENT
 
-Тип: stappler::xenolith::Padding
+Системные отступы в конечном изображении
+
+Тип: stappler::geom::Padding
 
 
 # ::stappler::xenolith::core::FrameContraints::transform
 
 ## BRIEF
 
+Способ трансформации конечного изображения
+
 ## CONTENT
+
+Способ трансформации конечного изображения
 
 Тип: stappler::xenolith::core::SurfaceTransformFlags
 
@@ -1375,7 +1935,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Целевая плотность пикселей
+
 ## CONTENT
+
+Целевая плотность пикселей
 
 Тип: float
 
@@ -1384,25 +1948,53 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Возвращает экранный размер в базовых точках дизайна
+
 ## CONTENT
 
+Возвращает экранный размер в базовых точках дизайна
+
 Возвращает:
-* stappler::xenolith::Size2
+* stappler::geom::Size2
 
 # ::stappler::xenolith::core::FrameContraints::getRotatedPadding() const
 
 ## BRIEF
 
+Возвращает повёрнутые на трансформацию отступы
+
 ## CONTENT
 
+Возвращает повёрнутые на трансформацию отступы
+
 Возвращает:
-* stappler::xenolith::Padding
+* stappler::geom::Padding
 
 # ::stappler::xenolith::core::FrameContraints::operator==(stappler::xenolith::core::FrameContraints const&) const
 
 ## BRIEF
 
+Сравнивает значения
+
 ## CONTENT
+
+Сравнивает значения
+
+Параметры:
+* stappler::xenolith::core::FrameContraints const&
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::core::FrameContraints::operator!=(stappler::xenolith::core::FrameContraints const&) const
+
+## BRIEF
+
+Сравнивает значения
+
+## CONTENT
+
+Сравнивает значения
 
 Параметры:
 * stappler::xenolith::core::FrameContraints const&
@@ -1414,14 +2006,22 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Конфигурация выходной цепочки изображений
+
 ## CONTENT
+
+Конфигурация выходной цепочки изображений
 
 
 # ::stappler::xenolith::core::SwapchainConfig::presentMode
 
 ## BRIEF
 
+Способ отправки кадра на презентацию
+
 ## CONTENT
+
+Способ отправки кадра на презентацию
 
 Тип: stappler::xenolith::core::PresentMode
 
@@ -1430,7 +2030,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Способ отправки кадра на презентацию в быстром режиме
+
 ## CONTENT
+
+Способ отправки кадра на презентацию в быстром режиме
 
 Тип: stappler::xenolith::core::PresentMode
 
@@ -1439,7 +2043,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Формат презентуемого изображения
+
 ## CONTENT
+
+Формат презентуемого изображения
 
 Тип: stappler::xenolith::core::ImageFormat
 
@@ -1448,7 +2056,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Цветовое пространство презентуемого изображения
+
 ## CONTENT
+
+Цветовое пространство презентуемого изображения
 
 Тип: stappler::xenolith::core::ColorSpace
 
@@ -1457,7 +2069,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Способ совмещения альфаканала с системой
+
 ## CONTENT
+
+Способ совмещения альфаканала с системой
 
 Тип: stappler::xenolith::core::CompositeAlphaFlags
 
@@ -1466,7 +2082,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Трансформация конечного изображения
+
 ## CONTENT
+
+Трансформация конечного изображения
 
 Тип: stappler::xenolith::core::SurfaceTransformFlags
 
@@ -1475,7 +2095,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Число изображений в цепочке
+
 ## CONTENT
+
+Число изображений в цепочке
 
 Тип: uint32_t
 
@@ -1484,16 +2108,24 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Размер изображений
+
 ## CONTENT
 
-Тип: stappler::xenolith::Extent2
+Размер изображений
+
+Тип: stappler::geom::Extent2
 
 
 # ::stappler::xenolith::core::SwapchainConfig::clipped
 
 ## BRIEF
 
+Флаг обрезки под область обзора
+
 ## CONTENT
+
+Флаг обрезки под область обзора
 
 Тип: bool
 
@@ -1502,7 +2134,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Флаг доступности прямой записи в цепочку
+
 ## CONTENT
+
+Флаг доступности прямой записи в цепочку
 
 Тип: bool
 
@@ -1511,23 +2147,67 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Возвращает текстовое описание
+
 ## CONTENT
+
+Возвращает текстовое описание
 
 Возвращает:
 * stappler::mem_std::String
+
+# ::stappler::xenolith::core::SwapchainConfig::operator==(stappler::xenolith::core::SwapchainConfig const&) const
+
+## BRIEF
+
+Сравнивает значения
+
+## CONTENT
+
+Сравнивает значения
+
+Параметры:
+* stappler::xenolith::core::SwapchainConfig const&
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::core::SwapchainConfig::operator!=(stappler::xenolith::core::SwapchainConfig const&) const
+
+## BRIEF
+
+Сравнивает значения
+
+## CONTENT
+
+Сравнивает значения
+
+Параметры:
+* stappler::xenolith::core::SwapchainConfig const&
+
+Возвращает:
+* bool
 
 # ::stappler::xenolith::core::SurfaceInfo
 
 ## BRIEF
 
+Параметры поверхности для рисования изображений на экране
+
 ## CONTENT
+
+Параметры поверхности для рисования изображений на экране
 
 
 # ::stappler::xenolith::core::SurfaceInfo::minImageCount
 
 ## BRIEF
 
+Минимальное число изображений
+
 ## CONTENT
+
+Минимальное число изображений
 
 Тип: uint32_t
 
@@ -1536,7 +2216,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Максимальное число изображений
+
 ## CONTENT
+
+Максимальное число изображений
 
 Тип: uint32_t
 
@@ -1545,34 +2229,50 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Размер поверхности
+
 ## CONTENT
 
-Тип: stappler::xenolith::Extent2
+Размер поверхности
+
+Тип: stappler::geom::Extent2
 
 
 # ::stappler::xenolith::core::SurfaceInfo::minImageExtent
 
 ## BRIEF
 
+Минимально допустимый размер поверхности
+
 ## CONTENT
 
-Тип: stappler::xenolith::Extent2
+Минимально допустимый размер поверхности
+
+Тип: stappler::geom::Extent2
 
 
 # ::stappler::xenolith::core::SurfaceInfo::maxImageExtent
 
 ## BRIEF
 
+Максимально допустимый размер поверхности
+
 ## CONTENT
 
-Тип: stappler::xenolith::Extent2
+Максимально допустимый размер поверхности
+
+Тип: stappler::geom::Extent2
 
 
 # ::stappler::xenolith::core::SurfaceInfo::maxImageArrayLayers
 
 ## BRIEF
 
+Максимальное число слоёв в изображениях
+
 ## CONTENT
+
+Максимальное число слоёв в изображениях
 
 Тип: uint32_t
 
@@ -1581,7 +2281,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Флаги поддерживаемых режимов смешивания
+
 ## CONTENT
+
+Флаги поддерживаемых режимов смешивания
 
 Тип: stappler::xenolith::core::CompositeAlphaFlags
 
@@ -1590,7 +2294,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Флаги поддерживаемых трансформаций
+
 ## CONTENT
+
+Флаги поддерживаемых трансформаций
 
 Тип: stappler::xenolith::core::SurfaceTransformFlags
 
@@ -1599,7 +2307,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Текущая трансформация
+
 ## CONTENT
+
+Текущая трансформация
 
 Тип: stappler::xenolith::core::SurfaceTransformFlags
 
@@ -1608,7 +2320,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Поддерживаемые флаги использования изображений
+
 ## CONTENT
+
+Поддерживаемые флаги использования изображений
 
 Тип: stappler::xenolith::core::ImageUsage
 
@@ -1617,7 +2333,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Форматы для вывода на поверхность
+
 ## CONTENT
+
+Форматы для вывода на поверхность
 
 Тип: Vector<Pair<stappler::xenolith::core::ImageFormat, stappler::xenolith::core::ColorSpace>>
 
@@ -1626,7 +2346,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Режимы презентации
+
 ## CONTENT
+
+Режимы презентации
 
 Тип: Vector<stappler::xenolith::core::PresentMode>
 
@@ -1635,7 +2359,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Плотность пикселей поверхности
+
 ## CONTENT
+
+Плотность пикселей поверхности
 
 Тип: float
 
@@ -1644,7 +2372,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Проверяет, возможен ли вывод изображений из цепочки на поверхность
+
 ## CONTENT
+
+Проверяет, возможен ли вывод изображений из цепочки на поверхность
 
 Параметры:
 * stappler::xenolith::core::SwapchainConfig const&
@@ -1656,7 +2388,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Возвращает текстовое описание
+
 ## CONTENT
+
+Возвращает текстовое описание
 
 Возвращает:
 * stappler::mem_std::String
@@ -1665,7 +2401,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Возвращает текстовое описание флагов
+
 ## CONTENT
+
+Возвращает текстовое описание флагов
 
 Параметры:
 * stappler::xenolith::core::BufferFlags
@@ -1677,7 +2417,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Возвращает текстовое описание флагов
+
 ## CONTENT
+
+Возвращает текстовое описание флагов
 
 Параметры:
 * stappler::xenolith::core::BufferUsage
@@ -1689,7 +2433,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Возвращает текстовое описание флагов
+
 ## CONTENT
+
+Возвращает текстовое описание флагов
 
 Параметры:
 * stappler::xenolith::core::ImageFlags
@@ -1701,7 +2449,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Возвращает текстовое описание флагов
+
 ## CONTENT
+
+Возвращает текстовое описание флагов
 
 Параметры:
 * stappler::xenolith::core::SampleCount
@@ -1713,7 +2465,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Возвращает текстовое описание значения
+
 ## CONTENT
+
+Возвращает текстовое описание значения
 
 Параметры:
 * stappler::xenolith::core::ImageType
@@ -1725,7 +2481,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Возвращает текстовое описание значения
+
 ## CONTENT
+
+Возвращает текстовое описание значения
 
 Параметры:
 * stappler::xenolith::core::ImageViewType
@@ -1737,7 +2497,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Возвращает текстовое описание значения
+
 ## CONTENT
+
+Возвращает текстовое описание значения
 
 Параметры:
 * stappler::xenolith::core::ImageFormat
@@ -1749,7 +2513,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Возвращает текстовое описание значения
+
 ## CONTENT
+
+Возвращает текстовое описание значения
 
 Параметры:
 * stappler::xenolith::core::ImageTiling
@@ -1761,7 +2529,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Возвращает текстовое описание значения
+
 ## CONTENT
+
+Возвращает текстовое описание значения
 
 Параметры:
 * stappler::xenolith::core::ComponentMapping
@@ -1773,7 +2545,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Возвращает текстовое описание значения
+
 ## CONTENT
+
+Возвращает текстовое описание значения
 
 Параметры:
 * stappler::xenolith::core::PresentMode
@@ -1785,7 +2561,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Возвращает текстовое описание значения
+
 ## CONTENT
+
+Возвращает текстовое описание значения
 
 Параметры:
 * stappler::xenolith::core::ColorSpace
@@ -1797,7 +2577,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Возвращает текстовое описание значения
+
 ## CONTENT
+
+Возвращает текстовое описание значения
 
 Параметры:
 * stappler::xenolith::core::CompositeAlphaFlags
@@ -1809,7 +2593,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Возвращает текстовое описание значения
+
 ## CONTENT
+
+Возвращает текстовое описание значения
 
 Параметры:
 * stappler::xenolith::core::SurfaceTransformFlags
@@ -1821,7 +2609,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Возвращает текстовое описание значения
+
 ## CONTENT
+
+Возвращает текстовое описание значения
 
 Параметры:
 * stappler::xenolith::core::ImageUsage
@@ -1833,7 +2625,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Возвращает текстовое описание значения
+
 ## CONTENT
+
+Возвращает текстовое описание значения
 
 Параметры:
 * stappler::xenolith::core::ImageFormat
@@ -1845,7 +2641,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Возвращает текстовое описание значения
+
 ## CONTENT
+
+Возвращает текстовое описание значения
 
 Параметры:
 * stappler::xenolith::core::ImageFormat
@@ -1857,7 +2657,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Проверяет, можно ли использовать формат изображения для трафарета
+
 ## CONTENT
+
+Проверяет, можно ли использовать формат изображения для трафарета
 
 Параметры:
 * stappler::xenolith::core::ImageFormat
@@ -1869,10 +2673,47 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+
+Проверяет, можно ли использовать формат изображения для глубины
+
 ## CONTENT
+
+Проверяет, можно ли использовать формат изображения для глубины
 
 Параметры:
 * stappler::xenolith::core::ImageFormat
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::core::hasReadAccess(stappler::xenolith::core::AccessType)
+
+## BRIEF
+
+Проверяет, доступно ли какое-либо чтение с указанными флагами
+
+## CONTENT
+
+Проверяет, доступно ли какое-либо чтение с указанными флагами
+
+Параметры:
+* stappler::xenolith::core::AccessType
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::core::hasWriteAccess(stappler::xenolith::core::AccessType)
+
+## BRIEF
+
+Проверяет, доступна ли какая-либо запись с указанными флагами
+
+## CONTENT
+
+Проверяет, доступна ли какая-либо запись с указанными флагами
+
+Параметры:
+* stappler::xenolith::core::AccessType
 
 Возвращает:
 * bool
@@ -1881,7 +2722,11 @@ Title: XLCoreInfo.h
 
 ## BRIEF
 
+Оператор вывода в поток
+
 ## CONTENT
+
+Оператор вывода в поток
 
 Параметры:
 * std::ostream&

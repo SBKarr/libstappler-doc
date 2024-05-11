@@ -57,6 +57,46 @@ Title: XLInput.h
 ## CONTENT
 
 
+# ::stappler::xenolith::TextInputType
+
+## BRIEF
+
+## CONTENT
+
+
+# ::stappler::xenolith::TextCursor
+
+## BRIEF
+
+## CONTENT
+
+
+# ::stappler::xenolith::TextCursorPosition
+
+## BRIEF
+
+## CONTENT
+
+
+# ::stappler::xenolith::TextCursorLength
+
+## BRIEF
+
+## CONTENT
+
+
+# ::stappler::xenolith::InputEventState
+
+## BRIEF
+
+## CONTENT
+
+Значения:
+* Declined
+* Processed
+* Captured
+
+
 # ::stappler::xenolith::InputEvent
 
 ## BRIEF
@@ -79,7 +119,7 @@ Title: XLInput.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::Vec2
+Тип: stappler::geom::Vec2
 
 
 # ::stappler::xenolith::InputEvent::currentLocation
@@ -88,7 +128,7 @@ Title: XLInput.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::Vec2
+Тип: stappler::geom::Vec2
 
 
 # ::stappler::xenolith::InputEvent::previousLocation
@@ -97,7 +137,7 @@ Title: XLInput.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::Vec2
+Тип: stappler::geom::Vec2
 
 
 # ::stappler::xenolith::InputEvent::originalTime
@@ -144,310 +184,6 @@ Title: XLInput.h
 
 Тип: stappler::xenolith::InputModifier
 
-
-# ::stappler::xenolith::TextCursorPosition
-
-## BRIEF
-
-## CONTENT
-
-
-# ::stappler::xenolith::TextCursorLength
-
-## BRIEF
-
-## CONTENT
-
-
-# ::stappler::xenolith::TextInputType
-
-## BRIEF
-
-## CONTENT
-
-Значения:
-* Empty
-* Date_Date
-* Date_DateTime
-* Date_Time
-* Date
-* Number_Numbers
-* Number_Decimial
-* Number_Signed
-* Number
-* Phone
-* Text_Text
-* Text_Search
-* Text_Punctuation
-* Text_Email
-* Text_Url
-* Text
-* Default
-* ClassMask
-* PasswordBit
-* MultiLineBit
-* AutoCorrectionBit
-* ReturnKeyMask
-* ReturnKeyDefault
-* ReturnKeyGo
-* ReturnKeyGoogle
-* ReturnKeyJoin
-* ReturnKeyNext
-* ReturnKeyRoute
-* ReturnKeySearch
-* ReturnKeySend
-* ReturnKeyYahoo
-* ReturnKeyDone
-* ReturnKeyEmergencyCall
-
-
-# ::stappler::xenolith::operator|(stappler::xenolith::TextInputType const&,stappler::xenolith::TextInputType const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::xenolith::TextInputType const&
-* stappler::xenolith::TextInputType const&
-
-Возвращает:
-* stappler::xenolith::TextInputType
-
-# ::stappler::xenolith::operator&(stappler::xenolith::TextInputType const&,stappler::xenolith::TextInputType const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::xenolith::TextInputType const&
-* stappler::xenolith::TextInputType const&
-
-Возвращает:
-* stappler::xenolith::TextInputType
-
-# ::stappler::xenolith::operator^(stappler::xenolith::TextInputType const&,stappler::xenolith::TextInputType const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::xenolith::TextInputType const&
-* stappler::xenolith::TextInputType const&
-
-Возвращает:
-* stappler::xenolith::TextInputType
-
-# ::stappler::xenolith::operator|=(stappler::xenolith::TextInputType&,stappler::xenolith::TextInputType const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::xenolith::TextInputType&
-* stappler::xenolith::TextInputType const&
-
-Возвращает:
-* stappler::xenolith::TextInputType&
-
-# ::stappler::xenolith::operator&=(stappler::xenolith::TextInputType&,stappler::xenolith::TextInputType const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::xenolith::TextInputType&
-* stappler::xenolith::TextInputType const&
-
-Возвращает:
-* stappler::xenolith::TextInputType&
-
-# ::stappler::xenolith::operator^=(stappler::xenolith::TextInputType&,stappler::xenolith::TextInputType const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::xenolith::TextInputType&
-* stappler::xenolith::TextInputType const&
-
-Возвращает:
-* stappler::xenolith::TextInputType&
-
-# ::stappler::xenolith::operator==(stappler::xenolith::TextInputType const&,std::underlying_type<TextInputType>::type const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::xenolith::TextInputType const&
-* std::underlying_type<TextInputType>::type const&
-
-Возвращает:
-* bool
-
-# ::stappler::xenolith::operator==(std::underlying_type<TextInputType>::type const&,stappler::xenolith::TextInputType const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* std::underlying_type<TextInputType>::type const&
-* stappler::xenolith::TextInputType const&
-
-Возвращает:
-* bool
-
-# ::stappler::xenolith::operator!=(stappler::xenolith::TextInputType const&,std::underlying_type<TextInputType>::type const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::xenolith::TextInputType const&
-* std::underlying_type<TextInputType>::type const&
-
-Возвращает:
-* bool
-
-# ::stappler::xenolith::operator!=(std::underlying_type<TextInputType>::type const&,stappler::xenolith::TextInputType const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* std::underlying_type<TextInputType>::type const&
-* stappler::xenolith::TextInputType const&
-
-Возвращает:
-* bool
-
-# ::stappler::xenolith::operator~(stappler::xenolith::TextInputType const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::xenolith::TextInputType const&
-
-Возвращает:
-* stappler::xenolith::TextInputType
-
-# ::stappler::xenolith::TextCursor
-
-## BRIEF
-
-## CONTENT
-
-
-# ::stappler::xenolith::TextCursor::InvalidCursor
-
-## BRIEF
-
-## CONTENT
-
-Тип: stappler::xenolith::TextCursor const
-
-
-# ::stappler::xenolith::TextCursor::start
-
-## BRIEF
-
-## CONTENT
-
-Тип: uint32_t
-
-
-# ::stappler::xenolith::TextCursor::length
-
-## BRIEF
-
-## CONTENT
-
-Тип: uint32_t
-
-
-# ::stappler::xenolith::TextCursor::TextCursor()
-
-## BRIEF
-
-## CONTENT
-
-
-# ::stappler::xenolith::TextCursor::TextCursor(uint32_t)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* uint32_t
-
-
-# ::stappler::xenolith::TextCursor::TextCursor(uint32_t,uint32_t)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* uint32_t
-* uint32_t
-
-
-# ::stappler::xenolith::TextCursor::TextCursor(stappler::xenolith::TextCursorPosition)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::xenolith::TextCursorPosition
-
-
-# ::stappler::xenolith::TextCursor::TextCursor(stappler::xenolith::TextCursorPosition,stappler::xenolith::TextCursorLength)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::xenolith::TextCursorPosition
-* stappler::xenolith::TextCursorLength
-
-
-# ::stappler::xenolith::TextCursor::TextCursor(stappler::xenolith::TextCursorPosition,stappler::xenolith::TextCursorPosition)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::xenolith::TextCursorPosition
-* stappler::xenolith::TextCursorPosition
-
-
-# ::stappler::xenolith::TextCursor::operator==(stappler::xenolith::TextCursor const&) const
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::xenolith::TextCursor const&
-
-Возвращает:
-* bool
 
 # ::stappler::xenolith::TextInputViewInterface
 
@@ -517,7 +253,7 @@ Title: XLInput.h
 Доступ: public
 
 
-# ::stappler::xenolith::TextCursor::InvalidCursor
+# ::stappler::xenolith::core::TextCursor::InvalidCursor
 
 ## BRIEF
 
@@ -526,21 +262,21 @@ Title: XLInput.h
 Тип: stappler::xenolith::TextCursor const
 
 
-# ::std::hash<stappler::xenolith::InputEventData>::hash<stappler::xenolith::InputEventData>
+# ::std::hash<::stappler::xenolith::InputEventData>::hash<::stappler::xenolith::InputEventData>
 
 ## BRIEF
 
 ## CONTENT
 
 
-# ::std::hash<stappler::xenolith::InputEventData>::operator()(stappler::xenolith::InputEventData const&) const
+# ::std::hash<::stappler::xenolith::InputEventData>::operator()(::stappler::xenolith::InputEventData const&) const
 
 ## BRIEF
 
 ## CONTENT
 
 Параметры:
-* stappler::xenolith::InputEventData const&
+* ::stappler::xenolith::InputEventData const&
 
 Возвращает:
 * std::size_t

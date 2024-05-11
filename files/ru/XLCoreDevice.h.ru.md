@@ -5,14 +5,22 @@ Title: XLCoreDevice.h
 
 ## BRIEF
 
+Заголовок абстрактного графического устройства
+
 ## CONTENT
+
+Заголовок абстрактного графического устройства
 
 
 # ::stappler::xenolith::core::Device
 
 ## BRIEF
 
+Абстрактное графическое устройство
+
 ## CONTENT
+
+Абстрактное графическое устройство
 
 Базовые классы:
 * Ref
@@ -22,48 +30,68 @@ Title: XLCoreDevice.h
 
 ## BRIEF
 
+Тип дескриптора
+
 ## CONTENT
 
 Доступ: public
+
+Тип дескриптора
 
 
 # ::stappler::xenolith::core::Device::ImageStorage
 
 ## BRIEF
 
+Тих хранимого изображения
+
 ## CONTENT
 
 Доступ: public
+
+Тих хранимого изображения
 
 
 # ::stappler::xenolith::core::Device::Device()
 
 ## BRIEF
 
+Конструктор
+
 ## CONTENT
 
 Доступ: public
+
+Конструктор
 
 
 # ::stappler::xenolith::core::Device::~Device()
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::core::Device::init(stappler::xenolith::core::Instance const*)
 
 ## BRIEF
 
+Инициализирует устройство
+
 ## CONTENT
 
 Доступ: public
 
+Инициализирует устройство
+
 Параметры:
-* stappler::xenolith::core::Instance const*
+* stappler::xenolith::core::Instance const* - интерфейс графического API
 
 Возвращает:
 * bool
@@ -72,16 +100,24 @@ Title: XLCoreDevice.h
 
 ## BRIEF
 
+Завершает работу устройства
+
 ## CONTENT
 
 Доступ: public
+
+Завершает работу устройства
 
 
 # ::stappler::xenolith::core::Device::getProgram(stappler::StringView)
 
 ## BRIEF
 
+Возвращает графическую подпрограмму по имени
+
 ## CONTENT
+
+Возвращает графическую подпрограмму по имени
 
 Доступ: public
 
@@ -95,9 +131,13 @@ Title: XLCoreDevice.h
 
 ## BRIEF
 
+Добавляет загруженную графическую программу
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет загруженную графическую программу
 
 Параметры:
 * Rc<stappler::xenolith::core::Shader>
@@ -105,37 +145,49 @@ Title: XLCoreDevice.h
 Возвращает:
 * Rc<stappler::xenolith::core::Shader>
 
-# ::stappler::xenolith::core::Device::addObject(stappler::xenolith::core::ObjectInterface*)
+# ::stappler::xenolith::core::Device::addObject(stappler::xenolith::core::Object*)
 
 ## BRIEF
+
+Добавляет объект внутри устройства
 
 ## CONTENT
 
 Доступ: public
 
+Добавляет объект внутри устройства
+
 Параметры:
-* stappler::xenolith::core::ObjectInterface*
+* stappler::xenolith::core::Object*
 
 
-# ::stappler::xenolith::core::Device::removeObject(stappler::xenolith::core::ObjectInterface*)
+# ::stappler::xenolith::core::Device::removeObject(stappler::xenolith::core::Object*)
 
 ## BRIEF
+
+Удаляет объект внутри устройства
 
 ## CONTENT
 
 Доступ: public
 
+Удаляет объект внутри устройства
+
 Параметры:
-* stappler::xenolith::core::ObjectInterface*
+* stappler::xenolith::core::Object*
 
 
 # ::stappler::xenolith::core::Device::getSamplersCount() const
 
 ## BRIEF
 
+Возвращает колечиество активных семплеров
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает колечиество активных семплеров
 
 Возвращает:
 * uint32_t
@@ -144,9 +196,13 @@ Title: XLCoreDevice.h
 
 ## BRIEF
 
+Проверяет, собраны ли семплеры
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, собраны ли семплеры
 
 Возвращает:
 * bool
@@ -155,9 +211,13 @@ Title: XLCoreDevice.h
 
 ## BRIEF
 
+Возвращает число изображений в наборе
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает число изображений в наборе. Большее число иображений в наборе означает меньшее число переключений контекста при рисовании. В лучшем случае, все активные изображения должны вмещаться в один набор.
 
 Возвращает:
 * uint32_t
@@ -166,9 +226,13 @@ Title: XLCoreDevice.h
 
 ## BRIEF
 
+Возвращает число ассоциированных с набором изображений буферов (для алтасов и подобного)
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает число ассоциированных с набором изображений буферов (для алтасов и подобного)
 
 Возвращает:
 * uint32_t
@@ -177,9 +241,13 @@ Title: XLCoreDevice.h
 
 ## BRIEF
 
+Возвращает поддерживаемые форматы буфера глубины
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает поддерживаемые форматы буфера глубины
 
 Возвращает:
 * Vector<stappler::xenolith::core::ImageFormat> const&
@@ -188,9 +256,13 @@ Title: XLCoreDevice.h
 
 ## BRIEF
 
+Возвращает поддерживаемые цветовые форматы
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает поддерживаемые цветовые форматы
 
 Возвращает:
 * Vector<stappler::xenolith::core::ImageFormat> const&
@@ -199,9 +271,13 @@ Title: XLCoreDevice.h
 
 ## BRIEF
 
+Обрабатывает событие запуска графического цикла
+
 ## CONTENT
 
 Доступ: public
+
+Обрабатывает событие запуска графического цикла
 
 Параметры:
 * stappler::xenolith::core::Loop&
@@ -211,9 +287,13 @@ Title: XLCoreDevice.h
 
 ## BRIEF
 
+Обрабатывает событие остановки графического цикла
+
 ## CONTENT
 
 Доступ: public
+
+Обрабатывает событие остановки графического цикла
 
 Параметры:
 * stappler::xenolith::core::Loop&
@@ -223,9 +303,13 @@ Title: XLCoreDevice.h
 
 ## BRIEF
 
+Проверяет, могут ли дескрипторы определённого типа быть обновлены после привязки
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, могут ли дескрипторы определённого типа быть обновлены после привязки. Такая возможность существенно ускоряет работу с дескрипторами.
 
 Параметры:
 * stappler::xenolith::core::Device::DescriptorType
@@ -237,9 +321,13 @@ Title: XLCoreDevice.h
 
 ## BRIEF
 
+Возвращает объект пустого изображения
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает объект пустого изображения
 
 Возвращает:
 * Rc<stappler::xenolith::core::ImageObject>
@@ -248,9 +336,13 @@ Title: XLCoreDevice.h
 
 ## BRIEF
 
+Возвращает объект заполненного цветом изображения
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает объект заполненного цветом изображения
 
 Возвращает:
 * Rc<stappler::xenolith::core::ImageObject>
@@ -259,9 +351,13 @@ Title: XLCoreDevice.h
 
 ## BRIEF
 
+Создаёт буфер кадра
+
 ## CONTENT
 
 Доступ: public
+
+Создаёт буфер кадра
 
 Параметры:
 * stappler::xenolith::core::QueuePassData const*
@@ -274,9 +370,13 @@ Title: XLCoreDevice.h
 
 ## BRIEF
 
+Создаёт объект изображения
+
 ## CONTENT
 
 Доступ: public
+
+Создаёт объект изображения
 
 Параметры:
 * stappler::xenolith::core::ImageInfoData const&
@@ -288,9 +388,13 @@ Title: XLCoreDevice.h
 
 ## BRIEF
 
+Создаёт семафор
+
 ## CONTENT
 
 Доступ: public
+
+Создаёт семафор
 
 Возвращает:
 * Rc<stappler::xenolith::core::Semaphore>
@@ -299,9 +403,13 @@ Title: XLCoreDevice.h
 
 ## BRIEF
 
+Создаёт отображение изображения
+
 ## CONTENT
 
 Доступ: public
+
+Создаёт отображение изображения
 
 Параметры:
 * Rc<stappler::xenolith::core::ImageObject> const&
@@ -314,9 +422,13 @@ Title: XLCoreDevice.h
 
 ## BRIEF
 
+Возвращает маску флагов, которая означает, что для определённого исполняющего устройства возможна презентация кадра на экране
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает маску флагов, которая означает, что для определённого исполняющего устройства возможна презентация кадра на экране
 
 Возвращает:
 * uint32_t
@@ -325,36 +437,52 @@ Title: XLCoreDevice.h
 
 ## BRIEF
 
+Ожидает полной остановки активности на устройстве
+
 ## CONTENT
 
 Доступ: public
+
+Ожидает полной остановки активности на устройстве
 
 
 # ::stappler::xenolith::core::Device::clearShaders()
 
 ## BRIEF
 
+Отключает все подпрограммы
+
 ## CONTENT
 
 Доступ: protected
+
+Отключает все подпрограммы
 
 
 # ::stappler::xenolith::core::Device::invalidateObjects()
 
 ## BRIEF
 
+Отключает все объекты
+
 ## CONTENT
 
 Доступ: protected
+
+Отключает все объекты
 
 
 # ::stappler::xenolith::core::Device::_started
 
 ## BRIEF
 
+Флаг запуска
+
 ## CONTENT
 
 Доступ: protected
+
+Флаг запуска
 
 Тип: bool
 
@@ -363,9 +491,13 @@ Title: XLCoreDevice.h
 
 ## BRIEF
 
+Интерфейс графического API
+
 ## CONTENT
 
 Доступ: protected
+
+Интерфейс графического API
 
 Тип: stappler::xenolith::core::Instance const*
 
@@ -374,9 +506,13 @@ Title: XLCoreDevice.h
 
 ## BRIEF
 
+Мутекс компиляции шейдеров
+
 ## CONTENT
 
 Доступ: protected
+
+Мутекс компиляции шейдеров
 
 Тип: stappler::mem_std::Mutex
 
@@ -385,9 +521,13 @@ Title: XLCoreDevice.h
 
 ## BRIEF
 
+Мутекс защиты объектов
+
 ## CONTENT
 
 Доступ: protected
+
+Мутекс защиты объектов
 
 Тип: stappler::mem_std::Mutex
 
@@ -396,9 +536,13 @@ Title: XLCoreDevice.h
 
 ## BRIEF
 
+Загруженные подпрограммы
+
 ## CONTENT
 
 Доступ: protected
+
+Загруженные подпрограммы
 
 Тип: Map<stappler::mem_std::String, Rc<stappler::xenolith::core::Shader>>
 
@@ -407,20 +551,28 @@ Title: XLCoreDevice.h
 
 ## BRIEF
 
+Объекты устройства
+
 ## CONTENT
 
 Доступ: protected
 
-Тип: std::unordered_set<ObjectInterface *>
+Объекты устройства
+
+Тип: HashSet<stappler::xenolith::core::Object *>
 
 
 # ::stappler::xenolith::core::Device::_samplersInfo
 
 ## BRIEF
 
+Семплеры
+
 ## CONTENT
 
 Доступ: protected
+
+Семплеры
 
 Тип: Vector<stappler::xenolith::core::SamplerInfo>
 
@@ -429,9 +581,13 @@ Title: XLCoreDevice.h
 
 ## BRIEF
 
+Форматы глубины
+
 ## CONTENT
 
 Доступ: protected
+
+Форматы глубины
 
 Тип: Vector<stappler::xenolith::core::ImageFormat>
 
@@ -440,9 +596,13 @@ Title: XLCoreDevice.h
 
 ## BRIEF
 
+Форматы цвета
+
 ## CONTENT
 
 Доступ: protected
+
+Форматы цвета
 
 Тип: Vector<stappler::xenolith::core::ImageFormat>
 
@@ -451,9 +611,13 @@ Title: XLCoreDevice.h
 
 ## BRIEF
 
+Число семплеров
+
 ## CONTENT
 
 Доступ: protected
+
+Число семплеров
 
 Тип: uint32_t
 
@@ -462,9 +626,13 @@ Title: XLCoreDevice.h
 
 ## BRIEF
 
+Флаг компиляции семплеров
+
 ## CONTENT
 
 Доступ: protected
+
+Флаг компиляции семплеров
 
 Тип: bool
 
@@ -473,9 +641,13 @@ Title: XLCoreDevice.h
 
 ## BRIEF
 
+Число изображений в укладке
+
 ## CONTENT
 
 Доступ: protected
+
+Число изображений в укладке
 
 Тип: uint32_t
 
@@ -484,9 +656,13 @@ Title: XLCoreDevice.h
 
 ## BRIEF
 
+Число буферов в укладке
+
 ## CONTENT
 
 Доступ: protected
+
+Число буферов в укладке
 
 Тип: uint32_t
 
@@ -495,9 +671,13 @@ Title: XLCoreDevice.h
 
 ## BRIEF
 
+Ид потока графического цикла
+
 ## CONTENT
 
 Доступ: protected
+
+Ид потока графического цикла
 
 Тип: std::thread::id
 
@@ -506,8 +686,12 @@ Title: XLCoreDevice.h
 
 ## BRIEF
 
+Маска флагов презентации
+
 ## CONTENT
 
 Доступ: protected
+
+Маска флагов презентации
 
 Тип: uint32_t

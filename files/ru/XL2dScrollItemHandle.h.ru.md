@@ -1,14 +1,14 @@
 Title: XL2dScrollItemHandle.h
 
 
-# XENOLITH_RENDERER_GUI2D_XL2DSCROLLITEMHANDLE_H_
+# XENOLITH_RENDERER_BASIC2D_XL2DSCROLLITEMHANDLE_H_
 
 ## BRIEF
 
 ## CONTENT
 
 
-# ::stappler::xenolith::gui2d::ScrollItemHandle
+# ::stappler::xenolith::basic2d::ScrollItemHandle
 
 ## BRIEF
 
@@ -18,7 +18,7 @@ Title: XL2dScrollItemHandle.h
 * Component
 
 
-# ::stappler::xenolith::gui2d::ScrollItemHandle::Item
+# ::stappler::xenolith::basic2d::ScrollItemHandle::Item
 
 ## BRIEF
 
@@ -27,7 +27,7 @@ Title: XL2dScrollItemHandle.h
 Доступ: public
 
 
-# ::stappler::xenolith::gui2d::ScrollItemHandle::Callback
+# ::stappler::xenolith::basic2d::ScrollItemHandle::Callback
 
 ## BRIEF
 
@@ -36,7 +36,7 @@ Title: XL2dScrollItemHandle.h
 Доступ: public
 
 
-# ::stappler::xenolith::gui2d::ScrollItemHandle::~ScrollItemHandle()
+# ::stappler::xenolith::basic2d::ScrollItemHandle::~ScrollItemHandle()
 
 ## BRIEF
 
@@ -45,7 +45,7 @@ Title: XL2dScrollItemHandle.h
 Доступ: public
 
 
-# ::stappler::xenolith::gui2d::ScrollItemHandle::onNodeInserted(stappler::xenolith::gui2d::ScrollController*,stappler::xenolith::gui2d::ScrollItemHandle::Item&,size_t)
+# ::stappler::xenolith::basic2d::ScrollItemHandle::onNodeInserted(stappler::xenolith::basic2d::ScrollController*,stappler::xenolith::basic2d::ScrollItemHandle::Item&,size_t)
 
 ## BRIEF
 
@@ -54,12 +54,12 @@ Title: XL2dScrollItemHandle.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::gui2d::ScrollController*
-* stappler::xenolith::gui2d::ScrollItemHandle::Item&
+* stappler::xenolith::basic2d::ScrollController*
+* stappler::xenolith::basic2d::ScrollItemHandle::Item&
 * size_t
 
 
-# ::stappler::xenolith::gui2d::ScrollItemHandle::onNodeUpdated(stappler::xenolith::gui2d::ScrollController*,stappler::xenolith::gui2d::ScrollItemHandle::Item&,size_t)
+# ::stappler::xenolith::basic2d::ScrollItemHandle::onNodeUpdated(stappler::xenolith::basic2d::ScrollController*,stappler::xenolith::basic2d::ScrollItemHandle::Item&,size_t)
 
 ## BRIEF
 
@@ -68,12 +68,12 @@ Title: XL2dScrollItemHandle.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::gui2d::ScrollController*
-* stappler::xenolith::gui2d::ScrollItemHandle::Item&
+* stappler::xenolith::basic2d::ScrollController*
+* stappler::xenolith::basic2d::ScrollItemHandle::Item&
 * size_t
 
 
-# ::stappler::xenolith::gui2d::ScrollItemHandle::onNodeRemoved(stappler::xenolith::gui2d::ScrollController*,stappler::xenolith::gui2d::ScrollItemHandle::Item&,size_t)
+# ::stappler::xenolith::basic2d::ScrollItemHandle::onNodeRemoved(stappler::xenolith::basic2d::ScrollController*,stappler::xenolith::basic2d::ScrollItemHandle::Item&,size_t)
 
 ## BRIEF
 
@@ -82,12 +82,12 @@ Title: XL2dScrollItemHandle.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::gui2d::ScrollController*
-* stappler::xenolith::gui2d::ScrollItemHandle::Item&
+* stappler::xenolith::basic2d::ScrollController*
+* stappler::xenolith::basic2d::ScrollItemHandle::Item&
 * size_t
 
 
-# ::stappler::xenolith::gui2d::ScrollItemHandle::setInsertCallback(stappler::xenolith::gui2d::ScrollItemHandle::Callback&&)
+# ::stappler::xenolith::basic2d::ScrollItemHandle::setInsertCallback(stappler::xenolith::basic2d::ScrollItemHandle::Callback&&)
 
 ## BRIEF
 
@@ -96,22 +96,10 @@ Title: XL2dScrollItemHandle.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::gui2d::ScrollItemHandle::Callback&&
+* stappler::xenolith::basic2d::ScrollItemHandle::Callback&&
 
 
-# ::stappler::xenolith::gui2d::ScrollItemHandle::setUpdateCallback(stappler::xenolith::gui2d::ScrollItemHandle::Callback&&)
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-Параметры:
-* stappler::xenolith::gui2d::ScrollItemHandle::Callback&&
-
-
-# ::stappler::xenolith::gui2d::ScrollItemHandle::setRemoveCallback(stappler::xenolith::gui2d::ScrollItemHandle::Callback&&)
+# ::stappler::xenolith::basic2d::ScrollItemHandle::setUpdateCallback(stappler::xenolith::basic2d::ScrollItemHandle::Callback&&)
 
 ## BRIEF
 
@@ -120,10 +108,22 @@ Title: XL2dScrollItemHandle.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::gui2d::ScrollItemHandle::Callback&&
+* stappler::xenolith::basic2d::ScrollItemHandle::Callback&&
 
 
-# ::stappler::xenolith::gui2d::ScrollItemHandle::resize(float,bool)
+# ::stappler::xenolith::basic2d::ScrollItemHandle::setRemoveCallback(stappler::xenolith::basic2d::ScrollItemHandle::Callback&&)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* stappler::xenolith::basic2d::ScrollItemHandle::Callback&&
+
+
+# ::stappler::xenolith::basic2d::ScrollItemHandle::resize(float,bool)
 
 ## BRIEF
 
@@ -136,7 +136,7 @@ Title: XL2dScrollItemHandle.h
 * bool
 
 
-# ::stappler::xenolith::gui2d::ScrollItemHandle::forceResize(float,bool)
+# ::stappler::xenolith::basic2d::ScrollItemHandle::forceResize(float,bool)
 
 ## BRIEF
 
@@ -149,7 +149,7 @@ Title: XL2dScrollItemHandle.h
 * bool
 
 
-# ::stappler::xenolith::gui2d::ScrollItemHandle::setLocked(bool)
+# ::stappler::xenolith::basic2d::ScrollItemHandle::setLocked(bool)
 
 ## BRIEF
 
@@ -161,7 +161,7 @@ Title: XL2dScrollItemHandle.h
 * bool
 
 
-# ::stappler::xenolith::gui2d::ScrollItemHandle::isLocked() const
+# ::stappler::xenolith::basic2d::ScrollItemHandle::isLocked() const
 
 ## BRIEF
 
@@ -172,7 +172,7 @@ Title: XL2dScrollItemHandle.h
 Возвращает:
 * bool
 
-# ::stappler::xenolith::gui2d::ScrollItemHandle::isConnected() const
+# ::stappler::xenolith::basic2d::ScrollItemHandle::isConnected() const
 
 ## BRIEF
 
@@ -183,7 +183,7 @@ Title: XL2dScrollItemHandle.h
 Возвращает:
 * bool
 
-# ::stappler::xenolith::gui2d::ScrollItemHandle::_controller
+# ::stappler::xenolith::basic2d::ScrollItemHandle::_controller
 
 ## BRIEF
 
@@ -191,10 +191,10 @@ Title: XL2dScrollItemHandle.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::gui2d::ScrollController*
+Тип: stappler::xenolith::basic2d::ScrollController*
 
 
-# ::stappler::xenolith::gui2d::ScrollItemHandle::_itemIndex
+# ::stappler::xenolith::basic2d::ScrollItemHandle::_itemIndex
 
 ## BRIEF
 
@@ -205,7 +205,7 @@ Title: XL2dScrollItemHandle.h
 Тип: size_t
 
 
-# ::stappler::xenolith::gui2d::ScrollItemHandle::_insertCallback
+# ::stappler::xenolith::basic2d::ScrollItemHandle::_insertCallback
 
 ## BRIEF
 
@@ -216,7 +216,7 @@ Title: XL2dScrollItemHandle.h
 Тип: Callback
 
 
-# ::stappler::xenolith::gui2d::ScrollItemHandle::_updateCallback
+# ::stappler::xenolith::basic2d::ScrollItemHandle::_updateCallback
 
 ## BRIEF
 
@@ -227,7 +227,7 @@ Title: XL2dScrollItemHandle.h
 Тип: Callback
 
 
-# ::stappler::xenolith::gui2d::ScrollItemHandle::_removeCallback
+# ::stappler::xenolith::basic2d::ScrollItemHandle::_removeCallback
 
 ## BRIEF
 
@@ -238,7 +238,7 @@ Title: XL2dScrollItemHandle.h
 Тип: Callback
 
 
-# ::stappler::xenolith::gui2d::ScrollItemHandle::_isLocked
+# ::stappler::xenolith::basic2d::ScrollItemHandle::_isLocked
 
 ## BRIEF
 

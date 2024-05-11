@@ -1,7 +1,7 @@
 Title: SPColor.h
 
 
-# STAPPLER_GEOM_SPCOLOR_H_
+# CORE_GEOM_SPCOLOR_H_
 
 ## BRIEF
 

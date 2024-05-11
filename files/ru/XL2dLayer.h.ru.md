@@ -35,7 +35,7 @@ Title: XL2dLayer.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::Vec2 const
+Тип: const stappler::geom::Vec2
 
 
 # ::stappler::xenolith::basic2d::SimpleGradient::Horizontal
@@ -44,7 +44,7 @@ Title: XL2dLayer.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::Vec2 const
+Тип: const stappler::geom::Vec2
 
 
 # ::stappler::xenolith::basic2d::SimpleGradient::progress(stappler::xenolith::basic2d::SimpleGradient const&,stappler::xenolith::basic2d::SimpleGradient const&,float)
@@ -78,7 +78,7 @@ Title: XL2dLayer.h
 * stappler::xenolith::basic2d::SimpleGradient::ColorRef
 
 
-# ::stappler::xenolith::basic2d::SimpleGradient::SimpleGradient(stappler::xenolith::basic2d::SimpleGradient::ColorRef,stappler::xenolith::basic2d::SimpleGradient::ColorRef,stappler::xenolith::Vec2 const&)
+# ::stappler::xenolith::basic2d::SimpleGradient::SimpleGradient(stappler::xenolith::basic2d::SimpleGradient::ColorRef,stappler::xenolith::basic2d::SimpleGradient::ColorRef,const stappler::geom::Vec2&)
 
 ## BRIEF
 
@@ -87,7 +87,7 @@ Title: XL2dLayer.h
 Параметры:
 * stappler::xenolith::basic2d::SimpleGradient::ColorRef
 * stappler::xenolith::basic2d::SimpleGradient::ColorRef
-* stappler::xenolith::Vec2 const&
+* const stappler::geom::Vec2&
 
 
 # ::stappler::xenolith::basic2d::SimpleGradient::SimpleGradient(stappler::xenolith::basic2d::SimpleGradient::ColorRef,stappler::xenolith::basic2d::SimpleGradient::ColorRef,stappler::xenolith::basic2d::SimpleGradient::ColorRef,stappler::xenolith::basic2d::SimpleGradient::ColorRef)
@@ -151,7 +151,7 @@ Title: XL2dLayer.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::Color4B[4]
+Тип: stappler::geom::Color4B[4]
 
 
 # ::stappler::xenolith::basic2d::Layer
@@ -184,7 +184,7 @@ Title: XL2dLayer.h
 Возвращает:
 * bool
 
-# ::stappler::xenolith::basic2d::Layer::init(stappler::xenolith::Color4F const&)
+# ::stappler::xenolith::basic2d::Layer::init(const stappler::geom::Color4F&)
 
 ## BRIEF
 
@@ -193,7 +193,7 @@ Title: XL2dLayer.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Color4F const&
+* const stappler::geom::Color4F&
 
 Возвращает:
 * bool
@@ -272,6 +272,21 @@ Title: XL2dLayer.h
 
 Возвращает:
 * stappler::xenolith::RenderingLevel
+
+# ::stappler::xenolith::basic2d::Layer::pushShadowCommands(stappler::xenolith::FrameInfo&,stappler::xenolith::NodeFlags,const stappler::geom::Mat4&,SpanView<stappler::xenolith::basic2d::TransformVertexData>)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Параметры:
+* stappler::xenolith::FrameInfo&
+* stappler::xenolith::NodeFlags
+* const stappler::geom::Mat4&
+* SpanView<stappler::xenolith::basic2d::TransformVertexData>
+
 
 # ::stappler::xenolith::basic2d::Layer::_gradient
 

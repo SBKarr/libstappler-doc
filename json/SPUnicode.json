@@ -4851,12 +4851,12 @@
 					"kind": "unknown",
 					"name": "always_inline"
 				}],
-				"body_kind": "declaration",
+				"body_kind": "definition",
 				"id": 2072018952,
 				"is_consteval": false,
 				"is_constexpr": true,
-				"is_declaration": true,
-				"is_definition": false,
+				"is_declaration": false,
+				"is_definition": true,
 				"is_variadic": false,
 				"kind": "function",
 				"name": "isUtf8Surrogate",
@@ -4880,51 +4880,6 @@
 				},
 				"semantic_scope": "",
 				"signature": "(char)"
-			}, {
-				"_fullName": "::stappler::unicode::utf8Decode32(char const*)",
-				"_kind": "function",
-				"_name": "utf8Decode32",
-				"body_kind": "definition",
-				"id": 3132892504,
-				"is_consteval": false,
-				"is_constexpr": true,
-				"is_declaration": false,
-				"is_definition": true,
-				"is_variadic": false,
-				"kind": "function",
-				"name": "utf8Decode32",
-				"parameters": [{
-					"_fullName": "ptr",
-					"_kind": "function parameter",
-					"_name": "ptr",
-					"id": 2892464029,
-					"kind": "function parameter",
-					"name": "ptr",
-					"type": {
-						"_typeName": "char const*",
-						"kind": "pointer",
-						"pointee": {
-							"_typeName": "char const",
-							"cv_qualifier": "const",
-							"kind": "cv_qualified",
-							"type": {
-								"_typeName": "char",
-								"builtin_type_kind": "char",
-								"kind": "builtin"
-							}
-						}
-					}
-				}],
-				"return_type":  {
-					"_typeName": "char32_t",
-					"builtin_type_kind": "char32_t",
-					"kind": "builtin"
-				},
-				"semantic_scope": "",
-				"signature": "(char const*)",
-				"storage_class": [
-					"static"
-				]
 			}, {
 				"_fullName": "::stappler::unicode::utf8Decode32(char const*,uint8_t&)",
 				"_kind": "function",
@@ -4985,10 +4940,110 @@
 					"kind": "builtin"
 				},
 				"semantic_scope": "",
-				"signature": "(char const*,uint8_t&)",
-				"storage_class": [
-					"static"
-				]
+				"signature": "(char const*,uint8_t&)"
+			}, {
+				"_fullName": "::stappler::unicode::utf8HtmlDecode32(char const*,uint8_t&)",
+				"_kind": "function",
+				"_name": "utf8HtmlDecode32",
+				"body_kind": "declaration",
+				"id": 1367145013,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": true,
+				"is_definition": false,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "utf8HtmlDecode32",
+				"parameters": [{
+					"_fullName": "ptr",
+					"_kind": "function parameter",
+					"_name": "ptr",
+					"id": 2892464029,
+					"kind": "function parameter",
+					"name": "ptr",
+					"type": {
+						"_typeName": "char const*",
+						"kind": "pointer",
+						"pointee": {
+							"_typeName": "char const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "char",
+								"builtin_type_kind": "char",
+								"kind": "builtin"
+							}
+						}
+					}
+				}, {
+					"_fullName": "offset",
+					"_kind": "function parameter",
+					"_name": "offset",
+					"id": 1470309982,
+					"kind": "function parameter",
+					"name": "offset",
+					"type": {
+						"_typeName": "uint8_t&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "uint8_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "uint8_t"
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "char32_t",
+					"builtin_type_kind": "char32_t",
+					"kind": "builtin"
+				},
+				"semantic_scope": "",
+				"signature": "(char const*,uint8_t&)"
+			}, {
+				"_fullName": "::stappler::unicode::utf8Decode32(char const*)",
+				"_kind": "function",
+				"_name": "utf8Decode32",
+				"body_kind": "definition",
+				"id": 3132892504,
+				"is_consteval": false,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "utf8Decode32",
+				"parameters": [{
+					"_fullName": "ptr",
+					"_kind": "function parameter",
+					"_name": "ptr",
+					"id": 2892464029,
+					"kind": "function parameter",
+					"name": "ptr",
+					"type": {
+						"_typeName": "char const*",
+						"kind": "pointer",
+						"pointee": {
+							"_typeName": "char const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "char",
+								"builtin_type_kind": "char",
+								"kind": "builtin"
+							}
+						}
+					}
+				}],
+				"return_type":  {
+					"_typeName": "char32_t",
+					"builtin_type_kind": "char32_t",
+					"kind": "builtin"
+				},
+				"semantic_scope": "",
+				"signature": "(char const*)"
 			}, {
 				"_fullName": "::stappler::unicode::utf8EncodeLength(char16_t)",
 				"_kind": "function",
@@ -5060,6 +5115,320 @@
 				"semantic_scope": "",
 				"signature": "(char32_t)"
 			}, {
+				"_fullName": "::stappler::unicode::utf8EncodeCb<typename>(PutCharFn const&,char16_t)",
+				"_kind": "function template",
+				"_name": "utf8EncodeCb",
+				"childs": [{
+					"_fullName": "::stappler::unicode::utf8EncodeCb<typename>(PutCharFn const&,char16_t)",
+					"_kind": "function",
+					"_name": "utf8EncodeCb",
+					"body_kind": "definition",
+					"id": 2351422005,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "utf8EncodeCb",
+					"parameters": [{
+						"_fullName": "cb",
+						"_kind": "function parameter",
+						"_name": "cb",
+						"id": 3456793284,
+						"kind": "function parameter",
+						"name": "cb",
+						"type": {
+							"_typeName": "PutCharFn const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "PutCharFn const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "PutCharFn",
+									"entity": {
+										"name": "PutCharFn",
+										"objects": [{
+											"_fullName": "PutCharFn",
+											"_kind": "template type parameter",
+											"_name": "PutCharFn",
+											"id": 6659087,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "PutCharFn"
+										}]
+									},
+									"kind": "template_parameter"
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_fullName": "c",
+						"_kind": "function parameter",
+						"_name": "c",
+						"id": 4004515611,
+						"kind": "function parameter",
+						"name": "c",
+						"type": {
+							"_typeName": "char16_t",
+							"builtin_type_kind": "char16_t",
+							"kind": "builtin"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "uint8_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "uint8_t"
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(PutCharFn const&,char16_t)"
+				}],
+				"function":  {
+					"_fullName": "::stappler::unicode::utf8EncodeCb<typename>(PutCharFn const&,char16_t)",
+					"_kind": "function",
+					"_name": "utf8EncodeCb",
+					"body_kind": "definition",
+					"id": 2351422005,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "utf8EncodeCb",
+					"parameters": [{
+						"_fullName": "cb",
+						"_kind": "function parameter",
+						"_name": "cb",
+						"id": 3456793284,
+						"kind": "function parameter",
+						"name": "cb",
+						"type": {
+							"_typeName": "PutCharFn const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "PutCharFn const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "PutCharFn",
+									"entity": {
+										"name": "PutCharFn",
+										"objects": [{
+											"_fullName": "PutCharFn",
+											"_kind": "template type parameter",
+											"_name": "PutCharFn",
+											"id": 6659087,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "PutCharFn"
+										}]
+									},
+									"kind": "template_parameter"
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_fullName": "c",
+						"_kind": "function parameter",
+						"_name": "c",
+						"id": 4004515611,
+						"kind": "function parameter",
+						"name": "c",
+						"type": {
+							"_typeName": "char16_t",
+							"builtin_type_kind": "char16_t",
+							"kind": "builtin"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "uint8_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "uint8_t"
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(PutCharFn const&,char16_t)"
+				},
+				"id": 2351422005,
+				"kind": "function template",
+				"name": "utf8EncodeCb",
+				"parameters": [{
+					"_fullName": "PutCharFn",
+					"_kind": "template type parameter",
+					"_name": "PutCharFn",
+					"id": 6659087,
+					"is_variadic": false,
+					"keyword": "typename",
+					"kind": "template type parameter",
+					"name": "PutCharFn"
+				}]
+			}, {
+				"_fullName": "::stappler::unicode::utf8EncodeCb<typename>(PutCharFn const&,char32_t)",
+				"_kind": "function template",
+				"_name": "utf8EncodeCb",
+				"childs": [{
+					"_fullName": "::stappler::unicode::utf8EncodeCb<typename>(PutCharFn const&,char32_t)",
+					"_kind": "function",
+					"_name": "utf8EncodeCb",
+					"body_kind": "definition",
+					"id": 2865558310,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "utf8EncodeCb",
+					"parameters": [{
+						"_fullName": "cb",
+						"_kind": "function parameter",
+						"_name": "cb",
+						"id": 3456793284,
+						"kind": "function parameter",
+						"name": "cb",
+						"type": {
+							"_typeName": "PutCharFn const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "PutCharFn const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "PutCharFn",
+									"entity": {
+										"name": "PutCharFn",
+										"objects": [{
+											"_fullName": "PutCharFn",
+											"_kind": "template type parameter",
+											"_name": "PutCharFn",
+											"id": 6659087,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "PutCharFn"
+										}]
+									},
+									"kind": "template_parameter"
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_fullName": "c",
+						"_kind": "function parameter",
+						"_name": "c",
+						"id": 4004515611,
+						"kind": "function parameter",
+						"name": "c",
+						"type": {
+							"_typeName": "char32_t",
+							"builtin_type_kind": "char32_t",
+							"kind": "builtin"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "uint8_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "uint8_t"
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(PutCharFn const&,char32_t)"
+				}],
+				"function":  {
+					"_fullName": "::stappler::unicode::utf8EncodeCb<typename>(PutCharFn const&,char32_t)",
+					"_kind": "function",
+					"_name": "utf8EncodeCb",
+					"body_kind": "definition",
+					"id": 2865558310,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "utf8EncodeCb",
+					"parameters": [{
+						"_fullName": "cb",
+						"_kind": "function parameter",
+						"_name": "cb",
+						"id": 3456793284,
+						"kind": "function parameter",
+						"name": "cb",
+						"type": {
+							"_typeName": "PutCharFn const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "PutCharFn const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "PutCharFn",
+									"entity": {
+										"name": "PutCharFn",
+										"objects": [{
+											"_fullName": "PutCharFn",
+											"_kind": "template type parameter",
+											"_name": "PutCharFn",
+											"id": 6659087,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "PutCharFn"
+										}]
+									},
+									"kind": "template_parameter"
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_fullName": "c",
+						"_kind": "function parameter",
+						"_name": "c",
+						"id": 4004515611,
+						"kind": "function parameter",
+						"name": "c",
+						"type": {
+							"_typeName": "char32_t",
+							"builtin_type_kind": "char32_t",
+							"kind": "builtin"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "uint8_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "uint8_t"
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(PutCharFn const&,char32_t)"
+				},
+				"id": 2865558310,
+				"kind": "function template",
+				"name": "utf8EncodeCb",
+				"parameters": [{
+					"_fullName": "PutCharFn",
+					"_kind": "template type parameter",
+					"_name": "PutCharFn",
+					"id": 6659087,
+					"is_variadic": false,
+					"keyword": "typename",
+					"kind": "template type parameter",
+					"name": "PutCharFn"
+				}]
+			}, {
 				"_fullName": "::stappler::unicode::utf8EncodeBuf(char*,char16_t)",
 				"_kind": "function",
 				"_name": "utf8EncodeBuf",
@@ -5089,12 +5458,12 @@
 						}
 					}
 				}, {
-					"_fullName": "c",
+					"_fullName": "ch",
 					"_kind": "function parameter",
-					"_name": "c",
-					"id": 4004515611,
+					"_name": "ch",
+					"id": 1501751781,
 					"kind": "function parameter",
-					"name": "c",
+					"name": "ch",
 					"type": {
 						"_typeName": "char16_t",
 						"builtin_type_kind": "char16_t",
@@ -5140,12 +5509,12 @@
 						}
 					}
 				}, {
-					"_fullName": "c",
+					"_fullName": "ch",
 					"_kind": "function parameter",
-					"_name": "c",
-					"id": 4004515611,
+					"_name": "ch",
+					"id": 1501751781,
 					"kind": "function parameter",
-					"name": "c",
+					"name": "ch",
 					"type": {
 						"_typeName": "char32_t",
 						"builtin_type_kind": "char32_t",
@@ -5194,12 +5563,12 @@
 						"reference_kind": "lvalue"
 					}
 				}, {
-					"_fullName": "c",
+					"_fullName": "ch",
 					"_kind": "function parameter",
-					"_name": "c",
-					"id": 4004515611,
+					"_name": "ch",
+					"id": 1501751781,
 					"kind": "function parameter",
-					"name": "c",
+					"name": "ch",
 					"type": {
 						"_typeName": "char16_t",
 						"builtin_type_kind": "char16_t",
@@ -5248,12 +5617,12 @@
 						"reference_kind": "lvalue"
 					}
 				}, {
-					"_fullName": "c",
+					"_fullName": "ch",
 					"_kind": "function parameter",
-					"_name": "c",
-					"id": 4004515611,
+					"_name": "ch",
+					"id": 1501751781,
 					"kind": "function parameter",
-					"name": "c",
+					"name": "ch",
 					"type": {
 						"_typeName": "char32_t",
 						"builtin_type_kind": "char32_t",
@@ -5411,12 +5780,12 @@
 						"reference_kind": "lvalue"
 					}
 				}, {
-					"_fullName": "c",
+					"_fullName": "ch",
 					"_kind": "function parameter",
-					"_name": "c",
-					"id": 4004515611,
+					"_name": "ch",
+					"id": 1501751781,
 					"kind": "function parameter",
-					"name": "c",
+					"name": "ch",
 					"type": {
 						"_typeName": "char16_t",
 						"builtin_type_kind": "char16_t",
@@ -5574,12 +5943,12 @@
 						"reference_kind": "lvalue"
 					}
 				}, {
-					"_fullName": "c",
+					"_fullName": "ch",
 					"_kind": "function parameter",
-					"_name": "c",
-					"id": 4004515611,
+					"_name": "ch",
+					"id": 1501751781,
 					"kind": "function parameter",
-					"name": "c",
+					"name": "ch",
 					"type": {
 						"_typeName": "char32_t",
 						"builtin_type_kind": "char32_t",
@@ -5628,12 +5997,12 @@
 						"reference_kind": "lvalue"
 					}
 				}, {
-					"_fullName": "c",
+					"_fullName": "ch",
 					"_kind": "function parameter",
-					"_name": "c",
-					"id": 4004515611,
+					"_name": "ch",
+					"id": 1501751781,
 					"kind": "function parameter",
-					"name": "c",
+					"name": "ch",
 					"type": {
 						"_typeName": "char16_t",
 						"builtin_type_kind": "char16_t",
@@ -5682,12 +6051,12 @@
 						"reference_kind": "lvalue"
 					}
 				}, {
-					"_fullName": "c",
+					"_fullName": "ch",
 					"_kind": "function parameter",
-					"_name": "c",
-					"id": 4004515611,
+					"_name": "ch",
+					"id": 1501751781,
 					"kind": "function parameter",
-					"name": "c",
+					"name": "ch",
 					"type": {
 						"_typeName": "char32_t",
 						"builtin_type_kind": "char32_t",
@@ -5704,13 +6073,116 @@
 				"semantic_scope": "",
 				"signature": "(std::ostream&,char32_t)"
 			}, {
+				"_fullName": "::stappler::unicode::utf16Decode32(char16_t const*,uint8_t&)",
+				"_kind": "function",
+				"_name": "utf16Decode32",
+				"body_kind": "definition",
+				"id": 2032615442,
+				"is_consteval": false,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "utf16Decode32",
+				"parameters": [{
+					"_fullName": "ptr",
+					"_kind": "function parameter",
+					"_name": "ptr",
+					"id": 2892464029,
+					"kind": "function parameter",
+					"name": "ptr",
+					"type": {
+						"_typeName": "char16_t const*",
+						"kind": "pointer",
+						"pointee": {
+							"_typeName": "char16_t const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "char16_t",
+								"builtin_type_kind": "char16_t",
+								"kind": "builtin"
+							}
+						}
+					}
+				}, {
+					"_fullName": "offset",
+					"_kind": "function parameter",
+					"_name": "offset",
+					"id": 1470309982,
+					"kind": "function parameter",
+					"name": "offset",
+					"type": {
+						"_typeName": "uint8_t&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "uint8_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "uint8_t"
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "char32_t",
+					"builtin_type_kind": "char32_t",
+					"kind": "builtin"
+				},
+				"semantic_scope": "",
+				"signature": "(char16_t const*,uint8_t&)"
+			}, {
+				"_fullName": "::stappler::unicode::utf16Decode32(char16_t const*)",
+				"_kind": "function",
+				"_name": "utf16Decode32",
+				"body_kind": "definition",
+				"id": 1486939502,
+				"is_consteval": false,
+				"is_constexpr": true,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "utf16Decode32",
+				"parameters": [{
+					"_fullName": "ptr",
+					"_kind": "function parameter",
+					"_name": "ptr",
+					"id": 2892464029,
+					"kind": "function parameter",
+					"name": "ptr",
+					"type": {
+						"_typeName": "char16_t const*",
+						"kind": "pointer",
+						"pointee": {
+							"_typeName": "char16_t const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "char16_t",
+								"builtin_type_kind": "char16_t",
+								"kind": "builtin"
+							}
+						}
+					}
+				}],
+				"return_type":  {
+					"_typeName": "char32_t",
+					"builtin_type_kind": "char32_t",
+					"kind": "builtin"
+				},
+				"semantic_scope": "",
+				"signature": "(char16_t const*)"
+			}, {
 				"_fullName": "::stappler::unicode::utf16EncodeLength(char32_t)",
 				"_kind": "function",
 				"_name": "utf16EncodeLength",
 				"body_kind": "definition",
 				"id": 2837164765,
 				"is_consteval": false,
-				"is_constexpr": false,
+				"is_constexpr": true,
 				"is_declaration": false,
 				"is_definition": true,
 				"is_variadic": false,
@@ -5738,6 +6210,163 @@
 				},
 				"semantic_scope": "",
 				"signature": "(char32_t)"
+			}, {
+				"_fullName": "::stappler::unicode::utf16EncodeCb<typename>(PutCharFn const&,char32_t)",
+				"_kind": "function template",
+				"_name": "utf16EncodeCb",
+				"childs": [{
+					"_fullName": "::stappler::unicode::utf16EncodeCb<typename>(PutCharFn const&,char32_t)",
+					"_kind": "function",
+					"_name": "utf16EncodeCb",
+					"body_kind": "definition",
+					"id": 1038921147,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "utf16EncodeCb",
+					"parameters": [{
+						"_fullName": "cb",
+						"_kind": "function parameter",
+						"_name": "cb",
+						"id": 3456793284,
+						"kind": "function parameter",
+						"name": "cb",
+						"type": {
+							"_typeName": "PutCharFn const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "PutCharFn const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "PutCharFn",
+									"entity": {
+										"name": "PutCharFn",
+										"objects": [{
+											"_fullName": "PutCharFn",
+											"_kind": "template type parameter",
+											"_name": "PutCharFn",
+											"id": 6659087,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "PutCharFn"
+										}]
+									},
+									"kind": "template_parameter"
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_fullName": "c",
+						"_kind": "function parameter",
+						"_name": "c",
+						"id": 4004515611,
+						"kind": "function parameter",
+						"name": "c",
+						"type": {
+							"_typeName": "char32_t",
+							"builtin_type_kind": "char32_t",
+							"kind": "builtin"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "uint8_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "uint8_t"
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(PutCharFn const&,char32_t)"
+				}],
+				"function":  {
+					"_fullName": "::stappler::unicode::utf16EncodeCb<typename>(PutCharFn const&,char32_t)",
+					"_kind": "function",
+					"_name": "utf16EncodeCb",
+					"body_kind": "definition",
+					"id": 1038921147,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "utf16EncodeCb",
+					"parameters": [{
+						"_fullName": "cb",
+						"_kind": "function parameter",
+						"_name": "cb",
+						"id": 3456793284,
+						"kind": "function parameter",
+						"name": "cb",
+						"type": {
+							"_typeName": "PutCharFn const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "PutCharFn const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "PutCharFn",
+									"entity": {
+										"name": "PutCharFn",
+										"objects": [{
+											"_fullName": "PutCharFn",
+											"_kind": "template type parameter",
+											"_name": "PutCharFn",
+											"id": 6659087,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "PutCharFn"
+										}]
+									},
+									"kind": "template_parameter"
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_fullName": "c",
+						"_kind": "function parameter",
+						"_name": "c",
+						"id": 4004515611,
+						"kind": "function parameter",
+						"name": "c",
+						"type": {
+							"_typeName": "char32_t",
+							"builtin_type_kind": "char32_t",
+							"kind": "builtin"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "uint8_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "uint8_t"
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(PutCharFn const&,char32_t)"
+				},
+				"id": 1038921147,
+				"kind": "function template",
+				"name": "utf16EncodeCb",
+				"parameters": [{
+					"_fullName": "PutCharFn",
+					"_kind": "template type parameter",
+					"_name": "PutCharFn",
+					"id": 6659087,
+					"is_variadic": false,
+					"keyword": "typename",
+					"kind": "template type parameter",
+					"name": "PutCharFn"
+				}]
 			}, {
 				"_fullName": "::stappler::unicode::utf16EncodeBuf(char16_t*,char32_t)",
 				"_kind": "function",
@@ -5768,12 +6397,12 @@
 						}
 					}
 				}, {
-					"_fullName": "c",
+					"_fullName": "ch",
 					"_kind": "function parameter",
-					"_name": "c",
-					"id": 4004515611,
+					"_name": "ch",
+					"id": 1501751781,
 					"kind": "function parameter",
-					"name": "c",
+					"name": "ch",
 					"type": {
 						"_typeName": "char32_t",
 						"builtin_type_kind": "char32_t",
@@ -5822,12 +6451,12 @@
 						"reference_kind": "lvalue"
 					}
 				}, {
-					"_fullName": "c",
+					"_fullName": "ch",
 					"_kind": "function parameter",
-					"_name": "c",
-					"id": 4004515611,
+					"_name": "ch",
+					"id": 1501751781,
 					"kind": "function parameter",
-					"name": "c",
+					"name": "ch",
 					"type": {
 						"_typeName": "char32_t",
 						"builtin_type_kind": "char32_t",
@@ -5985,12 +6614,12 @@
 						"reference_kind": "lvalue"
 					}
 				}, {
-					"_fullName": "c",
+					"_fullName": "ch",
 					"_kind": "function parameter",
-					"_name": "c",
-					"id": 4004515611,
+					"_name": "ch",
+					"id": 1501751781,
 					"kind": "function parameter",
-					"name": "c",
+					"name": "ch",
 					"type": {
 						"_typeName": "char32_t",
 						"builtin_type_kind": "char32_t",
@@ -6045,12 +6674,12 @@
 							"reference_kind": "lvalue"
 						}
 					}, {
-						"_fullName": "c",
+						"_fullName": "ch",
 						"_kind": "function parameter",
-						"_name": "c",
-						"id": 4004515611,
+						"_name": "ch",
+						"id": 1501751781,
 						"kind": "function parameter",
-						"name": "c",
+						"name": "ch",
 						"type": {
 							"_typeName": "char32_t",
 							"builtin_type_kind": "char32_t",
@@ -6102,12 +6731,12 @@
 							"reference_kind": "lvalue"
 						}
 					}, {
-						"_fullName": "c",
+						"_fullName": "ch",
 						"_kind": "function parameter",
-						"_name": "c",
-						"id": 4004515611,
+						"_name": "ch",
+						"id": 1501751781,
 						"kind": "function parameter",
-						"name": "c",
+						"name": "ch",
 						"type": {
 							"_typeName": "char32_t",
 							"builtin_type_kind": "char32_t",
@@ -6165,39 +6794,6 @@
 						}
 					}
 				}]
-			}, {
-				"_fullName": "::stappler::unicode::isUtf8Surrogate(char)",
-				"_kind": "function",
-				"_name": "isUtf8Surrogate",
-				"body_kind": "definition",
-				"id": 2072018952,
-				"is_consteval": false,
-				"is_constexpr": true,
-				"is_declaration": false,
-				"is_definition": true,
-				"is_variadic": false,
-				"kind": "function",
-				"name": "isUtf8Surrogate",
-				"parameters": [{
-					"_fullName": "c",
-					"_kind": "function parameter",
-					"_name": "c",
-					"id": 4004515611,
-					"kind": "function parameter",
-					"name": "c",
-					"type": {
-						"_typeName": "char",
-						"builtin_type_kind": "char",
-						"kind": "builtin"
-					}
-				}],
-				"return_type":  {
-					"_typeName": "bool",
-					"builtin_type_kind": "bool",
-					"kind": "builtin"
-				},
-				"semantic_scope": "",
-				"signature": "(char)"
 			}],
 			"id": 1044502763,
 			"is_anonymous": false,
@@ -6223,165 +6819,137 @@
 		"_kind": "namespace",
 		"_name": "stappler",
 		"childs": [{
+			"_fullName": "::stappler::platform",
+			"_kind": "namespace",
+			"_name": "platform",
+			"childs": [{
+				"_fullName": "::stappler::platform::tolower(char32_t)",
+				"_kind": "function",
+				"_name": "tolower",
+				"body_kind": "declaration",
+				"id": 2743829751,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": true,
+				"is_definition": false,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "tolower",
+				"parameters": [{
+					"_fullName": "c",
+					"_kind": "function parameter",
+					"_name": "c",
+					"id": 4004515611,
+					"kind": "function parameter",
+					"name": "c",
+					"type": {
+						"_typeName": "char32_t",
+						"builtin_type_kind": "char32_t",
+						"kind": "builtin"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "char32_t",
+					"builtin_type_kind": "char32_t",
+					"kind": "builtin"
+				},
+				"semantic_scope": "",
+				"signature": "(char32_t)"
+			}, {
+				"_fullName": "::stappler::platform::toupper(char32_t)",
+				"_kind": "function",
+				"_name": "toupper",
+				"body_kind": "declaration",
+				"id": 259787204,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": true,
+				"is_definition": false,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "toupper",
+				"parameters": [{
+					"_fullName": "c",
+					"_kind": "function parameter",
+					"_name": "c",
+					"id": 4004515611,
+					"kind": "function parameter",
+					"name": "c",
+					"type": {
+						"_typeName": "char32_t",
+						"builtin_type_kind": "char32_t",
+						"kind": "builtin"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "char32_t",
+					"builtin_type_kind": "char32_t",
+					"kind": "builtin"
+				},
+				"semantic_scope": "",
+				"signature": "(char32_t)"
+			}, {
+				"_fullName": "::stappler::platform::totitle(char32_t)",
+				"_kind": "function",
+				"_name": "totitle",
+				"body_kind": "declaration",
+				"id": 2900627456,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": true,
+				"is_definition": false,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "totitle",
+				"parameters": [{
+					"_fullName": "c",
+					"_kind": "function parameter",
+					"_name": "c",
+					"id": 4004515611,
+					"kind": "function parameter",
+					"name": "c",
+					"type": {
+						"_typeName": "char32_t",
+						"builtin_type_kind": "char32_t",
+						"kind": "builtin"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "char32_t",
+					"builtin_type_kind": "char32_t",
+					"kind": "builtin"
+				},
+				"semantic_scope": "",
+				"signature": "(char32_t)"
+			}],
+			"id": 3809189005,
+			"is_anonymous": false,
+			"is_inline": false,
+			"is_nested": true,
+			"kind": "namespace",
+			"name": "platform",
+			"scope": {
+				"name": "platform"
+			}
+		}],
+		"id": 96045446,
+		"is_anonymous": false,
+		"is_inline": false,
+		"is_nested": false,
+		"kind": "namespace",
+		"name": "stappler",
+		"scope": {
+			"name": "stappler"
+		}
+	}, {
+		"_fullName": "::stappler",
+		"_kind": "namespace",
+		"_name": "stappler",
+		"childs": [{
 			"_fullName": "::stappler::string",
 			"_kind": "namespace",
 			"_name": "string",
 			"childs": [{
-				"_fullName": "::stappler::string::char_ptr_t",
-				"_kind": "type alias",
-				"_name": "char_ptr_t",
-				"id": 2938547555,
-				"kind": "type alias",
-				"name": "char_ptr_t",
-				"underlying_type": {
-					"_typeName": "char*",
-					"kind": "pointer",
-					"pointee": {
-						"_typeName": "char",
-						"builtin_type_kind": "char",
-						"kind": "builtin"
-					}
-				}
-			}, {
-				"_fullName": "::stappler::string::char_ptr_ref_t",
-				"_kind": "type alias",
-				"_name": "char_ptr_ref_t",
-				"id": 3549152356,
-				"kind": "type alias",
-				"name": "char_ptr_ref_t",
-				"underlying_type": {
-					"_typeName": "char_ptr_t&",
-					"kind": "reference",
-					"referee": {
-						"_typeName": "char_ptr_t",
-						"kind": "user_defined",
-						"target": {
-							"name": "char_ptr_t",
-							"objects": [{
-								"_fullName": "::stappler::string::char_ptr_t",
-								"_kind": "type alias",
-								"_name": "char_ptr_t",
-								"id": 2938547555,
-								"kind": "type alias",
-								"name": "char_ptr_t",
-								"underlying_type": {
-									"_typeName": "char*",
-									"kind": "pointer",
-									"pointee": {
-										"_typeName": "char",
-										"builtin_type_kind": "char",
-										"kind": "builtin"
-									}
-								}
-							}]
-						}
-					},
-					"reference_kind": "lvalue"
-				}
-			}, {
-				"_fullName": "::stappler::string::char_const_ptr_t",
-				"_kind": "type alias",
-				"_name": "char_const_ptr_t",
-				"id": 1954871982,
-				"kind": "type alias",
-				"name": "char_const_ptr_t",
-				"underlying_type": {
-					"_typeName": "char const*",
-					"kind": "pointer",
-					"pointee": {
-						"_typeName": "char const",
-						"cv_qualifier": "const",
-						"kind": "cv_qualified",
-						"type": {
-							"_typeName": "char",
-							"builtin_type_kind": "char",
-							"kind": "builtin"
-						}
-					}
-				}
-			}, {
-				"_fullName": "::stappler::string::char_const_ptr_ref_t",
-				"_kind": "type alias",
-				"_name": "char_const_ptr_ref_t",
-				"id": 1006050777,
-				"kind": "type alias",
-				"name": "char_const_ptr_ref_t",
-				"underlying_type": {
-					"_typeName": "char_const_ptr_t&",
-					"kind": "reference",
-					"referee": {
-						"_typeName": "char_const_ptr_t",
-						"kind": "user_defined",
-						"target": {
-							"name": "char_const_ptr_t",
-							"objects": [{
-								"_fullName": "::stappler::string::char_const_ptr_t",
-								"_kind": "type alias",
-								"_name": "char_const_ptr_t",
-								"id": 1954871982,
-								"kind": "type alias",
-								"name": "char_const_ptr_t",
-								"underlying_type": {
-									"_typeName": "char const*",
-									"kind": "pointer",
-									"pointee": {
-										"_typeName": "char const",
-										"cv_qualifier": "const",
-										"kind": "cv_qualified",
-										"type": {
-											"_typeName": "char",
-											"builtin_type_kind": "char",
-											"kind": "builtin"
-										}
-									}
-								}
-							}]
-						}
-					},
-					"reference_kind": "lvalue"
-				}
-			}, {
-				"_fullName": "::stappler::string::char_const_ptr_const_ref_t",
-				"_kind": "type alias",
-				"_name": "char_const_ptr_const_ref_t",
-				"id": 573994064,
-				"kind": "type alias",
-				"name": "char_const_ptr_const_ref_t",
-				"underlying_type": {
-					"_typeName": "char_const_ptr_t&",
-					"kind": "reference",
-					"referee": {
-						"_typeName": "char_const_ptr_t",
-						"kind": "user_defined",
-						"target": {
-							"name": "char_const_ptr_t",
-							"objects": [{
-								"_fullName": "::stappler::string::char_const_ptr_t",
-								"_kind": "type alias",
-								"_name": "char_const_ptr_t",
-								"id": 1954871982,
-								"kind": "type alias",
-								"name": "char_const_ptr_t",
-								"underlying_type": {
-									"_typeName": "char const*",
-									"kind": "pointer",
-									"pointee": {
-										"_typeName": "char const",
-										"cv_qualifier": "const",
-										"kind": "cv_qualified",
-										"type": {
-											"_typeName": "char",
-											"builtin_type_kind": "char",
-											"kind": "builtin"
-										}
-									}
-								}
-							}]
-						}
-					},
-					"reference_kind": "lvalue"
-				}
-			}, {
 				"_fullName": "::stappler::string::DOUBLE_MAX_DIGITS",
 				"_kind": "variable",
 				"_name": "DOUBLE_MAX_DIGITS",
@@ -6427,36 +6995,19 @@
 					}
 				}
 			}, {
-				"_fullName": "::stappler::string::toupper(char&,char&)",
+				"_fullName": "::stappler::string::tolower(char32_t)",
 				"_kind": "function",
-				"_name": "toupper",
-				"body_kind": "declaration",
-				"id": 2800069046,
+				"_name": "tolower",
+				"body_kind": "definition",
+				"id": 3739000496,
 				"is_consteval": false,
 				"is_constexpr": false,
-				"is_declaration": true,
-				"is_definition": false,
+				"is_declaration": false,
+				"is_definition": true,
 				"is_variadic": false,
 				"kind": "function",
-				"name": "toupper",
+				"name": "tolower",
 				"parameters": [{
-					"_fullName": "b",
-					"_kind": "function parameter",
-					"_name": "b",
-					"id": 2718739903,
-					"kind": "function parameter",
-					"name": "b",
-					"type": {
-						"_typeName": "char&",
-						"kind": "reference",
-						"referee": {
-							"_typeName": "char",
-							"builtin_type_kind": "char",
-							"kind": "builtin"
-						},
-						"reference_kind": "lvalue"
-					}
-				}, {
 					"_fullName": "c",
 					"_kind": "function parameter",
 					"_name": "c",
@@ -6464,54 +7015,32 @@
 					"kind": "function parameter",
 					"name": "c",
 					"type": {
-						"_typeName": "char&",
-						"kind": "reference",
-						"referee": {
-							"_typeName": "char",
-							"builtin_type_kind": "char",
-							"kind": "builtin"
-						},
-						"reference_kind": "lvalue"
+						"_typeName": "char32_t",
+						"builtin_type_kind": "char32_t",
+						"kind": "builtin"
 					}
 				}],
 				"return_type":  {
-					"_typeName": "void",
-					"builtin_type_kind": "void",
+					"_typeName": "char32_t",
+					"builtin_type_kind": "char32_t",
 					"kind": "builtin"
 				},
 				"semantic_scope": "",
-				"signature": "(char&,char&)"
+				"signature": "(char32_t)"
 			}, {
-				"_fullName": "::stappler::string::tolower(char&,char&)",
+				"_fullName": "::stappler::string::toupper(char32_t)",
 				"_kind": "function",
-				"_name": "tolower",
-				"body_kind": "declaration",
-				"id": 3762576275,
+				"_name": "toupper",
+				"body_kind": "definition",
+				"id": 598543684,
 				"is_consteval": false,
 				"is_constexpr": false,
-				"is_declaration": true,
-				"is_definition": false,
+				"is_declaration": false,
+				"is_definition": true,
 				"is_variadic": false,
 				"kind": "function",
-				"name": "tolower",
+				"name": "toupper",
 				"parameters": [{
-					"_fullName": "b",
-					"_kind": "function parameter",
-					"_name": "b",
-					"id": 2718739903,
-					"kind": "function parameter",
-					"name": "b",
-					"type": {
-						"_typeName": "char&",
-						"kind": "reference",
-						"referee": {
-							"_typeName": "char",
-							"builtin_type_kind": "char",
-							"kind": "builtin"
-						},
-						"reference_kind": "lvalue"
-					}
-				}, {
 					"_fullName": "c",
 					"_kind": "function parameter",
 					"_name": "c",
@@ -6519,409 +7048,51 @@
 					"kind": "function parameter",
 					"name": "c",
 					"type": {
-						"_typeName": "char&",
-						"kind": "reference",
-						"referee": {
-							"_typeName": "char",
-							"builtin_type_kind": "char",
-							"kind": "builtin"
-						},
-						"reference_kind": "lvalue"
-					}
-				}],
-				"return_type":  {
-					"_typeName": "void",
-					"builtin_type_kind": "void",
-					"kind": "builtin"
-				},
-				"semantic_scope": "",
-				"signature": "(char&,char&)"
-			}, {
-				"_fullName": "::stappler::string::toupper(char16_t)",
-				"_kind": "function",
-				"_name": "toupper",
-				"body_kind": "declaration",
-				"id": 3835221781,
-				"is_consteval": false,
-				"is_constexpr": false,
-				"is_declaration": true,
-				"is_definition": false,
-				"is_variadic": false,
-				"kind": "function",
-				"name": "toupper",
-				"parameters": [{
-					"_fullName": "",
-					"_kind": "function parameter",
-					"_name": "",
-					"id": 46947589,
-					"kind": "function parameter",
-					"name": "",
-					"type": {
-						"_typeName": "char16_t",
-						"builtin_type_kind": "char16_t",
+						"_typeName": "char32_t",
+						"builtin_type_kind": "char32_t",
 						"kind": "builtin"
 					}
 				}],
 				"return_type":  {
-					"_typeName": "char16_t",
-					"builtin_type_kind": "char16_t",
+					"_typeName": "char32_t",
+					"builtin_type_kind": "char32_t",
 					"kind": "builtin"
 				},
 				"semantic_scope": "",
-				"signature": "(char16_t)"
+				"signature": "(char32_t)"
 			}, {
-				"_fullName": "::stappler::string::tolower(char16_t)",
+				"_fullName": "::stappler::string::totitle(char32_t)",
 				"_kind": "function",
-				"_name": "tolower",
-				"body_kind": "declaration",
-				"id": 2792674582,
+				"_name": "totitle",
+				"body_kind": "definition",
+				"id": 3802724895,
 				"is_consteval": false,
 				"is_constexpr": false,
-				"is_declaration": true,
-				"is_definition": false,
+				"is_declaration": false,
+				"is_definition": true,
 				"is_variadic": false,
 				"kind": "function",
-				"name": "tolower",
+				"name": "totitle",
 				"parameters": [{
-					"_fullName": "",
+					"_fullName": "c",
 					"_kind": "function parameter",
-					"_name": "",
-					"id": 46947589,
+					"_name": "c",
+					"id": 4004515611,
 					"kind": "function parameter",
-					"name": "",
+					"name": "c",
 					"type": {
-						"_typeName": "char16_t",
-						"builtin_type_kind": "char16_t",
+						"_typeName": "char32_t",
+						"builtin_type_kind": "char32_t",
 						"kind": "builtin"
 					}
 				}],
 				"return_type":  {
-					"_typeName": "char16_t",
-					"builtin_type_kind": "char16_t",
+					"_typeName": "char32_t",
+					"builtin_type_kind": "char32_t",
 					"kind": "builtin"
 				},
 				"semantic_scope": "",
-				"signature": "(char16_t)"
-			}, {
-				"_fullName": "::stappler::string::toupper_buf(char*,size_t)",
-				"_kind": "function",
-				"_name": "toupper_buf",
-				"body_kind": "declaration",
-				"id": 2221387570,
-				"is_consteval": false,
-				"is_constexpr": false,
-				"is_declaration": true,
-				"is_definition": false,
-				"is_variadic": false,
-				"kind": "function",
-				"name": "toupper_buf",
-				"parameters": [{
-					"_fullName": "",
-					"_kind": "function parameter",
-					"_name": "",
-					"id": 46947589,
-					"kind": "function parameter",
-					"name": "",
-					"type": {
-						"_typeName": "char*",
-						"kind": "pointer",
-						"pointee": {
-							"_typeName": "char",
-							"builtin_type_kind": "char",
-							"kind": "builtin"
-						}
-					}
-				}, {
-					"_fullName": "len",
-					"_kind": "function parameter",
-					"_name": "len",
-					"default_value": {
-						"expression": [{
-							"kind": "identifier",
-							"spelling": "maxOf"
-						}, {
-							"kind": "punctuation",
-							"spelling": "<"
-						}, {
-							"kind": "identifier",
-							"spelling": "size_t"
-						}, {
-							"kind": "punctuation",
-							"spelling": ">"
-						}, {
-							"kind": "punctuation",
-							"spelling": "("
-						}, {
-							"kind": "punctuation",
-							"spelling": ")"
-						}],
-						"kind": "unexposed",
-						"type": {
-							"_typeName": "size_t",
-							"kind": "user_defined",
-							"target": {
-								"name": "size_t"
-							}
-						}
-					},
-					"id": 127262242,
-					"kind": "function parameter",
-					"name": "len",
-					"type": {
-						"_typeName": "size_t",
-						"kind": "user_defined",
-						"target": {
-							"name": "size_t"
-						}
-					}
-				}],
-				"return_type":  {
-					"_typeName": "void",
-					"builtin_type_kind": "void",
-					"kind": "builtin"
-				},
-				"semantic_scope": "",
-				"signature": "(char*,size_t)"
-			}, {
-				"_fullName": "::stappler::string::tolower_buf(char*,size_t)",
-				"_kind": "function",
-				"_name": "tolower_buf",
-				"body_kind": "declaration",
-				"id": 2183248180,
-				"is_consteval": false,
-				"is_constexpr": false,
-				"is_declaration": true,
-				"is_definition": false,
-				"is_variadic": false,
-				"kind": "function",
-				"name": "tolower_buf",
-				"parameters": [{
-					"_fullName": "",
-					"_kind": "function parameter",
-					"_name": "",
-					"id": 46947589,
-					"kind": "function parameter",
-					"name": "",
-					"type": {
-						"_typeName": "char*",
-						"kind": "pointer",
-						"pointee": {
-							"_typeName": "char",
-							"builtin_type_kind": "char",
-							"kind": "builtin"
-						}
-					}
-				}, {
-					"_fullName": "len",
-					"_kind": "function parameter",
-					"_name": "len",
-					"default_value": {
-						"expression": [{
-							"kind": "identifier",
-							"spelling": "maxOf"
-						}, {
-							"kind": "punctuation",
-							"spelling": "<"
-						}, {
-							"kind": "identifier",
-							"spelling": "size_t"
-						}, {
-							"kind": "punctuation",
-							"spelling": ">"
-						}, {
-							"kind": "punctuation",
-							"spelling": "("
-						}, {
-							"kind": "punctuation",
-							"spelling": ")"
-						}],
-						"kind": "unexposed",
-						"type": {
-							"_typeName": "size_t",
-							"kind": "user_defined",
-							"target": {
-								"name": "size_t"
-							}
-						}
-					},
-					"id": 127262242,
-					"kind": "function parameter",
-					"name": "len",
-					"type": {
-						"_typeName": "size_t",
-						"kind": "user_defined",
-						"target": {
-							"name": "size_t"
-						}
-					}
-				}],
-				"return_type":  {
-					"_typeName": "void",
-					"builtin_type_kind": "void",
-					"kind": "builtin"
-				},
-				"semantic_scope": "",
-				"signature": "(char*,size_t)"
-			}, {
-				"_fullName": "::stappler::string::toupper_buf(char16_t*,size_t)",
-				"_kind": "function",
-				"_name": "toupper_buf",
-				"body_kind": "declaration",
-				"id": 2016254827,
-				"is_consteval": false,
-				"is_constexpr": false,
-				"is_declaration": true,
-				"is_definition": false,
-				"is_variadic": false,
-				"kind": "function",
-				"name": "toupper_buf",
-				"parameters": [{
-					"_fullName": "",
-					"_kind": "function parameter",
-					"_name": "",
-					"id": 46947589,
-					"kind": "function parameter",
-					"name": "",
-					"type": {
-						"_typeName": "char16_t*",
-						"kind": "pointer",
-						"pointee": {
-							"_typeName": "char16_t",
-							"builtin_type_kind": "char16_t",
-							"kind": "builtin"
-						}
-					}
-				}, {
-					"_fullName": "len",
-					"_kind": "function parameter",
-					"_name": "len",
-					"default_value": {
-						"expression": [{
-							"kind": "identifier",
-							"spelling": "maxOf"
-						}, {
-							"kind": "punctuation",
-							"spelling": "<"
-						}, {
-							"kind": "identifier",
-							"spelling": "size_t"
-						}, {
-							"kind": "punctuation",
-							"spelling": ">"
-						}, {
-							"kind": "punctuation",
-							"spelling": "("
-						}, {
-							"kind": "punctuation",
-							"spelling": ")"
-						}],
-						"kind": "unexposed",
-						"type": {
-							"_typeName": "size_t",
-							"kind": "user_defined",
-							"target": {
-								"name": "size_t"
-							}
-						}
-					},
-					"id": 127262242,
-					"kind": "function parameter",
-					"name": "len",
-					"type": {
-						"_typeName": "size_t",
-						"kind": "user_defined",
-						"target": {
-							"name": "size_t"
-						}
-					}
-				}],
-				"return_type":  {
-					"_typeName": "void",
-					"builtin_type_kind": "void",
-					"kind": "builtin"
-				},
-				"semantic_scope": "",
-				"signature": "(char16_t*,size_t)"
-			}, {
-				"_fullName": "::stappler::string::tolower_buf(char16_t*,size_t)",
-				"_kind": "function",
-				"_name": "tolower_buf",
-				"body_kind": "declaration",
-				"id": 2642585319,
-				"is_consteval": false,
-				"is_constexpr": false,
-				"is_declaration": true,
-				"is_definition": false,
-				"is_variadic": false,
-				"kind": "function",
-				"name": "tolower_buf",
-				"parameters": [{
-					"_fullName": "",
-					"_kind": "function parameter",
-					"_name": "",
-					"id": 46947589,
-					"kind": "function parameter",
-					"name": "",
-					"type": {
-						"_typeName": "char16_t*",
-						"kind": "pointer",
-						"pointee": {
-							"_typeName": "char16_t",
-							"builtin_type_kind": "char16_t",
-							"kind": "builtin"
-						}
-					}
-				}, {
-					"_fullName": "len",
-					"_kind": "function parameter",
-					"_name": "len",
-					"default_value": {
-						"expression": [{
-							"kind": "identifier",
-							"spelling": "maxOf"
-						}, {
-							"kind": "punctuation",
-							"spelling": "<"
-						}, {
-							"kind": "identifier",
-							"spelling": "size_t"
-						}, {
-							"kind": "punctuation",
-							"spelling": ">"
-						}, {
-							"kind": "punctuation",
-							"spelling": "("
-						}, {
-							"kind": "punctuation",
-							"spelling": ")"
-						}],
-						"kind": "unexposed",
-						"type": {
-							"_typeName": "size_t",
-							"kind": "user_defined",
-							"target": {
-								"name": "size_t"
-							}
-						}
-					},
-					"id": 127262242,
-					"kind": "function parameter",
-					"name": "len",
-					"type": {
-						"_typeName": "size_t",
-						"kind": "user_defined",
-						"target": {
-							"name": "size_t"
-						}
-					}
-				}],
-				"return_type":  {
-					"_typeName": "void",
-					"builtin_type_kind": "void",
-					"kind": "builtin"
-				},
-				"semantic_scope": "",
-				"signature": "(char16_t*,size_t)"
+				"signature": "(char32_t)"
 			}, {
 				"_fullName": "::stappler::string::_itoa(int64_t,char*,size_t)",
 				"_kind": "function",
@@ -7191,6 +7362,80 @@
 				"semantic_scope": "",
 				"signature": "(uint64_t,char16_t*,size_t)"
 			}, {
+				"_fullName": "::stappler::string::_itoa_len(int64_t)",
+				"_kind": "function",
+				"_name": "_itoa_len",
+				"body_kind": "declaration",
+				"id": 607157304,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": true,
+				"is_definition": false,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "_itoa_len",
+				"parameters": [{
+					"_fullName": "number",
+					"_kind": "function parameter",
+					"_name": "number",
+					"id": 451676807,
+					"kind": "function parameter",
+					"name": "number",
+					"type": {
+						"_typeName": "int64_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "int64_t"
+						}
+					}
+				}],
+				"return_type":  {
+					"_typeName": "size_t",
+					"kind": "user_defined",
+					"target": {
+						"name": "size_t"
+					}
+				},
+				"semantic_scope": "",
+				"signature": "(int64_t)"
+			}, {
+				"_fullName": "::stappler::string::_itoa_len(uint64_t)",
+				"_kind": "function",
+				"_name": "_itoa_len",
+				"body_kind": "declaration",
+				"id": 96116857,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": true,
+				"is_definition": false,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "_itoa_len",
+				"parameters": [{
+					"_fullName": "number",
+					"_kind": "function parameter",
+					"_name": "number",
+					"id": 451676807,
+					"kind": "function parameter",
+					"name": "number",
+					"type": {
+						"_typeName": "uint64_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "uint64_t"
+						}
+					}
+				}],
+				"return_type":  {
+					"_typeName": "size_t",
+					"kind": "user_defined",
+					"target": {
+						"name": "size_t"
+					}
+				},
+				"semantic_scope": "",
+				"signature": "(uint64_t)"
+			}, {
 				"_fullName": "::stappler::string::_dtoa(double,char*,size_t)",
 				"_kind": "function",
 				"_name": "_dtoa",
@@ -7320,6 +7565,395 @@
 				},
 				"semantic_scope": "",
 				"signature": "(double,char16_t*,size_t)"
+			}, {
+				"_fullName": "::stappler::string::_dtoa_len(double)",
+				"_kind": "function",
+				"_name": "_dtoa_len",
+				"body_kind": "declaration",
+				"id": 1466536647,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": true,
+				"is_definition": false,
+				"is_variadic": false,
+				"kind": "function",
+				"name": "_dtoa_len",
+				"parameters": [{
+					"_fullName": "number",
+					"_kind": "function parameter",
+					"_name": "number",
+					"id": 451676807,
+					"kind": "function parameter",
+					"name": "number",
+					"type": {
+						"_typeName": "double",
+						"builtin_type_kind": "double",
+						"kind": "builtin"
+					}
+				}],
+				"return_type":  {
+					"_typeName": "size_t",
+					"kind": "user_defined",
+					"target": {
+						"name": "size_t"
+					}
+				},
+				"semantic_scope": "",
+				"signature": "(double)"
+			}, {
+				"_fullName": "::stappler::string::readNumber<typename,typename>(Char const*,size_t,int,uint8_t&)",
+				"_kind": "function template",
+				"_name": "readNumber",
+				"childs": [{
+					"_fullName": "::stappler::string::readNumber<typename,typename>(Char const*,size_t,int,uint8_t&)",
+					"_kind": "function",
+					"_name": "readNumber",
+					"body_kind": "definition",
+					"id": 3995725752,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "readNumber",
+					"parameters": [{
+						"_fullName": "ptr",
+						"_kind": "function parameter",
+						"_name": "ptr",
+						"id": 2892464029,
+						"kind": "function parameter",
+						"name": "ptr",
+						"type": {
+							"_typeName": "Char const*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "Char const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "Char",
+									"entity": {
+										"name": "Char",
+										"objects": [{
+											"_fullName": "Char",
+											"_kind": "template type parameter",
+											"_name": "Char",
+											"id": 3389819904,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "Char"
+										}]
+									},
+									"kind": "template_parameter"
+								}
+							}
+						}
+					}, {
+						"_fullName": "len",
+						"_kind": "function parameter",
+						"_name": "len",
+						"id": 127262242,
+						"kind": "function parameter",
+						"name": "len",
+						"type": {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						}
+					}, {
+						"_fullName": "base",
+						"_kind": "function parameter",
+						"_name": "base",
+						"id": 438461662,
+						"kind": "function parameter",
+						"name": "base",
+						"type": {
+							"_typeName": "int",
+							"builtin_type_kind": "int",
+							"kind": "builtin"
+						}
+					}, {
+						"_fullName": "offset",
+						"_kind": "function parameter",
+						"_name": "offset",
+						"id": 1470309982,
+						"kind": "function parameter",
+						"name": "offset",
+						"type": {
+							"_typeName": "uint8_t&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "uint8_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "uint8_t"
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "Result<T>",
+						"arguments_exposed": false,
+						"kind": "template_instantiation",
+						"primary_template": {
+							"name": "Result",
+							"objects": [{
+								"_fullName": "::stappler::Result<typename>",
+								"_kind": "class template",
+								"_name": "Result",
+								"class": {
+									"_fullName": "::stappler::Result<typename>",
+									"_kind": "class",
+									"_name": "Result",
+									"class_kind": "struct",
+									"id": 3088976169,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "Result",
+									"scope": {
+										"is_templated": true,
+										"name": "Result",
+										"template_parameters": [{
+											"_fullName": "T",
+											"_kind": "template type parameter",
+											"_name": "T",
+											"id": 1306257776,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "T"
+										}]
+									},
+									"semantic_scope": ""
+								},
+								"comment": "Result is a helper class for functions, that returns some result\nor fails and returns nothing. It defines several mechanisms to handle\nerror state:\n- get with default value in case of failure (`get`)\n- grab value into object, provided by reference, if value is valid (`grab`)\n- call a callback with value, if it's valid (`unwrap`)\n",
+								"id": 3088976169,
+								"kind": "class template",
+								"name": "Result",
+								"parameters": [{
+									"_fullName": "T",
+									"_kind": "template type parameter",
+									"_name": "T",
+									"id": 1306257776,
+									"is_variadic": false,
+									"keyword": "typename",
+									"kind": "template type parameter",
+									"name": "T"
+								}],
+								"scope":  {
+									"is_templated": true,
+									"name": "Result",
+									"template_parameters": [{
+										"_fullName": "T",
+										"_kind": "template type parameter",
+										"_name": "T",
+										"id": 1306257776,
+										"is_variadic": false,
+										"keyword": "typename",
+										"kind": "template type parameter",
+										"name": "T"
+									}]
+								}
+							}]
+						},
+						"unexposed_arguments": "T"
+					},
+					"semantic_scope": "",
+					"signature": "(Char const*,size_t,int,uint8_t&)"
+				}],
+				"function":  {
+					"_fullName": "::stappler::string::readNumber<typename,typename>(Char const*,size_t,int,uint8_t&)",
+					"_kind": "function",
+					"_name": "readNumber",
+					"body_kind": "definition",
+					"id": 3995725752,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"kind": "function",
+					"name": "readNumber",
+					"parameters": [{
+						"_fullName": "ptr",
+						"_kind": "function parameter",
+						"_name": "ptr",
+						"id": 2892464029,
+						"kind": "function parameter",
+						"name": "ptr",
+						"type": {
+							"_typeName": "Char const*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "Char const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "Char",
+									"entity": {
+										"name": "Char",
+										"objects": [{
+											"_fullName": "Char",
+											"_kind": "template type parameter",
+											"_name": "Char",
+											"id": 3389819904,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "Char"
+										}]
+									},
+									"kind": "template_parameter"
+								}
+							}
+						}
+					}, {
+						"_fullName": "len",
+						"_kind": "function parameter",
+						"_name": "len",
+						"id": 127262242,
+						"kind": "function parameter",
+						"name": "len",
+						"type": {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						}
+					}, {
+						"_fullName": "base",
+						"_kind": "function parameter",
+						"_name": "base",
+						"id": 438461662,
+						"kind": "function parameter",
+						"name": "base",
+						"type": {
+							"_typeName": "int",
+							"builtin_type_kind": "int",
+							"kind": "builtin"
+						}
+					}, {
+						"_fullName": "offset",
+						"_kind": "function parameter",
+						"_name": "offset",
+						"id": 1470309982,
+						"kind": "function parameter",
+						"name": "offset",
+						"type": {
+							"_typeName": "uint8_t&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "uint8_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "uint8_t"
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"return_type":  {
+						"_typeName": "Result<T>",
+						"arguments_exposed": false,
+						"kind": "template_instantiation",
+						"primary_template": {
+							"name": "Result",
+							"objects": [{
+								"_fullName": "::stappler::Result<typename>",
+								"_kind": "class template",
+								"_name": "Result",
+								"class": {
+									"_fullName": "::stappler::Result<typename>",
+									"_kind": "class",
+									"_name": "Result",
+									"class_kind": "struct",
+									"id": 3088976169,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "Result",
+									"scope": {
+										"is_templated": true,
+										"name": "Result",
+										"template_parameters": [{
+											"_fullName": "T",
+											"_kind": "template type parameter",
+											"_name": "T",
+											"id": 1306257776,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "T"
+										}]
+									},
+									"semantic_scope": ""
+								},
+								"comment": "Result is a helper class for functions, that returns some result\nor fails and returns nothing. It defines several mechanisms to handle\nerror state:\n- get with default value in case of failure (`get`)\n- grab value into object, provided by reference, if value is valid (`grab`)\n- call a callback with value, if it's valid (`unwrap`)\n",
+								"id": 3088976169,
+								"kind": "class template",
+								"name": "Result",
+								"parameters": [{
+									"_fullName": "T",
+									"_kind": "template type parameter",
+									"_name": "T",
+									"id": 1306257776,
+									"is_variadic": false,
+									"keyword": "typename",
+									"kind": "template type parameter",
+									"name": "T"
+								}],
+								"scope":  {
+									"is_templated": true,
+									"name": "Result",
+									"template_parameters": [{
+										"_fullName": "T",
+										"_kind": "template type parameter",
+										"_name": "T",
+										"id": 1306257776,
+										"is_variadic": false,
+										"keyword": "typename",
+										"kind": "template type parameter",
+										"name": "T"
+									}]
+								}
+							}]
+						},
+						"unexposed_arguments": "T"
+					},
+					"semantic_scope": "",
+					"signature": "(Char const*,size_t,int,uint8_t&)"
+				},
+				"id": 3995725752,
+				"kind": "function template",
+				"name": "readNumber",
+				"parameters": [{
+					"_fullName": "T",
+					"_kind": "template type parameter",
+					"_name": "T",
+					"id": 1306257776,
+					"is_variadic": false,
+					"keyword": "typename",
+					"kind": "template type parameter",
+					"name": "T"
+				}, {
+					"_fullName": "Char",
+					"_kind": "template type parameter",
+					"_name": "Char",
+					"id": 3389819904,
+					"is_variadic": false,
+					"keyword": "typename",
+					"kind": "template type parameter",
+					"name": "Char"
+				}]
 			}],
 			"id": 649652778,
 			"is_anonymous": false,

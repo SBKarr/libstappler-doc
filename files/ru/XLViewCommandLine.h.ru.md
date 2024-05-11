@@ -75,7 +75,7 @@ Title: XLViewCommandLine.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::Extent2
+Тип: stappler::geom::Extent2
 
 
 # ::stappler::xenolith::ViewCommandLineData::viewDecoration
@@ -84,7 +84,7 @@ Title: XLViewCommandLine.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::Padding
+Тип: stappler::geom::Padding
 
 
 # ::stappler::xenolith::ViewCommandLineData::density

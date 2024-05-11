@@ -119,7 +119,7 @@ Title: XL2dCommandList.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::Mat4
+Тип: stappler::geom::Mat4
 
 
 # ::stappler::xenolith::basic2d::CmdDeferred::modelTransform
@@ -128,7 +128,7 @@ Title: XL2dCommandList.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::Mat4
+Тип: stappler::geom::Mat4
 
 
 # ::stappler::xenolith::basic2d::CmdDeferred::normalized
@@ -209,7 +209,7 @@ Title: XL2dCommandList.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::Mat4
+Тип: stappler::geom::Mat4
 
 
 # ::stappler::xenolith::basic2d::CmdShadowDeferred::modelTransform
@@ -218,7 +218,7 @@ Title: XL2dCommandList.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::Mat4
+Тип: stappler::geom::Mat4
 
 
 # ::stappler::xenolith::basic2d::CmdShadowDeferred::normalized
@@ -243,7 +243,7 @@ Title: XL2dCommandList.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::Mat4
+Тип: stappler::geom::Mat4
 
 
 # ::stappler::xenolith::basic2d::CmdSdfGroup2D::state
@@ -282,70 +282,70 @@ Title: XL2dCommandList.h
 Тип: memory::vector<SdfPrimitive2DHeader>
 
 
-# ::stappler::xenolith::basic2d::CmdSdfGroup2D::addCircle2D(stappler::xenolith::Vec2,float)
+# ::stappler::xenolith::basic2d::CmdSdfGroup2D::addCircle2D(stappler::geom::Vec2,float)
 
 ## BRIEF
 
 ## CONTENT
 
 Параметры:
-* stappler::xenolith::Vec2
+* stappler::geom::Vec2
 * float
 
 
-# ::stappler::xenolith::basic2d::CmdSdfGroup2D::addRect2D(stappler::xenolith::Rect)
+# ::stappler::xenolith::basic2d::CmdSdfGroup2D::addRect2D(stappler::geom::Rect)
 
 ## BRIEF
 
 ## CONTENT
 
 Параметры:
-* stappler::xenolith::Rect
+* stappler::geom::Rect
 
 
-# ::stappler::xenolith::basic2d::CmdSdfGroup2D::addRoundedRect2D(stappler::xenolith::Rect,float)
+# ::stappler::xenolith::basic2d::CmdSdfGroup2D::addRoundedRect2D(stappler::geom::Rect,float)
 
 ## BRIEF
 
 ## CONTENT
 
 Параметры:
-* stappler::xenolith::Rect
+* stappler::geom::Rect
 * float
 
 
-# ::stappler::xenolith::basic2d::CmdSdfGroup2D::addRoundedRect2D(stappler::xenolith::Rect,stappler::xenolith::Vec4)
+# ::stappler::xenolith::basic2d::CmdSdfGroup2D::addRoundedRect2D(stappler::geom::Rect,stappler::geom::Vec4)
 
 ## BRIEF
 
 ## CONTENT
 
 Параметры:
-* stappler::xenolith::Rect
-* stappler::xenolith::Vec4
+* stappler::geom::Rect
+* stappler::geom::Vec4
 
 
-# ::stappler::xenolith::basic2d::CmdSdfGroup2D::addTriangle2D(stappler::xenolith::Vec2,stappler::xenolith::Vec2,stappler::xenolith::Vec2,stappler::xenolith::Vec2)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::xenolith::Vec2
-* stappler::xenolith::Vec2
-* stappler::xenolith::Vec2
-* stappler::xenolith::Vec2
-
-
-# ::stappler::xenolith::basic2d::CmdSdfGroup2D::addPolygon2D(SpanView<stappler::xenolith::Vec2>)
+# ::stappler::xenolith::basic2d::CmdSdfGroup2D::addTriangle2D(stappler::geom::Vec2,stappler::geom::Vec2,stappler::geom::Vec2,stappler::geom::Vec2)
 
 ## BRIEF
 
 ## CONTENT
 
 Параметры:
-* SpanView<stappler::xenolith::Vec2>
+* stappler::geom::Vec2
+* stappler::geom::Vec2
+* stappler::geom::Vec2
+* stappler::geom::Vec2
+
+
+# ::stappler::xenolith::basic2d::CmdSdfGroup2D::addPolygon2D(SpanView<stappler::geom::Vec2>)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* SpanView<stappler::geom::Vec2>
 
 
 # ::stappler::xenolith::basic2d::Command
@@ -445,7 +445,7 @@ Title: XL2dCommandList.h
 Возвращает:
 * bool
 
-# ::stappler::xenolith::basic2d::CommandList::pushVertexArray(Rc<stappler::xenolith::basic2d::VertexData>&&,stappler::xenolith::Mat4 const&,SpanView<stappler::xenolith::ZOrder>,core::MaterialId,stappler::xenolith::StateId,stappler::xenolith::RenderingLevel,float,stappler::xenolith::CommandFlags)
+# ::stappler::xenolith::basic2d::CommandList::pushVertexArray(Rc<stappler::xenolith::basic2d::VertexData>&&,const stappler::geom::Mat4&,SpanView<stappler::xenolith::ZOrder>,core::MaterialId,stappler::xenolith::StateId,stappler::xenolith::RenderingLevel,float,stappler::xenolith::CommandFlags)
 
 ## BRIEF
 
@@ -455,7 +455,7 @@ Title: XL2dCommandList.h
 
 Параметры:
 * Rc<stappler::xenolith::basic2d::VertexData>&&
-* stappler::xenolith::Mat4 const&
+* const stappler::geom::Mat4&
 * SpanView<stappler::xenolith::ZOrder>
 * core::MaterialId
 * stappler::xenolith::StateId
@@ -482,7 +482,7 @@ Title: XL2dCommandList.h
 * stappler::xenolith::CommandFlags
 
 
-# ::stappler::xenolith::basic2d::CommandList::pushDeferredVertexResult(Rc<stappler::xenolith::basic2d::DeferredVertexResult> const&,stappler::xenolith::Mat4 const&,stappler::xenolith::Mat4 const&,bool,SpanView<stappler::xenolith::ZOrder>,core::MaterialId,stappler::xenolith::StateId,stappler::xenolith::RenderingLevel,float,stappler::xenolith::CommandFlags)
+# ::stappler::xenolith::basic2d::CommandList::pushDeferredVertexResult(Rc<stappler::xenolith::basic2d::DeferredVertexResult> const&,const stappler::geom::Mat4&,const stappler::geom::Mat4&,bool,SpanView<stappler::xenolith::ZOrder>,core::MaterialId,stappler::xenolith::StateId,stappler::xenolith::RenderingLevel,float,stappler::xenolith::CommandFlags)
 
 ## BRIEF
 
@@ -492,8 +492,8 @@ Title: XL2dCommandList.h
 
 Параметры:
 * Rc<stappler::xenolith::basic2d::DeferredVertexResult> const&
-* stappler::xenolith::Mat4 const&
-* stappler::xenolith::Mat4 const&
+* const stappler::geom::Mat4&
+* const stappler::geom::Mat4&
 * bool
 * SpanView<stappler::xenolith::ZOrder>
 * core::MaterialId
@@ -503,7 +503,7 @@ Title: XL2dCommandList.h
 * stappler::xenolith::CommandFlags
 
 
-# ::stappler::xenolith::basic2d::CommandList::pushShadowArray(Rc<stappler::xenolith::basic2d::VertexData>&&,stappler::xenolith::Mat4 const&,stappler::xenolith::StateId,float)
+# ::stappler::xenolith::basic2d::CommandList::pushShadowArray(Rc<stappler::xenolith::basic2d::VertexData>&&,const stappler::geom::Mat4&,stappler::xenolith::StateId,float)
 
 ## BRIEF
 
@@ -513,7 +513,7 @@ Title: XL2dCommandList.h
 
 Параметры:
 * Rc<stappler::xenolith::basic2d::VertexData>&&
-* stappler::xenolith::Mat4 const&
+* const stappler::geom::Mat4&
 * stappler::xenolith::StateId
 * float
 
@@ -532,7 +532,7 @@ Title: XL2dCommandList.h
 * float
 
 
-# ::stappler::xenolith::basic2d::CommandList::pushDeferredShadow(Rc<stappler::xenolith::basic2d::DeferredVertexResult> const&,stappler::xenolith::Mat4 const&,stappler::xenolith::Mat4 const&,stappler::xenolith::StateId,bool,float)
+# ::stappler::xenolith::basic2d::CommandList::pushDeferredShadow(Rc<stappler::xenolith::basic2d::DeferredVertexResult> const&,const stappler::geom::Mat4&,const stappler::geom::Mat4&,stappler::xenolith::StateId,bool,float)
 
 ## BRIEF
 
@@ -542,14 +542,14 @@ Title: XL2dCommandList.h
 
 Параметры:
 * Rc<stappler::xenolith::basic2d::DeferredVertexResult> const&
-* stappler::xenolith::Mat4 const&
-* stappler::xenolith::Mat4 const&
+* const stappler::geom::Mat4&
+* const stappler::geom::Mat4&
 * stappler::xenolith::StateId
 * bool
 * float
 
 
-# ::stappler::xenolith::basic2d::CommandList::pushSdfGroup(stappler::xenolith::Mat4 const&,stappler::xenolith::StateId,float,Callback<void (stappler::xenolith::basic2d::CmdSdfGroup2D &)> const&)
+# ::stappler::xenolith::basic2d::CommandList::pushSdfGroup(const stappler::geom::Mat4&,stappler::xenolith::StateId,float,Callback<void (stappler::xenolith::basic2d::CmdSdfGroup2D &)> const&)
 
 ## BRIEF
 
@@ -558,7 +558,7 @@ Title: XL2dCommandList.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Mat4 const&
+* const stappler::geom::Mat4&
 * stappler::xenolith::StateId
 * float
 * Callback<void (stappler::xenolith::basic2d::CmdSdfGroup2D &)> const&
@@ -596,6 +596,17 @@ Title: XL2dCommandList.h
 
 Возвращает:
 * bool
+
+# ::stappler::xenolith::basic2d::CommandList::size() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* size_t
 
 # ::stappler::xenolith::basic2d::CommandList::addCommand(stappler::xenolith::basic2d::Command*)
 
@@ -640,6 +651,17 @@ Title: XL2dCommandList.h
 Доступ: protected
 
 Тип: stappler::xenolith::basic2d::Command*
+
+
+# ::stappler::xenolith::basic2d::CommandList::_size
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: size_t
 
 
 # ::stappler::xenolith::basic2d::FrameContextHandle2d

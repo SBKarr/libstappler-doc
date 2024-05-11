@@ -17,6 +17,7 @@ Title: MaterialColorScheme.h
 Значения:
 * LightTheme
 * DarkTheme
+* Custom
 
 
 # ::stappler::xenolith::material2d::ColorRole
@@ -55,6 +56,7 @@ Title: MaterialColorScheme.h
 * InverseSurface
 * InverseOnSurface
 * InversePrimary
+* Undefined
 * Max
 
 
@@ -72,71 +74,71 @@ Title: MaterialColorScheme.h
 ## CONTENT
 
 
-# ::stappler::xenolith::material2d::TonalPalette::TonalPalette(stappler::xenolith::Color4F const&)
+# ::stappler::xenolith::material2d::TonalPalette::TonalPalette(const stappler::geom::Color4F&)
 
 ## BRIEF
 
 ## CONTENT
 
 Параметры:
-* stappler::xenolith::Color4F const&
+* const stappler::geom::Color4F&
 
 
-# ::stappler::xenolith::material2d::TonalPalette::TonalPalette(stappler::xenolith::material2d::Cam16 const&)
-
-## BRIEF
-
-## CONTENT
-
-Параметры:
-* stappler::xenolith::material2d::Cam16 const&
-
-
-# ::stappler::xenolith::material2d::TonalPalette::TonalPalette(stappler::xenolith::material2d::Cam16Float,stappler::xenolith::material2d::Cam16Float)
+# ::stappler::xenolith::material2d::TonalPalette::TonalPalette(geom::Cam16 const&)
 
 ## BRIEF
 
 ## CONTENT
 
 Параметры:
-* stappler::xenolith::material2d::Cam16Float
-* stappler::xenolith::material2d::Cam16Float
+* geom::Cam16 const&
 
 
-# ::stappler::xenolith::material2d::TonalPalette::get(stappler::xenolith::material2d::Cam16Float,float) const
+# ::stappler::xenolith::material2d::TonalPalette::TonalPalette(geom::Cam16Float,geom::Cam16Float)
 
 ## BRIEF
 
 ## CONTENT
 
 Параметры:
-* stappler::xenolith::material2d::Cam16Float
+* geom::Cam16Float
+* geom::Cam16Float
+
+
+# ::stappler::xenolith::material2d::TonalPalette::get(geom::Cam16Float,float) const
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* geom::Cam16Float
 * float
 
 Возвращает:
-* stappler::xenolith::Color4F
+* stappler::geom::Color4F
 
-# ::stappler::xenolith::material2d::TonalPalette::hct(stappler::xenolith::material2d::Cam16Float,float) const
+# ::stappler::xenolith::material2d::TonalPalette::hct(geom::Cam16Float,float) const
 
 ## BRIEF
 
 ## CONTENT
 
 Параметры:
-* stappler::xenolith::material2d::Cam16Float
+* geom::Cam16Float
 * float
 
 Возвращает:
-* stappler::xenolith::material2d::ColorHCT
+* stappler::geom::ColorHCT
 
-# ::stappler::xenolith::material2d::TonalPalette::values(stappler::xenolith::material2d::Cam16Float,float) const
+# ::stappler::xenolith::material2d::TonalPalette::values(geom::Cam16Float,float) const
 
 ## BRIEF
 
 ## CONTENT
 
 Параметры:
-* stappler::xenolith::material2d::Cam16Float
+* geom::Cam16Float
 * float
 
 Возвращает:
@@ -148,7 +150,7 @@ Title: MaterialColorScheme.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::material2d::Cam16Float
+Тип: geom::Cam16Float
 
 
 # ::stappler::xenolith::material2d::TonalPalette::chroma
@@ -157,7 +159,7 @@ Title: MaterialColorScheme.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::material2d::Cam16Float
+Тип: geom::Cam16Float
 
 
 # ::stappler::xenolith::material2d::CorePalette
@@ -174,37 +176,37 @@ Title: MaterialColorScheme.h
 ## CONTENT
 
 
-# ::stappler::xenolith::material2d::CorePalette::CorePalette(stappler::xenolith::Color4F const&,bool)
+# ::stappler::xenolith::material2d::CorePalette::CorePalette(const stappler::geom::Color4F&,bool)
 
 ## BRIEF
 
 ## CONTENT
 
 Параметры:
-* stappler::xenolith::Color4F const&
+* const stappler::geom::Color4F&
 * bool
 
 
-# ::stappler::xenolith::material2d::CorePalette::CorePalette(stappler::xenolith::material2d::Cam16 const&,bool)
+# ::stappler::xenolith::material2d::CorePalette::CorePalette(geom::Cam16 const&,bool)
 
 ## BRIEF
 
 ## CONTENT
 
 Параметры:
-* stappler::xenolith::material2d::Cam16 const&
+* geom::Cam16 const&
 * bool
 
 
-# ::stappler::xenolith::material2d::CorePalette::CorePalette(stappler::xenolith::material2d::Cam16Float,stappler::xenolith::material2d::Cam16Float,bool)
+# ::stappler::xenolith::material2d::CorePalette::CorePalette(geom::Cam16Float,geom::Cam16Float,bool)
 
 ## BRIEF
 
 ## CONTENT
 
 Параметры:
-* stappler::xenolith::material2d::Cam16Float
-* stappler::xenolith::material2d::Cam16Float
+* geom::Cam16Float
+* geom::Cam16Float
 * bool
 
 
@@ -300,7 +302,7 @@ Title: MaterialColorScheme.h
 * stappler::xenolith::material2d::CorePalette const&
 
 
-# ::stappler::xenolith::material2d::ColorScheme::ColorScheme(stappler::xenolith::material2d::ThemeType,stappler::xenolith::Color4F const&,bool)
+# ::stappler::xenolith::material2d::ColorScheme::ColorScheme(stappler::xenolith::material2d::ThemeType,const stappler::geom::Color4F&,bool)
 
 ## BRIEF
 
@@ -308,11 +310,11 @@ Title: MaterialColorScheme.h
 
 Параметры:
 * stappler::xenolith::material2d::ThemeType
-* stappler::xenolith::Color4F const&
+* const stappler::geom::Color4F&
 * bool
 
 
-# ::stappler::xenolith::material2d::ColorScheme::ColorScheme(stappler::xenolith::material2d::ThemeType,stappler::xenolith::material2d::ColorHCT const&,bool)
+# ::stappler::xenolith::material2d::ColorScheme::ColorScheme(stappler::xenolith::material2d::ThemeType,const stappler::geom::ColorHCT&,bool)
 
 ## BRIEF
 
@@ -320,7 +322,7 @@ Title: MaterialColorScheme.h
 
 Параметры:
 * stappler::xenolith::material2d::ThemeType
-* stappler::xenolith::material2d::ColorHCT const&
+* const stappler::geom::ColorHCT&
 * bool
 
 
@@ -335,7 +337,7 @@ Title: MaterialColorScheme.h
 * stappler::xenolith::material2d::CorePalette const&
 
 
-# ::stappler::xenolith::material2d::ColorScheme::set(stappler::xenolith::material2d::ThemeType,stappler::xenolith::Color4F const&,bool)
+# ::stappler::xenolith::material2d::ColorScheme::set(stappler::xenolith::material2d::ThemeType,const stappler::geom::Color4F&,bool)
 
 ## BRIEF
 
@@ -343,11 +345,11 @@ Title: MaterialColorScheme.h
 
 Параметры:
 * stappler::xenolith::material2d::ThemeType
-* stappler::xenolith::Color4F const&
+* const stappler::geom::Color4F&
 * bool
 
 
-# ::stappler::xenolith::material2d::ColorScheme::set(stappler::xenolith::material2d::ThemeType,stappler::xenolith::material2d::ColorHCT const&,bool)
+# ::stappler::xenolith::material2d::ColorScheme::set(stappler::xenolith::material2d::ThemeType,const stappler::geom::ColorHCT&,bool)
 
 ## BRIEF
 
@@ -355,7 +357,7 @@ Title: MaterialColorScheme.h
 
 Параметры:
 * stappler::xenolith::material2d::ThemeType
-* stappler::xenolith::material2d::ColorHCT const&
+* const stappler::geom::ColorHCT&
 * bool
 
 
@@ -369,7 +371,7 @@ Title: MaterialColorScheme.h
 * stappler::xenolith::material2d::ColorRole
 
 Возвращает:
-* stappler::xenolith::Color4F
+* stappler::geom::Color4F
 
 # ::stappler::xenolith::material2d::ColorScheme::on(stappler::xenolith::material2d::ColorRole) const
 
@@ -381,7 +383,7 @@ Title: MaterialColorScheme.h
 * stappler::xenolith::material2d::ColorRole
 
 Возвращает:
-* stappler::xenolith::Color4F
+* stappler::geom::Color4F
 
 # ::stappler::xenolith::material2d::ColorScheme::hct(stappler::xenolith::material2d::ColorRole,float) const
 
@@ -394,7 +396,7 @@ Title: MaterialColorScheme.h
 * float
 
 Возвращает:
-* stappler::xenolith::material2d::ColorHCT
+* stappler::geom::ColorHCT
 
 # ::stappler::xenolith::material2d::ColorScheme::values(stappler::xenolith::material2d::ColorRole,float) const
 

@@ -45,15 +45,6 @@ Title: XLVkView.h
 Тип: bool
 
 
-# ::stappler::xenolith::vk::View::EngineOptions::flattenFrameRate
-
-## BRIEF
-
-## CONTENT
-
-Тип: bool
-
-
 # ::stappler::xenolith::vk::View::EngineOptions::followDisplayLink
 
 ## BRIEF
@@ -152,6 +143,15 @@ Title: XLVkView.h
 
 Параметры:
 * bool
+
+
+# ::stappler::xenolith::vk::View::close()
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
 
 
 # ::stappler::xenolith::vk::View::run()
@@ -340,6 +340,29 @@ Title: XLVkView.h
 Доступ: public
 
 
+# ::stappler::xenolith::vk::View::setRenderOnDemand(bool)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* bool
+
+
+# ::stappler::xenolith::vk::View::isRenderOnDemand() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* bool
+
 # ::stappler::xenolith::vk::View::ScheduleImageMode
 
 ## BRIEF
@@ -352,6 +375,42 @@ Title: XLVkView.h
 * AcquireSwapchainImageAsync
 * AcquireSwapchainImageImmediate
 * AcquireOffscreenImage
+
+
+# ::stappler::xenolith::vk::View::FrameTimeInfo
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+
+# ::stappler::xenolith::vk::View::FrameTimeInfo::dt
+
+## BRIEF
+
+## CONTENT
+
+Тип: uint64_t
+
+
+# ::stappler::xenolith::vk::View::FrameTimeInfo::avg
+
+## BRIEF
+
+## CONTENT
+
+Тип: uint64_t
+
+
+# ::stappler::xenolith::vk::View::FrameTimeInfo::clock
+
+## BRIEF
+
+## CONTENT
+
+Тип: uint64_t
 
 
 # ::stappler::xenolith::vk::View::pollInput(bool)
@@ -554,7 +613,7 @@ Title: XLVkView.h
 Доступ: protected
 
 Возвращает:
-* Pair<uint64_t, uint64_t>
+* stappler::xenolith::vk::View::FrameTimeInfo
 
 # ::stappler::xenolith::vk::View::waitForFences(uint64_t)
 
@@ -595,6 +654,19 @@ Title: XLVkView.h
 Доступ: protected
 
 
+# ::stappler::xenolith::vk::View::schedulePresent(stappler::xenolith::vk::SwapchainImage*,uint64_t)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Параметры:
+* stappler::xenolith::vk::SwapchainImage*
+* uint64_t
+
+
 # ::stappler::xenolith::vk::View::_options
 
 ## BRIEF
@@ -617,7 +689,7 @@ Title: XLVkView.h
 Тип: bool
 
 
-# ::stappler::xenolith::vk::View::_blockDeprecation
+# ::stappler::xenolith::vk::View::_blockSwapchainRecreation
 
 ## BRIEF
 
@@ -626,6 +698,28 @@ Title: XLVkView.h
 Доступ: protected
 
 Тип: bool
+
+
+# ::stappler::xenolith::vk::View::_swapchainInvalidated
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: bool
+
+
+# ::stappler::xenolith::vk::View::_refId
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: uint64_t
 
 
 # ::stappler::xenolith::vk::View::_framesInProgress
@@ -673,6 +767,17 @@ Title: XLVkView.h
 
 
 # ::stappler::xenolith::vk::View::_scheduledTime
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: uint64_t
+
+
+# ::stappler::xenolith::vk::View::_nextPresentWindow
 
 ## BRIEF
 

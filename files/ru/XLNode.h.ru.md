@@ -8,6 +8,84 @@ Title: XLNode.h
 ## CONTENT
 
 
+# ::stappler::xenolith::ActionStorage
+
+## BRIEF
+
+## CONTENT
+
+Базовые классы:
+* Ref
+
+
+# ::stappler::xenolith::ActionStorage::actionToStart
+
+## BRIEF
+
+## CONTENT
+
+Тип: Vector<Rc<stappler::xenolith::Action>>
+
+
+# ::stappler::xenolith::ActionStorage::addAction(Rc<stappler::xenolith::Action>&&)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* Rc<stappler::xenolith::Action>&&
+
+
+# ::stappler::xenolith::ActionStorage::removeAction(stappler::xenolith::Action*)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* stappler::xenolith::Action*
+
+
+# ::stappler::xenolith::ActionStorage::removeAllActions()
+
+## BRIEF
+
+## CONTENT
+
+
+# ::stappler::xenolith::ActionStorage::removeActionByTag(uint32_t)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* uint32_t
+
+
+# ::stappler::xenolith::ActionStorage::removeAllActionsByTag(uint32_t)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* uint32_t
+
+
+# ::stappler::xenolith::ActionStorage::getActionByTag(uint32_t)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* uint32_t
+
+Возвращает:
+* stappler::xenolith::Action*
+
 # ::stappler::xenolith::Node
 
 ## BRIEF
@@ -80,7 +158,7 @@ Title: XLNode.h
 * bool
 
 Возвращает:
-* stappler::xenolith::Mat4
+* stappler::geom::Mat4
 
 # ::stappler::xenolith::Node::getChainParentToNodeTransform(stappler::xenolith::Node*,stappler::xenolith::Node*,bool)
 
@@ -96,7 +174,7 @@ Title: XLNode.h
 * bool
 
 Возвращает:
-* stappler::xenolith::Mat4
+* stappler::geom::Mat4
 
 # ::stappler::xenolith::Node::Node()
 
@@ -162,7 +240,7 @@ Title: XLNode.h
 * float
 
 
-# ::stappler::xenolith::Node::setScale(stappler::xenolith::Vec2 const&)
+# ::stappler::xenolith::Node::setScale(const stappler::geom::Vec2&)
 
 ## BRIEF
 
@@ -171,10 +249,10 @@ Title: XLNode.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Vec2 const&
+* const stappler::geom::Vec2&
 
 
-# ::stappler::xenolith::Node::setScale(stappler::xenolith::Vec3 const&)
+# ::stappler::xenolith::Node::setScale(const stappler::geom::Vec3&)
 
 ## BRIEF
 
@@ -183,7 +261,7 @@ Title: XLNode.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Vec3 const&
+* const stappler::geom::Vec3&
 
 
 # ::stappler::xenolith::Node::setScaleX(float)
@@ -231,21 +309,9 @@ Title: XLNode.h
 Доступ: public
 
 Возвращает:
-* stappler::xenolith::Vec3 const&
+* const stappler::geom::Vec3&
 
-# ::stappler::xenolith::Node::setPosition(stappler::xenolith::Vec2 const&)
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-Параметры:
-* stappler::xenolith::Vec2 const&
-
-
-# ::stappler::xenolith::Node::setPosition(stappler::xenolith::Vec3 const&)
+# ::stappler::xenolith::Node::setPosition(const stappler::geom::Vec2&)
 
 ## BRIEF
 
@@ -254,7 +320,19 @@ Title: XLNode.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Vec3 const&
+* const stappler::geom::Vec2&
+
+
+# ::stappler::xenolith::Node::setPosition(const stappler::geom::Vec3&)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* const stappler::geom::Vec3&
 
 
 # ::stappler::xenolith::Node::setPositionX(float)
@@ -302,7 +380,7 @@ Title: XLNode.h
 Доступ: public
 
 Возвращает:
-* stappler::xenolith::Vec3 const&
+* const stappler::geom::Vec3&
 
 # ::stappler::xenolith::Node::setSkewX(float)
 
@@ -337,9 +415,9 @@ Title: XLNode.h
 Доступ: public
 
 Возвращает:
-* stappler::xenolith::Vec2 const&
+* const stappler::geom::Vec2&
 
-# ::stappler::xenolith::Node::setAnchorPoint(stappler::xenolith::Vec2 const&)
+# ::stappler::xenolith::Node::setAnchorPoint(const stappler::geom::Vec2&)
 
 ## BRIEF
 
@@ -348,7 +426,7 @@ Title: XLNode.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Vec2 const&
+* const stappler::geom::Vec2&
 
 
 # ::stappler::xenolith::Node::getAnchorPoint() const
@@ -360,9 +438,9 @@ Title: XLNode.h
 Доступ: public
 
 Возвращает:
-* stappler::xenolith::Vec2 const&
+* const stappler::geom::Vec2&
 
-# ::stappler::xenolith::Node::setContentSize(stappler::xenolith::Size2 const&)
+# ::stappler::xenolith::Node::setContentSize(const stappler::geom::Size2&)
 
 ## BRIEF
 
@@ -371,7 +449,7 @@ Title: XLNode.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Size2 const&
+* const stappler::geom::Size2&
 
 
 # ::stappler::xenolith::Node::getContentSize() const
@@ -383,7 +461,7 @@ Title: XLNode.h
 Доступ: public
 
 Возвращает:
-* stappler::xenolith::Size2 const&
+* const stappler::geom::Size2&
 
 # ::stappler::xenolith::Node::setVisible(bool)
 
@@ -420,7 +498,7 @@ Title: XLNode.h
 * float
 
 
-# ::stappler::xenolith::Node::setRotation(stappler::xenolith::Vec3 const&)
+# ::stappler::xenolith::Node::setRotation(const stappler::geom::Vec3&)
 
 ## BRIEF
 
@@ -429,10 +507,10 @@ Title: XLNode.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Vec3 const&
+* const stappler::geom::Vec3&
 
 
-# ::stappler::xenolith::Node::setRotation(stappler::xenolith::Quaternion const&)
+# ::stappler::xenolith::Node::setRotation(const stappler::geom::Quaternion&)
 
 ## BRIEF
 
@@ -441,7 +519,7 @@ Title: XLNode.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Quaternion const&
+* const stappler::geom::Quaternion&
 
 
 # ::stappler::xenolith::Node::getRotation() const
@@ -464,7 +542,7 @@ Title: XLNode.h
 Доступ: public
 
 Возвращает:
-* stappler::xenolith::Vec3 const&
+* const stappler::geom::Vec3&
 
 # ::stappler::xenolith::Node::getRotationQuat() const
 
@@ -475,7 +553,7 @@ Title: XLNode.h
 Доступ: public
 
 Возвращает:
-* stappler::xenolith::Quaternion const&
+* const stappler::geom::Quaternion&
 
 # ::stappler::xenolith::Node::addChild<typename,typename>(N*,Args &&...)
 
@@ -588,7 +666,7 @@ Title: XLNode.h
 Доступ: public
 
 Возвращает:
-* ssize_t
+* size_t
 
 # ::stappler::xenolith::Node::setParent(stappler::xenolith::Node*)
 
@@ -1152,7 +1230,7 @@ Title: XLNode.h
 Доступ: public
 
 
-# ::stappler::xenolith::Node::onTransformDirty(stappler::xenolith::Mat4 const&)
+# ::stappler::xenolith::Node::onTransformDirty(const stappler::geom::Mat4&)
 
 ## BRIEF
 
@@ -1161,10 +1239,10 @@ Title: XLNode.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Mat4 const&
+* const stappler::geom::Mat4&
 
 
-# ::stappler::xenolith::Node::onGlobalTransformDirty(stappler::xenolith::Mat4 const&)
+# ::stappler::xenolith::Node::onGlobalTransformDirty(const stappler::geom::Mat4&)
 
 ## BRIEF
 
@@ -1173,7 +1251,7 @@ Title: XLNode.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Mat4 const&
+* const stappler::geom::Mat4&
 
 
 # ::stappler::xenolith::Node::onReorderChildDirty()
@@ -1203,7 +1281,7 @@ Title: XLNode.h
 Доступ: public
 
 Возвращает:
-* stappler::xenolith::Rect
+* stappler::geom::Rect
 
 # ::stappler::xenolith::Node::resume()
 
@@ -1253,9 +1331,9 @@ Title: XLNode.h
 Доступ: public
 
 Возвращает:
-* stappler::xenolith::Mat4 const&
+* const stappler::geom::Mat4&
 
-# ::stappler::xenolith::Node::setNodeToParentTransform(stappler::xenolith::Mat4 const&)
+# ::stappler::xenolith::Node::setNodeToParentTransform(const stappler::geom::Mat4&)
 
 ## BRIEF
 
@@ -1264,7 +1342,7 @@ Title: XLNode.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Mat4 const&
+* const stappler::geom::Mat4&
 
 
 # ::stappler::xenolith::Node::getParentToNodeTransform() const
@@ -1276,7 +1354,7 @@ Title: XLNode.h
 Доступ: public
 
 Возвращает:
-* stappler::xenolith::Mat4 const&
+* const stappler::geom::Mat4&
 
 # ::stappler::xenolith::Node::getNodeToWorldTransform() const
 
@@ -1287,7 +1365,7 @@ Title: XLNode.h
 Доступ: public
 
 Возвращает:
-* stappler::xenolith::Mat4
+* stappler::geom::Mat4
 
 # ::stappler::xenolith::Node::getWorldToNodeTransform() const
 
@@ -1298,23 +1376,9 @@ Title: XLNode.h
 Доступ: public
 
 Возвращает:
-* stappler::xenolith::Mat4
+* stappler::geom::Mat4
 
-# ::stappler::xenolith::Node::convertToNodeSpace(stappler::xenolith::Vec2 const&) const
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-Параметры:
-* stappler::xenolith::Vec2 const&
-
-Возвращает:
-* stappler::xenolith::Vec2
-
-# ::stappler::xenolith::Node::convertToWorldSpace(stappler::xenolith::Vec2 const&) const
+# ::stappler::xenolith::Node::convertToNodeSpace(const stappler::geom::Vec2&) const
 
 ## BRIEF
 
@@ -1323,12 +1387,12 @@ Title: XLNode.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Vec2 const&
+* const stappler::geom::Vec2&
 
 Возвращает:
-* stappler::xenolith::Vec2
+* stappler::geom::Vec2
 
-# ::stappler::xenolith::Node::convertToNodeSpaceAR(stappler::xenolith::Vec2 const&) const
+# ::stappler::xenolith::Node::convertToWorldSpace(const stappler::geom::Vec2&) const
 
 ## BRIEF
 
@@ -1337,12 +1401,12 @@ Title: XLNode.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Vec2 const&
+* const stappler::geom::Vec2&
 
 Возвращает:
-* stappler::xenolith::Vec2
+* stappler::geom::Vec2
 
-# ::stappler::xenolith::Node::convertToWorldSpaceAR(stappler::xenolith::Vec2 const&) const
+# ::stappler::xenolith::Node::convertToNodeSpaceAR(const stappler::geom::Vec2&) const
 
 ## BRIEF
 
@@ -1351,10 +1415,24 @@ Title: XLNode.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Vec2 const&
+* const stappler::geom::Vec2&
 
 Возвращает:
-* stappler::xenolith::Vec2
+* stappler::geom::Vec2
+
+# ::stappler::xenolith::Node::convertToWorldSpaceAR(const stappler::geom::Vec2&) const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* const stappler::geom::Vec2&
+
+Возвращает:
+* stappler::geom::Vec2
 
 # ::stappler::xenolith::Node::isCascadeOpacityEnabled() const
 
@@ -1469,7 +1547,7 @@ Title: XLNode.h
 Доступ: public
 
 Возвращает:
-* stappler::xenolith::Color4F
+* stappler::geom::Color4F
 
 # ::stappler::xenolith::Node::getDisplayedColor() const
 
@@ -1480,22 +1558,9 @@ Title: XLNode.h
 Доступ: public
 
 Возвращает:
-* stappler::xenolith::Color4F
+* stappler::geom::Color4F
 
-# ::stappler::xenolith::Node::setColor(stappler::xenolith::Color4F const&,bool)
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-Параметры:
-* stappler::xenolith::Color4F const&
-* bool
-
-
-# ::stappler::xenolith::Node::updateDisplayedColor(stappler::xenolith::Color4F const&)
+# ::stappler::xenolith::Node::setColor(const stappler::geom::Color4F&,bool)
 
 ## BRIEF
 
@@ -1504,10 +1569,11 @@ Title: XLNode.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Color4F const&
+* const stappler::geom::Color4F&
+* bool
 
 
-# ::stappler::xenolith::Node::setOpacityModifyRGB(bool)
+# ::stappler::xenolith::Node::updateDisplayedColor(const stappler::geom::Color4F&)
 
 ## BRIEF
 
@@ -1516,19 +1582,8 @@ Title: XLNode.h
 Доступ: public
 
 Параметры:
-* bool
+* const stappler::geom::Color4F&
 
-
-# ::stappler::xenolith::Node::isOpacityModifyRGB() const
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-Возвращает:
-* bool
 
 # ::stappler::xenolith::Node::setDepthIndex(float)
 
@@ -1614,7 +1669,7 @@ Title: XLNode.h
 Доступ: public
 
 
-# ::stappler::xenolith::Node::isTouched(stappler::xenolith::Vec2 const&,float)
+# ::stappler::xenolith::Node::isTouched(const stappler::geom::Vec2&,float)
 
 ## BRIEF
 
@@ -1623,13 +1678,13 @@ Title: XLNode.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Vec2 const&
+* const stappler::geom::Vec2&
 * float
 
 Возвращает:
 * bool
 
-# ::stappler::xenolith::Node::isTouchedNodeSpace(stappler::xenolith::Vec2 const&,float)
+# ::stappler::xenolith::Node::isTouchedNodeSpace(const stappler::geom::Vec2&,float)
 
 ## BRIEF
 
@@ -1638,7 +1693,7 @@ Title: XLNode.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Vec2 const&
+* const stappler::geom::Vec2&
 * float
 
 Возвращает:
@@ -1680,7 +1735,7 @@ Title: XLNode.h
 * Function<void ()>&&
 
 
-# ::stappler::xenolith::Node::setOnTransformDirtyCallback(Function<void (const stappler::xenolith::Mat4 &)>&&)
+# ::stappler::xenolith::Node::setOnTransformDirtyCallback(Function<void (const stappler::geom::Mat4 &)>&&)
 
 ## BRIEF
 
@@ -1689,7 +1744,7 @@ Title: XLNode.h
 Доступ: public
 
 Параметры:
-* Function<void (const stappler::xenolith::Mat4 &)>&&
+* Function<void (const stappler::geom::Mat4 &)>&&
 
 
 # ::stappler::xenolith::Node::setOnReorderChildDirtyCallback(Function<void ()>&&)
@@ -1714,6 +1769,17 @@ Title: XLNode.h
 
 Возвращает:
 * float
+
+# ::stappler::xenolith::Node::getScene() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* stappler::xenolith::Scene*
 
 # ::stappler::xenolith::Node::getDirector() const
 
@@ -1758,6 +1824,55 @@ Title: XLNode.h
 
 Возвращает:
 * stappler::xenolith::FrameContext*
+
+# ::stappler::xenolith::Node::getMaxDepthIndex() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* float
+
+# ::stappler::xenolith::Node::retainFocus()
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+
+# ::stappler::xenolith::Node::releaseFocus()
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+
+# ::stappler::xenolith::Node::clearFocus()
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+
+# ::stappler::xenolith::Node::getFocus() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* uint32_t
 
 # ::stappler::xenolith::Node::updateCascadeOpacity()
 
@@ -1804,7 +1919,7 @@ Title: XLNode.h
 Доступ: protected
 
 
-# ::stappler::xenolith::Node::transform(stappler::xenolith::Mat4 const&)
+# ::stappler::xenolith::Node::transform(const stappler::geom::Mat4&)
 
 ## BRIEF
 
@@ -1813,10 +1928,10 @@ Title: XLNode.h
 Доступ: protected
 
 Параметры:
-* stappler::xenolith::Mat4 const&
+* const stappler::geom::Mat4&
 
 Возвращает:
-* stappler::xenolith::Mat4
+* stappler::geom::Mat4
 
 # ::stappler::xenolith::Node::processParentFlags(stappler::xenolith::FrameInfo&,stappler::xenolith::NodeFlags)
 
@@ -1846,6 +1961,23 @@ Title: XLNode.h
 * stappler::xenolith::NodeFlags
 * bool
 
+
+# ::stappler::xenolith::Node::wrapVisit(stappler::xenolith::FrameInfo&,stappler::xenolith::NodeFlags,Callback<void (stappler::xenolith::NodeFlags, bool)> const&,bool)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Параметры:
+* stappler::xenolith::FrameInfo&
+* stappler::xenolith::NodeFlags
+* Callback<void (stappler::xenolith::NodeFlags, bool)> const&
+* bool
+
+Возвращает:
+* bool
 
 # ::stappler::xenolith::Node::_is3d
 
@@ -2023,6 +2155,17 @@ Title: XLNode.h
 Тип: stappler::xenolith::ZOrder
 
 
+# ::stappler::xenolith::Node::_focus
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: uint32_t
+
+
 # ::stappler::xenolith::Node::_skew
 
 ## BRIEF
@@ -2031,7 +2174,7 @@ Title: XLNode.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::Vec2
+Тип: stappler::geom::Vec2
 
 
 # ::stappler::xenolith::Node::_anchorPoint
@@ -2042,7 +2185,7 @@ Title: XLNode.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::Vec2
+Тип: stappler::geom::Vec2
 
 
 # ::stappler::xenolith::Node::_contentSize
@@ -2053,7 +2196,7 @@ Title: XLNode.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::Size2
+Тип: stappler::geom::Size2
 
 
 # ::stappler::xenolith::Node::_position
@@ -2064,7 +2207,7 @@ Title: XLNode.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::Vec3
+Тип: stappler::geom::Vec3
 
 
 # ::stappler::xenolith::Node::_scale
@@ -2075,7 +2218,7 @@ Title: XLNode.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::Vec3
+Тип: stappler::geom::Vec3
 
 
 # ::stappler::xenolith::Node::_rotation
@@ -2086,7 +2229,7 @@ Title: XLNode.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::Vec3
+Тип: stappler::geom::Vec3
 
 
 # ::stappler::xenolith::Node::_inputDensity
@@ -2119,7 +2262,7 @@ Title: XLNode.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::Color4F
+Тип: stappler::geom::Color4F
 
 
 # ::stappler::xenolith::Node::_realColor
@@ -2130,7 +2273,7 @@ Title: XLNode.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::Color4F
+Тип: stappler::geom::Color4F
 
 
 # ::stappler::xenolith::Node::_rotationQuat
@@ -2141,7 +2284,7 @@ Title: XLNode.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::Quaternion
+Тип: stappler::geom::Quaternion
 
 
 # ::stappler::xenolith::Node::_transform
@@ -2152,7 +2295,7 @@ Title: XLNode.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::Mat4
+Тип: stappler::geom::Mat4
 
 
 # ::stappler::xenolith::Node::_inverse
@@ -2163,7 +2306,7 @@ Title: XLNode.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::Mat4
+Тип: stappler::geom::Mat4
 
 
 # ::stappler::xenolith::Node::_modelViewTransform
@@ -2174,7 +2317,7 @@ Title: XLNode.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::Mat4
+Тип: stappler::geom::Mat4
 
 
 # ::stappler::xenolith::Node::_children
@@ -2240,7 +2383,7 @@ Title: XLNode.h
 
 Доступ: protected
 
-Тип: Function<void (const stappler::xenolith::Mat4 &)>
+Тип: Function<void (const stappler::geom::Mat4 &)>
 
 
 # ::stappler::xenolith::Node::_onReorderChildDirtyCallback
@@ -2329,6 +2472,17 @@ Title: XLNode.h
 Доступ: protected
 
 Тип: stappler::xenolith::FrameContext*
+
+
+# ::stappler::xenolith::Node::_actionStorage
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: Rc<stappler::xenolith::ActionStorage>
 
 
 # ::stappler::xenolith::Node::getComponentByType<typename>() const

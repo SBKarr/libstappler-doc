@@ -1277,134 +1277,6 @@
 							"kind": "builtin"
 						}
 					}, {
-						"_fullName": "::stappler::xenolith::core::SamplerInfo::operator==(stappler::xenolith::core::SamplerInfo const&) const",
-						"_kind": "member function",
-						"_name": "operator==",
-						"body_kind": "defaulted",
-						"cv_qualifier": "const",
-						"id": 1826835604,
-						"is_consteval": false,
-						"is_constexpr": false,
-						"is_declaration": false,
-						"is_definition": true,
-						"is_variadic": false,
-						"is_virtual": false,
-						"kind": "member function",
-						"name": "operator==",
-						"parameters": [{
-							"_fullName": "",
-							"_kind": "function parameter",
-							"_name": "",
-							"id": 46947589,
-							"kind": "function parameter",
-							"name": "",
-							"type": {
-								"_typeName": "stappler::xenolith::core::SamplerInfo const&",
-								"kind": "reference",
-								"referee": {
-									"_typeName": "stappler::xenolith::core::SamplerInfo const",
-									"cv_qualifier": "const",
-									"kind": "cv_qualified",
-									"type": {
-										"_typeName": "stappler::xenolith::core::SamplerInfo",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::xenolith::core::SamplerInfo",
-											"objects": [{
-												"_fullName": "::stappler::xenolith::core::SamplerInfo",
-												"_kind": "class",
-												"_name": "SamplerInfo",
-												"class_kind": "struct",
-												"id": 3991656155,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "SamplerInfo",
-												"scope": {
-													"name": "SamplerInfo"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								},
-								"reference_kind": "lvalue"
-							}
-						}],
-						"ref_qualifier": "none",
-						"return_type": {
-							"_typeName": "bool",
-							"builtin_type_kind": "bool",
-							"kind": "builtin"
-						},
-						"semantic_scope": "",
-						"signature": "(stappler::xenolith::core::SamplerInfo const&) const"
-					}, {
-						"_fullName": "::stappler::xenolith::core::SamplerInfo::operator!=(stappler::xenolith::core::SamplerInfo const&) const",
-						"_kind": "member function",
-						"_name": "operator!=",
-						"body_kind": "defaulted",
-						"cv_qualifier": "const",
-						"id": 3945061162,
-						"is_consteval": false,
-						"is_constexpr": false,
-						"is_declaration": false,
-						"is_definition": true,
-						"is_variadic": false,
-						"is_virtual": false,
-						"kind": "member function",
-						"name": "operator!=",
-						"parameters": [{
-							"_fullName": "",
-							"_kind": "function parameter",
-							"_name": "",
-							"id": 46947589,
-							"kind": "function parameter",
-							"name": "",
-							"type": {
-								"_typeName": "stappler::xenolith::core::SamplerInfo const&",
-								"kind": "reference",
-								"referee": {
-									"_typeName": "stappler::xenolith::core::SamplerInfo const",
-									"cv_qualifier": "const",
-									"kind": "cv_qualified",
-									"type": {
-										"_typeName": "stappler::xenolith::core::SamplerInfo",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::xenolith::core::SamplerInfo",
-											"objects": [{
-												"_fullName": "::stappler::xenolith::core::SamplerInfo",
-												"_kind": "class",
-												"_name": "SamplerInfo",
-												"class_kind": "struct",
-												"id": 3991656155,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "SamplerInfo",
-												"scope": {
-													"name": "SamplerInfo"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								},
-								"reference_kind": "lvalue"
-							}
-						}],
-						"ref_qualifier": "none",
-						"return_type": {
-							"_typeName": "bool",
-							"builtin_type_kind": "bool",
-							"kind": "builtin"
-						},
-						"semantic_scope": "",
-						"signature": "(stappler::xenolith::core::SamplerInfo const&) const"
-					}, {
 						"_fullName": "::stappler::xenolith::core::SamplerInfo::operator<=>(stappler::xenolith::core::SamplerInfo const&) const",
 						"_kind": "member function",
 						"_name": "operator<=>",
@@ -3501,17 +3373,51 @@
 							"primary_template": {
 								"name": "memory::callback",
 								"objects": [{
-									"_fullName": "::stappler::memory::callback<typename>",
-									"_kind": "class template",
+									"_fullName": "::stappler::memory::callback<ReturnType(ArgumentTypes...)>::callback<ReturnType(ArgumentTypes...)>",
+									"_kind": "class template specialization",
 									"_name": "callback",
+									"arguments_exposed": false,
 									"class": {
-										"_fullName": "::stappler::memory::callback<typename>",
+										"_fullName": "::stappler::memory::callback<ReturnType(ArgumentTypes...)>::callback<ReturnType(ArgumentTypes...)>",
 										"_kind": "class",
 										"_name": "callback",
+										"bases": [{
+											"_fullName": "AllocPool",
+											"_kind": "base class specifier",
+											"_name": "AllocPool",
+											"access_specifier": "public",
+											"id": 972079861,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "AllocPool",
+											"type": {
+												"_typeName": "stappler::memory::AllocPool",
+												"kind": "user_defined",
+												"target": {
+													"name": "stappler::memory::AllocPool",
+													"objects": [{
+														"_fullName": "::stappler::memory::AllocPool",
+														"_kind": "class",
+														"_name": "AllocPool",
+														"class_kind": "struct",
+														"id": 3030388899,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "AllocPool",
+														"scope": {
+															"name": "AllocPool"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}],
 										"class_kind": "class",
-										"id": 3310519973,
-										"is_declaration": true,
-										"is_definition": false,
+										"id": 1605912956,
+										"is_declaration": false,
+										"is_definition": true,
 										"is_final": false,
 										"kind": "class",
 										"name": "callback",
@@ -3519,6 +3425,87 @@
 											"is_templated": true,
 											"name": "callback",
 											"template_parameters": [{
+												"_fullName": "ReturnType",
+												"_kind": "template type parameter",
+												"_name": "ReturnType",
+												"id": 3798530772,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "ReturnType"
+											}, {
+												"_fullName": "ArgumentTypes",
+												"_kind": "template type parameter",
+												"_name": "ArgumentTypes",
+												"id": 120775233,
+												"is_variadic": true,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "ArgumentTypes"
+											}]
+										},
+										"semantic_scope": ""
+									},
+									"id": 1605912956,
+									"is_full_specialization": false,
+									"kind": "class template specialization",
+									"name": "callback",
+									"parameters": [{
+										"_fullName": "ReturnType",
+										"_kind": "template type parameter",
+										"_name": "ReturnType",
+										"id": 3798530772,
+										"is_variadic": false,
+										"keyword": "typename",
+										"kind": "template type parameter",
+										"name": "ReturnType"
+									}, {
+										"_fullName": "ArgumentTypes",
+										"_kind": "template type parameter",
+										"_name": "ArgumentTypes",
+										"id": 120775233,
+										"is_variadic": true,
+										"keyword": "typename",
+										"kind": "template type parameter",
+										"name": "ArgumentTypes"
+									}],
+									"primary_template":  {
+										"name": "callback",
+										"objects": [{
+											"_fullName": "::stappler::memory::callback<typename>",
+											"_kind": "class template",
+											"_name": "callback",
+											"class": {
+												"_fullName": "::stappler::memory::callback<typename>",
+												"_kind": "class",
+												"_name": "callback",
+												"class_kind": "class",
+												"id": 3310519973,
+												"is_declaration": true,
+												"is_definition": false,
+												"is_final": false,
+												"kind": "class",
+												"name": "callback",
+												"scope": {
+													"is_templated": true,
+													"name": "callback",
+													"template_parameters": [{
+														"_fullName": "UnusedType",
+														"_kind": "template type parameter",
+														"_name": "UnusedType",
+														"id": 3305497932,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "UnusedType"
+													}]
+												},
+												"semantic_scope": ""
+											},
+											"id": 3310519973,
+											"kind": "class template",
+											"name": "callback",
+											"parameters": [{
 												"_fullName": "UnusedType",
 												"_kind": "template type parameter",
 												"_name": "UnusedType",
@@ -3527,37 +3514,62 @@
 												"keyword": "typename",
 												"kind": "template type parameter",
 												"name": "UnusedType"
-											}]
-										},
-										"semantic_scope": ""
+											}],
+											"scope":  {
+												"is_templated": true,
+												"name": "callback",
+												"template_parameters": [{
+													"_fullName": "UnusedType",
+													"_kind": "template type parameter",
+													"_name": "UnusedType",
+													"id": 3305497932,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "UnusedType"
+												}]
+											}
+										}]
 									},
-									"id": 3310519973,
-									"kind": "class template",
-									"name": "callback",
-									"parameters": [{
-										"_fullName": "UnusedType",
-										"_kind": "template type parameter",
-										"_name": "UnusedType",
-										"id": 3305497932,
-										"is_variadic": false,
-										"keyword": "typename",
-										"kind": "template type parameter",
-										"name": "UnusedType"
-									}],
 									"scope":  {
 										"is_templated": true,
 										"name": "callback",
 										"template_parameters": [{
-											"_fullName": "UnusedType",
+											"_fullName": "ReturnType",
 											"_kind": "template type parameter",
-											"_name": "UnusedType",
-											"id": 3305497932,
+											"_name": "ReturnType",
+											"id": 3798530772,
 											"is_variadic": false,
 											"keyword": "typename",
 											"kind": "template type parameter",
-											"name": "UnusedType"
+											"name": "ReturnType"
+										}, {
+											"_fullName": "ArgumentTypes",
+											"_kind": "template type parameter",
+											"_name": "ArgumentTypes",
+											"id": 120775233,
+											"is_variadic": true,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "ArgumentTypes"
 										}]
-									}
+									},
+									"unexposed_arguments":  [{
+										"kind": "identifier",
+										"spelling": "ReturnType"
+									}, {
+										"kind": "punctuation",
+										"spelling": "("
+									}, {
+										"kind": "identifier",
+										"spelling": "ArgumentTypes"
+									}, {
+										"kind": "punctuation",
+										"spelling": "..."
+									}, {
+										"kind": "punctuation",
+										"spelling": ")"
+									}]
 								}]
 							},
 							"unexposed_arguments": "void (BytesView)"
@@ -3936,9 +3948,9 @@
 							}
 						}
 					}, {
-						"_fullName": "::stappler::xenolith::core::BufferData::callback",
+						"_fullName": "::stappler::xenolith::core::BufferData::memCallback",
 						"_kind": "member variable",
-						"_name": "callback",
+						"_name": "memCallback",
 						"default_value": {
 							"expression": [{
 								"kind": "keyword",
@@ -4154,10 +4166,10 @@
 								"unexposed_arguments": "void (uint8_t *, uint64_t, const DataCallback &)"
 							}
 						},
-						"id": 2713129425,
+						"id": 3559819785,
 						"is_mutable": false,
 						"kind": "member variable",
-						"name": "callback",
+						"name": "memCallback",
 						"type": {
 							"_typeName": "memory::function<void (uint8_t *, uint64_t, const DataCallback &)>",
 							"arguments_exposed": false,
@@ -4363,6 +4375,39 @@
 										"spelling": ")"
 									}]
 								}]
+							},
+							"unexposed_arguments": "void (uint8_t *, uint64_t, const DataCallback &)"
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::core::BufferData::stdCallback",
+						"_kind": "member variable",
+						"_name": "stdCallback",
+						"default_value": {
+							"expression": [{
+								"kind": "keyword",
+								"spelling": "nullptr"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "std::function<void (uint8_t *, uint64_t, const DataCallback &)>",
+								"arguments_exposed": false,
+								"kind": "template_instantiation",
+								"primary_template": {
+									"name": "std::function"
+								},
+								"unexposed_arguments": "void (uint8_t *, uint64_t, const DataCallback &)"
+							}
+						},
+						"id": 1038048637,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "stdCallback",
+						"type": {
+							"_typeName": "std::function<void (uint8_t *, uint64_t, const DataCallback &)>",
+							"arguments_exposed": false,
+							"kind": "template_instantiation",
+							"primary_template": {
+								"name": "std::function"
 							},
 							"unexposed_arguments": "void (uint8_t *, uint64_t, const DataCallback &)"
 						}
@@ -4932,6 +4977,64 @@
 								}]
 							}
 						}
+					}, {
+						"_fullName": "::stappler::xenolith::core::BufferData::writeData(uint8_t*,size_t) const",
+						"_kind": "member function",
+						"_name": "writeData",
+						"body_kind": "declaration",
+						"cv_qualifier": "const",
+						"id": 3886397945,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "writeData",
+						"parameters": [{
+							"_fullName": "mem",
+							"_kind": "function parameter",
+							"_name": "mem",
+							"id": 27240482,
+							"kind": "function parameter",
+							"name": "mem",
+							"type": {
+								"_typeName": "uint8_t*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "uint8_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "uint8_t"
+									}
+								}
+							}
+						}, {
+							"_fullName": "expected",
+							"_kind": "function parameter",
+							"_name": "expected",
+							"id": 3760805896,
+							"kind": "function parameter",
+							"name": "expected",
+							"type": {
+								"_typeName": "size_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "size_t"
+								}
+							}
+						}],
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "size_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "size_t"
+							}
+						},
+						"semantic_scope": "",
+						"signature": "(uint8_t*,size_t) const"
 					}],
 					"class_kind": "struct",
 					"id": 3875388438,
@@ -5457,42 +5560,9 @@
 							}],
 							"kind": "unexposed",
 							"type": {
-								"_typeName": "stappler::xenolith::Extent3",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Extent3",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Extent3",
-										"_kind": "type alias",
-										"_name": "Extent3",
-										"id": 2508878272,
-										"kind": "type alias",
-										"name": "Extent3",
-										"underlying_type": {
-											"_typeName": "geom::Extent3",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Extent3",
-												"objects": [{
-													"_fullName": "::stappler::geom::Extent3",
-													"_kind": "class",
-													"_name": "Extent3",
-													"class_kind": "struct",
-													"id": 3914224354,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Extent3",
-													"scope": {
-														"name": "Extent3"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Extent3",
+								"kind": "unexposed",
+								"name": "stappler::geom::Extent3"
 							}
 						},
 						"id": 382733733,
@@ -5500,42 +5570,9 @@
 						"kind": "member variable",
 						"name": "extent",
 						"type": {
-							"_typeName": "stappler::xenolith::Extent3",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::Extent3",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::Extent3",
-									"_kind": "type alias",
-									"_name": "Extent3",
-									"id": 2508878272,
-									"kind": "type alias",
-									"name": "Extent3",
-									"underlying_type": {
-										"_typeName": "geom::Extent3",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::Extent3",
-											"objects": [{
-												"_fullName": "::stappler::geom::Extent3",
-												"_kind": "class",
-												"_name": "Extent3",
-												"class_kind": "struct",
-												"id": 3914224354,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "Extent3",
-												"scope": {
-													"name": "Extent3"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::Extent3",
+							"kind": "unexposed",
+							"name": "stappler::geom::Extent3"
 						}
 					}, {
 						"_fullName": "::stappler::xenolith::core::ImageInfoData::mipLevels",
@@ -6493,134 +6530,6 @@
 						"semantic_scope": "",
 						"signature": "(stappler::xenolith::core::ImageViewInfo const&) const"
 					}, {
-						"_fullName": "::stappler::xenolith::core::ImageInfoData::operator==(stappler::xenolith::core::ImageInfoData const&) const",
-						"_kind": "member function",
-						"_name": "operator==",
-						"body_kind": "defaulted",
-						"cv_qualifier": "const",
-						"id": 1295243823,
-						"is_consteval": false,
-						"is_constexpr": false,
-						"is_declaration": false,
-						"is_definition": true,
-						"is_variadic": false,
-						"is_virtual": false,
-						"kind": "member function",
-						"name": "operator==",
-						"parameters": [{
-							"_fullName": "",
-							"_kind": "function parameter",
-							"_name": "",
-							"id": 46947589,
-							"kind": "function parameter",
-							"name": "",
-							"type": {
-								"_typeName": "stappler::xenolith::core::ImageInfoData const&",
-								"kind": "reference",
-								"referee": {
-									"_typeName": "stappler::xenolith::core::ImageInfoData const",
-									"cv_qualifier": "const",
-									"kind": "cv_qualified",
-									"type": {
-										"_typeName": "stappler::xenolith::core::ImageInfoData",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::xenolith::core::ImageInfoData",
-											"objects": [{
-												"_fullName": "::stappler::xenolith::core::ImageInfoData",
-												"_kind": "class",
-												"_name": "ImageInfoData",
-												"class_kind": "struct",
-												"id": 2769190166,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "ImageInfoData",
-												"scope": {
-													"name": "ImageInfoData"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								},
-								"reference_kind": "lvalue"
-							}
-						}],
-						"ref_qualifier": "none",
-						"return_type": {
-							"_typeName": "bool",
-							"builtin_type_kind": "bool",
-							"kind": "builtin"
-						},
-						"semantic_scope": "",
-						"signature": "(stappler::xenolith::core::ImageInfoData const&) const"
-					}, {
-						"_fullName": "::stappler::xenolith::core::ImageInfoData::operator!=(stappler::xenolith::core::ImageInfoData const&) const",
-						"_kind": "member function",
-						"_name": "operator!=",
-						"body_kind": "defaulted",
-						"cv_qualifier": "const",
-						"id": 3335263244,
-						"is_consteval": false,
-						"is_constexpr": false,
-						"is_declaration": false,
-						"is_definition": true,
-						"is_variadic": false,
-						"is_virtual": false,
-						"kind": "member function",
-						"name": "operator!=",
-						"parameters": [{
-							"_fullName": "",
-							"_kind": "function parameter",
-							"_name": "",
-							"id": 46947589,
-							"kind": "function parameter",
-							"name": "",
-							"type": {
-								"_typeName": "stappler::xenolith::core::ImageInfoData const&",
-								"kind": "reference",
-								"referee": {
-									"_typeName": "stappler::xenolith::core::ImageInfoData const",
-									"cv_qualifier": "const",
-									"kind": "cv_qualified",
-									"type": {
-										"_typeName": "stappler::xenolith::core::ImageInfoData",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::xenolith::core::ImageInfoData",
-											"objects": [{
-												"_fullName": "::stappler::xenolith::core::ImageInfoData",
-												"_kind": "class",
-												"_name": "ImageInfoData",
-												"class_kind": "struct",
-												"id": 2769190166,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "ImageInfoData",
-												"scope": {
-													"name": "ImageInfoData"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								},
-								"reference_kind": "lvalue"
-							}
-						}],
-						"ref_qualifier": "none",
-						"return_type": {
-							"_typeName": "bool",
-							"builtin_type_kind": "bool",
-							"kind": "builtin"
-						},
-						"semantic_scope": "",
-						"signature": "(stappler::xenolith::core::ImageInfoData const&) const"
-					}, {
 						"_fullName": "::stappler::xenolith::core::ImageInfoData::operator<=>(stappler::xenolith::core::ImageInfoData const&) const",
 						"_kind": "member function",
 						"_name": "operator<=>",
@@ -7032,12 +6941,12 @@
 						"semantic_scope": "",
 						"signature": "(stappler::xenolith::core::Extent1)"
 					}, {
-						"_fullName": "::stappler::xenolith::core::ImageInfo::setup(stappler::xenolith::Extent2)",
+						"_fullName": "::stappler::xenolith::core::ImageInfo::setup(stappler::geom::Extent2)",
 						"_kind": "member function",
 						"_name": "setup",
 						"body_kind": "definition",
 						"cv_qualifier": "none",
-						"id": 3792427170,
+						"id": 2814726527,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": false,
@@ -7054,42 +6963,9 @@
 							"kind": "function parameter",
 							"name": "value",
 							"type": {
-								"_typeName": "stappler::xenolith::Extent2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Extent2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Extent2",
-										"_kind": "type alias",
-										"_name": "Extent2",
-										"id": 3322744362,
-										"kind": "type alias",
-										"name": "Extent2",
-										"underlying_type": {
-											"_typeName": "geom::Extent2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Extent2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Extent2",
-													"_kind": "class",
-													"_name": "Extent2",
-													"class_kind": "struct",
-													"id": 3230388080,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Extent2",
-													"scope": {
-														"name": "Extent2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Extent2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Extent2"
 							}
 						}],
 						"ref_qualifier": "none",
@@ -7099,14 +6975,14 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::Extent2)"
+						"signature": "(stappler::geom::Extent2)"
 					}, {
-						"_fullName": "::stappler::xenolith::core::ImageInfo::setup(stappler::xenolith::Extent3)",
+						"_fullName": "::stappler::xenolith::core::ImageInfo::setup(stappler::geom::Extent3)",
 						"_kind": "member function",
 						"_name": "setup",
 						"body_kind": "definition",
 						"cv_qualifier": "none",
-						"id": 3707947762,
+						"id": 951991383,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": false,
@@ -7123,42 +6999,9 @@
 							"kind": "function parameter",
 							"name": "value",
 							"type": {
-								"_typeName": "stappler::xenolith::Extent3",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Extent3",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Extent3",
-										"_kind": "type alias",
-										"_name": "Extent3",
-										"id": 2508878272,
-										"kind": "type alias",
-										"name": "Extent3",
-										"underlying_type": {
-											"_typeName": "geom::Extent3",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Extent3",
-												"objects": [{
-													"_fullName": "::stappler::geom::Extent3",
-													"_kind": "class",
-													"_name": "Extent3",
-													"class_kind": "struct",
-													"id": 3914224354,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Extent3",
-													"scope": {
-														"name": "Extent3"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Extent3",
+								"kind": "unexposed",
+								"name": "stappler::geom::Extent3"
 							}
 						}],
 						"ref_qualifier": "none",
@@ -7168,7 +7011,7 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::Extent3)"
+						"signature": "(stappler::geom::Extent3)"
 					}, {
 						"_fullName": "::stappler::xenolith::core::ImageInfo::setup(stappler::xenolith::core::ImageFlags)",
 						"_kind": "member function",
@@ -9040,17 +8883,51 @@
 							"primary_template": {
 								"name": "memory::callback",
 								"objects": [{
-									"_fullName": "::stappler::memory::callback<typename>",
-									"_kind": "class template",
+									"_fullName": "::stappler::memory::callback<ReturnType(ArgumentTypes...)>::callback<ReturnType(ArgumentTypes...)>",
+									"_kind": "class template specialization",
 									"_name": "callback",
+									"arguments_exposed": false,
 									"class": {
-										"_fullName": "::stappler::memory::callback<typename>",
+										"_fullName": "::stappler::memory::callback<ReturnType(ArgumentTypes...)>::callback<ReturnType(ArgumentTypes...)>",
 										"_kind": "class",
 										"_name": "callback",
+										"bases": [{
+											"_fullName": "AllocPool",
+											"_kind": "base class specifier",
+											"_name": "AllocPool",
+											"access_specifier": "public",
+											"id": 972079861,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "AllocPool",
+											"type": {
+												"_typeName": "stappler::memory::AllocPool",
+												"kind": "user_defined",
+												"target": {
+													"name": "stappler::memory::AllocPool",
+													"objects": [{
+														"_fullName": "::stappler::memory::AllocPool",
+														"_kind": "class",
+														"_name": "AllocPool",
+														"class_kind": "struct",
+														"id": 3030388899,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "AllocPool",
+														"scope": {
+															"name": "AllocPool"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}],
 										"class_kind": "class",
-										"id": 3310519973,
-										"is_declaration": true,
-										"is_definition": false,
+										"id": 1605912956,
+										"is_declaration": false,
+										"is_definition": true,
 										"is_final": false,
 										"kind": "class",
 										"name": "callback",
@@ -9058,6 +8935,87 @@
 											"is_templated": true,
 											"name": "callback",
 											"template_parameters": [{
+												"_fullName": "ReturnType",
+												"_kind": "template type parameter",
+												"_name": "ReturnType",
+												"id": 3798530772,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "ReturnType"
+											}, {
+												"_fullName": "ArgumentTypes",
+												"_kind": "template type parameter",
+												"_name": "ArgumentTypes",
+												"id": 120775233,
+												"is_variadic": true,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "ArgumentTypes"
+											}]
+										},
+										"semantic_scope": ""
+									},
+									"id": 1605912956,
+									"is_full_specialization": false,
+									"kind": "class template specialization",
+									"name": "callback",
+									"parameters": [{
+										"_fullName": "ReturnType",
+										"_kind": "template type parameter",
+										"_name": "ReturnType",
+										"id": 3798530772,
+										"is_variadic": false,
+										"keyword": "typename",
+										"kind": "template type parameter",
+										"name": "ReturnType"
+									}, {
+										"_fullName": "ArgumentTypes",
+										"_kind": "template type parameter",
+										"_name": "ArgumentTypes",
+										"id": 120775233,
+										"is_variadic": true,
+										"keyword": "typename",
+										"kind": "template type parameter",
+										"name": "ArgumentTypes"
+									}],
+									"primary_template":  {
+										"name": "callback",
+										"objects": [{
+											"_fullName": "::stappler::memory::callback<typename>",
+											"_kind": "class template",
+											"_name": "callback",
+											"class": {
+												"_fullName": "::stappler::memory::callback<typename>",
+												"_kind": "class",
+												"_name": "callback",
+												"class_kind": "class",
+												"id": 3310519973,
+												"is_declaration": true,
+												"is_definition": false,
+												"is_final": false,
+												"kind": "class",
+												"name": "callback",
+												"scope": {
+													"is_templated": true,
+													"name": "callback",
+													"template_parameters": [{
+														"_fullName": "UnusedType",
+														"_kind": "template type parameter",
+														"_name": "UnusedType",
+														"id": 3305497932,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "UnusedType"
+													}]
+												},
+												"semantic_scope": ""
+											},
+											"id": 3310519973,
+											"kind": "class template",
+											"name": "callback",
+											"parameters": [{
 												"_fullName": "UnusedType",
 												"_kind": "template type parameter",
 												"_name": "UnusedType",
@@ -9066,37 +9024,62 @@
 												"keyword": "typename",
 												"kind": "template type parameter",
 												"name": "UnusedType"
-											}]
-										},
-										"semantic_scope": ""
+											}],
+											"scope":  {
+												"is_templated": true,
+												"name": "callback",
+												"template_parameters": [{
+													"_fullName": "UnusedType",
+													"_kind": "template type parameter",
+													"_name": "UnusedType",
+													"id": 3305497932,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "UnusedType"
+												}]
+											}
+										}]
 									},
-									"id": 3310519973,
-									"kind": "class template",
-									"name": "callback",
-									"parameters": [{
-										"_fullName": "UnusedType",
-										"_kind": "template type parameter",
-										"_name": "UnusedType",
-										"id": 3305497932,
-										"is_variadic": false,
-										"keyword": "typename",
-										"kind": "template type parameter",
-										"name": "UnusedType"
-									}],
 									"scope":  {
 										"is_templated": true,
 										"name": "callback",
 										"template_parameters": [{
-											"_fullName": "UnusedType",
+											"_fullName": "ReturnType",
 											"_kind": "template type parameter",
-											"_name": "UnusedType",
-											"id": 3305497932,
+											"_name": "ReturnType",
+											"id": 3798530772,
 											"is_variadic": false,
 											"keyword": "typename",
 											"kind": "template type parameter",
-											"name": "UnusedType"
+											"name": "ReturnType"
+										}, {
+											"_fullName": "ArgumentTypes",
+											"_kind": "template type parameter",
+											"_name": "ArgumentTypes",
+											"id": 120775233,
+											"is_variadic": true,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "ArgumentTypes"
 										}]
-									}
+									},
+									"unexposed_arguments":  [{
+										"kind": "identifier",
+										"spelling": "ReturnType"
+									}, {
+										"kind": "punctuation",
+										"spelling": "("
+									}, {
+										"kind": "identifier",
+										"spelling": "ArgumentTypes"
+									}, {
+										"kind": "punctuation",
+										"spelling": "..."
+									}, {
+										"kind": "punctuation",
+										"spelling": ")"
+									}]
 								}]
 							},
 							"unexposed_arguments": "void (BytesView)"
@@ -14352,134 +14335,6 @@
 						"semantic_scope": "",
 						"signature": "() const"
 					}, {
-						"_fullName": "::stappler::xenolith::core::ImageViewInfo::operator==(stappler::xenolith::core::ImageViewInfo const&) const",
-						"_kind": "member function",
-						"_name": "operator==",
-						"body_kind": "defaulted",
-						"cv_qualifier": "const",
-						"id": 1573668761,
-						"is_consteval": false,
-						"is_constexpr": false,
-						"is_declaration": false,
-						"is_definition": true,
-						"is_variadic": false,
-						"is_virtual": false,
-						"kind": "member function",
-						"name": "operator==",
-						"parameters": [{
-							"_fullName": "",
-							"_kind": "function parameter",
-							"_name": "",
-							"id": 46947589,
-							"kind": "function parameter",
-							"name": "",
-							"type": {
-								"_typeName": "stappler::xenolith::core::ImageViewInfo const&",
-								"kind": "reference",
-								"referee": {
-									"_typeName": "stappler::xenolith::core::ImageViewInfo const",
-									"cv_qualifier": "const",
-									"kind": "cv_qualified",
-									"type": {
-										"_typeName": "stappler::xenolith::core::ImageViewInfo",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::xenolith::core::ImageViewInfo",
-											"objects": [{
-												"_fullName": "::stappler::xenolith::core::ImageViewInfo",
-												"_kind": "class",
-												"_name": "ImageViewInfo",
-												"class_kind": "struct",
-												"id": 911496885,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "ImageViewInfo",
-												"scope": {
-													"name": "ImageViewInfo"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								},
-								"reference_kind": "lvalue"
-							}
-						}],
-						"ref_qualifier": "none",
-						"return_type": {
-							"_typeName": "bool",
-							"builtin_type_kind": "bool",
-							"kind": "builtin"
-						},
-						"semantic_scope": "",
-						"signature": "(stappler::xenolith::core::ImageViewInfo const&) const"
-					}, {
-						"_fullName": "::stappler::xenolith::core::ImageViewInfo::operator!=(stappler::xenolith::core::ImageViewInfo const&) const",
-						"_kind": "member function",
-						"_name": "operator!=",
-						"body_kind": "defaulted",
-						"cv_qualifier": "const",
-						"id": 3369220247,
-						"is_consteval": false,
-						"is_constexpr": false,
-						"is_declaration": false,
-						"is_definition": true,
-						"is_variadic": false,
-						"is_virtual": false,
-						"kind": "member function",
-						"name": "operator!=",
-						"parameters": [{
-							"_fullName": "",
-							"_kind": "function parameter",
-							"_name": "",
-							"id": 46947589,
-							"kind": "function parameter",
-							"name": "",
-							"type": {
-								"_typeName": "stappler::xenolith::core::ImageViewInfo const&",
-								"kind": "reference",
-								"referee": {
-									"_typeName": "stappler::xenolith::core::ImageViewInfo const",
-									"cv_qualifier": "const",
-									"kind": "cv_qualified",
-									"type": {
-										"_typeName": "stappler::xenolith::core::ImageViewInfo",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::xenolith::core::ImageViewInfo",
-											"objects": [{
-												"_fullName": "::stappler::xenolith::core::ImageViewInfo",
-												"_kind": "class",
-												"_name": "ImageViewInfo",
-												"class_kind": "struct",
-												"id": 911496885,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "ImageViewInfo",
-												"scope": {
-													"name": "ImageViewInfo"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								},
-								"reference_kind": "lvalue"
-							}
-						}],
-						"ref_qualifier": "none",
-						"return_type": {
-							"_typeName": "bool",
-							"builtin_type_kind": "bool",
-							"kind": "builtin"
-						},
-						"semantic_scope": "",
-						"signature": "(stappler::xenolith::core::ImageViewInfo const&) const"
-					}, {
 						"_fullName": "::stappler::xenolith::core::ImageViewInfo::operator<=>(stappler::xenolith::core::ImageViewInfo const&) const",
 						"_kind": "member function",
 						"_name": "operator<=>",
@@ -14567,42 +14422,9 @@
 						"kind": "member variable",
 						"name": "extent",
 						"type": {
-							"_typeName": "stappler::xenolith::Extent3",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::Extent3",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::Extent3",
-									"_kind": "type alias",
-									"_name": "Extent3",
-									"id": 2508878272,
-									"kind": "type alias",
-									"name": "Extent3",
-									"underlying_type": {
-										"_typeName": "geom::Extent3",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::Extent3",
-											"objects": [{
-												"_fullName": "::stappler::geom::Extent3",
-												"_kind": "class",
-												"_name": "Extent3",
-												"class_kind": "struct",
-												"id": 3914224354,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "Extent3",
-												"scope": {
-													"name": "Extent3"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::Extent3",
+							"kind": "unexposed",
+							"name": "stappler::geom::Extent3"
 						}
 					}, {
 						"_fullName": "::stappler::xenolith::core::FrameContraints::contentPadding",
@@ -14613,42 +14435,9 @@
 						"kind": "member variable",
 						"name": "contentPadding",
 						"type": {
-							"_typeName": "stappler::xenolith::Padding",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::Padding",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::Padding",
-									"_kind": "type alias",
-									"_name": "Padding",
-									"id": 232642206,
-									"kind": "type alias",
-									"name": "Padding",
-									"underlying_type": {
-										"_typeName": "geom::Padding",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::Padding",
-											"objects": [{
-												"_fullName": "::stappler::geom::Padding",
-												"_kind": "class",
-												"_name": "Padding",
-												"class_kind": "struct",
-												"id": 2717367825,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "Padding",
-												"scope": {
-													"name": "Padding"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::Padding",
+							"kind": "unexposed",
+							"name": "stappler::geom::Padding"
 						}
 					}, {
 						"_fullName": "::stappler::xenolith::core::FrameContraints::transform",
@@ -14769,42 +14558,9 @@
 						"name": "getScreenSize",
 						"ref_qualifier": "none",
 						"return_type": {
-							"_typeName": "stappler::xenolith::Size2",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::Size2",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::Size2",
-									"_kind": "type alias",
-									"_name": "Size2",
-									"id": 3876930682,
-									"kind": "type alias",
-									"name": "Size2",
-									"underlying_type": {
-										"_typeName": "geom::Size2",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::Size2",
-											"objects": [{
-												"_fullName": "::stappler::geom::Size2",
-												"_kind": "class",
-												"_name": "Size2",
-												"class_kind": "struct",
-												"id": 1488533902,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "Size2",
-												"scope": {
-													"name": "Size2"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::Size2",
+							"kind": "unexposed",
+							"name": "stappler::geom::Size2"
 						},
 						"semantic_scope": "",
 						"signature": "() const"
@@ -14825,42 +14581,9 @@
 						"name": "getRotatedPadding",
 						"ref_qualifier": "none",
 						"return_type": {
-							"_typeName": "stappler::xenolith::Padding",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::Padding",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::Padding",
-									"_kind": "type alias",
-									"_name": "Padding",
-									"id": 232642206,
-									"kind": "type alias",
-									"name": "Padding",
-									"underlying_type": {
-										"_typeName": "geom::Padding",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::Padding",
-											"objects": [{
-												"_fullName": "::stappler::geom::Padding",
-												"_kind": "class",
-												"_name": "Padding",
-												"class_kind": "struct",
-												"id": 2717367825,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "Padding",
-												"scope": {
-													"name": "Padding"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::Padding",
+							"kind": "unexposed",
+							"name": "stappler::geom::Padding"
 						},
 						"semantic_scope": "",
 						"signature": "() const"
@@ -14872,13 +14595,77 @@
 						"cv_qualifier": "const",
 						"id": 1357511764,
 						"is_consteval": false,
-						"is_constexpr": false,
+						"is_constexpr": true,
 						"is_declaration": false,
 						"is_definition": true,
 						"is_variadic": false,
 						"is_virtual": false,
 						"kind": "member function",
 						"name": "operator==",
+						"parameters": [{
+							"_fullName": "",
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 46947589,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::xenolith::core::FrameContraints const&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "stappler::xenolith::core::FrameContraints const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "stappler::xenolith::core::FrameContraints",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::xenolith::core::FrameContraints",
+											"objects": [{
+												"_fullName": "::stappler::xenolith::core::FrameContraints",
+												"_kind": "class",
+												"_name": "FrameContraints",
+												"class_kind": "struct",
+												"id": 1970292953,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "FrameContraints",
+												"scope": {
+													"name": "FrameContraints"
+												},
+												"semantic_scope": ""
+											}]
+										}
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}],
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "bool",
+							"builtin_type_kind": "bool",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::xenolith::core::FrameContraints const&) const"
+					}, {
+						"_fullName": "::stappler::xenolith::core::FrameContraints::operator!=(stappler::xenolith::core::FrameContraints const&) const",
+						"_kind": "member function",
+						"_name": "operator!=",
+						"body_kind": "defaulted",
+						"cv_qualifier": "const",
+						"id": 3601437546,
+						"is_consteval": false,
+						"is_constexpr": true,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "operator!=",
 						"parameters": [{
 							"_fullName": "",
 							"_kind": "function parameter",
@@ -15452,42 +15239,9 @@
 						"kind": "member variable",
 						"name": "extent",
 						"type": {
-							"_typeName": "stappler::xenolith::Extent2",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::Extent2",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::Extent2",
-									"_kind": "type alias",
-									"_name": "Extent2",
-									"id": 3322744362,
-									"kind": "type alias",
-									"name": "Extent2",
-									"underlying_type": {
-										"_typeName": "geom::Extent2",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::Extent2",
-											"objects": [{
-												"_fullName": "::stappler::geom::Extent2",
-												"_kind": "class",
-												"_name": "Extent2",
-												"class_kind": "struct",
-												"id": 3230388080,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "Extent2",
-												"scope": {
-													"name": "Extent2"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::Extent2",
+							"kind": "unexposed",
+							"name": "stappler::geom::Extent2"
 						}
 					}, {
 						"_fullName": "::stappler::xenolith::core::SwapchainConfig::clipped",
@@ -15579,6 +15333,134 @@
 						},
 						"semantic_scope": "",
 						"signature": "() const"
+					}, {
+						"_fullName": "::stappler::xenolith::core::SwapchainConfig::operator==(stappler::xenolith::core::SwapchainConfig const&) const",
+						"_kind": "member function",
+						"_name": "operator==",
+						"body_kind": "defaulted",
+						"cv_qualifier": "const",
+						"id": 9101575,
+						"is_consteval": false,
+						"is_constexpr": true,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "operator==",
+						"parameters": [{
+							"_fullName": "",
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 46947589,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::xenolith::core::SwapchainConfig const&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "stappler::xenolith::core::SwapchainConfig const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "stappler::xenolith::core::SwapchainConfig",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::xenolith::core::SwapchainConfig",
+											"objects": [{
+												"_fullName": "::stappler::xenolith::core::SwapchainConfig",
+												"_kind": "class",
+												"_name": "SwapchainConfig",
+												"class_kind": "struct",
+												"id": 2042378083,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "SwapchainConfig",
+												"scope": {
+													"name": "SwapchainConfig"
+												},
+												"semantic_scope": ""
+											}]
+										}
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}],
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "bool",
+							"builtin_type_kind": "bool",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::xenolith::core::SwapchainConfig const&) const"
+					}, {
+						"_fullName": "::stappler::xenolith::core::SwapchainConfig::operator!=(stappler::xenolith::core::SwapchainConfig const&) const",
+						"_kind": "member function",
+						"_name": "operator!=",
+						"body_kind": "defaulted",
+						"cv_qualifier": "const",
+						"id": 1793717801,
+						"is_consteval": false,
+						"is_constexpr": true,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "operator!=",
+						"parameters": [{
+							"_fullName": "",
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 46947589,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::xenolith::core::SwapchainConfig const&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "stappler::xenolith::core::SwapchainConfig const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "stappler::xenolith::core::SwapchainConfig",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::xenolith::core::SwapchainConfig",
+											"objects": [{
+												"_fullName": "::stappler::xenolith::core::SwapchainConfig",
+												"_kind": "class",
+												"_name": "SwapchainConfig",
+												"class_kind": "struct",
+												"id": 2042378083,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "SwapchainConfig",
+												"scope": {
+													"name": "SwapchainConfig"
+												},
+												"semantic_scope": ""
+											}]
+										}
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}],
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "bool",
+							"builtin_type_kind": "bool",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::xenolith::core::SwapchainConfig const&) const"
 					}],
 					"class_kind": "struct",
 					"id": 2042378083,
@@ -15634,42 +15516,9 @@
 						"kind": "member variable",
 						"name": "currentExtent",
 						"type": {
-							"_typeName": "stappler::xenolith::Extent2",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::Extent2",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::Extent2",
-									"_kind": "type alias",
-									"_name": "Extent2",
-									"id": 3322744362,
-									"kind": "type alias",
-									"name": "Extent2",
-									"underlying_type": {
-										"_typeName": "geom::Extent2",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::Extent2",
-											"objects": [{
-												"_fullName": "::stappler::geom::Extent2",
-												"_kind": "class",
-												"_name": "Extent2",
-												"class_kind": "struct",
-												"id": 3230388080,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "Extent2",
-												"scope": {
-													"name": "Extent2"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::Extent2",
+							"kind": "unexposed",
+							"name": "stappler::geom::Extent2"
 						}
 					}, {
 						"_fullName": "::stappler::xenolith::core::SurfaceInfo::minImageExtent",
@@ -15680,42 +15529,9 @@
 						"kind": "member variable",
 						"name": "minImageExtent",
 						"type": {
-							"_typeName": "stappler::xenolith::Extent2",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::Extent2",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::Extent2",
-									"_kind": "type alias",
-									"_name": "Extent2",
-									"id": 3322744362,
-									"kind": "type alias",
-									"name": "Extent2",
-									"underlying_type": {
-										"_typeName": "geom::Extent2",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::Extent2",
-											"objects": [{
-												"_fullName": "::stappler::geom::Extent2",
-												"_kind": "class",
-												"_name": "Extent2",
-												"class_kind": "struct",
-												"id": 3230388080,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "Extent2",
-												"scope": {
-													"name": "Extent2"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::Extent2",
+							"kind": "unexposed",
+							"name": "stappler::geom::Extent2"
 						}
 					}, {
 						"_fullName": "::stappler::xenolith::core::SurfaceInfo::maxImageExtent",
@@ -15726,42 +15542,9 @@
 						"kind": "member variable",
 						"name": "maxImageExtent",
 						"type": {
-							"_typeName": "stappler::xenolith::Extent2",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::Extent2",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::Extent2",
-									"_kind": "type alias",
-									"_name": "Extent2",
-									"id": 3322744362,
-									"kind": "type alias",
-									"name": "Extent2",
-									"underlying_type": {
-										"_typeName": "geom::Extent2",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::Extent2",
-											"objects": [{
-												"_fullName": "::stappler::geom::Extent2",
-												"_kind": "class",
-												"_name": "Extent2",
-												"class_kind": "struct",
-												"id": 3230388080,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "Extent2",
-												"scope": {
-													"name": "Extent2"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::Extent2",
+							"kind": "unexposed",
+							"name": "stappler::geom::Extent2"
 						}
 					}, {
 						"_fullName": "::stappler::xenolith::core::SurfaceInfo::maxImageArrayLayers",

@@ -166,7 +166,7 @@ Title: SPBytesReader.h
 * size_t - число символов для сдвига
 
 
-# ::stappler::BytesReader<typename>::compare(stappler::BytesReader::CharType const*,size_t) const
+# ::stappler::BytesReader<typename>::equals(stappler::BytesReader::CharType const*,size_t) const
 
 ## BRIEF
 
@@ -185,7 +185,7 @@ Title: SPBytesReader.h
 Возвращает:
 * bool - true если данные совпадают
 
-# ::stappler::BytesReader<typename>::compare(stappler::BytesReader::CharType const*) const
+# ::stappler::BytesReader<typename>::equals(stappler::BytesReader::CharType const*) const
 
 ## BRIEF
 

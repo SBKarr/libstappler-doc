@@ -12,6 +12,15 @@
 		"kind": "include directive",
 		"name": "XLVkInstance.h"
 	}, {
+		"_fullName": "SPDso.h",
+		"_kind": "include directive",
+		"_name": "SPDso.h",
+		"id": 2116684965,
+		"include": "core/core/utils/SPDso.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "SPDso.h"
+	}, {
 		"_fullName": "XENOLITH_BACKEND_VK_XLVKPLATFORM_H_",
 		"_kind": "macro definition",
 		"_name": "XENOLITH_BACKEND_VK_XLVKPLATFORM_H_",
@@ -757,12 +766,12 @@
 								"name": "LoaderTable::LoaderTable"
 							}
 						}, {
-							"_fullName": "::stappler::xenolith::vk::platform::FunctionTable::createInstance(Callback<bool (stappler::xenolith::vk::platform::VulkanInstanceData &, const stappler::xenolith::vk::platform::VulkanInstanceInfo &)> const&,Instance::TerminateCallback&&) const",
+							"_fullName": "::stappler::xenolith::vk::platform::FunctionTable::createInstance(Callback<bool (stappler::xenolith::vk::platform::VulkanInstanceData &, const stappler::xenolith::vk::platform::VulkanInstanceInfo &)> const&,stappler::Dso&&,Instance::TerminateCallback&&) const",
 							"_kind": "member function",
 							"_name": "createInstance",
 							"body_kind": "declaration",
 							"cv_qualifier": "const",
-							"id": 1246090335,
+							"id": 254807487,
 							"is_consteval": false,
 							"is_constexpr": false,
 							"is_declaration": true,
@@ -855,6 +864,41 @@
 										}
 									},
 									"reference_kind": "lvalue"
+								}
+							}, {
+								"_fullName": "vulkanModule",
+								"_kind": "function parameter",
+								"_name": "vulkanModule",
+								"id": 2370695562,
+								"kind": "function parameter",
+								"name": "vulkanModule",
+								"type": {
+									"_typeName": "stappler::Dso&&",
+									"kind": "reference",
+									"referee": {
+										"_typeName": "stappler::Dso",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::Dso",
+											"objects": [{
+												"_fullName": "::stappler::Dso",
+												"_kind": "class",
+												"_name": "Dso",
+												"class_kind": "class",
+												"id": 2090862796,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "Dso",
+												"scope": {
+													"name": "Dso"
+												},
+												"semantic_scope": ""
+											}]
+										}
+									},
+									"reference_kind": "rvalue"
 								}
 							}, {
 								"_fullName": "",
@@ -963,7 +1007,7 @@
 								"unexposed_arguments": "stappler::xenolith::vk::Instance"
 							},
 							"semantic_scope": "",
-							"signature": "(Callback<bool (stappler::xenolith::vk::platform::VulkanInstanceData &, const stappler::xenolith::vk::platform::VulkanInstanceInfo &)> const&,Instance::TerminateCallback&&) const"
+							"signature": "(Callback<bool (stappler::xenolith::vk::platform::VulkanInstanceData &, const stappler::xenolith::vk::platform::VulkanInstanceInfo &)> const&,stappler::Dso&&,Instance::TerminateCallback&&) const"
 						}, {
 							"_fullName": "::stappler::xenolith::vk::platform::FunctionTable::operator bool() const",
 							"_kind": "conversion operator",
@@ -975,7 +1019,7 @@
 							"is_constexpr": false,
 							"is_declaration": false,
 							"is_definition": true,
-							"is_explicit": false,
+							"is_explicit": true,
 							"is_variadic": false,
 							"is_virtual": false,
 							"kind": "conversion operator",
@@ -1236,12 +1280,12 @@
 							"semantic_scope": "",
 							"signature": "(stappler::xenolith::vk::platform::VulkanInstanceData&,stappler::xenolith::vk::platform::VulkanInstanceInfo const&) const"
 						}, {
-							"_fullName": "::stappler::xenolith::vk::platform::FunctionTable::doCreateInstance(stappler::xenolith::vk::platform::VulkanInstanceData&,Instance::TerminateCallback&&) const",
+							"_fullName": "::stappler::xenolith::vk::platform::FunctionTable::doCreateInstance(stappler::xenolith::vk::platform::VulkanInstanceData&,stappler::Dso&&,Instance::TerminateCallback&&) const",
 							"_kind": "member function",
 							"_name": "doCreateInstance",
 							"body_kind": "declaration",
 							"cv_qualifier": "const",
-							"id": 3730867778,
+							"id": 1683091946,
 							"is_consteval": false,
 							"is_constexpr": false,
 							"is_declaration": true,
@@ -1284,6 +1328,41 @@
 										}
 									},
 									"reference_kind": "lvalue"
+								}
+							}, {
+								"_fullName": "vulkanModule",
+								"_kind": "function parameter",
+								"_name": "vulkanModule",
+								"id": 2370695562,
+								"kind": "function parameter",
+								"name": "vulkanModule",
+								"type": {
+									"_typeName": "stappler::Dso&&",
+									"kind": "reference",
+									"referee": {
+										"_typeName": "stappler::Dso",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::Dso",
+											"objects": [{
+												"_fullName": "::stappler::Dso",
+												"_kind": "class",
+												"_name": "Dso",
+												"class_kind": "class",
+												"id": 2090862796,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "Dso",
+												"scope": {
+													"name": "Dso"
+												},
+												"semantic_scope": ""
+											}]
+										}
+									},
+									"reference_kind": "rvalue"
 								}
 							}, {
 								"_fullName": "",
@@ -1392,7 +1471,7 @@
 								"unexposed_arguments": "stappler::xenolith::vk::Instance"
 							},
 							"semantic_scope": "",
-							"signature": "(stappler::xenolith::vk::platform::VulkanInstanceData&,Instance::TerminateCallback&&) const"
+							"signature": "(stappler::xenolith::vk::platform::VulkanInstanceData&,stappler::Dso&&,Instance::TerminateCallback&&) const"
 						}],
 						"class_kind": "class",
 						"id": 522764081,

@@ -5278,12 +5278,12 @@
 						"semantic_scope": "",
 						"signature": "()"
 					}, {
-						"_fullName": "::stappler::xenolith::core::Material::init(stappler::xenolith::core::MaterialId,stappler::xenolith::core::Material::PipelineData const*,Vector<stappler::xenolith::core::MaterialImage>&&,stappler::mem_std::Bytes&&)",
+						"_fullName": "::stappler::xenolith::core::Material::init(stappler::xenolith::core::MaterialId,stappler::xenolith::core::Material::PipelineData const*,Vector<stappler::xenolith::core::MaterialImage>&&,Rc<stappler::mem_std::Ref>&&)",
 						"_kind": "member function",
 						"_name": "init",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 1181536982,
+						"id": 546859486,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -5502,7 +5502,16 @@
 							"default_value": {
 								"expression": [{
 									"kind": "identifier",
-									"spelling": "Bytes"
+									"spelling": "Rc"
+								}, {
+									"kind": "punctuation",
+									"spelling": "<"
+								}, {
+									"kind": "identifier",
+									"spelling": "Ref"
+								}, {
+									"kind": "punctuation",
+									"spelling": ">"
 								}, {
 									"kind": "punctuation",
 									"spelling": "("
@@ -5512,31 +5521,75 @@
 								}],
 								"kind": "unexposed",
 								"type": {
-									"_typeName": "stappler::mem_std::Bytes&&",
+									"_typeName": "Rc<stappler::mem_std::Ref>&&",
 									"kind": "reference",
 									"referee": {
-										"_typeName": "stappler::mem_std::Bytes",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::mem_std::Bytes",
+										"_typeName": "Rc<stappler::mem_std::Ref>",
+										"arguments_exposed": false,
+										"kind": "template_instantiation",
+										"primary_template": {
+											"name": "Rc",
 											"objects": [{
-												"_fullName": "::stappler::mem_std::Bytes",
-												"_kind": "type alias",
-												"_name": "Bytes",
-												"id": 3221952977,
-												"kind": "type alias",
-												"name": "Bytes",
-												"underlying_type": {
-													"_typeName": "std::vector<uint8_t>",
-													"arguments_exposed": false,
-													"kind": "template_instantiation",
-													"primary_template": {
-														"name": "std::vector"
+												"_fullName": "::stappler::RcBase<typename>",
+												"_kind": "class template",
+												"_name": "RcBase",
+												"class": {
+													"_fullName": "::stappler::RcBase<typename>",
+													"_kind": "class",
+													"_name": "RcBase",
+													"class_kind": "class",
+													"id": 782220210,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "RcBase",
+													"scope": {
+														"is_templated": true,
+														"name": "RcBase",
+														"template_parameters": [{
+															"_fullName": "Base",
+															"_kind": "template type parameter",
+															"_name": "Base",
+															"id": 3435036189,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "Base"
+														}]
 													},
-													"unexposed_arguments": "uint8_t"
+													"semantic_scope": ""
+												},
+												"id": 782220210,
+												"kind": "class template",
+												"name": "RcBase",
+												"parameters": [{
+													"_fullName": "Base",
+													"_kind": "template type parameter",
+													"_name": "Base",
+													"id": 3435036189,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "Base"
+												}],
+												"scope":  {
+													"is_templated": true,
+													"name": "RcBase",
+													"template_parameters": [{
+														"_fullName": "Base",
+														"_kind": "template type parameter",
+														"_name": "Base",
+														"id": 3435036189,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "Base"
+													}]
 												}
 											}]
-										}
+										},
+										"unexposed_arguments": "stappler::mem_std::Ref"
 									},
 									"reference_kind": "rvalue"
 								}
@@ -5545,31 +5598,75 @@
 							"kind": "function parameter",
 							"name": "",
 							"type": {
-								"_typeName": "stappler::mem_std::Bytes&&",
+								"_typeName": "Rc<stappler::mem_std::Ref>&&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "stappler::mem_std::Bytes",
-									"kind": "user_defined",
-									"target": {
-										"name": "stappler::mem_std::Bytes",
+									"_typeName": "Rc<stappler::mem_std::Ref>",
+									"arguments_exposed": false,
+									"kind": "template_instantiation",
+									"primary_template": {
+										"name": "Rc",
 										"objects": [{
-											"_fullName": "::stappler::mem_std::Bytes",
-											"_kind": "type alias",
-											"_name": "Bytes",
-											"id": 3221952977,
-											"kind": "type alias",
-											"name": "Bytes",
-											"underlying_type": {
-												"_typeName": "std::vector<uint8_t>",
-												"arguments_exposed": false,
-												"kind": "template_instantiation",
-												"primary_template": {
-													"name": "std::vector"
+											"_fullName": "::stappler::RcBase<typename>",
+											"_kind": "class template",
+											"_name": "RcBase",
+											"class": {
+												"_fullName": "::stappler::RcBase<typename>",
+												"_kind": "class",
+												"_name": "RcBase",
+												"class_kind": "class",
+												"id": 782220210,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "RcBase",
+												"scope": {
+													"is_templated": true,
+													"name": "RcBase",
+													"template_parameters": [{
+														"_fullName": "Base",
+														"_kind": "template type parameter",
+														"_name": "Base",
+														"id": 3435036189,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "Base"
+													}]
 												},
-												"unexposed_arguments": "uint8_t"
+												"semantic_scope": ""
+											},
+											"id": 782220210,
+											"kind": "class template",
+											"name": "RcBase",
+											"parameters": [{
+												"_fullName": "Base",
+												"_kind": "template type parameter",
+												"_name": "Base",
+												"id": 3435036189,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Base"
+											}],
+											"scope":  {
+												"is_templated": true,
+												"name": "RcBase",
+												"template_parameters": [{
+													"_fullName": "Base",
+													"_kind": "template type parameter",
+													"_name": "Base",
+													"id": 3435036189,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "Base"
+												}]
 											}
 										}]
-									}
+									},
+									"unexposed_arguments": "stappler::mem_std::Ref"
 								},
 								"reference_kind": "rvalue"
 							}
@@ -5581,14 +5678,14 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::core::MaterialId,stappler::xenolith::core::Material::PipelineData const*,Vector<stappler::xenolith::core::MaterialImage>&&,stappler::mem_std::Bytes&&)"
+						"signature": "(stappler::xenolith::core::MaterialId,stappler::xenolith::core::Material::PipelineData const*,Vector<stappler::xenolith::core::MaterialImage>&&,Rc<stappler::mem_std::Ref>&&)"
 					}, {
-						"_fullName": "::stappler::xenolith::core::Material::init(stappler::xenolith::core::MaterialId,stappler::xenolith::core::Material::PipelineData const*,Rc<stappler::xenolith::core::DynamicImageInstance> const&,stappler::mem_std::Bytes&&)",
+						"_fullName": "::stappler::xenolith::core::Material::init(stappler::xenolith::core::MaterialId,stappler::xenolith::core::Material::PipelineData const*,Rc<stappler::xenolith::core::DynamicImageInstance> const&,Rc<stappler::mem_std::Ref>&&)",
 						"_kind": "member function",
 						"_name": "init",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 1735658827,
+						"id": 575346131,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -5871,7 +5968,16 @@
 							"default_value": {
 								"expression": [{
 									"kind": "identifier",
-									"spelling": "Bytes"
+									"spelling": "Rc"
+								}, {
+									"kind": "punctuation",
+									"spelling": "<"
+								}, {
+									"kind": "identifier",
+									"spelling": "Ref"
+								}, {
+									"kind": "punctuation",
+									"spelling": ">"
 								}, {
 									"kind": "punctuation",
 									"spelling": "("
@@ -5881,31 +5987,75 @@
 								}],
 								"kind": "unexposed",
 								"type": {
-									"_typeName": "stappler::mem_std::Bytes&&",
+									"_typeName": "Rc<stappler::mem_std::Ref>&&",
 									"kind": "reference",
 									"referee": {
-										"_typeName": "stappler::mem_std::Bytes",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::mem_std::Bytes",
+										"_typeName": "Rc<stappler::mem_std::Ref>",
+										"arguments_exposed": false,
+										"kind": "template_instantiation",
+										"primary_template": {
+											"name": "Rc",
 											"objects": [{
-												"_fullName": "::stappler::mem_std::Bytes",
-												"_kind": "type alias",
-												"_name": "Bytes",
-												"id": 3221952977,
-												"kind": "type alias",
-												"name": "Bytes",
-												"underlying_type": {
-													"_typeName": "std::vector<uint8_t>",
-													"arguments_exposed": false,
-													"kind": "template_instantiation",
-													"primary_template": {
-														"name": "std::vector"
+												"_fullName": "::stappler::RcBase<typename>",
+												"_kind": "class template",
+												"_name": "RcBase",
+												"class": {
+													"_fullName": "::stappler::RcBase<typename>",
+													"_kind": "class",
+													"_name": "RcBase",
+													"class_kind": "class",
+													"id": 782220210,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "RcBase",
+													"scope": {
+														"is_templated": true,
+														"name": "RcBase",
+														"template_parameters": [{
+															"_fullName": "Base",
+															"_kind": "template type parameter",
+															"_name": "Base",
+															"id": 3435036189,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "Base"
+														}]
 													},
-													"unexposed_arguments": "uint8_t"
+													"semantic_scope": ""
+												},
+												"id": 782220210,
+												"kind": "class template",
+												"name": "RcBase",
+												"parameters": [{
+													"_fullName": "Base",
+													"_kind": "template type parameter",
+													"_name": "Base",
+													"id": 3435036189,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "Base"
+												}],
+												"scope":  {
+													"is_templated": true,
+													"name": "RcBase",
+													"template_parameters": [{
+														"_fullName": "Base",
+														"_kind": "template type parameter",
+														"_name": "Base",
+														"id": 3435036189,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "Base"
+													}]
 												}
 											}]
-										}
+										},
+										"unexposed_arguments": "stappler::mem_std::Ref"
 									},
 									"reference_kind": "rvalue"
 								}
@@ -5914,31 +6064,75 @@
 							"kind": "function parameter",
 							"name": "",
 							"type": {
-								"_typeName": "stappler::mem_std::Bytes&&",
+								"_typeName": "Rc<stappler::mem_std::Ref>&&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "stappler::mem_std::Bytes",
-									"kind": "user_defined",
-									"target": {
-										"name": "stappler::mem_std::Bytes",
+									"_typeName": "Rc<stappler::mem_std::Ref>",
+									"arguments_exposed": false,
+									"kind": "template_instantiation",
+									"primary_template": {
+										"name": "Rc",
 										"objects": [{
-											"_fullName": "::stappler::mem_std::Bytes",
-											"_kind": "type alias",
-											"_name": "Bytes",
-											"id": 3221952977,
-											"kind": "type alias",
-											"name": "Bytes",
-											"underlying_type": {
-												"_typeName": "std::vector<uint8_t>",
-												"arguments_exposed": false,
-												"kind": "template_instantiation",
-												"primary_template": {
-													"name": "std::vector"
+											"_fullName": "::stappler::RcBase<typename>",
+											"_kind": "class template",
+											"_name": "RcBase",
+											"class": {
+												"_fullName": "::stappler::RcBase<typename>",
+												"_kind": "class",
+												"_name": "RcBase",
+												"class_kind": "class",
+												"id": 782220210,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "RcBase",
+												"scope": {
+													"is_templated": true,
+													"name": "RcBase",
+													"template_parameters": [{
+														"_fullName": "Base",
+														"_kind": "template type parameter",
+														"_name": "Base",
+														"id": 3435036189,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "Base"
+													}]
 												},
-												"unexposed_arguments": "uint8_t"
+												"semantic_scope": ""
+											},
+											"id": 782220210,
+											"kind": "class template",
+											"name": "RcBase",
+											"parameters": [{
+												"_fullName": "Base",
+												"_kind": "template type parameter",
+												"_name": "Base",
+												"id": 3435036189,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Base"
+											}],
+											"scope":  {
+												"is_templated": true,
+												"name": "RcBase",
+												"template_parameters": [{
+													"_fullName": "Base",
+													"_kind": "template type parameter",
+													"_name": "Base",
+													"id": 3435036189,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "Base"
+												}]
 											}
 										}]
-									}
+									},
+									"unexposed_arguments": "stappler::mem_std::Ref"
 								},
 								"reference_kind": "rvalue"
 							}
@@ -5950,14 +6144,14 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::core::MaterialId,stappler::xenolith::core::Material::PipelineData const*,Rc<stappler::xenolith::core::DynamicImageInstance> const&,stappler::mem_std::Bytes&&)"
+						"signature": "(stappler::xenolith::core::MaterialId,stappler::xenolith::core::Material::PipelineData const*,Rc<stappler::xenolith::core::DynamicImageInstance> const&,Rc<stappler::mem_std::Ref>&&)"
 					}, {
-						"_fullName": "::stappler::xenolith::core::Material::init(stappler::xenolith::core::MaterialId,stappler::xenolith::core::Material::PipelineData const*,stappler::xenolith::core::ImageData const*,stappler::mem_std::Bytes&&,bool)",
+						"_fullName": "::stappler::xenolith::core::Material::init(stappler::xenolith::core::MaterialId,stappler::xenolith::core::Material::PipelineData const*,stappler::xenolith::core::ImageData const*,Rc<stappler::mem_std::Ref>&&,bool)",
 						"_kind": "member function",
 						"_name": "init",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 2366796351,
+						"id": 1825925345,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -6325,7 +6519,16 @@
 							"default_value": {
 								"expression": [{
 									"kind": "identifier",
-									"spelling": "Bytes"
+									"spelling": "Rc"
+								}, {
+									"kind": "punctuation",
+									"spelling": "<"
+								}, {
+									"kind": "identifier",
+									"spelling": "Ref"
+								}, {
+									"kind": "punctuation",
+									"spelling": ">"
 								}, {
 									"kind": "punctuation",
 									"spelling": "("
@@ -6335,31 +6538,75 @@
 								}],
 								"kind": "unexposed",
 								"type": {
-									"_typeName": "stappler::mem_std::Bytes&&",
+									"_typeName": "Rc<stappler::mem_std::Ref>&&",
 									"kind": "reference",
 									"referee": {
-										"_typeName": "stappler::mem_std::Bytes",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::mem_std::Bytes",
+										"_typeName": "Rc<stappler::mem_std::Ref>",
+										"arguments_exposed": false,
+										"kind": "template_instantiation",
+										"primary_template": {
+											"name": "Rc",
 											"objects": [{
-												"_fullName": "::stappler::mem_std::Bytes",
-												"_kind": "type alias",
-												"_name": "Bytes",
-												"id": 3221952977,
-												"kind": "type alias",
-												"name": "Bytes",
-												"underlying_type": {
-													"_typeName": "std::vector<uint8_t>",
-													"arguments_exposed": false,
-													"kind": "template_instantiation",
-													"primary_template": {
-														"name": "std::vector"
+												"_fullName": "::stappler::RcBase<typename>",
+												"_kind": "class template",
+												"_name": "RcBase",
+												"class": {
+													"_fullName": "::stappler::RcBase<typename>",
+													"_kind": "class",
+													"_name": "RcBase",
+													"class_kind": "class",
+													"id": 782220210,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "RcBase",
+													"scope": {
+														"is_templated": true,
+														"name": "RcBase",
+														"template_parameters": [{
+															"_fullName": "Base",
+															"_kind": "template type parameter",
+															"_name": "Base",
+															"id": 3435036189,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "Base"
+														}]
 													},
-													"unexposed_arguments": "uint8_t"
+													"semantic_scope": ""
+												},
+												"id": 782220210,
+												"kind": "class template",
+												"name": "RcBase",
+												"parameters": [{
+													"_fullName": "Base",
+													"_kind": "template type parameter",
+													"_name": "Base",
+													"id": 3435036189,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "Base"
+												}],
+												"scope":  {
+													"is_templated": true,
+													"name": "RcBase",
+													"template_parameters": [{
+														"_fullName": "Base",
+														"_kind": "template type parameter",
+														"_name": "Base",
+														"id": 3435036189,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "Base"
+													}]
 												}
 											}]
-										}
+										},
+										"unexposed_arguments": "stappler::mem_std::Ref"
 									},
 									"reference_kind": "rvalue"
 								}
@@ -6368,31 +6615,75 @@
 							"kind": "function parameter",
 							"name": "",
 							"type": {
-								"_typeName": "stappler::mem_std::Bytes&&",
+								"_typeName": "Rc<stappler::mem_std::Ref>&&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "stappler::mem_std::Bytes",
-									"kind": "user_defined",
-									"target": {
-										"name": "stappler::mem_std::Bytes",
+									"_typeName": "Rc<stappler::mem_std::Ref>",
+									"arguments_exposed": false,
+									"kind": "template_instantiation",
+									"primary_template": {
+										"name": "Rc",
 										"objects": [{
-											"_fullName": "::stappler::mem_std::Bytes",
-											"_kind": "type alias",
-											"_name": "Bytes",
-											"id": 3221952977,
-											"kind": "type alias",
-											"name": "Bytes",
-											"underlying_type": {
-												"_typeName": "std::vector<uint8_t>",
-												"arguments_exposed": false,
-												"kind": "template_instantiation",
-												"primary_template": {
-													"name": "std::vector"
+											"_fullName": "::stappler::RcBase<typename>",
+											"_kind": "class template",
+											"_name": "RcBase",
+											"class": {
+												"_fullName": "::stappler::RcBase<typename>",
+												"_kind": "class",
+												"_name": "RcBase",
+												"class_kind": "class",
+												"id": 782220210,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "RcBase",
+												"scope": {
+													"is_templated": true,
+													"name": "RcBase",
+													"template_parameters": [{
+														"_fullName": "Base",
+														"_kind": "template type parameter",
+														"_name": "Base",
+														"id": 3435036189,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "Base"
+													}]
 												},
-												"unexposed_arguments": "uint8_t"
+												"semantic_scope": ""
+											},
+											"id": 782220210,
+											"kind": "class template",
+											"name": "RcBase",
+											"parameters": [{
+												"_fullName": "Base",
+												"_kind": "template type parameter",
+												"_name": "Base",
+												"id": 3435036189,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Base"
+											}],
+											"scope":  {
+												"is_templated": true,
+												"name": "RcBase",
+												"template_parameters": [{
+													"_fullName": "Base",
+													"_kind": "template type parameter",
+													"_name": "Base",
+													"id": 3435036189,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "Base"
+												}]
 											}
 										}]
-									}
+									},
+									"unexposed_arguments": "stappler::mem_std::Ref"
 								},
 								"reference_kind": "rvalue"
 							}
@@ -6428,14 +6719,14 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::core::MaterialId,stappler::xenolith::core::Material::PipelineData const*,stappler::xenolith::core::ImageData const*,stappler::mem_std::Bytes&&,bool)"
+						"signature": "(stappler::xenolith::core::MaterialId,stappler::xenolith::core::Material::PipelineData const*,stappler::xenolith::core::ImageData const*,Rc<stappler::mem_std::Ref>&&,bool)"
 					}, {
-						"_fullName": "::stappler::xenolith::core::Material::init(stappler::xenolith::core::MaterialId,stappler::xenolith::core::Material::PipelineData const*,stappler::xenolith::core::ImageData const*,stappler::xenolith::core::ColorMode,stappler::mem_std::Bytes&&,bool)",
+						"_fullName": "::stappler::xenolith::core::Material::init(stappler::xenolith::core::MaterialId,stappler::xenolith::core::Material::PipelineData const*,stappler::xenolith::core::ImageData const*,stappler::xenolith::core::ColorMode,Rc<stappler::mem_std::Ref>&&,bool)",
 						"_kind": "member function",
 						"_name": "init",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 4210052910,
+						"id": 3228678577,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -6834,7 +7125,16 @@
 							"default_value": {
 								"expression": [{
 									"kind": "identifier",
-									"spelling": "Bytes"
+									"spelling": "Rc"
+								}, {
+									"kind": "punctuation",
+									"spelling": "<"
+								}, {
+									"kind": "identifier",
+									"spelling": "Ref"
+								}, {
+									"kind": "punctuation",
+									"spelling": ">"
 								}, {
 									"kind": "punctuation",
 									"spelling": "("
@@ -6844,31 +7144,75 @@
 								}],
 								"kind": "unexposed",
 								"type": {
-									"_typeName": "stappler::mem_std::Bytes&&",
+									"_typeName": "Rc<stappler::mem_std::Ref>&&",
 									"kind": "reference",
 									"referee": {
-										"_typeName": "stappler::mem_std::Bytes",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::mem_std::Bytes",
+										"_typeName": "Rc<stappler::mem_std::Ref>",
+										"arguments_exposed": false,
+										"kind": "template_instantiation",
+										"primary_template": {
+											"name": "Rc",
 											"objects": [{
-												"_fullName": "::stappler::mem_std::Bytes",
-												"_kind": "type alias",
-												"_name": "Bytes",
-												"id": 3221952977,
-												"kind": "type alias",
-												"name": "Bytes",
-												"underlying_type": {
-													"_typeName": "std::vector<uint8_t>",
-													"arguments_exposed": false,
-													"kind": "template_instantiation",
-													"primary_template": {
-														"name": "std::vector"
+												"_fullName": "::stappler::RcBase<typename>",
+												"_kind": "class template",
+												"_name": "RcBase",
+												"class": {
+													"_fullName": "::stappler::RcBase<typename>",
+													"_kind": "class",
+													"_name": "RcBase",
+													"class_kind": "class",
+													"id": 782220210,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "RcBase",
+													"scope": {
+														"is_templated": true,
+														"name": "RcBase",
+														"template_parameters": [{
+															"_fullName": "Base",
+															"_kind": "template type parameter",
+															"_name": "Base",
+															"id": 3435036189,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "Base"
+														}]
 													},
-													"unexposed_arguments": "uint8_t"
+													"semantic_scope": ""
+												},
+												"id": 782220210,
+												"kind": "class template",
+												"name": "RcBase",
+												"parameters": [{
+													"_fullName": "Base",
+													"_kind": "template type parameter",
+													"_name": "Base",
+													"id": 3435036189,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "Base"
+												}],
+												"scope":  {
+													"is_templated": true,
+													"name": "RcBase",
+													"template_parameters": [{
+														"_fullName": "Base",
+														"_kind": "template type parameter",
+														"_name": "Base",
+														"id": 3435036189,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "Base"
+													}]
 												}
 											}]
-										}
+										},
+										"unexposed_arguments": "stappler::mem_std::Ref"
 									},
 									"reference_kind": "rvalue"
 								}
@@ -6877,31 +7221,75 @@
 							"kind": "function parameter",
 							"name": "",
 							"type": {
-								"_typeName": "stappler::mem_std::Bytes&&",
+								"_typeName": "Rc<stappler::mem_std::Ref>&&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "stappler::mem_std::Bytes",
-									"kind": "user_defined",
-									"target": {
-										"name": "stappler::mem_std::Bytes",
+									"_typeName": "Rc<stappler::mem_std::Ref>",
+									"arguments_exposed": false,
+									"kind": "template_instantiation",
+									"primary_template": {
+										"name": "Rc",
 										"objects": [{
-											"_fullName": "::stappler::mem_std::Bytes",
-											"_kind": "type alias",
-											"_name": "Bytes",
-											"id": 3221952977,
-											"kind": "type alias",
-											"name": "Bytes",
-											"underlying_type": {
-												"_typeName": "std::vector<uint8_t>",
-												"arguments_exposed": false,
-												"kind": "template_instantiation",
-												"primary_template": {
-													"name": "std::vector"
+											"_fullName": "::stappler::RcBase<typename>",
+											"_kind": "class template",
+											"_name": "RcBase",
+											"class": {
+												"_fullName": "::stappler::RcBase<typename>",
+												"_kind": "class",
+												"_name": "RcBase",
+												"class_kind": "class",
+												"id": 782220210,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "RcBase",
+												"scope": {
+													"is_templated": true,
+													"name": "RcBase",
+													"template_parameters": [{
+														"_fullName": "Base",
+														"_kind": "template type parameter",
+														"_name": "Base",
+														"id": 3435036189,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "Base"
+													}]
 												},
-												"unexposed_arguments": "uint8_t"
+												"semantic_scope": ""
+											},
+											"id": 782220210,
+											"kind": "class template",
+											"name": "RcBase",
+											"parameters": [{
+												"_fullName": "Base",
+												"_kind": "template type parameter",
+												"_name": "Base",
+												"id": 3435036189,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Base"
+											}],
+											"scope":  {
+												"is_templated": true,
+												"name": "RcBase",
+												"template_parameters": [{
+													"_fullName": "Base",
+													"_kind": "template type parameter",
+													"_name": "Base",
+													"id": 3435036189,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "Base"
+												}]
 											}
 										}]
-									}
+									},
+									"unexposed_arguments": "stappler::mem_std::Ref"
 								},
 								"reference_kind": "rvalue"
 							}
@@ -6937,14 +7325,14 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::core::MaterialId,stappler::xenolith::core::Material::PipelineData const*,stappler::xenolith::core::ImageData const*,stappler::xenolith::core::ColorMode,stappler::mem_std::Bytes&&,bool)"
+						"signature": "(stappler::xenolith::core::MaterialId,stappler::xenolith::core::Material::PipelineData const*,stappler::xenolith::core::ImageData const*,stappler::xenolith::core::ColorMode,Rc<stappler::mem_std::Ref>&&,bool)"
 					}, {
-						"_fullName": "::stappler::xenolith::core::Material::init(stappler::xenolith::core::Material const*,Rc<stappler::xenolith::core::ImageObject>&&,Rc<stappler::xenolith::core::DataAtlas>&&,stappler::mem_std::Bytes&&)",
+						"_fullName": "::stappler::xenolith::core::Material::init(stappler::xenolith::core::Material const*,Rc<stappler::xenolith::core::ImageObject>&&,Rc<stappler::xenolith::core::DataAtlas>&&,Rc<stappler::mem_std::Ref>&&)",
 						"_kind": "member function",
 						"_name": "init",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 889570455,
+						"id": 1800592388,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -7267,7 +7655,16 @@
 							"default_value": {
 								"expression": [{
 									"kind": "identifier",
-									"spelling": "Bytes"
+									"spelling": "Rc"
+								}, {
+									"kind": "punctuation",
+									"spelling": "<"
+								}, {
+									"kind": "identifier",
+									"spelling": "Ref"
+								}, {
+									"kind": "punctuation",
+									"spelling": ">"
 								}, {
 									"kind": "punctuation",
 									"spelling": "("
@@ -7277,31 +7674,75 @@
 								}],
 								"kind": "unexposed",
 								"type": {
-									"_typeName": "stappler::mem_std::Bytes&&",
+									"_typeName": "Rc<stappler::mem_std::Ref>&&",
 									"kind": "reference",
 									"referee": {
-										"_typeName": "stappler::mem_std::Bytes",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::mem_std::Bytes",
+										"_typeName": "Rc<stappler::mem_std::Ref>",
+										"arguments_exposed": false,
+										"kind": "template_instantiation",
+										"primary_template": {
+											"name": "Rc",
 											"objects": [{
-												"_fullName": "::stappler::mem_std::Bytes",
-												"_kind": "type alias",
-												"_name": "Bytes",
-												"id": 3221952977,
-												"kind": "type alias",
-												"name": "Bytes",
-												"underlying_type": {
-													"_typeName": "std::vector<uint8_t>",
-													"arguments_exposed": false,
-													"kind": "template_instantiation",
-													"primary_template": {
-														"name": "std::vector"
+												"_fullName": "::stappler::RcBase<typename>",
+												"_kind": "class template",
+												"_name": "RcBase",
+												"class": {
+													"_fullName": "::stappler::RcBase<typename>",
+													"_kind": "class",
+													"_name": "RcBase",
+													"class_kind": "class",
+													"id": 782220210,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "RcBase",
+													"scope": {
+														"is_templated": true,
+														"name": "RcBase",
+														"template_parameters": [{
+															"_fullName": "Base",
+															"_kind": "template type parameter",
+															"_name": "Base",
+															"id": 3435036189,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "Base"
+														}]
 													},
-													"unexposed_arguments": "uint8_t"
+													"semantic_scope": ""
+												},
+												"id": 782220210,
+												"kind": "class template",
+												"name": "RcBase",
+												"parameters": [{
+													"_fullName": "Base",
+													"_kind": "template type parameter",
+													"_name": "Base",
+													"id": 3435036189,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "Base"
+												}],
+												"scope":  {
+													"is_templated": true,
+													"name": "RcBase",
+													"template_parameters": [{
+														"_fullName": "Base",
+														"_kind": "template type parameter",
+														"_name": "Base",
+														"id": 3435036189,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "Base"
+													}]
 												}
 											}]
-										}
+										},
+										"unexposed_arguments": "stappler::mem_std::Ref"
 									},
 									"reference_kind": "rvalue"
 								}
@@ -7310,31 +7751,75 @@
 							"kind": "function parameter",
 							"name": "",
 							"type": {
-								"_typeName": "stappler::mem_std::Bytes&&",
+								"_typeName": "Rc<stappler::mem_std::Ref>&&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "stappler::mem_std::Bytes",
-									"kind": "user_defined",
-									"target": {
-										"name": "stappler::mem_std::Bytes",
+									"_typeName": "Rc<stappler::mem_std::Ref>",
+									"arguments_exposed": false,
+									"kind": "template_instantiation",
+									"primary_template": {
+										"name": "Rc",
 										"objects": [{
-											"_fullName": "::stappler::mem_std::Bytes",
-											"_kind": "type alias",
-											"_name": "Bytes",
-											"id": 3221952977,
-											"kind": "type alias",
-											"name": "Bytes",
-											"underlying_type": {
-												"_typeName": "std::vector<uint8_t>",
-												"arguments_exposed": false,
-												"kind": "template_instantiation",
-												"primary_template": {
-													"name": "std::vector"
+											"_fullName": "::stappler::RcBase<typename>",
+											"_kind": "class template",
+											"_name": "RcBase",
+											"class": {
+												"_fullName": "::stappler::RcBase<typename>",
+												"_kind": "class",
+												"_name": "RcBase",
+												"class_kind": "class",
+												"id": 782220210,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "RcBase",
+												"scope": {
+													"is_templated": true,
+													"name": "RcBase",
+													"template_parameters": [{
+														"_fullName": "Base",
+														"_kind": "template type parameter",
+														"_name": "Base",
+														"id": 3435036189,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "Base"
+													}]
 												},
-												"unexposed_arguments": "uint8_t"
+												"semantic_scope": ""
+											},
+											"id": 782220210,
+											"kind": "class template",
+											"name": "RcBase",
+											"parameters": [{
+												"_fullName": "Base",
+												"_kind": "template type parameter",
+												"_name": "Base",
+												"id": 3435036189,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Base"
+											}],
+											"scope":  {
+												"is_templated": true,
+												"name": "RcBase",
+												"template_parameters": [{
+													"_fullName": "Base",
+													"_kind": "template type parameter",
+													"_name": "Base",
+													"id": 3435036189,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "Base"
+												}]
 											}
 										}]
-									}
+									},
+									"unexposed_arguments": "stappler::mem_std::Ref"
 								},
 								"reference_kind": "rvalue"
 							}
@@ -7346,7 +7831,7 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::core::Material const*,Rc<stappler::xenolith::core::ImageObject>&&,Rc<stappler::xenolith::core::DataAtlas>&&,stappler::mem_std::Bytes&&)"
+						"signature": "(stappler::xenolith::core::Material const*,Rc<stappler::xenolith::core::ImageObject>&&,Rc<stappler::xenolith::core::DataAtlas>&&,Rc<stappler::mem_std::Ref>&&)"
 					}, {
 						"_fullName": "::stappler::xenolith::core::Material::init(stappler::xenolith::core::Material const*,Vector<stappler::xenolith::core::MaterialImage>&&)",
 						"_kind": "member function",
@@ -7772,389 +8257,6 @@
 								}
 							},
 							"reference_kind": "lvalue"
-						},
-						"semantic_scope": "",
-						"signature": "() const"
-					}, {
-						"_fullName": "::stappler::xenolith::core::Material::getData() const",
-						"_kind": "member function",
-						"_name": "getData",
-						"body_kind": "definition",
-						"cv_qualifier": "const",
-						"id": 3933854543,
-						"is_consteval": false,
-						"is_constexpr": false,
-						"is_declaration": false,
-						"is_definition": true,
-						"is_variadic": false,
-						"is_virtual": false,
-						"kind": "member function",
-						"name": "getData",
-						"ref_qualifier": "none",
-						"return_type": {
-							"_typeName": "stappler::BytesView",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::BytesView",
-								"objects": [{
-									"_fullName": "::stappler::BytesView",
-									"_kind": "type alias",
-									"_name": "BytesView",
-									"id": 597702939,
-									"kind": "type alias",
-									"name": "BytesView",
-									"underlying_type": {
-										"_typeName": "BytesViewTemplate<Endian::Host>",
-										"arguments_exposed": false,
-										"kind": "template_instantiation",
-										"primary_template": {
-											"name": "BytesViewTemplate",
-											"objects": [{
-												"_fullName": "::stappler::BytesViewTemplate<stappler::Endian>",
-												"_kind": "class template",
-												"_name": "BytesViewTemplate",
-												"class": {
-													"_fullName": "::stappler::BytesViewTemplate<stappler::Endian>",
-													"_kind": "class",
-													"_name": "BytesViewTemplate",
-													"bases": [{
-														"_fullName": "BytesReader<uint8_t>",
-														"_kind": "base class specifier",
-														"_name": "BytesReader<uint8_t>",
-														"access_specifier": "public",
-														"id": 2456653580,
-														"is_virtual": false,
-														"kind": "base class specifier",
-														"name": "BytesReader<uint8_t>",
-														"type": {
-															"_typeName": "BytesReader<uint8_t>",
-															"arguments_exposed": false,
-															"kind": "template_instantiation",
-															"primary_template": {
-																"name": "BytesReader",
-																"objects": [{
-																	"_fullName": "::stappler::BytesReader<typename>",
-																	"_kind": "class template",
-																	"_name": "BytesReader",
-																	"class": {
-																		"_fullName": "::stappler::BytesReader<typename>",
-																		"_kind": "class",
-																		"_name": "BytesReader",
-																		"class_kind": "class",
-																		"id": 1592092855,
-																		"is_declaration": false,
-																		"is_definition": true,
-																		"is_final": false,
-																		"kind": "class",
-																		"name": "BytesReader",
-																		"scope": {
-																			"is_templated": true,
-																			"name": "BytesReader",
-																			"template_parameters": [{
-																				"_fullName": "_CharType",
-																				"_kind": "template type parameter",
-																				"_name": "_CharType",
-																				"id": 1941148167,
-																				"is_variadic": false,
-																				"keyword": "typename",
-																				"kind": "template type parameter",
-																				"name": "_CharType"
-																			}]
-																		},
-																		"semantic_scope": ""
-																	},
-																	"id": 1592092855,
-																	"kind": "class template",
-																	"name": "BytesReader",
-																	"parameters": [{
-																		"_fullName": "_CharType",
-																		"_kind": "template type parameter",
-																		"_name": "_CharType",
-																		"id": 1941148167,
-																		"is_variadic": false,
-																		"keyword": "typename",
-																		"kind": "template type parameter",
-																		"name": "_CharType"
-																	}],
-																	"scope":  {
-																		"is_templated": true,
-																		"name": "BytesReader",
-																		"template_parameters": [{
-																			"_fullName": "_CharType",
-																			"_kind": "template type parameter",
-																			"_name": "_CharType",
-																			"id": 1941148167,
-																			"is_variadic": false,
-																			"keyword": "typename",
-																			"kind": "template type parameter",
-																			"name": "_CharType"
-																		}]
-																	}
-																}]
-															},
-															"unexposed_arguments": "uint8_t"
-														}
-													}],
-													"class_kind": "class",
-													"id": 334826878,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "BytesViewTemplate",
-													"scope": {
-														"is_templated": true,
-														"name": "BytesViewTemplate",
-														"template_parameters": [{
-															"_fullName": "Endianess",
-															"_kind": "non type template parameter",
-															"_name": "Endianess",
-															"default_value": {
-																"expression": [{
-																	"kind": "identifier",
-																	"spelling": "Endian"
-																}, {
-																	"kind": "punctuation",
-																	"spelling": "::"
-																}, {
-																	"kind": "identifier",
-																	"spelling": "Network"
-																}],
-																"kind": "unexposed",
-																"type": {
-																	"_typeName": "stappler::Endian",
-																	"kind": "user_defined",
-																	"target": {
-																		"name": "stappler::Endian",
-																		"objects": [{
-																			"_fullName": "::stappler::Endian",
-																			"_kind": "enum",
-																			"_name": "Endian",
-																			"has_explicit_type": false,
-																			"id": 3672700419,
-																			"is_declaration": false,
-																			"is_definition": true,
-																			"is_scoped": true,
-																			"kind": "enum",
-																			"name": "Endian",
-																			"scope": {
-																				"name": "Endian"
-																			},
-																			"semantic_scope": "",
-																			"underlying_type": {
-																				"_typeName": "int",
-																				"builtin_type_kind": "int",
-																				"kind": "builtin"
-																			}
-																		}]
-																	}
-																}
-															},
-															"id": 2642596124,
-															"is_variadic": false,
-															"kind": "non type template parameter",
-															"name": "Endianess",
-															"type": {
-																"_typeName": "stappler::Endian",
-																"kind": "user_defined",
-																"target": {
-																	"name": "stappler::Endian",
-																	"objects": [{
-																		"_fullName": "::stappler::Endian",
-																		"_kind": "enum",
-																		"_name": "Endian",
-																		"has_explicit_type": false,
-																		"id": 3672700419,
-																		"is_declaration": false,
-																		"is_definition": true,
-																		"is_scoped": true,
-																		"kind": "enum",
-																		"name": "Endian",
-																		"scope": {
-																			"name": "Endian"
-																		},
-																		"semantic_scope": "",
-																		"underlying_type": {
-																			"_typeName": "int",
-																			"builtin_type_kind": "int",
-																			"kind": "builtin"
-																		}
-																	}]
-																}
-															}
-														}]
-													},
-													"semantic_scope": ""
-												},
-												"id": 334826878,
-												"kind": "class template",
-												"name": "BytesViewTemplate",
-												"parameters": [{
-													"_fullName": "Endianess",
-													"_kind": "non type template parameter",
-													"_name": "Endianess",
-													"default_value": {
-														"expression": [{
-															"kind": "identifier",
-															"spelling": "Endian"
-														}, {
-															"kind": "punctuation",
-															"spelling": "::"
-														}, {
-															"kind": "identifier",
-															"spelling": "Network"
-														}],
-														"kind": "unexposed",
-														"type": {
-															"_typeName": "stappler::Endian",
-															"kind": "user_defined",
-															"target": {
-																"name": "stappler::Endian",
-																"objects": [{
-																	"_fullName": "::stappler::Endian",
-																	"_kind": "enum",
-																	"_name": "Endian",
-																	"has_explicit_type": false,
-																	"id": 3672700419,
-																	"is_declaration": false,
-																	"is_definition": true,
-																	"is_scoped": true,
-																	"kind": "enum",
-																	"name": "Endian",
-																	"scope": {
-																		"name": "Endian"
-																	},
-																	"semantic_scope": "",
-																	"underlying_type": {
-																		"_typeName": "int",
-																		"builtin_type_kind": "int",
-																		"kind": "builtin"
-																	}
-																}]
-															}
-														}
-													},
-													"id": 2642596124,
-													"is_variadic": false,
-													"kind": "non type template parameter",
-													"name": "Endianess",
-													"type": {
-														"_typeName": "stappler::Endian",
-														"kind": "user_defined",
-														"target": {
-															"name": "stappler::Endian",
-															"objects": [{
-																"_fullName": "::stappler::Endian",
-																"_kind": "enum",
-																"_name": "Endian",
-																"has_explicit_type": false,
-																"id": 3672700419,
-																"is_declaration": false,
-																"is_definition": true,
-																"is_scoped": true,
-																"kind": "enum",
-																"name": "Endian",
-																"scope": {
-																	"name": "Endian"
-																},
-																"semantic_scope": "",
-																"underlying_type": {
-																	"_typeName": "int",
-																	"builtin_type_kind": "int",
-																	"kind": "builtin"
-																}
-															}]
-														}
-													}
-												}],
-												"scope":  {
-													"is_templated": true,
-													"name": "BytesViewTemplate",
-													"template_parameters": [{
-														"_fullName": "Endianess",
-														"_kind": "non type template parameter",
-														"_name": "Endianess",
-														"default_value": {
-															"expression": [{
-																"kind": "identifier",
-																"spelling": "Endian"
-															}, {
-																"kind": "punctuation",
-																"spelling": "::"
-															}, {
-																"kind": "identifier",
-																"spelling": "Network"
-															}],
-															"kind": "unexposed",
-															"type": {
-																"_typeName": "stappler::Endian",
-																"kind": "user_defined",
-																"target": {
-																	"name": "stappler::Endian",
-																	"objects": [{
-																		"_fullName": "::stappler::Endian",
-																		"_kind": "enum",
-																		"_name": "Endian",
-																		"has_explicit_type": false,
-																		"id": 3672700419,
-																		"is_declaration": false,
-																		"is_definition": true,
-																		"is_scoped": true,
-																		"kind": "enum",
-																		"name": "Endian",
-																		"scope": {
-																			"name": "Endian"
-																		},
-																		"semantic_scope": "",
-																		"underlying_type": {
-																			"_typeName": "int",
-																			"builtin_type_kind": "int",
-																			"kind": "builtin"
-																		}
-																	}]
-																}
-															}
-														},
-														"id": 2642596124,
-														"is_variadic": false,
-														"kind": "non type template parameter",
-														"name": "Endianess",
-														"type": {
-															"_typeName": "stappler::Endian",
-															"kind": "user_defined",
-															"target": {
-																"name": "stappler::Endian",
-																"objects": [{
-																	"_fullName": "::stappler::Endian",
-																	"_kind": "enum",
-																	"_name": "Endian",
-																	"has_explicit_type": false,
-																	"id": 3672700419,
-																	"is_declaration": false,
-																	"is_definition": true,
-																	"is_scoped": true,
-																	"kind": "enum",
-																	"name": "Endian",
-																	"scope": {
-																		"name": "Endian"
-																	},
-																	"semantic_scope": "",
-																	"underlying_type": {
-																		"_typeName": "int",
-																		"builtin_type_kind": "int",
-																		"kind": "builtin"
-																	}
-																}]
-															}
-														}
-													}]
-												}
-											}]
-										},
-										"unexposed_arguments": "Endian::Host"
-									}
-								}]
-							}
 						},
 						"semantic_scope": "",
 						"signature": "() const"
@@ -8916,28 +9018,72 @@
 						"kind": "member variable",
 						"name": "_data",
 						"type": {
-							"_typeName": "stappler::mem_std::Bytes",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::mem_std::Bytes",
+							"_typeName": "Rc<stappler::mem_std::Ref>",
+							"arguments_exposed": false,
+							"kind": "template_instantiation",
+							"primary_template": {
+								"name": "Rc",
 								"objects": [{
-									"_fullName": "::stappler::mem_std::Bytes",
-									"_kind": "type alias",
-									"_name": "Bytes",
-									"id": 3221952977,
-									"kind": "type alias",
-									"name": "Bytes",
-									"underlying_type": {
-										"_typeName": "std::vector<uint8_t>",
-										"arguments_exposed": false,
-										"kind": "template_instantiation",
-										"primary_template": {
-											"name": "std::vector"
+									"_fullName": "::stappler::RcBase<typename>",
+									"_kind": "class template",
+									"_name": "RcBase",
+									"class": {
+										"_fullName": "::stappler::RcBase<typename>",
+										"_kind": "class",
+										"_name": "RcBase",
+										"class_kind": "class",
+										"id": 782220210,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "RcBase",
+										"scope": {
+											"is_templated": true,
+											"name": "RcBase",
+											"template_parameters": [{
+												"_fullName": "Base",
+												"_kind": "template type parameter",
+												"_name": "Base",
+												"id": 3435036189,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Base"
+											}]
 										},
-										"unexposed_arguments": "uint8_t"
+										"semantic_scope": ""
+									},
+									"id": 782220210,
+									"kind": "class template",
+									"name": "RcBase",
+									"parameters": [{
+										"_fullName": "Base",
+										"_kind": "template type parameter",
+										"_name": "Base",
+										"id": 3435036189,
+										"is_variadic": false,
+										"keyword": "typename",
+										"kind": "template type parameter",
+										"name": "Base"
+									}],
+									"scope":  {
+										"is_templated": true,
+										"name": "RcBase",
+										"template_parameters": [{
+											"_fullName": "Base",
+											"_kind": "template type parameter",
+											"_name": "Base",
+											"id": 3435036189,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "Base"
+										}]
 									}
 								}]
-							}
+							},
+							"unexposed_arguments": "stappler::mem_std::Ref"
 						}
 					}, {
 						"_fullName": "::stappler::xenolith::core::Material::_ownedData",
@@ -12400,6 +12546,6 @@
 	"name": "xenolith/core/XLCoreMaterial.h",
 	"unmatched_comments": [{
 		"line": 22,
-		"text": "\nCopyright (c) 2021-2022 Roman Katuntsev <sbkarr@stappler.org>\nCopyright (c) 2023 Stappler LLC <admin@stappler.dev>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n"
+		"text": "\nCopyright (c) 2021-2022 Roman Katuntsev <sbkarr@stappler.org>\nCopyright (c) 2023-2024 Stappler LLC <admin@stappler.dev>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n"
 	}]
 }

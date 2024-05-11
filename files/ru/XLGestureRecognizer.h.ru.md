@@ -83,7 +83,7 @@ Title: XLGestureRecognizer.h
 ## CONTENT
 
 Возвращает:
-* stappler::xenolith::Vec2
+* stappler::geom::Vec2
 
 # ::stappler::xenolith::GestureData::getId() const
 
@@ -110,7 +110,7 @@ Title: XLGestureRecognizer.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::Vec2
+Тип: stappler::geom::Vec2
 
 
 # ::stappler::xenolith::GestureScroll::amount
@@ -119,7 +119,7 @@ Title: XLGestureRecognizer.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::Vec2
+Тип: stappler::geom::Vec2
 
 
 # ::stappler::xenolith::GestureScroll::location() const
@@ -129,7 +129,7 @@ Title: XLGestureRecognizer.h
 ## CONTENT
 
 Возвращает:
-* stappler::xenolith::Vec2 const&
+* const stappler::geom::Vec2&
 
 # ::stappler::xenolith::GestureScroll::cleanup()
 
@@ -154,7 +154,7 @@ Title: XLGestureRecognizer.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::Vec2
+Тип: stappler::geom::Vec2
 
 
 # ::stappler::xenolith::GestureTap::id
@@ -207,7 +207,7 @@ Title: XLGestureRecognizer.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::Vec2
+Тип: stappler::geom::Vec2
 
 
 # ::stappler::xenolith::GesturePress::id
@@ -269,7 +269,7 @@ Title: XLGestureRecognizer.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::Vec2
+Тип: stappler::geom::Vec2
 
 
 # ::stappler::xenolith::GestureSwipe::secondTouch
@@ -278,7 +278,7 @@ Title: XLGestureRecognizer.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::Vec2
+Тип: stappler::geom::Vec2
 
 
 # ::stappler::xenolith::GestureSwipe::midpoint
@@ -287,7 +287,7 @@ Title: XLGestureRecognizer.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::Vec2
+Тип: stappler::geom::Vec2
 
 
 # ::stappler::xenolith::GestureSwipe::delta
@@ -296,7 +296,7 @@ Title: XLGestureRecognizer.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::Vec2
+Тип: stappler::geom::Vec2
 
 
 # ::stappler::xenolith::GestureSwipe::velocity
@@ -305,7 +305,7 @@ Title: XLGestureRecognizer.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::Vec2
+Тип: stappler::geom::Vec2
 
 
 # ::stappler::xenolith::GestureSwipe::density
@@ -340,7 +340,7 @@ Title: XLGestureRecognizer.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::Vec2
+Тип: stappler::geom::Vec2
 
 
 # ::stappler::xenolith::GesturePinch::second
@@ -349,7 +349,7 @@ Title: XLGestureRecognizer.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::Vec2
+Тип: stappler::geom::Vec2
 
 
 # ::stappler::xenolith::GesturePinch::center
@@ -358,7 +358,7 @@ Title: XLGestureRecognizer.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::Vec2
+Тип: stappler::geom::Vec2
 
 
 # ::stappler::xenolith::GesturePinch::startDistance
@@ -497,7 +497,7 @@ Title: XLGestureRecognizer.h
 * float
 
 Возвращает:
-* bool
+* stappler::xenolith::InputEventState
 
 # ::stappler::xenolith::GestureRecognizer::onEnter(stappler::xenolith::InputListener*)
 
@@ -577,7 +577,7 @@ Title: XLGestureRecognizer.h
 Доступ: public
 
 Возвращает:
-* stappler::xenolith::Vec2
+* stappler::geom::Vec2
 
 # ::stappler::xenolith::GestureRecognizer::cancel()
 
@@ -611,6 +611,20 @@ Title: XLGestureRecognizer.h
 Возвращает:
 * size_t
 
+# ::stappler::xenolith::GestureRecognizer::canAddEvent(stappler::xenolith::InputEvent const&) const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Параметры:
+* stappler::xenolith::InputEvent const&
+
+Возвращает:
+* bool
+
 # ::stappler::xenolith::GestureRecognizer::addEvent(stappler::xenolith::InputEvent const&,float)
 
 ## BRIEF
@@ -624,7 +638,7 @@ Title: XLGestureRecognizer.h
 * float
 
 Возвращает:
-* bool
+* stappler::xenolith::InputEventState
 
 # ::stappler::xenolith::GestureRecognizer::removeEvent(stappler::xenolith::InputEvent const&,bool,float)
 
@@ -640,7 +654,7 @@ Title: XLGestureRecognizer.h
 * float
 
 Возвращает:
-* bool
+* stappler::xenolith::InputEventState
 
 # ::stappler::xenolith::GestureRecognizer::renewEvent(stappler::xenolith::InputEvent const&,float)
 
@@ -655,7 +669,7 @@ Title: XLGestureRecognizer.h
 * float
 
 Возвращает:
-* bool
+* stappler::xenolith::InputEventState
 
 # ::stappler::xenolith::GestureRecognizer::getTouchById(uint32_t,uint32_t*)
 
@@ -809,7 +823,7 @@ Title: XLGestureRecognizer.h
 * float
 
 Возвращает:
-* bool
+* stappler::xenolith::InputEventState
 
 # ::stappler::xenolith::GestureTouchRecognizer::removeEvent(stappler::xenolith::InputEvent const&,bool,float)
 
@@ -825,7 +839,7 @@ Title: XLGestureRecognizer.h
 * float
 
 Возвращает:
-* bool
+* stappler::xenolith::InputEventState
 
 # ::stappler::xenolith::GestureTouchRecognizer::renewEvent(stappler::xenolith::InputEvent const&,float)
 
@@ -840,7 +854,7 @@ Title: XLGestureRecognizer.h
 * float
 
 Возвращает:
-* bool
+* stappler::xenolith::InputEventState
 
 # ::stappler::xenolith::GestureTouchRecognizer::_event
 
@@ -951,7 +965,7 @@ Title: XLGestureRecognizer.h
 * float
 
 Возвращает:
-* bool
+* stappler::xenolith::InputEventState
 
 # ::stappler::xenolith::GestureTapRecognizer::removeEvent(stappler::xenolith::InputEvent const&,bool,float)
 
@@ -967,7 +981,7 @@ Title: XLGestureRecognizer.h
 * float
 
 Возвращает:
-* bool
+* stappler::xenolith::InputEventState
 
 # ::stappler::xenolith::GestureTapRecognizer::renewEvent(stappler::xenolith::InputEvent const&,float)
 
@@ -982,7 +996,7 @@ Title: XLGestureRecognizer.h
 * float
 
 Возвращает:
-* bool
+* stappler::xenolith::InputEventState
 
 # ::stappler::xenolith::GestureTapRecognizer::registerTap()
 
@@ -1024,6 +1038,17 @@ Title: XLGestureRecognizer.h
 Доступ: protected
 
 Тип: uint32_t
+
+
+# ::stappler::xenolith::GestureTapRecognizer::_tmpEvent
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: stappler::xenolith::InputEvent
 
 
 # ::stappler::xenolith::GesturePressRecognizer
@@ -1105,7 +1130,7 @@ Title: XLGestureRecognizer.h
 * float
 
 Возвращает:
-* bool
+* stappler::xenolith::InputEventState
 
 # ::stappler::xenolith::GesturePressRecognizer::removeEvent(stappler::xenolith::InputEvent const&,bool,float)
 
@@ -1121,7 +1146,7 @@ Title: XLGestureRecognizer.h
 * float
 
 Возвращает:
-* bool
+* stappler::xenolith::InputEventState
 
 # ::stappler::xenolith::GesturePressRecognizer::renewEvent(stappler::xenolith::InputEvent const&,float)
 
@@ -1136,7 +1161,7 @@ Title: XLGestureRecognizer.h
 * float
 
 Возвращает:
-* bool
+* stappler::xenolith::InputEventState
 
 # ::stappler::xenolith::GesturePressRecognizer::_lastTime
 
@@ -1271,7 +1296,7 @@ Title: XLGestureRecognizer.h
 * float
 
 Возвращает:
-* bool
+* stappler::xenolith::InputEventState
 
 # ::stappler::xenolith::GestureSwipeRecognizer::removeEvent(stappler::xenolith::InputEvent const&,bool,float)
 
@@ -1287,7 +1312,7 @@ Title: XLGestureRecognizer.h
 * float
 
 Возвращает:
-* bool
+* stappler::xenolith::InputEventState
 
 # ::stappler::xenolith::GestureSwipeRecognizer::renewEvent(stappler::xenolith::InputEvent const&,float)
 
@@ -1302,7 +1327,7 @@ Title: XLGestureRecognizer.h
 * float
 
 Возвращает:
-* bool
+* stappler::xenolith::InputEventState
 
 # ::stappler::xenolith::GestureSwipeRecognizer::_lastTime
 
@@ -1323,7 +1348,7 @@ Title: XLGestureRecognizer.h
 
 Доступ: protected
 
-Тип: math::MovingAverage<3>
+Тип: math::MovingAverage<4>
 
 
 # ::stappler::xenolith::GestureSwipeRecognizer::_velocityY
@@ -1334,7 +1359,7 @@ Title: XLGestureRecognizer.h
 
 Доступ: protected
 
-Тип: math::MovingAverage<3>
+Тип: math::MovingAverage<4>
 
 
 # ::stappler::xenolith::GestureSwipeRecognizer::_swipeBegin
@@ -1468,7 +1493,7 @@ Title: XLGestureRecognizer.h
 * float
 
 Возвращает:
-* bool
+* stappler::xenolith::InputEventState
 
 # ::stappler::xenolith::GesturePinchRecognizer::removeEvent(stappler::xenolith::InputEvent const&,bool,float)
 
@@ -1484,7 +1509,7 @@ Title: XLGestureRecognizer.h
 * float
 
 Возвращает:
-* bool
+* stappler::xenolith::InputEventState
 
 # ::stappler::xenolith::GesturePinchRecognizer::renewEvent(stappler::xenolith::InputEvent const&,float)
 
@@ -1499,7 +1524,7 @@ Title: XLGestureRecognizer.h
 * float
 
 Возвращает:
-* bool
+* stappler::xenolith::InputEventState
 
 # ::stappler::xenolith::GesturePinchRecognizer::_lastTime
 
@@ -1600,7 +1625,7 @@ Title: XLGestureRecognizer.h
 * float
 
 Возвращает:
-* bool
+* stappler::xenolith::InputEventState
 
 # ::stappler::xenolith::GestureScrollRecognizer::_gesture
 
@@ -1694,7 +1719,7 @@ Title: XLGestureRecognizer.h
 * float
 
 Возвращает:
-* bool
+* stappler::xenolith::InputEventState
 
 # ::stappler::xenolith::GestureMoveRecognizer::onEnter(stappler::xenolith::InputListener*)
 
@@ -1854,7 +1879,7 @@ Title: XLGestureRecognizer.h
 * float
 
 Возвращает:
-* bool
+* stappler::xenolith::InputEventState
 
 # ::stappler::xenolith::GestureKeyRecognizer::removeEvent(stappler::xenolith::InputEvent const&,bool,float)
 
@@ -1870,7 +1895,7 @@ Title: XLGestureRecognizer.h
 * float
 
 Возвращает:
-* bool
+* stappler::xenolith::InputEventState
 
 # ::stappler::xenolith::GestureKeyRecognizer::renewEvent(stappler::xenolith::InputEvent const&,float)
 
@@ -1885,7 +1910,7 @@ Title: XLGestureRecognizer.h
 * float
 
 Возвращает:
-* bool
+* stappler::xenolith::InputEventState
 
 # ::stappler::xenolith::GestureKeyRecognizer::_keyMask
 
@@ -1976,7 +2001,7 @@ Title: XLGestureRecognizer.h
 * float
 
 Возвращает:
-* bool
+* stappler::xenolith::InputEventState
 
 # ::stappler::xenolith::GestureMouseOverRecognizer::onEnter(stappler::xenolith::InputListener*)
 

@@ -67,6 +67,29 @@ Title: XLDynamicStateNode.h
 * stappler::xenolith::DynamicStateNode::StateApplyMode
 
 
+# ::stappler::xenolith::DynamicStateNode::isIgnoreParentState() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::DynamicStateNode::setIgnoreParentState(bool)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* bool
+
+
 # ::stappler::xenolith::DynamicStateNode::visitDraw(stappler::xenolith::FrameInfo&,stappler::xenolith::NodeFlags)
 
 ## BRIEF
@@ -82,7 +105,7 @@ Title: XLDynamicStateNode.h
 Возвращает:
 * bool
 
-# ::stappler::xenolith::DynamicStateNode::enableScissor(stappler::xenolith::Padding)
+# ::stappler::xenolith::DynamicStateNode::enableScissor(stappler::geom::Padding)
 
 ## BRIEF
 
@@ -91,7 +114,7 @@ Title: XLDynamicStateNode.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Padding
+* stappler::geom::Padding
 
 
 # ::stappler::xenolith::DynamicStateNode::disableScissor()
@@ -114,7 +137,7 @@ Title: XLDynamicStateNode.h
 Возвращает:
 * bool
 
-# ::stappler::xenolith::DynamicStateNode::setScissorOutlone(stappler::xenolith::Padding)
+# ::stappler::xenolith::DynamicStateNode::setScissorOutlone(stappler::geom::Padding)
 
 ## BRIEF
 
@@ -123,7 +146,7 @@ Title: XLDynamicStateNode.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Padding
+* stappler::geom::Padding
 
 
 # ::stappler::xenolith::DynamicStateNode::getScissorOutline() const
@@ -135,7 +158,7 @@ Title: XLDynamicStateNode.h
 Доступ: public
 
 Возвращает:
-* stappler::xenolith::Padding
+* stappler::geom::Padding
 
 # ::stappler::xenolith::DynamicStateNode::updateDynamicState(stappler::xenolith::DrawStateValues const&) const
 
@@ -162,6 +185,17 @@ Title: XLDynamicStateNode.h
 Тип: stappler::xenolith::DynamicStateNode::StateApplyMode
 
 
+# ::stappler::xenolith::DynamicStateNode::_ignoreParentState
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: bool
+
+
 # ::stappler::xenolith::DynamicStateNode::_scissorEnabled
 
 ## BRIEF
@@ -181,4 +215,4 @@ Title: XLDynamicStateNode.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::Padding
+Тип: stappler::geom::Padding

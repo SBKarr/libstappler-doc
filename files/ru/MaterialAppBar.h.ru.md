@@ -19,6 +19,7 @@ Title: MaterialAppBar.h
 * Small
 * Medium
 * Large
+* Minified
 
 
 # ::stappler::xenolith::material2d::AppBar
@@ -121,7 +122,7 @@ Title: MaterialAppBar.h
 Возвращает:
 * stappler::StringView
 
-# ::stappler::xenolith::material2d::AppBar::setNavButtonIcon(stappler::xenolith::IconName)
+# ::stappler::xenolith::material2d::AppBar::setNavButtonIcon(stappler::xenolith::IconName,float)
 
 ## BRIEF
 
@@ -131,6 +132,7 @@ Title: MaterialAppBar.h
 
 Параметры:
 * stappler::xenolith::IconName
+* float
 
 
 # ::stappler::xenolith::material2d::AppBar::getNavButtonIcon() const
@@ -360,6 +362,26 @@ Title: MaterialAppBar.h
 Возвращает:
 * float
 
+# ::stappler::xenolith::material2d::AppBar::getRealHeight() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Возвращает:
+* float
+
+# ::stappler::xenolith::material2d::AppBar::updateDefaultHeight()
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+
 # ::stappler::xenolith::material2d::AppBar::_layout
 
 ## BRIEF
@@ -471,6 +493,17 @@ Title: MaterialAppBar.h
 
 
 # ::stappler::xenolith::material2d::AppBar::_replaceProgress
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: float
+
+
+# ::stappler::xenolith::material2d::AppBar::_defaultHeight
 
 ## BRIEF
 

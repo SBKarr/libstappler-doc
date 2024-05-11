@@ -241,7 +241,7 @@ Title: XL2dSceneContent.h
 Доступ: public
 
 Возвращает:
-* stappler::xenolith::Padding
+* stappler::geom::Padding
 
 # ::stappler::xenolith::basic2d::SceneContent2d::updateLayoutNode(stappler::xenolith::basic2d::SceneLayout2d*)
 
@@ -356,7 +356,7 @@ Title: XL2dSceneContent.h
 * stappler::xenolith::basic2d::SceneLightType
 
 
-# ::stappler::xenolith::basic2d::SceneContent2d::setGlobalLight(stappler::xenolith::Color4F const&)
+# ::stappler::xenolith::basic2d::SceneContent2d::setGlobalLight(const stappler::geom::Color4F&)
 
 ## BRIEF
 
@@ -365,7 +365,7 @@ Title: XL2dSceneContent.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Color4F const&
+* const stappler::geom::Color4F&
 
 
 # ::stappler::xenolith::basic2d::SceneContent2d::getGlobalLight() const
@@ -377,7 +377,7 @@ Title: XL2dSceneContent.h
 Доступ: public
 
 Возвращает:
-* stappler::xenolith::Color4F const&
+* const stappler::geom::Color4F&
 
 # ::stappler::xenolith::basic2d::SceneContent2d::draw(stappler::xenolith::FrameInfo&,stappler::xenolith::NodeFlags)
 
@@ -577,4 +577,4 @@ Title: XL2dSceneContent.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::Color4F
+Тип: stappler::geom::Color4F

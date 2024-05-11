@@ -30,6 +30,15 @@
 		"kind": "include directive",
 		"name": "XL2dVertexArray.h"
 	}, {
+		"_fullName": "XL2dLinearGradient.h",
+		"_kind": "include directive",
+		"_name": "XL2dLinearGradient.h",
+		"id": 3618734405,
+		"include": "xenolith/renderer/basic2d/XL2dLinearGradient.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "XL2dLinearGradient.h"
+	}, {
 		"_fullName": "XENOLITH_RENDERER_BASIC2D_XL2DSPRITE_H_",
 		"_kind": "macro definition",
 		"_name": "XENOLITH_RENDERER_BASIC2D_XL2DSPRITE_H_",
@@ -246,16 +255,16 @@
 						"kind": "type alias",
 						"name": "Autofit",
 						"underlying_type": {
-							"_typeName": "geom::Autofit",
+							"_typeName": "font::Autofit",
 							"kind": "user_defined",
 							"target": {
-								"name": "geom::Autofit",
+								"name": "font::Autofit",
 								"objects": [{
-									"_fullName": "::stappler::geom::Autofit",
+									"_fullName": "::stappler::font::Autofit",
 									"_kind": "enum",
 									"_name": "Autofit",
 									"has_explicit_type": true,
-									"id": 1618228331,
+									"id": 2569455612,
 									"is_declaration": false,
 									"is_definition": true,
 									"is_scoped": true,
@@ -271,10 +280,10 @@
 										"target": {
 											"name": "EnumSize",
 											"objects": [{
-												"_fullName": "::stappler::geom::EnumSize",
+												"_fullName": "::stappler::font::EnumSize",
 												"_kind": "type alias",
 												"_name": "EnumSize",
-												"id": 3885594728,
+												"id": 856387209,
 												"kind": "type alias",
 												"name": "EnumSize",
 												"underlying_type": {
@@ -1124,12 +1133,212 @@
 						"semantic_scope": "",
 						"signature": "() const"
 					}, {
-						"_fullName": "::stappler::xenolith::basic2d::Sprite::setTextureRect(stappler::xenolith::Rect const&)",
+						"_fullName": "::stappler::xenolith::basic2d::Sprite::setLinearGradient(Rc<stappler::xenolith::basic2d::LinearGradient>&&)",
+						"_kind": "member function",
+						"_name": "setLinearGradient",
+						"body_kind": "declaration",
+						"cv_qualifier": "none",
+						"id": 3759961522,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"is_virtual": true,
+						"kind": "member function",
+						"name": "setLinearGradient",
+						"parameters": [{
+							"_fullName": "",
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 46947589,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "Rc<stappler::xenolith::basic2d::LinearGradient>&&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "Rc<stappler::xenolith::basic2d::LinearGradient>",
+									"arguments_exposed": false,
+									"kind": "template_instantiation",
+									"primary_template": {
+										"name": "Rc",
+										"objects": [{
+											"_fullName": "::stappler::RcBase<typename>",
+											"_kind": "class template",
+											"_name": "RcBase",
+											"class": {
+												"_fullName": "::stappler::RcBase<typename>",
+												"_kind": "class",
+												"_name": "RcBase",
+												"class_kind": "class",
+												"id": 782220210,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "RcBase",
+												"scope": {
+													"is_templated": true,
+													"name": "RcBase",
+													"template_parameters": [{
+														"_fullName": "Base",
+														"_kind": "template type parameter",
+														"_name": "Base",
+														"id": 3435036189,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "Base"
+													}]
+												},
+												"semantic_scope": ""
+											},
+											"id": 782220210,
+											"kind": "class template",
+											"name": "RcBase",
+											"parameters": [{
+												"_fullName": "Base",
+												"_kind": "template type parameter",
+												"_name": "Base",
+												"id": 3435036189,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Base"
+											}],
+											"scope":  {
+												"is_templated": true,
+												"name": "RcBase",
+												"template_parameters": [{
+													"_fullName": "Base",
+													"_kind": "template type parameter",
+													"_name": "Base",
+													"id": 3435036189,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "Base"
+												}]
+											}
+										}]
+									},
+									"unexposed_arguments": "stappler::xenolith::basic2d::LinearGradient"
+								},
+								"reference_kind": "rvalue"
+							}
+						}],
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(Rc<stappler::xenolith::basic2d::LinearGradient>&&)"
+					}, {
+						"_fullName": "::stappler::xenolith::basic2d::Sprite::getLinearGradient() const",
+						"_kind": "member function",
+						"_name": "getLinearGradient",
+						"body_kind": "declaration",
+						"cv_qualifier": "const",
+						"id": 3713868412,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "getLinearGradient",
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "Rc<stappler::xenolith::basic2d::LinearGradient> const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "Rc<stappler::xenolith::basic2d::LinearGradient> const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "Rc<stappler::xenolith::basic2d::LinearGradient>",
+									"arguments_exposed": false,
+									"kind": "template_instantiation",
+									"primary_template": {
+										"name": "Rc",
+										"objects": [{
+											"_fullName": "::stappler::RcBase<typename>",
+											"_kind": "class template",
+											"_name": "RcBase",
+											"class": {
+												"_fullName": "::stappler::RcBase<typename>",
+												"_kind": "class",
+												"_name": "RcBase",
+												"class_kind": "class",
+												"id": 782220210,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "RcBase",
+												"scope": {
+													"is_templated": true,
+													"name": "RcBase",
+													"template_parameters": [{
+														"_fullName": "Base",
+														"_kind": "template type parameter",
+														"_name": "Base",
+														"id": 3435036189,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "Base"
+													}]
+												},
+												"semantic_scope": ""
+											},
+											"id": 782220210,
+											"kind": "class template",
+											"name": "RcBase",
+											"parameters": [{
+												"_fullName": "Base",
+												"_kind": "template type parameter",
+												"_name": "Base",
+												"id": 3435036189,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Base"
+											}],
+											"scope":  {
+												"is_templated": true,
+												"name": "RcBase",
+												"template_parameters": [{
+													"_fullName": "Base",
+													"_kind": "template type parameter",
+													"_name": "Base",
+													"id": 3435036189,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "Base"
+												}]
+											}
+										}]
+									},
+									"unexposed_arguments": "stappler::xenolith::basic2d::LinearGradient"
+								}
+							},
+							"reference_kind": "lvalue"
+						},
+						"semantic_scope": "",
+						"signature": "() const"
+					}, {
+						"_fullName": "::stappler::xenolith::basic2d::Sprite::setTextureRect(const stappler::geom::Rect&)",
 						"_kind": "member function",
 						"_name": "setTextureRect",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 2891324748,
+						"id": 1250078790,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -1146,50 +1355,12 @@
 							"kind": "function parameter",
 							"name": "",
 							"type": {
-								"_typeName": "stappler::xenolith::Rect const&",
+								"_typeName": "const stappler::geom::Rect&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "stappler::xenolith::Rect const",
-									"cv_qualifier": "const",
-									"kind": "cv_qualified",
-									"type": {
-										"_typeName": "stappler::xenolith::Rect",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::xenolith::Rect",
-											"objects": [{
-												"_fullName": "::stappler::xenolith::Rect",
-												"_kind": "type alias",
-												"_name": "Rect",
-												"id": 1186107623,
-												"kind": "type alias",
-												"name": "Rect",
-												"underlying_type": {
-													"_typeName": "geom::Rect",
-													"kind": "user_defined",
-													"target": {
-														"name": "geom::Rect",
-														"objects": [{
-															"_fullName": "::stappler::geom::Rect",
-															"_kind": "class",
-															"_name": "Rect",
-															"class_kind": "struct",
-															"id": 4019440438,
-															"is_declaration": false,
-															"is_definition": true,
-															"is_final": false,
-															"kind": "class",
-															"name": "Rect",
-															"scope": {
-																"name": "Rect"
-															},
-															"semantic_scope": ""
-														}]
-													}
-												}
-											}]
-										}
-									}
+									"_typeName": "const stappler::geom::Rect",
+									"kind": "unexposed",
+									"name": "const stappler::geom::Rect"
 								},
 								"reference_kind": "lvalue"
 							}
@@ -1201,7 +1372,7 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::Rect const&)"
+						"signature": "(const stappler::geom::Rect&)"
 					}, {
 						"_fullName": "::stappler::xenolith::basic2d::Sprite::getTextureRect() const",
 						"_kind": "member function",
@@ -1219,50 +1390,12 @@
 						"name": "getTextureRect",
 						"ref_qualifier": "none",
 						"return_type": {
-							"_typeName": "stappler::xenolith::Rect const&",
+							"_typeName": "const stappler::geom::Rect&",
 							"kind": "reference",
 							"referee": {
-								"_typeName": "stappler::xenolith::Rect const",
-								"cv_qualifier": "const",
-								"kind": "cv_qualified",
-								"type": {
-									"_typeName": "stappler::xenolith::Rect",
-									"kind": "user_defined",
-									"target": {
-										"name": "stappler::xenolith::Rect",
-										"objects": [{
-											"_fullName": "::stappler::xenolith::Rect",
-											"_kind": "type alias",
-											"_name": "Rect",
-											"id": 1186107623,
-											"kind": "type alias",
-											"name": "Rect",
-											"underlying_type": {
-												"_typeName": "geom::Rect",
-												"kind": "user_defined",
-												"target": {
-													"name": "geom::Rect",
-													"objects": [{
-														"_fullName": "::stappler::geom::Rect",
-														"_kind": "class",
-														"_name": "Rect",
-														"class_kind": "struct",
-														"id": 4019440438,
-														"is_declaration": false,
-														"is_definition": true,
-														"is_final": false,
-														"kind": "class",
-														"name": "Rect",
-														"scope": {
-															"name": "Rect"
-														},
-														"semantic_scope": ""
-													}]
-												}
-											}
-										}]
-									}
-								}
+								"_typeName": "const stappler::geom::Rect",
+								"kind": "unexposed",
+								"name": "const stappler::geom::Rect"
 							},
 							"reference_kind": "lvalue"
 						},
@@ -2249,16 +2382,16 @@
 										"kind": "type alias",
 										"name": "Autofit",
 										"underlying_type": {
-											"_typeName": "geom::Autofit",
+											"_typeName": "font::Autofit",
 											"kind": "user_defined",
 											"target": {
-												"name": "geom::Autofit",
+												"name": "font::Autofit",
 												"objects": [{
-													"_fullName": "::stappler::geom::Autofit",
+													"_fullName": "::stappler::font::Autofit",
 													"_kind": "enum",
 													"_name": "Autofit",
 													"has_explicit_type": true,
-													"id": 1618228331,
+													"id": 2569455612,
 													"is_declaration": false,
 													"is_definition": true,
 													"is_scoped": true,
@@ -2274,10 +2407,10 @@
 														"target": {
 															"name": "EnumSize",
 															"objects": [{
-																"_fullName": "::stappler::geom::EnumSize",
+																"_fullName": "::stappler::font::EnumSize",
 																"_kind": "type alias",
 																"_name": "EnumSize",
-																"id": 3885594728,
+																"id": 856387209,
 																"kind": "type alias",
 																"name": "EnumSize",
 																"underlying_type": {
@@ -2334,16 +2467,16 @@
 									"kind": "type alias",
 									"name": "Autofit",
 									"underlying_type": {
-										"_typeName": "geom::Autofit",
+										"_typeName": "font::Autofit",
 										"kind": "user_defined",
 										"target": {
-											"name": "geom::Autofit",
+											"name": "font::Autofit",
 											"objects": [{
-												"_fullName": "::stappler::geom::Autofit",
+												"_fullName": "::stappler::font::Autofit",
 												"_kind": "enum",
 												"_name": "Autofit",
 												"has_explicit_type": true,
-												"id": 1618228331,
+												"id": 2569455612,
 												"is_declaration": false,
 												"is_definition": true,
 												"is_scoped": true,
@@ -2359,10 +2492,10 @@
 													"target": {
 														"name": "EnumSize",
 														"objects": [{
-															"_fullName": "::stappler::geom::EnumSize",
+															"_fullName": "::stappler::font::EnumSize",
 															"_kind": "type alias",
 															"_name": "EnumSize",
-															"id": 3885594728,
+															"id": 856387209,
 															"kind": "type alias",
 															"name": "EnumSize",
 															"underlying_type": {
@@ -2384,12 +2517,12 @@
 						"semantic_scope": "",
 						"signature": "() const"
 					}, {
-						"_fullName": "::stappler::xenolith::basic2d::Sprite::setAutofitPosition(stappler::xenolith::Vec2 const&)",
+						"_fullName": "::stappler::xenolith::basic2d::Sprite::setAutofitPosition(const stappler::geom::Vec2&)",
 						"_kind": "member function",
 						"_name": "setAutofitPosition",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 2338670751,
+						"id": 632776339,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -2406,50 +2539,12 @@
 							"kind": "function parameter",
 							"name": "",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2 const&",
+								"_typeName": "const stappler::geom::Vec2&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "stappler::xenolith::Vec2 const",
-									"cv_qualifier": "const",
-									"kind": "cv_qualified",
-									"type": {
-										"_typeName": "stappler::xenolith::Vec2",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::xenolith::Vec2",
-											"objects": [{
-												"_fullName": "::stappler::xenolith::Vec2",
-												"_kind": "type alias",
-												"_name": "Vec2",
-												"id": 1910638286,
-												"kind": "type alias",
-												"name": "Vec2",
-												"underlying_type": {
-													"_typeName": "geom::Vec2",
-													"kind": "user_defined",
-													"target": {
-														"name": "geom::Vec2",
-														"objects": [{
-															"_fullName": "::stappler::geom::Vec2",
-															"_kind": "class",
-															"_name": "Vec2",
-															"class_kind": "class",
-															"id": 16661423,
-															"is_declaration": false,
-															"is_definition": true,
-															"is_final": false,
-															"kind": "class",
-															"name": "Vec2",
-															"scope": {
-																"name": "Vec2"
-															},
-															"semantic_scope": ""
-														}]
-													}
-												}
-											}]
-										}
-									}
+									"_typeName": "const stappler::geom::Vec2",
+									"kind": "unexposed",
+									"name": "const stappler::geom::Vec2"
 								},
 								"reference_kind": "lvalue"
 							}
@@ -2461,7 +2556,7 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::Vec2 const&)"
+						"signature": "(const stappler::geom::Vec2&)"
 					}, {
 						"_fullName": "::stappler::xenolith::basic2d::Sprite::getAutofitPosition() const",
 						"_kind": "member function",
@@ -2479,50 +2574,12 @@
 						"name": "getAutofitPosition",
 						"ref_qualifier": "none",
 						"return_type": {
-							"_typeName": "stappler::xenolith::Vec2 const&",
+							"_typeName": "const stappler::geom::Vec2&",
 							"kind": "reference",
 							"referee": {
-								"_typeName": "stappler::xenolith::Vec2 const",
-								"cv_qualifier": "const",
-								"kind": "cv_qualified",
-								"type": {
-									"_typeName": "stappler::xenolith::Vec2",
-									"kind": "user_defined",
-									"target": {
-										"name": "stappler::xenolith::Vec2",
-										"objects": [{
-											"_fullName": "::stappler::xenolith::Vec2",
-											"_kind": "type alias",
-											"_name": "Vec2",
-											"id": 1910638286,
-											"kind": "type alias",
-											"name": "Vec2",
-											"underlying_type": {
-												"_typeName": "geom::Vec2",
-												"kind": "user_defined",
-												"target": {
-													"name": "geom::Vec2",
-													"objects": [{
-														"_fullName": "::stappler::geom::Vec2",
-														"_kind": "class",
-														"_name": "Vec2",
-														"class_kind": "class",
-														"id": 16661423,
-														"is_declaration": false,
-														"is_definition": true,
-														"is_final": false,
-														"kind": "class",
-														"name": "Vec2",
-														"scope": {
-															"name": "Vec2"
-														},
-														"semantic_scope": ""
-													}]
-												}
-											}
-										}]
-									}
-								}
+								"_typeName": "const stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "const stappler::geom::Vec2"
 							},
 							"reference_kind": "lvalue"
 						},
@@ -3044,12 +3101,12 @@
 							}]
 						}
 					}, {
-						"_fullName": "::stappler::xenolith::basic2d::Sprite::pushShadowCommands(stappler::xenolith::FrameInfo&,stappler::xenolith::NodeFlags,stappler::xenolith::Mat4 const&,SpanView<stappler::xenolith::basic2d::TransformVertexData>)",
+						"_fullName": "::stappler::xenolith::basic2d::Sprite::pushShadowCommands(stappler::xenolith::FrameInfo&,stappler::xenolith::NodeFlags,const stappler::geom::Mat4&,SpanView<stappler::xenolith::basic2d::TransformVertexData>)",
 						"_kind": "member function",
 						"_name": "pushShadowCommands",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 802287736,
+						"id": 1869900974,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -3136,60 +3193,12 @@
 							"kind": "function parameter",
 							"name": "",
 							"type": {
-								"_typeName": "stappler::xenolith::Mat4 const&",
+								"_typeName": "const stappler::geom::Mat4&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "stappler::xenolith::Mat4 const",
-									"cv_qualifier": "const",
-									"kind": "cv_qualified",
-									"type": {
-										"_typeName": "stappler::xenolith::Mat4",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::xenolith::Mat4",
-											"objects": [{
-												"_fullName": "::stappler::xenolith::Mat4",
-												"_kind": "type alias",
-												"_name": "Mat4",
-												"id": 905241342,
-												"kind": "type alias",
-												"name": "Mat4",
-												"underlying_type": {
-													"_typeName": "geom::Mat4",
-													"kind": "user_defined",
-													"target": {
-														"name": "geom::Mat4",
-														"objects": [{
-															"_fullName": "::stappler::geom::Mat4",
-															"_kind": "class",
-															"_name": "Mat4",
-															"attributes": [{
-																"arguments": [{
-																	"kind": "int_literal",
-																	"spelling": "16"
-																}],
-																"is_variadic": false,
-																"kind": "alignas_",
-																"name": "alignas"
-															}],
-															"class_kind": "class",
-															"comment": "\nDefines a 4 x 4 floating point matrix representing a 3D transformation.\n\nVectors are treated as columns, resulting in a matrix that is represented as follows,\nwhere x, y and z are the translation components of the matrix:\n\n    1  0  0  x\n    0  1  0  y\n    0  0  1  z\n    0  0  0  1\n\nThis matrix class is directly compatible with OpenGL since its elements are\nlaid out in memory exactly as they are expected by OpenGL.\nThe matrix uses column-major format such that array indices increase down column first.\nSince matrix multiplication is not commutative, multiplication must be done in the\ncorrect order when combining transformations. Suppose we have a translation\nmatrix T and a rotation matrix R. To first rotate an object around the origin\nand then translate it, you would multiply the two matrices as TR.\n\nLikewise, to first translate the object and then rotate it, you would do RT.\nSo generally, matrices must be multiplied in the reverse order in which you\nwant the transformations to take place (this also applies to\nthe scale, rotate, and translate methods below; these methods are convenience\nmethods for post-multiplying by a matrix representing a scale, rotation, or translation).\n\nIn the case of repeated local transformations (i.e. rotate around the Z-axis by 0.76 radians,\nthen translate by 2.1 along the X-axis, then ...), it is better to use the Transform class\n(which is optimized for that kind of usage).\n\n@see Transform\n",
-															"id": 3473668624,
-															"is_declaration": false,
-															"is_definition": true,
-															"is_final": false,
-															"kind": "class",
-															"name": "Mat4",
-															"scope": {
-																"name": "Mat4"
-															},
-															"semantic_scope": ""
-														}]
-													}
-												}
-											}]
-										}
-									}
+									"_typeName": "const stappler::geom::Mat4",
+									"kind": "unexposed",
+									"name": "const stappler::geom::Mat4"
 								},
 								"reference_kind": "lvalue"
 							}
@@ -3366,7 +3375,7 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::FrameInfo&,stappler::xenolith::NodeFlags,stappler::xenolith::Mat4 const&,SpanView<stappler::xenolith::basic2d::TransformVertexData>)"
+						"signature": "(stappler::xenolith::FrameInfo&,stappler::xenolith::NodeFlags,const stappler::geom::Mat4&,SpanView<stappler::xenolith::basic2d::TransformVertexData>)"
 					}, {
 						"_fullName": "::stappler::xenolith::basic2d::Sprite::pushCommands(stappler::xenolith::FrameInfo&,stappler::xenolith::NodeFlags)",
 						"_kind": "member function",
@@ -3730,11 +3739,11 @@
 						"semantic_scope": "",
 						"signature": "() const"
 					}, {
-						"_fullName": "::stappler::xenolith::basic2d::Sprite::getAutofitParams(stappler::xenolith::basic2d::Sprite::Autofit,stappler::xenolith::Vec2 const&,stappler::xenolith::Size2 const&,stappler::xenolith::Size2 const&,stappler::xenolith::Rect&,stappler::xenolith::Rect&)",
+						"_fullName": "::stappler::xenolith::basic2d::Sprite::getAutofitParams(stappler::xenolith::basic2d::Sprite::Autofit,const stappler::geom::Vec2&,const stappler::geom::Size2&,const stappler::geom::Size2&,stappler::geom::Rect&,stappler::geom::Rect&)",
 						"_kind": "function",
 						"_name": "getAutofitParams",
 						"body_kind": "declaration",
-						"id": 2586190787,
+						"id": 3652628286,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -3762,16 +3771,16 @@
 										"kind": "type alias",
 										"name": "Autofit",
 										"underlying_type": {
-											"_typeName": "geom::Autofit",
+											"_typeName": "font::Autofit",
 											"kind": "user_defined",
 											"target": {
-												"name": "geom::Autofit",
+												"name": "font::Autofit",
 												"objects": [{
-													"_fullName": "::stappler::geom::Autofit",
+													"_fullName": "::stappler::font::Autofit",
 													"_kind": "enum",
 													"_name": "Autofit",
 													"has_explicit_type": true,
-													"id": 1618228331,
+													"id": 2569455612,
 													"is_declaration": false,
 													"is_definition": true,
 													"is_scoped": true,
@@ -3787,10 +3796,10 @@
 														"target": {
 															"name": "EnumSize",
 															"objects": [{
-																"_fullName": "::stappler::geom::EnumSize",
+																"_fullName": "::stappler::font::EnumSize",
 																"_kind": "type alias",
 																"_name": "EnumSize",
-																"id": 3885594728,
+																"id": 856387209,
 																"kind": "type alias",
 																"name": "EnumSize",
 																"underlying_type": {
@@ -3817,50 +3826,12 @@
 							"kind": "function parameter",
 							"name": "autofitValue",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2 const&",
+								"_typeName": "const stappler::geom::Vec2&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "stappler::xenolith::Vec2 const",
-									"cv_qualifier": "const",
-									"kind": "cv_qualified",
-									"type": {
-										"_typeName": "stappler::xenolith::Vec2",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::xenolith::Vec2",
-											"objects": [{
-												"_fullName": "::stappler::xenolith::Vec2",
-												"_kind": "type alias",
-												"_name": "Vec2",
-												"id": 1910638286,
-												"kind": "type alias",
-												"name": "Vec2",
-												"underlying_type": {
-													"_typeName": "geom::Vec2",
-													"kind": "user_defined",
-													"target": {
-														"name": "geom::Vec2",
-														"objects": [{
-															"_fullName": "::stappler::geom::Vec2",
-															"_kind": "class",
-															"_name": "Vec2",
-															"class_kind": "class",
-															"id": 16661423,
-															"is_declaration": false,
-															"is_definition": true,
-															"is_final": false,
-															"kind": "class",
-															"name": "Vec2",
-															"scope": {
-																"name": "Vec2"
-															},
-															"semantic_scope": ""
-														}]
-													}
-												}
-											}]
-										}
-									}
+									"_typeName": "const stappler::geom::Vec2",
+									"kind": "unexposed",
+									"name": "const stappler::geom::Vec2"
 								},
 								"reference_kind": "lvalue"
 							}
@@ -3872,50 +3843,12 @@
 							"kind": "function parameter",
 							"name": "contentSize",
 							"type": {
-								"_typeName": "stappler::xenolith::Size2 const&",
+								"_typeName": "const stappler::geom::Size2&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "stappler::xenolith::Size2 const",
-									"cv_qualifier": "const",
-									"kind": "cv_qualified",
-									"type": {
-										"_typeName": "stappler::xenolith::Size2",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::xenolith::Size2",
-											"objects": [{
-												"_fullName": "::stappler::xenolith::Size2",
-												"_kind": "type alias",
-												"_name": "Size2",
-												"id": 3876930682,
-												"kind": "type alias",
-												"name": "Size2",
-												"underlying_type": {
-													"_typeName": "geom::Size2",
-													"kind": "user_defined",
-													"target": {
-														"name": "geom::Size2",
-														"objects": [{
-															"_fullName": "::stappler::geom::Size2",
-															"_kind": "class",
-															"_name": "Size2",
-															"class_kind": "struct",
-															"id": 1488533902,
-															"is_declaration": false,
-															"is_definition": true,
-															"is_final": false,
-															"kind": "class",
-															"name": "Size2",
-															"scope": {
-																"name": "Size2"
-															},
-															"semantic_scope": ""
-														}]
-													}
-												}
-											}]
-										}
-									}
+									"_typeName": "const stappler::geom::Size2",
+									"kind": "unexposed",
+									"name": "const stappler::geom::Size2"
 								},
 								"reference_kind": "lvalue"
 							}
@@ -3927,50 +3860,12 @@
 							"kind": "function parameter",
 							"name": "texSize",
 							"type": {
-								"_typeName": "stappler::xenolith::Size2 const&",
+								"_typeName": "const stappler::geom::Size2&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "stappler::xenolith::Size2 const",
-									"cv_qualifier": "const",
-									"kind": "cv_qualified",
-									"type": {
-										"_typeName": "stappler::xenolith::Size2",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::xenolith::Size2",
-											"objects": [{
-												"_fullName": "::stappler::xenolith::Size2",
-												"_kind": "type alias",
-												"_name": "Size2",
-												"id": 3876930682,
-												"kind": "type alias",
-												"name": "Size2",
-												"underlying_type": {
-													"_typeName": "geom::Size2",
-													"kind": "user_defined",
-													"target": {
-														"name": "geom::Size2",
-														"objects": [{
-															"_fullName": "::stappler::geom::Size2",
-															"_kind": "class",
-															"_name": "Size2",
-															"class_kind": "struct",
-															"id": 1488533902,
-															"is_declaration": false,
-															"is_definition": true,
-															"is_final": false,
-															"kind": "class",
-															"name": "Size2",
-															"scope": {
-																"name": "Size2"
-															},
-															"semantic_scope": ""
-														}]
-													}
-												}
-											}]
-										}
-									}
+									"_typeName": "const stappler::geom::Size2",
+									"kind": "unexposed",
+									"name": "const stappler::geom::Size2"
 								},
 								"reference_kind": "lvalue"
 							}
@@ -3982,45 +3877,12 @@
 							"kind": "function parameter",
 							"name": "contentRect",
 							"type": {
-								"_typeName": "stappler::xenolith::Rect&",
+								"_typeName": "stappler::geom::Rect&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "stappler::xenolith::Rect",
-									"kind": "user_defined",
-									"target": {
-										"name": "stappler::xenolith::Rect",
-										"objects": [{
-											"_fullName": "::stappler::xenolith::Rect",
-											"_kind": "type alias",
-											"_name": "Rect",
-											"id": 1186107623,
-											"kind": "type alias",
-											"name": "Rect",
-											"underlying_type": {
-												"_typeName": "geom::Rect",
-												"kind": "user_defined",
-												"target": {
-													"name": "geom::Rect",
-													"objects": [{
-														"_fullName": "::stappler::geom::Rect",
-														"_kind": "class",
-														"_name": "Rect",
-														"class_kind": "struct",
-														"id": 4019440438,
-														"is_declaration": false,
-														"is_definition": true,
-														"is_final": false,
-														"kind": "class",
-														"name": "Rect",
-														"scope": {
-															"name": "Rect"
-														},
-														"semantic_scope": ""
-													}]
-												}
-											}
-										}]
-									}
+									"_typeName": "stappler::geom::Rect",
+									"kind": "unexposed",
+									"name": "stappler::geom::Rect"
 								},
 								"reference_kind": "lvalue"
 							}
@@ -4032,45 +3894,12 @@
 							"kind": "function parameter",
 							"name": "textureRect",
 							"type": {
-								"_typeName": "stappler::xenolith::Rect&",
+								"_typeName": "stappler::geom::Rect&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "stappler::xenolith::Rect",
-									"kind": "user_defined",
-									"target": {
-										"name": "stappler::xenolith::Rect",
-										"objects": [{
-											"_fullName": "::stappler::xenolith::Rect",
-											"_kind": "type alias",
-											"_name": "Rect",
-											"id": 1186107623,
-											"kind": "type alias",
-											"name": "Rect",
-											"underlying_type": {
-												"_typeName": "geom::Rect",
-												"kind": "user_defined",
-												"target": {
-													"name": "geom::Rect",
-													"objects": [{
-														"_fullName": "::stappler::geom::Rect",
-														"_kind": "class",
-														"_name": "Rect",
-														"class_kind": "struct",
-														"id": 4019440438,
-														"is_declaration": false,
-														"is_definition": true,
-														"is_final": false,
-														"kind": "class",
-														"name": "Rect",
-														"scope": {
-															"name": "Rect"
-														},
-														"semantic_scope": ""
-													}]
-												}
-											}
-										}]
-									}
+									"_typeName": "stappler::geom::Rect",
+									"kind": "unexposed",
+									"name": "stappler::geom::Rect"
 								},
 								"reference_kind": "lvalue"
 							}
@@ -4081,7 +3910,7 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::basic2d::Sprite::Autofit,stappler::xenolith::Vec2 const&,stappler::xenolith::Size2 const&,stappler::xenolith::Size2 const&,stappler::xenolith::Rect&,stappler::xenolith::Rect&)",
+						"signature": "(stappler::xenolith::basic2d::Sprite::Autofit,const stappler::geom::Vec2&,const stappler::geom::Size2&,const stappler::geom::Size2&,stappler::geom::Rect&,stappler::geom::Rect&)",
 						"storage_class": [
 							"static"
 						]
@@ -4620,42 +4449,9 @@
 							}],
 							"kind": "unexposed",
 							"type": {
-								"_typeName": "stappler::xenolith::Rect",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Rect",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Rect",
-										"_kind": "type alias",
-										"_name": "Rect",
-										"id": 1186107623,
-										"kind": "type alias",
-										"name": "Rect",
-										"underlying_type": {
-											"_typeName": "geom::Rect",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Rect",
-												"objects": [{
-													"_fullName": "::stappler::geom::Rect",
-													"_kind": "class",
-													"_name": "Rect",
-													"class_kind": "struct",
-													"id": 4019440438,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Rect",
-													"scope": {
-														"name": "Rect"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Rect",
+								"kind": "unexposed",
+								"name": "stappler::geom::Rect"
 							}
 						},
 						"id": 2134968334,
@@ -4663,42 +4459,9 @@
 						"kind": "member variable",
 						"name": "_textureRect",
 						"type": {
-							"_typeName": "stappler::xenolith::Rect",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::Rect",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::Rect",
-									"_kind": "type alias",
-									"_name": "Rect",
-									"id": 1186107623,
-									"kind": "type alias",
-									"name": "Rect",
-									"underlying_type": {
-										"_typeName": "geom::Rect",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::Rect",
-											"objects": [{
-												"_fullName": "::stappler::geom::Rect",
-												"_kind": "class",
-												"_name": "Rect",
-												"class_kind": "struct",
-												"id": 4019440438,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "Rect",
-												"scope": {
-													"name": "Rect"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::Rect",
+							"kind": "unexposed",
+							"name": "stappler::geom::Rect"
 						}
 					}, {
 						"_fullName": "::stappler::xenolith::basic2d::Sprite::_autofit",
@@ -4729,16 +4492,16 @@
 										"kind": "type alias",
 										"name": "Autofit",
 										"underlying_type": {
-											"_typeName": "geom::Autofit",
+											"_typeName": "font::Autofit",
 											"kind": "user_defined",
 											"target": {
-												"name": "geom::Autofit",
+												"name": "font::Autofit",
 												"objects": [{
-													"_fullName": "::stappler::geom::Autofit",
+													"_fullName": "::stappler::font::Autofit",
 													"_kind": "enum",
 													"_name": "Autofit",
 													"has_explicit_type": true,
-													"id": 1618228331,
+													"id": 2569455612,
 													"is_declaration": false,
 													"is_definition": true,
 													"is_scoped": true,
@@ -4754,10 +4517,10 @@
 														"target": {
 															"name": "EnumSize",
 															"objects": [{
-																"_fullName": "::stappler::geom::EnumSize",
+																"_fullName": "::stappler::font::EnumSize",
 																"_kind": "type alias",
 																"_name": "EnumSize",
-																"id": 3885594728,
+																"id": 856387209,
 																"kind": "type alias",
 																"name": "EnumSize",
 																"underlying_type": {
@@ -4794,16 +4557,16 @@
 									"kind": "type alias",
 									"name": "Autofit",
 									"underlying_type": {
-										"_typeName": "geom::Autofit",
+										"_typeName": "font::Autofit",
 										"kind": "user_defined",
 										"target": {
-											"name": "geom::Autofit",
+											"name": "font::Autofit",
 											"objects": [{
-												"_fullName": "::stappler::geom::Autofit",
+												"_fullName": "::stappler::font::Autofit",
 												"_kind": "enum",
 												"_name": "Autofit",
 												"has_explicit_type": true,
-												"id": 1618228331,
+												"id": 2569455612,
 												"is_declaration": false,
 												"is_definition": true,
 												"is_scoped": true,
@@ -4819,10 +4582,10 @@
 													"target": {
 														"name": "EnumSize",
 														"objects": [{
-															"_fullName": "::stappler::geom::EnumSize",
+															"_fullName": "::stappler::font::EnumSize",
 															"_kind": "type alias",
 															"_name": "EnumSize",
-															"id": 3885594728,
+															"id": 856387209,
 															"kind": "type alias",
 															"name": "EnumSize",
 															"underlying_type": {
@@ -4867,42 +4630,9 @@
 							}],
 							"kind": "unexposed",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::Vec2",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::Vec2",
-										"_kind": "type alias",
-										"_name": "Vec2",
-										"id": 1910638286,
-										"kind": "type alias",
-										"name": "Vec2",
-										"underlying_type": {
-											"_typeName": "geom::Vec2",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::Vec2",
-												"objects": [{
-													"_fullName": "::stappler::geom::Vec2",
-													"_kind": "class",
-													"_name": "Vec2",
-													"class_kind": "class",
-													"id": 16661423,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_final": false,
-													"kind": "class",
-													"name": "Vec2",
-													"scope": {
-														"name": "Vec2"
-													},
-													"semantic_scope": ""
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "stappler::geom::Vec2"
 							}
 						},
 						"id": 2546421837,
@@ -4910,42 +4640,9 @@
 						"kind": "member variable",
 						"name": "_autofitPos",
 						"type": {
-							"_typeName": "stappler::xenolith::Vec2",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::Vec2",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::Vec2",
-									"_kind": "type alias",
-									"_name": "Vec2",
-									"id": 1910638286,
-									"kind": "type alias",
-									"name": "Vec2",
-									"underlying_type": {
-										"_typeName": "geom::Vec2",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::Vec2",
-											"objects": [{
-												"_fullName": "::stappler::geom::Vec2",
-												"_kind": "class",
-												"_name": "Vec2",
-												"class_kind": "class",
-												"id": 16661423,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "Vec2",
-												"scope": {
-													"name": "Vec2"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::Vec2",
+							"kind": "unexposed",
+							"name": "stappler::geom::Vec2"
 						}
 					}, {
 						"_fullName": "::stappler::xenolith::basic2d::Sprite::_textureOrigin",
@@ -4956,42 +4653,9 @@
 						"kind": "member variable",
 						"name": "_textureOrigin",
 						"type": {
-							"_typeName": "stappler::xenolith::Vec2",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::Vec2",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::Vec2",
-									"_kind": "type alias",
-									"_name": "Vec2",
-									"id": 1910638286,
-									"kind": "type alias",
-									"name": "Vec2",
-									"underlying_type": {
-										"_typeName": "geom::Vec2",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::Vec2",
-											"objects": [{
-												"_fullName": "::stappler::geom::Vec2",
-												"_kind": "class",
-												"_name": "Vec2",
-												"class_kind": "class",
-												"id": 16661423,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "Vec2",
-												"scope": {
-													"name": "Vec2"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::Vec2",
+							"kind": "unexposed",
+							"name": "stappler::geom::Vec2"
 						}
 					}, {
 						"_fullName": "::stappler::xenolith::basic2d::Sprite::_textureSize",
@@ -5002,42 +4666,9 @@
 						"kind": "member variable",
 						"name": "_textureSize",
 						"type": {
-							"_typeName": "stappler::xenolith::Size2",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::Size2",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::Size2",
-									"_kind": "type alias",
-									"_name": "Size2",
-									"id": 3876930682,
-									"kind": "type alias",
-									"name": "Size2",
-									"underlying_type": {
-										"_typeName": "geom::Size2",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::Size2",
-											"objects": [{
-												"_fullName": "::stappler::geom::Size2",
-												"_kind": "class",
-												"_name": "Size2",
-												"class_kind": "struct",
-												"id": 1488533902,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "Size2",
-												"scope": {
-													"name": "Size2"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::Size2",
+							"kind": "unexposed",
+							"name": "stappler::geom::Size2"
 						}
 					}, {
 						"_fullName": "::stappler::xenolith::basic2d::Sprite::_targetTextureSize",
@@ -5048,42 +4679,9 @@
 						"kind": "member variable",
 						"name": "_targetTextureSize",
 						"type": {
-							"_typeName": "stappler::xenolith::Extent3",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::Extent3",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::Extent3",
-									"_kind": "type alias",
-									"_name": "Extent3",
-									"id": 2508878272,
-									"kind": "type alias",
-									"name": "Extent3",
-									"underlying_type": {
-										"_typeName": "geom::Extent3",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::Extent3",
-											"objects": [{
-												"_fullName": "::stappler::geom::Extent3",
-												"_kind": "class",
-												"_name": "Extent3",
-												"class_kind": "struct",
-												"id": 3914224354,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "Extent3",
-												"scope": {
-													"name": "Extent3"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::Extent3",
+							"kind": "unexposed",
+							"name": "stappler::geom::Extent3"
 						}
 					}, {
 						"_fullName": "::stappler::xenolith::basic2d::Sprite::_renderingLevel",
@@ -5418,52 +5016,9 @@
 						"kind": "member variable",
 						"name": "_tmpColor",
 						"type": {
-							"_typeName": "stappler::xenolith::Color4F",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::Color4F",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::Color4F",
-									"_kind": "type alias",
-									"_name": "Color4F",
-									"id": 2730567930,
-									"kind": "type alias",
-									"name": "Color4F",
-									"underlying_type": {
-										"_typeName": "geom::Color4F",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::Color4F",
-											"objects": [{
-												"_fullName": "::stappler::geom::Color4F",
-												"_kind": "class",
-												"_name": "Color4F",
-												"attributes": [{
-													"arguments": [{
-														"kind": "int_literal",
-														"spelling": "16"
-													}],
-													"is_variadic": false,
-													"kind": "alignas_",
-													"name": "alignas"
-												}],
-												"class_kind": "struct",
-												"comment": "\nRGBA color composed of 4 floats.\n",
-												"id": 1425630790,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "Color4F",
-												"scope": {
-													"name": "Color4F"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::Color4F",
+							"kind": "unexposed",
+							"name": "stappler::geom::Color4F"
 						}
 					}, {
 						"_fullName": "::stappler::xenolith::basic2d::Sprite::_colorMode",
@@ -5592,6 +5147,82 @@
 								"name": "Function"
 							},
 							"unexposed_arguments": "void ()"
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::basic2d::Sprite::_linearGradient",
+						"_kind": "member variable",
+						"_name": "_linearGradient",
+						"id": 2662918576,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "_linearGradient",
+						"type": {
+							"_typeName": "Rc<stappler::xenolith::basic2d::LinearGradient>",
+							"arguments_exposed": false,
+							"kind": "template_instantiation",
+							"primary_template": {
+								"name": "Rc",
+								"objects": [{
+									"_fullName": "::stappler::RcBase<typename>",
+									"_kind": "class template",
+									"_name": "RcBase",
+									"class": {
+										"_fullName": "::stappler::RcBase<typename>",
+										"_kind": "class",
+										"_name": "RcBase",
+										"class_kind": "class",
+										"id": 782220210,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "RcBase",
+										"scope": {
+											"is_templated": true,
+											"name": "RcBase",
+											"template_parameters": [{
+												"_fullName": "Base",
+												"_kind": "template type parameter",
+												"_name": "Base",
+												"id": 3435036189,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Base"
+											}]
+										},
+										"semantic_scope": ""
+									},
+									"id": 782220210,
+									"kind": "class template",
+									"name": "RcBase",
+									"parameters": [{
+										"_fullName": "Base",
+										"_kind": "template type parameter",
+										"_name": "Base",
+										"id": 3435036189,
+										"is_variadic": false,
+										"keyword": "typename",
+										"kind": "template type parameter",
+										"name": "Base"
+									}],
+									"scope":  {
+										"is_templated": true,
+										"name": "RcBase",
+										"template_parameters": [{
+											"_fullName": "Base",
+											"_kind": "template type parameter",
+											"_name": "Base",
+											"id": 3435036189,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "Base"
+										}]
+									}
+								}]
+							},
+							"unexposed_arguments": "stappler::xenolith::basic2d::LinearGradient"
 						}
 					}],
 					"class_kind": "class",

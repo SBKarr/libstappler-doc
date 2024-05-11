@@ -132,7 +132,7 @@ Title: XLPlatformLinuxXcb.h
 Возвращает:
 * bool
 
-# ::stappler::xenolith::platform::XcbLibrary::open(void*)
+# ::stappler::xenolith::platform::XcbLibrary::open(stappler::Dso&)
 
 ## BRIEF
 
@@ -141,7 +141,7 @@ Title: XLPlatformLinuxXcb.h
 Доступ: public
 
 Параметры:
-* void*
+* stappler::Dso&
 
 Возвращает:
 * bool
@@ -298,6 +298,28 @@ Title: XLPlatformLinuxXcb.h
 Тип: xcb_generic_event_t*(*)(xcb_connection_t*)
 
 
+# ::stappler::xenolith::platform::XcbLibrary::xcb_send_event
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Тип: xcb_void_cookie_t(*)(xcb_connection_t*,uint8_t,xcb_window_t,uint32_t,char const*)
+
+
+# ::stappler::xenolith::platform::XcbLibrary::xcb_get_extension_data
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Тип: xcb_query_extension_reply_t const*(*)(xcb_connection_t*,xcb_extension_t*)
+
+
 # ::stappler::xenolith::platform::XcbLibrary::xcb_map_window
 
 ## BRIEF
@@ -353,6 +375,50 @@ Title: XLPlatformLinuxXcb.h
 Тип: xcb_intern_atom_reply_t*(*)(xcb_connection_t*,xcb_intern_atom_cookie_t,xcb_generic_error_t**)
 
 
+# ::stappler::xenolith::platform::XcbLibrary::xcb_get_property_reply
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Тип: xcb_get_property_reply_t*(*)(xcb_connection_t*,xcb_get_property_cookie_t,xcb_generic_error_t**)
+
+
+# ::stappler::xenolith::platform::XcbLibrary::xcb_get_property
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Тип: xcb_get_property_cookie_t(*)(xcb_connection_t*,uint8_t,xcb_window_t,xcb_atom_t,xcb_atom_t,uint32_t,uint32_t)
+
+
+# ::stappler::xenolith::platform::XcbLibrary::xcb_get_property_value
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Тип: void*(*)(xcb_get_property_reply_t const*)
+
+
+# ::stappler::xenolith::platform::XcbLibrary::xcb_get_property_value_length
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Тип: int(*)(xcb_get_property_reply_t const*)
+
+
 # ::stappler::xenolith::platform::XcbLibrary::xcb_wait_for_reply
 
 ## BRIEF
@@ -397,6 +463,50 @@ Title: XLPlatformLinuxXcb.h
 Тип: xcb_keycode_t*(*)(xcb_get_modifier_mapping_reply_t const*)
 
 
+# ::stappler::xenolith::platform::XcbLibrary::xcb_convert_selection
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Тип: xcb_void_cookie_t(*)(xcb_connection_t*,xcb_window_t,xcb_atom_t,xcb_atom_t,xcb_atom_t,xcb_timestamp_t)
+
+
+# ::stappler::xenolith::platform::XcbLibrary::xcb_set_selection_owner
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Тип: xcb_void_cookie_t(*)(xcb_connection_t*,xcb_window_t,xcb_atom_t,xcb_timestamp_t)
+
+
+# ::stappler::xenolith::platform::XcbLibrary::xcb_get_selection_owner
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Тип: xcb_get_selection_owner_cookie_t(*)(xcb_connection_t*,xcb_atom_t)
+
+
+# ::stappler::xenolith::platform::XcbLibrary::xcb_get_selection_owner_reply
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Тип: xcb_get_selection_owner_reply_t*(*)(xcb_connection_t*,xcb_get_selection_owner_cookie_t,xcb_generic_error_t**)
+
+
 # ::stappler::xenolith::platform::XcbLibrary::xcb_get_keyboard_mapping
 
 ## BRIEF
@@ -417,6 +527,17 @@ Title: XLPlatformLinuxXcb.h
 Доступ: public
 
 Тип: xcb_get_keyboard_mapping_reply_t*(*)(xcb_connection_t*,xcb_get_keyboard_mapping_cookie_t,xcb_generic_error_t**)
+
+
+# ::stappler::xenolith::platform::XcbLibrary::xcb_randr_id
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Тип: xcb_extension_t*
 
 
 # ::stappler::xenolith::platform::XcbLibrary::xcb_randr_query_version
@@ -529,6 +650,17 @@ Title: XLPlatformLinuxXcb.h
 Тип: void(*)(xcb_randr_refresh_rates_iterator_t*)
 
 
+# ::stappler::xenolith::platform::XcbLibrary::xcb_randr_refresh_rates_end
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Тип: xcb_generic_iterator_t(*)(xcb_randr_refresh_rates_iterator_t)
+
+
 # ::stappler::xenolith::platform::XcbLibrary::xcb_randr_refresh_rates_rates
 
 ## BRIEF
@@ -637,6 +769,314 @@ Title: XLPlatformLinuxXcb.h
 Доступ: public
 
 Тип: xcb_randr_get_screen_resources_current_reply_t*(*)(xcb_connection_t*,xcb_randr_get_screen_resources_current_cookie_t,xcb_generic_error_t**)
+
+
+# ::stappler::xenolith::platform::XcbLibrary::xcb_randr_get_screen_resources_current_outputs
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Тип: xcb_randr_output_t*(*)(xcb_randr_get_screen_resources_current_reply_t const*)
+
+
+# ::stappler::xenolith::platform::XcbLibrary::xcb_randr_get_screen_resources_current_outputs_length
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Тип: int(*)(xcb_randr_get_screen_resources_current_reply_t const*)
+
+
+# ::stappler::xenolith::platform::XcbLibrary::xcb_randr_get_screen_resources_current_modes
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Тип: xcb_randr_mode_info_t*(*)(xcb_randr_get_screen_resources_current_reply_t const*)
+
+
+# ::stappler::xenolith::platform::XcbLibrary::xcb_randr_get_screen_resources_current_modes_length
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Тип: int(*)(xcb_randr_get_screen_resources_current_reply_t const*)
+
+
+# ::stappler::xenolith::platform::XcbLibrary::xcb_randr_get_screen_resources_current_names
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Тип: uint8_t*(*)(xcb_randr_get_screen_resources_current_reply_t const*)
+
+
+# ::stappler::xenolith::platform::XcbLibrary::xcb_randr_get_screen_resources_current_names_length
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Тип: int(*)(xcb_randr_get_screen_resources_current_reply_t const*)
+
+
+# ::stappler::xenolith::platform::XcbLibrary::xcb_randr_get_screen_resources_current_crtcs
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Тип: xcb_randr_crtc_t*(*)(xcb_randr_get_screen_resources_current_reply_t const*)
+
+
+# ::stappler::xenolith::platform::XcbLibrary::xcb_randr_get_screen_resources_current_crtcs_length
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Тип: int(*)(xcb_randr_get_screen_resources_current_reply_t const*)
+
+
+# ::stappler::xenolith::platform::XcbLibrary::xcb_randr_get_output_primary
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Тип: xcb_randr_get_output_primary_cookie_t(*)(xcb_connection_t*,xcb_window_t)
+
+
+# ::stappler::xenolith::platform::XcbLibrary::xcb_randr_get_output_primary_unchecked
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Тип: xcb_randr_get_output_primary_cookie_t(*)(xcb_connection_t*,xcb_window_t)
+
+
+# ::stappler::xenolith::platform::XcbLibrary::xcb_randr_get_output_primary_reply
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Тип: xcb_randr_get_output_primary_reply_t*(*)(xcb_connection_t*,xcb_randr_get_output_primary_cookie_t,xcb_generic_error_t**)
+
+
+# ::stappler::xenolith::platform::XcbLibrary::xcb_randr_get_output_info
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Тип: xcb_randr_get_output_info_cookie_t(*)(xcb_connection_t*,xcb_randr_output_t,xcb_timestamp_t)
+
+
+# ::stappler::xenolith::platform::XcbLibrary::xcb_randr_get_output_info_unchecked
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Тип: xcb_randr_get_output_info_cookie_t(*)(xcb_connection_t*,xcb_randr_output_t,xcb_timestamp_t)
+
+
+# ::stappler::xenolith::platform::XcbLibrary::xcb_randr_get_output_info_reply
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Тип: xcb_randr_get_output_info_reply_t*(*)(xcb_connection_t*,xcb_randr_get_output_info_cookie_t,xcb_generic_error_t**)
+
+
+# ::stappler::xenolith::platform::XcbLibrary::xcb_randr_get_output_info_crtcs
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Тип: xcb_randr_crtc_t*(*)(xcb_randr_get_output_info_reply_t const*)
+
+
+# ::stappler::xenolith::platform::XcbLibrary::xcb_randr_get_output_info_crtcs_length
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Тип: int(*)(xcb_randr_get_output_info_reply_t const*)
+
+
+# ::stappler::xenolith::platform::XcbLibrary::xcb_randr_get_output_info_crtcs_end
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Тип: xcb_generic_iterator_t(*)(xcb_randr_get_output_info_reply_t const*)
+
+
+# ::stappler::xenolith::platform::XcbLibrary::xcb_randr_get_output_info_modes
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Тип: xcb_randr_mode_t*(*)(xcb_randr_get_output_info_reply_t const*)
+
+
+# ::stappler::xenolith::platform::XcbLibrary::xcb_randr_get_output_info_modes_length
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Тип: int(*)(xcb_randr_get_output_info_reply_t const*)
+
+
+# ::stappler::xenolith::platform::XcbLibrary::xcb_randr_get_output_info_name
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Тип: uint8_t*(*)(xcb_randr_get_output_info_reply_t const*)
+
+
+# ::stappler::xenolith::platform::XcbLibrary::xcb_randr_get_output_info_name_length
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Тип: int(*)(xcb_randr_get_output_info_reply_t const*)
+
+
+# ::stappler::xenolith::platform::XcbLibrary::xcb_randr_get_crtc_info
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Тип: xcb_randr_get_crtc_info_cookie_t(*)(xcb_connection_t*,xcb_randr_crtc_t,xcb_timestamp_t)
+
+
+# ::stappler::xenolith::platform::XcbLibrary::xcb_randr_get_crtc_info_unchecked
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Тип: xcb_randr_get_crtc_info_cookie_t(*)(xcb_connection_t*,xcb_randr_crtc_t,xcb_timestamp_t)
+
+
+# ::stappler::xenolith::platform::XcbLibrary::xcb_randr_get_crtc_info_reply
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Тип: xcb_randr_get_crtc_info_reply_t*(*)(xcb_connection_t*,xcb_randr_get_crtc_info_cookie_t,xcb_generic_error_t**)
+
+
+# ::stappler::xenolith::platform::XcbLibrary::xcb_randr_get_crtc_info_outputs
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Тип: xcb_randr_output_t*(*)(xcb_randr_get_crtc_info_reply_t const*)
+
+
+# ::stappler::xenolith::platform::XcbLibrary::xcb_randr_get_crtc_info_outputs_length
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Тип: int(*)(xcb_randr_get_crtc_info_reply_t const*)
+
+
+# ::stappler::xenolith::platform::XcbLibrary::xcb_randr_get_crtc_info_possible
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Тип: xcb_randr_output_t*(*)(xcb_randr_get_crtc_info_reply_t const*)
+
+
+# ::stappler::xenolith::platform::XcbLibrary::xcb_randr_get_crtc_info_possible_length
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Тип: int(*)(xcb_randr_get_crtc_info_reply_t const*)
 
 
 # ::stappler::xenolith::platform::XcbLibrary::xcb_key_symbols_alloc
@@ -855,7 +1295,7 @@ Title: XLPlatformLinuxXcb.h
 
 Доступ: protected
 
-Тип: void*
+Тип: stappler::Dso
 
 
 # ::stappler::xenolith::platform::XcbLibrary::_randr
@@ -866,7 +1306,7 @@ Title: XLPlatformLinuxXcb.h
 
 Доступ: protected
 
-Тип: void*
+Тип: stappler::Dso
 
 
 # ::stappler::xenolith::platform::XcbLibrary::_keysyms
@@ -877,7 +1317,7 @@ Title: XLPlatformLinuxXcb.h
 
 Доступ: protected
 
-Тип: void*
+Тип: stappler::Dso
 
 
 # ::stappler::xenolith::platform::XcbLibrary::_xkb
@@ -888,7 +1328,7 @@ Title: XLPlatformLinuxXcb.h
 
 Доступ: protected
 
-Тип: void*
+Тип: stappler::Dso
 
 
 # ::stappler::xenolith::platform::XcbLibrary::_pending
@@ -911,6 +1351,27 @@ Title: XLPlatformLinuxXcb.h
 Доступ: protected
 
 Тип: stappler::xenolith::platform::XcbLibrary::ConnectionData
+
+
+# ::stappler::xenolith::platform::XcbAtomIndex
+
+## BRIEF
+
+## CONTENT
+
+Значения:
+* WM_PROTOCOLS
+* WM_DELETE_WINDOW
+* WM_NAME
+* WM_ICON_NAME
+* SAVE_TARGETS
+* CLIPBOARD
+* PRIMARY
+* TARGETS
+* MULTIPLE
+* STRING
+* XNULL
+* XENOLITH_CLIPBOARD
 
 
 # ::stappler::xenolith::platform::XcbAtomRequest
@@ -944,4 +1405,4 @@ Title: XLPlatformLinuxXcb.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::platform::XcbAtomRequest[4]
+Тип: stappler::xenolith::platform::XcbAtomRequest[12]

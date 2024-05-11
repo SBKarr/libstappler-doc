@@ -196,7 +196,7 @@ Title: XL2dVkShadow.h
 Доступ: public
 
 
-# ::stappler::xenolith::basic2d::vk::ShadowSdfImageAttachment::init(stappler::xenolith::core::Attachment::AttachmentBuilder&,stappler::xenolith::Extent2)
+# ::stappler::xenolith::basic2d::vk::ShadowSdfImageAttachment::init(stappler::xenolith::core::Attachment::AttachmentBuilder&,stappler::geom::Extent2)
 
 ## BRIEF
 
@@ -206,7 +206,7 @@ Title: XL2dVkShadow.h
 
 Параметры:
 * stappler::xenolith::core::Attachment::AttachmentBuilder&
-* stappler::xenolith::Extent2
+* stappler::geom::Extent2
 
 Возвращает:
 * bool
@@ -257,38 +257,6 @@ Title: XL2dVkShadow.h
 * Rc<core::AttachmentInputData>&&
 * Function<void (bool)>&&
 
-
-# ::stappler::xenolith::basic2d::vk::ShadowVertexAttachmentHandle::isDescriptorDirty(stappler::xenolith::core::AttachmentHandle::PassHandle const&,stappler::xenolith::vk::PipelineDescriptor const&,uint32_t,bool) const
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-Параметры:
-* stappler::xenolith::core::AttachmentHandle::PassHandle const&
-* stappler::xenolith::vk::PipelineDescriptor const&
-* uint32_t
-* bool
-
-Возвращает:
-* bool
-
-# ::stappler::xenolith::basic2d::vk::ShadowVertexAttachmentHandle::writeDescriptor(core::QueuePassHandle const&,stappler::xenolith::vk::DescriptorBufferInfo&)
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-Параметры:
-* core::QueuePassHandle const&
-* stappler::xenolith::vk::DescriptorBufferInfo&
-
-Возвращает:
-* bool
 
 # ::stappler::xenolith::basic2d::vk::ShadowVertexAttachmentHandle::empty() const
 
@@ -376,7 +344,7 @@ Title: XL2dVkShadow.h
 Доступ: public
 
 Возвращает:
-* Rc<stappler::xenolith::vk::DeviceBuffer> const&
+* Rc<stappler::xenolith::vk::Buffer> const&
 
 # ::stappler::xenolith::basic2d::vk::ShadowVertexAttachmentHandle::loadVertexes(stappler::xenolith::core::AttachmentHandle::FrameHandle&,Rc<stappler::xenolith::basic2d::FrameContextHandle2d> const&)
 
@@ -401,7 +369,7 @@ Title: XL2dVkShadow.h
 
 Доступ: protected
 
-Тип: Rc<stappler::xenolith::vk::DeviceBuffer>
+Тип: Rc<stappler::xenolith::vk::Buffer>
 
 
 # ::stappler::xenolith::basic2d::vk::ShadowVertexAttachmentHandle::_vertexes
@@ -412,7 +380,7 @@ Title: XL2dVkShadow.h
 
 Доступ: protected
 
-Тип: Rc<stappler::xenolith::vk::DeviceBuffer>
+Тип: Rc<stappler::xenolith::vk::Buffer>
 
 
 # ::stappler::xenolith::basic2d::vk::ShadowVertexAttachmentHandle::_transforms
@@ -423,7 +391,7 @@ Title: XL2dVkShadow.h
 
 Доступ: protected
 
-Тип: Rc<stappler::xenolith::vk::DeviceBuffer>
+Тип: Rc<stappler::xenolith::vk::Buffer>
 
 
 # ::stappler::xenolith::basic2d::vk::ShadowVertexAttachmentHandle::_circles
@@ -434,7 +402,7 @@ Title: XL2dVkShadow.h
 
 Доступ: protected
 
-Тип: Rc<stappler::xenolith::vk::DeviceBuffer>
+Тип: Rc<stappler::xenolith::vk::Buffer>
 
 
 # ::stappler::xenolith::basic2d::vk::ShadowVertexAttachmentHandle::_rects
@@ -445,7 +413,7 @@ Title: XL2dVkShadow.h
 
 Доступ: protected
 
-Тип: Rc<stappler::xenolith::vk::DeviceBuffer>
+Тип: Rc<stappler::xenolith::vk::Buffer>
 
 
 # ::stappler::xenolith::basic2d::vk::ShadowVertexAttachmentHandle::_roundedRects
@@ -456,7 +424,7 @@ Title: XL2dVkShadow.h
 
 Доступ: protected
 
-Тип: Rc<stappler::xenolith::vk::DeviceBuffer>
+Тип: Rc<stappler::xenolith::vk::Buffer>
 
 
 # ::stappler::xenolith::basic2d::vk::ShadowVertexAttachmentHandle::_polygons
@@ -467,7 +435,7 @@ Title: XL2dVkShadow.h
 
 Доступ: protected
 
-Тип: Rc<stappler::xenolith::vk::DeviceBuffer>
+Тип: Rc<stappler::xenolith::vk::Buffer>
 
 
 # ::stappler::xenolith::basic2d::vk::ShadowVertexAttachmentHandle::_trianglesCount
@@ -671,7 +639,7 @@ Title: XL2dVkShadow.h
 Доступ: public
 
 Возвращает:
-* Rc<stappler::xenolith::vk::DeviceBuffer> const&
+* Rc<stappler::xenolith::vk::Buffer> const&
 
 # ::stappler::xenolith::basic2d::vk::ShadowLightDataAttachmentHandle::_data
 
@@ -681,7 +649,7 @@ Title: XL2dVkShadow.h
 
 Доступ: protected
 
-Тип: Rc<stappler::xenolith::vk::DeviceBuffer>
+Тип: Rc<stappler::xenolith::vk::Buffer>
 
 
 # ::stappler::xenolith::basic2d::vk::ShadowLightDataAttachmentHandle::_input
@@ -725,7 +693,7 @@ Title: XL2dVkShadow.h
 Доступ: public
 
 
-# ::stappler::xenolith::basic2d::vk::ShadowPrimitivesAttachmentHandle::allocateBuffer(stappler::xenolith::vk::DeviceFrameHandle*,uint32_t,stappler::xenolith::basic2d::ShadowData const&)
+# ::stappler::xenolith::basic2d::vk::ShadowPrimitivesAttachmentHandle::allocateBuffer(stappler::xenolith::vk::DeviceFrameHandle*,stappler::xenolith::basic2d::ShadowData const&)
 
 ## BRIEF
 
@@ -735,43 +703,10 @@ Title: XL2dVkShadow.h
 
 Параметры:
 * stappler::xenolith::vk::DeviceFrameHandle*
-* uint32_t
 * stappler::xenolith::basic2d::ShadowData const&
 
 
-# ::stappler::xenolith::basic2d::vk::ShadowPrimitivesAttachmentHandle::isDescriptorDirty(stappler::xenolith::core::AttachmentHandle::PassHandle const&,stappler::xenolith::vk::PipelineDescriptor const&,uint32_t,bool) const
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-Параметры:
-* stappler::xenolith::core::AttachmentHandle::PassHandle const&
-* stappler::xenolith::vk::PipelineDescriptor const&
-* uint32_t
-* bool
-
-Возвращает:
-* bool
-
-# ::stappler::xenolith::basic2d::vk::ShadowPrimitivesAttachmentHandle::writeDescriptor(core::QueuePassHandle const&,stappler::xenolith::vk::DescriptorBufferInfo&)
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-Параметры:
-* core::QueuePassHandle const&
-* stappler::xenolith::vk::DescriptorBufferInfo&
-
-Возвращает:
-* bool
-
-# ::stappler::xenolith::basic2d::vk::ShadowPrimitivesAttachmentHandle::getTriangles() const
+# ::stappler::xenolith::basic2d::vk::ShadowPrimitivesAttachmentHandle::getObjects() const
 
 ## BRIEF
 
@@ -780,51 +715,7 @@ Title: XL2dVkShadow.h
 Доступ: public
 
 Возвращает:
-* Rc<stappler::xenolith::vk::DeviceBuffer> const&
-
-# ::stappler::xenolith::basic2d::vk::ShadowPrimitivesAttachmentHandle::getCircles() const
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-Возвращает:
-* Rc<stappler::xenolith::vk::DeviceBuffer> const&
-
-# ::stappler::xenolith::basic2d::vk::ShadowPrimitivesAttachmentHandle::getRects() const
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-Возвращает:
-* Rc<stappler::xenolith::vk::DeviceBuffer> const&
-
-# ::stappler::xenolith::basic2d::vk::ShadowPrimitivesAttachmentHandle::getRoundedRects() const
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-Возвращает:
-* Rc<stappler::xenolith::vk::DeviceBuffer> const&
-
-# ::stappler::xenolith::basic2d::vk::ShadowPrimitivesAttachmentHandle::getPolygons() const
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-Возвращает:
-* Rc<stappler::xenolith::vk::DeviceBuffer> const&
+* Rc<stappler::xenolith::vk::Buffer> const&
 
 # ::stappler::xenolith::basic2d::vk::ShadowPrimitivesAttachmentHandle::getGridSize() const
 
@@ -835,7 +726,7 @@ Title: XL2dVkShadow.h
 Доступ: public
 
 Возвращает:
-* Rc<stappler::xenolith::vk::DeviceBuffer> const&
+* Rc<stappler::xenolith::vk::Buffer> const&
 
 # ::stappler::xenolith::basic2d::vk::ShadowPrimitivesAttachmentHandle::getGridIndex() const
 
@@ -846,20 +737,9 @@ Title: XL2dVkShadow.h
 Доступ: public
 
 Возвращает:
-* Rc<stappler::xenolith::vk::DeviceBuffer> const&
+* Rc<stappler::xenolith::vk::Buffer> const&
 
-# ::stappler::xenolith::basic2d::vk::ShadowPrimitivesAttachmentHandle::_triangles
-
-## BRIEF
-
-## CONTENT
-
-Доступ: protected
-
-Тип: Rc<stappler::xenolith::vk::DeviceBuffer>
-
-
-# ::stappler::xenolith::basic2d::vk::ShadowPrimitivesAttachmentHandle::_circles
+# ::stappler::xenolith::basic2d::vk::ShadowPrimitivesAttachmentHandle::_objects
 
 ## BRIEF
 
@@ -867,40 +747,7 @@ Title: XL2dVkShadow.h
 
 Доступ: protected
 
-Тип: Rc<stappler::xenolith::vk::DeviceBuffer>
-
-
-# ::stappler::xenolith::basic2d::vk::ShadowPrimitivesAttachmentHandle::_rects
-
-## BRIEF
-
-## CONTENT
-
-Доступ: protected
-
-Тип: Rc<stappler::xenolith::vk::DeviceBuffer>
-
-
-# ::stappler::xenolith::basic2d::vk::ShadowPrimitivesAttachmentHandle::_roundedRects
-
-## BRIEF
-
-## CONTENT
-
-Доступ: protected
-
-Тип: Rc<stappler::xenolith::vk::DeviceBuffer>
-
-
-# ::stappler::xenolith::basic2d::vk::ShadowPrimitivesAttachmentHandle::_polygons
-
-## BRIEF
-
-## CONTENT
-
-Доступ: protected
-
-Тип: Rc<stappler::xenolith::vk::DeviceBuffer>
+Тип: Rc<stappler::xenolith::vk::Buffer>
 
 
 # ::stappler::xenolith::basic2d::vk::ShadowPrimitivesAttachmentHandle::_gridSize
@@ -911,7 +758,7 @@ Title: XL2dVkShadow.h
 
 Доступ: protected
 
-Тип: Rc<stappler::xenolith::vk::DeviceBuffer>
+Тип: Rc<stappler::xenolith::vk::Buffer>
 
 
 # ::stappler::xenolith::basic2d::vk::ShadowPrimitivesAttachmentHandle::_gridIndex
@@ -922,7 +769,7 @@ Title: XL2dVkShadow.h
 
 Доступ: protected
 
-Тип: Rc<stappler::xenolith::vk::DeviceBuffer>
+Тип: Rc<stappler::xenolith::vk::Buffer>
 
 
 # ::stappler::xenolith::basic2d::vk::ShadowSdfImageAttachmentHandle

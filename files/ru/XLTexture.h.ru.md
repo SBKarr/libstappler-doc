@@ -127,7 +127,7 @@ Title: XLTexture.h
 Доступ: public
 
 Возвращает:
-* stappler::xenolith::Extent3
+* stappler::geom::Extent3
 
 # ::stappler::xenolith::Texture::isLoaded() const
 

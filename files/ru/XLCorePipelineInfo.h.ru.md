@@ -5,14 +5,22 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Заголовок параметров пайплайна и связанных объектов
+
 ## CONTENT
+
+Заголовок параметров пайплайна и связанных объектов
 
 
 # ::stappler::xenolith::core::EmptyTextureName
 
 ## BRIEF
 
+Идентификатор пустой текстуры
+
 ## CONTENT
+
+Идентификатор пустой текстуры
 
 Тип: auto const
 
@@ -21,7 +29,11 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Идентификатор заполненной текстуры
+
 ## CONTENT
+
+Идентификатор заполненной текстуры
 
 Тип: auto const
 
@@ -30,14 +42,22 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Режим доступа к цвету
+
 ## CONTENT
+
+Режим доступа к цвету
 
 
 # ::stappler::xenolith::core::ColorMode::SolidColor
 
 ## BRIEF
 
+Полный доступ к цвету
+
 ## CONTENT
+
+Полный доступ к цвету
 
 Тип: stappler::xenolith::core::ColorMode const
 
@@ -46,7 +66,11 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Альфаканал как канал интенсивности
+
 ## CONTENT
+
+Альфаканал как канал интенсивности
 
 Тип: stappler::xenolith::core::ColorMode const
 
@@ -55,7 +79,11 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Альфаканал как канал прозрачности
+
 ## CONTENT
+
+Альфаканал как канал прозрачности
 
 Тип: stappler::xenolith::core::ColorMode const
 
@@ -64,7 +92,11 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Базовый режим
+
 ## CONTENT
+
+Базовый режим
 
 Значения:
 * Solid
@@ -75,7 +107,11 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Базовый режим
+
 ## CONTENT
+
+Базовый режим
 
 Тип: uint32_t
 
@@ -84,7 +120,11 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Канал красного
+
 ## CONTENT
+
+Канал красного
 
 Тип: uint32_t
 
@@ -93,7 +133,11 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Канал зелёного
+
 ## CONTENT
+
+Канал зелёного
 
 Тип: uint32_t
 
@@ -102,7 +146,11 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Канал синего
+
 ## CONTENT
+
+Канал синего
 
 Тип: uint32_t
 
@@ -111,7 +159,11 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Канал альфа
+
 ## CONTENT
+
+Канал альфа
 
 Тип: uint32_t
 
@@ -120,38 +172,53 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Конструктор полного цвета
+
 ## CONTENT
 
+Конструктор полного цвета
 
 # ::stappler::xenolith::core::ColorMode::ColorMode(stappler::xenolith::core::ComponentMapping,stappler::xenolith::core::ComponentMapping,stappler::xenolith::core::ComponentMapping,stappler::xenolith::core::ComponentMapping)
 
 ## BRIEF
 
+Конструктор с указанием параметров
+
 ## CONTENT
 
+Конструктор с указанием параметров
+
 Параметры:
-* stappler::xenolith::core::ComponentMapping
-* stappler::xenolith::core::ComponentMapping
-* stappler::xenolith::core::ComponentMapping
-* stappler::xenolith::core::ComponentMapping
+* stappler::xenolith::core::ComponentMapping - красный
+* stappler::xenolith::core::ComponentMapping - зелёный
+* stappler::xenolith::core::ComponentMapping - синий
+* stappler::xenolith::core::ComponentMapping - альфа
 
 
 # ::stappler::xenolith::core::ColorMode::ColorMode(stappler::xenolith::core::ComponentMapping,stappler::xenolith::core::ComponentMapping)
 
 ## BRIEF
 
+Конструктор с указанием параметров
+
 ## CONTENT
 
+Конструктор с указанием параметров
+
 Параметры:
-* stappler::xenolith::core::ComponentMapping
-* stappler::xenolith::core::ComponentMapping
+* stappler::xenolith::core::ComponentMapping - цвета
+* stappler::xenolith::core::ComponentMapping - альфа
 
 
 # ::stappler::xenolith::core::ColorMode::ColorMode(stappler::xenolith::core::ColorMode const&)
 
 ## BRIEF
 
+Конструктор копирования
+
 ## CONTENT
+
+Конструктор копирования
 
 Параметры:
 * stappler::xenolith::core::ColorMode const&
@@ -161,7 +228,11 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Конструктор перемещения
+
 ## CONTENT
+
+Конструктор перемещения
 
 Параметры:
 * stappler::xenolith::core::ColorMode&&
@@ -171,7 +242,11 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Оператор копирования
+
 ## CONTENT
+
+Оператор копирования
 
 Параметры:
 * stappler::xenolith::core::ColorMode const&
@@ -183,7 +258,11 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Оператор перемещения
+
 ## CONTENT
+
+Оператор перемещения
 
 Параметры:
 * stappler::xenolith::core::ColorMode&&
@@ -195,7 +274,11 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Оператор сравнения
+
 ## CONTENT
+
+Оператор сравнения
 
 Параметры:
 * stappler::xenolith::core::ColorMode const&
@@ -207,7 +290,11 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Оператор сравнения
+
 ## CONTENT
+
+Оператор сравнения
 
 Параметры:
 * stappler::xenolith::core::ColorMode const&
@@ -219,7 +306,11 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Возвращает базовый режим
+
 ## CONTENT
+
+Возвращает базовый режим
 
 Возвращает:
 * stappler::xenolith::core::ColorMode::Mode
@@ -228,7 +319,11 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Красный канал
+
 ## CONTENT
+
+Красный канал
 
 Возвращает:
 * stappler::xenolith::core::ComponentMapping
@@ -237,7 +332,11 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Зелёный канал
+
 ## CONTENT
+
+Зелёный канал
 
 Возвращает:
 * stappler::xenolith::core::ComponentMapping
@@ -246,7 +345,11 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Синий канал
+
 ## CONTENT
+
+Синий канал
 
 Возвращает:
 * stappler::xenolith::core::ComponentMapping
@@ -255,7 +358,11 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Альфа канал
+
 ## CONTENT
+
+Альфа канал
 
 Возвращает:
 * stappler::xenolith::core::ComponentMapping
@@ -264,7 +371,11 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Конвертирует режим в целое число
+
 ## CONTENT
+
+Конвертирует режим в целое число
 
 Возвращает:
 * uint32_t
@@ -273,7 +384,11 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Конвертирует режим в целое число
+
 ## CONTENT
+
+Конвертирует режим в целое число
 
 Возвращает:
 * uint32_t
@@ -282,14 +397,22 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Параметры смешивания цветов
+
 ## CONTENT
+
+Параметры смешивания цветов
 
 
 # ::stappler::xenolith::core::BlendInfo::enabled
 
 ## BRIEF
 
+Флаг активности
+
 ## CONTENT
+
+Флаг активности
 
 Тип: uint32_t
 
@@ -298,7 +421,11 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Параметр исходного цвета
+
 ## CONTENT
+
+Параметр исходного цвета
 
 Тип: uint32_t
 
@@ -307,7 +434,11 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Параметр цвета назначения
+
 ## CONTENT
+
+Параметр цвета назначения
 
 Тип: uint32_t
 
@@ -316,7 +447,11 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Операция смешивания цвета
+
 ## CONTENT
+
+Операция смешивания цвета
 
 Тип: uint32_t
 
@@ -325,7 +460,11 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Параметр исходного альфаканала
+
 ## CONTENT
+
+Параметр исходного альфаканала
 
 Тип: uint32_t
 
@@ -334,7 +473,11 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Параметр альфаканала назначения
+
 ## CONTENT
+
+Параметр альфаканала назначения
 
 Тип: uint32_t
 
@@ -343,7 +486,11 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Оператор альфаканала
+
 ## CONTENT
+
+Оператор альфаканала
 
 Тип: uint32_t
 
@@ -352,7 +499,11 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Маска записи цвета
+
 ## CONTENT
+
+Маска записи цвета
 
 Тип: uint32_t
 
@@ -361,43 +512,59 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Конструктор
+
 ## CONTENT
+
+Конструктор
 
 
 # ::stappler::xenolith::core::BlendInfo::BlendInfo(stappler::xenolith::core::BlendFactor,stappler::xenolith::core::BlendFactor,stappler::xenolith::core::BlendOp,stappler::xenolith::core::ColorComponentFlags)
 
 ## BRIEF
 
+Конструктор из параметров
+
 ## CONTENT
 
+Конструктор из параметров
+
 Параметры:
-* stappler::xenolith::core::BlendFactor
-* stappler::xenolith::core::BlendFactor
-* stappler::xenolith::core::BlendOp
-* stappler::xenolith::core::ColorComponentFlags
+* stappler::xenolith::core::BlendFactor - параметр исходного цвета
+* stappler::xenolith::core::BlendFactor - параметр цвета назначения
+* stappler::xenolith::core::BlendOp - операция смешивания
+* stappler::xenolith::core::ColorComponentFlags - маска цветов
 
 
 # ::stappler::xenolith::core::BlendInfo::BlendInfo(stappler::xenolith::core::BlendFactor,stappler::xenolith::core::BlendFactor,stappler::xenolith::core::BlendOp,stappler::xenolith::core::BlendFactor,stappler::xenolith::core::BlendFactor,stappler::xenolith::core::BlendOp,stappler::xenolith::core::ColorComponentFlags)
 
 ## BRIEF
 
+Конструктор из параметров
+
 ## CONTENT
 
+Конструктор из параметров
+
 Параметры:
-* stappler::xenolith::core::BlendFactor
-* stappler::xenolith::core::BlendFactor
-* stappler::xenolith::core::BlendOp
-* stappler::xenolith::core::BlendFactor
-* stappler::xenolith::core::BlendFactor
-* stappler::xenolith::core::BlendOp
-* stappler::xenolith::core::ColorComponentFlags
+* stappler::xenolith::core::BlendFactor - параметр исходного цвета
+* stappler::xenolith::core::BlendFactor - параметр цвета назначения
+* stappler::xenolith::core::BlendOp - операция смешивания цвета
+* stappler::xenolith::core::BlendFactor - параметр исходного альфаканала
+* stappler::xenolith::core::BlendFactor - параметр альфаканала назначения
+* stappler::xenolith::core::BlendOp - операция смешивания альфаканала
+* stappler::xenolith::core::ColorComponentFlags - маска цветов
 
 
 # ::stappler::xenolith::core::BlendInfo::operator==(stappler::xenolith::core::BlendInfo const&) const
 
 ## BRIEF
 
+Оператор сравнения
+
 ## CONTENT
+
+Оператор сравнения
 
 Параметры:
 * stappler::xenolith::core::BlendInfo const&
@@ -409,7 +576,11 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Оператор сравнения
+
 ## CONTENT
+
+Оператор сравнения
 
 Параметры:
 * stappler::xenolith::core::BlendInfo const&
@@ -421,7 +592,11 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Проверяет, включено ли смешивание
+
 ## CONTENT
+
+Проверяет, включено ли смешивание
 
 Возвращает:
 * bool
@@ -430,14 +605,22 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Параметры работы с буфером глубины
+
 ## CONTENT
+
+Параметры работы с буфером глубины
 
 
 # ::stappler::xenolith::core::DepthInfo::writeEnabled
 
 ## BRIEF
 
+Запись включена
+
 ## CONTENT
+
+Запись включена
 
 Тип: uint32_t
 
@@ -446,7 +629,11 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Проверка включена
+
 ## CONTENT
+
+Проверка включена
 
 Тип: uint32_t
 
@@ -455,7 +642,11 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Оператор сравнения
+
 ## CONTENT
+
+Оператор сравнения
 
 Тип: uint32_t
 
@@ -464,26 +655,38 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Конструктор
+
 ## CONTENT
+
+Конструктор
 
 
 # ::stappler::xenolith::core::DepthInfo::DepthInfo(bool,bool,stappler::xenolith::core::CompareOp)
 
 ## BRIEF
 
+Конструктор
+
 ## CONTENT
 
+Конструктор
+
 Параметры:
-* bool
-* bool
-* stappler::xenolith::core::CompareOp
+* bool - включена ли запись
+* bool - включена ли проверка
+* stappler::xenolith::core::CompareOp - операция сранения
 
 
 # ::stappler::xenolith::core::DepthInfo::operator==(stappler::xenolith::core::DepthInfo const&) const
 
 ## BRIEF
 
+Оператор сравнения
+
 ## CONTENT
+
+Оператор сравнения
 
 Параметры:
 * stappler::xenolith::core::DepthInfo const&
@@ -495,7 +698,11 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Оператор сравнения
+
 ## CONTENT
+
+Оператор сравнения
 
 Параметры:
 * stappler::xenolith::core::DepthInfo const&
@@ -507,14 +714,22 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Граничные условия глубины
+
 ## CONTENT
+
+Граничные условия глубины
 
 
 # ::stappler::xenolith::core::DepthBounds::enabled
 
 ## BRIEF
 
+Флаг активности
+
 ## CONTENT
+
+Флаг активности
 
 Тип: bool
 
@@ -523,7 +738,11 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Минимум
+
 ## CONTENT
+
+Минимум
 
 Тип: float
 
@@ -532,7 +751,11 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Максимум
+
 ## CONTENT
+
+Максимум
 
 Тип: float
 
@@ -541,7 +764,11 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Оператор сравнения
+
 ## CONTENT
+
+Оператор сравнения
 
 Параметры:
 * stappler::xenolith::core::DepthBounds const&
@@ -553,7 +780,11 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Оператор сравнения
+
 ## CONTENT
+
+Оператор сравнения
 
 Параметры:
 * stappler::xenolith::core::DepthBounds const&
@@ -565,14 +796,22 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Параметры трафарета
+
 ## CONTENT
+
+Параметры трафарета
 
 
 # ::stappler::xenolith::core::StencilInfo::fail
 
 ## BRIEF
 
+Операция ошибки
+
 ## CONTENT
+
+Операция ошибки
 
 Тип: stappler::xenolith::core::StencilOp
 
@@ -581,7 +820,11 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Операция успеха
+
 ## CONTENT
+
+Операция успеха
 
 Тип: stappler::xenolith::core::StencilOp
 
@@ -590,7 +833,11 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Операция ошибки по глубине
+
 ## CONTENT
+
+Операция ошибки по глубине
 
 Тип: stappler::xenolith::core::StencilOp
 
@@ -599,7 +846,11 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Операция сравнения
+
 ## CONTENT
+
+Операция сравнения
 
 Тип: stappler::xenolith::core::CompareOp
 
@@ -608,7 +859,11 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Маска сравнения
+
 ## CONTENT
+
+Маска сравнения
 
 Тип: uint32_t
 
@@ -617,7 +872,11 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Маска записи
+
 ## CONTENT
+
+Маска записи
 
 Тип: uint32_t
 
@@ -626,7 +885,11 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Базовое значение
+
 ## CONTENT
+
+Базовое значение
 
 Тип: uint32_t
 
@@ -635,32 +898,48 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Тип ширины линии
+
 ## CONTENT
+
+Тип ширины линии. Если отрицательный - размер точки
 
 
 # ::stappler::xenolith::core::PipelineMaterialInfo
 
 ## BRIEF
 
+Информация о материале для пайплайна
+
 ## CONTENT
+
+Информация о материале для пайплайна
 
 
 # ::stappler::xenolith::core::PipelineMaterialInfo::PipelineMaterialInfo()
 
 ## BRIEF
 
+Конструктор
+
 ## CONTENT
 
 Доступ: public
+
+Конструктор
 
 
 # ::stappler::xenolith::core::PipelineMaterialInfo::PipelineMaterialInfo(stappler::xenolith::core::PipelineMaterialInfo const&)
 
 ## BRIEF
 
+Конструктор копирования
+
 ## CONTENT
 
 Доступ: public
+
+Конструктор копирования
 
 Параметры:
 * stappler::xenolith::core::PipelineMaterialInfo const&
@@ -670,9 +949,13 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Оператор копирования
+
 ## CONTENT
 
 Доступ: public
+
+Оператор копирования
 
 Параметры:
 * stappler::xenolith::core::PipelineMaterialInfo const&
@@ -684,9 +967,13 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Конструктор из типизированных параметров
+
 ## CONTENT
 
 Доступ: public
+
+Конструктор из типизированных параметров
 
 Параметры шаблона:
 * typename T
@@ -702,9 +989,13 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Устанавливает параметры смешивания цветов
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает параметры смешивания цветов
 
 Параметры:
 * stappler::xenolith::core::BlendInfo const&
@@ -714,9 +1005,13 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Устанавливает параметры работы с глубиной
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает параметры работы с глубиной
 
 Параметры:
 * stappler::xenolith::core::DepthInfo const&
@@ -726,9 +1021,13 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Устанавливает границы глубины
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает границы глубины
 
 Параметры:
 * stappler::xenolith::core::DepthBounds const&
@@ -738,9 +1037,13 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Включает трафарет с параметрами
+
 ## CONTENT
 
 Доступ: public
+
+Включает трафарет с параметрами
 
 Параметры:
 * stappler::xenolith::core::StencilInfo const&
@@ -750,31 +1053,43 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Включает трафарет с параметрами
+
 ## CONTENT
 
 Доступ: public
 
+Включает трафарет с параметрами
+
 Параметры:
-* stappler::xenolith::core::StencilInfo const&
-* stappler::xenolith::core::StencilInfo const&
+* stappler::xenolith::core::StencilInfo const& - трафарет для передней стороны объекта
+* stappler::xenolith::core::StencilInfo const& - трафарет для задней стороны объекта
 
 
 # ::stappler::xenolith::core::PipelineMaterialInfo::disableStancil()
 
 ## BRIEF
 
+Выключает трафарет
+
 ## CONTENT
 
 Доступ: public
+
+Выключает трафарет
 
 
 # ::stappler::xenolith::core::PipelineMaterialInfo::setLineWidth(float)
 
 ## BRIEF
 
+Устанавливает ширину линий
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает ширину линий
 
 Параметры:
 * float
@@ -784,9 +1099,13 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Возвращает параметры смешивания цветов
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает параметры смешивания цветов
 
 Возвращает:
 * stappler::xenolith::core::BlendInfo const&
@@ -795,9 +1114,13 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Возвращает параметры работы с буфером глубины
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает параметры работы с буфером глубины
 
 Возвращает:
 * stappler::xenolith::core::DepthInfo const&
@@ -806,9 +1129,13 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Возвращает границы глубины
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает границы глубины
 
 Возвращает:
 * stappler::xenolith::core::DepthBounds const&
@@ -817,9 +1144,13 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Проверяет, включен ли трафарет
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, включен ли трафарет
 
 Возвращает:
 * bool
@@ -828,9 +1159,13 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Возвращает трафарет для передней стороны
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает трафарет для передней стороны
 
 Возвращает:
 * stappler::xenolith::core::StencilInfo const&
@@ -839,9 +1174,13 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Возвращает трафарет для задней стороны
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает трафарет для задней стороны
 
 Возвращает:
 * stappler::xenolith::core::StencilInfo const&
@@ -850,9 +1189,13 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Возвращает ширину линий
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает ширину линий
 
 Возвращает:
 * float
@@ -861,9 +1204,13 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Оператор сравнения
+
 ## CONTENT
 
 Доступ: public
+
+Оператор сравнения
 
 Параметры:
 * stappler::xenolith::core::PipelineMaterialInfo const&
@@ -875,9 +1222,13 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Оператор сравнения
+
 ## CONTENT
 
 Доступ: public
+
+Оператор сравнения
 
 Параметры:
 * stappler::xenolith::core::PipelineMaterialInfo const&
@@ -889,9 +1240,13 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Возвращает значение хеша
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает значение хеша
 
 Возвращает:
 * size_t
@@ -900,9 +1255,13 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Возвращает данные в виде текста
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает данные в виде текста
 
 Возвращает:
 * stappler::mem_std::String
@@ -911,9 +1270,13 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Возвращает описание параметров
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает описание параметров
 
 Возвращает:
 * stappler::mem_std::String
@@ -922,9 +1285,13 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Устанавливает параметр
+
 ## CONTENT
 
 Доступ: protected
+
+Устанавливает параметр
 
 Параметры:
 * stappler::xenolith::core::BlendInfo const&
@@ -934,9 +1301,13 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Устанавливает параметр
+
 ## CONTENT
 
 Доступ: protected
+
+Устанавливает параметр
 
 Параметры:
 * stappler::xenolith::core::DepthInfo const&
@@ -946,9 +1317,13 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Устанавливает параметр
+
 ## CONTENT
 
 Доступ: protected
+
+Устанавливает параметр
 
 Параметры:
 * stappler::xenolith::core::DepthBounds const&
@@ -958,9 +1333,13 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Устанавливает параметр
+
 ## CONTENT
 
 Доступ: protected
+
+Устанавливает параметр
 
 Параметры:
 * stappler::xenolith::core::StencilInfo const&
@@ -970,9 +1349,13 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Устанавливает параметр
+
 ## CONTENT
 
 Доступ: protected
+
+Устанавливает параметр
 
 Параметры:
 * stappler::xenolith::core::LineWidth
@@ -982,9 +1365,13 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Устанавливает параметр
+
 ## CONTENT
 
 Доступ: protected
+
+Устанавливает параметр
 
 Параметры шаблона:
 * typename T
@@ -997,9 +1384,13 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Устанавливает параметр
+
 ## CONTENT
 
 Доступ: protected
+
+Устанавливает параметр
 
 Параметры шаблона:
 * typename T
@@ -1014,18 +1405,26 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Устанавливает параметр
+
 ## CONTENT
 
 Доступ: protected
+
+Устанавливает параметр
 
 
 # ::stappler::xenolith::core::PipelineMaterialInfo::blend
 
 ## BRIEF
 
+Смешивание
+
 ## CONTENT
 
 Доступ: protected
+
+Смешивание
 
 Тип: stappler::xenolith::core::BlendInfo
 
@@ -1034,9 +1433,13 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Параметры глубины
+
 ## CONTENT
 
 Доступ: protected
+
+Параметры глубины
 
 Тип: stappler::xenolith::core::DepthInfo
 
@@ -1045,9 +1448,13 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Границы глубины
+
 ## CONTENT
 
 Доступ: protected
+
+Границы глубины
 
 Тип: stappler::xenolith::core::DepthBounds
 
@@ -1056,9 +1463,13 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Трафарет переднего края
+
 ## CONTENT
 
 Доступ: protected
+
+Трафарет переднего края
 
 Тип: stappler::xenolith::core::StencilInfo
 
@@ -1067,9 +1478,13 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Трафарет заднего края
+
 ## CONTENT
 
 Доступ: protected
+
+Трафарет заднего края
 
 Тип: stappler::xenolith::core::StencilInfo
 
@@ -1078,9 +1493,13 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Флаг работы трафарета
+
 ## CONTENT
 
 Доступ: protected
+
+Флаг работы трафарета
 
 Тип: uint32_t
 
@@ -1089,8 +1508,12 @@ Title: XLCorePipelineInfo.h
 
 ## BRIEF
 
+Ширина линий
+
 ## CONTENT
 
 Доступ: protected
+
+Ширина линий
 
 Тип: float

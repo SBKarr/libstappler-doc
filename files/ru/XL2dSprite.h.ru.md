@@ -141,7 +141,7 @@ Title: XL2dSprite.h
 Возвращает:
 * Rc<stappler::xenolith::Texture> const&
 
-# ::stappler::xenolith::basic2d::Sprite::setTextureRect(stappler::xenolith::Rect const&)
+# ::stappler::xenolith::basic2d::Sprite::setLinearGradient(Rc<stappler::xenolith::basic2d::LinearGradient>&&)
 
 ## BRIEF
 
@@ -150,7 +150,30 @@ Title: XL2dSprite.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Rect const&
+* Rc<stappler::xenolith::basic2d::LinearGradient>&&
+
+
+# ::stappler::xenolith::basic2d::Sprite::getLinearGradient() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* Rc<stappler::xenolith::basic2d::LinearGradient> const&
+
+# ::stappler::xenolith::basic2d::Sprite::setTextureRect(const stappler::geom::Rect&)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* const stappler::geom::Rect&
 
 
 # ::stappler::xenolith::basic2d::Sprite::getTextureRect() const
@@ -162,7 +185,7 @@ Title: XL2dSprite.h
 Доступ: public
 
 Возвращает:
-* stappler::xenolith::Rect const&
+* const stappler::geom::Rect&
 
 # ::stappler::xenolith::basic2d::Sprite::visitDraw(stappler::xenolith::FrameInfo&,stappler::xenolith::NodeFlags)
 
@@ -369,7 +392,7 @@ Title: XL2dSprite.h
 Возвращает:
 * Autofit
 
-# ::stappler::xenolith::basic2d::Sprite::setAutofitPosition(stappler::xenolith::Vec2 const&)
+# ::stappler::xenolith::basic2d::Sprite::setAutofitPosition(const stappler::geom::Vec2&)
 
 ## BRIEF
 
@@ -378,7 +401,7 @@ Title: XL2dSprite.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Vec2 const&
+* const stappler::geom::Vec2&
 
 
 # ::stappler::xenolith::basic2d::Sprite::getAutofitPosition() const
@@ -390,7 +413,7 @@ Title: XL2dSprite.h
 Доступ: public
 
 Возвращает:
-* stappler::xenolith::Vec2 const&
+* const stappler::geom::Vec2&
 
 # ::stappler::xenolith::basic2d::Sprite::setSamplerIndex(uint16_t)
 
@@ -474,7 +497,7 @@ Title: XL2dSprite.h
 * Function<void ()>&&
 
 
-# ::stappler::xenolith::basic2d::Sprite::pushShadowCommands(stappler::xenolith::FrameInfo&,stappler::xenolith::NodeFlags,stappler::xenolith::Mat4 const&,SpanView<stappler::xenolith::basic2d::TransformVertexData>)
+# ::stappler::xenolith::basic2d::Sprite::pushShadowCommands(stappler::xenolith::FrameInfo&,stappler::xenolith::NodeFlags,const stappler::geom::Mat4&,SpanView<stappler::xenolith::basic2d::TransformVertexData>)
 
 ## BRIEF
 
@@ -485,7 +508,7 @@ Title: XL2dSprite.h
 Параметры:
 * stappler::xenolith::FrameInfo&
 * stappler::xenolith::NodeFlags
-* stappler::xenolith::Mat4 const&
+* const stappler::geom::Mat4&
 * SpanView<stappler::xenolith::basic2d::TransformVertexData>
 
 
@@ -591,7 +614,7 @@ Title: XL2dSprite.h
 Возвращает:
 * stappler::xenolith::RenderingLevel
 
-# ::stappler::xenolith::basic2d::Sprite::getAutofitParams(stappler::xenolith::basic2d::Sprite::Autofit,stappler::xenolith::Vec2 const&,stappler::xenolith::Size2 const&,stappler::xenolith::Size2 const&,stappler::xenolith::Rect&,stappler::xenolith::Rect&)
+# ::stappler::xenolith::basic2d::Sprite::getAutofitParams(stappler::xenolith::basic2d::Sprite::Autofit,const stappler::geom::Vec2&,const stappler::geom::Size2&,const stappler::geom::Size2&,stappler::geom::Rect&,stappler::geom::Rect&)
 
 ## BRIEF
 
@@ -601,11 +624,11 @@ Title: XL2dSprite.h
 
 Параметры:
 * stappler::xenolith::basic2d::Sprite::Autofit
-* stappler::xenolith::Vec2 const&
-* stappler::xenolith::Size2 const&
-* stappler::xenolith::Size2 const&
-* stappler::xenolith::Rect&
-* stappler::xenolith::Rect&
+* const stappler::geom::Vec2&
+* const stappler::geom::Size2&
+* const stappler::geom::Size2&
+* stappler::geom::Rect&
+* stappler::geom::Rect&
 
 Возвращает:
 * bool
@@ -761,7 +784,7 @@ Title: XL2dSprite.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::Rect
+Тип: stappler::geom::Rect
 
 
 # ::stappler::xenolith::basic2d::Sprite::_autofit
@@ -783,7 +806,7 @@ Title: XL2dSprite.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::Vec2
+Тип: stappler::geom::Vec2
 
 
 # ::stappler::xenolith::basic2d::Sprite::_textureOrigin
@@ -794,7 +817,7 @@ Title: XL2dSprite.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::Vec2
+Тип: stappler::geom::Vec2
 
 
 # ::stappler::xenolith::basic2d::Sprite::_textureSize
@@ -805,7 +828,7 @@ Title: XL2dSprite.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::Size2
+Тип: stappler::geom::Size2
 
 
 # ::stappler::xenolith::basic2d::Sprite::_targetTextureSize
@@ -816,7 +839,7 @@ Title: XL2dSprite.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::Extent3
+Тип: stappler::geom::Extent3
 
 
 # ::stappler::xenolith::basic2d::Sprite::_renderingLevel
@@ -871,7 +894,7 @@ Title: XL2dSprite.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::Color4F
+Тип: stappler::geom::Color4F
 
 
 # ::stappler::xenolith::basic2d::Sprite::_colorMode
@@ -927,3 +950,14 @@ Title: XL2dSprite.h
 Доступ: protected
 
 Тип: Function<void ()>
+
+
+# ::stappler::xenolith::basic2d::Sprite::_linearGradient
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: Rc<stappler::xenolith::basic2d::LinearGradient>

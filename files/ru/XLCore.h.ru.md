@@ -5,175 +5,69 @@ Title: XLCore.h
 
 ## BRIEF
 
+Базовый интерфейс графического движка
+
 ## CONTENT
+
+Базовый интерфейс графического движка
 
 
 # XL_ASSERT
 
 ## BRIEF
 
+Макрос утверждения
+
 ## CONTENT
 
+Макрос утверждения
+
 Параметры:
-* cond
-* msg
+* cond - условие
+* msg - сообщение об ошибке
 
 
 # XLASSERT
 
 ## BRIEF
 
+Макрос утверждения
+
 ## CONTENT
+
+Макрос утверждения
 
 Параметры:
-* cond
-* msg
-
-
-# ::stappler::xenolith::Vec2
-
-## BRIEF
-
-## CONTENT
-
-
-# ::stappler::xenolith::Vec3
-
-## BRIEF
-
-## CONTENT
-
-
-# ::stappler::xenolith::Vec4
-
-## BRIEF
-
-## CONTENT
-
-
-# ::stappler::xenolith::Mat4
-
-## BRIEF
-
-## CONTENT
-
-
-# ::stappler::xenolith::Size2
-
-## BRIEF
-
-## CONTENT
-
-
-# ::stappler::xenolith::Size3
-
-## BRIEF
-
-## CONTENT
-
-
-# ::stappler::xenolith::Extent2
-
-## BRIEF
-
-## CONTENT
-
-
-# ::stappler::xenolith::Extent3
-
-## BRIEF
-
-## CONTENT
-
-
-# ::stappler::xenolith::Rect
-
-## BRIEF
-
-## CONTENT
-
-
-# ::stappler::xenolith::URect
-
-## BRIEF
-
-## CONTENT
-
-
-# ::stappler::xenolith::UVec2
-
-## BRIEF
-
-## CONTENT
-
-
-# ::stappler::xenolith::Quaternion
-
-## BRIEF
-
-## CONTENT
-
-
-# ::stappler::xenolith::Color
-
-## BRIEF
-
-## CONTENT
-
-
-# ::stappler::xenolith::Color3B
-
-## BRIEF
-
-## CONTENT
-
-
-# ::stappler::xenolith::Color4B
-
-## BRIEF
-
-## CONTENT
-
-
-# ::stappler::xenolith::Color4F
-
-## BRIEF
-
-## CONTENT
-
-
-# ::stappler::xenolith::ColorMask
-
-## BRIEF
-
-## CONTENT
-
-
-# ::stappler::xenolith::Padding
-
-## BRIEF
-
-## CONTENT
+* cond - условие
+* msg - сообщение об ошибке
 
 
 # ::stappler::xenolith::Anchor
 
 ## BRIEF
 
+Тип якоря
+
 ## CONTENT
+
+Тип якоря
 
 
 # ::stappler::xenolith::XL_MAKE_API_VERSION(uint32_t,uint32_t,uint32_t,uint32_t)
 
 ## BRIEF
 
+Функция сборки версии аналогично Vulkan
+
 ## CONTENT
 
+Функция сборки версии аналогично Vulkan
+
 Параметры:
-* uint32_t
-* uint32_t
-* uint32_t
-* uint32_t
+* uint32_t - variant
+* uint32_t - major
+* uint32_t - minor
+* uint32_t - build
 
 Возвращает:
 * uint32_t
@@ -182,7 +76,11 @@ Title: XLCore.h
 
 ## BRIEF
 
+Собирает версию из строки
+
 ## CONTENT
+
+Собирает версию из строки
 
 Параметры:
 * stappler::StringView
@@ -194,7 +92,11 @@ Title: XLCore.h
 
 ## BRIEF
 
+Конвертирует число версии в строку
+
 ## CONTENT
+
+Конвертирует число версии в строку
 
 Параметры:
 * uint32_t
@@ -206,40 +108,54 @@ Title: XLCore.h
 
 ## BRIEF
 
+Обёртка вокруг пула памяти
+
 ## CONTENT
+
+Обёртка вокруг пула памяти
 
 Базовые классы:
 * Ref
-
 
 # ::stappler::xenolith::PoolRef::~PoolRef()
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
 
+Деструктор, удаляет пул памяти
 
 # ::stappler::xenolith::PoolRef::PoolRef(memory::pool_t*)
 
 ## BRIEF
 
+Создаёт новый пул памяти
+
 ## CONTENT
 
 Доступ: public
 
+Создаёт новый пул памяти
+
 Параметры:
-* memory::pool_t*
+* memory::pool_t* - исходный пул памяти или nullptr
 
 
 # ::stappler::xenolith::PoolRef::PoolRef(stappler::xenolith::PoolRef*)
 
 ## BRIEF
 
+Создаёт новый пул памяти
+
 ## CONTENT
 
 Доступ: public
+
+Создаёт новый пул памяти
 
 Параметры:
 * stappler::xenolith::PoolRef*
@@ -249,9 +165,13 @@ Title: XLCore.h
 
 ## BRIEF
 
+Возвращает пул памяти
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает пул памяти
 
 Возвращает:
 * memory::pool_t*
@@ -260,9 +180,13 @@ Title: XLCore.h
 
 ## BRIEF
 
+Распределяет память из пула
+
 ## CONTENT
 
 Доступ: public
+
+Распределяет память из пула
 
 Параметры:
 * size_t
@@ -274,9 +198,13 @@ Title: XLCore.h
 
 ## BRIEF
 
+Выполняет функцию в контексте пула памяти
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет функцию в контексте пула памяти
 
 Параметры шаблона:
 * typename Callable
@@ -291,9 +219,13 @@ Title: XLCore.h
 
 ## BRIEF
 
+Пул памяти
+
 ## CONTENT
 
 Доступ: protected
+
+Пул памяти
 
 Тип: memory::pool_t*
 
@@ -302,14 +234,22 @@ Title: XLCore.h
 
 ## BRIEF
 
+Структура данных для профилировки
+
 ## CONTENT
+
+Структура данных для профилировки
 
 
 # ::stappler::xenolith::profiling::ProfileData::timestamp
 
 ## BRIEF
 
+Метка времени
+
 ## CONTENT
+
+Метка времени
 
 Тип: uint64_t
 
@@ -318,7 +258,11 @@ Title: XLCore.h
 
 ## BRIEF
 
+Тег
+
 ## CONTENT
+
+Тег
 
 Тип: stappler::StringView
 
@@ -327,7 +271,11 @@ Title: XLCore.h
 
 ## BRIEF
 
+Вариант исполнения
+
 ## CONTENT
+
+Вариант исполнения
 
 Тип: stappler::StringView
 
@@ -336,7 +284,11 @@ Title: XLCore.h
 
 ## BRIEF
 
+Допустимый предел по времени
+
 ## CONTENT
+
+Допустимый предел по времени
 
 Тип: uint64_t
 
@@ -345,12 +297,16 @@ Title: XLCore.h
 
 ## BRIEF
 
+Начинает отсчёт профиля
+
 ## CONTENT
 
+Начинает отсчёт профиля
+
 Параметры:
-* stappler::StringView
-* stappler::StringView
-* uint64_t
+* stappler::StringView - тег
+* stappler::StringView - вариант исполнения
+* uint64_t - предел по времени
 
 Возвращает:
 * stappler::xenolith::profiling::ProfileData
@@ -359,7 +315,11 @@ Title: XLCore.h
 
 ## BRIEF
 
+Завершает отсчёт профиля
+
 ## CONTENT
+
+Завершает отсчёт профиля
 
 Параметры:
 * stappler::xenolith::profiling::ProfileData&
@@ -369,7 +329,11 @@ Title: XLCore.h
 
 ## BRIEF
 
+Сохраняет текущую отметку времени
+
 ## CONTENT
+
+Сохраняет текущую отметку времени
 
 Параметры:
 * stappler::xenolith::profiling::ProfileData&
@@ -379,14 +343,22 @@ Title: XLCore.h
 
 ## BRIEF
 
+Флаг отладки с профилем
+
 ## CONTENT
+
+Флаг отладки с профилем
 
 
 # XL_PROFILE_BEGIN
 
 ## BRIEF
 
+Начинает отсчёт профиля
+
 ## CONTENT
+
+Начинает отсчёт профиля
 
 Параметры:
 * name
@@ -399,7 +371,11 @@ Title: XLCore.h
 
 ## BRIEF
 
+Завершает отсчёт профиля
+
 ## CONTENT
+
+Завершает отсчёт профиля
 
 Параметры:
 * name

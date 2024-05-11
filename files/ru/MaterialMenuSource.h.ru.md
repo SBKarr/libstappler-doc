@@ -137,7 +137,7 @@ Title: MaterialMenuSource.h
 Возвращает:
 * stappler::xenolith::material2d::MenuSourceItem::Type
 
-# ::stappler::xenolith::material2d::MenuSourceItem::onNodeAttached(stappler::xenolith::Node*)
+# ::stappler::xenolith::material2d::MenuSourceItem::handleNodeAttached(stappler::xenolith::Node*)
 
 ## BRIEF
 
@@ -149,7 +149,7 @@ Title: MaterialMenuSource.h
 * stappler::xenolith::Node*
 
 
-# ::stappler::xenolith::material2d::MenuSourceItem::onNodeDetached(stappler::xenolith::Node*)
+# ::stappler::xenolith::material2d::MenuSourceItem::handleNodeDetached(stappler::xenolith::Node*)
 
 ## BRIEF
 
@@ -307,7 +307,7 @@ Title: MaterialMenuSource.h
 Возвращает:
 * float
 
-# ::stappler::xenolith::material2d::MenuSourceCustom::getHeight(float) const
+# ::stappler::xenolith::material2d::MenuSourceCustom::getHeight(stappler::xenolith::Node*,float) const
 
 ## BRIEF
 
@@ -316,6 +316,7 @@ Title: MaterialMenuSource.h
 Доступ: public
 
 Параметры:
+* stappler::xenolith::Node*
 * float
 
 Возвращает:
@@ -492,7 +493,7 @@ Title: MaterialMenuSource.h
 * stappler::xenolith::material2d::MenuSource::Callback&&
 
 Возвращает:
-* Rc<stappler::xenolith::material2d::MenuSourceButton>
+* stappler::xenolith::material2d::MenuSourceButton*
 
 # ::stappler::xenolith::material2d::MenuSource::addButton(stappler::StringView,stappler::xenolith::IconName,stappler::xenolith::material2d::MenuSource::Callback&&)
 
@@ -508,7 +509,7 @@ Title: MaterialMenuSource.h
 * stappler::xenolith::material2d::MenuSource::Callback&&
 
 Возвращает:
-* Rc<stappler::xenolith::material2d::MenuSourceButton>
+* stappler::xenolith::material2d::MenuSourceButton*
 
 # ::stappler::xenolith::material2d::MenuSource::addButton(stappler::StringView,stappler::xenolith::IconName,Rc<stappler::xenolith::material2d::MenuSource>&&)
 
@@ -524,7 +525,7 @@ Title: MaterialMenuSource.h
 * Rc<stappler::xenolith::material2d::MenuSource>&&
 
 Возвращает:
-* Rc<stappler::xenolith::material2d::MenuSourceButton>
+* stappler::xenolith::material2d::MenuSourceButton*
 
 # ::stappler::xenolith::material2d::MenuSource::addCustom(float,stappler::xenolith::material2d::MenuSource::FactoryFunction const&,float)
 
@@ -540,7 +541,7 @@ Title: MaterialMenuSource.h
 * float
 
 Возвращает:
-* Rc<stappler::xenolith::material2d::MenuSourceCustom>
+* stappler::xenolith::material2d::MenuSourceCustom*
 
 # ::stappler::xenolith::material2d::MenuSource::addCustom(stappler::xenolith::material2d::MenuSource::HeightFunction const&,stappler::xenolith::material2d::MenuSource::FactoryFunction const&,float)
 
@@ -556,7 +557,7 @@ Title: MaterialMenuSource.h
 * float
 
 Возвращает:
-* Rc<stappler::xenolith::material2d::MenuSourceCustom>
+* stappler::xenolith::material2d::MenuSourceCustom*
 
 # ::stappler::xenolith::material2d::MenuSource::addSeparator()
 
@@ -567,7 +568,7 @@ Title: MaterialMenuSource.h
 Доступ: public
 
 Возвращает:
-* Rc<stappler::xenolith::material2d::MenuSourceItem>
+* stappler::xenolith::material2d::MenuSourceItem*
 
 # ::stappler::xenolith::material2d::MenuSource::clear()
 

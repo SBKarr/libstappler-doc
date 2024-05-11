@@ -39,7 +39,6 @@ Title: XL2dVkShadowPass.h
 
 Значения:
 * None
-* Render3D
 
 
 # ::stappler::xenolith::basic2d::vk::ShadowPass::RenderQueueInfo
@@ -66,7 +65,7 @@ Title: XL2dVkShadowPass.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::Extent2
+Тип: stappler::geom::Extent2
 
 
 # ::stappler::xenolith::basic2d::vk::ShadowPass::RenderQueueInfo::flags
@@ -76,15 +75,6 @@ Title: XL2dVkShadowPass.h
 ## CONTENT
 
 Тип: stappler::xenolith::basic2d::vk::ShadowPass::Flags
-
-
-# ::stappler::xenolith::basic2d::vk::ShadowPass::RenderQueueInfo::resourceCallback
-
-## BRIEF
-
-## CONTENT
-
-Тип: Function<void (core::Resource::Builder &)>
 
 
 # ::stappler::xenolith::basic2d::vk::ShadowPass::PassCreateInfo
@@ -111,7 +101,7 @@ Title: XL2dVkShadowPass.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::Extent2
+Тип: stappler::geom::Extent2
 
 
 # ::stappler::xenolith::basic2d::vk::ShadowPass::PassCreateInfo::flags
@@ -600,7 +590,7 @@ Title: XL2dVkShadowPass.h
 Доступ: public
 
 
-# ::stappler::xenolith::basic2d::vk::ComputeShadowPass::init(Queue::Builder&,stappler::xenolith::core::QueuePass::QueuePassBuilder&,stappler::xenolith::Extent2)
+# ::stappler::xenolith::basic2d::vk::ComputeShadowPass::init(Queue::Builder&,stappler::xenolith::core::QueuePass::QueuePassBuilder&,stappler::geom::Extent2)
 
 ## BRIEF
 
@@ -611,7 +601,7 @@ Title: XL2dVkShadowPass.h
 Параметры:
 * Queue::Builder&
 * stappler::xenolith::core::QueuePass::QueuePassBuilder&
-* stappler::xenolith::Extent2
+* stappler::geom::Extent2
 
 Возвращает:
 * bool

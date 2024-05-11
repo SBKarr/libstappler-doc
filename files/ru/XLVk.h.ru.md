@@ -22,20 +22,6 @@ Title: XLVk.h
 ## CONTENT
 
 
-# VK_BUFFER_USAGE_RAY_TRACING_BIT_KHR
-
-## BRIEF
-
-## CONTENT
-
-
-# VK_BUFFER_USAGE_RAY_TRACING_BIT_NV
-
-## BRIEF
-
-## CONTENT
-
-
 # ::stappler::xenolith::vk::s_enableValidationLayers
 
 ## BRIEF
@@ -63,6 +49,20 @@ Title: XLVk.h
 Тип: char const* const[1]
 
 
+# VK_BUFFER_USAGE_RAY_TRACING_BIT_KHR
+
+## BRIEF
+
+## CONTENT
+
+
+# VK_BUFFER_USAGE_RAY_TRACING_BIT_NV
+
+## BRIEF
+
+## CONTENT
+
+
 # XL_VK_MIN_LOADER_MESSAGE_SEVERITY
 
 ## BRIEF
@@ -71,6 +71,13 @@ Title: XLVk.h
 
 
 # XL_VK_MIN_MESSAGE_SEVERITY
+
+## BRIEF
+
+## CONTENT
+
+
+# XL_VKAPI_DEBUG
 
 ## BRIEF
 
@@ -511,25 +518,6 @@ Title: XLVk.h
 Возвращает:
 * stappler::xenolith::vk::QueueOperations
 
-# ::stappler::xenolith::vk::PresentationEvent
-
-## BRIEF
-
-## CONTENT
-
-Значения:
-* Update
-* SwapChainDeprecated
-* SwapChainRecreated
-* SwapChainForceRecreate
-* FrameImageAcquired
-* FramePresentReady
-* FrameTimeoutPassed
-* UpdateFrameInterval
-* CompileResource
-* Exit
-
-
 # ::stappler::xenolith::vk::getQueueOperations(VkQueueFlags,bool)
 
 ## BRIEF
@@ -694,7 +682,7 @@ Title: XLVk.h
 * T&
 
 
-# ::operator<<(std::ostream&,VkResult)
+# ::stappler::xenolith::vk::operator<<(std::ostream&,VkResult)
 
 ## BRIEF
 

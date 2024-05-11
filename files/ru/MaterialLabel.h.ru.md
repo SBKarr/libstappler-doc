@@ -43,6 +43,21 @@ Title: MaterialLabel.h
 * Label
 
 
+# ::stappler::xenolith::material2d::TypescaleLabel::getTypescaleRoleStyle(stappler::xenolith::material2d::TypescaleRole,float)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* stappler::xenolith::material2d::TypescaleRole
+* float
+
+Возвращает:
+* stappler::xenolith::font::LabelBase::DescriptionStyle
+
 # ::stappler::xenolith::material2d::TypescaleLabel::~TypescaleLabel()
 
 ## BRIEF
@@ -134,6 +149,19 @@ Title: MaterialLabel.h
 * float
 
 
+# ::stappler::xenolith::material2d::TypescaleLabel::setBlendColor(const stappler::geom::Color4F&,float)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* const stappler::geom::Color4F&
+* float
+
+
 # ::stappler::xenolith::material2d::TypescaleLabel::getBlendColorRule() const
 
 ## BRIEF
@@ -144,6 +172,17 @@ Title: MaterialLabel.h
 
 Возвращает:
 * stappler::xenolith::material2d::ColorRole
+
+# ::stappler::xenolith::material2d::TypescaleLabel::getBlendColor() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* const stappler::geom::Color4F&
 
 # ::stappler::xenolith::material2d::TypescaleLabel::getBlendColorValue() const
 
@@ -237,7 +276,7 @@ Title: MaterialLabel.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::Color4F
+Тип: stappler::geom::Color4F
 
 
 # ::stappler::xenolith::material2d::TypescaleLabel::_blendColorRule

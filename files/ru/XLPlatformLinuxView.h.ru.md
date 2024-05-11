@@ -104,3 +104,29 @@ Title: XLPlatformLinuxView.h
 Параметры:
 * uint32_t
 * uint32_t
+
+
+# ::stappler::xenolith::platform::LinuxViewInterface::readFromClipboard(Function<void (stappler::BytesView, stappler::StringView)>&&,stappler::mem_std::Ref*)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* Function<void (stappler::BytesView, stappler::StringView)>&&
+* stappler::mem_std::Ref*
+
+
+# ::stappler::xenolith::platform::LinuxViewInterface::writeToClipboard(stappler::BytesView,stappler::StringView)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* stappler::BytesView
+* stappler::StringView

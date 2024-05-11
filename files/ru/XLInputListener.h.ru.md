@@ -557,7 +557,7 @@ Title: XLInputListener.h
 * stappler::xenolith::InputEvent const&
 
 Возвращает:
-* bool
+* stappler::xenolith::InputEventState
 
 # ::stappler::xenolith::InputListener::addTouchRecognizer(InputCallback<stappler::xenolith::GestureData>&&,stappler::xenolith::InputListener::ButtonMask&&)
 
@@ -723,18 +723,6 @@ Title: XLInputListener.h
 
 
 # ::stappler::xenolith::InputListener::setFocusCallback(Function<bool (bool)>&&)
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-Параметры:
-* Function<bool (bool)>&&
-
-
-# ::stappler::xenolith::InputListener::setMouseOverCallback(Function<bool (bool)>&&)
 
 ## BRIEF
 

@@ -30,14 +30,14 @@
 		"kind": "include directive",
 		"name": "XLEventHeader.h"
 	}, {
-		"_fullName": "STStorageScheme.h",
+		"_fullName": "SPDbScheme.h",
 		"_kind": "include directive",
-		"_name": "STStorageScheme.h",
-		"id": 1954926436,
-		"include": "core/db/STStorageScheme.h",
+		"_name": "SPDbScheme.h",
+		"id": 3599399255,
+		"include": "core/db/SPDbScheme.h",
 		"include_kind": "local",
 		"kind": "include directive",
-		"name": "STStorageScheme.h"
+		"name": "SPDbScheme.h"
 	}, {
 		"_fullName": "XENOLITH_RESOURCES_STORAGE_XLSTORAGESERVER_H_",
 		"_kind": "macro definition",
@@ -402,6 +402,43 @@
 									"name": "Scheme",
 									"scope": {
 										"name": "Scheme"
+									},
+									"semantic_scope": ""
+								}]
+							}
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::storage::Server::onBroadcast",
+						"_kind": "variable",
+						"_name": "onBroadcast",
+						"id": 3990273758,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"kind": "variable",
+						"name": "onBroadcast",
+						"semantic_scope": "",
+						"storage_class": [
+							"static"
+						],
+						"type":  {
+							"_typeName": "stappler::xenolith::EventHeader",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::xenolith::EventHeader",
+								"objects": [{
+									"_fullName": "::stappler::xenolith::EventHeader",
+									"_kind": "class",
+									"_name": "EventHeader",
+									"class_kind": "class",
+									"id": 3932186548,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "EventHeader",
+									"scope": {
+										"name": "EventHeader"
 									},
 									"semantic_scope": ""
 								}]
@@ -1790,12 +1827,12 @@
 						"semantic_scope": "",
 						"signature": "(Rc<stappler::xenolith::storage::ComponentContainer> const&)"
 					}, {
-						"_fullName": "::stappler::xenolith::storage::Server::get(stappler::CoderSource,stappler::xenolith::storage::Server::DataCallback&&)",
+						"_fullName": "::stappler::xenolith::storage::Server::get(stappler::CoderSource,stappler::xenolith::storage::Server::DataCallback&&) const",
 						"_kind": "member function",
 						"_name": "get",
 						"body_kind": "declaration",
-						"cv_qualifier": "none",
-						"id": 1654089322,
+						"cv_qualifier": "const",
+						"id": 2486141014,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -1878,14 +1915,14 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::CoderSource,stappler::xenolith::storage::Server::DataCallback&&)"
+						"signature": "(stappler::CoderSource,stappler::xenolith::storage::Server::DataCallback&&) const"
 					}, {
-						"_fullName": "::stappler::xenolith::storage::Server::set(stappler::CoderSource,stappler::mem_std::Value&&,stappler::xenolith::storage::Server::DataCallback&&)",
+						"_fullName": "::stappler::xenolith::storage::Server::set(stappler::CoderSource,stappler::mem_std::Value&&,stappler::xenolith::storage::Server::DataCallback&&) const",
 						"_kind": "member function",
 						"_name": "set",
 						"body_kind": "declaration",
-						"cv_qualifier": "none",
-						"id": 135692504,
+						"cv_qualifier": "const",
+						"id": 2670778822,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -2114,14 +2151,14 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::CoderSource,stappler::mem_std::Value&&,stappler::xenolith::storage::Server::DataCallback&&)"
+						"signature": "(stappler::CoderSource,stappler::mem_std::Value&&,stappler::xenolith::storage::Server::DataCallback&&) const"
 					}, {
-						"_fullName": "::stappler::xenolith::storage::Server::clear(stappler::CoderSource,stappler::xenolith::storage::Server::DataCallback&&)",
+						"_fullName": "::stappler::xenolith::storage::Server::clear(stappler::CoderSource,stappler::xenolith::storage::Server::DataCallback&&) const",
 						"_kind": "member function",
 						"_name": "clear",
 						"body_kind": "declaration",
-						"cv_qualifier": "none",
-						"id": 1426546328,
+						"cv_qualifier": "const",
+						"id": 2600132769,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -2240,7 +2277,7 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::CoderSource,stappler::xenolith::storage::Server::DataCallback&&)"
+						"signature": "(stappler::CoderSource,stappler::xenolith::storage::Server::DataCallback&&) const"
 					}, {
 						"_fullName": "::stappler::xenolith::storage::Server::get(stappler::xenolith::storage::Server::Scheme const&,stappler::xenolith::storage::Server::DataCallback&&,uint64_t,db::UpdateFlags) const",
 						"_kind": "member function",
@@ -8312,6 +8349,42 @@
 							"_fullName": "",
 							"_kind": "function parameter",
 							"_name": "",
+							"default_value": {
+								"expression": [{
+									"kind": "keyword",
+									"spelling": "nullptr"
+								}],
+								"kind": "unexposed",
+								"type": {
+									"_typeName": "stappler::xenolith::storage::Server::QueryCallback&&",
+									"kind": "reference",
+									"referee": {
+										"_typeName": "stappler::xenolith::storage::Server::QueryCallback",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::xenolith::storage::Server::QueryCallback",
+											"objects": [{
+												"_fullName": "::stappler::xenolith::storage::Server::QueryCallback",
+												"_kind": "type alias",
+												"_name": "QueryCallback",
+												"id": 2238783148,
+												"kind": "type alias",
+												"name": "QueryCallback",
+												"underlying_type": {
+													"_typeName": "Function<void (db::Query &)>",
+													"arguments_exposed": false,
+													"kind": "template_instantiation",
+													"primary_template": {
+														"name": "Function"
+													},
+													"unexposed_arguments": "void (db::Query &)"
+												}
+											}]
+										}
+									},
+									"reference_kind": "rvalue"
+								}
+							},
 							"id": 46947589,
 							"kind": "function parameter",
 							"name": "",
@@ -12938,6 +13011,38 @@
 													},
 													"unexposed_arguments": "Interface"
 												}
+											}, {
+												"_fullName": "db::ApplicationInterface",
+												"_kind": "base class specifier",
+												"_name": "db::ApplicationInterface",
+												"access_specifier": "public",
+												"id": 1546203237,
+												"is_virtual": false,
+												"kind": "base class specifier",
+												"name": "db::ApplicationInterface",
+												"type": {
+													"_typeName": "db::ApplicationInterface",
+													"kind": "user_defined",
+													"target": {
+														"name": "db::ApplicationInterface",
+														"objects": [{
+															"_fullName": "::stappler::db::ApplicationInterface",
+															"_kind": "class",
+															"_name": "ApplicationInterface",
+															"class_kind": "class",
+															"id": 3892933496,
+															"is_declaration": false,
+															"is_definition": true,
+															"is_final": false,
+															"kind": "class",
+															"name": "ApplicationInterface",
+															"scope": {
+																"name": "ApplicationInterface"
+															},
+															"semantic_scope": ""
+														}]
+													}
+												}
 											}],
 											"class_kind": "struct",
 											"id": 2260155374,
@@ -13301,6 +13406,38 @@
 												},
 												"unexposed_arguments": "Interface"
 											}
+										}, {
+											"_fullName": "db::ApplicationInterface",
+											"_kind": "base class specifier",
+											"_name": "db::ApplicationInterface",
+											"access_specifier": "public",
+											"id": 1546203237,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "db::ApplicationInterface",
+											"type": {
+												"_typeName": "db::ApplicationInterface",
+												"kind": "user_defined",
+												"target": {
+													"name": "db::ApplicationInterface",
+													"objects": [{
+														"_fullName": "::stappler::db::ApplicationInterface",
+														"_kind": "class",
+														"_name": "ApplicationInterface",
+														"class_kind": "class",
+														"id": 3892933496,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "ApplicationInterface",
+														"scope": {
+															"name": "ApplicationInterface"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
 										}],
 										"class_kind": "struct",
 										"id": 2260155374,
@@ -13489,806 +13626,6 @@
 						"name": "Server"
 					},
 					"semantic_scope": ""
-				}, {
-					"_fullName": "::stappler::xenolith::storage::StorageRoot",
-					"_kind": "class",
-					"_name": "StorageRoot",
-					"bases": [{
-						"_fullName": "db::StorageRoot",
-						"_kind": "base class specifier",
-						"_name": "db::StorageRoot",
-						"access_specifier": "public",
-						"id": 1101815841,
-						"is_virtual": false,
-						"kind": "base class specifier",
-						"name": "db::StorageRoot",
-						"type": {
-							"_typeName": "db::StorageRoot",
-							"kind": "user_defined",
-							"target": {
-								"name": "db::StorageRoot",
-								"objects": [{
-									"_fullName": "::stappler::db::StorageRoot",
-									"_kind": "class",
-									"_name": "StorageRoot",
-									"class_kind": "class",
-									"id": 1147890691,
-									"is_declaration": false,
-									"is_definition": true,
-									"is_final": false,
-									"kind": "class",
-									"name": "StorageRoot",
-									"scope": {
-										"name": "StorageRoot"
-									},
-									"semantic_scope": ""
-								}]
-							}
-						}
-					}],
-					"childs":  [{
-						"_fullName": "public",
-						"_kind": "access specifier",
-						"_name": "public",
-						"access_specifier": "public",
-						"id": 893076784,
-						"kind": "access specifier",
-						"name": "public"
-					}, {
-						"_fullName": "::stappler::xenolith::storage::StorageRoot::onBroadcast",
-						"_kind": "variable",
-						"_name": "onBroadcast",
-						"id": 297606351,
-						"is_constexpr": false,
-						"is_declaration": true,
-						"is_definition": false,
-						"kind": "variable",
-						"name": "onBroadcast",
-						"semantic_scope": "",
-						"storage_class": [
-							"static"
-						],
-						"type":  {
-							"_typeName": "stappler::xenolith::EventHeader",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::EventHeader",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::EventHeader",
-									"_kind": "class",
-									"_name": "EventHeader",
-									"class_kind": "class",
-									"id": 3932186548,
-									"is_declaration": false,
-									"is_definition": true,
-									"is_final": false,
-									"kind": "class",
-									"name": "EventHeader",
-									"scope": {
-										"name": "EventHeader"
-									},
-									"semantic_scope": ""
-								}]
-							}
-						}
-					}, {
-						"_fullName": "::stappler::xenolith::storage::StorageRoot::scheduleAyncDbTask(db::Callback<db::Function<void (const db::Transaction &)> (db::pool_t *)> const&)",
-						"_kind": "member function",
-						"_name": "scheduleAyncDbTask",
-						"body_kind": "declaration",
-						"cv_qualifier": "none",
-						"id": 1213505874,
-						"is_consteval": false,
-						"is_constexpr": false,
-						"is_declaration": true,
-						"is_definition": false,
-						"is_override": true,
-						"is_variadic": false,
-						"is_virtual": true,
-						"kind": "member function",
-						"name": "scheduleAyncDbTask",
-						"parameters": [{
-							"_fullName": "setupCb",
-							"_kind": "function parameter",
-							"_name": "setupCb",
-							"id": 2342035925,
-							"kind": "function parameter",
-							"name": "setupCb",
-							"type": {
-								"_typeName": "db::Callback<db::Function<void (const db::Transaction &)> (db::pool_t *)> const&",
-								"kind": "reference",
-								"referee": {
-									"_typeName": "db::Callback<db::Function<void (const db::Transaction &)> (db::pool_t *)> const",
-									"cv_qualifier": "const",
-									"kind": "cv_qualified",
-									"type": {
-										"_typeName": "db::Callback<db::Function<void (const db::Transaction &)> (db::pool_t *)>",
-										"arguments_exposed": false,
-										"kind": "template_instantiation",
-										"primary_template": {
-											"name": "db::Callback",
-											"objects": [{
-												"_fullName": "::stappler::memory::callback<typename>",
-												"_kind": "class template",
-												"_name": "callback",
-												"class": {
-													"_fullName": "::stappler::memory::callback<typename>",
-													"_kind": "class",
-													"_name": "callback",
-													"class_kind": "class",
-													"id": 3310519973,
-													"is_declaration": true,
-													"is_definition": false,
-													"is_final": false,
-													"kind": "class",
-													"name": "callback",
-													"scope": {
-														"is_templated": true,
-														"name": "callback",
-														"template_parameters": [{
-															"_fullName": "UnusedType",
-															"_kind": "template type parameter",
-															"_name": "UnusedType",
-															"id": 3305497932,
-															"is_variadic": false,
-															"keyword": "typename",
-															"kind": "template type parameter",
-															"name": "UnusedType"
-														}]
-													},
-													"semantic_scope": ""
-												},
-												"id": 3310519973,
-												"kind": "class template",
-												"name": "callback",
-												"parameters": [{
-													"_fullName": "UnusedType",
-													"_kind": "template type parameter",
-													"_name": "UnusedType",
-													"id": 3305497932,
-													"is_variadic": false,
-													"keyword": "typename",
-													"kind": "template type parameter",
-													"name": "UnusedType"
-												}],
-												"scope":  {
-													"is_templated": true,
-													"name": "callback",
-													"template_parameters": [{
-														"_fullName": "UnusedType",
-														"_kind": "template type parameter",
-														"_name": "UnusedType",
-														"id": 3305497932,
-														"is_variadic": false,
-														"keyword": "typename",
-														"kind": "template type parameter",
-														"name": "UnusedType"
-													}]
-												}
-											}]
-										},
-										"unexposed_arguments": "db::Function<void (const db::Transaction &)> (db::pool_t *)"
-									}
-								},
-								"reference_kind": "lvalue"
-							}
-						}],
-						"ref_qualifier": "none",
-						"return_type": {
-							"_typeName": "void",
-							"builtin_type_kind": "void",
-							"kind": "builtin"
-						},
-						"semantic_scope": "",
-						"signature": "(db::Callback<db::Function<void (const db::Transaction &)> (db::pool_t *)> const&)"
-					}, {
-						"_fullName": "::stappler::xenolith::storage::StorageRoot::getDocuemntRoot() const",
-						"_kind": "member function",
-						"_name": "getDocuemntRoot",
-						"body_kind": "declaration",
-						"cv_qualifier": "const",
-						"id": 3677796510,
-						"is_consteval": false,
-						"is_constexpr": false,
-						"is_declaration": true,
-						"is_definition": false,
-						"is_override": true,
-						"is_variadic": false,
-						"is_virtual": true,
-						"kind": "member function",
-						"name": "getDocuemntRoot",
-						"ref_qualifier": "none",
-						"return_type": {
-							"_typeName": "db::String",
-							"kind": "user_defined",
-							"target": {
-								"name": "db::String",
-								"objects": [{
-									"_fullName": "::stappler::mem_pool::String",
-									"_kind": "type alias",
-									"_name": "String",
-									"id": 1566294865,
-									"kind": "type alias",
-									"name": "String",
-									"underlying_type": {
-										"_typeName": "stappler::memory::string",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::memory::string",
-											"objects": [{
-												"_fullName": "::stappler::memory::string",
-												"_kind": "type alias",
-												"_name": "string",
-												"id": 3410524537,
-												"kind": "type alias",
-												"name": "string",
-												"underlying_type": {
-													"_typeName": "basic_string<char>",
-													"arguments_exposed": false,
-													"kind": "template_instantiation",
-													"primary_template": {
-														"name": "basic_string",
-														"objects": [{
-															"_fullName": "::stappler::memory::basic_string<typename>",
-															"_kind": "class template",
-															"_name": "basic_string",
-															"class": {
-																"_fullName": "::stappler::memory::basic_string<typename>",
-																"_kind": "class",
-																"_name": "basic_string",
-																"bases": [{
-																	"_fullName": "AllocPool",
-																	"_kind": "base class specifier",
-																	"_name": "AllocPool",
-																	"access_specifier": "public",
-																	"id": 972079861,
-																	"is_virtual": false,
-																	"kind": "base class specifier",
-																	"name": "AllocPool",
-																	"type": {
-																		"_typeName": "stappler::memory::AllocPool",
-																		"kind": "user_defined",
-																		"target": {
-																			"name": "stappler::memory::AllocPool",
-																			"objects": [{
-																				"_fullName": "::stappler::memory::AllocPool",
-																				"_kind": "class",
-																				"_name": "AllocPool",
-																				"class_kind": "struct",
-																				"id": 3030388899,
-																				"is_declaration": false,
-																				"is_definition": true,
-																				"is_final": false,
-																				"kind": "class",
-																				"name": "AllocPool",
-																				"scope": {
-																					"name": "AllocPool"
-																				},
-																				"semantic_scope": ""
-																			}]
-																		}
-																	}
-																}],
-																"class_kind": "class",
-																"id": 243140886,
-																"is_declaration": false,
-																"is_definition": true,
-																"is_final": false,
-																"kind": "class",
-																"name": "basic_string",
-																"scope": {
-																	"is_templated": true,
-																	"name": "basic_string",
-																	"template_parameters": [{
-																		"_fullName": "CharType",
-																		"_kind": "template type parameter",
-																		"_name": "CharType",
-																		"id": 4185085980,
-																		"is_variadic": false,
-																		"keyword": "typename",
-																		"kind": "template type parameter",
-																		"name": "CharType"
-																	}]
-																},
-																"semantic_scope": ""
-															},
-															"id": 243140886,
-															"kind": "class template",
-															"name": "basic_string",
-															"parameters": [{
-																"_fullName": "CharType",
-																"_kind": "template type parameter",
-																"_name": "CharType",
-																"id": 4185085980,
-																"is_variadic": false,
-																"keyword": "typename",
-																"kind": "template type parameter",
-																"name": "CharType"
-															}],
-															"scope":  {
-																"is_templated": true,
-																"name": "basic_string",
-																"template_parameters": [{
-																	"_fullName": "CharType",
-																	"_kind": "template type parameter",
-																	"_name": "CharType",
-																	"id": 4185085980,
-																	"is_variadic": false,
-																	"keyword": "typename",
-																	"kind": "template type parameter",
-																	"name": "CharType"
-																}]
-															}
-														}]
-													},
-													"unexposed_arguments": "char"
-												}
-											}]
-										}
-									}
-								}]
-							}
-						},
-						"semantic_scope": "",
-						"signature": "() const"
-					}, {
-						"_fullName": "::stappler::xenolith::storage::StorageRoot::getFileScheme() const",
-						"_kind": "member function",
-						"_name": "getFileScheme",
-						"body_kind": "declaration",
-						"cv_qualifier": "const",
-						"id": 1943438520,
-						"is_consteval": false,
-						"is_constexpr": false,
-						"is_declaration": true,
-						"is_definition": false,
-						"is_override": true,
-						"is_variadic": false,
-						"is_virtual": true,
-						"kind": "member function",
-						"name": "getFileScheme",
-						"ref_qualifier": "none",
-						"return_type": {
-							"_typeName": "db::Scheme const*",
-							"kind": "pointer",
-							"pointee": {
-								"_typeName": "db::Scheme const",
-								"cv_qualifier": "const",
-								"kind": "cv_qualified",
-								"type": {
-									"_typeName": "db::Scheme",
-									"kind": "user_defined",
-									"target": {
-										"name": "db::Scheme",
-										"objects": [{
-											"_fullName": "::stappler::db::Scheme",
-											"_kind": "class",
-											"_name": "Scheme",
-											"bases": [{
-												"_fullName": "AllocBase",
-												"_kind": "base class specifier",
-												"_name": "AllocBase",
-												"access_specifier": "public",
-												"id": 3721829073,
-												"is_virtual": false,
-												"kind": "base class specifier",
-												"name": "AllocBase",
-												"type": {
-													"_typeName": "stappler::mem_pool::AllocBase",
-													"kind": "user_defined",
-													"target": {
-														"name": "stappler::mem_pool::AllocBase",
-														"objects": [{
-															"_fullName": "::stappler::mem_pool::AllocBase",
-															"_kind": "type alias",
-															"_name": "AllocBase",
-															"id": 499918036,
-															"kind": "type alias",
-															"name": "AllocBase",
-															"underlying_type": {
-																"_typeName": "stappler::memory::AllocPool",
-																"kind": "user_defined",
-																"target": {
-																	"name": "stappler::memory::AllocPool",
-																	"objects": [{
-																		"_fullName": "::stappler::memory::AllocPool",
-																		"_kind": "class",
-																		"_name": "AllocPool",
-																		"class_kind": "struct",
-																		"id": 3030388899,
-																		"is_declaration": false,
-																		"is_definition": true,
-																		"is_final": false,
-																		"kind": "class",
-																		"name": "AllocPool",
-																		"scope": {
-																			"name": "AllocPool"
-																		},
-																		"semantic_scope": ""
-																	}]
-																}
-															}
-														}]
-													}
-												}
-											}],
-											"class_kind": "class",
-											"id": 858280278,
-											"is_declaration": false,
-											"is_definition": true,
-											"is_final": false,
-											"kind": "class",
-											"name": "Scheme",
-											"scope": {
-												"name": "Scheme"
-											},
-											"semantic_scope": ""
-										}]
-									}
-								}
-							}
-						},
-						"semantic_scope": "",
-						"signature": "() const"
-					}, {
-						"_fullName": "::stappler::xenolith::storage::StorageRoot::getUserScheme() const",
-						"_kind": "member function",
-						"_name": "getUserScheme",
-						"body_kind": "declaration",
-						"cv_qualifier": "const",
-						"id": 3353046234,
-						"is_consteval": false,
-						"is_constexpr": false,
-						"is_declaration": true,
-						"is_definition": false,
-						"is_override": true,
-						"is_variadic": false,
-						"is_virtual": true,
-						"kind": "member function",
-						"name": "getUserScheme",
-						"ref_qualifier": "none",
-						"return_type": {
-							"_typeName": "db::Scheme const*",
-							"kind": "pointer",
-							"pointee": {
-								"_typeName": "db::Scheme const",
-								"cv_qualifier": "const",
-								"kind": "cv_qualified",
-								"type": {
-									"_typeName": "db::Scheme",
-									"kind": "user_defined",
-									"target": {
-										"name": "db::Scheme",
-										"objects": [{
-											"_fullName": "::stappler::db::Scheme",
-											"_kind": "class",
-											"_name": "Scheme",
-											"bases": [{
-												"_fullName": "AllocBase",
-												"_kind": "base class specifier",
-												"_name": "AllocBase",
-												"access_specifier": "public",
-												"id": 3721829073,
-												"is_virtual": false,
-												"kind": "base class specifier",
-												"name": "AllocBase",
-												"type": {
-													"_typeName": "stappler::mem_pool::AllocBase",
-													"kind": "user_defined",
-													"target": {
-														"name": "stappler::mem_pool::AllocBase",
-														"objects": [{
-															"_fullName": "::stappler::mem_pool::AllocBase",
-															"_kind": "type alias",
-															"_name": "AllocBase",
-															"id": 499918036,
-															"kind": "type alias",
-															"name": "AllocBase",
-															"underlying_type": {
-																"_typeName": "stappler::memory::AllocPool",
-																"kind": "user_defined",
-																"target": {
-																	"name": "stappler::memory::AllocPool",
-																	"objects": [{
-																		"_fullName": "::stappler::memory::AllocPool",
-																		"_kind": "class",
-																		"_name": "AllocPool",
-																		"class_kind": "struct",
-																		"id": 3030388899,
-																		"is_declaration": false,
-																		"is_definition": true,
-																		"is_final": false,
-																		"kind": "class",
-																		"name": "AllocPool",
-																		"scope": {
-																			"name": "AllocPool"
-																		},
-																		"semantic_scope": ""
-																	}]
-																}
-															}
-														}]
-													}
-												}
-											}],
-											"class_kind": "class",
-											"id": 858280278,
-											"is_declaration": false,
-											"is_definition": true,
-											"is_final": false,
-											"kind": "class",
-											"name": "Scheme",
-											"scope": {
-												"name": "Scheme"
-											},
-											"semantic_scope": ""
-										}]
-									}
-								}
-							}
-						},
-						"semantic_scope": "",
-						"signature": "() const"
-					}, {
-						"_fullName": "::stappler::xenolith::storage::StorageRoot::onLocalBroadcast(db::Value const&)",
-						"_kind": "member function",
-						"_name": "onLocalBroadcast",
-						"body_kind": "declaration",
-						"cv_qualifier": "none",
-						"id": 505114001,
-						"is_consteval": false,
-						"is_constexpr": false,
-						"is_declaration": true,
-						"is_definition": false,
-						"is_override": true,
-						"is_variadic": false,
-						"is_virtual": true,
-						"kind": "member function",
-						"name": "onLocalBroadcast",
-						"parameters": [{
-							"_fullName": "",
-							"_kind": "function parameter",
-							"_name": "",
-							"id": 46947589,
-							"kind": "function parameter",
-							"name": "",
-							"type": {
-								"_typeName": "db::Value const&",
-								"kind": "reference",
-								"referee": {
-									"_typeName": "db::Value const",
-									"cv_qualifier": "const",
-									"kind": "cv_qualified",
-									"type": {
-										"_typeName": "db::Value",
-										"kind": "user_defined",
-										"target": {
-											"name": "db::Value",
-											"objects": [{
-												"_fullName": "::stappler::mem_pool::Value",
-												"_kind": "type alias",
-												"_name": "Value",
-												"id": 2414992359,
-												"kind": "type alias",
-												"name": "Value",
-												"underlying_type": {
-													"_typeName": "stappler::data::ValueTemplate<stappler::memory::PoolInterface>",
-													"arguments_exposed": false,
-													"kind": "template_instantiation",
-													"primary_template": {
-														"name": "stappler::data::ValueTemplate",
-														"objects": [{
-															"_fullName": "::stappler::data::ValueTemplate<typename>",
-															"_kind": "class template",
-															"_name": "ValueTemplate",
-															"class": {
-																"_fullName": "::stappler::data::ValueTemplate<typename>",
-																"_kind": "class",
-																"_name": "ValueTemplate",
-																"bases": [{
-																	"_fullName": "Interface::AllocBaseType",
-																	"_kind": "base class specifier",
-																	"_name": "Interface::AllocBaseType",
-																	"access_specifier": "public",
-																	"id": 25533212,
-																	"is_virtual": false,
-																	"kind": "base class specifier",
-																	"name": "Interface::AllocBaseType",
-																	"type": {
-																		"_typeName": "Interface::AllocBaseType",
-																		"kind": "unexposed",
-																		"name": "Interface::AllocBaseType"
-																	}
-																}],
-																"class_kind": "class",
-																"id": 3406641011,
-																"is_declaration": false,
-																"is_definition": true,
-																"is_final": false,
-																"kind": "class",
-																"name": "ValueTemplate",
-																"scope": {
-																	"is_templated": true,
-																	"name": "ValueTemplate",
-																	"template_parameters": [{
-																		"_fullName": "Interface",
-																		"_kind": "template type parameter",
-																		"_name": "Interface",
-																		"id": 2255344761,
-																		"is_variadic": false,
-																		"keyword": "typename",
-																		"kind": "template type parameter",
-																		"name": "Interface"
-																	}]
-																},
-																"semantic_scope": ""
-															},
-															"id": 3406641011,
-															"kind": "class template",
-															"name": "ValueTemplate",
-															"parameters": [{
-																"_fullName": "Interface",
-																"_kind": "template type parameter",
-																"_name": "Interface",
-																"id": 2255344761,
-																"is_variadic": false,
-																"keyword": "typename",
-																"kind": "template type parameter",
-																"name": "Interface"
-															}],
-															"scope":  {
-																"is_templated": true,
-																"name": "ValueTemplate",
-																"template_parameters": [{
-																	"_fullName": "Interface",
-																	"_kind": "template type parameter",
-																	"_name": "Interface",
-																	"id": 2255344761,
-																	"is_variadic": false,
-																	"keyword": "typename",
-																	"kind": "template type parameter",
-																	"name": "Interface"
-																}]
-															}
-														}]
-													},
-													"unexposed_arguments": "stappler::memory::PoolInterface"
-												}
-											}]
-										}
-									}
-								},
-								"reference_kind": "lvalue"
-							}
-						}],
-						"ref_qualifier": "none",
-						"return_type": {
-							"_typeName": "void",
-							"builtin_type_kind": "void",
-							"kind": "builtin"
-						},
-						"semantic_scope": "",
-						"signature": "(db::Value const&)"
-					}, {
-						"_fullName": "::stappler::xenolith::storage::StorageRoot::onStorageTransaction(db::Transaction&)",
-						"_kind": "member function",
-						"_name": "onStorageTransaction",
-						"body_kind": "declaration",
-						"cv_qualifier": "none",
-						"id": 1565686444,
-						"is_consteval": false,
-						"is_constexpr": false,
-						"is_declaration": true,
-						"is_definition": false,
-						"is_override": true,
-						"is_variadic": false,
-						"is_virtual": true,
-						"kind": "member function",
-						"name": "onStorageTransaction",
-						"parameters": [{
-							"_fullName": "",
-							"_kind": "function parameter",
-							"_name": "",
-							"id": 46947589,
-							"kind": "function parameter",
-							"name": "",
-							"type": {
-								"_typeName": "db::Transaction&",
-								"kind": "reference",
-								"referee": {
-									"_typeName": "db::Transaction",
-									"kind": "user_defined",
-									"target": {
-										"name": "db::Transaction",
-										"objects": [{
-											"_fullName": "::stappler::db::Transaction",
-											"_kind": "class",
-											"_name": "Transaction",
-											"bases": [{
-												"_fullName": "AllocBase",
-												"_kind": "base class specifier",
-												"_name": "AllocBase",
-												"access_specifier": "public",
-												"id": 3721829073,
-												"is_virtual": false,
-												"kind": "base class specifier",
-												"name": "AllocBase",
-												"type": {
-													"_typeName": "stappler::mem_pool::AllocBase",
-													"kind": "user_defined",
-													"target": {
-														"name": "stappler::mem_pool::AllocBase",
-														"objects": [{
-															"_fullName": "::stappler::mem_pool::AllocBase",
-															"_kind": "type alias",
-															"_name": "AllocBase",
-															"id": 499918036,
-															"kind": "type alias",
-															"name": "AllocBase",
-															"underlying_type": {
-																"_typeName": "stappler::memory::AllocPool",
-																"kind": "user_defined",
-																"target": {
-																	"name": "stappler::memory::AllocPool",
-																	"objects": [{
-																		"_fullName": "::stappler::memory::AllocPool",
-																		"_kind": "class",
-																		"_name": "AllocPool",
-																		"class_kind": "struct",
-																		"id": 3030388899,
-																		"is_declaration": false,
-																		"is_definition": true,
-																		"is_final": false,
-																		"kind": "class",
-																		"name": "AllocPool",
-																		"scope": {
-																			"name": "AllocPool"
-																		},
-																		"semantic_scope": ""
-																	}]
-																}
-															}
-														}]
-													}
-												}
-											}],
-											"class_kind": "class",
-											"id": 1675133751,
-											"is_declaration": false,
-											"is_definition": true,
-											"is_final": false,
-											"kind": "class",
-											"name": "Transaction",
-											"scope": {
-												"name": "Transaction"
-											},
-											"semantic_scope": ""
-										}]
-									}
-								},
-								"reference_kind": "lvalue"
-							}
-						}],
-						"ref_qualifier": "none",
-						"return_type": {
-							"_typeName": "void",
-							"builtin_type_kind": "void",
-							"kind": "builtin"
-						},
-						"semantic_scope": "",
-						"signature": "(db::Transaction&)"
-					}],
-					"class_kind": "class",
-					"id": 3371617267,
-					"is_declaration": false,
-					"is_definition": true,
-					"is_final": false,
-					"kind": "class",
-					"name": "StorageRoot",
-					"scope": {
-						"name": "StorageRoot"
-					},
-					"semantic_scope": ""
 				}],
 				"id": 1688702453,
 				"is_anonymous": false,
@@ -14325,6 +13662,6 @@
 	"name": "xenolith/resources/storage/XLStorageServer.h",
 	"unmatched_comments": [{
 		"line": 21,
-		"text": "\nCopyright (c) 2023 Stappler LLC <admin@stappler.dev>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n"
+		"text": "\nCopyright (c) 2023-2024 Stappler LLC <admin@stappler.dev>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n"
 	}]
 }

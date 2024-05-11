@@ -380,7 +380,7 @@ Title: XLVkRenderPass.h
 Возвращает:
 * Vector<VkClearValue> const&
 
-# ::stappler::xenolith::vk::RenderPass::writeDescriptors(core::QueuePassHandle const&,uint32_t,bool) const
+# ::stappler::xenolith::vk::RenderPass::writeDescriptors(stappler::xenolith::vk::QueuePassHandle const&,uint32_t,bool) const
 
 ## BRIEF
 
@@ -389,14 +389,14 @@ Title: XLVkRenderPass.h
 Доступ: public
 
 Параметры:
-* core::QueuePassHandle const&
+* stappler::xenolith::vk::QueuePassHandle const&
 * uint32_t
 * bool
 
 Возвращает:
 * bool
 
-# ::stappler::xenolith::vk::RenderPass::perform(core::QueuePassHandle const&,stappler::xenolith::vk::CommandBuffer&,Callback<void ()> const&)
+# ::stappler::xenolith::vk::RenderPass::perform(stappler::xenolith::vk::QueuePassHandle const&,stappler::xenolith::vk::CommandBuffer&,Callback<void ()> const&,bool)
 
 ## BRIEF
 
@@ -405,9 +405,10 @@ Title: XLVkRenderPass.h
 Доступ: public
 
 Параметры:
-* core::QueuePassHandle const&
+* stappler::xenolith::vk::QueuePassHandle const&
 * stappler::xenolith::vk::CommandBuffer&
 * Callback<void ()> const&
+* bool
 
 
 # ::stappler::xenolith::vk::RenderPass::initGraphicsPass(stappler::xenolith::vk::Device&,stappler::xenolith::core::RenderPass::QueuePassData&)

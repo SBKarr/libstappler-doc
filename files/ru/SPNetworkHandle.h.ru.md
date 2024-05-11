@@ -28,6 +28,17 @@ Title: SPNetworkHandle.h
 Базовые классы:
 * HandleData<Interface>
 
+# ::stappler::network::Handle<typename>::Method
+
+## BRIEF
+
+Псевдоним типа метода запроса
+
+## CONTENT
+
+Доступ: public
+
+Псевдоним типа метода запроса
 
 # ::stappler::network::Handle<typename>::DataType
 
@@ -167,7 +178,7 @@ Title: SPNetworkHandle.h
 Возвращает:
 * Handle<Interface>&
 
-# ::stappler::network::Handle<typename>::init(stappler::network::Method,stappler::StringView)
+# ::stappler::network::Handle<typename>::init(stappler::network::Handle::Method,stappler::StringView)
 
 ## BRIEF
 
@@ -180,7 +191,7 @@ Title: SPNetworkHandle.h
 Инициализирует запрос с методом и URL
 
 Параметры:
-* stappler::network::Method - метод запроса
+* stappler::network::Handle::Method - метод запроса
 * stappler::StringView - URL запроса
 
 Возвращает:
@@ -233,8 +244,7 @@ Title: SPNetworkHandle.h
 Базовые классы:
 * Interface::AllocBaseType
 
-
-# ::stappler::network::MultiHandle<typename>::addHandle(Handle<Interface>*,void*)
+# ::stappler::network::MultiHandle<typename>::addHandle(Handle<Interface>*,RefBase<Interface>*)
 
 ## BRIEF
 
@@ -248,10 +258,10 @@ Title: SPNetworkHandle.h
 
 Параметры:
 * Handle<Interface>* - указатель на запрос
-* void* - пользовательский указатель
+* RefBase<Interface>* - пользовательский хранимый объект
 
 
-# ::stappler::network::MultiHandle<typename>::perform(Callback<bool (Handle<Interface> *, void *)> const&)
+# ::stappler::network::MultiHandle<typename>::perform(Callback<bool (Handle<Interface> *, RefBase<Interface> *)> const&)
 
 ## BRIEF
 
@@ -268,7 +278,7 @@ Title: SPNetworkHandle.h
 Если управляющая функция возвращает false, все активные запросы скорейшим образом сворачиваются, и управление из функции возвращается пользователю.
 
 Параметры:
-* Callback<bool (Handle<Interface> *, void *)> const& - управляющая функция
+* Callback<bool (Handle<Interface> *, RefBase<Interface> *)> const& - управляющая функция
 
 Возвращает:
 * bool - true если все запросы выполнены, false если выполнение было прервано.

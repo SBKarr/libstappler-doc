@@ -306,6 +306,350 @@ Title: XLScheduler.h
 Тип: Vector<stappler::xenolith::Scheduler::ScheduledTemporary>
 
 
+# ::stappler::xenolith::SchedulerListener<class>
+
+## BRIEF
+
+## CONTENT
+
+Параметры шаблона:
+* class T
+
+
+# ::stappler::xenolith::SchedulerListener<class>::Callback
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+
+# ::stappler::xenolith::SchedulerListener<class>::SchedulerListener(stappler::xenolith::Scheduler*,stappler::xenolith::SchedulerListener::Callback const&,T*)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* stappler::xenolith::Scheduler*
+* stappler::xenolith::SchedulerListener::Callback const&
+* T*
+
+
+# ::stappler::xenolith::SchedulerListener<class>::~SchedulerListener()
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+
+# ::stappler::xenolith::SchedulerListener<class>::SchedulerListener(SchedulerListener<T> const&)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* SchedulerListener<T> const&
+
+
+# ::stappler::xenolith::SchedulerListener<class>::operator=(SchedulerListener<T> const&)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* SchedulerListener<T> const&
+
+Возвращает:
+* SchedulerListener<T>&
+
+# ::stappler::xenolith::SchedulerListener<class>::SchedulerListener(SchedulerListener<T>&&)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* SchedulerListener<T>&&
+
+
+# ::stappler::xenolith::SchedulerListener<class>::operator=(SchedulerListener<T>&&)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* SchedulerListener<T>&&
+
+Возвращает:
+* SchedulerListener<T>&
+
+# ::stappler::xenolith::SchedulerListener<class>::operator=(T*)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* T*
+
+Возвращает:
+* SchedulerListener<T>&
+
+# ::stappler::xenolith::SchedulerListener<class>::operator T*()
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* T*
+
+# ::stappler::xenolith::SchedulerListener<class>::operator T*() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* T*
+
+# ::stappler::xenolith::SchedulerListener<class>::operator bool() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::SchedulerListener<class>::operator->()
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* T*
+
+# ::stappler::xenolith::SchedulerListener<class>::operator->() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* T const*
+
+# ::stappler::xenolith::SchedulerListener<class>::set(T*)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* T*
+
+
+# ::stappler::xenolith::SchedulerListener<class>::get() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* T*
+
+# ::stappler::xenolith::SchedulerListener<class>::setScheduler(stappler::xenolith::Scheduler*)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* stappler::xenolith::Scheduler*
+
+
+# ::stappler::xenolith::SchedulerListener<class>::getScheduler() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* stappler::xenolith::Scheduler*
+
+# ::stappler::xenolith::SchedulerListener<class>::setCallback(stappler::xenolith::SchedulerListener::Callback const&)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* stappler::xenolith::SchedulerListener::Callback const&
+
+
+# ::stappler::xenolith::SchedulerListener<class>::getCallback() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* Callback&
+
+# ::stappler::xenolith::SchedulerListener<class>::setDirty()
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+
+# ::stappler::xenolith::SchedulerListener<class>::update(stappler::xenolith::UpdateTime const&)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* stappler::xenolith::UpdateTime const&
+
+
+# ::stappler::xenolith::SchedulerListener<class>::check()
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+
+# ::stappler::xenolith::SchedulerListener<class>::updateScheduler()
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+
+# ::stappler::xenolith::SchedulerListener<class>::schedule()
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+
+# ::stappler::xenolith::SchedulerListener<class>::unschedule()
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+
+# ::stappler::xenolith::SchedulerListener<class>::_scheduler
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: stappler::xenolith::Scheduler*
+
+
+# ::stappler::xenolith::SchedulerListener<class>::_binding
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: Binding<T>
+
+
+# ::stappler::xenolith::SchedulerListener<class>::_callback
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: Callback
+
+
+# ::stappler::xenolith::SchedulerListener<class>::_dirty
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: bool
+
+
+# ::stappler::xenolith::SchedulerListener<class>::_scheduled
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: bool
+
+
 # ::stappler::xenolith::SchedulerUpdate<typename,typename>
 
 ## BRIEF
@@ -332,7 +676,7 @@ Title: XLScheduler.h
 * bool
 
 
-# ::stappler::xenolith::SchedulerUpdate<T,typenamestd::enable_if<std::is_base_of<Ref,T>::value>::type>::SchedulerUpdate<T,typenamestd::enable_if<std::is_base_of<Ref,T>::value>::type>
+# ::stappler::xenolith::SchedulerUpdate<T,typename std::enable_if<std::is_base_of<Ref,T>::value>::type>::SchedulerUpdate<T,typename std::enable_if<std::is_base_of<Ref,T>::value>::type>
 
 ## BRIEF
 
@@ -342,7 +686,7 @@ Title: XLScheduler.h
 * class T
 
 
-# ::stappler::xenolith::SchedulerUpdate<T,typenamestd::enable_if<std::is_base_of<Ref,T>::value>::type>::scheduleUpdate(stappler::xenolith::Scheduler*,T*,int32_t,bool)
+# ::stappler::xenolith::SchedulerUpdate<T,typename std::enable_if<std::is_base_of<Ref,T>::value>::type>::scheduleUpdate(stappler::xenolith::Scheduler*,T*,int32_t,bool)
 
 ## BRIEF
 
@@ -370,3 +714,180 @@ Title: XLScheduler.h
 * T*
 * int32_t
 * bool
+
+
+# ::stappler::xenolith::SchedulerListener<class>::SchedulerListener(stappler::xenolith::Scheduler*,stappler::xenolith::SchedulerListener::Callback const&,T*)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* stappler::xenolith::Scheduler*
+* stappler::xenolith::SchedulerListener::Callback const&
+* T*
+
+
+# ::stappler::xenolith::SchedulerListener<class>::~SchedulerListener()
+
+## BRIEF
+
+## CONTENT
+
+
+# ::stappler::xenolith::SchedulerListener<class>::SchedulerListener(SchedulerListener<T> const&)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* SchedulerListener<T> const&
+
+
+# ::stappler::xenolith::SchedulerListener<class>::operator=(SchedulerListener<T> const&)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* SchedulerListener<T> const&
+
+Возвращает:
+* SchedulerListener<T>&
+
+# ::stappler::xenolith::SchedulerListener<class>::SchedulerListener(SchedulerListener<T>&&)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* SchedulerListener<T>&&
+
+
+# ::stappler::xenolith::SchedulerListener<class>::operator=(SchedulerListener<T>&&)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* SchedulerListener<T>&&
+
+Возвращает:
+* SchedulerListener<T>&
+
+# ::stappler::xenolith::SchedulerListener<class>::set(T*)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* T*
+
+
+# ::stappler::xenolith::SchedulerListener<class>::operator=(T*)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* T*
+
+Возвращает:
+* SchedulerListener<T>&
+
+# ::stappler::xenolith::SchedulerListener<class>::get() const
+
+## BRIEF
+
+## CONTENT
+
+Возвращает:
+* T*
+
+# ::stappler::xenolith::SchedulerListener<class>::setScheduler(stappler::xenolith::Scheduler*)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* stappler::xenolith::Scheduler*
+
+
+# ::stappler::xenolith::SchedulerListener<class>::getScheduler() const
+
+## BRIEF
+
+## CONTENT
+
+Возвращает:
+* stappler::xenolith::Scheduler*
+
+# ::stappler::xenolith::SchedulerListener<class>::setCallback(stappler::xenolith::SchedulerListener::Callback const&)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* stappler::xenolith::SchedulerListener::Callback const&
+
+
+# ::stappler::xenolith::SchedulerListener<class>::getCallback() const
+
+## BRIEF
+
+## CONTENT
+
+Возвращает:
+* Function<void (Subscription::Flags)> const&
+
+# ::stappler::xenolith::SchedulerListener<class>::setDirty()
+
+## BRIEF
+
+## CONTENT
+
+
+# ::stappler::xenolith::SchedulerListener<class>::update(stappler::xenolith::UpdateTime const&)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* stappler::xenolith::UpdateTime const&
+
+
+# ::stappler::xenolith::SchedulerListener<class>::check()
+
+## BRIEF
+
+## CONTENT
+
+
+# ::stappler::xenolith::SchedulerListener<class>::updateScheduler()
+
+## BRIEF
+
+## CONTENT
+
+
+# ::stappler::xenolith::SchedulerListener<class>::schedule()
+
+## BRIEF
+
+## CONTENT
+
+
+# ::stappler::xenolith::SchedulerListener<class>::unschedule()
+
+## BRIEF
+
+## CONTENT

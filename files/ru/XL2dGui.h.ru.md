@@ -1,8 +1,0 @@
-Title: XL2dGui.h
-
-
-# XENOLITH_RENDERER_GUI2D_XL2DGUI_H_
-
-## BRIEF
-
-## CONTENT

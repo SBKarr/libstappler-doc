@@ -1008,13 +1008,13 @@
 					"_fullName": "::stappler::xenolith::Action::setContainer(stappler::xenolith::Node*)",
 					"_kind": "member function",
 					"_name": "setContainer",
-					"body_kind": "definition",
+					"body_kind": "declaration",
 					"cv_qualifier": "none",
 					"id": 2558967692,
 					"is_consteval": false,
 					"is_constexpr": false,
-					"is_declaration": false,
-					"is_definition": true,
+					"is_declaration": true,
+					"is_definition": false,
 					"is_variadic": false,
 					"is_virtual": false,
 					"kind": "member function",
@@ -1174,13 +1174,13 @@
 					"_fullName": "::stappler::xenolith::Action::setTarget(stappler::xenolith::Node*)",
 					"_kind": "member function",
 					"_name": "setTarget",
-					"body_kind": "definition",
+					"body_kind": "declaration",
 					"cv_qualifier": "none",
 					"id": 1971778714,
 					"is_consteval": false,
 					"is_constexpr": false,
-					"is_declaration": false,
-					"is_definition": true,
+					"is_declaration": true,
+					"is_definition": false,
 					"is_variadic": false,
 					"is_virtual": false,
 					"kind": "member function",
@@ -3565,12 +3565,12 @@
 					"semantic_scope": "",
 					"signature": "()"
 				}, {
-					"_fullName": "::stappler::xenolith::Place::init(stappler::xenolith::Vec2 const&,bool)",
+					"_fullName": "::stappler::xenolith::Place::init(const stappler::geom::Vec2&,bool)",
 					"_kind": "member function",
 					"_name": "init",
 					"body_kind": "declaration",
 					"cv_qualifier": "none",
-					"id": 2777095053,
+					"id": 1427687543,
 					"is_consteval": false,
 					"is_constexpr": false,
 					"is_declaration": true,
@@ -3587,50 +3587,12 @@
 						"kind": "function parameter",
 						"name": "pos",
 						"type": {
-							"_typeName": "stappler::xenolith::Vec2 const&",
+							"_typeName": "const stappler::geom::Vec2&",
 							"kind": "reference",
 							"referee": {
-								"_typeName": "stappler::xenolith::Vec2 const",
-								"cv_qualifier": "const",
-								"kind": "cv_qualified",
-								"type": {
-									"_typeName": "stappler::xenolith::Vec2",
-									"kind": "user_defined",
-									"target": {
-										"name": "stappler::xenolith::Vec2",
-										"objects": [{
-											"_fullName": "::stappler::xenolith::Vec2",
-											"_kind": "type alias",
-											"_name": "Vec2",
-											"id": 1910638286,
-											"kind": "type alias",
-											"name": "Vec2",
-											"underlying_type": {
-												"_typeName": "geom::Vec2",
-												"kind": "user_defined",
-												"target": {
-													"name": "geom::Vec2",
-													"objects": [{
-														"_fullName": "::stappler::geom::Vec2",
-														"_kind": "class",
-														"_name": "Vec2",
-														"class_kind": "class",
-														"id": 16661423,
-														"is_declaration": false,
-														"is_definition": true,
-														"is_final": false,
-														"kind": "class",
-														"name": "Vec2",
-														"scope": {
-															"name": "Vec2"
-														},
-														"semantic_scope": ""
-													}]
-												}
-											}
-										}]
-									}
-								}
+								"_typeName": "const stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "const stappler::geom::Vec2"
 							},
 							"reference_kind": "lvalue"
 						}
@@ -3666,7 +3628,7 @@
 						"kind": "builtin"
 					},
 					"semantic_scope": "",
-					"signature": "(stappler::xenolith::Vec2 const&,bool)"
+					"signature": "(const stappler::geom::Vec2&,bool)"
 				}, {
 					"_fullName": "::stappler::xenolith::Place::update(float)",
 					"_kind": "member function",
@@ -3888,42 +3850,9 @@
 					"kind": "member variable",
 					"name": "_position",
 					"type": {
-						"_typeName": "stappler::xenolith::Vec2",
-						"kind": "user_defined",
-						"target": {
-							"name": "stappler::xenolith::Vec2",
-							"objects": [{
-								"_fullName": "::stappler::xenolith::Vec2",
-								"_kind": "type alias",
-								"_name": "Vec2",
-								"id": 1910638286,
-								"kind": "type alias",
-								"name": "Vec2",
-								"underlying_type": {
-									"_typeName": "geom::Vec2",
-									"kind": "user_defined",
-									"target": {
-										"name": "geom::Vec2",
-										"objects": [{
-											"_fullName": "::stappler::geom::Vec2",
-											"_kind": "class",
-											"_name": "Vec2",
-											"class_kind": "class",
-											"id": 16661423,
-											"is_declaration": false,
-											"is_definition": true,
-											"is_final": false,
-											"kind": "class",
-											"name": "Vec2",
-											"scope": {
-												"name": "Vec2"
-											},
-											"semantic_scope": ""
-										}]
-									}
-								}
-							}]
-						}
+						"_typeName": "stappler::geom::Vec2",
+						"kind": "unexposed",
+						"name": "stappler::geom::Vec2"
 					}
 				}],
 				"class_kind": "class",
@@ -4676,6 +4605,30 @@
 					"semantic_scope": "",
 					"signature": "()"
 				}, {
+					"_fullName": "::stappler::xenolith::ActionInterval::stop()",
+					"_kind": "member function",
+					"_name": "stop",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 1786970887,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_override": true,
+					"is_variadic": false,
+					"is_virtual": true,
+					"kind": "member function",
+					"name": "stop",
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "()"
+				}, {
 					"_fullName": "::stappler::xenolith::ActionInterval::isDone() const",
 					"_kind": "member function",
 					"_name": "isDone",
@@ -5195,12 +5148,12 @@
 					"semantic_scope": "",
 					"signature": "()"
 				}, {
-					"_fullName": "::stappler::xenolith::Speed::init(stappler::xenolith::ActionInterval*,float)",
+					"_fullName": "::stappler::xenolith::Speed::init(Rc<stappler::xenolith::ActionInterval>&&,float)",
 					"_kind": "member function",
 					"_name": "init",
 					"body_kind": "declaration",
 					"cv_qualifier": "none",
-					"id": 2229511318,
+					"id": 3354624702,
 					"is_consteval": false,
 					"is_constexpr": false,
 					"is_declaration": true,
@@ -5217,172 +5170,77 @@
 						"kind": "function parameter",
 						"name": "action",
 						"type": {
-							"_typeName": "stappler::xenolith::ActionInterval*",
-							"kind": "pointer",
-							"pointee": {
-								"_typeName": "stappler::xenolith::ActionInterval",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::ActionInterval",
+							"_typeName": "Rc<stappler::xenolith::ActionInterval>&&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "Rc<stappler::xenolith::ActionInterval>",
+								"arguments_exposed": false,
+								"kind": "template_instantiation",
+								"primary_template": {
+									"name": "Rc",
 									"objects": [{
-										"_fullName": "::stappler::xenolith::ActionInterval",
-										"_kind": "class",
-										"_name": "ActionInterval",
-										"bases": [{
-											"_fullName": "Action",
-											"_kind": "base class specifier",
-											"_name": "Action",
-											"access_specifier": "public",
-											"id": 1872525558,
-											"is_virtual": false,
-											"kind": "base class specifier",
-											"name": "Action",
-											"type": {
-												"_typeName": "stappler::xenolith::Action",
-												"kind": "user_defined",
-												"target": {
-													"name": "stappler::xenolith::Action",
-													"objects": [{
-														"_fullName": "::stappler::xenolith::Action",
-														"_kind": "class",
-														"_name": "Action",
-														"bases": [{
-															"_fullName": "Ref",
-															"_kind": "base class specifier",
-															"_name": "Ref",
-															"access_specifier": "public",
-															"id": 1165741041,
-															"is_virtual": false,
-															"kind": "base class specifier",
-															"name": "Ref",
-															"type": {
-																"_typeName": "stappler::mem_std::Ref",
-																"kind": "user_defined",
-																"target": {
-																	"name": "stappler::mem_std::Ref",
-																	"objects": [{
-																		"_fullName": "::stappler::mem_std::Ref",
-																		"_kind": "type alias",
-																		"_name": "Ref",
-																		"id": 3010886988,
-																		"kind": "type alias",
-																		"name": "Ref",
-																		"underlying_type": {
-																			"_typeName": "RefBase<memory::StandartInterface>",
-																			"arguments_exposed": false,
-																			"kind": "template_instantiation",
-																			"primary_template": {
-																				"name": "RefBase",
-																				"objects": [{
-																					"_fullName": "::stappler::RefBase<typename>",
-																					"_kind": "class template",
-																					"_name": "RefBase",
-																					"class": {
-																						"_fullName": "::stappler::RefBase<typename>",
-																						"_kind": "class",
-																						"_name": "RefBase",
-																						"bases": [{
-																							"_fullName": "Interface::AllocBaseType",
-																							"_kind": "base class specifier",
-																							"_name": "Interface::AllocBaseType",
-																							"access_specifier": "public",
-																							"id": 25533212,
-																							"is_virtual": false,
-																							"kind": "base class specifier",
-																							"name": "Interface::AllocBaseType",
-																							"type": {
-																								"_typeName": "Interface::AllocBaseType",
-																								"kind": "unexposed",
-																								"name": "Interface::AllocBaseType"
-																							}
-																						}],
-																						"class_kind": "class",
-																						"id": 2191419057,
-																						"is_declaration": false,
-																						"is_definition": true,
-																						"is_final": false,
-																						"kind": "class",
-																						"name": "RefBase",
-																						"scope": {
-																							"is_templated": true,
-																							"name": "RefBase",
-																							"template_parameters": [{
-																								"_fullName": "Interface",
-																								"_kind": "template type parameter",
-																								"_name": "Interface",
-																								"id": 2255344761,
-																								"is_variadic": false,
-																								"keyword": "typename",
-																								"kind": "template type parameter",
-																								"name": "Interface"
-																							}]
-																						},
-																						"semantic_scope": ""
-																					},
-																					"id": 2191419057,
-																					"kind": "class template",
-																					"name": "RefBase",
-																					"parameters": [{
-																						"_fullName": "Interface",
-																						"_kind": "template type parameter",
-																						"_name": "Interface",
-																						"id": 2255344761,
-																						"is_variadic": false,
-																						"keyword": "typename",
-																						"kind": "template type parameter",
-																						"name": "Interface"
-																					}],
-																					"scope":  {
-																						"is_templated": true,
-																						"name": "RefBase",
-																						"template_parameters": [{
-																							"_fullName": "Interface",
-																							"_kind": "template type parameter",
-																							"_name": "Interface",
-																							"id": 2255344761,
-																							"is_variadic": false,
-																							"keyword": "typename",
-																							"kind": "template type parameter",
-																							"name": "Interface"
-																						}]
-																					}
-																				}]
-																			},
-																			"unexposed_arguments": "memory::StandartInterface"
-																		}
-																	}]
-																}
-															}
-														}],
-														"class_kind": "class",
-														"id": 179658435,
-														"is_declaration": false,
-														"is_definition": true,
-														"is_final": false,
-														"kind": "class",
-														"name": "Action",
-														"scope": {
-															"name": "Action"
-														},
-														"semantic_scope": ""
-													}]
-												}
-											}
-										}],
-										"class_kind": "class",
-										"id": 1688733480,
-										"is_declaration": false,
-										"is_definition": true,
-										"is_final": false,
-										"kind": "class",
-										"name": "ActionInterval",
-										"scope": {
-											"name": "ActionInterval"
+										"_fullName": "::stappler::RcBase<typename>",
+										"_kind": "class template",
+										"_name": "RcBase",
+										"class": {
+											"_fullName": "::stappler::RcBase<typename>",
+											"_kind": "class",
+											"_name": "RcBase",
+											"class_kind": "class",
+											"id": 782220210,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "RcBase",
+											"scope": {
+												"is_templated": true,
+												"name": "RcBase",
+												"template_parameters": [{
+													"_fullName": "Base",
+													"_kind": "template type parameter",
+													"_name": "Base",
+													"id": 3435036189,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "Base"
+												}]
+											},
+											"semantic_scope": ""
 										},
-										"semantic_scope": ""
+										"id": 782220210,
+										"kind": "class template",
+										"name": "RcBase",
+										"parameters": [{
+											"_fullName": "Base",
+											"_kind": "template type parameter",
+											"_name": "Base",
+											"id": 3435036189,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "Base"
+										}],
+										"scope":  {
+											"is_templated": true,
+											"name": "RcBase",
+											"template_parameters": [{
+												"_fullName": "Base",
+												"_kind": "template type parameter",
+												"_name": "Base",
+												"id": 3435036189,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Base"
+											}]
+										}
 									}]
-								}
-							}
+								},
+								"unexposed_arguments": "stappler::xenolith::ActionInterval"
+							},
+							"reference_kind": "rvalue"
 						}
 					}, {
 						"_fullName": "speed",
@@ -5404,7 +5262,7 @@
 						"kind": "builtin"
 					},
 					"semantic_scope": "",
-					"signature": "(stappler::xenolith::ActionInterval*,float)"
+					"signature": "(Rc<stappler::xenolith::ActionInterval>&&,float)"
 				}, {
 					"_fullName": "::stappler::xenolith::Speed::getSpeed() const",
 					"_kind": "member function",
@@ -5651,12 +5509,12 @@
 					"semantic_scope": "",
 					"signature": "() const"
 				}, {
-					"_fullName": "::stappler::xenolith::Speed::setInnerAction(stappler::xenolith::ActionInterval*)",
+					"_fullName": "::stappler::xenolith::Speed::setInnerAction(Rc<stappler::xenolith::ActionInterval>&&)",
 					"_kind": "member function",
 					"_name": "setInnerAction",
 					"body_kind": "declaration",
 					"cv_qualifier": "none",
-					"id": 108573784,
+					"id": 4131333558,
 					"is_consteval": false,
 					"is_constexpr": false,
 					"is_declaration": true,
@@ -5673,172 +5531,77 @@
 						"kind": "function parameter",
 						"name": "action",
 						"type": {
-							"_typeName": "stappler::xenolith::ActionInterval*",
-							"kind": "pointer",
-							"pointee": {
-								"_typeName": "stappler::xenolith::ActionInterval",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::ActionInterval",
+							"_typeName": "Rc<stappler::xenolith::ActionInterval>&&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "Rc<stappler::xenolith::ActionInterval>",
+								"arguments_exposed": false,
+								"kind": "template_instantiation",
+								"primary_template": {
+									"name": "Rc",
 									"objects": [{
-										"_fullName": "::stappler::xenolith::ActionInterval",
-										"_kind": "class",
-										"_name": "ActionInterval",
-										"bases": [{
-											"_fullName": "Action",
-											"_kind": "base class specifier",
-											"_name": "Action",
-											"access_specifier": "public",
-											"id": 1872525558,
-											"is_virtual": false,
-											"kind": "base class specifier",
-											"name": "Action",
-											"type": {
-												"_typeName": "stappler::xenolith::Action",
-												"kind": "user_defined",
-												"target": {
-													"name": "stappler::xenolith::Action",
-													"objects": [{
-														"_fullName": "::stappler::xenolith::Action",
-														"_kind": "class",
-														"_name": "Action",
-														"bases": [{
-															"_fullName": "Ref",
-															"_kind": "base class specifier",
-															"_name": "Ref",
-															"access_specifier": "public",
-															"id": 1165741041,
-															"is_virtual": false,
-															"kind": "base class specifier",
-															"name": "Ref",
-															"type": {
-																"_typeName": "stappler::mem_std::Ref",
-																"kind": "user_defined",
-																"target": {
-																	"name": "stappler::mem_std::Ref",
-																	"objects": [{
-																		"_fullName": "::stappler::mem_std::Ref",
-																		"_kind": "type alias",
-																		"_name": "Ref",
-																		"id": 3010886988,
-																		"kind": "type alias",
-																		"name": "Ref",
-																		"underlying_type": {
-																			"_typeName": "RefBase<memory::StandartInterface>",
-																			"arguments_exposed": false,
-																			"kind": "template_instantiation",
-																			"primary_template": {
-																				"name": "RefBase",
-																				"objects": [{
-																					"_fullName": "::stappler::RefBase<typename>",
-																					"_kind": "class template",
-																					"_name": "RefBase",
-																					"class": {
-																						"_fullName": "::stappler::RefBase<typename>",
-																						"_kind": "class",
-																						"_name": "RefBase",
-																						"bases": [{
-																							"_fullName": "Interface::AllocBaseType",
-																							"_kind": "base class specifier",
-																							"_name": "Interface::AllocBaseType",
-																							"access_specifier": "public",
-																							"id": 25533212,
-																							"is_virtual": false,
-																							"kind": "base class specifier",
-																							"name": "Interface::AllocBaseType",
-																							"type": {
-																								"_typeName": "Interface::AllocBaseType",
-																								"kind": "unexposed",
-																								"name": "Interface::AllocBaseType"
-																							}
-																						}],
-																						"class_kind": "class",
-																						"id": 2191419057,
-																						"is_declaration": false,
-																						"is_definition": true,
-																						"is_final": false,
-																						"kind": "class",
-																						"name": "RefBase",
-																						"scope": {
-																							"is_templated": true,
-																							"name": "RefBase",
-																							"template_parameters": [{
-																								"_fullName": "Interface",
-																								"_kind": "template type parameter",
-																								"_name": "Interface",
-																								"id": 2255344761,
-																								"is_variadic": false,
-																								"keyword": "typename",
-																								"kind": "template type parameter",
-																								"name": "Interface"
-																							}]
-																						},
-																						"semantic_scope": ""
-																					},
-																					"id": 2191419057,
-																					"kind": "class template",
-																					"name": "RefBase",
-																					"parameters": [{
-																						"_fullName": "Interface",
-																						"_kind": "template type parameter",
-																						"_name": "Interface",
-																						"id": 2255344761,
-																						"is_variadic": false,
-																						"keyword": "typename",
-																						"kind": "template type parameter",
-																						"name": "Interface"
-																					}],
-																					"scope":  {
-																						"is_templated": true,
-																						"name": "RefBase",
-																						"template_parameters": [{
-																							"_fullName": "Interface",
-																							"_kind": "template type parameter",
-																							"_name": "Interface",
-																							"id": 2255344761,
-																							"is_variadic": false,
-																							"keyword": "typename",
-																							"kind": "template type parameter",
-																							"name": "Interface"
-																						}]
-																					}
-																				}]
-																			},
-																			"unexposed_arguments": "memory::StandartInterface"
-																		}
-																	}]
-																}
-															}
-														}],
-														"class_kind": "class",
-														"id": 179658435,
-														"is_declaration": false,
-														"is_definition": true,
-														"is_final": false,
-														"kind": "class",
-														"name": "Action",
-														"scope": {
-															"name": "Action"
-														},
-														"semantic_scope": ""
-													}]
-												}
-											}
-										}],
-										"class_kind": "class",
-										"id": 1688733480,
-										"is_declaration": false,
-										"is_definition": true,
-										"is_final": false,
-										"kind": "class",
-										"name": "ActionInterval",
-										"scope": {
-											"name": "ActionInterval"
+										"_fullName": "::stappler::RcBase<typename>",
+										"_kind": "class template",
+										"_name": "RcBase",
+										"class": {
+											"_fullName": "::stappler::RcBase<typename>",
+											"_kind": "class",
+											"_name": "RcBase",
+											"class_kind": "class",
+											"id": 782220210,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "RcBase",
+											"scope": {
+												"is_templated": true,
+												"name": "RcBase",
+												"template_parameters": [{
+													"_fullName": "Base",
+													"_kind": "template type parameter",
+													"_name": "Base",
+													"id": 3435036189,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "Base"
+												}]
+											},
+											"semantic_scope": ""
 										},
-										"semantic_scope": ""
+										"id": 782220210,
+										"kind": "class template",
+										"name": "RcBase",
+										"parameters": [{
+											"_fullName": "Base",
+											"_kind": "template type parameter",
+											"_name": "Base",
+											"id": 3435036189,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "Base"
+										}],
+										"scope":  {
+											"is_templated": true,
+											"name": "RcBase",
+											"template_parameters": [{
+												"_fullName": "Base",
+												"_kind": "template type parameter",
+												"_name": "Base",
+												"id": 3435036189,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Base"
+											}]
+										}
 									}]
-								}
-							}
+								},
+								"unexposed_arguments": "stappler::xenolith::ActionInterval"
+							},
+							"reference_kind": "rvalue"
 						}
 					}],
 					"ref_qualifier": "none",
@@ -5848,7 +5611,7 @@
 						"kind": "builtin"
 					},
 					"semantic_scope": "",
-					"signature": "(stappler::xenolith::ActionInterval*)"
+					"signature": "(Rc<stappler::xenolith::ActionInterval>&&)"
 				}, {
 					"_fullName": "::stappler::xenolith::Speed::stop()",
 					"_kind": "member function",
@@ -6870,6 +6633,93 @@
 					},
 					"semantic_scope": "",
 					"signature": "(float)"
+				}, {
+					"_fullName": "::stappler::xenolith::Sequence::addAction(stappler::TimeInterval)",
+					"_kind": "member function",
+					"_name": "addAction",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 2654306295,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "addAction",
+					"parameters": [{
+						"_fullName": "",
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 46947589,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::TimeInterval",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::TimeInterval",
+								"objects": [{
+									"_fullName": "::stappler::TimeInterval",
+									"_kind": "class",
+									"_name": "TimeInterval",
+									"bases": [{
+										"_fullName": "TimeStorage",
+										"_kind": "base class specifier",
+										"_name": "TimeStorage",
+										"access_specifier": "public",
+										"id": 1530442930,
+										"is_virtual": false,
+										"kind": "base class specifier",
+										"name": "TimeStorage",
+										"type": {
+											"_typeName": "stappler::TimeStorage",
+											"kind": "user_defined",
+											"target": {
+												"name": "stappler::TimeStorage",
+												"objects": [{
+													"_fullName": "::stappler::TimeStorage",
+													"_kind": "class",
+													"_name": "TimeStorage",
+													"class_kind": "class",
+													"id": 3963994454,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "TimeStorage",
+													"scope": {
+														"name": "TimeStorage"
+													},
+													"semantic_scope": ""
+												}]
+											}
+										}
+									}],
+									"class_kind": "class",
+									"id": 4115788410,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "TimeInterval",
+									"scope": {
+										"name": "TimeInterval"
+									},
+									"semantic_scope": ""
+								}]
+							}
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::TimeInterval)"
 				}, {
 					"_fullName": "::stappler::xenolith::Sequence::addAction<typename>(Rc<T> const&)",
 					"_kind": "function template",
@@ -9681,12 +9531,12 @@
 					"semantic_scope": "",
 					"signature": "()"
 				}, {
-					"_fullName": "::stappler::xenolith::Repeat::init(stappler::xenolith::ActionInterval*,uint32_t)",
+					"_fullName": "::stappler::xenolith::Repeat::init(Rc<stappler::xenolith::ActionInterval>&&,uint32_t)",
 					"_kind": "member function",
 					"_name": "init",
 					"body_kind": "declaration",
 					"cv_qualifier": "none",
-					"id": 4288830436,
+					"id": 3940223450,
 					"is_consteval": false,
 					"is_constexpr": false,
 					"is_declaration": true,
@@ -9703,172 +9553,77 @@
 						"kind": "function parameter",
 						"name": "",
 						"type": {
-							"_typeName": "stappler::xenolith::ActionInterval*",
-							"kind": "pointer",
-							"pointee": {
-								"_typeName": "stappler::xenolith::ActionInterval",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::ActionInterval",
+							"_typeName": "Rc<stappler::xenolith::ActionInterval>&&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "Rc<stappler::xenolith::ActionInterval>",
+								"arguments_exposed": false,
+								"kind": "template_instantiation",
+								"primary_template": {
+									"name": "Rc",
 									"objects": [{
-										"_fullName": "::stappler::xenolith::ActionInterval",
-										"_kind": "class",
-										"_name": "ActionInterval",
-										"bases": [{
-											"_fullName": "Action",
-											"_kind": "base class specifier",
-											"_name": "Action",
-											"access_specifier": "public",
-											"id": 1872525558,
-											"is_virtual": false,
-											"kind": "base class specifier",
-											"name": "Action",
-											"type": {
-												"_typeName": "stappler::xenolith::Action",
-												"kind": "user_defined",
-												"target": {
-													"name": "stappler::xenolith::Action",
-													"objects": [{
-														"_fullName": "::stappler::xenolith::Action",
-														"_kind": "class",
-														"_name": "Action",
-														"bases": [{
-															"_fullName": "Ref",
-															"_kind": "base class specifier",
-															"_name": "Ref",
-															"access_specifier": "public",
-															"id": 1165741041,
-															"is_virtual": false,
-															"kind": "base class specifier",
-															"name": "Ref",
-															"type": {
-																"_typeName": "stappler::mem_std::Ref",
-																"kind": "user_defined",
-																"target": {
-																	"name": "stappler::mem_std::Ref",
-																	"objects": [{
-																		"_fullName": "::stappler::mem_std::Ref",
-																		"_kind": "type alias",
-																		"_name": "Ref",
-																		"id": 3010886988,
-																		"kind": "type alias",
-																		"name": "Ref",
-																		"underlying_type": {
-																			"_typeName": "RefBase<memory::StandartInterface>",
-																			"arguments_exposed": false,
-																			"kind": "template_instantiation",
-																			"primary_template": {
-																				"name": "RefBase",
-																				"objects": [{
-																					"_fullName": "::stappler::RefBase<typename>",
-																					"_kind": "class template",
-																					"_name": "RefBase",
-																					"class": {
-																						"_fullName": "::stappler::RefBase<typename>",
-																						"_kind": "class",
-																						"_name": "RefBase",
-																						"bases": [{
-																							"_fullName": "Interface::AllocBaseType",
-																							"_kind": "base class specifier",
-																							"_name": "Interface::AllocBaseType",
-																							"access_specifier": "public",
-																							"id": 25533212,
-																							"is_virtual": false,
-																							"kind": "base class specifier",
-																							"name": "Interface::AllocBaseType",
-																							"type": {
-																								"_typeName": "Interface::AllocBaseType",
-																								"kind": "unexposed",
-																								"name": "Interface::AllocBaseType"
-																							}
-																						}],
-																						"class_kind": "class",
-																						"id": 2191419057,
-																						"is_declaration": false,
-																						"is_definition": true,
-																						"is_final": false,
-																						"kind": "class",
-																						"name": "RefBase",
-																						"scope": {
-																							"is_templated": true,
-																							"name": "RefBase",
-																							"template_parameters": [{
-																								"_fullName": "Interface",
-																								"_kind": "template type parameter",
-																								"_name": "Interface",
-																								"id": 2255344761,
-																								"is_variadic": false,
-																								"keyword": "typename",
-																								"kind": "template type parameter",
-																								"name": "Interface"
-																							}]
-																						},
-																						"semantic_scope": ""
-																					},
-																					"id": 2191419057,
-																					"kind": "class template",
-																					"name": "RefBase",
-																					"parameters": [{
-																						"_fullName": "Interface",
-																						"_kind": "template type parameter",
-																						"_name": "Interface",
-																						"id": 2255344761,
-																						"is_variadic": false,
-																						"keyword": "typename",
-																						"kind": "template type parameter",
-																						"name": "Interface"
-																					}],
-																					"scope":  {
-																						"is_templated": true,
-																						"name": "RefBase",
-																						"template_parameters": [{
-																							"_fullName": "Interface",
-																							"_kind": "template type parameter",
-																							"_name": "Interface",
-																							"id": 2255344761,
-																							"is_variadic": false,
-																							"keyword": "typename",
-																							"kind": "template type parameter",
-																							"name": "Interface"
-																						}]
-																					}
-																				}]
-																			},
-																			"unexposed_arguments": "memory::StandartInterface"
-																		}
-																	}]
-																}
-															}
-														}],
-														"class_kind": "class",
-														"id": 179658435,
-														"is_declaration": false,
-														"is_definition": true,
-														"is_final": false,
-														"kind": "class",
-														"name": "Action",
-														"scope": {
-															"name": "Action"
-														},
-														"semantic_scope": ""
-													}]
-												}
-											}
-										}],
-										"class_kind": "class",
-										"id": 1688733480,
-										"is_declaration": false,
-										"is_definition": true,
-										"is_final": false,
-										"kind": "class",
-										"name": "ActionInterval",
-										"scope": {
-											"name": "ActionInterval"
+										"_fullName": "::stappler::RcBase<typename>",
+										"_kind": "class template",
+										"_name": "RcBase",
+										"class": {
+											"_fullName": "::stappler::RcBase<typename>",
+											"_kind": "class",
+											"_name": "RcBase",
+											"class_kind": "class",
+											"id": 782220210,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "RcBase",
+											"scope": {
+												"is_templated": true,
+												"name": "RcBase",
+												"template_parameters": [{
+													"_fullName": "Base",
+													"_kind": "template type parameter",
+													"_name": "Base",
+													"id": 3435036189,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "Base"
+												}]
+											},
+											"semantic_scope": ""
 										},
-										"semantic_scope": ""
+										"id": 782220210,
+										"kind": "class template",
+										"name": "RcBase",
+										"parameters": [{
+											"_fullName": "Base",
+											"_kind": "template type parameter",
+											"_name": "Base",
+											"id": 3435036189,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "Base"
+										}],
+										"scope":  {
+											"is_templated": true,
+											"name": "RcBase",
+											"template_parameters": [{
+												"_fullName": "Base",
+												"_kind": "template type parameter",
+												"_name": "Base",
+												"id": 3435036189,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Base"
+											}]
+										}
 									}]
-								}
-							}
+								},
+								"unexposed_arguments": "stappler::xenolith::ActionInterval"
+							},
+							"reference_kind": "rvalue"
 						}
 					}, {
 						"_fullName": "times",
@@ -9892,196 +9647,101 @@
 						"kind": "builtin"
 					},
 					"semantic_scope": "",
-					"signature": "(stappler::xenolith::ActionInterval*,uint32_t)"
+					"signature": "(Rc<stappler::xenolith::ActionInterval>&&,uint32_t)"
 				}, {
-					"_fullName": "::stappler::xenolith::Repeat::setInnerAction(stappler::xenolith::ActionInterval*)",
+					"_fullName": "::stappler::xenolith::Repeat::setInnerAction(Rc<stappler::xenolith::ActionInterval>&&)",
 					"_kind": "member function",
 					"_name": "setInnerAction",
-					"body_kind": "definition",
+					"body_kind": "declaration",
 					"cv_qualifier": "none",
-					"id": 3649626814,
+					"id": 4262728,
 					"is_consteval": false,
 					"is_constexpr": false,
-					"is_declaration": false,
-					"is_definition": true,
+					"is_declaration": true,
+					"is_definition": false,
 					"is_variadic": false,
 					"is_virtual": false,
 					"kind": "member function",
 					"name": "setInnerAction",
 					"parameters": [{
-						"_fullName": "action",
+						"_fullName": "",
 						"_kind": "function parameter",
-						"_name": "action",
-						"id": 3629698115,
+						"_name": "",
+						"id": 46947589,
 						"kind": "function parameter",
-						"name": "action",
+						"name": "",
 						"type": {
-							"_typeName": "stappler::xenolith::ActionInterval*",
-							"kind": "pointer",
-							"pointee": {
-								"_typeName": "stappler::xenolith::ActionInterval",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::ActionInterval",
+							"_typeName": "Rc<stappler::xenolith::ActionInterval>&&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "Rc<stappler::xenolith::ActionInterval>",
+								"arguments_exposed": false,
+								"kind": "template_instantiation",
+								"primary_template": {
+									"name": "Rc",
 									"objects": [{
-										"_fullName": "::stappler::xenolith::ActionInterval",
-										"_kind": "class",
-										"_name": "ActionInterval",
-										"bases": [{
-											"_fullName": "Action",
-											"_kind": "base class specifier",
-											"_name": "Action",
-											"access_specifier": "public",
-											"id": 1872525558,
-											"is_virtual": false,
-											"kind": "base class specifier",
-											"name": "Action",
-											"type": {
-												"_typeName": "stappler::xenolith::Action",
-												"kind": "user_defined",
-												"target": {
-													"name": "stappler::xenolith::Action",
-													"objects": [{
-														"_fullName": "::stappler::xenolith::Action",
-														"_kind": "class",
-														"_name": "Action",
-														"bases": [{
-															"_fullName": "Ref",
-															"_kind": "base class specifier",
-															"_name": "Ref",
-															"access_specifier": "public",
-															"id": 1165741041,
-															"is_virtual": false,
-															"kind": "base class specifier",
-															"name": "Ref",
-															"type": {
-																"_typeName": "stappler::mem_std::Ref",
-																"kind": "user_defined",
-																"target": {
-																	"name": "stappler::mem_std::Ref",
-																	"objects": [{
-																		"_fullName": "::stappler::mem_std::Ref",
-																		"_kind": "type alias",
-																		"_name": "Ref",
-																		"id": 3010886988,
-																		"kind": "type alias",
-																		"name": "Ref",
-																		"underlying_type": {
-																			"_typeName": "RefBase<memory::StandartInterface>",
-																			"arguments_exposed": false,
-																			"kind": "template_instantiation",
-																			"primary_template": {
-																				"name": "RefBase",
-																				"objects": [{
-																					"_fullName": "::stappler::RefBase<typename>",
-																					"_kind": "class template",
-																					"_name": "RefBase",
-																					"class": {
-																						"_fullName": "::stappler::RefBase<typename>",
-																						"_kind": "class",
-																						"_name": "RefBase",
-																						"bases": [{
-																							"_fullName": "Interface::AllocBaseType",
-																							"_kind": "base class specifier",
-																							"_name": "Interface::AllocBaseType",
-																							"access_specifier": "public",
-																							"id": 25533212,
-																							"is_virtual": false,
-																							"kind": "base class specifier",
-																							"name": "Interface::AllocBaseType",
-																							"type": {
-																								"_typeName": "Interface::AllocBaseType",
-																								"kind": "unexposed",
-																								"name": "Interface::AllocBaseType"
-																							}
-																						}],
-																						"class_kind": "class",
-																						"id": 2191419057,
-																						"is_declaration": false,
-																						"is_definition": true,
-																						"is_final": false,
-																						"kind": "class",
-																						"name": "RefBase",
-																						"scope": {
-																							"is_templated": true,
-																							"name": "RefBase",
-																							"template_parameters": [{
-																								"_fullName": "Interface",
-																								"_kind": "template type parameter",
-																								"_name": "Interface",
-																								"id": 2255344761,
-																								"is_variadic": false,
-																								"keyword": "typename",
-																								"kind": "template type parameter",
-																								"name": "Interface"
-																							}]
-																						},
-																						"semantic_scope": ""
-																					},
-																					"id": 2191419057,
-																					"kind": "class template",
-																					"name": "RefBase",
-																					"parameters": [{
-																						"_fullName": "Interface",
-																						"_kind": "template type parameter",
-																						"_name": "Interface",
-																						"id": 2255344761,
-																						"is_variadic": false,
-																						"keyword": "typename",
-																						"kind": "template type parameter",
-																						"name": "Interface"
-																					}],
-																					"scope":  {
-																						"is_templated": true,
-																						"name": "RefBase",
-																						"template_parameters": [{
-																							"_fullName": "Interface",
-																							"_kind": "template type parameter",
-																							"_name": "Interface",
-																							"id": 2255344761,
-																							"is_variadic": false,
-																							"keyword": "typename",
-																							"kind": "template type parameter",
-																							"name": "Interface"
-																						}]
-																					}
-																				}]
-																			},
-																			"unexposed_arguments": "memory::StandartInterface"
-																		}
-																	}]
-																}
-															}
-														}],
-														"class_kind": "class",
-														"id": 179658435,
-														"is_declaration": false,
-														"is_definition": true,
-														"is_final": false,
-														"kind": "class",
-														"name": "Action",
-														"scope": {
-															"name": "Action"
-														},
-														"semantic_scope": ""
-													}]
-												}
-											}
-										}],
-										"class_kind": "class",
-										"id": 1688733480,
-										"is_declaration": false,
-										"is_definition": true,
-										"is_final": false,
-										"kind": "class",
-										"name": "ActionInterval",
-										"scope": {
-											"name": "ActionInterval"
+										"_fullName": "::stappler::RcBase<typename>",
+										"_kind": "class template",
+										"_name": "RcBase",
+										"class": {
+											"_fullName": "::stappler::RcBase<typename>",
+											"_kind": "class",
+											"_name": "RcBase",
+											"class_kind": "class",
+											"id": 782220210,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "RcBase",
+											"scope": {
+												"is_templated": true,
+												"name": "RcBase",
+												"template_parameters": [{
+													"_fullName": "Base",
+													"_kind": "template type parameter",
+													"_name": "Base",
+													"id": 3435036189,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "Base"
+												}]
+											},
+											"semantic_scope": ""
 										},
-										"semantic_scope": ""
+										"id": 782220210,
+										"kind": "class template",
+										"name": "RcBase",
+										"parameters": [{
+											"_fullName": "Base",
+											"_kind": "template type parameter",
+											"_name": "Base",
+											"id": 3435036189,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "Base"
+										}],
+										"scope":  {
+											"is_templated": true,
+											"name": "RcBase",
+											"template_parameters": [{
+												"_fullName": "Base",
+												"_kind": "template type parameter",
+												"_name": "Base",
+												"id": 3435036189,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Base"
+											}]
+										}
 									}]
-								}
-							}
+								},
+								"unexposed_arguments": "stappler::xenolith::ActionInterval"
+							},
+							"reference_kind": "rvalue"
 						}
 					}],
 					"ref_qualifier": "none",
@@ -10091,7 +9751,7 @@
 						"kind": "builtin"
 					},
 					"semantic_scope": "",
-					"signature": "(stappler::xenolith::ActionInterval*)"
+					"signature": "(Rc<stappler::xenolith::ActionInterval>&&)"
 				}, {
 					"_fullName": "::stappler::xenolith::Repeat::getInnerAction() const",
 					"_kind": "member function",
@@ -12296,12 +11956,12 @@
 					"semantic_scope": "",
 					"signature": "()"
 				}, {
-					"_fullName": "::stappler::xenolith::TintTo::init(float,stappler::xenolith::Color4F const&,stappler::xenolith::ColorMask)",
+					"_fullName": "::stappler::xenolith::TintTo::init(float,const stappler::geom::Color4F&,stappler::geom::ColorMask)",
 					"_kind": "member function",
 					"_name": "init",
 					"body_kind": "declaration",
 					"cv_qualifier": "none",
-					"id": 1806011471,
+					"id": 1729042443,
 					"is_consteval": false,
 					"is_constexpr": false,
 					"is_declaration": true,
@@ -12330,60 +11990,12 @@
 						"kind": "function parameter",
 						"name": "",
 						"type": {
-							"_typeName": "stappler::xenolith::Color4F const&",
+							"_typeName": "const stappler::geom::Color4F&",
 							"kind": "reference",
 							"referee": {
-								"_typeName": "stappler::xenolith::Color4F const",
-								"cv_qualifier": "const",
-								"kind": "cv_qualified",
-								"type": {
-									"_typeName": "stappler::xenolith::Color4F",
-									"kind": "user_defined",
-									"target": {
-										"name": "stappler::xenolith::Color4F",
-										"objects": [{
-											"_fullName": "::stappler::xenolith::Color4F",
-											"_kind": "type alias",
-											"_name": "Color4F",
-											"id": 2730567930,
-											"kind": "type alias",
-											"name": "Color4F",
-											"underlying_type": {
-												"_typeName": "geom::Color4F",
-												"kind": "user_defined",
-												"target": {
-													"name": "geom::Color4F",
-													"objects": [{
-														"_fullName": "::stappler::geom::Color4F",
-														"_kind": "class",
-														"_name": "Color4F",
-														"attributes": [{
-															"arguments": [{
-																"kind": "int_literal",
-																"spelling": "16"
-															}],
-															"is_variadic": false,
-															"kind": "alignas_",
-															"name": "alignas"
-														}],
-														"class_kind": "struct",
-														"comment": "\nRGBA color composed of 4 floats.\n",
-														"id": 1425630790,
-														"is_declaration": false,
-														"is_definition": true,
-														"is_final": false,
-														"kind": "class",
-														"name": "Color4F",
-														"scope": {
-															"name": "Color4F"
-														},
-														"semantic_scope": ""
-													}]
-												}
-											}
-										}]
-									}
-								}
+								"_typeName": "const stappler::geom::Color4F",
+								"kind": "unexposed",
+								"name": "const stappler::geom::Color4F"
 							},
 							"reference_kind": "lvalue"
 						}
@@ -12404,98 +12016,18 @@
 							}],
 							"kind": "unexposed",
 							"type": {
-								"_typeName": "stappler::xenolith::ColorMask",
-								"kind": "user_defined",
-								"target": {
-									"name": "stappler::xenolith::ColorMask",
-									"objects": [{
-										"_fullName": "::stappler::xenolith::ColorMask",
-										"_kind": "type alias",
-										"_name": "ColorMask",
-										"id": 3164166260,
-										"kind": "type alias",
-										"name": "ColorMask",
-										"underlying_type": {
-											"_typeName": "geom::ColorMask",
-											"kind": "user_defined",
-											"target": {
-												"name": "geom::ColorMask",
-												"objects": [{
-													"_fullName": "::stappler::geom::ColorMask",
-													"_kind": "enum",
-													"_name": "ColorMask",
-													"has_explicit_type": true,
-													"id": 753990925,
-													"is_declaration": false,
-													"is_definition": true,
-													"is_scoped": true,
-													"kind": "enum",
-													"name": "ColorMask",
-													"scope": {
-														"name": "ColorMask"
-													},
-													"semantic_scope": "",
-													"underlying_type": {
-														"_typeName": "uint8_t",
-														"kind": "user_defined",
-														"target": {
-															"name": "uint8_t"
-														}
-													}
-												}]
-											}
-										}
-									}]
-								}
+								"_typeName": "stappler::geom::ColorMask",
+								"kind": "unexposed",
+								"name": "stappler::geom::ColorMask"
 							}
 						},
 						"id": 46947589,
 						"kind": "function parameter",
 						"name": "",
 						"type": {
-							"_typeName": "stappler::xenolith::ColorMask",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::ColorMask",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::ColorMask",
-									"_kind": "type alias",
-									"_name": "ColorMask",
-									"id": 3164166260,
-									"kind": "type alias",
-									"name": "ColorMask",
-									"underlying_type": {
-										"_typeName": "geom::ColorMask",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::ColorMask",
-											"objects": [{
-												"_fullName": "::stappler::geom::ColorMask",
-												"_kind": "enum",
-												"_name": "ColorMask",
-												"has_explicit_type": true,
-												"id": 753990925,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_scoped": true,
-												"kind": "enum",
-												"name": "ColorMask",
-												"scope": {
-													"name": "ColorMask"
-												},
-												"semantic_scope": "",
-												"underlying_type": {
-													"_typeName": "uint8_t",
-													"kind": "user_defined",
-													"target": {
-														"name": "uint8_t"
-													}
-												}
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::ColorMask",
+							"kind": "unexposed",
+							"name": "stappler::geom::ColorMask"
 						}
 					}],
 					"ref_qualifier": "none",
@@ -12505,7 +12037,7 @@
 						"kind": "builtin"
 					},
 					"semantic_scope": "",
-					"signature": "(float,stappler::xenolith::Color4F const&,stappler::xenolith::ColorMask)"
+					"signature": "(float,const stappler::geom::Color4F&,stappler::geom::ColorMask)"
 				}, {
 					"_fullName": "::stappler::xenolith::TintTo::update(float)",
 					"_kind": "member function",
@@ -12735,49 +12267,9 @@
 						}],
 						"kind": "unexposed",
 						"type": {
-							"_typeName": "stappler::xenolith::ColorMask",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::ColorMask",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::ColorMask",
-									"_kind": "type alias",
-									"_name": "ColorMask",
-									"id": 3164166260,
-									"kind": "type alias",
-									"name": "ColorMask",
-									"underlying_type": {
-										"_typeName": "geom::ColorMask",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::ColorMask",
-											"objects": [{
-												"_fullName": "::stappler::geom::ColorMask",
-												"_kind": "enum",
-												"_name": "ColorMask",
-												"has_explicit_type": true,
-												"id": 753990925,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_scoped": true,
-												"kind": "enum",
-												"name": "ColorMask",
-												"scope": {
-													"name": "ColorMask"
-												},
-												"semantic_scope": "",
-												"underlying_type": {
-													"_typeName": "uint8_t",
-													"kind": "user_defined",
-													"target": {
-														"name": "uint8_t"
-													}
-												}
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::ColorMask",
+							"kind": "unexposed",
+							"name": "stappler::geom::ColorMask"
 						}
 					},
 					"id": 3886033791,
@@ -12785,49 +12277,9 @@
 					"kind": "member variable",
 					"name": "_mask",
 					"type": {
-						"_typeName": "stappler::xenolith::ColorMask",
-						"kind": "user_defined",
-						"target": {
-							"name": "stappler::xenolith::ColorMask",
-							"objects": [{
-								"_fullName": "::stappler::xenolith::ColorMask",
-								"_kind": "type alias",
-								"_name": "ColorMask",
-								"id": 3164166260,
-								"kind": "type alias",
-								"name": "ColorMask",
-								"underlying_type": {
-									"_typeName": "geom::ColorMask",
-									"kind": "user_defined",
-									"target": {
-										"name": "geom::ColorMask",
-										"objects": [{
-											"_fullName": "::stappler::geom::ColorMask",
-											"_kind": "enum",
-											"_name": "ColorMask",
-											"has_explicit_type": true,
-											"id": 753990925,
-											"is_declaration": false,
-											"is_definition": true,
-											"is_scoped": true,
-											"kind": "enum",
-											"name": "ColorMask",
-											"scope": {
-												"name": "ColorMask"
-											},
-											"semantic_scope": "",
-											"underlying_type": {
-												"_typeName": "uint8_t",
-												"kind": "user_defined",
-												"target": {
-													"name": "uint8_t"
-												}
-											}
-										}]
-									}
-								}
-							}]
-						}
+						"_typeName": "stappler::geom::ColorMask",
+						"kind": "unexposed",
+						"name": "stappler::geom::ColorMask"
 					}
 				}, {
 					"_fullName": "::stappler::xenolith::TintTo::_to",
@@ -12838,52 +12290,9 @@
 					"kind": "member variable",
 					"name": "_to",
 					"type": {
-						"_typeName": "stappler::xenolith::Color4F",
-						"kind": "user_defined",
-						"target": {
-							"name": "stappler::xenolith::Color4F",
-							"objects": [{
-								"_fullName": "::stappler::xenolith::Color4F",
-								"_kind": "type alias",
-								"_name": "Color4F",
-								"id": 2730567930,
-								"kind": "type alias",
-								"name": "Color4F",
-								"underlying_type": {
-									"_typeName": "geom::Color4F",
-									"kind": "user_defined",
-									"target": {
-										"name": "geom::Color4F",
-										"objects": [{
-											"_fullName": "::stappler::geom::Color4F",
-											"_kind": "class",
-											"_name": "Color4F",
-											"attributes": [{
-												"arguments": [{
-													"kind": "int_literal",
-													"spelling": "16"
-												}],
-												"is_variadic": false,
-												"kind": "alignas_",
-												"name": "alignas"
-											}],
-											"class_kind": "struct",
-											"comment": "\nRGBA color composed of 4 floats.\n",
-											"id": 1425630790,
-											"is_declaration": false,
-											"is_definition": true,
-											"is_final": false,
-											"kind": "class",
-											"name": "Color4F",
-											"scope": {
-												"name": "Color4F"
-											},
-											"semantic_scope": ""
-										}]
-									}
-								}
-							}]
-						}
+						"_typeName": "stappler::geom::Color4F",
+						"kind": "unexposed",
+						"name": "stappler::geom::Color4F"
 					}
 				}, {
 					"_fullName": "::stappler::xenolith::TintTo::_from",
@@ -12894,52 +12303,9 @@
 					"kind": "member variable",
 					"name": "_from",
 					"type": {
-						"_typeName": "stappler::xenolith::Color4F",
-						"kind": "user_defined",
-						"target": {
-							"name": "stappler::xenolith::Color4F",
-							"objects": [{
-								"_fullName": "::stappler::xenolith::Color4F",
-								"_kind": "type alias",
-								"_name": "Color4F",
-								"id": 2730567930,
-								"kind": "type alias",
-								"name": "Color4F",
-								"underlying_type": {
-									"_typeName": "geom::Color4F",
-									"kind": "user_defined",
-									"target": {
-										"name": "geom::Color4F",
-										"objects": [{
-											"_fullName": "::stappler::geom::Color4F",
-											"_kind": "class",
-											"_name": "Color4F",
-											"attributes": [{
-												"arguments": [{
-													"kind": "int_literal",
-													"spelling": "16"
-												}],
-												"is_variadic": false,
-												"kind": "alignas_",
-												"name": "alignas"
-											}],
-											"class_kind": "struct",
-											"comment": "\nRGBA color composed of 4 floats.\n",
-											"id": 1425630790,
-											"is_declaration": false,
-											"is_definition": true,
-											"is_final": false,
-											"kind": "class",
-											"name": "Color4F",
-											"scope": {
-												"name": "Color4F"
-											},
-											"semantic_scope": ""
-										}]
-									}
-								}
-							}]
-						}
+						"_typeName": "stappler::geom::Color4F",
+						"kind": "unexposed",
+						"name": "stappler::geom::Color4F"
 					}
 				}],
 				"class_kind": "class",
@@ -14805,12 +14171,12 @@
 					"semantic_scope": "",
 					"signature": "()"
 				}, {
-					"_fullName": "::stappler::xenolith::MoveTo::init(float,stappler::xenolith::Vec2 const&)",
+					"_fullName": "::stappler::xenolith::MoveTo::init(float,const stappler::geom::Vec2&)",
 					"_kind": "member function",
 					"_name": "init",
 					"body_kind": "declaration",
 					"cv_qualifier": "none",
-					"id": 3731173902,
+					"id": 531014936,
 					"is_consteval": false,
 					"is_constexpr": false,
 					"is_declaration": true,
@@ -14839,50 +14205,12 @@
 						"kind": "function parameter",
 						"name": "position",
 						"type": {
-							"_typeName": "stappler::xenolith::Vec2 const&",
+							"_typeName": "const stappler::geom::Vec2&",
 							"kind": "reference",
 							"referee": {
-								"_typeName": "stappler::xenolith::Vec2 const",
-								"cv_qualifier": "const",
-								"kind": "cv_qualified",
-								"type": {
-									"_typeName": "stappler::xenolith::Vec2",
-									"kind": "user_defined",
-									"target": {
-										"name": "stappler::xenolith::Vec2",
-										"objects": [{
-											"_fullName": "::stappler::xenolith::Vec2",
-											"_kind": "type alias",
-											"_name": "Vec2",
-											"id": 1910638286,
-											"kind": "type alias",
-											"name": "Vec2",
-											"underlying_type": {
-												"_typeName": "geom::Vec2",
-												"kind": "user_defined",
-												"target": {
-													"name": "geom::Vec2",
-													"objects": [{
-														"_fullName": "::stappler::geom::Vec2",
-														"_kind": "class",
-														"_name": "Vec2",
-														"class_kind": "class",
-														"id": 16661423,
-														"is_declaration": false,
-														"is_definition": true,
-														"is_final": false,
-														"kind": "class",
-														"name": "Vec2",
-														"scope": {
-															"name": "Vec2"
-														},
-														"semantic_scope": ""
-													}]
-												}
-											}
-										}]
-									}
-								}
+								"_typeName": "const stappler::geom::Vec2",
+								"kind": "unexposed",
+								"name": "const stappler::geom::Vec2"
 							},
 							"reference_kind": "lvalue"
 						}
@@ -14894,14 +14222,14 @@
 						"kind": "builtin"
 					},
 					"semantic_scope": "",
-					"signature": "(float,stappler::xenolith::Vec2 const&)"
+					"signature": "(float,const stappler::geom::Vec2&)"
 				}, {
-					"_fullName": "::stappler::xenolith::MoveTo::init(float,stappler::xenolith::Vec3 const&)",
+					"_fullName": "::stappler::xenolith::MoveTo::init(float,const stappler::geom::Vec3&)",
 					"_kind": "member function",
 					"_name": "init",
 					"body_kind": "declaration",
 					"cv_qualifier": "none",
-					"id": 1508417802,
+					"id": 3350046313,
 					"is_consteval": false,
 					"is_constexpr": false,
 					"is_declaration": true,
@@ -14930,50 +14258,12 @@
 						"kind": "function parameter",
 						"name": "position",
 						"type": {
-							"_typeName": "stappler::xenolith::Vec3 const&",
+							"_typeName": "const stappler::geom::Vec3&",
 							"kind": "reference",
 							"referee": {
-								"_typeName": "stappler::xenolith::Vec3 const",
-								"cv_qualifier": "const",
-								"kind": "cv_qualified",
-								"type": {
-									"_typeName": "stappler::xenolith::Vec3",
-									"kind": "user_defined",
-									"target": {
-										"name": "stappler::xenolith::Vec3",
-										"objects": [{
-											"_fullName": "::stappler::xenolith::Vec3",
-											"_kind": "type alias",
-											"_name": "Vec3",
-											"id": 2651073409,
-											"kind": "type alias",
-											"name": "Vec3",
-											"underlying_type": {
-												"_typeName": "geom::Vec3",
-												"kind": "user_defined",
-												"target": {
-													"name": "geom::Vec3",
-													"objects": [{
-														"_fullName": "::stappler::geom::Vec3",
-														"_kind": "class",
-														"_name": "Vec3",
-														"class_kind": "class",
-														"id": 748569271,
-														"is_declaration": false,
-														"is_definition": true,
-														"is_final": false,
-														"kind": "class",
-														"name": "Vec3",
-														"scope": {
-															"name": "Vec3"
-														},
-														"semantic_scope": ""
-													}]
-												}
-											}
-										}]
-									}
-								}
+								"_typeName": "const stappler::geom::Vec3",
+								"kind": "unexposed",
+								"name": "const stappler::geom::Vec3"
 							},
 							"reference_kind": "lvalue"
 						}
@@ -14985,7 +14275,7 @@
 						"kind": "builtin"
 					},
 					"semantic_scope": "",
-					"signature": "(float,stappler::xenolith::Vec3 const&)"
+					"signature": "(float,const stappler::geom::Vec3&)"
 				}, {
 					"_fullName": "::stappler::xenolith::MoveTo::startWithTarget(stappler::xenolith::Node*)",
 					"_kind": "member function",
@@ -15207,42 +14497,9 @@
 					"kind": "member variable",
 					"name": "_startPosition",
 					"type": {
-						"_typeName": "stappler::xenolith::Vec3",
-						"kind": "user_defined",
-						"target": {
-							"name": "stappler::xenolith::Vec3",
-							"objects": [{
-								"_fullName": "::stappler::xenolith::Vec3",
-								"_kind": "type alias",
-								"_name": "Vec3",
-								"id": 2651073409,
-								"kind": "type alias",
-								"name": "Vec3",
-								"underlying_type": {
-									"_typeName": "geom::Vec3",
-									"kind": "user_defined",
-									"target": {
-										"name": "geom::Vec3",
-										"objects": [{
-											"_fullName": "::stappler::geom::Vec3",
-											"_kind": "class",
-											"_name": "Vec3",
-											"class_kind": "class",
-											"id": 748569271,
-											"is_declaration": false,
-											"is_definition": true,
-											"is_final": false,
-											"kind": "class",
-											"name": "Vec3",
-											"scope": {
-												"name": "Vec3"
-											},
-											"semantic_scope": ""
-										}]
-									}
-								}
-							}]
-						}
+						"_typeName": "stappler::geom::Vec3",
+						"kind": "unexposed",
+						"name": "stappler::geom::Vec3"
 					}
 				}, {
 					"_fullName": "::stappler::xenolith::MoveTo::_endPosition",
@@ -15253,42 +14510,9 @@
 					"kind": "member variable",
 					"name": "_endPosition",
 					"type": {
-						"_typeName": "stappler::xenolith::Vec3",
-						"kind": "user_defined",
-						"target": {
-							"name": "stappler::xenolith::Vec3",
-							"objects": [{
-								"_fullName": "::stappler::xenolith::Vec3",
-								"_kind": "type alias",
-								"_name": "Vec3",
-								"id": 2651073409,
-								"kind": "type alias",
-								"name": "Vec3",
-								"underlying_type": {
-									"_typeName": "geom::Vec3",
-									"kind": "user_defined",
-									"target": {
-										"name": "geom::Vec3",
-										"objects": [{
-											"_fullName": "::stappler::geom::Vec3",
-											"_kind": "class",
-											"_name": "Vec3",
-											"class_kind": "class",
-											"id": 748569271,
-											"is_declaration": false,
-											"is_definition": true,
-											"is_final": false,
-											"kind": "class",
-											"name": "Vec3",
-											"scope": {
-												"name": "Vec3"
-											},
-											"semantic_scope": ""
-										}]
-									}
-								}
-							}]
-						}
+						"_typeName": "stappler::geom::Vec3",
+						"kind": "unexposed",
+						"name": "stappler::geom::Vec3"
 					}
 				}],
 				"class_kind": "class",
@@ -15552,12 +14776,12 @@
 					"semantic_scope": "",
 					"signature": "(float,float)"
 				}, {
-					"_fullName": "::stappler::xenolith::ScaleTo::init(float,stappler::xenolith::Vec3 const&)",
+					"_fullName": "::stappler::xenolith::ScaleTo::init(float,const stappler::geom::Vec3&)",
 					"_kind": "member function",
 					"_name": "init",
 					"body_kind": "declaration",
 					"cv_qualifier": "none",
-					"id": 3783547030,
+					"id": 330329049,
 					"is_consteval": false,
 					"is_constexpr": false,
 					"is_declaration": true,
@@ -15586,50 +14810,12 @@
 						"kind": "function parameter",
 						"name": "scale",
 						"type": {
-							"_typeName": "stappler::xenolith::Vec3 const&",
+							"_typeName": "const stappler::geom::Vec3&",
 							"kind": "reference",
 							"referee": {
-								"_typeName": "stappler::xenolith::Vec3 const",
-								"cv_qualifier": "const",
-								"kind": "cv_qualified",
-								"type": {
-									"_typeName": "stappler::xenolith::Vec3",
-									"kind": "user_defined",
-									"target": {
-										"name": "stappler::xenolith::Vec3",
-										"objects": [{
-											"_fullName": "::stappler::xenolith::Vec3",
-											"_kind": "type alias",
-											"_name": "Vec3",
-											"id": 2651073409,
-											"kind": "type alias",
-											"name": "Vec3",
-											"underlying_type": {
-												"_typeName": "geom::Vec3",
-												"kind": "user_defined",
-												"target": {
-													"name": "geom::Vec3",
-													"objects": [{
-														"_fullName": "::stappler::geom::Vec3",
-														"_kind": "class",
-														"_name": "Vec3",
-														"class_kind": "class",
-														"id": 748569271,
-														"is_declaration": false,
-														"is_definition": true,
-														"is_final": false,
-														"kind": "class",
-														"name": "Vec3",
-														"scope": {
-															"name": "Vec3"
-														},
-														"semantic_scope": ""
-													}]
-												}
-											}
-										}]
-									}
-								}
+								"_typeName": "const stappler::geom::Vec3",
+								"kind": "unexposed",
+								"name": "const stappler::geom::Vec3"
 							},
 							"reference_kind": "lvalue"
 						}
@@ -15641,7 +14827,7 @@
 						"kind": "builtin"
 					},
 					"semantic_scope": "",
-					"signature": "(float,stappler::xenolith::Vec3 const&)"
+					"signature": "(float,const stappler::geom::Vec3&)"
 				}, {
 					"_fullName": "::stappler::xenolith::ScaleTo::startWithTarget(stappler::xenolith::Node*)",
 					"_kind": "member function",
@@ -15863,42 +15049,9 @@
 					"kind": "member variable",
 					"name": "_startScale",
 					"type": {
-						"_typeName": "stappler::xenolith::Vec3",
-						"kind": "user_defined",
-						"target": {
-							"name": "stappler::xenolith::Vec3",
-							"objects": [{
-								"_fullName": "::stappler::xenolith::Vec3",
-								"_kind": "type alias",
-								"_name": "Vec3",
-								"id": 2651073409,
-								"kind": "type alias",
-								"name": "Vec3",
-								"underlying_type": {
-									"_typeName": "geom::Vec3",
-									"kind": "user_defined",
-									"target": {
-										"name": "geom::Vec3",
-										"objects": [{
-											"_fullName": "::stappler::geom::Vec3",
-											"_kind": "class",
-											"_name": "Vec3",
-											"class_kind": "class",
-											"id": 748569271,
-											"is_declaration": false,
-											"is_definition": true,
-											"is_final": false,
-											"kind": "class",
-											"name": "Vec3",
-											"scope": {
-												"name": "Vec3"
-											},
-											"semantic_scope": ""
-										}]
-									}
-								}
-							}]
-						}
+						"_typeName": "stappler::geom::Vec3",
+						"kind": "unexposed",
+						"name": "stappler::geom::Vec3"
 					}
 				}, {
 					"_fullName": "::stappler::xenolith::ScaleTo::_endScale",
@@ -15909,42 +15062,9 @@
 					"kind": "member variable",
 					"name": "_endScale",
 					"type": {
-						"_typeName": "stappler::xenolith::Vec3",
-						"kind": "user_defined",
-						"target": {
-							"name": "stappler::xenolith::Vec3",
-							"objects": [{
-								"_fullName": "::stappler::xenolith::Vec3",
-								"_kind": "type alias",
-								"_name": "Vec3",
-								"id": 2651073409,
-								"kind": "type alias",
-								"name": "Vec3",
-								"underlying_type": {
-									"_typeName": "geom::Vec3",
-									"kind": "user_defined",
-									"target": {
-										"name": "geom::Vec3",
-										"objects": [{
-											"_fullName": "::stappler::geom::Vec3",
-											"_kind": "class",
-											"_name": "Vec3",
-											"class_kind": "class",
-											"id": 748569271,
-											"is_declaration": false,
-											"is_definition": true,
-											"is_final": false,
-											"kind": "class",
-											"name": "Vec3",
-											"scope": {
-												"name": "Vec3"
-											},
-											"semantic_scope": ""
-										}]
-									}
-								}
-							}]
-						}
+						"_typeName": "stappler::geom::Vec3",
+						"kind": "unexposed",
+						"name": "stappler::geom::Vec3"
 					}
 				}],
 				"class_kind": "class",
@@ -16160,12 +15280,12 @@
 					"semantic_scope": "",
 					"signature": "()"
 				}, {
-					"_fullName": "::stappler::xenolith::ResizeTo::init(float,stappler::xenolith::Size2 const&)",
+					"_fullName": "::stappler::xenolith::ResizeTo::init(float,const stappler::geom::Size2&)",
 					"_kind": "member function",
 					"_name": "init",
 					"body_kind": "declaration",
 					"cv_qualifier": "none",
-					"id": 4148241019,
+					"id": 368687314,
 					"is_consteval": false,
 					"is_constexpr": false,
 					"is_declaration": true,
@@ -16194,50 +15314,12 @@
 						"kind": "function parameter",
 						"name": "position",
 						"type": {
-							"_typeName": "stappler::xenolith::Size2 const&",
+							"_typeName": "const stappler::geom::Size2&",
 							"kind": "reference",
 							"referee": {
-								"_typeName": "stappler::xenolith::Size2 const",
-								"cv_qualifier": "const",
-								"kind": "cv_qualified",
-								"type": {
-									"_typeName": "stappler::xenolith::Size2",
-									"kind": "user_defined",
-									"target": {
-										"name": "stappler::xenolith::Size2",
-										"objects": [{
-											"_fullName": "::stappler::xenolith::Size2",
-											"_kind": "type alias",
-											"_name": "Size2",
-											"id": 3876930682,
-											"kind": "type alias",
-											"name": "Size2",
-											"underlying_type": {
-												"_typeName": "geom::Size2",
-												"kind": "user_defined",
-												"target": {
-													"name": "geom::Size2",
-													"objects": [{
-														"_fullName": "::stappler::geom::Size2",
-														"_kind": "class",
-														"_name": "Size2",
-														"class_kind": "struct",
-														"id": 1488533902,
-														"is_declaration": false,
-														"is_definition": true,
-														"is_final": false,
-														"kind": "class",
-														"name": "Size2",
-														"scope": {
-															"name": "Size2"
-														},
-														"semantic_scope": ""
-													}]
-												}
-											}
-										}]
-									}
-								}
+								"_typeName": "const stappler::geom::Size2",
+								"kind": "unexposed",
+								"name": "const stappler::geom::Size2"
 							},
 							"reference_kind": "lvalue"
 						}
@@ -16249,7 +15331,7 @@
 						"kind": "builtin"
 					},
 					"semantic_scope": "",
-					"signature": "(float,stappler::xenolith::Size2 const&)"
+					"signature": "(float,const stappler::geom::Size2&)"
 				}, {
 					"_fullName": "::stappler::xenolith::ResizeTo::startWithTarget(stappler::xenolith::Node*)",
 					"_kind": "member function",
@@ -16471,42 +15553,9 @@
 					"kind": "member variable",
 					"name": "_startSize",
 					"type": {
-						"_typeName": "stappler::xenolith::Size2",
-						"kind": "user_defined",
-						"target": {
-							"name": "stappler::xenolith::Size2",
-							"objects": [{
-								"_fullName": "::stappler::xenolith::Size2",
-								"_kind": "type alias",
-								"_name": "Size2",
-								"id": 3876930682,
-								"kind": "type alias",
-								"name": "Size2",
-								"underlying_type": {
-									"_typeName": "geom::Size2",
-									"kind": "user_defined",
-									"target": {
-										"name": "geom::Size2",
-										"objects": [{
-											"_fullName": "::stappler::geom::Size2",
-											"_kind": "class",
-											"_name": "Size2",
-											"class_kind": "struct",
-											"id": 1488533902,
-											"is_declaration": false,
-											"is_definition": true,
-											"is_final": false,
-											"kind": "class",
-											"name": "Size2",
-											"scope": {
-												"name": "Size2"
-											},
-											"semantic_scope": ""
-										}]
-									}
-								}
-							}]
-						}
+						"_typeName": "stappler::geom::Size2",
+						"kind": "unexposed",
+						"name": "stappler::geom::Size2"
 					}
 				}, {
 					"_fullName": "::stappler::xenolith::ResizeTo::_endSize",
@@ -16517,42 +15566,9 @@
 					"kind": "member variable",
 					"name": "_endSize",
 					"type": {
-						"_typeName": "stappler::xenolith::Size2",
-						"kind": "user_defined",
-						"target": {
-							"name": "stappler::xenolith::Size2",
-							"objects": [{
-								"_fullName": "::stappler::xenolith::Size2",
-								"_kind": "type alias",
-								"_name": "Size2",
-								"id": 3876930682,
-								"kind": "type alias",
-								"name": "Size2",
-								"underlying_type": {
-									"_typeName": "geom::Size2",
-									"kind": "user_defined",
-									"target": {
-										"name": "geom::Size2",
-										"objects": [{
-											"_fullName": "::stappler::geom::Size2",
-											"_kind": "class",
-											"_name": "Size2",
-											"class_kind": "struct",
-											"id": 1488533902,
-											"is_declaration": false,
-											"is_definition": true,
-											"is_final": false,
-											"kind": "class",
-											"name": "Size2",
-											"scope": {
-												"name": "Size2"
-											},
-											"semantic_scope": ""
-										}]
-									}
-								}
-							}]
-						}
+						"_typeName": "stappler::geom::Size2",
+						"kind": "unexposed",
+						"name": "stappler::geom::Size2"
 					}
 				}],
 				"class_kind": "class",

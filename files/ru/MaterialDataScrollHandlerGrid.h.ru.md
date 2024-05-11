@@ -41,7 +41,7 @@ Title: MaterialDataScrollHandlerGrid.h
 Возвращает:
 * bool
 
-# ::stappler::xenolith::material2d::DataScrollHandlerGrid::init(stappler::xenolith::material2d::DataScroll*,stappler::xenolith::Padding const&)
+# ::stappler::xenolith::material2d::DataScrollHandlerGrid::init(stappler::xenolith::material2d::DataScroll*,const stappler::geom::Padding&)
 
 ## BRIEF
 
@@ -51,7 +51,7 @@ Title: MaterialDataScrollHandlerGrid.h
 
 Параметры:
 * stappler::xenolith::material2d::DataScroll*
-* stappler::xenolith::Padding const&
+* const stappler::geom::Padding&
 
 Возвращает:
 * bool
@@ -230,7 +230,7 @@ Title: MaterialDataScrollHandlerGrid.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::Padding
+Тип: stappler::geom::Padding
 
 
 # ::stappler::xenolith::material2d::DataScrollHandlerGrid::_currentCellSize
@@ -241,7 +241,7 @@ Title: MaterialDataScrollHandlerGrid.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::Size2
+Тип: stappler::geom::Size2
 
 
 # ::stappler::xenolith::material2d::DataScrollHandlerGrid::_currentCols

@@ -1,14 +1,14 @@
 Title: XL2dRoundedProgress.h
 
 
-# XENOLITH_RENDERER_GUI2D_XL2DROUNDEDPROGRESS_H_
+# XENOLITH_RENDERER_BASIC2D_XL2DROUNDEDPROGRESS_H_
 
 ## BRIEF
 
 ## CONTENT
 
 
-# ::stappler::xenolith::gui2d::RoundedProgress
+# ::stappler::xenolith::basic2d::RoundedProgress
 
 ## BRIEF
 
@@ -18,7 +18,7 @@ Title: XL2dRoundedProgress.h
 * LayerRounded
 
 
-# ::stappler::xenolith::gui2d::RoundedProgress::Layout
+# ::stappler::xenolith::basic2d::RoundedProgress::Layout
 
 ## BRIEF
 
@@ -32,7 +32,7 @@ Title: XL2dRoundedProgress.h
 * Horizontal
 
 
-# ::stappler::xenolith::gui2d::RoundedProgress::~RoundedProgress()
+# ::stappler::xenolith::basic2d::RoundedProgress::~RoundedProgress()
 
 ## BRIEF
 
@@ -41,7 +41,7 @@ Title: XL2dRoundedProgress.h
 Доступ: public
 
 
-# ::stappler::xenolith::gui2d::RoundedProgress::init(stappler::xenolith::gui2d::RoundedProgress::Layout)
+# ::stappler::xenolith::basic2d::RoundedProgress::init(stappler::xenolith::basic2d::RoundedProgress::Layout)
 
 ## BRIEF
 
@@ -50,12 +50,12 @@ Title: XL2dRoundedProgress.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::gui2d::RoundedProgress::Layout
+* stappler::xenolith::basic2d::RoundedProgress::Layout
 
 Возвращает:
 * bool
 
-# ::stappler::xenolith::gui2d::RoundedProgress::onContentSizeDirty()
+# ::stappler::xenolith::basic2d::RoundedProgress::onContentSizeDirty()
 
 ## BRIEF
 
@@ -64,7 +64,7 @@ Title: XL2dRoundedProgress.h
 Доступ: public
 
 
-# ::stappler::xenolith::gui2d::RoundedProgress::setLayout(stappler::xenolith::gui2d::RoundedProgress::Layout)
+# ::stappler::xenolith::basic2d::RoundedProgress::setLayout(stappler::xenolith::basic2d::RoundedProgress::Layout)
 
 ## BRIEF
 
@@ -73,10 +73,10 @@ Title: XL2dRoundedProgress.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::gui2d::RoundedProgress::Layout
+* stappler::xenolith::basic2d::RoundedProgress::Layout
 
 
-# ::stappler::xenolith::gui2d::RoundedProgress::getLayout() const
+# ::stappler::xenolith::basic2d::RoundedProgress::getLayout() const
 
 ## BRIEF
 
@@ -85,9 +85,9 @@ Title: XL2dRoundedProgress.h
 Доступ: public
 
 Возвращает:
-* stappler::xenolith::gui2d::RoundedProgress::Layout
+* stappler::xenolith::basic2d::RoundedProgress::Layout
 
-# ::stappler::xenolith::gui2d::RoundedProgress::setInverted(bool)
+# ::stappler::xenolith::basic2d::RoundedProgress::setInverted(bool)
 
 ## BRIEF
 
@@ -99,7 +99,7 @@ Title: XL2dRoundedProgress.h
 * bool
 
 
-# ::stappler::xenolith::gui2d::RoundedProgress::isInverted() const
+# ::stappler::xenolith::basic2d::RoundedProgress::isInverted() const
 
 ## BRIEF
 
@@ -110,7 +110,7 @@ Title: XL2dRoundedProgress.h
 Возвращает:
 * bool
 
-# ::stappler::xenolith::gui2d::RoundedProgress::setBorderRadius(float)
+# ::stappler::xenolith::basic2d::RoundedProgress::setBorderRadius(float)
 
 ## BRIEF
 
@@ -122,7 +122,7 @@ Title: XL2dRoundedProgress.h
 * float
 
 
-# ::stappler::xenolith::gui2d::RoundedProgress::setProgress(float,float)
+# ::stappler::xenolith::basic2d::RoundedProgress::setProgress(float,float)
 
 ## BRIEF
 
@@ -135,7 +135,7 @@ Title: XL2dRoundedProgress.h
 * float
 
 
-# ::stappler::xenolith::gui2d::RoundedProgress::getProgress() const
+# ::stappler::xenolith::basic2d::RoundedProgress::getProgress() const
 
 ## BRIEF
 
@@ -146,7 +146,7 @@ Title: XL2dRoundedProgress.h
 Возвращает:
 * float
 
-# ::stappler::xenolith::gui2d::RoundedProgress::setBarScale(float)
+# ::stappler::xenolith::basic2d::RoundedProgress::setBarScale(float)
 
 ## BRIEF
 
@@ -158,7 +158,7 @@ Title: XL2dRoundedProgress.h
 * float
 
 
-# ::stappler::xenolith::gui2d::RoundedProgress::getBarScale() const
+# ::stappler::xenolith::basic2d::RoundedProgress::getBarScale() const
 
 ## BRIEF
 
@@ -169,7 +169,7 @@ Title: XL2dRoundedProgress.h
 Возвращает:
 * float
 
-# ::stappler::xenolith::gui2d::RoundedProgress::setLineColor(stappler::xenolith::Color4F const&)
+# ::stappler::xenolith::basic2d::RoundedProgress::setLineColor(const stappler::geom::Color4F&)
 
 ## BRIEF
 
@@ -178,34 +178,10 @@ Title: XL2dRoundedProgress.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Color4F const&
+* const stappler::geom::Color4F&
 
 
-# ::stappler::xenolith::gui2d::RoundedProgress::setLineOpacity(float)
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-Параметры:
-* float
-
-
-# ::stappler::xenolith::gui2d::RoundedProgress::setBarColor(stappler::xenolith::Color4F const&)
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-Параметры:
-* stappler::xenolith::Color4F const&
-
-
-# ::stappler::xenolith::gui2d::RoundedProgress::setBarOpacity(float)
+# ::stappler::xenolith::basic2d::RoundedProgress::setLineOpacity(float)
 
 ## BRIEF
 
@@ -217,7 +193,31 @@ Title: XL2dRoundedProgress.h
 * float
 
 
-# ::stappler::xenolith::gui2d::RoundedProgress::_layout
+# ::stappler::xenolith::basic2d::RoundedProgress::setBarColor(const stappler::geom::Color4F&)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* const stappler::geom::Color4F&
+
+
+# ::stappler::xenolith::basic2d::RoundedProgress::setBarOpacity(float)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* float
+
+
+# ::stappler::xenolith::basic2d::RoundedProgress::_layout
 
 ## BRIEF
 
@@ -225,10 +225,10 @@ Title: XL2dRoundedProgress.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::gui2d::RoundedProgress::Layout
+Тип: stappler::xenolith::basic2d::RoundedProgress::Layout
 
 
-# ::stappler::xenolith::gui2d::RoundedProgress::_inverted
+# ::stappler::xenolith::basic2d::RoundedProgress::_inverted
 
 ## BRIEF
 
@@ -239,7 +239,7 @@ Title: XL2dRoundedProgress.h
 Тип: bool
 
 
-# ::stappler::xenolith::gui2d::RoundedProgress::_barScale
+# ::stappler::xenolith::basic2d::RoundedProgress::_barScale
 
 ## BRIEF
 
@@ -250,7 +250,7 @@ Title: XL2dRoundedProgress.h
 Тип: float
 
 
-# ::stappler::xenolith::gui2d::RoundedProgress::_progress
+# ::stappler::xenolith::basic2d::RoundedProgress::_progress
 
 ## BRIEF
 
@@ -261,7 +261,7 @@ Title: XL2dRoundedProgress.h
 Тип: float
 
 
-# ::stappler::xenolith::gui2d::RoundedProgress::_bar
+# ::stappler::xenolith::basic2d::RoundedProgress::_bar
 
 ## BRIEF
 
@@ -269,4 +269,4 @@ Title: XL2dRoundedProgress.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::gui2d::LayerRounded*
+Тип: stappler::xenolith::basic2d::LayerRounded*

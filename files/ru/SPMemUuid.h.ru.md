@@ -323,3 +323,16 @@ Title: SPMemUuid.h
 Хранилище UUID
 
 Тип: uuid_t
+
+# ::stappler::memory::uuid::view() const
+
+## BRIEF
+
+Возвращает отображение для данных UUID
+
+## CONTENT
+
+Возвращает отображение для данных UUID
+
+Возвращает:
+* stappler::BytesView

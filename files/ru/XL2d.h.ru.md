@@ -64,7 +64,7 @@ Title: XL2d.h
 ## CONTENT
 
 
-# ::stappler::xenolith::basic2d::Circle2DData
+# ::stappler::xenolith::basic2d::Sdf2DObjectData
 
 ## BRIEF
 
@@ -78,21 +78,7 @@ Title: XL2d.h
 ## CONTENT
 
 
-# ::stappler::xenolith::basic2d::Triangle2DData
-
-## BRIEF
-
-## CONTENT
-
-
 # ::stappler::xenolith::basic2d::Triangle2DIndex
-
-## BRIEF
-
-## CONTENT
-
-
-# ::stappler::xenolith::basic2d::Rect2DData
 
 ## BRIEF
 
@@ -106,21 +92,7 @@ Title: XL2d.h
 ## CONTENT
 
 
-# ::stappler::xenolith::basic2d::RoundedRect2DData
-
-## BRIEF
-
-## CONTENT
-
-
 # ::stappler::xenolith::basic2d::RoundedRect2DIndex
-
-## BRIEF
-
-## CONTENT
-
-
-# ::stappler::xenolith::basic2d::Polygon2DData
 
 ## BRIEF
 
@@ -263,6 +235,24 @@ Title: XL2d.h
 Тип: stappler::xenolith::StateId
 
 
+# ::stappler::xenolith::basic2d::VertexSpan::gradientOffset
+
+## BRIEF
+
+## CONTENT
+
+Тип: uint32_t
+
+
+# ::stappler::xenolith::basic2d::VertexSpan::gradientCount
+
+## BRIEF
+
+## CONTENT
+
+Тип: uint32_t
+
+
 # ::stappler::xenolith::basic2d::VertexData
 
 ## BRIEF
@@ -304,7 +294,7 @@ Title: XL2d.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::Mat4
+Тип: stappler::geom::Mat4
 
 
 # ::stappler::xenolith::basic2d::TransformVertexData::data
@@ -343,7 +333,7 @@ Title: XL2d.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::Vec2
+Тип: stappler::geom::Vec2
 
 
 # ::stappler::xenolith::basic2d::SdfCircle2D
@@ -381,7 +371,7 @@ Title: XL2d.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::Size2
+Тип: stappler::geom::Size2
 
 
 # ::stappler::xenolith::basic2d::SdfRoundedRect2D
@@ -400,7 +390,7 @@ Title: XL2d.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::Size2
+Тип: stappler::geom::Size2
 
 
 # ::stappler::xenolith::basic2d::SdfRoundedRect2D::radius
@@ -409,7 +399,7 @@ Title: XL2d.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::Vec4
+Тип: stappler::geom::Vec4
 
 
 # ::stappler::xenolith::basic2d::SdfTriangle2D
@@ -428,7 +418,7 @@ Title: XL2d.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::Vec2
+Тип: stappler::geom::Vec2
 
 
 # ::stappler::xenolith::basic2d::SdfTriangle2D::b
@@ -437,7 +427,7 @@ Title: XL2d.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::Vec2
+Тип: stappler::geom::Vec2
 
 
 # ::stappler::xenolith::basic2d::SdfTriangle2D::c
@@ -446,7 +436,7 @@ Title: XL2d.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::Vec2
+Тип: stappler::geom::Vec2
 
 
 # ::stappler::xenolith::basic2d::SdfPolygon2D
@@ -462,7 +452,7 @@ Title: XL2d.h
 
 ## CONTENT
 
-Тип: SpanView<stappler::xenolith::Vec2>
+Тип: SpanView<stappler::geom::Vec2>
 
 
 # ::stappler::xenolith::basic2d::SdfPrimitive2DHeader
@@ -586,7 +576,7 @@ Title: XL2d.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::Color4F
+Тип: stappler::geom::Color4F
 
 
 # ::stappler::xenolith::basic2d::ShadowLightInput::ambientLightCount
@@ -661,30 +651,54 @@ Title: XL2d.h
 Тип: stappler::xenolith::basic2d::DirectLightData[16]
 
 
-# ::stappler::xenolith::basic2d::ShadowLightInput::addAmbientLight(stappler::xenolith::Vec4 const&,stappler::xenolith::Color4F const&,bool)
+# ::stappler::xenolith::basic2d::ShadowLightInput::addAmbientLight(const stappler::geom::Vec4&,const stappler::geom::Color4F&,bool)
 
 ## BRIEF
 
 ## CONTENT
 
 Параметры:
-* stappler::xenolith::Vec4 const&
-* stappler::xenolith::Color4F const&
+* const stappler::geom::Vec4&
+* const stappler::geom::Color4F&
 * bool
 
 Возвращает:
 * bool
 
-# ::stappler::xenolith::basic2d::ShadowLightInput::addDirectLight(stappler::xenolith::Vec4 const&,stappler::xenolith::Color4F const&,stappler::xenolith::Vec4 const&)
+# ::stappler::xenolith::basic2d::ShadowLightInput::addDirectLight(const stappler::geom::Vec4&,const stappler::geom::Color4F&,const stappler::geom::Vec4&)
 
 ## BRIEF
 
 ## CONTENT
 
 Параметры:
-* stappler::xenolith::Vec4 const&
-* stappler::xenolith::Color4F const&
-* stappler::xenolith::Vec4 const&
+* const stappler::geom::Vec4&
+* const stappler::geom::Color4F&
+* const stappler::geom::Vec4&
 
 Возвращает:
 * bool
+
+# ::stappler::xenolith::basic2d::ShadowLightInput::getShadowExtent(stappler::geom::Size2) const
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* stappler::geom::Size2
+
+Возвращает:
+* stappler::geom::Extent2
+
+# ::stappler::xenolith::basic2d::ShadowLightInput::getShadowSize(stappler::geom::Size2) const
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* stappler::geom::Size2
+
+Возвращает:
+* stappler::geom::Size2

@@ -17,6 +17,9 @@ Title: XLIcons.h
 Значения:
 * None
 * Empty
+* Stappler_CursorIcon
+* Stappler_SelectioinStartIcon
+* Stappler_SelectioinEndIcon
 * Dynamic_Loader
 * Dynamic_Nav
 * Dynamic_DownloadProgress

@@ -12,7 +12,7 @@ Title: SPHtmlParser.h
 Заголовок HTML-парсера
 
 
-# ::stappler::html::parse<typename,typename,typename>(ReaderType&,StringReader const&,bool,bool)
+# ::stappler::html::parse<typename,typename,typename>(ReaderType&,StringReader const&,bool)
 
 ## BRIEF
 
@@ -31,7 +31,6 @@ Title: SPHtmlParser.h
 * ReaderType& - объект класса, выполняющего разбор
 * StringReader const& - строка, содержащая код HTML/XML
 * bool - true - читать только начальное дерево тегов, останавливать разбор по его завершению, false - читать до конца строки
-* bool - true - приводить теги к нижнему регистру автоматически
 
 Основа для чтения результата разбора может выглядеть так:
 
@@ -67,6 +66,18 @@ struct Reader {
 
 	inline void onTagContent(Parser &p, Tag &tag, StringReader &s) {
 		log::vtext("onTagContent", tag.name, ": ", s);
+	}
+	
+	inline void onSchemeTag(Parser &p, Tag &tag, StringReader &name, StringReader &value) {
+	
+	}
+	
+	inline void onCommentTag(Parser &p, Tag &tag, StringReader &comment) {
+	
+	}
+	
+	inline void onTagAttributeList(Parser &p, Tag &tag, StringReader &fullAttrList) {
+	
 	}
 };
 ```
@@ -636,59 +647,6 @@ struct Reader {
 
 Результат теста на существование метода `onReadAttributeValue`. true если метод определён в целевом классе.
 
-# ::stappler::html::ParserTraits<typename>::CallTest_shouldLowercaseTokens<typename>(typeof (& C::shouldLowercaseTokens))
-
-## BRIEF
-
-Проверяет, доступен ли метод `shouldLowercaseTokens`
-
-## CONTENT
-
-Доступ: private
-
-Проверяет, доступен ли метод `shouldLowercaseTokens`
-
-Параметры шаблона:
-* typename C - класс, получающий результат разбора HTML/XML
-
-Параметры:
-* typeof (& C::shouldLowercaseTokens) - указатель на метод `shouldLowercaseTokens` в целевом классе
-
-Возвращает:
-* success - сигнальное значение успешного теста
-
-# ::stappler::html::ParserTraits<typename>::CallTest_shouldLowercaseTokens<typename>()
-
-## BRIEF
-
-Проверяет, доступен ли метод `shouldLowercaseTokens`
-
-## CONTENT
-
-Доступ: private
-
-Проверяет, доступен ли метод `shouldLowercaseTokens`
-
-Параметры шаблона:
-* typename C - класс, получающий результат разбора HTML/XML
-
-Возвращает:
-* failure - сигнальное значение провала теста
-
-# ::stappler::html::ParserTraits<typename>::shouldLowercaseTokens
-
-## BRIEF
-
-Результат теста на существование метода `shouldLowercaseTokens`
-
-## CONTENT
-
-Доступ: public
-
-Тип: bool const
-
-Результат теста на существование метода `shouldLowercaseTokens`. true если метод определён в целевом классе.
-
 # ::stappler::html::ParserTraits<typename>::CallTest_shouldParseTag<typename>(typeof (& C::shouldParseTag))
 
 ## BRIEF
@@ -742,7 +700,7 @@ struct Reader {
 
 Результат теста на существование метода `shouldParseTag`. true если метод определён в целевом классе.
 
-# ::stappler::html::Tag_readName<typename>(StringReader&,bool)
+# ::stappler::html::Tag_readName<typename>(StringReader&)
 
 ## BRIEF
 
@@ -757,12 +715,11 @@ struct Reader {
 
 Параметры:
 * StringReader& - строка, из которой читается имя
-* bool - true если содержание строки не может быть изменено
 
 Возвращает:
 * StringReader - прочитанное имя тега
 
-# ::stappler::html::Tag_readAttrName<typename>(StringReader&,bool)
+# ::stappler::html::Tag_readAttrName<typename>(StringReader&)
 
 ## BRIEF
 
@@ -777,12 +734,11 @@ struct Reader {
 
 Параметры:
 * StringReader& - строка, из которой читается имя
-* bool - true если содержание строки не может быть изменено
 
 Возвращает:
 * StringReader - прочитанное имя атрибута
 
-# ::stappler::html::Tag_readAttrValue<typename>(StringReader&,bool)
+# ::stappler::html::Tag_readAttrValue<typename>(StringReader&)
 
 ## BRIEF
 
@@ -797,7 +753,6 @@ struct Reader {
 
 Параметры:
 * StringReader& - строка, из которой читается имя
-* bool - true если содержание строки не может быть изменено
 
 Возвращает:
 * StringReader - прочитанное значение атрибута
@@ -1258,18 +1213,6 @@ true если у тега есть тексовое содержимое
 Возвращает:
 * bool - true если тег должен быть прочитан.
 
-# ::stappler::html::Parser<typename,typename,typename,typename>::lowercase
-
-## BRIEF
-
-Необходимо ли приводить теги к нихнему регистру
-
-## CONTENT
-
-Тип: bool
-
-true если необходимо приводить теги к нихнему регистру
-
 # ::stappler::html::Parser<typename,typename,typename,typename>::canceled
 
 ## BRIEF
@@ -1319,3 +1262,307 @@ true если процесс чтения был заверёшн извне
 Тип: memory::vector<TagType>
 
 Стек тегов. Тег добавляется на стек, когда чтение ведётся внутри его контента
+
+# ::stappler::html::ParserTraits<typename>::CallTest_onSchemeTag<typename>(typeof (& C::onSchemeTag))
+
+## BRIEF
+
+Проверяет, доступен ли метод `onSchemeTag`
+
+## CONTENT
+
+Доступ: private
+
+Проверяет, доступен ли метод `onSchemeTag`
+
+Параметры шаблона:
+* typename C
+
+Параметры:
+* typeof (& C::onSchemeTag)
+
+Возвращает:
+* success
+
+# ::stappler::html::ParserTraits<typename>::CallTest_onSchemeTag<typename>()
+
+## BRIEF
+
+Проверяет, доступен ли метод `onSchemeTag`
+
+## CONTENT
+
+Доступ: private
+
+Проверяет, доступен ли метод `onSchemeTag`
+
+Параметры шаблона:
+* typename C
+
+Возвращает:
+* failure
+
+# ::stappler::html::ParserTraits<typename>::onSchemeTag
+
+## BRIEF
+
+Результат проверки на доступность метода `onSchemeTag`
+
+## CONTENT
+
+Доступ: public
+
+Результат проверки на доступность метода `onSchemeTag`
+
+Тип: bool const
+
+# ::stappler::html::ParserTraits<typename>::CallTest_onCommentTag<typename>(typeof (& C::onCommentTag))
+
+## BRIEF
+
+Проверяет, доступен ли метод `onCommentTag`
+
+## CONTENT
+
+Доступ: private
+
+Проверяет, доступен ли метод `onCommentTag`
+
+Параметры шаблона:
+* typename C
+
+Параметры:
+* typeof (& C::onCommentTag)
+
+Возвращает:
+* success
+
+# ::stappler::html::ParserTraits<typename>::CallTest_onCommentTag<typename>()
+
+## BRIEF
+
+Проверяет, доступен ли метод `onCommentTag`
+
+## CONTENT
+
+Доступ: private
+
+Проверяет, доступен ли метод `onCommentTag`
+
+Параметры шаблона:
+* typename C
+
+Возвращает:
+* failure
+
+# ::stappler::html::ParserTraits<typename>::onCommentTag
+
+## BRIEF
+
+Результат проверки на доступность метода `onCommentTag`
+
+## CONTENT
+
+Доступ: public
+
+Результат проверки на доступность метода `onCommentTag`
+
+Тип: bool const
+
+# ::stappler::html::ParserTraits<typename>::CallTest_onTagAttributeList<typename>(typeof (& C::onTagAttributeList))
+
+## BRIEF
+
+Проверяет, доступен ли метод `onTagAttributeList`
+
+## CONTENT
+
+Доступ: private
+
+Проверяет, доступен ли метод `onTagAttributeList`
+
+Параметры шаблона:
+* typename C
+
+Параметры:
+* typeof (& C::onTagAttributeList)
+
+Возвращает:
+* success
+
+# ::stappler::html::ParserTraits<typename>::CallTest_onTagAttributeList<typename>()
+
+## BRIEF
+
+Проверяет, доступен ли метод `onTagAttributeList`
+
+## CONTENT
+
+Доступ: private
+
+Проверяет, доступен ли метод `onTagAttributeList`
+
+Параметры шаблона:
+* typename C
+
+Возвращает:
+* failure
+
+# ::stappler::html::ParserTraits<typename>::onTagAttributeList
+
+## BRIEF
+
+Результат проверки на доступность метода `onTagAttributeList`
+
+## CONTENT
+
+Доступ: public
+
+Результат проверки на доступность метода `onTagAttributeList`
+
+Тип: bool const
+
+# ::stappler::html::ParserTraits<typename>::CallTest_readTagContent<typename>(typeof (& C::readTagContent))
+
+## BRIEF
+
+Проверяет, доступен ли метод `readTagContent`
+
+## CONTENT
+
+Доступ: private
+
+Проверяет, доступен ли метод `readTagContent`
+
+Параметры шаблона:
+* typename C
+
+Параметры:
+* typeof (& C::readTagContent)
+
+Возвращает:
+* success
+
+# ::stappler::html::ParserTraits<typename>::CallTest_readTagContent<typename>()
+
+## BRIEF
+
+Проверяет, доступен ли метод `readTagContent`
+
+## CONTENT
+
+Доступ: private
+
+Проверяет, доступен ли метод `readTagContent`
+
+Параметры шаблона:
+* typename C
+
+Возвращает:
+* failure
+
+# ::stappler::html::ParserTraits<typename>::readTagContent
+
+## BRIEF
+
+Результат проверки на доступность метода `readTagContent`
+
+## CONTENT
+
+Доступ: public
+
+Результат проверки на доступность метода `readTagContent`
+
+Тип: bool const
+
+# ::stappler::html::Tag<typename>::isNestedTagsAllowed() const
+
+## BRIEF
+
+Проверяет, возможны ли вложенные теги для данного тега
+
+## CONTENT
+
+Проверяет, возможны ли вложенные теги для данного тега. Функция должна быть определена для пользовательского типа тега
+
+Возвращает:
+* bool
+
+# ::stappler::html::Tag<typename>::nestedTagsAllowed
+
+## BRIEF
+
+Указывает, возможны ли вложенные теги для тега
+
+## CONTENT
+
+Указывает, возможны ли вложенные теги для тега
+
+Тип: bool
+
+# ::stappler::html::Parser<typename,typename,typename,typename>::skipQuoted<stappler::html::Parser::CharType>()
+
+## BRIEF
+
+Пропускает выделенный кавычками блок при чтении
+
+## CONTENT
+
+Пропускает выделенный кавычками блок при чтении
+
+Параметры шаблона:
+* stappler::html::Parser::CharType C - символ кавычки
+
+# ::stappler::html::Parser<typename,typename,typename,typename>::readTagContent()
+
+## BRIEF
+
+Читает содержимое тега
+
+## CONTENT
+
+Читает содержимое тега. Использует реализауию, предоставленную пользователем, если возможно.
+
+Возвращает:
+* StringReader - содержимое тега
+
+# ::stappler::html::Parser<typename,typename,typename,typename>::onSchemeTag(stappler::html::Parser::StringReader&,stappler::html::Parser::StringReader&)
+
+## BRIEF
+
+Читает тег разметки XML/HTML
+
+## CONTENT
+
+Читает тег разметки XML/HTML (начинается с \<! или \<?)
+
+Параметры:
+* stappler::html::Parser::StringReader& - имя тега
+* stappler::html::Parser::StringReader& - содержимое тега
+
+# ::stappler::html::Parser<typename,typename,typename,typename>::onCommentTag(stappler::html::Parser::StringReader&)
+
+## BRIEF
+
+Читает тег комментария
+
+## CONTENT
+
+Читает тег комментария (\<-- -->)
+
+Параметры:
+* stappler::html::Parser::StringReader&
+
+# ::stappler::html::Parser<typename,typename,typename,typename>::onTagAttributeList(TagType&,stappler::html::Parser::StringReader&)
+
+## BRIEF
+
+Читает список атрибутов тега как цельный блок
+
+## CONTENT
+
+Читает список атрибутов тега как цельный блок (всё, что следует после имени и до закрывающей операторной скобки)
+
+Параметры:
+* TagType&
+* stappler::html::Parser::StringReader&

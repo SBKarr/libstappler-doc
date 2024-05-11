@@ -1,7 +1,7 @@
 Title: SPMat4.h
 
 
-# STAPPLER_GEOM_SPMAT4_H_
+# CORE_GEOM_SPMAT4_H_
 
 ## BRIEF
 

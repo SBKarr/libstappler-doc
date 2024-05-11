@@ -431,3 +431,28 @@ Title: SPSvgReader.h
 Список всех объектов по их имени
 
 Тип: Interface::MapType<Interface::StringType, VectorPath>
+
+# ::stappler::vg::SvgTag::writer
+
+## BRIEF
+
+Интерфейс записи векторного пути в тег
+
+## CONTENT
+
+Интерфейс записи векторного пути в тег
+
+Тип: stappler::vg::PathWriter
+
+# ::stappler::vg::SvgTag::getWriter()
+
+## BRIEF
+
+Возвращает интерфейс записи векторного пути
+
+## CONTENT
+
+Возвращает интерфейс записи векторного пути
+
+Возвращает:
+* stappler::vg::PathWriter&

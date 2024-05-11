@@ -30,7 +30,7 @@ Title: XLTextInputManager.h
 
 ## CONTENT
 
-Тип: Function<void (bool, const stappler::xenolith::Rect &, float)>
+Тип: Function<void (bool, const stappler::geom::Rect &, float)>
 
 
 # ::stappler::xenolith::TextInputHandler::onInput
@@ -171,7 +171,7 @@ Title: XLTextInputManager.h
 ## CONTENT
 
 Возвращает:
-* stappler::xenolith::Rect const&
+* const stappler::geom::Rect&
 
 # ::stappler::xenolith::TextInputHandler::isActive() const
 
@@ -331,7 +331,7 @@ Title: XLTextInputManager.h
 * stappler::xenolith::TextCursor
 
 
-# ::stappler::xenolith::TextInputManager::onKeyboardEnabled(stappler::xenolith::Rect const&,float)
+# ::stappler::xenolith::TextInputManager::onKeyboardEnabled(const stappler::geom::Rect&,float)
 
 ## BRIEF
 
@@ -340,7 +340,7 @@ Title: XLTextInputManager.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Rect const&
+* const stappler::geom::Rect&
 * float
 
 
@@ -542,7 +542,7 @@ Title: XLTextInputManager.h
 Доступ: public
 
 Возвращает:
-* stappler::xenolith::Rect const&
+* const stappler::geom::Rect&
 
 # ::stappler::xenolith::TextInputManager::getHandler() const
 
@@ -628,7 +628,7 @@ Title: XLTextInputManager.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::Rect
+Тип: stappler::geom::Rect
 
 
 # ::stappler::xenolith::TextInputManager::_keyboardDuration

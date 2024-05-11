@@ -898,3 +898,75 @@ Title: SPMemFunction.h
 Указатель на функцию для вызова функтора
 
 Тип: FunctionPointer
+
+# ::stappler::memory::function<ReturnType(ArgumentTypes...)>::operator==(function<type-parameter-0-0 (type-parameter-0-1...)> const&) const
+
+## BRIEF
+
+Сравнивает два функциональных контейнера
+
+## CONTENT
+
+Доступ: public
+
+Сравнивает два функциональных контейнера
+
+Параметры:
+* function<type-parameter-0-0 (type-parameter-0-1...)> const&
+
+Возвращает:
+* bool - true при совпадении
+
+# ::stappler::memory::function<ReturnType(ArgumentTypes...)>::operator!=(function<type-parameter-0-0 (type-parameter-0-1...)> const&) const
+
+## BRIEF
+
+Сравнивает два функциональных контейнера
+
+## CONTENT
+
+Доступ: public
+
+Сравнивает два функциональных контейнера
+
+Параметры:
+* function<type-parameter-0-0 (type-parameter-0-1...)> const&
+
+Возвращает:
+* bool - true если не совпадают
+
+# ::stappler::memory::callback<ReturnType(ArgumentTypes...)>::operator==(stappler::nullptr_t) const
+
+## BRIEF
+
+Проверяет функциональный контейнер на пустоту
+
+## CONTENT
+
+Доступ: public
+
+Проверяет функциональный контейнер на пустоту
+
+Параметры:
+* stappler::nullptr_t
+
+Возвращает:
+* bool - true если функтор контейнера не определён
+
+# ::stappler::memory::callback<ReturnType(ArgumentTypes...)>::operator!=(stappler::nullptr_t) const
+
+## BRIEF
+
+Проверяет функциональный контейнер на пустоту
+
+## CONTENT
+
+Доступ: public
+
+Проверяет функциональный контейнер на пустоту
+
+Параметры:
+* stappler::nullptr_t
+
+Возвращает:
+* bool - true если функтор контейнера определён

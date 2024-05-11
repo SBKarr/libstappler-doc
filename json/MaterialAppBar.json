@@ -102,6 +102,13 @@
 						"id": 3767091180,
 						"kind": "enum value",
 						"name": "Large"
+					}, {
+						"_fullName": "::stappler::xenolith::material2d::AppBarLayout::Minified",
+						"_kind": "enum value",
+						"_name": "Minified",
+						"id": 3143247660,
+						"kind": "enum value",
+						"name": "Minified"
 					}],
 					"has_explicit_type": false,
 					"id": 1285095826,
@@ -1216,12 +1223,12 @@
 						"semantic_scope": "",
 						"signature": "() const"
 					}, {
-						"_fullName": "::stappler::xenolith::material2d::AppBar::setNavButtonIcon(stappler::xenolith::IconName)",
+						"_fullName": "::stappler::xenolith::material2d::AppBar::setNavButtonIcon(stappler::xenolith::IconName,float)",
 						"_kind": "member function",
 						"_name": "setNavButtonIcon",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 2542992931,
+						"id": 1031687595,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -1267,6 +1274,30 @@
 									}]
 								}
 							}
+						}, {
+							"_fullName": "progress",
+							"_kind": "function parameter",
+							"_name": "progress",
+							"default_value": {
+								"expression": [{
+									"kind": "float_literal",
+									"spelling": "0.0f"
+								}],
+								"kind": "unexposed",
+								"type": {
+									"_typeName": "float",
+									"builtin_type_kind": "float",
+									"kind": "builtin"
+								}
+							},
+							"id": 277902442,
+							"kind": "function parameter",
+							"name": "progress",
+							"type": {
+								"_typeName": "float",
+								"builtin_type_kind": "float",
+								"kind": "builtin"
+							}
 						}],
 						"ref_qualifier": "none",
 						"return_type": {
@@ -1275,7 +1306,7 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::IconName)"
+						"signature": "(stappler::xenolith::IconName,float)"
 					}, {
 						"_fullName": "::stappler::xenolith::material2d::AppBar::getNavButtonIcon() const",
 						"_kind": "member function",
@@ -3249,6 +3280,52 @@
 						},
 						"semantic_scope": "",
 						"signature": "() const"
+					}, {
+						"_fullName": "::stappler::xenolith::material2d::AppBar::getRealHeight() const",
+						"_kind": "member function",
+						"_name": "getRealHeight",
+						"body_kind": "declaration",
+						"cv_qualifier": "const",
+						"id": 335107377,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"is_virtual": true,
+						"kind": "member function",
+						"name": "getRealHeight",
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "() const"
+					}, {
+						"_fullName": "::stappler::xenolith::material2d::AppBar::updateDefaultHeight()",
+						"_kind": "member function",
+						"_name": "updateDefaultHeight",
+						"body_kind": "declaration",
+						"cv_qualifier": "none",
+						"id": 171794249,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"is_virtual": true,
+						"kind": "member function",
+						"name": "updateDefaultHeight",
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "()"
 					}, {
 						"_fullName": "::stappler::xenolith::material2d::AppBar::_layout",
 						"_kind": "member variable",
@@ -6133,13 +6210,44 @@
 							"kind": "builtin"
 						}
 					}, {
+						"_fullName": "::stappler::xenolith::material2d::AppBar::_defaultHeight",
+						"_kind": "member variable",
+						"_name": "_defaultHeight",
+						"default_value": {
+							"expression": [{
+								"kind": "float_literal",
+								"spelling": "56.0f"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "float",
+								"builtin_type_kind": "float",
+								"kind": "builtin"
+							}
+						},
+						"id": 2012044448,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "_defaultHeight",
+						"type": {
+							"_typeName": "float",
+							"builtin_type_kind": "float",
+							"kind": "builtin"
+						}
+					}, {
 						"_fullName": "::stappler::xenolith::material2d::AppBar::_basicHeight",
 						"_kind": "member variable",
 						"_name": "_basicHeight",
 						"default_value": {
 							"expression": [{
-								"kind": "float_literal",
-								"spelling": "56.0f"
+								"kind": "identifier",
+								"spelling": "nan"
+							}, {
+								"kind": "punctuation",
+								"spelling": "("
+							}, {
+								"kind": "punctuation",
+								"spelling": ")"
 							}],
 							"kind": "unexposed",
 							"type": {

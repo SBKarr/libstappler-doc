@@ -33,7 +33,7 @@ Title: XL2dLabel.h
 
 ## CONTENT
 
-Тип: Vector<stappler::xenolith::ColorMask>
+Тип: Vector<stappler::geom::ColorMask>
 
 
 # ::stappler::xenolith::basic2d::LabelDeferredResult
@@ -92,7 +92,7 @@ Title: XL2dLabel.h
 * Rc<stappler::xenolith::basic2d::LabelResult>&&
 
 
-# ::stappler::xenolith::basic2d::LabelDeferredResult::updateColor(stappler::xenolith::Color4F const&)
+# ::stappler::xenolith::basic2d::LabelDeferredResult::updateColor(const stappler::geom::Color4F&)
 
 ## BRIEF
 
@@ -101,7 +101,7 @@ Title: XL2dLabel.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Color4F const&
+* const stappler::geom::Color4F&
 
 
 # ::stappler::xenolith::basic2d::LabelDeferredResult::getResult() const
@@ -159,7 +159,7 @@ Title: XL2dLabel.h
 * font::LabelBase
 
 
-# ::stappler::xenolith::basic2d::Label::FormatSpec
+# ::stappler::xenolith::basic2d::Label::TextLayout
 
 ## BRIEF
 
@@ -168,7 +168,7 @@ Title: XL2dLabel.h
 Доступ: public
 
 
-# ::stappler::xenolith::basic2d::Label::LineSpec
+# ::stappler::xenolith::basic2d::Label::LineLayout
 
 ## BRIEF
 
@@ -195,7 +195,112 @@ Title: XL2dLabel.h
 Доступ: public
 
 
-# ::stappler::xenolith::basic2d::Label::writeQuads(stappler::xenolith::basic2d::VertexArray&,stappler::xenolith::basic2d::Label::FormatSpec*,Vector<stappler::xenolith::ColorMask>&)
+# ::stappler::xenolith::basic2d::Label::Selection
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Базовые классы:
+* Sprite
+
+
+# ::stappler::xenolith::basic2d::Label::Selection::~Selection()
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+
+# ::stappler::xenolith::basic2d::Label::Selection::init()
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::basic2d::Label::Selection::clear()
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+
+# ::stappler::xenolith::basic2d::Label::Selection::emplaceRect(const stappler::geom::Rect&)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* const stappler::geom::Rect&
+
+
+# ::stappler::xenolith::basic2d::Label::Selection::updateColor()
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+
+# ::stappler::xenolith::basic2d::Label::Selection::getTextCursor() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* core::TextCursor
+
+# ::stappler::xenolith::basic2d::Label::Selection::setTextCursor(core::TextCursor)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* core::TextCursor
+
+
+# ::stappler::xenolith::basic2d::Label::Selection::updateVertexes()
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+
+# ::stappler::xenolith::basic2d::Label::Selection::_cursor
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: core::TextCursor
+
+
+# ::stappler::xenolith::basic2d::Label::writeQuads(stappler::xenolith::basic2d::VertexArray&,font::TextLayoutData<memory::StandartInterface> const*,Vector<stappler::geom::ColorMask>&)
 
 ## BRIEF
 
@@ -205,11 +310,11 @@ Title: XL2dLabel.h
 
 Параметры:
 * stappler::xenolith::basic2d::VertexArray&
-* stappler::xenolith::basic2d::Label::FormatSpec*
-* Vector<stappler::xenolith::ColorMask>&
+* font::TextLayoutData<memory::StandartInterface> const*
+* Vector<stappler::geom::ColorMask>&
 
 
-# ::stappler::xenolith::basic2d::Label::writeResult(stappler::xenolith::basic2d::Label::FormatSpec*,stappler::xenolith::Color4F const&)
+# ::stappler::xenolith::basic2d::Label::writeQuads(stappler::xenolith::basic2d::VertexArray&,font::TextLayoutData<memory::PoolInterface> const*,Vector<stappler::geom::ColorMask>&)
 
 ## BRIEF
 
@@ -218,8 +323,22 @@ Title: XL2dLabel.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::basic2d::Label::FormatSpec*
-* stappler::xenolith::Color4F const&
+* stappler::xenolith::basic2d::VertexArray&
+* font::TextLayoutData<memory::PoolInterface> const*
+* Vector<stappler::geom::ColorMask>&
+
+
+# ::stappler::xenolith::basic2d::Label::writeResult(stappler::xenolith::basic2d::Label::TextLayout*,const stappler::geom::Color4F&)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* stappler::xenolith::basic2d::Label::TextLayout*
+* const stappler::geom::Color4F&
 
 Возвращает:
 * Rc<stappler::xenolith::basic2d::LabelResult>
@@ -341,7 +460,16 @@ Title: XL2dLabel.h
 Возвращает:
 * stappler::xenolith::font::LabelBase::DescriptionStyle const&
 
-# ::stappler::xenolith::basic2d::Label::onTransformDirty(stappler::xenolith::Mat4 const&)
+# ::stappler::xenolith::basic2d::Label::onContentSizeDirty()
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+
+# ::stappler::xenolith::basic2d::Label::onTransformDirty(const stappler::geom::Mat4&)
 
 ## BRIEF
 
@@ -350,10 +478,10 @@ Title: XL2dLabel.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Mat4 const&
+* const stappler::geom::Mat4&
 
 
-# ::stappler::xenolith::basic2d::Label::onGlobalTransformDirty(stappler::xenolith::Mat4 const&)
+# ::stappler::xenolith::basic2d::Label::onGlobalTransformDirty(const stappler::geom::Mat4&)
 
 ## BRIEF
 
@@ -362,7 +490,7 @@ Title: XL2dLabel.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Mat4 const&
+* const stappler::geom::Mat4&
 
 
 # ::stappler::xenolith::basic2d::Label::setAdjustValue(uint8_t)
@@ -433,7 +561,7 @@ Title: XL2dLabel.h
 * uint32_t
 
 Возвращает:
-* LineSpec
+* LineLayout
 
 # ::stappler::xenolith::basic2d::Label::getFontHeight() const
 
@@ -459,7 +587,7 @@ Title: XL2dLabel.h
 * bool
 
 Возвращает:
-* stappler::xenolith::Vec2
+* stappler::geom::Vec2
 
 # ::stappler::xenolith::basic2d::Label::getCursorOrigin() const
 
@@ -470,9 +598,9 @@ Title: XL2dLabel.h
 Доступ: public
 
 Возвращает:
-* stappler::xenolith::Vec2
+* stappler::geom::Vec2
 
-# ::stappler::xenolith::basic2d::Label::getCharIndex(stappler::xenolith::Vec2 const&) const
+# ::stappler::xenolith::basic2d::Label::getCharIndex(const stappler::geom::Vec2&,font::CharSelectMode) const
 
 ## BRIEF
 
@@ -481,10 +609,25 @@ Title: XL2dLabel.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Vec2 const&
+* const stappler::geom::Vec2&
+* font::CharSelectMode
 
 Возвращает:
 * Pair<uint32_t, bool>
+
+# ::stappler::xenolith::basic2d::Label::selectWord(uint32_t) const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* uint32_t
+
+Возвращает:
+* core::TextCursor
 
 # ::stappler::xenolith::basic2d::Label::getMaxLineX() const
 
@@ -520,7 +663,99 @@ Title: XL2dLabel.h
 Возвращает:
 * bool
 
-# ::stappler::xenolith::basic2d::Label::runDeferred(thread::TaskQueue&,stappler::xenolith::basic2d::Label::FormatSpec*,stappler::xenolith::Color4F const&)
+# ::stappler::xenolith::basic2d::Label::setSelectionCursor(core::TextCursor)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* core::TextCursor
+
+
+# ::stappler::xenolith::basic2d::Label::getSelectionCursor() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* core::TextCursor
+
+# ::stappler::xenolith::basic2d::Label::setSelectionColor(const stappler::geom::Color4F&)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* const stappler::geom::Color4F&
+
+
+# ::stappler::xenolith::basic2d::Label::getSelectionColor() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* stappler::geom::Color4F
+
+# ::stappler::xenolith::basic2d::Label::setMarkedCursor(core::TextCursor)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* core::TextCursor
+
+
+# ::stappler::xenolith::basic2d::Label::getMarkedCursor() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* core::TextCursor
+
+# ::stappler::xenolith::basic2d::Label::setMarkedColor(const stappler::geom::Color4F&)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* const stappler::geom::Color4F&
+
+
+# ::stappler::xenolith::basic2d::Label::getMarkedColor() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* stappler::geom::Color4F
+
+# ::stappler::xenolith::basic2d::Label::runDeferred(thread::TaskQueue&,stappler::xenolith::basic2d::Label::TextLayout*,const stappler::geom::Color4F&)
 
 ## BRIEF
 
@@ -530,8 +765,8 @@ Title: XL2dLabel.h
 
 Параметры:
 * thread::TaskQueue&
-* stappler::xenolith::basic2d::Label::FormatSpec*
-* stappler::xenolith::Color4F const&
+* stappler::xenolith::basic2d::Label::TextLayout*
+* const stappler::geom::Color4F&
 
 Возвращает:
 * Rc<stappler::xenolith::basic2d::LabelDeferredResult>
@@ -599,7 +834,7 @@ Title: XL2dLabel.h
 Доступ: protected
 
 
-# ::stappler::xenolith::basic2d::Label::updateQuadsForeground(font::FontController*,stappler::xenolith::basic2d::Label::FormatSpec*,Vector<stappler::xenolith::ColorMask>&)
+# ::stappler::xenolith::basic2d::Label::updateQuadsForeground(font::FontController*,stappler::xenolith::basic2d::Label::TextLayout*,Vector<stappler::geom::ColorMask>&)
 
 ## BRIEF
 
@@ -609,8 +844,8 @@ Title: XL2dLabel.h
 
 Параметры:
 * font::FontController*
-* stappler::xenolith::basic2d::Label::FormatSpec*
-* Vector<stappler::xenolith::ColorMask>&
+* stappler::xenolith::basic2d::Label::TextLayout*
+* Vector<stappler::geom::ColorMask>&
 
 
 # ::stappler::xenolith::basic2d::Label::checkVertexDirty() const
@@ -652,7 +887,7 @@ Title: XL2dLabel.h
 * stappler::xenolith::NodeFlags
 
 
-# ::stappler::xenolith::basic2d::Label::updateLabelScale(stappler::xenolith::Mat4 const&)
+# ::stappler::xenolith::basic2d::Label::updateLabelScale(const stappler::geom::Mat4&)
 
 ## BRIEF
 
@@ -661,7 +896,7 @@ Title: XL2dLabel.h
 Доступ: protected
 
 Параметры:
-* stappler::xenolith::Mat4 const&
+* const stappler::geom::Mat4&
 
 
 # ::stappler::xenolith::basic2d::Label::_listener
@@ -705,7 +940,7 @@ Title: XL2dLabel.h
 
 Доступ: protected
 
-Тип: Rc<stappler::xenolith::basic2d::Label::FormatSpec>
+Тип: Rc<stappler::xenolith::basic2d::Label::TextLayout>
 
 
 # ::stappler::xenolith::basic2d::Label::_colorMap
@@ -716,7 +951,7 @@ Title: XL2dLabel.h
 
 Доступ: protected
 
-Тип: Vector<stappler::xenolith::ColorMask>
+Тип: Vector<stappler::geom::ColorMask>
 
 
 # ::stappler::xenolith::basic2d::Label::_deferred
@@ -750,6 +985,28 @@ Title: XL2dLabel.h
 Доступ: protected
 
 Тип: size_t
+
+
+# ::stappler::xenolith::basic2d::Label::_selection
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: stappler::xenolith::basic2d::Label::Selection*
+
+
+# ::stappler::xenolith::basic2d::Label::_marked
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: stappler::xenolith::basic2d::Label::Selection*
 
 
 # ::stappler::xenolith::basic2d::Label::_deferredResult

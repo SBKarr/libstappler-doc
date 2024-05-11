@@ -27,6 +27,37 @@ Title: XL2dScene.h
 Доступ: public
 
 
+# ::stappler::xenolith::basic2d::Scene2d::init(stappler::xenolith::Application*,core::FrameContraints const&)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* stappler::xenolith::Application*
+* core::FrameContraints const&
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::basic2d::Scene2d::init(stappler::xenolith::Application*,Callback<void (Queue::Builder &)> const&,core::FrameContraints const&)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* stappler::xenolith::Application*
+* Callback<void (Queue::Builder &)> const&
+* core::FrameContraints const&
+
+Возвращает:
+* bool
+
 # ::stappler::xenolith::basic2d::Scene2d::init(Queue::Builder&&,core::FrameContraints const&)
 
 ## BRIEF
@@ -119,7 +150,7 @@ Title: XL2dScene.h
 * stappler::xenolith::SceneContent*
 
 
-# ::stappler::xenolith::basic2d::Scene2d::updateInputEventData(stappler::xenolith::InputEventData&,stappler::xenolith::InputEventData const&,stappler::xenolith::Vec2,uint32_t)
+# ::stappler::xenolith::basic2d::Scene2d::updateInputEventData(stappler::xenolith::InputEventData&,stappler::xenolith::InputEventData const&,stappler::geom::Vec2,uint32_t)
 
 ## BRIEF
 
@@ -130,7 +161,7 @@ Title: XL2dScene.h
 Параметры:
 * stappler::xenolith::InputEventData&
 * stappler::xenolith::InputEventData const&
-* stappler::xenolith::Vec2
+* stappler::geom::Vec2
 * uint32_t
 
 

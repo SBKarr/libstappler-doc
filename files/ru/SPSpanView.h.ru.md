@@ -1184,7 +1184,7 @@ Title: SPSpanView.h
 Возвращает:
 * SpanView<Type>
 
-# ::std::hash<stappler::SpanView<Value>>::hash<stappler::SpanView<Value>>
+# ::std::hash<::stappler::SpanView<Value>>::hash<::stappler::SpanView<Value>>
 
 ## BRIEF
 
@@ -1198,7 +1198,7 @@ Title: SPSpanView.h
 * typename Value
 
 
-# ::std::hash<stappler::SpanView<Value>>::operator()(stappler::SpanView<Value> const&)
+# ::std::hash<::stappler::SpanView<Value>>::operator()(::stappler::SpanView<Value> const&)
 
 ## BRIEF
 

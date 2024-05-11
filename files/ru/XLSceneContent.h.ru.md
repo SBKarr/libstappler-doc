@@ -79,6 +79,47 @@ Title: XLSceneContent.h
 Возвращает:
 * bool
 
+# ::stappler::xenolith::SceneContent::setHandlesViewDecoration(bool)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* bool
+
+
+# ::stappler::xenolith::SceneContent::isHandlesViewDecoration() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::SceneContent::showViewDecoration()
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+
+# ::stappler::xenolith::SceneContent::hideViewDecoration()
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+
 # ::stappler::xenolith::SceneContent::getDecorationPadding() const
 
 ## BRIEF
@@ -88,9 +129,9 @@ Title: XLSceneContent.h
 Доступ: public
 
 Возвращает:
-* stappler::xenolith::Padding
+* stappler::geom::Padding
 
-# ::stappler::xenolith::SceneContent::setDecorationPadding(stappler::xenolith::Padding)
+# ::stappler::xenolith::SceneContent::setDecorationPadding(stappler::geom::Padding)
 
 ## BRIEF
 
@@ -99,7 +140,7 @@ Title: XLSceneContent.h
 Доступ: protected
 
 Параметры:
-* stappler::xenolith::Padding
+* stappler::geom::Padding
 
 
 # ::stappler::xenolith::SceneContent::updateBackButtonStatus()
@@ -119,7 +160,7 @@ Title: XLSceneContent.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::Padding
+Тип: stappler::geom::Padding
 
 
 # ::stappler::xenolith::SceneContent::_inputListener
@@ -145,6 +186,28 @@ Title: XLSceneContent.h
 
 
 # ::stappler::xenolith::SceneContent::_backButtonRetained
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: bool
+
+
+# ::stappler::xenolith::SceneContent::_handlesViewDecoration
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: bool
+
+
+# ::stappler::xenolith::SceneContent::_decorationVisible
 
 ## BRIEF
 

@@ -167,6 +167,18 @@ Title: XL2dSceneLayout.h
 Возвращает:
 * stappler::xenolith::basic2d::DecorationMask
 
+# ::stappler::xenolith::basic2d::DecorationStatus
+
+## BRIEF
+
+## CONTENT
+
+Значения:
+* DontCare
+* Visible
+* Hidden
+
+
 # ::stappler::xenolith::basic2d::SceneLayout2d
 
 ## BRIEF
@@ -227,7 +239,7 @@ Title: XL2dSceneLayout.h
 Возвращает:
 * stappler::xenolith::basic2d::DecorationMask
 
-# ::stappler::xenolith::basic2d::SceneLayout2d::setDecorationPadding(stappler::xenolith::Padding)
+# ::stappler::xenolith::basic2d::SceneLayout2d::setDecorationPadding(stappler::geom::Padding)
 
 ## BRIEF
 
@@ -236,7 +248,7 @@ Title: XL2dSceneLayout.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Padding
+* stappler::geom::Padding
 
 
 # ::stappler::xenolith::basic2d::SceneLayout2d::getDecorationPadding() const
@@ -248,7 +260,30 @@ Title: XL2dSceneLayout.h
 Доступ: public
 
 Возвращает:
-* stappler::xenolith::Padding
+* stappler::geom::Padding
+
+# ::stappler::xenolith::basic2d::SceneLayout2d::setTargetContentSize(const stappler::geom::Size2&)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* const stappler::geom::Size2&
+
+
+# ::stappler::xenolith::basic2d::SceneLayout2d::getTargetContentSize() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* stappler::geom::Size2
 
 # ::stappler::xenolith::basic2d::SceneLayout2d::onBackButton()
 
@@ -450,6 +485,28 @@ Title: XL2dSceneLayout.h
 Возвращает:
 * stappler::StringView
 
+# ::stappler::xenolith::basic2d::SceneLayout2d::getDecorationStatus() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* stappler::xenolith::basic2d::DecorationStatus
+
+# ::stappler::xenolith::basic2d::SceneLayout2d::getSceneContent() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* stappler::xenolith::basic2d::SceneContent2d*
+
 # ::stappler::xenolith::basic2d::SceneLayout2d::_decorationMask
 
 ## BRIEF
@@ -469,7 +526,7 @@ Title: XL2dSceneLayout.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::Padding
+Тип: stappler::geom::Padding
 
 
 # ::stappler::xenolith::basic2d::SceneLayout2d::_inTransition
@@ -514,3 +571,14 @@ Title: XL2dSceneLayout.h
 Доступ: protected
 
 Тип: stappler::mem_std::String
+
+
+# ::stappler::xenolith::basic2d::SceneLayout2d::_targetContentSize
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: stappler::geom::Size2

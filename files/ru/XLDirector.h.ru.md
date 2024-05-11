@@ -216,7 +216,7 @@ Title: XLDirector.h
 Доступ: public
 
 Возвращает:
-* stappler::xenolith::Mat4 const&
+* const stappler::geom::Mat4&
 
 # ::stappler::xenolith::Director::getFrameConstraints() const
 
@@ -444,7 +444,7 @@ Title: XLDirector.h
 
 Доступ: protected
 
-Тип: stappler::xenolith::Mat4
+Тип: stappler::geom::Mat4
 
 
 # ::stappler::xenolith::Director::_pool

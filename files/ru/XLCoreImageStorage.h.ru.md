@@ -5,14 +5,22 @@ Title: XLCoreImageStorage.h
 
 ## BRIEF
 
+Заголовок типа хранилища изображения
+
 ## CONTENT
+
+Заголовок типа хранилища изображения
 
 
 # ::stappler::xenolith::core::ImageStorage
 
 ## BRIEF
 
+Тип хранилища изображения
+
 ## CONTENT
+
+Тип хранилища изображения. Тип хранит объект изображения на устройстве и данные, необходимые для работы с ним в движке.
 
 Базовые классы:
 * Ref
@@ -22,21 +30,44 @@ Title: XLCoreImageStorage.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::core::ImageStorage::init(Rc<stappler::xenolith::core::ImageObject>&&)
 
 ## BRIEF
 
+Создаёт хранимое изображение
+
 ## CONTENT
 
 Доступ: public
 
+Создаёт хранимое изображение
+
 Параметры:
 * Rc<stappler::xenolith::core::ImageObject>&&
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::core::ImageStorage::isStatic() const
+
+## BRIEF
+
+Проверяет, является ли объект статически хранимым
+
+## CONTENT
+
+Доступ: public
+
+Проверяет, является ли объект статически хранимым
 
 Возвращает:
 * bool
@@ -45,9 +76,13 @@ Title: XLCoreImageStorage.h
 
 ## BRIEF
 
+Проверяет, можно ли кешировать объект
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, можно ли кешировать объект
 
 Возвращает:
 * bool
@@ -56,9 +91,13 @@ Title: XLCoreImageStorage.h
 
 ## BRIEF
 
+Проверяет, является ли объект частью цепочки выходных изображений графической подсистемы ОС.
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, является ли объект частью цепочки выходных изображений графической подсистемы ОС.
 
 Возвращает:
 * bool
@@ -67,18 +106,26 @@ Title: XLCoreImageStorage.h
 
 ## BRIEF
 
+Удаляет объект и его данные
+
 ## CONTENT
 
 Доступ: public
+
+Удаляет объект и его данные
 
 
 # ::stappler::xenolith::core::ImageStorage::rearmSemaphores(stappler::xenolith::core::Loop&)
 
 ## BRIEF
 
+Перезаряжает семафоры доступа
+
 ## CONTENT
 
 Доступ: public
+
+Перезаряжает семафоры доступа. В норме - меняет местами семафоры сингала и ожидания. В случае ошибки - получает новые семафоры.
 
 Параметры:
 * stappler::xenolith::core::Loop&
@@ -88,9 +135,14 @@ Title: XLCoreImageStorage.h
 
 ## BRIEF
 
+Освобождает семафор
+
 ## CONTENT
 
 Доступ: public
+
+Освобождает семафор
+
 
 Параметры:
 * stappler::xenolith::core::Semaphore*
@@ -100,18 +152,26 @@ Title: XLCoreImageStorage.h
 
 ## BRIEF
 
+Помечает изображение как ошибочное
+
 ## CONTENT
 
 Доступ: public
+
+Помечает изображение как ошибочное
 
 
 # ::stappler::xenolith::core::ImageStorage::isReady() const
 
 ## BRIEF
 
+Проверяет, готово ли изобрадение к использованию
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, готово ли изобрадение к использованию
 
 Возвращает:
 * bool
@@ -120,9 +180,13 @@ Title: XLCoreImageStorage.h
 
 ## BRIEF
 
+Устаналвивает статус готовности
+
 ## CONTENT
 
 Доступ: public
+
+Устаналвивает статус готовности
 
 Параметры:
 * bool
@@ -132,9 +196,13 @@ Title: XLCoreImageStorage.h
 
 ## BRIEF
 
+Асинхронно ожидает готовности
+
 ## CONTENT
 
 Доступ: public
+
+Асинхронно ожидает готовности
 
 Параметры:
 * Function<void (bool)>&&
@@ -144,9 +212,13 @@ Title: XLCoreImageStorage.h
 
 ## BRIEF
 
+Проверяет, хранятся ли семафоры доступа в самом объекте
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, хранятся ли семафоры доступа в самом объекте
 
 Возвращает:
 * bool
@@ -155,9 +227,13 @@ Title: XLCoreImageStorage.h
 
 ## BRIEF
 
+Получает семафор для ожидания доступа к объекту
+
 ## CONTENT
 
 Доступ: public
+
+Получает семафор для ожидания доступа к объекту
 
 Возвращает:
 * Rc<stappler::xenolith::core::Semaphore> const&
@@ -166,9 +242,13 @@ Title: XLCoreImageStorage.h
 
 ## BRIEF
 
+Получает семафор для сигнала о готовности объекта
+
 ## CONTENT
 
 Доступ: public
+
+Получает семафор для сигнала о готовности объекта
 
 Возвращает:
 * Rc<stappler::xenolith::core::Semaphore> const&
@@ -177,9 +257,13 @@ Title: XLCoreImageStorage.h
 
 ## BRIEF
 
+Получает индекс изображения
+
 ## CONTENT
 
 Доступ: public
+
+Получает индекс изображения. Обычно - индекс в цепочке вывода или 0.
 
 Возвращает:
 * uint32_t
@@ -188,9 +272,13 @@ Title: XLCoreImageStorage.h
 
 ## BRIEF
 
+Возвращает параметры изображения
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает параметры изображения
 
 Возвращает:
 * stappler::xenolith::core::ImageInfoData
@@ -199,9 +287,13 @@ Title: XLCoreImageStorage.h
 
 ## BRIEF
 
+Получает объект изображения
+
 ## CONTENT
 
 Доступ: public
+
+Получает объект изображения
 
 Возвращает:
 * Rc<stappler::xenolith::core::ImageObject>
@@ -210,9 +302,13 @@ Title: XLCoreImageStorage.h
 
 ## BRIEF
 
+Добавляет отображение для изображения
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет отображение для изображения
 
 Параметры:
 * stappler::xenolith::core::ImageViewInfo const&
@@ -223,9 +319,13 @@ Title: XLCoreImageStorage.h
 
 ## BRIEF
 
+Получает отображение для изображения, если установлено
+
 ## CONTENT
 
 Доступ: public
+
+Получает отображение для изображения, если установлено для заданных параметров
 
 Параметры:
 * stappler::xenolith::core::ImageViewInfo const&
@@ -237,9 +337,13 @@ Title: XLCoreImageStorage.h
 
 ## BRIEF
 
+Создаёт отображение для изображения по параметрам
+
 ## CONTENT
 
 Доступ: public
+
+Создаёт отображение для изображения по параметрам
 
 Параметры:
 * stappler::xenolith::core::ImageViewInfo const&
@@ -251,9 +355,13 @@ Title: XLCoreImageStorage.h
 
 ## BRIEF
 
+Устанавливает текущую известную укладку изображения в памяти
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает текущую известную укладку изображения в памяти
 
 Параметры:
 * stappler::xenolith::core::AttachmentLayout
@@ -263,9 +371,13 @@ Title: XLCoreImageStorage.h
 
 ## BRIEF
 
+Возвращает текущую известную укладку изображения в памяти
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает текущую известную укладку изображения в памяти
 
 Возвращает:
 * stappler::xenolith::core::AttachmentLayout
@@ -274,9 +386,13 @@ Title: XLCoreImageStorage.h
 
 ## BRIEF
 
+Возвращает известные отображения
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает известные отображения
 
 Возвращает:
 * Map<stappler::xenolith::core::ImageViewInfo, Rc<stappler::xenolith::core::ImageView>> const&
@@ -285,9 +401,13 @@ Title: XLCoreImageStorage.h
 
 ## BRIEF
 
+Устанавливает время последнего доступа
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает время последнего доступа
 
 Параметры:
 * uint64_t
@@ -297,9 +417,13 @@ Title: XLCoreImageStorage.h
 
 ## BRIEF
 
+Получает время последнего доступа
+
 ## CONTENT
 
 Доступ: public
+
+Получает время последнего доступа
 
 Возвращает:
 * uint64_t
@@ -308,9 +432,13 @@ Title: XLCoreImageStorage.h
 
 ## BRIEF
 
+Устанавливает порядковый номер кадра, который владеет обектом
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает порядковый номер кадра, который владеет обектом
 
 Параметры:
 * uint64_t
@@ -320,9 +448,13 @@ Title: XLCoreImageStorage.h
 
 ## BRIEF
 
+Возвращает порядковый номер кадра, который владеет обектом
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает порядковый номер кадра, который владеет обектом
 
 Возвращает:
 * uint64_t
@@ -331,18 +463,25 @@ Title: XLCoreImageStorage.h
 
 ## BRIEF
 
+Уведомляет о готовности объекта
+
 ## CONTENT
 
 Доступ: protected
 
+Уведомляет о готовности объекта
 
 # ::stappler::xenolith::core::ImageStorage::_acquisitionTime
 
 ## BRIEF
 
+Последнее время доступа
+
 ## CONTENT
 
 Доступ: protected
+
+Последнее время доступа
 
 Тип: uint64_t
 
@@ -351,9 +490,13 @@ Title: XLCoreImageStorage.h
 
 ## BRIEF
 
+Порядковый номер кадра
+
 ## CONTENT
 
 Доступ: protected
+
+Порядковый номер кадра
 
 Тип: uint64_t
 
@@ -362,9 +505,13 @@ Title: XLCoreImageStorage.h
 
 ## BRIEF
 
+Изображение
+
 ## CONTENT
 
 Доступ: protected
+
+Изображение
 
 Тип: Rc<stappler::xenolith::core::ImageObject>
 
@@ -373,9 +520,13 @@ Title: XLCoreImageStorage.h
 
 ## BRIEF
 
+Семафор ожидания
+
 ## CONTENT
 
 Доступ: protected
+
+Семафор ожидания
 
 Тип: Rc<stappler::xenolith::core::Semaphore>
 
@@ -384,9 +535,13 @@ Title: XLCoreImageStorage.h
 
 ## BRIEF
 
+Семафор сигнала
+
 ## CONTENT
 
 Доступ: protected
+
+Семафор сигнала
 
 Тип: Rc<stappler::xenolith::core::Semaphore>
 
@@ -395,9 +550,13 @@ Title: XLCoreImageStorage.h
 
 ## BRIEF
 
+Отображения
+
 ## CONTENT
 
 Доступ: protected
+
+Отображения
 
 Тип: Map<stappler::xenolith::core::ImageViewInfo, Rc<stappler::xenolith::core::ImageView>>
 
@@ -406,9 +565,13 @@ Title: XLCoreImageStorage.h
 
 ## BRIEF
 
+Готовность
+
 ## CONTENT
 
 Доступ: protected
+
+Готовность
 
 Тип: bool
 
@@ -417,9 +580,13 @@ Title: XLCoreImageStorage.h
 
 ## BRIEF
 
+Отметка об ошибке
+
 ## CONTENT
 
 Доступ: protected
+
+Отметка об ошибке
 
 Тип: bool
 
@@ -428,9 +595,13 @@ Title: XLCoreImageStorage.h
 
 ## BRIEF
 
+Флаг отношения к цепочке вывода
+
 ## CONTENT
 
 Доступ: protected
+
+Флаг отношения к цепочке вывода
 
 Тип: bool
 
@@ -439,9 +610,13 @@ Title: XLCoreImageStorage.h
 
 ## BRIEF
 
+Текущая укладка
+
 ## CONTENT
 
 Доступ: protected
+
+Текущая укладка
 
 Тип: stappler::xenolith::core::AttachmentLayout
 
@@ -450,8 +625,12 @@ Title: XLCoreImageStorage.h
 
 ## BRIEF
 
+Ожидатели готовности
+
 ## CONTENT
 
 Доступ: protected
+
+Ожидатели готовности
 
 Тип: Vector<Function<void (bool)>>

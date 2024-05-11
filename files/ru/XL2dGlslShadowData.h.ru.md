@@ -128,15 +128,6 @@ Title: XL2dGlslShadowData.h
 Тип: stappler::glsl::color4
 
 
-# ::stappler::glsl::ShadowData::shadowOffset
-
-## BRIEF
-
-## CONTENT
-
-Тип: stappler::glsl::vec2
-
-
 # ::stappler::glsl::ShadowData::pix
 
 ## BRIEF
@@ -146,7 +137,52 @@ Title: XL2dGlslShadowData.h
 Тип: stappler::glsl::vec2
 
 
+# ::stappler::glsl::ShadowData::bbOffset
+
+## BRIEF
+
+## CONTENT
+
+Тип: float
+
+
+# ::stappler::glsl::ShadowData::luminosity
+
+## BRIEF
+
+## CONTENT
+
+Тип: float
+
+
 # ::stappler::glsl::ShadowData::shadowDensity
+
+## BRIEF
+
+## CONTENT
+
+Тип: float
+
+
+# ::stappler::glsl::ShadowData::density
+
+## BRIEF
+
+## CONTENT
+
+Тип: float
+
+
+# ::stappler::glsl::ShadowData::shadowSdfDensity
+
+## BRIEF
+
+## CONTENT
+
+Тип: float
+
+
+# ::stappler::glsl::ShadowData::maxValue
 
 ## BRIEF
 
@@ -182,43 +218,34 @@ Title: XL2dGlslShadowData.h
 Тип: stappler::glsl::uint
 
 
-# ::stappler::glsl::ShadowData::bbOffset
+# ::stappler::glsl::ShadowData::objectsCount
 
 ## BRIEF
 
 ## CONTENT
 
-Тип: float
+Тип: stappler::glsl::uint
 
 
-# ::stappler::glsl::ShadowData::density
-
-## BRIEF
-
-## CONTENT
-
-Тип: float
-
-
-# ::stappler::glsl::ShadowData::shadowSdfDensity
+# ::stappler::glsl::ShadowData::trianglesFirst
 
 ## BRIEF
 
 ## CONTENT
 
-Тип: float
-
-
-# ::stappler::glsl::ShadowData::luminosity
-
-## BRIEF
-
-## CONTENT
-
-Тип: float
+Тип: stappler::glsl::uint
 
 
 # ::stappler::glsl::ShadowData::trianglesCount
+
+## BRIEF
+
+## CONTENT
+
+Тип: stappler::glsl::uint
+
+
+# ::stappler::glsl::ShadowData::circlesFirst
 
 ## BRIEF
 
@@ -236,7 +263,25 @@ Title: XL2dGlslShadowData.h
 Тип: stappler::glsl::uint
 
 
+# ::stappler::glsl::ShadowData::rectsFirst
+
+## BRIEF
+
+## CONTENT
+
+Тип: stappler::glsl::uint
+
+
 # ::stappler::glsl::ShadowData::rectsCount
+
+## BRIEF
+
+## CONTENT
+
+Тип: stappler::glsl::uint
+
+
+# ::stappler::glsl::ShadowData::roundedRectsFirst
 
 ## BRIEF
 
@@ -254,88 +299,16 @@ Title: XL2dGlslShadowData.h
 Тип: stappler::glsl::uint
 
 
+# ::stappler::glsl::ShadowData::polygonsFirst
+
+## BRIEF
+
+## CONTENT
+
+Тип: stappler::glsl::uint
+
+
 # ::stappler::glsl::ShadowData::polygonsCount
-
-## BRIEF
-
-## CONTENT
-
-Тип: stappler::glsl::uint
-
-
-# ::stappler::glsl::ShadowData::groupsCount
-
-## BRIEF
-
-## CONTENT
-
-Тип: stappler::glsl::uint
-
-
-# ::stappler::glsl::ShadowData::circleGridSizeOffset
-
-## BRIEF
-
-## CONTENT
-
-Тип: stappler::glsl::uint
-
-
-# ::stappler::glsl::ShadowData::circleGridIndexOffset
-
-## BRIEF
-
-## CONTENT
-
-Тип: stappler::glsl::uint
-
-
-# ::stappler::glsl::ShadowData::rectGridSizeOffset
-
-## BRIEF
-
-## CONTENT
-
-Тип: stappler::glsl::uint
-
-
-# ::stappler::glsl::ShadowData::rectGridIndexOffset
-
-## BRIEF
-
-## CONTENT
-
-Тип: stappler::glsl::uint
-
-
-# ::stappler::glsl::ShadowData::roundedRectGridSizeOffset
-
-## BRIEF
-
-## CONTENT
-
-Тип: stappler::glsl::uint
-
-
-# ::stappler::glsl::ShadowData::roundedRectGridIndexOffset
-
-## BRIEF
-
-## CONTENT
-
-Тип: stappler::glsl::uint
-
-
-# ::stappler::glsl::ShadowData::polygonGridSizeOffset
-
-## BRIEF
-
-## CONTENT
-
-Тип: stappler::glsl::uint
-
-
-# ::stappler::glsl::ShadowData::polygonGridIndexOffset
 
 ## BRIEF
 

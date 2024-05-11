@@ -207,6 +207,20 @@ Title: XLVkDeviceQueue.h
 * Ref
 
 
+# ::stappler::xenolith::vk::DeviceQueue::IdleMode
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Значения:
+* None
+* Queue
+* Device
+
+
 # ::stappler::xenolith::vk::DeviceQueue::FrameSync
 
 ## BRIEF
@@ -251,7 +265,7 @@ Title: XLVkDeviceQueue.h
 Возвращает:
 * bool
 
-# ::stappler::xenolith::vk::DeviceQueue::submit(stappler::xenolith::vk::DeviceQueue::FrameSync const&,stappler::xenolith::vk::Fence&,stappler::xenolith::vk::CommandPool&,SpanView<const stappler::xenolith::vk::CommandBuffer *>)
+# ::stappler::xenolith::vk::DeviceQueue::submit(stappler::xenolith::vk::DeviceQueue::FrameSync const&,stappler::xenolith::vk::Fence&,stappler::xenolith::vk::CommandPool&,SpanView<const stappler::xenolith::vk::CommandBuffer *>,stappler::xenolith::vk::DeviceQueue::IdleMode)
 
 ## BRIEF
 
@@ -264,11 +278,12 @@ Title: XLVkDeviceQueue.h
 * stappler::xenolith::vk::Fence&
 * stappler::xenolith::vk::CommandPool&
 * SpanView<const stappler::xenolith::vk::CommandBuffer *>
+* stappler::xenolith::vk::DeviceQueue::IdleMode
 
 Возвращает:
 * bool
 
-# ::stappler::xenolith::vk::DeviceQueue::submit(stappler::xenolith::vk::Fence&,stappler::xenolith::vk::CommandBuffer const*)
+# ::stappler::xenolith::vk::DeviceQueue::submit(stappler::xenolith::vk::Fence&,stappler::xenolith::vk::CommandBuffer const*,stappler::xenolith::vk::DeviceQueue::IdleMode)
 
 ## BRIEF
 
@@ -279,11 +294,12 @@ Title: XLVkDeviceQueue.h
 Параметры:
 * stappler::xenolith::vk::Fence&
 * stappler::xenolith::vk::CommandBuffer const*
+* stappler::xenolith::vk::DeviceQueue::IdleMode
 
 Возвращает:
 * bool
 
-# ::stappler::xenolith::vk::DeviceQueue::submit(stappler::xenolith::vk::Fence&,SpanView<const stappler::xenolith::vk::CommandBuffer *>)
+# ::stappler::xenolith::vk::DeviceQueue::submit(stappler::xenolith::vk::Fence&,SpanView<const stappler::xenolith::vk::CommandBuffer *>,stappler::xenolith::vk::DeviceQueue::IdleMode)
 
 ## BRIEF
 
@@ -294,6 +310,7 @@ Title: XLVkDeviceQueue.h
 Параметры:
 * stappler::xenolith::vk::Fence&
 * SpanView<const stappler::xenolith::vk::CommandBuffer *>
+* stappler::xenolith::vk::DeviceQueue::IdleMode
 
 Возвращает:
 * bool
@@ -615,6 +632,15 @@ Title: XLVkDeviceQueue.h
 * VkImageMemoryBarrier const&
 
 
+# ::stappler::xenolith::vk::ImageMemoryBarrier::operator bool() const
+
+## BRIEF
+
+## CONTENT
+
+Возвращает:
+* bool
+
 # ::stappler::xenolith::vk::ImageMemoryBarrier::srcAccessMask
 
 ## BRIEF
@@ -742,6 +768,15 @@ Title: XLVkDeviceQueue.h
 * VkBufferMemoryBarrier const&
 
 
+# ::stappler::xenolith::vk::BufferMemoryBarrier::operator bool() const
+
+## BRIEF
+
+## CONTENT
+
+Возвращает:
+* bool
+
 # ::stappler::xenolith::vk::BufferMemoryBarrier::srcAccessMask
 
 ## BRIEF
@@ -852,6 +887,13 @@ Title: XLVkDeviceQueue.h
 * DescriptorInfo
 
 
+# ::stappler::xenolith::vk::DescriptorImageInfo::~DescriptorImageInfo()
+
+## BRIEF
+
+## CONTENT
+
+
 # ::stappler::xenolith::vk::DescriptorImageInfo::DescriptorImageInfo(stappler::xenolith::vk::PipelineDescriptor const*,uint32_t,bool)
 
 ## BRIEF
@@ -899,6 +941,13 @@ Title: XLVkDeviceQueue.h
 
 Базовые классы:
 * DescriptorInfo
+
+
+# ::stappler::xenolith::vk::DescriptorBufferInfo::~DescriptorBufferInfo()
+
+## BRIEF
+
+## CONTENT
 
 
 # ::stappler::xenolith::vk::DescriptorBufferInfo::DescriptorBufferInfo(stappler::xenolith::vk::PipelineDescriptor const*,uint32_t,bool)
@@ -950,6 +999,13 @@ Title: XLVkDeviceQueue.h
 * DescriptorInfo
 
 
+# ::stappler::xenolith::vk::DescriptorBufferViewInfo::~DescriptorBufferViewInfo()
+
+## BRIEF
+
+## CONTENT
+
+
 # ::stappler::xenolith::vk::DescriptorBufferViewInfo::DescriptorBufferViewInfo(stappler::xenolith::vk::PipelineDescriptor const*,uint32_t,bool)
 
 ## BRIEF
@@ -987,7 +1043,7 @@ Title: XLVkDeviceQueue.h
 ## CONTENT
 
 Базовые классы:
-* Ref
+* core::CommandBuffer
 
 
 # ::stappler::xenolith::vk::CommandBuffer::~CommandBuffer()
@@ -1221,7 +1277,7 @@ Title: XLVkDeviceQueue.h
 * SpanView<VkBufferImageCopy>
 
 
-# ::stappler::xenolith::vk::CommandBuffer::cmdClearColorImage(stappler::xenolith::vk::Image*,VkImageLayout,stappler::xenolith::Color4F const&)
+# ::stappler::xenolith::vk::CommandBuffer::cmdClearColorImage(stappler::xenolith::vk::Image*,VkImageLayout,const stappler::geom::Color4F&)
 
 ## BRIEF
 
@@ -1232,7 +1288,7 @@ Title: XLVkDeviceQueue.h
 Параметры:
 * stappler::xenolith::vk::Image*
 * VkImageLayout
-* stappler::xenolith::Color4F const&
+* const stappler::geom::Color4F&
 
 
 # ::stappler::xenolith::vk::CommandBuffer::cmdBeginRenderPass(stappler::xenolith::vk::RenderPass*,stappler::xenolith::vk::Framebuffer*,VkSubpassContents,bool)
@@ -1482,6 +1538,21 @@ Title: XLVkDeviceQueue.h
 * uint32_t
 
 
+# ::stappler::xenolith::vk::CommandBuffer::cmdDispatchPipeline(stappler::xenolith::vk::ComputePipeline*,uint32_t,uint32_t,uint32_t)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* stappler::xenolith::vk::ComputePipeline*
+* uint32_t
+* uint32_t
+* uint32_t
+
+
 # ::stappler::xenolith::vk::CommandBuffer::cmdNextSubpass()
 
 ## BRIEF
@@ -1552,50 +1623,16 @@ Title: XLVkDeviceQueue.h
 * Rc<stappler::xenolith::vk::Image> const&
 
 
-# ::stappler::xenolith::vk::CommandBuffer::addImage(stappler::xenolith::vk::Image*)
+# ::stappler::xenolith::vk::CommandBuffer::bindBuffer(core::BufferObject*)
 
 ## BRIEF
 
 ## CONTENT
 
-Доступ: protected
+Доступ: public
 
 Параметры:
-* stappler::xenolith::vk::Image*
-
-
-# ::stappler::xenolith::vk::CommandBuffer::addBuffer(stappler::xenolith::vk::Buffer*)
-
-## BRIEF
-
-## CONTENT
-
-Доступ: protected
-
-Параметры:
-* stappler::xenolith::vk::Buffer*
-
-
-# ::stappler::xenolith::vk::CommandBuffer::_currentSubpass
-
-## BRIEF
-
-## CONTENT
-
-Доступ: protected
-
-Тип: uint32_t
-
-
-# ::stappler::xenolith::vk::CommandBuffer::_boundLayoutIndex
-
-## BRIEF
-
-## CONTENT
-
-Доступ: protected
-
-Тип: uint32_t
+* core::BufferObject*
 
 
 # ::stappler::xenolith::vk::CommandBuffer::_boundLayout
@@ -1640,39 +1677,6 @@ Title: XLVkDeviceQueue.h
 Доступ: protected
 
 Тип: VkCommandBuffer
-
-
-# ::stappler::xenolith::vk::CommandBuffer::_buffers
-
-## BRIEF
-
-## CONTENT
-
-Доступ: protected
-
-Тип: Set<Rc<stappler::xenolith::vk::Buffer>>
-
-
-# ::stappler::xenolith::vk::CommandBuffer::_images
-
-## BRIEF
-
-## CONTENT
-
-Доступ: protected
-
-Тип: Set<Rc<stappler::xenolith::vk::Image>>
-
-
-# ::stappler::xenolith::vk::CommandBuffer::_framebuffers
-
-## BRIEF
-
-## CONTENT
-
-Доступ: protected
-
-Тип: Set<Rc<stappler::xenolith::vk::Framebuffer>>
 
 
 # ::stappler::xenolith::vk::CommandBuffer::_descriptorSets

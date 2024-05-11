@@ -18,6 +18,7 @@ Title: XLResourceCache.h
 * None
 * Loaded
 * RemoveOnClear
+* CompileWhenAdded
 
 
 # ::stappler::xenolith::operator|(stappler::xenolith::TemporaryResourceFlags const&,stappler::xenolith::TemporaryResourceFlags const&)

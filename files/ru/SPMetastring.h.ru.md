@@ -5,24 +5,35 @@ Title: SPMetastring.h
 
 ## BRIEF
 
+Заголовок интерфейса метастрок
+
 ## CONTENT
 
+Заголовок интерфейса метастрок. Метастроки использутся в качестве строк внутри шаблонов.
 
 # ::stappler::metastring::metastring<char...>
 
 ## BRIEF
 
+Класс метастроки
+
 ## CONTENT
 
+Класс метастроки
+
 Параметры шаблона:
-* char Chars
+* char Chars - символы в метастроке
 
 
 # ::stappler::metastring::metastring<char...>::string<typename>()
 
 ## BRIEF
 
+Конвертирует в строку
+
 ## CONTENT
+
+Конвертирует в строку
 
 Параметры шаблона:
 * typename Interface
@@ -34,25 +45,37 @@ Title: SPMetastring.h
 
 ## BRIEF
 
+Конвертирует в строку
+
 ## CONTENT
 
+Конвертирует в строку
+
 Возвращает:
-* std::array<char, sizeof...(Chars)>
+* std::string
 
 # ::stappler::metastring::metastring<char...>::memory_string()
 
 ## BRIEF
 
+Конвертирует в строку
+
 ## CONTENT
 
+Конвертирует в строку
+
 Возвращает:
-* std::array<char, sizeof...(Chars)>
+* memory::string
 
 # ::stappler::metastring::metastring<char...>::to_string<typename>()
 
 ## BRIEF
 
+Конвертирует в строку
+
 ## CONTENT
+
+Конвертирует в строку
 
 Параметры шаблона:
 * typename Interface
@@ -64,7 +87,11 @@ Title: SPMetastring.h
 
 ## BRIEF
 
+Конвертирует в строку
+
 ## CONTENT
+
+Конвертирует в строку
 
 Возвращает:
 * std::string
@@ -73,7 +100,11 @@ Title: SPMetastring.h
 
 ## BRIEF
 
+Конвертирует в строку
+
 ## CONTENT
+
+Конвертирует в строку
 
 Возвращает:
 * memory::string
@@ -82,7 +113,11 @@ Title: SPMetastring.h
 
 ## BRIEF
 
+Конвертирует в массив
+
 ## CONTENT
+
+Конвертирует в массив
 
 Возвращает:
 * std::array<char, sizeof...(Chars)>
@@ -91,7 +126,11 @@ Title: SPMetastring.h
 
 ## BRIEF
 
+Конвертирует в строку
+
 ## CONTENT
+
+Конвертирует в строку
 
 Возвращает:
 * memory::string
@@ -100,7 +139,11 @@ Title: SPMetastring.h
 
 ## BRIEF
 
+Конвертирует в строку
+
 ## CONTENT
+
+Конвертирует в строку
 
 Возвращает:
 * std::string
@@ -109,7 +152,11 @@ Title: SPMetastring.h
 
 ## BRIEF
 
+Возвращает длину строки
+
 ## CONTENT
+
+Возвращает длину строки
 
 Возвращает:
 * size_t
@@ -118,7 +165,11 @@ Title: SPMetastring.h
 
 ## BRIEF
 
+Соединяет две метастроки
+
 ## CONTENT
+
+Соединяет две метастроки
 
 Параметры шаблона:
 * char Lhs
@@ -135,7 +186,11 @@ Title: SPMetastring.h
 
 ## BRIEF
 
+Соединяет метастроки
+
 ## CONTENT
+
+Соединяет метастроки
 
 Параметры шаблона:
 * typename Args
@@ -154,7 +209,11 @@ Title: SPMetastring.h
 
 ## BRIEF
 
+Соединяет метастроки
+
 ## CONTENT
+
+Соединяет метастроки
 
 Параметры шаблона:
 * char Lhs
@@ -169,7 +228,11 @@ Title: SPMetastring.h
 
 ## BRIEF
 
+Соединяет метастроки
+
 ## CONTENT
+
+Соединяет метастроки
 
 Возвращает:
 * auto
@@ -178,7 +241,11 @@ Title: SPMetastring.h
 
 ## BRIEF
 
+Вычисляет число символов для числовой метастроки
+
 ## CONTENT
+
+Вычисляет число символов для числовой метастроки
 
 Параметры:
 * size_t
@@ -190,7 +257,11 @@ Title: SPMetastring.h
 
 ## BRIEF
 
+Собирает числовую метастроку
+
 ## CONTENT
+
+Собирает числовую метастроку
 
 Параметры шаблона:
 * int size
@@ -202,14 +273,22 @@ Title: SPMetastring.h
 
 ## BRIEF
 
+Собирает числовую метастроку
+
 ## CONTENT
+
+Собирает числовую метастроку
 
 
 # ::stappler::metastring::numeric_builder<2,x,args...>::numeric_builder<2,x,args...>
 
 ## BRIEF
 
+Собирает числовую метастроку
+
 ## CONTENT
+
+Собирает числовую метастроку
 
 Параметры шаблона:
 * size_t x
@@ -220,14 +299,22 @@ Title: SPMetastring.h
 
 ## BRIEF
 
+Тип собранной числовой метастроки
+
 ## CONTENT
+
+Тип собранной числовой метастроки
 
 
 # ::stappler::metastring::numeric_builder<1,x,args...>::numeric_builder<1,x,args...>
 
 ## BRIEF
 
+Собирает числовую метастроку
+
 ## CONTENT
+
+Собирает числовую метастроку
 
 Параметры шаблона:
 * size_t x
@@ -238,14 +325,22 @@ Title: SPMetastring.h
 
 ## BRIEF
 
+Тип собранной числовой метастроки
+
 ## CONTENT
+
+Тип собранной числовой метастроки
 
 
 # ::stappler::metastring::numeric<size_t>
 
 ## BRIEF
 
+Тип числовой метастроки
+
 ## CONTENT
+
+Тип числовой метастроки
 
 Параметры шаблона:
 * size_t x
@@ -255,7 +350,11 @@ Title: SPMetastring.h
 
 ## BRIEF
 
+Суффикс для создания метастроки
+
 ## CONTENT
+
+Суффикс для создания метастроки
 
 Параметры шаблона:
 * typename CharType
@@ -268,7 +367,11 @@ Title: SPMetastring.h
 
 ## BRIEF
 
+Выводит метастроку в поток
+
 ## CONTENT
+
+Выводит метастроку в поток
 
 Параметры шаблона:
 * char Chars

@@ -32,7 +32,7 @@
 		"is_variadic": false,
 		"kind": "macro definition",
 		"name": "SP_COMPILE_TIME",
-		"replacement": "(::stappler::Time::fromCompileTime(__DATE__, __TIME__))"
+		"replacement": "(STAPPLER_VERSIONIZED_NAMESPACE::Time::fromCompileTime(__DATE__, __TIME__))"
 	}, {
 		"_fullName": "::stappler",
 		"_kind": "namespace",
@@ -1424,9 +1424,11 @@
 				}],
 				"ref_qualifier": "none",
 				"return_type": {
-					"_typeName": "void",
-					"builtin_type_kind": "void",
-					"kind": "builtin"
+					"_typeName": "size_t",
+					"kind": "user_defined",
+					"target": {
+						"name": "size_t"
+					}
 				},
 				"semantic_scope": "",
 				"signature": "(char*) const"
@@ -1464,9 +1466,11 @@
 				}],
 				"ref_qualifier": "none",
 				"return_type": {
-					"_typeName": "void",
-					"builtin_type_kind": "void",
-					"kind": "builtin"
+					"_typeName": "size_t",
+					"kind": "user_defined",
+					"target": {
+						"name": "size_t"
+					}
 				},
 				"semantic_scope": "",
 				"signature": "(char*) const"
@@ -1518,9 +1522,11 @@
 				}],
 				"ref_qualifier": "none",
 				"return_type": {
-					"_typeName": "void",
-					"builtin_type_kind": "void",
-					"kind": "builtin"
+					"_typeName": "size_t",
+					"kind": "user_defined",
+					"target": {
+						"name": "size_t"
+					}
 				},
 				"semantic_scope": "",
 				"signature": "(char*,size_t) const"
@@ -2068,11 +2074,20 @@
 				"is_constexpr": false,
 				"is_declaration": false,
 				"is_definition": true,
-				"is_explicit": false,
+				"is_explicit": true,
 				"is_variadic": false,
 				"is_virtual": false,
 				"kind": "conversion operator",
 				"name": "operator bool",
+				"noexcept_condition": {
+					"kind": "literal",
+					"type": {
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
+						"kind": "builtin"
+					},
+					"value": "true"
+				},
 				"ref_qualifier": "none",
 				"return_type": {
 					"_typeName": "bool",
@@ -8826,63 +8841,6 @@
 				"semantic_scope": "",
 				"signature": "(stappler::Time&&)"
 			}, {
-				"_fullName": "protected",
-				"_kind": "access specifier",
-				"_name": "protected",
-				"access_specifier": "protected",
-				"id": 1892155628,
-				"kind": "access specifier",
-				"name": "protected"
-			}, {
-				"_fullName": "",
-				"_kind": "friend",
-				"_name": "",
-				"entity": {
-					"_fullName": "::stappler::Time::TimeInterval",
-					"_kind": "class",
-					"_name": "TimeInterval",
-					"class_kind": "class",
-					"id": 2985102248,
-					"is_declaration": true,
-					"is_definition": false,
-					"is_final": false,
-					"kind": "class",
-					"name": "TimeInterval",
-					"scope": {
-						"name": "TimeInterval"
-					},
-					"semantic_scope": ""
-				},
-				"id": 46947589,
-				"kind": "friend",
-				"name": ""
-			}, {
-				"_fullName": "",
-				"_kind": "using declaration",
-				"_name": "",
-				"id": 46947589,
-				"kind": "using declaration",
-				"name": "",
-				"target": {
-					"name": "TimeStorage::TimeStorage",
-					"objects": [{
-						"_fullName": "::stappler::TimeStorage",
-						"_kind": "class",
-						"_name": "TimeStorage",
-						"class_kind": "class",
-						"id": 3963994454,
-						"is_declaration": false,
-						"is_definition": true,
-						"is_final": false,
-						"kind": "class",
-						"name": "TimeStorage",
-						"scope": {
-							"name": "TimeStorage"
-						},
-						"semantic_scope": ""
-					}]
-				}
-			}, {
 				"_fullName": "::stappler::Time::encodeToFormat(char*,size_t,char const*) const",
 				"_kind": "member function",
 				"_name": "encodeToFormat",
@@ -8959,6 +8917,63 @@
 				},
 				"semantic_scope": "",
 				"signature": "(char*,size_t,char const*) const"
+			}, {
+				"_fullName": "protected",
+				"_kind": "access specifier",
+				"_name": "protected",
+				"access_specifier": "protected",
+				"id": 1892155628,
+				"kind": "access specifier",
+				"name": "protected"
+			}, {
+				"_fullName": "",
+				"_kind": "friend",
+				"_name": "",
+				"entity": {
+					"_fullName": "::stappler::Time::TimeInterval",
+					"_kind": "class",
+					"_name": "TimeInterval",
+					"class_kind": "class",
+					"id": 2985102248,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_final": false,
+					"kind": "class",
+					"name": "TimeInterval",
+					"scope": {
+						"name": "TimeInterval"
+					},
+					"semantic_scope": ""
+				},
+				"id": 46947589,
+				"kind": "friend",
+				"name": ""
+			}, {
+				"_fullName": "",
+				"_kind": "using declaration",
+				"_name": "",
+				"id": 46947589,
+				"kind": "using declaration",
+				"name": "",
+				"target": {
+					"name": "TimeStorage::TimeStorage",
+					"objects": [{
+						"_fullName": "::stappler::TimeStorage",
+						"_kind": "class",
+						"_name": "TimeStorage",
+						"class_kind": "class",
+						"id": 3963994454,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_final": false,
+						"kind": "class",
+						"name": "TimeStorage",
+						"scope": {
+							"name": "TimeStorage"
+						},
+						"semantic_scope": ""
+					}]
+				}
 			}],
 			"class_kind": "class",
 			"id": 2780947611,

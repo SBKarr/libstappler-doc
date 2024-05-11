@@ -214,6 +214,709 @@
 						},
 						"semantic_scope": ""
 					}, {
+						"_fullName": "::stappler::xenolith::core::Resource::loadImageMemoryData(uint8_t*,uint64_t,stappler::BytesView,stappler::xenolith::core::ImageFormat,ImageData::DataCallback const&)",
+						"_kind": "function",
+						"_name": "loadImageMemoryData",
+						"body_kind": "declaration",
+						"id": 2170744568,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "loadImageMemoryData",
+						"parameters": [{
+							"_fullName": "",
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 46947589,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "uint8_t*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "uint8_t",
+									"kind": "user_defined",
+									"target": {
+										"name": "uint8_t"
+									}
+								}
+							}
+						}, {
+							"_fullName": "expectedSize",
+							"_kind": "function parameter",
+							"_name": "expectedSize",
+							"id": 1904705606,
+							"kind": "function parameter",
+							"name": "expectedSize",
+							"type": {
+								"_typeName": "uint64_t",
+								"kind": "user_defined",
+								"target": {
+									"name": "uint64_t"
+								}
+							}
+						}, {
+							"_fullName": "data",
+							"_kind": "function parameter",
+							"_name": "data",
+							"id": 555911733,
+							"kind": "function parameter",
+							"name": "data",
+							"type": {
+								"_typeName": "stappler::BytesView",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::BytesView",
+									"objects": [{
+										"_fullName": "::stappler::BytesView",
+										"_kind": "type alias",
+										"_name": "BytesView",
+										"id": 597702939,
+										"kind": "type alias",
+										"name": "BytesView",
+										"underlying_type": {
+											"_typeName": "BytesViewTemplate<Endian::Host>",
+											"arguments_exposed": false,
+											"kind": "template_instantiation",
+											"primary_template": {
+												"name": "BytesViewTemplate",
+												"objects": [{
+													"_fullName": "::stappler::BytesViewTemplate<stappler::Endian>",
+													"_kind": "class template",
+													"_name": "BytesViewTemplate",
+													"class": {
+														"_fullName": "::stappler::BytesViewTemplate<stappler::Endian>",
+														"_kind": "class",
+														"_name": "BytesViewTemplate",
+														"bases": [{
+															"_fullName": "BytesReader<uint8_t>",
+															"_kind": "base class specifier",
+															"_name": "BytesReader<uint8_t>",
+															"access_specifier": "public",
+															"id": 2456653580,
+															"is_virtual": false,
+															"kind": "base class specifier",
+															"name": "BytesReader<uint8_t>",
+															"type": {
+																"_typeName": "BytesReader<uint8_t>",
+																"arguments_exposed": false,
+																"kind": "template_instantiation",
+																"primary_template": {
+																	"name": "BytesReader",
+																	"objects": [{
+																		"_fullName": "::stappler::BytesReader<typename>",
+																		"_kind": "class template",
+																		"_name": "BytesReader",
+																		"class": {
+																			"_fullName": "::stappler::BytesReader<typename>",
+																			"_kind": "class",
+																			"_name": "BytesReader",
+																			"class_kind": "class",
+																			"id": 1592092855,
+																			"is_declaration": false,
+																			"is_definition": true,
+																			"is_final": false,
+																			"kind": "class",
+																			"name": "BytesReader",
+																			"scope": {
+																				"is_templated": true,
+																				"name": "BytesReader",
+																				"template_parameters": [{
+																					"_fullName": "_CharType",
+																					"_kind": "template type parameter",
+																					"_name": "_CharType",
+																					"id": 1941148167,
+																					"is_variadic": false,
+																					"keyword": "typename",
+																					"kind": "template type parameter",
+																					"name": "_CharType"
+																				}]
+																			},
+																			"semantic_scope": ""
+																		},
+																		"id": 1592092855,
+																		"kind": "class template",
+																		"name": "BytesReader",
+																		"parameters": [{
+																			"_fullName": "_CharType",
+																			"_kind": "template type parameter",
+																			"_name": "_CharType",
+																			"id": 1941148167,
+																			"is_variadic": false,
+																			"keyword": "typename",
+																			"kind": "template type parameter",
+																			"name": "_CharType"
+																		}],
+																		"scope":  {
+																			"is_templated": true,
+																			"name": "BytesReader",
+																			"template_parameters": [{
+																				"_fullName": "_CharType",
+																				"_kind": "template type parameter",
+																				"_name": "_CharType",
+																				"id": 1941148167,
+																				"is_variadic": false,
+																				"keyword": "typename",
+																				"kind": "template type parameter",
+																				"name": "_CharType"
+																			}]
+																		}
+																	}]
+																},
+																"unexposed_arguments": "uint8_t"
+															}
+														}],
+														"class_kind": "class",
+														"id": 334826878,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "BytesViewTemplate",
+														"scope": {
+															"is_templated": true,
+															"name": "BytesViewTemplate",
+															"template_parameters": [{
+																"_fullName": "Endianess",
+																"_kind": "non type template parameter",
+																"_name": "Endianess",
+																"default_value": {
+																	"expression": [{
+																		"kind": "identifier",
+																		"spelling": "Endian"
+																	}, {
+																		"kind": "punctuation",
+																		"spelling": "::"
+																	}, {
+																		"kind": "identifier",
+																		"spelling": "Network"
+																	}],
+																	"kind": "unexposed",
+																	"type": {
+																		"_typeName": "stappler::Endian",
+																		"kind": "user_defined",
+																		"target": {
+																			"name": "stappler::Endian",
+																			"objects": [{
+																				"_fullName": "::stappler::Endian",
+																				"_kind": "enum",
+																				"_name": "Endian",
+																				"has_explicit_type": false,
+																				"id": 3672700419,
+																				"is_declaration": false,
+																				"is_definition": true,
+																				"is_scoped": true,
+																				"kind": "enum",
+																				"name": "Endian",
+																				"scope": {
+																					"name": "Endian"
+																				},
+																				"semantic_scope": "",
+																				"underlying_type": {
+																					"_typeName": "int",
+																					"builtin_type_kind": "int",
+																					"kind": "builtin"
+																				}
+																			}]
+																		}
+																	}
+																},
+																"id": 2642596124,
+																"is_variadic": false,
+																"kind": "non type template parameter",
+																"name": "Endianess",
+																"type": {
+																	"_typeName": "stappler::Endian",
+																	"kind": "user_defined",
+																	"target": {
+																		"name": "stappler::Endian",
+																		"objects": [{
+																			"_fullName": "::stappler::Endian",
+																			"_kind": "enum",
+																			"_name": "Endian",
+																			"has_explicit_type": false,
+																			"id": 3672700419,
+																			"is_declaration": false,
+																			"is_definition": true,
+																			"is_scoped": true,
+																			"kind": "enum",
+																			"name": "Endian",
+																			"scope": {
+																				"name": "Endian"
+																			},
+																			"semantic_scope": "",
+																			"underlying_type": {
+																				"_typeName": "int",
+																				"builtin_type_kind": "int",
+																				"kind": "builtin"
+																			}
+																		}]
+																	}
+																}
+															}]
+														},
+														"semantic_scope": ""
+													},
+													"id": 334826878,
+													"kind": "class template",
+													"name": "BytesViewTemplate",
+													"parameters": [{
+														"_fullName": "Endianess",
+														"_kind": "non type template parameter",
+														"_name": "Endianess",
+														"default_value": {
+															"expression": [{
+																"kind": "identifier",
+																"spelling": "Endian"
+															}, {
+																"kind": "punctuation",
+																"spelling": "::"
+															}, {
+																"kind": "identifier",
+																"spelling": "Network"
+															}],
+															"kind": "unexposed",
+															"type": {
+																"_typeName": "stappler::Endian",
+																"kind": "user_defined",
+																"target": {
+																	"name": "stappler::Endian",
+																	"objects": [{
+																		"_fullName": "::stappler::Endian",
+																		"_kind": "enum",
+																		"_name": "Endian",
+																		"has_explicit_type": false,
+																		"id": 3672700419,
+																		"is_declaration": false,
+																		"is_definition": true,
+																		"is_scoped": true,
+																		"kind": "enum",
+																		"name": "Endian",
+																		"scope": {
+																			"name": "Endian"
+																		},
+																		"semantic_scope": "",
+																		"underlying_type": {
+																			"_typeName": "int",
+																			"builtin_type_kind": "int",
+																			"kind": "builtin"
+																		}
+																	}]
+																}
+															}
+														},
+														"id": 2642596124,
+														"is_variadic": false,
+														"kind": "non type template parameter",
+														"name": "Endianess",
+														"type": {
+															"_typeName": "stappler::Endian",
+															"kind": "user_defined",
+															"target": {
+																"name": "stappler::Endian",
+																"objects": [{
+																	"_fullName": "::stappler::Endian",
+																	"_kind": "enum",
+																	"_name": "Endian",
+																	"has_explicit_type": false,
+																	"id": 3672700419,
+																	"is_declaration": false,
+																	"is_definition": true,
+																	"is_scoped": true,
+																	"kind": "enum",
+																	"name": "Endian",
+																	"scope": {
+																		"name": "Endian"
+																	},
+																	"semantic_scope": "",
+																	"underlying_type": {
+																		"_typeName": "int",
+																		"builtin_type_kind": "int",
+																		"kind": "builtin"
+																	}
+																}]
+															}
+														}
+													}],
+													"scope":  {
+														"is_templated": true,
+														"name": "BytesViewTemplate",
+														"template_parameters": [{
+															"_fullName": "Endianess",
+															"_kind": "non type template parameter",
+															"_name": "Endianess",
+															"default_value": {
+																"expression": [{
+																	"kind": "identifier",
+																	"spelling": "Endian"
+																}, {
+																	"kind": "punctuation",
+																	"spelling": "::"
+																}, {
+																	"kind": "identifier",
+																	"spelling": "Network"
+																}],
+																"kind": "unexposed",
+																"type": {
+																	"_typeName": "stappler::Endian",
+																	"kind": "user_defined",
+																	"target": {
+																		"name": "stappler::Endian",
+																		"objects": [{
+																			"_fullName": "::stappler::Endian",
+																			"_kind": "enum",
+																			"_name": "Endian",
+																			"has_explicit_type": false,
+																			"id": 3672700419,
+																			"is_declaration": false,
+																			"is_definition": true,
+																			"is_scoped": true,
+																			"kind": "enum",
+																			"name": "Endian",
+																			"scope": {
+																				"name": "Endian"
+																			},
+																			"semantic_scope": "",
+																			"underlying_type": {
+																				"_typeName": "int",
+																				"builtin_type_kind": "int",
+																				"kind": "builtin"
+																			}
+																		}]
+																	}
+																}
+															},
+															"id": 2642596124,
+															"is_variadic": false,
+															"kind": "non type template parameter",
+															"name": "Endianess",
+															"type": {
+																"_typeName": "stappler::Endian",
+																"kind": "user_defined",
+																"target": {
+																	"name": "stappler::Endian",
+																	"objects": [{
+																		"_fullName": "::stappler::Endian",
+																		"_kind": "enum",
+																		"_name": "Endian",
+																		"has_explicit_type": false,
+																		"id": 3672700419,
+																		"is_declaration": false,
+																		"is_definition": true,
+																		"is_scoped": true,
+																		"kind": "enum",
+																		"name": "Endian",
+																		"scope": {
+																			"name": "Endian"
+																		},
+																		"semantic_scope": "",
+																		"underlying_type": {
+																			"_typeName": "int",
+																			"builtin_type_kind": "int",
+																			"kind": "builtin"
+																		}
+																	}]
+																}
+															}
+														}]
+													}
+												}]
+											},
+											"unexposed_arguments": "Endian::Host"
+										}
+									}]
+								}
+							}
+						}, {
+							"_fullName": "fmt",
+							"_kind": "function parameter",
+							"_name": "fmt",
+							"id": 2706231129,
+							"kind": "function parameter",
+							"name": "fmt",
+							"type": {
+								"_typeName": "stappler::xenolith::core::ImageFormat",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::core::ImageFormat",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::core::ImageFormat",
+										"_kind": "enum",
+										"_name": "ImageFormat",
+										"has_explicit_type": false,
+										"id": 4011993076,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "ImageFormat",
+										"scope": {
+											"name": "ImageFormat"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
+						}, {
+							"_fullName": "dcb",
+							"_kind": "function parameter",
+							"_name": "dcb",
+							"id": 2698239599,
+							"kind": "function parameter",
+							"name": "dcb",
+							"type": {
+								"_typeName": "ImageData::DataCallback const&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "ImageData::DataCallback const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "ImageData::DataCallback",
+										"kind": "user_defined",
+										"target": {
+											"name": "ImageData::DataCallback",
+											"objects": [{
+												"_fullName": "::stappler::xenolith::core::ImageData::DataCallback",
+												"_kind": "type alias",
+												"_name": "DataCallback",
+												"id": 249891882,
+												"kind": "type alias",
+												"name": "DataCallback",
+												"underlying_type": {
+													"_typeName": "memory::callback<void (BytesView)>",
+													"arguments_exposed": false,
+													"kind": "template_instantiation",
+													"primary_template": {
+														"name": "memory::callback",
+														"objects": [{
+															"_fullName": "::stappler::memory::callback<ReturnType(ArgumentTypes...)>::callback<ReturnType(ArgumentTypes...)>",
+															"_kind": "class template specialization",
+															"_name": "callback",
+															"arguments_exposed": false,
+															"class": {
+																"_fullName": "::stappler::memory::callback<ReturnType(ArgumentTypes...)>::callback<ReturnType(ArgumentTypes...)>",
+																"_kind": "class",
+																"_name": "callback",
+																"bases": [{
+																	"_fullName": "AllocPool",
+																	"_kind": "base class specifier",
+																	"_name": "AllocPool",
+																	"access_specifier": "public",
+																	"id": 972079861,
+																	"is_virtual": false,
+																	"kind": "base class specifier",
+																	"name": "AllocPool",
+																	"type": {
+																		"_typeName": "stappler::memory::AllocPool",
+																		"kind": "user_defined",
+																		"target": {
+																			"name": "stappler::memory::AllocPool",
+																			"objects": [{
+																				"_fullName": "::stappler::memory::AllocPool",
+																				"_kind": "class",
+																				"_name": "AllocPool",
+																				"class_kind": "struct",
+																				"id": 3030388899,
+																				"is_declaration": false,
+																				"is_definition": true,
+																				"is_final": false,
+																				"kind": "class",
+																				"name": "AllocPool",
+																				"scope": {
+																					"name": "AllocPool"
+																				},
+																				"semantic_scope": ""
+																			}]
+																		}
+																	}
+																}],
+																"class_kind": "class",
+																"id": 1605912956,
+																"is_declaration": false,
+																"is_definition": true,
+																"is_final": false,
+																"kind": "class",
+																"name": "callback",
+																"scope": {
+																	"is_templated": true,
+																	"name": "callback",
+																	"template_parameters": [{
+																		"_fullName": "ReturnType",
+																		"_kind": "template type parameter",
+																		"_name": "ReturnType",
+																		"id": 3798530772,
+																		"is_variadic": false,
+																		"keyword": "typename",
+																		"kind": "template type parameter",
+																		"name": "ReturnType"
+																	}, {
+																		"_fullName": "ArgumentTypes",
+																		"_kind": "template type parameter",
+																		"_name": "ArgumentTypes",
+																		"id": 120775233,
+																		"is_variadic": true,
+																		"keyword": "typename",
+																		"kind": "template type parameter",
+																		"name": "ArgumentTypes"
+																	}]
+																},
+																"semantic_scope": ""
+															},
+															"id": 1605912956,
+															"is_full_specialization": false,
+															"kind": "class template specialization",
+															"name": "callback",
+															"parameters": [{
+																"_fullName": "ReturnType",
+																"_kind": "template type parameter",
+																"_name": "ReturnType",
+																"id": 3798530772,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "ReturnType"
+															}, {
+																"_fullName": "ArgumentTypes",
+																"_kind": "template type parameter",
+																"_name": "ArgumentTypes",
+																"id": 120775233,
+																"is_variadic": true,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "ArgumentTypes"
+															}],
+															"primary_template":  {
+																"name": "callback",
+																"objects": [{
+																	"_fullName": "::stappler::memory::callback<typename>",
+																	"_kind": "class template",
+																	"_name": "callback",
+																	"class": {
+																		"_fullName": "::stappler::memory::callback<typename>",
+																		"_kind": "class",
+																		"_name": "callback",
+																		"class_kind": "class",
+																		"id": 3310519973,
+																		"is_declaration": true,
+																		"is_definition": false,
+																		"is_final": false,
+																		"kind": "class",
+																		"name": "callback",
+																		"scope": {
+																			"is_templated": true,
+																			"name": "callback",
+																			"template_parameters": [{
+																				"_fullName": "UnusedType",
+																				"_kind": "template type parameter",
+																				"_name": "UnusedType",
+																				"id": 3305497932,
+																				"is_variadic": false,
+																				"keyword": "typename",
+																				"kind": "template type parameter",
+																				"name": "UnusedType"
+																			}]
+																		},
+																		"semantic_scope": ""
+																	},
+																	"id": 3310519973,
+																	"kind": "class template",
+																	"name": "callback",
+																	"parameters": [{
+																		"_fullName": "UnusedType",
+																		"_kind": "template type parameter",
+																		"_name": "UnusedType",
+																		"id": 3305497932,
+																		"is_variadic": false,
+																		"keyword": "typename",
+																		"kind": "template type parameter",
+																		"name": "UnusedType"
+																	}],
+																	"scope":  {
+																		"is_templated": true,
+																		"name": "callback",
+																		"template_parameters": [{
+																			"_fullName": "UnusedType",
+																			"_kind": "template type parameter",
+																			"_name": "UnusedType",
+																			"id": 3305497932,
+																			"is_variadic": false,
+																			"keyword": "typename",
+																			"kind": "template type parameter",
+																			"name": "UnusedType"
+																		}]
+																	}
+																}]
+															},
+															"scope":  {
+																"is_templated": true,
+																"name": "callback",
+																"template_parameters": [{
+																	"_fullName": "ReturnType",
+																	"_kind": "template type parameter",
+																	"_name": "ReturnType",
+																	"id": 3798530772,
+																	"is_variadic": false,
+																	"keyword": "typename",
+																	"kind": "template type parameter",
+																	"name": "ReturnType"
+																}, {
+																	"_fullName": "ArgumentTypes",
+																	"_kind": "template type parameter",
+																	"_name": "ArgumentTypes",
+																	"id": 120775233,
+																	"is_variadic": true,
+																	"keyword": "typename",
+																	"kind": "template type parameter",
+																	"name": "ArgumentTypes"
+																}]
+															},
+															"unexposed_arguments":  [{
+																"kind": "identifier",
+																"spelling": "ReturnType"
+															}, {
+																"kind": "punctuation",
+																"spelling": "("
+															}, {
+																"kind": "identifier",
+																"spelling": "ArgumentTypes"
+															}, {
+																"kind": "punctuation",
+																"spelling": "..."
+															}, {
+																"kind": "punctuation",
+																"spelling": ")"
+															}]
+														}]
+													},
+													"unexposed_arguments": "void (BytesView)"
+												}
+											}]
+										}
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}],
+						"return_type":  {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(uint8_t*,uint64_t,stappler::BytesView,stappler::xenolith::core::ImageFormat,ImageData::DataCallback const&)",
+						"storage_class": [
+							"static"
+						]
+					}, {
 						"_fullName": "::stappler::xenolith::core::Resource::loadImageFileData(uint8_t*,uint64_t,stappler::StringView,stappler::xenolith::core::ImageFormat,ImageData::DataCallback const&)",
 						"_kind": "function",
 						"_name": "loadImageFileData",
@@ -494,17 +1197,51 @@
 													"primary_template": {
 														"name": "memory::callback",
 														"objects": [{
-															"_fullName": "::stappler::memory::callback<typename>",
-															"_kind": "class template",
+															"_fullName": "::stappler::memory::callback<ReturnType(ArgumentTypes...)>::callback<ReturnType(ArgumentTypes...)>",
+															"_kind": "class template specialization",
 															"_name": "callback",
+															"arguments_exposed": false,
 															"class": {
-																"_fullName": "::stappler::memory::callback<typename>",
+																"_fullName": "::stappler::memory::callback<ReturnType(ArgumentTypes...)>::callback<ReturnType(ArgumentTypes...)>",
 																"_kind": "class",
 																"_name": "callback",
+																"bases": [{
+																	"_fullName": "AllocPool",
+																	"_kind": "base class specifier",
+																	"_name": "AllocPool",
+																	"access_specifier": "public",
+																	"id": 972079861,
+																	"is_virtual": false,
+																	"kind": "base class specifier",
+																	"name": "AllocPool",
+																	"type": {
+																		"_typeName": "stappler::memory::AllocPool",
+																		"kind": "user_defined",
+																		"target": {
+																			"name": "stappler::memory::AllocPool",
+																			"objects": [{
+																				"_fullName": "::stappler::memory::AllocPool",
+																				"_kind": "class",
+																				"_name": "AllocPool",
+																				"class_kind": "struct",
+																				"id": 3030388899,
+																				"is_declaration": false,
+																				"is_definition": true,
+																				"is_final": false,
+																				"kind": "class",
+																				"name": "AllocPool",
+																				"scope": {
+																					"name": "AllocPool"
+																				},
+																				"semantic_scope": ""
+																			}]
+																		}
+																	}
+																}],
 																"class_kind": "class",
-																"id": 3310519973,
-																"is_declaration": true,
-																"is_definition": false,
+																"id": 1605912956,
+																"is_declaration": false,
+																"is_definition": true,
 																"is_final": false,
 																"kind": "class",
 																"name": "callback",
@@ -512,6 +1249,87 @@
 																	"is_templated": true,
 																	"name": "callback",
 																	"template_parameters": [{
+																		"_fullName": "ReturnType",
+																		"_kind": "template type parameter",
+																		"_name": "ReturnType",
+																		"id": 3798530772,
+																		"is_variadic": false,
+																		"keyword": "typename",
+																		"kind": "template type parameter",
+																		"name": "ReturnType"
+																	}, {
+																		"_fullName": "ArgumentTypes",
+																		"_kind": "template type parameter",
+																		"_name": "ArgumentTypes",
+																		"id": 120775233,
+																		"is_variadic": true,
+																		"keyword": "typename",
+																		"kind": "template type parameter",
+																		"name": "ArgumentTypes"
+																	}]
+																},
+																"semantic_scope": ""
+															},
+															"id": 1605912956,
+															"is_full_specialization": false,
+															"kind": "class template specialization",
+															"name": "callback",
+															"parameters": [{
+																"_fullName": "ReturnType",
+																"_kind": "template type parameter",
+																"_name": "ReturnType",
+																"id": 3798530772,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "ReturnType"
+															}, {
+																"_fullName": "ArgumentTypes",
+																"_kind": "template type parameter",
+																"_name": "ArgumentTypes",
+																"id": 120775233,
+																"is_variadic": true,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "ArgumentTypes"
+															}],
+															"primary_template":  {
+																"name": "callback",
+																"objects": [{
+																	"_fullName": "::stappler::memory::callback<typename>",
+																	"_kind": "class template",
+																	"_name": "callback",
+																	"class": {
+																		"_fullName": "::stappler::memory::callback<typename>",
+																		"_kind": "class",
+																		"_name": "callback",
+																		"class_kind": "class",
+																		"id": 3310519973,
+																		"is_declaration": true,
+																		"is_definition": false,
+																		"is_final": false,
+																		"kind": "class",
+																		"name": "callback",
+																		"scope": {
+																			"is_templated": true,
+																			"name": "callback",
+																			"template_parameters": [{
+																				"_fullName": "UnusedType",
+																				"_kind": "template type parameter",
+																				"_name": "UnusedType",
+																				"id": 3305497932,
+																				"is_variadic": false,
+																				"keyword": "typename",
+																				"kind": "template type parameter",
+																				"name": "UnusedType"
+																			}]
+																		},
+																		"semantic_scope": ""
+																	},
+																	"id": 3310519973,
+																	"kind": "class template",
+																	"name": "callback",
+																	"parameters": [{
 																		"_fullName": "UnusedType",
 																		"_kind": "template type parameter",
 																		"_name": "UnusedType",
@@ -520,37 +1338,62 @@
 																		"keyword": "typename",
 																		"kind": "template type parameter",
 																		"name": "UnusedType"
-																	}]
-																},
-																"semantic_scope": ""
+																	}],
+																	"scope":  {
+																		"is_templated": true,
+																		"name": "callback",
+																		"template_parameters": [{
+																			"_fullName": "UnusedType",
+																			"_kind": "template type parameter",
+																			"_name": "UnusedType",
+																			"id": 3305497932,
+																			"is_variadic": false,
+																			"keyword": "typename",
+																			"kind": "template type parameter",
+																			"name": "UnusedType"
+																		}]
+																	}
+																}]
 															},
-															"id": 3310519973,
-															"kind": "class template",
-															"name": "callback",
-															"parameters": [{
-																"_fullName": "UnusedType",
-																"_kind": "template type parameter",
-																"_name": "UnusedType",
-																"id": 3305497932,
-																"is_variadic": false,
-																"keyword": "typename",
-																"kind": "template type parameter",
-																"name": "UnusedType"
-															}],
 															"scope":  {
 																"is_templated": true,
 																"name": "callback",
 																"template_parameters": [{
-																	"_fullName": "UnusedType",
+																	"_fullName": "ReturnType",
 																	"_kind": "template type parameter",
-																	"_name": "UnusedType",
-																	"id": 3305497932,
+																	"_name": "ReturnType",
+																	"id": 3798530772,
 																	"is_variadic": false,
 																	"keyword": "typename",
 																	"kind": "template type parameter",
-																	"name": "UnusedType"
+																	"name": "ReturnType"
+																}, {
+																	"_fullName": "ArgumentTypes",
+																	"_kind": "template type parameter",
+																	"_name": "ArgumentTypes",
+																	"id": 120775233,
+																	"is_variadic": true,
+																	"keyword": "typename",
+																	"kind": "template type parameter",
+																	"name": "ArgumentTypes"
 																}]
-															}
+															},
+															"unexposed_arguments":  [{
+																"kind": "identifier",
+																"spelling": "ReturnType"
+															}, {
+																"kind": "punctuation",
+																"spelling": "("
+															}, {
+																"kind": "identifier",
+																"spelling": "ArgumentTypes"
+															}, {
+																"kind": "punctuation",
+																"spelling": "..."
+															}, {
+																"kind": "punctuation",
+																"spelling": ")"
+															}]
 														}]
 													},
 													"unexposed_arguments": "void (BytesView)"

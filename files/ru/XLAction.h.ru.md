@@ -5,14 +5,22 @@ Title: XLAction.h
 
 ## BRIEF
 
+Заголовок типов действий
+
 ## CONTENT
+
+Заголовок типов действий. Действия - минимальные примитивы для реализации анимаций. Как правило, действия интерполируют некоторый параметр объекта во времени.
 
 
 # ::stappler::xenolith::Action
 
 ## BRIEF
 
+Базовый тип действия
+
 ## CONTENT
+
+Базовый тип действия
 
 Базовые классы:
 * Ref
@@ -22,9 +30,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Константа неназначенного тега
+
 ## CONTENT
 
 Доступ: public
+
+Константа неназначенного тега
 
 Тип: uint32_t const
 
@@ -33,27 +45,38 @@ Title: XLAction.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
 
+Деструктор
 
 # ::stappler::xenolith::Action::Action()
 
 ## BRIEF
 
+Конструктор
+
 ## CONTENT
 
 Доступ: public
+
+Конструктор
 
 
 # ::stappler::xenolith::Action::isDone() const
 
 ## BRIEF
 
+Проверяет, завершено ли действие
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, завершено ли действие
 
 Возвращает:
 * bool
@@ -62,51 +85,71 @@ Title: XLAction.h
 
 ## BRIEF
 
+Завершает действие с ошибкой
+
 ## CONTENT
 
 Доступ: public
+
+Завершает действие с ошибкой
 
 
 # ::stappler::xenolith::Action::stop()
 
 ## BRIEF
 
+Останавливает действие
+
 ## CONTENT
 
 Доступ: public
+
+Останавливает действие
 
 
 # ::stappler::xenolith::Action::step(float)
 
 ## BRIEF
 
+Выполняет сегмент действия
+
 ## CONTENT
 
 Доступ: public
 
+Выполняет сегмент действия
+
 Параметры:
-* float
+* float - сегмент в секундах
 
 
 # ::stappler::xenolith::Action::update(float)
 
 ## BRIEF
 
+Выполняет интерполяцию параметры
+
 ## CONTENT
 
 Доступ: public
 
+Выполняет интерполяцию параметры
+
 Параметры:
-* float
+* float - параметр от 0 до 1
 
 
 # ::stappler::xenolith::Action::getContainer() const
 
 ## BRIEF
 
+Возвращает объект, владеющий действием
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает объект, владеющий действием
 
 Возвращает:
 * stappler::xenolith::Node*
@@ -115,9 +158,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Возвращает целевой объект действия
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает целевой объект действия
 
 Возвращает:
 * stappler::xenolith::Node*
@@ -126,9 +173,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Возвращает тег
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает тег
 
 Возвращает:
 * uint32_t
@@ -137,9 +188,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Устанавливает тег
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает тег
 
 Параметры:
 * uint32_t
@@ -149,9 +204,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Возвращает длительность действия
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает длительность действия
 
 Возвращает:
 * float
@@ -160,9 +219,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Устанавливает длительность действия
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает длительность действия
 
 Параметры:
 * float
@@ -172,9 +235,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Начинает действие для объекта
+
 ## CONTENT
 
 Доступ: public
+
+Начинает действие для объекта
 
 Параметры:
 * stappler::xenolith::Node*
@@ -184,9 +251,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Назначает базовый объект для действия
+
 ## CONTENT
 
 Доступ: protected
+
+Назначает базовый объект для действия
 
 Параметры:
 * stappler::xenolith::Node*
@@ -196,9 +267,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Устанавливает цель для действия
+
 ## CONTENT
 
 Доступ: protected
+
+Устанавливает цель для действия
 
 Параметры:
 * stappler::xenolith::Node*
@@ -208,9 +283,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Объект, содержащий действие
+
 ## CONTENT
 
 Доступ: protected
+
+Объект, содержащий действие
 
 Тип: stappler::xenolith::Node*
 
@@ -219,9 +298,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Цель действия
+
 ## CONTENT
 
 Доступ: protected
+
+Цель действия
 
 Тип: Rc<stappler::xenolith::Node>
 
@@ -230,9 +313,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Тег
+
 ## CONTENT
 
 Доступ: protected
+
+Тег
 
 Тип: uint32_t
 
@@ -241,9 +328,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Длительность действия
+
 ## CONTENT
 
 Доступ: protected
+
+Длительность действия
 
 Тип: float
 
@@ -252,7 +343,11 @@ Title: XLAction.h
 
 ## BRIEF
 
+Базовый тип для действий, выполняемых мгновенно
+
 ## CONTENT
+
+Базовый тип для действий, выполняемых мгновенно
 
 Базовые классы:
 * Action
@@ -262,21 +357,29 @@ Title: XLAction.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::ActionInstant::init(bool)
 
 ## BRIEF
 
+Создаёт действие
+
 ## CONTENT
 
 Доступ: public
 
+Создаёт действие
+
 Параметры:
-* bool
+* bool - true если запустить действие можно лишь единожды
 
 Возвращает:
 * bool
@@ -285,9 +388,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Запускает сегмент действия
+
 ## CONTENT
 
 Доступ: public
+
+Запускает сегмент действия
 
 Параметры:
 * float
@@ -297,9 +404,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Флаг запуска единожды
+
 ## CONTENT
 
 Доступ: protected
+
+Флаг запуска единожды
 
 Тип: bool
 
@@ -308,9 +419,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Флаг выполнения
+
 ## CONTENT
 
 Доступ: protected
+
+Флаг выполнения
 
 Тип: bool
 
@@ -319,7 +434,11 @@ Title: XLAction.h
 
 ## BRIEF
 
+Действие: изменяет видимость объекта, показывает его
+
 ## CONTENT
+
+Действие: изменяет видимость объекта, показывает его
 
 Базовые классы:
 * ActionInstant
@@ -329,18 +448,26 @@ Title: XLAction.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::Show::update(float)
 
 ## BRIEF
 
+Функция интерполяции
+
 ## CONTENT
 
 Доступ: public
+
+Функция интерполяции
 
 Параметры:
 * float
@@ -350,7 +477,11 @@ Title: XLAction.h
 
 ## BRIEF
 
+Действие: изменяет видимость объекта, скрывает его
+
 ## CONTENT
+
+Действие: изменяет видимость объекта, скрывает его
 
 Базовые классы:
 * ActionInstant
@@ -360,18 +491,26 @@ Title: XLAction.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::Hide::update(float)
 
 ## BRIEF
 
+Функция интерполяции
+
 ## CONTENT
 
 Доступ: public
+
+Функция интерполяции
 
 Параметры:
 * float
@@ -381,7 +520,11 @@ Title: XLAction.h
 
 ## BRIEF
 
+Действие: переключает видимость объекта
+
 ## CONTENT
+
+Действие: переключает видимость объекта
 
 Базовые классы:
 * ActionInstant
@@ -391,18 +534,26 @@ Title: XLAction.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::ToggleVisibility::update(float)
 
 ## BRIEF
 
+Функция интерполяции
+
 ## CONTENT
 
 Доступ: public
+
+Функция интерполяции
 
 Параметры:
 * float
@@ -412,7 +563,11 @@ Title: XLAction.h
 
 ## BRIEF
 
+Действие: удаляет объект
+
 ## CONTENT
+
+Действие: удаляет объект
 
 Базовые классы:
 * ActionInstant
@@ -422,22 +577,30 @@ Title: XLAction.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::RemoveSelf::init(bool,bool)
 
 ## BRIEF
 
+Создаёт действие
+
 ## CONTENT
 
 Доступ: public
 
+Создаёт действие
+
 Параметры:
-* bool
-* bool
+* bool - флаг требования очистки
+* bool - флаг единственности выполнения
 
 Возвращает:
 * bool
@@ -446,9 +609,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Функция интерполяции
+
 ## CONTENT
 
 Доступ: public
+
+Функция интерполяции
 
 Параметры:
 * float
@@ -458,9 +625,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Флаг необходимости очистки
+
 ## CONTENT
 
 Доступ: protected
+
+Флаг необходимости очистки
 
 Тип: bool
 
@@ -469,7 +640,11 @@ Title: XLAction.h
 
 ## BRIEF
 
+Действие: перемещает объект на позицию
+
 ## CONTENT
+
+Действие: перемещает объект на позицию
 
 Базовые классы:
 * ActionInstant
@@ -479,22 +654,30 @@ Title: XLAction.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
 
+Деструктор
 
-# ::stappler::xenolith::Place::init(stappler::xenolith::Vec2 const&,bool)
+
+# ::stappler::xenolith::Place::init(const stappler::geom::Vec2&,bool)
 
 ## BRIEF
 
+Создаёт действие
+
 ## CONTENT
 
 Доступ: public
 
+Создаёт действие
+
 Параметры:
-* stappler::xenolith::Vec2 const&
-* bool
+* const stappler::geom::Vec2& - позиция
+* bool - флаг единственного вызова
 
 Возвращает:
 * bool
@@ -503,9 +686,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Функция интерполяции
+
 ## CONTENT
 
 Доступ: public
+
+Функция интерполяции
 
 Параметры:
 * float
@@ -515,18 +702,26 @@ Title: XLAction.h
 
 ## BRIEF
 
+Позиция для перемещения
+
 ## CONTENT
 
 Доступ: protected
 
-Тип: stappler::xenolith::Vec2
+Позиция для перемещения
+
+Тип: stappler::geom::Vec2
 
 
 # ::stappler::xenolith::CallFunc
 
 ## BRIEF
 
+Действие: вызывает функцию
+
 ## CONTENT
+
+Действие: вызывает функцию
 
 Базовые классы:
 * ActionInstant
@@ -536,22 +731,30 @@ Title: XLAction.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::CallFunc::init(Function<void ()>&&,bool)
 
 ## BRIEF
 
+Создаёт действие
+
 ## CONTENT
 
 Доступ: public
 
+Создаёт действие
+
 Параметры:
-* Function<void ()>&&
-* bool
+* Function<void ()>&& - функция для вызова
+* bool - флаг единственного вызова
 
 Возвращает:
 * bool
@@ -560,9 +763,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Функция интерполяции
+
 ## CONTENT
 
 Доступ: public
+
+Функция интерполяции
 
 Параметры:
 * float
@@ -572,9 +779,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Функция для вызова
+
 ## CONTENT
 
 Доступ: protected
+
+Функция для вызова
 
 Тип: Function<void ()>
 
@@ -583,7 +794,11 @@ Title: XLAction.h
 
 ## BRIEF
 
+Базовый тип для действия с длительностью
+
 ## CONTENT
+
+Базовый тип для действия с длительностью
 
 Базовые классы:
 * Action
@@ -593,21 +808,29 @@ Title: XLAction.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::ActionInterval::init(float)
 
 ## BRIEF
 
+Создаёт действие
+
 ## CONTENT
 
 Доступ: public
 
+Создаёт действие
+
 Параметры:
-* float
+* float - длительность
 
 Возвращает:
 * bool
@@ -616,20 +839,41 @@ Title: XLAction.h
 
 ## BRIEF
 
+Возвращает долю прошедшего действия
+
 ## CONTENT
 
 Доступ: public
 
+Возвращает долю прошедшего действия
+
 Возвращает:
 * float
+
+# ::stappler::xenolith::ActionInterval::stop()
+
+## BRIEF
+
+Останавливает действие
+
+## CONTENT
+
+Доступ: public
+
+Останавливает действие
+
 
 # ::stappler::xenolith::ActionInterval::isDone() const
 
 ## BRIEF
 
+Проверяет, завершено ли действие
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, завершено ли действие
 
 Возвращает:
 * bool
@@ -638,9 +882,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Выполняет сегмент действия
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет сегмент действия
 
 Параметры:
 * float
@@ -650,9 +898,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Устанавливает длительность действия
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает длительность действия
 
 Параметры:
 * float
@@ -662,9 +914,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Запускает действие для цели
+
 ## CONTENT
 
 Доступ: public
+
+Запускает действие для цели
 
 Параметры:
 * stappler::xenolith::Node*
@@ -674,9 +930,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Доля прошедшего действия
+
 ## CONTENT
 
 Доступ: protected
+
+Доля прошедшего действия
 
 Тип: float
 
@@ -685,9 +945,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Флаг начального вызова
+
 ## CONTENT
 
 Доступ: protected
+
+Флаг начального вызова
 
 Тип: bool
 
@@ -696,7 +960,11 @@ Title: XLAction.h
 
 ## BRIEF
 
+Действие изменения скорости действия
+
 ## CONTENT
+
+Действие изменения скорости действия
 
 Базовые классы:
 * Action
@@ -706,31 +974,43 @@ Title: XLAction.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::Speed::Speed()
 
 ## BRIEF
 
+Конструктор
+
 ## CONTENT
 
 Доступ: public
+
+Конструктор
 
 
 # ::stappler::xenolith::Speed::init(stappler::xenolith::ActionInterval*,float)
 
 ## BRIEF
 
+Создаёт действие
+
 ## CONTENT
 
 Доступ: public
 
+Создаёт действие
+
 Параметры:
-* stappler::xenolith::ActionInterval*
-* float
+* stappler::xenolith::ActionInterval* - базовое действие
+* float - параметр ускорения или замедления
 
 Возвращает:
 * bool
@@ -739,9 +1019,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Возвращает параметр
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает параметр
 
 Возвращает:
 * float
@@ -750,9 +1034,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Устанавливает параметр
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает параметр
 
 Параметры:
 * float
@@ -762,9 +1050,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Возвращает базовое действие
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает базовое действие
 
 Возвращает:
 * stappler::xenolith::ActionInterval*
@@ -773,9 +1065,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Устанавливает базовое действие
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает базовое действие
 
 Параметры:
 * stappler::xenolith::ActionInterval*
@@ -785,18 +1081,26 @@ Title: XLAction.h
 
 ## BRIEF
 
+Останавливает действие
+
 ## CONTENT
 
 Доступ: public
+
+Останавливает действие
 
 
 # ::stappler::xenolith::Speed::step(float)
 
 ## BRIEF
 
+Выполняет сегмент действия
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет сегмент действия
 
 Параметры:
 * float
@@ -806,9 +1110,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Проверяет, завершено ли действие
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, завершено ли действие
 
 Возвращает:
 * bool
@@ -817,9 +1125,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Запускает действие
+
 ## CONTENT
 
 Доступ: public
+
+Запускает действие
 
 Параметры:
 * stappler::xenolith::Node*
@@ -829,9 +1141,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Параметр изменения скорости
+
 ## CONTENT
 
 Доступ: protected
+
+Параметр изменения скорости
 
 Тип: float
 
@@ -840,9 +1156,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Базовое действие
+
 ## CONTENT
 
 Доступ: protected
+
+Базовое действие
 
 Тип: Rc<stappler::xenolith::ActionInterval>
 
@@ -851,7 +1171,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Тип последовательности действий
+
 ## CONTENT
+
+Тип последовательности действий
+
+Последовательность стабильно работает только по направлению вперёд.
 
 Базовые классы:
 * ActionInterval
@@ -861,18 +1187,27 @@ Title: XLAction.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
 
+Деструктор
 
 # ::stappler::xenolith::Sequence::init<typename>(Args &&...)
 
 ## BRIEF
 
+Создаёт последовательность действий
+
 ## CONTENT
 
 Доступ: public
+
+Создаёт последовательность действий
+
+В аргументах допустимо использовать другие действия, время ожидания в виде float, функции для вызова в виде лямбда-функций.
 
 Параметры шаблона:
 * typename Args
@@ -887,18 +1222,26 @@ Title: XLAction.h
 
 ## BRIEF
 
+Останавливает действие
+
 ## CONTENT
 
 Доступ: public
+
+Останавливает действие
 
 
 # ::stappler::xenolith::Sequence::update(float)
 
 ## BRIEF
 
+Функция интерполяции
+
 ## CONTENT
 
 Доступ: public
+
+Функция интерполяции
 
 Параметры:
 * float
@@ -908,9 +1251,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Запускает действие
+
 ## CONTENT
 
 Доступ: public
+
+Запускает действие
 
 Параметры:
 * stappler::xenolith::Node*
@@ -920,9 +1267,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Резервирует место под несколько вложенных действий
+
 ## CONTENT
 
 Доступ: protected
+
+Резервирует место под несколько вложенных действий
 
 Параметры:
 * size_t
@@ -934,9 +1285,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Добавляет действие в виде функции вызова
+
 ## CONTENT
 
 Доступ: protected
+
+Добавляет действие в виде функции вызова
 
 Параметры:
 * Function<void ()>&&
@@ -948,7 +1303,11 @@ Title: XLAction.h
 
 ## BRIEF
 
+Добавляет время ожидания
+
 ## CONTENT
+
+Добавляет время ожидания
 
 Доступ: protected
 
@@ -958,13 +1317,35 @@ Title: XLAction.h
 Возвращает:
 * bool
 
-# ::stappler::xenolith::Sequence::addAction<typename>(Rc<T> const&)
+# ::stappler::xenolith::Sequence::addAction(stappler::TimeInterval)
 
 ## BRIEF
+
+Добавляет время одижания
 
 ## CONTENT
 
 Доступ: protected
+
+Добавляет время одижания
+
+Параметры:
+* stappler::TimeInterval
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::Sequence::addAction<typename>(Rc<T> const&)
+
+## BRIEF
+
+Добавляет действие
+
+## CONTENT
+
+Доступ: protected
+
+Добавляет действие
 
 Параметры шаблона:
 * typename T
@@ -979,9 +1360,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Добавляет действие
+
 ## CONTENT
 
 Доступ: protected
+
+Добавляет действие
 
 Параметры:
 * stappler::xenolith::Action*
@@ -993,9 +1378,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Создаёт последовательность
+
 ## CONTENT
 
 Доступ: protected
+
+Создаёт последовательность
 
 Параметры шаблона:
 * typename T
@@ -1012,9 +1401,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Создаёт последовательность
+
 ## CONTENT
 
 Доступ: protected
+
+Создаёт последовательность
 
 Параметры шаблона:
 * typename T
@@ -1029,16 +1422,24 @@ Title: XLAction.h
 
 ## BRIEF
 
+Данные вложенного действия
+
 ## CONTENT
 
 Доступ: protected
+
+Данные вложенного действия
 
 
 # ::stappler::xenolith::Sequence::ActionData::action
 
 ## BRIEF
 
+Действие
+
 ## CONTENT
+
+Действие
 
 Тип: Rc<stappler::xenolith::Action>
 
@@ -1047,7 +1448,11 @@ Title: XLAction.h
 
 ## BRIEF
 
+Предел начала действия во времени в единицах интерполяции
+
 ## CONTENT
+
+Предел начала действия во времени в единицах интерполяции
 
 Тип: float
 
@@ -1056,7 +1461,11 @@ Title: XLAction.h
 
 ## BRIEF
 
+Предел конца действия во времени в единицах интерполяции
+
 ## CONTENT
+
+Предел конца действия во времени в единицах интерполяции
 
 Тип: float
 
@@ -1065,7 +1474,11 @@ Title: XLAction.h
 
 ## BRIEF
 
+Длительность в единицах интерполяции
+
 ## CONTENT
+
+Длительность в единицах интерполяции
 
 Тип: float
 
@@ -1074,9 +1487,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Вложенные действия
+
 ## CONTENT
 
 Доступ: protected
+
+Вложенные действия
 
 Тип: Vector<stappler::xenolith::Sequence::ActionData>
 
@@ -1085,9 +1502,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Время предыдущего обновления
+
 ## CONTENT
 
 Доступ: protected
+
+Время предыдущего обновления
 
 Тип: float
 
@@ -1096,9 +1517,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Индекс текущего действия
+
 ## CONTENT
 
 Доступ: protected
+
+Индекс текущего действия
 
 Тип: uint32_t
 
@@ -1107,7 +1532,11 @@ Title: XLAction.h
 
 ## BRIEF
 
+Действие, совмещающее несколько действий
+
 ## CONTENT
+
+Действие, совмещающее несколько действий
 
 Базовые классы:
 * ActionInterval
@@ -1117,18 +1546,25 @@ Title: XLAction.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
 
+Деструктор
 
 # ::stappler::xenolith::Spawn::init<typename>(Args &&...)
 
 ## BRIEF
 
+Создаёт действие из набора
+
 ## CONTENT
 
 Доступ: public
+
+Создаёт действие из набора
 
 Параметры шаблона:
 * typename Args
@@ -1143,18 +1579,25 @@ Title: XLAction.h
 
 ## BRIEF
 
+Останавливает действие
+
 ## CONTENT
 
 Доступ: public
 
+Останавливает действие
 
 # ::stappler::xenolith::Spawn::update(float)
 
 ## BRIEF
 
+Функция интерполяции
+
 ## CONTENT
 
 Доступ: public
+
+Функция интерполяции
 
 Параметры:
 * float
@@ -1164,9 +1607,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Запускает действие
+
 ## CONTENT
 
 Доступ: public
+
+Запускает действие
 
 Параметры:
 * stappler::xenolith::Node*
@@ -1176,9 +1623,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Резервирует место под действия
+
 ## CONTENT
 
 Доступ: protected
+
+Резервирует место под действия
 
 Параметры:
 * size_t
@@ -1190,9 +1641,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Добавляет действие
+
 ## CONTENT
 
 Доступ: protected
+
+Добавляет действие
 
 Параметры:
 * Function<void ()>&&
@@ -1204,9 +1659,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Добавляет действие
+
 ## CONTENT
 
 Доступ: protected
+
+Добавляет действие
 
 Параметры:
 * float
@@ -1218,9 +1677,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Добавляет действие
+
 ## CONTENT
 
 Доступ: protected
+
+Добавляет действие
 
 Параметры шаблона:
 * typename T
@@ -1235,9 +1698,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Добавляет действие
+
 ## CONTENT
 
 Доступ: protected
+
+Добавляет действие
 
 Параметры:
 * stappler::xenolith::Action*
@@ -1249,9 +1716,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Создаёт действие
+
 ## CONTENT
 
 Доступ: protected
+
+Создаёт действие
 
 Параметры шаблона:
 * typename T
@@ -1268,9 +1739,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Создаёт действие
+
 ## CONTENT
 
 Доступ: protected
+
+Создаёт действие
 
 Параметры шаблона:
 * typename T
@@ -1285,16 +1760,23 @@ Title: XLAction.h
 
 ## BRIEF
 
+Данные вложенного действия
+
 ## CONTENT
 
 Доступ: protected
 
+Данные вложенного действия
 
 # ::stappler::xenolith::Spawn::ActionData::action
 
 ## BRIEF
 
+Действие
+
 ## CONTENT
+
+Действие
 
 Тип: Rc<stappler::xenolith::Action>
 
@@ -1303,7 +1785,11 @@ Title: XLAction.h
 
 ## BRIEF
 
+Длительность в единицах интерполяции
+
 ## CONTENT
+
+Длительность в единицах интерполяции
 
 Тип: float
 
@@ -1312,9 +1798,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Вложенные действия
+
 ## CONTENT
 
 Доступ: protected
+
+Вложенные действия
 
 Тип: Vector<stappler::xenolith::Spawn::ActionData>
 
@@ -1323,9 +1813,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Время предыдущего обновления
+
 ## CONTENT
 
 Доступ: protected
+
+Время предыдущего обновления
 
 Тип: float
 
@@ -1334,18 +1828,373 @@ Title: XLAction.h
 
 ## BRIEF
 
+Индекс текущего активного действия
+
 ## CONTENT
 
 Доступ: protected
 
+Индекс текущего активного действия
+
 Тип: uint32_t
+
+
+# ::stappler::xenolith::Repeat
+
+## BRIEF
+
+Действие: повторяет переданное действие несколько раз
+
+## CONTENT
+
+Действие: повторяет переданное действие несколько раз
+
+Базовые классы:
+* ActionInterval
+
+
+# ::stappler::xenolith::Repeat::~Repeat()
+
+## BRIEF
+
+Деструктор
+
+## CONTENT
+
+Доступ: public
+
+Деструктор
+
+# ::stappler::xenolith::Repeat::init(stappler::xenolith::ActionInterval*,uint32_t)
+
+## BRIEF
+
+Создаёт действие
+
+## CONTENT
+
+Доступ: public
+
+Создаёт действие
+
+Параметры:
+* stappler::xenolith::ActionInterval* - базовое действие
+* uint32_t - число повторений
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::Repeat::setInnerAction(stappler::xenolith::ActionInterval*)
+
+## BRIEF
+
+Устанавливает базовое действие
+
+## CONTENT
+
+Доступ: public
+
+Устанавливает базовое действие
+
+Параметры:
+* stappler::xenolith::ActionInterval*
+
+
+# ::stappler::xenolith::Repeat::getInnerAction() const
+
+## BRIEF
+
+Возвращает базовое действие
+
+## CONTENT
+
+Доступ: public
+
+Возвращает базовое действие
+
+Возвращает:
+* stappler::xenolith::ActionInterval*
+
+# ::stappler::xenolith::Repeat::stop()
+
+## BRIEF
+
+Останавливает действие
+
+## CONTENT
+
+Доступ: public
+
+Останавливает действие
+
+# ::stappler::xenolith::Repeat::update(float)
+
+## BRIEF
+
+Функция интерполяции
+
+## CONTENT
+
+Доступ: public
+
+Функция интерполяции
+
+Параметры:
+* float
+
+
+# ::stappler::xenolith::Repeat::startWithTarget(stappler::xenolith::Node*)
+
+## BRIEF
+
+Запускает действие
+
+## CONTENT
+
+Доступ: public
+
+Запускает действие
+
+Параметры:
+* stappler::xenolith::Node*
+
+
+# ::stappler::xenolith::Repeat::isDone() const
+
+## BRIEF
+
+Проверяет, завершено ли действие
+
+## CONTENT
+
+Доступ: public
+
+Проверяет, завершено ли действие
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::Repeat::_times
+
+## BRIEF
+
+Число повторений
+
+## CONTENT
+
+Доступ: protected
+
+Число повторений
+
+Тип: uint32_t
+
+
+# ::stappler::xenolith::Repeat::_total
+
+## BRIEF
+
+Общее число повторений
+
+## CONTENT
+
+Доступ: protected
+
+Общее число повторений
+
+Тип: uint32_t
+
+
+# ::stappler::xenolith::Repeat::_nextDt
+
+## BRIEF
+
+Следующий период обновления
+
+## CONTENT
+
+Доступ: protected
+
+Следующий период обновления
+
+Тип: float
+
+
+# ::stappler::xenolith::Repeat::_actionInstant
+
+## BRIEF
+
+Флаг повторения мгновенного действия
+
+## CONTENT
+
+Доступ: protected
+
+Флаг повторения мгновенного действия
+
+Тип: bool
+
+
+# ::stappler::xenolith::Repeat::_innerAction
+
+## BRIEF
+
+Вложенное действие
+
+## CONTENT
+
+Доступ: protected
+
+Вложенное действие
+
+Тип: Rc<stappler::xenolith::ActionInterval>
+
+
+# ::stappler::xenolith::RepeatForever
+
+## BRIEF
+
+Действие: повторяет другое действие до отмены
+
+## CONTENT
+
+Действие: повторяет другое действие до отмены
+
+Базовые классы:
+* ActionInterval
+
+
+# ::stappler::xenolith::RepeatForever::~RepeatForever()
+
+## BRIEF
+
+Деструктор
+
+## CONTENT
+
+Доступ: public
+
+Деструктор
+
+# ::stappler::xenolith::RepeatForever::init(stappler::xenolith::ActionInterval*)
+
+## BRIEF
+
+Создаёт действие
+
+## CONTENT
+
+Доступ: public
+
+Создаёт действие
+
+Параметры:
+* stappler::xenolith::ActionInterval*
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::RepeatForever::setInnerAction(stappler::xenolith::ActionInterval*)
+
+## BRIEF
+
+Устанавливает вложенное действие
+
+## CONTENT
+
+Доступ: public
+
+Устанавливает вложенное действие
+
+Параметры:
+* stappler::xenolith::ActionInterval*
+
+
+# ::stappler::xenolith::RepeatForever::getInnerAction() const
+
+## BRIEF
+
+Возвращает вложенное действие
+
+## CONTENT
+
+Доступ: public
+
+Возвращает вложенное действие
+
+Возвращает:
+* stappler::xenolith::ActionInterval*
+
+# ::stappler::xenolith::RepeatForever::step(float)
+
+## BRIEF
+
+Выполняет сегмент действия
+
+## CONTENT
+
+Доступ: public
+
+Выполняет сегмент действия
+
+Параметры:
+* float
+
+
+# ::stappler::xenolith::RepeatForever::startWithTarget(stappler::xenolith::Node*)
+
+## BRIEF
+
+Запускает действие
+
+## CONTENT
+
+Доступ: public
+
+Запускает действие
+
+Параметры:
+* stappler::xenolith::Node*
+
+
+# ::stappler::xenolith::RepeatForever::isDone() const
+
+## BRIEF
+
+Проверяет, завершено ли действие
+
+## CONTENT
+
+Доступ: public
+
+Проверяет, завершено ли действие
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::RepeatForever::_innerAction
+
+## BRIEF
+
+Вложенное действие
+
+## CONTENT
+
+Доступ: protected
+
+Вложенное действие
+
+Тип: Rc<stappler::xenolith::ActionInterval>
 
 
 # ::stappler::xenolith::DelayTime
 
 ## BRIEF
 
+Действие: не делает ничего, реализует задержку
+
 ## CONTENT
+
+Действие: не делает ничего, реализует задержку
 
 Базовые классы:
 * ActionInterval
@@ -1355,18 +2204,25 @@ Title: XLAction.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
 
+Деструктор
 
 # ::stappler::xenolith::DelayTime::update(float)
 
 ## BRIEF
 
+Функция интерполяции
+
 ## CONTENT
 
 Доступ: public
+
+Функция интерполяции
 
 Параметры:
 * float
@@ -1376,7 +2232,11 @@ Title: XLAction.h
 
 ## BRIEF
 
+Действие: перекрашивает объект
+
 ## CONTENT
+
+Действие: перекрашивает объект
 
 Базовые классы:
 * ActionInterval
@@ -1386,23 +2246,31 @@ Title: XLAction.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
 
+Деструктор
 
-# ::stappler::xenolith::TintTo::init(float,stappler::xenolith::Color4F const&,stappler::xenolith::ColorMask)
+
+# ::stappler::xenolith::TintTo::init(float,const stappler::geom::Color4F&,stappler::geom::ColorMask)
 
 ## BRIEF
 
+Создаёт действие
+
 ## CONTENT
 
 Доступ: public
 
+Создаёт действие
+
 Параметры:
-* float
-* stappler::xenolith::Color4F const&
-* stappler::xenolith::ColorMask
+* float - длительность
+* const stappler::geom::Color4F& - новый цвет
+* stappler::geom::ColorMask - маска цвета
 
 Возвращает:
 * bool
@@ -1411,9 +2279,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Функция интерполяции
+
 ## CONTENT
 
 Доступ: public
+
+Функция интерполяции
 
 Параметры:
 * float
@@ -1423,9 +2295,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Запускает действие
+
 ## CONTENT
 
 Доступ: protected
+
+Запускает действие
 
 Параметры:
 * stappler::xenolith::Node*
@@ -1435,40 +2311,56 @@ Title: XLAction.h
 
 ## BRIEF
 
+Маска цветов
+
 ## CONTENT
 
 Доступ: protected
 
-Тип: stappler::xenolith::ColorMask
+Маска цветов
+
+Тип: stappler::geom::ColorMask
 
 
 # ::stappler::xenolith::TintTo::_to
 
 ## BRIEF
 
+Цвет для покраски
+
 ## CONTENT
 
 Доступ: protected
 
-Тип: stappler::xenolith::Color4F
+Цвет для покраски
+
+Тип: stappler::geom::Color4F
 
 
 # ::stappler::xenolith::TintTo::_from
 
 ## BRIEF
 
+Исходный цвет
+
 ## CONTENT
 
 Доступ: protected
 
-Тип: stappler::xenolith::Color4F
+Исходный цвет
+
+Тип: stappler::geom::Color4F
 
 
 # ::stappler::xenolith::ActionProgress
 
 ## BRIEF
 
+Действие: вызывает функцию интерполяции
+
 ## CONTENT
+
+Действие: вызывает функцию интерполяции
 
 Базовые классы:
 * ActionInterval
@@ -1478,48 +2370,66 @@ Title: XLAction.h
 
 ## BRIEF
 
+Функция запуска действия
+
 ## CONTENT
 
 Доступ: public
+
+Функция запуска действия
 
 
 # ::stappler::xenolith::ActionProgress::UpdateCallback
 
 ## BRIEF
 
+Функция интерполяции
+
 ## CONTENT
 
 Доступ: public
 
+Функция интерполяции
 
 # ::stappler::xenolith::ActionProgress::StopCallback
 
 ## BRIEF
 
+Функция остановки действия
+
 ## CONTENT
 
 Доступ: public
+
+Функция остановки действия
 
 
 # ::stappler::xenolith::ActionProgress::~ActionProgress()
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
 
+Деструктор
 
 # ::stappler::xenolith::ActionProgress::init(float,stappler::xenolith::ActionProgress::UpdateCallback&&,stappler::xenolith::ActionProgress::StartCallback&&,stappler::xenolith::ActionProgress::StopCallback&&)
 
 ## BRIEF
 
+Создаёт действие
+
 ## CONTENT
 
 Доступ: public
 
+Создаёт действие
+
 Параметры:
-* float
+* float - длительность
 * stappler::xenolith::ActionProgress::UpdateCallback&&
 * stappler::xenolith::ActionProgress::StartCallback&&
 * stappler::xenolith::ActionProgress::StopCallback&&
@@ -1531,13 +2441,17 @@ Title: XLAction.h
 
 ## BRIEF
 
+Создаёт действие
+
 ## CONTENT
 
 Доступ: public
 
+Создаёт действие
+
 Параметры:
 * float
-* float
+* float - целевой уровень интерполяции
 * stappler::xenolith::ActionProgress::UpdateCallback&&
 * stappler::xenolith::ActionProgress::StartCallback&&
 * stappler::xenolith::ActionProgress::StopCallback&&
@@ -1549,14 +2463,18 @@ Title: XLAction.h
 
 ## BRIEF
 
+Создаёт действие
+
 ## CONTENT
 
 Доступ: public
 
+Создаёт действие
+
 Параметры:
 * float
-* float
-* float
+* float - исходный уровень интерполяции
+* float - целевой уровень интерполяции
 * stappler::xenolith::ActionProgress::UpdateCallback&&
 * stappler::xenolith::ActionProgress::StartCallback&&
 * stappler::xenolith::ActionProgress::StopCallback&&
@@ -1568,9 +2486,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Запускает действие
+
 ## CONTENT
 
 Доступ: public
+
+Запускает действие
 
 Параметры:
 * stappler::xenolith::Node*
@@ -1580,9 +2502,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Функция интерполяции
+
 ## CONTENT
 
 Доступ: public
+
+Функция интерполяции
 
 Параметры:
 * float
@@ -1592,18 +2518,26 @@ Title: XLAction.h
 
 ## BRIEF
 
+Останавливает действие
+
 ## CONTENT
 
 Доступ: public
+
+Останавливает действие
 
 
 # ::stappler::xenolith::ActionProgress::setSourceProgress(float)
 
 ## BRIEF
 
+Устанавливает исходный прогресс интерполяции
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает исходный прогресс интерполяции
 
 Параметры:
 * float
@@ -1613,9 +2547,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Возвращает исходный прогресс интерполяции
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает исходный прогресс интерполяции
 
 Возвращает:
 * float
@@ -1624,9 +2562,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Устанавливает целевой прогресс интерполяции
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает целевой прогресс интерполяции
 
 Параметры:
 * float
@@ -1636,9 +2578,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Возвращает целевой прогресс интерполяции
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает целевой прогресс интерполяции
 
 Возвращает:
 * float
@@ -1647,9 +2593,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Устанавливает функцию запуска
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает функцию запуска
 
 Параметры:
 * stappler::xenolith::ActionProgress::StartCallback&&
@@ -1659,9 +2609,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Устанавливает функцию интерполяцию
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает функцию интерполяцию
 
 Параметры:
 * stappler::xenolith::ActionProgress::UpdateCallback&&
@@ -1671,9 +2625,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Устанавливает функцию завершения
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает функцию завершения
 
 Параметры:
 * stappler::xenolith::ActionProgress::StopCallback&&
@@ -1683,9 +2641,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Флаг остановки
+
 ## CONTENT
 
 Доступ: protected
+
+Флаг остановки
 
 Тип: bool
 
@@ -1694,9 +2656,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Исходный прогресс
+
 ## CONTENT
 
 Доступ: protected
+
+Исходный прогресс
 
 Тип: float
 
@@ -1705,9 +2671,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Целевой прогресс
+
 ## CONTENT
 
 Доступ: protected
+
+Целевой прогресс
 
 Тип: float
 
@@ -1716,9 +2686,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Функция запуска
+
 ## CONTENT
 
 Доступ: protected
+
+Функция запуска
 
 Тип: StartCallback
 
@@ -1727,9 +2701,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Функция интерполяции
+
 ## CONTENT
 
 Доступ: protected
+
+Функция интерполяции
 
 Тип: UpdateCallback
 
@@ -1738,9 +2716,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Функция остановки
+
 ## CONTENT
 
 Доступ: protected
+
+Функция остановки
 
 Тип: StopCallback
 
@@ -1749,7 +2731,11 @@ Title: XLAction.h
 
 ## BRIEF
 
+Действие: перемещение объекта
+
 ## CONTENT
+
+Действие: перемещение объекта
 
 Базовые классы:
 * ActionInterval
@@ -1759,37 +2745,49 @@ Title: XLAction.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
+
+Деструктор
 
 Доступ: public
 
 
-# ::stappler::xenolith::MoveTo::init(float,stappler::xenolith::Vec2 const&)
+# ::stappler::xenolith::MoveTo::init(float,const stappler::geom::Vec2&)
 
 ## BRIEF
 
+Создаёт действие
+
 ## CONTENT
 
 Доступ: public
 
+Создаёт действие
+
 Параметры:
-* float
-* stappler::xenolith::Vec2 const&
+* float - длительность
+* const stappler::geom::Vec2& - позиция
 
 Возвращает:
 * bool
 
-# ::stappler::xenolith::MoveTo::init(float,stappler::xenolith::Vec3 const&)
+# ::stappler::xenolith::MoveTo::init(float,const stappler::geom::Vec3&)
 
 ## BRIEF
+
+Создаёт действие
 
 ## CONTENT
 
 Доступ: public
 
+Создаёт действие
+
 Параметры:
-* float
-* stappler::xenolith::Vec3 const&
+* float - длительность
+* const stappler::geom::Vec3& - позиция
 
 Возвращает:
 * bool
@@ -1798,9 +2796,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Запускает действие
+
 ## CONTENT
 
 Доступ: public
+
+Запускает действие
 
 Параметры:
 * stappler::xenolith::Node*
@@ -1810,9 +2812,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Функция интерполяции
+
 ## CONTENT
 
 Доступ: public
+
+Функция интерполяции
 
 Параметры:
 * float
@@ -1822,29 +2828,41 @@ Title: XLAction.h
 
 ## BRIEF
 
+Начальная позция
+
 ## CONTENT
 
 Доступ: protected
 
-Тип: stappler::xenolith::Vec3
+Начальная позция
+
+Тип: stappler::geom::Vec3
 
 
 # ::stappler::xenolith::MoveTo::_endPosition
 
 ## BRIEF
 
+Конечная позиция
+
 ## CONTENT
 
 Доступ: protected
 
-Тип: stappler::xenolith::Vec3
+Конечная позиция
+
+Тип: stappler::geom::Vec3
 
 
 # ::stappler::xenolith::ScaleTo
 
 ## BRIEF
 
+Функция изменения относительного размера
+
 ## CONTENT
+
+Функция изменения относительного размера
 
 Базовые классы:
 * ActionInterval
@@ -1854,37 +2872,49 @@ Title: XLAction.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::ScaleTo::init(float,float)
 
 ## BRIEF
 
+Создаёт действие
+
 ## CONTENT
 
 Доступ: public
 
+Создаёт действие
+
 Параметры:
-* float
-* float
+* float - длительность
+* float - относительный размер
 
 Возвращает:
 * bool
 
-# ::stappler::xenolith::ScaleTo::init(float,stappler::xenolith::Vec3 const&)
+# ::stappler::xenolith::ScaleTo::init(float,const stappler::geom::Vec3&)
 
 ## BRIEF
+
+Создаёт действие
 
 ## CONTENT
 
 Доступ: public
 
+Создаёт действие
+
 Параметры:
-* float
-* stappler::xenolith::Vec3 const&
+* float - длительность
+* const stappler::geom::Vec3& - относительный размер по осям
 
 Возвращает:
 * bool
@@ -1893,9 +2923,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Запускает действие
+
 ## CONTENT
 
 Доступ: public
+
+Запускает действие
 
 Параметры:
 * stappler::xenolith::Node*
@@ -1905,9 +2939,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Функция интерполяции
+
 ## CONTENT
 
 Доступ: public
+
+Функция интерполяции
 
 Параметры:
 * float
@@ -1917,29 +2955,41 @@ Title: XLAction.h
 
 ## BRIEF
 
+Начальные параметры
+
 ## CONTENT
 
 Доступ: protected
 
-Тип: stappler::xenolith::Vec3
+Начальные параметры
+
+Тип: stappler::geom::Vec3
 
 
 # ::stappler::xenolith::ScaleTo::_endScale
 
 ## BRIEF
 
+Конечные параметры
+
 ## CONTENT
 
 Доступ: protected
 
-Тип: stappler::xenolith::Vec3
+Конечные параметры
+
+Тип: stappler::geom::Vec3
 
 
 # ::stappler::xenolith::ResizeTo
 
 ## BRIEF
 
+Действие: изменяет абсолютный размер
+
 ## CONTENT
+
+Действие: изменяет абсолютный размер
 
 Базовые классы:
 * ActionInterval
@@ -1949,22 +2999,29 @@ Title: XLAction.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
 
+Деструктор
 
-# ::stappler::xenolith::ResizeTo::init(float,stappler::xenolith::Size2 const&)
+# ::stappler::xenolith::ResizeTo::init(float,const stappler::geom::Size2&)
 
 ## BRIEF
 
+Создаёт действие
+
 ## CONTENT
 
 Доступ: public
 
+Создаёт действие
+
 Параметры:
-* float
-* stappler::xenolith::Size2 const&
+* float - длительность
+* const stappler::geom::Size2& - новый размер
 
 Возвращает:
 * bool
@@ -1973,9 +3030,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Запускает действие
+
 ## CONTENT
 
 Доступ: public
+
+Запускает действие
 
 Параметры:
 * stappler::xenolith::Node*
@@ -1985,9 +3046,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Функция интерполяции
+
 ## CONTENT
 
 Доступ: public
+
+Функция интерполяции
 
 Параметры:
 * float
@@ -1997,29 +3062,41 @@ Title: XLAction.h
 
 ## BRIEF
 
+Начальный размер
+
 ## CONTENT
 
 Доступ: protected
 
-Тип: stappler::xenolith::Size2
+Начальный размер
+
+Тип: stappler::geom::Size2
 
 
 # ::stappler::xenolith::ResizeTo::_endSize
 
 ## BRIEF
 
+Конечный размер
+
 ## CONTENT
 
 Доступ: protected
 
-Тип: stappler::xenolith::Size2
+Конечный размер
+
+Тип: stappler::geom::Size2
 
 
 # ::stappler::xenolith::FadeTo
 
 ## BRIEF
 
+Действие: изменяет прозрачность объекта
+
 ## CONTENT
+
+Действие: изменяет прозрачность объекта
 
 Базовые классы:
 * ActionInterval
@@ -2029,22 +3106,30 @@ Title: XLAction.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::FadeTo::init(float,float)
 
 ## BRIEF
 
+Создаёт действие
+
 ## CONTENT
 
 Доступ: public
 
+Создаёт действие
+
 Параметры:
-* float
-* float
+* float - длительность
+* float - новая прозрачность
 
 Возвращает:
 * bool
@@ -2053,9 +3138,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Запускает действие
+
 ## CONTENT
 
 Доступ: public
+
+Запускает действие
 
 Параметры:
 * stappler::xenolith::Node*
@@ -2065,9 +3154,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Функция интерполяции
+
 ## CONTENT
 
 Доступ: public
+
+Функция интерполяции
 
 Параметры:
 * float
@@ -2077,9 +3170,13 @@ Title: XLAction.h
 
 ## BRIEF
 
+Начальная прозрачность
+
 ## CONTENT
 
 Доступ: protected
+
+Начальная прозрачность
 
 Тип: float
 
@@ -2088,8 +3185,162 @@ Title: XLAction.h
 
 ## BRIEF
 
+Конечная прозрачность
+
 ## CONTENT
 
 Доступ: protected
 
+Конечная прозрачность
+
 Тип: float
+
+
+# ::stappler::xenolith::RenderContinuously
+
+## BRIEF
+
+Действие: блокирует систему энергоэффективного рисования до отмены
+
+## CONTENT
+
+Действие: блокирует систему энергоэффективного рисования до отмены
+
+Базовые классы:
+* ActionInterval
+
+
+# ::stappler::xenolith::RenderContinuously::~RenderContinuously()
+
+## BRIEF
+
+Деструктор
+
+## CONTENT
+
+Доступ: public
+
+Деструктор
+
+# ::stappler::xenolith::RenderContinuously::init()
+
+## BRIEF
+
+Создаёт действие
+
+## CONTENT
+
+Доступ: public
+
+Создаёт действие
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::RenderContinuously::init(float)
+
+## BRIEF
+
+Создаёт действие
+
+## CONTENT
+
+Доступ: public
+
+Создаёт действие
+
+Параметры:
+* float - длительность
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::RenderContinuously::step(float)
+
+## BRIEF
+
+Запускает сегмент действия
+
+## CONTENT
+
+Доступ: public
+
+Запускает сегмент действия
+
+Параметры:
+* float
+
+
+# ::stappler::xenolith::RenderContinuously::update(float)
+
+## BRIEF
+
+Функция интерполяции
+
+## CONTENT
+
+Доступ: public
+
+Функция интерполяции
+
+Параметры:
+* float
+
+
+# ::stappler::xenolith::RenderContinuously::startWithTarget(stappler::xenolith::Node*)
+
+## BRIEF
+
+Запускает действие
+
+## CONTENT
+
+Доступ: public
+
+Запускает действие
+
+Параметры:
+* stappler::xenolith::Node*
+
+
+# ::stappler::xenolith::RenderContinuously::isDone() const
+
+## BRIEF
+
+Проверяет действие на завершение
+
+## CONTENT
+
+Доступ: public
+
+Проверяет действие на завершение
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::RenderContinuously::stop()
+
+## BRIEF
+
+Останавливает действие
+
+## CONTENT
+
+Доступ: public
+
+Останавливает действие
+
+
+# ::stappler::xenolith::RenderContinuously::_innerAction
+
+## BRIEF
+
+Вложенное действие
+
+## CONTENT
+
+Доступ: protected
+
+Вложенное действие
+
+Тип: Rc<stappler::xenolith::ActionInterval>

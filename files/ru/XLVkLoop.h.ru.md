@@ -419,6 +419,19 @@ Title: XLVkLoop.h
 * core::AttachmentLayout
 
 
+# ::stappler::xenolith::vk::Loop::captureBuffer(Function<void (const stappler::xenolith::vk::BufferInfo &, stappler::BytesView)>&&,Rc<core::BufferObject> const&)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* Function<void (const stappler::xenolith::vk::BufferInfo &, stappler::BytesView)>&&
+* Rc<core::BufferObject> const&
+
+
 # ::stappler::xenolith::vk::Loop::_thread
 
 ## BRIEF

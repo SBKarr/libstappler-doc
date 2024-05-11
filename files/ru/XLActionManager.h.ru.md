@@ -373,6 +373,17 @@ Title: XLActionManager.h
 Тип: bool
 
 
+# ::stappler::xenolith::ActionManager::_inUpdate
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: bool
+
+
 # ::stappler::xenolith::ActionManager::_current
 
 ## BRIEF

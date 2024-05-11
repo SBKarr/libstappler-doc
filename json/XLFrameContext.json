@@ -957,12 +957,12 @@
 					"semantic_scope": "",
 					"signature": "(stappler::xenolith::MaterialInfo const&) const"
 				}, {
-					"_fullName": "::stappler::xenolith::FrameContext::acquireMaterial(stappler::xenolith::MaterialInfo const&,Vector<core::MaterialImage>&&,bool)",
+					"_fullName": "::stappler::xenolith::FrameContext::acquireMaterial(stappler::xenolith::MaterialInfo const&,Vector<core::MaterialImage>&&,stappler::mem_std::Ref*,bool)",
 					"_kind": "member function",
 					"_name": "acquireMaterial",
 					"body_kind": "declaration",
 					"cv_qualifier": "none",
-					"id": 1458144788,
+					"id": 3846408745,
 					"is_consteval": false,
 					"is_constexpr": false,
 					"is_declaration": true,
@@ -1033,6 +1033,115 @@
 							"reference_kind": "rvalue"
 						}
 					}, {
+						"_fullName": "data",
+						"_kind": "function parameter",
+						"_name": "data",
+						"id": 555911733,
+						"kind": "function parameter",
+						"name": "data",
+						"type": {
+							"_typeName": "stappler::mem_std::Ref*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::mem_std::Ref",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::mem_std::Ref",
+									"objects": [{
+										"_fullName": "::stappler::mem_std::Ref",
+										"_kind": "type alias",
+										"_name": "Ref",
+										"id": 3010886988,
+										"kind": "type alias",
+										"name": "Ref",
+										"underlying_type": {
+											"_typeName": "RefBase<memory::StandartInterface>",
+											"arguments_exposed": false,
+											"kind": "template_instantiation",
+											"primary_template": {
+												"name": "RefBase",
+												"objects": [{
+													"_fullName": "::stappler::RefBase<typename>",
+													"_kind": "class template",
+													"_name": "RefBase",
+													"class": {
+														"_fullName": "::stappler::RefBase<typename>",
+														"_kind": "class",
+														"_name": "RefBase",
+														"bases": [{
+															"_fullName": "Interface::AllocBaseType",
+															"_kind": "base class specifier",
+															"_name": "Interface::AllocBaseType",
+															"access_specifier": "public",
+															"id": 25533212,
+															"is_virtual": false,
+															"kind": "base class specifier",
+															"name": "Interface::AllocBaseType",
+															"type": {
+																"_typeName": "Interface::AllocBaseType",
+																"kind": "unexposed",
+																"name": "Interface::AllocBaseType"
+															}
+														}],
+														"class_kind": "class",
+														"id": 2191419057,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "RefBase",
+														"scope": {
+															"is_templated": true,
+															"name": "RefBase",
+															"template_parameters": [{
+																"_fullName": "Interface",
+																"_kind": "template type parameter",
+																"_name": "Interface",
+																"id": 2255344761,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "Interface"
+															}]
+														},
+														"semantic_scope": ""
+													},
+													"id": 2191419057,
+													"kind": "class template",
+													"name": "RefBase",
+													"parameters": [{
+														"_fullName": "Interface",
+														"_kind": "template type parameter",
+														"_name": "Interface",
+														"id": 2255344761,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "Interface"
+													}],
+													"scope":  {
+														"is_templated": true,
+														"name": "RefBase",
+														"template_parameters": [{
+															"_fullName": "Interface",
+															"_kind": "template type parameter",
+															"_name": "Interface",
+															"id": 2255344761,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "Interface"
+														}]
+													}
+												}]
+											},
+											"unexposed_arguments": "memory::StandartInterface"
+										}
+									}]
+								}
+							}
+						}
+					}, {
 						"_fullName": "revokable",
 						"_kind": "function parameter",
 						"_name": "revokable",
@@ -1054,7 +1163,7 @@
 						}
 					},
 					"semantic_scope": "",
-					"signature": "(stappler::xenolith::MaterialInfo const&,Vector<core::MaterialImage>&&,bool)"
+					"signature": "(stappler::xenolith::MaterialInfo const&,Vector<core::MaterialImage>&&,stappler::mem_std::Ref*,bool)"
 				}, {
 					"_fullName": "::stappler::xenolith::FrameContext::revokeImages(SpanView<uint64_t>)",
 					"_kind": "member function",
@@ -2284,89 +2393,6 @@
 					},
 					"semantic_scope": "",
 					"signature": "(stappler::xenolith::MaterialInfo const&,uint32_t,core::ImageData const*) const"
-				}, {
-					"_fullName": "::stappler::xenolith::FrameContext::getDataForMaterial(stappler::xenolith::MaterialInfo const&) const",
-					"_kind": "member function",
-					"_name": "getDataForMaterial",
-					"body_kind": "declaration",
-					"cv_qualifier": "const",
-					"id": 1893257498,
-					"is_consteval": false,
-					"is_constexpr": false,
-					"is_declaration": true,
-					"is_definition": false,
-					"is_variadic": false,
-					"is_virtual": true,
-					"kind": "member function",
-					"name": "getDataForMaterial",
-					"parameters": [{
-						"_fullName": "",
-						"_kind": "function parameter",
-						"_name": "",
-						"id": 46947589,
-						"kind": "function parameter",
-						"name": "",
-						"type": {
-							"_typeName": "stappler::xenolith::MaterialInfo const&",
-							"kind": "reference",
-							"referee": {
-								"_typeName": "stappler::xenolith::MaterialInfo const",
-								"cv_qualifier": "const",
-								"kind": "cv_qualified",
-								"type": {
-									"_typeName": "stappler::xenolith::MaterialInfo",
-									"kind": "user_defined",
-									"target": {
-										"name": "stappler::xenolith::MaterialInfo",
-										"objects": [{
-											"_fullName": "::stappler::xenolith::MaterialInfo",
-											"_kind": "class",
-											"_name": "MaterialInfo",
-											"class_kind": "struct",
-											"id": 2729705837,
-											"is_declaration": false,
-											"is_definition": true,
-											"is_final": false,
-											"kind": "class",
-											"name": "MaterialInfo",
-											"scope": {
-												"name": "MaterialInfo"
-											},
-											"semantic_scope": ""
-										}]
-									}
-								}
-							},
-							"reference_kind": "lvalue"
-						}
-					}],
-					"ref_qualifier": "none",
-					"return_type": {
-						"_typeName": "stappler::mem_std::Bytes",
-						"kind": "user_defined",
-						"target": {
-							"name": "stappler::mem_std::Bytes",
-							"objects": [{
-								"_fullName": "::stappler::mem_std::Bytes",
-								"_kind": "type alias",
-								"_name": "Bytes",
-								"id": 3221952977,
-								"kind": "type alias",
-								"name": "Bytes",
-								"underlying_type": {
-									"_typeName": "std::vector<uint8_t>",
-									"arguments_exposed": false,
-									"kind": "template_instantiation",
-									"primary_template": {
-										"name": "std::vector"
-									},
-									"unexposed_arguments": "uint8_t"
-								}
-							}]
-						}
-					},
-					"semantic_scope": "",
-					"signature": "(stappler::xenolith::MaterialInfo const&) const"
 				}, {
 					"_fullName": "::stappler::xenolith::FrameContext::getPipelineForMaterial(stappler::xenolith::MaterialInfo const&) const",
 					"_kind": "member function",

@@ -422,6 +422,36 @@
 						}
 					}
 				}, {
+					"_fullName": "::stappler::xenolith::basic2d::PathWriter",
+					"_kind": "type alias",
+					"_name": "PathWriter",
+					"id": 338346277,
+					"kind": "type alias",
+					"name": "PathWriter",
+					"underlying_type": {
+						"_typeName": "vg::PathWriter",
+						"kind": "user_defined",
+						"target": {
+							"name": "vg::PathWriter",
+							"objects": [{
+								"_fullName": "::stappler::vg::PathWriter",
+								"_kind": "class",
+								"_name": "PathWriter",
+								"class_kind": "struct",
+								"id": 4086173804,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_final": false,
+								"kind": "class",
+								"name": "PathWriter",
+								"scope": {
+									"name": "PathWriter"
+								},
+								"semantic_scope": ""
+							}]
+						}
+					}
+				}, {
 					"_fullName": "::stappler::xenolith::basic2d::VectorCanvasResult",
 					"_kind": "class",
 					"_name": "VectorCanvasResult",
@@ -576,52 +606,9 @@
 						"kind": "member variable",
 						"name": "targetColor",
 						"type": {
-							"_typeName": "stappler::xenolith::Color4F",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::Color4F",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::Color4F",
-									"_kind": "type alias",
-									"_name": "Color4F",
-									"id": 2730567930,
-									"kind": "type alias",
-									"name": "Color4F",
-									"underlying_type": {
-										"_typeName": "geom::Color4F",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::Color4F",
-											"objects": [{
-												"_fullName": "::stappler::geom::Color4F",
-												"_kind": "class",
-												"_name": "Color4F",
-												"attributes": [{
-													"arguments": [{
-														"kind": "int_literal",
-														"spelling": "16"
-													}],
-													"is_variadic": false,
-													"kind": "alignas_",
-													"name": "alignas"
-												}],
-												"class_kind": "struct",
-												"comment": "\nRGBA color composed of 4 floats.\n",
-												"id": 1425630790,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "Color4F",
-												"scope": {
-													"name": "Color4F"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::Color4F",
+							"kind": "unexposed",
+							"name": "stappler::geom::Color4F"
 						}
 					}, {
 						"_fullName": "::stappler::xenolith::basic2d::VectorCanvasResult::targetSize",
@@ -632,42 +619,9 @@
 						"kind": "member variable",
 						"name": "targetSize",
 						"type": {
-							"_typeName": "stappler::xenolith::Size2",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::Size2",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::Size2",
-									"_kind": "type alias",
-									"_name": "Size2",
-									"id": 3876930682,
-									"kind": "type alias",
-									"name": "Size2",
-									"underlying_type": {
-										"_typeName": "geom::Size2",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::Size2",
-											"objects": [{
-												"_fullName": "::stappler::geom::Size2",
-												"_kind": "class",
-												"_name": "Size2",
-												"class_kind": "struct",
-												"id": 1488533902,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "Size2",
-												"scope": {
-													"name": "Size2"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::Size2",
+							"kind": "unexposed",
+							"name": "stappler::geom::Size2"
 						}
 					}, {
 						"_fullName": "::stappler::xenolith::basic2d::VectorCanvasResult::targetTransform",
@@ -678,60 +632,17 @@
 						"kind": "member variable",
 						"name": "targetTransform",
 						"type": {
-							"_typeName": "stappler::xenolith::Mat4",
-							"kind": "user_defined",
-							"target": {
-								"name": "stappler::xenolith::Mat4",
-								"objects": [{
-									"_fullName": "::stappler::xenolith::Mat4",
-									"_kind": "type alias",
-									"_name": "Mat4",
-									"id": 905241342,
-									"kind": "type alias",
-									"name": "Mat4",
-									"underlying_type": {
-										"_typeName": "geom::Mat4",
-										"kind": "user_defined",
-										"target": {
-											"name": "geom::Mat4",
-											"objects": [{
-												"_fullName": "::stappler::geom::Mat4",
-												"_kind": "class",
-												"_name": "Mat4",
-												"attributes": [{
-													"arguments": [{
-														"kind": "int_literal",
-														"spelling": "16"
-													}],
-													"is_variadic": false,
-													"kind": "alignas_",
-													"name": "alignas"
-												}],
-												"class_kind": "class",
-												"comment": "\nDefines a 4 x 4 floating point matrix representing a 3D transformation.\n\nVectors are treated as columns, resulting in a matrix that is represented as follows,\nwhere x, y and z are the translation components of the matrix:\n\n    1  0  0  x\n    0  1  0  y\n    0  0  1  z\n    0  0  0  1\n\nThis matrix class is directly compatible with OpenGL since its elements are\nlaid out in memory exactly as they are expected by OpenGL.\nThe matrix uses column-major format such that array indices increase down column first.\nSince matrix multiplication is not commutative, multiplication must be done in the\ncorrect order when combining transformations. Suppose we have a translation\nmatrix T and a rotation matrix R. To first rotate an object around the origin\nand then translate it, you would multiply the two matrices as TR.\n\nLikewise, to first translate the object and then rotate it, you would do RT.\nSo generally, matrices must be multiplied in the reverse order in which you\nwant the transformations to take place (this also applies to\nthe scale, rotate, and translate methods below; these methods are convenience\nmethods for post-multiplying by a matrix representing a scale, rotation, or translation).\n\nIn the case of repeated local transformations (i.e. rotate around the Z-axis by 0.76 radians,\nthen translate by 2.1 along the X-axis, then ...), it is better to use the Transform class\n(which is optimized for that kind of usage).\n\n@see Transform\n",
-												"id": 3473668624,
-												"is_declaration": false,
-												"is_definition": true,
-												"is_final": false,
-												"kind": "class",
-												"name": "Mat4",
-												"scope": {
-													"name": "Mat4"
-												},
-												"semantic_scope": ""
-											}]
-										}
-									}
-								}]
-							}
+							"_typeName": "stappler::geom::Mat4",
+							"kind": "unexposed",
+							"name": "stappler::geom::Mat4"
 						}
 					}, {
-						"_fullName": "::stappler::xenolith::basic2d::VectorCanvasResult::updateColor(stappler::xenolith::Color4F const&)",
+						"_fullName": "::stappler::xenolith::basic2d::VectorCanvasResult::updateColor(const stappler::geom::Color4F&)",
 						"_kind": "member function",
 						"_name": "updateColor",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 2243332993,
+						"id": 2027955954,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -748,60 +659,12 @@
 							"kind": "function parameter",
 							"name": "",
 							"type": {
-								"_typeName": "stappler::xenolith::Color4F const&",
+								"_typeName": "const stappler::geom::Color4F&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "stappler::xenolith::Color4F const",
-									"cv_qualifier": "const",
-									"kind": "cv_qualified",
-									"type": {
-										"_typeName": "stappler::xenolith::Color4F",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::xenolith::Color4F",
-											"objects": [{
-												"_fullName": "::stappler::xenolith::Color4F",
-												"_kind": "type alias",
-												"_name": "Color4F",
-												"id": 2730567930,
-												"kind": "type alias",
-												"name": "Color4F",
-												"underlying_type": {
-													"_typeName": "geom::Color4F",
-													"kind": "user_defined",
-													"target": {
-														"name": "geom::Color4F",
-														"objects": [{
-															"_fullName": "::stappler::geom::Color4F",
-															"_kind": "class",
-															"_name": "Color4F",
-															"attributes": [{
-																"arguments": [{
-																	"kind": "int_literal",
-																	"spelling": "16"
-																}],
-																"is_variadic": false,
-																"kind": "alignas_",
-																"name": "alignas"
-															}],
-															"class_kind": "struct",
-															"comment": "\nRGBA color composed of 4 floats.\n",
-															"id": 1425630790,
-															"is_declaration": false,
-															"is_definition": true,
-															"is_final": false,
-															"kind": "class",
-															"name": "Color4F",
-															"scope": {
-																"name": "Color4F"
-															},
-															"semantic_scope": ""
-														}]
-													}
-												}
-											}]
-										}
-									}
+									"_typeName": "const stappler::geom::Color4F",
+									"kind": "unexposed",
+									"name": "const stappler::geom::Color4F"
 								},
 								"reference_kind": "lvalue"
 							}
@@ -813,7 +676,7 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::Color4F const&)"
+						"signature": "(const stappler::geom::Color4F&)"
 					}],
 					"class_kind": "struct",
 					"id": 3006272150,
@@ -1243,12 +1106,12 @@
 						"semantic_scope": "",
 						"signature": "(Rc<stappler::xenolith::basic2d::VectorCanvasResult>&&)"
 					}, {
-						"_fullName": "::stappler::xenolith::basic2d::VectorCanvasDeferredResult::updateColor(stappler::xenolith::Color4F const&)",
+						"_fullName": "::stappler::xenolith::basic2d::VectorCanvasDeferredResult::updateColor(const stappler::geom::Color4F&)",
 						"_kind": "member function",
 						"_name": "updateColor",
 						"body_kind": "declaration",
 						"cv_qualifier": "none",
-						"id": 2036894572,
+						"id": 1161785233,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -1265,60 +1128,12 @@
 							"kind": "function parameter",
 							"name": "",
 							"type": {
-								"_typeName": "stappler::xenolith::Color4F const&",
+								"_typeName": "const stappler::geom::Color4F&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "stappler::xenolith::Color4F const",
-									"cv_qualifier": "const",
-									"kind": "cv_qualified",
-									"type": {
-										"_typeName": "stappler::xenolith::Color4F",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::xenolith::Color4F",
-											"objects": [{
-												"_fullName": "::stappler::xenolith::Color4F",
-												"_kind": "type alias",
-												"_name": "Color4F",
-												"id": 2730567930,
-												"kind": "type alias",
-												"name": "Color4F",
-												"underlying_type": {
-													"_typeName": "geom::Color4F",
-													"kind": "user_defined",
-													"target": {
-														"name": "geom::Color4F",
-														"objects": [{
-															"_fullName": "::stappler::geom::Color4F",
-															"_kind": "class",
-															"_name": "Color4F",
-															"attributes": [{
-																"arguments": [{
-																	"kind": "int_literal",
-																	"spelling": "16"
-																}],
-																"is_variadic": false,
-																"kind": "alignas_",
-																"name": "alignas"
-															}],
-															"class_kind": "struct",
-															"comment": "\nRGBA color composed of 4 floats.\n",
-															"id": 1425630790,
-															"is_declaration": false,
-															"is_definition": true,
-															"is_final": false,
-															"kind": "class",
-															"name": "Color4F",
-															"scope": {
-																"name": "Color4F"
-															},
-															"semantic_scope": ""
-														}]
-													}
-												}
-											}]
-										}
-									}
+									"_typeName": "const stappler::geom::Color4F",
+									"kind": "unexposed",
+									"name": "const stappler::geom::Color4F"
 								},
 								"reference_kind": "lvalue"
 							}
@@ -1330,7 +1145,7 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::Color4F const&)"
+						"signature": "(const stappler::geom::Color4F&)"
 					}, {
 						"_fullName": "::stappler::xenolith::basic2d::VectorCanvasDeferredResult::getResult() const",
 						"_kind": "member function",

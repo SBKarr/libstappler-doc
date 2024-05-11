@@ -21,7 +21,7 @@ Title: XLFontController.h
 
 ## CONTENT
 
-Тип: Rc<font::FontFaceObject>
+Тип: Rc<stappler::font::FontFaceObject>
 
 
 # ::stappler::xenolith::font::FontUpdateRequest::chars
@@ -30,7 +30,7 @@ Title: XLFontController.h
 
 ## CONTENT
 
-Тип: Vector<char16_t>
+Тип: Vector<char32_t>
 
 
 # ::stappler::xenolith::font::FontUpdateRequest::persistent
@@ -125,7 +125,7 @@ Title: XLFontController.h
 
 ## CONTENT
 
-Тип: Rc<stappler::xenolith::font::FontFaceData>
+Тип: Rc<stappler::font::FontFaceData>
 
 
 # ::stappler::xenolith::font::FontController::FontSource::params
@@ -134,7 +134,16 @@ Title: XLFontController.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::font::FontLayoutParameters
+Тип: stappler::font::FontLayoutParameters
+
+
+# ::stappler::xenolith::font::FontController::FontSource::preconfiguredParams
+
+## BRIEF
+
+## CONTENT
+
+Тип: bool
 
 
 # ::stappler::xenolith::font::FontController::FamilyQuery
@@ -164,6 +173,15 @@ Title: XLFontController.h
 Тип: Vector<const stappler::xenolith::font::FontController::FontSource *>
 
 
+# ::stappler::xenolith::font::FontController::FamilyQuery::addInFront
+
+## BRIEF
+
+## CONTENT
+
+Тип: bool
+
+
 # ::stappler::xenolith::font::FontController::FamilySpec
 
 ## BRIEF
@@ -179,7 +197,7 @@ Title: XLFontController.h
 
 ## CONTENT
 
-Тип: Vector<Rc<stappler::xenolith::font::FontFaceData>>
+Тип: Vector<Rc<stappler::font::FontFaceData>>
 
 
 # ::stappler::xenolith::font::FontController::Builder
@@ -210,6 +228,18 @@ Title: XLFontController.h
 
 Параметры:
 * stappler::StringView
+
+
+# ::stappler::xenolith::font::FontController::Builder::Builder(stappler::xenolith::font::FontController*)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* stappler::xenolith::font::FontController*
 
 
 # ::stappler::xenolith::font::FontController::Builder::Builder(stappler::xenolith::font::FontController::Builder&&)
@@ -275,7 +305,18 @@ Title: XLFontController.h
 Возвращает:
 * stappler::StringView
 
-# ::stappler::xenolith::font::FontController::Builder::addFontSource(stappler::StringView,stappler::BytesView,stappler::xenolith::font::FontLayoutParameters)
+# ::stappler::xenolith::font::FontController::Builder::getTarget() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* stappler::xenolith::font::FontController*
+
+# ::stappler::xenolith::font::FontController::Builder::addFontSource(stappler::StringView,stappler::BytesView)
 
 ## BRIEF
 
@@ -286,12 +327,11 @@ Title: XLFontController.h
 Параметры:
 * stappler::StringView
 * stappler::BytesView
-* stappler::xenolith::font::FontLayoutParameters
 
 Возвращает:
 * stappler::xenolith::font::FontController::FontSource const*
 
-# ::stappler::xenolith::font::FontController::Builder::addFontSource(stappler::StringView,stappler::mem_std::Bytes&&,stappler::xenolith::font::FontLayoutParameters)
+# ::stappler::xenolith::font::FontController::Builder::addFontSource(stappler::StringView,stappler::mem_std::Bytes&&)
 
 ## BRIEF
 
@@ -302,12 +342,11 @@ Title: XLFontController.h
 Параметры:
 * stappler::StringView
 * stappler::mem_std::Bytes&&
-* stappler::xenolith::font::FontLayoutParameters
 
 Возвращает:
 * stappler::xenolith::font::FontController::FontSource const*
 
-# ::stappler::xenolith::font::FontController::Builder::addFontSource(stappler::StringView,stappler::FilePath,stappler::xenolith::font::FontLayoutParameters)
+# ::stappler::xenolith::font::FontController::Builder::addFontSource(stappler::StringView,stappler::FilePath)
 
 ## BRIEF
 
@@ -318,12 +357,11 @@ Title: XLFontController.h
 Параметры:
 * stappler::StringView
 * stappler::FilePath
-* stappler::xenolith::font::FontLayoutParameters
 
 Возвращает:
 * stappler::xenolith::font::FontController::FontSource const*
 
-# ::stappler::xenolith::font::FontController::Builder::addFontSource(stappler::StringView,Function<stappler::mem_std::Bytes ()>&&,stappler::xenolith::font::FontLayoutParameters)
+# ::stappler::xenolith::font::FontController::Builder::addFontSource(stappler::StringView,Function<stappler::mem_std::Bytes ()>&&)
 
 ## BRIEF
 
@@ -334,7 +372,70 @@ Title: XLFontController.h
 Параметры:
 * stappler::StringView
 * Function<stappler::mem_std::Bytes ()>&&
-* stappler::xenolith::font::FontLayoutParameters
+
+Возвращает:
+* stappler::xenolith::font::FontController::FontSource const*
+
+# ::stappler::xenolith::font::FontController::Builder::addFontSource(stappler::StringView,stappler::BytesView,stappler::font::FontLayoutParameters)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* stappler::StringView
+* stappler::BytesView
+* stappler::font::FontLayoutParameters
+
+Возвращает:
+* stappler::xenolith::font::FontController::FontSource const*
+
+# ::stappler::xenolith::font::FontController::Builder::addFontSource(stappler::StringView,stappler::mem_std::Bytes&&,stappler::font::FontLayoutParameters)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* stappler::StringView
+* stappler::mem_std::Bytes&&
+* stappler::font::FontLayoutParameters
+
+Возвращает:
+* stappler::xenolith::font::FontController::FontSource const*
+
+# ::stappler::xenolith::font::FontController::Builder::addFontSource(stappler::StringView,stappler::FilePath,stappler::font::FontLayoutParameters)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* stappler::StringView
+* stappler::FilePath
+* stappler::font::FontLayoutParameters
+
+Возвращает:
+* stappler::xenolith::font::FontController::FontSource const*
+
+# ::stappler::xenolith::font::FontController::Builder::addFontSource(stappler::StringView,Function<stappler::mem_std::Bytes ()>&&,stappler::font::FontLayoutParameters)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* stappler::StringView
+* Function<stappler::mem_std::Bytes ()>&&
+* stappler::font::FontLayoutParameters
 
 Возвращает:
 * stappler::xenolith::font::FontController::FontSource const*
@@ -492,7 +593,7 @@ Title: XLFontController.h
 Доступ: public
 
 
-# ::stappler::xenolith::font::FontController::init(Rc<stappler::xenolith::font::FontLibrary> const&)
+# ::stappler::xenolith::font::FontController::init(Rc<stappler::xenolith::font::FontExtension> const&)
 
 ## BRIEF
 
@@ -501,10 +602,22 @@ Title: XLFontController.h
 Доступ: public
 
 Параметры:
-* Rc<stappler::xenolith::font::FontLibrary> const&
+* Rc<stappler::xenolith::font::FontExtension> const&
 
 Возвращает:
 * bool
+
+# ::stappler::xenolith::font::FontController::extend(Callback<bool (FontController::Builder &)> const&)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* Callback<bool (FontController::Builder &)> const&
+
 
 # ::stappler::xenolith::font::FontController::initialize(stappler::xenolith::Application*)
 
@@ -529,49 +642,6 @@ Title: XLFontController.h
 Параметры:
 * stappler::xenolith::Application*
 
-
-# ::stappler::xenolith::font::FontController::addFont(stappler::StringView,Rc<stappler::xenolith::font::FontFaceData>&&,bool)
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-Параметры:
-* stappler::StringView
-* Rc<stappler::xenolith::font::FontFaceData>&&
-* bool
-
-
-# ::stappler::xenolith::font::FontController::addFont(stappler::StringView,Vector<Rc<stappler::xenolith::font::FontFaceData>>&&,bool)
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-Параметры:
-* stappler::StringView
-* Vector<Rc<stappler::xenolith::font::FontFaceData>>&&
-* bool
-
-
-# ::stappler::xenolith::font::FontController::addAlias(stappler::StringView,stappler::StringView)
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-Параметры:
-* stappler::StringView
-* stappler::StringView
-
-Возвращает:
-* bool
 
 # ::stappler::xenolith::font::FontController::isLoaded() const
 
@@ -606,7 +676,7 @@ Title: XLFontController.h
 Возвращает:
 * Rc<stappler::xenolith::Texture> const&
 
-# ::stappler::xenolith::font::FontController::getLayout(stappler::xenolith::font::FontParameters)
+# ::stappler::xenolith::font::FontController::getLayout(stappler::font::FontParameters)
 
 ## BRIEF
 
@@ -615,12 +685,12 @@ Title: XLFontController.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::font::FontParameters
+* stappler::font::FontParameters
 
 Возвращает:
-* Rc<stappler::xenolith::font::FontLayout>
+* Rc<stappler::font::FontFaceSet>
 
-# ::stappler::xenolith::font::FontController::getLayoutForString(stappler::xenolith::font::FontParameters const&,stappler::xenolith::font::FontCharString const&)
+# ::stappler::xenolith::font::FontController::getLayoutForString(stappler::font::FontParameters const&,stappler::font::CharVector const&)
 
 ## BRIEF
 
@@ -629,13 +699,13 @@ Title: XLFontController.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::font::FontParameters const&
-* stappler::xenolith::font::FontCharString const&
+* stappler::font::FontParameters const&
+* stappler::font::CharVector const&
 
 Возвращает:
-* Rc<stappler::xenolith::font::FontLayout>
+* Rc<stappler::font::FontFaceSet>
 
-# ::stappler::xenolith::font::FontController::addTextureChars(Rc<stappler::xenolith::font::FontLayout> const&,SpanView<stappler::xenolith::font::CharSpec>)
+# ::stappler::xenolith::font::FontController::addTextureChars(Rc<stappler::font::FontFaceSet> const&,SpanView<stappler::font::CharLayoutData>)
 
 ## BRIEF
 
@@ -644,8 +714,8 @@ Title: XLFontController.h
 Доступ: public
 
 Параметры:
-* Rc<stappler::xenolith::font::FontLayout> const&
-* SpanView<stappler::xenolith::font::CharSpec>
+* Rc<stappler::font::FontFaceSet> const&
+* SpanView<stappler::font::CharLayoutData>
 
 Возвращает:
 * Rc<core::DependencyEvent>
@@ -691,6 +761,49 @@ Title: XLFontController.h
 * stappler::xenolith::UpdateTime const&
 
 
+# ::stappler::xenolith::font::FontController::addFont(stappler::StringView,Rc<stappler::font::FontFaceData>&&,bool)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Параметры:
+* stappler::StringView
+* Rc<stappler::font::FontFaceData>&&
+* bool
+
+
+# ::stappler::xenolith::font::FontController::addFont(stappler::StringView,Vector<Rc<stappler::font::FontFaceData>>&&,bool)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Параметры:
+* stappler::StringView
+* Vector<Rc<stappler::font::FontFaceData>>&&
+* bool
+
+
+# ::stappler::xenolith::font::FontController::addAlias(stappler::StringView,stappler::StringView)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Параметры:
+* stappler::StringView
+* stappler::StringView
+
+Возвращает:
+* bool
+
 # ::stappler::xenolith::font::FontController::setImage(Rc<core::DynamicImage>&&)
 
 ## BRIEF
@@ -715,6 +828,15 @@ Title: XLFontController.h
 * bool
 
 
+# ::stappler::xenolith::font::FontController::sendFontUpdatedEvent()
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+
 # ::stappler::xenolith::font::FontController::setAliases(Map<stappler::mem_std::String, stappler::mem_std::String>&&)
 
 ## BRIEF
@@ -727,7 +849,7 @@ Title: XLFontController.h
 * Map<stappler::mem_std::String, stappler::mem_std::String>&&
 
 
-# ::stappler::xenolith::font::FontController::findSpecialization(stappler::xenolith::font::FontController::FamilySpec const&,stappler::xenolith::font::FontParameters const&,Vector<Rc<stappler::xenolith::font::FontFaceData>>*)
+# ::stappler::xenolith::font::FontController::findSpecialization(stappler::xenolith::font::FontController::FamilySpec const&,stappler::font::FontParameters const&,Vector<Rc<stappler::font::FontFaceData>>*)
 
 ## BRIEF
 
@@ -737,11 +859,11 @@ Title: XLFontController.h
 
 Параметры:
 * stappler::xenolith::font::FontController::FamilySpec const&
-* stappler::xenolith::font::FontParameters const&
-* Vector<Rc<stappler::xenolith::font::FontFaceData>>*
+* stappler::font::FontParameters const&
+* Vector<Rc<stappler::font::FontFaceData>>*
 
 Возвращает:
-* stappler::xenolith::font::FontSpecializationVector
+* stappler::font::FontSpecializationVector
 
 # ::stappler::xenolith::font::FontController::removeUnusedLayouts()
 
@@ -818,7 +940,7 @@ Title: XLFontController.h
 Тип: Rc<core::DynamicImage>
 
 
-# ::stappler::xenolith::font::FontController::_library
+# ::stappler::xenolith::font::FontController::_ext
 
 ## BRIEF
 
@@ -826,7 +948,7 @@ Title: XLFontController.h
 
 Доступ: protected
 
-Тип: Rc<stappler::xenolith::font::FontLibrary>
+Тип: Rc<stappler::xenolith::font::FontExtension>
 
 
 # ::stappler::xenolith::font::FontController::_aliases
@@ -870,7 +992,7 @@ Title: XLFontController.h
 
 Доступ: protected
 
-Тип: HashMap<stappler::StringView, Rc<stappler::xenolith::font::FontLayout>>
+Тип: HashMap<stappler::StringView, Rc<stappler::font::FontFaceSet>>
 
 
 # ::stappler::xenolith::font::FontController::_dependency

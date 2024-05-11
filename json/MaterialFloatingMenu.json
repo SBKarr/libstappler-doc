@@ -12,6 +12,15 @@
 		"kind": "include directive",
 		"name": "MaterialMenu.h"
 	}, {
+		"_fullName": "MaterialOverlayLayout.h",
+		"_kind": "include directive",
+		"_name": "MaterialOverlayLayout.h",
+		"id": 3786387936,
+		"include": "xenolith/renderer/material2d/layout/MaterialOverlayLayout.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "MaterialOverlayLayout.h"
+	}, {
 		"_fullName": "XL2dSceneContent.h",
 		"_kind": "include directive",
 		"_name": "XL2dSceneContent.h",
@@ -379,59 +388,45 @@
 						}
 					}, {
 						"_fullName": "::stappler::xenolith::material2d::FloatingMenu::Binding",
-						"_kind": "enum",
+						"_kind": "type alias",
 						"_name": "Binding",
-						"childs": [{
-							"_fullName": "::stappler::xenolith::material2d::FloatingMenu::Binding::Relative",
-							"_kind": "enum value",
-							"_name": "Relative",
-							"id": 800213849,
-							"kind": "enum value",
-							"name": "Relative"
-						}, {
-							"_fullName": "::stappler::xenolith::material2d::FloatingMenu::Binding::OriginLeft",
-							"_kind": "enum value",
-							"_name": "OriginLeft",
-							"id": 4111750886,
-							"kind": "enum value",
-							"name": "OriginLeft"
-						}, {
-							"_fullName": "::stappler::xenolith::material2d::FloatingMenu::Binding::OriginRight",
-							"_kind": "enum value",
-							"_name": "OriginRight",
-							"id": 1647802143,
-							"kind": "enum value",
-							"name": "OriginRight"
-						}, {
-							"_fullName": "::stappler::xenolith::material2d::FloatingMenu::Binding::Anchor",
-							"_kind": "enum value",
-							"_name": "Anchor",
-							"id": 444109998,
-							"kind": "enum value",
-							"name": "Anchor"
-						}],
-						"has_explicit_type": false,
 						"id": 1765044378,
-						"is_declaration": false,
-						"is_definition": true,
-						"is_scoped": true,
-						"kind": "enum",
+						"kind": "type alias",
 						"name": "Binding",
-						"scope": {
-							"name": "Binding"
-						},
-						"semantic_scope": "",
 						"underlying_type": {
-							"_typeName": "int",
-							"builtin_type_kind": "int",
-							"kind": "builtin"
+							"_typeName": "OverlayLayout::Binding",
+							"kind": "user_defined",
+							"target": {
+								"name": "OverlayLayout::Binding",
+								"objects": [{
+									"_fullName": "::stappler::xenolith::material2d::OverlayLayout::Binding",
+									"_kind": "enum",
+									"_name": "Binding",
+									"has_explicit_type": false,
+									"id": 2180067232,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_scoped": true,
+									"kind": "enum",
+									"name": "Binding",
+									"scope": {
+										"name": "Binding"
+									},
+									"semantic_scope": "",
+									"underlying_type": {
+										"_typeName": "int",
+										"builtin_type_kind": "int",
+										"kind": "builtin"
+									}
+								}]
+							}
 						}
 					}, {
-						"_fullName": "::stappler::xenolith::material2d::FloatingMenu::push(stappler::xenolith::basic2d::SceneContent2d*,stappler::xenolith::material2d::MenuSource*,stappler::xenolith::Vec2 const&,stappler::xenolith::material2d::FloatingMenu::Binding,stappler::xenolith::material2d::Menu*)",
+						"_fullName": "::stappler::xenolith::material2d::FloatingMenu::push(stappler::xenolith::basic2d::SceneContent2d*,stappler::xenolith::material2d::MenuSource*,const stappler::geom::Vec2&,stappler::xenolith::material2d::FloatingMenu::Binding,stappler::xenolith::material2d::Menu*)",
 						"_kind": "function",
 						"_name": "push",
 						"body_kind": "declaration",
-						"id": 2957126134,
+						"id": 466860735,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -908,50 +903,12 @@
 							"kind": "function parameter",
 							"name": "",
 							"type": {
-								"_typeName": "stappler::xenolith::Vec2 const&",
+								"_typeName": "const stappler::geom::Vec2&",
 								"kind": "reference",
 								"referee": {
-									"_typeName": "stappler::xenolith::Vec2 const",
-									"cv_qualifier": "const",
-									"kind": "cv_qualified",
-									"type": {
-										"_typeName": "stappler::xenolith::Vec2",
-										"kind": "user_defined",
-										"target": {
-											"name": "stappler::xenolith::Vec2",
-											"objects": [{
-												"_fullName": "::stappler::xenolith::Vec2",
-												"_kind": "type alias",
-												"_name": "Vec2",
-												"id": 1910638286,
-												"kind": "type alias",
-												"name": "Vec2",
-												"underlying_type": {
-													"_typeName": "geom::Vec2",
-													"kind": "user_defined",
-													"target": {
-														"name": "geom::Vec2",
-														"objects": [{
-															"_fullName": "::stappler::geom::Vec2",
-															"_kind": "class",
-															"_name": "Vec2",
-															"class_kind": "class",
-															"id": 16661423,
-															"is_declaration": false,
-															"is_definition": true,
-															"is_final": false,
-															"kind": "class",
-															"name": "Vec2",
-															"scope": {
-																"name": "Vec2"
-															},
-															"semantic_scope": ""
-														}]
-													}
-												}
-											}]
-										}
-									}
+									"_typeName": "const stappler::geom::Vec2",
+									"kind": "unexposed",
+									"name": "const stappler::geom::Vec2"
 								},
 								"reference_kind": "lvalue"
 							}
@@ -978,23 +935,38 @@
 										"name": "stappler::xenolith::material2d::FloatingMenu::Binding",
 										"objects": [{
 											"_fullName": "::stappler::xenolith::material2d::FloatingMenu::Binding",
-											"_kind": "enum",
+											"_kind": "type alias",
 											"_name": "Binding",
-											"has_explicit_type": false,
 											"id": 1765044378,
-											"is_declaration": false,
-											"is_definition": true,
-											"is_scoped": true,
-											"kind": "enum",
+											"kind": "type alias",
 											"name": "Binding",
-											"scope": {
-												"name": "Binding"
-											},
-											"semantic_scope": "",
 											"underlying_type": {
-												"_typeName": "int",
-												"builtin_type_kind": "int",
-												"kind": "builtin"
+												"_typeName": "OverlayLayout::Binding",
+												"kind": "user_defined",
+												"target": {
+													"name": "OverlayLayout::Binding",
+													"objects": [{
+														"_fullName": "::stappler::xenolith::material2d::OverlayLayout::Binding",
+														"_kind": "enum",
+														"_name": "Binding",
+														"has_explicit_type": false,
+														"id": 2180067232,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_scoped": true,
+														"kind": "enum",
+														"name": "Binding",
+														"scope": {
+															"name": "Binding"
+														},
+														"semantic_scope": "",
+														"underlying_type": {
+															"_typeName": "int",
+															"builtin_type_kind": "int",
+															"kind": "builtin"
+														}
+													}]
+												}
 											}
 										}]
 									}
@@ -1010,23 +982,38 @@
 									"name": "stappler::xenolith::material2d::FloatingMenu::Binding",
 									"objects": [{
 										"_fullName": "::stappler::xenolith::material2d::FloatingMenu::Binding",
-										"_kind": "enum",
+										"_kind": "type alias",
 										"_name": "Binding",
-										"has_explicit_type": false,
 										"id": 1765044378,
-										"is_declaration": false,
-										"is_definition": true,
-										"is_scoped": true,
-										"kind": "enum",
+										"kind": "type alias",
 										"name": "Binding",
-										"scope": {
-											"name": "Binding"
-										},
-										"semantic_scope": "",
 										"underlying_type": {
-											"_typeName": "int",
-											"builtin_type_kind": "int",
-											"kind": "builtin"
+											"_typeName": "OverlayLayout::Binding",
+											"kind": "user_defined",
+											"target": {
+												"name": "OverlayLayout::Binding",
+												"objects": [{
+													"_fullName": "::stappler::xenolith::material2d::OverlayLayout::Binding",
+													"_kind": "enum",
+													"_name": "Binding",
+													"has_explicit_type": false,
+													"id": 2180067232,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_scoped": true,
+													"kind": "enum",
+													"name": "Binding",
+													"scope": {
+														"name": "Binding"
+													},
+													"semantic_scope": "",
+													"underlying_type": {
+														"_typeName": "int",
+														"builtin_type_kind": "int",
+														"kind": "builtin"
+													}
+												}]
+											}
 										}
 									}]
 								}
@@ -1652,7 +1639,7 @@
 							"kind": "builtin"
 						},
 						"semantic_scope": "",
-						"signature": "(stappler::xenolith::basic2d::SceneContent2d*,stappler::xenolith::material2d::MenuSource*,stappler::xenolith::Vec2 const&,stappler::xenolith::material2d::FloatingMenu::Binding,stappler::xenolith::material2d::Menu*)",
+						"signature": "(stappler::xenolith::basic2d::SceneContent2d*,stappler::xenolith::material2d::MenuSource*,const stappler::geom::Vec2&,stappler::xenolith::material2d::FloatingMenu::Binding,stappler::xenolith::material2d::Menu*)",
 						"storage_class": [
 							"static"
 						]

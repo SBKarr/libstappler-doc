@@ -128,20 +128,6 @@ Title: SPDataEncode.h
 * stappler::StringView - ключ шифрования
 
 
-# ::stappler::data::EncodeFormat::EncodeFormat(long)
-
-## BRIEF
-
-Конструктор комплексного формата кодирования из кодированного числа
-
-## CONTENT
-
-Конструктор комплексного формата кодирования из кодированного числа
-
-Параметры:
-* long
-
-
 # ::stappler::data::EncodeFormat::EncodeFormat(stappler::data::EncodeFormat const&)
 
 ## BRIEF
@@ -280,22 +266,6 @@ Title: SPDataEncode.h
 
 Возвращает:
 * size_t - число записанных байт
-
-# ::stappler::data::writeCompressionMark(uint8_t*,size_t,EncodeFormat::Compression)
-
-## BRIEF
-
-Записывает определяющую метку для сжатого блока данных
-
-## CONTENT
-
-Записывает определяющую метку для сжатого блока данных
-
-Параметры:
-* uint8_t* - указатель на начало блока для записи
-* size_t - размер исходных данных
-* EncodeFormat::Compression - формат сжатия
-
 
 # ::stappler::data::compress<typename>(uint8_t const*,size_t,EncodeFormat::Compression,bool)
 
@@ -613,3 +583,33 @@ Title: SPDataEncode.h
 
 Возвращает:
 * std::basic_ostream<CharT, Traits>&
+
+# ::stappler::data::EncodeFormat::EncodeFormat(int)
+
+## BRIEF
+
+Загружает формат кодирования из целочисленного флага
+
+## CONTENT
+
+Загружает формат кодирования из целочисленного флага
+
+Параметры:
+* int - флаг, в который упакованы формат и тип сжатия данных
+
+
+# ::stappler::data::writeCompressionMark(uint8_t*,size_t,EncodeFormat::Compression,uint8_t)
+
+## BRIEF
+
+Записывает в блок данных метку о способе сжатия
+
+## CONTENT
+
+Записывает в блок данных метку о способе сжатия. Размер метки - 4 байта.
+
+Параметры:
+* uint8_t* - буфер для записи
+* size_t - размер сжатых данных
+* EncodeFormat::Compression - алгоритм сжатия
+* uint8_t - смещение в байтах для выравнивания блока (0-3)

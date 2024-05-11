@@ -513,11 +513,11 @@
 							"unexposed_arguments": "uint32_t (const stappler::xenolith::vk::Instance *, VkPhysicalDevice, uint32_t)"
 						}
 					}, {
-						"_fullName": "::stappler::xenolith::vk::Instance::Instance(VkInstance,PFN_vkGetInstanceProcAddr const,uint32_t,Vector<stappler::StringView>&&,stappler::xenolith::core::Instance::TerminateCallback&&,stappler::xenolith::vk::Instance::PresentSupportCallback&&,bool,Rc<stappler::mem_std::Ref>&&)",
+						"_fullName": "::stappler::xenolith::vk::Instance::Instance(VkInstance,PFN_vkGetInstanceProcAddr const,uint32_t,Vector<stappler::StringView>&&,stappler::Dso&&,stappler::xenolith::core::Instance::TerminateCallback&&,stappler::xenolith::vk::Instance::PresentSupportCallback&&,bool,Rc<stappler::mem_std::Ref>&&)",
 						"_kind": "constructor",
 						"_name": "Instance",
 						"body_kind": "declaration",
-						"id": 2343122374,
+						"id": 313517880,
 						"is_consteval": false,
 						"is_constexpr": false,
 						"is_declaration": true,
@@ -591,6 +591,41 @@
 										"name": "Vector"
 									},
 									"unexposed_arguments": "stappler::StringView"
+								},
+								"reference_kind": "rvalue"
+							}
+						}, {
+							"_fullName": "vulkanModule",
+							"_kind": "function parameter",
+							"_name": "vulkanModule",
+							"id": 2370695562,
+							"kind": "function parameter",
+							"name": "vulkanModule",
+							"type": {
+								"_typeName": "stappler::Dso&&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "stappler::Dso",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::Dso",
+										"objects": [{
+											"_fullName": "::stappler::Dso",
+											"_kind": "class",
+											"_name": "Dso",
+											"class_kind": "class",
+											"id": 2090862796,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Dso",
+											"scope": {
+												"name": "Dso"
+											},
+											"semantic_scope": ""
+										}]
+									}
 								},
 								"reference_kind": "rvalue"
 							}
@@ -760,7 +795,7 @@
 							}
 						}],
 						"semantic_scope": "",
-						"signature": "(VkInstance,PFN_vkGetInstanceProcAddr const,uint32_t,Vector<stappler::StringView>&&,stappler::xenolith::core::Instance::TerminateCallback&&,stappler::xenolith::vk::Instance::PresentSupportCallback&&,bool,Rc<stappler::mem_std::Ref>&&)"
+						"signature": "(VkInstance,PFN_vkGetInstanceProcAddr const,uint32_t,Vector<stappler::StringView>&&,stappler::Dso&&,stappler::xenolith::core::Instance::TerminateCallback&&,stappler::xenolith::vk::Instance::PresentSupportCallback&&,bool,Rc<stappler::mem_std::Ref>&&)"
 					}, {
 						"_fullName": "::stappler::xenolith::vk::Instance::~Instance()",
 						"_kind": "destructor",

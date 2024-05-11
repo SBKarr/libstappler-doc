@@ -1518,6 +1518,69 @@
 					"semantic_scope": "",
 					"signature": "() const"
 				}, {
+					"_fullName": "::stappler::xenolith::InputListener::setDedicatedFocus(uint32_t)",
+					"_kind": "member function",
+					"_name": "setDedicatedFocus",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 3330339340,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "setDedicatedFocus",
+					"parameters": [{
+						"_fullName": "",
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 46947589,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "uint32_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "uint32_t"
+							}
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(uint32_t)"
+				}, {
+					"_fullName": "::stappler::xenolith::InputListener::getDedicatedFocus() const",
+					"_kind": "member function",
+					"_name": "getDedicatedFocus",
+					"body_kind": "definition",
+					"cv_qualifier": "const",
+					"id": 1361486217,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "getDedicatedFocus",
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "uint32_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "uint32_t"
+						}
+					},
+					"semantic_scope": "",
+					"signature": "() const"
+				}, {
 					"_fullName": "::stappler::xenolith::InputListener::setOpacityFilter(float)",
 					"_kind": "member function",
 					"_name": "setOpacityFilter",
@@ -2623,9 +2686,32 @@
 					}],
 					"ref_qualifier": "none",
 					"return_type": {
-						"_typeName": "bool",
-						"builtin_type_kind": "bool",
-						"kind": "builtin"
+						"_typeName": "stappler::xenolith::InputEventState",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::xenolith::InputEventState",
+							"objects": [{
+								"_fullName": "::stappler::xenolith::InputEventState",
+								"_kind": "enum",
+								"_name": "InputEventState",
+								"has_explicit_type": false,
+								"id": 598523041,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_scoped": true,
+								"kind": "enum",
+								"name": "InputEventState",
+								"scope": {
+									"name": "InputEventState"
+								},
+								"semantic_scope": "",
+								"underlying_type": {
+									"_typeName": "int",
+									"builtin_type_kind": "int",
+									"kind": "builtin"
+								}
+							}]
+						}
 					},
 					"semantic_scope": "",
 					"signature": "(stappler::xenolith::InputEvent const&)"
@@ -5190,51 +5276,6 @@
 					"semantic_scope": "",
 					"signature": "(Function<bool (bool)>&&)"
 				}, {
-					"_fullName": "::stappler::xenolith::InputListener::setMouseOverCallback(Function<bool (bool)>&&)",
-					"_kind": "member function",
-					"_name": "setMouseOverCallback",
-					"body_kind": "declaration",
-					"cv_qualifier": "none",
-					"id": 2783710250,
-					"is_consteval": false,
-					"is_constexpr": false,
-					"is_declaration": true,
-					"is_definition": false,
-					"is_variadic": false,
-					"is_virtual": false,
-					"kind": "member function",
-					"name": "setMouseOverCallback",
-					"parameters": [{
-						"_fullName": "",
-						"_kind": "function parameter",
-						"_name": "",
-						"id": 46947589,
-						"kind": "function parameter",
-						"name": "",
-						"type": {
-							"_typeName": "Function<bool (bool)>&&",
-							"kind": "reference",
-							"referee": {
-								"_typeName": "Function<bool (bool)>",
-								"arguments_exposed": false,
-								"kind": "template_instantiation",
-								"primary_template": {
-									"name": "Function"
-								},
-								"unexposed_arguments": "bool (bool)"
-							},
-							"reference_kind": "rvalue"
-						}
-					}],
-					"ref_qualifier": "none",
-					"return_type": {
-						"_typeName": "void",
-						"builtin_type_kind": "void",
-						"kind": "builtin"
-					},
-					"semantic_scope": "",
-					"signature": "(Function<bool (bool)>&&)"
-				}, {
 					"_fullName": "::stappler::xenolith::InputListener::clear()",
 					"_kind": "member function",
 					"_name": "clear",
@@ -5781,6 +5822,35 @@
 						"kind": "user_defined",
 						"target": {
 							"name": "int32_t"
+						}
+					}
+				}, {
+					"_fullName": "::stappler::xenolith::InputListener::_dedicatedFocus",
+					"_kind": "member variable",
+					"_name": "_dedicatedFocus",
+					"default_value": {
+						"expression": [{
+							"kind": "int_literal",
+							"spelling": "0"
+						}],
+						"kind": "unexposed",
+						"type": {
+							"_typeName": "uint32_t",
+							"kind": "user_defined",
+							"target": {
+								"name": "uint32_t"
+							}
+						}
+					},
+					"id": 4174969087,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "_dedicatedFocus",
+					"type": {
+						"_typeName": "uint32_t",
+						"kind": "user_defined",
+						"target": {
+							"name": "uint32_t"
 						}
 					}
 				}, {

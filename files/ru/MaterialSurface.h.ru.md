@@ -220,7 +220,34 @@ Title: MaterialSurface.h
 Возвращает:
 * bool
 
-# ::stappler::xenolith::material2d::Surface::applyStyle(stappler::xenolith::material2d::SurfaceStyleData const&)
+# ::stappler::xenolith::material2d::Surface::getHeightLimits(bool) const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* bool
+
+Возвращает:
+* Pair<float, float>
+
+# ::stappler::xenolith::material2d::Surface::setHeightLimits(float,float)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* float
+* float
+
+
+# ::stappler::xenolith::material2d::Surface::applyStyle(stappler::xenolith::material2d::StyleContainer*,stappler::xenolith::material2d::SurfaceStyleData const&)
 
 ## BRIEF
 
@@ -229,6 +256,7 @@ Title: MaterialSurface.h
 Доступ: protected
 
 Параметры:
+* stappler::xenolith::material2d::StyleContainer*
 * stappler::xenolith::material2d::SurfaceStyleData const&
 
 
@@ -285,7 +313,7 @@ Title: MaterialSurface.h
 Возвращает:
 * stappler::xenolith::RenderingLevel
 
-# ::stappler::xenolith::material2d::Surface::pushShadowCommands(stappler::xenolith::FrameInfo&,stappler::xenolith::NodeFlags,stappler::xenolith::Mat4 const&,SpanView<stappler::xenolith::basic2d::TransformVertexData>)
+# ::stappler::xenolith::material2d::Surface::pushShadowCommands(stappler::xenolith::FrameInfo&,stappler::xenolith::NodeFlags,const stappler::geom::Mat4&,SpanView<stappler::xenolith::basic2d::TransformVertexData>)
 
 ## BRIEF
 
@@ -296,7 +324,7 @@ Title: MaterialSurface.h
 Параметры:
 * stappler::xenolith::FrameInfo&
 * stappler::xenolith::NodeFlags
-* stappler::xenolith::Mat4 const&
+* const stappler::geom::Mat4&
 * SpanView<stappler::xenolith::basic2d::TransformVertexData>
 
 
@@ -452,6 +480,28 @@ Title: MaterialSurface.h
 Доступ: protected
 
 Тип: bool
+
+
+# ::stappler::xenolith::material2d::Surface::_minHeight
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: float
+
+
+# ::stappler::xenolith::material2d::Surface::_maxHeight
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: float
 
 
 # ::stappler::xenolith::material2d::BackgroundSurface

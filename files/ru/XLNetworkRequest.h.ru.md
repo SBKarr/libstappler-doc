@@ -72,7 +72,7 @@ Title: XLNetworkRequest.h
 Возвращает:
 * bool
 
-# ::stappler::xenolith::network::Handle::init(stappler::xenolith::network::Method,stappler::StringView)
+# ::stappler::xenolith::network::Handle::init(stappler::network::Handle<stappler::memory::StandartInterface>::Method,stappler::StringView)
 
 ## BRIEF
 
@@ -81,7 +81,7 @@ Title: XLNetworkRequest.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::network::Method
+* stappler::network::Handle<stappler::memory::StandartInterface>::Method
 * stappler::StringView
 
 Возвращает:

@@ -112,6 +112,15 @@ Title: XLApplication.h
 Тип: void*
 
 
+# ::stappler::xenolith::Application::CommonInfo::dpi
+
+## BRIEF
+
+## CONTENT
+
+Тип: int
+
+
 # ::stappler::xenolith::Application::CallbackInfo
 
 ## BRIEF
@@ -453,6 +462,17 @@ Title: XLApplication.h
 
 Возвращает:
 * T*
+
+# ::stappler::xenolith::Application::getMessageToken() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* stappler::StringView
 
 # ::stappler::xenolith::Application::getInfo() const
 

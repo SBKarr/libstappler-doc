@@ -271,21 +271,6 @@ Title: MaterialLayerSurface.h
 Возвращает:
 * stappler::xenolith::RenderingLevel
 
-# ::stappler::xenolith::material2d::LayerSurface::pushShadowCommands(stappler::xenolith::FrameInfo&,stappler::xenolith::NodeFlags,stappler::xenolith::Mat4 const&,SpanView<stappler::xenolith::basic2d::TransformVertexData>)
-
-## BRIEF
-
-## CONTENT
-
-Доступ: protected
-
-Параметры:
-* stappler::xenolith::FrameInfo&
-* stappler::xenolith::NodeFlags
-* stappler::xenolith::Mat4 const&
-* SpanView<stappler::xenolith::basic2d::TransformVertexData>
-
-
 # ::stappler::xenolith::material2d::LayerSurface::_interior
 
 ## BRIEF

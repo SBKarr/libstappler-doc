@@ -1,0 +1,4048 @@
+{
+	"_fullName": "extra/webserver/webserver/resource/SPWebResourceHandler.h",
+	"_kind": "file",
+	"_name": "extra/webserver/webserver/resource/SPWebResourceHandler.h",
+	"childs": [{
+		"_fullName": "SPWebRequestHandler.h",
+		"_kind": "include directive",
+		"_name": "SPWebRequestHandler.h",
+		"id": 1444134822,
+		"include": "extra/webserver/webserver/request/SPWebRequestHandler.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "SPWebRequestHandler.h"
+	}, {
+		"_fullName": "EXTRA_WEBSERVER_WEBSERVER_RESOURCE_SPWEBRESOURCEHANDLER_H_",
+		"_kind": "macro definition",
+		"_name": "EXTRA_WEBSERVER_WEBSERVER_RESOURCE_SPWEBRESOURCEHANDLER_H_",
+		"id": 4116890701,
+		"is_function_like": false,
+		"is_object_like": true,
+		"is_variadic": false,
+		"kind": "macro definition",
+		"name": "EXTRA_WEBSERVER_WEBSERVER_RESOURCE_SPWEBRESOURCEHANDLER_H_",
+		"replacement": ""
+	}, {
+		"_fullName": "::stappler",
+		"_kind": "namespace",
+		"_name": "stappler",
+		"childs": [{
+			"_fullName": "::stappler::web",
+			"_kind": "namespace",
+			"_name": "web",
+			"childs": [{
+				"_fullName": "::stappler::web::Resource",
+				"_kind": "class",
+				"_name": "Resource",
+				"childs": null,
+				"class_kind": "class",
+				"id": 1354732481,
+				"is_declaration": true,
+				"is_definition": false,
+				"is_final": false,
+				"kind": "class",
+				"name": "Resource",
+				"scope": {
+					"name": "Resource"
+				},
+				"semantic_scope": ""
+			}, {
+				"_fullName": "::stappler::web::ResourceHandler",
+				"_kind": "class",
+				"_name": "ResourceHandler",
+				"bases": [{
+					"_fullName": "RequestHandler",
+					"_kind": "base class specifier",
+					"_name": "RequestHandler",
+					"access_specifier": "public",
+					"id": 356624441,
+					"is_virtual": false,
+					"kind": "base class specifier",
+					"name": "RequestHandler",
+					"type": {
+						"_typeName": "stappler::web::RequestHandler",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::web::RequestHandler",
+							"objects": [{
+								"_fullName": "::stappler::web::RequestHandler",
+								"_kind": "class",
+								"_name": "RequestHandler",
+								"bases": [{
+									"_fullName": "AllocBase",
+									"_kind": "base class specifier",
+									"_name": "AllocBase",
+									"access_specifier": "public",
+									"id": 3721829073,
+									"is_virtual": false,
+									"kind": "base class specifier",
+									"name": "AllocBase",
+									"type": {
+										"_typeName": "stappler::mem_pool::AllocBase",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::mem_pool::AllocBase",
+											"objects": [{
+												"_fullName": "::stappler::mem_pool::AllocBase",
+												"_kind": "type alias",
+												"_name": "AllocBase",
+												"id": 499918036,
+												"kind": "type alias",
+												"name": "AllocBase",
+												"underlying_type": {
+													"_typeName": "stappler::memory::AllocPool",
+													"kind": "user_defined",
+													"target": {
+														"name": "stappler::memory::AllocPool",
+														"objects": [{
+															"_fullName": "::stappler::memory::AllocPool",
+															"_kind": "class",
+															"_name": "AllocPool",
+															"class_kind": "struct",
+															"id": 3030388899,
+															"is_declaration": false,
+															"is_definition": true,
+															"is_final": false,
+															"kind": "class",
+															"name": "AllocPool",
+															"scope": {
+																"name": "AllocPool"
+															},
+															"semantic_scope": ""
+														}]
+													}
+												}
+											}]
+										}
+									}
+								}],
+								"class_kind": "class",
+								"id": 2042780376,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_final": false,
+								"kind": "class",
+								"name": "RequestHandler",
+								"scope": {
+									"name": "RequestHandler"
+								},
+								"semantic_scope": ""
+							}]
+						}
+					}
+				}],
+				"childs":  [{
+					"_fullName": "public",
+					"_kind": "access specifier",
+					"_name": "public",
+					"access_specifier": "public",
+					"id": 893076784,
+					"kind": "access specifier",
+					"name": "public"
+				}, {
+					"_fullName": "::stappler::web::ResourceHandler::Scheme",
+					"_kind": "type alias",
+					"_name": "Scheme",
+					"id": 3592565539,
+					"kind": "type alias",
+					"name": "Scheme",
+					"underlying_type": {
+						"_typeName": "db::Scheme",
+						"kind": "user_defined",
+						"target": {
+							"name": "db::Scheme",
+							"objects": [{
+								"_fullName": "::stappler::db::Scheme",
+								"_kind": "class",
+								"_name": "Scheme",
+								"bases": [{
+									"_fullName": "AllocBase",
+									"_kind": "base class specifier",
+									"_name": "AllocBase",
+									"access_specifier": "public",
+									"id": 3721829073,
+									"is_virtual": false,
+									"kind": "base class specifier",
+									"name": "AllocBase",
+									"type": {
+										"_typeName": "stappler::mem_pool::AllocBase",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::mem_pool::AllocBase",
+											"objects": [{
+												"_fullName": "::stappler::mem_pool::AllocBase",
+												"_kind": "type alias",
+												"_name": "AllocBase",
+												"id": 499918036,
+												"kind": "type alias",
+												"name": "AllocBase",
+												"underlying_type": {
+													"_typeName": "stappler::memory::AllocPool",
+													"kind": "user_defined",
+													"target": {
+														"name": "stappler::memory::AllocPool",
+														"objects": [{
+															"_fullName": "::stappler::memory::AllocPool",
+															"_kind": "class",
+															"_name": "AllocPool",
+															"class_kind": "struct",
+															"id": 3030388899,
+															"is_declaration": false,
+															"is_definition": true,
+															"is_final": false,
+															"kind": "class",
+															"name": "AllocPool",
+															"scope": {
+																"name": "AllocPool"
+															},
+															"semantic_scope": ""
+														}]
+													}
+												}
+											}]
+										}
+									}
+								}],
+								"class_kind": "class",
+								"id": 858280278,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_final": false,
+								"kind": "class",
+								"name": "Scheme",
+								"scope": {
+									"name": "Scheme"
+								},
+								"semantic_scope": ""
+							}]
+						}
+					}
+				}, {
+					"_fullName": "::stappler::web::ResourceHandler::ResourceHandler(stappler::web::ResourceHandler::Scheme const&,stappler::mem_pool::Value const&)",
+					"_kind": "constructor",
+					"_name": "ResourceHandler",
+					"body_kind": "declaration",
+					"id": 2557643365,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_explicit": false,
+					"is_variadic": false,
+					"kind": "constructor",
+					"name": "ResourceHandler",
+					"parameters": [{
+						"_fullName": "scheme",
+						"_kind": "function parameter",
+						"_name": "scheme",
+						"id": 1914930134,
+						"kind": "function parameter",
+						"name": "scheme",
+						"type": {
+							"_typeName": "stappler::web::ResourceHandler::Scheme const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::web::ResourceHandler::Scheme const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::web::ResourceHandler::Scheme",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::web::ResourceHandler::Scheme",
+										"objects": [{
+											"_fullName": "::stappler::web::ResourceHandler::Scheme",
+											"_kind": "type alias",
+											"_name": "Scheme",
+											"id": 3592565539,
+											"kind": "type alias",
+											"name": "Scheme",
+											"underlying_type": {
+												"_typeName": "db::Scheme",
+												"kind": "user_defined",
+												"target": {
+													"name": "db::Scheme",
+													"objects": [{
+														"_fullName": "::stappler::db::Scheme",
+														"_kind": "class",
+														"_name": "Scheme",
+														"bases": [{
+															"_fullName": "AllocBase",
+															"_kind": "base class specifier",
+															"_name": "AllocBase",
+															"access_specifier": "public",
+															"id": 3721829073,
+															"is_virtual": false,
+															"kind": "base class specifier",
+															"name": "AllocBase",
+															"type": {
+																"_typeName": "stappler::mem_pool::AllocBase",
+																"kind": "user_defined",
+																"target": {
+																	"name": "stappler::mem_pool::AllocBase",
+																	"objects": [{
+																		"_fullName": "::stappler::mem_pool::AllocBase",
+																		"_kind": "type alias",
+																		"_name": "AllocBase",
+																		"id": 499918036,
+																		"kind": "type alias",
+																		"name": "AllocBase",
+																		"underlying_type": {
+																			"_typeName": "stappler::memory::AllocPool",
+																			"kind": "user_defined",
+																			"target": {
+																				"name": "stappler::memory::AllocPool",
+																				"objects": [{
+																					"_fullName": "::stappler::memory::AllocPool",
+																					"_kind": "class",
+																					"_name": "AllocPool",
+																					"class_kind": "struct",
+																					"id": 3030388899,
+																					"is_declaration": false,
+																					"is_definition": true,
+																					"is_final": false,
+																					"kind": "class",
+																					"name": "AllocPool",
+																					"scope": {
+																						"name": "AllocPool"
+																					},
+																					"semantic_scope": ""
+																				}]
+																			}
+																		}
+																	}]
+																}
+															}
+														}],
+														"class_kind": "class",
+														"id": 858280278,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "Scheme",
+														"scope": {
+															"name": "Scheme"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_fullName": "",
+						"_kind": "function parameter",
+						"_name": "",
+						"default_value": {
+							"expression": [{
+								"kind": "identifier",
+								"spelling": "Value"
+							}, {
+								"kind": "punctuation",
+								"spelling": "("
+							}, {
+								"kind": "punctuation",
+								"spelling": ")"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "stappler::mem_pool::Value const&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "stappler::mem_pool::Value const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "stappler::mem_pool::Value",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::mem_pool::Value",
+											"objects": [{
+												"_fullName": "::stappler::mem_pool::Value",
+												"_kind": "type alias",
+												"_name": "Value",
+												"id": 2414992359,
+												"kind": "type alias",
+												"name": "Value",
+												"underlying_type": {
+													"_typeName": "stappler::data::ValueTemplate<stappler::memory::PoolInterface>",
+													"arguments_exposed": false,
+													"kind": "template_instantiation",
+													"primary_template": {
+														"name": "stappler::data::ValueTemplate",
+														"objects": [{
+															"_fullName": "::stappler::data::ValueTemplate<typename>",
+															"_kind": "class template",
+															"_name": "ValueTemplate",
+															"class": {
+																"_fullName": "::stappler::data::ValueTemplate<typename>",
+																"_kind": "class",
+																"_name": "ValueTemplate",
+																"bases": [{
+																	"_fullName": "Interface::AllocBaseType",
+																	"_kind": "base class specifier",
+																	"_name": "Interface::AllocBaseType",
+																	"access_specifier": "public",
+																	"id": 25533212,
+																	"is_virtual": false,
+																	"kind": "base class specifier",
+																	"name": "Interface::AllocBaseType",
+																	"type": {
+																		"_typeName": "Interface::AllocBaseType",
+																		"kind": "unexposed",
+																		"name": "Interface::AllocBaseType"
+																	}
+																}],
+																"class_kind": "class",
+																"id": 3406641011,
+																"is_declaration": false,
+																"is_definition": true,
+																"is_final": false,
+																"kind": "class",
+																"name": "ValueTemplate",
+																"scope": {
+																	"is_templated": true,
+																	"name": "ValueTemplate",
+																	"template_parameters": [{
+																		"_fullName": "Interface",
+																		"_kind": "template type parameter",
+																		"_name": "Interface",
+																		"id": 2255344761,
+																		"is_variadic": false,
+																		"keyword": "typename",
+																		"kind": "template type parameter",
+																		"name": "Interface"
+																	}]
+																},
+																"semantic_scope": ""
+															},
+															"id": 3406641011,
+															"kind": "class template",
+															"name": "ValueTemplate",
+															"parameters": [{
+																"_fullName": "Interface",
+																"_kind": "template type parameter",
+																"_name": "Interface",
+																"id": 2255344761,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "Interface"
+															}],
+															"scope":  {
+																"is_templated": true,
+																"name": "ValueTemplate",
+																"template_parameters": [{
+																	"_fullName": "Interface",
+																	"_kind": "template type parameter",
+																	"_name": "Interface",
+																	"id": 2255344761,
+																	"is_variadic": false,
+																	"keyword": "typename",
+																	"kind": "template type parameter",
+																	"name": "Interface"
+																}]
+															}
+														}]
+													},
+													"unexposed_arguments": "stappler::memory::PoolInterface"
+												}
+											}]
+										}
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						},
+						"id": 46947589,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::mem_pool::Value const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::mem_pool::Value const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::mem_pool::Value",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::mem_pool::Value",
+										"objects": [{
+											"_fullName": "::stappler::mem_pool::Value",
+											"_kind": "type alias",
+											"_name": "Value",
+											"id": 2414992359,
+											"kind": "type alias",
+											"name": "Value",
+											"underlying_type": {
+												"_typeName": "stappler::data::ValueTemplate<stappler::memory::PoolInterface>",
+												"arguments_exposed": false,
+												"kind": "template_instantiation",
+												"primary_template": {
+													"name": "stappler::data::ValueTemplate",
+													"objects": [{
+														"_fullName": "::stappler::data::ValueTemplate<typename>",
+														"_kind": "class template",
+														"_name": "ValueTemplate",
+														"class": {
+															"_fullName": "::stappler::data::ValueTemplate<typename>",
+															"_kind": "class",
+															"_name": "ValueTemplate",
+															"bases": [{
+																"_fullName": "Interface::AllocBaseType",
+																"_kind": "base class specifier",
+																"_name": "Interface::AllocBaseType",
+																"access_specifier": "public",
+																"id": 25533212,
+																"is_virtual": false,
+																"kind": "base class specifier",
+																"name": "Interface::AllocBaseType",
+																"type": {
+																	"_typeName": "Interface::AllocBaseType",
+																	"kind": "unexposed",
+																	"name": "Interface::AllocBaseType"
+																}
+															}],
+															"class_kind": "class",
+															"id": 3406641011,
+															"is_declaration": false,
+															"is_definition": true,
+															"is_final": false,
+															"kind": "class",
+															"name": "ValueTemplate",
+															"scope": {
+																"is_templated": true,
+																"name": "ValueTemplate",
+																"template_parameters": [{
+																	"_fullName": "Interface",
+																	"_kind": "template type parameter",
+																	"_name": "Interface",
+																	"id": 2255344761,
+																	"is_variadic": false,
+																	"keyword": "typename",
+																	"kind": "template type parameter",
+																	"name": "Interface"
+																}]
+															},
+															"semantic_scope": ""
+														},
+														"id": 3406641011,
+														"kind": "class template",
+														"name": "ValueTemplate",
+														"parameters": [{
+															"_fullName": "Interface",
+															"_kind": "template type parameter",
+															"_name": "Interface",
+															"id": 2255344761,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "Interface"
+														}],
+														"scope":  {
+															"is_templated": true,
+															"name": "ValueTemplate",
+															"template_parameters": [{
+																"_fullName": "Interface",
+																"_kind": "template type parameter",
+																"_name": "Interface",
+																"id": 2255344761,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "Interface"
+															}]
+														}
+													}]
+												},
+												"unexposed_arguments": "stappler::memory::PoolInterface"
+											}
+										}]
+									}
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"semantic_scope": "",
+					"signature": "(stappler::web::ResourceHandler::Scheme const&,stappler::mem_pool::Value const&)"
+				}, {
+					"_fullName": "::stappler::web::ResourceHandler::isRequestPermitted(stappler::web::Request&)",
+					"_kind": "member function",
+					"_name": "isRequestPermitted",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 2255665318,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_override": true,
+					"is_variadic": false,
+					"is_virtual": true,
+					"kind": "member function",
+					"name": "isRequestPermitted",
+					"parameters": [{
+						"_fullName": "",
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 46947589,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::web::Request&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::web::Request",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::web::Request",
+									"objects": [{
+										"_fullName": "::stappler::web::Request",
+										"_kind": "class",
+										"_name": "Request",
+										"bases": [{
+											"_fullName": "std::basic_ostream<char,std::char_traits<char>>",
+											"_kind": "base class specifier",
+											"_name": "std::basic_ostream<char,std::char_traits<char>>",
+											"access_specifier": "public",
+											"id": 1305816742,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "std::basic_ostream<char,std::char_traits<char>>",
+											"type": {
+												"_typeName": "std::basic_ostream<char, std::char_traits<char>>",
+												"arguments_exposed": false,
+												"kind": "template_instantiation",
+												"primary_template": {
+													"name": "std::basic_ostream"
+												},
+												"unexposed_arguments": "char, std::char_traits<char>"
+											}
+										}, {
+											"_fullName": "AllocBase",
+											"_kind": "base class specifier",
+											"_name": "AllocBase",
+											"access_specifier": "public",
+											"id": 3721829073,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "AllocBase",
+											"type": {
+												"_typeName": "stappler::mem_pool::AllocBase",
+												"kind": "user_defined",
+												"target": {
+													"name": "stappler::mem_pool::AllocBase",
+													"objects": [{
+														"_fullName": "::stappler::mem_pool::AllocBase",
+														"_kind": "type alias",
+														"_name": "AllocBase",
+														"id": 499918036,
+														"kind": "type alias",
+														"name": "AllocBase",
+														"underlying_type": {
+															"_typeName": "stappler::memory::AllocPool",
+															"kind": "user_defined",
+															"target": {
+																"name": "stappler::memory::AllocPool",
+																"objects": [{
+																	"_fullName": "::stappler::memory::AllocPool",
+																	"_kind": "class",
+																	"_name": "AllocPool",
+																	"class_kind": "struct",
+																	"id": 3030388899,
+																	"is_declaration": false,
+																	"is_definition": true,
+																	"is_final": false,
+																	"kind": "class",
+																	"name": "AllocPool",
+																	"scope": {
+																		"name": "AllocPool"
+																	},
+																	"semantic_scope": ""
+																}]
+															}
+														}
+													}]
+												}
+											}
+										}],
+										"class_kind": "class",
+										"id": 2202746144,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": true,
+										"kind": "class",
+										"name": "Request",
+										"scope": {
+											"name": "Request"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::web::Request&)"
+				}, {
+					"_fullName": "::stappler::web::ResourceHandler::onTranslateName(stappler::web::Request&)",
+					"_kind": "member function",
+					"_name": "onTranslateName",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 390775474,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_override": true,
+					"is_variadic": false,
+					"is_virtual": true,
+					"kind": "member function",
+					"name": "onTranslateName",
+					"parameters": [{
+						"_fullName": "",
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 46947589,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::web::Request&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::web::Request",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::web::Request",
+									"objects": [{
+										"_fullName": "::stappler::web::Request",
+										"_kind": "class",
+										"_name": "Request",
+										"bases": [{
+											"_fullName": "std::basic_ostream<char,std::char_traits<char>>",
+											"_kind": "base class specifier",
+											"_name": "std::basic_ostream<char,std::char_traits<char>>",
+											"access_specifier": "public",
+											"id": 1305816742,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "std::basic_ostream<char,std::char_traits<char>>",
+											"type": {
+												"_typeName": "std::basic_ostream<char, std::char_traits<char>>",
+												"arguments_exposed": false,
+												"kind": "template_instantiation",
+												"primary_template": {
+													"name": "std::basic_ostream"
+												},
+												"unexposed_arguments": "char, std::char_traits<char>"
+											}
+										}, {
+											"_fullName": "AllocBase",
+											"_kind": "base class specifier",
+											"_name": "AllocBase",
+											"access_specifier": "public",
+											"id": 3721829073,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "AllocBase",
+											"type": {
+												"_typeName": "stappler::mem_pool::AllocBase",
+												"kind": "user_defined",
+												"target": {
+													"name": "stappler::mem_pool::AllocBase",
+													"objects": [{
+														"_fullName": "::stappler::mem_pool::AllocBase",
+														"_kind": "type alias",
+														"_name": "AllocBase",
+														"id": 499918036,
+														"kind": "type alias",
+														"name": "AllocBase",
+														"underlying_type": {
+															"_typeName": "stappler::memory::AllocPool",
+															"kind": "user_defined",
+															"target": {
+																"name": "stappler::memory::AllocPool",
+																"objects": [{
+																	"_fullName": "::stappler::memory::AllocPool",
+																	"_kind": "class",
+																	"_name": "AllocPool",
+																	"class_kind": "struct",
+																	"id": 3030388899,
+																	"is_declaration": false,
+																	"is_definition": true,
+																	"is_final": false,
+																	"kind": "class",
+																	"name": "AllocPool",
+																	"scope": {
+																		"name": "AllocPool"
+																	},
+																	"semantic_scope": ""
+																}]
+															}
+														}
+													}]
+												}
+											}
+										}],
+										"class_kind": "class",
+										"id": 2202746144,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": true,
+										"kind": "class",
+										"name": "Request",
+										"scope": {
+											"name": "Request"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "stappler::web::Status",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::web::Status",
+							"objects": [{
+								"_fullName": "::stappler::web::Status",
+								"_kind": "enum",
+								"_name": "Status",
+								"has_explicit_type": true,
+								"id": 2736380534,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_scoped": false,
+								"kind": "enum",
+								"name": "Status",
+								"semantic_scope": "",
+								"underlying_type": {
+									"_typeName": "int",
+									"builtin_type_kind": "int",
+									"kind": "builtin"
+								}
+							}]
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::web::Request&)"
+				}, {
+					"_fullName": "::stappler::web::ResourceHandler::onInsertFilter(stappler::web::Request&)",
+					"_kind": "member function",
+					"_name": "onInsertFilter",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 3731684363,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_override": true,
+					"is_variadic": false,
+					"is_virtual": true,
+					"kind": "member function",
+					"name": "onInsertFilter",
+					"parameters": [{
+						"_fullName": "",
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 46947589,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::web::Request&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::web::Request",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::web::Request",
+									"objects": [{
+										"_fullName": "::stappler::web::Request",
+										"_kind": "class",
+										"_name": "Request",
+										"bases": [{
+											"_fullName": "std::basic_ostream<char,std::char_traits<char>>",
+											"_kind": "base class specifier",
+											"_name": "std::basic_ostream<char,std::char_traits<char>>",
+											"access_specifier": "public",
+											"id": 1305816742,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "std::basic_ostream<char,std::char_traits<char>>",
+											"type": {
+												"_typeName": "std::basic_ostream<char, std::char_traits<char>>",
+												"arguments_exposed": false,
+												"kind": "template_instantiation",
+												"primary_template": {
+													"name": "std::basic_ostream"
+												},
+												"unexposed_arguments": "char, std::char_traits<char>"
+											}
+										}, {
+											"_fullName": "AllocBase",
+											"_kind": "base class specifier",
+											"_name": "AllocBase",
+											"access_specifier": "public",
+											"id": 3721829073,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "AllocBase",
+											"type": {
+												"_typeName": "stappler::mem_pool::AllocBase",
+												"kind": "user_defined",
+												"target": {
+													"name": "stappler::mem_pool::AllocBase",
+													"objects": [{
+														"_fullName": "::stappler::mem_pool::AllocBase",
+														"_kind": "type alias",
+														"_name": "AllocBase",
+														"id": 499918036,
+														"kind": "type alias",
+														"name": "AllocBase",
+														"underlying_type": {
+															"_typeName": "stappler::memory::AllocPool",
+															"kind": "user_defined",
+															"target": {
+																"name": "stappler::memory::AllocPool",
+																"objects": [{
+																	"_fullName": "::stappler::memory::AllocPool",
+																	"_kind": "class",
+																	"_name": "AllocPool",
+																	"class_kind": "struct",
+																	"id": 3030388899,
+																	"is_declaration": false,
+																	"is_definition": true,
+																	"is_final": false,
+																	"kind": "class",
+																	"name": "AllocPool",
+																	"scope": {
+																		"name": "AllocPool"
+																	},
+																	"semantic_scope": ""
+																}]
+															}
+														}
+													}]
+												}
+											}
+										}],
+										"class_kind": "class",
+										"id": 2202746144,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": true,
+										"kind": "class",
+										"name": "Request",
+										"scope": {
+											"name": "Request"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::web::Request&)"
+				}, {
+					"_fullName": "::stappler::web::ResourceHandler::onHandler(stappler::web::Request&)",
+					"_kind": "member function",
+					"_name": "onHandler",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 2650661408,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_override": true,
+					"is_variadic": false,
+					"is_virtual": true,
+					"kind": "member function",
+					"name": "onHandler",
+					"parameters": [{
+						"_fullName": "",
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 46947589,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::web::Request&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::web::Request",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::web::Request",
+									"objects": [{
+										"_fullName": "::stappler::web::Request",
+										"_kind": "class",
+										"_name": "Request",
+										"bases": [{
+											"_fullName": "std::basic_ostream<char,std::char_traits<char>>",
+											"_kind": "base class specifier",
+											"_name": "std::basic_ostream<char,std::char_traits<char>>",
+											"access_specifier": "public",
+											"id": 1305816742,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "std::basic_ostream<char,std::char_traits<char>>",
+											"type": {
+												"_typeName": "std::basic_ostream<char, std::char_traits<char>>",
+												"arguments_exposed": false,
+												"kind": "template_instantiation",
+												"primary_template": {
+													"name": "std::basic_ostream"
+												},
+												"unexposed_arguments": "char, std::char_traits<char>"
+											}
+										}, {
+											"_fullName": "AllocBase",
+											"_kind": "base class specifier",
+											"_name": "AllocBase",
+											"access_specifier": "public",
+											"id": 3721829073,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "AllocBase",
+											"type": {
+												"_typeName": "stappler::mem_pool::AllocBase",
+												"kind": "user_defined",
+												"target": {
+													"name": "stappler::mem_pool::AllocBase",
+													"objects": [{
+														"_fullName": "::stappler::mem_pool::AllocBase",
+														"_kind": "type alias",
+														"_name": "AllocBase",
+														"id": 499918036,
+														"kind": "type alias",
+														"name": "AllocBase",
+														"underlying_type": {
+															"_typeName": "stappler::memory::AllocPool",
+															"kind": "user_defined",
+															"target": {
+																"name": "stappler::memory::AllocPool",
+																"objects": [{
+																	"_fullName": "::stappler::memory::AllocPool",
+																	"_kind": "class",
+																	"_name": "AllocPool",
+																	"class_kind": "struct",
+																	"id": 3030388899,
+																	"is_declaration": false,
+																	"is_definition": true,
+																	"is_final": false,
+																	"kind": "class",
+																	"name": "AllocPool",
+																	"scope": {
+																		"name": "AllocPool"
+																	},
+																	"semantic_scope": ""
+																}]
+															}
+														}
+													}]
+												}
+											}
+										}],
+										"class_kind": "class",
+										"id": 2202746144,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": true,
+										"kind": "class",
+										"name": "Request",
+										"scope": {
+											"name": "Request"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "stappler::web::Status",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::web::Status",
+							"objects": [{
+								"_fullName": "::stappler::web::Status",
+								"_kind": "enum",
+								"_name": "Status",
+								"has_explicit_type": true,
+								"id": 2736380534,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_scoped": false,
+								"kind": "enum",
+								"name": "Status",
+								"semantic_scope": "",
+								"underlying_type": {
+									"_typeName": "int",
+									"builtin_type_kind": "int",
+									"kind": "builtin"
+								}
+							}]
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::web::Request&)"
+				}, {
+					"_fullName": "::stappler::web::ResourceHandler::onFilterComplete(stappler::web::InputFilter*)",
+					"_kind": "member function",
+					"_name": "onFilterComplete",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 2707916108,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_override": true,
+					"is_variadic": false,
+					"is_virtual": true,
+					"kind": "member function",
+					"name": "onFilterComplete",
+					"parameters": [{
+						"_fullName": "f",
+						"_kind": "function parameter",
+						"_name": "f",
+						"id": 1729662580,
+						"kind": "function parameter",
+						"name": "f",
+						"type": {
+							"_typeName": "stappler::web::InputFilter*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::web::InputFilter",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::web::InputFilter",
+									"objects": [{
+										"_fullName": "::stappler::web::InputFilter",
+										"_kind": "class",
+										"_name": "InputFilter",
+										"bases": [{
+											"_fullName": "AllocBase",
+											"_kind": "base class specifier",
+											"_name": "AllocBase",
+											"access_specifier": "public",
+											"id": 3721829073,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "AllocBase",
+											"type": {
+												"_typeName": "stappler::mem_pool::AllocBase",
+												"kind": "user_defined",
+												"target": {
+													"name": "stappler::mem_pool::AllocBase",
+													"objects": [{
+														"_fullName": "::stappler::mem_pool::AllocBase",
+														"_kind": "type alias",
+														"_name": "AllocBase",
+														"id": 499918036,
+														"kind": "type alias",
+														"name": "AllocBase",
+														"underlying_type": {
+															"_typeName": "stappler::memory::AllocPool",
+															"kind": "user_defined",
+															"target": {
+																"name": "stappler::memory::AllocPool",
+																"objects": [{
+																	"_fullName": "::stappler::memory::AllocPool",
+																	"_kind": "class",
+																	"_name": "AllocPool",
+																	"class_kind": "struct",
+																	"id": 3030388899,
+																	"is_declaration": false,
+																	"is_definition": true,
+																	"is_final": false,
+																	"kind": "class",
+																	"name": "AllocPool",
+																	"scope": {
+																		"name": "AllocPool"
+																	},
+																	"semantic_scope": ""
+																}]
+															}
+														}
+													}]
+												}
+											}
+										}],
+										"class_kind": "class",
+										"id": 1049894888,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "InputFilter",
+										"scope": {
+											"name": "InputFilter"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "void",
+						"builtin_type_kind": "void",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::web::InputFilter*)"
+				}, {
+					"_fullName": "::stappler::web::ResourceHandler::writeInfoToReqest(stappler::web::Request&)",
+					"_kind": "member function",
+					"_name": "writeInfoToReqest",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 2285982991,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "writeInfoToReqest",
+					"parameters": [{
+						"_fullName": "rctx",
+						"_kind": "function parameter",
+						"_name": "rctx",
+						"id": 1380659621,
+						"kind": "function parameter",
+						"name": "rctx",
+						"type": {
+							"_typeName": "stappler::web::Request&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::web::Request",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::web::Request",
+									"objects": [{
+										"_fullName": "::stappler::web::Request",
+										"_kind": "class",
+										"_name": "Request",
+										"bases": [{
+											"_fullName": "std::basic_ostream<char,std::char_traits<char>>",
+											"_kind": "base class specifier",
+											"_name": "std::basic_ostream<char,std::char_traits<char>>",
+											"access_specifier": "public",
+											"id": 1305816742,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "std::basic_ostream<char,std::char_traits<char>>",
+											"type": {
+												"_typeName": "std::basic_ostream<char, std::char_traits<char>>",
+												"arguments_exposed": false,
+												"kind": "template_instantiation",
+												"primary_template": {
+													"name": "std::basic_ostream"
+												},
+												"unexposed_arguments": "char, std::char_traits<char>"
+											}
+										}, {
+											"_fullName": "AllocBase",
+											"_kind": "base class specifier",
+											"_name": "AllocBase",
+											"access_specifier": "public",
+											"id": 3721829073,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "AllocBase",
+											"type": {
+												"_typeName": "stappler::mem_pool::AllocBase",
+												"kind": "user_defined",
+												"target": {
+													"name": "stappler::mem_pool::AllocBase",
+													"objects": [{
+														"_fullName": "::stappler::mem_pool::AllocBase",
+														"_kind": "type alias",
+														"_name": "AllocBase",
+														"id": 499918036,
+														"kind": "type alias",
+														"name": "AllocBase",
+														"underlying_type": {
+															"_typeName": "stappler::memory::AllocPool",
+															"kind": "user_defined",
+															"target": {
+																"name": "stappler::memory::AllocPool",
+																"objects": [{
+																	"_fullName": "::stappler::memory::AllocPool",
+																	"_kind": "class",
+																	"_name": "AllocPool",
+																	"class_kind": "struct",
+																	"id": 3030388899,
+																	"is_declaration": false,
+																	"is_definition": true,
+																	"is_final": false,
+																	"kind": "class",
+																	"name": "AllocPool",
+																	"scope": {
+																		"name": "AllocPool"
+																	},
+																	"semantic_scope": ""
+																}]
+															}
+														}
+													}]
+												}
+											}
+										}],
+										"class_kind": "class",
+										"id": 2202746144,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": true,
+										"kind": "class",
+										"name": "Request",
+										"scope": {
+											"name": "Request"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "stappler::web::Status",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::web::Status",
+							"objects": [{
+								"_fullName": "::stappler::web::Status",
+								"_kind": "enum",
+								"_name": "Status",
+								"has_explicit_type": true,
+								"id": 2736380534,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_scoped": false,
+								"kind": "enum",
+								"name": "Status",
+								"semantic_scope": "",
+								"underlying_type": {
+									"_typeName": "int",
+									"builtin_type_kind": "int",
+									"kind": "builtin"
+								}
+							}]
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::web::Request&)"
+				}, {
+					"_fullName": "::stappler::web::ResourceHandler::writeToRequest(stappler::web::Request&)",
+					"_kind": "member function",
+					"_name": "writeToRequest",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 1921813873,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "writeToRequest",
+					"parameters": [{
+						"_fullName": "rctx",
+						"_kind": "function parameter",
+						"_name": "rctx",
+						"id": 1380659621,
+						"kind": "function parameter",
+						"name": "rctx",
+						"type": {
+							"_typeName": "stappler::web::Request&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::web::Request",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::web::Request",
+									"objects": [{
+										"_fullName": "::stappler::web::Request",
+										"_kind": "class",
+										"_name": "Request",
+										"bases": [{
+											"_fullName": "std::basic_ostream<char,std::char_traits<char>>",
+											"_kind": "base class specifier",
+											"_name": "std::basic_ostream<char,std::char_traits<char>>",
+											"access_specifier": "public",
+											"id": 1305816742,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "std::basic_ostream<char,std::char_traits<char>>",
+											"type": {
+												"_typeName": "std::basic_ostream<char, std::char_traits<char>>",
+												"arguments_exposed": false,
+												"kind": "template_instantiation",
+												"primary_template": {
+													"name": "std::basic_ostream"
+												},
+												"unexposed_arguments": "char, std::char_traits<char>"
+											}
+										}, {
+											"_fullName": "AllocBase",
+											"_kind": "base class specifier",
+											"_name": "AllocBase",
+											"access_specifier": "public",
+											"id": 3721829073,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "AllocBase",
+											"type": {
+												"_typeName": "stappler::mem_pool::AllocBase",
+												"kind": "user_defined",
+												"target": {
+													"name": "stappler::mem_pool::AllocBase",
+													"objects": [{
+														"_fullName": "::stappler::mem_pool::AllocBase",
+														"_kind": "type alias",
+														"_name": "AllocBase",
+														"id": 499918036,
+														"kind": "type alias",
+														"name": "AllocBase",
+														"underlying_type": {
+															"_typeName": "stappler::memory::AllocPool",
+															"kind": "user_defined",
+															"target": {
+																"name": "stappler::memory::AllocPool",
+																"objects": [{
+																	"_fullName": "::stappler::memory::AllocPool",
+																	"_kind": "class",
+																	"_name": "AllocPool",
+																	"class_kind": "struct",
+																	"id": 3030388899,
+																	"is_declaration": false,
+																	"is_definition": true,
+																	"is_final": false,
+																	"kind": "class",
+																	"name": "AllocPool",
+																	"scope": {
+																		"name": "AllocPool"
+																	},
+																	"semantic_scope": ""
+																}]
+															}
+														}
+													}]
+												}
+											}
+										}],
+										"class_kind": "class",
+										"id": 2202746144,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": true,
+										"kind": "class",
+										"name": "Request",
+										"scope": {
+											"name": "Request"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "stappler::web::Status",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::web::Status",
+							"objects": [{
+								"_fullName": "::stappler::web::Status",
+								"_kind": "enum",
+								"_name": "Status",
+								"has_explicit_type": true,
+								"id": 2736380534,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_scoped": false,
+								"kind": "enum",
+								"name": "Status",
+								"semantic_scope": "",
+								"underlying_type": {
+									"_typeName": "int",
+									"builtin_type_kind": "int",
+									"kind": "builtin"
+								}
+							}]
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::web::Request&)"
+				}, {
+					"_fullName": "protected",
+					"_kind": "access specifier",
+					"_name": "protected",
+					"access_specifier": "protected",
+					"id": 1892155628,
+					"kind": "access specifier",
+					"name": "protected"
+				}, {
+					"_fullName": "::stappler::web::ResourceHandler::writeDataToRequest(stappler::web::Request&,stappler::mem_pool::Value&&)",
+					"_kind": "member function",
+					"_name": "writeDataToRequest",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 4102022399,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "writeDataToRequest",
+					"parameters": [{
+						"_fullName": "rctx",
+						"_kind": "function parameter",
+						"_name": "rctx",
+						"id": 1380659621,
+						"kind": "function parameter",
+						"name": "rctx",
+						"type": {
+							"_typeName": "stappler::web::Request&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::web::Request",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::web::Request",
+									"objects": [{
+										"_fullName": "::stappler::web::Request",
+										"_kind": "class",
+										"_name": "Request",
+										"bases": [{
+											"_fullName": "std::basic_ostream<char,std::char_traits<char>>",
+											"_kind": "base class specifier",
+											"_name": "std::basic_ostream<char,std::char_traits<char>>",
+											"access_specifier": "public",
+											"id": 1305816742,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "std::basic_ostream<char,std::char_traits<char>>",
+											"type": {
+												"_typeName": "std::basic_ostream<char, std::char_traits<char>>",
+												"arguments_exposed": false,
+												"kind": "template_instantiation",
+												"primary_template": {
+													"name": "std::basic_ostream"
+												},
+												"unexposed_arguments": "char, std::char_traits<char>"
+											}
+										}, {
+											"_fullName": "AllocBase",
+											"_kind": "base class specifier",
+											"_name": "AllocBase",
+											"access_specifier": "public",
+											"id": 3721829073,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "AllocBase",
+											"type": {
+												"_typeName": "stappler::mem_pool::AllocBase",
+												"kind": "user_defined",
+												"target": {
+													"name": "stappler::mem_pool::AllocBase",
+													"objects": [{
+														"_fullName": "::stappler::mem_pool::AllocBase",
+														"_kind": "type alias",
+														"_name": "AllocBase",
+														"id": 499918036,
+														"kind": "type alias",
+														"name": "AllocBase",
+														"underlying_type": {
+															"_typeName": "stappler::memory::AllocPool",
+															"kind": "user_defined",
+															"target": {
+																"name": "stappler::memory::AllocPool",
+																"objects": [{
+																	"_fullName": "::stappler::memory::AllocPool",
+																	"_kind": "class",
+																	"_name": "AllocPool",
+																	"class_kind": "struct",
+																	"id": 3030388899,
+																	"is_declaration": false,
+																	"is_definition": true,
+																	"is_final": false,
+																	"kind": "class",
+																	"name": "AllocPool",
+																	"scope": {
+																		"name": "AllocPool"
+																	},
+																	"semantic_scope": ""
+																}]
+															}
+														}
+													}]
+												}
+											}
+										}],
+										"class_kind": "class",
+										"id": 2202746144,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": true,
+										"kind": "class",
+										"name": "Request",
+										"scope": {
+											"name": "Request"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_fullName": "objs",
+						"_kind": "function parameter",
+						"_name": "objs",
+						"id": 4263279844,
+						"kind": "function parameter",
+						"name": "objs",
+						"type": {
+							"_typeName": "stappler::mem_pool::Value&&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::mem_pool::Value",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::mem_pool::Value",
+									"objects": [{
+										"_fullName": "::stappler::mem_pool::Value",
+										"_kind": "type alias",
+										"_name": "Value",
+										"id": 2414992359,
+										"kind": "type alias",
+										"name": "Value",
+										"underlying_type": {
+											"_typeName": "stappler::data::ValueTemplate<stappler::memory::PoolInterface>",
+											"arguments_exposed": false,
+											"kind": "template_instantiation",
+											"primary_template": {
+												"name": "stappler::data::ValueTemplate",
+												"objects": [{
+													"_fullName": "::stappler::data::ValueTemplate<typename>",
+													"_kind": "class template",
+													"_name": "ValueTemplate",
+													"class": {
+														"_fullName": "::stappler::data::ValueTemplate<typename>",
+														"_kind": "class",
+														"_name": "ValueTemplate",
+														"bases": [{
+															"_fullName": "Interface::AllocBaseType",
+															"_kind": "base class specifier",
+															"_name": "Interface::AllocBaseType",
+															"access_specifier": "public",
+															"id": 25533212,
+															"is_virtual": false,
+															"kind": "base class specifier",
+															"name": "Interface::AllocBaseType",
+															"type": {
+																"_typeName": "Interface::AllocBaseType",
+																"kind": "unexposed",
+																"name": "Interface::AllocBaseType"
+															}
+														}],
+														"class_kind": "class",
+														"id": 3406641011,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "ValueTemplate",
+														"scope": {
+															"is_templated": true,
+															"name": "ValueTemplate",
+															"template_parameters": [{
+																"_fullName": "Interface",
+																"_kind": "template type parameter",
+																"_name": "Interface",
+																"id": 2255344761,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "Interface"
+															}]
+														},
+														"semantic_scope": ""
+													},
+													"id": 3406641011,
+													"kind": "class template",
+													"name": "ValueTemplate",
+													"parameters": [{
+														"_fullName": "Interface",
+														"_kind": "template type parameter",
+														"_name": "Interface",
+														"id": 2255344761,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "Interface"
+													}],
+													"scope":  {
+														"is_templated": true,
+														"name": "ValueTemplate",
+														"template_parameters": [{
+															"_fullName": "Interface",
+															"_kind": "template type parameter",
+															"_name": "Interface",
+															"id": 2255344761,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "Interface"
+														}]
+													}
+												}]
+											},
+											"unexposed_arguments": "stappler::memory::PoolInterface"
+										}
+									}]
+								}
+							},
+							"reference_kind": "rvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "stappler::web::Status",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::web::Status",
+							"objects": [{
+								"_fullName": "::stappler::web::Status",
+								"_kind": "enum",
+								"_name": "Status",
+								"has_explicit_type": true,
+								"id": 2736380534,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_scoped": false,
+								"kind": "enum",
+								"name": "Status",
+								"semantic_scope": "",
+								"underlying_type": {
+									"_typeName": "int",
+									"builtin_type_kind": "int",
+									"kind": "builtin"
+								}
+							}]
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::web::Request&,stappler::mem_pool::Value&&)"
+				}, {
+					"_fullName": "::stappler::web::ResourceHandler::getHintedStatus(stappler::web::Status) const",
+					"_kind": "member function",
+					"_name": "getHintedStatus",
+					"body_kind": "declaration",
+					"cv_qualifier": "const",
+					"id": 3158624440,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "getHintedStatus",
+					"parameters": [{
+						"_fullName": "",
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 46947589,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::web::Status",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::web::Status",
+								"objects": [{
+									"_fullName": "::stappler::web::Status",
+									"_kind": "enum",
+									"_name": "Status",
+									"has_explicit_type": true,
+									"id": 2736380534,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_scoped": false,
+									"kind": "enum",
+									"name": "Status",
+									"semantic_scope": "",
+									"underlying_type": {
+										"_typeName": "int",
+										"builtin_type_kind": "int",
+										"kind": "builtin"
+									}
+								}]
+							}
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "stappler::web::Status",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::web::Status",
+							"objects": [{
+								"_fullName": "::stappler::web::Status",
+								"_kind": "enum",
+								"_name": "Status",
+								"has_explicit_type": true,
+								"id": 2736380534,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_scoped": false,
+								"kind": "enum",
+								"name": "Status",
+								"semantic_scope": "",
+								"underlying_type": {
+									"_typeName": "int",
+									"builtin_type_kind": "int",
+									"kind": "builtin"
+								}
+							}]
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::web::Status) const"
+				}, {
+					"_fullName": "::stappler::web::ResourceHandler::getResource(stappler::web::Request&)",
+					"_kind": "member function",
+					"_name": "getResource",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 2395384850,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": true,
+					"kind": "member function",
+					"name": "getResource",
+					"parameters": [{
+						"_fullName": "",
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 46947589,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::web::Request&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::web::Request",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::web::Request",
+									"objects": [{
+										"_fullName": "::stappler::web::Request",
+										"_kind": "class",
+										"_name": "Request",
+										"bases": [{
+											"_fullName": "std::basic_ostream<char,std::char_traits<char>>",
+											"_kind": "base class specifier",
+											"_name": "std::basic_ostream<char,std::char_traits<char>>",
+											"access_specifier": "public",
+											"id": 1305816742,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "std::basic_ostream<char,std::char_traits<char>>",
+											"type": {
+												"_typeName": "std::basic_ostream<char, std::char_traits<char>>",
+												"arguments_exposed": false,
+												"kind": "template_instantiation",
+												"primary_template": {
+													"name": "std::basic_ostream"
+												},
+												"unexposed_arguments": "char, std::char_traits<char>"
+											}
+										}, {
+											"_fullName": "AllocBase",
+											"_kind": "base class specifier",
+											"_name": "AllocBase",
+											"access_specifier": "public",
+											"id": 3721829073,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "AllocBase",
+											"type": {
+												"_typeName": "stappler::mem_pool::AllocBase",
+												"kind": "user_defined",
+												"target": {
+													"name": "stappler::mem_pool::AllocBase",
+													"objects": [{
+														"_fullName": "::stappler::mem_pool::AllocBase",
+														"_kind": "type alias",
+														"_name": "AllocBase",
+														"id": 499918036,
+														"kind": "type alias",
+														"name": "AllocBase",
+														"underlying_type": {
+															"_typeName": "stappler::memory::AllocPool",
+															"kind": "user_defined",
+															"target": {
+																"name": "stappler::memory::AllocPool",
+																"objects": [{
+																	"_fullName": "::stappler::memory::AllocPool",
+																	"_kind": "class",
+																	"_name": "AllocPool",
+																	"class_kind": "struct",
+																	"id": 3030388899,
+																	"is_declaration": false,
+																	"is_definition": true,
+																	"is_final": false,
+																	"kind": "class",
+																	"name": "AllocPool",
+																	"scope": {
+																		"name": "AllocPool"
+																	},
+																	"semantic_scope": ""
+																}]
+															}
+														}
+													}]
+												}
+											}
+										}],
+										"class_kind": "class",
+										"id": 2202746144,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": true,
+										"kind": "class",
+										"name": "Request",
+										"scope": {
+											"name": "Request"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "stappler::web::Resource*",
+						"kind": "pointer",
+						"pointee": {
+							"_typeName": "stappler::web::Resource",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::web::Resource",
+								"objects": [{
+									"_fullName": "::stappler::web::Resource",
+									"_kind": "class",
+									"_name": "Resource",
+									"bases": [{
+										"_fullName": "AllocBase",
+										"_kind": "base class specifier",
+										"_name": "AllocBase",
+										"access_specifier": "public",
+										"id": 3721829073,
+										"is_virtual": false,
+										"kind": "base class specifier",
+										"name": "AllocBase",
+										"type": {
+											"_typeName": "stappler::mem_pool::AllocBase",
+											"kind": "user_defined",
+											"target": {
+												"name": "stappler::mem_pool::AllocBase",
+												"objects": [{
+													"_fullName": "::stappler::mem_pool::AllocBase",
+													"_kind": "type alias",
+													"_name": "AllocBase",
+													"id": 499918036,
+													"kind": "type alias",
+													"name": "AllocBase",
+													"underlying_type": {
+														"_typeName": "stappler::memory::AllocPool",
+														"kind": "user_defined",
+														"target": {
+															"name": "stappler::memory::AllocPool",
+															"objects": [{
+																"_fullName": "::stappler::memory::AllocPool",
+																"_kind": "class",
+																"_name": "AllocPool",
+																"class_kind": "struct",
+																"id": 3030388899,
+																"is_declaration": false,
+																"is_definition": true,
+																"is_final": false,
+																"kind": "class",
+																"name": "AllocPool",
+																"scope": {
+																	"name": "AllocPool"
+																},
+																"semantic_scope": ""
+															}]
+														}
+													}
+												}]
+											}
+										}
+									}],
+									"class_kind": "class",
+									"id": 1354732481,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "Resource",
+									"scope": {
+										"name": "Resource"
+									},
+									"semantic_scope": ""
+								}]
+							}
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::web::Request&)"
+				}, {
+					"_fullName": "::stappler::web::ResourceHandler::_method",
+					"_kind": "member variable",
+					"_name": "_method",
+					"default_value": {
+						"expression": [{
+							"kind": "identifier",
+							"spelling": "RequestMethod"
+						}, {
+							"kind": "punctuation",
+							"spelling": "::"
+						}, {
+							"kind": "identifier",
+							"spelling": "Get"
+						}],
+						"kind": "unexposed",
+						"type": {
+							"_typeName": "stappler::web::RequestMethod",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::web::RequestMethod",
+								"objects": [{
+									"_fullName": "::stappler::web::RequestMethod",
+									"_kind": "enum",
+									"_name": "RequestMethod",
+									"has_explicit_type": true,
+									"id": 1186012065,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_scoped": true,
+									"kind": "enum",
+									"name": "RequestMethod",
+									"scope": {
+										"name": "RequestMethod"
+									},
+									"semantic_scope": "",
+									"underlying_type": {
+										"_typeName": "int",
+										"builtin_type_kind": "int",
+										"kind": "builtin"
+									}
+								}]
+							}
+						}
+					},
+					"id": 3777016039,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "_method",
+					"type": {
+						"_typeName": "stappler::web::RequestMethod",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::web::RequestMethod",
+							"objects": [{
+								"_fullName": "::stappler::web::RequestMethod",
+								"_kind": "enum",
+								"_name": "RequestMethod",
+								"has_explicit_type": true,
+								"id": 1186012065,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_scoped": true,
+								"kind": "enum",
+								"name": "RequestMethod",
+								"scope": {
+									"name": "RequestMethod"
+								},
+								"semantic_scope": "",
+								"underlying_type": {
+									"_typeName": "int",
+									"builtin_type_kind": "int",
+									"kind": "builtin"
+								}
+							}]
+						}
+					}
+				}, {
+					"_fullName": "::stappler::web::ResourceHandler::_scheme",
+					"_kind": "member variable",
+					"_name": "_scheme",
+					"id": 2720727388,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "_scheme",
+					"type": {
+						"_typeName": "db::Scheme const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "db::Scheme const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "db::Scheme",
+								"kind": "user_defined",
+								"target": {
+									"name": "db::Scheme",
+									"objects": [{
+										"_fullName": "::stappler::db::Scheme",
+										"_kind": "class",
+										"_name": "Scheme",
+										"bases": [{
+											"_fullName": "AllocBase",
+											"_kind": "base class specifier",
+											"_name": "AllocBase",
+											"access_specifier": "public",
+											"id": 3721829073,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "AllocBase",
+											"type": {
+												"_typeName": "stappler::mem_pool::AllocBase",
+												"kind": "user_defined",
+												"target": {
+													"name": "stappler::mem_pool::AllocBase",
+													"objects": [{
+														"_fullName": "::stappler::mem_pool::AllocBase",
+														"_kind": "type alias",
+														"_name": "AllocBase",
+														"id": 499918036,
+														"kind": "type alias",
+														"name": "AllocBase",
+														"underlying_type": {
+															"_typeName": "stappler::memory::AllocPool",
+															"kind": "user_defined",
+															"target": {
+																"name": "stappler::memory::AllocPool",
+																"objects": [{
+																	"_fullName": "::stappler::memory::AllocPool",
+																	"_kind": "class",
+																	"_name": "AllocPool",
+																	"class_kind": "struct",
+																	"id": 3030388899,
+																	"is_declaration": false,
+																	"is_definition": true,
+																	"is_final": false,
+																	"kind": "class",
+																	"name": "AllocPool",
+																	"scope": {
+																		"name": "AllocPool"
+																	},
+																	"semantic_scope": ""
+																}]
+															}
+														}
+													}]
+												}
+											}
+										}],
+										"class_kind": "class",
+										"id": 858280278,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Scheme",
+										"scope": {
+											"name": "Scheme"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_fullName": "::stappler::web::ResourceHandler::_resource",
+					"_kind": "member variable",
+					"_name": "_resource",
+					"default_value": {
+						"expression": [{
+							"kind": "keyword",
+							"spelling": "nullptr"
+						}],
+						"kind": "unexposed",
+						"type": {
+							"_typeName": "stappler::web::Resource*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::web::Resource",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::web::Resource",
+									"objects": [{
+										"_fullName": "::stappler::web::Resource",
+										"_kind": "class",
+										"_name": "Resource",
+										"bases": [{
+											"_fullName": "AllocBase",
+											"_kind": "base class specifier",
+											"_name": "AllocBase",
+											"access_specifier": "public",
+											"id": 3721829073,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "AllocBase",
+											"type": {
+												"_typeName": "stappler::mem_pool::AllocBase",
+												"kind": "user_defined",
+												"target": {
+													"name": "stappler::mem_pool::AllocBase",
+													"objects": [{
+														"_fullName": "::stappler::mem_pool::AllocBase",
+														"_kind": "type alias",
+														"_name": "AllocBase",
+														"id": 499918036,
+														"kind": "type alias",
+														"name": "AllocBase",
+														"underlying_type": {
+															"_typeName": "stappler::memory::AllocPool",
+															"kind": "user_defined",
+															"target": {
+																"name": "stappler::memory::AllocPool",
+																"objects": [{
+																	"_fullName": "::stappler::memory::AllocPool",
+																	"_kind": "class",
+																	"_name": "AllocPool",
+																	"class_kind": "struct",
+																	"id": 3030388899,
+																	"is_declaration": false,
+																	"is_definition": true,
+																	"is_final": false,
+																	"kind": "class",
+																	"name": "AllocPool",
+																	"scope": {
+																		"name": "AllocPool"
+																	},
+																	"semantic_scope": ""
+																}]
+															}
+														}
+													}]
+												}
+											}
+										}],
+										"class_kind": "class",
+										"id": 1354732481,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Resource",
+										"scope": {
+											"name": "Resource"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						}
+					},
+					"id": 559215022,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "_resource",
+					"type": {
+						"_typeName": "stappler::web::Resource*",
+						"kind": "pointer",
+						"pointee": {
+							"_typeName": "stappler::web::Resource",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::web::Resource",
+								"objects": [{
+									"_fullName": "::stappler::web::Resource",
+									"_kind": "class",
+									"_name": "Resource",
+									"bases": [{
+										"_fullName": "AllocBase",
+										"_kind": "base class specifier",
+										"_name": "AllocBase",
+										"access_specifier": "public",
+										"id": 3721829073,
+										"is_virtual": false,
+										"kind": "base class specifier",
+										"name": "AllocBase",
+										"type": {
+											"_typeName": "stappler::mem_pool::AllocBase",
+											"kind": "user_defined",
+											"target": {
+												"name": "stappler::mem_pool::AllocBase",
+												"objects": [{
+													"_fullName": "::stappler::mem_pool::AllocBase",
+													"_kind": "type alias",
+													"_name": "AllocBase",
+													"id": 499918036,
+													"kind": "type alias",
+													"name": "AllocBase",
+													"underlying_type": {
+														"_typeName": "stappler::memory::AllocPool",
+														"kind": "user_defined",
+														"target": {
+															"name": "stappler::memory::AllocPool",
+															"objects": [{
+																"_fullName": "::stappler::memory::AllocPool",
+																"_kind": "class",
+																"_name": "AllocPool",
+																"class_kind": "struct",
+																"id": 3030388899,
+																"is_declaration": false,
+																"is_definition": true,
+																"is_final": false,
+																"kind": "class",
+																"name": "AllocPool",
+																"scope": {
+																	"name": "AllocPool"
+																},
+																"semantic_scope": ""
+															}]
+														}
+													}
+												}]
+											}
+										}
+									}],
+									"class_kind": "class",
+									"id": 1354732481,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "Resource",
+									"scope": {
+										"name": "Resource"
+									},
+									"semantic_scope": ""
+								}]
+							}
+						}
+					}
+				}, {
+					"_fullName": "::stappler::web::ResourceHandler::_value",
+					"_kind": "member variable",
+					"_name": "_value",
+					"id": 2806062093,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "_value",
+					"type": {
+						"_typeName": "stappler::mem_pool::Value",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::mem_pool::Value",
+							"objects": [{
+								"_fullName": "::stappler::mem_pool::Value",
+								"_kind": "type alias",
+								"_name": "Value",
+								"id": 2414992359,
+								"kind": "type alias",
+								"name": "Value",
+								"underlying_type": {
+									"_typeName": "stappler::data::ValueTemplate<stappler::memory::PoolInterface>",
+									"arguments_exposed": false,
+									"kind": "template_instantiation",
+									"primary_template": {
+										"name": "stappler::data::ValueTemplate",
+										"objects": [{
+											"_fullName": "::stappler::data::ValueTemplate<typename>",
+											"_kind": "class template",
+											"_name": "ValueTemplate",
+											"class": {
+												"_fullName": "::stappler::data::ValueTemplate<typename>",
+												"_kind": "class",
+												"_name": "ValueTemplate",
+												"bases": [{
+													"_fullName": "Interface::AllocBaseType",
+													"_kind": "base class specifier",
+													"_name": "Interface::AllocBaseType",
+													"access_specifier": "public",
+													"id": 25533212,
+													"is_virtual": false,
+													"kind": "base class specifier",
+													"name": "Interface::AllocBaseType",
+													"type": {
+														"_typeName": "Interface::AllocBaseType",
+														"kind": "unexposed",
+														"name": "Interface::AllocBaseType"
+													}
+												}],
+												"class_kind": "class",
+												"id": 3406641011,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "ValueTemplate",
+												"scope": {
+													"is_templated": true,
+													"name": "ValueTemplate",
+													"template_parameters": [{
+														"_fullName": "Interface",
+														"_kind": "template type parameter",
+														"_name": "Interface",
+														"id": 2255344761,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "Interface"
+													}]
+												},
+												"semantic_scope": ""
+											},
+											"id": 3406641011,
+											"kind": "class template",
+											"name": "ValueTemplate",
+											"parameters": [{
+												"_fullName": "Interface",
+												"_kind": "template type parameter",
+												"_name": "Interface",
+												"id": 2255344761,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Interface"
+											}],
+											"scope":  {
+												"is_templated": true,
+												"name": "ValueTemplate",
+												"template_parameters": [{
+													"_fullName": "Interface",
+													"_kind": "template type parameter",
+													"_name": "Interface",
+													"id": 2255344761,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "Interface"
+												}]
+											}
+										}]
+									},
+									"unexposed_arguments": "stappler::memory::PoolInterface"
+								}
+							}]
+						}
+					}
+				}, {
+					"_fullName": "::stappler::web::ResourceHandler::_transaction",
+					"_kind": "member variable",
+					"_name": "_transaction",
+					"default_value": {
+						"expression": [{
+							"kind": "keyword",
+							"spelling": "nullptr"
+						}],
+						"kind": "unexposed",
+						"type": {
+							"_typeName": "db::Transaction",
+							"kind": "user_defined",
+							"target": {
+								"name": "db::Transaction",
+								"objects": [{
+									"_fullName": "::stappler::db::Transaction",
+									"_kind": "class",
+									"_name": "Transaction",
+									"bases": [{
+										"_fullName": "AllocBase",
+										"_kind": "base class specifier",
+										"_name": "AllocBase",
+										"access_specifier": "public",
+										"id": 3721829073,
+										"is_virtual": false,
+										"kind": "base class specifier",
+										"name": "AllocBase",
+										"type": {
+											"_typeName": "stappler::mem_pool::AllocBase",
+											"kind": "user_defined",
+											"target": {
+												"name": "stappler::mem_pool::AllocBase",
+												"objects": [{
+													"_fullName": "::stappler::mem_pool::AllocBase",
+													"_kind": "type alias",
+													"_name": "AllocBase",
+													"id": 499918036,
+													"kind": "type alias",
+													"name": "AllocBase",
+													"underlying_type": {
+														"_typeName": "stappler::memory::AllocPool",
+														"kind": "user_defined",
+														"target": {
+															"name": "stappler::memory::AllocPool",
+															"objects": [{
+																"_fullName": "::stappler::memory::AllocPool",
+																"_kind": "class",
+																"_name": "AllocPool",
+																"class_kind": "struct",
+																"id": 3030388899,
+																"is_declaration": false,
+																"is_definition": true,
+																"is_final": false,
+																"kind": "class",
+																"name": "AllocPool",
+																"scope": {
+																	"name": "AllocPool"
+																},
+																"semantic_scope": ""
+															}]
+														}
+													}
+												}]
+											}
+										}
+									}],
+									"class_kind": "class",
+									"id": 1675133751,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "Transaction",
+									"scope": {
+										"name": "Transaction"
+									},
+									"semantic_scope": ""
+								}]
+							}
+						}
+					},
+					"id": 2693531356,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "_transaction",
+					"type": {
+						"_typeName": "db::Transaction",
+						"kind": "user_defined",
+						"target": {
+							"name": "db::Transaction",
+							"objects": [{
+								"_fullName": "::stappler::db::Transaction",
+								"_kind": "class",
+								"_name": "Transaction",
+								"bases": [{
+									"_fullName": "AllocBase",
+									"_kind": "base class specifier",
+									"_name": "AllocBase",
+									"access_specifier": "public",
+									"id": 3721829073,
+									"is_virtual": false,
+									"kind": "base class specifier",
+									"name": "AllocBase",
+									"type": {
+										"_typeName": "stappler::mem_pool::AllocBase",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::mem_pool::AllocBase",
+											"objects": [{
+												"_fullName": "::stappler::mem_pool::AllocBase",
+												"_kind": "type alias",
+												"_name": "AllocBase",
+												"id": 499918036,
+												"kind": "type alias",
+												"name": "AllocBase",
+												"underlying_type": {
+													"_typeName": "stappler::memory::AllocPool",
+													"kind": "user_defined",
+													"target": {
+														"name": "stappler::memory::AllocPool",
+														"objects": [{
+															"_fullName": "::stappler::memory::AllocPool",
+															"_kind": "class",
+															"_name": "AllocPool",
+															"class_kind": "struct",
+															"id": 3030388899,
+															"is_declaration": false,
+															"is_definition": true,
+															"is_final": false,
+															"kind": "class",
+															"name": "AllocPool",
+															"scope": {
+																"name": "AllocPool"
+															},
+															"semantic_scope": ""
+														}]
+													}
+												}
+											}]
+										}
+									}
+								}],
+								"class_kind": "class",
+								"id": 1675133751,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_final": false,
+								"kind": "class",
+								"name": "Transaction",
+								"scope": {
+									"name": "Transaction"
+								},
+								"semantic_scope": ""
+							}]
+						}
+					}
+				}],
+				"class_kind": "class",
+				"id": 1082424899,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_final": false,
+				"kind": "class",
+				"name": "ResourceHandler",
+				"scope": {
+					"name": "ResourceHandler"
+				},
+				"semantic_scope": ""
+			}, {
+				"_fullName": "::stappler::web::ResourceMultiHandler",
+				"_kind": "class",
+				"_name": "ResourceMultiHandler",
+				"bases": [{
+					"_fullName": "RequestHandler",
+					"_kind": "base class specifier",
+					"_name": "RequestHandler",
+					"access_specifier": "public",
+					"id": 356624441,
+					"is_virtual": false,
+					"kind": "base class specifier",
+					"name": "RequestHandler",
+					"type": {
+						"_typeName": "stappler::web::RequestHandler",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::web::RequestHandler",
+							"objects": [{
+								"_fullName": "::stappler::web::RequestHandler",
+								"_kind": "class",
+								"_name": "RequestHandler",
+								"bases": [{
+									"_fullName": "AllocBase",
+									"_kind": "base class specifier",
+									"_name": "AllocBase",
+									"access_specifier": "public",
+									"id": 3721829073,
+									"is_virtual": false,
+									"kind": "base class specifier",
+									"name": "AllocBase",
+									"type": {
+										"_typeName": "stappler::mem_pool::AllocBase",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::mem_pool::AllocBase",
+											"objects": [{
+												"_fullName": "::stappler::mem_pool::AllocBase",
+												"_kind": "type alias",
+												"_name": "AllocBase",
+												"id": 499918036,
+												"kind": "type alias",
+												"name": "AllocBase",
+												"underlying_type": {
+													"_typeName": "stappler::memory::AllocPool",
+													"kind": "user_defined",
+													"target": {
+														"name": "stappler::memory::AllocPool",
+														"objects": [{
+															"_fullName": "::stappler::memory::AllocPool",
+															"_kind": "class",
+															"_name": "AllocPool",
+															"class_kind": "struct",
+															"id": 3030388899,
+															"is_declaration": false,
+															"is_definition": true,
+															"is_final": false,
+															"kind": "class",
+															"name": "AllocPool",
+															"scope": {
+																"name": "AllocPool"
+															},
+															"semantic_scope": ""
+														}]
+													}
+												}
+											}]
+										}
+									}
+								}],
+								"class_kind": "class",
+								"id": 2042780376,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_final": false,
+								"kind": "class",
+								"name": "RequestHandler",
+								"scope": {
+									"name": "RequestHandler"
+								},
+								"semantic_scope": ""
+							}]
+						}
+					}
+				}],
+				"childs":  [{
+					"_fullName": "public",
+					"_kind": "access specifier",
+					"_name": "public",
+					"access_specifier": "public",
+					"id": 893076784,
+					"kind": "access specifier",
+					"name": "public"
+				}, {
+					"_fullName": "::stappler::web::ResourceMultiHandler::Scheme",
+					"_kind": "type alias",
+					"_name": "Scheme",
+					"id": 2706148903,
+					"kind": "type alias",
+					"name": "Scheme",
+					"underlying_type": {
+						"_typeName": "db::Scheme",
+						"kind": "user_defined",
+						"target": {
+							"name": "db::Scheme",
+							"objects": [{
+								"_fullName": "::stappler::db::Scheme",
+								"_kind": "class",
+								"_name": "Scheme",
+								"bases": [{
+									"_fullName": "AllocBase",
+									"_kind": "base class specifier",
+									"_name": "AllocBase",
+									"access_specifier": "public",
+									"id": 3721829073,
+									"is_virtual": false,
+									"kind": "base class specifier",
+									"name": "AllocBase",
+									"type": {
+										"_typeName": "stappler::mem_pool::AllocBase",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::mem_pool::AllocBase",
+											"objects": [{
+												"_fullName": "::stappler::mem_pool::AllocBase",
+												"_kind": "type alias",
+												"_name": "AllocBase",
+												"id": 499918036,
+												"kind": "type alias",
+												"name": "AllocBase",
+												"underlying_type": {
+													"_typeName": "stappler::memory::AllocPool",
+													"kind": "user_defined",
+													"target": {
+														"name": "stappler::memory::AllocPool",
+														"objects": [{
+															"_fullName": "::stappler::memory::AllocPool",
+															"_kind": "class",
+															"_name": "AllocPool",
+															"class_kind": "struct",
+															"id": 3030388899,
+															"is_declaration": false,
+															"is_definition": true,
+															"is_final": false,
+															"kind": "class",
+															"name": "AllocPool",
+															"scope": {
+																"name": "AllocPool"
+															},
+															"semantic_scope": ""
+														}]
+													}
+												}
+											}]
+										}
+									}
+								}],
+								"class_kind": "class",
+								"id": 858280278,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_final": false,
+								"kind": "class",
+								"name": "Scheme",
+								"scope": {
+									"name": "Scheme"
+								},
+								"semantic_scope": ""
+							}]
+						}
+					}
+				}, {
+					"_fullName": "::stappler::web::ResourceMultiHandler::ResourceMultiHandler(Map<stappler::StringView, const stappler::web::ResourceMultiHandler::Scheme *> const&)",
+					"_kind": "constructor",
+					"_name": "ResourceMultiHandler",
+					"body_kind": "declaration",
+					"id": 4232866010,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_explicit": false,
+					"is_variadic": false,
+					"kind": "constructor",
+					"name": "ResourceMultiHandler",
+					"parameters": [{
+						"_fullName": "",
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 46947589,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "Map<stappler::StringView, const stappler::web::ResourceMultiHandler::Scheme *> const&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "Map<stappler::StringView, const stappler::web::ResourceMultiHandler::Scheme *> const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "Map<stappler::StringView, const stappler::web::ResourceMultiHandler::Scheme *>",
+									"arguments_exposed": false,
+									"kind": "template_instantiation",
+									"primary_template": {
+										"name": "Map",
+										"objects": [{
+											"_fullName": "::stappler::memory::map<typename,typename,typename>",
+											"_kind": "class template",
+											"_name": "map",
+											"class": {
+												"_fullName": "::stappler::memory::map<typename,typename,typename>",
+												"_kind": "class",
+												"_name": "map",
+												"bases": [{
+													"_fullName": "AllocPool",
+													"_kind": "base class specifier",
+													"_name": "AllocPool",
+													"access_specifier": "public",
+													"id": 972079861,
+													"is_virtual": false,
+													"kind": "base class specifier",
+													"name": "AllocPool",
+													"type": {
+														"_typeName": "stappler::memory::AllocPool",
+														"kind": "user_defined",
+														"target": {
+															"name": "stappler::memory::AllocPool",
+															"objects": [{
+																"_fullName": "::stappler::memory::AllocPool",
+																"_kind": "class",
+																"_name": "AllocPool",
+																"class_kind": "struct",
+																"id": 3030388899,
+																"is_declaration": false,
+																"is_definition": true,
+																"is_final": false,
+																"kind": "class",
+																"name": "AllocPool",
+																"scope": {
+																	"name": "AllocPool"
+																},
+																"semantic_scope": ""
+															}]
+														}
+													}
+												}],
+												"class_kind": "class",
+												"id": 3259560450,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "map",
+												"scope": {
+													"is_templated": true,
+													"name": "map",
+													"template_parameters": [{
+														"_fullName": "Key",
+														"_kind": "template type parameter",
+														"_name": "Key",
+														"id": 2727489069,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "Key"
+													}, {
+														"_fullName": "Value",
+														"_kind": "template type parameter",
+														"_name": "Value",
+														"id": 1405462580,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "Value"
+													}, {
+														"_fullName": "Comp",
+														"_kind": "template type parameter",
+														"_name": "Comp",
+														"default_type": {
+															"_typeName": "std::less<>>",
+															"kind": "unexposed",
+															"name": "std::less<>>"
+														},
+														"id": 2001511452,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "Comp"
+													}]
+												},
+												"semantic_scope": ""
+											},
+											"id": 3259560450,
+											"kind": "class template",
+											"name": "map",
+											"parameters": [{
+												"_fullName": "Key",
+												"_kind": "template type parameter",
+												"_name": "Key",
+												"id": 2727489069,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Key"
+											}, {
+												"_fullName": "Value",
+												"_kind": "template type parameter",
+												"_name": "Value",
+												"id": 1405462580,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Value"
+											}, {
+												"_fullName": "Comp",
+												"_kind": "template type parameter",
+												"_name": "Comp",
+												"default_type": {
+													"_typeName": "std::less<>>",
+													"kind": "unexposed",
+													"name": "std::less<>>"
+												},
+												"id": 2001511452,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Comp"
+											}],
+											"scope":  {
+												"is_templated": true,
+												"name": "map",
+												"template_parameters": [{
+													"_fullName": "Key",
+													"_kind": "template type parameter",
+													"_name": "Key",
+													"id": 2727489069,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "Key"
+												}, {
+													"_fullName": "Value",
+													"_kind": "template type parameter",
+													"_name": "Value",
+													"id": 1405462580,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "Value"
+												}, {
+													"_fullName": "Comp",
+													"_kind": "template type parameter",
+													"_name": "Comp",
+													"default_type": {
+														"_typeName": "std::less<>>",
+														"kind": "unexposed",
+														"name": "std::less<>>"
+													},
+													"id": 2001511452,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "Comp"
+												}]
+											}
+										}]
+									},
+									"unexposed_arguments": "stappler::StringView, const stappler::web::ResourceMultiHandler::Scheme *"
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"semantic_scope": "",
+					"signature": "(Map<stappler::StringView, const stappler::web::ResourceMultiHandler::Scheme *> const&)"
+				}, {
+					"_fullName": "::stappler::web::ResourceMultiHandler::isRequestPermitted(stappler::web::Request&)",
+					"_kind": "member function",
+					"_name": "isRequestPermitted",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 3634347935,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_override": true,
+					"is_variadic": false,
+					"is_virtual": true,
+					"kind": "member function",
+					"name": "isRequestPermitted",
+					"parameters": [{
+						"_fullName": "",
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 46947589,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::web::Request&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::web::Request",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::web::Request",
+									"objects": [{
+										"_fullName": "::stappler::web::Request",
+										"_kind": "class",
+										"_name": "Request",
+										"bases": [{
+											"_fullName": "std::basic_ostream<char,std::char_traits<char>>",
+											"_kind": "base class specifier",
+											"_name": "std::basic_ostream<char,std::char_traits<char>>",
+											"access_specifier": "public",
+											"id": 1305816742,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "std::basic_ostream<char,std::char_traits<char>>",
+											"type": {
+												"_typeName": "std::basic_ostream<char, std::char_traits<char>>",
+												"arguments_exposed": false,
+												"kind": "template_instantiation",
+												"primary_template": {
+													"name": "std::basic_ostream"
+												},
+												"unexposed_arguments": "char, std::char_traits<char>"
+											}
+										}, {
+											"_fullName": "AllocBase",
+											"_kind": "base class specifier",
+											"_name": "AllocBase",
+											"access_specifier": "public",
+											"id": 3721829073,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "AllocBase",
+											"type": {
+												"_typeName": "stappler::mem_pool::AllocBase",
+												"kind": "user_defined",
+												"target": {
+													"name": "stappler::mem_pool::AllocBase",
+													"objects": [{
+														"_fullName": "::stappler::mem_pool::AllocBase",
+														"_kind": "type alias",
+														"_name": "AllocBase",
+														"id": 499918036,
+														"kind": "type alias",
+														"name": "AllocBase",
+														"underlying_type": {
+															"_typeName": "stappler::memory::AllocPool",
+															"kind": "user_defined",
+															"target": {
+																"name": "stappler::memory::AllocPool",
+																"objects": [{
+																	"_fullName": "::stappler::memory::AllocPool",
+																	"_kind": "class",
+																	"_name": "AllocPool",
+																	"class_kind": "struct",
+																	"id": 3030388899,
+																	"is_declaration": false,
+																	"is_definition": true,
+																	"is_final": false,
+																	"kind": "class",
+																	"name": "AllocPool",
+																	"scope": {
+																		"name": "AllocPool"
+																	},
+																	"semantic_scope": ""
+																}]
+															}
+														}
+													}]
+												}
+											}
+										}],
+										"class_kind": "class",
+										"id": 2202746144,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": true,
+										"kind": "class",
+										"name": "Request",
+										"scope": {
+											"name": "Request"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::web::Request&)"
+				}, {
+					"_fullName": "::stappler::web::ResourceMultiHandler::onTranslateName(stappler::web::Request&)",
+					"_kind": "member function",
+					"_name": "onTranslateName",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 3139117292,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_override": true,
+					"is_variadic": false,
+					"is_virtual": true,
+					"kind": "member function",
+					"name": "onTranslateName",
+					"parameters": [{
+						"_fullName": "",
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 46947589,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "stappler::web::Request&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::web::Request",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::web::Request",
+									"objects": [{
+										"_fullName": "::stappler::web::Request",
+										"_kind": "class",
+										"_name": "Request",
+										"bases": [{
+											"_fullName": "std::basic_ostream<char,std::char_traits<char>>",
+											"_kind": "base class specifier",
+											"_name": "std::basic_ostream<char,std::char_traits<char>>",
+											"access_specifier": "public",
+											"id": 1305816742,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "std::basic_ostream<char,std::char_traits<char>>",
+											"type": {
+												"_typeName": "std::basic_ostream<char, std::char_traits<char>>",
+												"arguments_exposed": false,
+												"kind": "template_instantiation",
+												"primary_template": {
+													"name": "std::basic_ostream"
+												},
+												"unexposed_arguments": "char, std::char_traits<char>"
+											}
+										}, {
+											"_fullName": "AllocBase",
+											"_kind": "base class specifier",
+											"_name": "AllocBase",
+											"access_specifier": "public",
+											"id": 3721829073,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "AllocBase",
+											"type": {
+												"_typeName": "stappler::mem_pool::AllocBase",
+												"kind": "user_defined",
+												"target": {
+													"name": "stappler::mem_pool::AllocBase",
+													"objects": [{
+														"_fullName": "::stappler::mem_pool::AllocBase",
+														"_kind": "type alias",
+														"_name": "AllocBase",
+														"id": 499918036,
+														"kind": "type alias",
+														"name": "AllocBase",
+														"underlying_type": {
+															"_typeName": "stappler::memory::AllocPool",
+															"kind": "user_defined",
+															"target": {
+																"name": "stappler::memory::AllocPool",
+																"objects": [{
+																	"_fullName": "::stappler::memory::AllocPool",
+																	"_kind": "class",
+																	"_name": "AllocPool",
+																	"class_kind": "struct",
+																	"id": 3030388899,
+																	"is_declaration": false,
+																	"is_definition": true,
+																	"is_final": false,
+																	"kind": "class",
+																	"name": "AllocPool",
+																	"scope": {
+																		"name": "AllocPool"
+																	},
+																	"semantic_scope": ""
+																}]
+															}
+														}
+													}]
+												}
+											}
+										}],
+										"class_kind": "class",
+										"id": 2202746144,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": true,
+										"kind": "class",
+										"name": "Request",
+										"scope": {
+											"name": "Request"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "stappler::web::Status",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::web::Status",
+							"objects": [{
+								"_fullName": "::stappler::web::Status",
+								"_kind": "enum",
+								"_name": "Status",
+								"has_explicit_type": true,
+								"id": 2736380534,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_scoped": false,
+								"kind": "enum",
+								"name": "Status",
+								"semantic_scope": "",
+								"underlying_type": {
+									"_typeName": "int",
+									"builtin_type_kind": "int",
+									"kind": "builtin"
+								}
+							}]
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::web::Request&)"
+				}, {
+					"_fullName": "protected",
+					"_kind": "access specifier",
+					"_name": "protected",
+					"access_specifier": "protected",
+					"id": 1892155628,
+					"kind": "access specifier",
+					"name": "protected"
+				}, {
+					"_fullName": "::stappler::web::ResourceMultiHandler::writeDataToRequest(stappler::web::Request&,stappler::mem_pool::Value&&)",
+					"_kind": "member function",
+					"_name": "writeDataToRequest",
+					"body_kind": "declaration",
+					"cv_qualifier": "none",
+					"id": 1648645579,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "writeDataToRequest",
+					"parameters": [{
+						"_fullName": "rctx",
+						"_kind": "function parameter",
+						"_name": "rctx",
+						"id": 1380659621,
+						"kind": "function parameter",
+						"name": "rctx",
+						"type": {
+							"_typeName": "stappler::web::Request&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::web::Request",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::web::Request",
+									"objects": [{
+										"_fullName": "::stappler::web::Request",
+										"_kind": "class",
+										"_name": "Request",
+										"bases": [{
+											"_fullName": "std::basic_ostream<char,std::char_traits<char>>",
+											"_kind": "base class specifier",
+											"_name": "std::basic_ostream<char,std::char_traits<char>>",
+											"access_specifier": "public",
+											"id": 1305816742,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "std::basic_ostream<char,std::char_traits<char>>",
+											"type": {
+												"_typeName": "std::basic_ostream<char, std::char_traits<char>>",
+												"arguments_exposed": false,
+												"kind": "template_instantiation",
+												"primary_template": {
+													"name": "std::basic_ostream"
+												},
+												"unexposed_arguments": "char, std::char_traits<char>"
+											}
+										}, {
+											"_fullName": "AllocBase",
+											"_kind": "base class specifier",
+											"_name": "AllocBase",
+											"access_specifier": "public",
+											"id": 3721829073,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "AllocBase",
+											"type": {
+												"_typeName": "stappler::mem_pool::AllocBase",
+												"kind": "user_defined",
+												"target": {
+													"name": "stappler::mem_pool::AllocBase",
+													"objects": [{
+														"_fullName": "::stappler::mem_pool::AllocBase",
+														"_kind": "type alias",
+														"_name": "AllocBase",
+														"id": 499918036,
+														"kind": "type alias",
+														"name": "AllocBase",
+														"underlying_type": {
+															"_typeName": "stappler::memory::AllocPool",
+															"kind": "user_defined",
+															"target": {
+																"name": "stappler::memory::AllocPool",
+																"objects": [{
+																	"_fullName": "::stappler::memory::AllocPool",
+																	"_kind": "class",
+																	"_name": "AllocPool",
+																	"class_kind": "struct",
+																	"id": 3030388899,
+																	"is_declaration": false,
+																	"is_definition": true,
+																	"is_final": false,
+																	"kind": "class",
+																	"name": "AllocPool",
+																	"scope": {
+																		"name": "AllocPool"
+																	},
+																	"semantic_scope": ""
+																}]
+															}
+														}
+													}]
+												}
+											}
+										}],
+										"class_kind": "class",
+										"id": 2202746144,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": true,
+										"kind": "class",
+										"name": "Request",
+										"scope": {
+											"name": "Request"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							},
+							"reference_kind": "lvalue"
+						}
+					}, {
+						"_fullName": "objs",
+						"_kind": "function parameter",
+						"_name": "objs",
+						"id": 4263279844,
+						"kind": "function parameter",
+						"name": "objs",
+						"type": {
+							"_typeName": "stappler::mem_pool::Value&&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "stappler::mem_pool::Value",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::mem_pool::Value",
+									"objects": [{
+										"_fullName": "::stappler::mem_pool::Value",
+										"_kind": "type alias",
+										"_name": "Value",
+										"id": 2414992359,
+										"kind": "type alias",
+										"name": "Value",
+										"underlying_type": {
+											"_typeName": "stappler::data::ValueTemplate<stappler::memory::PoolInterface>",
+											"arguments_exposed": false,
+											"kind": "template_instantiation",
+											"primary_template": {
+												"name": "stappler::data::ValueTemplate",
+												"objects": [{
+													"_fullName": "::stappler::data::ValueTemplate<typename>",
+													"_kind": "class template",
+													"_name": "ValueTemplate",
+													"class": {
+														"_fullName": "::stappler::data::ValueTemplate<typename>",
+														"_kind": "class",
+														"_name": "ValueTemplate",
+														"bases": [{
+															"_fullName": "Interface::AllocBaseType",
+															"_kind": "base class specifier",
+															"_name": "Interface::AllocBaseType",
+															"access_specifier": "public",
+															"id": 25533212,
+															"is_virtual": false,
+															"kind": "base class specifier",
+															"name": "Interface::AllocBaseType",
+															"type": {
+																"_typeName": "Interface::AllocBaseType",
+																"kind": "unexposed",
+																"name": "Interface::AllocBaseType"
+															}
+														}],
+														"class_kind": "class",
+														"id": 3406641011,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "ValueTemplate",
+														"scope": {
+															"is_templated": true,
+															"name": "ValueTemplate",
+															"template_parameters": [{
+																"_fullName": "Interface",
+																"_kind": "template type parameter",
+																"_name": "Interface",
+																"id": 2255344761,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "Interface"
+															}]
+														},
+														"semantic_scope": ""
+													},
+													"id": 3406641011,
+													"kind": "class template",
+													"name": "ValueTemplate",
+													"parameters": [{
+														"_fullName": "Interface",
+														"_kind": "template type parameter",
+														"_name": "Interface",
+														"id": 2255344761,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "Interface"
+													}],
+													"scope":  {
+														"is_templated": true,
+														"name": "ValueTemplate",
+														"template_parameters": [{
+															"_fullName": "Interface",
+															"_kind": "template type parameter",
+															"_name": "Interface",
+															"id": 2255344761,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "Interface"
+														}]
+													}
+												}]
+											},
+											"unexposed_arguments": "stappler::memory::PoolInterface"
+										}
+									}]
+								}
+							},
+							"reference_kind": "rvalue"
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "stappler::web::Status",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::web::Status",
+							"objects": [{
+								"_fullName": "::stappler::web::Status",
+								"_kind": "enum",
+								"_name": "Status",
+								"has_explicit_type": true,
+								"id": 2736380534,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_scoped": false,
+								"kind": "enum",
+								"name": "Status",
+								"semantic_scope": "",
+								"underlying_type": {
+									"_typeName": "int",
+									"builtin_type_kind": "int",
+									"kind": "builtin"
+								}
+							}]
+						}
+					},
+					"semantic_scope": "",
+					"signature": "(stappler::web::Request&,stappler::mem_pool::Value&&)"
+				}, {
+					"_fullName": "::stappler::web::ResourceMultiHandler::resultData",
+					"_kind": "member variable",
+					"_name": "resultData",
+					"id": 1043564260,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "resultData",
+					"type": {
+						"_typeName": "stappler::mem_pool::Value",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::mem_pool::Value",
+							"objects": [{
+								"_fullName": "::stappler::mem_pool::Value",
+								"_kind": "type alias",
+								"_name": "Value",
+								"id": 2414992359,
+								"kind": "type alias",
+								"name": "Value",
+								"underlying_type": {
+									"_typeName": "stappler::data::ValueTemplate<stappler::memory::PoolInterface>",
+									"arguments_exposed": false,
+									"kind": "template_instantiation",
+									"primary_template": {
+										"name": "stappler::data::ValueTemplate",
+										"objects": [{
+											"_fullName": "::stappler::data::ValueTemplate<typename>",
+											"_kind": "class template",
+											"_name": "ValueTemplate",
+											"class": {
+												"_fullName": "::stappler::data::ValueTemplate<typename>",
+												"_kind": "class",
+												"_name": "ValueTemplate",
+												"bases": [{
+													"_fullName": "Interface::AllocBaseType",
+													"_kind": "base class specifier",
+													"_name": "Interface::AllocBaseType",
+													"access_specifier": "public",
+													"id": 25533212,
+													"is_virtual": false,
+													"kind": "base class specifier",
+													"name": "Interface::AllocBaseType",
+													"type": {
+														"_typeName": "Interface::AllocBaseType",
+														"kind": "unexposed",
+														"name": "Interface::AllocBaseType"
+													}
+												}],
+												"class_kind": "class",
+												"id": 3406641011,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "ValueTemplate",
+												"scope": {
+													"is_templated": true,
+													"name": "ValueTemplate",
+													"template_parameters": [{
+														"_fullName": "Interface",
+														"_kind": "template type parameter",
+														"_name": "Interface",
+														"id": 2255344761,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "Interface"
+													}]
+												},
+												"semantic_scope": ""
+											},
+											"id": 3406641011,
+											"kind": "class template",
+											"name": "ValueTemplate",
+											"parameters": [{
+												"_fullName": "Interface",
+												"_kind": "template type parameter",
+												"_name": "Interface",
+												"id": 2255344761,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Interface"
+											}],
+											"scope":  {
+												"is_templated": true,
+												"name": "ValueTemplate",
+												"template_parameters": [{
+													"_fullName": "Interface",
+													"_kind": "template type parameter",
+													"_name": "Interface",
+													"id": 2255344761,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "Interface"
+												}]
+											}
+										}]
+									},
+									"unexposed_arguments": "stappler::memory::PoolInterface"
+								}
+							}]
+						}
+					}
+				}, {
+					"_fullName": "::stappler::web::ResourceMultiHandler::_schemes",
+					"_kind": "member variable",
+					"_name": "_schemes",
+					"id": 2083798739,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "_schemes",
+					"type": {
+						"_typeName": "Map<stappler::StringView, const stappler::web::ResourceMultiHandler::Scheme *>",
+						"arguments_exposed": false,
+						"kind": "template_instantiation",
+						"primary_template": {
+							"name": "Map",
+							"objects": [{
+								"_fullName": "::stappler::memory::map<typename,typename,typename>",
+								"_kind": "class template",
+								"_name": "map",
+								"class": {
+									"_fullName": "::stappler::memory::map<typename,typename,typename>",
+									"_kind": "class",
+									"_name": "map",
+									"bases": [{
+										"_fullName": "AllocPool",
+										"_kind": "base class specifier",
+										"_name": "AllocPool",
+										"access_specifier": "public",
+										"id": 972079861,
+										"is_virtual": false,
+										"kind": "base class specifier",
+										"name": "AllocPool",
+										"type": {
+											"_typeName": "stappler::memory::AllocPool",
+											"kind": "user_defined",
+											"target": {
+												"name": "stappler::memory::AllocPool",
+												"objects": [{
+													"_fullName": "::stappler::memory::AllocPool",
+													"_kind": "class",
+													"_name": "AllocPool",
+													"class_kind": "struct",
+													"id": 3030388899,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "AllocPool",
+													"scope": {
+														"name": "AllocPool"
+													},
+													"semantic_scope": ""
+												}]
+											}
+										}
+									}],
+									"class_kind": "class",
+									"id": 3259560450,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "map",
+									"scope": {
+										"is_templated": true,
+										"name": "map",
+										"template_parameters": [{
+											"_fullName": "Key",
+											"_kind": "template type parameter",
+											"_name": "Key",
+											"id": 2727489069,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "Key"
+										}, {
+											"_fullName": "Value",
+											"_kind": "template type parameter",
+											"_name": "Value",
+											"id": 1405462580,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "Value"
+										}, {
+											"_fullName": "Comp",
+											"_kind": "template type parameter",
+											"_name": "Comp",
+											"default_type": {
+												"_typeName": "std::less<>>",
+												"kind": "unexposed",
+												"name": "std::less<>>"
+											},
+											"id": 2001511452,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "Comp"
+										}]
+									},
+									"semantic_scope": ""
+								},
+								"id": 3259560450,
+								"kind": "class template",
+								"name": "map",
+								"parameters": [{
+									"_fullName": "Key",
+									"_kind": "template type parameter",
+									"_name": "Key",
+									"id": 2727489069,
+									"is_variadic": false,
+									"keyword": "typename",
+									"kind": "template type parameter",
+									"name": "Key"
+								}, {
+									"_fullName": "Value",
+									"_kind": "template type parameter",
+									"_name": "Value",
+									"id": 1405462580,
+									"is_variadic": false,
+									"keyword": "typename",
+									"kind": "template type parameter",
+									"name": "Value"
+								}, {
+									"_fullName": "Comp",
+									"_kind": "template type parameter",
+									"_name": "Comp",
+									"default_type": {
+										"_typeName": "std::less<>>",
+										"kind": "unexposed",
+										"name": "std::less<>>"
+									},
+									"id": 2001511452,
+									"is_variadic": false,
+									"keyword": "typename",
+									"kind": "template type parameter",
+									"name": "Comp"
+								}],
+								"scope":  {
+									"is_templated": true,
+									"name": "map",
+									"template_parameters": [{
+										"_fullName": "Key",
+										"_kind": "template type parameter",
+										"_name": "Key",
+										"id": 2727489069,
+										"is_variadic": false,
+										"keyword": "typename",
+										"kind": "template type parameter",
+										"name": "Key"
+									}, {
+										"_fullName": "Value",
+										"_kind": "template type parameter",
+										"_name": "Value",
+										"id": 1405462580,
+										"is_variadic": false,
+										"keyword": "typename",
+										"kind": "template type parameter",
+										"name": "Value"
+									}, {
+										"_fullName": "Comp",
+										"_kind": "template type parameter",
+										"_name": "Comp",
+										"default_type": {
+											"_typeName": "std::less<>>",
+											"kind": "unexposed",
+											"name": "std::less<>>"
+										},
+										"id": 2001511452,
+										"is_variadic": false,
+										"keyword": "typename",
+										"kind": "template type parameter",
+										"name": "Comp"
+									}]
+								}
+							}]
+						},
+						"unexposed_arguments": "stappler::StringView, const stappler::web::ResourceMultiHandler::Scheme *"
+					}
+				}, {
+					"_fullName": "::stappler::web::ResourceMultiHandler::_transaction",
+					"_kind": "member variable",
+					"_name": "_transaction",
+					"default_value": {
+						"expression": [{
+							"kind": "keyword",
+							"spelling": "nullptr"
+						}],
+						"kind": "unexposed",
+						"type": {
+							"_typeName": "db::Transaction",
+							"kind": "user_defined",
+							"target": {
+								"name": "db::Transaction",
+								"objects": [{
+									"_fullName": "::stappler::db::Transaction",
+									"_kind": "class",
+									"_name": "Transaction",
+									"bases": [{
+										"_fullName": "AllocBase",
+										"_kind": "base class specifier",
+										"_name": "AllocBase",
+										"access_specifier": "public",
+										"id": 3721829073,
+										"is_virtual": false,
+										"kind": "base class specifier",
+										"name": "AllocBase",
+										"type": {
+											"_typeName": "stappler::mem_pool::AllocBase",
+											"kind": "user_defined",
+											"target": {
+												"name": "stappler::mem_pool::AllocBase",
+												"objects": [{
+													"_fullName": "::stappler::mem_pool::AllocBase",
+													"_kind": "type alias",
+													"_name": "AllocBase",
+													"id": 499918036,
+													"kind": "type alias",
+													"name": "AllocBase",
+													"underlying_type": {
+														"_typeName": "stappler::memory::AllocPool",
+														"kind": "user_defined",
+														"target": {
+															"name": "stappler::memory::AllocPool",
+															"objects": [{
+																"_fullName": "::stappler::memory::AllocPool",
+																"_kind": "class",
+																"_name": "AllocPool",
+																"class_kind": "struct",
+																"id": 3030388899,
+																"is_declaration": false,
+																"is_definition": true,
+																"is_final": false,
+																"kind": "class",
+																"name": "AllocPool",
+																"scope": {
+																	"name": "AllocPool"
+																},
+																"semantic_scope": ""
+															}]
+														}
+													}
+												}]
+											}
+										}
+									}],
+									"class_kind": "class",
+									"id": 1675133751,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "Transaction",
+									"scope": {
+										"name": "Transaction"
+									},
+									"semantic_scope": ""
+								}]
+							}
+						}
+					},
+					"id": 1742053176,
+					"is_mutable": false,
+					"kind": "member variable",
+					"name": "_transaction",
+					"type": {
+						"_typeName": "db::Transaction",
+						"kind": "user_defined",
+						"target": {
+							"name": "db::Transaction",
+							"objects": [{
+								"_fullName": "::stappler::db::Transaction",
+								"_kind": "class",
+								"_name": "Transaction",
+								"bases": [{
+									"_fullName": "AllocBase",
+									"_kind": "base class specifier",
+									"_name": "AllocBase",
+									"access_specifier": "public",
+									"id": 3721829073,
+									"is_virtual": false,
+									"kind": "base class specifier",
+									"name": "AllocBase",
+									"type": {
+										"_typeName": "stappler::mem_pool::AllocBase",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::mem_pool::AllocBase",
+											"objects": [{
+												"_fullName": "::stappler::mem_pool::AllocBase",
+												"_kind": "type alias",
+												"_name": "AllocBase",
+												"id": 499918036,
+												"kind": "type alias",
+												"name": "AllocBase",
+												"underlying_type": {
+													"_typeName": "stappler::memory::AllocPool",
+													"kind": "user_defined",
+													"target": {
+														"name": "stappler::memory::AllocPool",
+														"objects": [{
+															"_fullName": "::stappler::memory::AllocPool",
+															"_kind": "class",
+															"_name": "AllocPool",
+															"class_kind": "struct",
+															"id": 3030388899,
+															"is_declaration": false,
+															"is_definition": true,
+															"is_final": false,
+															"kind": "class",
+															"name": "AllocPool",
+															"scope": {
+																"name": "AllocPool"
+															},
+															"semantic_scope": ""
+														}]
+													}
+												}
+											}]
+										}
+									}
+								}],
+								"class_kind": "class",
+								"id": 1675133751,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_final": false,
+								"kind": "class",
+								"name": "Transaction",
+								"scope": {
+									"name": "Transaction"
+								},
+								"semantic_scope": ""
+							}]
+						}
+					}
+				}],
+				"class_kind": "class",
+				"id": 393787966,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_final": false,
+				"kind": "class",
+				"name": "ResourceMultiHandler",
+				"scope": {
+					"name": "ResourceMultiHandler"
+				},
+				"semantic_scope": ""
+			}],
+			"id": 2371231296,
+			"is_anonymous": false,
+			"is_inline": false,
+			"is_nested": true,
+			"kind": "namespace",
+			"name": "web",
+			"scope": {
+				"name": "web"
+			}
+		}],
+		"id": 96045446,
+		"is_anonymous": false,
+		"is_inline": false,
+		"is_nested": false,
+		"kind": "namespace",
+		"name": "stappler",
+		"scope": {
+			"name": "stappler"
+		}
+	}],
+	"id": 3807832678,
+	"kind": "file",
+	"name": "extra/webserver/webserver/resource/SPWebResourceHandler.h",
+	"unmatched_comments": [{
+		"line": 21,
+		"text": "\nCopyright (c) 2024 Stappler LLC <admin@stappler.dev>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n"
+	}]
+}

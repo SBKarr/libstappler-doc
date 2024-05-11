@@ -1,7 +1,7 @@
 Title: SPFontStyle.h
 
 
-# CORE_GEOM_SPFONTSTYLE_H_
+# CORE_FONT_SPFONTSTYLE_H_
 
 ## BRIEF
 
@@ -11,7 +11,7 @@ Title: SPFontStyle.h
 
 Заголовок, описыающий параметры стиля шрифта
 
-# ::stappler::geom::EnumSize
+# ::stappler::font::EnumSize
 
 ## BRIEF
 
@@ -21,159 +21,27 @@ Title: SPFontStyle.h
 
 Стандартный размер перечислимого типа стиля: 8 бит.
 
-# ::stappler::geom::Metric
+# ::stappler::font::FontVariableAxis
 
 ## BRIEF
 
-Структура метрики размера
+Флаги изменяаемых параметров шрифта
 
 ## CONTENT
 
-Структура метрики размера. Используется в качестве описания размеров для шрифтов и парамтеров отступов на веб-страницах.
-
-# ::stappler::geom::Metric::Units
-
-## BRIEF
-
-Размерность метрики
-
-## CONTENT
-
-Размерность метрики
-
-Значения:
-* Percent - проценты (считаются 0.0 - 1.0)
-* Px - экранные пиксели
-* Em - отношение к родительскому элементу (1.0 - 100%)
-* Rem - отношение к основному элементу документа
-* Auto - определяется автоматически
-* Dpi - плотность пикселей
-* Dppx - пиксели в учётом плотности
-* Contain - вписан в родительский элементы
-* Cover - описан вокруг родительского эдемента
-* Vw - отношение к ширине экрана
-* Vh - отношение к высоте экрана
-* VMin
-* VMax
-
-
-# ::stappler::geom::Metric::isAuto() const
-
-## BRIEF
-
-Проверяет, используется ли автоматический размер
-
-## CONTENT
-
-Проверяет, используется ли автоматический размер
-
-Возвращает:
-* bool
-
-# ::stappler::geom::Metric::isFixed() const
-
-## BRIEF
-
-Проверяет, используется ли фиксирвоанный размер
-
-## CONTENT
-
-Проверяет, используется ли фиксирвоанный размер
-
-Возвращает:
-* bool
-
-# ::stappler::geom::Metric::value
-
-## BRIEF
-
-Значение размера
-
-## CONTENT
-
-Значение размера
-
-Тип: float
-
-
-# ::stappler::geom::Metric::metric
-
-## BRIEF
-
-Размерность метрики
-
-## CONTENT
-
-Размерность метрики
-
-Тип: stappler::geom::Metric::Units
-
-
-# ::stappler::geom::Metric::Metric(float,stappler::geom::Metric::Units)
-
-## BRIEF
-
-Создаёт метрику
-
-## CONTENT
-
-Создаёт метрику
-
-Параметры:
-* float - значение
-* stappler::geom::Metric::Units - размерность
-
-
-# ::stappler::geom::Metric::Metric()
-
-## BRIEF
-
-Создаёт метрику с автоматическим размером
-
-## CONTENT
-
-Создаёт метрику с автоматическим размером
-
-# ::stappler::geom::Metric::readStyleValue(stappler::StringView,bool,bool)
-
-## BRIEF
-
-Читает метрику из значения CSS
-
-## CONTENT
-
-Читает метрику из значения CSS
-
-Параметры:
-* stappler::StringView - строка для чтения
-* bool - true - читает экранные метрики, false - общие
-* bool - true - допускать пустые значеня
-
-Возвращает:
-* bool - true если метрика успешно прочитана
-
-# ::stappler::geom::FontVariableAxis
-
-## BRIEF
-
-Доступные параметры для изменяемых шрифтов
-
-## CONTENT
-
-Доступные параметры для изменяемых шрифтов
+Флаги изменяаемых параметров шрифта
 
 Значения:
 * None
 * Weight - толщина
 * Width - ширина
-* Italic - курсив
-* Slant - наклон
-* OpticalSize - оптическая коррекция размера
-* Grade - адаптивная ширина
-* Stretch - натяжение
+* Italic - наклонное начертание (9 или 1)
+* Slant - градус наклона
+* OpticalSize - оптический размер
+* Grade - утолщение
+* Stretch - растяжение символа
 
-
-# ::stappler::geom::operator|(stappler::geom::FontVariableAxis const&,stappler::geom::FontVariableAxis const&)
+# ::stappler::font::operator|(stappler::font::FontVariableAxis const&,stappler::font::FontVariableAxis const&)
 
 ## BRIEF
 
@@ -184,13 +52,13 @@ Title: SPFontStyle.h
 Логический оператор флага (создан автоматически)
 
 Параметры:
-* stappler::geom::FontVariableAxis const&
-* stappler::geom::FontVariableAxis const&
+* stappler::font::FontVariableAxis const&
+* stappler::font::FontVariableAxis const&
 
 Возвращает:
-* stappler::geom::FontVariableAxis
+* stappler::font::FontVariableAxis
 
-# ::stappler::geom::operator&(stappler::geom::FontVariableAxis const&,stappler::geom::FontVariableAxis const&)
+# ::stappler::font::operator&(stappler::font::FontVariableAxis const&,stappler::font::FontVariableAxis const&)
 
 ## BRIEF
 
@@ -201,13 +69,13 @@ Title: SPFontStyle.h
 Логический оператор флага (создан автоматически)
 
 Параметры:
-* stappler::geom::FontVariableAxis const&
-* stappler::geom::FontVariableAxis const&
+* stappler::font::FontVariableAxis const&
+* stappler::font::FontVariableAxis const&
 
 Возвращает:
-* stappler::geom::FontVariableAxis
+* stappler::font::FontVariableAxis
 
-# ::stappler::geom::operator^(stappler::geom::FontVariableAxis const&,stappler::geom::FontVariableAxis const&)
+# ::stappler::font::operator^(stappler::font::FontVariableAxis const&,stappler::font::FontVariableAxis const&)
 
 ## BRIEF
 
@@ -218,13 +86,13 @@ Title: SPFontStyle.h
 Логический оператор флага (создан автоматически)
 
 Параметры:
-* stappler::geom::FontVariableAxis const&
-* stappler::geom::FontVariableAxis const&
+* stappler::font::FontVariableAxis const&
+* stappler::font::FontVariableAxis const&
 
 Возвращает:
-* stappler::geom::FontVariableAxis
+* stappler::font::FontVariableAxis
 
-# ::stappler::geom::operator|=(stappler::geom::FontVariableAxis&,stappler::geom::FontVariableAxis const&)
+# ::stappler::font::operator|=(stappler::font::FontVariableAxis&,stappler::font::FontVariableAxis const&)
 
 ## BRIEF
 
@@ -235,13 +103,13 @@ Title: SPFontStyle.h
 Логический оператор флага (создан автоматически)
 
 Параметры:
-* stappler::geom::FontVariableAxis&
-* stappler::geom::FontVariableAxis const&
+* stappler::font::FontVariableAxis&
+* stappler::font::FontVariableAxis const&
 
 Возвращает:
-* stappler::geom::FontVariableAxis&
+* stappler::font::FontVariableAxis&
 
-# ::stappler::geom::operator&=(stappler::geom::FontVariableAxis&,stappler::geom::FontVariableAxis const&)
+# ::stappler::font::operator&=(stappler::font::FontVariableAxis&,stappler::font::FontVariableAxis const&)
 
 ## BRIEF
 
@@ -252,13 +120,13 @@ Title: SPFontStyle.h
 Логический оператор флага (создан автоматически)
 
 Параметры:
-* stappler::geom::FontVariableAxis&
-* stappler::geom::FontVariableAxis const&
+* stappler::font::FontVariableAxis&
+* stappler::font::FontVariableAxis const&
 
 Возвращает:
-* stappler::geom::FontVariableAxis&
+* stappler::font::FontVariableAxis&
 
-# ::stappler::geom::operator^=(stappler::geom::FontVariableAxis&,stappler::geom::FontVariableAxis const&)
+# ::stappler::font::operator^=(stappler::font::FontVariableAxis&,stappler::font::FontVariableAxis const&)
 
 ## BRIEF
 
@@ -269,13 +137,13 @@ Title: SPFontStyle.h
 Логический оператор флага (создан автоматически)
 
 Параметры:
-* stappler::geom::FontVariableAxis&
-* stappler::geom::FontVariableAxis const&
+* stappler::font::FontVariableAxis&
+* stappler::font::FontVariableAxis const&
 
 Возвращает:
-* stappler::geom::FontVariableAxis&
+* stappler::font::FontVariableAxis&
 
-# ::stappler::geom::operator==(stappler::geom::FontVariableAxis const&,std::underlying_type<FontVariableAxis>::type const&)
+# ::stappler::font::operator==(stappler::font::FontVariableAxis const&,std::underlying_type<FontVariableAxis>::type const&)
 
 ## BRIEF
 
@@ -286,47 +154,13 @@ Title: SPFontStyle.h
 Логический оператор флага (создан автоматически)
 
 Параметры:
-* stappler::geom::FontVariableAxis const&
+* stappler::font::FontVariableAxis const&
 * std::underlying_type<FontVariableAxis>::type const&
 
 Возвращает:
 * bool
 
-# ::stappler::geom::operator==(std::underlying_type<FontVariableAxis>::type const&,stappler::geom::FontVariableAxis const&)
-
-## BRIEF
-
-Логический оператор флага (создан автоматически)
-
-## CONTENT
-
-Логический оператор флага (создан автоматически)
-
-Параметры:
-* std::underlying_type<FontVariableAxis>::type const&
-* stappler::geom::FontVariableAxis const&
-
-Возвращает:
-* bool
-
-# ::stappler::geom::operator!=(stappler::geom::FontVariableAxis const&,std::underlying_type<FontVariableAxis>::type const&)
-
-## BRIEF
-
-Логический оператор флага (создан автоматически)
-
-## CONTENT
-
-Логический оператор флага (создан автоматически)
-
-Параметры:
-* stappler::geom::FontVariableAxis const&
-* std::underlying_type<FontVariableAxis>::type const&
-
-Возвращает:
-* bool
-
-# ::stappler::geom::operator!=(std::underlying_type<FontVariableAxis>::type const&,stappler::geom::FontVariableAxis const&)
+# ::stappler::font::operator==(std::underlying_type<FontVariableAxis>::type const&,stappler::font::FontVariableAxis const&)
 
 ## BRIEF
 
@@ -338,12 +172,12 @@ Title: SPFontStyle.h
 
 Параметры:
 * std::underlying_type<FontVariableAxis>::type const&
-* stappler::geom::FontVariableAxis const&
+* stappler::font::FontVariableAxis const&
 
 Возвращает:
 * bool
 
-# ::stappler::geom::operator~(stappler::geom::FontVariableAxis const&)
+# ::stappler::font::operator!=(stappler::font::FontVariableAxis const&,std::underlying_type<FontVariableAxis>::type const&)
 
 ## BRIEF
 
@@ -354,12 +188,46 @@ Title: SPFontStyle.h
 Логический оператор флага (создан автоматически)
 
 Параметры:
-* stappler::geom::FontVariableAxis const&
+* stappler::font::FontVariableAxis const&
+* std::underlying_type<FontVariableAxis>::type const&
 
 Возвращает:
-* stappler::geom::FontVariableAxis
+* bool
 
-# ::stappler::geom::Autofit
+# ::stappler::font::operator!=(std::underlying_type<FontVariableAxis>::type const&,stappler::font::FontVariableAxis const&)
+
+## BRIEF
+
+Логический оператор флага (создан автоматически)
+
+## CONTENT
+
+Логический оператор флага (создан автоматически)
+
+Параметры:
+* std::underlying_type<FontVariableAxis>::type const&
+* stappler::font::FontVariableAxis const&
+
+Возвращает:
+* bool
+
+# ::stappler::font::operator~(stappler::font::FontVariableAxis const&)
+
+## BRIEF
+
+Логический оператор флага (создан автоматически)
+
+## CONTENT
+
+Логический оператор флага (создан автоматически)
+
+Параметры:
+* stappler::font::FontVariableAxis const&
+
+Возвращает:
+* stappler::font::FontVariableAxis
+
+# ::stappler::font::Autofit
 
 ## BRIEF
 
@@ -377,7 +245,7 @@ Title: SPFontStyle.h
 * Contain - вписан
 
 
-# ::stappler::geom::TextTransform
+# ::stappler::font::TextTransform
 
 ## BRIEF
 
@@ -393,7 +261,7 @@ Title: SPFontStyle.h
 * Lowercase - нижний негистр
 
 
-# ::stappler::geom::TextDecoration
+# ::stappler::font::TextDecoration
 
 ## BRIEF
 
@@ -410,7 +278,7 @@ Title: SPFontStyle.h
 * Underline
 
 
-# ::stappler::geom::TextAlign
+# ::stappler::font::TextAlign
 
 ## BRIEF
 
@@ -427,7 +295,7 @@ Title: SPFontStyle.h
 * Justify
 
 
-# ::stappler::geom::WhiteSpace
+# ::stappler::font::WhiteSpace
 
 ## BRIEF
 
@@ -445,7 +313,7 @@ Title: SPFontStyle.h
 * PreWrap - предформатированный с переносом
 
 
-# ::stappler::geom::Hyphens
+# ::stappler::font::Hyphens
 
 ## BRIEF
 
@@ -461,7 +329,7 @@ Title: SPFontStyle.h
 * Auto - автоматический
 
 
-# ::stappler::geom::VerticalAlign
+# ::stappler::font::VerticalAlign
 
 ## BRIEF
 
@@ -480,7 +348,7 @@ Title: SPFontStyle.h
 * Bottom
 
 
-# ::stappler::geom::FontStyle
+# ::stappler::font::FontStyle
 
 ## BRIEF
 
@@ -494,7 +362,7 @@ Title: SPFontStyle.h
 * ValueWrapper<int16_t,class FontStyleFlag>
 
 
-# ::stappler::geom::FontStyle::Normal
+# ::stappler::font::FontStyle::Normal
 
 ## BRIEF
 
@@ -504,10 +372,10 @@ Title: SPFontStyle.h
 
 Обычный стиль шрифта
 
-Тип: stappler::geom::FontStyle const
+Тип: stappler::font::FontStyle const
 
 
-# ::stappler::geom::FontStyle::Italic
+# ::stappler::font::FontStyle::Italic
 
 ## BRIEF
 
@@ -517,10 +385,10 @@ Title: SPFontStyle.h
 
 Наклонный стиль шрифта
 
-Тип: stappler::geom::FontStyle const
+Тип: stappler::font::FontStyle const
 
 
-# ::stappler::geom::FontStyle::Oblique
+# ::stappler::font::FontStyle::Oblique
 
 ## BRIEF
 
@@ -530,10 +398,10 @@ Title: SPFontStyle.h
 
 Скошенный стиль шрифта
 
-Тип: stappler::geom::FontStyle const
+Тип: stappler::font::FontStyle const
 
 
-# ::stappler::geom::FontStyle::FromDegrees(float)
+# ::stappler::font::FontStyle::FromDegrees(float)
 
 ## BRIEF
 
@@ -547,9 +415,9 @@ Title: SPFontStyle.h
 * float
 
 Возвращает:
-* stappler::geom::FontStyle
+* stappler::font::FontStyle
 
-# ::stappler::geom::FontWeight
+# ::stappler::font::FontWeight
 
 ## BRIEF
 
@@ -563,7 +431,7 @@ Title: SPFontStyle.h
 * ValueWrapper<uint16_t,class FontWeightFlag>
 
 
-# ::stappler::geom::FontWeight::Thin
+# ::stappler::font::FontWeight::Thin
 
 ## BRIEF
 
@@ -573,10 +441,10 @@ Title: SPFontStyle.h
 
 Сверхтонкий шрифт
 
-Тип: stappler::geom::FontWeight const
+Тип: stappler::font::FontWeight const
 
 
-# ::stappler::geom::FontWeight::ExtraLight
+# ::stappler::font::FontWeight::ExtraLight
 
 ## BRIEF
 
@@ -586,10 +454,10 @@ Title: SPFontStyle.h
 
 Сверхлёгкий шрифт
 
-Тип: stappler::geom::FontWeight const
+Тип: stappler::font::FontWeight const
 
 
-# ::stappler::geom::FontWeight::Light
+# ::stappler::font::FontWeight::Light
 
 ## BRIEF
 
@@ -599,23 +467,10 @@ Title: SPFontStyle.h
 
 Облегчённый шрифт
 
-Тип: stappler::geom::FontWeight const
+Тип: stappler::font::FontWeight const
 
 
-# ::stappler::geom::FontWeight::Normal
-
-## BRIEF
-
-Обычный шрифт
-
-## CONTENT
-
-Обычный шрифт
-
-Тип: stappler::geom::FontWeight const
-
-
-# ::stappler::geom::FontWeight::Regular
+# ::stappler::font::FontWeight::Normal
 
 ## BRIEF
 
@@ -625,10 +480,23 @@ Title: SPFontStyle.h
 
 Обычный шрифт
 
-Тип: stappler::geom::FontWeight const
+Тип: stappler::font::FontWeight const
 
 
-# ::stappler::geom::FontWeight::Medium
+# ::stappler::font::FontWeight::Regular
+
+## BRIEF
+
+Обычный шрифт
+
+## CONTENT
+
+Обычный шрифт
+
+Тип: stappler::font::FontWeight const
+
+
+# ::stappler::font::FontWeight::Medium
 
 ## BRIEF
 
@@ -638,10 +506,10 @@ Title: SPFontStyle.h
 
 Средний шрифт
 
-Тип: stappler::geom::FontWeight const
+Тип: stappler::font::FontWeight const
 
 
-# ::stappler::geom::FontWeight::SemiBold
+# ::stappler::font::FontWeight::SemiBold
 
 ## BRIEF
 
@@ -651,10 +519,10 @@ Title: SPFontStyle.h
 
 Полужирный шрифт
 
-Тип: stappler::geom::FontWeight const
+Тип: stappler::font::FontWeight const
 
 
-# ::stappler::geom::FontWeight::Bold
+# ::stappler::font::FontWeight::Bold
 
 ## BRIEF
 
@@ -664,10 +532,10 @@ Title: SPFontStyle.h
 
 Жирный шрифт
 
-Тип: stappler::geom::FontWeight const
+Тип: stappler::font::FontWeight const
 
 
-# ::stappler::geom::FontWeight::ExtraBold
+# ::stappler::font::FontWeight::ExtraBold
 
 ## BRIEF
 
@@ -677,10 +545,10 @@ Title: SPFontStyle.h
 
 Суперширный шрифт
 
-Тип: stappler::geom::FontWeight const
+Тип: stappler::font::FontWeight const
 
 
-# ::stappler::geom::FontWeight::Heavy
+# ::stappler::font::FontWeight::Heavy
 
 ## BRIEF
 
@@ -690,10 +558,10 @@ Title: SPFontStyle.h
 
 Тяжёлый шрифт
 
-Тип: stappler::geom::FontWeight const
+Тип: stappler::font::FontWeight const
 
 
-# ::stappler::geom::FontWeight::Black
+# ::stappler::font::FontWeight::Black
 
 ## BRIEF
 
@@ -703,10 +571,10 @@ Title: SPFontStyle.h
 
 Сверхтяжёлый шрифт
 
-Тип: stappler::geom::FontWeight const
+Тип: stappler::font::FontWeight const
 
 
-# ::stappler::geom::FontStretch
+# ::stappler::font::FontStretch
 
 ## BRIEF
 
@@ -720,7 +588,7 @@ Title: SPFontStyle.h
 * ValueWrapper<uint16_t,class FontStretchFlag>
 
 
-# ::stappler::geom::FontStretch::UltraCondensed
+# ::stappler::font::FontStretch::UltraCondensed
 
 ## BRIEF
 
@@ -730,10 +598,10 @@ Title: SPFontStyle.h
 
 Ультрасжатый шрифт
 
-Тип: stappler::geom::FontStretch const
+Тип: stappler::font::FontStretch const
 
 
-# ::stappler::geom::FontStretch::ExtraCondensed
+# ::stappler::font::FontStretch::ExtraCondensed
 
 ## BRIEF
 
@@ -743,10 +611,10 @@ Title: SPFontStyle.h
 
 Сверхсжатый шрифт
 
-Тип: stappler::geom::FontStretch const
+Тип: stappler::font::FontStretch const
 
 
-# ::stappler::geom::FontStretch::Condensed
+# ::stappler::font::FontStretch::Condensed
 
 ## BRIEF
 
@@ -756,10 +624,10 @@ Title: SPFontStyle.h
 
 Сжатый шрифт
 
-Тип: stappler::geom::FontStretch const
+Тип: stappler::font::FontStretch const
 
 
-# ::stappler::geom::FontStretch::SemiCondensed
+# ::stappler::font::FontStretch::SemiCondensed
 
 ## BRIEF
 
@@ -769,10 +637,10 @@ Title: SPFontStyle.h
 
 Полусжатый шрифт
 
-Тип: stappler::geom::FontStretch const
+Тип: stappler::font::FontStretch const
 
 
-# ::stappler::geom::FontStretch::Normal
+# ::stappler::font::FontStretch::Normal
 
 ## BRIEF
 
@@ -782,10 +650,10 @@ Title: SPFontStyle.h
 
 Обычный шрифт
 
-Тип: stappler::geom::FontStretch const
+Тип: stappler::font::FontStretch const
 
 
-# ::stappler::geom::FontStretch::SemiExpanded
+# ::stappler::font::FontStretch::SemiExpanded
 
 ## BRIEF
 
@@ -795,10 +663,10 @@ Title: SPFontStyle.h
 
 Полуразрежённый шрифт
 
-Тип: stappler::geom::FontStretch const
+Тип: stappler::font::FontStretch const
 
 
-# ::stappler::geom::FontStretch::Expanded
+# ::stappler::font::FontStretch::Expanded
 
 ## BRIEF
 
@@ -808,10 +676,10 @@ Title: SPFontStyle.h
 
 Разрежённый шрифт
 
-Тип: stappler::geom::FontStretch const
+Тип: stappler::font::FontStretch const
 
 
-# ::stappler::geom::FontStretch::ExtraExpanded
+# ::stappler::font::FontStretch::ExtraExpanded
 
 ## BRIEF
 
@@ -821,10 +689,10 @@ Title: SPFontStyle.h
 
 Сверхразрежённый шрифт
 
-Тип: stappler::geom::FontStretch const
+Тип: stappler::font::FontStretch const
 
 
-# ::stappler::geom::FontStretch::UltraExpanded
+# ::stappler::font::FontStretch::UltraExpanded
 
 ## BRIEF
 
@@ -834,10 +702,10 @@ Title: SPFontStyle.h
 
 Ультраразрежённый шрифт
 
-Тип: stappler::geom::FontStretch const
+Тип: stappler::font::FontStretch const
 
 
-# ::stappler::geom::FontGrade
+# ::stappler::font::FontGrade
 
 ## BRIEF
 
@@ -851,7 +719,7 @@ Title: SPFontStyle.h
 * ValueWrapper<int16_t,class FontGradeFlag>
 
 
-# ::stappler::geom::FontGrade::Thin
+# ::stappler::font::FontGrade::Thin
 
 ## BRIEF
 
@@ -861,10 +729,10 @@ Title: SPFontStyle.h
 
 Сверхоблегчённый адаптивный вес
 
-Тип: stappler::geom::FontGrade const
+Тип: stappler::font::FontGrade const
 
 
-# ::stappler::geom::FontGrade::Reduced
+# ::stappler::font::FontGrade::Reduced
 
 ## BRIEF
 
@@ -874,10 +742,10 @@ Title: SPFontStyle.h
 
 Слегка облегчённый адаптивный вес
 
-Тип: stappler::geom::FontGrade const
+Тип: stappler::font::FontGrade const
 
 
-# ::stappler::geom::FontGrade::Normal
+# ::stappler::font::FontGrade::Normal
 
 ## BRIEF
 
@@ -887,10 +755,10 @@ Title: SPFontStyle.h
 
 Нормальный адаптивный вес
 
-Тип: stappler::geom::FontGrade const
+Тип: stappler::font::FontGrade const
 
 
-# ::stappler::geom::FontGrade::Heavy
+# ::stappler::font::FontGrade::Heavy
 
 ## BRIEF
 
@@ -900,10 +768,10 @@ Title: SPFontStyle.h
 
 Утяжелённый адаптивный вес
 
-Тип: stappler::geom::FontGrade const
+Тип: stappler::font::FontGrade const
 
 
-# ::stappler::geom::FontVariant
+# ::stappler::font::FontVariant
 
 ## BRIEF
 
@@ -918,7 +786,7 @@ Title: SPFontStyle.h
 * SmallCaps
 
 
-# ::stappler::geom::ListStyleType
+# ::stappler::font::ListStyleType
 
 ## BRIEF
 
@@ -943,7 +811,7 @@ Title: SPFontStyle.h
 * UpperRoman
 
 
-# ::stappler::geom::FontSize
+# ::stappler::font::FontSize
 
 ## BRIEF
 
@@ -953,7 +821,7 @@ Title: SPFontStyle.h
 
 Размер шрифта. Выражен в пикселях. Хранится в значении 1/16 пикселя на единицу для адаптивного прогресса.
 
-# ::stappler::geom::FontSize::XXSmall
+# ::stappler::font::FontSize::XXSmall
 
 ## BRIEF
 
@@ -963,10 +831,10 @@ Title: SPFontStyle.h
 
 Ультрамалый размер
 
-Тип: stappler::geom::FontSize const
+Тип: stappler::font::FontSize const
 
 
-# ::stappler::geom::FontSize::XSmall
+# ::stappler::font::FontSize::XSmall
 
 ## BRIEF
 
@@ -976,10 +844,10 @@ Title: SPFontStyle.h
 
 Сверхмалый размер
 
-Тип: stappler::geom::FontSize const
+Тип: stappler::font::FontSize const
 
 
-# ::stappler::geom::FontSize::Small
+# ::stappler::font::FontSize::Small
 
 ## BRIEF
 
@@ -989,10 +857,10 @@ Title: SPFontStyle.h
 
 Малый размер
 
-Тип: stappler::geom::FontSize const
+Тип: stappler::font::FontSize const
 
 
-# ::stappler::geom::FontSize::Medium
+# ::stappler::font::FontSize::Medium
 
 ## BRIEF
 
@@ -1002,10 +870,10 @@ Title: SPFontStyle.h
 
 Стандартный размер
 
-Тип: stappler::geom::FontSize const
+Тип: stappler::font::FontSize const
 
 
-# ::stappler::geom::FontSize::Large
+# ::stappler::font::FontSize::Large
 
 ## BRIEF
 
@@ -1015,10 +883,10 @@ Title: SPFontStyle.h
 
 Большой размер
 
-Тип: stappler::geom::FontSize const
+Тип: stappler::font::FontSize const
 
 
-# ::stappler::geom::FontSize::XLarge
+# ::stappler::font::FontSize::XLarge
 
 ## BRIEF
 
@@ -1028,10 +896,10 @@ Title: SPFontStyle.h
 
 Сверхбольшой размер
 
-Тип: stappler::geom::FontSize const
+Тип: stappler::font::FontSize const
 
 
-# ::stappler::geom::FontSize::XXLarge
+# ::stappler::font::FontSize::XXLarge
 
 ## BRIEF
 
@@ -1041,10 +909,10 @@ Title: SPFontStyle.h
 
 Ультрабольшой размер
 
-Тип: stappler::geom::FontSize const
+Тип: stappler::font::FontSize const
 
 
-# ::stappler::geom::FontSize::progress(stappler::geom::FontSize,stappler::geom::FontSize,float)
+# ::stappler::font::FontSize::progress(stappler::font::FontSize,stappler::font::FontSize,float)
 
 ## BRIEF
 
@@ -1055,14 +923,14 @@ Title: SPFontStyle.h
 Функция линейной интерполяции размера
 
 Параметры:
-* stappler::geom::FontSize
-* stappler::geom::FontSize
+* stappler::font::FontSize
+* stappler::font::FontSize
 * float
 
 Возвращает:
-* stappler::geom::FontSize
+* stappler::font::FontSize
 
-# ::stappler::geom::FontSize::make(float)
+# ::stappler::font::FontSize::make(float)
 
 ## BRIEF
 
@@ -1076,9 +944,9 @@ Title: SPFontStyle.h
 * float
 
 Возвращает:
-* stappler::geom::FontSize
+* stappler::font::FontSize
 
-# ::stappler::geom::FontSize::FontSize()
+# ::stappler::font::FontSize::FontSize()
 
 ## BRIEF
 
@@ -1089,7 +957,7 @@ Title: SPFontStyle.h
 Создаёт размер по умолчанию
 
 
-# ::stappler::geom::FontSize::FontSize(stappler::geom::FontSize const&)
+# ::stappler::font::FontSize::FontSize(stappler::font::FontSize const&)
 
 ## BRIEF
 
@@ -1100,10 +968,10 @@ Title: SPFontStyle.h
 Конструктор копирования
 
 Параметры:
-* stappler::geom::FontSize const&
+* stappler::font::FontSize const&
 
 
-# ::stappler::geom::FontSize::FontSize(uint16_t)
+# ::stappler::font::FontSize::FontSize(uint16_t)
 
 ## BRIEF
 
@@ -1117,7 +985,7 @@ Title: SPFontStyle.h
 * uint16_t
 
 
-# ::stappler::geom::FontSize::scale(float) const
+# ::stappler::font::FontSize::scale(float) const
 
 ## BRIEF
 
@@ -1131,9 +999,9 @@ Title: SPFontStyle.h
 * float
 
 Возвращает:
-* stappler::geom::FontSize
+* stappler::font::FontSize
 
-# ::stappler::geom::FontSize::operator*(float) const
+# ::stappler::font::FontSize::operator*(float) const
 
 ## BRIEF
 
@@ -1147,9 +1015,9 @@ Title: SPFontStyle.h
 * float
 
 Возвращает:
-* stappler::geom::FontSize
+* stappler::font::FontSize
 
-# ::stappler::geom::FontSize::operator/(float) const
+# ::stappler::font::FontSize::operator/(float) const
 
 ## BRIEF
 
@@ -1163,9 +1031,9 @@ Title: SPFontStyle.h
 * float
 
 Возвращает:
-* stappler::geom::FontSize
+* stappler::font::FontSize
 
-# ::stappler::geom::FontSize::get() const
+# ::stappler::font::FontSize::get() const
 
 ## BRIEF
 
@@ -1178,7 +1046,7 @@ Title: SPFontStyle.h
 Возвращает:
 * uint16_t
 
-# ::stappler::geom::FontSize::val() const
+# ::stappler::font::FontSize::val() const
 
 ## BRIEF
 
@@ -1191,7 +1059,7 @@ Title: SPFontStyle.h
 Возвращает:
 * float
 
-# ::stappler::geom::FontSize::operator-=(stappler::geom::FontSize)
+# ::stappler::font::FontSize::operator-=(stappler::font::FontSize)
 
 ## BRIEF
 
@@ -1202,12 +1070,12 @@ Title: SPFontStyle.h
 Уменьшает размер на значение
 
 Параметры:
-* stappler::geom::FontSize
+* stappler::font::FontSize
 
 Возвращает:
-* stappler::geom::FontSize&
+* stappler::font::FontSize&
 
-# ::stappler::geom::FontSize::operator==(stappler::geom::FontSize const&) const
+# ::stappler::font::FontSize::operator==(stappler::font::FontSize const&) const
 
 ## BRIEF
 
@@ -1218,12 +1086,12 @@ Title: SPFontStyle.h
 Сравнивает размеры
 
 Параметры:
-* stappler::geom::FontSize const&
+* stappler::font::FontSize const&
 
 Возвращает:
 * bool
 
-# ::stappler::geom::FontSize::operator!=(stappler::geom::FontSize const&) const
+# ::stappler::font::FontSize::operator!=(stappler::font::FontSize const&) const
 
 ## BRIEF
 
@@ -1234,12 +1102,12 @@ Title: SPFontStyle.h
 Сравнивает размеры
 
 Параметры:
-* stappler::geom::FontSize const&
+* stappler::font::FontSize const&
 
 Возвращает:
 * bool
 
-# ::stappler::geom::FontSize::value
+# ::stappler::font::FontSize::value
 
 ## BRIEF
 
@@ -1252,7 +1120,7 @@ Title: SPFontStyle.h
 Тип: uint16_t
 
 
-# ::stappler::geom::TextParameters
+# ::stappler::font::TextParameters
 
 ## BRIEF
 
@@ -1263,7 +1131,7 @@ Title: SPFontStyle.h
 Общая структура параметров стиля текста
 
 
-# ::stappler::geom::TextParameters::textTransform
+# ::stappler::font::TextParameters::textTransform
 
 ## BRIEF
 
@@ -1273,10 +1141,10 @@ Title: SPFontStyle.h
 
 Режим преобразования текста
 
-Тип: stappler::geom::TextTransform
+Тип: stappler::font::TextTransform
 
 
-# ::stappler::geom::TextParameters::textDecoration
+# ::stappler::font::TextParameters::textDecoration
 
 ## BRIEF
 
@@ -1286,10 +1154,10 @@ Title: SPFontStyle.h
 
 Декорирование текста
 
-Тип: stappler::geom::TextDecoration
+Тип: stappler::font::TextDecoration
 
 
-# ::stappler::geom::TextParameters::whiteSpace
+# ::stappler::font::TextParameters::whiteSpace
 
 ## BRIEF
 
@@ -1299,10 +1167,10 @@ Title: SPFontStyle.h
 
 Режим пробелов
 
-Тип: stappler::geom::WhiteSpace
+Тип: stappler::font::WhiteSpace
 
 
-# ::stappler::geom::TextParameters::hyphens
+# ::stappler::font::TextParameters::hyphens
 
 ## BRIEF
 
@@ -1312,10 +1180,10 @@ Title: SPFontStyle.h
 
 Режим переносов
 
-Тип: stappler::geom::Hyphens
+Тип: stappler::font::Hyphens
 
 
-# ::stappler::geom::TextParameters::verticalAlign
+# ::stappler::font::TextParameters::verticalAlign
 
 ## BRIEF
 
@@ -1325,10 +1193,10 @@ Title: SPFontStyle.h
 
 Вертикальное выравнивание
 
-Тип: stappler::geom::VerticalAlign
+Тип: stappler::font::VerticalAlign
 
 
-# ::stappler::geom::TextParameters::color
+# ::stappler::font::TextParameters::color
 
 ## BRIEF
 
@@ -1338,10 +1206,10 @@ Title: SPFontStyle.h
 
 Цвет текста
 
-Тип: stappler::geom::Color3B
+Тип: stappler::font::Color3B
 
 
-# ::stappler::geom::TextParameters::opacity
+# ::stappler::font::TextParameters::opacity
 
 ## BRIEF
 
@@ -1354,7 +1222,7 @@ Title: SPFontStyle.h
 Тип: uint8_t
 
 
-# ::stappler::geom::TextParameters::operator==(stappler::geom::TextParameters const&) const
+# ::stappler::font::TextParameters::operator==(stappler::font::TextParameters const&) const
 
 ## BRIEF
 
@@ -1365,12 +1233,12 @@ Title: SPFontStyle.h
 Сравнивает параметры стиля текста
 
 Параметры:
-* stappler::geom::TextParameters const&
+* stappler::font::TextParameters const&
 
 Возвращает:
 * bool
 
-# ::stappler::geom::TextParameters::operator!=(stappler::geom::TextParameters const&) const
+# ::stappler::font::TextParameters::operator!=(stappler::font::TextParameters const&) const
 
 ## BRIEF
 
@@ -1381,12 +1249,12 @@ Title: SPFontStyle.h
 Сравнивает параметры стиля текста
 
 Параметры:
-* stappler::geom::TextParameters const&
+* stappler::font::TextParameters const&
 
 Возвращает:
 * bool
 
-# ::stappler::geom::FontLayoutParameters
+# ::stappler::font::FontLayoutParameters
 
 ## BRIEF
 
@@ -1397,7 +1265,7 @@ Title: SPFontStyle.h
 Структура параметров стиля шрифта
 
 
-# ::stappler::geom::FontLayoutParameters::fontStyle
+# ::stappler::font::FontLayoutParameters::fontStyle
 
 ## BRIEF
 
@@ -1407,10 +1275,10 @@ Title: SPFontStyle.h
 
 Стиль шрифта
 
-Тип: stappler::geom::FontStyle
+Тип: stappler::font::FontStyle
 
 
-# ::stappler::geom::FontLayoutParameters::fontWeight
+# ::stappler::font::FontLayoutParameters::fontWeight
 
 ## BRIEF
 
@@ -1420,10 +1288,10 @@ Title: SPFontStyle.h
 
 Вес шрифта
 
-Тип: stappler::geom::FontWeight
+Тип: stappler::font::FontWeight
 
 
-# ::stappler::geom::FontLayoutParameters::fontStretch
+# ::stappler::font::FontLayoutParameters::fontStretch
 
 ## BRIEF
 
@@ -1433,10 +1301,10 @@ Title: SPFontStyle.h
 
 Натяжение шрифта
 
-Тип: stappler::geom::FontStretch
+Тип: stappler::font::FontStretch
 
 
-# ::stappler::geom::FontLayoutParameters::fontGrade
+# ::stappler::font::FontLayoutParameters::fontGrade
 
 ## BRIEF
 
@@ -1446,10 +1314,10 @@ Title: SPFontStyle.h
 
 Адаптивный вес шрифта
 
-Тип: stappler::geom::FontGrade
+Тип: stappler::font::FontGrade
 
 
-# ::stappler::geom::FontLayoutParameters::operator==(stappler::geom::FontLayoutParameters const&) const
+# ::stappler::font::FontLayoutParameters::operator==(stappler::font::FontLayoutParameters const&) const
 
 ## BRIEF
 
@@ -1460,12 +1328,12 @@ Title: SPFontStyle.h
 Сравнивает параметры стиля шрифта
 
 Параметры:
-* stappler::geom::FontLayoutParameters const&
+* stappler::font::FontLayoutParameters const&
 
 Возвращает:
 * bool
 
-# ::stappler::geom::FontLayoutParameters::operator!=(stappler::geom::FontLayoutParameters const&) const
+# ::stappler::font::FontLayoutParameters::operator!=(stappler::font::FontLayoutParameters const&) const
 
 ## BRIEF
 
@@ -1476,12 +1344,12 @@ Title: SPFontStyle.h
 Сравнивает параметры стиля шрифта
 
 Параметры:
-* stappler::geom::FontLayoutParameters const&
+* stappler::font::FontLayoutParameters const&
 
 Возвращает:
 * bool
 
-# ::stappler::geom::FontSpecializationVector
+# ::stappler::font::FontSpecializationVector
 
 ## BRIEF
 
@@ -1495,7 +1363,7 @@ Title: SPFontStyle.h
 * FontLayoutParameters
 
 
-# ::stappler::geom::FontSpecializationVector::fontSize
+# ::stappler::font::FontSpecializationVector::fontSize
 
 ## BRIEF
 
@@ -1505,10 +1373,10 @@ Title: SPFontStyle.h
 
 Размер шрифта
 
-Тип: stappler::geom::FontSize
+Тип: stappler::font::FontSize
 
 
-# ::stappler::geom::FontSpecializationVector::density
+# ::stappler::font::FontSpecializationVector::density
 
 ## BRIEF
 
@@ -1521,7 +1389,7 @@ Title: SPFontStyle.h
 Тип: float
 
 
-# ::stappler::geom::FontSpecializationVector::getSpecializationArgs<typename>() const
+# ::stappler::font::FontSpecializationVector::getSpecializationArgs<typename>() const
 
 ## BRIEF
 
@@ -1537,7 +1405,7 @@ Title: SPFontStyle.h
 Возвращает:
 * typename Interface::StringType
 
-# ::stappler::geom::FontSpecializationVector::operator==(stappler::geom::FontSpecializationVector const&) const
+# ::stappler::font::FontSpecializationVector::operator==(stappler::font::FontSpecializationVector const&) const
 
 ## BRIEF
 
@@ -1548,12 +1416,12 @@ Title: SPFontStyle.h
 Сравнивает параметры специализации шрифта
 
 Параметры:
-* stappler::geom::FontSpecializationVector const&
+* stappler::font::FontSpecializationVector const&
 
 Возвращает:
 * bool
 
-# ::stappler::geom::FontSpecializationVector::operator!=(stappler::geom::FontSpecializationVector const&) const
+# ::stappler::font::FontSpecializationVector::operator!=(stappler::font::FontSpecializationVector const&) const
 
 ## BRIEF
 
@@ -1564,12 +1432,12 @@ Title: SPFontStyle.h
 Сравнивает параметры специализации шрифта
 
 Параметры:
-* stappler::geom::FontSpecializationVector const&
+* stappler::font::FontSpecializationVector const&
 
 Возвращает:
 * bool
 
-# ::stappler::geom::FontParameters
+# ::stappler::font::FontParameters
 
 ## BRIEF
 
@@ -1583,7 +1451,7 @@ Title: SPFontStyle.h
 * FontSpecializationVector
 
 
-# ::stappler::geom::FontParameters::create(stappler::StringView,memory::pool_t*)
+# ::stappler::font::FontParameters::create(stappler::StringView,memory::pool_t*)
 
 ## BRIEF
 
@@ -1598,9 +1466,9 @@ Title: SPFontStyle.h
 * memory::pool_t* - пул памяти для инициализации имени семейства шрифта
 
 Возвращает:
-* stappler::geom::FontParameters
+* stappler::font::FontParameters
 
-# ::stappler::geom::FontParameters::getFontConfigName<typename>(stappler::StringView,stappler::geom::FontSize,stappler::geom::FontStyle,stappler::geom::FontWeight,stappler::geom::FontStretch,stappler::geom::FontGrade,stappler::geom::FontVariant,bool)
+# ::stappler::font::FontParameters::getFontConfigName<typename>(stappler::StringView,stappler::font::FontSize,stappler::font::FontStyle,stappler::font::FontWeight,stappler::font::FontStretch,stappler::font::FontGrade,stappler::font::FontVariant,bool)
 
 ## BRIEF
 
@@ -1615,18 +1483,18 @@ Title: SPFontStyle.h
 
 Параметры:
 * stappler::StringView - семейство шрифта
-* stappler::geom::FontSize
-* stappler::geom::FontStyle
-* stappler::geom::FontWeight
-* stappler::geom::FontStretch
-* stappler::geom::FontGrade
-* stappler::geom::FontVariant
+* stappler::font::FontSize
+* stappler::font::FontStyle
+* stappler::font::FontWeight
+* stappler::font::FontStretch
+* stappler::font::FontGrade
+* stappler::font::FontVariant
 * bool - true для SmallCaps
 
 Возвращает:
 * typename Interface::StringType
 
-# ::stappler::geom::FontParameters::fontVariant
+# ::stappler::font::FontParameters::fontVariant
 
 ## BRIEF
 
@@ -1636,10 +1504,10 @@ Title: SPFontStyle.h
 
 Вариант начертания шрифта
 
-Тип: stappler::geom::FontVariant
+Тип: stappler::font::FontVariant
 
 
-# ::stappler::geom::FontParameters::listStyleType
+# ::stappler::font::FontParameters::listStyleType
 
 ## BRIEF
 
@@ -1649,10 +1517,10 @@ Title: SPFontStyle.h
 
 Соотвествующий стиль маркеров списка
 
-Тип: stappler::geom::ListStyleType
+Тип: stappler::font::ListStyleType
 
 
-# ::stappler::geom::FontParameters::fontFamily
+# ::stappler::font::FontParameters::fontFamily
 
 ## BRIEF
 
@@ -1665,7 +1533,7 @@ Title: SPFontStyle.h
 Тип: stappler::StringView
 
 
-# ::stappler::geom::FontParameters::persistent
+# ::stappler::font::FontParameters::persistent
 
 ## BRIEF
 
@@ -1678,7 +1546,7 @@ Title: SPFontStyle.h
 Тип: bool
 
 
-# ::stappler::geom::FontParameters::getConfigName<typename>(bool) const
+# ::stappler::font::FontParameters::getConfigName<typename>(bool) const
 
 ## BRIEF
 
@@ -1697,7 +1565,7 @@ Title: SPFontStyle.h
 Возвращает:
 * typename Interface::StringType
 
-# ::stappler::geom::FontParameters::getSmallCaps() const
+# ::stappler::font::FontParameters::getSmallCaps() const
 
 ## BRIEF
 
@@ -1708,25 +1576,9 @@ Title: SPFontStyle.h
 Возвращает параемтры сопряжённого шрифта при использовании SmallCaps
 
 Возвращает:
-* stappler::geom::FontParameters
+* stappler::font::FontParameters
 
-# ::stappler::geom::FontParameters::operator==(stappler::geom::FontParameters const&) const
-
-## BRIEF
-
-Оператор сравнения параметров шрифта
-
-## CONTENT
-
-Оператор сравнения параметров шрифта
-
-Параметры:
-* stappler::geom::FontParameters const&
-
-Возвращает:
-* bool
-
-# ::stappler::geom::FontParameters::operator!=(stappler::geom::FontParameters const&) const
+# ::stappler::font::FontParameters::operator==(stappler::font::FontParameters const&) const
 
 ## BRIEF
 
@@ -1737,825 +1589,264 @@ Title: SPFontStyle.h
 Оператор сравнения параметров шрифта
 
 Параметры:
-* stappler::geom::FontParameters const&
+* stappler::font::FontParameters const&
 
 Возвращает:
 * bool
 
-
-# ::stappler::geom::FontLayoutId
-
-## BRIEF
-
-Псевдоним для идентификатора реализации стиля шрифта
-
-## CONTENT
-
-Псевдоним для идентификатора реализации стиля шрифта
-
-
-# ::stappler::geom::SpriteAnchor
+# ::stappler::font::FontParameters::operator!=(stappler::font::FontParameters const&) const
 
 ## BRIEF
 
-Якорь для текстуры символа
+Оператор сравнения параметров шрифта
 
 ## CONTENT
 
-Якорь для текстуры символа
-
-Значения:
-* BottomLeft
-* TopLeft
-* TopRight
-* BottomRight
-
-
-# ::stappler::geom::FontMetrics
-
-## BRIEF
-
-Структура метрик шрифта
-
-## CONTENT
-
-Структура метрик шрифта. Метрики описываются в 1/16 пикселя
-
-# ::stappler::geom::FontMetrics::size
-
-## BRIEF
-
-Размер шрифта
-
-## CONTENT
-
-Размер шрифта
-
-Тип: uint16_t
-
-
-# ::stappler::geom::FontMetrics::height
-
-## BRIEF
-
-Высота шрифта
-
-## CONTENT
-
-Высота шрифта
-
-Тип: uint16_t
-
-
-# ::stappler::geom::FontMetrics::ascender
-
-## BRIEF
-
-Верхняя граница
-
-## CONTENT
-
-Верхняя граница
-
-Тип: int16_t
-
-
-# ::stappler::geom::FontMetrics::descender
-
-## BRIEF
-
-Нижняя граница
-
-## CONTENT
-
-Нижняя граница
-
-Тип: int16_t
-
-
-# ::stappler::geom::FontMetrics::underlinePosition
-
-## BRIEF
-
-Смещение подчёркивания
-
-## CONTENT
-
-Смещение подчёркивания
-
-Тип: int16_t
-
-
-# ::stappler::geom::FontMetrics::underlineThickness
-
-## BRIEF
-
-Толщина подчёркивания
-
-## CONTENT
-
-Толщина подчёркивания
-
-Тип: int16_t
-
-
-# ::stappler::geom::CharLayout
-
-## BRIEF
-
-Параметры укладки символа в тексте. Передаётся при формировании текста их шрифтового атласа и укладки форматирования
-
-## CONTENT
-
-Параметры укладки символа в тексте. Передаётся при формировании текста их шрифтового атласа и укладки форматирования
-
-
-# ::stappler::geom::CharLayout::CharMask
-
-## BRIEF
-
-Маска символа в идентификаторе объекта
-
-## CONTENT
-
-Маска символа в идентификаторе объекта
-
-Тип: uint32_t const
-
-
-# ::stappler::geom::CharLayout::AnchorMask
-
-## BRIEF
-
-Маска якоря в идентификаторе объекта
-
-## CONTENT
-
-Маска якоря в идентификаторе объекта
-
-Тип: uint32_t const
-
-
-# ::stappler::geom::CharLayout::SourceMask
-
-## BRIEF
-
-Маска группы укладки в идентификаторе объекта
-
-## CONTENT
-
-Маска группы укладки в идентификаторе объекта
-
-Тип: uint32_t const
-
-
-# ::stappler::geom::CharLayout::SourceMax
-
-## BRIEF
-
-Максимальное значение идентификатора группы укладки
-
-## CONTENT
-
-Максимальное значение идентификатора группы укладки
-
-Тип: uint32_t const
-
-
-# ::stappler::geom::CharLayout::getObjectId(uint16_t,char16_t,stappler::geom::SpriteAnchor)
-
-## BRIEF
-
-Возвращает идентификатор объекта
-
-## CONTENT
-
-Возвращает идентификатор объекта. Идентификатор объекта - уникальный ключ даля точки привязки текстуры символа, составляемый из идентификатора группы укладки (конкретной реализации шрифта), якоря и кода символа.
+Оператор сравнения параметров шрифта
 
 Параметры:
-* uint16_t - группа укладки
-* char16_t - символ
-* stappler::geom::SpriteAnchor - якорь
-
-Возвращает:
-* uint32_t
-
-# ::stappler::geom::CharLayout::getObjectId(uint32_t,stappler::geom::SpriteAnchor)
-
-## BRIEF
-
-Возвращает идентификатор объекта с другим якорем
-
-## CONTENT
-
-Возвращает идентификатор объекта с другим якорем. Группа укладки и код символа сохраняются
-
-Параметры:
-* uint32_t - идентификатор объекта
-* stappler::geom::SpriteAnchor - новый якорь
-
-Возвращает:
-* uint32_t
-
-# ::stappler::geom::CharLayout::getAnchorForObject(uint32_t)
-
-## BRIEF
-
-Возвращает якорь для объекта
-
-## CONTENT
-
-Возвращает якорь для объекта
-
-Параметры:
-* uint32_t
-
-Возвращает:
-* stappler::geom::SpriteAnchor
-
-# ::stappler::geom::CharLayout::charID
-
-## BRIEF
-
-Код символа
-
-## CONTENT
-
-Код символа. Используется код символа внутри плоскости Юникода (то есть, 0 - 0xFFFF). Разные плоскости имеют разные группы укладки, и не пересекаются. Большинство приложений используют только BMP - плоскость 0.
-
-Тип: char16_t
-
-
-# ::stappler::geom::CharLayout::xAdvance
-
-## BRIEF
-
-Смещение символа по основной оси
-
-## CONTENT
-
-Смещение символа по основной оси
-
-Тип: uint16_t
-
-
-# ::stappler::geom::CharLayout::operator char16_t() const
-
-## BRIEF
-
-Конвертирует параметры укладки символа в код символа
-
-## CONTENT
-
-Конвертирует параметры укладки символа в код символа
-
-Возвращает:
-* char16_t
-
-# ::stappler::geom::CharSpec
-
-## BRIEF
-
-Структура параметров специализации символа
-
-## CONTENT
-
-Структура параметров специализации символа. Используется при форматировании текста.
-
-# ::stappler::geom::CharSpec::charID
-
-## BRIEF
-
-Код символа
-
-## CONTENT
-
-Код символа. Используется код символа внутри плоскости Юникода (то есть, 0 - 0xFFFF). Разные плоскости имеют разные группы укладки, и не пересекаются. Большинство приложений используют только BMP - плоскость 0.
-
-Тип: char16_t
-
-
-# ::stappler::geom::CharSpec::pos
-
-## BRIEF
-
-Текущая позиция символа по оси прогрессии
-
-## CONTENT
-
-Текущая позиция символа по оси прогрессии
-
-Тип: int16_t
-
-
-# ::stappler::geom::CharSpec::advance
-
-## BRIEF
-
-Смещение для символа по оси прогрессии
-
-## CONTENT
-
-Смещение для символа по оси прогрессии, с помощью которого определяется точка сразу после символа.
-
-Тип: uint16_t
-
-
-# ::stappler::geom::CharSpec::face
-
-## BRIEF
-
-Идентификатор шрифта
-
-## CONTENT
-
-Идентификатор шрифта
-
-Тип: uint16_t
-
-
-# ::stappler::geom::CharTexture
-
-## BRIEF
-
-Параметры текстуры символа
-
-## CONTENT
-
-Параметры текстуры символа
-
-
-# ::stappler::geom::CharTexture::fontID
-
-## BRIEF
-
-Идентификатор шрифта
-
-## CONTENT
-
-Идентификатор шрифта
-
-Тип: uint16_t
-
-
-# ::stappler::geom::CharTexture::charID
-
-## BRIEF
-
-Код символа
-
-## CONTENT
-
-Код символа. Используется код символа внутри плоскости Юникода (то есть, 0 - 0xFFFF). Разные плоскости имеют разные группы укладки, и не пересекаются. Большинство приложений используют только BMP - плоскость 0.
-
-Тип: char16_t
-
-
-# ::stappler::geom::CharTexture::x
-
-## BRIEF
-
-Координата x
-
-## CONTENT
-
-Координата x
-
-Тип: int16_t
-
-
-# ::stappler::geom::CharTexture::y
-
-## BRIEF
-
-Координата y
-
-## CONTENT
-
-Координата y
-
-Тип: int16_t
-
-
-# ::stappler::geom::CharTexture::width
-
-## BRIEF
-
-Ширина текстуры
-
-## CONTENT
-
-Ширина текстуры
-
-Тип: uint16_t
-
-
-# ::stappler::geom::CharTexture::height
-
-## BRIEF
-
-Высота текстуры
-
-## CONTENT
-
-Высота текстуры
-
-Тип: uint16_t
-
-
-# ::stappler::geom::CharTexture::bitmapWidth
-
-## BRIEF
-
-Ширина битовой карты
-
-## CONTENT
-
-Ширина битовой карты
-
-Тип: uint32_t
-
-
-# ::stappler::geom::CharTexture::bitmapRows
-
-## BRIEF
-
-Число рядов в битовой карте
-
-## CONTENT
-
-Число рядов в битовой карте
-
-Тип: uint32_t
-
-
-# ::stappler::geom::CharTexture::pitch
-
-## BRIEF
-
-Смещение в байтах для ряда в битовой карте
-
-## CONTENT
-
-Смещение в байтах для ряда в битовой карте
-
-Тип: int
-
-
-# ::stappler::geom::CharTexture::bitmap
-
-## BRIEF
-
-Укаратель на битовую карту символа
-
-## CONTENT
-
-Укаратель на битовую карту символа
-
-Тип: uint8_t*
-
-
-# ::stappler::geom::FontAtlasValue
-
-## BRIEF
-
-Параметры объекта в шрифтовом атласа
-
-## CONTENT
-
-Параметры объекта в шрифтовом атласа
-
-# ::stappler::geom::FontAtlasValue::pos
-
-## BRIEF
-
-Позиция объекта в текстуре
-
-## CONTENT
-
-Позиция объекта в текстуре
-
-Тип: stappler::geom::Vec2
-
-
-# ::stappler::geom::FontAtlasValue::tex
-
-## BRIEF
-
-Размерность объекта в текстуре
-
-## CONTENT
-
-Размерность объекта в текстуре
-
-Тип: stappler::geom::Vec2
-
-
-# ::stappler::geom::EmplaceCharInterface
-
-## BRIEF
-
-Интерфейс укладки текстур символов
-
-## CONTENT
-
-Интерфейс укладки текстур символов
-
-# ::stappler::geom::EmplaceCharInterface::getX
-
-## BRIEF
-
-Возвращает X для объекта
-
-## CONTENT
-
-Возвращает X для объекта
-
-Тип: uint16_t(*)(void*)
-
-
-# ::stappler::geom::EmplaceCharInterface::getY
-
-## BRIEF
-
-Возвращает Y для объекта
-
-## CONTENT
-
-Возвращает Y для объекта
-
-Тип: uint16_t(*)(void*)
-
-
-# ::stappler::geom::EmplaceCharInterface::getWidth
-
-## BRIEF
-
-Возвращает ширину для объекта
-
-## CONTENT
-
-Возвращает ширину для объекта
-
-Тип: uint16_t(*)(void*)
-
-
-# ::stappler::geom::EmplaceCharInterface::getHeight
-
-## BRIEF
-
-Возвращает высоту для объекта
-
-## CONTENT
-
-Возвращает высоту для объекта
-
-Тип: uint16_t(*)(void*)
-
-
-# ::stappler::geom::EmplaceCharInterface::setX
-
-## BRIEF
-
-Устанавливает X для объекта
-
-## CONTENT
-
-Устанавливает X для объекта
-
-Тип: void(*)(void*,uint16_t)
-
-
-# ::stappler::geom::EmplaceCharInterface::setY
-
-## BRIEF
-
-Устанавливает Y для объекта
-
-## CONTENT
-
-Устанавливает Y для объекта
-
-Тип: void(*)(void*,uint16_t)
-
-
-# ::stappler::geom::EmplaceCharInterface::setTex
-
-## BRIEF
-
-Устанавливает индекс текстуры для объекта
-
-## CONTENT
-
-Устанавливает индекс текстуры для объекта
-
-Тип: void(*)(void*,uint16_t)
-
-
-# ::stappler::geom::emplaceChars(stappler::geom::EmplaceCharInterface const&,SpanView<void *> const&,float)
-
-## BRIEF
-
-Размещает текстуры шрифта в атласе
-
-## CONTENT
-
-Размещает текстуры шрифта в атласе. Вычисляет наименьший размер текстуры для атласа и составляет карту размещения символов внутри неё (через setX/setY). Использует эвристический адаптивный алгоритм размещения прямоугольников.
-
-Параметры:
-* stappler::geom::EmplaceCharInterface const& - интерфейс для получения данных их объектов
-* SpanView<void *> const& - список объектов (символов) для размещения
-* float - общая площадь символов, если заранее известна. Позволяет ускорить алгоритм
-
-Возвращает:
-* stappler::geom::Extent2 - итоговый размер предполагаемой текстуры
-
-# ::stappler::geom::operator<(stappler::geom::CharLayout const&,stappler::geom::CharLayout const&)
-
-## BRIEF
-
-Сравнивает укладки символов для упорядочивания
-
-## CONTENT
-
-Сравнивает укладки символов для упорядочивания
-
-Параметры:
-* stappler::geom::CharLayout const&
-* stappler::geom::CharLayout const&
+* stappler::font::FontParameters const&
 
 Возвращает:
 * bool
 
-# ::stappler::geom::operator>(stappler::geom::CharLayout const&,stappler::geom::CharLayout const&)
+# ::stappler::font::FontVariations
 
 ## BRIEF
 
-Сравнивает укладки символов для упорядочивания
+Параметры допустимых изменений динамического шрифта
 
 ## CONTENT
 
-Сравнивает укладки символов для упорядочивания
+Параметры допустимых изменений динамического шрифта
 
+
+# ::stappler::font::FontVariations::Variations<typename>
+
+## BRIEF
+
+Вспомогательный тип для хранения минимального и максимального значений параметра
+
+## CONTENT
+
+Вспомогательный тип для хранения минимального и максимального значений параметра
+
+Параметры шаблона:
+* typename T - тип параметра
+
+
+# ::stappler::font::FontVariations::Variations<typename>::min
+
+## BRIEF
+
+Значение минимума
+
+## CONTENT
+
+Значение минимума
+
+Тип: T
+
+
+# ::stappler::font::FontVariations::Variations<typename>::max
+
+## BRIEF
+
+Значение максимума
+
+## CONTENT
+
+Значение максимума
+
+Тип: T
+
+
+# ::stappler::font::FontVariations::Variations<typename>::operator=(T const&)
+
+## BRIEF
+
+Назначает минимуму и максимуму одно значение
+
+## CONTENT
+
+Назначает минимуму и максимуму одно значение
 Параметры:
-* stappler::geom::CharLayout const&
-* stappler::geom::CharLayout const&
+* T const&
 
 Возвращает:
-* bool
+* Variations<T>&
 
-# ::stappler::geom::operator<=(stappler::geom::CharLayout const&,stappler::geom::CharLayout const&)
+# ::stappler::font::FontVariations::Variations<typename>::clamp(T) const
 
 ## BRIEF
 
-Сравнивает укладки символов для упорядочивания
+Обрезает исходное значение по заданным минимуму и максимуму
 
 ## CONTENT
 
-Сравнивает укладки символов для упорядочивания
+Обрезает исходное значение по заданным минимуму и максимуму
 
 Параметры:
-* stappler::geom::CharLayout const&
-* stappler::geom::CharLayout const&
+* T
 
 Возвращает:
-* bool
+* T
 
-# ::stappler::geom::operator>=(stappler::geom::CharLayout const&,stappler::geom::CharLayout const&)
+# ::stappler::font::FontVariations::axisMask
 
 ## BRIEF
 
-Сравнивает укладки символов для упорядочивания
+Маска флагов изменяемых параметров
 
 ## CONTENT
 
-Сравнивает укладки символов для упорядочивания
+Маска флагов изменяемых параметров. Маска содержит флаги только тех параметров, что могут быть изменены. Остальные параметры статичны.
+
+Тип: stappler::font::FontVariableAxis
+
+
+# ::stappler::font::FontVariations::weight
+
+## BRIEF
+
+Допустимая толщина шрифта
+
+## CONTENT
+
+Допустимая толщина шрифта
+
+Тип: Variations<stappler::font::FontWeight>
+
+
+# ::stappler::font::FontVariations::stretch
+
+## BRIEF
+
+Допустимое растяжение шрифта
+
+## CONTENT
+
+Допустимое растяжение шрифта
+
+Тип: Variations<stappler::font::FontStretch>
+
+
+# ::stappler::font::FontVariations::slant
+
+## BRIEF
+
+Допустимый наклон шрифта
+
+## CONTENT
+
+Допустимый наклон шрифта
+
+Тип: Variations<stappler::font::FontStyle>
+
+
+# ::stappler::font::FontVariations::opticalSize
+
+## BRIEF
+
+Допустимый оптический размер шрифта
+
+## CONTENT
+
+Допустимый оптический размер шрифта
+
+Тип: Variations<uint32_t>
+
+
+# ::stappler::font::FontVariations::italic
+
+## BRIEF
+
+Допустимое наклонное начертание шрифта
+
+## CONTENT
+
+Допустимое наклонное начертание шрифта (0-1, либо 0-0б либо 1-1)
+
+Тип: Variations<uint32_t>
+
+
+# ::stappler::font::FontVariations::grade
+
+## BRIEF
+
+Допустимое утолщение шрифта
+
+## CONTENT
+
+Допустимое утолщение шрифта
+
+Тип: Variations<stappler::font::FontGrade>
+
+
+# ::stappler::font::FontVariations::getSpecialization(stappler::font::FontSpecializationVector const&) const
+
+## BRIEF
+
+Возвращает максимально близкую к заданной специализацию шрифта
+
+## CONTENT
+
+Возвращает максимально близкую к заданной специализацию шрифта, используя ограничения переменных.
 
 Параметры:
-* stappler::geom::CharLayout const&
-* stappler::geom::CharLayout const&
+* stappler::font::FontSpecializationVector const&
 
 Возвращает:
-* bool
+* stappler::font::FontSpecializationVector
 
-# ::stappler::geom::operator<(stappler::geom::CharLayout const&,char16_t const&)
+# ::stappler::progress(font::FontSize,font::FontSize,float)
 
 ## BRIEF
 
-Сравнивает укладки символов для упорядочивания
+Специализация линейной интерполяции для размера шрифта
 
 ## CONTENT
 
-Сравнивает укладки символов для упорядочивания
+Специализация линейной интерполяции для размера шрифта. Размер может принимать субпиксельные значения, что имеет роль при высокой плотности пикселей. Вместо использования целых чисел, стоит использовать линейную интерполцию.
 
 Параметры:
-* stappler::geom::CharLayout const&
-* char16_t const&
+* font::FontSize
+* font::FontSize
+* float - фактор интерполяции
 
-Возвращает:
-* bool
-
-# ::stappler::geom::operator>(stappler::geom::CharLayout const&,char16_t const&)
+# ::std::hash<::stappler::font::FontSize>::hash<::stappler::font::FontSize>
 
 ## BRIEF
 
-Сравнивает укладки символов для упорядочивания
+Стандартная функция хэширования для размера шрифта
 
 ## CONTENT
 
-Сравнивает укладки символов для упорядочивания
+Стандартная функция хэширования для размера шрифта
+
+
+# ::std::hash<::stappler::font::FontSize>::hash()
+
+## BRIEF
+
+Стандартная функция хэширования для размера шрифта
+
+## CONTENT
+
+Стандартная функция хэширования для размера шрифта
+
+# ::std::hash<::stappler::font::FontSize>::operator()(::stappler::font::FontSize const&) const
+
+## BRIEF
+
+Стандартная функция хэширования для размера шрифта
+
+## CONTENT
+
+Стандартная функция хэширования для размера шрифта
 
 Параметры:
-* stappler::geom::CharLayout const&
-* char16_t const&
-
-Возвращает:
-* bool
-
-# ::stappler::geom::operator<=(stappler::geom::CharLayout const&,char16_t const&)
-
-## BRIEF
-
-Сравнивает укладки символов для упорядочивания
-
-## CONTENT
-
-Сравнивает укладки символов для упорядочивания
-
-Параметры:
-* stappler::geom::CharLayout const&
-* char16_t const&
-
-Возвращает:
-* bool
-
-# ::stappler::geom::operator>=(stappler::geom::CharLayout const&,char16_t const&)
-
-## BRIEF
-
-Сравнивает укладки символов для упорядочивания
-
-## CONTENT
-
-Сравнивает укладки символов для упорядочивания
-
-Параметры:
-* stappler::geom::CharLayout const&
-* char16_t const&
-
-Возвращает:
-* bool
-
-# ::stappler::progress(geom::FontSize,geom::FontSize,float)
-
-## BRIEF
-
-Специализация функции линейной интерполации для размера символов
-
-## CONTENT
-
-Специализация функции линейной интерполации для размера символов
-
-Параметры:
-* geom::FontSize
-* geom::FontSize
-* float
-
-Возвращает:
-* geom::FontSize
-
-# ::std::hash<stappler::geom::FontSize>::hash<stappler::geom::FontSize>
-
-## BRIEF
-
-Вычисление хэша для размера символов
-
-## CONTENT
-
-Вычисление хэша для размера символов
-
-# ::std::hash<stappler::geom::FontSize>::hash()
-
-## BRIEF
-
-Вычисление хэша для размера символов
-
-## CONTENT
-
-Вычисление хэша для размера символов
-
-# ::std::hash<stappler::geom::FontSize>::operator()(stappler::geom::FontSize const&) const
-
-## BRIEF
-
-Вычисление хэша для размера символов
-
-## CONTENT
-
-Вычисление хэша для размера символов
-
-Параметры:
-* stappler::geom::FontSize const&
+* ::stappler::font::FontSize const&
 
 Возвращает:
 * std::size_t

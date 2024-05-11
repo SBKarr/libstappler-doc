@@ -168,25 +168,6 @@ Title: SPFilesystem.h
 
 Тип целочисленного значения
 
-# ::stappler::filesystem::File::open_tmp(char const*,bool)
-
-## BRIEF
-
-Открывает временный файл с использованием префикса для шаблона
-
-## CONTENT
-
-Доступ: public
-
-Открывает временный файл с использованием префикса для шаблона. Файл создаётся в стандартной временной директории системы
-
-Параметры:
-* char const* - префикс файла или nullptr
-* bool - true если файл необходимо удалить при закрытии
-
-Возвращает:
-* stappler::filesystem::File
-
 # ::stappler::filesystem::File::File()
 
 ## BRIEF
@@ -1734,3 +1715,39 @@ Title: SPFilesystem.h
 
 Возвращает:
 * size_t
+
+# ::stappler::filesystem::detectMimeType(stappler::StringView)
+
+## BRIEF
+
+Пытается определить MIME-тип по расширению имени файла
+
+## CONTENT
+
+Пытается определить MIME-тип по расширению имени файла
+
+Параметры:
+* stappler::StringView
+
+Возвращает:
+* stappler::StringView - предполагаемый MIME-тип
+
+
+# ::stappler::filesystem::File::open_tmp(stappler::StringView,bool)
+
+## BRIEF
+
+Открывает на запись новый временный файл
+
+## CONTENT
+
+Доступ: public
+
+Открывает на запись новый временный файл
+
+Параметры:
+* stappler::StringView - уникальный префикс имени файла
+* bool - true если файл нужно удалить сразу после закрытия
+
+Возвращает:
+* stappler::filesystem::File

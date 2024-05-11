@@ -39,7 +39,7 @@ Title: XLView.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::URect
+Тип: stappler::geom::URect
 
 
 # ::stappler::xenolith::ViewInfo::decoration
@@ -48,7 +48,7 @@ Title: XLView.h
 
 ## CONTENT
 
-Тип: stappler::xenolith::Padding
+Тип: stappler::geom::Padding
 
 
 # ::stappler::xenolith::ViewInfo::frameInterval
@@ -546,7 +546,7 @@ Title: XLView.h
 Доступ: public
 
 Возвращает:
-* stappler::xenolith::Extent2
+* stappler::geom::Extent2
 
 # ::stappler::xenolith::View::hasFocus() const
 
@@ -612,6 +612,29 @@ Title: XLView.h
 
 Доступ: public
 
+
+# ::stappler::xenolith::View::setRenderOnDemand(bool)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* bool
+
+
+# ::stappler::xenolith::View::isRenderOnDemand() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* bool
 
 # ::stappler::xenolith::View::retainBackButton()
 
@@ -689,7 +712,7 @@ Title: XLView.h
 * uint64_t
 
 
-# ::stappler::xenolith::View::setContentPadding(stappler::xenolith::Padding const&)
+# ::stappler::xenolith::View::setContentPadding(const stappler::geom::Padding&)
 
 ## BRIEF
 
@@ -698,16 +721,19 @@ Title: XLView.h
 Доступ: public
 
 Параметры:
-* stappler::xenolith::Padding const&
+* const stappler::geom::Padding&
 
 
-# ::stappler::xenolith::View::wakeup()
+# ::stappler::xenolith::View::wakeup(std::unique_lock<Mutex>&)
 
 ## BRIEF
 
 ## CONTENT
 
 Доступ: protected
+
+Параметры:
+* std::unique_lock<Mutex>&
 
 
 # ::stappler::xenolith::View::_constraints

@@ -5672,6 +5672,31 @@
 							"kind": "builtin"
 						}
 					}, {
+						"_fullName": "::stappler::xenolith::core::PipelineDescriptor::countIsPredefined",
+						"_kind": "member variable",
+						"_name": "countIsPredefined",
+						"default_value": {
+							"expression": [{
+								"kind": "keyword",
+								"spelling": "false"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "bool",
+								"builtin_type_kind": "bool",
+								"kind": "builtin"
+							}
+						},
+						"id": 599085391,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "countIsPredefined",
+						"type": {
+							"_typeName": "bool",
+							"builtin_type_kind": "bool",
+							"kind": "builtin"
+						}
+					}, {
 						"_fullName": "::stappler::xenolith::core::PipelineDescriptor::boundGeneration",
 						"_kind": "member variable",
 						"_name": "boundGeneration",
@@ -6769,6 +6794,118 @@
 								}]
 							}
 						}
+					}, {
+						"_fullName": "::stappler::xenolith::core::AttachmentDependencyInfo::make(stappler::xenolith::core::PipelineStage,stappler::xenolith::core::AccessType)",
+						"_kind": "function",
+						"_name": "make",
+						"body_kind": "definition",
+						"id": 633373075,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"kind": "function",
+						"name": "make",
+						"parameters": [{
+							"_fullName": "stage",
+							"_kind": "function parameter",
+							"_name": "stage",
+							"id": 1151241131,
+							"kind": "function parameter",
+							"name": "stage",
+							"type": {
+								"_typeName": "stappler::xenolith::core::PipelineStage",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::core::PipelineStage",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::core::PipelineStage",
+										"_kind": "enum",
+										"_name": "PipelineStage",
+										"has_explicit_type": false,
+										"id": 2769254131,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "PipelineStage",
+										"scope": {
+											"name": "PipelineStage"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
+						}, {
+							"_fullName": "type",
+							"_kind": "function parameter",
+							"_name": "type",
+							"id": 4107985162,
+							"kind": "function parameter",
+							"name": "type",
+							"type": {
+								"_typeName": "stappler::xenolith::core::AccessType",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::core::AccessType",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::core::AccessType",
+										"_kind": "enum",
+										"_name": "AccessType",
+										"has_explicit_type": false,
+										"id": 1354462768,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "AccessType",
+										"scope": {
+											"name": "AccessType"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
+						}],
+						"return_type":  {
+							"_typeName": "stappler::xenolith::core::AttachmentDependencyInfo",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::xenolith::core::AttachmentDependencyInfo",
+								"objects": [{
+									"_fullName": "::stappler::xenolith::core::AttachmentDependencyInfo",
+									"_kind": "class",
+									"_name": "AttachmentDependencyInfo",
+									"class_kind": "struct",
+									"id": 481528226,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "AttachmentDependencyInfo",
+									"scope": {
+										"name": "AttachmentDependencyInfo"
+									},
+									"semantic_scope": ""
+								}]
+							}
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::xenolith::core::PipelineStage,stappler::xenolith::core::AccessType)",
+						"storage_class": [
+							"static"
+						]
 					}],
 					"class_kind": "struct",
 					"id": 481528226,
@@ -7534,6 +7671,37 @@
 									"name": "AttachmentDependencyInfo",
 									"scope": {
 										"name": "AttachmentDependencyInfo"
+									},
+									"semantic_scope": ""
+								}]
+							}
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::core::AttachmentSubpassData::blendInfo",
+						"_kind": "member variable",
+						"_name": "blendInfo",
+						"id": 3144249472,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "blendInfo",
+						"type": {
+							"_typeName": "stappler::xenolith::core::BlendInfo",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::xenolith::core::BlendInfo",
+								"objects": [{
+									"_fullName": "::stappler::xenolith::core::BlendInfo",
+									"_kind": "class",
+									"_name": "BlendInfo",
+									"class_kind": "struct",
+									"id": 4250537286,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "BlendInfo",
+									"scope": {
+										"name": "BlendInfo"
 									},
 									"semantic_scope": ""
 								}]
@@ -9458,6 +9626,83 @@
 									"name": "AttachmentUsage",
 									"scope": {
 										"name": "AttachmentUsage"
+									},
+									"semantic_scope": "",
+									"underlying_type": {
+										"_typeName": "int",
+										"builtin_type_kind": "int",
+										"kind": "builtin"
+									}
+								}]
+							}
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::core::AttachmentData::outputState",
+						"_kind": "member variable",
+						"_name": "outputState",
+						"default_value": {
+							"expression": [{
+								"kind": "identifier",
+								"spelling": "FrameRenderPassState"
+							}, {
+								"kind": "punctuation",
+								"spelling": "::"
+							}, {
+								"kind": "identifier",
+								"spelling": "Submitted"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "stappler::xenolith::core::FrameRenderPassState",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::core::FrameRenderPassState",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::core::FrameRenderPassState",
+										"_kind": "enum",
+										"_name": "FrameRenderPassState",
+										"has_explicit_type": false,
+										"id": 2848171226,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "FrameRenderPassState",
+										"scope": {
+											"name": "FrameRenderPassState"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
+						},
+						"id": 3650342550,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "outputState",
+						"type": {
+							"_typeName": "stappler::xenolith::core::FrameRenderPassState",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::xenolith::core::FrameRenderPassState",
+								"objects": [{
+									"_fullName": "::stappler::xenolith::core::FrameRenderPassState",
+									"_kind": "enum",
+									"_name": "FrameRenderPassState",
+									"has_explicit_type": false,
+									"id": 2848171226,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_scoped": true,
+									"kind": "enum",
+									"name": "FrameRenderPassState",
+									"scope": {
+										"name": "FrameRenderPassState"
 									},
 									"semantic_scope": "",
 									"underlying_type": {
@@ -12594,6 +12839,868 @@
 							},
 							"unexposed_arguments": "uint32_t"
 						}
+					}, {
+						"_fullName": "::stappler::xenolith::core::SubpassData::prepareCallback",
+						"_kind": "member variable",
+						"_name": "prepareCallback",
+						"default_value": {
+							"expression": [{
+								"kind": "keyword",
+								"spelling": "nullptr"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "memory::function<void (const SubpassData &, FrameQueue &)>",
+								"arguments_exposed": false,
+								"kind": "template_instantiation",
+								"primary_template": {
+									"name": "memory::function",
+									"objects": [{
+										"_fullName": "::stappler::memory::function<ReturnType(ArgumentTypes...)>::function<ReturnType(ArgumentTypes...)>",
+										"_kind": "class template specialization",
+										"_name": "function",
+										"arguments_exposed": false,
+										"class": {
+											"_fullName": "::stappler::memory::function<ReturnType(ArgumentTypes...)>::function<ReturnType(ArgumentTypes...)>",
+											"_kind": "class",
+											"_name": "function",
+											"bases": [{
+												"_fullName": "AllocPool",
+												"_kind": "base class specifier",
+												"_name": "AllocPool",
+												"access_specifier": "public",
+												"id": 972079861,
+												"is_virtual": false,
+												"kind": "base class specifier",
+												"name": "AllocPool",
+												"type": {
+													"_typeName": "stappler::memory::AllocPool",
+													"kind": "user_defined",
+													"target": {
+														"name": "stappler::memory::AllocPool",
+														"objects": [{
+															"_fullName": "::stappler::memory::AllocPool",
+															"_kind": "class",
+															"_name": "AllocPool",
+															"class_kind": "struct",
+															"id": 3030388899,
+															"is_declaration": false,
+															"is_definition": true,
+															"is_final": false,
+															"kind": "class",
+															"name": "AllocPool",
+															"scope": {
+																"name": "AllocPool"
+															},
+															"semantic_scope": ""
+														}]
+													}
+												}
+											}],
+											"class_kind": "class",
+											"id": 3077520827,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "function",
+											"scope": {
+												"is_templated": true,
+												"name": "function",
+												"template_parameters": [{
+													"_fullName": "ReturnType",
+													"_kind": "template type parameter",
+													"_name": "ReturnType",
+													"id": 3798530772,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "ReturnType"
+												}, {
+													"_fullName": "ArgumentTypes",
+													"_kind": "template type parameter",
+													"_name": "ArgumentTypes",
+													"id": 120775233,
+													"is_variadic": true,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "ArgumentTypes"
+												}]
+											},
+											"semantic_scope": ""
+										},
+										"id": 3077520827,
+										"is_full_specialization": false,
+										"kind": "class template specialization",
+										"name": "function",
+										"parameters": [{
+											"_fullName": "ReturnType",
+											"_kind": "template type parameter",
+											"_name": "ReturnType",
+											"id": 3798530772,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "ReturnType"
+										}, {
+											"_fullName": "ArgumentTypes",
+											"_kind": "template type parameter",
+											"_name": "ArgumentTypes",
+											"id": 120775233,
+											"is_variadic": true,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "ArgumentTypes"
+										}],
+										"primary_template":  {
+											"name": "function",
+											"objects": [{
+												"_fullName": "::stappler::memory::function<typename>",
+												"_kind": "class template",
+												"_name": "function",
+												"class": {
+													"_fullName": "::stappler::memory::function<typename>",
+													"_kind": "class",
+													"_name": "function",
+													"class_kind": "class",
+													"id": 537666963,
+													"is_declaration": true,
+													"is_definition": false,
+													"is_final": false,
+													"kind": "class",
+													"name": "function",
+													"scope": {
+														"is_templated": true,
+														"name": "function",
+														"template_parameters": [{
+															"_fullName": "UnusedType",
+															"_kind": "template type parameter",
+															"_name": "UnusedType",
+															"id": 3305497932,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "UnusedType"
+														}]
+													},
+													"semantic_scope": ""
+												},
+												"id": 537666963,
+												"kind": "class template",
+												"name": "function",
+												"parameters": [{
+													"_fullName": "UnusedType",
+													"_kind": "template type parameter",
+													"_name": "UnusedType",
+													"id": 3305497932,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "UnusedType"
+												}],
+												"scope":  {
+													"is_templated": true,
+													"name": "function",
+													"template_parameters": [{
+														"_fullName": "UnusedType",
+														"_kind": "template type parameter",
+														"_name": "UnusedType",
+														"id": 3305497932,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "UnusedType"
+													}]
+												}
+											}]
+										},
+										"scope":  {
+											"is_templated": true,
+											"name": "function",
+											"template_parameters": [{
+												"_fullName": "ReturnType",
+												"_kind": "template type parameter",
+												"_name": "ReturnType",
+												"id": 3798530772,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "ReturnType"
+											}, {
+												"_fullName": "ArgumentTypes",
+												"_kind": "template type parameter",
+												"_name": "ArgumentTypes",
+												"id": 120775233,
+												"is_variadic": true,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "ArgumentTypes"
+											}]
+										},
+										"unexposed_arguments":  [{
+											"kind": "identifier",
+											"spelling": "ReturnType"
+										}, {
+											"kind": "punctuation",
+											"spelling": "("
+										}, {
+											"kind": "identifier",
+											"spelling": "ArgumentTypes"
+										}, {
+											"kind": "punctuation",
+											"spelling": "..."
+										}, {
+											"kind": "punctuation",
+											"spelling": ")"
+										}]
+									}]
+								},
+								"unexposed_arguments": "void (const SubpassData &, FrameQueue &)"
+							}
+						},
+						"id": 858181202,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "prepareCallback",
+						"type": {
+							"_typeName": "memory::function<void (const SubpassData &, FrameQueue &)>",
+							"arguments_exposed": false,
+							"kind": "template_instantiation",
+							"primary_template": {
+								"name": "memory::function",
+								"objects": [{
+									"_fullName": "::stappler::memory::function<ReturnType(ArgumentTypes...)>::function<ReturnType(ArgumentTypes...)>",
+									"_kind": "class template specialization",
+									"_name": "function",
+									"arguments_exposed": false,
+									"class": {
+										"_fullName": "::stappler::memory::function<ReturnType(ArgumentTypes...)>::function<ReturnType(ArgumentTypes...)>",
+										"_kind": "class",
+										"_name": "function",
+										"bases": [{
+											"_fullName": "AllocPool",
+											"_kind": "base class specifier",
+											"_name": "AllocPool",
+											"access_specifier": "public",
+											"id": 972079861,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "AllocPool",
+											"type": {
+												"_typeName": "stappler::memory::AllocPool",
+												"kind": "user_defined",
+												"target": {
+													"name": "stappler::memory::AllocPool",
+													"objects": [{
+														"_fullName": "::stappler::memory::AllocPool",
+														"_kind": "class",
+														"_name": "AllocPool",
+														"class_kind": "struct",
+														"id": 3030388899,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "AllocPool",
+														"scope": {
+															"name": "AllocPool"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}],
+										"class_kind": "class",
+										"id": 3077520827,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "function",
+										"scope": {
+											"is_templated": true,
+											"name": "function",
+											"template_parameters": [{
+												"_fullName": "ReturnType",
+												"_kind": "template type parameter",
+												"_name": "ReturnType",
+												"id": 3798530772,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "ReturnType"
+											}, {
+												"_fullName": "ArgumentTypes",
+												"_kind": "template type parameter",
+												"_name": "ArgumentTypes",
+												"id": 120775233,
+												"is_variadic": true,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "ArgumentTypes"
+											}]
+										},
+										"semantic_scope": ""
+									},
+									"id": 3077520827,
+									"is_full_specialization": false,
+									"kind": "class template specialization",
+									"name": "function",
+									"parameters": [{
+										"_fullName": "ReturnType",
+										"_kind": "template type parameter",
+										"_name": "ReturnType",
+										"id": 3798530772,
+										"is_variadic": false,
+										"keyword": "typename",
+										"kind": "template type parameter",
+										"name": "ReturnType"
+									}, {
+										"_fullName": "ArgumentTypes",
+										"_kind": "template type parameter",
+										"_name": "ArgumentTypes",
+										"id": 120775233,
+										"is_variadic": true,
+										"keyword": "typename",
+										"kind": "template type parameter",
+										"name": "ArgumentTypes"
+									}],
+									"primary_template":  {
+										"name": "function",
+										"objects": [{
+											"_fullName": "::stappler::memory::function<typename>",
+											"_kind": "class template",
+											"_name": "function",
+											"class": {
+												"_fullName": "::stappler::memory::function<typename>",
+												"_kind": "class",
+												"_name": "function",
+												"class_kind": "class",
+												"id": 537666963,
+												"is_declaration": true,
+												"is_definition": false,
+												"is_final": false,
+												"kind": "class",
+												"name": "function",
+												"scope": {
+													"is_templated": true,
+													"name": "function",
+													"template_parameters": [{
+														"_fullName": "UnusedType",
+														"_kind": "template type parameter",
+														"_name": "UnusedType",
+														"id": 3305497932,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "UnusedType"
+													}]
+												},
+												"semantic_scope": ""
+											},
+											"id": 537666963,
+											"kind": "class template",
+											"name": "function",
+											"parameters": [{
+												"_fullName": "UnusedType",
+												"_kind": "template type parameter",
+												"_name": "UnusedType",
+												"id": 3305497932,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "UnusedType"
+											}],
+											"scope":  {
+												"is_templated": true,
+												"name": "function",
+												"template_parameters": [{
+													"_fullName": "UnusedType",
+													"_kind": "template type parameter",
+													"_name": "UnusedType",
+													"id": 3305497932,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "UnusedType"
+												}]
+											}
+										}]
+									},
+									"scope":  {
+										"is_templated": true,
+										"name": "function",
+										"template_parameters": [{
+											"_fullName": "ReturnType",
+											"_kind": "template type parameter",
+											"_name": "ReturnType",
+											"id": 3798530772,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "ReturnType"
+										}, {
+											"_fullName": "ArgumentTypes",
+											"_kind": "template type parameter",
+											"_name": "ArgumentTypes",
+											"id": 120775233,
+											"is_variadic": true,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "ArgumentTypes"
+										}]
+									},
+									"unexposed_arguments":  [{
+										"kind": "identifier",
+										"spelling": "ReturnType"
+									}, {
+										"kind": "punctuation",
+										"spelling": "("
+									}, {
+										"kind": "identifier",
+										"spelling": "ArgumentTypes"
+									}, {
+										"kind": "punctuation",
+										"spelling": "..."
+									}, {
+										"kind": "punctuation",
+										"spelling": ")"
+									}]
+								}]
+							},
+							"unexposed_arguments": "void (const SubpassData &, FrameQueue &)"
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::core::SubpassData::commandsCallback",
+						"_kind": "member variable",
+						"_name": "commandsCallback",
+						"default_value": {
+							"expression": [{
+								"kind": "keyword",
+								"spelling": "nullptr"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "memory::function<void (const SubpassData &, FrameQueue &, CommandBuffer &)>",
+								"arguments_exposed": false,
+								"kind": "template_instantiation",
+								"primary_template": {
+									"name": "memory::function",
+									"objects": [{
+										"_fullName": "::stappler::memory::function<ReturnType(ArgumentTypes...)>::function<ReturnType(ArgumentTypes...)>",
+										"_kind": "class template specialization",
+										"_name": "function",
+										"arguments_exposed": false,
+										"class": {
+											"_fullName": "::stappler::memory::function<ReturnType(ArgumentTypes...)>::function<ReturnType(ArgumentTypes...)>",
+											"_kind": "class",
+											"_name": "function",
+											"bases": [{
+												"_fullName": "AllocPool",
+												"_kind": "base class specifier",
+												"_name": "AllocPool",
+												"access_specifier": "public",
+												"id": 972079861,
+												"is_virtual": false,
+												"kind": "base class specifier",
+												"name": "AllocPool",
+												"type": {
+													"_typeName": "stappler::memory::AllocPool",
+													"kind": "user_defined",
+													"target": {
+														"name": "stappler::memory::AllocPool",
+														"objects": [{
+															"_fullName": "::stappler::memory::AllocPool",
+															"_kind": "class",
+															"_name": "AllocPool",
+															"class_kind": "struct",
+															"id": 3030388899,
+															"is_declaration": false,
+															"is_definition": true,
+															"is_final": false,
+															"kind": "class",
+															"name": "AllocPool",
+															"scope": {
+																"name": "AllocPool"
+															},
+															"semantic_scope": ""
+														}]
+													}
+												}
+											}],
+											"class_kind": "class",
+											"id": 3077520827,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "function",
+											"scope": {
+												"is_templated": true,
+												"name": "function",
+												"template_parameters": [{
+													"_fullName": "ReturnType",
+													"_kind": "template type parameter",
+													"_name": "ReturnType",
+													"id": 3798530772,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "ReturnType"
+												}, {
+													"_fullName": "ArgumentTypes",
+													"_kind": "template type parameter",
+													"_name": "ArgumentTypes",
+													"id": 120775233,
+													"is_variadic": true,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "ArgumentTypes"
+												}]
+											},
+											"semantic_scope": ""
+										},
+										"id": 3077520827,
+										"is_full_specialization": false,
+										"kind": "class template specialization",
+										"name": "function",
+										"parameters": [{
+											"_fullName": "ReturnType",
+											"_kind": "template type parameter",
+											"_name": "ReturnType",
+											"id": 3798530772,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "ReturnType"
+										}, {
+											"_fullName": "ArgumentTypes",
+											"_kind": "template type parameter",
+											"_name": "ArgumentTypes",
+											"id": 120775233,
+											"is_variadic": true,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "ArgumentTypes"
+										}],
+										"primary_template":  {
+											"name": "function",
+											"objects": [{
+												"_fullName": "::stappler::memory::function<typename>",
+												"_kind": "class template",
+												"_name": "function",
+												"class": {
+													"_fullName": "::stappler::memory::function<typename>",
+													"_kind": "class",
+													"_name": "function",
+													"class_kind": "class",
+													"id": 537666963,
+													"is_declaration": true,
+													"is_definition": false,
+													"is_final": false,
+													"kind": "class",
+													"name": "function",
+													"scope": {
+														"is_templated": true,
+														"name": "function",
+														"template_parameters": [{
+															"_fullName": "UnusedType",
+															"_kind": "template type parameter",
+															"_name": "UnusedType",
+															"id": 3305497932,
+															"is_variadic": false,
+															"keyword": "typename",
+															"kind": "template type parameter",
+															"name": "UnusedType"
+														}]
+													},
+													"semantic_scope": ""
+												},
+												"id": 537666963,
+												"kind": "class template",
+												"name": "function",
+												"parameters": [{
+													"_fullName": "UnusedType",
+													"_kind": "template type parameter",
+													"_name": "UnusedType",
+													"id": 3305497932,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "UnusedType"
+												}],
+												"scope":  {
+													"is_templated": true,
+													"name": "function",
+													"template_parameters": [{
+														"_fullName": "UnusedType",
+														"_kind": "template type parameter",
+														"_name": "UnusedType",
+														"id": 3305497932,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "UnusedType"
+													}]
+												}
+											}]
+										},
+										"scope":  {
+											"is_templated": true,
+											"name": "function",
+											"template_parameters": [{
+												"_fullName": "ReturnType",
+												"_kind": "template type parameter",
+												"_name": "ReturnType",
+												"id": 3798530772,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "ReturnType"
+											}, {
+												"_fullName": "ArgumentTypes",
+												"_kind": "template type parameter",
+												"_name": "ArgumentTypes",
+												"id": 120775233,
+												"is_variadic": true,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "ArgumentTypes"
+											}]
+										},
+										"unexposed_arguments":  [{
+											"kind": "identifier",
+											"spelling": "ReturnType"
+										}, {
+											"kind": "punctuation",
+											"spelling": "("
+										}, {
+											"kind": "identifier",
+											"spelling": "ArgumentTypes"
+										}, {
+											"kind": "punctuation",
+											"spelling": "..."
+										}, {
+											"kind": "punctuation",
+											"spelling": ")"
+										}]
+									}]
+								},
+								"unexposed_arguments": "void (const SubpassData &, FrameQueue &, CommandBuffer &)"
+							}
+						},
+						"id": 4289856672,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "commandsCallback",
+						"type": {
+							"_typeName": "memory::function<void (const SubpassData &, FrameQueue &, CommandBuffer &)>",
+							"arguments_exposed": false,
+							"kind": "template_instantiation",
+							"primary_template": {
+								"name": "memory::function",
+								"objects": [{
+									"_fullName": "::stappler::memory::function<ReturnType(ArgumentTypes...)>::function<ReturnType(ArgumentTypes...)>",
+									"_kind": "class template specialization",
+									"_name": "function",
+									"arguments_exposed": false,
+									"class": {
+										"_fullName": "::stappler::memory::function<ReturnType(ArgumentTypes...)>::function<ReturnType(ArgumentTypes...)>",
+										"_kind": "class",
+										"_name": "function",
+										"bases": [{
+											"_fullName": "AllocPool",
+											"_kind": "base class specifier",
+											"_name": "AllocPool",
+											"access_specifier": "public",
+											"id": 972079861,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "AllocPool",
+											"type": {
+												"_typeName": "stappler::memory::AllocPool",
+												"kind": "user_defined",
+												"target": {
+													"name": "stappler::memory::AllocPool",
+													"objects": [{
+														"_fullName": "::stappler::memory::AllocPool",
+														"_kind": "class",
+														"_name": "AllocPool",
+														"class_kind": "struct",
+														"id": 3030388899,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "AllocPool",
+														"scope": {
+															"name": "AllocPool"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}],
+										"class_kind": "class",
+										"id": 3077520827,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "function",
+										"scope": {
+											"is_templated": true,
+											"name": "function",
+											"template_parameters": [{
+												"_fullName": "ReturnType",
+												"_kind": "template type parameter",
+												"_name": "ReturnType",
+												"id": 3798530772,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "ReturnType"
+											}, {
+												"_fullName": "ArgumentTypes",
+												"_kind": "template type parameter",
+												"_name": "ArgumentTypes",
+												"id": 120775233,
+												"is_variadic": true,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "ArgumentTypes"
+											}]
+										},
+										"semantic_scope": ""
+									},
+									"id": 3077520827,
+									"is_full_specialization": false,
+									"kind": "class template specialization",
+									"name": "function",
+									"parameters": [{
+										"_fullName": "ReturnType",
+										"_kind": "template type parameter",
+										"_name": "ReturnType",
+										"id": 3798530772,
+										"is_variadic": false,
+										"keyword": "typename",
+										"kind": "template type parameter",
+										"name": "ReturnType"
+									}, {
+										"_fullName": "ArgumentTypes",
+										"_kind": "template type parameter",
+										"_name": "ArgumentTypes",
+										"id": 120775233,
+										"is_variadic": true,
+										"keyword": "typename",
+										"kind": "template type parameter",
+										"name": "ArgumentTypes"
+									}],
+									"primary_template":  {
+										"name": "function",
+										"objects": [{
+											"_fullName": "::stappler::memory::function<typename>",
+											"_kind": "class template",
+											"_name": "function",
+											"class": {
+												"_fullName": "::stappler::memory::function<typename>",
+												"_kind": "class",
+												"_name": "function",
+												"class_kind": "class",
+												"id": 537666963,
+												"is_declaration": true,
+												"is_definition": false,
+												"is_final": false,
+												"kind": "class",
+												"name": "function",
+												"scope": {
+													"is_templated": true,
+													"name": "function",
+													"template_parameters": [{
+														"_fullName": "UnusedType",
+														"_kind": "template type parameter",
+														"_name": "UnusedType",
+														"id": 3305497932,
+														"is_variadic": false,
+														"keyword": "typename",
+														"kind": "template type parameter",
+														"name": "UnusedType"
+													}]
+												},
+												"semantic_scope": ""
+											},
+											"id": 537666963,
+											"kind": "class template",
+											"name": "function",
+											"parameters": [{
+												"_fullName": "UnusedType",
+												"_kind": "template type parameter",
+												"_name": "UnusedType",
+												"id": 3305497932,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "UnusedType"
+											}],
+											"scope":  {
+												"is_templated": true,
+												"name": "function",
+												"template_parameters": [{
+													"_fullName": "UnusedType",
+													"_kind": "template type parameter",
+													"_name": "UnusedType",
+													"id": 3305497932,
+													"is_variadic": false,
+													"keyword": "typename",
+													"kind": "template type parameter",
+													"name": "UnusedType"
+												}]
+											}
+										}]
+									},
+									"scope":  {
+										"is_templated": true,
+										"name": "function",
+										"template_parameters": [{
+											"_fullName": "ReturnType",
+											"_kind": "template type parameter",
+											"_name": "ReturnType",
+											"id": 3798530772,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "ReturnType"
+										}, {
+											"_fullName": "ArgumentTypes",
+											"_kind": "template type parameter",
+											"_name": "ArgumentTypes",
+											"id": 120775233,
+											"is_variadic": true,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "ArgumentTypes"
+										}]
+									},
+									"unexposed_arguments":  [{
+										"kind": "identifier",
+										"spelling": "ReturnType"
+									}, {
+										"kind": "punctuation",
+										"spelling": "("
+									}, {
+										"kind": "identifier",
+										"spelling": "ArgumentTypes"
+									}, {
+										"kind": "punctuation",
+										"spelling": "..."
+									}, {
+										"kind": "punctuation",
+										"spelling": ")"
+									}]
+								}]
+							},
+							"unexposed_arguments": "void (const SubpassData &, FrameQueue &, CommandBuffer &)"
+						}
 					}],
 					"class_kind": "struct",
 					"id": 3277697160,
@@ -13231,6 +14338,1220 @@
 							}]
 						}
 					}
+				}, {
+					"_fullName": "::stappler::xenolith::core::QueuePassRequirements",
+					"_kind": "class",
+					"_name": "QueuePassRequirements",
+					"childs": [{
+						"_fullName": "::stappler::xenolith::core::QueuePassRequirements::data",
+						"_kind": "member variable",
+						"_name": "data",
+						"default_value": {
+							"expression": [{
+								"kind": "keyword",
+								"spelling": "nullptr"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "stappler::xenolith::core::QueuePassData const*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::xenolith::core::QueuePassData const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "stappler::xenolith::core::QueuePassData",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::xenolith::core::QueuePassData",
+											"objects": [{
+												"_fullName": "::stappler::xenolith::core::QueuePassData",
+												"_kind": "class",
+												"_name": "QueuePassData",
+												"bases": [{
+													"_fullName": "NamedMem",
+													"_kind": "base class specifier",
+													"_name": "NamedMem",
+													"access_specifier": "public",
+													"id": 2204536658,
+													"is_virtual": false,
+													"kind": "base class specifier",
+													"name": "NamedMem",
+													"type": {
+														"_typeName": "stappler::NamedMem",
+														"kind": "user_defined",
+														"target": {
+															"name": "stappler::NamedMem",
+															"objects": [{
+																"_fullName": "::stappler::NamedMem",
+																"_kind": "class",
+																"_name": "NamedMem",
+																"bases": [{
+																	"_fullName": "memory::AllocPool",
+																	"_kind": "base class specifier",
+																	"_name": "memory::AllocPool",
+																	"access_specifier": "public",
+																	"id": 2757191808,
+																	"is_virtual": false,
+																	"kind": "base class specifier",
+																	"name": "memory::AllocPool",
+																	"type": {
+																		"_typeName": "memory::AllocPool",
+																		"kind": "user_defined",
+																		"target": {
+																			"name": "memory::AllocPool",
+																			"objects": [{
+																				"_fullName": "::stappler::memory::AllocPool",
+																				"_kind": "class",
+																				"_name": "AllocPool",
+																				"class_kind": "struct",
+																				"id": 3030388899,
+																				"is_declaration": false,
+																				"is_definition": true,
+																				"is_final": false,
+																				"kind": "class",
+																				"name": "AllocPool",
+																				"scope": {
+																					"name": "AllocPool"
+																				},
+																				"semantic_scope": ""
+																			}]
+																		}
+																	}
+																}],
+																"class_kind": "struct",
+																"id": 3105446803,
+																"is_declaration": false,
+																"is_definition": true,
+																"is_final": false,
+																"kind": "class",
+																"name": "NamedMem",
+																"scope": {
+																	"name": "NamedMem"
+																},
+																"semantic_scope": ""
+															}]
+														}
+													}
+												}],
+												"class_kind": "struct",
+												"id": 3839697320,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "QueuePassData",
+												"scope": {
+													"name": "QueuePassData"
+												},
+												"semantic_scope": ""
+											}]
+										}
+									}
+								}
+							}
+						},
+						"id": 1339807395,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "data",
+						"type": {
+							"_typeName": "stappler::xenolith::core::QueuePassData const*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::xenolith::core::QueuePassData const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::xenolith::core::QueuePassData",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::xenolith::core::QueuePassData",
+										"objects": [{
+											"_fullName": "::stappler::xenolith::core::QueuePassData",
+											"_kind": "class",
+											"_name": "QueuePassData",
+											"bases": [{
+												"_fullName": "NamedMem",
+												"_kind": "base class specifier",
+												"_name": "NamedMem",
+												"access_specifier": "public",
+												"id": 2204536658,
+												"is_virtual": false,
+												"kind": "base class specifier",
+												"name": "NamedMem",
+												"type": {
+													"_typeName": "stappler::NamedMem",
+													"kind": "user_defined",
+													"target": {
+														"name": "stappler::NamedMem",
+														"objects": [{
+															"_fullName": "::stappler::NamedMem",
+															"_kind": "class",
+															"_name": "NamedMem",
+															"bases": [{
+																"_fullName": "memory::AllocPool",
+																"_kind": "base class specifier",
+																"_name": "memory::AllocPool",
+																"access_specifier": "public",
+																"id": 2757191808,
+																"is_virtual": false,
+																"kind": "base class specifier",
+																"name": "memory::AllocPool",
+																"type": {
+																	"_typeName": "memory::AllocPool",
+																	"kind": "user_defined",
+																	"target": {
+																		"name": "memory::AllocPool",
+																		"objects": [{
+																			"_fullName": "::stappler::memory::AllocPool",
+																			"_kind": "class",
+																			"_name": "AllocPool",
+																			"class_kind": "struct",
+																			"id": 3030388899,
+																			"is_declaration": false,
+																			"is_definition": true,
+																			"is_final": false,
+																			"kind": "class",
+																			"name": "AllocPool",
+																			"scope": {
+																				"name": "AllocPool"
+																			},
+																			"semantic_scope": ""
+																		}]
+																	}
+																}
+															}],
+															"class_kind": "struct",
+															"id": 3105446803,
+															"is_declaration": false,
+															"is_definition": true,
+															"is_final": false,
+															"kind": "class",
+															"name": "NamedMem",
+															"scope": {
+																"name": "NamedMem"
+															},
+															"semantic_scope": ""
+														}]
+													}
+												}
+											}],
+											"class_kind": "struct",
+											"id": 3839697320,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "QueuePassData",
+											"scope": {
+												"name": "QueuePassData"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							}
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::core::QueuePassRequirements::requiredState",
+						"_kind": "member variable",
+						"_name": "requiredState",
+						"default_value": {
+							"expression": [{
+								"kind": "identifier",
+								"spelling": "FrameRenderPassState"
+							}, {
+								"kind": "punctuation",
+								"spelling": "::"
+							}, {
+								"kind": "identifier",
+								"spelling": "Initial"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "stappler::xenolith::core::FrameRenderPassState",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::core::FrameRenderPassState",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::core::FrameRenderPassState",
+										"_kind": "enum",
+										"_name": "FrameRenderPassState",
+										"has_explicit_type": false,
+										"id": 2848171226,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "FrameRenderPassState",
+										"scope": {
+											"name": "FrameRenderPassState"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
+						},
+						"id": 2766167824,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "requiredState",
+						"type": {
+							"_typeName": "stappler::xenolith::core::FrameRenderPassState",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::xenolith::core::FrameRenderPassState",
+								"objects": [{
+									"_fullName": "::stappler::xenolith::core::FrameRenderPassState",
+									"_kind": "enum",
+									"_name": "FrameRenderPassState",
+									"has_explicit_type": false,
+									"id": 2848171226,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_scoped": true,
+									"kind": "enum",
+									"name": "FrameRenderPassState",
+									"scope": {
+										"name": "FrameRenderPassState"
+									},
+									"semantic_scope": "",
+									"underlying_type": {
+										"_typeName": "int",
+										"builtin_type_kind": "int",
+										"kind": "builtin"
+									}
+								}]
+							}
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::core::QueuePassRequirements::lockedState",
+						"_kind": "member variable",
+						"_name": "lockedState",
+						"default_value": {
+							"expression": [{
+								"kind": "identifier",
+								"spelling": "FrameRenderPassState"
+							}, {
+								"kind": "punctuation",
+								"spelling": "::"
+							}, {
+								"kind": "identifier",
+								"spelling": "Initial"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "stappler::xenolith::core::FrameRenderPassState",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::core::FrameRenderPassState",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::core::FrameRenderPassState",
+										"_kind": "enum",
+										"_name": "FrameRenderPassState",
+										"has_explicit_type": false,
+										"id": 2848171226,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "FrameRenderPassState",
+										"scope": {
+											"name": "FrameRenderPassState"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
+						},
+						"id": 628178856,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "lockedState",
+						"type": {
+							"_typeName": "stappler::xenolith::core::FrameRenderPassState",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::xenolith::core::FrameRenderPassState",
+								"objects": [{
+									"_fullName": "::stappler::xenolith::core::FrameRenderPassState",
+									"_kind": "enum",
+									"_name": "FrameRenderPassState",
+									"has_explicit_type": false,
+									"id": 2848171226,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_scoped": true,
+									"kind": "enum",
+									"name": "FrameRenderPassState",
+									"scope": {
+										"name": "FrameRenderPassState"
+									},
+									"semantic_scope": "",
+									"underlying_type": {
+										"_typeName": "int",
+										"builtin_type_kind": "int",
+										"kind": "builtin"
+									}
+								}]
+							}
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::core::QueuePassRequirements::QueuePassRequirements()",
+						"_kind": "constructor",
+						"_name": "QueuePassRequirements",
+						"body_kind": "defaulted",
+						"id": 3280921449,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_explicit": false,
+						"is_variadic": false,
+						"kind": "constructor",
+						"name": "QueuePassRequirements",
+						"semantic_scope": "",
+						"signature": "()"
+					}, {
+						"_fullName": "::stappler::xenolith::core::QueuePassRequirements::QueuePassRequirements(stappler::xenolith::core::QueuePassData const&,stappler::xenolith::core::FrameRenderPassState,stappler::xenolith::core::FrameRenderPassState)",
+						"_kind": "constructor",
+						"_name": "QueuePassRequirements",
+						"body_kind": "definition",
+						"id": 2706984936,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_explicit": false,
+						"is_variadic": false,
+						"kind": "constructor",
+						"name": "QueuePassRequirements",
+						"parameters": [{
+							"_fullName": "d",
+							"_kind": "function parameter",
+							"_name": "d",
+							"id": 1123242640,
+							"kind": "function parameter",
+							"name": "d",
+							"type": {
+								"_typeName": "stappler::xenolith::core::QueuePassData const&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "stappler::xenolith::core::QueuePassData const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "stappler::xenolith::core::QueuePassData",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::xenolith::core::QueuePassData",
+											"objects": [{
+												"_fullName": "::stappler::xenolith::core::QueuePassData",
+												"_kind": "class",
+												"_name": "QueuePassData",
+												"bases": [{
+													"_fullName": "NamedMem",
+													"_kind": "base class specifier",
+													"_name": "NamedMem",
+													"access_specifier": "public",
+													"id": 2204536658,
+													"is_virtual": false,
+													"kind": "base class specifier",
+													"name": "NamedMem",
+													"type": {
+														"_typeName": "stappler::NamedMem",
+														"kind": "user_defined",
+														"target": {
+															"name": "stappler::NamedMem",
+															"objects": [{
+																"_fullName": "::stappler::NamedMem",
+																"_kind": "class",
+																"_name": "NamedMem",
+																"bases": [{
+																	"_fullName": "memory::AllocPool",
+																	"_kind": "base class specifier",
+																	"_name": "memory::AllocPool",
+																	"access_specifier": "public",
+																	"id": 2757191808,
+																	"is_virtual": false,
+																	"kind": "base class specifier",
+																	"name": "memory::AllocPool",
+																	"type": {
+																		"_typeName": "memory::AllocPool",
+																		"kind": "user_defined",
+																		"target": {
+																			"name": "memory::AllocPool",
+																			"objects": [{
+																				"_fullName": "::stappler::memory::AllocPool",
+																				"_kind": "class",
+																				"_name": "AllocPool",
+																				"class_kind": "struct",
+																				"id": 3030388899,
+																				"is_declaration": false,
+																				"is_definition": true,
+																				"is_final": false,
+																				"kind": "class",
+																				"name": "AllocPool",
+																				"scope": {
+																					"name": "AllocPool"
+																				},
+																				"semantic_scope": ""
+																			}]
+																		}
+																	}
+																}],
+																"class_kind": "struct",
+																"id": 3105446803,
+																"is_declaration": false,
+																"is_definition": true,
+																"is_final": false,
+																"kind": "class",
+																"name": "NamedMem",
+																"scope": {
+																	"name": "NamedMem"
+																},
+																"semantic_scope": ""
+															}]
+														}
+													}
+												}],
+												"class_kind": "struct",
+												"id": 3839697320,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "QueuePassData",
+												"scope": {
+													"name": "QueuePassData"
+												},
+												"semantic_scope": ""
+											}]
+										}
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}, {
+							"_fullName": "required",
+							"_kind": "function parameter",
+							"_name": "required",
+							"id": 2387096581,
+							"kind": "function parameter",
+							"name": "required",
+							"type": {
+								"_typeName": "stappler::xenolith::core::FrameRenderPassState",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::core::FrameRenderPassState",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::core::FrameRenderPassState",
+										"_kind": "enum",
+										"_name": "FrameRenderPassState",
+										"has_explicit_type": false,
+										"id": 2848171226,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "FrameRenderPassState",
+										"scope": {
+											"name": "FrameRenderPassState"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
+						}, {
+							"_fullName": "locked",
+							"_kind": "function parameter",
+							"_name": "locked",
+							"id": 4249697944,
+							"kind": "function parameter",
+							"name": "locked",
+							"type": {
+								"_typeName": "stappler::xenolith::core::FrameRenderPassState",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::core::FrameRenderPassState",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::core::FrameRenderPassState",
+										"_kind": "enum",
+										"_name": "FrameRenderPassState",
+										"has_explicit_type": false,
+										"id": 2848171226,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "FrameRenderPassState",
+										"scope": {
+											"name": "FrameRenderPassState"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
+						}],
+						"semantic_scope": "",
+						"signature": "(stappler::xenolith::core::QueuePassData const&,stappler::xenolith::core::FrameRenderPassState,stappler::xenolith::core::FrameRenderPassState)"
+					}],
+					"class_kind": "struct",
+					"id": 1565579972,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_final": false,
+					"kind": "class",
+					"name": "QueuePassRequirements",
+					"scope": {
+						"name": "QueuePassRequirements"
+					},
+					"semantic_scope": ""
+				}, {
+					"_fullName": "::stappler::xenolith::core::QueuePassDependency",
+					"_kind": "class",
+					"_name": "QueuePassDependency",
+					"childs": [{
+						"_fullName": "::stappler::xenolith::core::QueuePassDependency::source",
+						"_kind": "member variable",
+						"_name": "source",
+						"default_value": {
+							"expression": [{
+								"kind": "keyword",
+								"spelling": "nullptr"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "stappler::xenolith::core::QueuePassData const*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::xenolith::core::QueuePassData const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "stappler::xenolith::core::QueuePassData",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::xenolith::core::QueuePassData",
+											"objects": [{
+												"_fullName": "::stappler::xenolith::core::QueuePassData",
+												"_kind": "class",
+												"_name": "QueuePassData",
+												"bases": [{
+													"_fullName": "NamedMem",
+													"_kind": "base class specifier",
+													"_name": "NamedMem",
+													"access_specifier": "public",
+													"id": 2204536658,
+													"is_virtual": false,
+													"kind": "base class specifier",
+													"name": "NamedMem",
+													"type": {
+														"_typeName": "stappler::NamedMem",
+														"kind": "user_defined",
+														"target": {
+															"name": "stappler::NamedMem",
+															"objects": [{
+																"_fullName": "::stappler::NamedMem",
+																"_kind": "class",
+																"_name": "NamedMem",
+																"bases": [{
+																	"_fullName": "memory::AllocPool",
+																	"_kind": "base class specifier",
+																	"_name": "memory::AllocPool",
+																	"access_specifier": "public",
+																	"id": 2757191808,
+																	"is_virtual": false,
+																	"kind": "base class specifier",
+																	"name": "memory::AllocPool",
+																	"type": {
+																		"_typeName": "memory::AllocPool",
+																		"kind": "user_defined",
+																		"target": {
+																			"name": "memory::AllocPool",
+																			"objects": [{
+																				"_fullName": "::stappler::memory::AllocPool",
+																				"_kind": "class",
+																				"_name": "AllocPool",
+																				"class_kind": "struct",
+																				"id": 3030388899,
+																				"is_declaration": false,
+																				"is_definition": true,
+																				"is_final": false,
+																				"kind": "class",
+																				"name": "AllocPool",
+																				"scope": {
+																					"name": "AllocPool"
+																				},
+																				"semantic_scope": ""
+																			}]
+																		}
+																	}
+																}],
+																"class_kind": "struct",
+																"id": 3105446803,
+																"is_declaration": false,
+																"is_definition": true,
+																"is_final": false,
+																"kind": "class",
+																"name": "NamedMem",
+																"scope": {
+																	"name": "NamedMem"
+																},
+																"semantic_scope": ""
+															}]
+														}
+													}
+												}],
+												"class_kind": "struct",
+												"id": 3839697320,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "QueuePassData",
+												"scope": {
+													"name": "QueuePassData"
+												},
+												"semantic_scope": ""
+											}]
+										}
+									}
+								}
+							}
+						},
+						"id": 1445685924,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "source",
+						"type": {
+							"_typeName": "stappler::xenolith::core::QueuePassData const*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::xenolith::core::QueuePassData const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::xenolith::core::QueuePassData",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::xenolith::core::QueuePassData",
+										"objects": [{
+											"_fullName": "::stappler::xenolith::core::QueuePassData",
+											"_kind": "class",
+											"_name": "QueuePassData",
+											"bases": [{
+												"_fullName": "NamedMem",
+												"_kind": "base class specifier",
+												"_name": "NamedMem",
+												"access_specifier": "public",
+												"id": 2204536658,
+												"is_virtual": false,
+												"kind": "base class specifier",
+												"name": "NamedMem",
+												"type": {
+													"_typeName": "stappler::NamedMem",
+													"kind": "user_defined",
+													"target": {
+														"name": "stappler::NamedMem",
+														"objects": [{
+															"_fullName": "::stappler::NamedMem",
+															"_kind": "class",
+															"_name": "NamedMem",
+															"bases": [{
+																"_fullName": "memory::AllocPool",
+																"_kind": "base class specifier",
+																"_name": "memory::AllocPool",
+																"access_specifier": "public",
+																"id": 2757191808,
+																"is_virtual": false,
+																"kind": "base class specifier",
+																"name": "memory::AllocPool",
+																"type": {
+																	"_typeName": "memory::AllocPool",
+																	"kind": "user_defined",
+																	"target": {
+																		"name": "memory::AllocPool",
+																		"objects": [{
+																			"_fullName": "::stappler::memory::AllocPool",
+																			"_kind": "class",
+																			"_name": "AllocPool",
+																			"class_kind": "struct",
+																			"id": 3030388899,
+																			"is_declaration": false,
+																			"is_definition": true,
+																			"is_final": false,
+																			"kind": "class",
+																			"name": "AllocPool",
+																			"scope": {
+																				"name": "AllocPool"
+																			},
+																			"semantic_scope": ""
+																		}]
+																	}
+																}
+															}],
+															"class_kind": "struct",
+															"id": 3105446803,
+															"is_declaration": false,
+															"is_definition": true,
+															"is_final": false,
+															"kind": "class",
+															"name": "NamedMem",
+															"scope": {
+																"name": "NamedMem"
+															},
+															"semantic_scope": ""
+														}]
+													}
+												}
+											}],
+											"class_kind": "struct",
+											"id": 3839697320,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "QueuePassData",
+											"scope": {
+												"name": "QueuePassData"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							}
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::core::QueuePassDependency::target",
+						"_kind": "member variable",
+						"_name": "target",
+						"default_value": {
+							"expression": [{
+								"kind": "keyword",
+								"spelling": "nullptr"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "stappler::xenolith::core::QueuePassData const*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::xenolith::core::QueuePassData const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "stappler::xenolith::core::QueuePassData",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::xenolith::core::QueuePassData",
+											"objects": [{
+												"_fullName": "::stappler::xenolith::core::QueuePassData",
+												"_kind": "class",
+												"_name": "QueuePassData",
+												"bases": [{
+													"_fullName": "NamedMem",
+													"_kind": "base class specifier",
+													"_name": "NamedMem",
+													"access_specifier": "public",
+													"id": 2204536658,
+													"is_virtual": false,
+													"kind": "base class specifier",
+													"name": "NamedMem",
+													"type": {
+														"_typeName": "stappler::NamedMem",
+														"kind": "user_defined",
+														"target": {
+															"name": "stappler::NamedMem",
+															"objects": [{
+																"_fullName": "::stappler::NamedMem",
+																"_kind": "class",
+																"_name": "NamedMem",
+																"bases": [{
+																	"_fullName": "memory::AllocPool",
+																	"_kind": "base class specifier",
+																	"_name": "memory::AllocPool",
+																	"access_specifier": "public",
+																	"id": 2757191808,
+																	"is_virtual": false,
+																	"kind": "base class specifier",
+																	"name": "memory::AllocPool",
+																	"type": {
+																		"_typeName": "memory::AllocPool",
+																		"kind": "user_defined",
+																		"target": {
+																			"name": "memory::AllocPool",
+																			"objects": [{
+																				"_fullName": "::stappler::memory::AllocPool",
+																				"_kind": "class",
+																				"_name": "AllocPool",
+																				"class_kind": "struct",
+																				"id": 3030388899,
+																				"is_declaration": false,
+																				"is_definition": true,
+																				"is_final": false,
+																				"kind": "class",
+																				"name": "AllocPool",
+																				"scope": {
+																					"name": "AllocPool"
+																				},
+																				"semantic_scope": ""
+																			}]
+																		}
+																	}
+																}],
+																"class_kind": "struct",
+																"id": 3105446803,
+																"is_declaration": false,
+																"is_definition": true,
+																"is_final": false,
+																"kind": "class",
+																"name": "NamedMem",
+																"scope": {
+																	"name": "NamedMem"
+																},
+																"semantic_scope": ""
+															}]
+														}
+													}
+												}],
+												"class_kind": "struct",
+												"id": 3839697320,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "QueuePassData",
+												"scope": {
+													"name": "QueuePassData"
+												},
+												"semantic_scope": ""
+											}]
+										}
+									}
+								}
+							}
+						},
+						"id": 3233653909,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "target",
+						"type": {
+							"_typeName": "stappler::xenolith::core::QueuePassData const*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::xenolith::core::QueuePassData const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "stappler::xenolith::core::QueuePassData",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::xenolith::core::QueuePassData",
+										"objects": [{
+											"_fullName": "::stappler::xenolith::core::QueuePassData",
+											"_kind": "class",
+											"_name": "QueuePassData",
+											"bases": [{
+												"_fullName": "NamedMem",
+												"_kind": "base class specifier",
+												"_name": "NamedMem",
+												"access_specifier": "public",
+												"id": 2204536658,
+												"is_virtual": false,
+												"kind": "base class specifier",
+												"name": "NamedMem",
+												"type": {
+													"_typeName": "stappler::NamedMem",
+													"kind": "user_defined",
+													"target": {
+														"name": "stappler::NamedMem",
+														"objects": [{
+															"_fullName": "::stappler::NamedMem",
+															"_kind": "class",
+															"_name": "NamedMem",
+															"bases": [{
+																"_fullName": "memory::AllocPool",
+																"_kind": "base class specifier",
+																"_name": "memory::AllocPool",
+																"access_specifier": "public",
+																"id": 2757191808,
+																"is_virtual": false,
+																"kind": "base class specifier",
+																"name": "memory::AllocPool",
+																"type": {
+																	"_typeName": "memory::AllocPool",
+																	"kind": "user_defined",
+																	"target": {
+																		"name": "memory::AllocPool",
+																		"objects": [{
+																			"_fullName": "::stappler::memory::AllocPool",
+																			"_kind": "class",
+																			"_name": "AllocPool",
+																			"class_kind": "struct",
+																			"id": 3030388899,
+																			"is_declaration": false,
+																			"is_definition": true,
+																			"is_final": false,
+																			"kind": "class",
+																			"name": "AllocPool",
+																			"scope": {
+																				"name": "AllocPool"
+																			},
+																			"semantic_scope": ""
+																		}]
+																	}
+																}
+															}],
+															"class_kind": "struct",
+															"id": 3105446803,
+															"is_declaration": false,
+															"is_definition": true,
+															"is_final": false,
+															"kind": "class",
+															"name": "NamedMem",
+															"scope": {
+																"name": "NamedMem"
+															},
+															"semantic_scope": ""
+														}]
+													}
+												}
+											}],
+											"class_kind": "struct",
+											"id": 3839697320,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "QueuePassData",
+											"scope": {
+												"name": "QueuePassData"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							}
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::core::QueuePassDependency::attachments",
+						"_kind": "member variable",
+						"_name": "attachments",
+						"id": 2860053399,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "attachments",
+						"type": {
+							"_typeName": "memory::vector<const AttachmentData *>",
+							"arguments_exposed": false,
+							"kind": "template_instantiation",
+							"primary_template": {
+								"name": "memory::vector",
+								"objects": [{
+									"_fullName": "::stappler::memory::vector<typename>",
+									"_kind": "class template",
+									"_name": "vector",
+									"class": {
+										"_fullName": "::stappler::memory::vector<typename>",
+										"_kind": "class",
+										"_name": "vector",
+										"bases": [{
+											"_fullName": "AllocPool",
+											"_kind": "base class specifier",
+											"_name": "AllocPool",
+											"access_specifier": "public",
+											"id": 972079861,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "AllocPool",
+											"type": {
+												"_typeName": "stappler::memory::AllocPool",
+												"kind": "user_defined",
+												"target": {
+													"name": "stappler::memory::AllocPool",
+													"objects": [{
+														"_fullName": "::stappler::memory::AllocPool",
+														"_kind": "class",
+														"_name": "AllocPool",
+														"class_kind": "struct",
+														"id": 3030388899,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "AllocPool",
+														"scope": {
+															"name": "AllocPool"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}],
+										"class_kind": "class",
+										"id": 2741056261,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "vector",
+										"scope": {
+											"is_templated": true,
+											"name": "vector",
+											"template_parameters": [{
+												"_fullName": "Type",
+												"_kind": "template type parameter",
+												"_name": "Type",
+												"id": 3167053791,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Type"
+											}]
+										},
+										"semantic_scope": ""
+									},
+									"id": 2741056261,
+									"kind": "class template",
+									"name": "vector",
+									"parameters": [{
+										"_fullName": "Type",
+										"_kind": "template type parameter",
+										"_name": "Type",
+										"id": 3167053791,
+										"is_variadic": false,
+										"keyword": "typename",
+										"kind": "template type parameter",
+										"name": "Type"
+									}],
+									"scope":  {
+										"is_templated": true,
+										"name": "vector",
+										"template_parameters": [{
+											"_fullName": "Type",
+											"_kind": "template type parameter",
+											"_name": "Type",
+											"id": 3167053791,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "Type"
+										}]
+									}
+								}]
+							},
+							"unexposed_arguments": "const AttachmentData *"
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::core::QueuePassDependency::stageFlags",
+						"_kind": "member variable",
+						"_name": "stageFlags",
+						"default_value": {
+							"expression": [{
+								"kind": "identifier",
+								"spelling": "PipelineStage"
+							}, {
+								"kind": "punctuation",
+								"spelling": "::"
+							}, {
+								"kind": "identifier",
+								"spelling": "None"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "stappler::xenolith::core::PipelineStage",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::core::PipelineStage",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::core::PipelineStage",
+										"_kind": "enum",
+										"_name": "PipelineStage",
+										"has_explicit_type": false,
+										"id": 2769254131,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "PipelineStage",
+										"scope": {
+											"name": "PipelineStage"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
+						},
+						"id": 2579584029,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "stageFlags",
+						"type": {
+							"_typeName": "stappler::xenolith::core::PipelineStage",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::xenolith::core::PipelineStage",
+								"objects": [{
+									"_fullName": "::stappler::xenolith::core::PipelineStage",
+									"_kind": "enum",
+									"_name": "PipelineStage",
+									"has_explicit_type": false,
+									"id": 2769254131,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_scoped": true,
+									"kind": "enum",
+									"name": "PipelineStage",
+									"scope": {
+										"name": "PipelineStage"
+									},
+									"semantic_scope": "",
+									"underlying_type": {
+										"_typeName": "int",
+										"builtin_type_kind": "int",
+										"kind": "builtin"
+									}
+								}]
+							}
+						}
+					}],
+					"class_kind": "struct",
+					"id": 1955723694,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_final": false,
+					"kind": "class",
+					"name": "QueuePassDependency",
+					"scope": {
+						"name": "QueuePassDependency"
+					},
+					"semantic_scope": ""
 				}, {
 					"_fullName": "::stappler::xenolith::core::QueuePassData",
 					"_kind": "class",
@@ -14639,6 +16960,333 @@
 							"unexposed_arguments": "SubpassDependency"
 						}
 					}, {
+						"_fullName": "::stappler::xenolith::core::QueuePassData::sourceQueueDependencies",
+						"_kind": "member variable",
+						"_name": "sourceQueueDependencies",
+						"id": 1886184762,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "sourceQueueDependencies",
+						"type": {
+							"_typeName": "memory::vector<QueuePassDependency *>",
+							"arguments_exposed": false,
+							"kind": "template_instantiation",
+							"primary_template": {
+								"name": "memory::vector",
+								"objects": [{
+									"_fullName": "::stappler::memory::vector<typename>",
+									"_kind": "class template",
+									"_name": "vector",
+									"class": {
+										"_fullName": "::stappler::memory::vector<typename>",
+										"_kind": "class",
+										"_name": "vector",
+										"bases": [{
+											"_fullName": "AllocPool",
+											"_kind": "base class specifier",
+											"_name": "AllocPool",
+											"access_specifier": "public",
+											"id": 972079861,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "AllocPool",
+											"type": {
+												"_typeName": "stappler::memory::AllocPool",
+												"kind": "user_defined",
+												"target": {
+													"name": "stappler::memory::AllocPool",
+													"objects": [{
+														"_fullName": "::stappler::memory::AllocPool",
+														"_kind": "class",
+														"_name": "AllocPool",
+														"class_kind": "struct",
+														"id": 3030388899,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "AllocPool",
+														"scope": {
+															"name": "AllocPool"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}],
+										"class_kind": "class",
+										"id": 2741056261,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "vector",
+										"scope": {
+											"is_templated": true,
+											"name": "vector",
+											"template_parameters": [{
+												"_fullName": "Type",
+												"_kind": "template type parameter",
+												"_name": "Type",
+												"id": 3167053791,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Type"
+											}]
+										},
+										"semantic_scope": ""
+									},
+									"id": 2741056261,
+									"kind": "class template",
+									"name": "vector",
+									"parameters": [{
+										"_fullName": "Type",
+										"_kind": "template type parameter",
+										"_name": "Type",
+										"id": 3167053791,
+										"is_variadic": false,
+										"keyword": "typename",
+										"kind": "template type parameter",
+										"name": "Type"
+									}],
+									"scope":  {
+										"is_templated": true,
+										"name": "vector",
+										"template_parameters": [{
+											"_fullName": "Type",
+											"_kind": "template type parameter",
+											"_name": "Type",
+											"id": 3167053791,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "Type"
+										}]
+									}
+								}]
+							},
+							"unexposed_arguments": "QueuePassDependency *"
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::core::QueuePassData::targetQueueDependencies",
+						"_kind": "member variable",
+						"_name": "targetQueueDependencies",
+						"id": 2075596175,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "targetQueueDependencies",
+						"type": {
+							"_typeName": "memory::vector<QueuePassDependency *>",
+							"arguments_exposed": false,
+							"kind": "template_instantiation",
+							"primary_template": {
+								"name": "memory::vector",
+								"objects": [{
+									"_fullName": "::stappler::memory::vector<typename>",
+									"_kind": "class template",
+									"_name": "vector",
+									"class": {
+										"_fullName": "::stappler::memory::vector<typename>",
+										"_kind": "class",
+										"_name": "vector",
+										"bases": [{
+											"_fullName": "AllocPool",
+											"_kind": "base class specifier",
+											"_name": "AllocPool",
+											"access_specifier": "public",
+											"id": 972079861,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "AllocPool",
+											"type": {
+												"_typeName": "stappler::memory::AllocPool",
+												"kind": "user_defined",
+												"target": {
+													"name": "stappler::memory::AllocPool",
+													"objects": [{
+														"_fullName": "::stappler::memory::AllocPool",
+														"_kind": "class",
+														"_name": "AllocPool",
+														"class_kind": "struct",
+														"id": 3030388899,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "AllocPool",
+														"scope": {
+															"name": "AllocPool"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}],
+										"class_kind": "class",
+										"id": 2741056261,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "vector",
+										"scope": {
+											"is_templated": true,
+											"name": "vector",
+											"template_parameters": [{
+												"_fullName": "Type",
+												"_kind": "template type parameter",
+												"_name": "Type",
+												"id": 3167053791,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Type"
+											}]
+										},
+										"semantic_scope": ""
+									},
+									"id": 2741056261,
+									"kind": "class template",
+									"name": "vector",
+									"parameters": [{
+										"_fullName": "Type",
+										"_kind": "template type parameter",
+										"_name": "Type",
+										"id": 3167053791,
+										"is_variadic": false,
+										"keyword": "typename",
+										"kind": "template type parameter",
+										"name": "Type"
+									}],
+									"scope":  {
+										"is_templated": true,
+										"name": "vector",
+										"template_parameters": [{
+											"_fullName": "Type",
+											"_kind": "template type parameter",
+											"_name": "Type",
+											"id": 3167053791,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "Type"
+										}]
+									}
+								}]
+							},
+							"unexposed_arguments": "QueuePassDependency *"
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::core::QueuePassData::required",
+						"_kind": "member variable",
+						"_name": "required",
+						"id": 1600483643,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "required",
+						"type": {
+							"_typeName": "memory::vector<QueuePassRequirements>",
+							"arguments_exposed": false,
+							"kind": "template_instantiation",
+							"primary_template": {
+								"name": "memory::vector",
+								"objects": [{
+									"_fullName": "::stappler::memory::vector<typename>",
+									"_kind": "class template",
+									"_name": "vector",
+									"class": {
+										"_fullName": "::stappler::memory::vector<typename>",
+										"_kind": "class",
+										"_name": "vector",
+										"bases": [{
+											"_fullName": "AllocPool",
+											"_kind": "base class specifier",
+											"_name": "AllocPool",
+											"access_specifier": "public",
+											"id": 972079861,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "AllocPool",
+											"type": {
+												"_typeName": "stappler::memory::AllocPool",
+												"kind": "user_defined",
+												"target": {
+													"name": "stappler::memory::AllocPool",
+													"objects": [{
+														"_fullName": "::stappler::memory::AllocPool",
+														"_kind": "class",
+														"_name": "AllocPool",
+														"class_kind": "struct",
+														"id": 3030388899,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "AllocPool",
+														"scope": {
+															"name": "AllocPool"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}],
+										"class_kind": "class",
+										"id": 2741056261,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "vector",
+										"scope": {
+											"is_templated": true,
+											"name": "vector",
+											"template_parameters": [{
+												"_fullName": "Type",
+												"_kind": "template type parameter",
+												"_name": "Type",
+												"id": 3167053791,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Type"
+											}]
+										},
+										"semantic_scope": ""
+									},
+									"id": 2741056261,
+									"kind": "class template",
+									"name": "vector",
+									"parameters": [{
+										"_fullName": "Type",
+										"_kind": "template type parameter",
+										"_name": "Type",
+										"id": 3167053791,
+										"is_variadic": false,
+										"keyword": "typename",
+										"kind": "template type parameter",
+										"name": "Type"
+									}],
+									"scope":  {
+										"is_templated": true,
+										"name": "vector",
+										"template_parameters": [{
+											"_fullName": "Type",
+											"_kind": "template type parameter",
+											"_name": "Type",
+											"id": 3167053791,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "Type"
+										}]
+									}
+								}]
+							},
+							"unexposed_arguments": "QueuePassRequirements"
+						}
+					}, {
 						"_fullName": "::stappler::xenolith::core::QueuePassData::type",
 						"_kind": "member variable",
 						"_name": "type",
@@ -15126,6 +17774,224 @@
 								}]
 							},
 							"unexposed_arguments": "stappler::xenolith::core::RenderPass"
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::core::QueuePassData::submittedCallbacks",
+						"_kind": "member variable",
+						"_name": "submittedCallbacks",
+						"id": 1600032573,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "submittedCallbacks",
+						"type": {
+							"_typeName": "memory::vector<memory::function<void (const QueuePassData &, FrameQueue &, bool)>>",
+							"arguments_exposed": false,
+							"kind": "template_instantiation",
+							"primary_template": {
+								"name": "memory::vector",
+								"objects": [{
+									"_fullName": "::stappler::memory::vector<typename>",
+									"_kind": "class template",
+									"_name": "vector",
+									"class": {
+										"_fullName": "::stappler::memory::vector<typename>",
+										"_kind": "class",
+										"_name": "vector",
+										"bases": [{
+											"_fullName": "AllocPool",
+											"_kind": "base class specifier",
+											"_name": "AllocPool",
+											"access_specifier": "public",
+											"id": 972079861,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "AllocPool",
+											"type": {
+												"_typeName": "stappler::memory::AllocPool",
+												"kind": "user_defined",
+												"target": {
+													"name": "stappler::memory::AllocPool",
+													"objects": [{
+														"_fullName": "::stappler::memory::AllocPool",
+														"_kind": "class",
+														"_name": "AllocPool",
+														"class_kind": "struct",
+														"id": 3030388899,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "AllocPool",
+														"scope": {
+															"name": "AllocPool"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}],
+										"class_kind": "class",
+										"id": 2741056261,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "vector",
+										"scope": {
+											"is_templated": true,
+											"name": "vector",
+											"template_parameters": [{
+												"_fullName": "Type",
+												"_kind": "template type parameter",
+												"_name": "Type",
+												"id": 3167053791,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Type"
+											}]
+										},
+										"semantic_scope": ""
+									},
+									"id": 2741056261,
+									"kind": "class template",
+									"name": "vector",
+									"parameters": [{
+										"_fullName": "Type",
+										"_kind": "template type parameter",
+										"_name": "Type",
+										"id": 3167053791,
+										"is_variadic": false,
+										"keyword": "typename",
+										"kind": "template type parameter",
+										"name": "Type"
+									}],
+									"scope":  {
+										"is_templated": true,
+										"name": "vector",
+										"template_parameters": [{
+											"_fullName": "Type",
+											"_kind": "template type parameter",
+											"_name": "Type",
+											"id": 3167053791,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "Type"
+										}]
+									}
+								}]
+							},
+							"unexposed_arguments": "memory::function<void (const QueuePassData &, FrameQueue &, bool)>"
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::core::QueuePassData::completeCallbacks",
+						"_kind": "member variable",
+						"_name": "completeCallbacks",
+						"id": 151439482,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "completeCallbacks",
+						"type": {
+							"_typeName": "memory::vector<memory::function<void (const QueuePassData &, FrameQueue &, bool)>>",
+							"arguments_exposed": false,
+							"kind": "template_instantiation",
+							"primary_template": {
+								"name": "memory::vector",
+								"objects": [{
+									"_fullName": "::stappler::memory::vector<typename>",
+									"_kind": "class template",
+									"_name": "vector",
+									"class": {
+										"_fullName": "::stappler::memory::vector<typename>",
+										"_kind": "class",
+										"_name": "vector",
+										"bases": [{
+											"_fullName": "AllocPool",
+											"_kind": "base class specifier",
+											"_name": "AllocPool",
+											"access_specifier": "public",
+											"id": 972079861,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "AllocPool",
+											"type": {
+												"_typeName": "stappler::memory::AllocPool",
+												"kind": "user_defined",
+												"target": {
+													"name": "stappler::memory::AllocPool",
+													"objects": [{
+														"_fullName": "::stappler::memory::AllocPool",
+														"_kind": "class",
+														"_name": "AllocPool",
+														"class_kind": "struct",
+														"id": 3030388899,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "AllocPool",
+														"scope": {
+															"name": "AllocPool"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}],
+										"class_kind": "class",
+										"id": 2741056261,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "vector",
+										"scope": {
+											"is_templated": true,
+											"name": "vector",
+											"template_parameters": [{
+												"_fullName": "Type",
+												"_kind": "template type parameter",
+												"_name": "Type",
+												"id": 3167053791,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Type"
+											}]
+										},
+										"semantic_scope": ""
+									},
+									"id": 2741056261,
+									"kind": "class template",
+									"name": "vector",
+									"parameters": [{
+										"_fullName": "Type",
+										"_kind": "template type parameter",
+										"_name": "Type",
+										"id": 3167053791,
+										"is_variadic": false,
+										"keyword": "typename",
+										"kind": "template type parameter",
+										"name": "Type"
+									}],
+									"scope":  {
+										"is_templated": true,
+										"name": "vector",
+										"template_parameters": [{
+											"_fullName": "Type",
+											"_kind": "template type parameter",
+											"_name": "Type",
+											"id": 3167053791,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "Type"
+										}]
+									}
+								}]
+							},
+							"unexposed_arguments": "memory::function<void (const QueuePassData &, FrameQueue &, bool)>"
 						}
 					}],
 					"class_kind": "struct",
@@ -16017,6 +18883,40 @@
 							"unexposed_arguments": "void (stappler::xenolith::core::FrameRequest &)"
 						}
 					}, {
+						"_fullName": "::stappler::xenolith::core::QueueData::attachCallback",
+						"_kind": "member variable",
+						"_name": "attachCallback",
+						"id": 1846520521,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "attachCallback",
+						"type": {
+							"_typeName": "Function<void (const stappler::xenolith::core::FrameHandle *)>",
+							"arguments_exposed": false,
+							"kind": "template_instantiation",
+							"primary_template": {
+								"name": "Function"
+							},
+							"unexposed_arguments": "void (const stappler::xenolith::core::FrameHandle *)"
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::core::QueueData::detachCallback",
+						"_kind": "member variable",
+						"_name": "detachCallback",
+						"id": 122680645,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "detachCallback",
+						"type": {
+							"_typeName": "Function<void (const stappler::xenolith::core::FrameHandle *)>",
+							"arguments_exposed": false,
+							"kind": "template_instantiation",
+							"primary_template": {
+								"name": "Function"
+							},
+							"unexposed_arguments": "void (const stappler::xenolith::core::FrameHandle *)"
+						}
+					}, {
 						"_fullName": "::stappler::xenolith::core::QueueData::releaseCallback",
 						"_kind": "member variable",
 						"_name": "releaseCallback",
@@ -16485,6 +19385,83 @@
 							}
 						}
 					}, {
+						"_fullName": "::stappler::xenolith::core::QueueData::defaultSyncPassState",
+						"_kind": "member variable",
+						"_name": "defaultSyncPassState",
+						"default_value": {
+							"expression": [{
+								"kind": "identifier",
+								"spelling": "FrameRenderPassState"
+							}, {
+								"kind": "punctuation",
+								"spelling": "::"
+							}, {
+								"kind": "identifier",
+								"spelling": "Submitted"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "stappler::xenolith::core::FrameRenderPassState",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::core::FrameRenderPassState",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::core::FrameRenderPassState",
+										"_kind": "enum",
+										"_name": "FrameRenderPassState",
+										"has_explicit_type": false,
+										"id": 2848171226,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_scoped": true,
+										"kind": "enum",
+										"name": "FrameRenderPassState",
+										"scope": {
+											"name": "FrameRenderPassState"
+										},
+										"semantic_scope": "",
+										"underlying_type": {
+											"_typeName": "int",
+											"builtin_type_kind": "int",
+											"kind": "builtin"
+										}
+									}]
+								}
+							}
+						},
+						"id": 4229236680,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "defaultSyncPassState",
+						"type": {
+							"_typeName": "stappler::xenolith::core::FrameRenderPassState",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::xenolith::core::FrameRenderPassState",
+								"objects": [{
+									"_fullName": "::stappler::xenolith::core::FrameRenderPassState",
+									"_kind": "enum",
+									"_name": "FrameRenderPassState",
+									"has_explicit_type": false,
+									"id": 2848171226,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_scoped": true,
+									"kind": "enum",
+									"name": "FrameRenderPassState",
+									"scope": {
+										"name": "FrameRenderPassState"
+									},
+									"semantic_scope": "",
+									"underlying_type": {
+										"_typeName": "int",
+										"builtin_type_kind": "int",
+										"kind": "builtin"
+									}
+								}]
+							}
+						}
+					}, {
 						"_fullName": "::stappler::xenolith::core::QueueData::typedInput",
 						"_kind": "member variable",
 						"_name": "typedInput",
@@ -16839,6 +19816,115 @@
 								}]
 							},
 							"unexposed_arguments": "std::type_index, Attachment *"
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::core::QueueData::passDependencies",
+						"_kind": "member variable",
+						"_name": "passDependencies",
+						"id": 455844579,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "passDependencies",
+						"type": {
+							"_typeName": "memory::vector<QueuePassDependency>",
+							"arguments_exposed": false,
+							"kind": "template_instantiation",
+							"primary_template": {
+								"name": "memory::vector",
+								"objects": [{
+									"_fullName": "::stappler::memory::vector<typename>",
+									"_kind": "class template",
+									"_name": "vector",
+									"class": {
+										"_fullName": "::stappler::memory::vector<typename>",
+										"_kind": "class",
+										"_name": "vector",
+										"bases": [{
+											"_fullName": "AllocPool",
+											"_kind": "base class specifier",
+											"_name": "AllocPool",
+											"access_specifier": "public",
+											"id": 972079861,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "AllocPool",
+											"type": {
+												"_typeName": "stappler::memory::AllocPool",
+												"kind": "user_defined",
+												"target": {
+													"name": "stappler::memory::AllocPool",
+													"objects": [{
+														"_fullName": "::stappler::memory::AllocPool",
+														"_kind": "class",
+														"_name": "AllocPool",
+														"class_kind": "struct",
+														"id": 3030388899,
+														"is_declaration": false,
+														"is_definition": true,
+														"is_final": false,
+														"kind": "class",
+														"name": "AllocPool",
+														"scope": {
+															"name": "AllocPool"
+														},
+														"semantic_scope": ""
+													}]
+												}
+											}
+										}],
+										"class_kind": "class",
+										"id": 2741056261,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "vector",
+										"scope": {
+											"is_templated": true,
+											"name": "vector",
+											"template_parameters": [{
+												"_fullName": "Type",
+												"_kind": "template type parameter",
+												"_name": "Type",
+												"id": 3167053791,
+												"is_variadic": false,
+												"keyword": "typename",
+												"kind": "template type parameter",
+												"name": "Type"
+											}]
+										},
+										"semantic_scope": ""
+									},
+									"id": 2741056261,
+									"kind": "class template",
+									"name": "vector",
+									"parameters": [{
+										"_fullName": "Type",
+										"_kind": "template type parameter",
+										"_name": "Type",
+										"id": 3167053791,
+										"is_variadic": false,
+										"keyword": "typename",
+										"kind": "template type parameter",
+										"name": "Type"
+									}],
+									"scope":  {
+										"is_templated": true,
+										"name": "vector",
+										"template_parameters": [{
+											"_fullName": "Type",
+											"_kind": "template type parameter",
+											"_name": "Type",
+											"id": 3167053791,
+											"is_variadic": false,
+											"keyword": "typename",
+											"kind": "template type parameter",
+											"name": "Type"
+										}]
+									}
+								}]
+							},
+							"unexposed_arguments": "QueuePassDependency"
 						}
 					}, {
 						"_fullName": "::stappler::xenolith::core::QueueData::clear()",

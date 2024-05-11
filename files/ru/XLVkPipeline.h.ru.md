@@ -114,7 +114,7 @@ Title: XLVkPipeline.h
 Доступ: public
 
 
-# ::stappler::xenolith::vk::GraphicPipeline::init(stappler::xenolith::vk::Device&,stappler::xenolith::core::GraphicPipeline::PipelineData const&,stappler::xenolith::core::GraphicPipeline::SubpassData const&,stappler::xenolith::core::GraphicPipeline::RenderQueue const&)
+# ::stappler::xenolith::vk::GraphicPipeline::init(stappler::xenolith::vk::Device&,stappler::xenolith::core::GraphicPipeline::PipelineData const&,stappler::xenolith::core::GraphicPipeline::SubpassData const&,stappler::xenolith::core::GraphicPipeline::Queue const&)
 
 ## BRIEF
 
@@ -126,7 +126,7 @@ Title: XLVkPipeline.h
 * stappler::xenolith::vk::Device&
 * stappler::xenolith::core::GraphicPipeline::PipelineData const&
 * stappler::xenolith::core::GraphicPipeline::SubpassData const&
-* stappler::xenolith::core::GraphicPipeline::RenderQueue const&
+* stappler::xenolith::core::GraphicPipeline::Queue const&
 
 Возвращает:
 * bool
@@ -172,7 +172,7 @@ Title: XLVkPipeline.h
 Доступ: public
 
 
-# ::stappler::xenolith::vk::ComputePipeline::init(stappler::xenolith::vk::Device&,stappler::xenolith::core::ComputePipeline::PipelineData const&,stappler::xenolith::core::ComputePipeline::SubpassData const&,stappler::xenolith::core::ComputePipeline::RenderQueue const&)
+# ::stappler::xenolith::vk::ComputePipeline::init(stappler::xenolith::vk::Device&,stappler::xenolith::core::ComputePipeline::PipelineData const&,stappler::xenolith::core::ComputePipeline::SubpassData const&,stappler::xenolith::core::ComputePipeline::Queue const&)
 
 ## BRIEF
 
@@ -184,7 +184,7 @@ Title: XLVkPipeline.h
 * stappler::xenolith::vk::Device&
 * stappler::xenolith::core::ComputePipeline::PipelineData const&
 * stappler::xenolith::core::ComputePipeline::SubpassData const&
-* stappler::xenolith::core::ComputePipeline::RenderQueue const&
+* stappler::xenolith::core::ComputePipeline::Queue const&
 
 Возвращает:
 * bool

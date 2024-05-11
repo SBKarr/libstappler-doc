@@ -18,6 +18,25 @@ Title: MaterialButton.h
 * Surface
 
 
+# ::stappler::xenolith::material2d::Button::NodeMask
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Значения:
+* None
+* LabelText
+* LabelValue
+* LeadingIcon
+* TrailingIcon
+* Labels
+* Icons
+* All
+
+
 # ::stappler::xenolith::material2d::Button::LongPressInterval
 
 ## BRIEF
@@ -157,6 +176,29 @@ Title: MaterialButton.h
 Возвращает:
 * bool
 
+# ::stappler::xenolith::material2d::Button::setNodeMask(stappler::xenolith::material2d::Button::NodeMask)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* stappler::xenolith::material2d::Button::NodeMask
+
+
+# ::stappler::xenolith::material2d::Button::getNodeMask() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* stappler::xenolith::material2d::Button::NodeMask
+
 # ::stappler::xenolith::material2d::Button::setSelected(bool)
 
 ## BRIEF
@@ -203,6 +245,29 @@ Title: MaterialButton.h
 Возвращает:
 * stappler::StringView
 
+# ::stappler::xenolith::material2d::Button::setTextValue(stappler::StringView)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* stappler::StringView
+
+
+# ::stappler::xenolith::material2d::Button::getTextValue() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* stappler::StringView
+
 # ::stappler::xenolith::material2d::Button::setIconSize(float)
 
 ## BRIEF
@@ -226,7 +291,7 @@ Title: MaterialButton.h
 Возвращает:
 * float
 
-# ::stappler::xenolith::material2d::Button::setLeadingIconName(stappler::xenolith::IconName)
+# ::stappler::xenolith::material2d::Button::setLeadingIconName(stappler::xenolith::IconName,float)
 
 ## BRIEF
 
@@ -236,6 +301,7 @@ Title: MaterialButton.h
 
 Параметры:
 * stappler::xenolith::IconName
+* float
 
 
 # ::stappler::xenolith::material2d::Button::getLeadingIconName() const
@@ -248,6 +314,30 @@ Title: MaterialButton.h
 
 Возвращает:
 * stappler::xenolith::IconName
+
+# ::stappler::xenolith::material2d::Button::setLeadingIconProgress(float,float)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* float
+* float
+
+
+# ::stappler::xenolith::material2d::Button::getLeadingIconProgress() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* float
 
 # ::stappler::xenolith::material2d::Button::setTrailingIconName(stappler::xenolith::IconName)
 
@@ -272,6 +362,30 @@ Title: MaterialButton.h
 Возвращает:
 * stappler::xenolith::IconName
 
+# ::stappler::xenolith::material2d::Button::setTrailingIconProgress(float,float)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* float
+* float
+
+
+# ::stappler::xenolith::material2d::Button::getTrailingIconProgress() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* float
+
 # ::stappler::xenolith::material2d::Button::setTapCallback(Function<void ()>&&)
 
 ## BRIEF
@@ -283,6 +397,17 @@ Title: MaterialButton.h
 Параметры:
 * Function<void ()>&&
 
+
+# ::stappler::xenolith::material2d::Button::getTapCallback() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* Function<void ()> const&
 
 # ::stappler::xenolith::material2d::Button::setLongPressCallback(Function<void ()>&&)
 
@@ -296,6 +421,17 @@ Title: MaterialButton.h
 * Function<void ()>&&
 
 
+# ::stappler::xenolith::material2d::Button::getLongPressCallback() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* Function<void ()> const&
+
 # ::stappler::xenolith::material2d::Button::setDoubleTapCallback(Function<void ()>&&)
 
 ## BRIEF
@@ -307,6 +443,17 @@ Title: MaterialButton.h
 Параметры:
 * Function<void ()>&&
 
+
+# ::stappler::xenolith::material2d::Button::getDoubleTapCallback() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* Function<void ()> const&
 
 # ::stappler::xenolith::material2d::Button::setMenuSourceButton(Rc<stappler::xenolith::material2d::MenuSourceButton>&&)
 
@@ -320,7 +467,88 @@ Title: MaterialButton.h
 * Rc<stappler::xenolith::material2d::MenuSourceButton>&&
 
 
-# ::stappler::xenolith::material2d::Button::getLabelNode() const
+# ::stappler::xenolith::material2d::Button::getMenuSourceButton() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* stappler::xenolith::material2d::MenuSourceButton*
+
+# ::stappler::xenolith::material2d::Button::setBlendColor(stappler::xenolith::material2d::ColorRole,float)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* stappler::xenolith::material2d::ColorRole
+* float
+
+
+# ::stappler::xenolith::material2d::Button::setBlendColor(const stappler::geom::Color4F&,float)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* const stappler::geom::Color4F&
+* float
+
+
+# ::stappler::xenolith::material2d::Button::getBlendColorRule() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* stappler::xenolith::material2d::ColorRole
+
+# ::stappler::xenolith::material2d::Button::getBlendColor() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* const stappler::geom::Color4F&
+
+# ::stappler::xenolith::material2d::Button::getBlendColorValue() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* float
+
+# ::stappler::xenolith::material2d::Button::getLabelTextNode() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* stappler::xenolith::material2d::TypescaleLabel*
+
+# ::stappler::xenolith::material2d::Button::getLabelValueNode() const
 
 ## BRIEF
 
@@ -352,6 +580,50 @@ Title: MaterialButton.h
 
 Возвращает:
 * stappler::xenolith::material2d::IconSprite*
+
+# ::stappler::xenolith::material2d::Button::getInputListener() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* stappler::xenolith::InputListener*
+
+# ::stappler::xenolith::material2d::Button::getMenuButtonListener() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* DataListener<stappler::xenolith::material2d::MenuSourceButton>*
+
+# ::stappler::xenolith::material2d::Button::getTouchLocation() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* stappler::geom::Vec2
+
+# ::stappler::xenolith::material2d::Button::hasContent() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Возвращает:
+* bool
 
 # ::stappler::xenolith::material2d::Button::updateSizeFromContent()
 
@@ -418,6 +690,15 @@ Title: MaterialButton.h
 Доступ: protected
 
 
+# ::stappler::xenolith::material2d::Button::layoutContent()
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+
 # ::stappler::xenolith::material2d::Button::_inputListener
 
 ## BRIEF
@@ -429,7 +710,18 @@ Title: MaterialButton.h
 Тип: stappler::xenolith::InputListener*
 
 
-# ::stappler::xenolith::material2d::Button::_label
+# ::stappler::xenolith::material2d::Button::_labelText
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: stappler::xenolith::material2d::TypescaleLabel*
+
+
+# ::stappler::xenolith::material2d::Button::_labelValue
 
 ## BRIEF
 
@@ -517,6 +809,17 @@ Title: MaterialButton.h
 Тип: Function<void ()>
 
 
+# ::stappler::xenolith::material2d::Button::_touchLocation
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: stappler::geom::Vec2
+
+
 # ::stappler::xenolith::material2d::Button::_activityAnimationDuration
 
 ## BRIEF
@@ -526,6 +829,17 @@ Title: MaterialButton.h
 Доступ: protected
 
 Тип: float
+
+
+# ::stappler::xenolith::material2d::Button::_nodeMask
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: stappler::xenolith::material2d::Button::NodeMask
 
 
 # ::stappler::xenolith::material2d::Button::_followContentSize
@@ -603,3 +917,146 @@ Title: MaterialButton.h
 Доступ: protected
 
 Тип: bool
+
+
+# ::stappler::xenolith::material2d::operator|(Button::NodeMask const&,Button::NodeMask const&)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* Button::NodeMask const&
+* Button::NodeMask const&
+
+Возвращает:
+* Button::NodeMask
+
+# ::stappler::xenolith::material2d::operator&(Button::NodeMask const&,Button::NodeMask const&)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* Button::NodeMask const&
+* Button::NodeMask const&
+
+Возвращает:
+* Button::NodeMask
+
+# ::stappler::xenolith::material2d::operator^(Button::NodeMask const&,Button::NodeMask const&)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* Button::NodeMask const&
+* Button::NodeMask const&
+
+Возвращает:
+* Button::NodeMask
+
+# ::stappler::xenolith::material2d::operator|=(Button::NodeMask&,Button::NodeMask const&)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* Button::NodeMask&
+* Button::NodeMask const&
+
+Возвращает:
+* Button::NodeMask&
+
+# ::stappler::xenolith::material2d::operator&=(Button::NodeMask&,Button::NodeMask const&)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* Button::NodeMask&
+* Button::NodeMask const&
+
+Возвращает:
+* Button::NodeMask&
+
+# ::stappler::xenolith::material2d::operator^=(Button::NodeMask&,Button::NodeMask const&)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* Button::NodeMask&
+* Button::NodeMask const&
+
+Возвращает:
+* Button::NodeMask&
+
+# ::stappler::xenolith::material2d::operator==(Button::NodeMask const&,std::underlying_type<Button::NodeMask>::type const&)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* Button::NodeMask const&
+* std::underlying_type<Button::NodeMask>::type const&
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::material2d::operator==(std::underlying_type<Button::NodeMask>::type const&,Button::NodeMask const&)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* std::underlying_type<Button::NodeMask>::type const&
+* Button::NodeMask const&
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::material2d::operator!=(Button::NodeMask const&,std::underlying_type<Button::NodeMask>::type const&)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* Button::NodeMask const&
+* std::underlying_type<Button::NodeMask>::type const&
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::material2d::operator!=(std::underlying_type<Button::NodeMask>::type const&,Button::NodeMask const&)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* std::underlying_type<Button::NodeMask>::type const&
+* Button::NodeMask const&
+
+Возвращает:
+* bool
+
+# ::stappler::xenolith::material2d::operator~(Button::NodeMask const&)
+
+## BRIEF
+
+## CONTENT
+
+Параметры:
+* Button::NodeMask const&
+
+Возвращает:
+* Button::NodeMask

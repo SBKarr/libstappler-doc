@@ -21,6 +21,15 @@
 		"kind": "include directive",
 		"name": "SPPriorityList.h"
 	}, {
+		"_fullName": "SPSubscription.h",
+		"_kind": "include directive",
+		"_name": "SPSubscription.h",
+		"id": 1928146289,
+		"include": "core/core/utils/SPSubscription.h",
+		"include_kind": "local",
+		"kind": "include directive",
+		"name": "SPSubscription.h"
+	}, {
 		"_fullName": "XENOLITH_SCENE_DIRECTOR_XLSCHEDULER_H_",
 		"_kind": "macro definition",
 		"_name": "XENOLITH_SCENE_DIRECTOR_XLSCHEDULER_H_",
@@ -901,6 +910,46 @@
 					"semantic_scope": "",
 					"signature": "(stappler::xenolith::UpdateTime const&)"
 				}, {
+					"_fullName": "::stappler::xenolith::Scheduler::isPaused(void*) const",
+					"_kind": "member function",
+					"_name": "isPaused",
+					"body_kind": "declaration",
+					"cv_qualifier": "const",
+					"id": 3285811610,
+					"is_consteval": false,
+					"is_constexpr": false,
+					"is_declaration": true,
+					"is_definition": false,
+					"is_variadic": false,
+					"is_virtual": false,
+					"kind": "member function",
+					"name": "isPaused",
+					"parameters": [{
+						"_fullName": "",
+						"_kind": "function parameter",
+						"_name": "",
+						"id": 46947589,
+						"kind": "function parameter",
+						"name": "",
+						"type": {
+							"_typeName": "void*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "void",
+								"builtin_type_kind": "void",
+								"kind": "builtin"
+							}
+						}
+					}],
+					"ref_qualifier": "none",
+					"return_type": {
+						"_typeName": "bool",
+						"builtin_type_kind": "bool",
+						"kind": "builtin"
+					},
+					"semantic_scope": "",
+					"signature": "(void*) const"
+				}, {
 					"_fullName": "::stappler::xenolith::Scheduler::resume(void*)",
 					"_kind": "member function",
 					"_name": "resume",
@@ -1346,6 +1395,2513 @@
 					"name": "Scheduler"
 				},
 				"semantic_scope": ""
+			}, {
+				"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+				"_kind": "class template",
+				"_name": "SchedulerListener",
+				"childs": [{
+					"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+					"_kind": "class",
+					"_name": "SchedulerListener",
+					"childs": [{
+						"_fullName": "public",
+						"_kind": "access specifier",
+						"_name": "public",
+						"access_specifier": "public",
+						"id": 893076784,
+						"kind": "access specifier",
+						"name": "public"
+					}, {
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>::Callback",
+						"_kind": "type alias",
+						"_name": "Callback",
+						"id": 317071321,
+						"kind": "type alias",
+						"name": "Callback",
+						"underlying_type": {
+							"_typeName": "Function<void (Subscription::Flags)>",
+							"arguments_exposed": false,
+							"kind": "template_instantiation",
+							"primary_template": {
+								"name": "Function"
+							},
+							"unexposed_arguments": "void (Subscription::Flags)"
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>::SchedulerListener(stappler::xenolith::Scheduler*,stappler::xenolith::SchedulerListener::Callback const&,T*)",
+						"_kind": "constructor",
+						"_name": "SchedulerListener",
+						"body_kind": "declaration",
+						"id": 2630493125,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_explicit": false,
+						"is_variadic": false,
+						"kind": "constructor",
+						"name": "SchedulerListener",
+						"parameters": [{
+							"_fullName": "s",
+							"_kind": "function parameter",
+							"_name": "s",
+							"default_value": {
+								"expression": [{
+									"kind": "keyword",
+									"spelling": "nullptr"
+								}],
+								"kind": "unexposed",
+								"type": {
+									"_typeName": "stappler::xenolith::Scheduler*",
+									"kind": "pointer",
+									"pointee": {
+										"_typeName": "stappler::xenolith::Scheduler",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::xenolith::Scheduler",
+											"objects": [{
+												"_fullName": "::stappler::xenolith::Scheduler",
+												"_kind": "class",
+												"_name": "Scheduler",
+												"bases": [{
+													"_fullName": "Ref",
+													"_kind": "base class specifier",
+													"_name": "Ref",
+													"access_specifier": "public",
+													"id": 1165741041,
+													"is_virtual": false,
+													"kind": "base class specifier",
+													"name": "Ref",
+													"type": {
+														"_typeName": "stappler::mem_std::Ref",
+														"kind": "user_defined",
+														"target": {
+															"name": "stappler::mem_std::Ref",
+															"objects": [{
+																"_fullName": "::stappler::mem_std::Ref",
+																"_kind": "type alias",
+																"_name": "Ref",
+																"id": 3010886988,
+																"kind": "type alias",
+																"name": "Ref",
+																"underlying_type": {
+																	"_typeName": "RefBase<memory::StandartInterface>",
+																	"arguments_exposed": false,
+																	"kind": "template_instantiation",
+																	"primary_template": {
+																		"name": "RefBase",
+																		"objects": [{
+																			"_fullName": "::stappler::RefBase<typename>",
+																			"_kind": "class template",
+																			"_name": "RefBase",
+																			"class": {
+																				"_fullName": "::stappler::RefBase<typename>",
+																				"_kind": "class",
+																				"_name": "RefBase",
+																				"bases": [{
+																					"_fullName": "Interface::AllocBaseType",
+																					"_kind": "base class specifier",
+																					"_name": "Interface::AllocBaseType",
+																					"access_specifier": "public",
+																					"id": 25533212,
+																					"is_virtual": false,
+																					"kind": "base class specifier",
+																					"name": "Interface::AllocBaseType",
+																					"type": {
+																						"_typeName": "Interface::AllocBaseType",
+																						"kind": "unexposed",
+																						"name": "Interface::AllocBaseType"
+																					}
+																				}],
+																				"class_kind": "class",
+																				"id": 2191419057,
+																				"is_declaration": false,
+																				"is_definition": true,
+																				"is_final": false,
+																				"kind": "class",
+																				"name": "RefBase",
+																				"scope": {
+																					"is_templated": true,
+																					"name": "RefBase",
+																					"template_parameters": [{
+																						"_fullName": "Interface",
+																						"_kind": "template type parameter",
+																						"_name": "Interface",
+																						"id": 2255344761,
+																						"is_variadic": false,
+																						"keyword": "typename",
+																						"kind": "template type parameter",
+																						"name": "Interface"
+																					}]
+																				},
+																				"semantic_scope": ""
+																			},
+																			"id": 2191419057,
+																			"kind": "class template",
+																			"name": "RefBase",
+																			"parameters": [{
+																				"_fullName": "Interface",
+																				"_kind": "template type parameter",
+																				"_name": "Interface",
+																				"id": 2255344761,
+																				"is_variadic": false,
+																				"keyword": "typename",
+																				"kind": "template type parameter",
+																				"name": "Interface"
+																			}],
+																			"scope":  {
+																				"is_templated": true,
+																				"name": "RefBase",
+																				"template_parameters": [{
+																					"_fullName": "Interface",
+																					"_kind": "template type parameter",
+																					"_name": "Interface",
+																					"id": 2255344761,
+																					"is_variadic": false,
+																					"keyword": "typename",
+																					"kind": "template type parameter",
+																					"name": "Interface"
+																				}]
+																			}
+																		}]
+																	},
+																	"unexposed_arguments": "memory::StandartInterface"
+																}
+															}]
+														}
+													}
+												}],
+												"class_kind": "class",
+												"id": 304516062,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "Scheduler",
+												"scope": {
+													"name": "Scheduler"
+												},
+												"semantic_scope": ""
+											}]
+										}
+									}
+								}
+							},
+							"id": 974162354,
+							"kind": "function parameter",
+							"name": "s",
+							"type": {
+								"_typeName": "stappler::xenolith::Scheduler*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::xenolith::Scheduler",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::xenolith::Scheduler",
+										"objects": [{
+											"_fullName": "::stappler::xenolith::Scheduler",
+											"_kind": "class",
+											"_name": "Scheduler",
+											"bases": [{
+												"_fullName": "Ref",
+												"_kind": "base class specifier",
+												"_name": "Ref",
+												"access_specifier": "public",
+												"id": 1165741041,
+												"is_virtual": false,
+												"kind": "base class specifier",
+												"name": "Ref",
+												"type": {
+													"_typeName": "stappler::mem_std::Ref",
+													"kind": "user_defined",
+													"target": {
+														"name": "stappler::mem_std::Ref",
+														"objects": [{
+															"_fullName": "::stappler::mem_std::Ref",
+															"_kind": "type alias",
+															"_name": "Ref",
+															"id": 3010886988,
+															"kind": "type alias",
+															"name": "Ref",
+															"underlying_type": {
+																"_typeName": "RefBase<memory::StandartInterface>",
+																"arguments_exposed": false,
+																"kind": "template_instantiation",
+																"primary_template": {
+																	"name": "RefBase",
+																	"objects": [{
+																		"_fullName": "::stappler::RefBase<typename>",
+																		"_kind": "class template",
+																		"_name": "RefBase",
+																		"class": {
+																			"_fullName": "::stappler::RefBase<typename>",
+																			"_kind": "class",
+																			"_name": "RefBase",
+																			"bases": [{
+																				"_fullName": "Interface::AllocBaseType",
+																				"_kind": "base class specifier",
+																				"_name": "Interface::AllocBaseType",
+																				"access_specifier": "public",
+																				"id": 25533212,
+																				"is_virtual": false,
+																				"kind": "base class specifier",
+																				"name": "Interface::AllocBaseType",
+																				"type": {
+																					"_typeName": "Interface::AllocBaseType",
+																					"kind": "unexposed",
+																					"name": "Interface::AllocBaseType"
+																				}
+																			}],
+																			"class_kind": "class",
+																			"id": 2191419057,
+																			"is_declaration": false,
+																			"is_definition": true,
+																			"is_final": false,
+																			"kind": "class",
+																			"name": "RefBase",
+																			"scope": {
+																				"is_templated": true,
+																				"name": "RefBase",
+																				"template_parameters": [{
+																					"_fullName": "Interface",
+																					"_kind": "template type parameter",
+																					"_name": "Interface",
+																					"id": 2255344761,
+																					"is_variadic": false,
+																					"keyword": "typename",
+																					"kind": "template type parameter",
+																					"name": "Interface"
+																				}]
+																			},
+																			"semantic_scope": ""
+																		},
+																		"id": 2191419057,
+																		"kind": "class template",
+																		"name": "RefBase",
+																		"parameters": [{
+																			"_fullName": "Interface",
+																			"_kind": "template type parameter",
+																			"_name": "Interface",
+																			"id": 2255344761,
+																			"is_variadic": false,
+																			"keyword": "typename",
+																			"kind": "template type parameter",
+																			"name": "Interface"
+																		}],
+																		"scope":  {
+																			"is_templated": true,
+																			"name": "RefBase",
+																			"template_parameters": [{
+																				"_fullName": "Interface",
+																				"_kind": "template type parameter",
+																				"_name": "Interface",
+																				"id": 2255344761,
+																				"is_variadic": false,
+																				"keyword": "typename",
+																				"kind": "template type parameter",
+																				"name": "Interface"
+																			}]
+																		}
+																	}]
+																},
+																"unexposed_arguments": "memory::StandartInterface"
+															}
+														}]
+													}
+												}
+											}],
+											"class_kind": "class",
+											"id": 304516062,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Scheduler",
+											"scope": {
+												"name": "Scheduler"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							}
+						}, {
+							"_fullName": "cb",
+							"_kind": "function parameter",
+							"_name": "cb",
+							"default_value": {
+								"expression": [{
+									"kind": "keyword",
+									"spelling": "nullptr"
+								}],
+								"kind": "unexposed",
+								"type": {
+									"_typeName": "stappler::xenolith::SchedulerListener::Callback const&",
+									"kind": "reference",
+									"referee": {
+										"_typeName": "stappler::xenolith::SchedulerListener::Callback const",
+										"cv_qualifier": "const",
+										"kind": "cv_qualified",
+										"type": {
+											"_typeName": "stappler::xenolith::SchedulerListener::Callback",
+											"kind": "user_defined",
+											"target": {
+												"name": "stappler::xenolith::SchedulerListener::Callback",
+												"objects": [{
+													"_fullName": "::stappler::xenolith::SchedulerListener<class>::Callback",
+													"_kind": "type alias",
+													"_name": "Callback",
+													"id": 317071321,
+													"kind": "type alias",
+													"name": "Callback",
+													"underlying_type": {
+														"_typeName": "Function<void (Subscription::Flags)>",
+														"arguments_exposed": false,
+														"kind": "template_instantiation",
+														"primary_template": {
+															"name": "Function"
+														},
+														"unexposed_arguments": "void (Subscription::Flags)"
+													}
+												}]
+											}
+										}
+									},
+									"reference_kind": "lvalue"
+								}
+							},
+							"id": 3456793284,
+							"kind": "function parameter",
+							"name": "cb",
+							"type": {
+								"_typeName": "stappler::xenolith::SchedulerListener::Callback const&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "stappler::xenolith::SchedulerListener::Callback const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "stappler::xenolith::SchedulerListener::Callback",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::xenolith::SchedulerListener::Callback",
+											"objects": [{
+												"_fullName": "::stappler::xenolith::SchedulerListener<class>::Callback",
+												"_kind": "type alias",
+												"_name": "Callback",
+												"id": 317071321,
+												"kind": "type alias",
+												"name": "Callback",
+												"underlying_type": {
+													"_typeName": "Function<void (Subscription::Flags)>",
+													"arguments_exposed": false,
+													"kind": "template_instantiation",
+													"primary_template": {
+														"name": "Function"
+													},
+													"unexposed_arguments": "void (Subscription::Flags)"
+												}
+											}]
+										}
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}, {
+							"_fullName": "sub",
+							"_kind": "function parameter",
+							"_name": "sub",
+							"default_value": {
+								"expression": [{
+									"kind": "keyword",
+									"spelling": "nullptr"
+								}],
+								"kind": "unexposed",
+								"type": {
+									"_typeName": "T*",
+									"kind": "pointer",
+									"pointee": {
+										"_typeName": "T",
+										"entity": {
+											"name": "T",
+											"objects": [{
+												"_fullName": "T",
+												"_kind": "template type parameter",
+												"_name": "T",
+												"default_type": {
+													"_typeName": "Subscription",
+													"kind": "unexposed",
+													"name": "Subscription"
+												},
+												"id": 1306257776,
+												"is_variadic": false,
+												"keyword": "class",
+												"kind": "template type parameter",
+												"name": "T"
+											}]
+										},
+										"kind": "template_parameter"
+									}
+								}
+							},
+							"id": 1798987754,
+							"kind": "function parameter",
+							"name": "sub",
+							"type": {
+								"_typeName": "T*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "T",
+									"entity": {
+										"name": "T",
+										"objects": [{
+											"_fullName": "T",
+											"_kind": "template type parameter",
+											"_name": "T",
+											"default_type": {
+												"_typeName": "Subscription",
+												"kind": "unexposed",
+												"name": "Subscription"
+											},
+											"id": 1306257776,
+											"is_variadic": false,
+											"keyword": "class",
+											"kind": "template type parameter",
+											"name": "T"
+										}]
+									},
+									"kind": "template_parameter"
+								}
+							}
+						}],
+						"semantic_scope": "",
+						"signature": "(stappler::xenolith::Scheduler*,stappler::xenolith::SchedulerListener::Callback const&,T*)"
+					}, {
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>::~SchedulerListener()",
+						"_kind": "destructor",
+						"_name": "~SchedulerListener",
+						"body_kind": "declaration",
+						"id": 2708914223,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "destructor",
+						"name": "~SchedulerListener",
+						"semantic_scope": "",
+						"signature": "()"
+					}, {
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>::SchedulerListener(SchedulerListener<T> const&)",
+						"_kind": "constructor",
+						"_name": "SchedulerListener",
+						"body_kind": "declaration",
+						"id": 797685718,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_explicit": false,
+						"is_variadic": false,
+						"kind": "constructor",
+						"name": "SchedulerListener",
+						"parameters": [{
+							"_fullName": "",
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 46947589,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "SchedulerListener<T> const&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "SchedulerListener<T> const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "SchedulerListener<T>",
+										"arguments_exposed": false,
+										"kind": "template_instantiation",
+										"primary_template": {
+											"name": "SchedulerListener",
+											"objects": [{
+												"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+												"_kind": "class template",
+												"_name": "SchedulerListener",
+												"class": {
+													"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+													"_kind": "class",
+													"_name": "SchedulerListener",
+													"class_kind": "class",
+													"id": 859895748,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "SchedulerListener",
+													"scope": {
+														"is_templated": true,
+														"name": "SchedulerListener",
+														"template_parameters": [{
+															"_fullName": "T",
+															"_kind": "template type parameter",
+															"_name": "T",
+															"default_type": {
+																"_typeName": "Subscription",
+																"kind": "unexposed",
+																"name": "Subscription"
+															},
+															"id": 1306257776,
+															"is_variadic": false,
+															"keyword": "class",
+															"kind": "template type parameter",
+															"name": "T"
+														}]
+													},
+													"semantic_scope": ""
+												},
+												"id": 859895748,
+												"kind": "class template",
+												"name": "SchedulerListener",
+												"parameters": [{
+													"_fullName": "T",
+													"_kind": "template type parameter",
+													"_name": "T",
+													"default_type": {
+														"_typeName": "Subscription",
+														"kind": "unexposed",
+														"name": "Subscription"
+													},
+													"id": 1306257776,
+													"is_variadic": false,
+													"keyword": "class",
+													"kind": "template type parameter",
+													"name": "T"
+												}],
+												"scope":  {
+													"is_templated": true,
+													"name": "SchedulerListener",
+													"template_parameters": [{
+														"_fullName": "T",
+														"_kind": "template type parameter",
+														"_name": "T",
+														"default_type": {
+															"_typeName": "Subscription",
+															"kind": "unexposed",
+															"name": "Subscription"
+														},
+														"id": 1306257776,
+														"is_variadic": false,
+														"keyword": "class",
+														"kind": "template type parameter",
+														"name": "T"
+													}]
+												}
+											}]
+										},
+										"unexposed_arguments": "T"
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}],
+						"semantic_scope": "",
+						"signature": "(SchedulerListener<T> const&)"
+					}, {
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>::operator=(SchedulerListener<T> const&)",
+						"_kind": "member function",
+						"_name": "operator=",
+						"body_kind": "declaration",
+						"cv_qualifier": "none",
+						"id": 4212645617,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "operator=",
+						"parameters": [{
+							"_fullName": "",
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 46947589,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "SchedulerListener<T> const&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "SchedulerListener<T> const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "SchedulerListener<T>",
+										"arguments_exposed": false,
+										"kind": "template_instantiation",
+										"primary_template": {
+											"name": "SchedulerListener",
+											"objects": [{
+												"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+												"_kind": "class template",
+												"_name": "SchedulerListener",
+												"class": {
+													"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+													"_kind": "class",
+													"_name": "SchedulerListener",
+													"class_kind": "class",
+													"id": 859895748,
+													"is_declaration": false,
+													"is_definition": true,
+													"is_final": false,
+													"kind": "class",
+													"name": "SchedulerListener",
+													"scope": {
+														"is_templated": true,
+														"name": "SchedulerListener",
+														"template_parameters": [{
+															"_fullName": "T",
+															"_kind": "template type parameter",
+															"_name": "T",
+															"default_type": {
+																"_typeName": "Subscription",
+																"kind": "unexposed",
+																"name": "Subscription"
+															},
+															"id": 1306257776,
+															"is_variadic": false,
+															"keyword": "class",
+															"kind": "template type parameter",
+															"name": "T"
+														}]
+													},
+													"semantic_scope": ""
+												},
+												"id": 859895748,
+												"kind": "class template",
+												"name": "SchedulerListener",
+												"parameters": [{
+													"_fullName": "T",
+													"_kind": "template type parameter",
+													"_name": "T",
+													"default_type": {
+														"_typeName": "Subscription",
+														"kind": "unexposed",
+														"name": "Subscription"
+													},
+													"id": 1306257776,
+													"is_variadic": false,
+													"keyword": "class",
+													"kind": "template type parameter",
+													"name": "T"
+												}],
+												"scope":  {
+													"is_templated": true,
+													"name": "SchedulerListener",
+													"template_parameters": [{
+														"_fullName": "T",
+														"_kind": "template type parameter",
+														"_name": "T",
+														"default_type": {
+															"_typeName": "Subscription",
+															"kind": "unexposed",
+															"name": "Subscription"
+														},
+														"id": 1306257776,
+														"is_variadic": false,
+														"keyword": "class",
+														"kind": "template type parameter",
+														"name": "T"
+													}]
+												}
+											}]
+										},
+										"unexposed_arguments": "T"
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}],
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "SchedulerListener<T>&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "SchedulerListener<T>",
+								"kind": "unexposed",
+								"name": "SchedulerListener<T>"
+							},
+							"reference_kind": "lvalue"
+						},
+						"semantic_scope": "",
+						"signature": "(SchedulerListener<T> const&)"
+					}, {
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>::SchedulerListener(SchedulerListener<T>&&)",
+						"_kind": "constructor",
+						"_name": "SchedulerListener",
+						"body_kind": "declaration",
+						"id": 2381058986,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_explicit": false,
+						"is_variadic": false,
+						"kind": "constructor",
+						"name": "SchedulerListener",
+						"parameters": [{
+							"_fullName": "",
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 46947589,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "SchedulerListener<T>&&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "SchedulerListener<T>",
+									"arguments_exposed": false,
+									"kind": "template_instantiation",
+									"primary_template": {
+										"name": "SchedulerListener",
+										"objects": [{
+											"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+											"_kind": "class template",
+											"_name": "SchedulerListener",
+											"class": {
+												"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+												"_kind": "class",
+												"_name": "SchedulerListener",
+												"class_kind": "class",
+												"id": 859895748,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "SchedulerListener",
+												"scope": {
+													"is_templated": true,
+													"name": "SchedulerListener",
+													"template_parameters": [{
+														"_fullName": "T",
+														"_kind": "template type parameter",
+														"_name": "T",
+														"default_type": {
+															"_typeName": "Subscription",
+															"kind": "unexposed",
+															"name": "Subscription"
+														},
+														"id": 1306257776,
+														"is_variadic": false,
+														"keyword": "class",
+														"kind": "template type parameter",
+														"name": "T"
+													}]
+												},
+												"semantic_scope": ""
+											},
+											"id": 859895748,
+											"kind": "class template",
+											"name": "SchedulerListener",
+											"parameters": [{
+												"_fullName": "T",
+												"_kind": "template type parameter",
+												"_name": "T",
+												"default_type": {
+													"_typeName": "Subscription",
+													"kind": "unexposed",
+													"name": "Subscription"
+												},
+												"id": 1306257776,
+												"is_variadic": false,
+												"keyword": "class",
+												"kind": "template type parameter",
+												"name": "T"
+											}],
+											"scope":  {
+												"is_templated": true,
+												"name": "SchedulerListener",
+												"template_parameters": [{
+													"_fullName": "T",
+													"_kind": "template type parameter",
+													"_name": "T",
+													"default_type": {
+														"_typeName": "Subscription",
+														"kind": "unexposed",
+														"name": "Subscription"
+													},
+													"id": 1306257776,
+													"is_variadic": false,
+													"keyword": "class",
+													"kind": "template type parameter",
+													"name": "T"
+												}]
+											}
+										}]
+									},
+									"unexposed_arguments": "T"
+								},
+								"reference_kind": "rvalue"
+							}
+						}],
+						"semantic_scope": "",
+						"signature": "(SchedulerListener<T>&&)"
+					}, {
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>::operator=(SchedulerListener<T>&&)",
+						"_kind": "member function",
+						"_name": "operator=",
+						"body_kind": "declaration",
+						"cv_qualifier": "none",
+						"id": 3241466107,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "operator=",
+						"parameters": [{
+							"_fullName": "",
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 46947589,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "SchedulerListener<T>&&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "SchedulerListener<T>",
+									"arguments_exposed": false,
+									"kind": "template_instantiation",
+									"primary_template": {
+										"name": "SchedulerListener",
+										"objects": [{
+											"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+											"_kind": "class template",
+											"_name": "SchedulerListener",
+											"class": {
+												"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+												"_kind": "class",
+												"_name": "SchedulerListener",
+												"class_kind": "class",
+												"id": 859895748,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "SchedulerListener",
+												"scope": {
+													"is_templated": true,
+													"name": "SchedulerListener",
+													"template_parameters": [{
+														"_fullName": "T",
+														"_kind": "template type parameter",
+														"_name": "T",
+														"default_type": {
+															"_typeName": "Subscription",
+															"kind": "unexposed",
+															"name": "Subscription"
+														},
+														"id": 1306257776,
+														"is_variadic": false,
+														"keyword": "class",
+														"kind": "template type parameter",
+														"name": "T"
+													}]
+												},
+												"semantic_scope": ""
+											},
+											"id": 859895748,
+											"kind": "class template",
+											"name": "SchedulerListener",
+											"parameters": [{
+												"_fullName": "T",
+												"_kind": "template type parameter",
+												"_name": "T",
+												"default_type": {
+													"_typeName": "Subscription",
+													"kind": "unexposed",
+													"name": "Subscription"
+												},
+												"id": 1306257776,
+												"is_variadic": false,
+												"keyword": "class",
+												"kind": "template type parameter",
+												"name": "T"
+											}],
+											"scope":  {
+												"is_templated": true,
+												"name": "SchedulerListener",
+												"template_parameters": [{
+													"_fullName": "T",
+													"_kind": "template type parameter",
+													"_name": "T",
+													"default_type": {
+														"_typeName": "Subscription",
+														"kind": "unexposed",
+														"name": "Subscription"
+													},
+													"id": 1306257776,
+													"is_variadic": false,
+													"keyword": "class",
+													"kind": "template type parameter",
+													"name": "T"
+												}]
+											}
+										}]
+									},
+									"unexposed_arguments": "T"
+								},
+								"reference_kind": "rvalue"
+							}
+						}],
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "SchedulerListener<T>&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "SchedulerListener<T>",
+								"kind": "unexposed",
+								"name": "SchedulerListener<T>"
+							},
+							"reference_kind": "lvalue"
+						},
+						"semantic_scope": "",
+						"signature": "(SchedulerListener<T>&&)"
+					}, {
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>::operator=(T*)",
+						"_kind": "member function",
+						"_name": "operator=",
+						"body_kind": "declaration",
+						"cv_qualifier": "none",
+						"id": 3276438399,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "operator=",
+						"parameters": [{
+							"_fullName": "",
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 46947589,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "T*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "T",
+									"entity": {
+										"name": "T",
+										"objects": [{
+											"_fullName": "T",
+											"_kind": "template type parameter",
+											"_name": "T",
+											"default_type": {
+												"_typeName": "Subscription",
+												"kind": "unexposed",
+												"name": "Subscription"
+											},
+											"id": 1306257776,
+											"is_variadic": false,
+											"keyword": "class",
+											"kind": "template type parameter",
+											"name": "T"
+										}]
+									},
+									"kind": "template_parameter"
+								}
+							}
+						}],
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "SchedulerListener<T>&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "SchedulerListener<T>",
+								"kind": "unexposed",
+								"name": "SchedulerListener<T>"
+							},
+							"reference_kind": "lvalue"
+						},
+						"semantic_scope": "",
+						"signature": "(T*)"
+					}, {
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>::operator T*()",
+						"_kind": "conversion operator",
+						"_name": "operator T*",
+						"body_kind": "definition",
+						"cv_qualifier": "none",
+						"id": 2921608856,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_explicit": false,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "conversion operator",
+						"name": "operator T*",
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "T*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "T",
+								"entity": {
+									"name": "T",
+									"objects": [{
+										"_fullName": "T",
+										"_kind": "template type parameter",
+										"_name": "T",
+										"default_type": {
+											"_typeName": "Subscription",
+											"kind": "unexposed",
+											"name": "Subscription"
+										},
+										"id": 1306257776,
+										"is_variadic": false,
+										"keyword": "class",
+										"kind": "template type parameter",
+										"name": "T"
+									}]
+								},
+								"kind": "template_parameter"
+							}
+						},
+						"semantic_scope": "",
+						"signature": "()"
+					}, {
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>::operator T*() const",
+						"_kind": "conversion operator",
+						"_name": "operator T*",
+						"body_kind": "definition",
+						"cv_qualifier": "const",
+						"id": 3583370068,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_explicit": false,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "conversion operator",
+						"name": "operator T*",
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "T*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "T",
+								"entity": {
+									"name": "T",
+									"objects": [{
+										"_fullName": "T",
+										"_kind": "template type parameter",
+										"_name": "T",
+										"default_type": {
+											"_typeName": "Subscription",
+											"kind": "unexposed",
+											"name": "Subscription"
+										},
+										"id": 1306257776,
+										"is_variadic": false,
+										"keyword": "class",
+										"kind": "template type parameter",
+										"name": "T"
+									}]
+								},
+								"kind": "template_parameter"
+							}
+						},
+						"semantic_scope": "",
+						"signature": "() const"
+					}, {
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>::operator bool() const",
+						"_kind": "conversion operator",
+						"_name": "operator bool",
+						"body_kind": "definition",
+						"cv_qualifier": "const",
+						"id": 2762962958,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_explicit": false,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "conversion operator",
+						"name": "operator bool",
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "bool",
+							"builtin_type_kind": "bool",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "() const"
+					}, {
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>::operator->()",
+						"_kind": "member function",
+						"_name": "operator->",
+						"body_kind": "definition",
+						"cv_qualifier": "none",
+						"id": 3492410577,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "operator->",
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "T*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "T",
+								"entity": {
+									"name": "T",
+									"objects": [{
+										"_fullName": "T",
+										"_kind": "template type parameter",
+										"_name": "T",
+										"default_type": {
+											"_typeName": "Subscription",
+											"kind": "unexposed",
+											"name": "Subscription"
+										},
+										"id": 1306257776,
+										"is_variadic": false,
+										"keyword": "class",
+										"kind": "template type parameter",
+										"name": "T"
+									}]
+								},
+								"kind": "template_parameter"
+							}
+						},
+						"semantic_scope": "",
+						"signature": "()"
+					}, {
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>::operator->() const",
+						"_kind": "member function",
+						"_name": "operator->",
+						"body_kind": "definition",
+						"cv_qualifier": "const",
+						"id": 1859661816,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": false,
+						"is_definition": true,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "operator->",
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "T const*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "T const",
+								"cv_qualifier": "const",
+								"kind": "cv_qualified",
+								"type": {
+									"_typeName": "T",
+									"entity": {
+										"name": "T",
+										"objects": [{
+											"_fullName": "T",
+											"_kind": "template type parameter",
+											"_name": "T",
+											"default_type": {
+												"_typeName": "Subscription",
+												"kind": "unexposed",
+												"name": "Subscription"
+											},
+											"id": 1306257776,
+											"is_variadic": false,
+											"keyword": "class",
+											"kind": "template type parameter",
+											"name": "T"
+										}]
+									},
+									"kind": "template_parameter"
+								}
+							}
+						},
+						"semantic_scope": "",
+						"signature": "() const"
+					}, {
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>::set(T*)",
+						"_kind": "member function",
+						"_name": "set",
+						"body_kind": "declaration",
+						"cv_qualifier": "none",
+						"id": 4152815556,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "set",
+						"parameters": [{
+							"_fullName": "sub",
+							"_kind": "function parameter",
+							"_name": "sub",
+							"id": 1798987754,
+							"kind": "function parameter",
+							"name": "sub",
+							"type": {
+								"_typeName": "T*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "T",
+									"entity": {
+										"name": "T",
+										"objects": [{
+											"_fullName": "T",
+											"_kind": "template type parameter",
+											"_name": "T",
+											"default_type": {
+												"_typeName": "Subscription",
+												"kind": "unexposed",
+												"name": "Subscription"
+											},
+											"id": 1306257776,
+											"is_variadic": false,
+											"keyword": "class",
+											"kind": "template type parameter",
+											"name": "T"
+										}]
+									},
+									"kind": "template_parameter"
+								}
+							}
+						}],
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(T*)"
+					}, {
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>::get() const",
+						"_kind": "member function",
+						"_name": "get",
+						"body_kind": "declaration",
+						"cv_qualifier": "const",
+						"id": 351193282,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "get",
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "T*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "T",
+								"entity": {
+									"name": "T",
+									"objects": [{
+										"_fullName": "T",
+										"_kind": "template type parameter",
+										"_name": "T",
+										"default_type": {
+											"_typeName": "Subscription",
+											"kind": "unexposed",
+											"name": "Subscription"
+										},
+										"id": 1306257776,
+										"is_variadic": false,
+										"keyword": "class",
+										"kind": "template type parameter",
+										"name": "T"
+									}]
+								},
+								"kind": "template_parameter"
+							}
+						},
+						"semantic_scope": "",
+						"signature": "() const"
+					}, {
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>::setScheduler(stappler::xenolith::Scheduler*)",
+						"_kind": "member function",
+						"_name": "setScheduler",
+						"body_kind": "declaration",
+						"cv_qualifier": "none",
+						"id": 1912545557,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "setScheduler",
+						"parameters": [{
+							"_fullName": "",
+							"_kind": "function parameter",
+							"_name": "",
+							"id": 46947589,
+							"kind": "function parameter",
+							"name": "",
+							"type": {
+								"_typeName": "stappler::xenolith::Scheduler*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::xenolith::Scheduler",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::xenolith::Scheduler",
+										"objects": [{
+											"_fullName": "::stappler::xenolith::Scheduler",
+											"_kind": "class",
+											"_name": "Scheduler",
+											"bases": [{
+												"_fullName": "Ref",
+												"_kind": "base class specifier",
+												"_name": "Ref",
+												"access_specifier": "public",
+												"id": 1165741041,
+												"is_virtual": false,
+												"kind": "base class specifier",
+												"name": "Ref",
+												"type": {
+													"_typeName": "stappler::mem_std::Ref",
+													"kind": "user_defined",
+													"target": {
+														"name": "stappler::mem_std::Ref",
+														"objects": [{
+															"_fullName": "::stappler::mem_std::Ref",
+															"_kind": "type alias",
+															"_name": "Ref",
+															"id": 3010886988,
+															"kind": "type alias",
+															"name": "Ref",
+															"underlying_type": {
+																"_typeName": "RefBase<memory::StandartInterface>",
+																"arguments_exposed": false,
+																"kind": "template_instantiation",
+																"primary_template": {
+																	"name": "RefBase",
+																	"objects": [{
+																		"_fullName": "::stappler::RefBase<typename>",
+																		"_kind": "class template",
+																		"_name": "RefBase",
+																		"class": {
+																			"_fullName": "::stappler::RefBase<typename>",
+																			"_kind": "class",
+																			"_name": "RefBase",
+																			"bases": [{
+																				"_fullName": "Interface::AllocBaseType",
+																				"_kind": "base class specifier",
+																				"_name": "Interface::AllocBaseType",
+																				"access_specifier": "public",
+																				"id": 25533212,
+																				"is_virtual": false,
+																				"kind": "base class specifier",
+																				"name": "Interface::AllocBaseType",
+																				"type": {
+																					"_typeName": "Interface::AllocBaseType",
+																					"kind": "unexposed",
+																					"name": "Interface::AllocBaseType"
+																				}
+																			}],
+																			"class_kind": "class",
+																			"id": 2191419057,
+																			"is_declaration": false,
+																			"is_definition": true,
+																			"is_final": false,
+																			"kind": "class",
+																			"name": "RefBase",
+																			"scope": {
+																				"is_templated": true,
+																				"name": "RefBase",
+																				"template_parameters": [{
+																					"_fullName": "Interface",
+																					"_kind": "template type parameter",
+																					"_name": "Interface",
+																					"id": 2255344761,
+																					"is_variadic": false,
+																					"keyword": "typename",
+																					"kind": "template type parameter",
+																					"name": "Interface"
+																				}]
+																			},
+																			"semantic_scope": ""
+																		},
+																		"id": 2191419057,
+																		"kind": "class template",
+																		"name": "RefBase",
+																		"parameters": [{
+																			"_fullName": "Interface",
+																			"_kind": "template type parameter",
+																			"_name": "Interface",
+																			"id": 2255344761,
+																			"is_variadic": false,
+																			"keyword": "typename",
+																			"kind": "template type parameter",
+																			"name": "Interface"
+																		}],
+																		"scope":  {
+																			"is_templated": true,
+																			"name": "RefBase",
+																			"template_parameters": [{
+																				"_fullName": "Interface",
+																				"_kind": "template type parameter",
+																				"_name": "Interface",
+																				"id": 2255344761,
+																				"is_variadic": false,
+																				"keyword": "typename",
+																				"kind": "template type parameter",
+																				"name": "Interface"
+																			}]
+																		}
+																	}]
+																},
+																"unexposed_arguments": "memory::StandartInterface"
+															}
+														}]
+													}
+												}
+											}],
+											"class_kind": "class",
+											"id": 304516062,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Scheduler",
+											"scope": {
+												"name": "Scheduler"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							}
+						}],
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::xenolith::Scheduler*)"
+					}, {
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>::getScheduler() const",
+						"_kind": "member function",
+						"_name": "getScheduler",
+						"body_kind": "declaration",
+						"cv_qualifier": "const",
+						"id": 2834843708,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "getScheduler",
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "stappler::xenolith::Scheduler*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::xenolith::Scheduler",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::Scheduler",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::Scheduler",
+										"_kind": "class",
+										"_name": "Scheduler",
+										"bases": [{
+											"_fullName": "Ref",
+											"_kind": "base class specifier",
+											"_name": "Ref",
+											"access_specifier": "public",
+											"id": 1165741041,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "Ref",
+											"type": {
+												"_typeName": "stappler::mem_std::Ref",
+												"kind": "user_defined",
+												"target": {
+													"name": "stappler::mem_std::Ref",
+													"objects": [{
+														"_fullName": "::stappler::mem_std::Ref",
+														"_kind": "type alias",
+														"_name": "Ref",
+														"id": 3010886988,
+														"kind": "type alias",
+														"name": "Ref",
+														"underlying_type": {
+															"_typeName": "RefBase<memory::StandartInterface>",
+															"arguments_exposed": false,
+															"kind": "template_instantiation",
+															"primary_template": {
+																"name": "RefBase",
+																"objects": [{
+																	"_fullName": "::stappler::RefBase<typename>",
+																	"_kind": "class template",
+																	"_name": "RefBase",
+																	"class": {
+																		"_fullName": "::stappler::RefBase<typename>",
+																		"_kind": "class",
+																		"_name": "RefBase",
+																		"bases": [{
+																			"_fullName": "Interface::AllocBaseType",
+																			"_kind": "base class specifier",
+																			"_name": "Interface::AllocBaseType",
+																			"access_specifier": "public",
+																			"id": 25533212,
+																			"is_virtual": false,
+																			"kind": "base class specifier",
+																			"name": "Interface::AllocBaseType",
+																			"type": {
+																				"_typeName": "Interface::AllocBaseType",
+																				"kind": "unexposed",
+																				"name": "Interface::AllocBaseType"
+																			}
+																		}],
+																		"class_kind": "class",
+																		"id": 2191419057,
+																		"is_declaration": false,
+																		"is_definition": true,
+																		"is_final": false,
+																		"kind": "class",
+																		"name": "RefBase",
+																		"scope": {
+																			"is_templated": true,
+																			"name": "RefBase",
+																			"template_parameters": [{
+																				"_fullName": "Interface",
+																				"_kind": "template type parameter",
+																				"_name": "Interface",
+																				"id": 2255344761,
+																				"is_variadic": false,
+																				"keyword": "typename",
+																				"kind": "template type parameter",
+																				"name": "Interface"
+																			}]
+																		},
+																		"semantic_scope": ""
+																	},
+																	"id": 2191419057,
+																	"kind": "class template",
+																	"name": "RefBase",
+																	"parameters": [{
+																		"_fullName": "Interface",
+																		"_kind": "template type parameter",
+																		"_name": "Interface",
+																		"id": 2255344761,
+																		"is_variadic": false,
+																		"keyword": "typename",
+																		"kind": "template type parameter",
+																		"name": "Interface"
+																	}],
+																	"scope":  {
+																		"is_templated": true,
+																		"name": "RefBase",
+																		"template_parameters": [{
+																			"_fullName": "Interface",
+																			"_kind": "template type parameter",
+																			"_name": "Interface",
+																			"id": 2255344761,
+																			"is_variadic": false,
+																			"keyword": "typename",
+																			"kind": "template type parameter",
+																			"name": "Interface"
+																		}]
+																	}
+																}]
+															},
+															"unexposed_arguments": "memory::StandartInterface"
+														}
+													}]
+												}
+											}
+										}],
+										"class_kind": "class",
+										"id": 304516062,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Scheduler",
+										"scope": {
+											"name": "Scheduler"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						},
+						"semantic_scope": "",
+						"signature": "() const"
+					}, {
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>::setCallback(stappler::xenolith::SchedulerListener::Callback const&)",
+						"_kind": "member function",
+						"_name": "setCallback",
+						"body_kind": "declaration",
+						"cv_qualifier": "none",
+						"id": 1978071578,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "setCallback",
+						"parameters": [{
+							"_fullName": "cb",
+							"_kind": "function parameter",
+							"_name": "cb",
+							"id": 3456793284,
+							"kind": "function parameter",
+							"name": "cb",
+							"type": {
+								"_typeName": "stappler::xenolith::SchedulerListener::Callback const&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "stappler::xenolith::SchedulerListener::Callback const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "stappler::xenolith::SchedulerListener::Callback",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::xenolith::SchedulerListener::Callback",
+											"objects": [{
+												"_fullName": "::stappler::xenolith::SchedulerListener<class>::Callback",
+												"_kind": "type alias",
+												"_name": "Callback",
+												"id": 317071321,
+												"kind": "type alias",
+												"name": "Callback",
+												"underlying_type": {
+													"_typeName": "Function<void (Subscription::Flags)>",
+													"arguments_exposed": false,
+													"kind": "template_instantiation",
+													"primary_template": {
+														"name": "Function"
+													},
+													"unexposed_arguments": "void (Subscription::Flags)"
+												}
+											}]
+										}
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}],
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::xenolith::SchedulerListener::Callback const&)"
+					}, {
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>::getCallback() const",
+						"_kind": "member function",
+						"_name": "getCallback",
+						"body_kind": "declaration",
+						"cv_qualifier": "const",
+						"id": 2421048520,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "getCallback",
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "Callback&",
+							"kind": "reference",
+							"referee": {
+								"_typeName": "Callback",
+								"kind": "user_defined",
+								"target": {
+									"name": "Callback",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::SchedulerListener<class>::Callback",
+										"_kind": "type alias",
+										"_name": "Callback",
+										"id": 317071321,
+										"kind": "type alias",
+										"name": "Callback",
+										"underlying_type": {
+											"_typeName": "Function<void (Subscription::Flags)>",
+											"arguments_exposed": false,
+											"kind": "template_instantiation",
+											"primary_template": {
+												"name": "Function"
+											},
+											"unexposed_arguments": "void (Subscription::Flags)"
+										}
+									}]
+								}
+							},
+							"reference_kind": "lvalue"
+						},
+						"semantic_scope": "",
+						"signature": "() const"
+					}, {
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>::setDirty()",
+						"_kind": "member function",
+						"_name": "setDirty",
+						"body_kind": "declaration",
+						"cv_qualifier": "none",
+						"id": 1176923935,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "setDirty",
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "()"
+					}, {
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>::update(stappler::xenolith::UpdateTime const&)",
+						"_kind": "member function",
+						"_name": "update",
+						"body_kind": "declaration",
+						"cv_qualifier": "none",
+						"id": 4138002721,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "update",
+						"parameters": [{
+							"_fullName": "time",
+							"_kind": "function parameter",
+							"_name": "time",
+							"id": 3795382400,
+							"kind": "function parameter",
+							"name": "time",
+							"type": {
+								"_typeName": "stappler::xenolith::UpdateTime const&",
+								"kind": "reference",
+								"referee": {
+									"_typeName": "stappler::xenolith::UpdateTime const",
+									"cv_qualifier": "const",
+									"kind": "cv_qualified",
+									"type": {
+										"_typeName": "stappler::xenolith::UpdateTime",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::xenolith::UpdateTime",
+											"objects": [{
+												"_fullName": "::stappler::xenolith::UpdateTime",
+												"_kind": "class",
+												"_name": "UpdateTime",
+												"class_kind": "struct",
+												"id": 3485761381,
+												"is_declaration": false,
+												"is_definition": true,
+												"is_final": false,
+												"kind": "class",
+												"name": "UpdateTime",
+												"scope": {
+													"name": "UpdateTime"
+												},
+												"semantic_scope": ""
+											}]
+										}
+									}
+								},
+								"reference_kind": "lvalue"
+							}
+						}],
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "(stappler::xenolith::UpdateTime const&)"
+					}, {
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>::check()",
+						"_kind": "member function",
+						"_name": "check",
+						"body_kind": "declaration",
+						"cv_qualifier": "none",
+						"id": 1694742516,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "check",
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "()"
+					}, {
+						"_fullName": "protected",
+						"_kind": "access specifier",
+						"_name": "protected",
+						"access_specifier": "protected",
+						"id": 1892155628,
+						"kind": "access specifier",
+						"name": "protected"
+					}, {
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>::updateScheduler()",
+						"_kind": "member function",
+						"_name": "updateScheduler",
+						"body_kind": "declaration",
+						"cv_qualifier": "none",
+						"id": 1059070384,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "updateScheduler",
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "()"
+					}, {
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>::schedule()",
+						"_kind": "member function",
+						"_name": "schedule",
+						"body_kind": "declaration",
+						"cv_qualifier": "none",
+						"id": 993930042,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "schedule",
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "()"
+					}, {
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>::unschedule()",
+						"_kind": "member function",
+						"_name": "unschedule",
+						"body_kind": "declaration",
+						"cv_qualifier": "none",
+						"id": 2054645820,
+						"is_consteval": false,
+						"is_constexpr": false,
+						"is_declaration": true,
+						"is_definition": false,
+						"is_variadic": false,
+						"is_virtual": false,
+						"kind": "member function",
+						"name": "unschedule",
+						"ref_qualifier": "none",
+						"return_type": {
+							"_typeName": "void",
+							"builtin_type_kind": "void",
+							"kind": "builtin"
+						},
+						"semantic_scope": "",
+						"signature": "()"
+					}, {
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>::_scheduler",
+						"_kind": "member variable",
+						"_name": "_scheduler",
+						"default_value": {
+							"expression": [{
+								"kind": "keyword",
+								"spelling": "nullptr"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "stappler::xenolith::Scheduler*",
+								"kind": "pointer",
+								"pointee": {
+									"_typeName": "stappler::xenolith::Scheduler",
+									"kind": "user_defined",
+									"target": {
+										"name": "stappler::xenolith::Scheduler",
+										"objects": [{
+											"_fullName": "::stappler::xenolith::Scheduler",
+											"_kind": "class",
+											"_name": "Scheduler",
+											"bases": [{
+												"_fullName": "Ref",
+												"_kind": "base class specifier",
+												"_name": "Ref",
+												"access_specifier": "public",
+												"id": 1165741041,
+												"is_virtual": false,
+												"kind": "base class specifier",
+												"name": "Ref",
+												"type": {
+													"_typeName": "stappler::mem_std::Ref",
+													"kind": "user_defined",
+													"target": {
+														"name": "stappler::mem_std::Ref",
+														"objects": [{
+															"_fullName": "::stappler::mem_std::Ref",
+															"_kind": "type alias",
+															"_name": "Ref",
+															"id": 3010886988,
+															"kind": "type alias",
+															"name": "Ref",
+															"underlying_type": {
+																"_typeName": "RefBase<memory::StandartInterface>",
+																"arguments_exposed": false,
+																"kind": "template_instantiation",
+																"primary_template": {
+																	"name": "RefBase",
+																	"objects": [{
+																		"_fullName": "::stappler::RefBase<typename>",
+																		"_kind": "class template",
+																		"_name": "RefBase",
+																		"class": {
+																			"_fullName": "::stappler::RefBase<typename>",
+																			"_kind": "class",
+																			"_name": "RefBase",
+																			"bases": [{
+																				"_fullName": "Interface::AllocBaseType",
+																				"_kind": "base class specifier",
+																				"_name": "Interface::AllocBaseType",
+																				"access_specifier": "public",
+																				"id": 25533212,
+																				"is_virtual": false,
+																				"kind": "base class specifier",
+																				"name": "Interface::AllocBaseType",
+																				"type": {
+																					"_typeName": "Interface::AllocBaseType",
+																					"kind": "unexposed",
+																					"name": "Interface::AllocBaseType"
+																				}
+																			}],
+																			"class_kind": "class",
+																			"id": 2191419057,
+																			"is_declaration": false,
+																			"is_definition": true,
+																			"is_final": false,
+																			"kind": "class",
+																			"name": "RefBase",
+																			"scope": {
+																				"is_templated": true,
+																				"name": "RefBase",
+																				"template_parameters": [{
+																					"_fullName": "Interface",
+																					"_kind": "template type parameter",
+																					"_name": "Interface",
+																					"id": 2255344761,
+																					"is_variadic": false,
+																					"keyword": "typename",
+																					"kind": "template type parameter",
+																					"name": "Interface"
+																				}]
+																			},
+																			"semantic_scope": ""
+																		},
+																		"id": 2191419057,
+																		"kind": "class template",
+																		"name": "RefBase",
+																		"parameters": [{
+																			"_fullName": "Interface",
+																			"_kind": "template type parameter",
+																			"_name": "Interface",
+																			"id": 2255344761,
+																			"is_variadic": false,
+																			"keyword": "typename",
+																			"kind": "template type parameter",
+																			"name": "Interface"
+																		}],
+																		"scope":  {
+																			"is_templated": true,
+																			"name": "RefBase",
+																			"template_parameters": [{
+																				"_fullName": "Interface",
+																				"_kind": "template type parameter",
+																				"_name": "Interface",
+																				"id": 2255344761,
+																				"is_variadic": false,
+																				"keyword": "typename",
+																				"kind": "template type parameter",
+																				"name": "Interface"
+																			}]
+																		}
+																	}]
+																},
+																"unexposed_arguments": "memory::StandartInterface"
+															}
+														}]
+													}
+												}
+											}],
+											"class_kind": "class",
+											"id": 304516062,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "Scheduler",
+											"scope": {
+												"name": "Scheduler"
+											},
+											"semantic_scope": ""
+										}]
+									}
+								}
+							}
+						},
+						"id": 1909366957,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "_scheduler",
+						"type": {
+							"_typeName": "stappler::xenolith::Scheduler*",
+							"kind": "pointer",
+							"pointee": {
+								"_typeName": "stappler::xenolith::Scheduler",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::Scheduler",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::Scheduler",
+										"_kind": "class",
+										"_name": "Scheduler",
+										"bases": [{
+											"_fullName": "Ref",
+											"_kind": "base class specifier",
+											"_name": "Ref",
+											"access_specifier": "public",
+											"id": 1165741041,
+											"is_virtual": false,
+											"kind": "base class specifier",
+											"name": "Ref",
+											"type": {
+												"_typeName": "stappler::mem_std::Ref",
+												"kind": "user_defined",
+												"target": {
+													"name": "stappler::mem_std::Ref",
+													"objects": [{
+														"_fullName": "::stappler::mem_std::Ref",
+														"_kind": "type alias",
+														"_name": "Ref",
+														"id": 3010886988,
+														"kind": "type alias",
+														"name": "Ref",
+														"underlying_type": {
+															"_typeName": "RefBase<memory::StandartInterface>",
+															"arguments_exposed": false,
+															"kind": "template_instantiation",
+															"primary_template": {
+																"name": "RefBase",
+																"objects": [{
+																	"_fullName": "::stappler::RefBase<typename>",
+																	"_kind": "class template",
+																	"_name": "RefBase",
+																	"class": {
+																		"_fullName": "::stappler::RefBase<typename>",
+																		"_kind": "class",
+																		"_name": "RefBase",
+																		"bases": [{
+																			"_fullName": "Interface::AllocBaseType",
+																			"_kind": "base class specifier",
+																			"_name": "Interface::AllocBaseType",
+																			"access_specifier": "public",
+																			"id": 25533212,
+																			"is_virtual": false,
+																			"kind": "base class specifier",
+																			"name": "Interface::AllocBaseType",
+																			"type": {
+																				"_typeName": "Interface::AllocBaseType",
+																				"kind": "unexposed",
+																				"name": "Interface::AllocBaseType"
+																			}
+																		}],
+																		"class_kind": "class",
+																		"id": 2191419057,
+																		"is_declaration": false,
+																		"is_definition": true,
+																		"is_final": false,
+																		"kind": "class",
+																		"name": "RefBase",
+																		"scope": {
+																			"is_templated": true,
+																			"name": "RefBase",
+																			"template_parameters": [{
+																				"_fullName": "Interface",
+																				"_kind": "template type parameter",
+																				"_name": "Interface",
+																				"id": 2255344761,
+																				"is_variadic": false,
+																				"keyword": "typename",
+																				"kind": "template type parameter",
+																				"name": "Interface"
+																			}]
+																		},
+																		"semantic_scope": ""
+																	},
+																	"id": 2191419057,
+																	"kind": "class template",
+																	"name": "RefBase",
+																	"parameters": [{
+																		"_fullName": "Interface",
+																		"_kind": "template type parameter",
+																		"_name": "Interface",
+																		"id": 2255344761,
+																		"is_variadic": false,
+																		"keyword": "typename",
+																		"kind": "template type parameter",
+																		"name": "Interface"
+																	}],
+																	"scope":  {
+																		"is_templated": true,
+																		"name": "RefBase",
+																		"template_parameters": [{
+																			"_fullName": "Interface",
+																			"_kind": "template type parameter",
+																			"_name": "Interface",
+																			"id": 2255344761,
+																			"is_variadic": false,
+																			"keyword": "typename",
+																			"kind": "template type parameter",
+																			"name": "Interface"
+																		}]
+																	}
+																}]
+															},
+															"unexposed_arguments": "memory::StandartInterface"
+														}
+													}]
+												}
+											}
+										}],
+										"class_kind": "class",
+										"id": 304516062,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Scheduler",
+										"scope": {
+											"name": "Scheduler"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>::_binding",
+						"_kind": "member variable",
+						"_name": "_binding",
+						"id": 2604217006,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "_binding",
+						"type": {
+							"_typeName": "Binding<T>",
+							"arguments_exposed": false,
+							"kind": "template_instantiation",
+							"primary_template": {
+								"name": "Binding",
+								"objects": [{
+									"_fullName": "::stappler::Binding<class>",
+									"_kind": "class template",
+									"_name": "Binding",
+									"class": {
+										"_fullName": "::stappler::Binding<class>",
+										"_kind": "class",
+										"_name": "Binding",
+										"class_kind": "class",
+										"id": 497989141,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "Binding",
+										"scope": {
+											"is_templated": true,
+											"name": "Binding",
+											"template_parameters": [{
+												"_fullName": "T",
+												"_kind": "template type parameter",
+												"_name": "T",
+												"id": 1306257776,
+												"is_variadic": false,
+												"keyword": "class",
+												"kind": "template type parameter",
+												"name": "T"
+											}]
+										},
+										"semantic_scope": ""
+									},
+									"comment": "Binding is an interface or slot for subscription, that handles\n- unique id acquisition\n- proper refcounting for binded subscription\n- easy access and not-null check for binded subscription\n\n",
+									"id": 497989141,
+									"kind": "class template",
+									"name": "Binding",
+									"parameters": [{
+										"_fullName": "T",
+										"_kind": "template type parameter",
+										"_name": "T",
+										"id": 1306257776,
+										"is_variadic": false,
+										"keyword": "class",
+										"kind": "template type parameter",
+										"name": "T"
+									}],
+									"scope":  {
+										"is_templated": true,
+										"name": "Binding",
+										"template_parameters": [{
+											"_fullName": "T",
+											"_kind": "template type parameter",
+											"_name": "T",
+											"id": 1306257776,
+											"is_variadic": false,
+											"keyword": "class",
+											"kind": "template type parameter",
+											"name": "T"
+										}]
+									}
+								}]
+							},
+							"unexposed_arguments": "T"
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>::_callback",
+						"_kind": "member variable",
+						"_name": "_callback",
+						"id": 349881750,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "_callback",
+						"type": {
+							"_typeName": "Callback",
+							"kind": "user_defined",
+							"target": {
+								"name": "Callback",
+								"objects": [{
+									"_fullName": "::stappler::xenolith::SchedulerListener<class>::Callback",
+									"_kind": "type alias",
+									"_name": "Callback",
+									"id": 317071321,
+									"kind": "type alias",
+									"name": "Callback",
+									"underlying_type": {
+										"_typeName": "Function<void (Subscription::Flags)>",
+										"arguments_exposed": false,
+										"kind": "template_instantiation",
+										"primary_template": {
+											"name": "Function"
+										},
+										"unexposed_arguments": "void (Subscription::Flags)"
+									}
+								}]
+							}
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>::_dirty",
+						"_kind": "member variable",
+						"_name": "_dirty",
+						"default_value": {
+							"expression": [{
+								"kind": "keyword",
+								"spelling": "false"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "bool",
+								"builtin_type_kind": "bool",
+								"kind": "builtin"
+							}
+						},
+						"id": 1061548841,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "_dirty",
+						"type": {
+							"_typeName": "bool",
+							"builtin_type_kind": "bool",
+							"kind": "builtin"
+						}
+					}, {
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>::_scheduled",
+						"_kind": "member variable",
+						"_name": "_scheduled",
+						"default_value": {
+							"expression": [{
+								"kind": "keyword",
+								"spelling": "false"
+							}],
+							"kind": "unexposed",
+							"type": {
+								"_typeName": "bool",
+								"builtin_type_kind": "bool",
+								"kind": "builtin"
+							}
+						},
+						"id": 1358668444,
+						"is_mutable": false,
+						"kind": "member variable",
+						"name": "_scheduled",
+						"type": {
+							"_typeName": "bool",
+							"builtin_type_kind": "bool",
+							"kind": "builtin"
+						}
+					}],
+					"class_kind": "class",
+					"id": 859895748,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_final": false,
+					"kind": "class",
+					"name": "SchedulerListener",
+					"scope": {
+						"is_templated": true,
+						"name": "SchedulerListener",
+						"template_parameters": [{
+							"_fullName": "T",
+							"_kind": "template type parameter",
+							"_name": "T",
+							"default_type": {
+								"_typeName": "Subscription",
+								"kind": "unexposed",
+								"name": "Subscription"
+							},
+							"id": 1306257776,
+							"is_variadic": false,
+							"keyword": "class",
+							"kind": "template type parameter",
+							"name": "T"
+						}]
+					},
+					"semantic_scope": ""
+				}],
+				"class":  {
+					"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+					"_kind": "class",
+					"_name": "SchedulerListener",
+					"class_kind": "class",
+					"id": 859895748,
+					"is_declaration": false,
+					"is_definition": true,
+					"is_final": false,
+					"kind": "class",
+					"name": "SchedulerListener",
+					"scope": {
+						"is_templated": true,
+						"name": "SchedulerListener",
+						"template_parameters": [{
+							"_fullName": "T",
+							"_kind": "template type parameter",
+							"_name": "T",
+							"default_type": {
+								"_typeName": "Subscription",
+								"kind": "unexposed",
+								"name": "Subscription"
+							},
+							"id": 1306257776,
+							"is_variadic": false,
+							"keyword": "class",
+							"kind": "template type parameter",
+							"name": "T"
+						}]
+					},
+					"semantic_scope": ""
+				},
+				"id": 859895748,
+				"kind": "class template",
+				"name": "SchedulerListener",
+				"parameters": [{
+					"_fullName": "T",
+					"_kind": "template type parameter",
+					"_name": "T",
+					"default_type": {
+						"_typeName": "Subscription",
+						"kind": "unexposed",
+						"name": "Subscription"
+					},
+					"id": 1306257776,
+					"is_variadic": false,
+					"keyword": "class",
+					"kind": "template type parameter",
+					"name": "T"
+				}],
+				"scope":  {
+					"is_templated": true,
+					"name": "SchedulerListener",
+					"template_parameters": [{
+						"_fullName": "T",
+						"_kind": "template type parameter",
+						"_name": "T",
+						"default_type": {
+							"_typeName": "Subscription",
+							"kind": "unexposed",
+							"name": "Subscription"
+						},
+						"id": 1306257776,
+						"is_variadic": false,
+						"keyword": "class",
+						"kind": "template type parameter",
+						"name": "T"
+					}]
+				}
 			}, {
 				"_fullName": "::stappler::xenolith::SchedulerUpdate<typename,typename>",
 				"_kind": "class template",
@@ -2626,6 +5182,3195 @@
 					"kind": "template type parameter",
 					"name": "T"
 				}]
+			}, {
+				"_fullName": "::stappler::xenolith::SchedulerListener<class>::SchedulerListener(stappler::xenolith::Scheduler*,stappler::xenolith::SchedulerListener::Callback const&,T*)",
+				"_kind": "constructor",
+				"_name": "SchedulerListener",
+				"body_kind": "definition",
+				"id": 2630493125,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_explicit": false,
+				"is_variadic": false,
+				"kind": "constructor",
+				"name": "SchedulerListener",
+				"parameters": [{
+					"_fullName": "s",
+					"_kind": "function parameter",
+					"_name": "s",
+					"id": 974162354,
+					"kind": "function parameter",
+					"name": "s",
+					"type": {
+						"_typeName": "stappler::xenolith::Scheduler*",
+						"kind": "pointer",
+						"pointee": {
+							"_typeName": "stappler::xenolith::Scheduler",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::xenolith::Scheduler",
+								"objects": [{
+									"_fullName": "::stappler::xenolith::Scheduler",
+									"_kind": "class",
+									"_name": "Scheduler",
+									"bases": [{
+										"_fullName": "Ref",
+										"_kind": "base class specifier",
+										"_name": "Ref",
+										"access_specifier": "public",
+										"id": 1165741041,
+										"is_virtual": false,
+										"kind": "base class specifier",
+										"name": "Ref",
+										"type": {
+											"_typeName": "stappler::mem_std::Ref",
+											"kind": "user_defined",
+											"target": {
+												"name": "stappler::mem_std::Ref",
+												"objects": [{
+													"_fullName": "::stappler::mem_std::Ref",
+													"_kind": "type alias",
+													"_name": "Ref",
+													"id": 3010886988,
+													"kind": "type alias",
+													"name": "Ref",
+													"underlying_type": {
+														"_typeName": "RefBase<memory::StandartInterface>",
+														"arguments_exposed": false,
+														"kind": "template_instantiation",
+														"primary_template": {
+															"name": "RefBase",
+															"objects": [{
+																"_fullName": "::stappler::RefBase<typename>",
+																"_kind": "class template",
+																"_name": "RefBase",
+																"class": {
+																	"_fullName": "::stappler::RefBase<typename>",
+																	"_kind": "class",
+																	"_name": "RefBase",
+																	"bases": [{
+																		"_fullName": "Interface::AllocBaseType",
+																		"_kind": "base class specifier",
+																		"_name": "Interface::AllocBaseType",
+																		"access_specifier": "public",
+																		"id": 25533212,
+																		"is_virtual": false,
+																		"kind": "base class specifier",
+																		"name": "Interface::AllocBaseType",
+																		"type": {
+																			"_typeName": "Interface::AllocBaseType",
+																			"kind": "unexposed",
+																			"name": "Interface::AllocBaseType"
+																		}
+																	}],
+																	"class_kind": "class",
+																	"id": 2191419057,
+																	"is_declaration": false,
+																	"is_definition": true,
+																	"is_final": false,
+																	"kind": "class",
+																	"name": "RefBase",
+																	"scope": {
+																		"is_templated": true,
+																		"name": "RefBase",
+																		"template_parameters": [{
+																			"_fullName": "Interface",
+																			"_kind": "template type parameter",
+																			"_name": "Interface",
+																			"id": 2255344761,
+																			"is_variadic": false,
+																			"keyword": "typename",
+																			"kind": "template type parameter",
+																			"name": "Interface"
+																		}]
+																	},
+																	"semantic_scope": ""
+																},
+																"id": 2191419057,
+																"kind": "class template",
+																"name": "RefBase",
+																"parameters": [{
+																	"_fullName": "Interface",
+																	"_kind": "template type parameter",
+																	"_name": "Interface",
+																	"id": 2255344761,
+																	"is_variadic": false,
+																	"keyword": "typename",
+																	"kind": "template type parameter",
+																	"name": "Interface"
+																}],
+																"scope":  {
+																	"is_templated": true,
+																	"name": "RefBase",
+																	"template_parameters": [{
+																		"_fullName": "Interface",
+																		"_kind": "template type parameter",
+																		"_name": "Interface",
+																		"id": 2255344761,
+																		"is_variadic": false,
+																		"keyword": "typename",
+																		"kind": "template type parameter",
+																		"name": "Interface"
+																	}]
+																}
+															}]
+														},
+														"unexposed_arguments": "memory::StandartInterface"
+													}
+												}]
+											}
+										}
+									}],
+									"class_kind": "class",
+									"id": 304516062,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "Scheduler",
+									"scope": {
+										"name": "Scheduler"
+									},
+									"semantic_scope": ""
+								}]
+							}
+						}
+					}
+				}, {
+					"_fullName": "cb",
+					"_kind": "function parameter",
+					"_name": "cb",
+					"id": 3456793284,
+					"kind": "function parameter",
+					"name": "cb",
+					"type": {
+						"_typeName": "stappler::xenolith::SchedulerListener::Callback const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::xenolith::SchedulerListener::Callback const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::xenolith::SchedulerListener::Callback",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::SchedulerListener::Callback",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::SchedulerListener<class>::Callback",
+										"_kind": "type alias",
+										"_name": "Callback",
+										"id": 317071321,
+										"kind": "type alias",
+										"name": "Callback",
+										"underlying_type": {
+											"_typeName": "Function<void (Subscription::Flags)>",
+											"arguments_exposed": false,
+											"kind": "template_instantiation",
+											"primary_template": {
+												"name": "Function"
+											},
+											"unexposed_arguments": "void (Subscription::Flags)"
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}, {
+					"_fullName": "sub",
+					"_kind": "function parameter",
+					"_name": "sub",
+					"id": 1798987754,
+					"kind": "function parameter",
+					"name": "sub",
+					"type": {
+						"_typeName": "T*",
+						"kind": "pointer",
+						"pointee": {
+							"_typeName": "T",
+							"entity": {
+								"name": "T",
+								"objects": [{
+									"_fullName": "T",
+									"_kind": "template type parameter",
+									"_name": "T",
+									"default_type": {
+										"_typeName": "Subscription",
+										"kind": "unexposed",
+										"name": "Subscription"
+									},
+									"id": 1306257776,
+									"is_variadic": false,
+									"keyword": "class",
+									"kind": "template type parameter",
+									"name": "T"
+								}]
+							},
+							"kind": "template_parameter"
+						}
+					}
+				}],
+				"semantic_parent":  {
+					"name": "SchedulerListener<T>::",
+					"objects": [{
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+						"_kind": "class template",
+						"_name": "SchedulerListener",
+						"class": {
+							"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+							"_kind": "class",
+							"_name": "SchedulerListener",
+							"class_kind": "class",
+							"id": 859895748,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_final": false,
+							"kind": "class",
+							"name": "SchedulerListener",
+							"scope": {
+								"is_templated": true,
+								"name": "SchedulerListener",
+								"template_parameters": [{
+									"_fullName": "T",
+									"_kind": "template type parameter",
+									"_name": "T",
+									"default_type": {
+										"_typeName": "Subscription",
+										"kind": "unexposed",
+										"name": "Subscription"
+									},
+									"id": 1306257776,
+									"is_variadic": false,
+									"keyword": "class",
+									"kind": "template type parameter",
+									"name": "T"
+								}]
+							},
+							"semantic_scope": ""
+						},
+						"id": 859895748,
+						"kind": "class template",
+						"name": "SchedulerListener",
+						"parameters": [{
+							"_fullName": "T",
+							"_kind": "template type parameter",
+							"_name": "T",
+							"default_type": {
+								"_typeName": "Subscription",
+								"kind": "unexposed",
+								"name": "Subscription"
+							},
+							"id": 1306257776,
+							"is_variadic": false,
+							"keyword": "class",
+							"kind": "template type parameter",
+							"name": "T"
+						}],
+						"scope":  {
+							"is_templated": true,
+							"name": "SchedulerListener",
+							"template_parameters": [{
+								"_fullName": "T",
+								"_kind": "template type parameter",
+								"_name": "T",
+								"default_type": {
+									"_typeName": "Subscription",
+									"kind": "unexposed",
+									"name": "Subscription"
+								},
+								"id": 1306257776,
+								"is_variadic": false,
+								"keyword": "class",
+								"kind": "template type parameter",
+								"name": "T"
+							}]
+						}
+					}]
+				},
+				"semantic_scope": "SchedulerListener<T>::",
+				"signature": "(stappler::xenolith::Scheduler*,stappler::xenolith::SchedulerListener::Callback const&,T*)"
+			}, {
+				"_fullName": "::stappler::xenolith::SchedulerListener<class>::~SchedulerListener()",
+				"_kind": "destructor",
+				"_name": "~SchedulerListener",
+				"body_kind": "definition",
+				"id": 2708914223,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"is_virtual": false,
+				"kind": "destructor",
+				"name": "~SchedulerListener",
+				"semantic_parent": {
+					"name": "SchedulerListener<T>::",
+					"objects": [{
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+						"_kind": "class template",
+						"_name": "SchedulerListener",
+						"class": {
+							"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+							"_kind": "class",
+							"_name": "SchedulerListener",
+							"class_kind": "class",
+							"id": 859895748,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_final": false,
+							"kind": "class",
+							"name": "SchedulerListener",
+							"scope": {
+								"is_templated": true,
+								"name": "SchedulerListener",
+								"template_parameters": [{
+									"_fullName": "T",
+									"_kind": "template type parameter",
+									"_name": "T",
+									"default_type": {
+										"_typeName": "Subscription",
+										"kind": "unexposed",
+										"name": "Subscription"
+									},
+									"id": 1306257776,
+									"is_variadic": false,
+									"keyword": "class",
+									"kind": "template type parameter",
+									"name": "T"
+								}]
+							},
+							"semantic_scope": ""
+						},
+						"id": 859895748,
+						"kind": "class template",
+						"name": "SchedulerListener",
+						"parameters": [{
+							"_fullName": "T",
+							"_kind": "template type parameter",
+							"_name": "T",
+							"default_type": {
+								"_typeName": "Subscription",
+								"kind": "unexposed",
+								"name": "Subscription"
+							},
+							"id": 1306257776,
+							"is_variadic": false,
+							"keyword": "class",
+							"kind": "template type parameter",
+							"name": "T"
+						}],
+						"scope":  {
+							"is_templated": true,
+							"name": "SchedulerListener",
+							"template_parameters": [{
+								"_fullName": "T",
+								"_kind": "template type parameter",
+								"_name": "T",
+								"default_type": {
+									"_typeName": "Subscription",
+									"kind": "unexposed",
+									"name": "Subscription"
+								},
+								"id": 1306257776,
+								"is_variadic": false,
+								"keyword": "class",
+								"kind": "template type parameter",
+								"name": "T"
+							}]
+						}
+					}]
+				},
+				"semantic_scope": "SchedulerListener<T>::",
+				"signature": "()"
+			}, {
+				"_fullName": "::stappler::xenolith::SchedulerListener<class>::SchedulerListener(SchedulerListener<T> const&)",
+				"_kind": "constructor",
+				"_name": "SchedulerListener",
+				"body_kind": "definition",
+				"id": 797685718,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_explicit": false,
+				"is_variadic": false,
+				"kind": "constructor",
+				"name": "SchedulerListener",
+				"parameters": [{
+					"_fullName": "other",
+					"_kind": "function parameter",
+					"_name": "other",
+					"id": 1825998954,
+					"kind": "function parameter",
+					"name": "other",
+					"type": {
+						"_typeName": "SchedulerListener<T> const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "SchedulerListener<T> const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "SchedulerListener<T>",
+								"arguments_exposed": false,
+								"kind": "template_instantiation",
+								"primary_template": {
+									"name": "SchedulerListener",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+										"_kind": "class template",
+										"_name": "SchedulerListener",
+										"class": {
+											"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+											"_kind": "class",
+											"_name": "SchedulerListener",
+											"class_kind": "class",
+											"id": 859895748,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "SchedulerListener",
+											"scope": {
+												"is_templated": true,
+												"name": "SchedulerListener",
+												"template_parameters": [{
+													"_fullName": "T",
+													"_kind": "template type parameter",
+													"_name": "T",
+													"default_type": {
+														"_typeName": "Subscription",
+														"kind": "unexposed",
+														"name": "Subscription"
+													},
+													"id": 1306257776,
+													"is_variadic": false,
+													"keyword": "class",
+													"kind": "template type parameter",
+													"name": "T"
+												}]
+											},
+											"semantic_scope": ""
+										},
+										"id": 859895748,
+										"kind": "class template",
+										"name": "SchedulerListener",
+										"parameters": [{
+											"_fullName": "T",
+											"_kind": "template type parameter",
+											"_name": "T",
+											"default_type": {
+												"_typeName": "Subscription",
+												"kind": "unexposed",
+												"name": "Subscription"
+											},
+											"id": 1306257776,
+											"is_variadic": false,
+											"keyword": "class",
+											"kind": "template type parameter",
+											"name": "T"
+										}],
+										"scope":  {
+											"is_templated": true,
+											"name": "SchedulerListener",
+											"template_parameters": [{
+												"_fullName": "T",
+												"_kind": "template type parameter",
+												"_name": "T",
+												"default_type": {
+													"_typeName": "Subscription",
+													"kind": "unexposed",
+													"name": "Subscription"
+												},
+												"id": 1306257776,
+												"is_variadic": false,
+												"keyword": "class",
+												"kind": "template type parameter",
+												"name": "T"
+											}]
+										}
+									}]
+								},
+								"unexposed_arguments": "T"
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"semantic_parent":  {
+					"name": "SchedulerListener<T>::",
+					"objects": [{
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+						"_kind": "class template",
+						"_name": "SchedulerListener",
+						"class": {
+							"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+							"_kind": "class",
+							"_name": "SchedulerListener",
+							"class_kind": "class",
+							"id": 859895748,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_final": false,
+							"kind": "class",
+							"name": "SchedulerListener",
+							"scope": {
+								"is_templated": true,
+								"name": "SchedulerListener",
+								"template_parameters": [{
+									"_fullName": "T",
+									"_kind": "template type parameter",
+									"_name": "T",
+									"default_type": {
+										"_typeName": "Subscription",
+										"kind": "unexposed",
+										"name": "Subscription"
+									},
+									"id": 1306257776,
+									"is_variadic": false,
+									"keyword": "class",
+									"kind": "template type parameter",
+									"name": "T"
+								}]
+							},
+							"semantic_scope": ""
+						},
+						"id": 859895748,
+						"kind": "class template",
+						"name": "SchedulerListener",
+						"parameters": [{
+							"_fullName": "T",
+							"_kind": "template type parameter",
+							"_name": "T",
+							"default_type": {
+								"_typeName": "Subscription",
+								"kind": "unexposed",
+								"name": "Subscription"
+							},
+							"id": 1306257776,
+							"is_variadic": false,
+							"keyword": "class",
+							"kind": "template type parameter",
+							"name": "T"
+						}],
+						"scope":  {
+							"is_templated": true,
+							"name": "SchedulerListener",
+							"template_parameters": [{
+								"_fullName": "T",
+								"_kind": "template type parameter",
+								"_name": "T",
+								"default_type": {
+									"_typeName": "Subscription",
+									"kind": "unexposed",
+									"name": "Subscription"
+								},
+								"id": 1306257776,
+								"is_variadic": false,
+								"keyword": "class",
+								"kind": "template type parameter",
+								"name": "T"
+							}]
+						}
+					}]
+				},
+				"semantic_scope": "SchedulerListener<T>::",
+				"signature": "(SchedulerListener<T> const&)"
+			}, {
+				"_fullName": "::stappler::xenolith::SchedulerListener<class>::operator=(SchedulerListener<T> const&)",
+				"_kind": "member function",
+				"_name": "operator=",
+				"body_kind": "definition",
+				"cv_qualifier": "none",
+				"id": 4212645617,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"is_virtual": false,
+				"kind": "member function",
+				"name": "operator=",
+				"parameters": [{
+					"_fullName": "other",
+					"_kind": "function parameter",
+					"_name": "other",
+					"id": 1825998954,
+					"kind": "function parameter",
+					"name": "other",
+					"type": {
+						"_typeName": "SchedulerListener<T> const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "SchedulerListener<T> const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "SchedulerListener<T>",
+								"arguments_exposed": false,
+								"kind": "template_instantiation",
+								"primary_template": {
+									"name": "SchedulerListener",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+										"_kind": "class template",
+										"_name": "SchedulerListener",
+										"class": {
+											"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+											"_kind": "class",
+											"_name": "SchedulerListener",
+											"class_kind": "class",
+											"id": 859895748,
+											"is_declaration": false,
+											"is_definition": true,
+											"is_final": false,
+											"kind": "class",
+											"name": "SchedulerListener",
+											"scope": {
+												"is_templated": true,
+												"name": "SchedulerListener",
+												"template_parameters": [{
+													"_fullName": "T",
+													"_kind": "template type parameter",
+													"_name": "T",
+													"default_type": {
+														"_typeName": "Subscription",
+														"kind": "unexposed",
+														"name": "Subscription"
+													},
+													"id": 1306257776,
+													"is_variadic": false,
+													"keyword": "class",
+													"kind": "template type parameter",
+													"name": "T"
+												}]
+											},
+											"semantic_scope": ""
+										},
+										"id": 859895748,
+										"kind": "class template",
+										"name": "SchedulerListener",
+										"parameters": [{
+											"_fullName": "T",
+											"_kind": "template type parameter",
+											"_name": "T",
+											"default_type": {
+												"_typeName": "Subscription",
+												"kind": "unexposed",
+												"name": "Subscription"
+											},
+											"id": 1306257776,
+											"is_variadic": false,
+											"keyword": "class",
+											"kind": "template type parameter",
+											"name": "T"
+										}],
+										"scope":  {
+											"is_templated": true,
+											"name": "SchedulerListener",
+											"template_parameters": [{
+												"_fullName": "T",
+												"_kind": "template type parameter",
+												"_name": "T",
+												"default_type": {
+													"_typeName": "Subscription",
+													"kind": "unexposed",
+													"name": "Subscription"
+												},
+												"id": 1306257776,
+												"is_variadic": false,
+												"keyword": "class",
+												"kind": "template type parameter",
+												"name": "T"
+											}]
+										}
+									}]
+								},
+								"unexposed_arguments": "T"
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"ref_qualifier": "none",
+				"return_type": {
+					"_typeName": "SchedulerListener<T>&",
+					"kind": "reference",
+					"referee": {
+						"_typeName": "SchedulerListener<T>",
+						"arguments_exposed": false,
+						"kind": "template_instantiation",
+						"primary_template": {
+							"name": "SchedulerListener",
+							"objects": [{
+								"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+								"_kind": "class template",
+								"_name": "SchedulerListener",
+								"class": {
+									"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+									"_kind": "class",
+									"_name": "SchedulerListener",
+									"class_kind": "class",
+									"id": 859895748,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "SchedulerListener",
+									"scope": {
+										"is_templated": true,
+										"name": "SchedulerListener",
+										"template_parameters": [{
+											"_fullName": "T",
+											"_kind": "template type parameter",
+											"_name": "T",
+											"default_type": {
+												"_typeName": "Subscription",
+												"kind": "unexposed",
+												"name": "Subscription"
+											},
+											"id": 1306257776,
+											"is_variadic": false,
+											"keyword": "class",
+											"kind": "template type parameter",
+											"name": "T"
+										}]
+									},
+									"semantic_scope": ""
+								},
+								"id": 859895748,
+								"kind": "class template",
+								"name": "SchedulerListener",
+								"parameters": [{
+									"_fullName": "T",
+									"_kind": "template type parameter",
+									"_name": "T",
+									"default_type": {
+										"_typeName": "Subscription",
+										"kind": "unexposed",
+										"name": "Subscription"
+									},
+									"id": 1306257776,
+									"is_variadic": false,
+									"keyword": "class",
+									"kind": "template type parameter",
+									"name": "T"
+								}],
+								"scope":  {
+									"is_templated": true,
+									"name": "SchedulerListener",
+									"template_parameters": [{
+										"_fullName": "T",
+										"_kind": "template type parameter",
+										"_name": "T",
+										"default_type": {
+											"_typeName": "Subscription",
+											"kind": "unexposed",
+											"name": "Subscription"
+										},
+										"id": 1306257776,
+										"is_variadic": false,
+										"keyword": "class",
+										"kind": "template type parameter",
+										"name": "T"
+									}]
+								}
+							}]
+						},
+						"unexposed_arguments": "T"
+					},
+					"reference_kind": "lvalue"
+				},
+				"semantic_parent":  {
+					"name": "SchedulerListener<T>::",
+					"objects": [{
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+						"_kind": "class template",
+						"_name": "SchedulerListener",
+						"class": {
+							"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+							"_kind": "class",
+							"_name": "SchedulerListener",
+							"class_kind": "class",
+							"id": 859895748,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_final": false,
+							"kind": "class",
+							"name": "SchedulerListener",
+							"scope": {
+								"is_templated": true,
+								"name": "SchedulerListener",
+								"template_parameters": [{
+									"_fullName": "T",
+									"_kind": "template type parameter",
+									"_name": "T",
+									"default_type": {
+										"_typeName": "Subscription",
+										"kind": "unexposed",
+										"name": "Subscription"
+									},
+									"id": 1306257776,
+									"is_variadic": false,
+									"keyword": "class",
+									"kind": "template type parameter",
+									"name": "T"
+								}]
+							},
+							"semantic_scope": ""
+						},
+						"id": 859895748,
+						"kind": "class template",
+						"name": "SchedulerListener",
+						"parameters": [{
+							"_fullName": "T",
+							"_kind": "template type parameter",
+							"_name": "T",
+							"default_type": {
+								"_typeName": "Subscription",
+								"kind": "unexposed",
+								"name": "Subscription"
+							},
+							"id": 1306257776,
+							"is_variadic": false,
+							"keyword": "class",
+							"kind": "template type parameter",
+							"name": "T"
+						}],
+						"scope":  {
+							"is_templated": true,
+							"name": "SchedulerListener",
+							"template_parameters": [{
+								"_fullName": "T",
+								"_kind": "template type parameter",
+								"_name": "T",
+								"default_type": {
+									"_typeName": "Subscription",
+									"kind": "unexposed",
+									"name": "Subscription"
+								},
+								"id": 1306257776,
+								"is_variadic": false,
+								"keyword": "class",
+								"kind": "template type parameter",
+								"name": "T"
+							}]
+						}
+					}]
+				},
+				"semantic_scope": "SchedulerListener<T>::",
+				"signature": "(SchedulerListener<T> const&)"
+			}, {
+				"_fullName": "::stappler::xenolith::SchedulerListener<class>::SchedulerListener(SchedulerListener<T>&&)",
+				"_kind": "constructor",
+				"_name": "SchedulerListener",
+				"body_kind": "definition",
+				"id": 2381058986,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_explicit": false,
+				"is_variadic": false,
+				"kind": "constructor",
+				"name": "SchedulerListener",
+				"parameters": [{
+					"_fullName": "other",
+					"_kind": "function parameter",
+					"_name": "other",
+					"id": 1825998954,
+					"kind": "function parameter",
+					"name": "other",
+					"type": {
+						"_typeName": "SchedulerListener<T>&&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "SchedulerListener<T>",
+							"arguments_exposed": false,
+							"kind": "template_instantiation",
+							"primary_template": {
+								"name": "SchedulerListener",
+								"objects": [{
+									"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+									"_kind": "class template",
+									"_name": "SchedulerListener",
+									"class": {
+										"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+										"_kind": "class",
+										"_name": "SchedulerListener",
+										"class_kind": "class",
+										"id": 859895748,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "SchedulerListener",
+										"scope": {
+											"is_templated": true,
+											"name": "SchedulerListener",
+											"template_parameters": [{
+												"_fullName": "T",
+												"_kind": "template type parameter",
+												"_name": "T",
+												"default_type": {
+													"_typeName": "Subscription",
+													"kind": "unexposed",
+													"name": "Subscription"
+												},
+												"id": 1306257776,
+												"is_variadic": false,
+												"keyword": "class",
+												"kind": "template type parameter",
+												"name": "T"
+											}]
+										},
+										"semantic_scope": ""
+									},
+									"id": 859895748,
+									"kind": "class template",
+									"name": "SchedulerListener",
+									"parameters": [{
+										"_fullName": "T",
+										"_kind": "template type parameter",
+										"_name": "T",
+										"default_type": {
+											"_typeName": "Subscription",
+											"kind": "unexposed",
+											"name": "Subscription"
+										},
+										"id": 1306257776,
+										"is_variadic": false,
+										"keyword": "class",
+										"kind": "template type parameter",
+										"name": "T"
+									}],
+									"scope":  {
+										"is_templated": true,
+										"name": "SchedulerListener",
+										"template_parameters": [{
+											"_fullName": "T",
+											"_kind": "template type parameter",
+											"_name": "T",
+											"default_type": {
+												"_typeName": "Subscription",
+												"kind": "unexposed",
+												"name": "Subscription"
+											},
+											"id": 1306257776,
+											"is_variadic": false,
+											"keyword": "class",
+											"kind": "template type parameter",
+											"name": "T"
+										}]
+									}
+								}]
+							},
+							"unexposed_arguments": "T"
+						},
+						"reference_kind": "rvalue"
+					}
+				}],
+				"semantic_parent":  {
+					"name": "SchedulerListener<T>::",
+					"objects": [{
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+						"_kind": "class template",
+						"_name": "SchedulerListener",
+						"class": {
+							"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+							"_kind": "class",
+							"_name": "SchedulerListener",
+							"class_kind": "class",
+							"id": 859895748,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_final": false,
+							"kind": "class",
+							"name": "SchedulerListener",
+							"scope": {
+								"is_templated": true,
+								"name": "SchedulerListener",
+								"template_parameters": [{
+									"_fullName": "T",
+									"_kind": "template type parameter",
+									"_name": "T",
+									"default_type": {
+										"_typeName": "Subscription",
+										"kind": "unexposed",
+										"name": "Subscription"
+									},
+									"id": 1306257776,
+									"is_variadic": false,
+									"keyword": "class",
+									"kind": "template type parameter",
+									"name": "T"
+								}]
+							},
+							"semantic_scope": ""
+						},
+						"id": 859895748,
+						"kind": "class template",
+						"name": "SchedulerListener",
+						"parameters": [{
+							"_fullName": "T",
+							"_kind": "template type parameter",
+							"_name": "T",
+							"default_type": {
+								"_typeName": "Subscription",
+								"kind": "unexposed",
+								"name": "Subscription"
+							},
+							"id": 1306257776,
+							"is_variadic": false,
+							"keyword": "class",
+							"kind": "template type parameter",
+							"name": "T"
+						}],
+						"scope":  {
+							"is_templated": true,
+							"name": "SchedulerListener",
+							"template_parameters": [{
+								"_fullName": "T",
+								"_kind": "template type parameter",
+								"_name": "T",
+								"default_type": {
+									"_typeName": "Subscription",
+									"kind": "unexposed",
+									"name": "Subscription"
+								},
+								"id": 1306257776,
+								"is_variadic": false,
+								"keyword": "class",
+								"kind": "template type parameter",
+								"name": "T"
+							}]
+						}
+					}]
+				},
+				"semantic_scope": "SchedulerListener<T>::",
+				"signature": "(SchedulerListener<T>&&)"
+			}, {
+				"_fullName": "::stappler::xenolith::SchedulerListener<class>::operator=(SchedulerListener<T>&&)",
+				"_kind": "member function",
+				"_name": "operator=",
+				"body_kind": "definition",
+				"cv_qualifier": "none",
+				"id": 3241466107,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"is_virtual": false,
+				"kind": "member function",
+				"name": "operator=",
+				"parameters": [{
+					"_fullName": "other",
+					"_kind": "function parameter",
+					"_name": "other",
+					"id": 1825998954,
+					"kind": "function parameter",
+					"name": "other",
+					"type": {
+						"_typeName": "SchedulerListener<T>&&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "SchedulerListener<T>",
+							"arguments_exposed": false,
+							"kind": "template_instantiation",
+							"primary_template": {
+								"name": "SchedulerListener",
+								"objects": [{
+									"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+									"_kind": "class template",
+									"_name": "SchedulerListener",
+									"class": {
+										"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+										"_kind": "class",
+										"_name": "SchedulerListener",
+										"class_kind": "class",
+										"id": 859895748,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "SchedulerListener",
+										"scope": {
+											"is_templated": true,
+											"name": "SchedulerListener",
+											"template_parameters": [{
+												"_fullName": "T",
+												"_kind": "template type parameter",
+												"_name": "T",
+												"default_type": {
+													"_typeName": "Subscription",
+													"kind": "unexposed",
+													"name": "Subscription"
+												},
+												"id": 1306257776,
+												"is_variadic": false,
+												"keyword": "class",
+												"kind": "template type parameter",
+												"name": "T"
+											}]
+										},
+										"semantic_scope": ""
+									},
+									"id": 859895748,
+									"kind": "class template",
+									"name": "SchedulerListener",
+									"parameters": [{
+										"_fullName": "T",
+										"_kind": "template type parameter",
+										"_name": "T",
+										"default_type": {
+											"_typeName": "Subscription",
+											"kind": "unexposed",
+											"name": "Subscription"
+										},
+										"id": 1306257776,
+										"is_variadic": false,
+										"keyword": "class",
+										"kind": "template type parameter",
+										"name": "T"
+									}],
+									"scope":  {
+										"is_templated": true,
+										"name": "SchedulerListener",
+										"template_parameters": [{
+											"_fullName": "T",
+											"_kind": "template type parameter",
+											"_name": "T",
+											"default_type": {
+												"_typeName": "Subscription",
+												"kind": "unexposed",
+												"name": "Subscription"
+											},
+											"id": 1306257776,
+											"is_variadic": false,
+											"keyword": "class",
+											"kind": "template type parameter",
+											"name": "T"
+										}]
+									}
+								}]
+							},
+							"unexposed_arguments": "T"
+						},
+						"reference_kind": "rvalue"
+					}
+				}],
+				"ref_qualifier": "none",
+				"return_type": {
+					"_typeName": "SchedulerListener<T>&",
+					"kind": "reference",
+					"referee": {
+						"_typeName": "SchedulerListener<T>",
+						"arguments_exposed": false,
+						"kind": "template_instantiation",
+						"primary_template": {
+							"name": "SchedulerListener",
+							"objects": [{
+								"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+								"_kind": "class template",
+								"_name": "SchedulerListener",
+								"class": {
+									"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+									"_kind": "class",
+									"_name": "SchedulerListener",
+									"class_kind": "class",
+									"id": 859895748,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "SchedulerListener",
+									"scope": {
+										"is_templated": true,
+										"name": "SchedulerListener",
+										"template_parameters": [{
+											"_fullName": "T",
+											"_kind": "template type parameter",
+											"_name": "T",
+											"default_type": {
+												"_typeName": "Subscription",
+												"kind": "unexposed",
+												"name": "Subscription"
+											},
+											"id": 1306257776,
+											"is_variadic": false,
+											"keyword": "class",
+											"kind": "template type parameter",
+											"name": "T"
+										}]
+									},
+									"semantic_scope": ""
+								},
+								"id": 859895748,
+								"kind": "class template",
+								"name": "SchedulerListener",
+								"parameters": [{
+									"_fullName": "T",
+									"_kind": "template type parameter",
+									"_name": "T",
+									"default_type": {
+										"_typeName": "Subscription",
+										"kind": "unexposed",
+										"name": "Subscription"
+									},
+									"id": 1306257776,
+									"is_variadic": false,
+									"keyword": "class",
+									"kind": "template type parameter",
+									"name": "T"
+								}],
+								"scope":  {
+									"is_templated": true,
+									"name": "SchedulerListener",
+									"template_parameters": [{
+										"_fullName": "T",
+										"_kind": "template type parameter",
+										"_name": "T",
+										"default_type": {
+											"_typeName": "Subscription",
+											"kind": "unexposed",
+											"name": "Subscription"
+										},
+										"id": 1306257776,
+										"is_variadic": false,
+										"keyword": "class",
+										"kind": "template type parameter",
+										"name": "T"
+									}]
+								}
+							}]
+						},
+						"unexposed_arguments": "T"
+					},
+					"reference_kind": "lvalue"
+				},
+				"semantic_parent":  {
+					"name": "SchedulerListener<T>::",
+					"objects": [{
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+						"_kind": "class template",
+						"_name": "SchedulerListener",
+						"class": {
+							"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+							"_kind": "class",
+							"_name": "SchedulerListener",
+							"class_kind": "class",
+							"id": 859895748,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_final": false,
+							"kind": "class",
+							"name": "SchedulerListener",
+							"scope": {
+								"is_templated": true,
+								"name": "SchedulerListener",
+								"template_parameters": [{
+									"_fullName": "T",
+									"_kind": "template type parameter",
+									"_name": "T",
+									"default_type": {
+										"_typeName": "Subscription",
+										"kind": "unexposed",
+										"name": "Subscription"
+									},
+									"id": 1306257776,
+									"is_variadic": false,
+									"keyword": "class",
+									"kind": "template type parameter",
+									"name": "T"
+								}]
+							},
+							"semantic_scope": ""
+						},
+						"id": 859895748,
+						"kind": "class template",
+						"name": "SchedulerListener",
+						"parameters": [{
+							"_fullName": "T",
+							"_kind": "template type parameter",
+							"_name": "T",
+							"default_type": {
+								"_typeName": "Subscription",
+								"kind": "unexposed",
+								"name": "Subscription"
+							},
+							"id": 1306257776,
+							"is_variadic": false,
+							"keyword": "class",
+							"kind": "template type parameter",
+							"name": "T"
+						}],
+						"scope":  {
+							"is_templated": true,
+							"name": "SchedulerListener",
+							"template_parameters": [{
+								"_fullName": "T",
+								"_kind": "template type parameter",
+								"_name": "T",
+								"default_type": {
+									"_typeName": "Subscription",
+									"kind": "unexposed",
+									"name": "Subscription"
+								},
+								"id": 1306257776,
+								"is_variadic": false,
+								"keyword": "class",
+								"kind": "template type parameter",
+								"name": "T"
+							}]
+						}
+					}]
+				},
+				"semantic_scope": "SchedulerListener<T>::",
+				"signature": "(SchedulerListener<T>&&)"
+			}, {
+				"_fullName": "::stappler::xenolith::SchedulerListener<class>::set(T*)",
+				"_kind": "member function",
+				"_name": "set",
+				"body_kind": "definition",
+				"cv_qualifier": "none",
+				"id": 4152815556,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"is_virtual": false,
+				"kind": "member function",
+				"name": "set",
+				"parameters": [{
+					"_fullName": "sub",
+					"_kind": "function parameter",
+					"_name": "sub",
+					"id": 1798987754,
+					"kind": "function parameter",
+					"name": "sub",
+					"type": {
+						"_typeName": "T*",
+						"kind": "pointer",
+						"pointee": {
+							"_typeName": "T",
+							"entity": {
+								"name": "T",
+								"objects": [{
+									"_fullName": "T",
+									"_kind": "template type parameter",
+									"_name": "T",
+									"default_type": {
+										"_typeName": "Subscription",
+										"kind": "unexposed",
+										"name": "Subscription"
+									},
+									"id": 1306257776,
+									"is_variadic": false,
+									"keyword": "class",
+									"kind": "template type parameter",
+									"name": "T"
+								}]
+							},
+							"kind": "template_parameter"
+						}
+					}
+				}],
+				"ref_qualifier": "none",
+				"return_type": {
+					"_typeName": "void",
+					"builtin_type_kind": "void",
+					"kind": "builtin"
+				},
+				"semantic_parent":  {
+					"name": "SchedulerListener<T>::",
+					"objects": [{
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+						"_kind": "class template",
+						"_name": "SchedulerListener",
+						"class": {
+							"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+							"_kind": "class",
+							"_name": "SchedulerListener",
+							"class_kind": "class",
+							"id": 859895748,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_final": false,
+							"kind": "class",
+							"name": "SchedulerListener",
+							"scope": {
+								"is_templated": true,
+								"name": "SchedulerListener",
+								"template_parameters": [{
+									"_fullName": "T",
+									"_kind": "template type parameter",
+									"_name": "T",
+									"default_type": {
+										"_typeName": "Subscription",
+										"kind": "unexposed",
+										"name": "Subscription"
+									},
+									"id": 1306257776,
+									"is_variadic": false,
+									"keyword": "class",
+									"kind": "template type parameter",
+									"name": "T"
+								}]
+							},
+							"semantic_scope": ""
+						},
+						"id": 859895748,
+						"kind": "class template",
+						"name": "SchedulerListener",
+						"parameters": [{
+							"_fullName": "T",
+							"_kind": "template type parameter",
+							"_name": "T",
+							"default_type": {
+								"_typeName": "Subscription",
+								"kind": "unexposed",
+								"name": "Subscription"
+							},
+							"id": 1306257776,
+							"is_variadic": false,
+							"keyword": "class",
+							"kind": "template type parameter",
+							"name": "T"
+						}],
+						"scope":  {
+							"is_templated": true,
+							"name": "SchedulerListener",
+							"template_parameters": [{
+								"_fullName": "T",
+								"_kind": "template type parameter",
+								"_name": "T",
+								"default_type": {
+									"_typeName": "Subscription",
+									"kind": "unexposed",
+									"name": "Subscription"
+								},
+								"id": 1306257776,
+								"is_variadic": false,
+								"keyword": "class",
+								"kind": "template type parameter",
+								"name": "T"
+							}]
+						}
+					}]
+				},
+				"semantic_scope": "SchedulerListener<T>::",
+				"signature": "(T*)"
+			}, {
+				"_fullName": "::stappler::xenolith::SchedulerListener<class>::operator=(T*)",
+				"_kind": "member function",
+				"_name": "operator=",
+				"body_kind": "definition",
+				"cv_qualifier": "none",
+				"id": 3276438399,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"is_virtual": false,
+				"kind": "member function",
+				"name": "operator=",
+				"parameters": [{
+					"_fullName": "sub",
+					"_kind": "function parameter",
+					"_name": "sub",
+					"id": 1798987754,
+					"kind": "function parameter",
+					"name": "sub",
+					"type": {
+						"_typeName": "T*",
+						"kind": "pointer",
+						"pointee": {
+							"_typeName": "T",
+							"entity": {
+								"name": "T",
+								"objects": [{
+									"_fullName": "T",
+									"_kind": "template type parameter",
+									"_name": "T",
+									"default_type": {
+										"_typeName": "Subscription",
+										"kind": "unexposed",
+										"name": "Subscription"
+									},
+									"id": 1306257776,
+									"is_variadic": false,
+									"keyword": "class",
+									"kind": "template type parameter",
+									"name": "T"
+								}]
+							},
+							"kind": "template_parameter"
+						}
+					}
+				}],
+				"ref_qualifier": "none",
+				"return_type": {
+					"_typeName": "SchedulerListener<T>&",
+					"kind": "reference",
+					"referee": {
+						"_typeName": "SchedulerListener<T>",
+						"arguments_exposed": false,
+						"kind": "template_instantiation",
+						"primary_template": {
+							"name": "SchedulerListener",
+							"objects": [{
+								"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+								"_kind": "class template",
+								"_name": "SchedulerListener",
+								"class": {
+									"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+									"_kind": "class",
+									"_name": "SchedulerListener",
+									"class_kind": "class",
+									"id": 859895748,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "SchedulerListener",
+									"scope": {
+										"is_templated": true,
+										"name": "SchedulerListener",
+										"template_parameters": [{
+											"_fullName": "T",
+											"_kind": "template type parameter",
+											"_name": "T",
+											"default_type": {
+												"_typeName": "Subscription",
+												"kind": "unexposed",
+												"name": "Subscription"
+											},
+											"id": 1306257776,
+											"is_variadic": false,
+											"keyword": "class",
+											"kind": "template type parameter",
+											"name": "T"
+										}]
+									},
+									"semantic_scope": ""
+								},
+								"id": 859895748,
+								"kind": "class template",
+								"name": "SchedulerListener",
+								"parameters": [{
+									"_fullName": "T",
+									"_kind": "template type parameter",
+									"_name": "T",
+									"default_type": {
+										"_typeName": "Subscription",
+										"kind": "unexposed",
+										"name": "Subscription"
+									},
+									"id": 1306257776,
+									"is_variadic": false,
+									"keyword": "class",
+									"kind": "template type parameter",
+									"name": "T"
+								}],
+								"scope":  {
+									"is_templated": true,
+									"name": "SchedulerListener",
+									"template_parameters": [{
+										"_fullName": "T",
+										"_kind": "template type parameter",
+										"_name": "T",
+										"default_type": {
+											"_typeName": "Subscription",
+											"kind": "unexposed",
+											"name": "Subscription"
+										},
+										"id": 1306257776,
+										"is_variadic": false,
+										"keyword": "class",
+										"kind": "template type parameter",
+										"name": "T"
+									}]
+								}
+							}]
+						},
+						"unexposed_arguments": "T"
+					},
+					"reference_kind": "lvalue"
+				},
+				"semantic_parent":  {
+					"name": "SchedulerListener<T>::",
+					"objects": [{
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+						"_kind": "class template",
+						"_name": "SchedulerListener",
+						"class": {
+							"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+							"_kind": "class",
+							"_name": "SchedulerListener",
+							"class_kind": "class",
+							"id": 859895748,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_final": false,
+							"kind": "class",
+							"name": "SchedulerListener",
+							"scope": {
+								"is_templated": true,
+								"name": "SchedulerListener",
+								"template_parameters": [{
+									"_fullName": "T",
+									"_kind": "template type parameter",
+									"_name": "T",
+									"default_type": {
+										"_typeName": "Subscription",
+										"kind": "unexposed",
+										"name": "Subscription"
+									},
+									"id": 1306257776,
+									"is_variadic": false,
+									"keyword": "class",
+									"kind": "template type parameter",
+									"name": "T"
+								}]
+							},
+							"semantic_scope": ""
+						},
+						"id": 859895748,
+						"kind": "class template",
+						"name": "SchedulerListener",
+						"parameters": [{
+							"_fullName": "T",
+							"_kind": "template type parameter",
+							"_name": "T",
+							"default_type": {
+								"_typeName": "Subscription",
+								"kind": "unexposed",
+								"name": "Subscription"
+							},
+							"id": 1306257776,
+							"is_variadic": false,
+							"keyword": "class",
+							"kind": "template type parameter",
+							"name": "T"
+						}],
+						"scope":  {
+							"is_templated": true,
+							"name": "SchedulerListener",
+							"template_parameters": [{
+								"_fullName": "T",
+								"_kind": "template type parameter",
+								"_name": "T",
+								"default_type": {
+									"_typeName": "Subscription",
+									"kind": "unexposed",
+									"name": "Subscription"
+								},
+								"id": 1306257776,
+								"is_variadic": false,
+								"keyword": "class",
+								"kind": "template type parameter",
+								"name": "T"
+							}]
+						}
+					}]
+				},
+				"semantic_scope": "SchedulerListener<T>::",
+				"signature": "(T*)"
+			}, {
+				"_fullName": "::stappler::xenolith::SchedulerListener<class>::get() const",
+				"_kind": "member function",
+				"_name": "get",
+				"body_kind": "definition",
+				"cv_qualifier": "const",
+				"id": 351193282,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"is_virtual": false,
+				"kind": "member function",
+				"name": "get",
+				"ref_qualifier": "none",
+				"return_type": {
+					"_typeName": "T*",
+					"kind": "pointer",
+					"pointee": {
+						"_typeName": "T",
+						"entity": {
+							"name": "T",
+							"objects": [{
+								"_fullName": "T",
+								"_kind": "template type parameter",
+								"_name": "T",
+								"default_type": {
+									"_typeName": "Subscription",
+									"kind": "unexposed",
+									"name": "Subscription"
+								},
+								"id": 1306257776,
+								"is_variadic": false,
+								"keyword": "class",
+								"kind": "template type parameter",
+								"name": "T"
+							}]
+						},
+						"kind": "template_parameter"
+					}
+				},
+				"semantic_parent":  {
+					"name": "SchedulerListener<T>::",
+					"objects": [{
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+						"_kind": "class template",
+						"_name": "SchedulerListener",
+						"class": {
+							"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+							"_kind": "class",
+							"_name": "SchedulerListener",
+							"class_kind": "class",
+							"id": 859895748,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_final": false,
+							"kind": "class",
+							"name": "SchedulerListener",
+							"scope": {
+								"is_templated": true,
+								"name": "SchedulerListener",
+								"template_parameters": [{
+									"_fullName": "T",
+									"_kind": "template type parameter",
+									"_name": "T",
+									"default_type": {
+										"_typeName": "Subscription",
+										"kind": "unexposed",
+										"name": "Subscription"
+									},
+									"id": 1306257776,
+									"is_variadic": false,
+									"keyword": "class",
+									"kind": "template type parameter",
+									"name": "T"
+								}]
+							},
+							"semantic_scope": ""
+						},
+						"id": 859895748,
+						"kind": "class template",
+						"name": "SchedulerListener",
+						"parameters": [{
+							"_fullName": "T",
+							"_kind": "template type parameter",
+							"_name": "T",
+							"default_type": {
+								"_typeName": "Subscription",
+								"kind": "unexposed",
+								"name": "Subscription"
+							},
+							"id": 1306257776,
+							"is_variadic": false,
+							"keyword": "class",
+							"kind": "template type parameter",
+							"name": "T"
+						}],
+						"scope":  {
+							"is_templated": true,
+							"name": "SchedulerListener",
+							"template_parameters": [{
+								"_fullName": "T",
+								"_kind": "template type parameter",
+								"_name": "T",
+								"default_type": {
+									"_typeName": "Subscription",
+									"kind": "unexposed",
+									"name": "Subscription"
+								},
+								"id": 1306257776,
+								"is_variadic": false,
+								"keyword": "class",
+								"kind": "template type parameter",
+								"name": "T"
+							}]
+						}
+					}]
+				},
+				"semantic_scope": "SchedulerListener<T>::",
+				"signature": "() const"
+			}, {
+				"_fullName": "::stappler::xenolith::SchedulerListener<class>::setScheduler(stappler::xenolith::Scheduler*)",
+				"_kind": "member function",
+				"_name": "setScheduler",
+				"body_kind": "definition",
+				"cv_qualifier": "none",
+				"id": 1912545557,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"is_virtual": false,
+				"kind": "member function",
+				"name": "setScheduler",
+				"parameters": [{
+					"_fullName": "s",
+					"_kind": "function parameter",
+					"_name": "s",
+					"id": 974162354,
+					"kind": "function parameter",
+					"name": "s",
+					"type": {
+						"_typeName": "stappler::xenolith::Scheduler*",
+						"kind": "pointer",
+						"pointee": {
+							"_typeName": "stappler::xenolith::Scheduler",
+							"kind": "user_defined",
+							"target": {
+								"name": "stappler::xenolith::Scheduler",
+								"objects": [{
+									"_fullName": "::stappler::xenolith::Scheduler",
+									"_kind": "class",
+									"_name": "Scheduler",
+									"bases": [{
+										"_fullName": "Ref",
+										"_kind": "base class specifier",
+										"_name": "Ref",
+										"access_specifier": "public",
+										"id": 1165741041,
+										"is_virtual": false,
+										"kind": "base class specifier",
+										"name": "Ref",
+										"type": {
+											"_typeName": "stappler::mem_std::Ref",
+											"kind": "user_defined",
+											"target": {
+												"name": "stappler::mem_std::Ref",
+												"objects": [{
+													"_fullName": "::stappler::mem_std::Ref",
+													"_kind": "type alias",
+													"_name": "Ref",
+													"id": 3010886988,
+													"kind": "type alias",
+													"name": "Ref",
+													"underlying_type": {
+														"_typeName": "RefBase<memory::StandartInterface>",
+														"arguments_exposed": false,
+														"kind": "template_instantiation",
+														"primary_template": {
+															"name": "RefBase",
+															"objects": [{
+																"_fullName": "::stappler::RefBase<typename>",
+																"_kind": "class template",
+																"_name": "RefBase",
+																"class": {
+																	"_fullName": "::stappler::RefBase<typename>",
+																	"_kind": "class",
+																	"_name": "RefBase",
+																	"bases": [{
+																		"_fullName": "Interface::AllocBaseType",
+																		"_kind": "base class specifier",
+																		"_name": "Interface::AllocBaseType",
+																		"access_specifier": "public",
+																		"id": 25533212,
+																		"is_virtual": false,
+																		"kind": "base class specifier",
+																		"name": "Interface::AllocBaseType",
+																		"type": {
+																			"_typeName": "Interface::AllocBaseType",
+																			"kind": "unexposed",
+																			"name": "Interface::AllocBaseType"
+																		}
+																	}],
+																	"class_kind": "class",
+																	"id": 2191419057,
+																	"is_declaration": false,
+																	"is_definition": true,
+																	"is_final": false,
+																	"kind": "class",
+																	"name": "RefBase",
+																	"scope": {
+																		"is_templated": true,
+																		"name": "RefBase",
+																		"template_parameters": [{
+																			"_fullName": "Interface",
+																			"_kind": "template type parameter",
+																			"_name": "Interface",
+																			"id": 2255344761,
+																			"is_variadic": false,
+																			"keyword": "typename",
+																			"kind": "template type parameter",
+																			"name": "Interface"
+																		}]
+																	},
+																	"semantic_scope": ""
+																},
+																"id": 2191419057,
+																"kind": "class template",
+																"name": "RefBase",
+																"parameters": [{
+																	"_fullName": "Interface",
+																	"_kind": "template type parameter",
+																	"_name": "Interface",
+																	"id": 2255344761,
+																	"is_variadic": false,
+																	"keyword": "typename",
+																	"kind": "template type parameter",
+																	"name": "Interface"
+																}],
+																"scope":  {
+																	"is_templated": true,
+																	"name": "RefBase",
+																	"template_parameters": [{
+																		"_fullName": "Interface",
+																		"_kind": "template type parameter",
+																		"_name": "Interface",
+																		"id": 2255344761,
+																		"is_variadic": false,
+																		"keyword": "typename",
+																		"kind": "template type parameter",
+																		"name": "Interface"
+																	}]
+																}
+															}]
+														},
+														"unexposed_arguments": "memory::StandartInterface"
+													}
+												}]
+											}
+										}
+									}],
+									"class_kind": "class",
+									"id": 304516062,
+									"is_declaration": false,
+									"is_definition": true,
+									"is_final": false,
+									"kind": "class",
+									"name": "Scheduler",
+									"scope": {
+										"name": "Scheduler"
+									},
+									"semantic_scope": ""
+								}]
+							}
+						}
+					}
+				}],
+				"ref_qualifier": "none",
+				"return_type": {
+					"_typeName": "void",
+					"builtin_type_kind": "void",
+					"kind": "builtin"
+				},
+				"semantic_parent":  {
+					"name": "SchedulerListener<T>::",
+					"objects": [{
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+						"_kind": "class template",
+						"_name": "SchedulerListener",
+						"class": {
+							"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+							"_kind": "class",
+							"_name": "SchedulerListener",
+							"class_kind": "class",
+							"id": 859895748,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_final": false,
+							"kind": "class",
+							"name": "SchedulerListener",
+							"scope": {
+								"is_templated": true,
+								"name": "SchedulerListener",
+								"template_parameters": [{
+									"_fullName": "T",
+									"_kind": "template type parameter",
+									"_name": "T",
+									"default_type": {
+										"_typeName": "Subscription",
+										"kind": "unexposed",
+										"name": "Subscription"
+									},
+									"id": 1306257776,
+									"is_variadic": false,
+									"keyword": "class",
+									"kind": "template type parameter",
+									"name": "T"
+								}]
+							},
+							"semantic_scope": ""
+						},
+						"id": 859895748,
+						"kind": "class template",
+						"name": "SchedulerListener",
+						"parameters": [{
+							"_fullName": "T",
+							"_kind": "template type parameter",
+							"_name": "T",
+							"default_type": {
+								"_typeName": "Subscription",
+								"kind": "unexposed",
+								"name": "Subscription"
+							},
+							"id": 1306257776,
+							"is_variadic": false,
+							"keyword": "class",
+							"kind": "template type parameter",
+							"name": "T"
+						}],
+						"scope":  {
+							"is_templated": true,
+							"name": "SchedulerListener",
+							"template_parameters": [{
+								"_fullName": "T",
+								"_kind": "template type parameter",
+								"_name": "T",
+								"default_type": {
+									"_typeName": "Subscription",
+									"kind": "unexposed",
+									"name": "Subscription"
+								},
+								"id": 1306257776,
+								"is_variadic": false,
+								"keyword": "class",
+								"kind": "template type parameter",
+								"name": "T"
+							}]
+						}
+					}]
+				},
+				"semantic_scope": "SchedulerListener<T>::",
+				"signature": "(stappler::xenolith::Scheduler*)"
+			}, {
+				"_fullName": "::stappler::xenolith::SchedulerListener<class>::getScheduler() const",
+				"_kind": "member function",
+				"_name": "getScheduler",
+				"body_kind": "definition",
+				"cv_qualifier": "const",
+				"id": 2834843708,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"is_virtual": false,
+				"kind": "member function",
+				"name": "getScheduler",
+				"ref_qualifier": "none",
+				"return_type": {
+					"_typeName": "stappler::xenolith::Scheduler*",
+					"kind": "pointer",
+					"pointee": {
+						"_typeName": "stappler::xenolith::Scheduler",
+						"kind": "user_defined",
+						"target": {
+							"name": "stappler::xenolith::Scheduler",
+							"objects": [{
+								"_fullName": "::stappler::xenolith::Scheduler",
+								"_kind": "class",
+								"_name": "Scheduler",
+								"bases": [{
+									"_fullName": "Ref",
+									"_kind": "base class specifier",
+									"_name": "Ref",
+									"access_specifier": "public",
+									"id": 1165741041,
+									"is_virtual": false,
+									"kind": "base class specifier",
+									"name": "Ref",
+									"type": {
+										"_typeName": "stappler::mem_std::Ref",
+										"kind": "user_defined",
+										"target": {
+											"name": "stappler::mem_std::Ref",
+											"objects": [{
+												"_fullName": "::stappler::mem_std::Ref",
+												"_kind": "type alias",
+												"_name": "Ref",
+												"id": 3010886988,
+												"kind": "type alias",
+												"name": "Ref",
+												"underlying_type": {
+													"_typeName": "RefBase<memory::StandartInterface>",
+													"arguments_exposed": false,
+													"kind": "template_instantiation",
+													"primary_template": {
+														"name": "RefBase",
+														"objects": [{
+															"_fullName": "::stappler::RefBase<typename>",
+															"_kind": "class template",
+															"_name": "RefBase",
+															"class": {
+																"_fullName": "::stappler::RefBase<typename>",
+																"_kind": "class",
+																"_name": "RefBase",
+																"bases": [{
+																	"_fullName": "Interface::AllocBaseType",
+																	"_kind": "base class specifier",
+																	"_name": "Interface::AllocBaseType",
+																	"access_specifier": "public",
+																	"id": 25533212,
+																	"is_virtual": false,
+																	"kind": "base class specifier",
+																	"name": "Interface::AllocBaseType",
+																	"type": {
+																		"_typeName": "Interface::AllocBaseType",
+																		"kind": "unexposed",
+																		"name": "Interface::AllocBaseType"
+																	}
+																}],
+																"class_kind": "class",
+																"id": 2191419057,
+																"is_declaration": false,
+																"is_definition": true,
+																"is_final": false,
+																"kind": "class",
+																"name": "RefBase",
+																"scope": {
+																	"is_templated": true,
+																	"name": "RefBase",
+																	"template_parameters": [{
+																		"_fullName": "Interface",
+																		"_kind": "template type parameter",
+																		"_name": "Interface",
+																		"id": 2255344761,
+																		"is_variadic": false,
+																		"keyword": "typename",
+																		"kind": "template type parameter",
+																		"name": "Interface"
+																	}]
+																},
+																"semantic_scope": ""
+															},
+															"id": 2191419057,
+															"kind": "class template",
+															"name": "RefBase",
+															"parameters": [{
+																"_fullName": "Interface",
+																"_kind": "template type parameter",
+																"_name": "Interface",
+																"id": 2255344761,
+																"is_variadic": false,
+																"keyword": "typename",
+																"kind": "template type parameter",
+																"name": "Interface"
+															}],
+															"scope":  {
+																"is_templated": true,
+																"name": "RefBase",
+																"template_parameters": [{
+																	"_fullName": "Interface",
+																	"_kind": "template type parameter",
+																	"_name": "Interface",
+																	"id": 2255344761,
+																	"is_variadic": false,
+																	"keyword": "typename",
+																	"kind": "template type parameter",
+																	"name": "Interface"
+																}]
+															}
+														}]
+													},
+													"unexposed_arguments": "memory::StandartInterface"
+												}
+											}]
+										}
+									}
+								}],
+								"class_kind": "class",
+								"id": 304516062,
+								"is_declaration": false,
+								"is_definition": true,
+								"is_final": false,
+								"kind": "class",
+								"name": "Scheduler",
+								"scope": {
+									"name": "Scheduler"
+								},
+								"semantic_scope": ""
+							}]
+						}
+					}
+				},
+				"semantic_parent":  {
+					"name": "SchedulerListener<T>::",
+					"objects": [{
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+						"_kind": "class template",
+						"_name": "SchedulerListener",
+						"class": {
+							"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+							"_kind": "class",
+							"_name": "SchedulerListener",
+							"class_kind": "class",
+							"id": 859895748,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_final": false,
+							"kind": "class",
+							"name": "SchedulerListener",
+							"scope": {
+								"is_templated": true,
+								"name": "SchedulerListener",
+								"template_parameters": [{
+									"_fullName": "T",
+									"_kind": "template type parameter",
+									"_name": "T",
+									"default_type": {
+										"_typeName": "Subscription",
+										"kind": "unexposed",
+										"name": "Subscription"
+									},
+									"id": 1306257776,
+									"is_variadic": false,
+									"keyword": "class",
+									"kind": "template type parameter",
+									"name": "T"
+								}]
+							},
+							"semantic_scope": ""
+						},
+						"id": 859895748,
+						"kind": "class template",
+						"name": "SchedulerListener",
+						"parameters": [{
+							"_fullName": "T",
+							"_kind": "template type parameter",
+							"_name": "T",
+							"default_type": {
+								"_typeName": "Subscription",
+								"kind": "unexposed",
+								"name": "Subscription"
+							},
+							"id": 1306257776,
+							"is_variadic": false,
+							"keyword": "class",
+							"kind": "template type parameter",
+							"name": "T"
+						}],
+						"scope":  {
+							"is_templated": true,
+							"name": "SchedulerListener",
+							"template_parameters": [{
+								"_fullName": "T",
+								"_kind": "template type parameter",
+								"_name": "T",
+								"default_type": {
+									"_typeName": "Subscription",
+									"kind": "unexposed",
+									"name": "Subscription"
+								},
+								"id": 1306257776,
+								"is_variadic": false,
+								"keyword": "class",
+								"kind": "template type parameter",
+								"name": "T"
+							}]
+						}
+					}]
+				},
+				"semantic_scope": "SchedulerListener<T>::",
+				"signature": "() const"
+			}, {
+				"_fullName": "::stappler::xenolith::SchedulerListener<class>::setCallback(stappler::xenolith::SchedulerListener::Callback const&)",
+				"_kind": "member function",
+				"_name": "setCallback",
+				"body_kind": "definition",
+				"cv_qualifier": "none",
+				"id": 1978071578,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"is_virtual": false,
+				"kind": "member function",
+				"name": "setCallback",
+				"parameters": [{
+					"_fullName": "cb",
+					"_kind": "function parameter",
+					"_name": "cb",
+					"id": 3456793284,
+					"kind": "function parameter",
+					"name": "cb",
+					"type": {
+						"_typeName": "stappler::xenolith::SchedulerListener::Callback const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::xenolith::SchedulerListener::Callback const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::xenolith::SchedulerListener::Callback",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::SchedulerListener::Callback",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::SchedulerListener<class>::Callback",
+										"_kind": "type alias",
+										"_name": "Callback",
+										"id": 317071321,
+										"kind": "type alias",
+										"name": "Callback",
+										"underlying_type": {
+											"_typeName": "Function<void (Subscription::Flags)>",
+											"arguments_exposed": false,
+											"kind": "template_instantiation",
+											"primary_template": {
+												"name": "Function"
+											},
+											"unexposed_arguments": "void (Subscription::Flags)"
+										}
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"ref_qualifier": "none",
+				"return_type": {
+					"_typeName": "void",
+					"builtin_type_kind": "void",
+					"kind": "builtin"
+				},
+				"semantic_parent":  {
+					"name": "SchedulerListener<T>::",
+					"objects": [{
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+						"_kind": "class template",
+						"_name": "SchedulerListener",
+						"class": {
+							"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+							"_kind": "class",
+							"_name": "SchedulerListener",
+							"class_kind": "class",
+							"id": 859895748,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_final": false,
+							"kind": "class",
+							"name": "SchedulerListener",
+							"scope": {
+								"is_templated": true,
+								"name": "SchedulerListener",
+								"template_parameters": [{
+									"_fullName": "T",
+									"_kind": "template type parameter",
+									"_name": "T",
+									"default_type": {
+										"_typeName": "Subscription",
+										"kind": "unexposed",
+										"name": "Subscription"
+									},
+									"id": 1306257776,
+									"is_variadic": false,
+									"keyword": "class",
+									"kind": "template type parameter",
+									"name": "T"
+								}]
+							},
+							"semantic_scope": ""
+						},
+						"id": 859895748,
+						"kind": "class template",
+						"name": "SchedulerListener",
+						"parameters": [{
+							"_fullName": "T",
+							"_kind": "template type parameter",
+							"_name": "T",
+							"default_type": {
+								"_typeName": "Subscription",
+								"kind": "unexposed",
+								"name": "Subscription"
+							},
+							"id": 1306257776,
+							"is_variadic": false,
+							"keyword": "class",
+							"kind": "template type parameter",
+							"name": "T"
+						}],
+						"scope":  {
+							"is_templated": true,
+							"name": "SchedulerListener",
+							"template_parameters": [{
+								"_fullName": "T",
+								"_kind": "template type parameter",
+								"_name": "T",
+								"default_type": {
+									"_typeName": "Subscription",
+									"kind": "unexposed",
+									"name": "Subscription"
+								},
+								"id": 1306257776,
+								"is_variadic": false,
+								"keyword": "class",
+								"kind": "template type parameter",
+								"name": "T"
+							}]
+						}
+					}]
+				},
+				"semantic_scope": "SchedulerListener<T>::",
+				"signature": "(stappler::xenolith::SchedulerListener::Callback const&)"
+			}, {
+				"_fullName": "::stappler::xenolith::SchedulerListener<class>::getCallback() const",
+				"_kind": "member function",
+				"_name": "getCallback",
+				"body_kind": "definition",
+				"cv_qualifier": "const",
+				"id": 2421048520,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"is_virtual": false,
+				"kind": "member function",
+				"name": "getCallback",
+				"ref_qualifier": "none",
+				"return_type": {
+					"_typeName": "Function<void (Subscription::Flags)> const&",
+					"kind": "reference",
+					"referee": {
+						"_typeName": "Function<void (Subscription::Flags)> const",
+						"cv_qualifier": "const",
+						"kind": "cv_qualified",
+						"type": {
+							"_typeName": "Function<void (Subscription::Flags)>",
+							"arguments_exposed": false,
+							"kind": "template_instantiation",
+							"primary_template": {
+								"name": "Function"
+							},
+							"unexposed_arguments": "void (Subscription::Flags)"
+						}
+					},
+					"reference_kind": "lvalue"
+				},
+				"semantic_parent":  {
+					"name": "SchedulerListener<T>::",
+					"objects": [{
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+						"_kind": "class template",
+						"_name": "SchedulerListener",
+						"class": {
+							"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+							"_kind": "class",
+							"_name": "SchedulerListener",
+							"class_kind": "class",
+							"id": 859895748,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_final": false,
+							"kind": "class",
+							"name": "SchedulerListener",
+							"scope": {
+								"is_templated": true,
+								"name": "SchedulerListener",
+								"template_parameters": [{
+									"_fullName": "T",
+									"_kind": "template type parameter",
+									"_name": "T",
+									"default_type": {
+										"_typeName": "Subscription",
+										"kind": "unexposed",
+										"name": "Subscription"
+									},
+									"id": 1306257776,
+									"is_variadic": false,
+									"keyword": "class",
+									"kind": "template type parameter",
+									"name": "T"
+								}]
+							},
+							"semantic_scope": ""
+						},
+						"id": 859895748,
+						"kind": "class template",
+						"name": "SchedulerListener",
+						"parameters": [{
+							"_fullName": "T",
+							"_kind": "template type parameter",
+							"_name": "T",
+							"default_type": {
+								"_typeName": "Subscription",
+								"kind": "unexposed",
+								"name": "Subscription"
+							},
+							"id": 1306257776,
+							"is_variadic": false,
+							"keyword": "class",
+							"kind": "template type parameter",
+							"name": "T"
+						}],
+						"scope":  {
+							"is_templated": true,
+							"name": "SchedulerListener",
+							"template_parameters": [{
+								"_fullName": "T",
+								"_kind": "template type parameter",
+								"_name": "T",
+								"default_type": {
+									"_typeName": "Subscription",
+									"kind": "unexposed",
+									"name": "Subscription"
+								},
+								"id": 1306257776,
+								"is_variadic": false,
+								"keyword": "class",
+								"kind": "template type parameter",
+								"name": "T"
+							}]
+						}
+					}]
+				},
+				"semantic_scope": "SchedulerListener<T>::",
+				"signature": "() const"
+			}, {
+				"_fullName": "::stappler::xenolith::SchedulerListener<class>::setDirty()",
+				"_kind": "member function",
+				"_name": "setDirty",
+				"body_kind": "definition",
+				"cv_qualifier": "none",
+				"id": 1176923935,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"is_virtual": false,
+				"kind": "member function",
+				"name": "setDirty",
+				"ref_qualifier": "none",
+				"return_type": {
+					"_typeName": "void",
+					"builtin_type_kind": "void",
+					"kind": "builtin"
+				},
+				"semantic_parent":  {
+					"name": "SchedulerListener<T>::",
+					"objects": [{
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+						"_kind": "class template",
+						"_name": "SchedulerListener",
+						"class": {
+							"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+							"_kind": "class",
+							"_name": "SchedulerListener",
+							"class_kind": "class",
+							"id": 859895748,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_final": false,
+							"kind": "class",
+							"name": "SchedulerListener",
+							"scope": {
+								"is_templated": true,
+								"name": "SchedulerListener",
+								"template_parameters": [{
+									"_fullName": "T",
+									"_kind": "template type parameter",
+									"_name": "T",
+									"default_type": {
+										"_typeName": "Subscription",
+										"kind": "unexposed",
+										"name": "Subscription"
+									},
+									"id": 1306257776,
+									"is_variadic": false,
+									"keyword": "class",
+									"kind": "template type parameter",
+									"name": "T"
+								}]
+							},
+							"semantic_scope": ""
+						},
+						"id": 859895748,
+						"kind": "class template",
+						"name": "SchedulerListener",
+						"parameters": [{
+							"_fullName": "T",
+							"_kind": "template type parameter",
+							"_name": "T",
+							"default_type": {
+								"_typeName": "Subscription",
+								"kind": "unexposed",
+								"name": "Subscription"
+							},
+							"id": 1306257776,
+							"is_variadic": false,
+							"keyword": "class",
+							"kind": "template type parameter",
+							"name": "T"
+						}],
+						"scope":  {
+							"is_templated": true,
+							"name": "SchedulerListener",
+							"template_parameters": [{
+								"_fullName": "T",
+								"_kind": "template type parameter",
+								"_name": "T",
+								"default_type": {
+									"_typeName": "Subscription",
+									"kind": "unexposed",
+									"name": "Subscription"
+								},
+								"id": 1306257776,
+								"is_variadic": false,
+								"keyword": "class",
+								"kind": "template type parameter",
+								"name": "T"
+							}]
+						}
+					}]
+				},
+				"semantic_scope": "SchedulerListener<T>::",
+				"signature": "()"
+			}, {
+				"_fullName": "::stappler::xenolith::SchedulerListener<class>::update(stappler::xenolith::UpdateTime const&)",
+				"_kind": "member function",
+				"_name": "update",
+				"body_kind": "definition",
+				"cv_qualifier": "none",
+				"id": 4138002721,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"is_virtual": false,
+				"kind": "member function",
+				"name": "update",
+				"parameters": [{
+					"_fullName": "time",
+					"_kind": "function parameter",
+					"_name": "time",
+					"id": 3795382400,
+					"kind": "function parameter",
+					"name": "time",
+					"type": {
+						"_typeName": "stappler::xenolith::UpdateTime const&",
+						"kind": "reference",
+						"referee": {
+							"_typeName": "stappler::xenolith::UpdateTime const",
+							"cv_qualifier": "const",
+							"kind": "cv_qualified",
+							"type": {
+								"_typeName": "stappler::xenolith::UpdateTime",
+								"kind": "user_defined",
+								"target": {
+									"name": "stappler::xenolith::UpdateTime",
+									"objects": [{
+										"_fullName": "::stappler::xenolith::UpdateTime",
+										"_kind": "class",
+										"_name": "UpdateTime",
+										"class_kind": "struct",
+										"id": 3485761381,
+										"is_declaration": false,
+										"is_definition": true,
+										"is_final": false,
+										"kind": "class",
+										"name": "UpdateTime",
+										"scope": {
+											"name": "UpdateTime"
+										},
+										"semantic_scope": ""
+									}]
+								}
+							}
+						},
+						"reference_kind": "lvalue"
+					}
+				}],
+				"ref_qualifier": "none",
+				"return_type": {
+					"_typeName": "void",
+					"builtin_type_kind": "void",
+					"kind": "builtin"
+				},
+				"semantic_parent":  {
+					"name": "SchedulerListener<T>::",
+					"objects": [{
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+						"_kind": "class template",
+						"_name": "SchedulerListener",
+						"class": {
+							"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+							"_kind": "class",
+							"_name": "SchedulerListener",
+							"class_kind": "class",
+							"id": 859895748,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_final": false,
+							"kind": "class",
+							"name": "SchedulerListener",
+							"scope": {
+								"is_templated": true,
+								"name": "SchedulerListener",
+								"template_parameters": [{
+									"_fullName": "T",
+									"_kind": "template type parameter",
+									"_name": "T",
+									"default_type": {
+										"_typeName": "Subscription",
+										"kind": "unexposed",
+										"name": "Subscription"
+									},
+									"id": 1306257776,
+									"is_variadic": false,
+									"keyword": "class",
+									"kind": "template type parameter",
+									"name": "T"
+								}]
+							},
+							"semantic_scope": ""
+						},
+						"id": 859895748,
+						"kind": "class template",
+						"name": "SchedulerListener",
+						"parameters": [{
+							"_fullName": "T",
+							"_kind": "template type parameter",
+							"_name": "T",
+							"default_type": {
+								"_typeName": "Subscription",
+								"kind": "unexposed",
+								"name": "Subscription"
+							},
+							"id": 1306257776,
+							"is_variadic": false,
+							"keyword": "class",
+							"kind": "template type parameter",
+							"name": "T"
+						}],
+						"scope":  {
+							"is_templated": true,
+							"name": "SchedulerListener",
+							"template_parameters": [{
+								"_fullName": "T",
+								"_kind": "template type parameter",
+								"_name": "T",
+								"default_type": {
+									"_typeName": "Subscription",
+									"kind": "unexposed",
+									"name": "Subscription"
+								},
+								"id": 1306257776,
+								"is_variadic": false,
+								"keyword": "class",
+								"kind": "template type parameter",
+								"name": "T"
+							}]
+						}
+					}]
+				},
+				"semantic_scope": "SchedulerListener<T>::",
+				"signature": "(stappler::xenolith::UpdateTime const&)"
+			}, {
+				"_fullName": "::stappler::xenolith::SchedulerListener<class>::check()",
+				"_kind": "member function",
+				"_name": "check",
+				"body_kind": "definition",
+				"cv_qualifier": "none",
+				"id": 1694742516,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"is_virtual": false,
+				"kind": "member function",
+				"name": "check",
+				"ref_qualifier": "none",
+				"return_type": {
+					"_typeName": "void",
+					"builtin_type_kind": "void",
+					"kind": "builtin"
+				},
+				"semantic_parent":  {
+					"name": "SchedulerListener<T>::",
+					"objects": [{
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+						"_kind": "class template",
+						"_name": "SchedulerListener",
+						"class": {
+							"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+							"_kind": "class",
+							"_name": "SchedulerListener",
+							"class_kind": "class",
+							"id": 859895748,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_final": false,
+							"kind": "class",
+							"name": "SchedulerListener",
+							"scope": {
+								"is_templated": true,
+								"name": "SchedulerListener",
+								"template_parameters": [{
+									"_fullName": "T",
+									"_kind": "template type parameter",
+									"_name": "T",
+									"default_type": {
+										"_typeName": "Subscription",
+										"kind": "unexposed",
+										"name": "Subscription"
+									},
+									"id": 1306257776,
+									"is_variadic": false,
+									"keyword": "class",
+									"kind": "template type parameter",
+									"name": "T"
+								}]
+							},
+							"semantic_scope": ""
+						},
+						"id": 859895748,
+						"kind": "class template",
+						"name": "SchedulerListener",
+						"parameters": [{
+							"_fullName": "T",
+							"_kind": "template type parameter",
+							"_name": "T",
+							"default_type": {
+								"_typeName": "Subscription",
+								"kind": "unexposed",
+								"name": "Subscription"
+							},
+							"id": 1306257776,
+							"is_variadic": false,
+							"keyword": "class",
+							"kind": "template type parameter",
+							"name": "T"
+						}],
+						"scope":  {
+							"is_templated": true,
+							"name": "SchedulerListener",
+							"template_parameters": [{
+								"_fullName": "T",
+								"_kind": "template type parameter",
+								"_name": "T",
+								"default_type": {
+									"_typeName": "Subscription",
+									"kind": "unexposed",
+									"name": "Subscription"
+								},
+								"id": 1306257776,
+								"is_variadic": false,
+								"keyword": "class",
+								"kind": "template type parameter",
+								"name": "T"
+							}]
+						}
+					}]
+				},
+				"semantic_scope": "SchedulerListener<T>::",
+				"signature": "()"
+			}, {
+				"_fullName": "::stappler::xenolith::SchedulerListener<class>::updateScheduler()",
+				"_kind": "member function",
+				"_name": "updateScheduler",
+				"body_kind": "definition",
+				"cv_qualifier": "none",
+				"id": 1059070384,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"is_virtual": false,
+				"kind": "member function",
+				"name": "updateScheduler",
+				"ref_qualifier": "none",
+				"return_type": {
+					"_typeName": "void",
+					"builtin_type_kind": "void",
+					"kind": "builtin"
+				},
+				"semantic_parent":  {
+					"name": "SchedulerListener<T>::",
+					"objects": [{
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+						"_kind": "class template",
+						"_name": "SchedulerListener",
+						"class": {
+							"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+							"_kind": "class",
+							"_name": "SchedulerListener",
+							"class_kind": "class",
+							"id": 859895748,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_final": false,
+							"kind": "class",
+							"name": "SchedulerListener",
+							"scope": {
+								"is_templated": true,
+								"name": "SchedulerListener",
+								"template_parameters": [{
+									"_fullName": "T",
+									"_kind": "template type parameter",
+									"_name": "T",
+									"default_type": {
+										"_typeName": "Subscription",
+										"kind": "unexposed",
+										"name": "Subscription"
+									},
+									"id": 1306257776,
+									"is_variadic": false,
+									"keyword": "class",
+									"kind": "template type parameter",
+									"name": "T"
+								}]
+							},
+							"semantic_scope": ""
+						},
+						"id": 859895748,
+						"kind": "class template",
+						"name": "SchedulerListener",
+						"parameters": [{
+							"_fullName": "T",
+							"_kind": "template type parameter",
+							"_name": "T",
+							"default_type": {
+								"_typeName": "Subscription",
+								"kind": "unexposed",
+								"name": "Subscription"
+							},
+							"id": 1306257776,
+							"is_variadic": false,
+							"keyword": "class",
+							"kind": "template type parameter",
+							"name": "T"
+						}],
+						"scope":  {
+							"is_templated": true,
+							"name": "SchedulerListener",
+							"template_parameters": [{
+								"_fullName": "T",
+								"_kind": "template type parameter",
+								"_name": "T",
+								"default_type": {
+									"_typeName": "Subscription",
+									"kind": "unexposed",
+									"name": "Subscription"
+								},
+								"id": 1306257776,
+								"is_variadic": false,
+								"keyword": "class",
+								"kind": "template type parameter",
+								"name": "T"
+							}]
+						}
+					}]
+				},
+				"semantic_scope": "SchedulerListener<T>::",
+				"signature": "()"
+			}, {
+				"_fullName": "::stappler::xenolith::SchedulerListener<class>::schedule()",
+				"_kind": "member function",
+				"_name": "schedule",
+				"body_kind": "definition",
+				"cv_qualifier": "none",
+				"id": 993930042,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"is_virtual": false,
+				"kind": "member function",
+				"name": "schedule",
+				"ref_qualifier": "none",
+				"return_type": {
+					"_typeName": "void",
+					"builtin_type_kind": "void",
+					"kind": "builtin"
+				},
+				"semantic_parent":  {
+					"name": "SchedulerListener<T>::",
+					"objects": [{
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+						"_kind": "class template",
+						"_name": "SchedulerListener",
+						"class": {
+							"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+							"_kind": "class",
+							"_name": "SchedulerListener",
+							"class_kind": "class",
+							"id": 859895748,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_final": false,
+							"kind": "class",
+							"name": "SchedulerListener",
+							"scope": {
+								"is_templated": true,
+								"name": "SchedulerListener",
+								"template_parameters": [{
+									"_fullName": "T",
+									"_kind": "template type parameter",
+									"_name": "T",
+									"default_type": {
+										"_typeName": "Subscription",
+										"kind": "unexposed",
+										"name": "Subscription"
+									},
+									"id": 1306257776,
+									"is_variadic": false,
+									"keyword": "class",
+									"kind": "template type parameter",
+									"name": "T"
+								}]
+							},
+							"semantic_scope": ""
+						},
+						"id": 859895748,
+						"kind": "class template",
+						"name": "SchedulerListener",
+						"parameters": [{
+							"_fullName": "T",
+							"_kind": "template type parameter",
+							"_name": "T",
+							"default_type": {
+								"_typeName": "Subscription",
+								"kind": "unexposed",
+								"name": "Subscription"
+							},
+							"id": 1306257776,
+							"is_variadic": false,
+							"keyword": "class",
+							"kind": "template type parameter",
+							"name": "T"
+						}],
+						"scope":  {
+							"is_templated": true,
+							"name": "SchedulerListener",
+							"template_parameters": [{
+								"_fullName": "T",
+								"_kind": "template type parameter",
+								"_name": "T",
+								"default_type": {
+									"_typeName": "Subscription",
+									"kind": "unexposed",
+									"name": "Subscription"
+								},
+								"id": 1306257776,
+								"is_variadic": false,
+								"keyword": "class",
+								"kind": "template type parameter",
+								"name": "T"
+							}]
+						}
+					}]
+				},
+				"semantic_scope": "SchedulerListener<T>::",
+				"signature": "()"
+			}, {
+				"_fullName": "::stappler::xenolith::SchedulerListener<class>::unschedule()",
+				"_kind": "member function",
+				"_name": "unschedule",
+				"body_kind": "definition",
+				"cv_qualifier": "none",
+				"id": 2054645820,
+				"is_consteval": false,
+				"is_constexpr": false,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_variadic": false,
+				"is_virtual": false,
+				"kind": "member function",
+				"name": "unschedule",
+				"ref_qualifier": "none",
+				"return_type": {
+					"_typeName": "void",
+					"builtin_type_kind": "void",
+					"kind": "builtin"
+				},
+				"semantic_parent":  {
+					"name": "SchedulerListener<T>::",
+					"objects": [{
+						"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+						"_kind": "class template",
+						"_name": "SchedulerListener",
+						"class": {
+							"_fullName": "::stappler::xenolith::SchedulerListener<class>",
+							"_kind": "class",
+							"_name": "SchedulerListener",
+							"class_kind": "class",
+							"id": 859895748,
+							"is_declaration": false,
+							"is_definition": true,
+							"is_final": false,
+							"kind": "class",
+							"name": "SchedulerListener",
+							"scope": {
+								"is_templated": true,
+								"name": "SchedulerListener",
+								"template_parameters": [{
+									"_fullName": "T",
+									"_kind": "template type parameter",
+									"_name": "T",
+									"default_type": {
+										"_typeName": "Subscription",
+										"kind": "unexposed",
+										"name": "Subscription"
+									},
+									"id": 1306257776,
+									"is_variadic": false,
+									"keyword": "class",
+									"kind": "template type parameter",
+									"name": "T"
+								}]
+							},
+							"semantic_scope": ""
+						},
+						"id": 859895748,
+						"kind": "class template",
+						"name": "SchedulerListener",
+						"parameters": [{
+							"_fullName": "T",
+							"_kind": "template type parameter",
+							"_name": "T",
+							"default_type": {
+								"_typeName": "Subscription",
+								"kind": "unexposed",
+								"name": "Subscription"
+							},
+							"id": 1306257776,
+							"is_variadic": false,
+							"keyword": "class",
+							"kind": "template type parameter",
+							"name": "T"
+						}],
+						"scope":  {
+							"is_templated": true,
+							"name": "SchedulerListener",
+							"template_parameters": [{
+								"_fullName": "T",
+								"_kind": "template type parameter",
+								"_name": "T",
+								"default_type": {
+									"_typeName": "Subscription",
+									"kind": "unexposed",
+									"name": "Subscription"
+								},
+								"id": 1306257776,
+								"is_variadic": false,
+								"keyword": "class",
+								"kind": "template type parameter",
+								"name": "T"
+							}]
+						}
+					}]
+				},
+				"semantic_scope": "SchedulerListener<T>::",
+				"signature": "()"
 			}],
 			"id": 2324754634,
 			"is_anonymous": false,

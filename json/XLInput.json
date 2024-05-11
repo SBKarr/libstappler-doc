@@ -589,6 +589,48 @@
 					}
 				}
 			}, {
+				"_fullName": "::stappler::xenolith::InputEventState",
+				"_kind": "enum",
+				"_name": "InputEventState",
+				"childs": [{
+					"_fullName": "::stappler::xenolith::InputEventState::Declined",
+					"_kind": "enum value",
+					"_name": "Declined",
+					"id": 481328909,
+					"kind": "enum value",
+					"name": "Declined"
+				}, {
+					"_fullName": "::stappler::xenolith::InputEventState::Processed",
+					"_kind": "enum value",
+					"_name": "Processed",
+					"id": 2538228523,
+					"kind": "enum value",
+					"name": "Processed"
+				}, {
+					"_fullName": "::stappler::xenolith::InputEventState::Captured",
+					"_kind": "enum value",
+					"_name": "Captured",
+					"id": 3285412974,
+					"kind": "enum value",
+					"name": "Captured"
+				}],
+				"has_explicit_type": false,
+				"id": 598523041,
+				"is_declaration": false,
+				"is_definition": true,
+				"is_scoped": true,
+				"kind": "enum",
+				"name": "InputEventState",
+				"scope": {
+					"name": "InputEventState"
+				},
+				"semantic_scope": "",
+				"underlying_type": {
+					"_typeName": "int",
+					"builtin_type_kind": "int",
+					"kind": "builtin"
+				}
+			}, {
 				"_fullName": "::stappler::xenolith::InputEvent",
 				"_kind": "class",
 				"_name": "InputEvent",
@@ -647,42 +689,9 @@
 					"kind": "member variable",
 					"name": "originalLocation",
 					"type": {
-						"_typeName": "stappler::xenolith::Vec2",
-						"kind": "user_defined",
-						"target": {
-							"name": "stappler::xenolith::Vec2",
-							"objects": [{
-								"_fullName": "::stappler::xenolith::Vec2",
-								"_kind": "type alias",
-								"_name": "Vec2",
-								"id": 1910638286,
-								"kind": "type alias",
-								"name": "Vec2",
-								"underlying_type": {
-									"_typeName": "geom::Vec2",
-									"kind": "user_defined",
-									"target": {
-										"name": "geom::Vec2",
-										"objects": [{
-											"_fullName": "::stappler::geom::Vec2",
-											"_kind": "class",
-											"_name": "Vec2",
-											"class_kind": "class",
-											"id": 16661423,
-											"is_declaration": false,
-											"is_definition": true,
-											"is_final": false,
-											"kind": "class",
-											"name": "Vec2",
-											"scope": {
-												"name": "Vec2"
-											},
-											"semantic_scope": ""
-										}]
-									}
-								}
-							}]
-						}
+						"_typeName": "stappler::geom::Vec2",
+						"kind": "unexposed",
+						"name": "stappler::geom::Vec2"
 					}
 				}, {
 					"_fullName": "::stappler::xenolith::InputEvent::currentLocation",
@@ -693,42 +702,9 @@
 					"kind": "member variable",
 					"name": "currentLocation",
 					"type": {
-						"_typeName": "stappler::xenolith::Vec2",
-						"kind": "user_defined",
-						"target": {
-							"name": "stappler::xenolith::Vec2",
-							"objects": [{
-								"_fullName": "::stappler::xenolith::Vec2",
-								"_kind": "type alias",
-								"_name": "Vec2",
-								"id": 1910638286,
-								"kind": "type alias",
-								"name": "Vec2",
-								"underlying_type": {
-									"_typeName": "geom::Vec2",
-									"kind": "user_defined",
-									"target": {
-										"name": "geom::Vec2",
-										"objects": [{
-											"_fullName": "::stappler::geom::Vec2",
-											"_kind": "class",
-											"_name": "Vec2",
-											"class_kind": "class",
-											"id": 16661423,
-											"is_declaration": false,
-											"is_definition": true,
-											"is_final": false,
-											"kind": "class",
-											"name": "Vec2",
-											"scope": {
-												"name": "Vec2"
-											},
-											"semantic_scope": ""
-										}]
-									}
-								}
-							}]
-						}
+						"_typeName": "stappler::geom::Vec2",
+						"kind": "unexposed",
+						"name": "stappler::geom::Vec2"
 					}
 				}, {
 					"_fullName": "::stappler::xenolith::InputEvent::previousLocation",
@@ -739,42 +715,9 @@
 					"kind": "member variable",
 					"name": "previousLocation",
 					"type": {
-						"_typeName": "stappler::xenolith::Vec2",
-						"kind": "user_defined",
-						"target": {
-							"name": "stappler::xenolith::Vec2",
-							"objects": [{
-								"_fullName": "::stappler::xenolith::Vec2",
-								"_kind": "type alias",
-								"_name": "Vec2",
-								"id": 1910638286,
-								"kind": "type alias",
-								"name": "Vec2",
-								"underlying_type": {
-									"_typeName": "geom::Vec2",
-									"kind": "user_defined",
-									"target": {
-										"name": "geom::Vec2",
-										"objects": [{
-											"_fullName": "::stappler::geom::Vec2",
-											"_kind": "class",
-											"_name": "Vec2",
-											"class_kind": "class",
-											"id": 16661423,
-											"is_declaration": false,
-											"is_definition": true,
-											"is_final": false,
-											"kind": "class",
-											"name": "Vec2",
-											"scope": {
-												"name": "Vec2"
-											},
-											"semantic_scope": ""
-										}]
-									}
-								}
-							}]
-						}
+						"_typeName": "stappler::geom::Vec2",
+						"kind": "unexposed",
+						"name": "stappler::geom::Vec2"
 					}
 				}, {
 					"_fullName": "::stappler::xenolith::InputEvent::originalTime",
@@ -1113,6 +1056,11 @@
 					"_fullName": "::stappler::xenolith::TextInputViewInterface::~TextInputViewInterface()",
 					"_kind": "destructor",
 					"_name": "~TextInputViewInterface",
+					"attributes": [{
+						"is_variadic": false,
+						"kind": "unknown",
+						"name": "no_profile_instrument_function"
+					}],
 					"body_kind": "definition",
 					"id": 2173585484,
 					"is_declaration": false,
@@ -1852,21 +1800,21 @@
 		"_kind": "namespace",
 		"_name": "std",
 		"childs": [{
-			"_fullName": "::std::hash<stappler::xenolith::InputEventData>::hash<stappler::xenolith::InputEventData>",
+			"_fullName": "::std::hash<::stappler::xenolith::InputEventData>::hash<::stappler::xenolith::InputEventData>",
 			"_kind": "class template specialization",
 			"_name": "hash",
 			"arguments_exposed": false,
 			"childs": [{
-				"_fullName": "::std::hash<stappler::xenolith::InputEventData>::hash<stappler::xenolith::InputEventData>",
+				"_fullName": "::std::hash<::stappler::xenolith::InputEventData>::hash<::stappler::xenolith::InputEventData>",
 				"_kind": "class",
 				"_name": "hash",
 				"childs": [{
-					"_fullName": "::std::hash<stappler::xenolith::InputEventData>::operator()(stappler::xenolith::InputEventData const&) const",
+					"_fullName": "::std::hash<::stappler::xenolith::InputEventData>::operator()(::stappler::xenolith::InputEventData const&) const",
 					"_kind": "member function",
 					"_name": "operator()",
 					"body_kind": "definition",
 					"cv_qualifier": "const",
-					"id": 2304958614,
+					"id": 3194698353,
 					"is_consteval": false,
 					"is_constexpr": false,
 					"is_declaration": false,
@@ -1883,17 +1831,17 @@
 						"kind": "function parameter",
 						"name": "ev",
 						"type": {
-							"_typeName": "stappler::xenolith::InputEventData const&",
+							"_typeName": "::stappler::xenolith::InputEventData const&",
 							"kind": "reference",
 							"referee": {
-								"_typeName": "stappler::xenolith::InputEventData const",
+								"_typeName": "::stappler::xenolith::InputEventData const",
 								"cv_qualifier": "const",
 								"kind": "cv_qualified",
 								"type": {
-									"_typeName": "stappler::xenolith::InputEventData",
+									"_typeName": "::stappler::xenolith::InputEventData",
 									"kind": "user_defined",
 									"target": {
-										"name": "stappler::xenolith::InputEventData",
+										"name": "::stappler::xenolith::InputEventData",
 										"objects": [{
 											"_fullName": "::stappler::xenolith::InputEventData",
 											"_kind": "type alias",
@@ -1940,10 +1888,10 @@
 						}
 					},
 					"semantic_scope": "",
-					"signature": "(stappler::xenolith::InputEventData const&) const"
+					"signature": "(::stappler::xenolith::InputEventData const&) const"
 				}],
 				"class_kind": "struct",
-				"id": 2733323981,
+				"id": 3007847243,
 				"is_declaration": false,
 				"is_definition": true,
 				"is_final": false,
@@ -1955,11 +1903,11 @@
 				"semantic_scope": ""
 			}],
 			"class":  {
-				"_fullName": "::std::hash<stappler::xenolith::InputEventData>::hash<stappler::xenolith::InputEventData>",
+				"_fullName": "::std::hash<::stappler::xenolith::InputEventData>::hash<::stappler::xenolith::InputEventData>",
 				"_kind": "class",
 				"_name": "hash",
 				"class_kind": "struct",
-				"id": 2733323981,
+				"id": 3007847243,
 				"is_declaration": false,
 				"is_definition": true,
 				"is_final": false,
@@ -1970,7 +1918,7 @@
 				},
 				"semantic_scope": ""
 			},
-			"id": 2733323981,
+			"id": 3007847243,
 			"is_full_specialization": true,
 			"kind": "class template specialization",
 			"name": "hash",
@@ -1981,6 +1929,9 @@
 				"name": "hash"
 			},
 			"unexposed_arguments":  [{
+				"kind": "punctuation",
+				"spelling": "::"
+			}, {
 				"kind": "identifier",
 				"spelling": "stappler"
 			}, {

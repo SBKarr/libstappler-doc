@@ -103,6 +103,42 @@ Title: XL2dGlslVertexData.h
 Тип: stappler::glsl::uint
 
 
+# ::stappler::glsl::MaterialData::gradient
+
+## BRIEF
+
+## CONTENT
+
+Тип: stappler::glsl::uint
+
+
+# ::stappler::glsl::MaterialData::padding0
+
+## BRIEF
+
+## CONTENT
+
+Тип: stappler::glsl::uint
+
+
+# ::stappler::glsl::MaterialData::padding1
+
+## BRIEF
+
+## CONTENT
+
+Тип: stappler::glsl::uint
+
+
+# ::stappler::glsl::MaterialData::padding2
+
+## BRIEF
+
+## CONTENT
+
+Тип: stappler::glsl::uint
+
+
 # ::stappler::glsl::TransformData
 
 ## BRIEF
@@ -220,3 +256,31 @@ Title: XL2dGlslVertexData.h
 ## CONTENT
 
 Тип: stappler::glsl::vec2
+
+
+# XL_GLSL_MATERIAL_FLAG_HAS_ATLAS_INDEX
+
+## BRIEF
+
+## CONTENT
+
+
+# XL_GLSL_MATERIAL_FLAG_HAS_ATLAS_DATA
+
+## BRIEF
+
+## CONTENT
+
+
+# XL_GLSL_MATERIAL_FLAG_HAS_ATLAS
+
+## BRIEF
+
+## CONTENT
+
+
+# XL_GLSL_MATERIAL_FLAG_ATLAS_POW2_INDEX_BIT_OFFSET
+
+## BRIEF
+
+## CONTENT
