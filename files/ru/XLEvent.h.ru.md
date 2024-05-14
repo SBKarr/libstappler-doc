@@ -5,23 +5,35 @@ Title: XLEvent.h
 
 ## BRIEF
 
+Заголовок типа события
+
 ## CONTENT
+
+Заголовок типа события
 
 
 # ::stappler::xenolith::Event
 
 ## BRIEF
 
+Тип события
+
 ## CONTENT
+
+Тип события. Событие служит для передачи глобального сообщения внутри приложения. Слушатели должны подписываться на событие по заголовку, отправители используют заголовок для отправки.
 
 
 # ::stappler::xenolith::Event::Type
 
 ## BRIEF
 
+Тип значения события
+
 ## CONTENT
 
 Доступ: protected
+
+Тип значения события
 
 Значения:
 * Int
@@ -37,9 +49,13 @@ Title: XLEvent.h
 
 ## BRIEF
 
+Получает объект-источник события
+
 ## CONTENT
 
 Доступ: public
+
+Получает объект-источник события
 
 Возвращает:
 * stappler::mem_std::Ref*
@@ -48,9 +64,13 @@ Title: XLEvent.h
 
 ## BRIEF
 
+Получает заголовок события
+
 ## CONTENT
 
 Доступ: public
+
+Получает заголовок события
 
 Возвращает:
 * stappler::xenolith::EventHeader const&
@@ -59,9 +79,13 @@ Title: XLEvent.h
 
 ## BRIEF
 
+Получает категорию события
+
 ## CONTENT
 
 Доступ: public
+
+Получает категорию события
 
 Возвращает:
 * EventHeader::Category
@@ -70,9 +94,13 @@ Title: XLEvent.h
 
 ## BRIEF
 
+Получает идентификатор события
+
 ## CONTENT
 
 Доступ: public
+
+Получает идентификатор события
 
 Возвращает:
 * EventHeader::EventID
@@ -81,9 +109,13 @@ Title: XLEvent.h
 
 ## BRIEF
 
+Проверяет событие на соотвествие заголовку
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет событие на соотвествие заголовку
 
 Параметры:
 * stappler::xenolith::EventHeader const&
@@ -95,9 +127,13 @@ Title: XLEvent.h
 
 ## BRIEF
 
+Проверяет событие на соотвествие заголовку
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет событие на соотвествие заголовку
 
 Параметры:
 * stappler::xenolith::EventHeader const&
@@ -109,9 +145,13 @@ Title: XLEvent.h
 
 ## BRIEF
 
+Возвращает целевой объект события
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает целевой объект события
 
 Параметры шаблона:
 * class T
@@ -123,9 +163,13 @@ Title: XLEvent.h
 
 ## BRIEF
 
+Проверяет, есть ли значение в событии
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, есть ли значение в событии
 
 Возвращает:
 * bool
@@ -134,9 +178,13 @@ Title: XLEvent.h
 
 ## BRIEF
 
+Проверяет тип значения
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет тип значения
 
 Возвращает:
 * bool
@@ -145,9 +193,13 @@ Title: XLEvent.h
 
 ## BRIEF
 
+Проверяет тип значения
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет тип значения
 
 Возвращает:
 * bool
@@ -156,9 +208,13 @@ Title: XLEvent.h
 
 ## BRIEF
 
+Проверяет тип значения
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет тип значения
 
 Возвращает:
 * bool
@@ -167,9 +223,13 @@ Title: XLEvent.h
 
 ## BRIEF
 
+Проверяет тип значения
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет тип значения
 
 Возвращает:
 * bool
@@ -178,9 +238,13 @@ Title: XLEvent.h
 
 ## BRIEF
 
+Проверяет тип значения
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет тип значения
 
 Возвращает:
 * bool
@@ -189,9 +253,13 @@ Title: XLEvent.h
 
 ## BRIEF
 
+Проверяет тип значения
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет тип значения
 
 Возвращает:
 * bool
@@ -200,9 +268,13 @@ Title: XLEvent.h
 
 ## BRIEF
 
+Получает значение события
+
 ## CONTENT
 
 Доступ: public
+
+Получает значение события
 
 Возвращает:
 * int64_t
@@ -211,9 +283,13 @@ Title: XLEvent.h
 
 ## BRIEF
 
+Получает значение события
+
 ## CONTENT
 
 Доступ: public
+
+Получает значение события
 
 Возвращает:
 * double
@@ -222,9 +298,13 @@ Title: XLEvent.h
 
 ## BRIEF
 
+Получает значение события
+
 ## CONTENT
 
 Доступ: public
+
+Получает значение события
 
 Возвращает:
 * bool
@@ -233,9 +313,13 @@ Title: XLEvent.h
 
 ## BRIEF
 
+Получает значение события
+
 ## CONTENT
 
 Доступ: public
+
+Получает значение события
 
 Параметры шаблона:
 * class T
@@ -250,9 +334,13 @@ Title: XLEvent.h
 
 ## BRIEF
 
+Получает значение события
+
 ## CONTENT
 
 Доступ: public
+
+Получает значение события
 
 Параметры шаблона:
 * class T
@@ -267,9 +355,13 @@ Title: XLEvent.h
 
 ## BRIEF
 
+Получает значение события
+
 ## CONTENT
 
 Доступ: public
+
+Получает значение события
 
 Параметры шаблона:
 * class T
@@ -281,9 +373,13 @@ Title: XLEvent.h
 
 ## BRIEF
 
+Получает значение события
+
 ## CONTENT
 
 Доступ: public
+
+Получает значение события
 
 Возвращает:
 * stappler::StringView
@@ -292,9 +388,13 @@ Title: XLEvent.h
 
 ## BRIEF
 
+Получает значение события
+
 ## CONTENT
 
 Доступ: public
+
+Получает значение события
 
 Возвращает:
 * stappler::mem_std::Value const&
@@ -303,16 +403,25 @@ Title: XLEvent.h
 
 ## BRIEF
 
+Тип значения события
+
 ## CONTENT
 
 Доступ: protected
+
+Тип значения события
+
 
 
 # ::stappler::xenolith::Event::EventValue::intValue
 
 ## BRIEF
 
+Целочисленное значение
+
 ## CONTENT
+
+Целочисленное значение
 
 Тип: int64_t
 
@@ -321,7 +430,11 @@ Title: XLEvent.h
 
 ## BRIEF
 
+Значение с плавающей точкой
+
 ## CONTENT
+
+Значение с плавающей точкой
 
 Тип: double
 
@@ -330,7 +443,11 @@ Title: XLEvent.h
 
 ## BRIEF
 
+булево значение
+
 ## CONTENT
+
+булево значение
 
 Тип: bool
 
@@ -339,7 +456,11 @@ Title: XLEvent.h
 
 ## BRIEF
 
+Объект-значение
+
 ## CONTENT
+
+Объект-значение
 
 Тип: stappler::mem_std::Ref*
 
@@ -348,7 +469,11 @@ Title: XLEvent.h
 
 ## BRIEF
 
+Значение-строка
+
 ## CONTENT
+
+Значение-строка
 
 Тип: stappler::mem_std::String const*
 
@@ -357,7 +482,11 @@ Title: XLEvent.h
 
 ## BRIEF
 
+Значение-данные
+
 ## CONTENT
+
+Значение-данные
 
 Тип: stappler::mem_std::Value const*
 
@@ -366,37 +495,49 @@ Title: XLEvent.h
 
 ## BRIEF
 
+Конструктор
+
 ## CONTENT
 
 Доступ: protected
 
+Конструктор
+
 Параметры:
-* stappler::xenolith::EventHeader const&
-* stappler::mem_std::Ref*
-* stappler::xenolith::Event::EventValue
-* stappler::xenolith::Event::Type
+* stappler::xenolith::EventHeader const& - заголовок
+* stappler::mem_std::Ref* - источник
+* stappler::xenolith::Event::EventValue - значение
+* stappler::xenolith::Event::Type - тип значения
 
 
 # ::stappler::xenolith::Event::Event(stappler::xenolith::EventHeader const&,stappler::mem_std::Ref*)
 
 ## BRIEF
 
+Конструктор
+
 ## CONTENT
 
 Доступ: protected
 
+Конструктор
+
 Параметры:
-* stappler::xenolith::EventHeader const&
-* stappler::mem_std::Ref*
+* stappler::xenolith::EventHeader const& - заголовок
+* stappler::mem_std::Ref* - источник
 
 
 # ::stappler::xenolith::Event::send(stappler::xenolith::EventHeader const&,stappler::mem_std::Ref*,stappler::xenolith::Event::EventValue,stappler::xenolith::Event::Type)
 
 ## BRIEF
 
+Отправляет событие
+
 ## CONTENT
 
 Доступ: protected
+
+Отправляет событие
 
 Параметры:
 * stappler::xenolith::EventHeader const&
@@ -409,9 +550,13 @@ Title: XLEvent.h
 
 ## BRIEF
 
+Отправляет событие
+
 ## CONTENT
 
 Доступ: protected
+
+Отправляет событие
 
 Параметры:
 * stappler::xenolith::EventHeader const&
@@ -423,9 +568,13 @@ Title: XLEvent.h
 
 ## BRIEF
 
+Отправляет событие
+
 ## CONTENT
 
 Доступ: protected
+
+Отправляет событие
 
 Параметры:
 * stappler::xenolith::EventHeader const&
@@ -437,9 +586,13 @@ Title: XLEvent.h
 
 ## BRIEF
 
+Отправляет событие
+
 ## CONTENT
 
 Доступ: protected
+
+Отправляет событие
 
 Параметры:
 * stappler::xenolith::EventHeader const&
@@ -451,9 +604,13 @@ Title: XLEvent.h
 
 ## BRIEF
 
+Отправляет событие
+
 ## CONTENT
 
 Доступ: protected
+
+Отправляет событие
 
 Параметры:
 * stappler::xenolith::EventHeader const&
@@ -465,9 +622,13 @@ Title: XLEvent.h
 
 ## BRIEF
 
+Отправляет событие
+
 ## CONTENT
 
 Доступ: protected
+
+Отправляет событие
 
 Параметры:
 * stappler::xenolith::EventHeader const&
@@ -479,9 +640,13 @@ Title: XLEvent.h
 
 ## BRIEF
 
+Отправляет событие
+
 ## CONTENT
 
 Доступ: protected
+
+Отправляет событие
 
 Параметры:
 * stappler::xenolith::EventHeader const&
@@ -493,9 +658,13 @@ Title: XLEvent.h
 
 ## BRIEF
 
+Отправляет событие
+
 ## CONTENT
 
 Доступ: protected
+
+Отправляет событие
 
 Параметры:
 * stappler::xenolith::EventHeader const&
@@ -507,9 +676,13 @@ Title: XLEvent.h
 
 ## BRIEF
 
+Отправляет событие
+
 ## CONTENT
 
 Доступ: protected
+
+Отправляет событие
 
 Параметры:
 * stappler::xenolith::EventHeader const&
@@ -521,9 +694,13 @@ Title: XLEvent.h
 
 ## BRIEF
 
+Отправляет событие
+
 ## CONTENT
 
 Доступ: protected
+
+Отправляет событие
 
 Параметры:
 * stappler::xenolith::EventHeader const&
@@ -534,18 +711,26 @@ Title: XLEvent.h
 
 ## BRIEF
 
+Доставляет текущее событие
+
 ## CONTENT
 
 Доступ: protected
+
+Доставляет текущее событие
 
 
 # ::stappler::xenolith::Event::_header
 
 ## BRIEF
 
+Заголовок события
+
 ## CONTENT
 
 Доступ: protected
+
+Заголовок события
 
 Тип: stappler::xenolith::EventHeader const&
 
@@ -554,9 +739,13 @@ Title: XLEvent.h
 
 ## BRIEF
 
+Тип события
+
 ## CONTENT
 
 Доступ: protected
+
+Тип события
 
 Тип: stappler::xenolith::Event::Type
 
@@ -565,9 +754,13 @@ Title: XLEvent.h
 
 ## BRIEF
 
+Объект-источник
+
 ## CONTENT
 
 Доступ: protected
+
+Объект-источник
 
 Тип: stappler::mem_std::Ref*
 
@@ -576,9 +769,13 @@ Title: XLEvent.h
 
 ## BRIEF
 
+Значение
+
 ## CONTENT
 
 Доступ: protected
+
+Значение
 
 Тип: stappler::xenolith::Event::EventValue
 
@@ -587,8 +784,12 @@ Title: XLEvent.h
 
 ## BRIEF
 
+Нулевая строка
+
 ## CONTENT
 
 Доступ: private
+
+Нулевая строка
 
 Тип: stappler::mem_std::String

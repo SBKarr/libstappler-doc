@@ -5,17 +5,28 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Заголовок модификаторов кривой исполнения для действвий
+
 ## CONTENT
+
+Заголовок модификаторов кривой исполнения для действвий
 
 
 # ::stappler::xenolith::interpolation::Type
 
 ## BRIEF
 
+Способ интерполяции
+
 ## CONTENT
+
+Способ интерполяции
 
 Значения:
 * Linear
+* EaseIn
+* EaseOut
+* EaseInOut
 * Sine_EaseIn
 * Sine_EaseOut
 * Sine_EaseInOut
@@ -54,12 +65,16 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Интерполирует время исполнения
+
 ## CONTENT
 
+Интерполирует время исполнения
+
 Параметры:
-* float
-* stappler::xenolith::interpolation::Type
-* float*
+* float - значение для интерполяции
+* stappler::xenolith::interpolation::Type - способ интерполяции
+* float* - программа интерполяции (если тип её предполагает)
 
 Возвращает:
 * float
@@ -68,7 +83,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Интерполирует время исполнения
+
 ## CONTENT
+
+Интерполирует время исполнения
 
 Параметры:
 * float
@@ -80,11 +99,15 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Интерполирует время исполнения
+
 ## CONTENT
+
+Интерполирует время исполнения
 
 Параметры:
 * float
-* float
+* float - параметр интерполяции
 
 Возвращает:
 * float
@@ -93,11 +116,15 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Интерполирует время исполнения
+
 ## CONTENT
+
+Интерполирует время исполнения
 
 Параметры:
 * float
-* float
+* float - параметр интерполяции
 
 Возвращает:
 * float
@@ -106,11 +133,15 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Интерполирует время исполнения
+
 ## CONTENT
+
+Интерполирует время исполнения
 
 Параметры:
 * float
-* float
+* float - параметр интерполяции
 
 Возвращает:
 * float
@@ -119,14 +150,18 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Интерполирует время исполнения вдоль кривой безье
+
 ## CONTENT
+
+Интерполирует время исполнения вдоль кривой безье
 
 Параметры:
 * float
-* float
-* float
-* float
-* float
+* float - x первой контрольной точки
+* float - y первой контрольной точки
+* float - x второй контрольной точки
+* float - y второй контрольной точки
 
 Возвращает:
 * float
@@ -135,7 +170,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Интерполирует время исполнения
+
 ## CONTENT
+
+Интерполирует время исполнения
 
 Параметры:
 * float
@@ -147,7 +186,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Интерполирует время исполнения
+
 ## CONTENT
+
+Интерполирует время исполнения
 
 Параметры:
 * float
@@ -159,7 +202,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Интерполирует время исполнения
+
 ## CONTENT
+
+Интерполирует время исполнения
 
 Параметры:
 * float
@@ -171,7 +218,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Интерполирует время исполнения
+
 ## CONTENT
+
+Интерполирует время исполнения
 
 Параметры:
 * float
@@ -183,7 +234,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Интерполирует время исполнения
+
 ## CONTENT
+
+Интерполирует время исполнения
 
 Параметры:
 * float
@@ -195,7 +250,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Интерполирует время исполнения
+
 ## CONTENT
+
+Интерполирует время исполнения
 
 Параметры:
 * float
@@ -207,7 +266,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Интерполирует время исполнения
+
 ## CONTENT
+
+Интерполирует время исполнения
 
 Параметры:
 * float
@@ -219,7 +282,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Интерполирует время исполнения
+
 ## CONTENT
+
+Интерполирует время исполнения
 
 Параметры:
 * float
@@ -231,7 +298,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Интерполирует время исполнения
+
 ## CONTENT
+
+Интерполирует время исполнения
 
 Параметры:
 * float
@@ -243,7 +314,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Интерполирует время исполнения
+
 ## CONTENT
+
+Интерполирует время исполнения
 
 Параметры:
 * float
@@ -255,7 +330,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Интерполирует время исполнения
+
 ## CONTENT
+
+Интерполирует время исполнения
 
 Параметры:
 * float
@@ -267,7 +346,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Интерполирует время исполнения
+
 ## CONTENT
+
+Интерполирует время исполнения
 
 Параметры:
 * float
@@ -279,7 +362,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Интерполирует время исполнения
+
 ## CONTENT
+
+Интерполирует время исполнения
 
 Параметры:
 * float
@@ -291,7 +378,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Интерполирует время исполнения
+
 ## CONTENT
+
+Интерполирует время исполнения
 
 Параметры:
 * float
@@ -303,7 +394,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Интерполирует время исполнения
+
 ## CONTENT
+
+Интерполирует время исполнения
 
 Параметры:
 * float
@@ -315,7 +410,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Интерполирует время исполнения
+
 ## CONTENT
+
+Интерполирует время исполнения
 
 Параметры:
 * float
@@ -327,7 +426,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Интерполирует время исполнения
+
 ## CONTENT
+
+Интерполирует время исполнения
 
 Параметры:
 * float
@@ -339,7 +442,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Интерполирует время исполнения
+
 ## CONTENT
+
+Интерполирует время исполнения
 
 Параметры:
 * float
@@ -351,7 +458,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Интерполирует время исполнения
+
 ## CONTENT
+
+Интерполирует время исполнения
 
 Параметры:
 * float
@@ -363,7 +474,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Интерполирует время исполнения
+
 ## CONTENT
+
+Интерполирует время исполнения
 
 Параметры:
 * float
@@ -375,7 +490,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Интерполирует время исполнения
+
 ## CONTENT
+
+Интерполирует время исполнения
 
 Параметры:
 * float
@@ -387,7 +506,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Интерполирует время исполнения
+
 ## CONTENT
+
+Интерполирует время исполнения
 
 Параметры:
 * float
@@ -399,7 +522,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Интерполирует время исполнения
+
 ## CONTENT
+
+Интерполирует время исполнения
 
 Параметры:
 * float
@@ -411,7 +538,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Интерполирует время исполнения
+
 ## CONTENT
+
+Интерполирует время исполнения
 
 Параметры:
 * float
@@ -423,11 +554,15 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Интерполирует время исполнения
+
 ## CONTENT
+
+Интерполирует время исполнения
 
 Параметры:
 * float
-* float
+* float - параметр интерполяции
 
 Возвращает:
 * float
@@ -436,11 +571,15 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Интерполирует время исполнения
+
 ## CONTENT
+
+Интерполирует время исполнения
 
 Параметры:
 * float
-* float
+* float - параметр интерполяции
 
 Возвращает:
 * float
@@ -449,11 +588,15 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Интерполирует время исполнения
+
 ## CONTENT
+
+Интерполирует время исполнения
 
 Параметры:
 * float
-* float
+* float - параметр интерполяции
 
 Возвращает:
 * float
@@ -462,7 +605,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Интерполирует время исполнения
+
 ## CONTENT
+
+Интерполирует время исполнения
 
 Параметры:
 * float
@@ -474,7 +621,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Интерполирует время исполнения
+
 ## CONTENT
+
+Интерполирует время исполнения
 
 Параметры:
 * float
@@ -486,7 +637,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Интерполирует время исполнения
+
 ## CONTENT
+
+Интерполирует время исполнения
 
 Параметры:
 * float
@@ -498,7 +653,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Интерполирует время исполнения
+
 ## CONTENT
+
+Интерполирует время исполнения
 
 Параметры:
 * float
@@ -510,7 +669,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Интерполирует время исполнения
+
 ## CONTENT
+
+Интерполирует время исполнения
 
 Параметры:
 * float
@@ -522,7 +685,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Интерполирует время исполнения
+
 ## CONTENT
+
+Интерполирует время исполнения
 
 Параметры:
 * float
@@ -534,7 +701,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Интерполирует время исполнения
+
 ## CONTENT
+
+Интерполирует время исполнения по параметрам кубического уравнения
 
 Параметры:
 * float
@@ -547,7 +718,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Базовый модификатор действия
+
 ## CONTENT
+
+Базовый модификатор действия
 
 Базовые классы:
 * ActionInterval
@@ -557,18 +732,25 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
 
+Деструктор
 
 # ::stappler::xenolith::ActionEase::init(stappler::xenolith::ActionInterval*)
 
 ## BRIEF
 
+Создаёт модификатор для действия
+
 ## CONTENT
 
 Доступ: public
+
+Создаёт модификатор для действия
 
 Параметры:
 * stappler::xenolith::ActionInterval*
@@ -580,9 +762,13 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Запускает действие
+
 ## CONTENT
 
 Доступ: public
+
+Запускает действие
 
 Параметры:
 * stappler::xenolith::Node*
@@ -592,18 +778,25 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Останавливает действие
+
 ## CONTENT
 
 Доступ: public
 
+Останавливает действие
 
 # ::stappler::xenolith::ActionEase::update(float)
 
 ## BRIEF
 
+Выполняет действие
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет действие
 
 Параметры:
 * float
@@ -613,9 +806,13 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Действие для модификации
+
 ## CONTENT
 
 Доступ: protected
+
+Действие для модификации
 
 Тип: Rc<stappler::xenolith::ActionInterval>
 
@@ -624,7 +821,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Модификатор действия
+
 ## CONTENT
+
+Модификатор действия
 
 Базовые классы:
 * ActionEase
@@ -634,18 +835,26 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::EaseRateAction::init(stappler::xenolith::ActionInterval*,float)
 
 ## BRIEF
 
+Создаёт модификатор
+
 ## CONTENT
 
 Доступ: public
+
+Создаёт модификатор
 
 Параметры:
 * stappler::xenolith::ActionInterval*
@@ -658,9 +867,13 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Устанавливает параметр интерполяции
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает параметр интерполяции
 
 Параметры:
 * float
@@ -670,9 +883,13 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Возвращает параметр интерполяции
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает параметр интерполяции
 
 Возвращает:
 * float
@@ -681,9 +898,13 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Параметр интерполяции
+
 ## CONTENT
 
 Доступ: protected
+
+Параметр интерполяции
 
 Тип: float
 
@@ -692,7 +913,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Модификатор действия
+
 ## CONTENT
+
+Модификатор действия
 
 Базовые классы:
 * EaseRateAction
@@ -702,18 +927,26 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::EaseIn::update(float)
 
 ## BRIEF
 
+Выполняет действие
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет действие
 
 Параметры:
 * float
@@ -723,7 +956,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Модификатор действия
+
 ## CONTENT
+
+Модификатор действия
 
 Базовые классы:
 * EaseRateAction
@@ -733,18 +970,26 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::EaseOut::update(float)
 
 ## BRIEF
 
+Выполняет действие
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет действие
 
 Параметры:
 * float
@@ -754,7 +999,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Модификатор действия
+
 ## CONTENT
+
+Модификатор действия
 
 Базовые классы:
 * EaseRateAction
@@ -764,18 +1013,26 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::EaseInOut::update(float)
 
 ## BRIEF
 
+Выполняет действие
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет действие
 
 Параметры:
 * float
@@ -785,7 +1042,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Модификатор действия
+
 ## CONTENT
+
+Модификатор действия
 
 Базовые классы:
 * ActionEase
@@ -795,18 +1056,26 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::EaseExponentialIn::update(float)
 
 ## BRIEF
 
+Выполняет действие
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет действие
 
 Параметры:
 * float
@@ -816,7 +1085,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Модификатор действия
+
 ## CONTENT
+
+Модификатор действия
 
 Базовые классы:
 * ActionEase
@@ -826,18 +1099,26 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::EaseExponentialOut::update(float)
 
 ## BRIEF
 
+Выполняет действие
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет действие
 
 Параметры:
 * float
@@ -847,7 +1128,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Модификатор действия
+
 ## CONTENT
+
+Модификатор действия
 
 Базовые классы:
 * ActionEase
@@ -857,18 +1142,26 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::EaseExponentialInOut::update(float)
 
 ## BRIEF
 
+Выполняет действие
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет действие
 
 Параметры:
 * float
@@ -878,7 +1171,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Модификатор действия
+
 ## CONTENT
+
+Модификатор действия
 
 Базовые классы:
 * ActionEase
@@ -888,18 +1185,26 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::EaseSineIn::update(float)
 
 ## BRIEF
 
+Выполняет действие
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет действие
 
 Параметры:
 * float
@@ -909,7 +1214,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Модификатор действия
+
 ## CONTENT
+
+Модификатор действия
 
 Базовые классы:
 * ActionEase
@@ -919,18 +1228,26 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::EaseSineOut::update(float)
 
 ## BRIEF
 
+Выполняет действие
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет действие
 
 Параметры:
 * float
@@ -940,7 +1257,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Модификатор действия
+
 ## CONTENT
+
+Модификатор действия
 
 Базовые классы:
 * ActionEase
@@ -950,18 +1271,26 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::EaseSineInOut::update(float)
 
 ## BRIEF
 
+Выполняет действие
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет действие
 
 Параметры:
 * float
@@ -971,7 +1300,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Модификатор действия
+
 ## CONTENT
+
+Модификатор действия
 
 Базовые классы:
 * ActionEase
@@ -981,18 +1314,26 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::EaseElastic::init(stappler::xenolith::ActionInterval*,float)
 
 ## BRIEF
 
+Создаёт модификатор действия
+
 ## CONTENT
 
 Доступ: public
+
+Создаёт модификатор действия
 
 Параметры:
 * stappler::xenolith::ActionInterval*
@@ -1005,9 +1346,13 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Возвращает параметр интерполяции
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает параметр интерполяции
 
 Возвращает:
 * float
@@ -1016,9 +1361,13 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Устанавливает параметр интерполяции
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает параметр интерполяции
 
 Параметры:
 * float
@@ -1028,9 +1377,13 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Параметр интерполяции
+
 ## CONTENT
 
 Доступ: protected
+
+Параметр интерполяции
 
 Тип: float
 
@@ -1039,7 +1392,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Модификатор действия
+
 ## CONTENT
+
+Модификатор действия
 
 Базовые классы:
 * EaseElastic
@@ -1049,18 +1406,26 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::EaseElasticIn::update(float)
 
 ## BRIEF
 
+Выполняет действие
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет действие
 
 Параметры:
 * float
@@ -1070,7 +1435,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Модификатор действия
+
 ## CONTENT
+
+Модификатор действия
 
 Базовые классы:
 * EaseElastic
@@ -1080,18 +1449,26 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::EaseElasticOut::update(float)
 
 ## BRIEF
 
+Выполняет действие
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет действие
 
 Параметры:
 * float
@@ -1101,7 +1478,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Модификатор действия
+
 ## CONTENT
+
+Модификатор действия
 
 Базовые классы:
 * EaseElastic
@@ -1111,18 +1492,26 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::EaseElasticInOut::update(float)
 
 ## BRIEF
 
+Выполняет действие
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет действие
 
 Параметры:
 * float
@@ -1132,7 +1521,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Модификатор действия
+
 ## CONTENT
+
+Модификатор действия
 
 Базовые классы:
 * ActionEase
@@ -1142,18 +1535,26 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::EaseBounceIn::update(float)
 
 ## BRIEF
 
+Выполняет действие
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет действие
 
 Параметры:
 * float
@@ -1163,7 +1564,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Модификатор действия
+
 ## CONTENT
+
+Модификатор действия
 
 Базовые классы:
 * ActionEase
@@ -1173,18 +1578,26 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::EaseBounceOut::update(float)
 
 ## BRIEF
 
+Выполняет действие
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет действие
 
 Параметры:
 * float
@@ -1194,7 +1607,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Модификатор действия
+
 ## CONTENT
+
+Модификатор действия
 
 Базовые классы:
 * ActionEase
@@ -1204,18 +1621,26 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::EaseBounceInOut::update(float)
 
 ## BRIEF
 
+Выполняет действие
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет действие
 
 Параметры:
 * float
@@ -1225,7 +1650,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Модификатор действия
+
 ## CONTENT
+
+Модификатор действия
 
 Базовые классы:
 * ActionEase
@@ -1235,18 +1664,26 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::EaseBackIn::update(float)
 
 ## BRIEF
 
+Выполняет действие
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет действие
 
 Параметры:
 * float
@@ -1256,7 +1693,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Модификатор действия
+
 ## CONTENT
+
+Модификатор действия
 
 Базовые классы:
 * ActionEase
@@ -1266,18 +1707,26 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::EaseBackOut::update(float)
 
 ## BRIEF
 
+Выполняет действие
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет действие
 
 Параметры:
 * float
@@ -1287,7 +1736,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Модификатор действия
+
 ## CONTENT
+
+Модификатор действия
 
 Базовые классы:
 * ActionEase
@@ -1297,18 +1750,26 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::EaseBackInOut::update(float)
 
 ## BRIEF
 
+Выполняет действие
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет действие
 
 Параметры:
 * float
@@ -1318,7 +1779,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Модификатор действия
+
 ## CONTENT
+
+Модификатор действия
 
 Базовые классы:
 * ActionEase
@@ -1328,25 +1793,33 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::EaseBezierAction::init(stappler::xenolith::ActionInterval*,float,float,float,float)
 
 ## BRIEF
 
+Создаёт модификатор действия на основе параметров Безье
+
 ## CONTENT
 
 Доступ: public
 
+Создаёт модификатор действия на основе параметров Безье
+
 Параметры:
 * stappler::xenolith::ActionInterval*
-* float
-* float
-* float
-* float
+* float - x первого параметра
+* float - y первого параметра
+* float - x второго параметра
+* float - y второго параметра
 
 Возвращает:
 * bool
@@ -1355,9 +1828,13 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Выполняет действие
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет действие
 
 Параметры:
 * float
@@ -1367,9 +1844,13 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Параметр интерполяции
+
 ## CONTENT
 
 Доступ: protected
+
+Параметр интерполяции
 
 Тип: float
 
@@ -1378,9 +1859,13 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Параметр интерполяции
+
 ## CONTENT
 
 Доступ: protected
+
+Параметр интерполяции
 
 Тип: float
 
@@ -1389,9 +1874,13 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Параметр интерполяции
+
 ## CONTENT
 
 Доступ: protected
+
+Параметр интерполяции
 
 Тип: float
 
@@ -1400,9 +1889,13 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Параметр интерполяции
+
 ## CONTENT
 
 Доступ: protected
+
+Параметр интерполяции
 
 Тип: float
 
@@ -1411,7 +1904,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Модификатор действия
+
 ## CONTENT
+
+Модификатор действия
 
 Базовые классы:
 * ActionEase
@@ -1421,18 +1918,26 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::EaseQuadraticActionIn::update(float)
 
 ## BRIEF
 
+Выполняет действие
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет действие
 
 Параметры:
 * float
@@ -1442,7 +1947,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Модификатор действия
+
 ## CONTENT
+
+Модификатор действия
 
 Базовые классы:
 * ActionEase
@@ -1452,18 +1961,26 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::EaseQuadraticActionOut::update(float)
 
 ## BRIEF
 
+Выполняет действие
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет действие
 
 Параметры:
 * float
@@ -1473,7 +1990,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Модификатор действия
+
 ## CONTENT
+
+Модификатор действия
 
 Базовые классы:
 * ActionEase
@@ -1483,18 +2004,26 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::EaseQuadraticActionInOut::update(float)
 
 ## BRIEF
 
+Выполняет действие
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет действие
 
 Параметры:
 * float
@@ -1504,7 +2033,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Модификатор действия
+
 ## CONTENT
+
+Модификатор действия
 
 Базовые классы:
 * ActionEase
@@ -1514,18 +2047,26 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::EaseQuarticActionIn::update(float)
 
 ## BRIEF
 
+Выполняет действие
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет действие
 
 Параметры:
 * float
@@ -1535,7 +2076,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Модификатор действия
+
 ## CONTENT
+
+Модификатор действия
 
 Базовые классы:
 * ActionEase
@@ -1545,18 +2090,26 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::EaseQuarticActionOut::update(float)
 
 ## BRIEF
 
+Выполняет действие
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет действие
 
 Параметры:
 * float
@@ -1566,7 +2119,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Модификатор действия
+
 ## CONTENT
+
+Модификатор действия
 
 Базовые классы:
 * ActionEase
@@ -1576,18 +2133,26 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::EaseQuarticActionInOut::update(float)
 
 ## BRIEF
 
+Выполняет действие
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет действие
 
 Параметры:
 * float
@@ -1597,7 +2162,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Модификатор действия
+
 ## CONTENT
+
+Модификатор действия
 
 Базовые классы:
 * ActionEase
@@ -1607,18 +2176,26 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::EaseQuinticActionIn::update(float)
 
 ## BRIEF
 
+Выполняет действие
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет действие
 
 Параметры:
 * float
@@ -1628,7 +2205,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Модификатор действия
+
 ## CONTENT
+
+Модификатор действия
 
 Базовые классы:
 * ActionEase
@@ -1638,18 +2219,26 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::EaseQuinticActionOut::update(float)
 
 ## BRIEF
 
+Выполняет действие
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет действие
 
 Параметры:
 * float
@@ -1659,7 +2248,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Модификатор действия
+
 ## CONTENT
+
+Модификатор действия
 
 Базовые классы:
 * ActionEase
@@ -1669,18 +2262,26 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::EaseQuinticActionInOut::update(float)
 
 ## BRIEF
 
+Выполняет действие
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет действие
 
 Параметры:
 * float
@@ -1690,7 +2291,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Модификатор действия
+
 ## CONTENT
+
+Модификатор действия
 
 Базовые классы:
 * ActionEase
@@ -1700,18 +2305,26 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::EaseCircleActionIn::update(float)
 
 ## BRIEF
 
+Выполняет действие
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет действие
 
 Параметры:
 * float
@@ -1721,7 +2334,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Модификатор действия
+
 ## CONTENT
+
+Модификатор действия
 
 Базовые классы:
 * ActionEase
@@ -1731,18 +2348,26 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::EaseCircleActionOut::update(float)
 
 ## BRIEF
 
+Выполняет действие
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет действие
 
 Параметры:
 * float
@@ -1752,7 +2377,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Модификатор действия
+
 ## CONTENT
+
+Модификатор действия
 
 Базовые классы:
 * ActionEase
@@ -1762,18 +2391,26 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::EaseCircleActionInOut::update(float)
 
 ## BRIEF
 
+Выполняет действие
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет действие
 
 Параметры:
 * float
@@ -1783,7 +2420,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Модификатор действия
+
 ## CONTENT
+
+Модификатор действия
 
 Базовые классы:
 * ActionEase
@@ -1793,18 +2434,26 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::EaseCubicActionIn::update(float)
 
 ## BRIEF
 
+Выполняет действие
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет действие
 
 Параметры:
 * float
@@ -1814,7 +2463,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Модификатор действия
+
 ## CONTENT
+
+Модификатор действия
 
 Базовые классы:
 * ActionEase
@@ -1824,18 +2477,26 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::EaseCubicActionOut::update(float)
 
 ## BRIEF
 
+Выполняет действие
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет действие
 
 Параметры:
 * float
@@ -1845,7 +2506,11 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Модификатор действия
+
 ## CONTENT
+
+Модификатор действия
 
 Базовые классы:
 * ActionEase
@@ -1855,18 +2520,25 @@ Title: XLActionEase.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
 
+Деструктор
 
 # ::stappler::xenolith::EaseCubicActionInOut::update(float)
 
 ## BRIEF
 
+Выполняет действие
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет действие
 
 Параметры:
 * float

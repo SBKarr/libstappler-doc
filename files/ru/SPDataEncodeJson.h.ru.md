@@ -11,7 +11,7 @@ Title: SPDataEncodeJson.h
 
 Заголовок, описывающий кодирование данных в формат JSON
 
-# ::stappler::data::json::encodeString<typename>(std::ostream&,StringType const&)
+# ::stappler::data::json::encodeString<typename>(Callback<void (stappler::StringView)> const&,StringType const&)
 
 ## BRIEF
 
@@ -25,7 +25,7 @@ Title: SPDataEncodeJson.h
 * typename StringType - тип строки
 
 Параметры:
-* std::ostream& - выходной поток
+* Callback<void (stappler::StringView)> const& - выходной поток
 * StringType const& - исходная строка
 
 
@@ -66,7 +66,7 @@ Title: SPDataEncodeJson.h
 
 Тип исходного значения
 
-# ::stappler::data::json::RawEncoder<typename>::RawEncoder(std::ostream*)
+# ::stappler::data::json::RawEncoder<typename>::RawEncoder(Callback<void (stappler::StringView)> const*)
 
 ## BRIEF
 
@@ -77,7 +77,7 @@ Title: SPDataEncodeJson.h
 Инициализирует кодировщик с выходным потоком
 
 Параметры:
-* std::ostream*
+* Callback<void (stappler::StringView)> const*
 
 
 # ::stappler::data::json::RawEncoder<typename>::write(stappler::nullptr_t)
@@ -254,7 +254,7 @@ Title: SPDataEncodeJson.h
 
 Выходной поток
 
-Тип: std::ostream*
+Тип: Callback<void (stappler::StringView)> const*
 
 
 # ::stappler::data::json::PrettyEncoder<typename>
@@ -294,7 +294,7 @@ Title: SPDataEncodeJson.h
 
 Тип исходного значения
 
-# ::stappler::data::json::PrettyEncoder<typename>::PrettyEncoder(std::ostream*,bool)
+# ::stappler::data::json::PrettyEncoder<typename>::PrettyEncoder(Callback<void (stappler::StringView)> const*,bool)
 
 ## BRIEF
 
@@ -305,7 +305,7 @@ Title: SPDataEncodeJson.h
 Инициализирует кодировщик с выходным потоком
 
 Параметры:
-* std::ostream* - выходной поток
+* Callback<void (stappler::StringView)> const* - выходной поток
 * bool - true если необходимо интерпретировать значения времени
 
 # ::stappler::data::json::RawEncoder<typename>::writeData(char const*,size_t)
@@ -604,7 +604,7 @@ Title: SPDataEncodeJson.h
 
 Выходной поток
 
-Тип: std::ostream*
+Тип: Callback<void (stappler::StringView)> const*
 
 
 # ::stappler::data::json::PrettyEncoder<typename>::lastKey
@@ -633,7 +633,7 @@ Title: SPDataEncodeJson.h
 Тип: typename Interface::template ArrayType<bool>
 
 
-# ::stappler::data::json::write<typename>(std::ostream&,ValueTemplate<Interface> const&,bool,bool)
+# ::stappler::data::json::write<typename>(Callback<void (stappler::StringView)> const&,ValueTemplate<Interface> const&,bool,bool)
 
 ## BRIEF
 
@@ -647,7 +647,7 @@ Title: SPDataEncodeJson.h
 * typename Interface - интерфейс памяти
 
 Параметры:
-* std::ostream& - выходной поток
+* Callback<void (stappler::StringView)> const& - выходной поток
 * ValueTemplate<Interface> const& - значение для записи
 * bool - true если использовать человекочитаемый формат
 * bool - true если интерпретировать маркеры времени
@@ -703,6 +703,8 @@ Title: SPDataEncodeJson.h
 Записывает значение в строку
 
 ## CONTENT
+
+Записывает значение в строку
 
 Параметры шаблона:
 * typename Interface - интерфейс памяти

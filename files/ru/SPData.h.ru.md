@@ -127,3 +127,51 @@ Title: SPData.h
 
 Возвращает:
 * data::ValueTemplate<Interface> - распознанные данные
+
+# ::stappler::data::MIME_URLENCODED
+
+## BRIEF
+
+MIME-тип urlencoded
+
+## CONTENT
+
+MIME-тип urlencoded
+
+Тип: stappler::StringView const
+
+# ::stappler::data::MIME_SERENITY
+
+## BRIEF
+
+MIME-тип для кода serenity
+
+## CONTENT
+
+MIME-тип для кода serenity
+
+Тип: stappler::StringView const
+
+# ::stappler::data::MIME_JSON
+
+## BRIEF
+
+MIME-тип для JSON
+
+## CONTENT
+
+MIME-тип для JSON
+
+Тип: stappler::StringView const
+
+# ::stappler::data::MIME_CBOR
+
+## BRIEF
+
+MIME-тип для CBOR
+
+## CONTENT
+
+MIME-тип для CBOR
+
+Тип: stappler::StringView const

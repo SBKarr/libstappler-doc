@@ -39,7 +39,7 @@ Title: SPWebRequestHandler.h
 Функция создания обработчика запроса
 
 
-# ::stappler::web::RequestHandler::Handler<typename,typename>(Args &&...)
+# ::stappler::web::RequestHandler::Make<typename,typename>(Args &&...)
 
 ## BRIEF
 
@@ -60,6 +60,28 @@ Title: SPWebRequestHandler.h
 
 Возвращает:
 * HandlerCallback
+
+# ::stappler::web::RequestHandlerMap::Handler::Make<typename,typename>(Args &&...)
+
+## BRIEF
+
+Создаёт обработчик на основе аргументов
+
+## CONTENT
+
+Доступ: public
+
+Создаёт обработчик на основе аргументов
+
+Параметры шаблона:
+* typename T
+* typename Args
+
+Параметры:
+* Args &&...
+
+Возвращает:
+* Function<stappler::web::RequestHandlerMap::Handler *()>
 
 # ::stappler::web::RequestHandler::~RequestHandler()
 

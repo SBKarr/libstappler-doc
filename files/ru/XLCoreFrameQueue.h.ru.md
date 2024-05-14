@@ -1356,3 +1356,17 @@ Title: XLCoreFrameQueue.h
 Проходы на ожидании
 
 Тип: Vector<Pair<stappler::xenolith::core::FramePassData *, stappler::xenolith::core::FrameRenderPassState>>
+
+# ::stappler::xenolith::core::FrameQueue::_invalidated
+
+## BRIEF
+
+Флаг ошибочного состояния очереди
+
+## CONTENT
+
+Доступ: protected
+
+Флаг ошибочного состояния очереди
+
+Тип: bool

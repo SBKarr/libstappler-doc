@@ -21,6 +21,86 @@ Title: XLCoreObject.h
 
 Флаг использования 64-битных указателей на объекты
 
+# ::stappler::xenolith::core::ObjectData
+
+## BRIEF
+
+Тип внутренних данных объекта
+
+## CONTENT
+
+Тип внутренних данных объекта
+
+# ::stappler::xenolith::core::ObjectData::ClearCallback
+
+## BRIEF
+
+Тип функции удаления объекта
+
+## CONTENT
+
+Тип функции удаления объекта
+
+# ::stappler::xenolith::core::ObjectData::type
+
+## BRIEF
+
+Тип объекта
+
+## CONTENT
+
+Тип объекта
+
+Тип: stappler::xenolith::core::ObjectType
+
+# ::stappler::xenolith::core::ObjectData::device
+
+## BRIEF
+
+Виртуальное устройство, хранящее объект
+
+## CONTENT
+
+Виртуальное устройство, хранящее объект
+
+Тип: stappler::xenolith::core::Device*
+
+# ::stappler::xenolith::core::ObjectData::callback
+
+## BRIEF
+
+Функция удаления объекта
+
+## CONTENT
+
+Тип: ClearCallback
+
+Функция удаления объекта
+
+# ::stappler::xenolith::core::ObjectData::handle
+
+## BRIEF
+
+Внутренний указатель устройства на объект
+
+## CONTENT
+
+Внутренний указатель устройства на объект
+
+Тип: stappler::xenolith::core::ObjectHandle
+
+# ::stappler::xenolith::core::ObjectData::ptr
+
+## BRIEF
+
+Внешний указатель на объект
+
+## CONTENT
+
+Внешний указатель на объект
+
+Тип: void*
+
 # ::stappler::xenolith::core::ObjectHandle
 
 ## BRIEF
@@ -115,37 +195,6 @@ Title: XLCoreObject.h
 
 Отключает объект
 
-
-# ::stappler::xenolith::core::Object::getType() const
-
-## BRIEF
-
-Возвращает тип объекта
-
-## CONTENT
-
-Доступ: public
-
-Возвращает тип объекта
-
-Возвращает:
-* stappler::xenolith::core::ObjectType
-
-# ::stappler::xenolith::core::Object::getObject() const
-
-## BRIEF
-
-Возвращает указатель на объект
-
-## CONTENT
-
-Доступ: public
-
-Возвращает указатель на объект
-
-Возвращает:
-* ObjectHandle
-
 # ::stappler::xenolith::core::Object::setName(stappler::StringView)
 
 ## BRIEF
@@ -177,80 +226,35 @@ Title: XLCoreObject.h
 Возвращает:
 * stappler::StringView
 
-# ::stappler::xenolith::core::Object::_type
+# ::stappler::xenolith::core::Object::getObjectData() const
 
 ## BRIEF
 
-Тип объекта
+Возвращает данные объекта
+
+## CONTENT
+
+Доступ: public
+
+Возвращает данные объекта
+
+Возвращает:
+* stappler::xenolith::core::ObjectData const&
+
+
+# ::stappler::xenolith::core::Object::_object
+
+## BRIEF
+
+Данные объекта
 
 ## CONTENT
 
 Доступ: protected
 
-Тип объекта
+Данные объекта
 
-Тип: stappler::xenolith::core::ObjectType
-
-
-# ::stappler::xenolith::core::Object::_device
-
-## BRIEF
-
-Устройство обхекта
-
-## CONTENT
-
-Доступ: protected
-
-Устройство обхекта
-
-Тип: stappler::xenolith::core::Device*
-
-
-# ::stappler::xenolith::core::Object::_callback
-
-## BRIEF
-
-Функция уничтожения
-
-## CONTENT
-
-Доступ: protected
-
-Функция уничтожения
-
-Тип: ClearCallback
-
-
-# ::stappler::xenolith::core::Object::_handle
-
-## BRIEF
-
-Указатель на объект
-
-## CONTENT
-
-Доступ: protected
-
-Указатель на объект
-
-Тип: ObjectHandle
-
-
-# ::stappler::xenolith::core::Object::_ptr
-
-## BRIEF
-
-Указатель на внешний ресурс, представляющий объект
-
-## CONTENT
-
-Доступ: protected
-
-Указатель на внешний ресурс, представляющий объект
-
-Тип: void*
-
+Тип: stappler::xenolith::core::ObjectData
 
 # ::stappler::xenolith::core::Object::_name
 

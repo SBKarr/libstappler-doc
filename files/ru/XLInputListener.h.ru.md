@@ -284,6 +284,29 @@ Title: XLInputListener.h
 Возвращает:
 * int32_t
 
+# ::stappler::xenolith::InputListener::setDedicatedFocus(uint32_t)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* uint32_t
+
+
+# ::stappler::xenolith::InputListener::getDedicatedFocus() const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Возвращает:
+* uint32_t
+
 # ::stappler::xenolith::InputListener::setOpacityFilter(float)
 
 ## BRIEF
@@ -806,6 +829,17 @@ Title: XLInputListener.h
 Доступ: protected
 
 Тип: int32_t
+
+
+# ::stappler::xenolith::InputListener::_dedicatedFocus
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Тип: uint32_t
 
 
 # ::stappler::xenolith::InputListener::_enabled

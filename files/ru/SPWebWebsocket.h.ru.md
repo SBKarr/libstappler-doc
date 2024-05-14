@@ -591,22 +591,6 @@ Title: SPWebWebsocket.h
 Возвращает:
 * uint8_t
 
-# ::stappler::web::WebsocketFrameWriter::makeHeader(StackBuffer<32>&,size_t,stappler::web::WebsocketFrameType)
-
-## BRIEF
-
-Заполняет заголовок кадра
-
-## CONTENT
-
-Заполняет заголовок кадра
-
-Параметры:
-* StackBuffer<32>& - буфер для заполнения
-* size_t - размер кадра
-* stappler::web::WebsocketFrameType - тип кадра
-
-
 # ::stappler::web::WebsocketFrameWriter::Slice
 
 ## BRIEF
@@ -936,3 +920,57 @@ Title: SPWebWebsocket.h
 
 Возвращает:
 * stappler::web::WebsocketFrameWriter::WriteSlot*
+
+# ::stappler::web::WebsocketFrameWriter::getFrameSize(size_t,bool)
+
+## BRIEF
+
+Возвращает размер фрейма для указанного размера данных
+
+## CONTENT
+
+Возвращает размер фрейма для указанного размера данных
+
+Параметры:
+* size_t - размер данных
+* bool - true если необходима маска фрейма
+
+Возвращает:
+* size_t
+
+# ::stappler::web::WebsocketFrameWriter::makeHeader(uint8_t*,size_t,stappler::web::WebsocketFrameType,bool,uint32_t)
+
+## BRIEF
+
+Записывает заголовок фрейма в буфер
+
+## CONTENT
+
+Записывает заголовок фрейма в буфер
+
+Параметры:
+* uint8_t* - указатель на буфер
+* size_t - размер данных фрейма
+* stappler::web::WebsocketFrameType - тип фрейма
+* bool - true если необходима маска
+* uint32_t - значение маски
+
+Возвращает:
+* size_t
+
+# ::stappler::web::WebsocketFrameWriter::makeHeader(StackBuffer<32>&,size_t,stappler::web::WebsocketFrameType,bool,uint32_t)
+
+## BRIEF
+
+Записывает заголовок фрейма в буфер
+
+## CONTENT
+
+Записывает заголовок фрейма в буфер
+
+Параметры:
+* StackBuffer<32>&
+* size_t - размер данных фрейма
+* stappler::web::WebsocketFrameType - тип фрейма
+* bool - true если необходима маска
+* uint32_t - значение маски

@@ -26,19 +26,6 @@ Title: SPWebMultipartParser.h
 * InputParser
 
 
-# ::stappler::web::MultipartParser::Reader
-
-## BRIEF
-
-Тип интерфейса чтения
-
-## CONTENT
-
-Доступ: public
-
-Тип интерфейса чтения
-
-
 # ::stappler::web::MultipartParser::MultipartParser(db::InputConfig const&,size_t,stappler::StringView const&)
 
 ## BRIEF
@@ -57,7 +44,7 @@ Title: SPWebMultipartParser.h
 * stappler::StringView const& - строка-ограничитель
 
 
-# ::stappler::web::MultipartParser::run(stappler::StringView)
+# ::stappler::web::MultipartParser::run(stappler::BytesView)
 
 ## BRIEF
 
@@ -70,7 +57,7 @@ Title: SPWebMultipartParser.h
 Запускает разбор запроса
 
 Параметры:
-* stappler::StringView
+* stappler::BytesView
 
 
 # ::stappler::web::MultipartParser::finalize()
@@ -188,7 +175,7 @@ Title: SPWebMultipartParser.h
 * End
 
 
-# ::stappler::web::MultipartParser::flushVarName(stappler::web::MultipartParser::Reader&)
+# ::stappler::web::MultipartParser::flushVarName(stappler::StringView&)
 
 ## BRIEF
 
@@ -201,12 +188,12 @@ Title: SPWebMultipartParser.h
 Записывает результат чтения переменной
 
 Параметры:
-* stappler::web::MultipartParser::Reader&
+* stappler::StringView&
 
 Возвращает:
 * stappler::mem_pool::Value*
 
-# ::stappler::web::MultipartParser::flushLiteral(stappler::web::MultipartParser::Reader&,bool)
+# ::stappler::web::MultipartParser::flushLiteral(stappler::StringView&,bool)
 
 ## BRIEF
 
@@ -219,11 +206,11 @@ Title: SPWebMultipartParser.h
 Записывает результат чтения литерала
 
 Параметры:
-* stappler::web::MultipartParser::Reader&
+* stappler::StringView&
 * bool
 
 
-# ::stappler::web::MultipartParser::flushData(stappler::web::MultipartParser::Reader&)
+# ::stappler::web::MultipartParser::flushData(stappler::BytesView const&)
 
 ## BRIEF
 
@@ -236,10 +223,10 @@ Title: SPWebMultipartParser.h
 Записывает результат чтения данных
 
 Параметры:
-* stappler::web::MultipartParser::Reader&
+* stappler::BytesView const&
 
 
-# ::stappler::web::MultipartParser::readBegin(stappler::web::MultipartParser::Reader&)
+# ::stappler::web::MultipartParser::readBegin(stappler::BytesView&)
 
 ## BRIEF
 
@@ -252,10 +239,10 @@ Title: SPWebMultipartParser.h
 Начинает чтение блока описания
 
 Параметры:
-* stappler::web::MultipartParser::Reader&
+* stappler::BytesView&
 
 
-# ::stappler::web::MultipartParser::readBlock(stappler::web::MultipartParser::Reader&)
+# ::stappler::web::MultipartParser::readBlock(stappler::BytesView&)
 
 ## BRIEF
 
@@ -268,10 +255,10 @@ Title: SPWebMultipartParser.h
 Читает вложенный блок
 
 Параметры:
-* stappler::web::MultipartParser::Reader&
+* stappler::BytesView&
 
 
-# ::stappler::web::MultipartParser::readHeaderBegin(stappler::web::MultipartParser::Reader&)
+# ::stappler::web::MultipartParser::readHeaderBegin(stappler::StringView&)
 
 ## BRIEF
 
@@ -284,26 +271,10 @@ Title: SPWebMultipartParser.h
 Читает заголовок вложенного блока
 
 Параметры:
-* stappler::web::MultipartParser::Reader&
+* stappler::StringView&
 
 
-# ::stappler::web::MultipartParser::readHeaderContentDisposition(stappler::web::MultipartParser::Reader&)
-
-## BRIEF
-
-Читает внутренний заголовок
-
-## CONTENT
-
-Доступ: protected
-
-Читает внутренний заголовок
-
-Параметры:
-* stappler::web::MultipartParser::Reader&
-
-
-# ::stappler::web::MultipartParser::readHeaderContentDispositionParam(stappler::web::MultipartParser::Reader&)
+# ::stappler::web::MultipartParser::readHeaderContentDisposition(stappler::StringView&)
 
 ## BRIEF
 
@@ -316,10 +287,26 @@ Title: SPWebMultipartParser.h
 Читает внутренний заголовок
 
 Параметры:
-* stappler::web::MultipartParser::Reader&
+* stappler::StringView&
 
 
-# ::stappler::web::MultipartParser::readHeaderValue(stappler::web::MultipartParser::Reader&)
+# ::stappler::web::MultipartParser::readHeaderContentDispositionParam(stappler::StringView&)
+
+## BRIEF
+
+Читает внутренний заголовок
+
+## CONTENT
+
+Доступ: protected
+
+Читает внутренний заголовок
+
+Параметры:
+* stappler::StringView&
+
+
+# ::stappler::web::MultipartParser::readHeaderValue(stappler::StringView&)
 
 ## BRIEF
 
@@ -332,10 +319,10 @@ Title: SPWebMultipartParser.h
 Читает значение
 
 Параметры:
-* stappler::web::MultipartParser::Reader&
+* stappler::StringView&
 
 
-# ::stappler::web::MultipartParser::readHeaderDummy(stappler::web::MultipartParser::Reader&)
+# ::stappler::web::MultipartParser::readHeaderDummy(stappler::StringView&)
 
 ## BRIEF
 
@@ -348,10 +335,10 @@ Title: SPWebMultipartParser.h
 Пропускает значение
 
 Параметры:
-* stappler::web::MultipartParser::Reader&
+* stappler::StringView&
 
 
-# ::stappler::web::MultipartParser::readPlainLiteral(stappler::web::MultipartParser::Reader&)
+# ::stappler::web::MultipartParser::readPlainLiteral(stappler::StringView&)
 
 ## BRIEF
 
@@ -364,10 +351,10 @@ Title: SPWebMultipartParser.h
 Читает необработанный текст
 
 Параметры:
-* stappler::web::MultipartParser::Reader&
+* stappler::StringView&
 
 
-# ::stappler::web::MultipartParser::readQuotedLiteral(stappler::web::MultipartParser::Reader&)
+# ::stappler::web::MultipartParser::readQuotedLiteral(stappler::StringView&)
 
 ## BRIEF
 
@@ -380,26 +367,10 @@ Title: SPWebMultipartParser.h
 Читает литерал
 
 Параметры:
-* stappler::web::MultipartParser::Reader&
+* stappler::StringView&
 
 
-# ::stappler::web::MultipartParser::readHeaderContentDispositionValue(stappler::web::MultipartParser::Reader&)
-
-## BRIEF
-
-Читает значение заголовка
-
-## CONTENT
-
-Доступ: protected
-
-Читает значение заголовка
-
-Параметры:
-* stappler::web::MultipartParser::Reader&
-
-
-# ::stappler::web::MultipartParser::readHeaderContentDispositionDummy(stappler::web::MultipartParser::Reader&)
+# ::stappler::web::MultipartParser::readHeaderContentDispositionValue(stappler::StringView&)
 
 ## BRIEF
 
@@ -412,10 +383,26 @@ Title: SPWebMultipartParser.h
 Читает значение заголовка
 
 Параметры:
-* stappler::web::MultipartParser::Reader&
+* stappler::StringView&
 
 
-# ::stappler::web::MultipartParser::readHeader(stappler::web::MultipartParser::Reader&)
+# ::stappler::web::MultipartParser::readHeaderContentDispositionDummy(stappler::StringView&)
+
+## BRIEF
+
+Читает значение заголовка
+
+## CONTENT
+
+Доступ: protected
+
+Читает значение заголовка
+
+Параметры:
+* stappler::StringView&
+
+
+# ::stappler::web::MultipartParser::readHeader(stappler::BytesView&)
 
 ## BRIEF
 
@@ -428,10 +415,10 @@ Title: SPWebMultipartParser.h
 Читает заголовок
 
 Параметры:
-* stappler::web::MultipartParser::Reader&
+* stappler::BytesView&
 
 
-# ::stappler::web::MultipartParser::readData(stappler::web::MultipartParser::Reader&)
+# ::stappler::web::MultipartParser::readData(stappler::BytesView&)
 
 ## BRIEF
 
@@ -444,7 +431,7 @@ Title: SPWebMultipartParser.h
 Читает данные
 
 Параметры:
-* stappler::web::MultipartParser::Reader&
+* stappler::BytesView&
 
 
 # ::stappler::web::MultipartParser::flushString(stappler::StringView&,stappler::mem_pool::Value*,stappler::web::MultipartParser::VarState)

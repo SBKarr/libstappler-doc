@@ -633,6 +633,8 @@ SP_EXTERN_C int main(int argc, const char * argv[]) {
 			if (filesystem::exists(dataFile)) {
 				auto val = data::readFile<Interface>(dataFile);
 
+				Vector<String> undefined;
+
 				auto undef = undefinedSymbols;
 				readSymbols(val, [&] (DocSymbolInfo &info) {
 					++ totalSymbols;
@@ -659,6 +661,7 @@ SP_EXTERN_C int main(int argc, const char * argv[]) {
 							//}
 						} else {
 							++ undefinedSymbols;
+							undefined.emplace_back(info.name);
 							if (verbose) {
 								std::cout << name << ": Symbol NOT defined in documentation: " << info.name << "\n";
 							}
@@ -668,6 +671,11 @@ SP_EXTERN_C int main(int argc, const char * argv[]) {
 
 				if (undef != undefinedSymbols) {
 					std::cout << name << ": Undefined in file: " << undefinedSymbols - undef << "\n";
+					if (undefinedSymbols - undef < 5) {
+						for (auto &it : undefined) {
+							std::cout << "\t" << it << "\n";
+						}
+					}
 				}
 
 				for (auto &it : table.symbols) {

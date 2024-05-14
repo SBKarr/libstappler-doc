@@ -5,14 +5,22 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Заголовок библиотеки внешних ресурсов
+
 ## CONTENT
+
+Заголовок библиотеки внешних ресурсов
 
 
 # ::stappler::xenolith::storage::AssetComponentContainer
 
 ## BRIEF
 
+Контейнер для хранилища ресурсов в БД
+
 ## CONTENT
+
+Контейнер для хранилища ресурсов в БД
 
 Базовые классы:
 * ComponentContainer
@@ -22,18 +30,26 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::storage::AssetComponentContainer::init(stappler::StringView,stappler::xenolith::storage::AssetLibrary*)
 
 ## BRIEF
 
+Создаёт контейнер для ресурсов
+
 ## CONTENT
 
 Доступ: public
+
+Создаёт контейнер для ресурсов
 
 Параметры:
 * stappler::StringView
@@ -46,9 +62,13 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Обрабатывает инициализацию хранилища
+
 ## CONTENT
 
 Доступ: public
+
+Обрабатывает инициализацию хранилища
 
 Параметры:
 * storage::ComponentLoader&
@@ -58,9 +78,13 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Обрабатывает уничтожение хранилища
+
 ## CONTENT
 
 Доступ: public
+
+Обрабатывает уничтожение хранилища
 
 Параметры:
 * db::Transaction const&
@@ -70,9 +94,13 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Возвращает библиотеку ресурсов
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает библиотеку ресурсов
 
 Возвращает:
 * stappler::xenolith::storage::AssetLibrary*
@@ -81,9 +109,13 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Возвращает компонент хранилища БД
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает компонент хранилища БД
 
 Возвращает:
 * stappler::xenolith::storage::AssetComponent*
@@ -92,9 +124,13 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Библиотека ресурсов
+
 ## CONTENT
 
 Доступ: protected
+
+Библиотека ресурсов
 
 Тип: stappler::xenolith::storage::AssetLibrary*
 
@@ -103,9 +139,13 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Компонент хранилища
+
 ## CONTENT
 
 Доступ: protected
+
+Компонент хранилища
 
 Тип: stappler::xenolith::storage::AssetComponent*
 
@@ -114,7 +154,11 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Библиотека внешних ресурсов
+
 ## CONTENT
+
+Библиотека внешних ресурсов. Реализует доступ и хранение внешних ресурсов во внутренней БД.
 
 Базовые классы:
 * ApplicationExtension
@@ -124,9 +168,13 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Событие загрузки библиотеки
+
 ## CONTENT
 
 Доступ: public
+
+Событие загрузки библиотеки
 
 Тип: stappler::xenolith::EventHeader
 
@@ -135,43 +183,61 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Функция для получения ресурса
+
 ## CONTENT
 
 Доступ: public
 
+Функция для получения ресурса
 
 # ::stappler::xenolith::storage::AssetLibrary::AssetVecCallback
 
 ## BRIEF
 
+Функция для получения набора ресурса
+
 ## CONTENT
 
 Доступ: public
+
+Функция для получения набора ресурса
 
 
 # ::stappler::xenolith::storage::AssetLibrary::TaskCallback
 
 ## BRIEF
 
+Функция для выполнения задачи в контексте БД
+
 ## CONTENT
 
 Доступ: public
 
+Функция для выполнения задачи в контексте БД
 
 # ::stappler::xenolith::storage::AssetLibrary::AssetRequest
 
 ## BRIEF
 
+Запрос на получение ресурса
+
 ## CONTENT
 
 Доступ: public
+
+Запрос на получение ресурса
 
 
 # ::stappler::xenolith::storage::AssetLibrary::AssetRequest::url
 
 ## BRIEF
 
+URL доступа
+
 ## CONTENT
+
+URL доступа
 
 Тип: stappler::mem_std::String
 
@@ -180,7 +246,11 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Функция получения ресурса
+
 ## CONTENT
+
+Функция получения ресурса
 
 Тип: stappler::xenolith::storage::AssetLibrary::AssetCallback
 
@@ -189,7 +259,11 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Желаемое время жизни ресурса
+
 ## CONTENT
+
+Желаемое время жизни ресурса
 
 Тип: stappler::TimeInterval
 
@@ -198,16 +272,23 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Владелец запроса
+
 ## CONTENT
 
-Тип: Rc<stappler::mem_std::Ref>
+Владелец запроса
 
+Тип: Rc<stappler::mem_std::Ref>
 
 # ::stappler::xenolith::storage::AssetLibrary::AssetRequest::AssetRequest(stappler::StringView,stappler::xenolith::storage::AssetLibrary::AssetCallback&&,stappler::TimeInterval,Rc<stappler::mem_std::Ref>&&)
 
 ## BRIEF
 
+Создаёт запрос ресурса
+
 ## CONTENT
+
+Создаёт запрос ресурса
 
 Параметры:
 * stappler::StringView
@@ -220,16 +301,24 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Множественный запрос на ресурсы
+
 ## CONTENT
 
 Доступ: public
+
+Множественный запрос на ресурсы. Служит для получения сразу всех необходиых ресурсов в одной функции.
 
 
 # ::stappler::xenolith::storage::AssetLibrary::AssetMultiRequest::vec
 
 ## BRIEF
 
+Набор запросов
+
 ## CONTENT
+
+Набор запросов
 
 Тип: Vector<stappler::xenolith::storage::AssetLibrary::AssetRequest>
 
@@ -238,7 +327,11 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Функция для получения всех необходимых ресурсов
+
 ## CONTENT
+
+Функция для получения всех необходимых ресурсов
 
 Тип: stappler::xenolith::storage::AssetLibrary::AssetVecCallback
 
@@ -247,7 +340,11 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Общий владелец запроса
+
 ## CONTENT
+
+Общий владелец запроса
 
 Тип: Rc<stappler::mem_std::Ref>
 
@@ -256,7 +353,11 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Создаёт запрос
+
 ## CONTENT
+
+Создаёт запрос
 
 Параметры:
 * Vector<stappler::xenolith::storage::AssetLibrary::AssetRequest>&&
@@ -268,9 +369,13 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Возвращает путь для хранения данных ресурса по идентификатору
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает путь для хранения данных ресурса по идентификатору
 
 Параметры:
 * int64_t
@@ -282,9 +387,13 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Конвертирует внешний URL в URL, воспринимаемый библиотекой
+
 ## CONTENT
 
 Доступ: public
+
+Конвертирует внешний URL в URL, воспринимаемый библиотекой
 
 Параметры:
 * stappler::StringView
@@ -296,23 +405,30 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
 
+Деструктор
 
 # ::stappler::xenolith::storage::AssetLibrary::init(stappler::xenolith::Application*,network::Controller*,stappler::mem_std::Value const&)
 
 ## BRIEF
 
+Создаёт библиотеку ресурсов
+
 ## CONTENT
 
 Доступ: public
 
+Создаёт библиотеку ресурсов
+
 Параметры:
-* stappler::xenolith::Application*
-* network::Controller*
-* stappler::mem_std::Value const&
+* stappler::xenolith::Application* - приложение
+* network::Controller* - интерфейс к сетевым запросам
+* stappler::mem_std::Value const& - даные для соединения с БД
 
 Возвращает:
 * bool
@@ -321,9 +437,13 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Инициалиирует библиотеку
+
 ## CONTENT
 
 Доступ: public
+
+Инициалиирует библиотеку
 
 Параметры:
 * stappler::xenolith::Application*
@@ -333,9 +453,13 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Деинициализирует библиотеку
+
 ## CONTENT
 
 Доступ: public
+
+Деинициализирует библиотеку
 
 Параметры:
 * stappler::xenolith::Application*
@@ -345,9 +469,13 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Обновляет библиотеку
+
 ## CONTENT
 
 Доступ: public
+
+Обновляет библиотеку
 
 Параметры:
 * stappler::xenolith::Application*
@@ -358,15 +486,19 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Запрашивает ресурс
+
 ## CONTENT
 
 Доступ: public
 
+Запрашивает ресурс
+
 Параметры:
-* stappler::StringView
-* stappler::xenolith::storage::AssetLibrary::AssetCallback&&
-* stappler::TimeInterval
-* Rc<stappler::mem_std::Ref>&&
+* stappler::StringView - URL ресурса
+* stappler::xenolith::storage::AssetLibrary::AssetCallback&& - функция получения ресурса
+* stappler::TimeInterval - время жизни ресурса
+* Rc<stappler::mem_std::Ref>&& - хозяин запроса
 
 Возвращает:
 * bool
@@ -375,14 +507,18 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Запрашивает ресурсы
+
 ## CONTENT
 
 Доступ: public
 
+Запрашивает ресурсы
+
 Параметры:
-* SpanView<stappler::xenolith::storage::AssetLibrary::AssetRequest>
-* stappler::xenolith::storage::AssetLibrary::AssetVecCallback&&
-* Rc<stappler::mem_std::Ref>&&
+* SpanView<stappler::xenolith::storage::AssetLibrary::AssetRequest> - набор запросов
+* stappler::xenolith::storage::AssetLibrary::AssetVecCallback&& - функция получения ресурсов
+* Rc<stappler::mem_std::Ref>&& - хозяин запроса
 
 Возвращает:
 * bool
@@ -391,37 +527,49 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Возвращает загруженный ресурс по URL
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает загруженный ресурс по URL
 
 Параметры:
 * stappler::StringView
 
 Возвращает:
-* stappler::xenolith::storage::Asset*
+* stappler::xenolith::storage::Asset* - ресурс или nullptr
 
 # ::stappler::xenolith::storage::AssetLibrary::getLiveAsset(int64_t) const
 
 ## BRIEF
 
+Возвращает загруженный ресурс по идентификатору
+
 ## CONTENT
 
 Доступ: public
 
+Возвращает загруженный ресурс по идентификатору
+
 Параметры:
-* int64_t
+* int64_t - идентификатор
 
 Возвращает:
-* stappler::xenolith::storage::Asset*
+* stappler::xenolith::storage::Asset* - ресурс или nullptr
 
 # ::stappler::xenolith::storage::AssetLibrary::perform(stappler::xenolith::storage::AssetLibrary::TaskCallback&&,stappler::mem_std::Ref*) const
 
 ## BRIEF
 
+Выполняет задачу в контексте БД ресурсов
+
 ## CONTENT
 
 Доступ: public
+
+Выполняет задачу в контексте БД ресурсов
 
 Параметры:
 * stappler::xenolith::storage::AssetLibrary::TaskCallback&&
@@ -434,9 +582,13 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Возвращает приложение
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает приложение
 
 Возвращает:
 * stappler::xenolith::Application*
@@ -445,9 +597,13 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Возвращает интерфейс к сетевым запросам
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает интерфейс к сетевым запросам
 
 Возвращает:
 * network::Controller*
@@ -456,9 +612,13 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Добавляет версию ресурса
+
 ## CONTENT
 
 Доступ: protected
+
+Добавляет версию ресурса
 
 Параметры:
 * db::Transaction const&
@@ -472,9 +632,13 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Удаляет версию ресурса
+
 ## CONTENT
 
 Доступ: protected
+
+Удаляет версию ресурса
 
 Параметры:
 * int64_t
@@ -484,9 +648,13 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Устанавливает флаг загрузки в БД
+
 ## CONTENT
 
 Доступ: protected
+
+Устанавливает флаг загрузки в БД
 
 Параметры:
 * int64_t
@@ -497,9 +665,13 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Устанавливает флаг завершения загрузки версии
+
 ## CONTENT
 
 Доступ: protected
+
+Устанавливает флаг завершения загрузки версии
 
 Параметры:
 * int64_t
@@ -510,9 +682,13 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Удаляет ресурс из БД
+
 ## CONTENT
 
 Доступ: protected
+
+Удаляет ресурс из БД
 
 Параметры:
 * stappler::xenolith::storage::Asset*
@@ -522,9 +698,13 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Начинает загрузку ресурса
+
 ## CONTENT
 
 Доступ: protected
+
+Начинает загрузку ресурса
 
 Параметры:
 * stappler::xenolith::storage::Asset*
@@ -536,18 +716,25 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Удаляет устаревшие ресурсы
+
 ## CONTENT
 
 Доступ: protected
 
+Удаляет устаревшие ресурсы
 
 # ::stappler::xenolith::storage::AssetLibrary::handleLibraryLoaded(Vector<Rc<stappler::xenolith::storage::Asset>>&&)
 
 ## BRIEF
 
+Обрабатывает загрузку библиотеки
+
 ## CONTENT
 
 Доступ: protected
+
+Обрабатывает загрузку библиотеки
 
 Параметры:
 * Vector<Rc<stappler::xenolith::storage::Asset>>&&
@@ -557,9 +744,13 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Обрабатывает загрузку ресурса
+
 ## CONTENT
 
 Доступ: protected
+
+Обрабатывает загрузку ресурса
 
 Параметры:
 * Rc<stappler::xenolith::storage::Asset>&&
@@ -569,9 +760,13 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Контейнер БД
+
 ## CONTENT
 
 Доступ: protected
+
+Контейнер БД
 
 Тип: Rc<stappler::xenolith::storage::AssetComponentContainer>
 
@@ -580,9 +775,13 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Флаг загрузки библиотеки
+
 ## CONTENT
 
 Доступ: protected
+
+Флаг загрузки библиотеки
 
 Тип: bool
 
@@ -591,9 +790,13 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Ожидающие завершения вызовы
+
 ## CONTENT
 
 Доступ: protected
+
+Ожидающие завершения вызовы
 
 Тип: Map<stappler::mem_std::String, Vector<Pair<stappler::xenolith::storage::AssetLibrary::AssetCallback, Rc<stappler::mem_std::Ref>>>>
 
@@ -602,9 +805,13 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Загруженные ресурсы
+
 ## CONTENT
 
 Доступ: protected
+
+Загруженные ресурсы
 
 Тип: Vector<Rc<stappler::xenolith::storage::Asset>>
 
@@ -613,9 +820,13 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Загруженные ресурсы по URL
+
 ## CONTENT
 
 Доступ: protected
+
+Загруженные ресурсы по URL
 
 Тип: Map<stappler::StringView, stappler::xenolith::storage::Asset *>
 
@@ -624,9 +835,13 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Загруженные ресурсы по идентификатору
+
 ## CONTENT
 
 Доступ: protected
+
+Загруженные ресурсы по идентификатору
 
 Тип: Map<uint64_t, stappler::xenolith::storage::Asset *>
 
@@ -635,9 +850,13 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Приложение
+
 ## CONTENT
 
 Доступ: protected
+
+Приложение
 
 Тип: stappler::xenolith::Application*
 
@@ -646,9 +865,13 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Интерфейс к сети
+
 ## CONTENT
 
 Доступ: protected
+
+Интерфейс к сети
 
 Тип: network::Controller*
 
@@ -657,9 +880,13 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Сервер БД
+
 ## CONTENT
 
 Доступ: protected
+
+Сервер БД
 
 Тип: Rc<stappler::xenolith::storage::Server>
 
@@ -668,9 +895,13 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Ожидающие запуска запросы
+
 ## CONTENT
 
 Доступ: protected
+
+Ожидающие запуска запросы
 
 Тип: Vector<stappler::xenolith::storage::AssetLibrary::AssetRequest>
 
@@ -679,8 +910,12 @@ Title: XLAssetLibrary.h
 
 ## BRIEF
 
+Ожидающие запуска запросы
+
 ## CONTENT
 
 Доступ: protected
+
+Ожидающие запуска запросы
 
 Тип: Vector<stappler::xenolith::storage::AssetLibrary::AssetMultiRequest>

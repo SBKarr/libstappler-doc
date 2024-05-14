@@ -25,6 +25,15 @@ Title: SPPugToken.h
 Базовые классы:
 * memory::AllocPool
 
+# ::stappler::pug::Token::OutStream
+
+## BRIEF
+
+Тип выходного потока
+
+## CONTENT
+
+Тип выходного потока
 
 # ::stappler::pug::Token::Type
 
@@ -130,7 +139,7 @@ Title: SPPugToken.h
 * stappler::pug::Token*
 
 
-# ::stappler::pug::Token::describe(std::ostream&) const
+# ::stappler::pug::Token::describe(stappler::pug::Token::OutStream const&) const
 
 ## BRIEF
 
@@ -141,7 +150,7 @@ Title: SPPugToken.h
 Выводит отладочную информацию о токене
 
 Параметры:
-* std::ostream&
+* stappler::pug::Token::OutStream const&
 
 
 # ::stappler::pug::Token::type

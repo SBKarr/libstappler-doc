@@ -772,3 +772,32 @@ Title: SPSearchDistance.h
 Хранилище вектора расстояния
 
 Тип: stappler::search::Distance::Storage
+
+# ::stappler::search::Distance::storage() const
+
+## BRIEF
+
+Возвращает хранимые данные расстояния левенштейна
+
+## CONTENT
+
+Доступ: public
+
+Возвращает хранимые данные расстояния левенштейна
+
+Возвращает:
+* stappler::search::Distance::Storage
+
+# ::stappler::search::Distance::_distance
+
+## BRIEF
+
+Численное выражение расстояния Левенштейна
+
+## CONTENT
+
+Доступ: protected
+
+Численное выражение расстояния Левенштейна
+
+Тип: uint32_t

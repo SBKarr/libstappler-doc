@@ -5,14 +5,22 @@ Title: XLApplicationExtension.h
 
 ## BRIEF
 
+Заголовок интерфейса расширения приложения
+
 ## CONTENT
+
+Заголовок интерфейса расширения приложения
 
 
 # ::stappler::xenolith::ApplicationExtension
 
 ## BRIEF
 
+Интерфейс расширения приложения
+
 ## CONTENT
+
+Интерфейс расширения приложения
 
 Базовые классы:
 * Ref
@@ -22,18 +30,26 @@ Title: XLApplicationExtension.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::ApplicationExtension::initialize(stappler::xenolith::Application*)
 
 ## BRIEF
 
+Инициализирует расширение
+
 ## CONTENT
 
 Доступ: public
+
+Инициализирует расширение
 
 Параметры:
 * stappler::xenolith::Application*
@@ -43,9 +59,13 @@ Title: XLApplicationExtension.h
 
 ## BRIEF
 
+Денициализирует расширение
+
 ## CONTENT
 
 Доступ: public
+
+Денициализирует расширение
 
 Параметры:
 * stappler::xenolith::Application*
@@ -55,9 +75,13 @@ Title: XLApplicationExtension.h
 
 ## BRIEF
 
+Обновляет расширение
+
 ## CONTENT
 
 Доступ: public
+
+Обновляет расширение
 
 Параметры:
 * stappler::xenolith::Application*

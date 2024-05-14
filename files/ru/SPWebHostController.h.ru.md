@@ -1106,3 +1106,18 @@ Title: SPWebHostController.h
 Модули WebAssembly
 
 Тип: Map<stappler::StringView, Rc<wasm::Module>>
+
+# ::stappler::web::HostController::getRootPool() const
+
+## BRIEF
+
+Возвращает базовый пул памяти
+
+## CONTENT
+
+Доступ: public
+
+Возвращает базовый пул памяти
+
+Возвращает:
+* stappler::mempool::base::pool_t*

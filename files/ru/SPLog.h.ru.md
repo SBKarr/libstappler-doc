@@ -270,6 +270,18 @@ Title: SPLog.h
 Параметры:
 * std::bitset<6>&&
 
+# ::stappler::log::getlogFilterMask()
+
+## BRIEF
+
+Возраает текущую маску типов для лога
+
+## CONTENT
+
+Возраает текущую маску типов для лога
+
+Возвращает:
+* std::bitset<6>
 
 # ::stappler::log::format(stappler::log::LogType,stappler::StringView const&,char const*,...)
 

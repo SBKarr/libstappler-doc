@@ -5,50 +5,73 @@ Title: XLEventHandler.h
 
 ## BRIEF
 
+Заголовок обработчика события
+
 ## CONTENT
+
+Заголовок обработчика события
 
 
 # ::stappler::xenolith::EventHandler
 
 ## BRIEF
 
+Тип обработчика соыбтия
+
 ## CONTENT
+
+Тип обработчика соыбтия
 
 
 # ::stappler::xenolith::EventHandler::Callback
 
 ## BRIEF
 
+Функция обработки события
+
 ## CONTENT
 
 Доступ: public
 
+Функция обработки события
 
 # ::stappler::xenolith::EventHandler::EventHandler()
 
 ## BRIEF
 
+Конструктор
+
 ## CONTENT
 
 Доступ: public
+
+Конструктор
 
 
 # ::stappler::xenolith::EventHandler::~EventHandler()
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::EventHandler::addHandlerNode(stappler::xenolith::EventHandlerNode*)
 
 ## BRIEF
 
+Добавляет узел обработки
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет узел обработки
 
 Параметры:
 * stappler::xenolith::EventHandlerNode*
@@ -58,9 +81,13 @@ Title: XLEventHandler.h
 
 ## BRIEF
 
+Удаляет узел обработки
+
 ## CONTENT
 
 Доступ: public
+
+Удаляет узел обработки
 
 Параметры:
 * stappler::xenolith::EventHandlerNode*
@@ -70,9 +97,13 @@ Title: XLEventHandler.h
 
 ## BRIEF
 
+Устанавливает обработчик
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает обработчик
 
 Параметры:
 * stappler::xenolith::EventHeader const&
@@ -86,9 +117,13 @@ Title: XLEventHandler.h
 
 ## BRIEF
 
+Устанавливает обработчик для объекта-источника
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает обработчик для объекта-источника
 
 Параметры:
 * stappler::xenolith::EventHeader const&
@@ -103,9 +138,13 @@ Title: XLEventHandler.h
 
 ## BRIEF
 
+Возвращает внешний интерфейс обработчика
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает внешний интерфейс обработчика
 
 Возвращает:
 * stappler::mem_std::Ref*
@@ -114,18 +153,26 @@ Title: XLEventHandler.h
 
 ## BRIEF
 
+Удаляет обработчики событий
+
 ## CONTENT
 
 Доступ: public
+
+Удаляет обработчики событий
 
 
 # ::stappler::xenolith::EventHandler::_handlers
 
 ## BRIEF
 
+Узлы обработки
+
 ## CONTENT
 
 Доступ: private
+
+Узлы обработки
 
 Тип: Set<Rc<stappler::xenolith::EventHandlerNode>>
 
@@ -134,7 +181,11 @@ Title: XLEventHandler.h
 
 ## BRIEF
 
+Тип узла обработки события
+
 ## CONTENT
+
+Тип узла обработки события. Узел отвечает за обработку отдельного соыбтия.
 
 Базовые классы:
 * Ref
@@ -144,18 +195,26 @@ Title: XLEventHandler.h
 
 ## BRIEF
 
+Функция обработки события
+
 ## CONTENT
 
 Доступ: public
+
+Функция обработки события
 
 
 # ::stappler::xenolith::EventHandlerNode::onEvent(stappler::xenolith::EventHeader const&,stappler::mem_std::Ref*,stappler::xenolith::EventHandlerNode::Callback&&,stappler::xenolith::EventHandler*,bool)
 
 ## BRIEF
 
+Обрабатывает событие
+
 ## CONTENT
 
 Доступ: public
+
+Обрабатывает событие
 
 Параметры:
 * stappler::xenolith::EventHeader const&
@@ -171,9 +230,13 @@ Title: XLEventHandler.h
 
 ## BRIEF
 
+Создаёт узел
+
 ## CONTENT
 
 Доступ: public
+
+Создаёт узел
 
 Параметры:
 * stappler::xenolith::EventHeader const&
@@ -187,18 +250,25 @@ Title: XLEventHandler.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
 
+Деструктор
 
 # ::stappler::xenolith::EventHandlerNode::setSupport(stappler::xenolith::EventHandler*)
 
 ## BRIEF
 
+Устанавливает обарботчик
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает обарботчик
 
 Параметры:
 * stappler::xenolith::EventHandler*
@@ -208,9 +278,13 @@ Title: XLEventHandler.h
 
 ## BRIEF
 
+Проверяет, должен ли узел обработать событие
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, должен ли узел обработать событие
 
 Параметры:
 * EventHeader::EventID
@@ -223,9 +297,13 @@ Title: XLEventHandler.h
 
 ## BRIEF
 
+Возвращает идентификатор обрабатываемого соыбтия
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает идентификатор обрабатываемого соыбтия
 
 Возвращает:
 * EventHeader::EventID
@@ -234,9 +312,13 @@ Title: XLEventHandler.h
 
 ## BRIEF
 
+Обрабатывает событие
+
 ## CONTENT
 
 Доступ: public
+
+Обрабатывает событие
 
 Параметры:
 * stappler::xenolith::Event const&
@@ -246,9 +328,13 @@ Title: XLEventHandler.h
 
 ## BRIEF
 
+Флаг удаления узла после обработки
+
 ## CONTENT
 
 Доступ: private
+
+Флаг удаления узла после обработки
 
 Тип: bool
 
@@ -257,9 +343,13 @@ Title: XLEventHandler.h
 
 ## BRIEF
 
+Идентификатор соыбтия
+
 ## CONTENT
 
 Доступ: private
+
+Идентификатор соыбтия
 
 Тип: EventHeader::EventID
 
@@ -268,9 +358,13 @@ Title: XLEventHandler.h
 
 ## BRIEF
 
+Функция обработки
+
 ## CONTENT
 
 Доступ: private
+
+Функция обработки
 
 Тип: Callback
 
@@ -279,9 +373,13 @@ Title: XLEventHandler.h
 
 ## BRIEF
 
+Объект-источник
+
 ## CONTENT
 
 Доступ: private
+
+Объект-источник
 
 Тип: stappler::mem_std::Ref*
 
@@ -290,8 +388,12 @@ Title: XLEventHandler.h
 
 ## BRIEF
 
+Обработчик события
+
 ## CONTENT
 
 Доступ: private
+
+Обработчик события
 
 Тип: std::atomic<EventHandler *>

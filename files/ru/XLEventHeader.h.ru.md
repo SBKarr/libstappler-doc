@@ -5,64 +5,91 @@ Title: XLEventHeader.h
 
 ## BRIEF
 
+Тип заголовка события
+
 ## CONTENT
+
+Тип заголовка события. Заголовок события обычно определяется как статическая часть класса.
 
 
 # XL_DECLARE_EVENT_CLASS
 
 ## BRIEF
 
+Объявляет заголовок события для класса
+
 ## CONTENT
 
+Объявляет заголовок события для класса
+
 Параметры:
-* class
-* event
+* class - класс
+* event - имя соыбтия
 
 
 # XL_DECLARE_EVENT
 
 ## BRIEF
 
+Объявляет заголовок события для класса
+
 ## CONTENT
 
+Объявляет заголовок события для класса
+
 Параметры:
-* class
-* catName
-* event
+* class - класс
+* catName - выделенное имя категории
+* event - имя соыбтия
 
 
 # ::stappler::xenolith::EventHeader
 
 ## BRIEF
 
+Тип заголовка события
+
 ## CONTENT
+
+Тип заголовка события
 
 
 # ::stappler::xenolith::EventHeader::Category
 
 ## BRIEF
 
+Тип категории
+
 ## CONTENT
 
 Доступ: public
+
+Тип категории
 
 
 # ::stappler::xenolith::EventHeader::EventID
 
 ## BRIEF
 
+Тип идентификатора соыбтия
+
 ## CONTENT
 
 Доступ: public
 
+Тип идентификатора соыбтия
 
 # ::stappler::xenolith::EventHeader::getCategoryForName(stappler::StringView)
 
 ## BRIEF
 
+Возвращает категорию по имени
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает категорию по имени
 
 Параметры:
 * stappler::StringView
@@ -74,18 +101,26 @@ Title: XLEventHeader.h
 
 ## BRIEF
 
+Конструктор
+
 ## CONTENT
 
 Доступ: public
+
+Конструктор
 
 
 # ::stappler::xenolith::EventHeader::EventHeader(stappler::StringView,stappler::StringView)
 
 ## BRIEF
 
+Конструктор
+
 ## CONTENT
 
 Доступ: public
+
+Конструктор
 
 Параметры:
 * stappler::StringView
@@ -96,9 +131,13 @@ Title: XLEventHeader.h
 
 ## BRIEF
 
+Конструктор
+
 ## CONTENT
 
 Доступ: public
+
+Конструктор
 
 Параметры:
 * stappler::xenolith::EventHeader::Category
@@ -109,18 +148,25 @@ Title: XLEventHeader.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
 
+Деструктор
 
 # ::stappler::xenolith::EventHeader::EventHeader(stappler::xenolith::EventHeader const&)
 
 ## BRIEF
 
+Конструктор копирования
+
 ## CONTENT
 
 Доступ: public
+
+Конструктор копирования
 
 Параметры:
 * stappler::xenolith::EventHeader const&
@@ -130,9 +176,13 @@ Title: XLEventHeader.h
 
 ## BRIEF
 
+Конструктор перемещения
+
 ## CONTENT
 
 Доступ: public
+
+Конструктор перемещения
 
 Параметры:
 * stappler::xenolith::EventHeader&&
@@ -142,9 +192,13 @@ Title: XLEventHeader.h
 
 ## BRIEF
 
+Оператор копирования
+
 ## CONTENT
 
 Доступ: public
+
+Оператор копирования
 
 Параметры:
 * stappler::xenolith::EventHeader const&
@@ -156,9 +210,13 @@ Title: XLEventHeader.h
 
 ## BRIEF
 
+Оператор перемещения
+
 ## CONTENT
 
 Доступ: public
+
+Оператор перемещения
 
 Параметры:
 * stappler::xenolith::EventHeader&&
@@ -170,9 +228,13 @@ Title: XLEventHeader.h
 
 ## BRIEF
 
+Возвращает категорию события
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает категорию события
 
 Возвращает:
 * Category
@@ -181,9 +243,13 @@ Title: XLEventHeader.h
 
 ## BRIEF
 
+Возвращает идентификатор события
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает идентификатор события
 
 Возвращает:
 * EventID
@@ -192,9 +258,13 @@ Title: XLEventHeader.h
 
 ## BRIEF
 
+Возвращает имя события
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает имя события
 
 Возвращает:
 * stappler::StringView
@@ -203,9 +273,13 @@ Title: XLEventHeader.h
 
 ## BRIEF
 
+Проверяет, относится ли событие к категории
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, относится ли событие к категории
 
 Параметры:
 * stappler::xenolith::EventHeader::Category
@@ -217,9 +291,13 @@ Title: XLEventHeader.h
 
 ## BRIEF
 
+Возвращает идентификатор события
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает идентификатор события
 
 Возвращает:
 * int
@@ -228,9 +306,13 @@ Title: XLEventHeader.h
 
 ## BRIEF
 
+Сопоставляет событие и заголовок
+
 ## CONTENT
 
 Доступ: public
+
+Сопоставляет событие и заголовок
 
 Параметры:
 * stappler::xenolith::Event const&
@@ -242,9 +324,13 @@ Title: XLEventHeader.h
 
 ## BRIEF
 
+Отправляет собцтие
+
 ## CONTENT
 
 Доступ: public
+
+Отправляет собцтие
 
 Параметры шаблона:
 * typename T
@@ -258,9 +344,13 @@ Title: XLEventHeader.h
 
 ## BRIEF
 
+Отправляет собцтие
+
 ## CONTENT
 
 Доступ: public
+
+Отправляет собцтие
 
 Параметры:
 * stappler::mem_std::Ref*
@@ -270,9 +360,13 @@ Title: XLEventHeader.h
 
 ## BRIEF
 
+Отправляет собцтие
+
 ## CONTENT
 
-Доступ: protected
+Доступ: public
+
+Отправляет собцтие
 
 Параметры:
 * stappler::mem_std::Ref*
@@ -283,9 +377,13 @@ Title: XLEventHeader.h
 
 ## BRIEF
 
+Отправляет собцтие
+
 ## CONTENT
 
-Доступ: protected
+Доступ: public
+
+Отправляет собцтие
 
 Параметры:
 * stappler::mem_std::Ref*
@@ -296,9 +394,13 @@ Title: XLEventHeader.h
 
 ## BRIEF
 
+Отправляет собцтие
+
 ## CONTENT
 
-Доступ: protected
+Доступ: public
+
+Отправляет собцтие
 
 Параметры:
 * stappler::mem_std::Ref*
@@ -309,9 +411,13 @@ Title: XLEventHeader.h
 
 ## BRIEF
 
+Отправляет собцтие
+
 ## CONTENT
 
-Доступ: protected
+Доступ: public
+
+Отправляет собцтие
 
 Параметры:
 * stappler::mem_std::Ref*
@@ -322,9 +428,13 @@ Title: XLEventHeader.h
 
 ## BRIEF
 
+Отправляет собцтие
+
 ## CONTENT
 
-Доступ: protected
+Доступ: public
+
+Отправляет собцтие
 
 Параметры:
 * stappler::mem_std::Ref*
@@ -335,9 +445,13 @@ Title: XLEventHeader.h
 
 ## BRIEF
 
+Отправляет собцтие
+
 ## CONTENT
 
-Доступ: protected
+Доступ: public
+
+Отправляет собцтие
 
 Параметры:
 * stappler::mem_std::Ref*
@@ -348,9 +462,13 @@ Title: XLEventHeader.h
 
 ## BRIEF
 
+Отправляет собцтие
+
 ## CONTENT
 
-Доступ: protected
+Доступ: public
+
+Отправляет собцтие
 
 Параметры:
 * stappler::mem_std::Ref*
@@ -361,9 +479,13 @@ Title: XLEventHeader.h
 
 ## BRIEF
 
+Отправляет собцтие
+
 ## CONTENT
 
-Доступ: protected
+Доступ: public
+
+Отправляет собцтие
 
 Параметры:
 * stappler::mem_std::Ref*
@@ -374,9 +496,13 @@ Title: XLEventHeader.h
 
 ## BRIEF
 
+Отправляет собцтие
+
 ## CONTENT
 
-Доступ: protected
+Доступ: public
+
+Отправляет собцтие
 
 Параметры:
 * stappler::mem_std::Ref*
@@ -386,9 +512,13 @@ Title: XLEventHeader.h
 
 ## BRIEF
 
+Категория соыбтия
+
 ## CONTENT
 
 Доступ: protected
+
+Категория соыбтия
 
 Тип: Category
 
@@ -397,9 +527,13 @@ Title: XLEventHeader.h
 
 ## BRIEF
 
+Идентификатор соыбтия
+
 ## CONTENT
 
 Доступ: protected
+
+Идентификатор соыбтия
 
 Тип: EventID
 
@@ -408,8 +542,12 @@ Title: XLEventHeader.h
 
 ## BRIEF
 
+Имя события
+
 ## CONTENT
 
 Доступ: protected
+
+Имя события
 
 Тип: stappler::StringView

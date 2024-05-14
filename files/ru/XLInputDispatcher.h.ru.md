@@ -100,6 +100,18 @@ Title: XLInputDispatcher.h
 * uint32_t
 
 
+# ::stappler::xenolith::InputListenerStorage::updateFocus(uint32_t)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* uint32_t
+
+
 # ::stappler::xenolith::InputListenerStorage::foreach<typename>(Callback const&,bool)
 
 ## BRIEF

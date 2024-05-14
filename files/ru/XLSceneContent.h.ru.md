@@ -152,6 +152,18 @@ Title: XLSceneContent.h
 Доступ: protected
 
 
+# ::stappler::xenolith::SceneContent::handleBackgroundTransition(bool)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Параметры:
+* bool
+
+
 # ::stappler::xenolith::SceneContent::_decorationPadding
 
 ## BRIEF

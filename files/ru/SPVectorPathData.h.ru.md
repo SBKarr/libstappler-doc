@@ -1154,3 +1154,19 @@ Title: SPVectorPathData.h
 
 Возвращает:
 * bool
+
+# ::stappler::vg::PathWriter::readFromFileContent(stappler::StringView)
+
+## BRIEF
+
+Записывает данные из файла в путь
+
+## CONTENT
+
+Записывает данные из файла в путь
+
+Параметры:
+* stappler::StringView
+
+Возвращает:
+* bool

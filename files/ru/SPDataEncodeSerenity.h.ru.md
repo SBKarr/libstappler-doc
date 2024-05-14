@@ -27,7 +27,7 @@ Title: SPDataEncodeSerenity.h
 Возвращает:
 * bool - true еесли кодирование необходимо
 
-# ::stappler::data::serenity::encodeString<typename>(std::ostream&,StringType const&)
+# ::stappler::data::serenity::encodeString<typename>(Callback<void (stappler::StringView)> const&,StringType const&)
 
 ## BRIEF
 
@@ -41,7 +41,7 @@ Title: SPDataEncodeSerenity.h
 * typename StringType
 
 Параметры:
-* std::ostream&
+* Callback<void (stappler::StringView)> const&
 * StringType const&
 
 
@@ -98,7 +98,7 @@ Title: SPDataEncodeSerenity.h
 * Plain
 
 
-# ::stappler::data::serenity::RawEncoder<typename>::RawEncoder(std::ostream*)
+# ::stappler::data::serenity::RawEncoder<typename>::RawEncoder(Callback<void (stappler::StringView)> const*)
 
 ## BRIEF
 
@@ -109,7 +109,7 @@ Title: SPDataEncodeSerenity.h
 Инициализирует кодировщик с выходным потоком
 
 Параметры:
-* std::ostream*
+* Callback<void (stappler::StringView)> const*
 
 
 # ::stappler::data::serenity::RawEncoder<typename>::write(stappler::nullptr_t)
@@ -329,7 +329,7 @@ Title: SPDataEncodeSerenity.h
 
 Выходной поток
 
-Тип: std::ostream*
+Тип: Callback<void (stappler::StringView)> const*
 
 
 # ::stappler::data::serenity::RawEncoder<typename>::type
@@ -398,7 +398,7 @@ Title: SPDataEncodeSerenity.h
 * Plain
 
 
-# ::stappler::data::serenity::PrettyEncoder<typename>::PrettyEncoder(std::ostream*)
+# ::stappler::data::serenity::PrettyEncoder<typename>::PrettyEncoder(Callback<void (stappler::StringView)> const*)
 
 ## BRIEF
 
@@ -409,7 +409,7 @@ Title: SPDataEncodeSerenity.h
 Инициализирует кодировщик с выходным потоком
 
 Параметры:
-* std::ostream*
+* Callback<void (stappler::StringView)> const*
 
 
 # ::stappler::data::serenity::PrettyEncoder<typename>::write(stappler::nullptr_t)
@@ -684,7 +684,7 @@ Title: SPDataEncodeSerenity.h
 
 Выходной поток
 
-Тип: std::ostream*
+Тип: Callback<void (stappler::StringView)> const*
 
 
 # ::stappler::data::serenity::PrettyEncoder<typename>::bstack
@@ -713,7 +713,7 @@ Title: SPDataEncodeSerenity.h
 Тип: stappler::data::serenity::PrettyEncoder::Type
 
 
-# ::stappler::data::serenity::write<typename>(std::ostream&,ValueTemplate<Interface> const&,bool)
+# ::stappler::data::serenity::write<typename>(Callback<void (stappler::StringView)> const&,ValueTemplate<Interface> const&,bool)
 
 ## BRIEF
 
@@ -727,7 +727,7 @@ Title: SPDataEncodeSerenity.h
 * typename Interface - интерфейс памяти
 
 Параметры:
-* std::ostream& - выходной поток
+* Callback<void (stappler::StringView)> const& - выходной поток
 * ValueTemplate<Interface> const& - записываемое значение
 * bool - true если запрошена человекочитаемая запись
 

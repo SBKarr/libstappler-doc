@@ -564,24 +564,6 @@ Title: SPSearchConfiguration.h
 Возвращает:
 * Vector<stappler::mem_pool::String>
 
-# ::stappler::search::Configuration::stemQuery(Vector<stappler::search::SearchData> const&) const
-
-## BRIEF
-
-Вычленяет корни из поисковых данных
-
-## CONTENT
-
-Доступ: public
-
-Вычленяет корни из поисковых данных. Создаёт исходный материал для порождения заголовков поиска.
-
-Параметры:
-* Vector<stappler::search::SearchData> const&
-
-Возвращает:
-* Vector<stappler::mem_pool::String>
-
 # ::stappler::search::Configuration::makeSearchVector(stappler::search::SearchVector&,stappler::StringView,SearchData::Rank,size_t,Callback<void (stappler::StringView, stappler::StringView, stappler::search::ParserToken)> const&) const
 
 ## BRIEF
@@ -720,7 +702,7 @@ Title: SPSearchConfiguration.h
 Возвращает:
 * stappler::search::StemmerEnv*
 
-# ::stappler::search::Configuration::doStemQuery(Vector<stappler::mem_pool::String>,stappler::search::SearchQuery const&) const
+# ::stappler::search::Configuration::doStemQuery(Vector<stappler::mem_pool::String>&,stappler::search::SearchQuery const&) const
 
 ## BRIEF
 
@@ -733,7 +715,7 @@ Title: SPSearchConfiguration.h
 Рабочая функция разделения запроса на части
 
 Параметры:
-* Vector<stappler::mem_pool::String>
+* Vector<stappler::mem_pool::String>&
 * stappler::search::SearchQuery const&
 
 # ::stappler::search::Configuration::data

@@ -5,14 +5,22 @@ Title: XLActionManager.h
 
 ## BRIEF
 
+Заголовок объекта управления действиями
+
 ## CONTENT
+
+Заголовок объекта управления действиями
 
 
 # ::stappler::xenolith::ActionContainer
 
 ## BRIEF
 
+Контейнер для хранения действия и параметров
+
 ## CONTENT
+
+Контейнер для хранения действия и параметров
 
 Базовые классы:
 * RefContainer<Action>
@@ -22,7 +30,11 @@ Title: XLActionManager.h
 
 ## BRIEF
 
+Целевой объект
+
 ## CONTENT
+
+Целевой объект
 
 Тип: Rc<stappler::xenolith::Node>
 
@@ -31,7 +43,11 @@ Title: XLActionManager.h
 
 ## BRIEF
 
+Флаг временной остановки
+
 ## CONTENT
+
+Флаг временной остановки
 
 Тип: bool
 
@@ -40,14 +56,21 @@ Title: XLActionManager.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
+Деструктор
 
 # ::stappler::xenolith::ActionContainer::ActionContainer(stappler::xenolith::Node*)
 
 ## BRIEF
 
+Создаёт контейнер
+
 ## CONTENT
+
+Создаёт контейнер
 
 Параметры:
 * stappler::xenolith::Node*
@@ -57,14 +80,21 @@ Title: XLActionManager.h
 
 ## BRIEF
 
+Параметры вычисления хеша для контейнера
+
 ## CONTENT
 
+Параметры вычисления хеша для контейнера
 
 # ::stappler::xenolith::HashTraitActionContainer::hash(uint32_t,stappler::xenolith::ActionContainer const&)
 
 ## BRIEF
 
+Вычисляет хеш
+
 ## CONTENT
+
+Вычисляет хеш
 
 Параметры:
 * uint32_t
@@ -77,7 +107,11 @@ Title: XLActionManager.h
 
 ## BRIEF
 
+Вычисляет хеш
+
 ## CONTENT
+
+Вычисляет хеш
 
 Параметры:
 * uint32_t
@@ -90,7 +124,11 @@ Title: XLActionManager.h
 
 ## BRIEF
 
+Проверяет объекты на равенство
+
 ## CONTENT
+
+Проверяет объекты на равенство
 
 Параметры:
 * stappler::xenolith::ActionContainer const&
@@ -103,7 +141,11 @@ Title: XLActionManager.h
 
 ## BRIEF
 
+Проверяет объекты на равенство
+
 ## CONTENT
+
+Проверяет объекты на равенство
 
 Параметры:
 * stappler::xenolith::ActionContainer const&
@@ -116,21 +158,32 @@ Title: XLActionManager.h
 
 ## BRIEF
 
+Интерфейс поиска хеша для типа
+
 ## CONTENT
+
+Интерфейс поиска хеша для типа
 
 
 # ::stappler::HashTraitDiscovery<xenolith::ActionContainer>::type
 
 ## BRIEF
 
+Искомый тип
+
 ## CONTENT
 
+Искомый тип
 
 # ::stappler::xenolith::ActionManager
 
 ## BRIEF
 
+Тип управления действиями
+
 ## CONTENT
+
+Тип управления действиями
 
 Базовые классы:
 * Ref
@@ -140,27 +193,38 @@ Title: XLActionManager.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
 
+Деструктор
 
 # ::stappler::xenolith::ActionManager::ActionManager()
 
 ## BRIEF
 
+Конструктор
+
 ## CONTENT
 
 Доступ: public
+
+Конструктор
 
 
 # ::stappler::xenolith::ActionManager::init()
 
 ## BRIEF
 
+Инициализирует управляющий объект
+
 ## CONTENT
 
 Доступ: public
+
+Инициализирует управляющий объект
 
 Возвращает:
 * bool
@@ -169,9 +233,13 @@ Title: XLActionManager.h
 
 ## BRIEF
 
+Добавляет действие
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет действие
 
 Параметры:
 * stappler::xenolith::Action*
@@ -183,18 +251,26 @@ Title: XLActionManager.h
 
 ## BRIEF
 
+Удаляет все активные действия
+
 ## CONTENT
 
 Доступ: public
+
+Удаляет все активные действия
 
 
 # ::stappler::xenolith::ActionManager::removeAllActionsFromTarget(stappler::xenolith::Node*)
 
 ## BRIEF
 
+Удаляет все действия для целевого объекта
+
 ## CONTENT
 
 Доступ: public
+
+Удаляет все действия для целевого объекта
 
 Параметры:
 * stappler::xenolith::Node*
@@ -204,9 +280,13 @@ Title: XLActionManager.h
 
 ## BRIEF
 
+Удаляет действие
+
 ## CONTENT
 
 Доступ: public
+
+Удаляет действие
 
 Параметры:
 * stappler::xenolith::Action*
@@ -216,9 +296,13 @@ Title: XLActionManager.h
 
 ## BRIEF
 
+Удаляет одиночное действие по тегу
+
 ## CONTENT
 
 Доступ: public
+
+Удаляет одиночное действие по тегу
 
 Параметры:
 * uint32_t
@@ -229,9 +313,13 @@ Title: XLActionManager.h
 
 ## BRIEF
 
+Удаляет все действия по тегу
+
 ## CONTENT
 
 Доступ: public
+
+Удаляет все действия по тегу
 
 Параметры:
 * uint32_t
@@ -242,9 +330,13 @@ Title: XLActionManager.h
 
 ## BRIEF
 
+Получает действие по тегу
+
 ## CONTENT
 
 Доступ: public
+
+Получает действие по тегу
 
 Параметры:
 * uint32_t
@@ -257,9 +349,13 @@ Title: XLActionManager.h
 
 ## BRIEF
 
+Возвращает число запущенных действий для цели
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает число запущенных действий для цели
 
 Параметры:
 * stappler::xenolith::Node const*
@@ -271,9 +367,13 @@ Title: XLActionManager.h
 
 ## BRIEF
 
+Приостанавливает действия для цели
+
 ## CONTENT
 
 Доступ: public
+
+Приостанавливает действия для цели
 
 Параметры:
 * stappler::xenolith::Node*
@@ -283,9 +383,13 @@ Title: XLActionManager.h
 
 ## BRIEF
 
+Возобновляет действия для цели
+
 ## CONTENT
 
 Доступ: public
+
+Возобновляет действия для цели
 
 Параметры:
 * stappler::xenolith::Node*
@@ -295,32 +399,44 @@ Title: XLActionManager.h
 
 ## BRIEF
 
+Приостанавоивает все действия
+
 ## CONTENT
 
 Доступ: public
 
+Приостанавоивает все действия
+
 Возвращает:
-* Vector<stappler::xenolith::Node *>
+* Vector<stappler::xenolith::Node *> - набор активных целей
 
 # ::stappler::xenolith::ActionManager::resumeTargets(Vector<stappler::xenolith::Node *> const&)
 
 ## BRIEF
 
+Возобновляет действия для целей
+
 ## CONTENT
 
 Доступ: public
 
+Возобновляет действия для целей
+
 Параметры:
-* Vector<stappler::xenolith::Node *> const&
+* Vector<stappler::xenolith::Node *> const& - набор целей
 
 
 # ::stappler::xenolith::ActionManager::update(stappler::xenolith::UpdateTime const&)
 
 ## BRIEF
 
+Обновляет объект, выполняет действия
+
 ## CONTENT
 
 Доступ: public
+
+Обновляет объект, выполняет действия
 
 Параметры:
 * stappler::xenolith::UpdateTime const&
@@ -330,9 +446,13 @@ Title: XLActionManager.h
 
 ## BRIEF
 
+Проверяет объект на пустоту
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет объект на пустоту
 
 Возвращает:
 * bool
@@ -341,16 +461,24 @@ Title: XLActionManager.h
 
 ## BRIEF
 
+Структура ожидающего действия
+
 ## CONTENT
 
 Доступ: protected
+
+Структура ожидающего действия. Хранит действие до запуска объекта, потом запускает его
 
 
 # ::stappler::xenolith::ActionManager::PendingAction::action
 
 ## BRIEF
 
+Действие
+
 ## CONTENT
+
+Действие
 
 Тип: Rc<stappler::xenolith::Action>
 
@@ -359,7 +487,11 @@ Title: XLActionManager.h
 
 ## BRIEF
 
+Цель действия
+
 ## CONTENT
+
+Цель действия
 
 Тип: Rc<stappler::xenolith::Node>
 
@@ -368,7 +500,11 @@ Title: XLActionManager.h
 
 ## BRIEF
 
+Флаг приостановки
+
 ## CONTENT
+
+Флаг приостановки
 
 Тип: bool
 
@@ -377,9 +513,13 @@ Title: XLActionManager.h
 
 ## BRIEF
 
+Индикатор текущего обновления
+
 ## CONTENT
 
 Доступ: protected
+
+Индикатор текущего обновления
 
 Тип: bool
 
@@ -388,9 +528,13 @@ Title: XLActionManager.h
 
 ## BRIEF
 
+Текущее действие в обновлении
+
 ## CONTENT
 
 Доступ: protected
+
+Текущее действие в обновлении
 
 Тип: stappler::xenolith::ActionContainer*
 
@@ -399,9 +543,13 @@ Title: XLActionManager.h
 
 ## BRIEF
 
+Активные действия
+
 ## CONTENT
 
 Доступ: protected
+
+Активные действия
 
 Тип: HashTable<stappler::xenolith::ActionContainer>
 
@@ -410,8 +558,12 @@ Title: XLActionManager.h
 
 ## BRIEF
 
+Действия, ожидающие добавления
+
 ## CONTENT
 
 Доступ: protected
+
+Действия, ожидающие добавления
 
 Тип: Vector<stappler::xenolith::ActionManager::PendingAction>

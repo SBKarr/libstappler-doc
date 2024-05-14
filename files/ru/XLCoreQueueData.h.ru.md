@@ -2610,3 +2610,28 @@ Title: XLCoreQueueData.h
 
 Возвращает:
 * stappler::mem_std::String
+
+
+# ::stappler::xenolith::core::QueueData::attachCallback
+
+## BRIEF
+
+Функция, вызываемая при соединении кадра с очередью
+
+## CONTENT
+
+Функция, вызываемая при соединении кадра с очередью
+
+Тип: Function<void (const stappler::xenolith::core::FrameHandle *)>
+
+# ::stappler::xenolith::core::QueueData::detachCallback
+
+## BRIEF
+
+Функция, вызываемая при отсоединении кадра от очереди
+
+## CONTENT
+
+Функция, вызываемая при отсоединении кадра от очереди
+
+Тип: Function<void (const stappler::xenolith::core::FrameHandle *)>

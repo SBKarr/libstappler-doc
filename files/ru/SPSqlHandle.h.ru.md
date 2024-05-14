@@ -1285,3 +1285,18 @@ Title: STSqlHandle.h
 Драйвер для запроса
 
 Тип: stappler::db::sql::Driver const*
+
+# ::stappler::db::sql::SqlHandle::getDriver() const
+
+## BRIEF
+
+Возвращает драйвер БД
+
+## CONTENT
+
+Доступ: public
+
+Возвращает драйвер БД
+
+Возвращает:
+* stappler::db::sql::Driver const*

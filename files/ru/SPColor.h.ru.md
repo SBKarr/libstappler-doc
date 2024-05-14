@@ -6206,3 +6206,19 @@ Title: SPColor.h
 
 Возвращает:
 * geom::Color4F
+
+# ::stappler::geom::Color3B::name<typename>() const
+
+## BRIEF
+
+Возвращает известное имя для цвета
+
+## CONTENT
+
+Возвращает известное имя для цвета
+
+Параметры шаблона:
+* typename Interface
+
+Возвращает:
+* typename Interface::StringType

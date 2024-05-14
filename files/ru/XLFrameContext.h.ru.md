@@ -5,14 +5,22 @@ Title: XLFrameContext.h
 
 ## BRIEF
 
+Заголовок контекста текущего кадра
+
 ## CONTENT
+
+Заголовок контекста текущего кадра
 
 
 # ::stappler::xenolith::FrameContext
 
 ## BRIEF
 
+Тип контекста кадра
+
 ## CONTENT
+
+Тип контекста кадра. Контекст связывает данные сцены и входящие вложения очереди рендеринга.
 
 Базовые классы:
 * ResourceOwner
@@ -22,18 +30,26 @@ Title: XLFrameContext.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::FrameContext::init()
 
 ## BRIEF
 
+Создаёт контекст
+
 ## CONTENT
 
 Доступ: public
+
+Создаёт контекст
 
 Возвращает:
 * bool
@@ -42,9 +58,13 @@ Title: XLFrameContext.h
 
 ## BRIEF
 
+Обрабатывает добавление на сцену
+
 ## CONTENT
 
 Доступ: public
+
+Обрабатывает добавление на сцену
 
 Параметры:
 * stappler::xenolith::Scene*
@@ -54,18 +74,26 @@ Title: XLFrameContext.h
 
 ## BRIEF
 
+Обрабатывает удаление со сцены
+
 ## CONTENT
 
 Доступ: public
+
+Обрабатывает удаление со сцены
 
 
 # ::stappler::xenolith::FrameContext::makeHandle(stappler::xenolith::FrameInfo&)
 
 ## BRIEF
 
+Создаёт интерфейс кадра для сцены
+
 ## CONTENT
 
 Доступ: public
+
+Создаёт интерфейс кадра для сцены
 
 Параметры:
 * stappler::xenolith::FrameInfo&
@@ -77,9 +105,13 @@ Title: XLFrameContext.h
 
 ## BRIEF
 
+Отправляет данные, собранные интерфейсом, в очередь рендеринга
+
 ## CONTENT
 
 Доступ: public
+
+Отправляет данные, собранные интерфейсом, в очередь рендеринга
 
 Параметры:
 * stappler::xenolith::FrameInfo&
@@ -90,9 +122,13 @@ Title: XLFrameContext.h
 
 ## BRIEF
 
+Возвращает загруженный материал
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает загруженный материал
 
 Параметры:
 * stappler::xenolith::MaterialInfo const&
@@ -104,9 +140,13 @@ Title: XLFrameContext.h
 
 ## BRIEF
 
+Запрашивает новый материал
+
 ## CONTENT
 
 Доступ: public
+
+Запрашивает новый материал
 
 Параметры:
 * stappler::xenolith::MaterialInfo const&
@@ -121,9 +161,13 @@ Title: XLFrameContext.h
 
 ## BRIEF
 
+Отзывает более не использующиеся идентификаторы текстур
+
 ## CONTENT
 
 Доступ: public
+
+Отзывает более не использующиеся идентификаторы текстур
 
 Параметры:
 * SpanView<uint64_t>
@@ -133,16 +177,24 @@ Title: XLFrameContext.h
 
 ## BRIEF
 
+Данные о связи пайплайнов и укладки дескрипторов
+
 ## CONTENT
 
 Доступ: protected
+
+Данные о связи пайплайнов и укладки дескрипторов
 
 
 # ::stappler::xenolith::FrameContext::PipelineLayoutData::layout
 
 ## BRIEF
 
+Данные укладки
+
 ## CONTENT
+
+Данные укладки
 
 Тип: core::PipelineLayoutData const*
 
@@ -151,7 +203,11 @@ Title: XLFrameContext.h
 
 ## BRIEF
 
+Связанные пайплайны
+
 ## CONTENT
+
+Связанные пайплайны
 
 Тип: HashMap<size_t, Vector<const core::GraphicPipelineData *>>
 
@@ -160,16 +216,24 @@ Title: XLFrameContext.h
 
 ## BRIEF
 
+Контекстные данные материала
+
 ## CONTENT
 
 Доступ: protected
+
+Контекстные данные материала
 
 
 # ::stappler::xenolith::FrameContext::ContextMaterialInfo::info
 
 ## BRIEF
 
+Информация о материале
+
 ## CONTENT
+
+Информация о материале
 
 Тип: stappler::xenolith::MaterialInfo
 
@@ -178,7 +242,11 @@ Title: XLFrameContext.h
 
 ## BRIEF
 
+Идентификатор
+
 ## CONTENT
+
+Идентификатор
 
 Тип: core::MaterialId
 
@@ -187,7 +255,11 @@ Title: XLFrameContext.h
 
 ## BRIEF
 
+Флаг возможности отзыва материала
+
 ## CONTENT
+
+Флаг возможности отзыва материала
 
 Тип: bool
 
@@ -196,9 +268,13 @@ Title: XLFrameContext.h
 
 ## BRIEF
 
+Читает предустановленные материалы, чтобы сделать их доступными на сцене
+
 ## CONTENT
 
 Доступ: protected
+
+Читает предустановленные материалы, чтобы сделать их доступными на сцене
 
 Параметры:
 * core::MaterialAttachment*
@@ -208,9 +284,13 @@ Title: XLFrameContext.h
 
 ## BRIEF
 
+Возвращает информацию о материале
+
 ## CONTENT
 
 Доступ: protected
+
+Возвращает информацию о материале
 
 Параметры:
 * Rc<core::Material> const&
@@ -222,9 +302,13 @@ Title: XLFrameContext.h
 
 ## BRIEF
 
+Добавляет материал, ожидающий отправки на устройство
+
 ## CONTENT
 
 Доступ: protected
+
+Добавляет материал, ожидающий отправки на устройство
 
 Параметры:
 * Rc<core::Material>&&
@@ -234,9 +318,13 @@ Title: XLFrameContext.h
 
 ## BRIEF
 
+Добавляет новый материал, доступный на сцене
+
 ## CONTENT
 
 Доступ: protected
+
+Добавляет новый материал, доступный на сцене
 
 Параметры:
 * stappler::xenolith::MaterialInfo const&
@@ -248,9 +336,13 @@ Title: XLFrameContext.h
 
 ## BRIEF
 
+Показывает список доступных материалов для отладки
+
 ## CONTENT
 
 Доступ: protected
+
+Показывает список доступных материалов для отладки
 
 Возвращает:
 * stappler::mem_std::String
@@ -259,9 +351,13 @@ Title: XLFrameContext.h
 
 ## BRIEF
 
+Возвращает параметры отображения текстур материала
+
 ## CONTENT
 
 Доступ: protected
+
+Возвращает параметры отображения текстур материала
 
 Параметры:
 * stappler::xenolith::MaterialInfo const&
@@ -275,9 +371,13 @@ Title: XLFrameContext.h
 
 ## BRIEF
 
+Возвращает пайплайн, используемый материалом
+
 ## CONTENT
 
 Доступ: protected
+
+Возвращает пайплайн, используемый материалом
 
 Параметры:
 * stappler::xenolith::MaterialInfo const&
@@ -289,9 +389,13 @@ Title: XLFrameContext.h
 
 ## BRIEF
 
+Проверяет, возможно ли использовать пайплайн с материалом
+
 ## CONTENT
 
 Доступ: protected
+
+Проверяет, возможно ли использовать пайплайн с материалом
 
 Параметры:
 * core::GraphicPipelineData const*
@@ -304,9 +408,13 @@ Title: XLFrameContext.h
 
 ## BRIEF
 
+Отправляет ожидающие материалы на устройство
+
 ## CONTENT
 
 Доступ: protected
+
+Отправляет ожидающие материалы на устройство
 
 Параметры:
 * stappler::xenolith::FrameInfo const&
@@ -316,9 +424,13 @@ Title: XLFrameContext.h
 
 ## BRIEF
 
+Сцена
+
 ## CONTENT
 
 Доступ: protected
+
+Сцена
 
 Тип: stappler::xenolith::Scene*
 
@@ -327,9 +439,13 @@ Title: XLFrameContext.h
 
 ## BRIEF
 
+Очередь рендеринга
+
 ## CONTENT
 
 Доступ: protected
+
+Очередь рендеринга
 
 Тип: Rc<core::Queue>
 
@@ -338,9 +454,13 @@ Title: XLFrameContext.h
 
 ## BRIEF
 
+Источник материалов
+
 ## CONTENT
 
 Доступ: protected
+
+Источник материалов
 
 Тип: core::MaterialAttachment const*
 
@@ -349,9 +469,13 @@ Title: XLFrameContext.h
 
 ## BRIEF
 
+Данные укладки дескрипторов
+
 ## CONTENT
 
 Доступ: protected
+
+Данные укладки дескрипторов
 
 Тип: Vector<stappler::xenolith::FrameContext::PipelineLayoutData>
 
@@ -360,9 +484,13 @@ Title: XLFrameContext.h
 
 ## BRIEF
 
+Доступные материалы
+
 ## CONTENT
 
 Доступ: protected
+
+Доступные материалы
 
 Тип: HashMap<uint64_t, Vector<stappler::xenolith::FrameContext::ContextMaterialInfo>>
 
@@ -371,9 +499,13 @@ Title: XLFrameContext.h
 
 ## BRIEF
 
+Ожидающие добавления материалы
+
 ## CONTENT
 
 Доступ: protected
+
+Ожидающие добавления материалы
 
 Тип: Vector<Rc<core::Material>>
 
@@ -382,9 +514,13 @@ Title: XLFrameContext.h
 
 ## BRIEF
 
+Ожидающие отзыва материалы
+
 ## CONTENT
 
 Доступ: protected
+
+Ожидающие отзыва материалы
 
 Тип: Vector<uint32_t>
 
@@ -393,9 +529,13 @@ Title: XLFrameContext.h
 
 ## BRIEF
 
+Зависимость для отслеживания загрузки материалов
+
 ## CONTENT
 
 Доступ: protected
+
+Зависимость для отслеживания загрузки материалов
 
 Тип: Rc<core::DependencyEvent>
 
@@ -404,9 +544,13 @@ Title: XLFrameContext.h
 
 ## BRIEF
 
+Отозванные идентификаторы текстур
+
 ## CONTENT
 
 Доступ: protected
+
+Отозванные идентификаторы текстур
 
 Тип: Vector<core::MaterialId>
 
@@ -415,7 +559,11 @@ Title: XLFrameContext.h
 
 ## BRIEF
 
+Интерфейс кадра для контеста
+
 ## CONTENT
+
+Интерфейс кадра для контеста. Используется для накопления данных для отправки в очередь отрисовки при обходе сцены.
 
 Базовые классы:
 * core::AttachmentInputData
@@ -425,7 +573,11 @@ Title: XLFrameContext.h
 
 ## BRIEF
 
+Режиссёр
+
 ## CONTENT
+
+Режиссёр
 
 Тип: Rc<stappler::xenolith::Director>
 
@@ -434,7 +586,11 @@ Title: XLFrameContext.h
 
 ## BRIEF
 
+Контекст
+
 ## CONTENT
+
+Контекст
 
 Тип: stappler::xenolith::FrameContext*
 
@@ -443,7 +599,11 @@ Title: XLFrameContext.h
 
 ## BRIEF
 
+Стек состояний
+
 ## CONTENT
+
+Стек состояний
 
 Тип: memory::vector<StateId>
 
@@ -452,7 +612,11 @@ Title: XLFrameContext.h
 
 ## BRIEF
 
+Доступные состояния
+
 ## CONTENT
+
+Доступные состояния
 
 Тип: memory::vector<DrawStateValues>
 
@@ -461,7 +625,11 @@ Title: XLFrameContext.h
 
 ## BRIEF
 
+Добавляет состояние
+
 ## CONTENT
+
+Добавляет состояние
 
 Параметры:
 * stappler::xenolith::DrawStateValues
@@ -473,7 +641,11 @@ Title: XLFrameContext.h
 
 ## BRIEF
 
+Возвращает доступное состояние
+
 ## CONTENT
+
+Возвращает доступное состояние
 
 Параметры:
 * stappler::xenolith::StateId
@@ -485,7 +657,11 @@ Title: XLFrameContext.h
 
 ## BRIEF
 
+Возвращает текущее состояние
+
 ## CONTENT
+
+Возвращает текущее состояние
 
 Возвращает:
 * stappler::xenolith::StateId

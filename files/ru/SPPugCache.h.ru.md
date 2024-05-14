@@ -407,7 +407,7 @@ Title: SPPugCache.h
 
 Деструктор
 
-# ::stappler::pug::Cache::runTemplate(stappler::StringView const&,stappler::pug::Cache::RunCallback const&,std::ostream&)
+# ::stappler::pug::Cache::runTemplate(stappler::StringView const&,stappler::pug::Cache::RunCallback const&,stappler::pug::Cache::OutStream const&)
 
 ## BRIEF
 
@@ -422,12 +422,12 @@ Title: SPPugCache.h
 Параметры:
 * stappler::StringView const& - имя шаблона
 * stappler::pug::Cache::RunCallback const& - функция запуска шаблона
-* std::ostream& - поток для записи результата
+* ,stappler::pug::Cache::OutStream const& - поток для записи результата
 
 Возвращает:
 * bool - true если успешно
 
-# ::stappler::pug::Cache::runTemplate(stappler::StringView const&,stappler::pug::Cache::RunCallback const&,std::ostream&,Template::Options)
+# ::stappler::pug::Cache::runTemplate(stappler::StringView const&,stappler::pug::Cache::RunCallback const&,stappler::pug::Cache::OutStream const&,Template::Options)
 
 ## BRIEF
 
@@ -442,7 +442,7 @@ Title: SPPugCache.h
 Параметры:
 * stappler::StringView const& - имя шаблона
 * stappler::pug::Cache::RunCallback const& - функция запуска шаблона
-* std::ostream& - поток для записи результата
+* stappler::pug::Cache::OutStream const& - поток для записи результата
 * Template::Options - флаги для запуска шаблона
 
 Возвращает:
@@ -524,24 +524,6 @@ Title: SPPugCache.h
 Возвращает:
 * bool - true если успешно
 
-# ::stappler::pug::Cache::get(stappler::StringView const&) const
-
-## BRIEF
-
-Возвращает файл в кеше по имени
-
-## CONTENT
-
-Доступ: public
-
-Возвращает файл в кеше по имени
-
-Параметры:
-* stappler::StringView const& - имя файла
-
-Возвращает:
-* Rc<stappler::pug::FileRef>
-
 # ::stappler::pug::Cache::update(int,bool)
 
 ## BRIEF
@@ -559,7 +541,7 @@ Title: SPPugCache.h
 * bool - true если файл наблюдения неободимо перезаписать
 
 
-# ::stappler::pug::Cache::update(memory::pool_t*)
+# ::stappler::pug::Cache::update(memory::pool_t*,bool)
 
 ## BRIEF
 
@@ -573,6 +555,7 @@ Title: SPPugCache.h
 
 Параметры:
 * memory::pool_t* - используемый в обновлении пул памяти
+* bool - true для принудительного обновления
 
 
 # ::stappler::pug::Cache::getNotify() const
@@ -645,7 +628,7 @@ Title: SPPugCache.h
 Возвращает:
 * Rc<stappler::pug::FileRef>
 
-# ::stappler::pug::Cache::runTemplate(Rc<stappler::pug::FileRef>,stappler::StringView,stappler::pug::Cache::RunCallback const&,std::ostream&,Template::Options)
+# ::stappler::pug::Cache::runTemplate(Rc<stappler::pug::FileRef>,stappler::StringView,stappler::pug::Cache::RunCallback const&,stappler::pug::Cache::OutStream const&,Template::Options)
 
 ## BRIEF
 
@@ -801,3 +784,64 @@ Title: SPPugCache.h
 Функция сообщения об ошибках
 
 Тип: Function<void (const stappler::StringView &)>
+
+# ::stappler::pug::Cache::OutStream
+
+## BRIEF
+
+Тип выходного потока для шаблонизатора
+
+## CONTENT
+
+Доступ: public
+
+Тип выходного потока для шаблонизатора
+
+# ::stappler::pug::Cache::get(stappler::StringView) const
+
+## BRIEF
+
+Возвращает хранимый в кеше файл
+
+## CONTENT
+
+Доступ: public
+
+Возвращает хранимый в кеше файл
+
+Параметры:
+* stappler::StringView
+
+Возвращает:
+* Rc<stappler::pug::FileRef>
+
+# ::stappler::pug::Cache::regenerate(stappler::StringView)
+
+## BRIEF
+
+Пытается повторно добавить файл в отслеживание на уровне ОС
+
+## CONTENT
+
+Доступ: public
+
+Пытается повторно добавить файл в отслеживание на уровне ОС
+
+Параметры:
+* stappler::StringView
+
+# ::stappler::pug::Cache::drop(stappler::StringView)
+
+## BRIEF
+
+Убирает файл из кеша
+
+## CONTENT
+
+Доступ: public
+
+Убирает файл из кеша
+
+Параметры:
+* stappler::StringView
+

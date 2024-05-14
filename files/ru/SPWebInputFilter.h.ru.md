@@ -56,7 +56,7 @@ Title: SPWebInputFilter.h
 Деструктор
 
 
-# ::stappler::web::InputParser::run(stappler::StringView)
+# ::stappler::web::InputParser::run(stappler::BytesView)
 
 ## BRIEF
 
@@ -69,7 +69,7 @@ Title: SPWebInputFilter.h
 Запускает обработку для данных
 
 Параметры:
-* stappler::StringView
+* stappler::BytesView
 
 
 # ::stappler::web::InputParser::finalize()
@@ -314,7 +314,7 @@ Title: SPWebInputFilter.h
 * stappler::web::InputFilter::Accept - тип принимаемых данных
 
 
-# ::stappler::web::InputFilter::step(stappler::StringView)
+# ::stappler::web::InputFilter::step(stappler::BytesView)
 
 ## BRIEF
 
@@ -839,3 +839,36 @@ Title: SPWebInputFilter.h
 Начат ли разбор данных
 
 Тип: bool
+
+# ::stappler::web::InputFilter::getStatusForException(stappler::web::InputFilter::Exception)
+
+## BRIEF
+
+Возвращает статус запроса для ошибки чтения
+
+## CONTENT
+
+Доступ: public
+
+Возвращает статус запроса для ошибки чтения
+
+Параметры:
+* stappler::web::InputFilter::Exception
+
+Возвращает:
+* stappler::web::Status
+
+# ::stappler::web::InputFilter::getPool() const
+
+## BRIEF
+
+Возвращает пул памяти для фильтра
+
+## CONTENT
+
+Доступ: public
+
+Возвращает пул памяти для фильтра
+
+Возвращает:
+* memory::pool_t*

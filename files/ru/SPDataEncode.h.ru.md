@@ -380,7 +380,7 @@ Title: SPDataEncode.h
 Возвращает:
 * BytesType - байтовый контейнер с кодированными данными
 
-# ::stappler::data::EncodeTraits<typename>::write(std::ostream&,stappler::data::EncodeTraits::ValueType const&,stappler::data::EncodeFormat)
+# ::stappler::data::EncodeTraits<typename>::write(Callback<void (stappler::StringView)> const&,stappler::data::EncodeTraits::ValueType const&,stappler::data::EncodeFormat)
 
 ## BRIEF
 
@@ -391,7 +391,7 @@ Title: SPDataEncode.h
 Записывает кодированные данные в поток
 
 Параметры:
-* std::ostream& - выходной поток
+* Callback<void (stappler::StringView)> const& - выходной поток
 * stappler::data::EncodeTraits::ValueType const& - данные для кодирования
 * stappler::data::EncodeFormat - комплексный формат кодирования
 
@@ -437,7 +437,7 @@ Title: SPDataEncode.h
 Возвращает:
 * typename ValueTemplate<Interface>::BytesType - выходной байтовый контейнер
 
-# ::stappler::data::write<typename>(std::ostream&,ValueTemplate<Interface> const&,stappler::data::EncodeFormat)
+# ::stappler::data::write<typename>(Callback<void (stappler::StringView)> const&,ValueTemplate<Interface> const&,stappler::data::EncodeFormat)
 
 ## BRIEF
 
@@ -451,7 +451,7 @@ Title: SPDataEncode.h
 * typename Interface - интерфейс памяти
 
 Параметры:
-* std::ostream& - выходной поток
+* Callback<void (stappler::StringView)> const& - выходной поток
 * ValueTemplate<Interface> const& - данные для кодирования
 * stappler::data::EncodeFormat - комплексный формат кодирования
 

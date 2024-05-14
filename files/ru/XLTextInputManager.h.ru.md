@@ -155,24 +155,6 @@ Title: XLTextInputManager.h
 Возвращает:
 * bool
 
-# ::stappler::xenolith::TextInputHandler::isKeyboardVisible() const
-
-## BRIEF
-
-## CONTENT
-
-Возвращает:
-* bool
-
-# ::stappler::xenolith::TextInputHandler::getKeyboardRect() const
-
-## BRIEF
-
-## CONTENT
-
-Возвращает:
-* const stappler::geom::Rect&
-
 # ::stappler::xenolith::TextInputHandler::isActive() const
 
 ## BRIEF
@@ -331,31 +313,6 @@ Title: XLTextInputManager.h
 * stappler::xenolith::TextCursor
 
 
-# ::stappler::xenolith::TextInputManager::onKeyboardEnabled(const stappler::geom::Rect&,float)
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-Параметры:
-* const stappler::geom::Rect&
-* float
-
-
-# ::stappler::xenolith::TextInputManager::onKeyboardDisabled(float)
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-Параметры:
-* float
-
-
 # ::stappler::xenolith::TextInputManager::setInputEnabled(bool)
 
 ## BRIEF
@@ -500,17 +457,6 @@ Title: XLTextInputManager.h
 Возвращает:
 * bool
 
-# ::stappler::xenolith::TextInputManager::isKeyboardVisible() const
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-Возвращает:
-* bool
-
 # ::stappler::xenolith::TextInputManager::isInputEnabled() const
 
 ## BRIEF
@@ -521,28 +467,6 @@ Title: XLTextInputManager.h
 
 Возвращает:
 * bool
-
-# ::stappler::xenolith::TextInputManager::getKeyboardDuration() const
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-Возвращает:
-* float
-
-# ::stappler::xenolith::TextInputManager::getKeyboardRect() const
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-Возвращает:
-* const stappler::geom::Rect&
 
 # ::stappler::xenolith::TextInputManager::getHandler() const
 
@@ -620,40 +544,7 @@ Title: XLTextInputManager.h
 Тип: stappler::xenolith::TextInputHandler*
 
 
-# ::stappler::xenolith::TextInputManager::_keyboardRect
-
-## BRIEF
-
-## CONTENT
-
-Доступ: protected
-
-Тип: stappler::geom::Rect
-
-
-# ::stappler::xenolith::TextInputManager::_keyboardDuration
-
-## BRIEF
-
-## CONTENT
-
-Доступ: protected
-
-Тип: float
-
-
 # ::stappler::xenolith::TextInputManager::_isInputEnabled
-
-## BRIEF
-
-## CONTENT
-
-Доступ: protected
-
-Тип: bool
-
-
-# ::stappler::xenolith::TextInputManager::_isKeyboardVisible
 
 ## BRIEF
 

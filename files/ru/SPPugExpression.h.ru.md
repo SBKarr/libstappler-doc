@@ -24,6 +24,16 @@ Title: SPPugExpression.h
 Базовые классы:
 * memory::AllocPool
 
+# ::stappler::pug::Expression::OutStream
+
+## BRIEF
+
+Тип выходного потока
+
+## CONTENT
+
+Тип выходного потока
+
 
 # ::stappler::pug::Expression::Op
 
@@ -507,7 +517,7 @@ Title: SPPugExpression.h
 Возвращает:
 * bool
 
-# ::stappler::pug::Expression::describe(std::ostream&,size_t)
+# ::stappler::pug::Expression::describe(stappler::pug::Expression::OutStream const&,size_t)
 
 ## BRIEF
 
@@ -518,7 +528,7 @@ Title: SPPugExpression.h
 Выводит структуру выражения в поток
 
 Параметры:
-* std::ostream&
+* stappler::pug::Expression::OutStream const&
 * size_t - текущий уровень вложенности
 
 

@@ -4481,3 +4481,109 @@ Title: SPStringStream.h
 
 Возвращает:
 * typename Interface::StringType - конкатенация всех аргументов в виде строки
+
+
+# ::stappler::detail::streamWrite<typename>(FunctionalStream const&,int16_t)
+
+## BRIEF
+
+Выводит число в поток
+
+## CONTENT
+
+Выводит число в поток
+
+Параметры шаблона:
+* typename FunctionalStream
+
+Параметры:
+* FunctionalStream const&
+* int16_t
+
+
+# ::stappler::detail::streamWrite<typename>(FunctionalStream const&,uint16_t)
+
+## BRIEF
+
+Выводит число в поток
+
+## CONTENT
+
+Выводит число в поток
+
+Параметры шаблона:
+* typename FunctionalStream
+
+Параметры:
+* FunctionalStream const&
+* uint16_t
+
+
+# ::stappler::detail::streamWrite<typename>(FunctionalStream const&,int8_t)
+
+## BRIEF
+
+Выводит число в поток
+
+## CONTENT
+
+Выводит число в поток
+
+Параметры шаблона:
+* typename FunctionalStream
+
+Параметры:
+* FunctionalStream const&
+* int8_t
+
+
+# ::stappler::detail::streamWrite<typename>(FunctionalStream const&,uint8_t)
+
+## BRIEF
+
+Выводит число в поток
+
+## CONTENT
+
+Выводит число в поток
+
+Параметры шаблона:
+* typename FunctionalStream
+
+Параметры:
+* FunctionalStream const&
+* uint8_t
+
+# ::stappler::operator<<(int const&,int const&)
+
+## BRIEF
+
+Выводит число в поток
+
+## CONTENT
+
+Выводит число в поток
+
+Параметры:
+* int const&
+* int const&
+
+Возвращает:
+* int
+
+# ::stappler::operator<<(int const&,uint8_t const&)
+
+## BRIEF
+
+Выводит число в поток
+
+## CONTENT
+
+Выводит число в поток
+
+Параметры:
+* int const&
+* uint8_t const&
+
+Возвращает:
+* int

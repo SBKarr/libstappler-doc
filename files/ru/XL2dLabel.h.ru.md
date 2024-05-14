@@ -1018,3 +1018,14 @@ Title: XL2dLabel.h
 Доступ: protected
 
 Тип: Rc<stappler::xenolith::basic2d::LabelDeferredResult>
+
+# ::stappler::xenolith::basic2d::Label::applyLayout(stappler::xenolith::basic2d::Label::TextLayout*)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: protected
+
+Параметры:
+* stappler::xenolith::basic2d::Label::TextLayout*

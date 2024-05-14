@@ -996,7 +996,7 @@ Title: XLAction.h
 Конструктор
 
 
-# ::stappler::xenolith::Speed::init(stappler::xenolith::ActionInterval*,float)
+# ::stappler::xenolith::Speed::init(Rc<stappler::xenolith::ActionInterval>&&,float)
 
 ## BRIEF
 
@@ -1009,7 +1009,7 @@ Title: XLAction.h
 Создаёт действие
 
 Параметры:
-* stappler::xenolith::ActionInterval* - базовое действие
+* Rc<stappler::xenolith::ActionInterval>&& - базовое действие
 * float - параметр ускорения или замедления
 
 Возвращает:
@@ -1061,7 +1061,7 @@ Title: XLAction.h
 Возвращает:
 * stappler::xenolith::ActionInterval*
 
-# ::stappler::xenolith::Speed::setInnerAction(stappler::xenolith::ActionInterval*)
+# ::stappler::xenolith::Speed::setInnerAction(Rc<stappler::xenolith::ActionInterval>&&)
 
 ## BRIEF
 
@@ -1074,7 +1074,7 @@ Title: XLAction.h
 Устанавливает базовое действие
 
 Параметры:
-* stappler::xenolith::ActionInterval*
+* Rc<stappler::xenolith::ActionInterval>&&
 
 
 # ::stappler::xenolith::Speed::stop()
@@ -1865,7 +1865,7 @@ Title: XLAction.h
 
 Деструктор
 
-# ::stappler::xenolith::Repeat::init(stappler::xenolith::ActionInterval*,uint32_t)
+# ::stappler::xenolith::Repeat::init(Rc<stappler::xenolith::ActionInterval>&&,uint32_t)
 
 ## BRIEF
 
@@ -1878,13 +1878,13 @@ Title: XLAction.h
 Создаёт действие
 
 Параметры:
-* stappler::xenolith::ActionInterval* - базовое действие
+* Rc<stappler::xenolith::ActionInterval>&& - базовое действие
 * uint32_t - число повторений
 
 Возвращает:
 * bool
 
-# ::stappler::xenolith::Repeat::setInnerAction(stappler::xenolith::ActionInterval*)
+# ::stappler::xenolith::Repeat::setInnerAction(Rc<stappler::xenolith::ActionInterval>&&)
 
 ## BRIEF
 
@@ -1897,7 +1897,7 @@ Title: XLAction.h
 Устанавливает базовое действие
 
 Параметры:
-* stappler::xenolith::ActionInterval*
+* Rc<stappler::xenolith::ActionInterval>&&
 
 
 # ::stappler::xenolith::Repeat::getInnerAction() const

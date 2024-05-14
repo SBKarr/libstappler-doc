@@ -1413,3 +1413,224 @@ Title: SPBytesView.h
 
 Возвращает:
 * stappler::StringView
+
+# ::stappler::BytesViewTemplate<stappler::Endian>::match(stappler::BytesReader<unsigned char>::CharType)
+
+## BRIEF
+
+Проверяет первый символ в отображении на соотвествие
+
+## CONTENT
+
+Доступ: private
+
+Проверяет первый символ в отображении на соотвествие
+
+Параметры:
+* stappler::BytesReader<unsigned char>::CharType
+
+Возвращает:
+* bool
+
+# ::stappler::BytesViewTemplate<stappler::Endian>::match<uint8_t,uint8_t...>(stappler::BytesReader<unsigned char>::CharType)
+
+## BRIEF
+
+Проверяет первый символ в отображении на соотвествие группе
+
+## CONTENT
+
+Доступ: private
+
+Проверяет первый символ в отображении на соотвествие группе
+
+Параметры шаблона:
+* uint8_t Arg
+* uint8_t Args
+
+Параметры:
+* stappler::BytesReader<unsigned char>::CharType
+
+Возвращает:
+* bool
+
+# ::stappler::BytesViewTemplate<stappler::Endian>::skipChars<uint8_t...>()
+
+## BRIEF
+
+Смещает отображение, пропуская группу символов из списка
+
+## CONTENT
+
+Доступ: public
+
+Смещает отображение, пропуская группу символов из списка
+
+Параметры шаблона:
+* uint8_t Args
+
+# ::stappler::BytesViewTemplate<stappler::Endian>::skipUntil<uint8_t...>()
+
+## BRIEF
+
+Смещает отображение, пропуская символы, пока не будет найден символ из группы
+
+## CONTENT
+
+Доступ: public
+
+Смещает отображение, пропуская символы, пока не будет найден символ из группы
+
+Параметры шаблона:
+* uint8_t Args
+
+# ::stappler::BytesViewTemplate<stappler::Endian>::backwardSkipChars<uint8_t...>()
+
+## BRIEF
+
+Убирает символы из группы из конца отображения
+
+## CONTENT
+
+Доступ: public
+
+Убирает символы из группы из конца отображения
+
+Параметры шаблона:
+* uint8_t Args
+
+# ::stappler::BytesViewTemplate<stappler::Endian>::backwardSkipUntil<uint8_t...>()
+
+## BRIEF
+
+Убирает символы с конца, пока не будут найдены символы из группы
+
+## CONTENT
+
+Доступ: public
+
+Убирает символы с конца, пока не будут найдены символы из группы
+
+Параметры шаблона:
+* uint8_t Args
+
+# ::stappler::BytesViewTemplate<stappler::Endian>::readChars<uint8_t...>()
+
+## BRIEF
+
+Читает символы из группы с начала отображения
+
+## CONTENT
+
+Доступ: public
+
+Читает символы из группы с начала отображения. Смещает отображение на прочитанные символы.
+
+Параметры шаблона:
+* uint8_t Args
+
+Возвращает:
+* Self
+
+# ::stappler::BytesViewTemplate<stappler::Endian>::readUntil<uint8_t...>()
+
+## BRIEF
+
+Читает символы, пока не будут найдены символы из группы
+
+## CONTENT
+
+Доступ: public
+
+Читает символы, пока не будут найдены символы из группы. Смещает отображение на прочитанные символы.
+
+Параметры шаблона:
+* uint8_t Args
+
+Возвращает:
+* Self
+
+# ::stappler::BytesViewTemplate<stappler::Endian>::backwardReadChars<uint8_t...>()
+
+## BRIEF
+
+Читает символы из группы с конца отображения
+
+## CONTENT
+
+Доступ: public
+
+Читает символы из группы с конца отображения. Смещает отображение на прочитанные символы.
+
+Параметры шаблона:
+* uint8_t Args
+
+Возвращает:
+* Self
+
+# ::stappler::BytesViewTemplate<stappler::Endian>::backwardReadUntil<uint8_t...>()
+
+## BRIEF
+
+Читает символы с конца отображения, пока не будут найдены символы из группы
+
+## CONTENT
+
+Доступ: public
+
+Читает символы с конца отображения, пока не будут найдены символы из группы. Смещает отображение на прочитанные символы.
+
+Параметры шаблона:
+* uint8_t Args
+
+Возвращает:
+* Self
+
+# ::stappler::BytesViewTemplate<stappler::Endian>::trimChars<uint8_t...>()
+
+## BRIEF
+
+Обрезает символы из группы
+
+## CONTENT
+
+Доступ: public
+
+Обрезает символы из группы
+
+Параметры шаблона:
+* uint8_t Args
+
+# ::stappler::BytesViewTemplate<stappler::Endian>::trimUntil<uint8_t...>()
+
+## BRIEF
+
+Обрезает символы не из группы
+
+## CONTENT
+
+Доступ: public
+
+Обрезает символы не из группы
+
+Параметры шаблона:
+* uint8_t Args
+
+# ::stappler::BytesViewTemplate<stappler::Endian>::split<typename,typename>(Callback const&) const
+
+## BRIEF
+
+Разделяет отображение по символу-разделителю
+
+## CONTENT
+
+Доступ: public
+
+Разделяет отображение по символу-разделителю
+
+Параметры шаблона:
+* typename Separator
+* typename Callback
+
+Параметры:
+* Callback const& - функция вызывается с каждым найденным сегментом

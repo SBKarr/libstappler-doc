@@ -1088,3 +1088,19 @@ MIME-тип файла
 ## CONTENT
 
 Конструктор по умолчанию
+
+# ::stappler::db::InputConfig::isFileAsDataSupportedForType(stappler::StringView)
+
+## BRIEF
+
+Проверяет, может ли система прочитать тип как данные
+
+## CONTENT
+
+Проверяет, может ли система прочитать тип как данные (например, JSON, CBOR, multipart/form-data)
+
+Параметры:
+* stappler::StringView - MIME-тип
+
+Возвращает:
+* bool

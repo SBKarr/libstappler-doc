@@ -1889,3 +1889,21 @@ Title: SPCrypto.h
 
 Возвращает:
 * bool - true если шифрование успешно
+
+# ::stappler::crypto::makeBlockKey(stappler::crypto::PrivateKey const&,stappler::BytesView,uint32_t)
+
+## BRIEF
+
+Создаёт ключ для блочного шифра
+
+## CONTENT
+
+Создаёт ключ для блочного шифра. Алгоритм определяется на основе типа ключа
+
+Параметры:
+* stappler::crypto::PrivateKey const& - закрытый ключ
+* stappler::BytesView - случайные данные
+* uint32_t - версия генератора (2 - максимальная)
+
+Возвращает:
+* stappler::crypto::BlockKey256

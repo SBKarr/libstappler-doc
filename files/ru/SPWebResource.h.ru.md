@@ -407,68 +407,6 @@ Title: SPWebResource.h
 * stappler::mem_pool::Value const&
 
 
-# ::stappler::web::Resource::setResolveOptions(stappler::mem_pool::Value const&)
-
-## BRIEF
-
-Устанавливает параметры раскрытия полей
-
-## CONTENT
-
-Доступ: public
-
-Устанавливает параметры раскрытия полей
-
-Параметры:
-* stappler::mem_pool::Value const&
-
-
-# ::stappler::web::Resource::setResolveDepth(size_t)
-
-## BRIEF
-
-Устанавливает максимальную глубину обхода ресурсов
-
-## CONTENT
-
-Доступ: public
-
-Устанавливает максимальную глубину обхода ресурсов
-
-Параметры:
-* size_t
-
-
-# ::stappler::web::Resource::setPageFrom(size_t)
-
-## BRIEF
-
-Устанавливает смещение данных в запросе
-
-## CONTENT
-
-Доступ: public
-
-Устанавливает смещение данных в запросе (OFFSET)
-
-Параметры:
-* size_t
-
-
-# ::stappler::web::Resource::setPageCount(size_t)
-
-## BRIEF
-
-Устанавливает количество объектов в ответе
-
-## CONTENT
-
-Доступ: public
-
-Устанавливает количество объектов в ответе (LIMIT)
-
-Параметры:
-* size_t
 
 
 # ::stappler::web::Resource::applyQuery(stappler::mem_pool::Value const&)
@@ -1136,23 +1074,6 @@ Title: SPWebResource.h
 Возвращает:
 * uint64_t
 
-# ::stappler::web::ResourceProperty::getObject(bool)
-
-## BRIEF
-
-Возвращает объект ресурса
-
-## CONTENT
-
-Доступ: protected
-
-Возвращает объект ресурса
-
-Параметры:
-* bool - true если объект получается для обновления
-
-Возвращает:
-* stappler::mem_pool::Value
 
 # ::stappler::web::ResourceProperty::_field
 
@@ -1443,24 +1364,6 @@ Title: SPWebResource.h
 Доступ: protected
 
 Возвращает базовый объект
-
-Возвращает:
-* stappler::mem_pool::Value
-
-# ::stappler::web::ResourceArray::getArrayForObject(stappler::mem_pool::Value&)
-
-## BRIEF
-
-Возвращает массив из объекта
-
-## CONTENT
-
-Доступ: protected
-
-Возвращает массив из объекта
-
-Параметры:
-* stappler::mem_pool::Value&
 
 Возвращает:
 * stappler::mem_pool::Value
@@ -2029,21 +1932,6 @@ Title: SPWebResource.h
 Возвращает:
 * int64_t
 
-# ::stappler::web::ResourceRefSet::getObjectValue()
-
-## BRIEF
-
-Возвращает базовый объект
-
-## CONTENT
-
-Доступ: protected
-
-Возвращает базовый объект
-
-Возвращает:
-* stappler::mem_pool::Value
-
 # ::stappler::web::ResourceRefSet::prepareAppendList(int64_t,stappler::mem_pool::Value const&,bool)
 
 ## BRIEF
@@ -2393,42 +2281,6 @@ Title: SPWebResource.h
 
 Возвращает:
 * int64_t
-
-# ::stappler::web::ResourceFieldObject::getRootObject(bool)
-
-## BRIEF
-
-Возвращает корневой объект
-
-## CONTENT
-
-Доступ: protected
-
-Возвращает корневой объект
-
-Параметры:
-* bool
-
-Возвращает:
-* stappler::mem_pool::Value
-
-# ::stappler::web::ResourceFieldObject::getTargetObject(bool)
-
-## BRIEF
-
-Возвращает целевой объект
-
-## CONTENT
-
-Доступ: protected
-
-Возвращает целевой объект
-
-Параметры:
-* bool
-
-Возвращает:
-* stappler::mem_pool::Value
 
 # ::stappler::web::ResourceFieldObject::doRemoveObject()
 
@@ -2819,3 +2671,86 @@ Title: SPWebResource.h
 Поле для поиска
 
 Тип: stappler::web::Resource::Field const*
+
+# ::stappler::web::Resource::getInputFlags() const
+
+## BRIEF
+
+Возвращает флаги необходимого для ресурса содержимого запроса
+
+## CONTENT
+
+Доступ: public
+
+Возвращает флаги необходимого для ресурса содержимого запроса
+
+Возвращает:
+* db::InputConfig::Require
+
+# ::stappler::web::ResourceFile::getInputFlags() const
+
+## BRIEF
+
+Возвращает флаги необходимого для ресурса содержимого запроса
+
+## CONTENT
+
+Доступ: public
+
+Возвращает флаги необходимого для ресурса содержимого запроса
+
+Возвращает:
+* db::InputConfig::Require
+
+# ::stappler::web::ResourceArray::prepareAppend()
+
+## BRIEF
+
+Подготавливает добавление элементов в массив
+
+## CONTENT
+
+Доступ: public
+
+Подготавливает добавление элементов в массив
+
+Возвращает:
+* bool
+
+# ::stappler::web::ResourceArray::appendObject(stappler::mem_pool::Value&)
+
+## BRIEF
+
+Добавляет элементы в массив
+
+## CONTENT
+
+Доступ: public
+
+Добавляет элементы в массив
+
+Параметры:
+* stappler::mem_pool::Value&
+
+Возвращает:
+* stappler::mem_pool::Value
+
+# ::stappler::web::ResourceReslist::doCreateObject(stappler::mem_pool::Value&,Vector<db::InputFile>&,stappler::mem_pool::Value const&)
+
+## BRIEF
+
+Создаёт новый объект в списке
+
+## CONTENT
+
+Доступ: protected
+
+Создаёт новый объект в списке
+
+Параметры:
+* stappler::mem_pool::Value&
+* Vector<db::InputFile>&
+* stappler::mem_pool::Value const&
+
+Возвращает:
+* stappler::mem_pool::Value

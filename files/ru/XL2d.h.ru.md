@@ -5,119 +5,184 @@ Title: XL2d.h
 
 ## BRIEF
 
+Базовый заголовок типов для двумерного рисования
+
 ## CONTENT
+
+Базовый заголовок типов для двумерного рисования
 
 
 # ::stappler::xenolith::basic2d::Vertex
 
 ## BRIEF
 
+Тип одиночной вершины
+
 ## CONTENT
+
+Тип одиночной вершины
 
 
 # ::stappler::xenolith::basic2d::MaterialData
 
 ## BRIEF
 
+Тип данных материала
+
 ## CONTENT
+
+Тип данных материала
 
 
 # ::stappler::xenolith::basic2d::TransformData
 
 ## BRIEF
 
+Тип данных для трансформации вершин
+
 ## CONTENT
+
+Тип данных для трансформации вершин
 
 
 # ::stappler::xenolith::basic2d::ShadowData
 
 ## BRIEF
 
+Тип данных затенения
+
 ## CONTENT
+
+Тип данных затенения
 
 
 # ::stappler::xenolith::basic2d::DataAtlasIndex
 
 ## BRIEF
 
+Тип индекса для атласа
+
 ## CONTENT
+
+Тип индекса для атласа
 
 
 # ::stappler::xenolith::basic2d::DataAtlasValue
 
 ## BRIEF
 
+Тип данных для атласа
+
 ## CONTENT
+
+Тип данных для атласа
 
 
 # ::stappler::xenolith::basic2d::AmbientLightData
 
 ## BRIEF
 
+Данные света окружения
+
 ## CONTENT
+
+Данные света окружения
 
 
 # ::stappler::xenolith::basic2d::DirectLightData
 
 ## BRIEF
 
+Данные направленного света
+
 ## CONTENT
 
+Данные направленного света
 
 # ::stappler::xenolith::basic2d::Sdf2DObjectData
 
 ## BRIEF
 
+Данные объекта SDF
+
 ## CONTENT
+
+Данные объекта SDF
 
 
 # ::stappler::xenolith::basic2d::Circle2DIndex
 
 ## BRIEF
 
+Данные индекса для круга SDF
+
 ## CONTENT
+
+Данные индекса для круга SDF
 
 
 # ::stappler::xenolith::basic2d::Triangle2DIndex
 
 ## BRIEF
 
+Данные индекса для треугольника SDF
+
 ## CONTENT
+
+Данные индекса для треугольника SDF
 
 
 # ::stappler::xenolith::basic2d::Rect2DIndex
 
 ## BRIEF
 
+Данные индекса для прямоугольника SDF
+
 ## CONTENT
 
+Данные индекса для прямоугольника SDF
 
 # ::stappler::xenolith::basic2d::RoundedRect2DIndex
 
 ## BRIEF
 
+Данные индекса для прямоугольника со скруглёнными углами SDF
+
 ## CONTENT
+
+Данные индекса для прямоугольника со скруглёнными углами SDF
 
 
 # ::stappler::xenolith::basic2d::Polygon2DIndex
 
 ## BRIEF
 
+Данные индекса для полигона SDF
+
 ## CONTENT
 
+Данные индекса для полигона SDF
 
 # ::stappler::xenolith::basic2d::Triangle
 
 ## BRIEF
 
+Тип треугольника
+
 ## CONTENT
+
+Тип треугольника
 
 
 # ::stappler::xenolith::basic2d::Triangle::a
 
 ## BRIEF
 
+Вершина треугольника
+
 ## CONTENT
+
+Вершина треугольника
 
 Тип: stappler::xenolith::basic2d::Vertex
 
@@ -126,7 +191,11 @@ Title: XL2d.h
 
 ## BRIEF
 
+Вершина треугольника
+
 ## CONTENT
+
+Вершина треугольника
 
 Тип: stappler::xenolith::basic2d::Vertex
 
@@ -135,7 +204,11 @@ Title: XL2d.h
 
 ## BRIEF
 
+Вершина треугольника
+
 ## CONTENT
+
+Вершина треугольника
 
 Тип: stappler::xenolith::basic2d::Vertex
 
@@ -144,14 +217,22 @@ Title: XL2d.h
 
 ## BRIEF
 
+Данные четырёхугольника
+
 ## CONTENT
+
+Данные четырёхугольника
 
 
 # ::stappler::xenolith::basic2d::Quad::tl
 
 ## BRIEF
 
+Вершина четырёхугольника
+
 ## CONTENT
+
+Вершина четырёхугольника
 
 Тип: stappler::xenolith::basic2d::Vertex
 
@@ -160,7 +241,11 @@ Title: XL2d.h
 
 ## BRIEF
 
+Вершина четырёхугольника
+
 ## CONTENT
+
+Вершина четырёхугольника
 
 Тип: stappler::xenolith::basic2d::Vertex
 
@@ -169,7 +254,11 @@ Title: XL2d.h
 
 ## BRIEF
 
+Вершина четырёхугольника
+
 ## CONTENT
+
+Вершина четырёхугольника
 
 Тип: stappler::xenolith::basic2d::Vertex
 
@@ -178,7 +267,11 @@ Title: XL2d.h
 
 ## BRIEF
 
+Вершина четырёхугольника
+
 ## CONTENT
+
+Вершина четырёхугольника
 
 Тип: stappler::xenolith::basic2d::Vertex
 
@@ -187,14 +280,22 @@ Title: XL2d.h
 
 ## BRIEF
 
+Данные набора вершин для материала
+
 ## CONTENT
+
+Данные набора вершин для материала
 
 
 # ::stappler::xenolith::basic2d::VertexSpan::material
 
 ## BRIEF
 
+Идентификатор материала
+
 ## CONTENT
+
+Идентификатор материала
 
 Тип: core::MaterialId
 
@@ -203,7 +304,11 @@ Title: XL2d.h
 
 ## BRIEF
 
+Число вершин в индексном буфере
+
 ## CONTENT
+
+Число вершин в индексном буфере
 
 Тип: uint32_t
 
@@ -212,7 +317,11 @@ Title: XL2d.h
 
 ## BRIEF
 
+Число экземпляров
+
 ## CONTENT
+
+Число экземпляров
 
 Тип: uint32_t
 
@@ -221,7 +330,11 @@ Title: XL2d.h
 
 ## BRIEF
 
+Первая вершина в индексном буфере
+
 ## CONTENT
+
+Первая вершина в индексном буфере
 
 Тип: uint32_t
 
@@ -230,7 +343,11 @@ Title: XL2d.h
 
 ## BRIEF
 
+Идентификатор набора параметров
+
 ## CONTENT
+
+Идентификатор набора параметров
 
 Тип: stappler::xenolith::StateId
 
@@ -239,7 +356,11 @@ Title: XL2d.h
 
 ## BRIEF
 
+Смещение индекса градиента
+
 ## CONTENT
+
+Смещение индекса градиента
 
 Тип: uint32_t
 
@@ -248,7 +369,11 @@ Title: XL2d.h
 
 ## BRIEF
 
+Число вершин градиента
+
 ## CONTENT
+
+Число вершин градиента
 
 Тип: uint32_t
 
@@ -257,7 +382,11 @@ Title: XL2d.h
 
 ## BRIEF
 
+Данные набора вершин
+
 ## CONTENT
+
+Данные набора вершин
 
 Базовые классы:
 * Ref
@@ -267,7 +396,11 @@ Title: XL2d.h
 
 ## BRIEF
 
+Данные вершин
+
 ## CONTENT
+
+Данные вершин
 
 Тип: Vector<stappler::xenolith::basic2d::Vertex>
 
@@ -276,7 +409,11 @@ Title: XL2d.h
 
 ## BRIEF
 
+Индексы вершин
+
 ## CONTENT
+
+Индексы вершин
 
 Тип: Vector<uint32_t>
 
@@ -285,14 +422,22 @@ Title: XL2d.h
 
 ## BRIEF
 
+Данные трансформированных вершин
+
 ## CONTENT
+
+Данные трансформированных вершин
 
 
 # ::stappler::xenolith::basic2d::TransformVertexData::transform
 
 ## BRIEF
 
+Матрица трансформации
+
 ## CONTENT
+
+Матрица трансформации
 
 Тип: stappler::geom::Mat4
 
@@ -301,7 +446,11 @@ Title: XL2d.h
 
 ## BRIEF
 
+Данные вершин
+
 ## CONTENT
+
+Данные вершин
 
 Тип: Rc<stappler::xenolith::basic2d::VertexData>
 
@@ -310,7 +459,11 @@ Title: XL2d.h
 
 ## BRIEF
 
+Перечисление форм для SDF
+
 ## CONTENT
+
+Перечисление форм для SDF
 
 Значения:
 * Circle2D
@@ -324,14 +477,22 @@ Title: XL2d.h
 
 ## BRIEF
 
+Базовый SDF примитив
+
 ## CONTENT
+
+Базовый SDF примитив
 
 
 # ::stappler::xenolith::basic2d::SdfPrimitive2D::origin
 
 ## BRIEF
 
+Исходная точка
+
 ## CONTENT
+
+Исходная точка
 
 Тип: stappler::geom::Vec2
 
@@ -340,7 +501,11 @@ Title: XL2d.h
 
 ## BRIEF
 
+Примитив круга SDF
+
 ## CONTENT
+
+Примитив круга SDF
 
 Базовые классы:
 * SdfPrimitive2D
@@ -350,7 +515,11 @@ Title: XL2d.h
 
 ## BRIEF
 
+Радиус круга
+
 ## CONTENT
+
+Радиус круга
 
 Тип: float
 
@@ -359,7 +528,11 @@ Title: XL2d.h
 
 ## BRIEF
 
+Примитив прямоугольника SDF
+
 ## CONTENT
+
+Примитив прямоугольника SDF
 
 Базовые классы:
 * SdfPrimitive2D
@@ -369,7 +542,11 @@ Title: XL2d.h
 
 ## BRIEF
 
+Размер прямоугольника
+
 ## CONTENT
+
+Размер прямоугольника
 
 Тип: stappler::geom::Size2
 
@@ -378,7 +555,11 @@ Title: XL2d.h
 
 ## BRIEF
 
+Примитив прямоугольника со скруглёнными углами SDF
+
 ## CONTENT
+
+Примитив прямоугольника со скруглёнными углами SDF
 
 Базовые классы:
 * SdfPrimitive2D
@@ -388,7 +569,11 @@ Title: XL2d.h
 
 ## BRIEF
 
+Размер прямоугольника
+
 ## CONTENT
+
+Размер прямоугольника
 
 Тип: stappler::geom::Size2
 
@@ -397,7 +582,11 @@ Title: XL2d.h
 
 ## BRIEF
 
+Набор радиусов скругления
+
 ## CONTENT
+
+Набор радиусов скругления
 
 Тип: stappler::geom::Vec4
 
@@ -406,7 +595,11 @@ Title: XL2d.h
 
 ## BRIEF
 
+Тип треугольника SDF
+
 ## CONTENT
+
+Тип треугольника SDF
 
 Базовые классы:
 * SdfPrimitive2D
@@ -416,7 +609,11 @@ Title: XL2d.h
 
 ## BRIEF
 
+Вершина треугольника
+
 ## CONTENT
+
+Вершина треугольника
 
 Тип: stappler::geom::Vec2
 
@@ -425,7 +622,11 @@ Title: XL2d.h
 
 ## BRIEF
 
+Вершина треугольника
+
 ## CONTENT
+
+Вершина треугольника
 
 Тип: stappler::geom::Vec2
 
@@ -434,7 +635,11 @@ Title: XL2d.h
 
 ## BRIEF
 
+Вершина треугольника
+
 ## CONTENT
+
+Вершина треугольника
 
 Тип: stappler::geom::Vec2
 
@@ -443,14 +648,22 @@ Title: XL2d.h
 
 ## BRIEF
 
+Тип полигона SDF
+
 ## CONTENT
+
+Тип полигона SDF
 
 
 # ::stappler::xenolith::basic2d::SdfPolygon2D::points
 
 ## BRIEF
 
+Точки полигона
+
 ## CONTENT
+
+Точки полигона
 
 Тип: SpanView<stappler::geom::Vec2>
 
@@ -459,14 +672,22 @@ Title: XL2d.h
 
 ## BRIEF
 
+Заголовок примитива SDF
+
 ## CONTENT
+
+Заголовок примитива SDF
 
 
 # ::stappler::xenolith::basic2d::SdfPrimitive2DHeader::type
 
 ## BRIEF
 
+Тип примитива
+
 ## CONTENT
+
+Тип примитива
 
 Тип: stappler::xenolith::basic2d::SdfShape
 
@@ -475,7 +696,11 @@ Title: XL2d.h
 
 ## BRIEF
 
+Данные объекта
+
 ## CONTENT
+
+Данные объекта
 
 Тип: stappler::BytesView
 
@@ -484,7 +709,11 @@ Title: XL2d.h
 
 ## BRIEF
 
+Тип отложенно вычисляемого набора вершин
+
 ## CONTENT
+
+Тип отложенно вычисляемого набора вершин. Класс потокобезопасен.
 
 Базовые классы:
 * Ref
@@ -494,18 +723,25 @@ Title: XL2d.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
 
+Деструктор
 
 # ::stappler::xenolith::basic2d::DeferredVertexResult::getData()
 
 ## BRIEF
 
+Возвращает готовые данные
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает готовые данные. Блокируется до готовности.
 
 Возвращает:
 * SpanView<stappler::xenolith::basic2d::TransformVertexData>
@@ -514,9 +750,13 @@ Title: XL2d.h
 
 ## BRIEF
 
+Проверяет готовность данных
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет готовность данных
 
 Возвращает:
 * bool
@@ -525,9 +765,13 @@ Title: XL2d.h
 
 ## BRIEF
 
+Проверяет, находится ли структура в режиме ожидания
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, находится ли структура в режиме ожидания
 
 Возвращает:
 * bool
@@ -536,18 +780,26 @@ Title: XL2d.h
 
 ## BRIEF
 
+Обрабатывает событие готовности данных
+
 ## CONTENT
 
 Доступ: public
+
+Обрабатывает событие готовности данных
 
 
 # ::stappler::xenolith::basic2d::DeferredVertexResult::_waitOnReady
 
 ## BRIEF
 
+Флаг режима ожидания
+
 ## CONTENT
 
 Доступ: protected
+
+Флаг режима ожидания
 
 Тип: bool
 
@@ -556,9 +808,13 @@ Title: XL2d.h
 
 ## BRIEF
 
+Флаг готовности
+
 ## CONTENT
 
 Доступ: protected
+
+Флаг готовности
 
 Тип: std::atomic<bool>
 
@@ -567,14 +823,22 @@ Title: XL2d.h
 
 ## BRIEF
 
+Данные для системы освещения
+
 ## CONTENT
+
+Данные для системы освещения
 
 
 # ::stappler::xenolith::basic2d::ShadowLightInput::globalColor
 
 ## BRIEF
 
+Цвет глобального освещения
+
 ## CONTENT
+
+Цвет глобального освещения
 
 Тип: stappler::geom::Color4F
 
@@ -583,7 +847,11 @@ Title: XL2d.h
 
 ## BRIEF
 
+Число источников света окружения
+
 ## CONTENT
+
+Число источников света окружения
 
 Тип: uint32_t
 
@@ -592,7 +860,11 @@ Title: XL2d.h
 
 ## BRIEF
 
+Число направленных источников света
+
 ## CONTENT
+
+Число направленных источников света
 
 Тип: uint32_t
 
@@ -601,7 +873,11 @@ Title: XL2d.h
 
 ## BRIEF
 
+Плотность пикселей на сцене
+
 ## CONTENT
+
+Плотность пикселей на сцене
 
 Тип: float
 
@@ -610,7 +886,11 @@ Title: XL2d.h
 
 ## BRIEF
 
+Коэффициет снижения плотности пикселенй для карты теней
+
 ## CONTENT
+
+Коэффициет снижения плотности пикселенй для карты теней
 
 Тип: float
 
@@ -619,7 +899,11 @@ Title: XL2d.h
 
 ## BRIEF
 
+Максимальный индекс освещённости
+
 ## CONTENT
+
+Максимальный индекс освещённости. Влияет на цвет самой яркой точки сцены. Может вычисляться автоматически.
 
 Тип: float
 
@@ -628,7 +912,11 @@ Title: XL2d.h
 
 ## BRIEF
 
+Заполнитель
+
 ## CONTENT
+
+Заполнитель
 
 Тип: float
 
@@ -637,7 +925,11 @@ Title: XL2d.h
 
 ## BRIEF
 
+Данные источников света окружения
+
 ## CONTENT
+
+Данные источников света окружения
 
 Тип: stappler::xenolith::basic2d::AmbientLightData[16]
 
@@ -646,7 +938,11 @@ Title: XL2d.h
 
 ## BRIEF
 
+Данные направленных источников цвета
+
 ## CONTENT
+
+Данные направленных источников цвета
 
 Тип: stappler::xenolith::basic2d::DirectLightData[16]
 
@@ -655,12 +951,16 @@ Title: XL2d.h
 
 ## BRIEF
 
+Добавляет свет окружения
+
 ## CONTENT
 
+Добавляет свет окружения
+
 Параметры:
-* const stappler::geom::Vec4&
-* const stappler::geom::Color4F&
-* bool
+* const stappler::geom::Vec4& - направление света и коэффициент рассивания
+* const stappler::geom::Color4F& - цвет света
+* bool - флаг смягчения
 
 Возвращает:
 * bool
@@ -669,12 +969,16 @@ Title: XL2d.h
 
 ## BRIEF
 
+Добавляет направленный свет
+
 ## CONTENT
 
+Добавляет направленный свет
+
 Параметры:
-* const stappler::geom::Vec4&
-* const stappler::geom::Color4F&
-* const stappler::geom::Vec4&
+* const stappler::geom::Vec4&  направление света и коэффициент рассивания
+* const stappler::geom::Color4F&- цвет света
+* const stappler::geom::Vec4& - позиция и радиус источника света
 
 Возвращает:
 * bool
@@ -683,10 +987,14 @@ Title: XL2d.h
 
 ## BRIEF
 
+Возвращает размер карты теней для сцены
+
 ## CONTENT
 
 Параметры:
 * stappler::geom::Size2
+
+Возвращает размер карты теней для сцены
 
 Возвращает:
 * stappler::geom::Extent2
@@ -695,7 +1003,14 @@ Title: XL2d.h
 
 ## BRIEF
 
+Возвращает размер карты теней для сцены
+
 ## CONTENT
+
+Параметры:
+* stappler::geom::Size2
+
+Возвращает размер карты теней для сцены
 
 Параметры:
 * stappler::geom::Size2

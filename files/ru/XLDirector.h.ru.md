@@ -5,14 +5,22 @@ Title: XLDirector.h
 
 ## BRIEF
 
+Заголовок типа режиссёра
+
 ## CONTENT
+
+Заголовок типа режиссёра
 
 
 # ::stappler::xenolith::Director
 
 ## BRIEF
 
+Тип режиссёра
+
 ## CONTENT
+
+Тип режиссёра. Режиссёр связывает окно со сценой.
 
 Базовые классы:
 * Ref
@@ -22,36 +30,50 @@ Title: XLDirector.h
 
 ## BRIEF
 
+Тип запроса на кадр
+
 ## CONTENT
 
 Доступ: public
 
+Тип запроса на кадр
 
 # ::stappler::xenolith::Director::~Director()
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
 
+Деструктор
 
 # ::stappler::xenolith::Director::Director()
 
 ## BRIEF
 
+Конструктор
+
 ## CONTENT
 
 Доступ: public
+
+Конструктор
 
 
 # ::stappler::xenolith::Director::init(stappler::xenolith::Application*,core::FrameContraints const&,stappler::xenolith::View*)
 
 ## BRIEF
 
+Создаёт режиссёра
+
 ## CONTENT
 
 Доступ: public
+
+Создаёт режиссёра
 
 Параметры:
 * stappler::xenolith::Application*
@@ -65,9 +87,13 @@ Title: XLDirector.h
 
 ## BRIEF
 
+Запускает сцену
+
 ## CONTENT
 
 Доступ: public
+
+Запускает сцену
 
 Параметры:
 * Rc<stappler::xenolith::Scene>&&
@@ -77,9 +103,13 @@ Title: XLDirector.h
 
 ## BRIEF
 
+Запрашивает рисование кадра
+
 ## CONTENT
 
 Доступ: public
+
+Запрашивает рисование кадра
 
 Параметры:
 * Rc<stappler::xenolith::Director::FrameRequest> const&
@@ -91,9 +121,13 @@ Title: XLDirector.h
 
 ## BRIEF
 
+Обновляет сцену, запускает действия и обновления по расписанию
+
 ## CONTENT
 
 Доступ: public
+
+Обновляет сцену, запускает действия и обновления по расписанию
 
 Параметры:
 * uint64_t
@@ -103,18 +137,26 @@ Title: XLDirector.h
 
 ## BRIEF
 
+Завершает работу режиссёра
+
 ## CONTENT
 
 Доступ: public
+
+Завершает работу режиссёра
 
 
 # ::stappler::xenolith::Director::getApplication() const
 
 ## BRIEF
 
+Возвращает приложение
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает приложение
 
 Возвращает:
 * stappler::xenolith::Application*
@@ -123,9 +165,13 @@ Title: XLDirector.h
 
 ## BRIEF
 
+Возвращает графический цикл
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает графический цикл
 
 Возвращает:
 * core::Loop*
@@ -134,9 +180,13 @@ Title: XLDirector.h
 
 ## BRIEF
 
+Возвращает виртуальное окно
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает виртуальное окно
 
 Возвращает:
 * stappler::xenolith::View*
@@ -145,9 +195,13 @@ Title: XLDirector.h
 
 ## BRIEF
 
+Возвращает объект расписания
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает объект расписания
 
 Возвращает:
 * stappler::xenolith::Scheduler*
@@ -156,9 +210,13 @@ Title: XLDirector.h
 
 ## BRIEF
 
+Возвращает объект управления действиями
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает объект управления действиями
 
 Возвращает:
 * stappler::xenolith::ActionManager*
@@ -167,9 +225,13 @@ Title: XLDirector.h
 
 ## BRIEF
 
+Возвращает диспетчер ввода
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает диспетчер ввода
 
 Возвращает:
 * stappler::xenolith::InputDispatcher*
@@ -178,9 +240,13 @@ Title: XLDirector.h
 
 ## BRIEF
 
+Возвращает диспетчер текстового ввода
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает диспетчер текстового ввода
 
 Возвращает:
 * stappler::xenolith::TextInputManager*
@@ -189,9 +255,13 @@ Title: XLDirector.h
 
 ## BRIEF
 
+Возвращает текущую сцену
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает текущую сцену
 
 Возвращает:
 * Rc<stappler::xenolith::Scene> const&
@@ -200,9 +270,13 @@ Title: XLDirector.h
 
 ## BRIEF
 
+Возвращает кеш ресурсов
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает кеш ресурсов
 
 Возвращает:
 * Rc<stappler::xenolith::ResourceCache> const&
@@ -211,9 +285,13 @@ Title: XLDirector.h
 
 ## BRIEF
 
+Возвращает базовую матрицу проекции
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает базовую матрицу проекции
 
 Возвращает:
 * const stappler::geom::Mat4&
@@ -222,9 +300,13 @@ Title: XLDirector.h
 
 ## BRIEF
 
+Возвращает текущие ограничения кадра
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает текущие ограничения кадра
 
 Возвращает:
 * core::FrameContraints const&
@@ -233,9 +315,13 @@ Title: XLDirector.h
 
 ## BRIEF
 
+Добавляет статистику рисования предыдущего кадра
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет статистику рисования предыдущего кадра
 
 Параметры:
 * stappler::xenolith::DrawStat const&
@@ -245,9 +331,13 @@ Title: XLDirector.h
 
 ## BRIEF
 
+Возвращает статистику рисования последнего кадра
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает статистику рисования последнего кадра
 
 Возвращает:
 * stappler::xenolith::DrawStat const&
@@ -256,9 +346,13 @@ Title: XLDirector.h
 
 ## BRIEF
 
+Возвращает последнее значение кадров в секунду
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает последнее значение кадров в секунду
 
 Возвращает:
 * float
@@ -267,9 +361,13 @@ Title: XLDirector.h
 
 ## BRIEF
 
+Возвращает среднее значение кадров в секунду
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает среднее значение кадров в секунду
 
 Возвращает:
 * float
@@ -278,9 +376,13 @@ Title: XLDirector.h
 
 ## BRIEF
 
+Возвращает время выполнения последнего кадра
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает время выполнения последнего кадра
 
 Возвращает:
 * float
@@ -289,9 +391,13 @@ Title: XLDirector.h
 
 ## BRIEF
 
+Возвращает время обработки последнего кадра
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает время обработки последнего кадра
 
 Возвращает:
 * float
@@ -300,9 +406,13 @@ Title: XLDirector.h
 
 ## BRIEF
 
+Возвращает время обработки директором последнего кадра
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает время обработки директором последнего кадра
 
 Возвращает:
 * float
@@ -311,9 +421,13 @@ Title: XLDirector.h
 
 ## BRIEF
 
+Добавляет объект для освобождения после обработки кадра
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет объект для освобождения после обработки кадра
 
 Параметры:
 * stappler::mem_std::Ref*
@@ -323,38 +437,69 @@ Title: XLDirector.h
 
 ## BRIEF
 
+Останавливает работу директора
+
 ## CONTENT
 
 Доступ: protected
+
+Останавливает работу директора
 
 
 # ::stappler::xenolith::Director::updateGeneralTransform()
 
 ## BRIEF
 
+Обновляет матрицу трансформации
+
 ## CONTENT
 
 Доступ: protected
+
+Обновляет матрицу трансформации
 
 
 # ::stappler::xenolith::Director::hasActiveInteractions()
 
 ## BRIEF
 
+Проверяет, есть ли активные взаимодействия, требующие постоянной обработки
+
 ## CONTENT
 
 Доступ: protected
 
+Проверяет, есть ли активные взаимодействия, требующие постоянной обработки
+
 Возвращает:
 * bool
+
+# ::stappler::xenolith::Director::setFrameConstraints(core::FrameContraints const&)
+
+## BRIEF
+
+Устанавливает ограничения кадра
+
+## CONTENT
+
+Доступ: public
+
+Устанавливает ограничения кадра
+
+Параметры:
+* core::FrameContraints const&
 
 # ::stappler::xenolith::Director::_mainLoop
 
 ## BRIEF
 
+Интерфейс основного цикла событий
+
 ## CONTENT
 
 Доступ: protected
+
+Интерфейс основного цикла событий
 
 Тип: Rc<stappler::xenolith::Application>
 
@@ -363,9 +508,13 @@ Title: XLDirector.h
 
 ## BRIEF
 
+Виртуальное окно
+
 ## CONTENT
 
 Доступ: protected
+
+Виртуальное окно
 
 Тип: stappler::xenolith::View*
 
@@ -374,9 +523,13 @@ Title: XLDirector.h
 
 ## BRIEF
 
+Ограничения кадра
+
 ## CONTENT
 
 Доступ: protected
+
+Ограничения кадра
 
 Тип: core::FrameContraints
 
@@ -385,9 +538,13 @@ Title: XLDirector.h
 
 ## BRIEF
 
+Время начала работы директора
+
 ## CONTENT
 
 Доступ: protected
+
+Время начала работы директора
 
 Тип: uint64_t
 
@@ -396,9 +553,13 @@ Title: XLDirector.h
 
 ## BRIEF
 
+Время последнего обновления
+
 ## CONTENT
 
 Доступ: protected
+
+Время последнего обновления
 
 Тип: stappler::xenolith::UpdateTime
 
@@ -407,9 +568,13 @@ Title: XLDirector.h
 
 ## BRIEF
 
+Статистика последнего кадра
+
 ## CONTENT
 
 Доступ: protected
+
+Статистика последнего кадра
 
 Тип: stappler::xenolith::DrawStat
 
@@ -418,9 +583,13 @@ Title: XLDirector.h
 
 ## BRIEF
 
+Текущая сцена
+
 ## CONTENT
 
 Доступ: protected
+
+Текущая сцена
 
 Тип: Rc<stappler::xenolith::Scene>
 
@@ -429,9 +598,13 @@ Title: XLDirector.h
 
 ## BRIEF
 
+Сцена для следующего кадра
+
 ## CONTENT
 
 Доступ: protected
+
+Сцена для следующего кадра
 
 Тип: Rc<stappler::xenolith::Scene>
 
@@ -440,9 +613,13 @@ Title: XLDirector.h
 
 ## BRIEF
 
+Текущая проекция
+
 ## CONTENT
 
 Доступ: protected
+
+Текущая проекция
 
 Тип: stappler::geom::Mat4
 
@@ -451,9 +628,13 @@ Title: XLDirector.h
 
 ## BRIEF
 
+Пул памяти для кадра режиссёра
+
 ## CONTENT
 
 Доступ: protected
+
+Пул памяти для кадра режиссёра
 
 Тип: Rc<stappler::xenolith::PoolRef>
 
@@ -462,9 +643,13 @@ Title: XLDirector.h
 
 ## BRIEF
 
+Интерфейс расписания
+
 ## CONTENT
 
 Доступ: protected
+
+Интерфейс расписания
 
 Тип: Rc<stappler::xenolith::Scheduler>
 
@@ -473,9 +658,13 @@ Title: XLDirector.h
 
 ## BRIEF
 
+Интерфейс управления действиями
+
 ## CONTENT
 
 Доступ: protected
+
+Интерфейс управления действиями
 
 Тип: Rc<stappler::xenolith::ActionManager>
 
@@ -484,9 +673,13 @@ Title: XLDirector.h
 
 ## BRIEF
 
+Диспетчер ввода
+
 ## CONTENT
 
 Доступ: protected
+
+Диспетчер ввода
 
 Тип: Rc<stappler::xenolith::InputDispatcher>
 
@@ -495,9 +688,13 @@ Title: XLDirector.h
 
 ## BRIEF
 
+Список объектов для освобождения после кадра
+
 ## CONTENT
 
 Доступ: protected
+
+Список объектов для освобождения после кадра
 
 Тип: Vector<Rc<stappler::mem_std::Ref>>
 
@@ -506,9 +703,13 @@ Title: XLDirector.h
 
 ## BRIEF
 
+Среднее время кадра
+
 ## CONTENT
 
 Доступ: protected
+
+Среднее время кадра
 
 Тип: math::MovingAverage<20, uint64_t>
 
@@ -517,8 +718,12 @@ Title: XLDirector.h
 
 ## BRIEF
 
+Вычисленное значение среднего времени кадра
+
 ## CONTENT
 
 Доступ: protected
+
+Вычисленное значение среднего времени кадра
 
 Тип: uint64_t

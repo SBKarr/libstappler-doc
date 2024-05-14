@@ -855,3 +855,46 @@ Cookies
 Список форматов для получения
 
 Тип: Vector<Pair<stappler::StringView, float>>
+
+
+# ::stappler::web::RequestController::finalize()
+
+## BRIEF
+
+Завершает работу с запросом
+
+## CONTENT
+
+Доступ: public
+
+Завершает работу с запросом
+
+# ::stappler::web::RequestController::pushErrorMessage(stappler::mem_pool::Value&&)
+
+## BRIEF
+
+Добавляет сообщение об ошибке к запросу
+
+## CONTENT
+
+Доступ: public
+
+Добавляет сообщение об ошибке к запросу
+
+Параметры:
+* stappler::mem_pool::Value&&
+
+# ::stappler::web::RequestController::pushDebugMessage(stappler::mem_pool::Value&&)
+
+## BRIEF
+
+Добавляет отладочное сообщение к запросу
+
+## CONTENT
+
+Доступ: public
+
+Добавляет отладочное сообщение к запросу
+
+Параметры:
+* stappler::mem_pool::Value&&

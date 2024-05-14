@@ -26,26 +26,6 @@ Title: SPWebWebsocketConnection.h
 * AllocBase
 
 
-# ::stappler::web::WebsocketConnection::create(stappler::mempool::base::allocator_t*,stappler::mempool::base::pool_t*,stappler::web::Request const&)
-
-## BRIEF
-
-Создаёт соединение с вебсокетом
-
-## CONTENT
-
-Доступ: public
-
-Создаёт соединение с вебсокетом
-
-Параметры:
-* stappler::mempool::base::allocator_t*
-* stappler::mempool::base::pool_t*
-* stappler::web::Request const& - базовый запрос
-
-Возвращает:
-* stappler::web::WebsocketConnection*
-
 # ::stappler::web::WebsocketConnection::destroy(stappler::web::WebsocketConnection*)
 
 ## BRIEF

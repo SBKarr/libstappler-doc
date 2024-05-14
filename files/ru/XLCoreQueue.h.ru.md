@@ -2104,58 +2104,6 @@ Title: XLCoreQueue.h
 Возвращает:
 * stappler::xenolith::core::ImageData const*
 
-# ::stappler::xenolith::core::Builder::getPool() const
-
-## BRIEF
-
-Возвращает пул памяти для сборки
-
-## CONTENT
-
-Доступ: protected
-
-Возвращает пул памяти для сборки
-
-Возвращает:
-* memory::pool_t*
-
-# ::stappler::xenolith::core::Builder::getPassData(Rc<stappler::xenolith::core::QueuePass> const&) const
-
-## BRIEF
-
-Возвращает данные прохода
-
-## CONTENT
-
-Доступ: protected
-
-Возвращает данные прохода
-
-Параметры:
-* Rc<stappler::xenolith::core::QueuePass> const&
-
-Возвращает:
-* stappler::xenolith::core::QueuePassData const*
-
-# ::stappler::xenolith::core::Builder::getSubpassData(Rc<stappler::xenolith::core::QueuePass> const&,uint32_t) const
-
-## BRIEF
-
-Возвращает данные подпрохода
-
-## CONTENT
-
-Доступ: protected
-
-Возвращает данные подпрохода
-
-Параметры:
-* Rc<stappler::xenolith::core::QueuePass> const&
-* uint32_t
-
-Возвращает:
-* stappler::xenolith::core::SubpassData const*
-
 # ::stappler::xenolith::core::Builder::_data
 
 ## BRIEF
@@ -2217,3 +2165,65 @@ Title: XLCoreQueue.h
 
 Возвращает:
 * T const*
+
+# ::stappler::xenolith::core::Queue::attachFrame(stappler::xenolith::core::Queue::FrameHandle*)
+
+## BRIEF
+
+Соединяет кадр с очередью
+
+## CONTENT
+
+Доступ: public
+
+Соединяет кадр с очередью
+
+Параметры:
+* stappler::xenolith::core::Queue::FrameHandle*
+
+
+# ::stappler::xenolith::core::Queue::detachFrame(stappler::xenolith::core::Queue::FrameHandle*)
+
+## BRIEF
+
+Отсоединяет кадр от очереди
+
+## CONTENT
+
+Доступ: public
+
+Отсоединяет кадр от очереди
+
+Параметры:
+* stappler::xenolith::core::Queue::FrameHandle*
+
+# ::stappler::xenolith::core::Builder::setAttachCallback(Function<void (const stappler::xenolith::core::Queue::FrameHandle *)>&&)
+
+## BRIEF
+
+Устанавливает функцию, вызываемую при соединении кадра с очередью
+
+## CONTENT
+
+Доступ: public
+
+Устанавливает функцию, вызываемую при соединении кадра с очередью
+
+Параметры:
+* Function<void (const stappler::xenolith::core::Queue::FrameHandle *)>&&
+
+
+# ::stappler::xenolith::core::Builder::setDetachCallback(Function<void (const stappler::xenolith::core::Queue::FrameHandle *)>&&)
+
+## BRIEF
+
+Устанавливает функцию, вызываемую при отсоединении кадра
+
+## CONTENT
+
+Доступ: public
+
+Устанавливает функцию, вызываемую при отсоединении кадра
+
+Параметры:
+* Function<void (const stappler::xenolith::core::Queue::FrameHandle *)>&&

@@ -171,6 +171,20 @@ Title: XLScheduler.h
 * stappler::xenolith::UpdateTime const&
 
 
+# ::stappler::xenolith::Scheduler::isPaused(void*) const
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* void*
+
+Возвращает:
+* bool
+
 # ::stappler::xenolith::Scheduler::resume(void*)
 
 ## BRIEF

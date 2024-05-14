@@ -112,7 +112,7 @@ Title: SPDataEncodeCbor.h
 * stappler::StringView - имя файла для записи
 
 
-# ::stappler::data::cbor::Encoder<typename>::Encoder(std::ostream*)
+# ::stappler::data::cbor::Encoder<typename>::Encoder(Callback<void (stappler::BytesView)> const*)
 
 ## BRIEF
 
@@ -123,7 +123,7 @@ Title: SPDataEncodeCbor.h
 Инициализирует кодировщик с выходным потоком
 
 Параметры:
-* std::ostream* - выходной поток
+* Callback<void (stappler::BytesView)> const* - выходной поток
 
 
 # ::stappler::data::cbor::Encoder<typename>::Encoder(bool,size_t)
@@ -483,7 +483,7 @@ Title: SPDataEncodeCbor.h
 Возвращает:
 * typename Interface::BytesType
 
-# ::stappler::data::cbor::write<typename>(std::ostream&,ValueTemplate<Interface> const&)
+# ::stappler::data::cbor::write<typename>(Callback<void (stappler::BytesView)> const&,ValueTemplate<Interface> const&)
 
 ## BRIEF
 
@@ -497,7 +497,7 @@ Title: SPDataEncodeCbor.h
 * typename Interface - интерфейс памяти
 
 Параметры:
-* std::ostream& - выходной поток
+* Callback<void (stappler::BytesView)> const& - выходной поток
 * ValueTemplate<Interface> const&
 
 Возвращает:

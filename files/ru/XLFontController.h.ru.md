@@ -5,21 +5,32 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Заголовок контроллера ширфта
+
 ## CONTENT
 
+Заголовок контроллера ширфта
 
 # ::stappler::xenolith::font::FontUpdateRequest
 
 ## BRIEF
 
+Тип запроса на обновление данных шрифта
+
 ## CONTENT
+
+Тип запроса на обновление данных шрифта
 
 
 # ::stappler::xenolith::font::FontUpdateRequest::object
 
 ## BRIEF
 
+Объект шрифта
+
 ## CONTENT
+
+Объект шрифта
 
 Тип: Rc<stappler::font::FontFaceObject>
 
@@ -28,7 +39,11 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Используемые символы шрифта
+
 ## CONTENT
+
+Используемые символы шрифта
 
 Тип: Vector<char32_t>
 
@@ -37,7 +52,11 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Флаг постоянного хранения данных
+
 ## CONTENT
+
+Флаг постоянного хранения данных
 
 Тип: bool
 
@@ -46,7 +65,11 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Тип контроллера шрифта
+
 ## CONTENT
+
+Тип контроллера шрифта. Контроллер служит для получения укладок по параметрам, обновления избражения с данными шрифта, работы с зависимостями для ожидания загрузки данных на устройство.
 
 Базовые классы:
 * ApplicationExtension
@@ -56,9 +79,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Событие загрузки контроллера
+
 ## CONTENT
 
 Доступ: public
+
+Событие загрузки контроллера
 
 Тип: stappler::xenolith::EventHeader
 
@@ -67,9 +94,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Событие обновления контроллера
+
 ## CONTENT
 
 Доступ: public
+
+Событие обновления контроллера
 
 Тип: stappler::xenolith::EventHeader
 
@@ -78,16 +109,24 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Источник данных шрифта
+
 ## CONTENT
 
 Доступ: public
+
+Источник данных шрифта
 
 
 # ::stappler::xenolith::font::FontController::FontSource::fontFilePath
 
 ## BRIEF
 
+Путь к файлу шрифта
+
 ## CONTENT
+
+Путь к файлу шрифта
 
 Тип: stappler::mem_std::String
 
@@ -96,7 +135,11 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Данные шрифта в памяти
+
 ## CONTENT
+
+Данные шрифта в памяти
 
 Тип: stappler::mem_std::Bytes
 
@@ -105,7 +148,11 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Внешние данные в памяти
+
 ## CONTENT
+
+Внешние данные в памяти
 
 Тип: stappler::BytesView
 
@@ -114,7 +161,11 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Функция для получения данных
+
 ## CONTENT
+
+Функция для получения данных
 
 Тип: Function<stappler::mem_std::Bytes ()>
 
@@ -123,7 +174,11 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Источник данных
+
 ## CONTENT
+
+Источник данных
 
 Тип: Rc<stappler::font::FontFaceData>
 
@@ -132,7 +187,11 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Параметры шрифта
+
 ## CONTENT
+
+Параметры шрифта
 
 Тип: stappler::font::FontLayoutParameters
 
@@ -141,7 +200,11 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Флаг, определяющий предопределённые параметры
+
 ## CONTENT
+
+Флаг, определяющий предопределённые параметры
 
 Тип: bool
 
@@ -150,16 +213,24 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Запрос на семейство шрифтов
+
 ## CONTENT
 
 Доступ: public
+
+Запрос на семейство шрифтов
 
 
 # ::stappler::xenolith::font::FontController::FamilyQuery::family
 
 ## BRIEF
 
+Имя семейства
+
 ## CONTENT
+
+Имя семейства
 
 Тип: stappler::mem_std::String
 
@@ -168,7 +239,11 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Источники данных для семейства
+
 ## CONTENT
+
+Источники данных для семейства
 
 Тип: Vector<const stappler::xenolith::font::FontController::FontSource *>
 
@@ -177,7 +252,11 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Флаг добавления в начало списка
+
 ## CONTENT
+
+Флаг добавления в начало списка
 
 Тип: bool
 
@@ -186,16 +265,24 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Определение семейства шрифтов
+
 ## CONTENT
 
 Доступ: public
+
+Определение семейства шрифтов
 
 
 # ::stappler::xenolith::font::FontController::FamilySpec::data
 
 ## BRIEF
 
+Набор данных
+
 ## CONTENT
+
+Набор данных
 
 Тип: Vector<Rc<stappler::font::FontFaceData>>
 
@@ -204,27 +291,39 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Сборщик шрифтового контроллера
+
 ## CONTENT
 
 Доступ: public
+
+Сборщик шрифтового контроллера
 
 
 # ::stappler::xenolith::font::FontController::Builder::~Builder()
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::font::FontController::Builder::Builder(stappler::StringView)
 
 ## BRIEF
 
+Конструктор
+
 ## CONTENT
 
 Доступ: public
+
+Конструктор
 
 Параметры:
 * stappler::StringView
@@ -234,9 +333,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Конструктор для обновления контроллера
+
 ## CONTENT
 
 Доступ: public
+
+Конструктор для обновления контроллера
 
 Параметры:
 * stappler::xenolith::font::FontController*
@@ -246,9 +349,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Конструктор перемещения
+
 ## CONTENT
 
 Доступ: public
+
+Конструктор перемещения
 
 Параметры:
 * stappler::xenolith::font::FontController::Builder&&
@@ -258,9 +365,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Оператор перемещения
+
 ## CONTENT
 
 Доступ: public
+
+Оператор перемещения
 
 Параметры:
 * stappler::xenolith::font::FontController::Builder&&
@@ -272,9 +383,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Конструктор копирования
+
 ## CONTENT
 
 Доступ: public
+
+Конструктор копирования
 
 Параметры:
 * stappler::xenolith::font::FontController::Builder const&
@@ -284,9 +399,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Оператор копирования
+
 ## CONTENT
 
 Доступ: public
+
+Оператор копирования
 
 Параметры:
 * stappler::xenolith::font::FontController::Builder const&
@@ -298,9 +417,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Возвращает имя контроллера
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает имя контроллера
 
 Возвращает:
 * stappler::StringView
@@ -309,9 +432,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Возвращает целевой контроллер для обновления
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает целевой контроллер для обновления
 
 Возвращает:
 * stappler::xenolith::font::FontController*
@@ -320,9 +447,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Добавляет источник данных шрифта
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет источник данных шрифта
 
 Параметры:
 * stappler::StringView
@@ -335,9 +466,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Добавляет источник данных шрифта
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет источник данных шрифта
 
 Параметры:
 * stappler::StringView
@@ -350,9 +485,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Добавляет источник данных шрифта
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет источник данных шрифта
 
 Параметры:
 * stappler::StringView
@@ -365,9 +504,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Добавляет источник данных шрифта
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет источник данных шрифта
 
 Параметры:
 * stappler::StringView
@@ -380,9 +523,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Добавляет источник данных шрифта
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет источник данных шрифта с предопределёнными параметрами
 
 Параметры:
 * stappler::StringView
@@ -396,9 +543,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Добавляет источник данных шрифта
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет источник данных шрифта с предопределёнными параметрами
 
 Параметры:
 * stappler::StringView
@@ -412,9 +563,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Добавляет источник данных шрифта
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет источник данных шрифта с предопределёнными параметрами
 
 Параметры:
 * stappler::StringView
@@ -428,9 +583,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Добавляет источник данных шрифта
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет источник данных шрифта с предопределёнными параметрами
 
 Параметры:
 * stappler::StringView
@@ -444,9 +603,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Возвращает источник данных шрифта по имени
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает источник данных шрифта по имени
 
 Параметры:
 * stappler::StringView
@@ -458,14 +621,18 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Добавляет запрос на семейство шрифтов
+
 ## CONTENT
 
 Доступ: public
 
+Добавляет запрос на семейство шрифтов
+
 Параметры:
-* stappler::StringView
-* stappler::xenolith::font::FontController::FontSource const*
-* bool
+* stappler::StringView - имя семейства
+* stappler::xenolith::font::FontController::FontSource const* - источник данных
+* bool - флаг добавления в начало списка
 
 Возвращает:
 * stappler::xenolith::font::FontController::FamilyQuery const*
@@ -474,14 +641,18 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Добавляет запрос на семейство шрифтов
+
 ## CONTENT
 
 Доступ: public
 
+Добавляет запрос на семейство шрифтов
+
 Параметры:
-* stappler::StringView
+* stappler::StringView - имя семейства
 * Vector<const stappler::xenolith::font::FontController::FontSource *>&&
-* bool
+* bool - флаг добавления в начало списка
 
 Возвращает:
 * stappler::xenolith::font::FontController::FamilyQuery const*
@@ -490,9 +661,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Добавляет псевдоним для семейства шрифтов
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет псевдоним для семейства шрифтов
 
 Параметры:
 * stappler::StringView
@@ -505,9 +680,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Возвращает семейство шрифтов
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает семейство шрифтов
 
 Параметры:
 * stappler::StringView
@@ -519,9 +698,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Возвращает запросы данных
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает запросы данных
 
 Возвращает:
 * Map<stappler::mem_std::String, stappler::xenolith::font::FontController::FontSource>&
@@ -530,9 +713,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Возвращает семейства шрифтов
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает семейства шрифтов
 
 Возвращает:
 * Map<stappler::mem_std::String, stappler::xenolith::font::FontController::FamilyQuery>&
@@ -541,9 +728,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Возвращает псевдонимы
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает псевдонимы
 
 Возвращает:
 * Map<stappler::mem_std::String, stappler::mem_std::String>&
@@ -552,9 +743,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Возвращает внутренние данные
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает внутренние данные
 
 Возвращает:
 * stappler::xenolith::font::FontController::Builder::Data*
@@ -563,23 +758,31 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Добавляет источники к семейству
+
 ## CONTENT
 
 Доступ: protected
 
+Добавляет источники к семейству
+
 Параметры:
 * stappler::xenolith::font::FontController::FamilyQuery*
 * Vector<const stappler::xenolith::font::FontController::FontSource *>&&
-* bool
+* bool - флаг добавления к началу
 
 
 # ::stappler::xenolith::font::FontController::Builder::_data
 
 ## BRIEF
 
+Данные сборщика
+
 ## CONTENT
 
 Доступ: protected
+
+Данные сборщика
 
 Тип: stappler::xenolith::font::FontController::Builder::Data*
 
@@ -588,18 +791,25 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
 
+Деструктор
 
 # ::stappler::xenolith::font::FontController::init(Rc<stappler::xenolith::font::FontExtension> const&)
 
 ## BRIEF
 
+Создаёт шрифтовый контроллер
+
 ## CONTENT
 
 Доступ: public
+
+Создаёт шрифтовый контроллер
 
 Параметры:
 * Rc<stappler::xenolith::font::FontExtension> const&
@@ -611,9 +821,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Создаёт сборщик для изменения контроллера
+
 ## CONTENT
 
 Доступ: public
+
+Создаёт сборщик для изменения контроллера
 
 Параметры:
 * Callback<bool (FontController::Builder &)> const&
@@ -623,9 +837,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Инициализирует контроллер
+
 ## CONTENT
 
 Доступ: public
+
+Инициализирует контроллер
 
 Параметры:
 * stappler::xenolith::Application*
@@ -635,9 +853,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Деинициализирует контроллер
+
 ## CONTENT
 
 Доступ: public
+
+Деинициализирует контроллер
 
 Параметры:
 * stappler::xenolith::Application*
@@ -647,9 +869,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Проверяет, хагружен ли контроллер
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, хагружен ли контроллер
 
 Возвращает:
 * bool
@@ -658,9 +884,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Возвращает динамическое изображение с данными шрифта
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает динамическое изображение с данными шрифта
 
 Возвращает:
 * Rc<core::DynamicImage> const&
@@ -669,9 +899,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Возвращает текстуру для ристования шрифта
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает текстуру для ристования шрифта
 
 Возвращает:
 * Rc<stappler::xenolith::Texture> const&
@@ -680,9 +914,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Возвращает параметры укладки для параметров шрифта
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает параметры укладки для параметров шрифта
 
 Параметры:
 * stappler::font::FontParameters
@@ -694,9 +932,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Возвращает параметры укладки для параметров шрифта
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает параметры укладки для параметров шрифта
 
 Параметры:
 * stappler::font::FontParameters const&
@@ -709,9 +951,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Добавляет символы в текстуру шрифта
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет символы в текстуру шрифта
 
 Параметры:
 * Rc<stappler::font::FontFaceSet> const&
@@ -724,9 +970,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Возвращает индекс семейства по имени
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает индекс семейства по имени
 
 Параметры:
 * stappler::StringView
@@ -738,9 +988,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Возвращает имя семейства по индексу
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает имя семейства по индексу
 
 Параметры:
 * uint32_t
@@ -752,9 +1006,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Обновляет данные контроллера
+
 ## CONTENT
 
 Доступ: public
+
+Обновляет данные контроллера
 
 Параметры:
 * stappler::xenolith::Application*
@@ -765,9 +1023,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Добавляет данные шрифта
+
 ## CONTENT
 
 Доступ: protected
+
+Добавляет данные шрифта
 
 Параметры:
 * stappler::StringView
@@ -779,9 +1041,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Добавляет данные шрифта
+
 ## CONTENT
 
 Доступ: protected
+
+Добавляет данные шрифта
 
 Параметры:
 * stappler::StringView
@@ -793,9 +1059,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Добавляет псевдоним семейства
+
 ## CONTENT
 
 Доступ: protected
+
+Добавляет псевдоним семейства
 
 Параметры:
 * stappler::StringView
@@ -808,9 +1078,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Загружает динамическое изображение
+
 ## CONTENT
 
 Доступ: protected
+
+Загружает динамическое изображение
 
 Параметры:
 * Rc<core::DynamicImage>&&
@@ -820,9 +1094,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Устанавливает флаг загрузки
+
 ## CONTENT
 
 Доступ: protected
+
+Устанавливает флаг загрузки
 
 Параметры:
 * bool
@@ -832,18 +1110,26 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Отправляет событие обновления
+
 ## CONTENT
 
 Доступ: protected
+
+Отправляет событие обновления
 
 
 # ::stappler::xenolith::font::FontController::setAliases(Map<stappler::mem_std::String, stappler::mem_std::String>&&)
 
 ## BRIEF
 
+Устанавливает псевдонимы
+
 ## CONTENT
 
 Доступ: protected
+
+Устанавливает псевдонимы
 
 Параметры:
 * Map<stappler::mem_std::String, stappler::mem_std::String>&&
@@ -853,9 +1139,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Находит специализацию шрифта для параметров
+
 ## CONTENT
 
 Доступ: protected
+
+Находит специализацию шрифта для параметров
 
 Параметры:
 * stappler::xenolith::font::FontController::FamilySpec const&
@@ -869,18 +1159,26 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Удаляет неиспользуемые укладки
+
 ## CONTENT
 
 Доступ: protected
+
+Удаляет неиспользуемые укладки
 
 
 # ::stappler::xenolith::font::FontController::_loaded
 
 ## BRIEF
 
+Флаг загрузки
+
 ## CONTENT
 
 Доступ: protected
+
+Флаг загрузки
 
 Тип: bool
 
@@ -889,9 +1187,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Время обновления
+
 ## CONTENT
 
 Доступ: protected
+
+Время обновления
 
 Тип: std::atomic<uint64_t>
 
@@ -900,9 +1202,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Флаг допустимого периода неиспользования укладки
+
 ## CONTENT
 
 Доступ: protected
+
+Флаг допустимого периода неиспользования укладки
 
 Тип: stappler::TimeInterval
 
@@ -911,9 +1217,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Семейство шрифтов по умолчанию
+
 ## CONTENT
 
 Доступ: protected
+
+Семейство шрифтов по умолчанию
 
 Тип: stappler::mem_std::String
 
@@ -922,9 +1232,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Текстура
+
 ## CONTENT
 
 Доступ: protected
+
+Текстура
 
 Тип: Rc<stappler::xenolith::Texture>
 
@@ -933,9 +1247,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Изображение
+
 ## CONTENT
 
 Доступ: protected
+
+Изображение
 
 Тип: Rc<core::DynamicImage>
 
@@ -944,9 +1262,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Расширение
+
 ## CONTENT
 
 Доступ: protected
+
+Расширение
 
 Тип: Rc<stappler::xenolith::font::FontExtension>
 
@@ -955,9 +1277,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Псевдонимы
+
 ## CONTENT
 
 Доступ: protected
+
+Псевдонимы
 
 Тип: Map<stappler::mem_std::String, stappler::mem_std::String>
 
@@ -966,9 +1292,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Имена загруженных семейств
+
 ## CONTENT
 
 Доступ: protected
+
+Имена загруженных семейств
 
 Тип: Vector<stappler::StringView>
 
@@ -977,9 +1307,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Загруженные семейства
+
 ## CONTENT
 
 Доступ: protected
+
+Загруженные семейства
 
 Тип: Map<stappler::mem_std::String, stappler::xenolith::font::FontController::FamilySpec>
 
@@ -988,9 +1322,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Набор используемых укладок
+
 ## CONTENT
 
 Доступ: protected
+
+Набор используемых укладок
 
 Тип: HashMap<stappler::StringView, Rc<stappler::font::FontFaceSet>>
 
@@ -999,9 +1337,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Флаг зависимости для обновления шрифтов
+
 ## CONTENT
 
 Доступ: protected
+
+Флаг зависимости для обновления шрифтов
 
 Тип: Rc<core::DependencyEvent>
 
@@ -1010,9 +1352,13 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Флаг обновления
+
 ## CONTENT
 
 Доступ: protected
+
+Флаг обновления
 
 Тип: bool
 
@@ -1021,8 +1367,12 @@ Title: XLFontController.h
 
 ## BRIEF
 
+Мутекс укладок
+
 ## CONTENT
 
 Доступ: protected
+
+Мутекс укладок
 
 Тип: std::shared_mutex

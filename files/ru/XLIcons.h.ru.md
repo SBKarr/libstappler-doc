@@ -5,14 +5,22 @@ Title: XLIcons.h
 
 ## BRIEF
 
+Заголовок встроенных иконок
+
 ## CONTENT
+
+Заголовок встроенных иконок
 
 
 # ::stappler::xenolith::IconName
 
 ## BRIEF
 
+Названия встроенных иконок
+
 ## CONTENT
+
+Названия встроенных иконок
 
 Значения:
 * None
@@ -2862,7 +2870,11 @@ Title: XLIcons.h
 
 ## BRIEF
 
+Получает имя иконки
+
 ## CONTENT
+
+Получает имя иконки
 
 Параметры:
 * stappler::xenolith::IconName
@@ -2874,7 +2886,11 @@ Title: XLIcons.h
 
 ## BRIEF
 
+Получает данные иконки для векторного пути
+
 ## CONTENT
+
+Получает данные иконки для векторного пути
 
 Параметры:
 * stappler::xenolith::IconName
@@ -2887,9 +2903,13 @@ Title: XLIcons.h
 
 ## BRIEF
 
+Рисует иконку в векторное изображение
+
 ## CONTENT
+
+Рисует иконку в векторное изображение
 
 Параметры:
 * vg::VectorImage&
 * stappler::xenolith::IconName
-* float
+* float - прогресс для динамической иконки

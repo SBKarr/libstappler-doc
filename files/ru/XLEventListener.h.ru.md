@@ -5,14 +5,22 @@ Title: XLEventListener.h
 
 ## BRIEF
 
+Заголовок компонента для прослушивания событий
+
 ## CONTENT
+
+Заголовок компонента для прослушивания событий
 
 
 # ::stappler::xenolith::EventListener
 
 ## BRIEF
 
+Компонент для прослушивания событий
+
 ## CONTENT
+
+Компонент для прослушивания событий
 
 Базовые классы:
 * Component
@@ -23,27 +31,38 @@ Title: XLEventListener.h
 
 ## BRIEF
 
+Функция обработки событий
+
 ## CONTENT
 
 Доступ: public
+
+Функция обработки событий
 
 
 # ::stappler::xenolith::EventListener::~EventListener()
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
 
+Деструктор
 
 # ::stappler::xenolith::EventListener::init()
 
 ## BRIEF
 
+Создаёт компонент
+
 ## CONTENT
 
 Доступ: public
+
+Создаёт компонент
 
 Возвращает:
 * bool
@@ -52,9 +71,13 @@ Title: XLEventListener.h
 
 ## BRIEF
 
+Устанавливает обработчик события
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает обработчик события
 
 Параметры:
 * stappler::xenolith::Event const&
@@ -65,14 +88,18 @@ Title: XLEventListener.h
 
 ## BRIEF
 
+Устанавливает обработчик события
+
 ## CONTENT
 
 Доступ: public
 
+Устанавливает обработчик события
+
 Параметры:
 * stappler::xenolith::EventHeader const&
 * stappler::xenolith::EventListener::EventCallback&&
-* bool
+* bool - true если обработчик нужно удалить после первого вызова
 
 Возвращает:
 * stappler::xenolith::EventHandlerNode*
@@ -81,9 +108,13 @@ Title: XLEventListener.h
 
 ## BRIEF
 
+Устанавливает обработчик события для объекта
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает обработчик события для объекта
 
 Параметры:
 * stappler::xenolith::EventHeader const&
@@ -98,6 +129,10 @@ Title: XLEventListener.h
 
 ## BRIEF
 
+Удаляет обработчики
+
 ## CONTENT
 
 Доступ: public
+
+Удаляет обработчики

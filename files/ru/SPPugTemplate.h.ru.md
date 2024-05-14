@@ -24,6 +24,17 @@ Title: SPPugTemplate.h
 Базовые классы:
 * memory::AllocPool
 
+# ::stappler::pug::Template::OutStream
+
+## BRIEF
+
+Тип выходного потока
+
+## CONTENT
+
+Доступ: public
+
+Тип выходного потока
 
 # ::stappler::pug::Template::ChunkType
 
@@ -256,8 +267,7 @@ Title: SPPugTemplate.h
 
 Тип: std::bitset<toInt(Flags::LineFeeds) + 1>
 
-
-# ::stappler::pug::Template::read(stappler::StringView const&,stappler::pug::Template::Options const&,Callback<void (const stappler::StringView &)> const&)
+# ::stappler::pug::Template::read(stappler::StringView const&,stappler::pug::Template::Options const&,Callback<void (stappler::StringView)> const&)
 
 ## BRIEF
 
@@ -272,12 +282,12 @@ Title: SPPugTemplate.h
 Параметры:
 * stappler::StringView const& - данные шаблона
 * stappler::pug::Template::Options const& - параметры чтения
-* Callback<void (const stappler::StringView &)> const& - функция сообщения об ощибке
+* Callback<void (stappler::StringView)> const& - функция сообщения об ощибке
 
 Возвращает:
 * stappler::pug::Template* - прочитанный шаблон или nullptr
 
-# ::stappler::pug::Template::read(memory::pool_t*,stappler::StringView const&,stappler::pug::Template::Options const&,Callback<void (const stappler::StringView &)> const&)
+# ::stappler::pug::Template::read(memory::pool_t*,stappler::StringView const&,stappler::pug::Template::Options const&,Callback<void (stappler::StringView)> const&)
 
 ## BRIEF
 
@@ -293,7 +303,7 @@ Title: SPPugTemplate.h
 * memory::pool_t* - пул памяти для использования
 * stappler::StringView const& - данные шаблона
 * stappler::pug::Template::Options const& - параметры чтения
-* Callback<void (const stappler::StringView &)> const& - функция сообщения об ощибке
+* Callback<void (stappler::StringView)> const& - функция сообщения об ощибке
 
 Возвращает:
 * stappler::pug::Template* - прочитанный шаблон или nullptr
@@ -313,7 +323,7 @@ Title: SPPugTemplate.h
 Возвращает:
 * stappler::pug::Template::Options
 
-# ::stappler::pug::Template::run(stappler::pug::Context&,std::ostream&) const
+# ::stappler::pug::Template::run(stappler::pug::Context&,stappler::pug::Template::OutStream const&) const
 
 ## BRIEF
 
@@ -327,12 +337,12 @@ Title: SPPugTemplate.h
 
 Параметры:
 * stappler::pug::Context&
-* std::ostream&
+* stappler::pug::Template::OutStream const&
 
 Возвращает:
 * bool -  true если успешно
 
-# ::stappler::pug::Template::run(stappler::pug::Context&,std::ostream&,stappler::pug::Template::Options const&) const
+# ::stappler::pug::Template::run(stappler::pug::Context&,stappler::pug::Template::OutStream const&,stappler::pug::Template::Options const&) const
 
 ## BRIEF
 
@@ -346,13 +356,33 @@ Title: SPPugTemplate.h
 
 Параметры:
 * stappler::pug::Context&
-* std::ostream&
+* stappler::pug::Template::OutStream const&
 * stappler::pug::Template::Options const& - дополнительные параметры для выполнения
 
 Возвращает:
 * bool -  true если успешно
 
-# ::stappler::pug::Template::describe(std::ostream&,bool) const
+# ::stappler::pug::Template::run(stappler::pug::Context&,stappler::pug::Template::OutStream const&,stappler::pug::Template::RunContext&) const
+
+## BRIEF
+
+Запускает шаблон в контексте и выводит результат в поток
+
+## CONTENT
+
+Доступ: public
+
+Запускает шаблон в контексте и выводит результат в поток
+
+Параметры:
+* stappler::pug::Context&
+* stappler::pug::Template::OutStream const&
+* stappler::pug::Template::RunContext&
+
+Возвращает:
+* bool
+
+# ::stappler::pug::Template::describe(stappler::pug::Template::OutStream const&,bool) const
 
 ## BRIEF
 
@@ -365,7 +395,7 @@ Title: SPPugTemplate.h
 Выводит отладочную инфомрацию о шаблоне
 
 Параметры:
-* std::ostream&
+* stappler::pug::Template::OutStream const&
 * bool - true - выводить информацию о токенах
 
 
@@ -432,7 +462,19 @@ Title: SPPugTemplate.h
 
 Используемые параметры исполнения
 
-# ::stappler::pug::Template::Template(memory::pool_t*,stappler::StringView const&,stappler::pug::Template::Options const&,Callback<void (const stappler::StringView &)> const&)
+# ::stappler::pug::Template::RunContext::templateStack
+
+## BRIEF
+
+Стек включения шаблонов
+
+## CONTENT
+
+Стек включения шаблонов
+
+Тип: Vector<const stappler::pug::Template *>
+
+# ::stappler::pug::Template::Template(memory::pool_t*,stappler::StringView const&,stappler::pug::Template::Options const&,stappler::pug::Template::OutStream const&)
 
 ## BRIEF
 
@@ -448,10 +490,10 @@ Title: SPPugTemplate.h
 * memory::pool_t*
 * stappler::StringView const&
 * stappler::pug::Template::Options const&
-* Callback<void (const stappler::StringView &)> const&
+* stappler::pug::Template::OutStream const&
 
 
-# ::stappler::pug::Template::runChunk(stappler::pug::Template::Chunk const&,stappler::pug::Context&,std::ostream&,stappler::pug::Template::RunContext&) const
+# ::stappler::pug::Template::runChunk(stappler::pug::Template::Chunk const&,stappler::pug::Context&,stappler::pug::Template::OutStream const&,stappler::pug::Template::RunContext&) const
 
 ## BRIEF
 
@@ -466,13 +508,13 @@ Title: SPPugTemplate.h
 Параметры:
 * stappler::pug::Template::Chunk const&
 * stappler::pug::Context&
-* std::ostream&
+* stappler::pug::Template::OutStream const&
 * stappler::pug::Template::RunContext&
 
 Возвращает:
 * bool
 
-# ::stappler::pug::Template::runCase(stappler::pug::Template::Chunk const&,stappler::pug::Context&,std::ostream&,stappler::pug::Template::RunContext&) const
+# ::stappler::pug::Template::runCase(stappler::pug::Template::Chunk const&,stappler::pug::Context&,stappler::pug::Template::OutStream const&,stappler::pug::Template::RunContext&) const
 
 ## BRIEF
 
@@ -487,13 +529,13 @@ Title: SPPugTemplate.h
 Параметры:
 * stappler::pug::Template::Chunk const&
 * stappler::pug::Context&
-* std::ostream&
+* stappler::pug::Template::OutStream const&
 * stappler::pug::Template::RunContext&
 
 Возвращает:
 * bool
 
-# ::stappler::pug::Template::pushWithPrettyFilter(memory::ostringstream&,size_t,std::ostream&) const
+# ::stappler::pug::Template::pushWithPrettyFilter(stappler::StringView,size_t,stappler::pug::Template::OutStream const&) const
 
 ## BRIEF
 
@@ -506,9 +548,9 @@ Title: SPPugTemplate.h
 Записывает результат с дополнительным форматированием
 
 Параметры:
-* memory::ostringstream&
+* stappler::StringView
 * size_t
-* std::ostream&
+* stappler::pug::Template::OutStream const&
 
 
 # ::stappler::pug::Template::_pool

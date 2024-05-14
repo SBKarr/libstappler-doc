@@ -5,14 +5,22 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Заголовок основы для создания графических текстовых полей
+
 ## CONTENT
+
+Заголовок основы для создания графических текстовых полей
 
 
 # ::stappler::xenolith::font::TextLayout
 
 ## BRIEF
 
+Тип для хранения готовой укладки текста
+
 ## CONTENT
+
+Тип для хранения готовой укладки текста
 
 Базовые классы:
 * RefBase<memory::StandartInterface>
@@ -23,54 +31,74 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::font::TextLayout::TextLayout(stappler::xenolith::font::FontController*,size_t,size_t)
 
 ## BRIEF
 
+Конструктор
+
 ## CONTENT
 
 Доступ: public
 
+Конструктор
+
 Параметры:
-* stappler::xenolith::font::FontController*
-* size_t
-* size_t
+* stappler::xenolith::font::FontController* - контроллер шрифта
+* size_t - предполагаемое число симвоов
+* size_t - предполагаемое число строк
 
 
 # ::stappler::xenolith::font::TextLayout::reserve(size_t,size_t)
 
 ## BRIEF
 
+Резервирует пространство для символов и строк
+
 ## CONTENT
 
 Доступ: public
 
+Резервирует пространство для символов и строк
+
 Параметры:
-* size_t
-* size_t
+* size_t - предполагаемое число симвоов
+* size_t - предполагаемое число строк
 
 
 # ::stappler::xenolith::font::TextLayout::clear()
 
 ## BRIEF
 
+Удаляет данные
+
 ## CONTENT
 
 Доступ: public
+
+Удаляет данные
 
 
 # ::stappler::xenolith::font::TextLayout::empty() const
 
 ## BRIEF
 
+Проверяет на пустоту
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет на пустоту
 
 Возвращает:
 * bool
@@ -79,9 +107,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Возвращает данные укладки
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает данные укладки
 
 Возвращает:
 * TextLayoutData<stappler::InterfaceObject<stappler::memory::StandartInterface>::Interface>*
@@ -90,9 +122,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Возвращает данные укладки
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает данные укладки
 
 Возвращает:
 * TextLayoutData<stappler::InterfaceObject<stappler::memory::StandartInterface>::Interface> const*
@@ -101,9 +137,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Возвращает ширину укладки в пикселях
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает ширину укладки в пикселях
 
 Возвращает:
 * uint16_t
@@ -112,9 +152,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Возвращает высоту укладки в пикселях
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает высоту укладки в пикселях
 
 Возвращает:
 * uint16_t
@@ -123,9 +167,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Возвращает максимальное смещение символа с начальной позиции
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает максимальное смещение символа с начальной позиции. Может отличаться от ширины.
 
 Возвращает:
 * uint16_t
@@ -134,9 +182,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Проверяет укладку на переполнение по ширине и строкам
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет укладку на переполнение по ширине и строкам
 
 Возвращает:
 * bool
@@ -145,9 +197,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Возвращает шрифтовый контроллер
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает шрифтовый контроллер
 
 Возвращает:
 * stappler::xenolith::font::FontController*
@@ -156,9 +212,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Получает набор шрифтов для параметров шрифта
+
 ## CONTENT
 
 Доступ: public
+
+Получает набор шрифтов для параметров шрифта
 
 Параметры:
 * stappler::font::FontParameters const&
@@ -170,9 +230,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Начинает обход строк и диапазонов
+
 ## CONTENT
 
 Доступ: public
+
+Начинает обход строк и диапазонов
 
 Возвращает:
 * stappler::font::RangeLineIterator
@@ -181,9 +245,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Завершает обход строк и диапазонов
+
 ## CONTENT
 
 Доступ: public
+
+Завершает обход строк и диапазонов
 
 Возвращает:
 * stappler::font::RangeLineIterator
@@ -192,9 +260,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Конвертирует укладку в единую стоку
+
 ## CONTENT
 
 Доступ: public
+
+Конвертирует укладку в единую стоку
 
 Параметры:
 * bool
@@ -206,16 +278,20 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Конвертирует сегмент укладки в строку
+
 ## CONTENT
 
 Доступ: public
 
+Конвертирует сегмент укладки в строку
+
 Параметры:
-* uint32_t
-* uint32_t
-* size_t
-* bool
-* bool
+* uint32_t - начало сегмента
+* uint32_t - конец сегмента
+* size_t - максимальное число слов в сегменте
+* bool - true если для обрезанных сегментов подставлять заполнитель
+* bool - true если не включать в результат сегменты, отличающиеся по выравниванию
 
 Возвращает:
 * stappler::InterfaceObject<stappler::memory::StandartInterface>::WideString
@@ -224,14 +300,18 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Ищет символ в укладке по позиции
+
 ## CONTENT
 
 Доступ: public
 
+Ищет символ в укладке по позиции
+
 Параметры:
-* int32_t
-* int32_t
-* stappler::font::CharSelectMode
+* int32_t - x
+* int32_t - y
+* stappler::font::CharSelectMode - резим поиска
 
 Возвращает:
 * Pair<uint32_t, stappler::font::CharSelectMode>
@@ -240,9 +320,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Возвращает строку по индексу
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает строку по индексу
 
 Параметры:
 * uint32_t
@@ -254,12 +338,16 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Возвращет индекс строки для символа
+
 ## CONTENT
 
 Доступ: public
 
+Возвращет индекс строки для символа
+
 Параметры:
-* uint32_t
+* uint32_t - номер символа
 
 Возвращает:
 * uint32_t
@@ -268,28 +356,36 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Выбирает слово целиком по символу
+
 ## CONTENT
 
 Доступ: public
 
+Выбирает слово целиком по символу
+
 Параметры:
-* uint32_t
+* uint32_t - номер символа
 
 Возвращает:
-* Pair<uint32_t, uint32_t>
+* Pair<uint32_t, uint32_t> - начало и конец слова
 
 # ::stappler::xenolith::font::TextLayout::getLineRect(uint32_t,float,geom::Vec2 const&) const
 
 ## BRIEF
 
+Возвращает прямоугольник вокруг строки
+
 ## CONTENT
 
 Доступ: public
 
+Возвращает прямоугольник вокруг строки
+
 Параметры:
-* uint32_t
-* float
-* geom::Vec2 const&
+* uint32_t - номер строки
+* float - плотность пикселей
+* geom::Vec2 const& - исходная точка
 
 Возвращает:
 * geom::Rect
@@ -298,14 +394,18 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Возвращает прямоугольник вокруг строки
+
 ## CONTENT
 
 Доступ: public
 
+Возвращает прямоугольник вокруг строки
+
 Параметры:
-* stappler::font::LineLayoutData const&
-* float
-* geom::Vec2 const&
+* stappler::font::LineLayoutData const& - данные строки
+* float - плотность пикселей
+* geom::Vec2 const& - исходная точка
 
 Возвращает:
 * geom::Rect
@@ -314,12 +414,16 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Возвращает индекс строки для символа
+
 ## CONTENT
 
 Доступ: public
 
+Возвращает индекс строки для символа
+
 Параметры:
-* uint32_t
+* uint32_t - номер символа
 
 Возвращает:
 * uint16_t
@@ -328,16 +432,20 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Возвращает набор прямоугольников для подсвечивания строк
+
 ## CONTENT
 
 Доступ: public
 
+Возвращает набор прямоугольников для подсвечивания строк
+
 Параметры:
-* uint32_t
-* uint32_t
-* float
-* geom::Vec2 const&
-* geom::Padding const&
+* uint32_t - первая стока
+* uint32_t - последняя строка
+* float - плотность пикселей
+* geom::Vec2 const& - начальная позиция
+* geom::Padding const& - расширение прямоугольников
 
 Возвращает:
 * Vector<geom::Rect>
@@ -346,26 +454,34 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Возвращает набор прямоугольников для подсвечивания строк
+
 ## CONTENT
 
 Доступ: public
 
+Возвращает набор прямоугольников для подсвечивания строк
+
 Параметры:
-* Vector<geom::Rect>&
-* uint32_t
-* uint32_t
-* float
-* geom::Vec2 const&
-* geom::Padding const&
+* Vector<geom::Rect>& - массив для записи прямоугольников
+* uint32_t - первая стока
+* uint32_t - последняя строка
+* float - плотность пикселей
+* geom::Vec2 const& - начальная позиция
+* geom::Padding const& - расширение прямоугольников
 
 
 # ::stappler::xenolith::font::TextLayout::_data
 
 ## BRIEF
 
+Данные укладки
+
 ## CONTENT
 
 Доступ: protected
+
+Данные укладки
 
 Тип: TextLayoutData<memory::StandartInterface>
 
@@ -374,9 +490,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Контроллер
+
 ## CONTENT
 
 Доступ: protected
+
+Контроллер
 
 Тип: Rc<stappler::xenolith::font::FontController>
 
@@ -385,9 +505,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Набор используемых шрифтов
+
 ## CONTENT
 
 Доступ: protected
+
+Набор используемых шрифтов
 
 Тип: Set<Rc<stappler::font::FontFaceSet>>
 
@@ -396,41 +520,59 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Базовый тип для создания текстовых полей
+
 ## CONTENT
+
+Базовый тип для создания текстовых полей. Реализует стилизованное текстовое поле с возможностью использовать несколько стилей.
 
 
 # ::stappler::xenolith::font::LabelBase::FontFamily
 
 ## BRIEF
 
+Тип для хранения индекса шрифтового семейства
+
 ## CONTENT
 
 Доступ: public
 
+Тип для хранения индекса шрифтового семейства
 
 # ::stappler::xenolith::font::LabelBase::Opacity
 
 ## BRIEF
 
+Тип для прозрачности
+
 ## CONTENT
 
 Доступ: public
 
+Тип для прозрачности
 
 # ::stappler::xenolith::font::LabelBase::Style
 
 ## BRIEF
 
+Тип стиля фрагмента
+
 ## CONTENT
 
 Доступ: public
+
+Тип стиля фрагмента
 
 
 # ::stappler::xenolith::font::LabelBase::Style::Name
 
 ## BRIEF
 
+Имя параметра
+
 ## CONTENT
+
+Имя параметра
 
 Значения:
 * TextTransform
@@ -451,14 +593,21 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Значение параметра
+
 ## CONTENT
 
+Значение параметра
 
 # ::stappler::xenolith::font::LabelBase::Style::Value::textTransform
 
 ## BRIEF
 
+Способ трансформации текста
+
 ## CONTENT
+
+Способ трансформации текста
 
 Тип: stappler::font::TextTransform
 
@@ -467,7 +616,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Декорации текста
+
 ## CONTENT
+
+Декорации текста
 
 Тип: stappler::font::TextDecoration
 
@@ -476,7 +629,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Режим переносов
+
 ## CONTENT
+
+Режим переносов
 
 Тип: stappler::font::Hyphens
 
@@ -485,7 +642,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Выравнивание по вертикали
+
 ## CONTENT
+
+Выравнивание по вертикали
 
 Тип: stappler::font::VerticalAlign
 
@@ -494,7 +655,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Цвет текста
+
 ## CONTENT
+
+Цвет текста
 
 Тип: stappler::geom::Color3B
 
@@ -503,7 +668,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Прозрачность текста
+
 ## CONTENT
+
+Прозрачность текста
 
 Тип: uint8_t
 
@@ -512,7 +681,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Размер шрифта
+
 ## CONTENT
+
+Размер шрифта
 
 Тип: stappler::font::FontSize
 
@@ -521,7 +694,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Стиль шрифта
+
 ## CONTENT
+
+Стиль шрифта
 
 Тип: stappler::font::FontStyle
 
@@ -530,7 +707,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Толщина шрифта
+
 ## CONTENT
+
+Толщина шрифта
 
 Тип: stappler::font::FontWeight
 
@@ -539,7 +720,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Плотность шрифта
+
 ## CONTENT
+
+Плотность шрифта
 
 Тип: stappler::font::FontStretch
 
@@ -548,7 +733,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Утолщение шрифта
+
 ## CONTENT
+
+Утолщение шрифта
 
 Тип: stappler::font::FontGrade
 
@@ -557,7 +746,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Индекс семейства шрифтов
+
 ## CONTENT
+
+Индекс семейства шрифтов
 
 Тип: uint32_t
 
@@ -566,21 +759,33 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Конструктор
+
 ## CONTENT
+
+Конструктор
 
 
 # ::stappler::xenolith::font::LabelBase::Style::Param
 
 ## BRIEF
 
+Тип параметра стиля
+
 ## CONTENT
+
+Тип параметра стиля
 
 
 # ::stappler::xenolith::font::LabelBase::Style::Param::name
 
 ## BRIEF
 
+Имя параметра
+
 ## CONTENT
+
+Имя параметра
 
 Тип: stappler::xenolith::font::LabelBase::Style::Name
 
@@ -589,7 +794,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Значение параметра
+
 ## CONTENT
+
+Значение параметра
 
 Тип: stappler::xenolith::font::LabelBase::Style::Value
 
@@ -598,7 +807,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Создаёт параметр
+
 ## CONTENT
+
+Создаёт параметр
 
 Параметры:
 * stappler::font::TextTransform const&
@@ -608,7 +821,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Создаёт параметр
+
 ## CONTENT
+
+Создаёт параметр
 
 Параметры:
 * stappler::font::TextDecoration const&
@@ -618,7 +835,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Создаёт параметр
+
 ## CONTENT
+
+Создаёт параметр
 
 Параметры:
 * stappler::font::Hyphens const&
@@ -628,7 +849,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Создаёт параметр
+
 ## CONTENT
+
+Создаёт параметр
 
 Параметры:
 * stappler::font::VerticalAlign const&
@@ -638,7 +863,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Создаёт параметр
+
 ## CONTENT
+
+Создаёт параметр
 
 Параметры:
 * const stappler::geom::Color3B&
@@ -648,7 +877,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Создаёт параметр
+
 ## CONTENT
+
+Создаёт параметр
 
 Параметры:
 * const stappler::geom::Color&
@@ -658,7 +891,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Создаёт параметр
+
 ## CONTENT
+
+Создаёт параметр
 
 Параметры:
 * stappler::xenolith::font::LabelBase::Opacity const&
@@ -668,7 +905,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Создаёт параметр
+
 ## CONTENT
+
+Создаёт параметр
 
 Параметры:
 * stappler::font::FontSize const&
@@ -678,7 +919,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Создаёт параметр
+
 ## CONTENT
+
+Создаёт параметр
 
 Параметры:
 * stappler::font::FontStyle const&
@@ -688,7 +933,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Создаёт параметр
+
 ## CONTENT
+
+Создаёт параметр
 
 Параметры:
 * stappler::font::FontWeight const&
@@ -698,7 +947,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Создаёт параметр
+
 ## CONTENT
+
+Создаёт параметр
 
 Параметры:
 * stappler::font::FontStretch const&
@@ -708,7 +961,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Создаёт параметр
+
 ## CONTENT
+
+Создаёт параметр
 
 Параметры:
 * stappler::xenolith::font::LabelBase::FontFamily const&
@@ -718,7 +975,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Создаёт параметр
+
 ## CONTENT
+
+Создаёт параметр
 
 Параметры:
 * stappler::font::FontGrade const&
@@ -728,14 +989,22 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Конструктор
+
 ## CONTENT
+
+Конструктор
 
 
 # ::stappler::xenolith::font::LabelBase::Style::Style(stappler::xenolith::font::LabelBase::Style const&)
 
 ## BRIEF
 
+Конструктор копирования
+
 ## CONTENT
+
+Конструктор копирования
 
 Параметры:
 * stappler::xenolith::font::LabelBase::Style const&
@@ -745,7 +1014,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Конструктор перемещения
+
 ## CONTENT
+
+Конструктор перемещения
 
 Параметры:
 * stappler::xenolith::font::LabelBase::Style&&
@@ -755,7 +1028,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Оператор копирования
+
 ## CONTENT
+
+Оператор копирования
 
 Параметры:
 * stappler::xenolith::font::LabelBase::Style const&
@@ -767,7 +1044,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Оператор перемещения
+
 ## CONTENT
+
+Оператор перемещения
 
 Параметры:
 * stappler::xenolith::font::LabelBase::Style&&
@@ -779,7 +1060,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Созаёт стиль из набора параметров
+
 ## CONTENT
+
+Созаёт стиль из набора параметров
 
 Параметры:
 * std::initializer_list<Param>
@@ -789,7 +1074,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Устанавливает параметр
+
 ## CONTENT
+
+Устанавливает параметр
 
 Параметры шаблона:
 * class T
@@ -802,7 +1091,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Устанавливает параметр
+
 ## CONTENT
+
+Устанавливает параметр
 
 Параметры шаблона:
 * class T
@@ -817,18 +1110,26 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Устанавливает параметр
+
 ## CONTENT
+
+Устанавливает параметр
 
 Параметры:
 * stappler::xenolith::font::LabelBase::Style::Param const&
-* bool
+* bool - true для перезаписи уже установленного
 
 
 # ::stappler::xenolith::font::LabelBase::Style::merge(stappler::xenolith::font::LabelBase::Style const&)
 
 ## BRIEF
 
+Объединяет стиль с текущим
+
 ## CONTENT
+
+Объединяет стиль с текущим
 
 Параметры:
 * stappler::xenolith::font::LabelBase::Style const&
@@ -838,14 +1139,21 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Удаляет все параметры
+
 ## CONTENT
 
+Удаляет все параметры
 
 # ::stappler::xenolith::font::LabelBase::Style::params
 
 ## BRIEF
 
+Параметры стиля
+
 ## CONTENT
+
+Параметры стиля
 
 Тип: Vector<stappler::xenolith::font::LabelBase::Style::Param>
 
@@ -854,16 +1162,24 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Тип стилизованного сегмента
+
 ## CONTENT
 
 Доступ: public
+
+Тип стилизованного сегмента
 
 
 # ::stappler::xenolith::font::LabelBase::StyleSpec::start
 
 ## BRIEF
 
+Начало сегмента
+
 ## CONTENT
+
+Начало сегмента
 
 Тип: size_t
 
@@ -872,7 +1188,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Длина сегмента
+
 ## CONTENT
+
+Длина сегмента
 
 Тип: size_t
 
@@ -881,7 +1201,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Стиль сегмента
+
 ## CONTENT
+
+Стиль сегмента
 
 Тип: stappler::xenolith::font::LabelBase::Style
 
@@ -890,40 +1214,56 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Конструктор
+
 ## CONTENT
 
+Конструктор
+
 Параметры:
-* size_t
-* size_t
-* stappler::xenolith::font::LabelBase::Style&&
+* size_t - начало сегмента
+* size_t - конец сегмента
+* stappler::xenolith::font::LabelBase::Style&& - стиль сегмента
 
 
 # ::stappler::xenolith::font::LabelBase::StyleSpec::StyleSpec(size_t,size_t,stappler::xenolith::font::LabelBase::Style const&)
 
 ## BRIEF
 
+Конструктор
+
 ## CONTENT
 
+Конструктор
+
 Параметры:
-* size_t
-* size_t
-* stappler::xenolith::font::LabelBase::Style const&
+* size_t - начало сегмента
+* size_t - конец сегмента
+* stappler::xenolith::font::LabelBase::Style const& - стиль сегмента
 
 
 # ::stappler::xenolith::font::LabelBase::DescriptionStyle
 
 ## BRIEF
 
+Полное описание стиля текста
+
 ## CONTENT
 
 Доступ: public
+
+Полное описание стиля текста
 
 
 # ::stappler::xenolith::font::LabelBase::DescriptionStyle::font
 
 ## BRIEF
 
+Параметры шрифта
+
 ## CONTENT
+
+Параметры шрифта
 
 Тип: stappler::font::FontParameters
 
@@ -932,7 +1272,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Параметры текста
+
 ## CONTENT
+
+Параметры текста
 
 Тип: stappler::font::TextParameters
 
@@ -941,7 +1285,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Флаг изменения цвета
+
 ## CONTENT
+
+Флаг изменения цвета
 
 Тип: bool
 
@@ -950,7 +1298,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Флаг изменения прозрачности
+
 ## CONTENT
+
+Флаг изменения прозрачности
 
 Тип: bool
 
@@ -959,7 +1311,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Тег стиля
+
 ## CONTENT
+
+Тег стиля
 
 Тип: uint32_t
 
@@ -968,17 +1324,24 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Конструктор
+
 ## CONTENT
 
+Конструктор
 
 # ::stappler::xenolith::font::LabelBase::DescriptionStyle::getConfigName(bool) const
 
 ## BRIEF
 
+Возвращает имя для конфигурации шрифта
+
 ## CONTENT
 
+Возвращает имя для конфигурации шрифта
+
 Параметры:
-* bool
+* bool - true для SmallCaps
 
 Возвращает:
 * stappler::mem_std::String
@@ -987,7 +1350,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Записывает параметры из стиля в конфигурацию
+
 ## CONTENT
+
+Записывает параметры из стиля в конфигурацию
 
 Параметры:
 * Rc<font::FontController> const&
@@ -1000,7 +1367,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Оператор сравнения
+
 ## CONTENT
+
+Оператор сравнения
 
 Параметры:
 * stappler::xenolith::font::LabelBase::DescriptionStyle const&
@@ -1012,7 +1383,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Оператор сравнения
+
 ## CONTENT
+
+Оператор сравнения
 
 Параметры:
 * stappler::xenolith::font::LabelBase::DescriptionStyle const&
@@ -1024,15 +1399,19 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Создаёт описание стиля
+
 ## CONTENT
+
+Создаёт описание стиля
 
 Параметры шаблона:
 * typename Args
 
 Параметры:
-* stappler::StringView const&
-* stappler::font::FontSize
-* Args &&...
+* stappler::StringView const& - семейство шрифтов
+* stappler::font::FontSize - размер шрифта
+* Args &&... - другие параметры
 
 Возвращает:
 * stappler::xenolith::font::LabelBase::DescriptionStyle
@@ -1041,7 +1420,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Читает параметр в конструкторе
+
 ## CONTENT
+
+Читает параметр в конструкторе
 
 Параметры:
 * stappler::xenolith::font::LabelBase::DescriptionStyle&
@@ -1052,7 +1435,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Читает параметр в конструкторе
+
 ## CONTENT
+
+Читает параметр в конструкторе
 
 Параметры:
 * stappler::xenolith::font::LabelBase::DescriptionStyle&
@@ -1063,7 +1450,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Читает параметр в конструкторе
+
 ## CONTENT
+
+Читает параметр в конструкторе
 
 Параметры:
 * stappler::xenolith::font::LabelBase::DescriptionStyle&
@@ -1074,7 +1465,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Читает параметр в конструкторе
+
 ## CONTENT
+
+Читает параметр в конструкторе
 
 Параметры:
 * stappler::xenolith::font::LabelBase::DescriptionStyle&
@@ -1085,7 +1480,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Читает параметр в конструкторе
+
 ## CONTENT
+
+Читает параметр в конструкторе
 
 Параметры:
 * stappler::xenolith::font::LabelBase::DescriptionStyle&
@@ -1096,7 +1495,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Читает параметр в конструкторе
+
 ## CONTENT
+
+Читает параметр в конструкторе
 
 Параметры:
 * stappler::xenolith::font::LabelBase::DescriptionStyle&
@@ -1107,7 +1510,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Читает параметр в конструкторе
+
 ## CONTENT
+
+Читает параметр в конструкторе
 
 Параметры:
 * stappler::xenolith::font::LabelBase::DescriptionStyle&
@@ -1118,7 +1525,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Читает параметр в конструкторе
+
 ## CONTENT
+
+Читает параметр в конструкторе
 
 Параметры:
 * stappler::xenolith::font::LabelBase::DescriptionStyle&
@@ -1129,7 +1540,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Читает параметр в конструкторе
+
 ## CONTENT
+
+Читает параметр в конструкторе
 
 Параметры:
 * stappler::xenolith::font::LabelBase::DescriptionStyle&
@@ -1140,7 +1555,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Читает параметр в конструкторе
+
 ## CONTENT
+
+Читает параметр в конструкторе
 
 Параметры:
 * stappler::xenolith::font::LabelBase::DescriptionStyle&
@@ -1151,7 +1570,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Читает параметр в конструкторе
+
 ## CONTENT
+
+Читает параметр в конструкторе
 
 Параметры:
 * stappler::xenolith::font::LabelBase::DescriptionStyle&
@@ -1162,7 +1585,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Читает параметр в конструкторе
+
 ## CONTENT
+
+Читает параметр в конструкторе
 
 Параметры шаблона:
 * typename T
@@ -1178,7 +1605,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Читает параметр в конструкторе
+
 ## CONTENT
+
+Читает параметр в конструкторе
 
 Параметры шаблона:
 * typename T
@@ -1192,7 +1623,11 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Читает параметр в конструкторе
+
 ## CONTENT
+
+Читает параметр в конструкторе
 
 Параметры:
 * stappler::xenolith::font::LabelBase::DescriptionStyle&
@@ -1202,9 +1637,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Структура для вычисления параметров текстового поля без создания объекта поля
+
 ## CONTENT
 
 Доступ: public
+
+Структура для вычисления параметров текстового поля без создания объекта поля
 
 Базовые классы:
 * Ref
@@ -1214,23 +1653,31 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::font::LabelBase::ExternalFormatter::init(font::FontController*,float,float)
 
 ## BRIEF
 
+Конструктор
+
 ## CONTENT
 
 Доступ: public
 
+Конструктор
+
 Параметры:
-* font::FontController*
-* float
-* float
+* font::FontController* - контроллер шрифта
+* float - ширина поля
+* float - плотность пикселей
 
 Возвращает:
 * bool
@@ -1239,9 +1686,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Устанавливает высоту строки в абсолютном значении
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает высоту строки в абсолютном значении
 
 Параметры:
 * float
@@ -1251,9 +1702,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Устанавливает высоту строки по отношению к размеру шрифта
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает высоту строки по отношению к размеру шрифта
 
 Параметры:
 * float
@@ -1263,50 +1718,66 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Запасает место под символя и строки
+
 ## CONTENT
 
 Доступ: public
 
+Запасает место под символя и строки
+
 Параметры:
-* size_t
-* size_t
+* size_t - число символов
+* size_t - число строк
 
 
 # ::stappler::xenolith::font::LabelBase::ExternalFormatter::addString(stappler::xenolith::font::LabelBase::DescriptionStyle const&,stappler::StringView const&,bool)
 
 ## BRIEF
 
+Добавляет строку для форматирования
+
 ## CONTENT
 
 Доступ: public
 
+Добавляет строку для форматирования
+
 Параметры:
-* stappler::xenolith::font::LabelBase::DescriptionStyle const&
-* stappler::StringView const&
-* bool
+* stappler::xenolith::font::LabelBase::DescriptionStyle const& - стиль строки
+* stappler::StringView const& - строка
+* bool - true для зависимой от локали строки
 
 
 # ::stappler::xenolith::font::LabelBase::ExternalFormatter::addString(stappler::xenolith::font::LabelBase::DescriptionStyle const&,stappler::WideStringView const&,bool)
 
 ## BRIEF
 
+Добавляет строку для форматирования
+
 ## CONTENT
 
 Доступ: public
 
+Добавляет строку для форматирования
+
 Параметры:
-* stappler::xenolith::font::LabelBase::DescriptionStyle const&
-* stappler::WideStringView const&
-* bool
+* stappler::xenolith::font::LabelBase::DescriptionStyle const& - стиль строки
+* stappler::WideStringView const& - строка
+* bool - true для зависимой от локали строки
 
 
 # ::stappler::xenolith::font::LabelBase::ExternalFormatter::finalize()
 
 ## BRIEF
 
+Завершает формирование поля
+
 ## CONTENT
 
 Доступ: public
+
+Завершает формирование поля
 
 Возвращает:
 * stappler::geom::Size2
@@ -1315,9 +1786,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Флаг начала
+
 ## CONTENT
 
 Доступ: protected
+
+Флаг начала
 
 Тип: bool
 
@@ -1326,9 +1801,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Данные укладки
+
 ## CONTENT
 
 Доступ: protected
+
+Данные укладки
 
 Тип: Rc<font::TextLayout>
 
@@ -1337,9 +1816,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Инструмент форматирования текста
+
 ## CONTENT
 
 Доступ: protected
+
+Инструмент форматирования текста
 
 Тип: font::Formatter
 
@@ -1348,9 +1831,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Плотность пикселя
+
 ## CONTENT
 
 Доступ: protected
+
+Плотность пикселя
 
 Тип: float
 
@@ -1359,18 +1846,25 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Тип вектора стилей
+
 ## CONTENT
 
 Доступ: public
 
+Тип вектора стилей
 
 # ::stappler::xenolith::font::LabelBase::getLocalizedString(stappler::StringView const&)
 
 ## BRIEF
 
+Возвращает локализованную версию строки
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает локализованную версию строки
 
 Параметры:
 * stappler::StringView const&
@@ -1382,9 +1876,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Возвращает локализованную версию строки
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает локализованную версию строки
 
 Параметры:
 * stappler::WideStringView const&
@@ -1396,16 +1894,20 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Вычисляет размер поля для строки
+
 ## CONTENT
 
 Доступ: public
 
+Вычисляет размер поля для строки
+
 Параметры:
-* font::FontController*
-* stappler::xenolith::font::LabelBase::DescriptionStyle const&
-* stappler::StringView const&
-* float
-* bool
+* font::FontController* - контроллер шрифта
+* stappler::xenolith::font::LabelBase::DescriptionStyle const& - стиль строки
+* stappler::StringView const& - строка
+* float - ширина строки
+* bool - true для локализованной строки
 
 Возвращает:
 * stappler::geom::Size2
@@ -1414,16 +1916,20 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Вычисляет размер поля для строки
+
 ## CONTENT
 
 Доступ: public
 
+Вычисляет размер поля для строки
+
 Параметры:
-* font::FontController*
-* stappler::xenolith::font::LabelBase::DescriptionStyle const&
-* stappler::WideStringView const&
-* float
-* bool
+* font::FontController* - контроллер шрифта
+* stappler::xenolith::font::LabelBase::DescriptionStyle const& - стиль строки
+* stappler::WideStringView const& - строка
+* float - ширина строки
+* bool - true для локализованной строки
 
 Возвращает:
 * stappler::geom::Size2
@@ -1432,15 +1938,19 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Возвращает ширину для строки
+
 ## CONTENT
 
 Доступ: public
 
+Возвращает ширину для строки
+
 Параметры:
-* font::FontController*
-* stappler::xenolith::font::LabelBase::DescriptionStyle const&
-* stappler::StringView const&
-* bool
+* font::FontController* - контроллер шрифта
+* stappler::xenolith::font::LabelBase::DescriptionStyle const& - стиль строки
+* stappler::StringView const& - строка
+* bool - true для локализованной строки
 
 Возвращает:
 * float
@@ -1449,15 +1959,19 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Возвращает ширину для строки
+
 ## CONTENT
 
 Доступ: public
 
+Возвращает ширину для строки
+
 Параметры:
-* font::FontController*
-* stappler::xenolith::font::LabelBase::DescriptionStyle const&
-* stappler::WideStringView const&
-* bool
+* font::FontController* - контроллер шрифта
+* stappler::xenolith::font::LabelBase::DescriptionStyle const& - стиль строки
+* stappler::WideStringView const& - строка
+* bool - true для локализованной строки
 
 Возвращает:
 * float
@@ -1466,18 +1980,26 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Деструктор
+
 ## CONTENT
 
 Доступ: public
+
+Деструктор
 
 
 # ::stappler::xenolith::font::LabelBase::isLabelDirty() const
 
 ## BRIEF
 
+Проверяет, изменено ли поле с последнего обновления
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, изменено ли поле с последнего обновления
 
 Возвращает:
 * bool
@@ -1486,9 +2008,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Компилирует стили поля
+
 ## CONTENT
 
 Доступ: public
+
+Компилирует стили поля. Разбивает и совмещает стили так, чтобы получилась линейная одноуровневая последовательность.
 
 Возвращает:
 * StyleVec
@@ -1497,24 +2023,32 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Устанавливает строку
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает строку
 
 Параметры шаблона:
 * char Chars
 
 Параметры:
-* metastring::metastring<Chars...>&&
+* metastring::metastring<Chars...>&& - метастрока
 
 
 # ::stappler::xenolith::font::LabelBase::setString(stappler::StringView const&)
 
 ## BRIEF
 
+Устанавливает строку
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает строку
 
 Параметры:
 * stappler::StringView const&
@@ -1524,9 +2058,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Устанавливает строку
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает строку
 
 Параметры:
 * stappler::WideStringView const&
@@ -1536,9 +2074,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Устанавливает локализованную строку по индексу
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает локализованную строку по индексу
 
 Параметры:
 * size_t
@@ -1548,9 +2090,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Возвращает строку поля
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает строку поля
 
 Возвращает:
 * stappler::WideStringView
@@ -1559,9 +2105,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Возвращает строку поля в виде UTF-8
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает строку поля в виде UTF-8
 
 Возвращает:
 * stappler::StringView
@@ -1570,35 +2120,47 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Удаляет сегмент из строки в контексте UTF-16
+
 ## CONTENT
 
 Доступ: public
 
+Удаляет сегмент из строки в контексте UTF-16
+
 Параметры:
-* size_t
-* size_t
+* size_t - начало сегмента
+* size_t - длина сегента
 
 
 # ::stappler::xenolith::font::LabelBase::erase8(size_t,size_t)
 
 ## BRIEF
 
+Удаляет сегмент из строки в контексте UTF-8
+
 ## CONTENT
 
 Доступ: public
 
+Удаляет сегмент из строки в контексте UTF-8
+
 Параметры:
-* size_t
-* size_t
+* size_t - начало сегмента
+* size_t - длина сегента
 
 
 # ::stappler::xenolith::font::LabelBase::append(stappler::StringView const&)
 
 ## BRIEF
 
+Добавляет строку
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет строку
 
 Параметры:
 * stappler::StringView const&
@@ -1608,9 +2170,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Добавляет строку
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет строку
 
 Параметры:
 * stappler::WideStringView const&
@@ -1620,9 +2186,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Добавляет строку в начало
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет строку в начало
 
 Параметры:
 * stappler::StringView const&
@@ -1632,9 +2202,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Добавляет строку в начало
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет строку в начало
 
 Параметры:
 * stappler::WideStringView const&
@@ -1644,13 +2218,17 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Устанавливает стиль для сегмента
+
 ## CONTENT
 
 Доступ: public
 
+Устанавливает стиль для сегмента. Сегмент определяется по UTF-16
+
 Параметры:
-* size_t
-* size_t
+* size_t - начало сегмента
+* size_t - длина сегента
 * stappler::xenolith::font::LabelBase::Style&&
 
 
@@ -1658,9 +2236,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Добавляет стилизованную строку
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет стилизованную строку
 
 Параметры:
 * stappler::StringView const&
@@ -1671,9 +2253,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Добавляет стилизованную строку
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет стилизованную строку
 
 Параметры:
 * stappler::WideStringView const&
@@ -1684,9 +2270,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Добавляет стилизованную строку в начало
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет стилизованную строку в начало
 
 Параметры:
 * stappler::StringView const&
@@ -1697,9 +2287,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Добавляет стилизованную строку в начало
+
 ## CONTENT
 
 Доступ: public
+
+Добавляет стилизованную строку в начало
 
 Параметры:
 * stappler::WideStringView const&
@@ -1710,18 +2304,26 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Удаляет все стили
+
 ## CONTENT
 
 Доступ: public
+
+Удаляет все стили
 
 
 # ::stappler::xenolith::font::LabelBase::getStyles() const
 
 ## BRIEF
 
+Возвращает стили
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает стили
 
 Возвращает:
 * StyleVec&
@@ -1730,9 +2332,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Возвращает собранные стили
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает собранные стили
 
 Возвращает:
 * StyleVec&
@@ -1741,9 +2347,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Устанавливает стили сегментов
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает стили сегментов
 
 Параметры:
 * stappler::xenolith::font::LabelBase::StyleVec&&
@@ -1753,9 +2363,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Устанавливает стили сегментов
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает стили сегментов
 
 Параметры:
 * stappler::xenolith::font::LabelBase::StyleVec const&
@@ -1765,15 +2379,19 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Записывает отформатированную укладку
+
 ## CONTENT
 
 Доступ: public
 
+Записывает отформатированную укладку
+
 Параметры:
-* stappler::xenolith::font::TextLayout*
-* stappler::xenolith::font::LabelBase::StyleVec const&
-* float
-* uint8_t
+* stappler::xenolith::font::TextLayout* - укладка
+* stappler::xenolith::font::LabelBase::StyleVec const& - собранные стили
+* float - плотность пикселей
+* uint8_t - значение допустимой подстроки размера шрифта
 
 Возвращает:
 * bool
@@ -1782,9 +2400,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Проверяет поле на пустоту
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет поле на пустоту
 
 Возвращает:
 * bool
@@ -1793,9 +2415,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Устанавливает выравнивание шрифта
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает выравнивание шрифта
 
 Параметры:
 * stappler::font::TextAlign
@@ -1805,9 +2431,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Возвращает выравнивание шрифта
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает выравнивание шрифта
 
 Возвращает:
 * stappler::font::TextAlign
@@ -1816,9 +2446,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Устанавливает ширину шрифта
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает ширину шрифта. Ширина орпделяет, где текст будет переноситься на следующую строку
 
 Параметры:
 * float
@@ -1828,9 +2462,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Возвращает ширину
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает ширину
 
 Возвращает:
 * float
@@ -1839,9 +2477,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Устанавливает отступ первой строки
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает отступ первой строки
 
 Параметры:
 * float
@@ -1851,9 +2493,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Возвращает отступ первой строки
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает отступ первой строки
 
 Возвращает:
 * float
@@ -1862,9 +2508,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Устанавливает трансформацию текста
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает трансформацию текста
 
 Параметры:
 * stappler::font::TextTransform const&
@@ -1874,9 +2524,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Возвращает трансформацию текста
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает трансформацию текста
 
 Возвращает:
 * stappler::font::TextTransform
@@ -1885,9 +2539,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Устанавливает декорации текста
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает декорации текста
 
 Параметры:
 * stappler::font::TextDecoration const&
@@ -1897,9 +2555,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Возвращает декорации текста
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает декорации текста
 
 Возвращает:
 * stappler::font::TextDecoration
@@ -1908,9 +2570,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Устанавливает режим переноса
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает режим переноса
 
 Параметры:
 * stappler::font::Hyphens const&
@@ -1920,9 +2586,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Возвращает режим переноса
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает режим переноса
 
 Возвращает:
 * stappler::font::Hyphens
@@ -1931,9 +2601,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Устанавливает вертикальное выравнивание
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает вертикальное выравнивание
 
 Параметры:
 * stappler::font::VerticalAlign const&
@@ -1943,9 +2617,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Возвращает вертикальное выравнивание
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает вертикальное выравнивание
 
 Возвращает:
 * stappler::font::VerticalAlign
@@ -1954,9 +2632,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Устанавливает размер шрифта
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает размер шрифта
 
 Параметры:
 * uint16_t const&
@@ -1966,9 +2648,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Устанавливает размер шрифта
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает размер шрифта
 
 Параметры:
 * stappler::font::FontSize const&
@@ -1978,9 +2664,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Возвращает размер шрифта
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает размер шрифта
 
 Возвращает:
 * stappler::font::FontSize
@@ -1989,9 +2679,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Устанавливает стиль шрифта
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает стиль шрифта
 
 Параметры:
 * stappler::font::FontStyle const&
@@ -2001,9 +2695,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Возвращает стиль шрифта
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает стиль шрифта
 
 Возвращает:
 * stappler::font::FontStyle
@@ -2012,9 +2710,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Устанавливает ширину шрифта
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает ширину шрифта
 
 Параметры:
 * stappler::font::FontWeight const&
@@ -2024,9 +2726,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Возвращает ширину шрифта
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает ширину шрифта
 
 Возвращает:
 * stappler::font::FontWeight
@@ -2035,9 +2741,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Устанавливает плотность шрифта
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает плотность шрифта
 
 Параметры:
 * stappler::font::FontStretch const&
@@ -2047,9 +2757,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Возвращает плотность шрифта
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает плотность шрифта
 
 Возвращает:
 * stappler::font::FontStretch
@@ -2058,9 +2772,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Устанавливает утолщение шрифта
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает утолщение шрифта
 
 Параметры:
 * stappler::font::FontGrade const&
@@ -2070,9 +2788,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Возвращает утолщение шрифта
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает утолщение шрифта
 
 Возвращает:
 * stappler::font::FontGrade
@@ -2081,9 +2803,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Устанавливает семейство шрифта
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает семейство шрифта
 
 Параметры:
 * stappler::StringView const&
@@ -2093,9 +2819,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Возвращает семейство шрифта
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает семейство шрифта
 
 Возвращает:
 * stappler::StringView
@@ -2104,9 +2834,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Устанавливает высоту строки в виде абсолютного значения
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает высоту строки в виде абсолютного значения
 
 Параметры:
 * float
@@ -2116,9 +2850,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Устанавливает высоту строки как отношение к размеру шрифта
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает высоту строки как отношение к размеру шрифта
 
 Параметры:
 * float
@@ -2128,9 +2866,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Возвращает высоту строки
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает высоту строки
 
 Возвращает:
 * float
@@ -2139,9 +2881,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Проверяет, установлено ли абсолютное значение высоты строки
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, установлено ли абсолютное значение высоты строки
 
 Возвращает:
 * bool
@@ -2150,9 +2896,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Устанавливает максимальную ширину поля
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает максимальную ширину поля. Поле не может выходить за пределы максимальной ширины, это считается переполнением.
 
 Параметры:
 * float
@@ -2162,9 +2912,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Возвращает максимальную ширину поля
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает максимальную ширину поля
 
 Возвращает:
 * float
@@ -2173,9 +2927,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Устанавливает максимальное число строк
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает максимальное число строк
 
 Параметры:
 * size_t
@@ -2185,9 +2943,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Возвращает максимальное число строк
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает максимальное число строк
 
 Возвращает:
 * size_t
@@ -2196,9 +2958,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Устанавливает максимальное число символов
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает максимальное число символов
 
 Параметры:
 * size_t
@@ -2208,9 +2974,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Возвращает максимальное число символов
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает максимальное число символов
 
 Возвращает:
 * size_t
@@ -2219,9 +2989,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Устанавливает режим оптического выравнивания при форматировании
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает режим оптического выравнивания при форматировании. Включает опции свисающей пунктуации и выравнивания спискоа. В этом режиме поле может выходить за свои границы.
 
 Параметры:
 * bool
@@ -2231,9 +3005,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Проверяет, используется ли оптическое выравнивание.
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет, используется ли оптическое выравнивание.
 
 Возвращает:
 * bool
@@ -2242,9 +3020,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Устанавливает символ-заместитель при переполнении
+
 ## CONTENT
 
 Доступ: public
+
+Устанавливает символ-заместитель при переполнении
 
 Параметры:
 * char16_t
@@ -2254,9 +3036,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Возвращает символ-заместитель
+
 ## CONTENT
 
 Доступ: public
+
+Возвращает символ-заместитель
 
 Возвращает:
 * char16_t
@@ -2265,9 +3051,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Включает режим распознавания локали
+
 ## CONTENT
 
 Доступ: public
+
+Включает режим распознавания локали
 
 Параметры:
 * bool
@@ -2277,9 +3067,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Проверяет режим распознавания локали
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет режим распознавания локали
 
 Возвращает:
 * bool
@@ -2288,9 +3082,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Помечает поле как использующее постоянную укладку
+
 ## CONTENT
 
 Доступ: public
+
+Помечает поле как использующее постоянную укладку. Данные для постоянной укладки кешируются на стороне графического устройства.
 
 Параметры:
 * bool
@@ -2300,9 +3098,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Проверяет флаг постоянной укладки
+
 ## CONTENT
 
 Доступ: public
+
+Проверяет флаг постоянной укладки
 
 Возвращает:
 * bool
@@ -2311,9 +3113,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Проверяет, есть ли теги локали в строке
+
 ## CONTENT
 
 Доступ: protected
+
+Проверяет, есть ли теги локали в строке
 
 Параметры:
 * stappler::WideStringView const&
@@ -2325,9 +3131,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Преобразует зависимую от локали строку
+
 ## CONTENT
 
 Доступ: protected
+
+Преобразует зависимую от локали строку
 
 Параметры:
 * stappler::WideStringView const&
@@ -2339,9 +3149,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Подстраивает стиль под поле
+
 ## CONTENT
 
 Доступ: protected
+
+Подстраивает стиль под поле
 
 Параметры:
 * stappler::xenolith::font::LabelBase::DescriptionStyle&
@@ -2352,18 +3166,26 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Устанавливает флаг изменения шрифта
+
 ## CONTENT
 
 Доступ: protected
+
+Устанавливает флаг изменения шрифта
 
 
 # ::stappler::xenolith::font::LabelBase::_string16
 
 ## BRIEF
 
+Строка в UTF-16
+
 ## CONTENT
 
 Доступ: protected
+
+Строка в UTF-16
 
 Тип: stappler::mem_std::WideString
 
@@ -2372,9 +3194,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Строка в UTF-8
+
 ## CONTENT
 
 Доступ: protected
+
+Строка в UTF-8
 
 Тип: stappler::mem_std::String
 
@@ -2383,9 +3209,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Ширина шрифта
+
 ## CONTENT
 
 Доступ: protected
+
+Ширина шрифта
 
 Тип: float
 
@@ -2394,9 +3224,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Отступ первой строки
+
 ## CONTENT
 
 Доступ: protected
+
+Отступ первой строки
 
 Тип: float
 
@@ -2405,9 +3239,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Плотность пикселей поля
+
 ## CONTENT
 
 Доступ: protected
+
+Плотность пикселей поля
 
 Тип: float
 
@@ -2416,9 +3254,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Горизонтальное выравнивание
+
 ## CONTENT
 
 Доступ: protected
+
+Горизонтальное выравнивание
 
 Тип: stappler::font::TextAlign
 
@@ -2427,9 +3269,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Флаг локали
+
 ## CONTENT
 
 Доступ: protected
+
+Флаг локали
 
 Тип: bool
 
@@ -2438,9 +3284,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Флаг обновления
+
 ## CONTENT
 
 Доступ: protected
+
+Флаг обновления
 
 Тип: bool
 
@@ -2449,9 +3299,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Флаг абсолютной высоты строки
+
 ## CONTENT
 
 Доступ: protected
+
+Флаг абсолютной высоты строки
 
 Тип: bool
 
@@ -2460,9 +3314,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Высота строки
+
 ## CONTENT
 
 Доступ: protected
+
+Высота строки
 
 Тип: float
 
@@ -2471,9 +3329,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Имя семейства шрифтов
+
 ## CONTENT
 
 Доступ: protected
+
+Имя семейства шрифтов
 
 Тип: stappler::mem_std::String
 
@@ -2482,9 +3344,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Общий стиль поля
+
 ## CONTENT
 
 Доступ: protected
+
+Общий стиль поля
 
 Тип: stappler::xenolith::font::LabelBase::DescriptionStyle
 
@@ -2493,9 +3359,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Стили сегментов
+
 ## CONTENT
 
 Доступ: protected
+
+Стили сегментов
 
 Тип: StyleVec
 
@@ -2504,9 +3374,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Собранные стили сегментов
+
 ## CONTENT
 
 Доступ: protected
+
+Собранные стили сегментов
 
 Тип: StyleVec
 
@@ -2515,9 +3389,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Ширина блока символов
+
 ## CONTENT
 
 Доступ: protected
+
+Ширина блока символов
 
 Тип: uint16_t
 
@@ -2526,9 +3404,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Высота блока символов
+
 ## CONTENT
 
 Доступ: protected
+
+Высота блока символов
 
 Тип: uint16_t
 
@@ -2537,9 +3419,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Максимальная ширина
+
 ## CONTENT
 
 Доступ: protected
+
+Максимальная ширина
 
 Тип: float
 
@@ -2548,9 +3434,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Максимальное число строк
+
 ## CONTENT
 
 Доступ: protected
+
+Максимальное число строк
 
 Тип: size_t
 
@@ -2559,9 +3449,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Максимальное число символов
+
 ## CONTENT
 
 Доступ: protected
+
+Максимальное число символов
 
 Тип: size_t
 
@@ -2570,9 +3464,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Флаг оптического выравнивания
+
 ## CONTENT
 
 Доступ: protected
+
+Флаг оптического выравнивания
 
 Тип: bool
 
@@ -2581,9 +3479,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Флаг размещения всех символов
+
 ## CONTENT
 
 Доступ: protected
+
+Флаг размещения всех символов
 
 Тип: bool
 
@@ -2592,9 +3494,13 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Символ-заполнитель при превышении
+
 ## CONTENT
 
 Доступ: protected
+
+Символ-заполнитель при превышении
 
 Тип: char16_t
 
@@ -2603,8 +3509,12 @@ Title: XLFontLabelBase.h
 
 ## BRIEF
 
+Флаг постоянной укладки
+
 ## CONTENT
 
 Доступ: protected
+
+Флаг постоянной укладки
 
 Тип: bool

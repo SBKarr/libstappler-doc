@@ -21,19 +21,18 @@ Title: SPPugLexer.h
 
 Структура разбора языка шаблонизатора. Читает документ шаблона в дерево токенов.
 
-
-# ::stappler::pug::Lexer::ErrCb
+# ::stappler::pug::Lexer::OutStream
 
 ## BRIEF
 
-Функция сообщения об ошибке
+Тип выходного потока
 
 ## CONTENT
 
-Функция сообщения об ошибке
+Тип выходного потока
 
 
-# ::stappler::pug::Lexer::Lexer(stappler::StringView const&,stappler::pug::Lexer::ErrCb const&)
+# ::stappler::pug::Lexer::Lexer(stappler::StringView const&,stappler::pug::Lexer::OutStream const&)
 
 ## BRIEF
 
@@ -45,10 +44,10 @@ Title: SPPugLexer.h
 
 Параметры:
 * stappler::StringView const&
-* stappler::pug::Lexer::ErrCb const&
+* stappler::pug::Lexer::OutStream const& - поток для вывода ошибок чтения
 
 
-# ::stappler::pug::Lexer::perform(stappler::pug::Lexer::ErrCb const&)
+# ::stappler::pug::Lexer::perform(stappler::pug::Lexer::OutStream const&)
 
 ## BRIEF
 
@@ -59,12 +58,12 @@ Title: SPPugLexer.h
 Запускает процесс чтения (вызывается автоматически)
 
 Параметры:
-* stappler::pug::Lexer::ErrCb const&
+* stappler::pug::Lexer::OutStream const& - поток для вывода ошибок чтения
 
 Возвращает:
 * bool - true если успешно
 
-# ::stappler::pug::Lexer::parseToken(stappler::pug::Lexer::ErrCb const&,stappler::pug::Token&)
+# ::stappler::pug::Lexer::parseToken(stappler::pug::Lexer::OutStream const&,stappler::pug::Token&)
 
 ## BRIEF
 
@@ -75,13 +74,13 @@ Title: SPPugLexer.h
 Разбирает токен шаблона
 
 Параметры:
-* stappler::pug::Lexer::ErrCb const&
+* stappler::pug::Lexer::OutStream const& - поток для вывода ошибок чтения
 * stappler::pug::Token&
 
 Возвращает:
 * bool - true если успешно
 
-# ::stappler::pug::Lexer::readAttributes(stappler::pug::Lexer::ErrCb const&,stappler::pug::Token*,stappler::StringView&) const
+# ::stappler::pug::Lexer::readAttributes(stappler::pug::Lexer::OutStream const&,stappler::pug::Token*,stappler::StringView&) const
 
 ## BRIEF
 
@@ -92,7 +91,7 @@ Title: SPPugLexer.h
 Разбирает список шаблонированных HTML-атрибутов
 
 Параметры:
-* stappler::pug::Lexer::ErrCb const&
+* stappler::pug::Lexer::OutStream const& - поток для вывода ошибок чтения
 * stappler::pug::Token*
 * stappler::StringView&
 
@@ -116,7 +115,7 @@ Title: SPPugLexer.h
 Возвращает:
 * bool - true если успешно
 
-# ::stappler::pug::Lexer::readTagInfo(stappler::pug::Lexer::ErrCb const&,stappler::pug::Token*,stappler::StringView&,bool) const
+# ::stappler::pug::Lexer::readTagInfo(stappler::pug::Lexer::OutStream const&,stappler::pug::Token*,stappler::StringView&,bool) const
 
 ## BRIEF
 
@@ -127,7 +126,7 @@ Title: SPPugLexer.h
 Читает HTML-тег из токена
 
 Параметры:
-* stappler::pug::Lexer::ErrCb const&
+* stappler::pug::Lexer::OutStream const& - поток для вывода ошибок чтения
 * stappler::pug::Token*
 * stappler::StringView&
 * bool
@@ -169,7 +168,7 @@ Title: SPPugLexer.h
 Возвращает:
 * bool - true если успешно
 
-# ::stappler::pug::Lexer::readPlainTextInterpolation(stappler::pug::Lexer::ErrCb const&,stappler::pug::Token*,stappler::StringView&,bool) const
+# ::stappler::pug::Lexer::readPlainTextInterpolation(stappler::pug::Lexer::OutStream const&,stappler::pug::Token*,stappler::StringView&,bool) const
 
 ## BRIEF
 
@@ -180,7 +179,7 @@ Title: SPPugLexer.h
 Читает вывод текста без форматирования
 
 Параметры:
-* stappler::pug::Lexer::ErrCb const&
+* stappler::pug::Lexer::OutStream const& - поток для вывода ошибок чтения
 * stappler::pug::Token*
 * stappler::StringView&
 * bool
@@ -188,7 +187,7 @@ Title: SPPugLexer.h
 Возвращает:
 * bool - true если успешно
 
-# ::stappler::pug::Lexer::readLine(stappler::pug::Lexer::ErrCb const&,stappler::StringView const&,stappler::StringView&,stappler::pug::Token*)
+# ::stappler::pug::Lexer::readLine(stappler::pug::Lexer::OutStream const&,stappler::StringView const&,stappler::StringView&,stappler::pug::Token*)
 
 ## BRIEF
 
@@ -199,7 +198,7 @@ Title: SPPugLexer.h
 Читает строку шаблона
 
 Параметры:
-* stappler::pug::Lexer::ErrCb const&
+* stappler::pug::Lexer::OutStream const& - поток для вывода ошибок чтения
 * stappler::StringView const&
 * stappler::StringView&
 * stappler::pug::Token*
@@ -207,7 +206,7 @@ Title: SPPugLexer.h
 Возвращает:
 * stappler::pug::Token* - результирующий токен
 
-# ::stappler::pug::Lexer::readPlainLine(stappler::pug::Lexer::ErrCb const&,stappler::StringView const&,stappler::StringView&)
+# ::stappler::pug::Lexer::readPlainLine(stappler::pug::Lexer::OutStream const&,stappler::StringView const&,stappler::StringView&)
 
 ## BRIEF
 
@@ -218,14 +217,14 @@ Title: SPPugLexer.h
 Читает строку прямого вывода в текст
 
 Параметры:
-* stappler::pug::Lexer::ErrCb const&
+* stappler::pug::Lexer::OutStream const& - поток для вывода ошибок чтения
 * stappler::StringView const&
 * stappler::StringView&
 
 Возвращает:
 * stappler::pug::Token* - результирующий токен
 
-# ::stappler::pug::Lexer::readCommonLine(stappler::pug::Lexer::ErrCb const&,stappler::StringView const&,stappler::StringView&)
+# ::stappler::pug::Lexer::readCommonLine(stappler::pug::Lexer::OutStream const&,stappler::StringView const&,stappler::StringView&)
 
 ## BRIEF
 
@@ -236,14 +235,14 @@ Title: SPPugLexer.h
 Читает стандартную строку шаблонизатора
 
 Параметры:
-* stappler::pug::Lexer::ErrCb const&
+* stappler::pug::Lexer::OutStream const& - поток для вывода ошибок чтения
 * stappler::StringView const&
 * stappler::StringView&
 
 Возвращает:
 * stappler::pug::Token* - результирующий токен
 
-# ::stappler::pug::Lexer::readKeywordLine(stappler::pug::Lexer::ErrCb const&,stappler::StringView const&,stappler::StringView&)
+# ::stappler::pug::Lexer::readKeywordLine(stappler::pug::Lexer::OutStream const&,stappler::StringView const&,stappler::StringView&)
 
 ## BRIEF
 
@@ -254,14 +253,14 @@ Title: SPPugLexer.h
 Читает специальную строку шаблонизатора
 
 Параметры:
-* stappler::pug::Lexer::ErrCb const&
+* stappler::pug::Lexer::OutStream const& - поток для вывода ошибок чтения
 * stappler::StringView const&
 * stappler::StringView&
 
 Возвращает:
 * stappler::pug::Token* - результирующий токен
 
-# ::stappler::pug::Lexer::onError(stappler::pug::Lexer::ErrCb const&,stappler::StringView const&,stappler::StringView const&) const
+# ::stappler::pug::Lexer::onError(stappler::pug::Lexer::OutStream const&,stappler::StringView const&,stappler::StringView const&) const
 
 ## BRIEF
 
@@ -272,7 +271,7 @@ Title: SPPugLexer.h
 Выводит сообщение об ошибке чтения
 
 Параметры:
-* stappler::pug::Lexer::ErrCb const&
+* stappler::pug::Lexer::OutStream const& - поток для вывода ошибок чтения
 * stappler::StringView const&
 * stappler::StringView const&
 

@@ -382,3 +382,29 @@ Title: SPMetastring.h
 
 Возвращает:
 * std::basic_ostream<char>&
+
+# ::stappler::metastring::metastring<char...>::to_std_ustring() const
+
+## BRIEF
+
+Кодирует метастроку в строку UTF-16
+
+## CONTENT
+
+Кодирует метастроку в строку UTF-16
+
+Возвращает:
+* std::u16string
+
+# ::stappler::metastring::metastring<char...>::to_memory_ustring() const
+
+## BRIEF
+
+Кодирует метастроку в строку UTF-16
+
+## CONTENT
+
+Кодирует метастроку в строку UTF-16
+
+Возвращает:
+* memory::u16string

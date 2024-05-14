@@ -620,21 +620,6 @@ Title: SPJsonWebToken.h
 * stappler::BytesView
 
 
-# ::stappler::AesToken<typename>::Fingerprint::Fingerprint(crypto::HashFunction,Function<void (const Callback<void (const stappler::CoderSource &)>)>&&)
-
-## BRIEF
-
-Создаёт структуру кодирования отпечатка
-
-## CONTENT
-
-Создаёт структуру кодирования отпечатка
-
-Параметры:
-* crypto::HashFunction
-* Function<void (const Callback<void (const stappler::CoderSource &)>)>&&
-
-
 # ::stappler::AesToken<typename>::parse(stappler::StringView,stappler::AesToken::Fingerprint const&,stappler::StringView,stappler::StringView,stappler::AesToken::Keys)
 
 ## BRIEF
@@ -865,4 +850,18 @@ Title: SPJsonWebToken.h
 Ключи
 
 Тип: stappler::AesToken::Keys
+
+# ::stappler::AesToken<typename>::Fingerprint::Fingerprint(crypto::HashFunction,Function<void (const crypto::HashCoderCallback &)>&&)
+
+## BRIEF
+
+Создаёт структуру для создания отпечатка с помощью функции получения случайных данных
+
+## CONTENT
+
+Создаёт структуру для создания отпечатка с помощью функции получения случайных данных
+
+Параметры:
+* crypto::HashFunction
+* Function<void (const crypto::HashCoderCallback &)>&&
 

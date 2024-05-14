@@ -225,6 +225,30 @@ Title: XLScene.h
 * stappler::xenolith::Scene::FrameRequest&
 
 
+# ::stappler::xenolith::Scene::onFrameAttached(stappler::xenolith::Scene::FrameHandle const*)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* stappler::xenolith::Scene::FrameHandle const*
+
+
+# ::stappler::xenolith::Scene::onFrameDetached(stappler::xenolith::Scene::FrameHandle const*)
+
+## BRIEF
+
+## CONTENT
+
+Доступ: public
+
+Параметры:
+* stappler::xenolith::Scene::FrameHandle const*
+
+
 # ::stappler::xenolith::Scene::setFrameConstraints(core::FrameContraints const&)
 
 ## BRIEF

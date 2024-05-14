@@ -1313,15 +1313,6 @@ Title: XLNode.h
 * stappler::xenolith::UpdateTime const&
 
 
-# ::stappler::xenolith::Node::updateChildrenTransform()
-
-## BRIEF
-
-## CONTENT
-
-Доступ: public
-
-
 # ::stappler::xenolith::Node::getNodeToParentTransform() const
 
 ## BRIEF

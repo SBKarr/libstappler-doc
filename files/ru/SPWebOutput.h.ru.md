@@ -12,7 +12,7 @@ Title: SPWebOutput.h
 Заголовок функций вывода в запрос
 
 
-# ::stappler::web::output::formatJsonAsHtml(stappler::mem_pool::OutputStream&,stappler::mem_pool::Value const&,bool)
+# ::stappler::web::output::formatJsonAsHtml(Callback<void (stappler::StringView)> const&,stappler::mem_pool::Value const&,bool)
 
 ## BRIEF
 
@@ -23,7 +23,7 @@ Title: SPWebOutput.h
 Выводит JSON как HTML
 
 Параметры:
-* stappler::mem_pool::OutputStream&
+* Callback<void (stappler::StringView)> const&
 * stappler::mem_pool::Value const&
 * bool - true для вывода управляющих кнопок
 
@@ -44,7 +44,7 @@ Title: SPWebOutput.h
 * bool - true если разрешена форма JSON-P
 
 
-# ::stappler::web::output::writeData(stappler::web::Request&,std::basic_ostream<char>&,Function<void (const stappler::mem_pool::String &)> const&,stappler::mem_pool::Value const&,bool)
+# ::stappler::web::output::writeData(stappler::web::Request&,Callback<void (stappler::StringView)> const&,Function<void (const stappler::mem_pool::String &)> const&,stappler::mem_pool::Value const&,bool)
 
 ## BRIEF
 
@@ -56,7 +56,7 @@ Title: SPWebOutput.h
 
 Параметры:
 * stappler::web::Request&
-* std::basic_ostream<char>&
+* Callback<void (stappler::StringView)> const&
 * Function<void (const stappler::mem_pool::String &)> const& - функция для получения типа контента
 * stappler::mem_pool::Value const&
 * bool - true если разрешена форма JSON-P

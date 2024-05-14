@@ -652,19 +652,6 @@ Title: SPSearchIndex.h
 Возвращает:
 * stappler::search::SearchIndex::Slice
 
-# ::stappler::search::SearchIndex::print() const
-
-## BRIEF
-
-Печатает содержимое индекса (для отладки)
-
-## CONTENT
-
-Доступ: public
-
-Печатает содержимое индекса (для отладки)
-
-
 # ::stappler::search::SearchIndex::makeStringView(stappler::search::SearchIndex::Token const&) const
 
 ## BRIEF
@@ -764,3 +751,18 @@ Title: SPSearchIndex.h
 Функция разбиения фразы на токены
 
 Тип: TokenizerCallback
+
+# ::stappler::search::SearchIndex::print(Callback<void (stappler::StringView)> const&) const
+
+## BRIEF
+
+Выводит содержимое текстового индекса в поток для отладки
+
+## CONTENT
+
+Доступ: public
+
+Выводит содержимое текстового индекса в поток для отладки
+
+Параметры:
+* Callback<void (stappler::StringView)> const&

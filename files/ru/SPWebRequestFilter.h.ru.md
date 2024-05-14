@@ -70,7 +70,7 @@ Title: SPWebRequestFilter.h
 * bool - true если данные успешно прочитаны
 
 
-# ::stappler::web::RequestFilter::readRequestHeader(stappler::StringView&,stappler::StringView&,stappler::StringView&)
+# ::stappler::web::RequestFilter::readRequestHeader(stappler::BytesView&,stappler::StringView&,stappler::StringView&)
 
 ## BRIEF
 
@@ -83,7 +83,7 @@ Title: SPWebRequestFilter.h
 Читает заголовок запроса
 
 Параметры:
-* stappler::StringView& - данные запроса
+* stappler::BytesView& - данные запроса
 * stappler::StringView& - имя заголовка
 * stappler::StringView& - данные аголовка
 

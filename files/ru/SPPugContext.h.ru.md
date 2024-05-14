@@ -25,6 +25,17 @@ Title: SPPugContext.h
 Базовые классы:
 * memory::AllocPool
 
+# ::stappler::pug::Context::OutStream
+
+## BRIEF
+
+Тип выходного потока
+
+## CONTENT
+
+Доступ: public
+
+Тип выходного потока
 
 # ::stappler::pug::Context::StackSize
 
@@ -299,7 +310,7 @@ Title: SPPugContext.h
 Возвращает:
 * bool
 
-# ::stappler::pug::Context::printConstExpr(stappler::pug::Expression const&,std::ostream&,bool)
+# ::stappler::pug::Context::printConstExpr(stappler::pug::Expression const&,stappler::pug::Context::OutStream const&,bool)
 
 ## BRIEF
 
@@ -313,13 +324,13 @@ Title: SPPugContext.h
 
 Параметры:
 * stappler::pug::Expression const&
-* std::ostream&
+* stappler::pug::Context::OutStream const&
 * bool
 
 Возвращает:
 * bool
 
-# ::stappler::pug::Context::printAttrVar(stappler::StringView const&,stappler::pug::Expression const&,std::ostream&,bool)
+# ::stappler::pug::Context::printAttrVar(stappler::StringView const&,stappler::pug::Expression const&,stappler::pug::Context::OutStream const&,bool)
 
 ## BRIEF
 
@@ -334,13 +345,13 @@ Title: SPPugContext.h
 Параметры:
 * stappler::StringView const& - имя атрибута
 * stappler::pug::Expression const& - значение
-* std::ostream&
+* stappler::pug::Context::OutStream const&
 * bool - true если необходимо экранировать спецсимволы
 
 Возвращает:
 * bool
 
-# ::stappler::pug::Context::printAttrExpr(stappler::pug::Expression const&,std::ostream&)
+# ::stappler::pug::Context::printAttrExpr(stappler::pug::Expression const&,stappler::pug::Context::OutStream const&)
 
 ## BRIEF
 
@@ -354,7 +365,7 @@ Title: SPPugContext.h
 
 Параметры:
 * stappler::pug::Expression const&
-* std::ostream&
+* stappler::pug::Context::OutStream const&
 
 Возвращает:
 * bool
@@ -371,7 +382,7 @@ Title: SPPugContext.h
 
 Конструктор
 
-# ::stappler::pug::Context::setErrorStream(std::ostream&)
+# ::stappler::pug::Context::setErrorStream(stappler::pug::Context::OutStream const&)
 
 ## BRIEF
 
@@ -384,10 +395,10 @@ Title: SPPugContext.h
 Устанавливает поток для вывода ошибок времени исполнения
 
 Параметры:
-* std::ostream&
+* stappler::pug::Context::OutStream const&
 
 
-# ::stappler::pug::Context::print(stappler::pug::Expression const&,std::ostream&,bool)
+# ::stappler::pug::Context::print(stappler::pug::Expression const&,stappler::pug::Context::OutStream const&,bool)
 
 ## BRIEF
 
@@ -401,13 +412,13 @@ Title: SPPugContext.h
 
 Параметры:
 * stappler::pug::Expression const&
-* std::ostream&
+* stappler::pug::Context::OutStream const&
 * bool - true если необходимо экранировать спецсимволы
 
 Возвращает:
 * bool
 
-# ::stappler::pug::Context::printAttr(stappler::StringView const&,stappler::pug::Expression const&,std::ostream&,bool)
+# ::stappler::pug::Context::printAttr(stappler::StringView const&,stappler::pug::Expression const&,stappler::pug::Context::OutStream const&,bool)
 
 ## BRIEF
 
@@ -422,13 +433,13 @@ Title: SPPugContext.h
 Параметры:
 * stappler::StringView const& - имя атрибута
 * stappler::pug::Expression const&
-* std::ostream&
+* stappler::pug::Context::OutStream const&
 * bool - true если необходимо экранировать спецсимволы
 
 Возвращает:
 * bool
 
-# ::stappler::pug::Context::printAttrExprList(stappler::pug::Expression const&,std::ostream&)
+# ::stappler::pug::Context::printAttrExprList(stappler::pug::Expression const&,stappler::pug::Context::OutStream const&)
 
 ## BRIEF
 
@@ -442,12 +453,12 @@ Title: SPPugContext.h
 
 Параметры:
 * stappler::pug::Expression const&
-* std::ostream&
+* stappler::pug::Context::OutStream const&
 
 Возвращает:
 * bool
 
-# ::stappler::pug::Context::exec(stappler::pug::Expression const&,std::ostream&,bool)
+# ::stappler::pug::Context::exec(stappler::pug::Expression const&,stappler::pug::Context::OutStream const&,bool)
 
 ## BRIEF
 
@@ -461,7 +472,7 @@ Title: SPPugContext.h
 
 Параметры:
 * stappler::pug::Expression const&
-* std::ostream&
+* stappler::pug::Context::OutStream const&
 * bool - true если необходимо экранировать спецсимволы
 
 Возвращает:
@@ -521,6 +532,21 @@ Title: SPPugContext.h
 * stappler::pug::Value const*  - указатель на значение переменной
 * stappler::pug::VarClass* - класс переменной
 
+# ::stappler::pug::Context::set(stappler::StringView const&,stappler::pug::VarClass*)
+
+## BRIEF
+
+Устанавливает значение класса для локальной переменной
+
+## CONTENT
+
+Доступ: public
+
+Устанавливает значение класса для локальной переменной
+
+Параметры:
+* stappler::StringView const&
+* stappler::pug::VarClass*
 
 # ::stappler::pug::Context::set(stappler::StringView const&,stappler::pug::Context::Callback&&)
 
@@ -613,7 +639,7 @@ Title: SPPugContext.h
 Возвращает:
 * stappler::pug::VarClass*
 
-# ::stappler::pug::Context::runInclude(stappler::StringView const&,std::ostream&,stappler::pug::Template const*)
+# ::stappler::pug::Context::runInclude(stappler::StringView const&,stappler::pug::Context::OutStream const&,Template::RunContext&)
 
 ## BRIEF
 
@@ -627,8 +653,8 @@ Title: SPPugContext.h
 
 Параметры:
 * stappler::StringView const& - имя шаблона
-* std::ostream& - поток для вывода
-* stappler::pug::Template const* - запускаемый шаблон
+* stappler::pug::Context::OutStream const& - поток для вывода
+* Template::RunContext& - контекст запуска
 
 Возвращает:
 * bool

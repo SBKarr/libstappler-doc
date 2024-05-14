@@ -1060,3 +1060,45 @@ Title: XLCoreFrameRequest.h
 Список привязанных по времени жизни объектов
 
 Тип: std::forward_list<Rc<Ref>>
+
+# ::stappler::xenolith::core::FrameRequest::attachFrame(stappler::xenolith::core::FrameHandle*)
+
+## BRIEF
+
+Соединяет кадр с запросом
+
+## CONTENT
+
+Доступ: public
+
+Соединяет кадр с запросом
+
+Параметры:
+* stappler::xenolith::core::FrameHandle*
+
+
+# ::stappler::xenolith::core::FrameRequest::detachFrame()
+
+## BRIEF
+
+Отсоединяет кадр от запроса
+
+## CONTENT
+
+Доступ: public
+
+Отсоединяет кадр от запроса
+
+# ::stappler::xenolith::core::FrameRequest::_frame
+
+## BRIEF
+
+Кадр, исполняющий запрос
+
+## CONTENT
+
+Доступ: protected
+
+Кадр, исполняющий запрос
+
+Тип: stappler::xenolith::core::FrameHandle*

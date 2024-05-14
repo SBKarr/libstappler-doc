@@ -308,7 +308,7 @@ Title: SPPriorityList.h
 * Value* - указатель на новое значение
 
 
-# ::stappler::PriorityList<typename>::find(void*)
+# ::stappler::PriorityList<typename>::find(void*) const
 
 ## BRIEF
 
