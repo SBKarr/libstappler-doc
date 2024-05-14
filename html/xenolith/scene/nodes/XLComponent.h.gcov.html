@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2023-12-03 02:10:58</td>
+            <td class="headerValue">2024-05-12 00:16:13</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">2</td>
@@ -88,7 +88,7 @@
 <a name="26"><span class="lineNum">      26 </span>            : </a>
 <a name="27"><span class="lineNum">      27 </span>            : #include &quot;XLNodeInfo.h&quot;</a>
 <a name="28"><span class="lineNum">      28 </span>            : </a>
-<a name="29"><span class="lineNum">      29 </span>            : namespace stappler::xenolith {</a>
+<a name="29"><span class="lineNum">      29 </span>            : namespace STAPPLER_VERSIONIZED stappler::xenolith {</a>
 <a name="30"><span class="lineNum">      30 </span>            : </a>
 <a name="31"><span class="lineNum">      31 </span>            : struct FrameInfo;</a>
 <a name="32"><span class="lineNum">      32 </span>            : class Node;</a>
@@ -110,30 +110,37 @@
 <a name="48"><span class="lineNum">      48 </span>            : </a>
 <a name="49"><span class="lineNum">      49 </span>            :         virtual void visit(FrameInfo &amp;, NodeFlags parentFlags);</a>
 <a name="50"><span class="lineNum">      50 </span>            : </a>
-<a name="51"><span class="lineNum">      51 </span>            :         virtual void onContentSizeDirty();</a>
-<a name="52"><span class="lineNum">      52 </span>            :         virtual void onTransformDirty(const Mat4 &amp;);</a>
-<a name="53"><span class="lineNum">      53 </span>            :         virtual void onReorderChildDirty();</a>
-<a name="54"><span class="lineNum">      54 </span>            : </a>
-<a name="55"><span class="lineNum">      55 </span>            :         virtual bool isRunning() const;</a>
+<a name="51"><span class="lineNum">      51 </span>            :         virtual void update(const UpdateTime &amp;time);</a>
+<a name="52"><span class="lineNum">      52 </span>            : </a>
+<a name="53"><span class="lineNum">      53 </span>            :         virtual void onContentSizeDirty();</a>
+<a name="54"><span class="lineNum">      54 </span>            :         virtual void onTransformDirty(const Mat4 &amp;);</a>
+<a name="55"><span class="lineNum">      55 </span>            :         virtual void onReorderChildDirty();</a>
 <a name="56"><span class="lineNum">      56 </span>            : </a>
-<a name="57"><span class="lineNum">      57 </span>            :         virtual bool isEnabled() const;</a>
-<a name="58"><span class="lineNum">      58 </span>            :         virtual void setEnabled(bool b);</a>
-<a name="59"><span class="lineNum">      59 </span>            : </a>
-<a name="60"><span class="lineNum">      60 </span><span class="lineCov">        148 :         Node* getOwner() const { return _owner; }</span></a>
+<a name="57"><span class="lineNum">      57 </span>            :         virtual bool isRunning() const;</a>
+<a name="58"><span class="lineNum">      58 </span>            : </a>
+<a name="59"><span class="lineNum">      59 </span>            :         virtual bool isEnabled() const;</a>
+<a name="60"><span class="lineNum">      60 </span>            :         virtual void setEnabled(bool b);</a>
 <a name="61"><span class="lineNum">      61 </span>            : </a>
-<a name="62"><span class="lineNum">      62 </span>            :         void setFrameTag(uint64_t);</a>
-<a name="63"><span class="lineNum">      63 </span><span class="lineCov">       4866 :         uint64_t getFrameTag() const { return _frameTag; }</span></a>
-<a name="64"><span class="lineNum">      64 </span>            : </a>
-<a name="65"><span class="lineNum">      65 </span>            : protected:</a>
-<a name="66"><span class="lineNum">      66 </span>            :         Node *_owner = nullptr;</a>
-<a name="67"><span class="lineNum">      67 </span>            :         bool _enabled = true;</a>
-<a name="68"><span class="lineNum">      68 </span>            :         bool _running = false;</a>
-<a name="69"><span class="lineNum">      69 </span>            :         uint64_t _frameTag = InvalidTag;</a>
-<a name="70"><span class="lineNum">      70 </span>            : };</a>
-<a name="71"><span class="lineNum">      71 </span>            : </a>
-<a name="72"><span class="lineNum">      72 </span>            : }</a>
-<a name="73"><span class="lineNum">      73 </span>            : </a>
-<a name="74"><span class="lineNum">      74 </span>            : #endif /* XENOLITH_SCENE_NODES_XLCOMPONENT_H_ */</a>
+<a name="62"><span class="lineNum">      62 </span>            :         bool isScheduled() const;</a>
+<a name="63"><span class="lineNum">      63 </span>            :         void scheduleUpdate();</a>
+<a name="64"><span class="lineNum">      64 </span>            :         void unscheduleUpdate();</a>
+<a name="65"><span class="lineNum">      65 </span>            : </a>
+<a name="66"><span class="lineNum">      66 </span><span class="lineCov">      11480 :         Node* getOwner() const { return _owner; }</span></a>
+<a name="67"><span class="lineNum">      67 </span>            : </a>
+<a name="68"><span class="lineNum">      68 </span>            :         void setFrameTag(uint64_t);</a>
+<a name="69"><span class="lineNum">      69 </span><span class="lineCov">     502332 :         uint64_t getFrameTag() const { return _frameTag; }</span></a>
+<a name="70"><span class="lineNum">      70 </span>            : </a>
+<a name="71"><span class="lineNum">      71 </span>            : protected:</a>
+<a name="72"><span class="lineNum">      72 </span>            :         Node *_owner = nullptr;</a>
+<a name="73"><span class="lineNum">      73 </span>            :         bool _enabled = true;</a>
+<a name="74"><span class="lineNum">      74 </span>            :         bool _running = false;</a>
+<a name="75"><span class="lineNum">      75 </span>            :         bool _scheduled = false;</a>
+<a name="76"><span class="lineNum">      76 </span>            :         uint64_t _frameTag = InvalidTag;</a>
+<a name="77"><span class="lineNum">      77 </span>            : };</a>
+<a name="78"><span class="lineNum">      78 </span>            : </a>
+<a name="79"><span class="lineNum">      79 </span>            : }</a>
+<a name="80"><span class="lineNum">      80 </span>            : </a>
+<a name="81"><span class="lineNum">      81 </span>            : #endif /* XENOLITH_SCENE_NODES_XLCOMPONENT_H_ */</a>
 </pre>
       </td>
     </tr>

@@ -1,0 +1,531 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - coverage.info - extra/webserver/webserver/utils/SPWebAsyncTask.h</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">extra/webserver/webserver/utils</a> - SPWebAsyncTask.h<span style="font-size: 80%;"> (source / <a href="SPWebAsyncTask.h.func-sort-c.html">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">coverage.info</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">68</td>
+            <td class="headerCovTableEntry">73</td>
+            <td class="headerCovTableEntryHi">93.2 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-05-12 00:16:13</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">28</td>
+            <td class="headerCovTableEntry">28</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">          Line data    Source code</pre>
+<pre class="source">
+<a name="1"><span class="lineNum">       1 </span>            : /**</a>
+<a name="2"><span class="lineNum">       2 </span>            :  Copyright (c) 2024 Stappler LLC &lt;admin@stappler.dev&gt;</a>
+<a name="3"><span class="lineNum">       3 </span>            : </a>
+<a name="4"><span class="lineNum">       4 </span>            :  Permission is hereby granted, free of charge, to any person obtaining a copy</a>
+<a name="5"><span class="lineNum">       5 </span>            :  of this software and associated documentation files (the &quot;Software&quot;), to deal</a>
+<a name="6"><span class="lineNum">       6 </span>            :  in the Software without restriction, including without limitation the rights</a>
+<a name="7"><span class="lineNum">       7 </span>            :  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell</a>
+<a name="8"><span class="lineNum">       8 </span>            :  copies of the Software, and to permit persons to whom the Software is</a>
+<a name="9"><span class="lineNum">       9 </span>            :  furnished to do so, subject to the following conditions:</a>
+<a name="10"><span class="lineNum">      10 </span>            : </a>
+<a name="11"><span class="lineNum">      11 </span>            :  The above copyright notice and this permission notice shall be included in</a>
+<a name="12"><span class="lineNum">      12 </span>            :  all copies or substantial portions of the Software.</a>
+<a name="13"><span class="lineNum">      13 </span>            : </a>
+<a name="14"><span class="lineNum">      14 </span>            :  THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</a>
+<a name="15"><span class="lineNum">      15 </span>            :  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</a>
+<a name="16"><span class="lineNum">      16 </span>            :  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE</a>
+<a name="17"><span class="lineNum">      17 </span>            :  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</a>
+<a name="18"><span class="lineNum">      18 </span>            :  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,</a>
+<a name="19"><span class="lineNum">      19 </span>            :  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN</a>
+<a name="20"><span class="lineNum">      20 </span>            :  THE SOFTWARE.</a>
+<a name="21"><span class="lineNum">      21 </span>            :  **/</a>
+<a name="22"><span class="lineNum">      22 </span>            : </a>
+<a name="23"><span class="lineNum">      23 </span>            : #ifndef EXTRA_WEBSERVER_WEBSERVER_UTILS_SPWEBASYNCTASK_H_</a>
+<a name="24"><span class="lineNum">      24 </span>            : #define EXTRA_WEBSERVER_WEBSERVER_UTILS_SPWEBASYNCTASK_H_</a>
+<a name="25"><span class="lineNum">      25 </span>            : </a>
+<a name="26"><span class="lineNum">      26 </span>            : #include &quot;SPWebHost.h&quot;</a>
+<a name="27"><span class="lineNum">      27 </span>            : </a>
+<a name="28"><span class="lineNum">      28 </span>            : namespace STAPPLER_VERSIONIZED stappler::web {</a>
+<a name="29"><span class="lineNum">      29 </span>            : </a>
+<a name="30"><span class="lineNum">      30 </span>            : class Host;</a>
+<a name="31"><span class="lineNum">      31 </span>            : class AsyncTask;</a>
+<a name="32"><span class="lineNum">      32 </span>            : </a>
+<a name="33"><span class="lineNum">      33 </span>            : class AsyncTaskGroup : public AllocBase {</a>
+<a name="34"><span class="lineNum">      34 </span>            : public:</a>
+<a name="35"><span class="lineNum">      35 </span>            :         static AsyncTaskGroup *getCurrent();</a>
+<a name="36"><span class="lineNum">      36 </span>            : </a>
+<a name="37"><span class="lineNum">      37 </span>            :         AsyncTaskGroup();</a>
+<a name="38"><span class="lineNum">      38 </span>            :         AsyncTaskGroup(const Host &amp;);</a>
+<a name="39"><span class="lineNum">      39 </span>            :         AsyncTaskGroup(const Host &amp;, std::function&lt;void()&gt; &amp;&amp;);</a>
+<a name="40"><span class="lineNum">      40 </span>            : </a>
+<a name="41"><span class="lineNum">      41 </span>            :         void onAdded(AsyncTask *);</a>
+<a name="42"><span class="lineNum">      42 </span>            :         void onPerformed(AsyncTask *);</a>
+<a name="43"><span class="lineNum">      43 </span>            : </a>
+<a name="44"><span class="lineNum">      44 </span>            :         void update();</a>
+<a name="45"><span class="lineNum">      45 </span>            :         void waitForAll();</a>
+<a name="46"><span class="lineNum">      46 </span>            : </a>
+<a name="47"><span class="lineNum">      47 </span>            :         bool perform(const Callback&lt;void(AsyncTask &amp;)&gt; &amp;cb);</a>
+<a name="48"><span class="lineNum">      48 </span>            : </a>
+<a name="49"><span class="lineNum">      49 </span>            :         Pair&lt;size_t, size_t&gt; getCounters() const; // &lt;completed, added&gt;</a>
+<a name="50"><span class="lineNum">      50 </span>            : </a>
+<a name="51"><span class="lineNum">      51 </span><span class="lineCov">        750 :         Host getHost() const { return _host; }</span></a>
+<a name="52"><span class="lineNum">      52 </span>            : </a>
+<a name="53"><span class="lineNum">      53 </span>            : protected:</a>
+<a name="54"><span class="lineNum">      54 </span>            :         Time _lastUpdate = Time::now();</a>
+<a name="55"><span class="lineNum">      55 </span>            :         std::thread::id _threadId = std::this_thread::get_id();</a>
+<a name="56"><span class="lineNum">      56 </span>            :         std::mutex _mutex;</a>
+<a name="57"><span class="lineNum">      57 </span>            :         std::mutex _condMutex;</a>
+<a name="58"><span class="lineNum">      58 </span>            :         std::condition_variable _condition;</a>
+<a name="59"><span class="lineNum">      59 </span>            : </a>
+<a name="60"><span class="lineNum">      60 </span>            :         std::vector&lt;AsyncTask *&gt; _queue;</a>
+<a name="61"><span class="lineNum">      61 </span>            :         std::atomic&lt;size_t&gt; _added = 0;</a>
+<a name="62"><span class="lineNum">      62 </span>            :         std::atomic&lt;size_t&gt; _completed = 0;</a>
+<a name="63"><span class="lineNum">      63 </span>            :         Host _host;</a>
+<a name="64"><span class="lineNum">      64 </span>            : </a>
+<a name="65"><span class="lineNum">      65 </span>            :         std::function&lt;void()&gt; _notifyFn = nullptr;</a>
+<a name="66"><span class="lineNum">      66 </span>            : };</a>
+<a name="67"><span class="lineNum">      67 </span>            : </a>
+<a name="68"><span class="lineNum">      68 </span>            : class AsyncTask : public AllocBase {</a>
+<a name="69"><span class="lineNum">      69 </span>            : public:</a>
+<a name="70"><span class="lineNum">      70 </span>            :         static constexpr uint8_t PriorityLowest = config::PriorityLowest;</a>
+<a name="71"><span class="lineNum">      71 </span>            :         static constexpr uint8_t PriorityLow = config::PriorityLow;</a>
+<a name="72"><span class="lineNum">      72 </span>            :         static constexpr uint8_t PriorityNormal = config::PriorityNormal;</a>
+<a name="73"><span class="lineNum">      73 </span>            :         static constexpr uint8_t PriorityHigh = config::PriorityHigh;</a>
+<a name="74"><span class="lineNum">      74 </span>            :         static constexpr uint8_t PriorityHighest = config::PriorityHighest;</a>
+<a name="75"><span class="lineNum">      75 </span>            : </a>
+<a name="76"><span class="lineNum">      76 </span>            :         using ExecuteCallback = Function&lt;bool(const AsyncTask &amp;)&gt;;</a>
+<a name="77"><span class="lineNum">      77 </span>            :         using CompleteCallback = Function&lt;void(const AsyncTask &amp;, bool)&gt;;</a>
+<a name="78"><span class="lineNum">      78 </span>            : </a>
+<a name="79"><span class="lineNum">      79 </span>            :         // usage:</a>
+<a name="80"><span class="lineNum">      80 </span>            :         // auto newTask = Task::prepare([&amp;] (Task &amp;task) {</a>
+<a name="81"><span class="lineNum">      81 </span>            :         //    // do configuration in Task's memory pool context</a>
+<a name="82"><span class="lineNum">      82 </span>            :         // });</a>
+<a name="83"><span class="lineNum">      83 </span>            :         //</a>
+<a name="84"><span class="lineNum">      84 </span>            :         static AsyncTask *prepare(pool_t *rootPool, const Callback&lt;void(AsyncTask &amp;)&gt; &amp;cb, AsyncTaskGroup * = nullptr);</a>
+<a name="85"><span class="lineNum">      85 </span>            :         static AsyncTask *prepare(const Callback&lt;void(AsyncTask &amp;)&gt; &amp;cb, AsyncTaskGroup * = nullptr);</a>
+<a name="86"><span class="lineNum">      86 </span>            : </a>
+<a name="87"><span class="lineNum">      87 </span>            :         static bool perform(const Host &amp;, const Callback&lt;void(AsyncTask &amp;)&gt; &amp;cb, AsyncTaskGroup * = nullptr);</a>
+<a name="88"><span class="lineNum">      88 </span>            :         static bool perform(const Callback&lt;void(AsyncTask &amp;)&gt; &amp;cb, AsyncTaskGroup * = nullptr);</a>
+<a name="89"><span class="lineNum">      89 </span>            : </a>
+<a name="90"><span class="lineNum">      90 </span>            :         static void destroy(AsyncTask *);</a>
+<a name="91"><span class="lineNum">      91 </span>            : </a>
+<a name="92"><span class="lineNum">      92 </span>            :         static void run(AsyncTask *);</a>
+<a name="93"><span class="lineNum">      93 </span>            : </a>
+<a name="94"><span class="lineNum">      94 </span>            :         static AsyncTask *getCurrent();</a>
+<a name="95"><span class="lineNum">      95 </span>            : </a>
+<a name="96"><span class="lineNum">      96 </span>            :         void addExecuteFn(const ExecuteCallback &amp;);</a>
+<a name="97"><span class="lineNum">      97 </span>            :         void addExecuteFn(ExecuteCallback &amp;&amp;);</a>
+<a name="98"><span class="lineNum">      98 </span>            : </a>
+<a name="99"><span class="lineNum">      99 </span>            :         void addCompleteFn(const CompleteCallback &amp;);</a>
+<a name="100"><span class="lineNum">     100 </span>            :         void addCompleteFn(CompleteCallback &amp;&amp;);</a>
+<a name="101"><span class="lineNum">     101 </span>            : </a>
+<a name="102"><span class="lineNum">     102 </span>            :         /* set default task priority */</a>
+<a name="103"><span class="lineNum">     103 </span>            :         void setPriority(uint8_t priority) { _priority = priority; }</a>
+<a name="104"><span class="lineNum">     104 </span>            : </a>
+<a name="105"><span class="lineNum">     105 </span>            :         /* get task priority */</a>
+<a name="106"><span class="lineNum">     106 </span><span class="lineCov">        100 :         uint8_t getPriority() const { return _priority; }</span></a>
+<a name="107"><span class="lineNum">     107 </span>            : </a>
+<a name="108"><span class="lineNum">     108 </span>            :         /* used by task manager to set success state */</a>
+<a name="109"><span class="lineNum">     109 </span><span class="lineCov">        100 :         void setSuccessful(bool value) { _isSuccessful = value; }</span></a>
+<a name="110"><span class="lineNum">     110 </span>            : </a>
+<a name="111"><span class="lineNum">     111 </span>            :         /* if task execution was successful */</a>
+<a name="112"><span class="lineNum">     112 </span>            :         bool isSuccessful() const { return _isSuccessful; }</a>
+<a name="113"><span class="lineNum">     113 </span>            : </a>
+<a name="114"><span class="lineNum">     114 </span><span class="lineCov">        100 :         void setHost(const Host &amp;serv) { _host = serv; }</span></a>
+<a name="115"><span class="lineNum">     115 </span><span class="lineCov">        300 :         const Host &amp;getHost() const { return _host; }</span></a>
+<a name="116"><span class="lineNum">     116 </span>            : </a>
+<a name="117"><span class="lineNum">     117 </span>            :         void setScheduled(Time t) { _scheduled = t; }</a>
+<a name="118"><span class="lineNum">     118 </span>            :         Time getScheduled() const { return _scheduled; }</a>
+<a name="119"><span class="lineNum">     119 </span>            : </a>
+<a name="120"><span class="lineNum">     120 </span><span class="lineCov">        400 :         AsyncTaskGroup *getGroup() const { return _group; }</span></a>
+<a name="121"><span class="lineNum">     121 </span>            : </a>
+<a name="122"><span class="lineNum">     122 </span>            :         void performWithStorage(const Callback&lt;void(const db::Transaction &amp;)&gt; &amp;) const;</a>
+<a name="123"><span class="lineNum">     123 </span>            : </a>
+<a name="124"><span class="lineNum">     124 </span>            :         bool execute();</a>
+<a name="125"><span class="lineNum">     125 </span>            :         void onComplete();</a>
+<a name="126"><span class="lineNum">     126 </span>            : </a>
+<a name="127"><span class="lineNum">     127 </span><span class="lineCov">        325 :         pool_t *pool() const { return _pool; }</span></a>
+<a name="128"><span class="lineNum">     128 </span>            : </a>
+<a name="129"><span class="lineNum">     129 </span>            : protected:</a>
+<a name="130"><span class="lineNum">     130 </span>            :         AsyncTask(pool_t *, AsyncTaskGroup *);</a>
+<a name="131"><span class="lineNum">     131 </span>            : </a>
+<a name="132"><span class="lineNum">     132 </span>            :         pool_t *_pool = nullptr;</a>
+<a name="133"><span class="lineNum">     133 </span>            :         uint8_t _priority = PriorityNormal;</a>
+<a name="134"><span class="lineNum">     134 </span>            :         Time _scheduled;</a>
+<a name="135"><span class="lineNum">     135 </span>            :         bool _isSuccessful = false;</a>
+<a name="136"><span class="lineNum">     136 </span>            : </a>
+<a name="137"><span class="lineNum">     137 </span>            :         Host _host;</a>
+<a name="138"><span class="lineNum">     138 </span>            :         Vector&lt;ExecuteCallback&gt; _execute;</a>
+<a name="139"><span class="lineNum">     139 </span>            :         Vector&lt;CompleteCallback&gt; _complete;</a>
+<a name="140"><span class="lineNum">     140 </span>            : </a>
+<a name="141"><span class="lineNum">     141 </span>            :         AsyncTaskGroup *_group = nullptr;</a>
+<a name="142"><span class="lineNum">     142 </span>            : };</a>
+<a name="143"><span class="lineNum">     143 </span>            : </a>
+<a name="144"><span class="lineNum">     144 </span>            : enum class SharedMode {</a>
+<a name="145"><span class="lineNum">     145 </span>            :         Pool,</a>
+<a name="146"><span class="lineNum">     146 </span>            :         Allocator,</a>
+<a name="147"><span class="lineNum">     147 </span>            : };</a>
+<a name="148"><span class="lineNum">     148 </span>            : </a>
+<a name="149"><span class="lineNum">     149 </span>            : template &lt;typename T&gt;</a>
+<a name="150"><span class="lineNum">     150 </span>            : class Shared : public RefBase&lt;memory::PoolInterface&gt; {</a>
+<a name="151"><span class="lineNum">     151 </span>            : public:</a>
+<a name="152"><span class="lineNum">     152 </span>            :         template &lt;typename ...Args&gt;</a>
+<a name="153"><span class="lineNum">     153 </span>            :         static Shared *create(Args &amp;&amp; ...);</a>
+<a name="154"><span class="lineNum">     154 </span>            : </a>
+<a name="155"><span class="lineNum">     155 </span>            :         template &lt;typename ...Args&gt;</a>
+<a name="156"><span class="lineNum">     156 </span>            :         static Shared *create(pool_t *, Args &amp;&amp; ...);</a>
+<a name="157"><span class="lineNum">     157 </span>            : </a>
+<a name="158"><span class="lineNum">     158 </span>            :         template &lt;typename ...Args&gt;</a>
+<a name="159"><span class="lineNum">     159 </span>            :         static Shared *create(SharedMode, Args &amp;&amp; ...);</a>
+<a name="160"><span class="lineNum">     160 </span>            : </a>
+<a name="161"><span class="lineNum">     161 </span>            :         virtual ~Shared();</a>
+<a name="162"><span class="lineNum">     162 </span>            : </a>
+<a name="163"><span class="lineNum">     163 </span>            :         template &lt;typename Callback&gt;</a>
+<a name="164"><span class="lineNum">     164 </span><span class="lineCov">         25 :         void perform(Callback &amp;&amp;cb) {</span></a>
+<a name="165"><span class="lineNum">     165 </span><span class="lineCov">         25 :                 web::perform([&amp;, this] {</span></a>
+<a name="166"><span class="lineNum">     166 </span><span class="lineCov">         25 :                         cb(_shared);</span></a>
+<a name="167"><span class="lineNum">     167 </span>            :                 }, _pool);</a>
+<a name="168"><span class="lineNum">     168 </span><span class="lineCov">         25 :         }</span></a>
+<a name="169"><span class="lineNum">     169 </span>            : </a>
+<a name="170"><span class="lineNum">     170 </span><span class="lineCov">         75 :         inline T *get() const { return _shared; }</span></a>
+<a name="171"><span class="lineNum">     171 </span>            : </a>
+<a name="172"><span class="lineNum">     172 </span>            :         inline operator T * () const { return get(); }</a>
+<a name="173"><span class="lineNum">     173 </span>            :         inline T * operator-&gt;() const { return get(); }</a>
+<a name="174"><span class="lineNum">     174 </span>            : </a>
+<a name="175"><span class="lineNum">     175 </span>            :         inline explicit operator bool () const { return _shared != nullptr; }</a>
+<a name="176"><span class="lineNum">     176 </span>            : </a>
+<a name="177"><span class="lineNum">     177 </span>            :         pool_t *getPool() const { return _pool; }</a>
+<a name="178"><span class="lineNum">     178 </span>            :         allocator_t *getAllocator() const { return _allocator; }</a>
+<a name="179"><span class="lineNum">     179 </span>            : </a>
+<a name="180"><span class="lineNum">     180 </span>            : protected:</a>
+<a name="181"><span class="lineNum">     181 </span>            :         Shared(SharedMode m, allocator_t *, pool_t *, T *);</a>
+<a name="182"><span class="lineNum">     182 </span>            : </a>
+<a name="183"><span class="lineNum">     183 </span>            :         allocator_t *_allocator = nullptr;</a>
+<a name="184"><span class="lineNum">     184 </span>            :         pool_t *_pool = nullptr;</a>
+<a name="185"><span class="lineNum">     185 </span>            :         T *_shared = nullptr;</a>
+<a name="186"><span class="lineNum">     186 </span>            :         SharedMode _mode = SharedMode::Pool;</a>
+<a name="187"><span class="lineNum">     187 </span>            : };</a>
+<a name="188"><span class="lineNum">     188 </span>            : </a>
+<a name="189"><span class="lineNum">     189 </span>            : </a>
+<a name="190"><span class="lineNum">     190 </span>            : template &lt;typename _Base&gt;</a>
+<a name="191"><span class="lineNum">     191 </span>            : class SharedRc {</a>
+<a name="192"><span class="lineNum">     192 </span>            : public:</a>
+<a name="193"><span class="lineNum">     193 </span>            :         using Base = typename std::remove_cv&lt;_Base&gt;::type;</a>
+<a name="194"><span class="lineNum">     194 </span>            :         using Type = Shared&lt;Base&gt;;</a>
+<a name="195"><span class="lineNum">     195 </span>            :         using Self = SharedRc&lt;Base&gt;;</a>
+<a name="196"><span class="lineNum">     196 </span>            :         using Pointer = Type *;</a>
+<a name="197"><span class="lineNum">     197 </span>            : </a>
+<a name="198"><span class="lineNum">     198 </span>            :         template &lt;class... Args&gt;</a>
+<a name="199"><span class="lineNum">     199 </span>            :         static inline Self create(Args &amp;&amp; ... args) {</a>
+<a name="200"><span class="lineNum">     200 </span>            :                 auto pRet = Type::create();</a>
+<a name="201"><span class="lineNum">     201 </span>            :                 Self ret(nullptr);</a>
+<a name="202"><span class="lineNum">     202 </span>            :                 pRet-&gt;perform([&amp;] (Base *base) {</a>
+<a name="203"><span class="lineNum">     203 </span>            :                     if (base-&gt;init(std::forward&lt;Args&gt;(args)...)) {</a>
+<a name="204"><span class="lineNum">     204 </span>            :                         ret = Self(pRet, true); // unsafe assignment</a>
+<a name="205"><span class="lineNum">     205 </span>            :                         }</a>
+<a name="206"><span class="lineNum">     206 </span>            :                 });</a>
+<a name="207"><span class="lineNum">     207 </span>            :                 if (!ret) {</a>
+<a name="208"><span class="lineNum">     208 </span>            :                         delete pRet;</a>
+<a name="209"><span class="lineNum">     209 </span>            :                 }</a>
+<a name="210"><span class="lineNum">     210 </span>            :                 return ret;</a>
+<a name="211"><span class="lineNum">     211 </span>            :         }</a>
+<a name="212"><span class="lineNum">     212 </span>            : </a>
+<a name="213"><span class="lineNum">     213 </span>            :         template &lt;class... Args&gt;</a>
+<a name="214"><span class="lineNum">     214 </span>            :         static inline Self create(pool_t *pool, Args &amp;&amp; ... args) {</a>
+<a name="215"><span class="lineNum">     215 </span>            :                 auto pRet = Type::create(pool);</a>
+<a name="216"><span class="lineNum">     216 </span>            :                 Self ret(nullptr);</a>
+<a name="217"><span class="lineNum">     217 </span>            :                 pRet-&gt;perform([&amp;] (Base *base) {</a>
+<a name="218"><span class="lineNum">     218 </span>            :                     if (base-&gt;init(std::forward&lt;Args&gt;(args)...)) {</a>
+<a name="219"><span class="lineNum">     219 </span>            :                         ret = Self(pRet, true); // unsafe assignment</a>
+<a name="220"><span class="lineNum">     220 </span>            :                         }</a>
+<a name="221"><span class="lineNum">     221 </span>            :                 });</a>
+<a name="222"><span class="lineNum">     222 </span>            :                 if (!ret) {</a>
+<a name="223"><span class="lineNum">     223 </span>            :                         delete pRet;</a>
+<a name="224"><span class="lineNum">     224 </span>            :                 }</a>
+<a name="225"><span class="lineNum">     225 </span>            :                 return ret;</a>
+<a name="226"><span class="lineNum">     226 </span>            :         }</a>
+<a name="227"><span class="lineNum">     227 </span>            : </a>
+<a name="228"><span class="lineNum">     228 </span>            :         template &lt;class... Args&gt;</a>
+<a name="229"><span class="lineNum">     229 </span><span class="lineCov">         25 :         static inline Self create(SharedMode mode, Args &amp;&amp; ... args) {</span></a>
+<a name="230"><span class="lineNum">     230 </span><span class="lineCov">         25 :                 auto pRet = Type::create(mode);</span></a>
+<a name="231"><span class="lineNum">     231 </span><span class="lineCov">         25 :                 Self ret(nullptr);</span></a>
+<a name="232"><span class="lineNum">     232 </span><span class="lineCov">         50 :                 pRet-&gt;perform([&amp;] (Base *base) {</span></a>
+<a name="233"><span class="lineNum">     233 </span><span class="lineCov">         25 :                     if (base-&gt;init(std::forward&lt;Args&gt;(args)...)) {</span></a>
+<a name="234"><span class="lineNum">     234 </span><span class="lineCov">         25 :                         ret = Self(pRet, true); // unsafe assignment</span></a>
+<a name="235"><span class="lineNum">     235 </span>            :                         }</a>
+<a name="236"><span class="lineNum">     236 </span>            :                 });</a>
+<a name="237"><span class="lineNum">     237 </span><span class="lineCov">         25 :                 if (!ret) {</span></a>
+<a name="238"><span class="lineNum">     238 </span><span class="lineNoCov">          0 :                         delete pRet;</span></a>
+<a name="239"><span class="lineNum">     239 </span>            :                 }</a>
+<a name="240"><span class="lineNum">     240 </span><span class="lineCov">         50 :                 return ret;</span></a>
+<a name="241"><span class="lineNum">     241 </span><span class="lineNoCov">          0 :         }</span></a>
+<a name="242"><span class="lineNum">     242 </span>            : </a>
+<a name="243"><span class="lineNum">     243 </span>            :         static inline Self alloc() {</a>
+<a name="244"><span class="lineNum">     244 </span>            :                 return Self(Type::create(), true);</a>
+<a name="245"><span class="lineNum">     245 </span>            :         }</a>
+<a name="246"><span class="lineNum">     246 </span>            : </a>
+<a name="247"><span class="lineNum">     247 </span>            :         template &lt;class... Args&gt;</a>
+<a name="248"><span class="lineNum">     248 </span>            :         static inline Self alloc(Args &amp;&amp; ... args) {</a>
+<a name="249"><span class="lineNum">     249 </span>            :                 return Self(Type::create(std::forward&lt;Args&gt;(args)...), true);</a>
+<a name="250"><span class="lineNum">     250 </span>            :         }</a>
+<a name="251"><span class="lineNum">     251 </span>            : </a>
+<a name="252"><span class="lineNum">     252 </span>            :         template &lt;class... Args&gt;</a>
+<a name="253"><span class="lineNum">     253 </span>            :         static inline Self alloc(pool_t *pool, Args &amp;&amp; ... args) {</a>
+<a name="254"><span class="lineNum">     254 </span>            :                 return Self(Type::create(pool, std::forward&lt;Args&gt;(args)...), true);</a>
+<a name="255"><span class="lineNum">     255 </span>            :         }</a>
+<a name="256"><span class="lineNum">     256 </span>            : </a>
+<a name="257"><span class="lineNum">     257 </span>            :         template &lt;class... Args&gt;</a>
+<a name="258"><span class="lineNum">     258 </span>            :         static inline Self alloc(SharedMode mode, Args &amp;&amp; ... args) {</a>
+<a name="259"><span class="lineNum">     259 </span>            :                 return Self(Type::create(mode, std::forward&lt;Args&gt;(args)...), true);</a>
+<a name="260"><span class="lineNum">     260 </span>            :         }</a>
+<a name="261"><span class="lineNum">     261 </span>            : </a>
+<a name="262"><span class="lineNum">     262 </span>            :         inline SharedRc() : _ptr(nullptr) { }</a>
+<a name="263"><span class="lineNum">     263 </span><span class="lineCov">         25 :         inline SharedRc(const nullptr_t &amp;) : _ptr(nullptr) { }</span></a>
+<a name="264"><span class="lineNum">     264 </span>            :         inline SharedRc(const Pointer &amp;value) : _ptr(value) { doRetain(); }</a>
+<a name="265"><span class="lineNum">     265 </span>            :         inline SharedRc(const Self &amp;v) { _ptr = v._ptr; doRetain(); }</a>
+<a name="266"><span class="lineNum">     266 </span>            :         inline SharedRc(Self &amp;&amp;v) {</a>
+<a name="267"><span class="lineNum">     267 </span>            :                 _ptr = v._ptr; v._ptr = nullptr;</a>
+<a name="268"><span class="lineNum">     268 </span>            :         }</a>
+<a name="269"><span class="lineNum">     269 </span>            : </a>
+<a name="270"><span class="lineNum">     270 </span><span class="lineCov">         25 :         inline SharedRc &amp; operator = (const nullptr_t &amp;) {</span></a>
+<a name="271"><span class="lineNum">     271 </span><span class="lineCov">         25 :                 doRelease();</span></a>
+<a name="272"><span class="lineNum">     272 </span><span class="lineCov">         25 :                 _ptr = nullptr;</span></a>
+<a name="273"><span class="lineNum">     273 </span><span class="lineCov">         25 :                 return *this;</span></a>
+<a name="274"><span class="lineNum">     274 </span>            :         }</a>
+<a name="275"><span class="lineNum">     275 </span>            : </a>
+<a name="276"><span class="lineNum">     276 </span>            :         inline SharedRc &amp; operator = (const Pointer &amp;value) { set(value); return *this; }</a>
+<a name="277"><span class="lineNum">     277 </span>            :         inline SharedRc &amp; operator = (const Self &amp;v) { set(v._ptr); return *this; }</a>
+<a name="278"><span class="lineNum">     278 </span><span class="lineCov">         25 :         inline SharedRc &amp; operator = (Self &amp;&amp;v) {</span></a>
+<a name="279"><span class="lineNum">     279 </span><span class="lineCov">         25 :                 doRelease();</span></a>
+<a name="280"><span class="lineNum">     280 </span><span class="lineCov">         25 :                 _ptr = v._ptr; v._ptr = nullptr;</span></a>
+<a name="281"><span class="lineNum">     281 </span><span class="lineCov">         25 :                 return *this;</span></a>
+<a name="282"><span class="lineNum">     282 </span>            :         }</a>
+<a name="283"><span class="lineNum">     283 </span>            : </a>
+<a name="284"><span class="lineNum">     284 </span><span class="lineCov">         50 :         inline ~SharedRc() { doRelease(); _ptr = nullptr; }</span></a>
+<a name="285"><span class="lineNum">     285 </span>            : </a>
+<a name="286"><span class="lineNum">     286 </span>            :         inline void set(const Pointer &amp;value) {</a>
+<a name="287"><span class="lineNum">     287 </span>            :                 _ptr = doSwap(value);</a>
+<a name="288"><span class="lineNum">     288 </span>            :         }</a>
+<a name="289"><span class="lineNum">     289 </span>            : </a>
+<a name="290"><span class="lineNum">     290 </span><span class="lineCov">         25 :         inline Base *get() const {</span></a>
+<a name="291"><span class="lineNum">     291 </span><span class="lineCov">         25 :                 return _ptr ? _ptr-&gt;get() : nullptr;</span></a>
+<a name="292"><span class="lineNum">     292 </span>            :         }</a>
+<a name="293"><span class="lineNum">     293 </span>            : </a>
+<a name="294"><span class="lineNum">     294 </span><span class="lineCov">         25 :         inline operator Base * () const { return get(); }</span></a>
+<a name="295"><span class="lineNum">     295 </span><span class="lineCov">         25 :         inline explicit operator bool () const { return _ptr &amp;&amp; _ptr-&gt;get() != nullptr; }</span></a>
+<a name="296"><span class="lineNum">     296 </span>            : </a>
+<a name="297"><span class="lineNum">     297 </span>            :         inline void swap(Self &amp; v) { auto ptr = _ptr; _ptr = v._ptr; v._ptr = ptr; }</a>
+<a name="298"><span class="lineNum">     298 </span>            : </a>
+<a name="299"><span class="lineNum">     299 </span><span class="lineCov">         25 :         inline Base * operator-&gt;() const { return _ptr ? _ptr-&gt;get() : nullptr; }</span></a>
+<a name="300"><span class="lineNum">     300 </span>            : </a>
+<a name="301"><span class="lineNum">     301 </span>            :         template &lt;typename Target&gt;</a>
+<a name="302"><span class="lineNum">     302 </span>            :         inline RcBase&lt;Target&gt; cast() const {</a>
+<a name="303"><span class="lineNum">     303 </span>            :                 if (auto v = dynamic_cast&lt;Target *&gt;(_ptr)) {</a>
+<a name="304"><span class="lineNum">     304 </span>            :                         return RcBase&lt;Target&gt;(v);</a>
+<a name="305"><span class="lineNum">     305 </span>            :                 }</a>
+<a name="306"><span class="lineNum">     306 </span>            :                 return RcBase&lt;Target&gt;(nullptr);</a>
+<a name="307"><span class="lineNum">     307 </span>            :         }</a>
+<a name="308"><span class="lineNum">     308 </span>            : </a>
+<a name="309"><span class="lineNum">     309 </span>            :         inline bool operator == (const Self &amp; other) const { return _ptr == other._ptr; }</a>
+<a name="310"><span class="lineNum">     310 </span>            :         inline bool operator == (const Base * &amp; other) const { return _ptr-&gt;get() == other; }</a>
+<a name="311"><span class="lineNum">     311 </span>            :         inline bool operator == (const std::nullptr_t other) const { return _ptr == other; }</a>
+<a name="312"><span class="lineNum">     312 </span>            : </a>
+<a name="313"><span class="lineNum">     313 </span>            :         inline bool operator != (const Self &amp; other) const { return _ptr != other._ptr; }</a>
+<a name="314"><span class="lineNum">     314 </span>            :         inline bool operator != (const Base * &amp; other) const { return _ptr-&gt;get() != other; }</a>
+<a name="315"><span class="lineNum">     315 </span>            :         inline bool operator != (const std::nullptr_t other) const { return _ptr != other; }</a>
+<a name="316"><span class="lineNum">     316 </span>            : </a>
+<a name="317"><span class="lineNum">     317 </span>            :         inline bool operator &gt; (const Self &amp; other) const { return _ptr &gt; other._ptr; }</a>
+<a name="318"><span class="lineNum">     318 </span>            :         inline bool operator &gt; (const Base * other) const { return _ptr-&gt;get() &gt; other; }</a>
+<a name="319"><span class="lineNum">     319 </span>            :         inline bool operator &gt; (const std::nullptr_t other) const { return _ptr &gt; other; }</a>
+<a name="320"><span class="lineNum">     320 </span>            : </a>
+<a name="321"><span class="lineNum">     321 </span>            :         inline bool operator &lt; (const Self &amp; other) const { return _ptr &lt; other._ptr; }</a>
+<a name="322"><span class="lineNum">     322 </span>            :         inline bool operator &lt; (const Base * other) const { return _ptr-&gt;get() &lt; other; }</a>
+<a name="323"><span class="lineNum">     323 </span>            :         inline bool operator &lt; (const std::nullptr_t other) const { return _ptr &lt; other; }</a>
+<a name="324"><span class="lineNum">     324 </span>            : </a>
+<a name="325"><span class="lineNum">     325 </span>            :         inline bool operator &gt;= (const Self &amp; other) const { return _ptr &gt;= other._ptr; }</a>
+<a name="326"><span class="lineNum">     326 </span>            :         inline bool operator &gt;= (const Base * other) const { return _ptr-&gt;get() &gt;= other; }</a>
+<a name="327"><span class="lineNum">     327 </span>            :         inline bool operator &gt;= (const std::nullptr_t other) const { return _ptr &gt;= other; }</a>
+<a name="328"><span class="lineNum">     328 </span>            : </a>
+<a name="329"><span class="lineNum">     329 </span>            :         inline bool operator &lt;= (const Self &amp; other) const { return _ptr &lt;= other._ptr; }</a>
+<a name="330"><span class="lineNum">     330 </span>            :         inline bool operator &lt;= (const Base * other) const { return _ptr-&gt;get() &lt;= other; }</a>
+<a name="331"><span class="lineNum">     331 </span>            :         inline bool operator &lt;= (const std::nullptr_t other) const { return _ptr &lt;= other; }</a>
+<a name="332"><span class="lineNum">     332 </span>            : </a>
+<a name="333"><span class="lineNum">     333 </span>            : #if SP_REF_DEBUG</a>
+<a name="334"><span class="lineNum">     334 </span>            :         uint64_t getId() const { return _id; }</a>
+<a name="335"><span class="lineNum">     335 </span>            : #endif</a>
+<a name="336"><span class="lineNum">     336 </span>            : private:</a>
+<a name="337"><span class="lineNum">     337 </span>            :         inline void doRetain() {</a>
+<a name="338"><span class="lineNum">     338 </span>            : #if SP_REF_DEBUG</a>
+<a name="339"><span class="lineNum">     339 </span>            :                 if (_ptr) { _id = _ptr-&gt;retain(); }</a>
+<a name="340"><span class="lineNum">     340 </span>            : #else</a>
+<a name="341"><span class="lineNum">     341 </span>            :                 if (_ptr) { _ptr-&gt;retain(); }</a>
+<a name="342"><span class="lineNum">     342 </span>            : #endif</a>
+<a name="343"><span class="lineNum">     343 </span>            :         }</a>
+<a name="344"><span class="lineNum">     344 </span>            : </a>
+<a name="345"><span class="lineNum">     345 </span><span class="lineCov">        100 :         inline void doRelease() {</span></a>
+<a name="346"><span class="lineNum">     346 </span>            : #if SP_REF_DEBUG</a>
+<a name="347"><span class="lineNum">     347 </span>            :                 if (_ptr) { _ptr-&gt;release(_id); }</a>
+<a name="348"><span class="lineNum">     348 </span>            : #else</a>
+<a name="349"><span class="lineNum">     349 </span><span class="lineCov">        100 :                 if (_ptr) { _ptr-&gt;release(0); }</span></a>
+<a name="350"><span class="lineNum">     350 </span>            : #endif</a>
+<a name="351"><span class="lineNum">     351 </span><span class="lineCov">        100 :         }</span></a>
+<a name="352"><span class="lineNum">     352 </span>            : </a>
+<a name="353"><span class="lineNum">     353 </span>            :         inline Pointer doSwap(Pointer value) {</a>
+<a name="354"><span class="lineNum">     354 </span>            : #if SP_REF_DEBUG</a>
+<a name="355"><span class="lineNum">     355 </span>            :                 uint64_t id = 0;</a>
+<a name="356"><span class="lineNum">     356 </span>            :                 if (value) { id = value-&gt;retain(); }</a>
+<a name="357"><span class="lineNum">     357 </span>            :                 if (_ptr) { _ptr-&gt;release(_id); }</a>
+<a name="358"><span class="lineNum">     358 </span>            :                 _id = id;</a>
+<a name="359"><span class="lineNum">     359 </span>            :                 return value;</a>
+<a name="360"><span class="lineNum">     360 </span>            : #else</a>
+<a name="361"><span class="lineNum">     361 </span>            :                 if (value) { value-&gt;retain(); }</a>
+<a name="362"><span class="lineNum">     362 </span>            :                 if (_ptr) { _ptr-&gt;release(0); }</a>
+<a name="363"><span class="lineNum">     363 </span>            :                 return value;</a>
+<a name="364"><span class="lineNum">     364 </span>            : #endif</a>
+<a name="365"><span class="lineNum">     365 </span>            :         }</a>
+<a name="366"><span class="lineNum">     366 </span>            : </a>
+<a name="367"><span class="lineNum">     367 </span>            :         // unsafe</a>
+<a name="368"><span class="lineNum">     368 </span><span class="lineCov">         25 :         inline SharedRc(Pointer value, bool v) : _ptr(value) { }</span></a>
+<a name="369"><span class="lineNum">     369 </span>            : </a>
+<a name="370"><span class="lineNum">     370 </span>            :         Pointer _ptr = nullptr;</a>
+<a name="371"><span class="lineNum">     371 </span>            : #if SP_REF_DEBUG</a>
+<a name="372"><span class="lineNum">     372 </span>            :         uint64_t _id = 0;</a>
+<a name="373"><span class="lineNum">     373 </span>            : #endif</a>
+<a name="374"><span class="lineNum">     374 </span>            : };</a>
+<a name="375"><span class="lineNum">     375 </span>            : </a>
+<a name="376"><span class="lineNum">     376 </span>            : template &lt;typename T&gt;</a>
+<a name="377"><span class="lineNum">     377 </span>            : template &lt;typename ...Args&gt;</a>
+<a name="378"><span class="lineNum">     378 </span>            : auto Shared&lt;T&gt;::create(Args &amp;&amp; ... args) -&gt; Shared * {</a>
+<a name="379"><span class="lineNum">     379 </span>            :         auto pool = pool::create((pool_t *)nullptr);</a>
+<a name="380"><span class="lineNum">     380 </span>            : </a>
+<a name="381"><span class="lineNum">     381 </span>            :         Shared *shared = nullptr;</a>
+<a name="382"><span class="lineNum">     382 </span>            :         web::perform([&amp;] {</a>
+<a name="383"><span class="lineNum">     383 </span>            :                 shared = new (pool) Shared(SharedMode::Pool, nullptr, pool,</a>
+<a name="384"><span class="lineNum">     384 </span>            :                         new (pool) T(pool, std::forward&lt;Args&gt;(args)...));</a>
+<a name="385"><span class="lineNum">     385 </span>            :         }, pool);</a>
+<a name="386"><span class="lineNum">     386 </span>            :         return shared;</a>
+<a name="387"><span class="lineNum">     387 </span>            : }</a>
+<a name="388"><span class="lineNum">     388 </span>            : </a>
+<a name="389"><span class="lineNum">     389 </span>            : template &lt;typename T&gt;</a>
+<a name="390"><span class="lineNum">     390 </span>            : template &lt;typename ...Args&gt;</a>
+<a name="391"><span class="lineNum">     391 </span>            : auto Shared&lt;T&gt;::create(pool_t *p, Args &amp;&amp; ... args) -&gt; Shared * {</a>
+<a name="392"><span class="lineNum">     392 </span>            :         auto pool = pool::create(p);</a>
+<a name="393"><span class="lineNum">     393 </span>            : </a>
+<a name="394"><span class="lineNum">     394 </span>            :         Shared *shared = nullptr;</a>
+<a name="395"><span class="lineNum">     395 </span>            :         web::perform([&amp;] {</a>
+<a name="396"><span class="lineNum">     396 </span>            :                 shared = new (pool) Shared(SharedMode::Pool, nullptr, pool,</a>
+<a name="397"><span class="lineNum">     397 </span>            :                         new (pool) T(pool, std::forward&lt;Args&gt;(args)...));</a>
+<a name="398"><span class="lineNum">     398 </span>            :         }, pool);</a>
+<a name="399"><span class="lineNum">     399 </span>            :         return shared;</a>
+<a name="400"><span class="lineNum">     400 </span>            : }</a>
+<a name="401"><span class="lineNum">     401 </span>            : </a>
+<a name="402"><span class="lineNum">     402 </span>            : template &lt;typename T&gt;</a>
+<a name="403"><span class="lineNum">     403 </span>            : template &lt;typename ...Args&gt;</a>
+<a name="404"><span class="lineNum">     404 </span><span class="lineCov">         25 : auto Shared&lt;T&gt;::create(SharedMode mode, Args &amp;&amp; ... args) -&gt; Shared * {</span></a>
+<a name="405"><span class="lineNum">     405 </span><span class="lineCov">         25 :         allocator_t *alloc = nullptr;</span></a>
+<a name="406"><span class="lineNum">     406 </span><span class="lineCov">         25 :         pool_t *pool = nullptr;</span></a>
+<a name="407"><span class="lineNum">     407 </span>            : </a>
+<a name="408"><span class="lineNum">     408 </span><span class="lineCov">         25 :         switch (mode) {</span></a>
+<a name="409"><span class="lineNum">     409 </span><span class="lineNoCov">          0 :         case SharedMode::Pool:</span></a>
+<a name="410"><span class="lineNum">     410 </span><span class="lineNoCov">          0 :                 pool = pool::create((pool_t *)nullptr);</span></a>
+<a name="411"><span class="lineNum">     411 </span><span class="lineNoCov">          0 :                 break;</span></a>
+<a name="412"><span class="lineNum">     412 </span><span class="lineCov">         25 :         case SharedMode::Allocator:</span></a>
+<a name="413"><span class="lineNum">     413 </span><span class="lineCov">         25 :                 alloc = allocator::create();</span></a>
+<a name="414"><span class="lineNum">     414 </span><span class="lineCov">         25 :                 pool = pool::create(alloc);</span></a>
+<a name="415"><span class="lineNum">     415 </span><span class="lineCov">         25 :                 break;</span></a>
+<a name="416"><span class="lineNum">     416 </span>            :         }</a>
+<a name="417"><span class="lineNum">     417 </span>            : </a>
+<a name="418"><span class="lineNum">     418 </span><span class="lineCov">         25 :         Shared *shared = nullptr;</span></a>
+<a name="419"><span class="lineNum">     419 </span><span class="lineCov">         25 :         web::perform([&amp;] {</span></a>
+<a name="420"><span class="lineNum">     420 </span><span class="lineCov">         25 :                 shared = new (pool) Shared(mode, alloc, pool,</span></a>
+<a name="421"><span class="lineNum">     421 </span><span class="lineCov">         25 :                         new (pool) T(pool, std::forward&lt;Args&gt;(args)...));</span></a>
+<a name="422"><span class="lineNum">     422 </span>            :         }, pool);</a>
+<a name="423"><span class="lineNum">     423 </span><span class="lineCov">         25 :         return shared;</span></a>
+<a name="424"><span class="lineNum">     424 </span>            : }</a>
+<a name="425"><span class="lineNum">     425 </span>            : </a>
+<a name="426"><span class="lineNum">     426 </span>            : template &lt;typename T&gt;</a>
+<a name="427"><span class="lineNum">     427 </span><span class="lineCov">         50 : Shared&lt;T&gt;::~Shared() {</span></a>
+<a name="428"><span class="lineNum">     428 </span><span class="lineCov">         25 :         if (_shared) {</span></a>
+<a name="429"><span class="lineNum">     429 </span><span class="lineCov">         75 :                 web::perform([&amp;, this] {</span></a>
+<a name="430"><span class="lineNum">     430 </span><span class="lineCov">         25 :                         delete _shared;</span></a>
+<a name="431"><span class="lineNum">     431 </span>            :                 }, _pool);</a>
+<a name="432"><span class="lineNum">     432 </span><span class="lineCov">         25 :                 _shared = nullptr;</span></a>
+<a name="433"><span class="lineNum">     433 </span>            :         }</a>
+<a name="434"><span class="lineNum">     434 </span>            : </a>
+<a name="435"><span class="lineNum">     435 </span><span class="lineCov">         25 :         auto pool = _pool;</span></a>
+<a name="436"><span class="lineNum">     436 </span><span class="lineCov">         25 :         auto allocator = _allocator;</span></a>
+<a name="437"><span class="lineNum">     437 </span>            : </a>
+<a name="438"><span class="lineNum">     438 </span><span class="lineCov">         25 :         _pool = nullptr;</span></a>
+<a name="439"><span class="lineNum">     439 </span><span class="lineCov">         25 :         _allocator = nullptr;</span></a>
+<a name="440"><span class="lineNum">     440 </span>            : </a>
+<a name="441"><span class="lineNum">     441 </span><span class="lineCov">         25 :         if (pool) {</span></a>
+<a name="442"><span class="lineNum">     442 </span><span class="lineCov">         25 :                 pool::destroy(pool);</span></a>
+<a name="443"><span class="lineNum">     443 </span>            :         }</a>
+<a name="444"><span class="lineNum">     444 </span><span class="lineCov">         25 :         if (allocator) {</span></a>
+<a name="445"><span class="lineNum">     445 </span><span class="lineCov">         25 :                 allocator::destroy(allocator);</span></a>
+<a name="446"><span class="lineNum">     446 </span>            :         }</a>
+<a name="447"><span class="lineNum">     447 </span><span class="lineCov">         75 : }</span></a>
+<a name="448"><span class="lineNum">     448 </span>            : </a>
+<a name="449"><span class="lineNum">     449 </span>            : template &lt;typename T&gt;</a>
+<a name="450"><span class="lineNum">     450 </span><span class="lineCov">         25 : Shared&lt;T&gt;::Shared(SharedMode m, allocator_t *alloc, pool_t *pool, T *obj)</span></a>
+<a name="451"><span class="lineNum">     451 </span><span class="lineCov">         25 : : _allocator(alloc), _pool(pool), _shared(obj), _mode(m) { }</span></a>
+<a name="452"><span class="lineNum">     452 </span>            : </a>
+<a name="453"><span class="lineNum">     453 </span>            : }</a>
+<a name="454"><span class="lineNum">     454 </span>            : </a>
+<a name="455"><span class="lineNum">     455 </span>            : #endif /* EXTRA_WEBSERVER_WEBSERVER_UTILS_SPWEBASYNCTASK_H_ */</a>
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

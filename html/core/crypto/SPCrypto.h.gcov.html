@@ -31,17 +31,17 @@
             <td class="headerValue">coverage.info</td>
             <td></td>
             <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">16</td>
             <td class="headerCovTableEntry">17</td>
-            <td class="headerCovTableEntry">18</td>
-            <td class="headerCovTableEntryHi">94.4 %</td>
+            <td class="headerCovTableEntryHi">94.1 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2023-12-03 02:10:58</td>
+            <td class="headerValue">2024-05-12 00:16:13</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntry">9</td>
-            <td class="headerCovTableEntry">9</td>
+            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntry">8</td>
             <td class="headerCovTableEntryHi">100.0 %</td>
           </tr>
           <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
@@ -62,7 +62,7 @@
 <pre class="source">
 <a name="1"><span class="lineNum">       1 </span>            : /**</a>
 <a name="2"><span class="lineNum">       2 </span>            : Copyright (c) 2021-2022 Roman Katuntsev &lt;sbkarr@stappler.org&gt;</a>
-<a name="3"><span class="lineNum">       3 </span>            : Copyright (c) 2023 Stappler LLC &lt;admin@stappler.dev&gt;</a>
+<a name="3"><span class="lineNum">       3 </span>            : Copyright (c) 2023-2024 Stappler LLC &lt;admin@stappler.dev&gt;</a>
 <a name="4"><span class="lineNum">       4 </span>            : </a>
 <a name="5"><span class="lineNum">       5 </span>            : Permission is hereby granted, free of charge, to any person obtaining a copy</a>
 <a name="6"><span class="lineNum">       6 </span>            : of this software and associated documentation files (the &quot;Software&quot;), to deal</a>
@@ -88,9 +88,9 @@
 <a name="26"><span class="lineNum">      26 </span>            : </a>
 <a name="27"><span class="lineNum">      27 </span>            : #include &quot;SPIO.h&quot;</a>
 <a name="28"><span class="lineNum">      28 </span>            : #include &quot;SPBytesView.h&quot;</a>
-<a name="29"><span class="lineNum">      29 </span>            : #include &quot;SPSha.h&quot;</a>
+<a name="29"><span class="lineNum">      29 </span>            : #include &quot;SPCoreCrypto.h&quot;</a>
 <a name="30"><span class="lineNum">      30 </span>            : </a>
-<a name="31"><span class="lineNum">      31 </span>            : namespace stappler::crypto {</a>
+<a name="31"><span class="lineNum">      31 </span>            : namespace STAPPLER_VERSIONIZED stappler::crypto {</a>
 <a name="32"><span class="lineNum">      32 </span>            : </a>
 <a name="33"><span class="lineNum">      33 </span>            : // Гарантирует единственность шифротекста для разных бэкэндов в блочных шифрах</a>
 <a name="34"><span class="lineNum">      34 </span>            : // ценой производетльности. Если выключено - шифротексты могут различаться</a>
@@ -125,7 +125,7 @@
 <a name="63"><span class="lineNum">      63 </span>            :         SupportsGost3410_2012 = 1 &lt;&lt; 6, // ЭЦП</a>
 <a name="64"><span class="lineNum">      64 </span>            : };</a>
 <a name="65"><span class="lineNum">      65 </span>            : </a>
-<a name="66"><span class="lineNum">      66 </span><span class="lineCov">         25 : SP_DEFINE_ENUM_AS_MASK(BackendFlags)</span></a>
+<a name="66"><span class="lineNum">      66 </span>            : SP_DEFINE_ENUM_AS_MASK(BackendFlags)</a>
 <a name="67"><span class="lineNum">      67 </span>            : </a>
 <a name="68"><span class="lineNum">      68 </span>            : enum class BlockCipher : uint16_t {</a>
 <a name="69"><span class="lineNum">      69 </span>            :         AES_CBC,</a>
@@ -133,7 +133,7 @@
 <a name="71"><span class="lineNum">      71 </span>            :         Gost3412_2015_CTR_ACPKM</a>
 <a name="72"><span class="lineNum">      72 </span>            : };</a>
 <a name="73"><span class="lineNum">      73 </span>            : </a>
-<a name="74"><span class="lineNum">      74 </span>            : enum class KeyType {</a>
+<a name="74"><span class="lineNum">      74 </span>            : enum class KeyType : uint32_t {</a>
 <a name="75"><span class="lineNum">      75 </span>            :         Unknown,</a>
 <a name="76"><span class="lineNum">      76 </span>            :         RSA,</a>
 <a name="77"><span class="lineNum">      77 </span>            :         DSA,</a>
@@ -172,154 +172,164 @@
 <a name="110"><span class="lineNum">     110 </span>            : struct KeyContext {</a>
 <a name="111"><span class="lineNum">     111 </span>            :         void *cryptoCtx = nullptr;</a>
 <a name="112"><span class="lineNum">     112 </span>            :         void *keyCtx = nullptr;</a>
-<a name="113"><span class="lineNum">     113 </span>            :         void *backendCtx = nullptr;</a>
+<a name="113"><span class="lineNum">     113 </span>            :         uint32_t padding = 0;</a>
 <a name="114"><span class="lineNum">     114 </span>            :         KeyType type = KeyType::Unknown;</a>
-<a name="115"><span class="lineNum">     115 </span>            : };</a>
-<a name="116"><span class="lineNum">     116 </span>            : </a>
-<a name="117"><span class="lineNum">     117 </span>            : struct BlockKey256 {</a>
-<a name="118"><span class="lineNum">     118 </span><span class="lineCov">          5 :         std::array&lt;uint8_t, BlockKeySize256&gt; data;</span></a>
-<a name="119"><span class="lineNum">     119 </span><span class="lineCov">          5 :         uint16_t version = 0; // keygen version</span></a>
-<a name="120"><span class="lineNum">     120 </span><span class="lineCov">          5 :         BlockCipher cipher = BlockCipher::AES_CBC;</span></a>
-<a name="121"><span class="lineNum">     121 </span>            : </a>
-<a name="122"><span class="lineNum">     122 </span><span class="lineCov">          5 :         bool operator==(const BlockKey256 &amp;) const = default;</span></a>
-<a name="123"><span class="lineNum">     123 </span><span class="lineCov">          5 :         bool operator!=(const BlockKey256 &amp;) const = default;</span></a>
-<a name="124"><span class="lineNum">     124 </span>            : };</a>
-<a name="125"><span class="lineNum">     125 </span>            : </a>
-<a name="126"><span class="lineNum">     126 </span>            : struct BlockCryptoHeader {</a>
-<a name="127"><span class="lineNum">     127 </span>            :         uint64_t size;</a>
-<a name="128"><span class="lineNum">     128 </span>            :         uint16_t version;</a>
-<a name="129"><span class="lineNum">     129 </span>            :         uint16_t cipher;</a>
-<a name="130"><span class="lineNum">     130 </span>            :         uint32_t padding;</a>
-<a name="131"><span class="lineNum">     131 </span>            : };</a>
-<a name="132"><span class="lineNum">     132 </span>            : </a>
-<a name="133"><span class="lineNum">     133 </span>            : struct BlockInfo {</a>
-<a name="134"><span class="lineNum">     134 </span>            :         uint64_t dataSize = 0;</a>
-<a name="135"><span class="lineNum">     135 </span>            :         uint16_t version = 0; // keygen version</a>
-<a name="136"><span class="lineNum">     136 </span>            :         BlockCipher cipher = BlockCipher::AES_CBC;</a>
-<a name="137"><span class="lineNum">     137 </span>            : };</a>
-<a name="138"><span class="lineNum">     138 </span>            : </a>
-<a name="139"><span class="lineNum">     139 </span>            : class PrivateKey {</a>
-<a name="140"><span class="lineNum">     140 </span>            : public:</a>
-<a name="141"><span class="lineNum">     141 </span>            :         PrivateKey(Backend = Backend::Default);</a>
-<a name="142"><span class="lineNum">     142 </span>            :         PrivateKey(Backend, BytesView, const CoderSource &amp; passwd = CoderSource());</a>
-<a name="143"><span class="lineNum">     143 </span>            :         PrivateKey(BytesView, const CoderSource &amp; passwd = CoderSource());</a>
-<a name="144"><span class="lineNum">     144 </span>            :         ~PrivateKey();</a>
-<a name="145"><span class="lineNum">     145 </span>            : </a>
-<a name="146"><span class="lineNum">     146 </span>            :         PrivateKey(const PrivateKey &amp;) = delete;</a>
-<a name="147"><span class="lineNum">     147 </span>            :         PrivateKey&amp; operator=(const PrivateKey &amp;) = delete;</a>
-<a name="148"><span class="lineNum">     148 </span>            : </a>
-<a name="149"><span class="lineNum">     149 </span>            :         bool generate(KeyBits = KeyBits::_2048);</a>
-<a name="150"><span class="lineNum">     150 </span>            : </a>
-<a name="151"><span class="lineNum">     151 </span>            :         bool import(BytesView, const CoderSource &amp; passwd = CoderSource());</a>
+<a name="115"><span class="lineNum">     115 </span>            :         void *backendCtx = nullptr;</a>
+<a name="116"><span class="lineNum">     116 </span>            : };</a>
+<a name="117"><span class="lineNum">     117 </span>            : </a>
+<a name="118"><span class="lineNum">     118 </span>            : struct BlockKey256 {</a>
+<a name="119"><span class="lineNum">     119 </span><span class="lineCov">        125 :         uint16_t version = 0; // keygen version</span></a>
+<a name="120"><span class="lineNum">     120 </span><span class="lineCov">        125 :         BlockCipher cipher = BlockCipher::AES_CBC;</span></a>
+<a name="121"><span class="lineNum">     121 </span><span class="lineCov">        125 :         std::array&lt;uint8_t, BlockKeySize256&gt; data = { 0 };</span></a>
+<a name="122"><span class="lineNum">     122 </span>            : </a>
+<a name="123"><span class="lineNum">     123 </span><span class="lineCov">        125 :         bool operator==(const BlockKey256 &amp;) const = default;</span></a>
+<a name="124"><span class="lineNum">     124 </span><span class="lineCov">        125 :         bool operator!=(const BlockKey256 &amp;) const = default;</span></a>
+<a name="125"><span class="lineNum">     125 </span>            : };</a>
+<a name="126"><span class="lineNum">     126 </span>            : </a>
+<a name="127"><span class="lineNum">     127 </span>            : struct BlockCryptoHeader {</a>
+<a name="128"><span class="lineNum">     128 </span>            :         uint64_t size;</a>
+<a name="129"><span class="lineNum">     129 </span>            :         uint16_t version;</a>
+<a name="130"><span class="lineNum">     130 </span>            :         uint16_t cipher;</a>
+<a name="131"><span class="lineNum">     131 </span>            :         uint32_t padding;</a>
+<a name="132"><span class="lineNum">     132 </span>            : };</a>
+<a name="133"><span class="lineNum">     133 </span>            : </a>
+<a name="134"><span class="lineNum">     134 </span>            : struct BlockInfo {</a>
+<a name="135"><span class="lineNum">     135 </span>            :         uint64_t dataSize = 0;</a>
+<a name="136"><span class="lineNum">     136 </span>            :         uint16_t version = 0; // keygen version</a>
+<a name="137"><span class="lineNum">     137 </span>            :         BlockCipher cipher = BlockCipher::AES_CBC;</a>
+<a name="138"><span class="lineNum">     138 </span>            : };</a>
+<a name="139"><span class="lineNum">     139 </span>            : </a>
+<a name="140"><span class="lineNum">     140 </span>            : class PrivateKey {</a>
+<a name="141"><span class="lineNum">     141 </span>            : public:</a>
+<a name="142"><span class="lineNum">     142 </span>            :         PrivateKey(Backend = Backend::Default);</a>
+<a name="143"><span class="lineNum">     143 </span>            :         PrivateKey(Backend, BytesView, const CoderSource &amp; passwd = CoderSource());</a>
+<a name="144"><span class="lineNum">     144 </span>            :         PrivateKey(BytesView, const CoderSource &amp; passwd = CoderSource());</a>
+<a name="145"><span class="lineNum">     145 </span>            :         ~PrivateKey();</a>
+<a name="146"><span class="lineNum">     146 </span>            : </a>
+<a name="147"><span class="lineNum">     147 </span>            :         PrivateKey(const PrivateKey &amp;) = delete;</a>
+<a name="148"><span class="lineNum">     148 </span>            :         PrivateKey&amp; operator=(const PrivateKey &amp;) = delete;</a>
+<a name="149"><span class="lineNum">     149 </span>            : </a>
+<a name="150"><span class="lineNum">     150 </span>            :         PrivateKey(PrivateKey &amp;&amp;);</a>
+<a name="151"><span class="lineNum">     151 </span>            :         PrivateKey&amp; operator=(PrivateKey &amp;&amp;);</a>
 <a name="152"><span class="lineNum">     152 </span>            : </a>
-<a name="153"><span class="lineNum">     153 </span>            :         PublicKey exportPublic() const;</a>
-<a name="154"><span class="lineNum">     154 </span>            : </a>
-<a name="155"><span class="lineNum">     155 </span>            :         Backend getBackend() const;</a>
-<a name="156"><span class="lineNum">     156 </span><span class="lineCov">         27 :         KeyContext getKey() const { return _key; }</span></a>
-<a name="157"><span class="lineNum">     157 </span><span class="lineCov">         19 :         KeyType getType() const { return _key.type; }</span></a>
-<a name="158"><span class="lineNum">     158 </span>            : </a>
-<a name="159"><span class="lineNum">     159 </span><span class="lineCov">         22 :         operator bool () const { return _valid &amp;&amp; _loaded; }</span></a>
-<a name="160"><span class="lineNum">     160 </span>            : </a>
-<a name="161"><span class="lineNum">     161 </span>            :         bool exportPem(const Callback&lt;void(const uint8_t *, size_t)&gt; &amp;, KeyFormat = KeyFormat::PKCS8, const CoderSource &amp;passPhrase = StringView()) const;</a>
-<a name="162"><span class="lineNum">     162 </span>            :         bool exportPem(const Callback&lt;void(const uint8_t *, size_t)&gt; &amp;, const CoderSource &amp;passPhrase) const;</a>
+<a name="153"><span class="lineNum">     153 </span>            :         bool generate(KeyType type = KeyType::RSA);</a>
+<a name="154"><span class="lineNum">     154 </span>            :         bool generate(KeyBits = KeyBits::_2048, KeyType type = KeyType::RSA);</a>
+<a name="155"><span class="lineNum">     155 </span>            : </a>
+<a name="156"><span class="lineNum">     156 </span>            :         bool import(BytesView, const CoderSource &amp; passwd = CoderSource());</a>
+<a name="157"><span class="lineNum">     157 </span>            : </a>
+<a name="158"><span class="lineNum">     158 </span>            :         PublicKey exportPublic() const;</a>
+<a name="159"><span class="lineNum">     159 </span>            : </a>
+<a name="160"><span class="lineNum">     160 </span>            :         Backend getBackend() const;</a>
+<a name="161"><span class="lineNum">     161 </span><span class="lineCov">       1425 :         KeyContext getKey() const { return _key; }</span></a>
+<a name="162"><span class="lineNum">     162 </span><span class="lineCov">       2000 :         KeyType getType() const { return _key.type; }</span></a>
 <a name="163"><span class="lineNum">     163 </span>            : </a>
-<a name="164"><span class="lineNum">     164 </span>            :         bool exportDer(const Callback&lt;void(const uint8_t *, size_t)&gt; &amp;, KeyFormat = KeyFormat::PKCS8, const CoderSource &amp;passPhrase = StringView()) const;</a>
-<a name="165"><span class="lineNum">     165 </span>            :         bool exportDer(const Callback&lt;void(const uint8_t *, size_t)&gt; &amp;, const CoderSource &amp;passPhrase) const;</a>
-<a name="166"><span class="lineNum">     166 </span>            : </a>
-<a name="167"><span class="lineNum">     167 </span>            :         bool sign(const Callback&lt;void(const uint8_t *, size_t)&gt; &amp;, const CoderSource &amp;, SignAlgorithm = SignAlgorithm::RSA_SHA512) const;</a>
-<a name="168"><span class="lineNum">     168 </span>            :         bool verify(const CoderSource &amp;data, BytesView signature, SignAlgorithm) const;</a>
-<a name="169"><span class="lineNum">     169 </span>            : </a>
-<a name="170"><span class="lineNum">     170 </span>            :         bool fingerprint(const Callback&lt;void(const uint8_t *, size_t)&gt; &amp;, const CoderSource &amp;) const;</a>
+<a name="164"><span class="lineNum">     164 </span><span class="lineCov">       1250 :         explicit operator bool () const { return _valid &amp;&amp; _loaded; }</span></a>
+<a name="165"><span class="lineNum">     165 </span>            : </a>
+<a name="166"><span class="lineNum">     166 </span>            :         bool exportPem(const Callback&lt;void(BytesView)&gt; &amp;, KeyFormat = KeyFormat::PKCS8, const CoderSource &amp;passPhrase = StringView()) const;</a>
+<a name="167"><span class="lineNum">     167 </span>            :         bool exportPem(const Callback&lt;void(BytesView)&gt; &amp;, const CoderSource &amp;passPhrase) const;</a>
+<a name="168"><span class="lineNum">     168 </span>            : </a>
+<a name="169"><span class="lineNum">     169 </span>            :         bool exportDer(const Callback&lt;void(BytesView)&gt; &amp;, KeyFormat = KeyFormat::PKCS8, const CoderSource &amp;passPhrase = StringView()) const;</a>
+<a name="170"><span class="lineNum">     170 </span>            :         bool exportDer(const Callback&lt;void(BytesView)&gt; &amp;, const CoderSource &amp;passPhrase) const;</a>
 <a name="171"><span class="lineNum">     171 </span>            : </a>
-<a name="172"><span class="lineNum">     172 </span>            :         bool isSupported(KeyFormat) const;</a>
-<a name="173"><span class="lineNum">     173 </span>            : </a>
-<a name="174"><span class="lineNum">     174 </span>            :         bool encrypt(const Callback&lt;void(const uint8_t *, size_t)&gt; &amp;, const CoderSource &amp;);</a>
-<a name="175"><span class="lineNum">     175 </span>            :         bool decrypt(const Callback&lt;void(const uint8_t *, size_t)&gt; &amp;, const CoderSource &amp;);</a>
+<a name="172"><span class="lineNum">     172 </span>            :         bool sign(const Callback&lt;void(BytesView)&gt; &amp;, const CoderSource &amp;, SignAlgorithm = SignAlgorithm::RSA_SHA512) const;</a>
+<a name="173"><span class="lineNum">     173 </span>            :         bool verify(const CoderSource &amp;data, BytesView signature, SignAlgorithm) const;</a>
+<a name="174"><span class="lineNum">     174 </span>            : </a>
+<a name="175"><span class="lineNum">     175 </span>            :         bool fingerprint(const Callback&lt;void(BytesView)&gt; &amp;, const CoderSource &amp;) const;</a>
 <a name="176"><span class="lineNum">     176 </span>            : </a>
-<a name="177"><span class="lineNum">     177 </span>            : protected:</a>
-<a name="178"><span class="lineNum">     178 </span>            :         bool _loaded = false;</a>
-<a name="179"><span class="lineNum">     179 </span>            :         bool _valid = false;</a>
-<a name="180"><span class="lineNum">     180 </span>            :         KeyContext _key;</a>
-<a name="181"><span class="lineNum">     181 </span>            : };</a>
+<a name="177"><span class="lineNum">     177 </span>            :         bool isGenerateSupported(KeyType) const;</a>
+<a name="178"><span class="lineNum">     178 </span>            :         bool isSupported(KeyFormat) const;</a>
+<a name="179"><span class="lineNum">     179 </span>            : </a>
+<a name="180"><span class="lineNum">     180 </span>            :         bool encrypt(const Callback&lt;void(BytesView)&gt; &amp;, const CoderSource &amp;);</a>
+<a name="181"><span class="lineNum">     181 </span>            :         bool decrypt(const Callback&lt;void(BytesView)&gt; &amp;, const CoderSource &amp;);</a>
 <a name="182"><span class="lineNum">     182 </span>            : </a>
-<a name="183"><span class="lineNum">     183 </span>            : class PublicKey {</a>
-<a name="184"><span class="lineNum">     184 </span>            : public:</a>
-<a name="185"><span class="lineNum">     185 </span>            :         PublicKey(Backend = Backend::Default);</a>
-<a name="186"><span class="lineNum">     186 </span>            :         PublicKey(Backend, BytesView);</a>
-<a name="187"><span class="lineNum">     187 </span>            :         PublicKey(BytesView);</a>
-<a name="188"><span class="lineNum">     188 </span>            :         PublicKey(const PrivateKey &amp;);</a>
-<a name="189"><span class="lineNum">     189 </span>            :         ~PublicKey();</a>
-<a name="190"><span class="lineNum">     190 </span>            : </a>
-<a name="191"><span class="lineNum">     191 </span>            :         PublicKey(const PublicKey &amp;) = delete;</a>
-<a name="192"><span class="lineNum">     192 </span>            :         PublicKey&amp; operator=(const PublicKey &amp;) = delete;</a>
-<a name="193"><span class="lineNum">     193 </span>            : </a>
-<a name="194"><span class="lineNum">     194 </span>            :         bool import(BytesView);</a>
-<a name="195"><span class="lineNum">     195 </span>            :         bool importOpenSSH(StringView);</a>
+<a name="183"><span class="lineNum">     183 </span>            : protected:</a>
+<a name="184"><span class="lineNum">     184 </span>            :         bool _loaded = false;</a>
+<a name="185"><span class="lineNum">     185 </span>            :         bool _valid = false;</a>
+<a name="186"><span class="lineNum">     186 </span>            :         KeyContext _key;</a>
+<a name="187"><span class="lineNum">     187 </span>            : };</a>
+<a name="188"><span class="lineNum">     188 </span>            : </a>
+<a name="189"><span class="lineNum">     189 </span>            : class PublicKey {</a>
+<a name="190"><span class="lineNum">     190 </span>            : public:</a>
+<a name="191"><span class="lineNum">     191 </span>            :         PublicKey(Backend = Backend::Default);</a>
+<a name="192"><span class="lineNum">     192 </span>            :         PublicKey(Backend, BytesView);</a>
+<a name="193"><span class="lineNum">     193 </span>            :         PublicKey(BytesView);</a>
+<a name="194"><span class="lineNum">     194 </span>            :         PublicKey(const PrivateKey &amp;);</a>
+<a name="195"><span class="lineNum">     195 </span>            :         ~PublicKey();</a>
 <a name="196"><span class="lineNum">     196 </span>            : </a>
-<a name="197"><span class="lineNum">     197 </span>            :         Backend getBackend() const;</a>
-<a name="198"><span class="lineNum">     198 </span>            :         KeyContext getKey() const { return _key; }</a>
-<a name="199"><span class="lineNum">     199 </span><span class="lineCov">          2 :         KeyType getType() const { return _key.type; }</span></a>
-<a name="200"><span class="lineNum">     200 </span>            : </a>
-<a name="201"><span class="lineNum">     201 </span><span class="lineCov">         20 :         operator bool () const { return _valid &amp;&amp; _loaded; }</span></a>
+<a name="197"><span class="lineNum">     197 </span>            :         PublicKey(const PublicKey &amp;) = delete;</a>
+<a name="198"><span class="lineNum">     198 </span>            :         PublicKey&amp; operator=(const PublicKey &amp;) = delete;</a>
+<a name="199"><span class="lineNum">     199 </span>            : </a>
+<a name="200"><span class="lineNum">     200 </span>            :         PublicKey(PublicKey &amp;&amp;);</a>
+<a name="201"><span class="lineNum">     201 </span>            :         PublicKey&amp; operator=(PublicKey &amp;&amp;);</a>
 <a name="202"><span class="lineNum">     202 </span>            : </a>
-<a name="203"><span class="lineNum">     203 </span>            :         bool exportPem(const Callback&lt;void(const uint8_t *, size_t)&gt; &amp;) const; // only pkcs8</a>
-<a name="204"><span class="lineNum">     204 </span>            :         bool exportDer(const Callback&lt;void(const uint8_t *, size_t)&gt; &amp;) const; // only pkcs8</a>
+<a name="203"><span class="lineNum">     203 </span>            :         bool import(BytesView);</a>
+<a name="204"><span class="lineNum">     204 </span>            :         bool importOpenSSH(StringView);</a>
 <a name="205"><span class="lineNum">     205 </span>            : </a>
-<a name="206"><span class="lineNum">     206 </span>            :         bool verify(const CoderSource &amp;data, BytesView signature, SignAlgorithm) const;</a>
-<a name="207"><span class="lineNum">     207 </span>            : </a>
-<a name="208"><span class="lineNum">     208 </span>            :         bool encrypt(const Callback&lt;void(const uint8_t *, size_t)&gt; &amp;, const CoderSource &amp;);</a>
+<a name="206"><span class="lineNum">     206 </span>            :         Backend getBackend() const;</a>
+<a name="207"><span class="lineNum">     207 </span>            :         KeyContext getKey() const { return _key; }</a>
+<a name="208"><span class="lineNum">     208 </span><span class="lineCov">         50 :         KeyType getType() const { return _key.type; }</span></a>
 <a name="209"><span class="lineNum">     209 </span>            : </a>
-<a name="210"><span class="lineNum">     210 </span>            : protected:</a>
-<a name="211"><span class="lineNum">     211 </span>            :         bool _loaded = false;</a>
-<a name="212"><span class="lineNum">     212 </span>            :         bool _valid = false;</a>
-<a name="213"><span class="lineNum">     213 </span>            :         KeyContext _key;</a>
-<a name="214"><span class="lineNum">     214 </span>            : };</a>
-<a name="215"><span class="lineNum">     215 </span>            : </a>
-<a name="216"><span class="lineNum">     216 </span><span class="lineCov">         25 : inline constexpr size_t getBlockSize(BlockCipher c) {</span></a>
-<a name="217"><span class="lineNum">     217 </span><span class="lineCov">         25 :         switch (c) {</span></a>
-<a name="218"><span class="lineNum">     218 </span><span class="lineCov">         13 :         case BlockCipher::AES_CBC:</span></a>
-<a name="219"><span class="lineNum">     219 </span>            :         case BlockCipher::AES_CFB8:</a>
-<a name="220"><span class="lineNum">     220 </span><span class="lineCov">         13 :                 return 16;</span></a>
-<a name="221"><span class="lineNum">     221 </span>            :                 break;</a>
-<a name="222"><span class="lineNum">     222 </span><span class="lineCov">         12 :         case BlockCipher::Gost3412_2015_CTR_ACPKM:</span></a>
-<a name="223"><span class="lineNum">     223 </span><span class="lineCov">         12 :                 return 16;</span></a>
-<a name="224"><span class="lineNum">     224 </span>            :                 break;</a>
-<a name="225"><span class="lineNum">     225 </span>            :         }</a>
-<a name="226"><span class="lineNum">     226 </span><span class="lineNoCov">          0 :         return 16;</span></a>
-<a name="227"><span class="lineNum">     227 </span>            : }</a>
-<a name="228"><span class="lineNum">     228 </span>            : </a>
-<a name="229"><span class="lineNum">     229 </span>            : void listBackends(const Callback&lt;void(Backend, StringView, BackendFlags)&gt; &amp;);</a>
-<a name="230"><span class="lineNum">     230 </span>            : </a>
-<a name="231"><span class="lineNum">     231 </span>            : bool isPemKey(BytesView data);</a>
-<a name="232"><span class="lineNum">     232 </span>            : </a>
-<a name="233"><span class="lineNum">     233 </span>            : bool encryptBlock(const BlockKey256 &amp;, BytesView, const Callback&lt;void(const uint8_t *, size_t)&gt; &amp;);</a>
-<a name="234"><span class="lineNum">     234 </span>            : bool encryptBlock(Backend b, const BlockKey256 &amp;, BytesView, const Callback&lt;void(const uint8_t *, size_t)&gt; &amp;);</a>
-<a name="235"><span class="lineNum">     235 </span>            : </a>
-<a name="236"><span class="lineNum">     236 </span>            : bool decryptBlock(const BlockKey256 &amp;, BytesView, const Callback&lt;void(const uint8_t *, size_t)&gt; &amp;);</a>
-<a name="237"><span class="lineNum">     237 </span>            : bool decryptBlock(Backend b, const BlockKey256 &amp;, BytesView, const Callback&lt;void(const uint8_t *, size_t)&gt; &amp;);</a>
-<a name="238"><span class="lineNum">     238 </span>            : </a>
-<a name="239"><span class="lineNum">     239 </span>            : BlockKey256 makeBlockKey(Backend, BytesView pkey, BytesView hash, BlockCipher = BlockCipher::AES_CBC, uint32_t version = 2);</a>
-<a name="240"><span class="lineNum">     240 </span>            : BlockKey256 makeBlockKey(BytesView pkey, BytesView hash, BlockCipher = BlockCipher::AES_CBC, uint32_t version = 2);</a>
-<a name="241"><span class="lineNum">     241 </span>            : BlockKey256 makeBlockKey(const PrivateKey &amp;pkey, BytesView hash, BlockCipher = BlockCipher::AES_CBC, uint32_t version = 2);</a>
-<a name="242"><span class="lineNum">     242 </span>            : </a>
-<a name="243"><span class="lineNum">     243 </span>            : // get keygen version from encrypted block</a>
-<a name="244"><span class="lineNum">     244 </span>            : BlockInfo getBlockInfo(BytesView);</a>
-<a name="245"><span class="lineNum">     245 </span>            : </a>
-<a name="246"><span class="lineNum">     246 </span>            : using HashCoderCallback = const Callback&lt;bool(const CoderSource &amp;)&gt;;</a>
+<a name="210"><span class="lineNum">     210 </span><span class="lineCov">        925 :         explicit operator bool () const { return _valid &amp;&amp; _loaded; }</span></a>
+<a name="211"><span class="lineNum">     211 </span>            : </a>
+<a name="212"><span class="lineNum">     212 </span>            :         bool exportPem(const Callback&lt;void(BytesView)&gt; &amp;) const; // only pkcs8</a>
+<a name="213"><span class="lineNum">     213 </span>            :         bool exportDer(const Callback&lt;void(BytesView)&gt; &amp;) const; // only pkcs8</a>
+<a name="214"><span class="lineNum">     214 </span>            : </a>
+<a name="215"><span class="lineNum">     215 </span>            :         bool verify(const CoderSource &amp;data, BytesView signature, SignAlgorithm) const;</a>
+<a name="216"><span class="lineNum">     216 </span>            : </a>
+<a name="217"><span class="lineNum">     217 </span>            :         bool encrypt(const Callback&lt;void(BytesView)&gt; &amp;, const CoderSource &amp;);</a>
+<a name="218"><span class="lineNum">     218 </span>            : </a>
+<a name="219"><span class="lineNum">     219 </span>            : protected:</a>
+<a name="220"><span class="lineNum">     220 </span>            :         bool _loaded = false;</a>
+<a name="221"><span class="lineNum">     221 </span>            :         bool _valid = false;</a>
+<a name="222"><span class="lineNum">     222 </span>            :         KeyContext _key;</a>
+<a name="223"><span class="lineNum">     223 </span>            : };</a>
+<a name="224"><span class="lineNum">     224 </span>            : </a>
+<a name="225"><span class="lineNum">     225 </span><span class="lineCov">        975 : inline constexpr size_t getBlockSize(BlockCipher c) {</span></a>
+<a name="226"><span class="lineNum">     226 </span><span class="lineCov">        975 :         switch (c) {</span></a>
+<a name="227"><span class="lineNum">     227 </span><span class="lineCov">        475 :         case BlockCipher::AES_CBC:</span></a>
+<a name="228"><span class="lineNum">     228 </span>            :         case BlockCipher::AES_CFB8:</a>
+<a name="229"><span class="lineNum">     229 </span><span class="lineCov">        475 :                 return 16;</span></a>
+<a name="230"><span class="lineNum">     230 </span>            :                 break;</a>
+<a name="231"><span class="lineNum">     231 </span><span class="lineCov">        500 :         case BlockCipher::Gost3412_2015_CTR_ACPKM:</span></a>
+<a name="232"><span class="lineNum">     232 </span><span class="lineCov">        500 :                 return 16;</span></a>
+<a name="233"><span class="lineNum">     233 </span>            :                 break;</a>
+<a name="234"><span class="lineNum">     234 </span>            :         }</a>
+<a name="235"><span class="lineNum">     235 </span><span class="lineNoCov">          0 :         return 16;</span></a>
+<a name="236"><span class="lineNum">     236 </span>            : }</a>
+<a name="237"><span class="lineNum">     237 </span>            : </a>
+<a name="238"><span class="lineNum">     238 </span>            : void listBackends(const Callback&lt;void(Backend, StringView, BackendFlags)&gt; &amp;);</a>
+<a name="239"><span class="lineNum">     239 </span>            : </a>
+<a name="240"><span class="lineNum">     240 </span>            : bool isPemKey(BytesView data);</a>
+<a name="241"><span class="lineNum">     241 </span>            : </a>
+<a name="242"><span class="lineNum">     242 </span>            : bool encryptBlock(const BlockKey256 &amp;, BytesView, const Callback&lt;void(BytesView)&gt; &amp;);</a>
+<a name="243"><span class="lineNum">     243 </span>            : bool encryptBlock(Backend b, const BlockKey256 &amp;, BytesView, const Callback&lt;void(BytesView)&gt; &amp;);</a>
+<a name="244"><span class="lineNum">     244 </span>            : </a>
+<a name="245"><span class="lineNum">     245 </span>            : bool decryptBlock(const BlockKey256 &amp;, BytesView, const Callback&lt;void(BytesView)&gt; &amp;);</a>
+<a name="246"><span class="lineNum">     246 </span>            : bool decryptBlock(Backend b, const BlockKey256 &amp;, BytesView, const Callback&lt;void(BytesView)&gt; &amp;);</a>
 <a name="247"><span class="lineNum">     247 </span>            : </a>
-<a name="248"><span class="lineNum">     248 </span>            : Sha256::Buf hash256(Backend, const Callback&lt;void( const HashCoderCallback &amp;upd )&gt; &amp;, HashFunction func = HashFunction::SHA_2);</a>
-<a name="249"><span class="lineNum">     249 </span>            : Sha256::Buf hash256(const Callback&lt;void( const HashCoderCallback &amp;upd )&gt; &amp;, HashFunction func = HashFunction::SHA_2);</a>
-<a name="250"><span class="lineNum">     250 </span>            : Sha256::Buf hash256(Backend, const CoderSource &amp;, HashFunction func = HashFunction::SHA_2);</a>
-<a name="251"><span class="lineNum">     251 </span>            : Sha256::Buf hash256(const CoderSource &amp;, HashFunction func = HashFunction::SHA_2);</a>
+<a name="248"><span class="lineNum">     248 </span>            : BlockKey256 makeBlockKey(Backend, BytesView pkey, BytesView hash, BlockCipher = BlockCipher::AES_CBC, uint32_t version = 2);</a>
+<a name="249"><span class="lineNum">     249 </span>            : BlockKey256 makeBlockKey(BytesView pkey, BytesView hash, BlockCipher = BlockCipher::AES_CBC, uint32_t version = 2);</a>
+<a name="250"><span class="lineNum">     250 </span>            : BlockKey256 makeBlockKey(const PrivateKey &amp;pkey, BytesView hash, uint32_t version = 2);</a>
+<a name="251"><span class="lineNum">     251 </span>            : BlockKey256 makeBlockKey(const PrivateKey &amp;pkey, BytesView hash, BlockCipher, uint32_t version = 2);</a>
 <a name="252"><span class="lineNum">     252 </span>            : </a>
-<a name="253"><span class="lineNum">     253 </span>            : Sha512::Buf hash512(Backend, const Callback&lt;void( const HashCoderCallback &amp;upd )&gt; &amp;, HashFunction func = HashFunction::SHA_2);</a>
-<a name="254"><span class="lineNum">     254 </span>            : Sha512::Buf hash512(const Callback&lt;void( const HashCoderCallback &amp;upd )&gt; &amp;, HashFunction func = HashFunction::SHA_2);</a>
-<a name="255"><span class="lineNum">     255 </span>            : Sha512::Buf hash512(Backend, const CoderSource &amp;, HashFunction func = HashFunction::SHA_2);</a>
-<a name="256"><span class="lineNum">     256 </span>            : Sha512::Buf hash512(const CoderSource &amp;, HashFunction func = HashFunction::SHA_2);</a>
+<a name="253"><span class="lineNum">     253 </span>            : // get keygen version from encrypted block</a>
+<a name="254"><span class="lineNum">     254 </span>            : BlockInfo getBlockInfo(BytesView);</a>
+<a name="255"><span class="lineNum">     255 </span>            : </a>
+<a name="256"><span class="lineNum">     256 </span>            : using HashCoderCallback = const Callback&lt;bool(const CoderSource &amp;)&gt;;</a>
 <a name="257"><span class="lineNum">     257 </span>            : </a>
-<a name="258"><span class="lineNum">     258 </span>            : }</a>
-<a name="259"><span class="lineNum">     259 </span>            : </a>
-<a name="260"><span class="lineNum">     260 </span>            : #endif /* STAPPLER_CRYPTO_SPCRYPTO_H_ */</a>
+<a name="258"><span class="lineNum">     258 </span>            : Sha256::Buf hash256(Backend, const Callback&lt;void( const HashCoderCallback &amp;upd )&gt; &amp;, HashFunction func = HashFunction::SHA_2);</a>
+<a name="259"><span class="lineNum">     259 </span>            : Sha256::Buf hash256(const Callback&lt;void( const HashCoderCallback &amp;upd )&gt; &amp;, HashFunction func = HashFunction::SHA_2);</a>
+<a name="260"><span class="lineNum">     260 </span>            : Sha256::Buf hash256(Backend, const CoderSource &amp;, HashFunction func = HashFunction::SHA_2);</a>
+<a name="261"><span class="lineNum">     261 </span>            : Sha256::Buf hash256(const CoderSource &amp;, HashFunction func = HashFunction::SHA_2);</a>
+<a name="262"><span class="lineNum">     262 </span>            : </a>
+<a name="263"><span class="lineNum">     263 </span>            : Sha512::Buf hash512(Backend, const Callback&lt;void( const HashCoderCallback &amp;upd )&gt; &amp;, HashFunction func = HashFunction::SHA_2);</a>
+<a name="264"><span class="lineNum">     264 </span>            : Sha512::Buf hash512(const Callback&lt;void( const HashCoderCallback &amp;upd )&gt; &amp;, HashFunction func = HashFunction::SHA_2);</a>
+<a name="265"><span class="lineNum">     265 </span>            : Sha512::Buf hash512(Backend, const CoderSource &amp;, HashFunction func = HashFunction::SHA_2);</a>
+<a name="266"><span class="lineNum">     266 </span>            : Sha512::Buf hash512(const CoderSource &amp;, HashFunction func = HashFunction::SHA_2);</a>
+<a name="267"><span class="lineNum">     267 </span>            : </a>
+<a name="268"><span class="lineNum">     268 </span>            : }</a>
+<a name="269"><span class="lineNum">     269 </span>            : </a>
+<a name="270"><span class="lineNum">     270 </span>            : #endif /* STAPPLER_CRYPTO_SPCRYPTO_H_ */</a>
 </pre>
       </td>
     </tr>

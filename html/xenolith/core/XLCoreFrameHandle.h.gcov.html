@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2023-12-03 02:10:58</td>
+            <td class="headerValue">2024-05-12 00:16:13</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">10</td>
@@ -88,7 +88,7 @@
 <a name="26"><span class="lineNum">      26 </span>            : #include &quot;XLCoreQueue.h&quot;</a>
 <a name="27"><span class="lineNum">      27 </span>            : #include &quot;XLCoreAttachment.h&quot;</a>
 <a name="28"><span class="lineNum">      28 </span>            : </a>
-<a name="29"><span class="lineNum">      29 </span>            : namespace stappler::xenolith::core {</a>
+<a name="29"><span class="lineNum">      29 </span>            : namespace STAPPLER_VERSIONIZED stappler::xenolith::core {</a>
 <a name="30"><span class="lineNum">      30 </span>            : </a>
 <a name="31"><span class="lineNum">      31 </span>            : class FrameHandle : public Ref {</a>
 <a name="32"><span class="lineNum">      32 </span>            : public:</a>
@@ -103,18 +103,18 @@
 <a name="41"><span class="lineNum">      41 </span>            : </a>
 <a name="42"><span class="lineNum">      42 </span>            :         void update(bool init = false);</a>
 <a name="43"><span class="lineNum">      43 </span>            : </a>
-<a name="44"><span class="lineNum">      44 </span><span class="lineCov">        216 :         uint64_t getTimeStart() const { return _timeStart; }</span></a>
-<a name="45"><span class="lineNum">      45 </span><span class="lineCov">        216 :         uint64_t getTimeEnd() const { return _timeEnd; }</span></a>
-<a name="46"><span class="lineNum">      46 </span><span class="lineCov">        814 :         uint64_t getOrder() const { return _order; }</span></a>
-<a name="47"><span class="lineNum">      47 </span><span class="lineCov">        107 :         uint64_t getGen() const { return _gen; }</span></a>
-<a name="48"><span class="lineNum">      48 </span><span class="lineCov">        108 :         uint64_t getSubmissionTime() const { return _submissionTime; }</span></a>
-<a name="49"><span class="lineNum">      49 </span><span class="lineCov">        248 :         Loop *getLoop() const { return _loop; }</span></a>
-<a name="50"><span class="lineNum">      50 </span><span class="lineCov">        404 :         Device *getDevice() const { return _device; }</span></a>
+<a name="44"><span class="lineNum">      44 </span><span class="lineCov">      14676 :         uint64_t getTimeStart() const { return _timeStart; }</span></a>
+<a name="45"><span class="lineNum">      45 </span><span class="lineCov">      14676 :         uint64_t getTimeEnd() const { return _timeEnd; }</span></a>
+<a name="46"><span class="lineNum">      46 </span><span class="lineCov">     201235 :         uint64_t getOrder() const { return _order; }</span></a>
+<a name="47"><span class="lineNum">      47 </span><span class="lineCov">       7323 :         uint64_t getGen() const { return _gen; }</span></a>
+<a name="48"><span class="lineNum">      48 </span><span class="lineCov">       7338 :         uint64_t getSubmissionTime() const { return _submissionTime; }</span></a>
+<a name="49"><span class="lineNum">      49 </span><span class="lineCov">      47812 :         Loop *getLoop() const { return _loop; }</span></a>
+<a name="50"><span class="lineNum">      50 </span><span class="lineCov">     348983 :         Device *getDevice() const { return _device; }</span></a>
 <a name="51"><span class="lineNum">      51 </span>            :         const Rc&lt;FrameEmitter&gt; &amp;getEmitter() const;</a>
 <a name="52"><span class="lineNum">      52 </span>            :         const Rc&lt;Queue&gt; &amp;getQueue() const;</a>
 <a name="53"><span class="lineNum">      53 </span>            :         const FrameContraints &amp;getFrameConstraints() const;</a>
-<a name="54"><span class="lineNum">      54 </span><span class="lineCov">        108 :         const Rc&lt;PoolRef&gt; &amp;getPool() const { return _pool; }</span></a>
-<a name="55"><span class="lineNum">      55 </span><span class="lineCov">        108 :         const Rc&lt;FrameRequest&gt; &amp;getRequest() const { return _request; }</span></a>
+<a name="54"><span class="lineNum">      54 </span><span class="lineCov">       4640 :         const Rc&lt;PoolRef&gt; &amp;getPool() const { return _pool; }</span></a>
+<a name="55"><span class="lineNum">      55 </span><span class="lineCov">       4640 :         const Rc&lt;FrameRequest&gt; &amp;getRequest() const { return _request; }</span></a>
 <a name="56"><span class="lineNum">      56 </span>            : </a>
 <a name="57"><span class="lineNum">      57 </span>            :         const ImageInfoData *getImageSpecialization(const ImageAttachment *) const;</a>
 <a name="58"><span class="lineNum">      58 </span>            : </a>
@@ -125,82 +125,89 @@
 <a name="63"><span class="lineNum">      63 </span>            :         const Vector&lt;Rc&lt;DependencyEvent&gt;&gt; &amp;getSignalDependencies() const;</a>
 <a name="64"><span class="lineNum">      64 </span>            : </a>
 <a name="65"><span class="lineNum">      65 </span>            :         const Vector&lt;Rc&lt;FrameQueue&gt;&gt; &amp;getFrameQueues() const { return _queues; }</a>
-<a name="66"><span class="lineNum">      66 </span>            : </a>
-<a name="67"><span class="lineNum">      67 </span>            :         // spinners within frame should not spin directly on loop to preserve FrameHandle object</a>
-<a name="68"><span class="lineNum">      68 </span>            :         virtual void schedule(Function&lt;bool(FrameHandle &amp;)&gt; &amp;&amp;, StringView tag);</a>
-<a name="69"><span class="lineNum">      69 </span>            : </a>
-<a name="70"><span class="lineNum">      70 </span>            :         // thread tasks within frame should not be performed directly on loop's queue to preserve FrameHandle object</a>
-<a name="71"><span class="lineNum">      71 </span>            :         virtual void performInQueue(Function&lt;void(FrameHandle &amp;)&gt; &amp;&amp;, Ref *, StringView tag);</a>
-<a name="72"><span class="lineNum">      72 </span>            :         virtual void performInQueue(Function&lt;bool(FrameHandle &amp;)&gt; &amp;&amp;, Function&lt;void(FrameHandle &amp;, bool)&gt; &amp;&amp;, Ref *, StringView tag);</a>
-<a name="73"><span class="lineNum">      73 </span>            : </a>
-<a name="74"><span class="lineNum">      74 </span>            :         // thread tasks within frame should not be performed directly on loop's queue to preserve FrameHandle object</a>
-<a name="75"><span class="lineNum">      75 </span>            :         virtual void performOnGlThread(Function&lt;void(FrameHandle &amp;)&gt; &amp;&amp;, Ref *, bool immediate, StringView tag);</a>
-<a name="76"><span class="lineNum">      76 </span>            : </a>
-<a name="77"><span class="lineNum">      77 </span>            :         // required tasks should be completed before onComplete call</a>
-<a name="78"><span class="lineNum">      78 </span>            :         virtual void performRequiredTask(Function&lt;bool(FrameHandle &amp;)&gt; &amp;&amp;, Ref *, StringView tag);</a>
-<a name="79"><span class="lineNum">      79 </span>            :         virtual void performRequiredTask(Function&lt;bool(FrameHandle &amp;)&gt; &amp;&amp;, Function&lt;void(FrameHandle &amp;, bool)&gt; &amp;&amp;, Ref *, StringView tag);</a>
-<a name="80"><span class="lineNum">      80 </span>            : </a>
-<a name="81"><span class="lineNum">      81 </span><span class="lineNoCov">          0 :         virtual bool isSubmitted() const { return _submitted; }</span></a>
-<a name="82"><span class="lineNum">      82 </span>            :         virtual bool isValid() const;</a>
-<a name="83"><span class="lineNum">      83 </span><span class="lineCov">        656 :         virtual bool isValidFlag() const { return _valid; }</span></a>
-<a name="84"><span class="lineNum">      84 </span>            : </a>
-<a name="85"><span class="lineNum">      85 </span>            :         virtual bool isPersistentMapping() const;</a>
-<a name="86"><span class="lineNum">      86 </span>            : </a>
-<a name="87"><span class="lineNum">      87 </span>            :         virtual Rc&lt;AttachmentInputData&gt; getInputData(const AttachmentData *);</a>
-<a name="88"><span class="lineNum">      88 </span>            : </a>
-<a name="89"><span class="lineNum">      89 </span>            :         virtual bool isReadyForSubmit() const;</a>
-<a name="90"><span class="lineNum">      90 </span>            :         virtual void setReadyForSubmit(bool);</a>
-<a name="91"><span class="lineNum">      91 </span>            : </a>
-<a name="92"><span class="lineNum">      92 </span>            :         virtual void invalidate();</a>
-<a name="93"><span class="lineNum">      93 </span>            : </a>
-<a name="94"><span class="lineNum">      94 </span>            :         virtual void setCompleteCallback(Function&lt;void(FrameHandle &amp;)&gt; &amp;&amp;);</a>
-<a name="95"><span class="lineNum">      95 </span>            : </a>
-<a name="96"><span class="lineNum">      96 </span>            :         virtual void onQueueSubmitted(FrameQueue &amp;);</a>
-<a name="97"><span class="lineNum">      97 </span>            :         virtual void onQueueComplete(FrameQueue &amp;);</a>
-<a name="98"><span class="lineNum">      98 </span>            :         virtual void onQueueInvalidated(FrameQueue &amp;);</a>
-<a name="99"><span class="lineNum">      99 </span>            :         virtual void onOutputAttachment(FrameAttachmentData &amp;);</a>
-<a name="100"><span class="lineNum">     100 </span>            :         virtual void onOutputAttachmentInvalidated(FrameAttachmentData &amp;);</a>
-<a name="101"><span class="lineNum">     101 </span>            : </a>
-<a name="102"><span class="lineNum">     102 </span>            :         virtual void waitForDependencies(const Vector&lt;Rc&lt;DependencyEvent&gt;&gt; &amp;, Function&lt;void(FrameHandle &amp;, bool)&gt; &amp;&amp;);</a>
-<a name="103"><span class="lineNum">     103 </span>            : </a>
-<a name="104"><span class="lineNum">     104 </span>            :         virtual void waitForInput(FrameQueue &amp;queue, const Rc&lt;AttachmentHandle&gt; &amp;a, Function&lt;void(bool)&gt; &amp;&amp;cb);</a>
-<a name="105"><span class="lineNum">     105 </span>            : </a>
-<a name="106"><span class="lineNum">     106 </span>            :         virtual void signalDependencies(bool success);</a>
-<a name="107"><span class="lineNum">     107 </span>            : </a>
-<a name="108"><span class="lineNum">     108 </span>            : protected:</a>
-<a name="109"><span class="lineNum">     109 </span>            :         virtual bool setup();</a>
-<a name="110"><span class="lineNum">     110 </span>            : </a>
-<a name="111"><span class="lineNum">     111 </span>            :         virtual void onRequiredTaskCompleted(StringView tag);</a>
-<a name="112"><span class="lineNum">     112 </span>            : </a>
-<a name="113"><span class="lineNum">     113 </span>            :         virtual void tryComplete();</a>
-<a name="114"><span class="lineNum">     114 </span>            :         virtual void onComplete();</a>
-<a name="115"><span class="lineNum">     115 </span>            : </a>
-<a name="116"><span class="lineNum">     116 </span>            :         Loop *_loop = nullptr; // loop can not die until frames are performed</a>
-<a name="117"><span class="lineNum">     117 </span>            :         Device *_device = nullptr;</a>
-<a name="118"><span class="lineNum">     118 </span>            :         Rc&lt;PoolRef&gt; _pool;</a>
-<a name="119"><span class="lineNum">     119 </span>            :         Rc&lt;FrameRequest&gt; _request;</a>
-<a name="120"><span class="lineNum">     120 </span>            : </a>
-<a name="121"><span class="lineNum">     121 </span>            :         uint64_t _timeStart = 0;</a>
-<a name="122"><span class="lineNum">     122 </span>            :         uint64_t _timeEnd = 0;</a>
-<a name="123"><span class="lineNum">     123 </span>            :         uint64_t _gen = 0;</a>
-<a name="124"><span class="lineNum">     124 </span>            :         uint64_t _order = 0;</a>
-<a name="125"><span class="lineNum">     125 </span>            :         uint64_t _submissionTime = 0;</a>
-<a name="126"><span class="lineNum">     126 </span>            :         std::atomic&lt;uint32_t&gt; _tasksRequired = 0;</a>
-<a name="127"><span class="lineNum">     127 </span>            :         uint32_t _tasksCompleted = 0;</a>
-<a name="128"><span class="lineNum">     128 </span>            :         uint32_t _queuesSubmitted = 0;</a>
-<a name="129"><span class="lineNum">     129 </span>            :         uint32_t _queuesCompleted = 0;</a>
-<a name="130"><span class="lineNum">     130 </span>            : </a>
-<a name="131"><span class="lineNum">     131 </span>            :         bool _submitted = false;</a>
-<a name="132"><span class="lineNum">     132 </span>            :         bool _completed = false;</a>
-<a name="133"><span class="lineNum">     133 </span>            :         bool _valid = true;</a>
-<a name="134"><span class="lineNum">     134 </span>            : </a>
-<a name="135"><span class="lineNum">     135 </span>            :         Vector&lt;Rc&lt;FrameQueue&gt;&gt; _queues;</a>
-<a name="136"><span class="lineNum">     136 </span>            :         Function&lt;void(FrameHandle &amp;)&gt; _complete;</a>
-<a name="137"><span class="lineNum">     137 </span>            : };</a>
-<a name="138"><span class="lineNum">     138 </span>            : </a>
-<a name="139"><span class="lineNum">     139 </span>            : }</a>
-<a name="140"><span class="lineNum">     140 </span>            : </a>
-<a name="141"><span class="lineNum">     141 </span>            : #endif /* XENOLITH_CORE_XLCOREFRAMEHANDLE_H_ */</a>
+<a name="66"><span class="lineNum">      66 </span>            :         FrameQueue *getFrameQueue(Queue *) const;</a>
+<a name="67"><span class="lineNum">      67 </span>            : </a>
+<a name="68"><span class="lineNum">      68 </span>            :         // spinners within frame should not spin directly on loop to preserve FrameHandle object</a>
+<a name="69"><span class="lineNum">      69 </span>            :         virtual void schedule(Function&lt;bool(FrameHandle &amp;)&gt; &amp;&amp;, StringView tag);</a>
+<a name="70"><span class="lineNum">      70 </span>            : </a>
+<a name="71"><span class="lineNum">      71 </span>            :         // thread tasks within frame should not be performed directly on loop's queue to preserve FrameHandle object</a>
+<a name="72"><span class="lineNum">      72 </span>            :         virtual void performInQueue(Function&lt;void(FrameHandle &amp;)&gt; &amp;&amp;, Ref *, StringView tag);</a>
+<a name="73"><span class="lineNum">      73 </span>            :         virtual void performInQueue(Function&lt;bool(FrameHandle &amp;)&gt; &amp;&amp;, Function&lt;void(FrameHandle &amp;, bool)&gt; &amp;&amp;, Ref *, StringView tag);</a>
+<a name="74"><span class="lineNum">      74 </span>            : </a>
+<a name="75"><span class="lineNum">      75 </span>            :         // thread tasks within frame should not be performed directly on loop's queue to preserve FrameHandle object</a>
+<a name="76"><span class="lineNum">      76 </span>            :         virtual void performOnGlThread(Function&lt;void(FrameHandle &amp;)&gt; &amp;&amp;, Ref *, bool immediate, StringView tag);</a>
+<a name="77"><span class="lineNum">      77 </span>            : </a>
+<a name="78"><span class="lineNum">      78 </span>            :         // required tasks should be completed before onComplete call</a>
+<a name="79"><span class="lineNum">      79 </span>            :         virtual void performRequiredTask(Function&lt;bool(FrameHandle &amp;)&gt; &amp;&amp;, Ref *, StringView tag);</a>
+<a name="80"><span class="lineNum">      80 </span>            :         virtual void performRequiredTask(Function&lt;bool(FrameHandle &amp;)&gt; &amp;&amp;, Function&lt;void(FrameHandle &amp;, bool)&gt; &amp;&amp;, Ref *, StringView tag);</a>
+<a name="81"><span class="lineNum">      81 </span>            : </a>
+<a name="82"><span class="lineNum">      82 </span><span class="lineNoCov">          0 :         virtual bool isSubmitted() const { return _submitted; }</span></a>
+<a name="83"><span class="lineNum">      83 </span>            :         virtual bool isValid() const;</a>
+<a name="84"><span class="lineNum">      84 </span><span class="lineCov">      57358 :         virtual bool isValidFlag() const { return _valid; }</span></a>
+<a name="85"><span class="lineNum">      85 </span>            : </a>
+<a name="86"><span class="lineNum">      86 </span>            :         virtual bool isPersistentMapping() const;</a>
+<a name="87"><span class="lineNum">      87 </span>            : </a>
+<a name="88"><span class="lineNum">      88 </span>            :         virtual Rc&lt;AttachmentInputData&gt; getInputData(const AttachmentData *);</a>
+<a name="89"><span class="lineNum">      89 </span>            : </a>
+<a name="90"><span class="lineNum">      90 </span>            :         virtual bool isReadyForSubmit() const;</a>
+<a name="91"><span class="lineNum">      91 </span>            :         virtual void setReadyForSubmit(bool);</a>
+<a name="92"><span class="lineNum">      92 </span>            : </a>
+<a name="93"><span class="lineNum">      93 </span>            :         virtual void invalidate();</a>
+<a name="94"><span class="lineNum">      94 </span>            : </a>
+<a name="95"><span class="lineNum">      95 </span>            :         virtual void setCompleteCallback(Function&lt;void(FrameHandle &amp;)&gt; &amp;&amp;);</a>
+<a name="96"><span class="lineNum">      96 </span>            : </a>
+<a name="97"><span class="lineNum">      97 </span>            :         virtual void onQueueSubmitted(FrameQueue &amp;);</a>
+<a name="98"><span class="lineNum">      98 </span>            :         virtual void onQueueComplete(FrameQueue &amp;);</a>
+<a name="99"><span class="lineNum">      99 </span>            :         virtual void onQueueInvalidated(FrameQueue &amp;);</a>
+<a name="100"><span class="lineNum">     100 </span>            :         virtual void onOutputAttachment(FrameAttachmentData &amp;);</a>
+<a name="101"><span class="lineNum">     101 </span>            :         virtual void onOutputAttachmentInvalidated(FrameAttachmentData &amp;);</a>
+<a name="102"><span class="lineNum">     102 </span>            : </a>
+<a name="103"><span class="lineNum">     103 </span>            :         virtual void waitForDependencies(const Vector&lt;Rc&lt;DependencyEvent&gt;&gt; &amp;, Function&lt;void(FrameHandle &amp;, bool)&gt; &amp;&amp;);</a>
+<a name="104"><span class="lineNum">     104 </span>            : </a>
+<a name="105"><span class="lineNum">     105 </span>            :         virtual void waitForInput(FrameQueue &amp;queue, const Rc&lt;AttachmentHandle&gt; &amp;a, Function&lt;void(bool)&gt; &amp;&amp;cb);</a>
+<a name="106"><span class="lineNum">     106 </span>            : </a>
+<a name="107"><span class="lineNum">     107 </span>            :         virtual void signalDependencies(bool success);</a>
+<a name="108"><span class="lineNum">     108 </span>            : </a>
+<a name="109"><span class="lineNum">     109 </span>            : protected:</a>
+<a name="110"><span class="lineNum">     110 </span>            :         virtual bool setup();</a>
+<a name="111"><span class="lineNum">     111 </span>            : </a>
+<a name="112"><span class="lineNum">     112 </span>            :         virtual void onRequiredTaskCompleted(StringView tag);</a>
+<a name="113"><span class="lineNum">     113 </span>            : </a>
+<a name="114"><span class="lineNum">     114 </span>            :         virtual void tryComplete();</a>
+<a name="115"><span class="lineNum">     115 </span>            :         virtual void onComplete();</a>
+<a name="116"><span class="lineNum">     116 </span>            : </a>
+<a name="117"><span class="lineNum">     117 </span>            : #if SP_REF_DEBUG</a>
+<a name="118"><span class="lineNum">     118 </span>            :         virtual bool isRetainTrackerEnabled() const override {</a>
+<a name="119"><span class="lineNum">     119 </span>            :                 return false;</a>
+<a name="120"><span class="lineNum">     120 </span>            :         }</a>
+<a name="121"><span class="lineNum">     121 </span>            : #endif</a>
+<a name="122"><span class="lineNum">     122 </span>            : </a>
+<a name="123"><span class="lineNum">     123 </span>            :         Loop *_loop = nullptr; // loop can not die until frames are performed</a>
+<a name="124"><span class="lineNum">     124 </span>            :         Device *_device = nullptr;</a>
+<a name="125"><span class="lineNum">     125 </span>            :         Rc&lt;PoolRef&gt; _pool;</a>
+<a name="126"><span class="lineNum">     126 </span>            :         Rc&lt;FrameRequest&gt; _request;</a>
+<a name="127"><span class="lineNum">     127 </span>            : </a>
+<a name="128"><span class="lineNum">     128 </span>            :         uint64_t _timeStart = 0;</a>
+<a name="129"><span class="lineNum">     129 </span>            :         uint64_t _timeEnd = 0;</a>
+<a name="130"><span class="lineNum">     130 </span>            :         uint64_t _gen = 0;</a>
+<a name="131"><span class="lineNum">     131 </span>            :         uint64_t _order = 0;</a>
+<a name="132"><span class="lineNum">     132 </span>            :         uint64_t _submissionTime = 0;</a>
+<a name="133"><span class="lineNum">     133 </span>            :         std::atomic&lt;uint32_t&gt; _tasksRequired = 0;</a>
+<a name="134"><span class="lineNum">     134 </span>            :         uint32_t _tasksCompleted = 0;</a>
+<a name="135"><span class="lineNum">     135 </span>            :         uint32_t _queuesSubmitted = 0;</a>
+<a name="136"><span class="lineNum">     136 </span>            :         uint32_t _queuesCompleted = 0;</a>
+<a name="137"><span class="lineNum">     137 </span>            : </a>
+<a name="138"><span class="lineNum">     138 </span>            :         bool _submitted = false;</a>
+<a name="139"><span class="lineNum">     139 </span>            :         bool _completed = false;</a>
+<a name="140"><span class="lineNum">     140 </span>            :         bool _valid = true;</a>
+<a name="141"><span class="lineNum">     141 </span>            : </a>
+<a name="142"><span class="lineNum">     142 </span>            :         Vector&lt;Rc&lt;FrameQueue&gt;&gt; _queues;</a>
+<a name="143"><span class="lineNum">     143 </span>            :         Function&lt;void(FrameHandle &amp;)&gt; _complete;</a>
+<a name="144"><span class="lineNum">     144 </span>            : };</a>
+<a name="145"><span class="lineNum">     145 </span>            : </a>
+<a name="146"><span class="lineNum">     146 </span>            : }</a>
+<a name="147"><span class="lineNum">     147 </span>            : </a>
+<a name="148"><span class="lineNum">     148 </span>            : #endif /* XENOLITH_CORE_XLCOREFRAMEHANDLE_H_ */</a>
 </pre>
       </td>
     </tr>

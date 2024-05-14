@@ -31,18 +31,18 @@
             <td class="headerValue">coverage.info</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntry">30</td>
-            <td class="headerCovTableEntry">56</td>
-            <td class="headerCovTableEntryLo">53.6 %</td>
+            <td class="headerCovTableEntry">49</td>
+            <td class="headerCovTableEntry">49</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2023-12-03 02:10:58</td>
+            <td class="headerValue">2024-05-12 00:16:13</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntry">21</td>
-            <td class="headerCovTableEntry">38</td>
-            <td class="headerCovTableEntryLo">55.3 %</td>
+            <td class="headerCovTableEntry">35</td>
+            <td class="headerCovTableEntry">35</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
           </tr>
           <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
         </table>
@@ -64,7 +64,7 @@
 <a name="2"><span class="lineNum">       2 </span>            : Copyright (c) 2010-2012 cocos2d-x.org</a>
 <a name="3"><span class="lineNum">       3 </span>            : Copyright (c) 2013-2014 Chukong Technologies</a>
 <a name="4"><span class="lineNum">       4 </span>            : Copyright (c) 2017-2022 Roman Katuntsev &lt;sbkarr@stappler.org&gt;</a>
-<a name="5"><span class="lineNum">       5 </span>            : Copyright (c) 2023 Stappler LLC &lt;admin@stappler.dev&gt;</a>
+<a name="5"><span class="lineNum">       5 </span>            : Copyright (c) 2023-2024 Stappler LLC &lt;admin@stappler.dev&gt;</a>
 <a name="6"><span class="lineNum">       6 </span>            : </a>
 <a name="7"><span class="lineNum">       7 </span>            : Permission is hereby granted, free of charge, to any person obtaining a copy</a>
 <a name="8"><span class="lineNum">       8 </span>            : of this software and associated documentation files (the &quot;Software&quot;), to deal</a>
@@ -85,326 +85,406 @@
 <a name="23"><span class="lineNum">      23 </span>            : THE SOFTWARE.</a>
 <a name="24"><span class="lineNum">      24 </span>            : **/</a>
 <a name="25"><span class="lineNum">      25 </span>            : </a>
-<a name="26"><span class="lineNum">      26 </span>            : #ifndef STAPPLER_GEOM_SPGEOMETRY_H_</a>
-<a name="27"><span class="lineNum">      27 </span>            : #define STAPPLER_GEOM_SPGEOMETRY_H_</a>
+<a name="26"><span class="lineNum">      26 </span>            : #ifndef CORE_GEOM_SPGEOMETRY_H_</a>
+<a name="27"><span class="lineNum">      27 </span>            : #define CORE_GEOM_SPGEOMETRY_H_</a>
 <a name="28"><span class="lineNum">      28 </span>            : </a>
 <a name="29"><span class="lineNum">      29 </span>            : #include &quot;SPVec2.h&quot;</a>
 <a name="30"><span class="lineNum">      30 </span>            : #include &quot;SPVec3.h&quot;</a>
 <a name="31"><span class="lineNum">      31 </span>            : </a>
-<a name="32"><span class="lineNum">      32 </span>            : namespace stappler::geom {</a>
+<a name="32"><span class="lineNum">      32 </span>            : namespace STAPPLER_VERSIONIZED stappler::geom {</a>
 <a name="33"><span class="lineNum">      33 </span>            : </a>
-<a name="34"><span class="lineNum">      34 </span>            : struct Size2 {</a>
-<a name="35"><span class="lineNum">      35 </span>            :         static const Size2 ZERO;</a>
-<a name="36"><span class="lineNum">      36 </span>            : </a>
-<a name="37"><span class="lineNum">      37 </span>            :         float width = 0.0f;</a>
-<a name="38"><span class="lineNum">      38 </span>            :         float height = 0.0f;</a>
-<a name="39"><span class="lineNum">      39 </span>            : </a>
-<a name="40"><span class="lineNum">      40 </span><span class="lineCov">      57223 :         constexpr Size2() = default;</span></a>
-<a name="41"><span class="lineNum">      41 </span><span class="lineCov">      76624 :         constexpr Size2(float w, float h) : width(w), height(h) { }</span></a>
-<a name="42"><span class="lineNum">      42 </span>            : </a>
-<a name="43"><span class="lineNum">      43 </span>            :         template &lt;typename Functor&gt;</a>
-<a name="44"><span class="lineNum">      44 </span>            :         constexpr Size2(const Size2 &amp;v, const Functor &amp;f) : width(f(v.width)), height(f(v.height)) { }</a>
-<a name="45"><span class="lineNum">      45 </span>            : </a>
-<a name="46"><span class="lineNum">      46 </span>            :         constexpr Size2(const Size2 &amp;other) = default;</a>
-<a name="47"><span class="lineNum">      47 </span>            :         constexpr explicit Size2(const Vec2 &amp;point) : width(point.x), height(point.y) { }</a>
-<a name="48"><span class="lineNum">      48 </span>            : </a>
-<a name="49"><span class="lineNum">      49 </span><span class="lineCov">          4 :         constexpr operator Vec2() const { return Vec2(width, height); }</span></a>
+<a name="34"><span class="lineNum">      34 </span>            : struct Metric {</a>
+<a name="35"><span class="lineNum">      35 </span>            :         enum Units : uint8_t {</a>
+<a name="36"><span class="lineNum">      36 </span>            :                 Percent,</a>
+<a name="37"><span class="lineNum">      37 </span>            :                 Px,</a>
+<a name="38"><span class="lineNum">      38 </span>            :                 Em,</a>
+<a name="39"><span class="lineNum">      39 </span>            :                 Rem,</a>
+<a name="40"><span class="lineNum">      40 </span>            :                 Auto,</a>
+<a name="41"><span class="lineNum">      41 </span>            :                 Dpi,</a>
+<a name="42"><span class="lineNum">      42 </span>            :                 Dppx,</a>
+<a name="43"><span class="lineNum">      43 </span>            :                 Contain, // only for background-size</a>
+<a name="44"><span class="lineNum">      44 </span>            :                 Cover, // only for background-size</a>
+<a name="45"><span class="lineNum">      45 </span>            :                 Vw,</a>
+<a name="46"><span class="lineNum">      46 </span>            :                 Vh,</a>
+<a name="47"><span class="lineNum">      47 </span>            :                 VMin,</a>
+<a name="48"><span class="lineNum">      48 </span>            :                 VMax</a>
+<a name="49"><span class="lineNum">      49 </span>            :         };</a>
 <a name="50"><span class="lineNum">      50 </span>            : </a>
-<a name="51"><span class="lineNum">      51 </span>            :         constexpr Size2&amp; operator= (const Size2 &amp;other) = default;</a>
-<a name="52"><span class="lineNum">      52 </span>            :         constexpr Size2&amp; operator= (const Vec2 &amp;point) {</a>
-<a name="53"><span class="lineNum">      53 </span>            :                 this-&gt;width = point.x; this-&gt;height = point.y;</a>
-<a name="54"><span class="lineNum">      54 </span>            :                 return *this;</a>
-<a name="55"><span class="lineNum">      55 </span>            :         }</a>
-<a name="56"><span class="lineNum">      56 </span>            : </a>
-<a name="57"><span class="lineNum">      57 </span><span class="lineNoCov">          0 :         constexpr Size2 operator+(const Size2 &amp;right) const {</span></a>
-<a name="58"><span class="lineNum">      58 </span><span class="lineNoCov">          0 :                 return Size2(this-&gt;width + right.width, this-&gt;height + right.height);</span></a>
-<a name="59"><span class="lineNum">      59 </span>            :         }</a>
-<a name="60"><span class="lineNum">      60 </span><span class="lineNoCov">          0 :         constexpr Size2 operator-(const Size2 &amp;right) const {</span></a>
-<a name="61"><span class="lineNum">      61 </span><span class="lineNoCov">          0 :                 return Size2(this-&gt;width - right.width, this-&gt;height - right.height);</span></a>
-<a name="62"><span class="lineNum">      62 </span>            :         }</a>
-<a name="63"><span class="lineNum">      63 </span><span class="lineCov">          2 :         constexpr Size2 operator*(float a) const {</span></a>
-<a name="64"><span class="lineNum">      64 </span><span class="lineCov">          2 :                 return Size2(this-&gt;width * a, this-&gt;height * a);</span></a>
-<a name="65"><span class="lineNum">      65 </span>            :         }</a>
-<a name="66"><span class="lineNum">      66 </span><span class="lineCov">          7 :         constexpr Size2 operator/(float a) const {</span></a>
-<a name="67"><span class="lineNum">      67 </span><span class="lineCov">          7 :                 return Size2(this-&gt;width / a, this-&gt;height / a);</span></a>
+<a name="51"><span class="lineNum">      51 </span>            :         inline bool isAuto() const { return metric == Units::Auto; }</a>
+<a name="52"><span class="lineNum">      52 </span>            : </a>
+<a name="53"><span class="lineNum">      53 </span>            :         inline bool isFixed() const {</a>
+<a name="54"><span class="lineNum">      54 </span>            :                 switch (metric) {</a>
+<a name="55"><span class="lineNum">      55 </span>            :                 case Units::Px:</a>
+<a name="56"><span class="lineNum">      56 </span>            :                 case Units::Em:</a>
+<a name="57"><span class="lineNum">      57 </span>            :                 case Units::Rem:</a>
+<a name="58"><span class="lineNum">      58 </span>            :                 case Units::Vw:</a>
+<a name="59"><span class="lineNum">      59 </span>            :                 case Units::Vh:</a>
+<a name="60"><span class="lineNum">      60 </span>            :                 case Units::VMin:</a>
+<a name="61"><span class="lineNum">      61 </span>            :                 case Units::VMax:</a>
+<a name="62"><span class="lineNum">      62 </span>            :                         return true;</a>
+<a name="63"><span class="lineNum">      63 </span>            :                         break;</a>
+<a name="64"><span class="lineNum">      64 </span>            :                 default:</a>
+<a name="65"><span class="lineNum">      65 </span>            :                         break;</a>
+<a name="66"><span class="lineNum">      66 </span>            :                 }</a>
+<a name="67"><span class="lineNum">      67 </span>            :                 return false;</a>
 <a name="68"><span class="lineNum">      68 </span>            :         }</a>
 <a name="69"><span class="lineNum">      69 </span>            : </a>
-<a name="70"><span class="lineNum">      70 </span>            :         constexpr void setSize(float w, float h) {  }</a>
-<a name="71"><span class="lineNum">      71 </span>            : </a>
-<a name="72"><span class="lineNum">      72 </span>            :         constexpr bool fuzzyEquals(const Size2 &amp;target, float var = NumericLimits&lt;float&gt;::epsilon()) const {</a>
-<a name="73"><span class="lineNum">      73 </span>            :                 return (std::fabs(this-&gt;width - target.width) &lt; var)</a>
-<a name="74"><span class="lineNum">      74 </span>            :                                 &amp;&amp; (std::fabs(this-&gt;height - target.height) &lt; var);</a>
-<a name="75"><span class="lineNum">      75 </span>            :         }</a>
+<a name="70"><span class="lineNum">      70 </span>            :         float value = 0.0f;</a>
+<a name="71"><span class="lineNum">      71 </span>            :         Units metric = Units::Auto;</a>
+<a name="72"><span class="lineNum">      72 </span>            : </a>
+<a name="73"><span class="lineNum">      73 </span>            :         Metric(float v, Units m) : value(v), metric(m) { }</a>
+<a name="74"><span class="lineNum">      74 </span>            : </a>
+<a name="75"><span class="lineNum">      75 </span>            :         Metric() = default;</a>
 <a name="76"><span class="lineNum">      76 </span>            : </a>
-<a name="77"><span class="lineNum">      77 </span>            :         SP_THREE_WAY_COMPARISON_FRIEND_CONSTEXPR(Size2)</a>
-<a name="78"><span class="lineNum">      78 </span>            : };</a>
-<a name="79"><span class="lineNum">      79 </span>            : </a>
-<a name="80"><span class="lineNum">      80 </span>            : constexpr Size2 Size2::ZERO(0.0f, 0.0f);</a>
-<a name="81"><span class="lineNum">      81 </span>            : </a>
+<a name="77"><span class="lineNum">      77 </span>            :         bool readStyleValue(StringView r, bool resolutionMetric, bool allowEmptyMetric);</a>
+<a name="78"><span class="lineNum">      78 </span>            : </a>
+<a name="79"><span class="lineNum">      79 </span>            :         inline bool operator == (const Metric &amp;other) const = default;</a>
+<a name="80"><span class="lineNum">      80 </span>            :         inline bool operator != (const Metric &amp;other) const = default;</a>
+<a name="81"><span class="lineNum">      81 </span>            : };</a>
 <a name="82"><span class="lineNum">      82 </span>            : </a>
-<a name="83"><span class="lineNum">      83 </span>            : struct Size3 {</a>
-<a name="84"><span class="lineNum">      84 </span>            :         static const Size3 ZERO;</a>
+<a name="83"><span class="lineNum">      83 </span>            : struct Size2 {</a>
+<a name="84"><span class="lineNum">      84 </span>            :         static const Size2 ZERO;</a>
 <a name="85"><span class="lineNum">      85 </span>            : </a>
 <a name="86"><span class="lineNum">      86 </span>            :         float width = 0.0f;</a>
 <a name="87"><span class="lineNum">      87 </span>            :         float height = 0.0f;</a>
-<a name="88"><span class="lineNum">      88 </span>            :         float depth = 0.0f;</a>
-<a name="89"><span class="lineNum">      89 </span>            : </a>
-<a name="90"><span class="lineNum">      90 </span>            :         constexpr Size3() = default;</a>
-<a name="91"><span class="lineNum">      91 </span>            :         constexpr Size3(float w, float h, float d) : width(w), height(h), depth(d) { }</a>
-<a name="92"><span class="lineNum">      92 </span>            : </a>
-<a name="93"><span class="lineNum">      93 </span>            :         template &lt;typename Functor&gt;</a>
-<a name="94"><span class="lineNum">      94 </span>            :         constexpr Size3(const Size3 &amp;v, const Functor &amp;f) : width(f(v.width)), height(f(v.height)), depth(f(v.depth)) { }</a>
-<a name="95"><span class="lineNum">      95 </span>            : </a>
-<a name="96"><span class="lineNum">      96 </span>            :         constexpr Size3(const Size3&amp; other) = default;</a>
-<a name="97"><span class="lineNum">      97 </span>            :         constexpr explicit Size3(const Vec3&amp; point) : width(point.x), height(point.y), depth(point.z) { }</a>
-<a name="98"><span class="lineNum">      98 </span>            : </a>
-<a name="99"><span class="lineNum">      99 </span>            :         constexpr operator Vec3() const { return Vec3(width, height, depth); }</a>
-<a name="100"><span class="lineNum">     100 </span>            : </a>
-<a name="101"><span class="lineNum">     101 </span>            :         constexpr Size3&amp; operator= (const Size3&amp; other) = default;</a>
-<a name="102"><span class="lineNum">     102 </span>            :         constexpr Size3&amp; operator= (const Vec3&amp; point) {</a>
-<a name="103"><span class="lineNum">     103 </span>            :                 width = point.x;</a>
-<a name="104"><span class="lineNum">     104 </span>            :                 height = point.y;</a>
-<a name="105"><span class="lineNum">     105 </span>            :                 depth = point.z;</a>
-<a name="106"><span class="lineNum">     106 </span>            :                 return *this;</a>
-<a name="107"><span class="lineNum">     107 </span>            :         }</a>
-<a name="108"><span class="lineNum">     108 </span>            : </a>
-<a name="109"><span class="lineNum">     109 </span>            :         constexpr Size3 operator+(const Size3&amp; right) const {</a>
-<a name="110"><span class="lineNum">     110 </span>            :                 Size3 ret(*this);</a>
-<a name="111"><span class="lineNum">     111 </span>            :                 ret.width += right.width;</a>
-<a name="112"><span class="lineNum">     112 </span>            :                 ret.height += right.height;</a>
-<a name="113"><span class="lineNum">     113 </span>            :                 ret.depth += right.depth;</a>
-<a name="114"><span class="lineNum">     114 </span>            :                 return ret;</a>
-<a name="115"><span class="lineNum">     115 </span>            :         }</a>
-<a name="116"><span class="lineNum">     116 </span>            :         constexpr Size3 operator-(const Size3&amp; right) const {</a>
-<a name="117"><span class="lineNum">     117 </span>            :                 Size3 ret(*this);</a>
-<a name="118"><span class="lineNum">     118 </span>            :                 ret.width -= right.width;</a>
-<a name="119"><span class="lineNum">     119 </span>            :                 ret.height -= right.height;</a>
-<a name="120"><span class="lineNum">     120 </span>            :                 ret.depth -= right.depth;</a>
-<a name="121"><span class="lineNum">     121 </span>            :                 return ret;</a>
-<a name="122"><span class="lineNum">     122 </span>            :         }</a>
-<a name="123"><span class="lineNum">     123 </span>            :         constexpr Size3 operator*(float a) const {</a>
-<a name="124"><span class="lineNum">     124 </span>            :                 Size3 ret(*this);</a>
-<a name="125"><span class="lineNum">     125 </span>            :                 ret.width *= a;</a>
-<a name="126"><span class="lineNum">     126 </span>            :                 ret.height *= a;</a>
-<a name="127"><span class="lineNum">     127 </span>            :                 ret.depth *= a;</a>
-<a name="128"><span class="lineNum">     128 </span>            :                 return ret;</a>
-<a name="129"><span class="lineNum">     129 </span>            :         }</a>
-<a name="130"><span class="lineNum">     130 </span>            :         constexpr Size3 operator/(float a) const {</a>
-<a name="131"><span class="lineNum">     131 </span>            :                 Size3 ret(*this);</a>
-<a name="132"><span class="lineNum">     132 </span>            :                 ret.width /= a;</a>
-<a name="133"><span class="lineNum">     133 </span>            :                 ret.height /= a;</a>
-<a name="134"><span class="lineNum">     134 </span>            :                 ret.depth /= a;</a>
-<a name="135"><span class="lineNum">     135 </span>            :                 return ret;</a>
-<a name="136"><span class="lineNum">     136 </span>            :         }</a>
-<a name="137"><span class="lineNum">     137 </span>            : </a>
-<a name="138"><span class="lineNum">     138 </span>            :         constexpr bool fuzzyEquals(const Size3 &amp;target, float var = NumericLimits&lt;float&gt;::epsilon()) const {</a>
-<a name="139"><span class="lineNum">     139 </span>            :                 return (std::fabs(this-&gt;width - target.width) &lt; var)</a>
-<a name="140"><span class="lineNum">     140 </span>            :                                 &amp;&amp; (std::fabs(this-&gt;height - target.height) &lt; var)</a>
-<a name="141"><span class="lineNum">     141 </span>            :                                 &amp;&amp; (std::fabs(this-&gt;depth - target.depth) &lt; var);</a>
-<a name="142"><span class="lineNum">     142 </span>            :         }</a>
-<a name="143"><span class="lineNum">     143 </span>            : </a>
-<a name="144"><span class="lineNum">     144 </span>            :         SP_THREE_WAY_COMPARISON_FRIEND_CONSTEXPR(Size3)</a>
-<a name="145"><span class="lineNum">     145 </span>            : };</a>
-<a name="146"><span class="lineNum">     146 </span>            : </a>
-<a name="147"><span class="lineNum">     147 </span>            : constexpr Size3 Size3::ZERO = Size3(0.0f, 0.0f, 0.0f);</a>
-<a name="148"><span class="lineNum">     148 </span>            : </a>
-<a name="149"><span class="lineNum">     149 </span>            : </a>
-<a name="150"><span class="lineNum">     150 </span>            : struct Extent2 {</a>
-<a name="151"><span class="lineNum">     151 </span>            :         static const Extent2 ZERO;</a>
-<a name="152"><span class="lineNum">     152 </span>            : </a>
-<a name="153"><span class="lineNum">     153 </span>            :         uint32_t width = 0;</a>
-<a name="154"><span class="lineNum">     154 </span>            :         uint32_t height = 0;</a>
+<a name="88"><span class="lineNum">      88 </span>            : </a>
+<a name="89"><span class="lineNum">      89 </span><span class="lineCov">     146463 :         constexpr Size2() = default;</span></a>
+<a name="90"><span class="lineNum">      90 </span><span class="lineCov">    3113213 :         constexpr Size2(float w, float h) : width(w), height(h) { }</span></a>
+<a name="91"><span class="lineNum">      91 </span>            : </a>
+<a name="92"><span class="lineNum">      92 </span>            :         template &lt;typename Functor&gt;</a>
+<a name="93"><span class="lineNum">      93 </span>            :         constexpr Size2(const Size2 &amp;v, const Functor &amp;f) : width(f(v.width)), height(f(v.height)) { }</a>
+<a name="94"><span class="lineNum">      94 </span>            : </a>
+<a name="95"><span class="lineNum">      95 </span>            :         constexpr Size2(const Size2 &amp;other) = default;</a>
+<a name="96"><span class="lineNum">      96 </span>            :         constexpr explicit Size2(const Vec2 &amp;point) : width(point.x), height(point.y) { }</a>
+<a name="97"><span class="lineNum">      97 </span>            : </a>
+<a name="98"><span class="lineNum">      98 </span><span class="lineCov">       4274 :         constexpr operator Vec2() const { return Vec2(width, height); }</span></a>
+<a name="99"><span class="lineNum">      99 </span>            : </a>
+<a name="100"><span class="lineNum">     100 </span>            :         constexpr Size2&amp; operator= (const Size2 &amp;other) = default;</a>
+<a name="101"><span class="lineNum">     101 </span>            :         constexpr Size2&amp; operator= (const Vec2 &amp;point) {</a>
+<a name="102"><span class="lineNum">     102 </span>            :                 this-&gt;width = point.x; this-&gt;height = point.y;</a>
+<a name="103"><span class="lineNum">     103 </span>            :                 return *this;</a>
+<a name="104"><span class="lineNum">     104 </span>            :         }</a>
+<a name="105"><span class="lineNum">     105 </span>            : </a>
+<a name="106"><span class="lineNum">     106 </span><span class="lineCov">        138 :         constexpr Size2 operator+(const Size2 &amp;right) const {</span></a>
+<a name="107"><span class="lineNum">     107 </span><span class="lineCov">        138 :                 return Size2(this-&gt;width + right.width, this-&gt;height + right.height);</span></a>
+<a name="108"><span class="lineNum">     108 </span>            :         }</a>
+<a name="109"><span class="lineNum">     109 </span><span class="lineCov">         10 :         constexpr Size2 operator-(const Size2 &amp;right) const {</span></a>
+<a name="110"><span class="lineNum">     110 </span><span class="lineCov">         10 :                 return Size2(this-&gt;width - right.width, this-&gt;height - right.height);</span></a>
+<a name="111"><span class="lineNum">     111 </span>            :         }</a>
+<a name="112"><span class="lineNum">     112 </span><span class="lineCov">        252 :         constexpr Size2 operator*(float a) const {</span></a>
+<a name="113"><span class="lineNum">     113 </span><span class="lineCov">        252 :                 return Size2(this-&gt;width * a, this-&gt;height * a);</span></a>
+<a name="114"><span class="lineNum">     114 </span>            :         }</a>
+<a name="115"><span class="lineNum">     115 </span><span class="lineCov">       4348 :         constexpr Size2 operator/(float a) const {</span></a>
+<a name="116"><span class="lineNum">     116 </span><span class="lineCov">       4348 :                 return Size2(this-&gt;width / a, this-&gt;height / a);</span></a>
+<a name="117"><span class="lineNum">     117 </span>            :         }</a>
+<a name="118"><span class="lineNum">     118 </span>            : </a>
+<a name="119"><span class="lineNum">     119 </span>            :         constexpr void setSize(float w, float h) {  }</a>
+<a name="120"><span class="lineNum">     120 </span>            : </a>
+<a name="121"><span class="lineNum">     121 </span>            :         constexpr bool fuzzyEquals(const Size2 &amp;target, float var = NumericLimits&lt;float&gt;::epsilon()) const {</a>
+<a name="122"><span class="lineNum">     122 </span>            :                 return (std::fabs(this-&gt;width - target.width) &lt; var)</a>
+<a name="123"><span class="lineNum">     123 </span>            :                                 &amp;&amp; (std::fabs(this-&gt;height - target.height) &lt; var);</a>
+<a name="124"><span class="lineNum">     124 </span>            :         }</a>
+<a name="125"><span class="lineNum">     125 </span>            : </a>
+<a name="126"><span class="lineNum">     126 </span>            :         SP_THREE_WAY_COMPARISON_FRIEND_CONSTEXPR(Size2)</a>
+<a name="127"><span class="lineNum">     127 </span>            : };</a>
+<a name="128"><span class="lineNum">     128 </span>            : </a>
+<a name="129"><span class="lineNum">     129 </span>            : </a>
+<a name="130"><span class="lineNum">     130 </span>            : struct Size3 {</a>
+<a name="131"><span class="lineNum">     131 </span>            :         static const Size3 ZERO;</a>
+<a name="132"><span class="lineNum">     132 </span>            : </a>
+<a name="133"><span class="lineNum">     133 </span>            :         float width = 0.0f;</a>
+<a name="134"><span class="lineNum">     134 </span>            :         float height = 0.0f;</a>
+<a name="135"><span class="lineNum">     135 </span>            :         float depth = 0.0f;</a>
+<a name="136"><span class="lineNum">     136 </span>            : </a>
+<a name="137"><span class="lineNum">     137 </span>            :         constexpr Size3() = default;</a>
+<a name="138"><span class="lineNum">     138 </span><span class="lineCov">         25 :         constexpr Size3(float w, float h, float d) : width(w), height(h), depth(d) { }</span></a>
+<a name="139"><span class="lineNum">     139 </span>            : </a>
+<a name="140"><span class="lineNum">     140 </span>            :         template &lt;typename Functor&gt;</a>
+<a name="141"><span class="lineNum">     141 </span>            :         constexpr Size3(const Size3 &amp;v, const Functor &amp;f) : width(f(v.width)), height(f(v.height)), depth(f(v.depth)) { }</a>
+<a name="142"><span class="lineNum">     142 </span>            : </a>
+<a name="143"><span class="lineNum">     143 </span>            :         constexpr Size3(const Size3&amp; other) = default;</a>
+<a name="144"><span class="lineNum">     144 </span>            :         constexpr explicit Size3(const Vec3&amp; point) : width(point.x), height(point.y), depth(point.z) { }</a>
+<a name="145"><span class="lineNum">     145 </span>            : </a>
+<a name="146"><span class="lineNum">     146 </span>            :         constexpr operator Vec3() const { return Vec3(width, height, depth); }</a>
+<a name="147"><span class="lineNum">     147 </span>            : </a>
+<a name="148"><span class="lineNum">     148 </span>            :         constexpr Size3&amp; operator= (const Size3&amp; other) = default;</a>
+<a name="149"><span class="lineNum">     149 </span>            :         constexpr Size3&amp; operator= (const Vec3&amp; point) {</a>
+<a name="150"><span class="lineNum">     150 </span>            :                 width = point.x;</a>
+<a name="151"><span class="lineNum">     151 </span>            :                 height = point.y;</a>
+<a name="152"><span class="lineNum">     152 </span>            :                 depth = point.z;</a>
+<a name="153"><span class="lineNum">     153 </span>            :                 return *this;</a>
+<a name="154"><span class="lineNum">     154 </span>            :         }</a>
 <a name="155"><span class="lineNum">     155 </span>            : </a>
-<a name="156"><span class="lineNum">     156 </span><span class="lineCov">         29 :         constexpr Extent2() = default;</span></a>
-<a name="157"><span class="lineNum">     157 </span><span class="lineCov">        347 :         constexpr Extent2(uint32_t w, uint32_t h) : width(w), height(h) { }</span></a>
-<a name="158"><span class="lineNum">     158 </span>            : </a>
-<a name="159"><span class="lineNum">     159 </span>            :         constexpr Extent2(const Extent2 &amp;other) = default;</a>
-<a name="160"><span class="lineNum">     160 </span>            :         constexpr Extent2&amp; operator= (const Extent2 &amp;other) = default;</a>
-<a name="161"><span class="lineNum">     161 </span>            : </a>
-<a name="162"><span class="lineNum">     162 </span>            :         constexpr explicit Extent2(const Size2 &amp;size) : width(size.width), height(size.height) { }</a>
-<a name="163"><span class="lineNum">     163 </span>            :         constexpr explicit Extent2(const Vec2 &amp;point) : width(point.x), height(point.y) { }</a>
-<a name="164"><span class="lineNum">     164 </span>            : </a>
-<a name="165"><span class="lineNum">     165 </span>            :         constexpr Extent2&amp; operator= (const Size2 &amp;size) { width = size.width; height = size.width; return *this; }</a>
-<a name="166"><span class="lineNum">     166 </span>            :         constexpr Extent2&amp; operator= (const Vec2 &amp;other) { width = other.x; height = other.y; return *this; }</a>
-<a name="167"><span class="lineNum">     167 </span>            : </a>
-<a name="168"><span class="lineNum">     168 </span>            :         constexpr bool operator==(const Extent2 &amp;other) const = default;</a>
-<a name="169"><span class="lineNum">     169 </span>            :         constexpr bool operator!=(const Extent2 &amp;other) const = default;</a>
-<a name="170"><span class="lineNum">     170 </span>            :         SP_THREE_WAY_COMPARISON_TYPE_CONSTEXPR(Extent2)</a>
-<a name="171"><span class="lineNum">     171 </span>            : </a>
-<a name="172"><span class="lineNum">     172 </span>            :         constexpr operator Size2 () const { return Size2(width, height); }</a>
-<a name="173"><span class="lineNum">     173 </span>            : };</a>
-<a name="174"><span class="lineNum">     174 </span>            : </a>
-<a name="175"><span class="lineNum">     175 </span>            : constexpr Extent2 Extent2::ZERO = Extent2(0, 0);</a>
-<a name="176"><span class="lineNum">     176 </span>            : </a>
-<a name="177"><span class="lineNum">     177 </span>            : </a>
-<a name="178"><span class="lineNum">     178 </span>            : struct Extent3 {</a>
-<a name="179"><span class="lineNum">     179 </span>            :         static const Extent3 ZERO;</a>
-<a name="180"><span class="lineNum">     180 </span>            : </a>
-<a name="181"><span class="lineNum">     181 </span><span class="lineCov">       2054 :         uint32_t width = 0;</span></a>
-<a name="182"><span class="lineNum">     182 </span><span class="lineCov">       2053 :         uint32_t height = 0;</span></a>
-<a name="183"><span class="lineNum">     183 </span><span class="lineCov">       2053 :         uint32_t depth = 0;</span></a>
+<a name="156"><span class="lineNum">     156 </span>            :         constexpr Size3 operator+(const Size3&amp; right) const {</a>
+<a name="157"><span class="lineNum">     157 </span>            :                 Size3 ret(*this);</a>
+<a name="158"><span class="lineNum">     158 </span>            :                 ret.width += right.width;</a>
+<a name="159"><span class="lineNum">     159 </span>            :                 ret.height += right.height;</a>
+<a name="160"><span class="lineNum">     160 </span>            :                 ret.depth += right.depth;</a>
+<a name="161"><span class="lineNum">     161 </span>            :                 return ret;</a>
+<a name="162"><span class="lineNum">     162 </span>            :         }</a>
+<a name="163"><span class="lineNum">     163 </span>            :         constexpr Size3 operator-(const Size3&amp; right) const {</a>
+<a name="164"><span class="lineNum">     164 </span>            :                 Size3 ret(*this);</a>
+<a name="165"><span class="lineNum">     165 </span>            :                 ret.width -= right.width;</a>
+<a name="166"><span class="lineNum">     166 </span>            :                 ret.height -= right.height;</a>
+<a name="167"><span class="lineNum">     167 </span>            :                 ret.depth -= right.depth;</a>
+<a name="168"><span class="lineNum">     168 </span>            :                 return ret;</a>
+<a name="169"><span class="lineNum">     169 </span>            :         }</a>
+<a name="170"><span class="lineNum">     170 </span>            :         constexpr Size3 operator*(float a) const {</a>
+<a name="171"><span class="lineNum">     171 </span>            :                 Size3 ret(*this);</a>
+<a name="172"><span class="lineNum">     172 </span>            :                 ret.width *= a;</a>
+<a name="173"><span class="lineNum">     173 </span>            :                 ret.height *= a;</a>
+<a name="174"><span class="lineNum">     174 </span>            :                 ret.depth *= a;</a>
+<a name="175"><span class="lineNum">     175 </span>            :                 return ret;</a>
+<a name="176"><span class="lineNum">     176 </span>            :         }</a>
+<a name="177"><span class="lineNum">     177 </span>            :         constexpr Size3 operator/(float a) const {</a>
+<a name="178"><span class="lineNum">     178 </span>            :                 Size3 ret(*this);</a>
+<a name="179"><span class="lineNum">     179 </span>            :                 ret.width /= a;</a>
+<a name="180"><span class="lineNum">     180 </span>            :                 ret.height /= a;</a>
+<a name="181"><span class="lineNum">     181 </span>            :                 ret.depth /= a;</a>
+<a name="182"><span class="lineNum">     182 </span>            :                 return ret;</a>
+<a name="183"><span class="lineNum">     183 </span>            :         }</a>
 <a name="184"><span class="lineNum">     184 </span>            : </a>
-<a name="185"><span class="lineNum">     185 </span><span class="lineCov">        624 :         constexpr Extent3() = default;</span></a>
-<a name="186"><span class="lineNum">     186 </span><span class="lineCov">       1719 :         constexpr Extent3(uint32_t w, uint32_t h, uint32_t d) : width(w), height(h), depth(d) { }</span></a>
-<a name="187"><span class="lineNum">     187 </span><span class="lineCov">        110 :         constexpr Extent3(Extent2 e, uint32_t d) : width(e.width), height(e.height), depth(d) { }</span></a>
-<a name="188"><span class="lineNum">     188 </span>            : </a>
-<a name="189"><span class="lineNum">     189 </span>            :         constexpr Extent3(const Extent3&amp; other) = default;</a>
-<a name="190"><span class="lineNum">     190 </span>            :         constexpr Extent3&amp; operator= (const Extent3&amp; other) = default;</a>
-<a name="191"><span class="lineNum">     191 </span>            : </a>
-<a name="192"><span class="lineNum">     192 </span>            :         constexpr Extent3(const Extent2&amp; other) : width(other.width), height(other.height), depth(1) { }</a>
-<a name="193"><span class="lineNum">     193 </span><span class="lineCov">        224 :         constexpr Extent3&amp; operator= (const Extent2&amp; other) { width = other.width; height = other.height; depth = 1; return *this; }</span></a>
+<a name="185"><span class="lineNum">     185 </span>            :         constexpr bool fuzzyEquals(const Size3 &amp;target, float var = NumericLimits&lt;float&gt;::epsilon()) const {</a>
+<a name="186"><span class="lineNum">     186 </span>            :                 return (std::fabs(this-&gt;width - target.width) &lt; var)</a>
+<a name="187"><span class="lineNum">     187 </span>            :                                 &amp;&amp; (std::fabs(this-&gt;height - target.height) &lt; var)</a>
+<a name="188"><span class="lineNum">     188 </span>            :                                 &amp;&amp; (std::fabs(this-&gt;depth - target.depth) &lt; var);</a>
+<a name="189"><span class="lineNum">     189 </span>            :         }</a>
+<a name="190"><span class="lineNum">     190 </span>            : </a>
+<a name="191"><span class="lineNum">     191 </span>            :         SP_THREE_WAY_COMPARISON_FRIEND_CONSTEXPR(Size3)</a>
+<a name="192"><span class="lineNum">     192 </span>            : };</a>
+<a name="193"><span class="lineNum">     193 </span>            : </a>
 <a name="194"><span class="lineNum">     194 </span>            : </a>
-<a name="195"><span class="lineNum">     195 </span>            :         constexpr explicit Extent3(const Size3 &amp;size) : width(size.width), height(size.height), depth(size.depth) { }</a>
-<a name="196"><span class="lineNum">     196 </span>            :         constexpr explicit Extent3(const Vec3 &amp;point) : width(point.x), height(point.y), depth(point.z) { }</a>
+<a name="195"><span class="lineNum">     195 </span>            : struct Extent2 {</a>
+<a name="196"><span class="lineNum">     196 </span>            :         static const Extent2 ZERO;</a>
 <a name="197"><span class="lineNum">     197 </span>            : </a>
-<a name="198"><span class="lineNum">     198 </span>            :         constexpr Extent3&amp; operator= (const Size3 &amp;size) { width = size.width; height = size.width; depth = size.depth; return *this; }</a>
-<a name="199"><span class="lineNum">     199 </span>            :         constexpr Extent3&amp; operator= (const Vec3 &amp;other) { width = other.x; height = other.y; depth = other.z; return *this; }</a>
+<a name="198"><span class="lineNum">     198 </span>            :         uint32_t width = 0;</a>
+<a name="199"><span class="lineNum">     199 </span>            :         uint32_t height = 0;</a>
 <a name="200"><span class="lineNum">     200 </span>            : </a>
-<a name="201"><span class="lineNum">     201 </span><span class="lineCov">        760 :         constexpr bool operator==(const Extent3 &amp;other) const = default;</span></a>
-<a name="202"><span class="lineNum">     202 </span><span class="lineCov">        330 :         constexpr bool operator!=(const Extent3 &amp;other) const = default;</span></a>
-<a name="203"><span class="lineNum">     203 </span><span class="lineCov">       1294 :         SP_THREE_WAY_COMPARISON_TYPE_CONSTEXPR(Extent3)</span></a>
-<a name="204"><span class="lineNum">     204 </span>            : </a>
-<a name="205"><span class="lineNum">     205 </span>            :         constexpr operator Size3 () const { return Size3(width, height, depth); }</a>
-<a name="206"><span class="lineNum">     206 </span>            : };</a>
-<a name="207"><span class="lineNum">     207 </span>            : </a>
-<a name="208"><span class="lineNum">     208 </span>            : constexpr Extent3 Extent3::ZERO = Extent3(0, 0, 0);</a>
+<a name="201"><span class="lineNum">     201 </span><span class="lineCov">       2731 :         constexpr Extent2() = default;</span></a>
+<a name="202"><span class="lineNum">     202 </span><span class="lineCov">      30960 :         constexpr Extent2(uint32_t w, uint32_t h) : width(w), height(h) { }</span></a>
+<a name="203"><span class="lineNum">     203 </span>            : </a>
+<a name="204"><span class="lineNum">     204 </span>            :         constexpr Extent2(const Extent2 &amp;other) = default;</a>
+<a name="205"><span class="lineNum">     205 </span>            :         constexpr Extent2&amp; operator= (const Extent2 &amp;other) = default;</a>
+<a name="206"><span class="lineNum">     206 </span>            : </a>
+<a name="207"><span class="lineNum">     207 </span>            :         constexpr explicit Extent2(const Size2 &amp;size) : width(size.width), height(size.height) { }</a>
+<a name="208"><span class="lineNum">     208 </span>            :         constexpr explicit Extent2(const Vec2 &amp;point) : width(point.x), height(point.y) { }</a>
 <a name="209"><span class="lineNum">     209 </span>            : </a>
-<a name="210"><span class="lineNum">     210 </span>            : </a>
-<a name="211"><span class="lineNum">     211 </span>            : struct Rect {</a>
-<a name="212"><span class="lineNum">     212 </span>            :         static const Rect ZERO;</a>
-<a name="213"><span class="lineNum">     213 </span>            : </a>
-<a name="214"><span class="lineNum">     214 </span>            :         Vec2 origin;</a>
-<a name="215"><span class="lineNum">     215 </span>            :         Size2 size;</a>
-<a name="216"><span class="lineNum">     216 </span>            : </a>
-<a name="217"><span class="lineNum">     217 </span><span class="lineCov">      19853 :         constexpr Rect() = default;</span></a>
-<a name="218"><span class="lineNum">     218 </span><span class="lineCov">      31280 :         constexpr Rect(float x, float y, float width, float height) : origin(x, y), size(width, height) { }</span></a>
-<a name="219"><span class="lineNum">     219 </span><span class="lineNoCov">          0 :         constexpr Rect(const Vec2 &amp;o, const Size2 &amp;s) : origin(o), size(s) { }</span></a>
-<a name="220"><span class="lineNum">     220 </span>            : </a>
-<a name="221"><span class="lineNum">     221 </span>            :         template &lt;typename Functor&gt;</a>
-<a name="222"><span class="lineNum">     222 </span>            :         constexpr Rect(const Rect &amp;v, const Functor &amp;f) : origin(Vec2(v.origin, f)), size(Size2(v.size, f)) { }</a>
-<a name="223"><span class="lineNum">     223 </span>            : </a>
-<a name="224"><span class="lineNum">     224 </span>            :         constexpr Rect(const Rect&amp; other) = default;</a>
+<a name="210"><span class="lineNum">     210 </span>            :         constexpr Extent2&amp; operator= (const Size2 &amp;size) { width = size.width; height = size.width; return *this; }</a>
+<a name="211"><span class="lineNum">     211 </span>            :         constexpr Extent2&amp; operator= (const Vec2 &amp;other) { width = other.x; height = other.y; return *this; }</a>
+<a name="212"><span class="lineNum">     212 </span>            : </a>
+<a name="213"><span class="lineNum">     213 </span>            :         SP_THREE_WAY_COMPARISON_TYPE_CONSTEXPR(Extent2)</a>
+<a name="214"><span class="lineNum">     214 </span>            : </a>
+<a name="215"><span class="lineNum">     215 </span>            :         constexpr operator Size2 () const { return Size2(width, height); }</a>
+<a name="216"><span class="lineNum">     216 </span>            : };</a>
+<a name="217"><span class="lineNum">     217 </span>            : </a>
+<a name="218"><span class="lineNum">     218 </span>            : </a>
+<a name="219"><span class="lineNum">     219 </span>            : struct Extent3 {</a>
+<a name="220"><span class="lineNum">     220 </span>            :         static const Extent3 ZERO;</a>
+<a name="221"><span class="lineNum">     221 </span>            : </a>
+<a name="222"><span class="lineNum">     222 </span><span class="lineCov">      87992 :         uint32_t width = 0;</span></a>
+<a name="223"><span class="lineNum">     223 </span><span class="lineCov">      87992 :         uint32_t height = 0;</span></a>
+<a name="224"><span class="lineNum">     224 </span><span class="lineCov">      87992 :         uint32_t depth = 0;</span></a>
 <a name="225"><span class="lineNum">     225 </span>            : </a>
-<a name="226"><span class="lineNum">     226 </span>            :         constexpr Rect&amp; operator= (const Rect&amp; other) = default;</a>
-<a name="227"><span class="lineNum">     227 </span>            : </a>
-<a name="228"><span class="lineNum">     228 </span><span class="lineNoCov">          0 :         constexpr float getMaxX() const { return origin.x + size.width; }</span></a>
-<a name="229"><span class="lineNum">     229 </span><span class="lineNoCov">          0 :         constexpr float getMidX() const { return origin.x + size.width / 2.0f; }</span></a>
-<a name="230"><span class="lineNum">     230 </span><span class="lineNoCov">          0 :         constexpr float getMinX() const { return origin.x; }</span></a>
-<a name="231"><span class="lineNum">     231 </span><span class="lineNoCov">          0 :         constexpr float getMaxY() const { return origin.y + size.height; }</span></a>
-<a name="232"><span class="lineNum">     232 </span><span class="lineNoCov">          0 :         constexpr float getMidY() const { return origin.y + size.height / 2.0f; }</span></a>
-<a name="233"><span class="lineNum">     233 </span><span class="lineNoCov">          0 :         constexpr float getMinY() const { return origin.y; }</span></a>
-<a name="234"><span class="lineNum">     234 </span>            : </a>
-<a name="235"><span class="lineNum">     235 </span><span class="lineNoCov">          0 :         constexpr bool equals(const Rect&amp; rect) const {</span></a>
-<a name="236"><span class="lineNum">     236 </span><span class="lineNoCov">          0 :                 return (origin == rect.origin) &amp;&amp; (size == rect.size);</span></a>
-<a name="237"><span class="lineNum">     237 </span>            :         }</a>
+<a name="226"><span class="lineNum">     226 </span><span class="lineCov">     199861 :         constexpr Extent3() = default;</span></a>
+<a name="227"><span class="lineNum">     227 </span><span class="lineCov">    1075823 :         constexpr Extent3(uint32_t w, uint32_t h, uint32_t d) : width(w), height(h), depth(d) { }</span></a>
+<a name="228"><span class="lineNum">     228 </span><span class="lineCov">       7322 :         constexpr Extent3(Extent2 e, uint32_t d) : width(e.width), height(e.height), depth(d) { }</span></a>
+<a name="229"><span class="lineNum">     229 </span>            : </a>
+<a name="230"><span class="lineNum">     230 </span>            :         constexpr Extent3(const Extent3&amp; other) = default;</a>
+<a name="231"><span class="lineNum">     231 </span>            :         constexpr Extent3&amp; operator= (const Extent3&amp; other) = default;</a>
+<a name="232"><span class="lineNum">     232 </span>            : </a>
+<a name="233"><span class="lineNum">     233 </span>            :         constexpr Extent3(const Extent2&amp; other) : width(other.width), height(other.height), depth(1) { }</a>
+<a name="234"><span class="lineNum">     234 </span><span class="lineCov">       9822 :         constexpr Extent3&amp; operator= (const Extent2&amp; other) { width = other.width; height = other.height; depth = 1; return *this; }</span></a>
+<a name="235"><span class="lineNum">     235 </span>            : </a>
+<a name="236"><span class="lineNum">     236 </span>            :         constexpr explicit Extent3(const Size3 &amp;size) : width(size.width), height(size.height), depth(size.depth) { }</a>
+<a name="237"><span class="lineNum">     237 </span>            :         constexpr explicit Extent3(const Vec3 &amp;point) : width(point.x), height(point.y), depth(point.z) { }</a>
 <a name="238"><span class="lineNum">     238 </span>            : </a>
-<a name="239"><span class="lineNum">     239 </span>            :         bool containsPoint(const Vec2&amp; point) const;</a>
-<a name="240"><span class="lineNum">     240 </span>            :         bool intersectsRect(const Rect&amp; rect) const;</a>
-<a name="241"><span class="lineNum">     241 </span>            :         bool intersectsCircle(const Vec2&amp; center, float radius) const;</a>
-<a name="242"><span class="lineNum">     242 </span>            : </a>
-<a name="243"><span class="lineNum">     243 </span>            :         /** Get the min rect which can contain this and rect. */</a>
-<a name="244"><span class="lineNum">     244 </span>            :         Rect unionWithRect(const Rect &amp; rect) const;</a>
-<a name="245"><span class="lineNum">     245 </span>            : </a>
-<a name="246"><span class="lineNum">     246 </span>            :         /** Compute the min rect which can contain this and rect, assign it to this. */</a>
-<a name="247"><span class="lineNum">     247 </span>            :         void merge(const Rect&amp; rect);</a>
-<a name="248"><span class="lineNum">     248 </span>            : </a>
-<a name="249"><span class="lineNum">     249 </span>            :         SP_THREE_WAY_COMPARISON_FRIEND_CONSTEXPR(Rect)</a>
-<a name="250"><span class="lineNum">     250 </span>            : };</a>
-<a name="251"><span class="lineNum">     251 </span>            : </a>
-<a name="252"><span class="lineNum">     252 </span>            : constexpr Rect Rect::ZERO = Rect(0.0f, 0.0f, 0.0f, 0.0f);</a>
-<a name="253"><span class="lineNum">     253 </span>            : </a>
-<a name="254"><span class="lineNum">     254 </span>            : struct UVec2 {</a>
-<a name="255"><span class="lineNum">     255 </span>            :         uint32_t x;</a>
-<a name="256"><span class="lineNum">     256 </span>            :         uint32_t y;</a>
-<a name="257"><span class="lineNum">     257 </span>            : </a>
-<a name="258"><span class="lineNum">     258 </span>            :         constexpr bool operator==(const UVec2 &amp;) const = default;</a>
-<a name="259"><span class="lineNum">     259 </span>            :         constexpr bool operator!=(const UVec2 &amp;) const = default;</a>
-<a name="260"><span class="lineNum">     260 </span>            : };</a>
-<a name="261"><span class="lineNum">     261 </span>            : </a>
-<a name="262"><span class="lineNum">     262 </span>            : struct UVec3 {</a>
-<a name="263"><span class="lineNum">     263 </span>            :         uint32_t x;</a>
-<a name="264"><span class="lineNum">     264 </span>            :         uint32_t y;</a>
-<a name="265"><span class="lineNum">     265 </span>            :         uint32_t z;</a>
-<a name="266"><span class="lineNum">     266 </span>            : </a>
-<a name="267"><span class="lineNum">     267 </span>            :         constexpr bool operator==(const UVec3 &amp;) const = default;</a>
-<a name="268"><span class="lineNum">     268 </span>            :         constexpr bool operator!=(const UVec3 &amp;) const = default;</a>
-<a name="269"><span class="lineNum">     269 </span>            : };</a>
-<a name="270"><span class="lineNum">     270 </span>            : </a>
-<a name="271"><span class="lineNum">     271 </span>            : struct UVec4 {</a>
-<a name="272"><span class="lineNum">     272 </span>            :         uint32_t x;</a>
-<a name="273"><span class="lineNum">     273 </span>            :         uint32_t y;</a>
-<a name="274"><span class="lineNum">     274 </span>            :         uint32_t z;</a>
-<a name="275"><span class="lineNum">     275 </span>            :         uint32_t w;</a>
-<a name="276"><span class="lineNum">     276 </span>            : </a>
-<a name="277"><span class="lineNum">     277 </span>            :         constexpr bool operator==(const UVec4 &amp;) const = default;</a>
-<a name="278"><span class="lineNum">     278 </span>            :         constexpr bool operator!=(const UVec4 &amp;) const = default;</a>
-<a name="279"><span class="lineNum">     279 </span>            : };</a>
-<a name="280"><span class="lineNum">     280 </span>            : </a>
-<a name="281"><span class="lineNum">     281 </span>            : struct URect {</a>
-<a name="282"><span class="lineNum">     282 </span><span class="lineNoCov">          0 :         uint32_t x = 0;</span></a>
-<a name="283"><span class="lineNum">     283 </span><span class="lineNoCov">          0 :         uint32_t y = 0;</span></a>
-<a name="284"><span class="lineNum">     284 </span><span class="lineNoCov">          0 :         uint32_t width = 0;</span></a>
-<a name="285"><span class="lineNum">     285 </span><span class="lineNoCov">          0 :         uint32_t height = 0;</span></a>
+<a name="239"><span class="lineNum">     239 </span>            :         constexpr Extent3&amp; operator= (const Size3 &amp;size) { width = size.width; height = size.width; depth = size.depth; return *this; }</a>
+<a name="240"><span class="lineNum">     240 </span>            :         constexpr Extent3&amp; operator= (const Vec3 &amp;other) { width = other.x; height = other.y; depth = other.z; return *this; }</a>
+<a name="241"><span class="lineNum">     241 </span>            : </a>
+<a name="242"><span class="lineNum">     242 </span>            : #if SP_HAVE_THREE_WAY_COMPARISON</a>
+<a name="243"><span class="lineNum">     243 </span><span class="lineCov">      87992 :         SP_THREE_WAY_COMPARISON_TYPE(Extent3)</span></a>
+<a name="244"><span class="lineNum">     244 </span>            : #else</a>
+<a name="245"><span class="lineNum">     245 </span>            :         constexpr bool operator==(const Extent3 &amp;other) const {</a>
+<a name="246"><span class="lineNum">     246 </span>            :                 return width == other.width</a>
+<a name="247"><span class="lineNum">     247 </span>            :                         &amp;&amp; height == other.height</a>
+<a name="248"><span class="lineNum">     248 </span>            :                         &amp;&amp; depth == other.depth</a>
+<a name="249"><span class="lineNum">     249 </span>            :                         ;</a>
+<a name="250"><span class="lineNum">     250 </span>            :         }</a>
+<a name="251"><span class="lineNum">     251 </span>            :         constexpr bool operator!=(const Extent3 &amp;other) const {</a>
+<a name="252"><span class="lineNum">     252 </span>            :                 return width != other.width</a>
+<a name="253"><span class="lineNum">     253 </span>            :                         || height != other.height</a>
+<a name="254"><span class="lineNum">     254 </span>            :                         || depth != other.depth</a>
+<a name="255"><span class="lineNum">     255 </span>            :                         ;</a>
+<a name="256"><span class="lineNum">     256 </span>            :         }</a>
+<a name="257"><span class="lineNum">     257 </span>            :         constexpr bool operator&lt;(const Extent3 &amp;other) const {</a>
+<a name="258"><span class="lineNum">     258 </span>            :                 if (width &lt; other.width) { return true; } else if (width &gt; other.width) { return false; }</a>
+<a name="259"><span class="lineNum">     259 </span>            :                 if (height &lt; other.height) { return true; } else if (height &gt; other.height) { return false; }</a>
+<a name="260"><span class="lineNum">     260 </span>            :                 if (depth &lt; other.depth) { return true; } else if (depth &gt; other.depth) { return false; }</a>
+<a name="261"><span class="lineNum">     261 </span>            :                 return false;</a>
+<a name="262"><span class="lineNum">     262 </span>            :         }</a>
+<a name="263"><span class="lineNum">     263 </span>            :         constexpr bool operator&gt;(const Extent3 &amp;other) const {</a>
+<a name="264"><span class="lineNum">     264 </span>            :                 if (width &lt; other.width) { return false; } else if (width &gt; other.width) { return true; }</a>
+<a name="265"><span class="lineNum">     265 </span>            :                 if (height &lt; other.height) { return false; } else if (height &gt; other.height) { return true; }</a>
+<a name="266"><span class="lineNum">     266 </span>            :                 if (depth &lt; other.depth) { return false; } else if (depth &gt; other.depth) { return true; }</a>
+<a name="267"><span class="lineNum">     267 </span>            :                 return false;</a>
+<a name="268"><span class="lineNum">     268 </span>            :         }</a>
+<a name="269"><span class="lineNum">     269 </span>            :         constexpr bool operator&lt;=(const Extent3 &amp;other) const {</a>
+<a name="270"><span class="lineNum">     270 </span>            :                 if (width &lt; other.width) { return true; } else if (width &gt; other.width) { return false; }</a>
+<a name="271"><span class="lineNum">     271 </span>            :                 if (height &lt; other.height) { return true; } else if (height &gt; other.height) { return false; }</a>
+<a name="272"><span class="lineNum">     272 </span>            :                 if (depth &lt; other.depth) { return true; } else if (depth &gt; other.depth) { return false; }</a>
+<a name="273"><span class="lineNum">     273 </span>            :                 return true;</a>
+<a name="274"><span class="lineNum">     274 </span>            :         }</a>
+<a name="275"><span class="lineNum">     275 </span>            :         constexpr bool operator&gt;=(const Extent3 &amp;other) const {</a>
+<a name="276"><span class="lineNum">     276 </span>            :                 if (width &lt; other.width) { return false; } else if (width &gt; other.width) { return true; }</a>
+<a name="277"><span class="lineNum">     277 </span>            :                 if (height &lt; other.height) { return false; } else if (height &gt; other.height) { return true; }</a>
+<a name="278"><span class="lineNum">     278 </span>            :                 if (depth &lt; other.depth) { return false; } else if (depth &gt; other.depth) { return true; }</a>
+<a name="279"><span class="lineNum">     279 </span>            :                 return true;</a>
+<a name="280"><span class="lineNum">     280 </span>            :         }</a>
+<a name="281"><span class="lineNum">     281 </span>            : #endif</a>
+<a name="282"><span class="lineNum">     282 </span>            : </a>
+<a name="283"><span class="lineNum">     283 </span>            :         constexpr operator Size3 () const { return Size3(width, height, depth); }</a>
+<a name="284"><span class="lineNum">     284 </span>            : };</a>
+<a name="285"><span class="lineNum">     285 </span>            : </a>
 <a name="286"><span class="lineNum">     286 </span>            : </a>
-<a name="287"><span class="lineNum">     287 </span><span class="lineCov">       2898 :         URect() = default;</span></a>
-<a name="288"><span class="lineNum">     288 </span><span class="lineCov">          1 :         URect(const UVec2 &amp;origin, const Extent2 &amp;size)</span></a>
-<a name="289"><span class="lineNum">     289 </span><span class="lineCov">          1 :         : x(origin.x), y(origin.y), width(size.width), height(size.height) { }</span></a>
-<a name="290"><span class="lineNum">     290 </span><span class="lineCov">       4474 :         URect(uint32_t x, uint32_t y, uint32_t w, uint32_t h)</span></a>
-<a name="291"><span class="lineNum">     291 </span><span class="lineCov">       4474 :         : x(x), y(y), width(w), height(h) { }</span></a>
+<a name="287"><span class="lineNum">     287 </span>            : struct Rect {</a>
+<a name="288"><span class="lineNum">     288 </span>            :         static const Rect ZERO;</a>
+<a name="289"><span class="lineNum">     289 </span>            : </a>
+<a name="290"><span class="lineNum">     290 </span>            :         Vec2 origin;</a>
+<a name="291"><span class="lineNum">     291 </span>            :         Size2 size;</a>
 <a name="292"><span class="lineNum">     292 </span>            : </a>
-<a name="293"><span class="lineNum">     293 </span><span class="lineCov">        856 :         constexpr UVec2 origin() const { return UVec2{x, y}; }</span></a>
-<a name="294"><span class="lineNum">     294 </span>            : </a>
-<a name="295"><span class="lineNum">     295 </span><span class="lineNoCov">          0 :         constexpr bool operator==(const URect &amp;) const = default;</span></a>
-<a name="296"><span class="lineNum">     296 </span><span class="lineNoCov">          0 :         constexpr bool operator!=(const URect &amp;) const = default;</span></a>
-<a name="297"><span class="lineNum">     297 </span>            : </a>
-<a name="298"><span class="lineNum">     298 </span><span class="lineNoCov">          0 :         constexpr float getMaxX() const { return x + width; }</span></a>
-<a name="299"><span class="lineNum">     299 </span>            :         constexpr float getMidX() const { return x + width / 2.0f; }</a>
-<a name="300"><span class="lineNum">     300 </span><span class="lineNoCov">          0 :         constexpr float getMinX() const { return x; }</span></a>
-<a name="301"><span class="lineNum">     301 </span><span class="lineNoCov">          0 :         constexpr float getMaxY() const { return y + height; }</span></a>
-<a name="302"><span class="lineNum">     302 </span>            :         constexpr float getMidY() const { return y + height / 2.0f; }</a>
-<a name="303"><span class="lineNum">     303 </span><span class="lineNoCov">          0 :         constexpr float getMinY() const { return y; }</span></a>
-<a name="304"><span class="lineNum">     304 </span>            : </a>
-<a name="305"><span class="lineNum">     305 </span>            :         bool containsPoint(const UVec2 &amp;point) const;</a>
-<a name="306"><span class="lineNum">     306 </span>            :         bool intersectsRect(const URect &amp;rect) const;</a>
-<a name="307"><span class="lineNum">     307 </span>            : };</a>
-<a name="308"><span class="lineNum">     308 </span>            : </a>
-<a name="309"><span class="lineNum">     309 </span>            : Rect TransformRect(const Rect&amp; rect, const Mat4&amp; transform);</a>
+<a name="293"><span class="lineNum">     293 </span><span class="lineCov">     548856 :         constexpr Rect() = default;</span></a>
+<a name="294"><span class="lineNum">     294 </span><span class="lineCov">     778482 :         constexpr Rect(float x, float y, float width, float height) : origin(x, y), size(width, height) { }</span></a>
+<a name="295"><span class="lineNum">     295 </span><span class="lineCov">        508 :         constexpr Rect(const Vec2 &amp;o, const Size2 &amp;s) : origin(o), size(s) { }</span></a>
+<a name="296"><span class="lineNum">     296 </span>            : </a>
+<a name="297"><span class="lineNum">     297 </span>            :         template &lt;typename Functor&gt;</a>
+<a name="298"><span class="lineNum">     298 </span>            :         constexpr Rect(const Rect &amp;v, const Functor &amp;f) : origin(Vec2(v.origin, f)), size(Size2(v.size, f)) { }</a>
+<a name="299"><span class="lineNum">     299 </span>            : </a>
+<a name="300"><span class="lineNum">     300 </span>            :         constexpr Rect(const Rect&amp; other) = default;</a>
+<a name="301"><span class="lineNum">     301 </span>            : </a>
+<a name="302"><span class="lineNum">     302 </span>            :         constexpr Rect&amp; operator= (const Rect&amp; other) = default;</a>
+<a name="303"><span class="lineNum">     303 </span>            : </a>
+<a name="304"><span class="lineNum">     304 </span><span class="lineCov">        175 :         constexpr float getMaxX() const { return origin.x + size.width; }</span></a>
+<a name="305"><span class="lineNum">     305 </span><span class="lineCov">       6114 :         constexpr float getMidX() const { return origin.x + size.width / 2.0f; }</span></a>
+<a name="306"><span class="lineNum">     306 </span><span class="lineCov">        175 :         constexpr float getMinX() const { return origin.x; }</span></a>
+<a name="307"><span class="lineNum">     307 </span><span class="lineCov">        150 :         constexpr float getMaxY() const { return origin.y + size.height; }</span></a>
+<a name="308"><span class="lineNum">     308 </span><span class="lineCov">       6114 :         constexpr float getMidY() const { return origin.y + size.height / 2.0f; }</span></a>
+<a name="309"><span class="lineNum">     309 </span><span class="lineCov">        150 :         constexpr float getMinY() const { return origin.y; }</span></a>
 <a name="310"><span class="lineNum">     310 </span>            : </a>
-<a name="311"><span class="lineNum">     311 </span>            : inline std::ostream &amp; operator&lt;&lt;(std::ostream &amp; stream, const Rect &amp; obj) {</a>
-<a name="312"><span class="lineNum">     312 </span>            :         stream &lt;&lt; &quot;Rect(x:&quot; &lt;&lt; obj.origin.x &lt;&lt; &quot; y:&quot; &lt;&lt; obj.origin.y</a>
-<a name="313"><span class="lineNum">     313 </span>            :                         &lt;&lt; &quot; width:&quot; &lt;&lt; obj.size.width &lt;&lt; &quot; height:&quot; &lt;&lt; obj.size.height &lt;&lt; &quot;);&quot;;</a>
-<a name="314"><span class="lineNum">     314 </span>            :         return stream;</a>
-<a name="315"><span class="lineNum">     315 </span>            : }</a>
-<a name="316"><span class="lineNum">     316 </span>            : </a>
-<a name="317"><span class="lineNum">     317 </span>            : inline std::ostream &amp; operator&lt;&lt;(std::ostream &amp; stream, const URect &amp; obj) {</a>
-<a name="318"><span class="lineNum">     318 </span>            :         stream &lt;&lt; &quot;URect(x:&quot; &lt;&lt; obj.x &lt;&lt; &quot; y:&quot; &lt;&lt; obj.y</a>
-<a name="319"><span class="lineNum">     319 </span>            :                         &lt;&lt; &quot; width:&quot; &lt;&lt; obj.width &lt;&lt; &quot; height:&quot; &lt;&lt; obj.height &lt;&lt; &quot;);&quot;;</a>
-<a name="320"><span class="lineNum">     320 </span>            :         return stream;</a>
-<a name="321"><span class="lineNum">     321 </span>            : }</a>
-<a name="322"><span class="lineNum">     322 </span>            : </a>
-<a name="323"><span class="lineNum">     323 </span><span class="lineCov">          1 : inline std::ostream &amp; operator&lt;&lt;(std::ostream &amp; stream, const Size2 &amp; obj) {</span></a>
-<a name="324"><span class="lineNum">     324 </span><span class="lineCov">          1 :         stream &lt;&lt; &quot;Size2(width:&quot; &lt;&lt; obj.width &lt;&lt; &quot; height:&quot; &lt;&lt; obj.height &lt;&lt; &quot;);&quot;;</span></a>
-<a name="325"><span class="lineNum">     325 </span><span class="lineCov">          1 :         return stream;</span></a>
-<a name="326"><span class="lineNum">     326 </span>            : }</a>
+<a name="311"><span class="lineNum">     311 </span><span class="lineCov">        131 :         constexpr bool equals(const Rect&amp; rect) const {</span></a>
+<a name="312"><span class="lineNum">     312 </span><span class="lineCov">        131 :                 return (origin == rect.origin) &amp;&amp; (size == rect.size);</span></a>
+<a name="313"><span class="lineNum">     313 </span>            :         }</a>
+<a name="314"><span class="lineNum">     314 </span>            : </a>
+<a name="315"><span class="lineNum">     315 </span>            :         bool containsPoint(const Vec2&amp; point, float padding = 0.0f) const;</a>
+<a name="316"><span class="lineNum">     316 </span>            :         bool intersectsRect(const Rect&amp; rect) const;</a>
+<a name="317"><span class="lineNum">     317 </span>            :         bool intersectsCircle(const Vec2&amp; center, float radius) const;</a>
+<a name="318"><span class="lineNum">     318 </span>            : </a>
+<a name="319"><span class="lineNum">     319 </span>            :         /** Get the min rect which can contain this and rect. */</a>
+<a name="320"><span class="lineNum">     320 </span>            :         Rect unionWithRect(const Rect &amp; rect) const;</a>
+<a name="321"><span class="lineNum">     321 </span>            : </a>
+<a name="322"><span class="lineNum">     322 </span>            :         /** Compute the min rect which can contain this and rect, assign it to this. */</a>
+<a name="323"><span class="lineNum">     323 </span>            :         void merge(const Rect&amp; rect);</a>
+<a name="324"><span class="lineNum">     324 </span>            : </a>
+<a name="325"><span class="lineNum">     325 </span>            :         SP_THREE_WAY_COMPARISON_FRIEND_CONSTEXPR(Rect)</a>
+<a name="326"><span class="lineNum">     326 </span>            : };</a>
 <a name="327"><span class="lineNum">     327 </span>            : </a>
-<a name="328"><span class="lineNum">     328 </span>            : inline std::ostream &amp; operator&lt;&lt;(std::ostream &amp; stream, const Size3 &amp; obj) {</a>
-<a name="329"><span class="lineNum">     329 </span>            :         stream &lt;&lt; &quot;Size3(width:&quot; &lt;&lt; obj.width &lt;&lt; &quot; height:&quot; &lt;&lt; obj.height &lt;&lt; &quot; depth:&quot; &lt;&lt; obj.depth &lt;&lt; &quot;);&quot;;</a>
-<a name="330"><span class="lineNum">     330 </span>            :         return stream;</a>
-<a name="331"><span class="lineNum">     331 </span>            : }</a>
-<a name="332"><span class="lineNum">     332 </span>            : </a>
-<a name="333"><span class="lineNum">     333 </span>            : inline std::ostream &amp; operator&lt;&lt;(std::ostream &amp; stream, const Extent2 &amp; obj) {</a>
-<a name="334"><span class="lineNum">     334 </span>            :         stream &lt;&lt; &quot;Extent2(width:&quot; &lt;&lt; obj.width &lt;&lt; &quot; height:&quot; &lt;&lt; obj.height &lt;&lt; &quot;);&quot;;</a>
-<a name="335"><span class="lineNum">     335 </span>            :         return stream;</a>
-<a name="336"><span class="lineNum">     336 </span>            : }</a>
-<a name="337"><span class="lineNum">     337 </span>            : </a>
-<a name="338"><span class="lineNum">     338 </span><span class="lineNoCov">          0 : inline std::ostream &amp; operator&lt;&lt;(std::ostream &amp; stream, const Extent3 &amp; obj) {</span></a>
-<a name="339"><span class="lineNum">     339 </span><span class="lineNoCov">          0 :         stream &lt;&lt; &quot;Extent3(width:&quot; &lt;&lt; obj.width &lt;&lt; &quot; height:&quot; &lt;&lt; obj.height &lt;&lt; &quot; depth:&quot; &lt;&lt; obj.depth &lt;&lt; &quot;);&quot;;</span></a>
-<a name="340"><span class="lineNum">     340 </span><span class="lineNoCov">          0 :         return stream;</span></a>
-<a name="341"><span class="lineNum">     341 </span>            : }</a>
+<a name="328"><span class="lineNum">     328 </span>            : struct UVec2 {</a>
+<a name="329"><span class="lineNum">     329 </span>            :         uint32_t x;</a>
+<a name="330"><span class="lineNum">     330 </span>            :         uint32_t y;</a>
+<a name="331"><span class="lineNum">     331 </span>            : </a>
+<a name="332"><span class="lineNum">     332 </span>            :         SP_THREE_WAY_COMPARISON_TYPE_CONSTEXPR(UVec2)</a>
+<a name="333"><span class="lineNum">     333 </span>            : };</a>
+<a name="334"><span class="lineNum">     334 </span>            : </a>
+<a name="335"><span class="lineNum">     335 </span>            : struct UVec3 {</a>
+<a name="336"><span class="lineNum">     336 </span>            :         uint32_t x;</a>
+<a name="337"><span class="lineNum">     337 </span>            :         uint32_t y;</a>
+<a name="338"><span class="lineNum">     338 </span>            :         uint32_t z;</a>
+<a name="339"><span class="lineNum">     339 </span>            : </a>
+<a name="340"><span class="lineNum">     340 </span>            :         SP_THREE_WAY_COMPARISON_TYPE_CONSTEXPR(UVec3)</a>
+<a name="341"><span class="lineNum">     341 </span>            : };</a>
 <a name="342"><span class="lineNum">     342 </span>            : </a>
-<a name="343"><span class="lineNum">     343 </span>            : }</a>
-<a name="344"><span class="lineNum">     344 </span>            : </a>
-<a name="345"><span class="lineNum">     345 </span>            : #endif /* STAPPLER_GEOM_SPGEOMETRY_H_ */</a>
+<a name="343"><span class="lineNum">     343 </span>            : struct UVec4 {</a>
+<a name="344"><span class="lineNum">     344 </span>            :         uint32_t x;</a>
+<a name="345"><span class="lineNum">     345 </span>            :         uint32_t y;</a>
+<a name="346"><span class="lineNum">     346 </span>            :         uint32_t z;</a>
+<a name="347"><span class="lineNum">     347 </span>            :         uint32_t w;</a>
+<a name="348"><span class="lineNum">     348 </span>            : </a>
+<a name="349"><span class="lineNum">     349 </span>            :         SP_THREE_WAY_COMPARISON_TYPE_CONSTEXPR(UVec4)</a>
+<a name="350"><span class="lineNum">     350 </span>            : };</a>
+<a name="351"><span class="lineNum">     351 </span>            : </a>
+<a name="352"><span class="lineNum">     352 </span>            : struct URect {</a>
+<a name="353"><span class="lineNum">     353 </span>            :         uint32_t x = 0;</a>
+<a name="354"><span class="lineNum">     354 </span>            :         uint32_t y = 0;</a>
+<a name="355"><span class="lineNum">     355 </span>            :         uint32_t width = 0;</a>
+<a name="356"><span class="lineNum">     356 </span>            :         uint32_t height = 0;</a>
+<a name="357"><span class="lineNum">     357 </span>            : </a>
+<a name="358"><span class="lineNum">     358 </span><span class="lineCov">     616747 :         URect() = default;</span></a>
+<a name="359"><span class="lineNum">     359 </span><span class="lineCov">          2 :         URect(const UVec2 &amp;origin, const Extent2 &amp;size)</span></a>
+<a name="360"><span class="lineNum">     360 </span><span class="lineCov">          2 :         : x(origin.x), y(origin.y), width(size.width), height(size.height) { }</span></a>
+<a name="361"><span class="lineNum">     361 </span><span class="lineCov">    1272199 :         URect(uint32_t x, uint32_t y, uint32_t w, uint32_t h)</span></a>
+<a name="362"><span class="lineNum">     362 </span><span class="lineCov">    1272199 :         : x(x), y(y), width(w), height(h) { }</span></a>
+<a name="363"><span class="lineNum">     363 </span>            : </a>
+<a name="364"><span class="lineNum">     364 </span><span class="lineCov">     208814 :         constexpr UVec2 origin() const { return UVec2{x, y}; }</span></a>
+<a name="365"><span class="lineNum">     365 </span>            : </a>
+<a name="366"><span class="lineNum">     366 </span><span class="lineCov">        300 :         constexpr float getMaxX() const { return x + width; }</span></a>
+<a name="367"><span class="lineNum">     367 </span>            :         constexpr float getMidX() const { return x + width / 2.0f; }</a>
+<a name="368"><span class="lineNum">     368 </span><span class="lineCov">        325 :         constexpr float getMinX() const { return x; }</span></a>
+<a name="369"><span class="lineNum">     369 </span><span class="lineCov">         75 :         constexpr float getMaxY() const { return y + height; }</span></a>
+<a name="370"><span class="lineNum">     370 </span>            :         constexpr float getMidY() const { return y + height / 2.0f; }</a>
+<a name="371"><span class="lineNum">     371 </span><span class="lineCov">         75 :         constexpr float getMinY() const { return y; }</span></a>
+<a name="372"><span class="lineNum">     372 </span>            : </a>
+<a name="373"><span class="lineNum">     373 </span>            :         bool containsPoint(const UVec2 &amp;point) const;</a>
+<a name="374"><span class="lineNum">     374 </span>            :         bool intersectsRect(const URect &amp;rect) const;</a>
+<a name="375"><span class="lineNum">     375 </span>            : </a>
+<a name="376"><span class="lineNum">     376 </span>            :         SP_THREE_WAY_COMPARISON_TYPE_CONSTEXPR(URect)</a>
+<a name="377"><span class="lineNum">     377 </span>            : };</a>
+<a name="378"><span class="lineNum">     378 </span>            : </a>
+<a name="379"><span class="lineNum">     379 </span>            : #ifndef __LCC__</a>
+<a name="380"><span class="lineNum">     380 </span>            : </a>
+<a name="381"><span class="lineNum">     381 </span>            : constexpr Size2 Size2::ZERO(0.0f, 0.0f);</a>
+<a name="382"><span class="lineNum">     382 </span>            : constexpr Size3 Size3::ZERO = Size3(0.0f, 0.0f, 0.0f);</a>
+<a name="383"><span class="lineNum">     383 </span>            : constexpr Extent2 Extent2::ZERO = Extent2(0, 0);</a>
+<a name="384"><span class="lineNum">     384 </span>            : constexpr Extent3 Extent3::ZERO = Extent3(0, 0, 0);</a>
+<a name="385"><span class="lineNum">     385 </span>            : constexpr Rect Rect::ZERO = Rect(0.0f, 0.0f, 0.0f, 0.0f);</a>
+<a name="386"><span class="lineNum">     386 </span>            : </a>
+<a name="387"><span class="lineNum">     387 </span>            : #endif</a>
+<a name="388"><span class="lineNum">     388 </span>            : </a>
+<a name="389"><span class="lineNum">     389 </span>            : Rect TransformRect(const Rect&amp; rect, const Mat4&amp; transform);</a>
+<a name="390"><span class="lineNum">     390 </span>            : </a>
+<a name="391"><span class="lineNum">     391 </span>            : inline std::ostream &amp; operator&lt;&lt;(std::ostream &amp; stream, const Rect &amp; obj) {</a>
+<a name="392"><span class="lineNum">     392 </span>            :         stream &lt;&lt; &quot;Rect(x:&quot; &lt;&lt; obj.origin.x &lt;&lt; &quot; y:&quot; &lt;&lt; obj.origin.y</a>
+<a name="393"><span class="lineNum">     393 </span>            :                         &lt;&lt; &quot; width:&quot; &lt;&lt; obj.size.width &lt;&lt; &quot; height:&quot; &lt;&lt; obj.size.height &lt;&lt; &quot;);&quot;;</a>
+<a name="394"><span class="lineNum">     394 </span>            :         return stream;</a>
+<a name="395"><span class="lineNum">     395 </span>            : }</a>
+<a name="396"><span class="lineNum">     396 </span>            : </a>
+<a name="397"><span class="lineNum">     397 </span>            : inline std::ostream &amp; operator&lt;&lt;(std::ostream &amp; stream, const URect &amp; obj) {</a>
+<a name="398"><span class="lineNum">     398 </span>            :         stream &lt;&lt; &quot;URect(x:&quot; &lt;&lt; obj.x &lt;&lt; &quot; y:&quot; &lt;&lt; obj.y</a>
+<a name="399"><span class="lineNum">     399 </span>            :                         &lt;&lt; &quot; width:&quot; &lt;&lt; obj.width &lt;&lt; &quot; height:&quot; &lt;&lt; obj.height &lt;&lt; &quot;);&quot;;</a>
+<a name="400"><span class="lineNum">     400 </span>            :         return stream;</a>
+<a name="401"><span class="lineNum">     401 </span>            : }</a>
+<a name="402"><span class="lineNum">     402 </span>            : </a>
+<a name="403"><span class="lineNum">     403 </span><span class="lineCov">         21 : inline std::ostream &amp; operator&lt;&lt;(std::ostream &amp; stream, const Size2 &amp; obj) {</span></a>
+<a name="404"><span class="lineNum">     404 </span><span class="lineCov">         21 :         stream &lt;&lt; &quot;Size2(width:&quot; &lt;&lt; obj.width &lt;&lt; &quot; height:&quot; &lt;&lt; obj.height &lt;&lt; &quot;);&quot;;</span></a>
+<a name="405"><span class="lineNum">     405 </span><span class="lineCov">         21 :         return stream;</span></a>
+<a name="406"><span class="lineNum">     406 </span>            : }</a>
+<a name="407"><span class="lineNum">     407 </span>            : </a>
+<a name="408"><span class="lineNum">     408 </span>            : inline std::ostream &amp; operator&lt;&lt;(std::ostream &amp; stream, const Size3 &amp; obj) {</a>
+<a name="409"><span class="lineNum">     409 </span>            :         stream &lt;&lt; &quot;Size3(width:&quot; &lt;&lt; obj.width &lt;&lt; &quot; height:&quot; &lt;&lt; obj.height &lt;&lt; &quot; depth:&quot; &lt;&lt; obj.depth &lt;&lt; &quot;);&quot;;</a>
+<a name="410"><span class="lineNum">     410 </span>            :         return stream;</a>
+<a name="411"><span class="lineNum">     411 </span>            : }</a>
+<a name="412"><span class="lineNum">     412 </span>            : </a>
+<a name="413"><span class="lineNum">     413 </span>            : inline std::ostream &amp; operator&lt;&lt;(std::ostream &amp; stream, const Extent2 &amp; obj) {</a>
+<a name="414"><span class="lineNum">     414 </span>            :         stream &lt;&lt; &quot;Extent2(width:&quot; &lt;&lt; obj.width &lt;&lt; &quot; height:&quot; &lt;&lt; obj.height &lt;&lt; &quot;);&quot;;</a>
+<a name="415"><span class="lineNum">     415 </span>            :         return stream;</a>
+<a name="416"><span class="lineNum">     416 </span>            : }</a>
+<a name="417"><span class="lineNum">     417 </span>            : </a>
+<a name="418"><span class="lineNum">     418 </span><span class="lineCov">        101 : inline std::ostream &amp; operator&lt;&lt;(std::ostream &amp; stream, const Extent3 &amp; obj) {</span></a>
+<a name="419"><span class="lineNum">     419 </span><span class="lineCov">        101 :         stream &lt;&lt; &quot;Extent3(width:&quot; &lt;&lt; obj.width &lt;&lt; &quot; height:&quot; &lt;&lt; obj.height &lt;&lt; &quot; depth:&quot; &lt;&lt; obj.depth &lt;&lt; &quot;);&quot;;</span></a>
+<a name="420"><span class="lineNum">     420 </span><span class="lineCov">        101 :         return stream;</span></a>
+<a name="421"><span class="lineNum">     421 </span>            : }</a>
+<a name="422"><span class="lineNum">     422 </span>            : </a>
+<a name="423"><span class="lineNum">     423 </span>            : }</a>
+<a name="424"><span class="lineNum">     424 </span>            : </a>
+<a name="425"><span class="lineNum">     425 </span>            : #endif /* CORE_GEOM_SPGEOMETRY_H_ */</a>
 </pre>
       </td>
     </tr>

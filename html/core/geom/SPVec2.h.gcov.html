@@ -31,18 +31,18 @@
             <td class="headerValue">coverage.info</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntry">61</td>
+            <td class="headerCovTableEntry">94</td>
             <td class="headerCovTableEntry">96</td>
-            <td class="headerCovTableEntryLo">63.5 %</td>
+            <td class="headerCovTableEntryHi">97.9 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2023-12-03 02:10:58</td>
+            <td class="headerValue">2024-05-12 00:16:13</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntry">23</td>
             <td class="headerCovTableEntry">37</td>
-            <td class="headerCovTableEntryLo">62.2 %</td>
+            <td class="headerCovTableEntry">37</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
           </tr>
           <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
         </table>
@@ -89,7 +89,7 @@
 <a name="27"><span class="lineNum">      27 </span>            : </a>
 <a name="28"><span class="lineNum">      28 </span>            : #include &quot;SPGeom.h&quot;</a>
 <a name="29"><span class="lineNum">      29 </span>            : </a>
-<a name="30"><span class="lineNum">      30 </span>            : namespace stappler::geom {</a>
+<a name="30"><span class="lineNum">      30 </span>            : namespace STAPPLER_VERSIONIZED stappler::geom {</a>
 <a name="31"><span class="lineNum">      31 </span>            : </a>
 <a name="32"><span class="lineNum">      32 </span>            : class Mat4;</a>
 <a name="33"><span class="lineNum">      33 </span>            : struct Size2;</a>
@@ -104,17 +104,17 @@
 <a name="42"><span class="lineNum">      42 </span>            :         static const Vec2 UNIT_X;</a>
 <a name="43"><span class="lineNum">      43 </span>            :         static const Vec2 UNIT_Y;</a>
 <a name="44"><span class="lineNum">      44 </span>            : </a>
-<a name="45"><span class="lineNum">      45 </span><span class="lineCov">     134302 :         static constexpr void add(const Vec2 &amp;v1, const Vec2 &amp;v2, Vec2 *dst) {</span></a>
-<a name="46"><span class="lineNum">      46 </span><span class="lineCov">     134302 :                 dst-&gt;x = v1.x + v2.x; dst-&gt;y = v1.y + v2.y;</span></a>
-<a name="47"><span class="lineNum">      47 </span><span class="lineCov">     134302 :         }</span></a>
+<a name="45"><span class="lineNum">      45 </span><span class="lineCov">     269731 :         static constexpr void add(const Vec2 &amp;v1, const Vec2 &amp;v2, Vec2 *dst) {</span></a>
+<a name="46"><span class="lineNum">      46 </span><span class="lineCov">     269731 :                 dst-&gt;x = v1.x + v2.x; dst-&gt;y = v1.y + v2.y;</span></a>
+<a name="47"><span class="lineNum">      47 </span><span class="lineCov">     269731 :         }</span></a>
 <a name="48"><span class="lineNum">      48 </span>            : </a>
-<a name="49"><span class="lineNum">      49 </span><span class="lineCov">    1412969 :         static constexpr void subtract(const Vec2 &amp;v1, const Vec2 &amp;v2, Vec2 *dst) {</span></a>
-<a name="50"><span class="lineNum">      50 </span><span class="lineCov">    1412969 :                 dst-&gt;x = v1.x - v2.x; dst-&gt;y = v1.y - v2.y;</span></a>
-<a name="51"><span class="lineNum">      51 </span><span class="lineCov">    1412969 :         }</span></a>
+<a name="49"><span class="lineNum">      49 </span><span class="lineCov">    3463979 :         static constexpr void subtract(const Vec2 &amp;v1, const Vec2 &amp;v2, Vec2 *dst) {</span></a>
+<a name="50"><span class="lineNum">      50 </span><span class="lineCov">    3463979 :                 dst-&gt;x = v1.x - v2.x; dst-&gt;y = v1.y - v2.y;</span></a>
+<a name="51"><span class="lineNum">      51 </span><span class="lineCov">    3463979 :         }</span></a>
 <a name="52"><span class="lineNum">      52 </span>            : </a>
-<a name="53"><span class="lineNum">      53 </span><span class="lineNoCov">          0 :         static constexpr void scale(const Vec2 &amp;v1, const Vec2 &amp;v2, Vec2 *dst) {</span></a>
-<a name="54"><span class="lineNum">      54 </span><span class="lineNoCov">          0 :                 dst-&gt;x = v1.x * v2.x; dst-&gt;y = v1.y * v2.y;</span></a>
-<a name="55"><span class="lineNum">      55 </span><span class="lineNoCov">          0 :         }</span></a>
+<a name="53"><span class="lineNum">      53 </span><span class="lineCov">         10 :         static constexpr void scale(const Vec2 &amp;v1, const Vec2 &amp;v2, Vec2 *dst) {</span></a>
+<a name="54"><span class="lineNum">      54 </span><span class="lineCov">         10 :                 dst-&gt;x = v1.x * v2.x; dst-&gt;y = v1.y * v2.y;</span></a>
+<a name="55"><span class="lineNum">      55 </span><span class="lineCov">         10 :         }</span></a>
 <a name="56"><span class="lineNum">      56 </span>            : </a>
 <a name="57"><span class="lineNum">      57 </span>            :         static constexpr void unscale(const Vec2&amp; v1, const Vec2 &amp;v2, Vec2 *dst) {</a>
 <a name="58"><span class="lineNum">      58 </span>            :                 dst-&gt;x = v1.x / v2.x; dst-&gt;y = v1.y / v2.y;</a>
@@ -124,8 +124,8 @@
 <a name="62"><span class="lineNum">      62 </span>            :                 return v1.x * v2.y - v1.y * v2.x;</a>
 <a name="63"><span class="lineNum">      63 </span>            :         }</a>
 <a name="64"><span class="lineNum">      64 </span>            : </a>
-<a name="65"><span class="lineNum">      65 </span><span class="lineNoCov">          0 :         static constexpr float dot(const Vec2 &amp;v1, const Vec2 &amp;v2) {</span></a>
-<a name="66"><span class="lineNum">      66 </span><span class="lineNoCov">          0 :                 return v1.x * v2.x + v1.y * v2.y;</span></a>
+<a name="65"><span class="lineNum">      65 </span><span class="lineCov">         50 :         static constexpr float dot(const Vec2 &amp;v1, const Vec2 &amp;v2) {</span></a>
+<a name="66"><span class="lineNum">      66 </span><span class="lineCov">         50 :                 return v1.x * v2.x + v1.y * v2.y;</span></a>
 <a name="67"><span class="lineNum">      67 </span>            :         }</a>
 <a name="68"><span class="lineNum">      68 </span>            : </a>
 <a name="69"><span class="lineNum">      69 </span>            :         static float angle(const Vec2&amp; v1, const Vec2&amp; v2);</a>
@@ -133,8 +133,8 @@
 <a name="71"><span class="lineNum">      71 </span>            :         /** Clamps the specified vector within the specified range and returns it in dst. */</a>
 <a name="72"><span class="lineNum">      72 </span>            :         static void clamp(const Vec2&amp; v, const Vec2&amp; min, const Vec2&amp; max, Vec2* dst);</a>
 <a name="73"><span class="lineNum">      73 </span>            : </a>
-<a name="74"><span class="lineNum">      74 </span><span class="lineCov">        108 :         static constexpr Vec2 forAngle(const float a) {</span></a>
-<a name="75"><span class="lineNum">      75 </span><span class="lineCov">        108 :                 return Vec2(cosf(a), sinf(a));</span></a>
+<a name="74"><span class="lineNum">      74 </span><span class="lineCov">        300 :         static constexpr Vec2 forAngle(const float a) {</span></a>
+<a name="75"><span class="lineNum">      75 </span><span class="lineCov">        300 :                 return Vec2(cosf(a), sinf(a));</span></a>
 <a name="76"><span class="lineNum">      76 </span>            :         }</a>
 <a name="77"><span class="lineNum">      77 </span>            : </a>
 <a name="78"><span class="lineNum">      78 </span>            :         /** A general line-line intersection test</a>
@@ -186,13 +186,13 @@
 <a name="124"><span class="lineNum">     124 </span>            :         float x;</a>
 <a name="125"><span class="lineNum">     125 </span>            :         float y;</a>
 <a name="126"><span class="lineNum">     126 </span>            : </a>
-<a name="127"><span class="lineNum">     127 </span><span class="lineCov">    3148459 :         constexpr Vec2() : x(0.0f), y(0.0f) { }</span></a>
-<a name="128"><span class="lineNum">     128 </span><span class="lineCov">   14703833 :         constexpr Vec2(float xx, float yy) : x(xx), y(yy) { }</span></a>
+<a name="127"><span class="lineNum">     127 </span><span class="lineCov">   39458800 :         constexpr Vec2() : x(0.0f), y(0.0f) { }</span></a>
+<a name="128"><span class="lineNum">     128 </span><span class="lineCov">  431182172 :         constexpr Vec2(float xx, float yy) : x(xx), y(yy) { }</span></a>
 <a name="129"><span class="lineNum">     129 </span>            : </a>
 <a name="130"><span class="lineNum">     130 </span>            :         constexpr Vec2(const Vec2 &amp;p1, const Vec2 &amp;p2) :  x(p2.x - p1.x), y(p2.y - p1.y) { }</a>
 <a name="131"><span class="lineNum">     131 </span>            : </a>
 <a name="132"><span class="lineNum">     132 </span>            :         template &lt;typename Functor&gt;</a>
-<a name="133"><span class="lineNum">     133 </span><span class="lineCov">          2 :         constexpr Vec2(const Vec2 &amp;v, const Functor &amp;f) : x(f(v.x)), y(f(v.y)) { }</span></a>
+<a name="133"><span class="lineNum">     133 </span><span class="lineCov">         50 :         constexpr Vec2(const Vec2 &amp;v, const Functor &amp;f) : x(f(v.x)), y(f(v.y)) { }</span></a>
 <a name="134"><span class="lineNum">     134 </span>            : </a>
 <a name="135"><span class="lineNum">     135 </span>            :         template &lt;typename Functor&gt;</a>
 <a name="136"><span class="lineNum">     136 </span>            :         constexpr Vec2(const Vec2 &amp;v1, const Vec2 &amp;v2, const Functor &amp;f) : x(f(v1.x, v2.x)), y(f(v1.y, v2.y)) { }</a>
@@ -202,15 +202,15 @@
 <a name="140"><span class="lineNum">     140 </span>            :         explicit Vec2(const Size2 &amp;);</a>
 <a name="141"><span class="lineNum">     141 </span>            :         explicit Vec2(const Extent2 &amp;);</a>
 <a name="142"><span class="lineNum">     142 </span>            : </a>
-<a name="143"><span class="lineNum">     143 </span><span class="lineCov">     293514 :         constexpr bool isValid() const { return !std::isnan(x) &amp;&amp; !std::isnan(y); }</span></a>
+<a name="143"><span class="lineNum">     143 </span><span class="lineCov">   10246802 :         constexpr bool isValid() const { return !std::isnan(x) &amp;&amp; !std::isnan(y); }</span></a>
 <a name="144"><span class="lineNum">     144 </span>            : </a>
 <a name="145"><span class="lineNum">     145 </span>            :         constexpr void add(const float &amp;v) {</a>
 <a name="146"><span class="lineNum">     146 </span>            :                 x += v; y += v;</a>
 <a name="147"><span class="lineNum">     147 </span>            :         }</a>
 <a name="148"><span class="lineNum">     148 </span>            : </a>
-<a name="149"><span class="lineNum">     149 </span><span class="lineCov">      11160 :         constexpr void add(const Vec2 &amp;v) {</span></a>
-<a name="150"><span class="lineNum">     150 </span><span class="lineCov">      11160 :                 x += v.x; y += v.y;</span></a>
-<a name="151"><span class="lineNum">     151 </span><span class="lineCov">      11160 :         }</span></a>
+<a name="149"><span class="lineNum">     149 </span><span class="lineCov">      13320 :         constexpr void add(const Vec2 &amp;v) {</span></a>
+<a name="150"><span class="lineNum">     150 </span><span class="lineCov">      13320 :                 x += v.x; y += v.y;</span></a>
+<a name="151"><span class="lineNum">     151 </span><span class="lineCov">      13320 :         }</span></a>
 <a name="152"><span class="lineNum">     152 </span>            : </a>
 <a name="153"><span class="lineNum">     153 </span>            :         constexpr void subtract(const float &amp;v) {</a>
 <a name="154"><span class="lineNum">     154 </span>            :                 x -= v; y -= v;</a>
@@ -220,17 +220,17 @@
 <a name="158"><span class="lineNum">     158 </span>            :                 x -= v.x; y -= v.y;</a>
 <a name="159"><span class="lineNum">     159 </span>            :         }</a>
 <a name="160"><span class="lineNum">     160 </span>            : </a>
-<a name="161"><span class="lineNum">     161 </span><span class="lineCov">      14108 :         constexpr void scale(const float &amp;v) {</span></a>
-<a name="162"><span class="lineNum">     162 </span><span class="lineCov">      14108 :                 x *= v; y *= v;</span></a>
-<a name="163"><span class="lineNum">     163 </span><span class="lineCov">      14108 :         }</span></a>
+<a name="161"><span class="lineNum">     161 </span><span class="lineCov">     366668 :         constexpr void scale(const float &amp;v) {</span></a>
+<a name="162"><span class="lineNum">     162 </span><span class="lineCov">     366668 :                 x *= v; y *= v;</span></a>
+<a name="163"><span class="lineNum">     163 </span><span class="lineCov">     366668 :         }</span></a>
 <a name="164"><span class="lineNum">     164 </span>            : </a>
 <a name="165"><span class="lineNum">     165 </span>            :         constexpr void scale(const Vec2 &amp;v) {</a>
 <a name="166"><span class="lineNum">     166 </span>            :                 x *= v.x; y *= v.y;</a>
 <a name="167"><span class="lineNum">     167 </span>            :         }</a>
 <a name="168"><span class="lineNum">     168 </span>            : </a>
-<a name="169"><span class="lineNum">     169 </span><span class="lineNoCov">          0 :         constexpr void unscale(const float &amp;v) {</span></a>
-<a name="170"><span class="lineNum">     170 </span><span class="lineNoCov">          0 :                 x /= v; y /= v;</span></a>
-<a name="171"><span class="lineNum">     171 </span><span class="lineNoCov">          0 :         }</span></a>
+<a name="169"><span class="lineNum">     169 </span><span class="lineCov">        154 :         constexpr void unscale(const float &amp;v) {</span></a>
+<a name="170"><span class="lineNum">     170 </span><span class="lineCov">        154 :                 x /= v; y /= v;</span></a>
+<a name="171"><span class="lineNum">     171 </span><span class="lineCov">        154 :         }</span></a>
 <a name="172"><span class="lineNum">     172 </span>            : </a>
 <a name="173"><span class="lineNum">     173 </span>            :         constexpr void unscale(const Vec2 &amp;v) {</a>
 <a name="174"><span class="lineNum">     174 </span>            :                 x /= v.x; y /= v.y;</a>
@@ -238,44 +238,44 @@
 <a name="176"><span class="lineNum">     176 </span>            : </a>
 <a name="177"><span class="lineNum">     177 </span>            :         void clamp(const Vec2&amp; min, const Vec2&amp; max);</a>
 <a name="178"><span class="lineNum">     178 </span>            : </a>
-<a name="179"><span class="lineNum">     179 </span><span class="lineCov">        358 :         constexpr float distanceSquared(const Vec2&amp; v) const {</span></a>
-<a name="180"><span class="lineNum">     180 </span><span class="lineCov">        358 :                 const float dx = v.x - x;</span></a>
-<a name="181"><span class="lineNum">     181 </span><span class="lineCov">        358 :                 const float dy = v.y - y;</span></a>
-<a name="182"><span class="lineNum">     182 </span><span class="lineCov">        358 :                 return (dx * dx + dy * dy);</span></a>
+<a name="179"><span class="lineNum">     179 </span><span class="lineCov">       9344 :         constexpr float distanceSquared(const Vec2&amp; v) const {</span></a>
+<a name="180"><span class="lineNum">     180 </span><span class="lineCov">       9344 :                 const float dx = v.x - x;</span></a>
+<a name="181"><span class="lineNum">     181 </span><span class="lineCov">       9344 :                 const float dy = v.y - y;</span></a>
+<a name="182"><span class="lineNum">     182 </span><span class="lineCov">       9344 :                 return (dx * dx + dy * dy);</span></a>
 <a name="183"><span class="lineNum">     183 </span>            :         }</a>
 <a name="184"><span class="lineNum">     184 </span>            : </a>
-<a name="185"><span class="lineNum">     185 </span><span class="lineCov">        108 :         constexpr float lengthSquared() const {</span></a>
-<a name="186"><span class="lineNum">     186 </span><span class="lineCov">        108 :                 return (x * x + y * y);</span></a>
+<a name="185"><span class="lineNum">     185 </span><span class="lineCov">       2398 :         constexpr float lengthSquared() const {</span></a>
+<a name="186"><span class="lineNum">     186 </span><span class="lineCov">       2398 :                 return (x * x + y * y);</span></a>
 <a name="187"><span class="lineNum">     187 </span>            :         }</a>
 <a name="188"><span class="lineNum">     188 </span>            : </a>
-<a name="189"><span class="lineNum">     189 </span><span class="lineNoCov">          0 :         constexpr float distance(const Vec2&amp; other) const {</span></a>
-<a name="190"><span class="lineNum">     190 </span><span class="lineNoCov">          0 :                 return std::sqrt(distanceSquared(other));</span></a>
+<a name="189"><span class="lineNum">     189 </span><span class="lineCov">       1826 :         constexpr float distance(const Vec2&amp; other) const {</span></a>
+<a name="190"><span class="lineNum">     190 </span><span class="lineCov">       1826 :                 return std::sqrt(distanceSquared(other));</span></a>
 <a name="191"><span class="lineNum">     191 </span>            :         }</a>
 <a name="192"><span class="lineNum">     192 </span>            : </a>
-<a name="193"><span class="lineNum">     193 </span><span class="lineCov">        108 :         constexpr float length() const {</span></a>
-<a name="194"><span class="lineNum">     194 </span><span class="lineCov">        108 :                 return std::sqrt(lengthSquared());</span></a>
+<a name="193"><span class="lineNum">     193 </span><span class="lineCov">       2398 :         constexpr float length() const {</span></a>
+<a name="194"><span class="lineNum">     194 </span><span class="lineCov">       2398 :                 return std::sqrt(lengthSquared());</span></a>
 <a name="195"><span class="lineNum">     195 </span>            :         }</a>
 <a name="196"><span class="lineNum">     196 </span>            : </a>
 <a name="197"><span class="lineNum">     197 </span>            :         constexpr bool isWithinDistance(const Vec2&amp; v, float val) const {</a>
 <a name="198"><span class="lineNum">     198 </span>            :                 return distanceSquared(v) &lt; val * val;</a>
 <a name="199"><span class="lineNum">     199 </span>            :         }</a>
 <a name="200"><span class="lineNum">     200 </span>            : </a>
-<a name="201"><span class="lineNum">     201 </span><span class="lineNoCov">          0 :         constexpr float dot(const Vec2&amp; v) const { return (x * v.x + y * v.y); }</span></a>
+<a name="201"><span class="lineNum">     201 </span><span class="lineCov">         75 :         constexpr float dot(const Vec2&amp; v) const { return (x * v.x + y * v.y); }</span></a>
 <a name="202"><span class="lineNum">     202 </span>            : </a>
-<a name="203"><span class="lineNum">     203 </span><span class="lineNoCov">          0 :         constexpr float cross(const Vec2&amp; v) const { return x * v.y - y * v.x; }</span></a>
+<a name="203"><span class="lineNum">     203 </span><span class="lineCov">         25 :         constexpr float cross(const Vec2&amp; v) const { return x * v.y - y * v.x; }</span></a>
 <a name="204"><span class="lineNum">     204 </span>            : </a>
-<a name="205"><span class="lineNum">     205 </span><span class="lineCov">      13642 :         constexpr void negate() { x = -x; y = -y; }</span></a>
+<a name="205"><span class="lineNum">     205 </span><span class="lineCov">     341125 :         constexpr void negate() { x = -x; y = -y; }</span></a>
 <a name="206"><span class="lineNum">     206 </span>            : </a>
 <a name="207"><span class="lineNum">     207 </span>            :         constexpr Vec2 &amp; normalize();</a>
 <a name="208"><span class="lineNum">     208 </span>            : </a>
 <a name="209"><span class="lineNum">     209 </span>            :         Vec2 getNormalized() const;</a>
 <a name="210"><span class="lineNum">     210 </span>            : </a>
-<a name="211"><span class="lineNum">     211 </span><span class="lineCov">   14032469 :         constexpr bool fuzzyEquals(const Vec2&amp; b, float var = NumericLimits&lt;float&gt;::epsilon()) const {</span></a>
-<a name="212"><span class="lineNum">     212 </span><span class="lineCov">   14032469 :                 return (x - var &lt;= b.x &amp;&amp; b.x &lt;= x + var) &amp;&amp; (y - var &lt;= b.y &amp;&amp; b.y &lt;= y + var);</span></a>
+<a name="211"><span class="lineNum">     211 </span><span class="lineCov">  419884544 :         constexpr bool fuzzyEquals(const Vec2&amp; b, float var = NumericLimits&lt;float&gt;::epsilon()) const {</span></a>
+<a name="212"><span class="lineNum">     212 </span><span class="lineCov">  419884544 :                 return (x - var &lt;= b.x &amp;&amp; b.x &lt;= x + var) &amp;&amp; (y - var &lt;= b.y &amp;&amp; b.y &lt;= y + var);</span></a>
 <a name="213"><span class="lineNum">     213 </span>            :         }</a>
 <a name="214"><span class="lineNum">     214 </span>            : </a>
-<a name="215"><span class="lineNum">     215 </span><span class="lineNoCov">          0 :         constexpr float getAngle() const {</span></a>
-<a name="216"><span class="lineNum">     216 </span><span class="lineNoCov">          0 :                 return std::atan2(y, x);</span></a>
+<a name="215"><span class="lineNum">     215 </span><span class="lineCov">         25 :         constexpr float getAngle() const {</span></a>
+<a name="216"><span class="lineNum">     216 </span><span class="lineCov">         25 :                 return std::atan2(y, x);</span></a>
 <a name="217"><span class="lineNum">     217 </span>            :         }</a>
 <a name="218"><span class="lineNum">     218 </span>            : </a>
 <a name="219"><span class="lineNum">     219 </span>            :         /** Calculates perpendicular of v, rotated 90 degrees counter-clockwise -- cross(v, perp(v)) &gt;= 0 */</a>
@@ -283,8 +283,8 @@
 <a name="221"><span class="lineNum">     221 </span>            :                 return Vec2(-y, x);</a>
 <a name="222"><span class="lineNum">     222 </span>            :         }</a>
 <a name="223"><span class="lineNum">     223 </span>            : </a>
-<a name="224"><span class="lineNum">     224 </span><span class="lineNoCov">          0 :         constexpr Vec2 getMidpoint(const Vec2&amp; other) const {</span></a>
-<a name="225"><span class="lineNum">     225 </span><span class="lineNoCov">          0 :                 return Vec2((x + other.x) / 2.0f, (y + other.y) / 2.0f);</span></a>
+<a name="224"><span class="lineNum">     224 </span><span class="lineCov">        105 :         constexpr Vec2 getMidpoint(const Vec2&amp; other) const {</span></a>
+<a name="225"><span class="lineNum">     225 </span><span class="lineCov">        105 :                 return Vec2((x + other.x) / 2.0f, (y + other.y) / 2.0f);</span></a>
 <a name="226"><span class="lineNum">     226 </span>            :         }</a>
 <a name="227"><span class="lineNum">     227 </span>            : </a>
 <a name="228"><span class="lineNum">     228 </span>            :         constexpr Vec2 getClampPoint(const Vec2&amp; min_inclusive, const Vec2&amp; max_inclusive) const {</a>
@@ -292,7 +292,7 @@
 <a name="230"><span class="lineNum">     230 </span>            :         }</a>
 <a name="231"><span class="lineNum">     231 </span>            : </a>
 <a name="232"><span class="lineNum">     232 </span>            :         /** Calculates perpendicular of v, rotated 90 degrees clockwise -- cross(v, rperp(v)) &lt;= 0 */</a>
-<a name="233"><span class="lineNum">     233 </span><span class="lineCov">      14000 :         constexpr Vec2 getRPerp() const { return Vec2(y, -x); }</span></a>
+<a name="233"><span class="lineNum">     233 </span><span class="lineCov">     350050 :         constexpr Vec2 getRPerp() const { return Vec2(y, -x); }</span></a>
 <a name="234"><span class="lineNum">     234 </span>            : </a>
 <a name="235"><span class="lineNum">     235 </span>            :         /** Calculates the projection of this over other. */</a>
 <a name="236"><span class="lineNum">     236 </span>            :         constexpr Vec2 project(const Vec2&amp; other) const;</a>
@@ -300,8 +300,8 @@
 <a name="238"><span class="lineNum">     238 </span>            :         /** Complex multiplication of two points (&quot;rotates&quot; two points).</a>
 <a name="239"><span class="lineNum">     239 </span>            :          @return Vec2 vector with an angle of this.getAngle() + other.getAngle(),</a>
 <a name="240"><span class="lineNum">     240 </span>            :          and a length of this.getLength() * other.getLength(). */</a>
-<a name="241"><span class="lineNum">     241 </span><span class="lineNoCov">          0 :         constexpr Vec2 rotate(const Vec2&amp; other) const {</span></a>
-<a name="242"><span class="lineNum">     242 </span><span class="lineNoCov">          0 :                 return Vec2(x*other.x - y*other.y, x*other.y + y*other.x);</span></a>
+<a name="241"><span class="lineNum">     241 </span><span class="lineCov">         25 :         constexpr Vec2 rotate(const Vec2&amp; other) const {</span></a>
+<a name="242"><span class="lineNum">     242 </span><span class="lineCov">         25 :                 return Vec2(x*other.x - y*other.y, x*other.y + y*other.x);</span></a>
 <a name="243"><span class="lineNum">     243 </span>            :         }</a>
 <a name="244"><span class="lineNum">     244 </span>            : </a>
 <a name="245"><span class="lineNum">     245 </span>            :         /** Unrotates two points.</a>
@@ -321,9 +321,9 @@
 <a name="259"><span class="lineNum">     259 </span>            :                 return *this;</a>
 <a name="260"><span class="lineNum">     260 </span>            :         }</a>
 <a name="261"><span class="lineNum">     261 </span>            : </a>
-<a name="262"><span class="lineNum">     262 </span><span class="lineCov">      11160 :         constexpr Vec2&amp; operator+=(const Vec2&amp; v) {</span></a>
-<a name="263"><span class="lineNum">     263 </span><span class="lineCov">      11160 :                 add(v);</span></a>
-<a name="264"><span class="lineNum">     264 </span><span class="lineCov">      11160 :                 return *this;</span></a>
+<a name="262"><span class="lineNum">     262 </span><span class="lineCov">      13320 :         constexpr Vec2&amp; operator+=(const Vec2&amp; v) {</span></a>
+<a name="263"><span class="lineNum">     263 </span><span class="lineCov">      13320 :                 add(v);</span></a>
+<a name="264"><span class="lineNum">     264 </span><span class="lineCov">      13320 :                 return *this;</span></a>
 <a name="265"><span class="lineNum">     265 </span>            :         }</a>
 <a name="266"><span class="lineNum">     266 </span>            : </a>
 <a name="267"><span class="lineNum">     267 </span>            :         constexpr Vec2&amp; operator-=(const float &amp;v) {</a>
@@ -346,9 +346,9 @@
 <a name="284"><span class="lineNum">     284 </span>            :                 return *this;</a>
 <a name="285"><span class="lineNum">     285 </span>            :         }</a>
 <a name="286"><span class="lineNum">     286 </span>            : </a>
-<a name="287"><span class="lineNum">     287 </span><span class="lineNoCov">          0 :         constexpr Vec2&amp; operator/=(const float &amp;v) {</span></a>
-<a name="288"><span class="lineNum">     288 </span><span class="lineNoCov">          0 :                 unscale(v);</span></a>
-<a name="289"><span class="lineNum">     289 </span><span class="lineNoCov">          0 :                 return *this;</span></a>
+<a name="287"><span class="lineNum">     287 </span><span class="lineCov">        109 :         constexpr Vec2&amp; operator/=(const float &amp;v) {</span></a>
+<a name="288"><span class="lineNum">     288 </span><span class="lineCov">        109 :                 unscale(v);</span></a>
+<a name="289"><span class="lineNum">     289 </span><span class="lineCov">        109 :                 return *this;</span></a>
 <a name="290"><span class="lineNum">     290 </span>            :         }</a>
 <a name="291"><span class="lineNum">     291 </span>            : </a>
 <a name="292"><span class="lineNum">     292 </span>            :         constexpr Vec2&amp; operator/=(const Vec2 &amp;s) {</a>
@@ -359,155 +359,159 @@
 <a name="297"><span class="lineNum">     297 </span>            :         SP_THREE_WAY_COMPARISON_FRIEND_CONSTEXPR(Vec2)</a>
 <a name="298"><span class="lineNum">     298 </span>            : };</a>
 <a name="299"><span class="lineNum">     299 </span>            : </a>
-<a name="300"><span class="lineNum">     300 </span><span class="lineCov">      14000 : constexpr inline Vec2 &amp; Vec2::normalize() {</span></a>
-<a name="301"><span class="lineNum">     301 </span><span class="lineCov">      14000 :         float n = x * x + y * y;</span></a>
+<a name="300"><span class="lineNum">     300 </span><span class="lineCov">     350125 : constexpr inline Vec2 &amp; Vec2::normalize() {</span></a>
+<a name="301"><span class="lineNum">     301 </span><span class="lineCov">     350125 :         float n = x * x + y * y;</span></a>
 <a name="302"><span class="lineNum">     302 </span>            :         // Already normalized.</a>
-<a name="303"><span class="lineNum">     303 </span><span class="lineCov">      14000 :         if (n == 1.0f) {</span></a>
-<a name="304"><span class="lineNum">     304 </span><span class="lineCov">        190 :                 return *this;</span></a>
+<a name="303"><span class="lineNum">     303 </span><span class="lineCov">     350125 :         if (n == 1.0f) {</span></a>
+<a name="304"><span class="lineNum">     304 </span><span class="lineNoCov">          0 :                 return *this;</span></a>
 <a name="305"><span class="lineNum">     305 </span>            :         }</a>
 <a name="306"><span class="lineNum">     306 </span>            : </a>
-<a name="307"><span class="lineNum">     307 </span><span class="lineCov">      13810 :         n = std::sqrt(n);</span></a>
+<a name="307"><span class="lineNum">     307 </span><span class="lineCov">     345350 :         n = std::sqrt(n);</span></a>
 <a name="308"><span class="lineNum">     308 </span>            :         // Too close to zero.</a>
-<a name="309"><span class="lineNum">     309 </span><span class="lineCov">      13810 :         if (n &lt; math::MATH_TOLERANCE) {</span></a>
-<a name="310"><span class="lineNum">     310 </span><span class="lineCov">         35 :                 return *this;</span></a>
+<a name="309"><span class="lineNum">     309 </span><span class="lineCov">     345350 :         if (n &lt; math::MATH_TOLERANCE) {</span></a>
+<a name="310"><span class="lineNum">     310 </span><span class="lineNoCov">          0 :                 return *this;</span></a>
 <a name="311"><span class="lineNum">     311 </span>            :         }</a>
 <a name="312"><span class="lineNum">     312 </span>            : </a>
-<a name="313"><span class="lineNum">     313 </span><span class="lineCov">      13775 :         n = 1.0f / n;</span></a>
-<a name="314"><span class="lineNum">     314 </span><span class="lineCov">      13775 :         x *= n;</span></a>
-<a name="315"><span class="lineNum">     315 </span><span class="lineCov">      13775 :         y *= n;</span></a>
+<a name="313"><span class="lineNum">     313 </span><span class="lineCov">     344475 :         n = 1.0f / n;</span></a>
+<a name="314"><span class="lineNum">     314 </span><span class="lineCov">     344475 :         x *= n;</span></a>
+<a name="315"><span class="lineNum">     315 </span><span class="lineCov">     344475 :         y *= n;</span></a>
 <a name="316"><span class="lineNum">     316 </span>            : </a>
-<a name="317"><span class="lineNum">     317 </span><span class="lineCov">      13775 :         return *this;</span></a>
+<a name="317"><span class="lineNum">     317 </span><span class="lineCov">     344475 :         return *this;</span></a>
 <a name="318"><span class="lineNum">     318 </span>            : }</a>
 <a name="319"><span class="lineNum">     319 </span>            : </a>
-<a name="320"><span class="lineNum">     320 </span>            : constexpr const Vec2 Vec2::ZERO(0.0f, 0.0f);</a>
-<a name="321"><span class="lineNum">     321 </span>            : constexpr const Vec2 Vec2::ONE(1.0f, 1.0f);</a>
-<a name="322"><span class="lineNum">     322 </span>            : constexpr const Vec2 Vec2::UNIT_X(1.0f, 0.0f);</a>
-<a name="323"><span class="lineNum">     323 </span>            : constexpr const Vec2 Vec2::UNIT_Y(0.0f, 1.0f);</a>
-<a name="324"><span class="lineNum">     324 </span>            : </a>
-<a name="325"><span class="lineNum">     325 </span><span class="lineCov">     134302 : constexpr inline const Vec2 operator+(const Vec2 &amp;l, const Vec2 &amp;r) {</span></a>
-<a name="326"><span class="lineNum">     326 </span><span class="lineCov">     134302 :         Vec2 result;</span></a>
-<a name="327"><span class="lineNum">     327 </span><span class="lineCov">     134302 :         Vec2::add(l, r, &amp;result);</span></a>
-<a name="328"><span class="lineNum">     328 </span><span class="lineCov">     134302 :         return result;</span></a>
-<a name="329"><span class="lineNum">     329 </span>            : }</a>
-<a name="330"><span class="lineNum">     330 </span>            : </a>
-<a name="331"><span class="lineNum">     331 </span>            : constexpr inline const Vec2 operator+(const Vec2 &amp;l, const float &amp;r) {</a>
-<a name="332"><span class="lineNum">     332 </span>            :         Vec2 result(l);</a>
-<a name="333"><span class="lineNum">     333 </span>            :         result.add(r);</a>
-<a name="334"><span class="lineNum">     334 </span>            :         return result;</a>
-<a name="335"><span class="lineNum">     335 </span>            : }</a>
-<a name="336"><span class="lineNum">     336 </span>            : </a>
-<a name="337"><span class="lineNum">     337 </span>            : constexpr inline const Vec2 operator+(const float &amp;l, const Vec2 &amp;r) {</a>
-<a name="338"><span class="lineNum">     338 </span>            :         Vec2 result(r);</a>
-<a name="339"><span class="lineNum">     339 </span>            :         result.add(l);</a>
-<a name="340"><span class="lineNum">     340 </span>            :         return result;</a>
-<a name="341"><span class="lineNum">     341 </span>            : }</a>
-<a name="342"><span class="lineNum">     342 </span>            : </a>
-<a name="343"><span class="lineNum">     343 </span><span class="lineCov">    1412969 : constexpr inline const Vec2 operator-(const Vec2 &amp;l, const Vec2 &amp;r) {</span></a>
-<a name="344"><span class="lineNum">     344 </span><span class="lineCov">    1412969 :         Vec2 result;</span></a>
-<a name="345"><span class="lineNum">     345 </span><span class="lineCov">    1412969 :         Vec2::subtract(l, r, &amp;result);</span></a>
-<a name="346"><span class="lineNum">     346 </span><span class="lineCov">    1412969 :         return result;</span></a>
-<a name="347"><span class="lineNum">     347 </span>            : }</a>
-<a name="348"><span class="lineNum">     348 </span>            : </a>
-<a name="349"><span class="lineNum">     349 </span>            : constexpr inline const Vec2 operator-(const Vec2 &amp;l, const float &amp;r) {</a>
-<a name="350"><span class="lineNum">     350 </span>            :         Vec2 result(l);</a>
-<a name="351"><span class="lineNum">     351 </span>            :         result.subtract(r);</a>
-<a name="352"><span class="lineNum">     352 </span>            :         return result;</a>
-<a name="353"><span class="lineNum">     353 </span>            : }</a>
-<a name="354"><span class="lineNum">     354 </span>            : </a>
-<a name="355"><span class="lineNum">     355 </span><span class="lineNoCov">          0 : constexpr inline const Vec2 operator*(const Vec2 &amp;l, const Vec2 &amp;r) {</span></a>
-<a name="356"><span class="lineNum">     356 </span><span class="lineNoCov">          0 :         Vec2 result;</span></a>
-<a name="357"><span class="lineNum">     357 </span><span class="lineNoCov">          0 :         Vec2::scale(l, r, &amp;result);</span></a>
-<a name="358"><span class="lineNum">     358 </span><span class="lineNoCov">          0 :         return result;</span></a>
-<a name="359"><span class="lineNum">     359 </span>            : }</a>
-<a name="360"><span class="lineNum">     360 </span>            : </a>
-<a name="361"><span class="lineNum">     361 </span><span class="lineCov">      14108 : constexpr inline const Vec2 operator*(const Vec2 &amp;l, const float &amp;r) {</span></a>
-<a name="362"><span class="lineNum">     362 </span><span class="lineCov">      14108 :         Vec2 result(l);</span></a>
-<a name="363"><span class="lineNum">     363 </span><span class="lineCov">      14108 :         result.scale(r);</span></a>
-<a name="364"><span class="lineNum">     364 </span><span class="lineCov">      14108 :         return result;</span></a>
-<a name="365"><span class="lineNum">     365 </span>            : }</a>
-<a name="366"><span class="lineNum">     366 </span>            : </a>
-<a name="367"><span class="lineNum">     367 </span>            : constexpr inline const Vec2 operator*(const float &amp;l, const Vec2 &amp;r) {</a>
-<a name="368"><span class="lineNum">     368 </span>            :         Vec2 result(r);</a>
-<a name="369"><span class="lineNum">     369 </span>            :         result.scale(l);</a>
-<a name="370"><span class="lineNum">     370 </span>            :         return result;</a>
-<a name="371"><span class="lineNum">     371 </span>            : }</a>
-<a name="372"><span class="lineNum">     372 </span>            : </a>
-<a name="373"><span class="lineNum">     373 </span>            : constexpr inline const Vec2 operator/(const Vec2 &amp;l, const Vec2 &amp;r) {</a>
-<a name="374"><span class="lineNum">     374 </span>            :         Vec2 result;</a>
-<a name="375"><span class="lineNum">     375 </span>            :         Vec2::unscale(l, r, &amp;result);</a>
-<a name="376"><span class="lineNum">     376 </span>            :         return result;</a>
-<a name="377"><span class="lineNum">     377 </span>            : }</a>
-<a name="378"><span class="lineNum">     378 </span>            : </a>
-<a name="379"><span class="lineNum">     379 </span><span class="lineNoCov">          0 : constexpr inline const Vec2 operator/(const Vec2 &amp;l, const float &amp;r) {</span></a>
-<a name="380"><span class="lineNum">     380 </span><span class="lineNoCov">          0 :         Vec2 result(l);</span></a>
-<a name="381"><span class="lineNum">     381 </span><span class="lineNoCov">          0 :         result.unscale(r);</span></a>
-<a name="382"><span class="lineNum">     382 </span><span class="lineNoCov">          0 :         return result;</span></a>
-<a name="383"><span class="lineNum">     383 </span>            : }</a>
-<a name="384"><span class="lineNum">     384 </span>            : </a>
-<a name="385"><span class="lineNum">     385 </span><span class="lineNoCov">          0 : constexpr Vec2 operator-(const Vec2&amp; v) {</span></a>
-<a name="386"><span class="lineNum">     386 </span><span class="lineNoCov">          0 :         Vec2 result(v);</span></a>
-<a name="387"><span class="lineNum">     387 </span><span class="lineNoCov">          0 :         result.negate();</span></a>
-<a name="388"><span class="lineNum">     388 </span><span class="lineNoCov">          0 :         return result;</span></a>
-<a name="389"><span class="lineNum">     389 </span>            : }</a>
-<a name="390"><span class="lineNum">     390 </span>            : </a>
-<a name="391"><span class="lineNum">     391 </span><span class="lineNoCov">          0 : constexpr inline Vec2 Vec2::project(const Vec2&amp; other) const {</span></a>
-<a name="392"><span class="lineNum">     392 </span><span class="lineNoCov">          0 :         return other * (dot(other)/other.dot(other));</span></a>
+<a name="320"><span class="lineNum">     320 </span>            : #ifndef __LCC__</a>
+<a name="321"><span class="lineNum">     321 </span>            : </a>
+<a name="322"><span class="lineNum">     322 </span>            : constexpr const Vec2 Vec2::ZERO(0.0f, 0.0f);</a>
+<a name="323"><span class="lineNum">     323 </span>            : constexpr const Vec2 Vec2::ONE(1.0f, 1.0f);</a>
+<a name="324"><span class="lineNum">     324 </span>            : constexpr const Vec2 Vec2::UNIT_X(1.0f, 0.0f);</a>
+<a name="325"><span class="lineNum">     325 </span>            : constexpr const Vec2 Vec2::UNIT_Y(0.0f, 1.0f);</a>
+<a name="326"><span class="lineNum">     326 </span>            : </a>
+<a name="327"><span class="lineNum">     327 </span>            : #endif</a>
+<a name="328"><span class="lineNum">     328 </span>            : </a>
+<a name="329"><span class="lineNum">     329 </span><span class="lineCov">     269731 : constexpr inline const Vec2 operator+(const Vec2 &amp;l, const Vec2 &amp;r) {</span></a>
+<a name="330"><span class="lineNum">     330 </span><span class="lineCov">     269731 :         Vec2 result;</span></a>
+<a name="331"><span class="lineNum">     331 </span><span class="lineCov">     269731 :         Vec2::add(l, r, &amp;result);</span></a>
+<a name="332"><span class="lineNum">     332 </span><span class="lineCov">     269731 :         return result;</span></a>
+<a name="333"><span class="lineNum">     333 </span>            : }</a>
+<a name="334"><span class="lineNum">     334 </span>            : </a>
+<a name="335"><span class="lineNum">     335 </span>            : constexpr inline const Vec2 operator+(const Vec2 &amp;l, const float &amp;r) {</a>
+<a name="336"><span class="lineNum">     336 </span>            :         Vec2 result(l);</a>
+<a name="337"><span class="lineNum">     337 </span>            :         result.add(r);</a>
+<a name="338"><span class="lineNum">     338 </span>            :         return result;</a>
+<a name="339"><span class="lineNum">     339 </span>            : }</a>
+<a name="340"><span class="lineNum">     340 </span>            : </a>
+<a name="341"><span class="lineNum">     341 </span>            : constexpr inline const Vec2 operator+(const float &amp;l, const Vec2 &amp;r) {</a>
+<a name="342"><span class="lineNum">     342 </span>            :         Vec2 result(r);</a>
+<a name="343"><span class="lineNum">     343 </span>            :         result.add(l);</a>
+<a name="344"><span class="lineNum">     344 </span>            :         return result;</a>
+<a name="345"><span class="lineNum">     345 </span>            : }</a>
+<a name="346"><span class="lineNum">     346 </span>            : </a>
+<a name="347"><span class="lineNum">     347 </span><span class="lineCov">    3464631 : constexpr inline const Vec2 operator-(const Vec2 &amp;l, const Vec2 &amp;r) {</span></a>
+<a name="348"><span class="lineNum">     348 </span><span class="lineCov">    3464631 :         Vec2 result;</span></a>
+<a name="349"><span class="lineNum">     349 </span><span class="lineCov">    3464631 :         Vec2::subtract(l, r, &amp;result);</span></a>
+<a name="350"><span class="lineNum">     350 </span><span class="lineCov">    3464989 :         return result;</span></a>
+<a name="351"><span class="lineNum">     351 </span>            : }</a>
+<a name="352"><span class="lineNum">     352 </span>            : </a>
+<a name="353"><span class="lineNum">     353 </span>            : constexpr inline const Vec2 operator-(const Vec2 &amp;l, const float &amp;r) {</a>
+<a name="354"><span class="lineNum">     354 </span>            :         Vec2 result(l);</a>
+<a name="355"><span class="lineNum">     355 </span>            :         result.subtract(r);</a>
+<a name="356"><span class="lineNum">     356 </span>            :         return result;</a>
+<a name="357"><span class="lineNum">     357 </span>            : }</a>
+<a name="358"><span class="lineNum">     358 </span>            : </a>
+<a name="359"><span class="lineNum">     359 </span><span class="lineCov">         10 : constexpr inline const Vec2 operator*(const Vec2 &amp;l, const Vec2 &amp;r) {</span></a>
+<a name="360"><span class="lineNum">     360 </span><span class="lineCov">         10 :         Vec2 result;</span></a>
+<a name="361"><span class="lineNum">     361 </span><span class="lineCov">         10 :         Vec2::scale(l, r, &amp;result);</span></a>
+<a name="362"><span class="lineNum">     362 </span><span class="lineCov">         10 :         return result;</span></a>
+<a name="363"><span class="lineNum">     363 </span>            : }</a>
+<a name="364"><span class="lineNum">     364 </span>            : </a>
+<a name="365"><span class="lineNum">     365 </span><span class="lineCov">     366668 : constexpr inline const Vec2 operator*(const Vec2 &amp;l, const float &amp;r) {</span></a>
+<a name="366"><span class="lineNum">     366 </span><span class="lineCov">     366668 :         Vec2 result(l);</span></a>
+<a name="367"><span class="lineNum">     367 </span><span class="lineCov">     366668 :         result.scale(r);</span></a>
+<a name="368"><span class="lineNum">     368 </span><span class="lineCov">     366668 :         return result;</span></a>
+<a name="369"><span class="lineNum">     369 </span>            : }</a>
+<a name="370"><span class="lineNum">     370 </span>            : </a>
+<a name="371"><span class="lineNum">     371 </span>            : constexpr inline const Vec2 operator*(const float &amp;l, const Vec2 &amp;r) {</a>
+<a name="372"><span class="lineNum">     372 </span>            :         Vec2 result(r);</a>
+<a name="373"><span class="lineNum">     373 </span>            :         result.scale(l);</a>
+<a name="374"><span class="lineNum">     374 </span>            :         return result;</a>
+<a name="375"><span class="lineNum">     375 </span>            : }</a>
+<a name="376"><span class="lineNum">     376 </span>            : </a>
+<a name="377"><span class="lineNum">     377 </span>            : constexpr inline const Vec2 operator/(const Vec2 &amp;l, const Vec2 &amp;r) {</a>
+<a name="378"><span class="lineNum">     378 </span>            :         Vec2 result;</a>
+<a name="379"><span class="lineNum">     379 </span>            :         Vec2::unscale(l, r, &amp;result);</a>
+<a name="380"><span class="lineNum">     380 </span>            :         return result;</a>
+<a name="381"><span class="lineNum">     381 </span>            : }</a>
+<a name="382"><span class="lineNum">     382 </span>            : </a>
+<a name="383"><span class="lineNum">     383 </span><span class="lineCov">         25 : constexpr inline const Vec2 operator/(const Vec2 &amp;l, const float &amp;r) {</span></a>
+<a name="384"><span class="lineNum">     384 </span><span class="lineCov">         25 :         Vec2 result(l);</span></a>
+<a name="385"><span class="lineNum">     385 </span><span class="lineCov">         25 :         result.unscale(r);</span></a>
+<a name="386"><span class="lineNum">     386 </span><span class="lineCov">         25 :         return result;</span></a>
+<a name="387"><span class="lineNum">     387 </span>            : }</a>
+<a name="388"><span class="lineNum">     388 </span>            : </a>
+<a name="389"><span class="lineNum">     389 </span><span class="lineCov">         25 : constexpr Vec2 operator-(const Vec2&amp; v) {</span></a>
+<a name="390"><span class="lineNum">     390 </span><span class="lineCov">         25 :         Vec2 result(v);</span></a>
+<a name="391"><span class="lineNum">     391 </span><span class="lineCov">         25 :         result.negate();</span></a>
+<a name="392"><span class="lineNum">     392 </span><span class="lineCov">         25 :         return result;</span></a>
 <a name="393"><span class="lineNum">     393 </span>            : }</a>
 <a name="394"><span class="lineNum">     394 </span>            : </a>
-<a name="395"><span class="lineNum">     395 </span>            : namespace Anchor {</a>
-<a name="396"><span class="lineNum">     396 </span>            : </a>
-<a name="397"><span class="lineNum">     397 </span>            : constexpr const Vec2 Middle(0.5f, 0.5f);</a>
-<a name="398"><span class="lineNum">     398 </span>            : constexpr const Vec2 BottomLeft(0.0f, 0.0f);</a>
-<a name="399"><span class="lineNum">     399 </span>            : constexpr const Vec2 TopLeft(0.0f, 1.0f);</a>
-<a name="400"><span class="lineNum">     400 </span>            : constexpr const Vec2 BottomRight(1.0f, 0.0f);</a>
-<a name="401"><span class="lineNum">     401 </span>            : constexpr const Vec2 TopRight(1.0f, 1.0f);</a>
-<a name="402"><span class="lineNum">     402 </span>            : constexpr const Vec2 MiddleRight(1.0f, 0.5f);</a>
-<a name="403"><span class="lineNum">     403 </span>            : constexpr const Vec2 MiddleLeft(0.0f, 0.5f);</a>
-<a name="404"><span class="lineNum">     404 </span>            : constexpr const Vec2 MiddleTop(0.5f, 1.0f);</a>
-<a name="405"><span class="lineNum">     405 </span>            : constexpr const Vec2 MiddleBottom(0.5f, 0.0f);</a>
-<a name="406"><span class="lineNum">     406 </span>            : </a>
-<a name="407"><span class="lineNum">     407 </span>            : }</a>
-<a name="408"><span class="lineNum">     408 </span>            : </a>
-<a name="409"><span class="lineNum">     409 </span>            : inline std::basic_ostream&lt;char&gt; &amp;</a>
-<a name="410"><span class="lineNum">     410 </span><span class="lineCov">         84 : operator &lt;&lt; (std::basic_ostream&lt;char&gt; &amp; os, const Vec2 &amp; vec) {</span></a>
-<a name="411"><span class="lineNum">     411 </span><span class="lineCov">         84 :         os &lt;&lt; &quot;(x: &quot; &lt;&lt; std::setprecision(std::numeric_limits&lt;float&gt;::digits10 + 3) &lt;&lt; vec.x &lt;&lt; &quot;; y: &quot; &lt;&lt; vec.y &lt;&lt; &quot;)&quot;;</span></a>
-<a name="412"><span class="lineNum">     412 </span><span class="lineCov">         84 :         return os;</span></a>
-<a name="413"><span class="lineNum">     413 </span>            : }</a>
-<a name="414"><span class="lineNum">     414 </span>            : </a>
-<a name="415"><span class="lineNum">     415 </span>            : template &lt;typename Callback&gt;</a>
-<a name="416"><span class="lineNum">     416 </span>            : inline bool Vec2::getSegmentIntersectPoint(const Vec2&amp; A, const Vec2&amp; B, const Vec2&amp; C, const Vec2&amp; D, const Callback &amp;cb) {</a>
-<a name="417"><span class="lineNum">     417 </span>            :         float S, T;</a>
+<a name="395"><span class="lineNum">     395 </span><span class="lineCov">         25 : constexpr inline Vec2 Vec2::project(const Vec2&amp; other) const {</span></a>
+<a name="396"><span class="lineNum">     396 </span><span class="lineCov">         25 :         return other * (dot(other)/other.dot(other));</span></a>
+<a name="397"><span class="lineNum">     397 </span>            : }</a>
+<a name="398"><span class="lineNum">     398 </span>            : </a>
+<a name="399"><span class="lineNum">     399 </span>            : namespace Anchor {</a>
+<a name="400"><span class="lineNum">     400 </span>            : </a>
+<a name="401"><span class="lineNum">     401 </span>            : constexpr const Vec2 Middle(0.5f, 0.5f);</a>
+<a name="402"><span class="lineNum">     402 </span>            : constexpr const Vec2 BottomLeft(0.0f, 0.0f);</a>
+<a name="403"><span class="lineNum">     403 </span>            : constexpr const Vec2 TopLeft(0.0f, 1.0f);</a>
+<a name="404"><span class="lineNum">     404 </span>            : constexpr const Vec2 BottomRight(1.0f, 0.0f);</a>
+<a name="405"><span class="lineNum">     405 </span>            : constexpr const Vec2 TopRight(1.0f, 1.0f);</a>
+<a name="406"><span class="lineNum">     406 </span>            : constexpr const Vec2 MiddleRight(1.0f, 0.5f);</a>
+<a name="407"><span class="lineNum">     407 </span>            : constexpr const Vec2 MiddleLeft(0.0f, 0.5f);</a>
+<a name="408"><span class="lineNum">     408 </span>            : constexpr const Vec2 MiddleTop(0.5f, 1.0f);</a>
+<a name="409"><span class="lineNum">     409 </span>            : constexpr const Vec2 MiddleBottom(0.5f, 0.0f);</a>
+<a name="410"><span class="lineNum">     410 </span>            : </a>
+<a name="411"><span class="lineNum">     411 </span>            : }</a>
+<a name="412"><span class="lineNum">     412 </span>            : </a>
+<a name="413"><span class="lineNum">     413 </span>            : inline std::basic_ostream&lt;char&gt; &amp;</a>
+<a name="414"><span class="lineNum">     414 </span><span class="lineCov">       2100 : operator &lt;&lt; (std::basic_ostream&lt;char&gt; &amp; os, const Vec2 &amp; vec) {</span></a>
+<a name="415"><span class="lineNum">     415 </span><span class="lineCov">       2100 :         os &lt;&lt; &quot;(x: &quot; &lt;&lt; std::setprecision(std::numeric_limits&lt;float&gt;::digits10 + 3) &lt;&lt; vec.x &lt;&lt; &quot;; y: &quot; &lt;&lt; vec.y &lt;&lt; &quot;)&quot;;</span></a>
+<a name="416"><span class="lineNum">     416 </span><span class="lineCov">       2100 :         return os;</span></a>
+<a name="417"><span class="lineNum">     417 </span>            : }</a>
 <a name="418"><span class="lineNum">     418 </span>            : </a>
-<a name="419"><span class="lineNum">     419 </span>            :         const auto minXAB = std::min(A.x, B.x);</a>
-<a name="420"><span class="lineNum">     420 </span>            :         const auto minYAB = std::min(A.y, B.y);</a>
-<a name="421"><span class="lineNum">     421 </span>            : </a>
-<a name="422"><span class="lineNum">     422 </span>            :         const auto minXCD = std::min(C.x, D.x);</a>
-<a name="423"><span class="lineNum">     423 </span>            :         const auto minYCD = std::min(C.y, D.y);</a>
-<a name="424"><span class="lineNum">     424 </span>            : </a>
-<a name="425"><span class="lineNum">     425 </span>            :         const auto maxXAB = std::max(A.x, B.x);</a>
-<a name="426"><span class="lineNum">     426 </span>            :         const auto maxYAB = std::max(A.y, B.y);</a>
-<a name="427"><span class="lineNum">     427 </span>            : </a>
-<a name="428"><span class="lineNum">     428 </span>            :         const auto internalBoxWidth = (maxXAB - minXAB) - (minXCD - minXAB);</a>
-<a name="429"><span class="lineNum">     429 </span>            :         const auto internalBoxheight = (maxYAB - minYAB) - (minYCD - minYAB);</a>
-<a name="430"><span class="lineNum">     430 </span>            : </a>
-<a name="431"><span class="lineNum">     431 </span>            :         if (internalBoxWidth &gt; 0.0f &amp;&amp; internalBoxheight &gt; 0.0f) {</a>
-<a name="432"><span class="lineNum">     432 </span>            :                 if (isLineIntersect(A, B, C, D, &amp;S, &amp;T )&amp;&amp; (S &gt; 0.0f &amp;&amp; S &lt; 1.0f &amp;&amp; T &gt; 0.0f &amp;&amp; T &lt; 1.0f)) {</a>
-<a name="433"><span class="lineNum">     433 </span>            :                         // Vec2 of intersection</a>
-<a name="434"><span class="lineNum">     434 </span>            :                         cb(Vec2(A.x + S * (B.x - A.x), A.y + S * (B.y - A.y)), S, T);</a>
-<a name="435"><span class="lineNum">     435 </span>            :                         return true;</a>
-<a name="436"><span class="lineNum">     436 </span>            :                 }</a>
-<a name="437"><span class="lineNum">     437 </span>            :         }</a>
-<a name="438"><span class="lineNum">     438 </span>            : </a>
-<a name="439"><span class="lineNum">     439 </span>            :         return false;</a>
-<a name="440"><span class="lineNum">     440 </span>            : }</a>
-<a name="441"><span class="lineNum">     441 </span>            : </a>
-<a name="442"><span class="lineNum">     442 </span><span class="lineCov">     116493 : inline bool Vec2::isCounterClockwise(const Vec2 &amp;u, const Vec2 &amp;v, const Vec2 &amp;w) {</span></a>
-<a name="443"><span class="lineNum">     443 </span><span class="lineCov">     116493 :         return (u.x * (v.y - w.y) + v.x * (w.y - u.y) + w.x * (u.y - v.y)) &gt;= 0;</span></a>
+<a name="419"><span class="lineNum">     419 </span>            : template &lt;typename Callback&gt;</a>
+<a name="420"><span class="lineNum">     420 </span>            : inline bool Vec2::getSegmentIntersectPoint(const Vec2&amp; A, const Vec2&amp; B, const Vec2&amp; C, const Vec2&amp; D, const Callback &amp;cb) {</a>
+<a name="421"><span class="lineNum">     421 </span>            :         float S, T;</a>
+<a name="422"><span class="lineNum">     422 </span>            : </a>
+<a name="423"><span class="lineNum">     423 </span>            :         const auto minXAB = std::min(A.x, B.x);</a>
+<a name="424"><span class="lineNum">     424 </span>            :         const auto minYAB = std::min(A.y, B.y);</a>
+<a name="425"><span class="lineNum">     425 </span>            : </a>
+<a name="426"><span class="lineNum">     426 </span>            :         const auto minXCD = std::min(C.x, D.x);</a>
+<a name="427"><span class="lineNum">     427 </span>            :         const auto minYCD = std::min(C.y, D.y);</a>
+<a name="428"><span class="lineNum">     428 </span>            : </a>
+<a name="429"><span class="lineNum">     429 </span>            :         const auto maxXAB = std::max(A.x, B.x);</a>
+<a name="430"><span class="lineNum">     430 </span>            :         const auto maxYAB = std::max(A.y, B.y);</a>
+<a name="431"><span class="lineNum">     431 </span>            : </a>
+<a name="432"><span class="lineNum">     432 </span>            :         const auto internalBoxWidth = (maxXAB - minXAB) - (minXCD - minXAB);</a>
+<a name="433"><span class="lineNum">     433 </span>            :         const auto internalBoxheight = (maxYAB - minYAB) - (minYCD - minYAB);</a>
+<a name="434"><span class="lineNum">     434 </span>            : </a>
+<a name="435"><span class="lineNum">     435 </span>            :         if (internalBoxWidth &gt; 0.0f &amp;&amp; internalBoxheight &gt; 0.0f) {</a>
+<a name="436"><span class="lineNum">     436 </span>            :                 if (isLineIntersect(A, B, C, D, &amp;S, &amp;T )&amp;&amp; (S &gt; 0.0f &amp;&amp; S &lt; 1.0f &amp;&amp; T &gt; 0.0f &amp;&amp; T &lt; 1.0f)) {</a>
+<a name="437"><span class="lineNum">     437 </span>            :                         // Vec2 of intersection</a>
+<a name="438"><span class="lineNum">     438 </span>            :                         cb(Vec2(A.x + S * (B.x - A.x), A.y + S * (B.y - A.y)), S, T);</a>
+<a name="439"><span class="lineNum">     439 </span>            :                         return true;</a>
+<a name="440"><span class="lineNum">     440 </span>            :                 }</a>
+<a name="441"><span class="lineNum">     441 </span>            :         }</a>
+<a name="442"><span class="lineNum">     442 </span>            : </a>
+<a name="443"><span class="lineNum">     443 </span>            :         return false;</a>
 <a name="444"><span class="lineNum">     444 </span>            : }</a>
 <a name="445"><span class="lineNum">     445 </span>            : </a>
-<a name="446"><span class="lineNum">     446 </span>            : }</a>
-<a name="447"><span class="lineNum">     447 </span>            : </a>
-<a name="448"><span class="lineNum">     448 </span>            : #endif /* STAPPLER_GEOM_SPVEC2_H_ */</a>
+<a name="446"><span class="lineNum">     446 </span><span class="lineCov">    3893519 : inline bool Vec2::isCounterClockwise(const Vec2 &amp;u, const Vec2 &amp;v, const Vec2 &amp;w) {</span></a>
+<a name="447"><span class="lineNum">     447 </span><span class="lineCov">    3893519 :         return (u.x * (v.y - w.y) + v.x * (w.y - u.y) + w.x * (u.y - v.y)) &gt;= 0;</span></a>
+<a name="448"><span class="lineNum">     448 </span>            : }</a>
+<a name="449"><span class="lineNum">     449 </span>            : </a>
+<a name="450"><span class="lineNum">     450 </span>            : }</a>
+<a name="451"><span class="lineNum">     451 </span>            : </a>
+<a name="452"><span class="lineNum">     452 </span>            : #endif /* STAPPLER_GEOM_SPVEC2_H_ */</a>
 </pre>
       </td>
     </tr>

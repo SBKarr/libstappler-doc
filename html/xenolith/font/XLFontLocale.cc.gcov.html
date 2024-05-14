@@ -31,18 +31,18 @@
             <td class="headerValue">coverage.info</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntry">66</td>
+            <td class="headerCovTableEntry">327</td>
             <td class="headerCovTableEntry">328</td>
-            <td class="headerCovTableEntryLo">20.1 %</td>
+            <td class="headerCovTableEntryHi">99.7 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2023-12-03 02:10:58</td>
+            <td class="headerValue">2024-05-12 00:16:13</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntry">5</td>
-            <td class="headerCovTableEntry">47</td>
-            <td class="headerCovTableEntryLo">10.6 %</td>
+            <td class="headerCovTableEntry">49</td>
+            <td class="headerCovTableEntry">49</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
           </tr>
           <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
         </table>
@@ -84,7 +84,7 @@
 <a name="22"><span class="lineNum">      22 </span>            : </a>
 <a name="23"><span class="lineNum">      23 </span>            : #include &quot;XLFontLocale.h&quot;</a>
 <a name="24"><span class="lineNum">      24 </span>            : </a>
-<a name="25"><span class="lineNum">      25 </span>            : namespace stappler::xenolith::locale {</a>
+<a name="25"><span class="lineNum">      25 </span>            : namespace STAPPLER_VERSIONIZED stappler::xenolith::locale {</a>
 <a name="26"><span class="lineNum">      26 </span>            : </a>
 <a name="27"><span class="lineNum">      27 </span>            : class LocaleManager {</a>
 <a name="28"><span class="lineNum">      28 </span>            : public:</a>
@@ -98,389 +98,389 @@
 <a name="36"><span class="lineNum">      36 </span>            : </a>
 <a name="37"><span class="lineNum">      37 </span>            :         static LocaleManager *s_sharedInstance;</a>
 <a name="38"><span class="lineNum">      38 </span>            : </a>
-<a name="39"><span class="lineNum">      39 </span><span class="lineCov">        228 :         static LocaleManager *getInstance() {</span></a>
-<a name="40"><span class="lineNum">      40 </span><span class="lineCov">        228 :                 if (!s_sharedInstance) {</span></a>
-<a name="41"><span class="lineNum">      41 </span><span class="lineCov">          1 :                         auto p = memory::pool::createTagged(nullptr, &quot;LocaleManager&quot;);</span></a>
-<a name="42"><span class="lineNum">      42 </span><span class="lineCov">          1 :                         memory::pool::push(p);</span></a>
-<a name="43"><span class="lineNum">      43 </span><span class="lineCov">          1 :                         s_sharedInstance = new LocaleManager(p);</span></a>
-<a name="44"><span class="lineNum">      44 </span><span class="lineCov">          1 :                         memory::pool::pop();</span></a>
+<a name="39"><span class="lineNum">      39 </span><span class="lineCov">      12171 :         static LocaleManager *getInstance() {</span></a>
+<a name="40"><span class="lineNum">      40 </span><span class="lineCov">      12171 :                 if (!s_sharedInstance) {</span></a>
+<a name="41"><span class="lineNum">      41 </span><span class="lineCov">         12 :                         auto p = memory::pool::createTagged(nullptr, &quot;LocaleManager&quot;);</span></a>
+<a name="42"><span class="lineNum">      42 </span><span class="lineCov">         12 :                         memory::pool::push(p);</span></a>
+<a name="43"><span class="lineNum">      43 </span><span class="lineCov">         12 :                         s_sharedInstance = new LocaleManager(p);</span></a>
+<a name="44"><span class="lineNum">      44 </span><span class="lineCov">         12 :                         memory::pool::pop();</span></a>
 <a name="45"><span class="lineNum">      45 </span>            :                 }</a>
-<a name="46"><span class="lineNum">      46 </span><span class="lineCov">        228 :                 return s_sharedInstance;</span></a>
+<a name="46"><span class="lineNum">      46 </span><span class="lineCov">      12171 :                 return s_sharedInstance;</span></a>
 <a name="47"><span class="lineNum">      47 </span>            :         }</a>
 <a name="48"><span class="lineNum">      48 </span>            : </a>
-<a name="49"><span class="lineNum">      49 </span><span class="lineCov">          1 :         LocaleManager(memory::pool_t *p) : _defaultTime{</span></a>
+<a name="49"><span class="lineNum">      49 </span><span class="lineCov">         12 :         LocaleManager(memory::pool_t *p) : _defaultTime{</span></a>
 <a name="50"><span class="lineNum">      50 </span>            :                 &quot;today&quot;,</a>
 <a name="51"><span class="lineNum">      51 </span>            :                 &quot;yesterday&quot;,</a>
 <a name="52"><span class="lineNum">      52 </span>            :                 &quot;jan&quot;, &quot;feb&quot;, &quot;mar&quot;, &quot;apr&quot;, &quot;may&quot;, &quot;jun&quot;,</a>
 <a name="53"><span class="lineNum">      53 </span>            :                 &quot;jul&quot;, &quot;aug&quot;, &quot;sep&quot;, &quot;oct&quot;, &quot;nov&quot;, &quot;dec&quot;</a>
-<a name="54"><span class="lineNum">      54 </span><span class="lineCov">          1 :         }, _pool(p) {</span></a>
-<a name="55"><span class="lineNum">      55 </span><span class="lineCov">         17 :                 define(&quot;ru-ru&quot;, {</span></a>
-<a name="56"><span class="lineNum">      56 </span><span class="lineCov">          1 :                         pair(&quot;SystemSearch&quot;, &quot;Найти&quot;),</span></a>
-<a name="57"><span class="lineNum">      57 </span><span class="lineCov">          1 :                         pair(&quot;SystemFontSize&quot;, &quot;Размер шрифта&quot;),</span></a>
-<a name="58"><span class="lineNum">      58 </span><span class="lineCov">          1 :                         pair(&quot;SystemTheme&quot;, &quot;Оформление&quot;),</span></a>
-<a name="59"><span class="lineNum">      59 </span><span class="lineCov">          1 :                         pair(&quot;SystemThemeLight&quot;, &quot;Светлая тема&quot;),</span></a>
-<a name="60"><span class="lineNum">      60 </span><span class="lineCov">          1 :                         pair(&quot;SystemThemeNeutral&quot;, &quot;Нейтральная тема&quot;),</span></a>
-<a name="61"><span class="lineNum">      61 </span><span class="lineCov">          1 :                         pair(&quot;SystemThemeDark&quot;, &quot;Темная тема&quot;),</span></a>
-<a name="62"><span class="lineNum">      62 </span><span class="lineCov">          1 :                         pair(&quot;SystemMore&quot;, &quot;Ещё&quot;),</span></a>
-<a name="63"><span class="lineNum">      63 </span><span class="lineCov">          1 :                         pair(&quot;SystemRestore&quot;, &quot;Восстановить&quot;),</span></a>
-<a name="64"><span class="lineNum">      64 </span><span class="lineCov">          1 :                         pair(&quot;SystemRemoved&quot;, &quot;Удалено&quot;),</span></a>
-<a name="65"><span class="lineNum">      65 </span><span class="lineCov">          1 :                         pair(&quot;SystemCopy&quot;, &quot;Копировать&quot;),</span></a>
-<a name="66"><span class="lineNum">      66 </span><span class="lineCov">          1 :                         pair(&quot;SystemCut&quot;, &quot;Вырезать&quot;),</span></a>
-<a name="67"><span class="lineNum">      67 </span><span class="lineCov">          1 :                         pair(&quot;SystemPaste&quot;, &quot;Вставить&quot;),</span></a>
-<a name="68"><span class="lineNum">      68 </span><span class="lineCov">          1 :                         pair(&quot;SystemTapExit&quot;, &quot;Нажмите ещё раз для выхода&quot;),</span></a>
+<a name="54"><span class="lineNum">      54 </span><span class="lineCov">         12 :         }, _pool(p) {</span></a>
+<a name="55"><span class="lineNum">      55 </span><span class="lineCov">        204 :                 define(&quot;ru-ru&quot;, {</span></a>
+<a name="56"><span class="lineNum">      56 </span><span class="lineCov">         12 :                         pair(&quot;SystemSearch&quot;, &quot;Найти&quot;),</span></a>
+<a name="57"><span class="lineNum">      57 </span><span class="lineCov">         12 :                         pair(&quot;SystemFontSize&quot;, &quot;Размер шрифта&quot;),</span></a>
+<a name="58"><span class="lineNum">      58 </span><span class="lineCov">         12 :                         pair(&quot;SystemTheme&quot;, &quot;Оформление&quot;),</span></a>
+<a name="59"><span class="lineNum">      59 </span><span class="lineCov">         12 :                         pair(&quot;SystemThemeLight&quot;, &quot;Светлая тема&quot;),</span></a>
+<a name="60"><span class="lineNum">      60 </span><span class="lineCov">         12 :                         pair(&quot;SystemThemeNeutral&quot;, &quot;Нейтральная тема&quot;),</span></a>
+<a name="61"><span class="lineNum">      61 </span><span class="lineCov">         12 :                         pair(&quot;SystemThemeDark&quot;, &quot;Темная тема&quot;),</span></a>
+<a name="62"><span class="lineNum">      62 </span><span class="lineCov">         12 :                         pair(&quot;SystemMore&quot;, &quot;Ещё&quot;),</span></a>
+<a name="63"><span class="lineNum">      63 </span><span class="lineCov">         12 :                         pair(&quot;SystemRestore&quot;, &quot;Восстановить&quot;),</span></a>
+<a name="64"><span class="lineNum">      64 </span><span class="lineCov">         12 :                         pair(&quot;SystemRemoved&quot;, &quot;Удалено&quot;),</span></a>
+<a name="65"><span class="lineNum">      65 </span><span class="lineCov">         12 :                         pair(&quot;SystemCopy&quot;, &quot;Копировать&quot;),</span></a>
+<a name="66"><span class="lineNum">      66 </span><span class="lineCov">         12 :                         pair(&quot;SystemCut&quot;, &quot;Вырезать&quot;),</span></a>
+<a name="67"><span class="lineNum">      67 </span><span class="lineCov">         12 :                         pair(&quot;SystemPaste&quot;, &quot;Вставить&quot;),</span></a>
+<a name="68"><span class="lineNum">      68 </span><span class="lineCov">         12 :                         pair(&quot;SystemTapExit&quot;, &quot;Нажмите ещё раз для выхода&quot;),</span></a>
 <a name="69"><span class="lineNum">      69 </span>            : </a>
-<a name="70"><span class="lineNum">      70 </span><span class="lineCov">          1 :                         pair(&quot;SystemErrorOverflowChars&quot;, &quot;Слишком много символов&quot;),</span></a>
-<a name="71"><span class="lineNum">      71 </span><span class="lineCov">          1 :                         pair(&quot;SystemErrorInvalidChar&quot;, &quot;Недопустимый символ&quot;),</span></a>
+<a name="70"><span class="lineNum">      70 </span><span class="lineCov">         12 :                         pair(&quot;SystemErrorOverflowChars&quot;, &quot;Слишком много символов&quot;),</span></a>
+<a name="71"><span class="lineNum">      71 </span><span class="lineCov">         12 :                         pair(&quot;SystemErrorInvalidChar&quot;, &quot;Недопустимый символ&quot;),</span></a>
 <a name="72"><span class="lineNum">      72 </span>            : </a>
-<a name="73"><span class="lineNum">      73 </span><span class="lineCov">          1 :                         pair(&quot;Shortcut:Megabytes&quot;, &quot;Мб&quot;),</span></a>
-<a name="74"><span class="lineNum">      74 </span><span class="lineCov">          1 :                         pair(&quot;Shortcut:Pages&quot;, &quot;с&quot;),</span></a>
+<a name="73"><span class="lineNum">      73 </span><span class="lineCov">         12 :                         pair(&quot;Shortcut:Megabytes&quot;, &quot;Мб&quot;),</span></a>
+<a name="74"><span class="lineNum">      74 </span><span class="lineCov">         12 :                         pair(&quot;Shortcut:Pages&quot;, &quot;с&quot;),</span></a>
 <a name="75"><span class="lineNum">      75 </span>            :                 });</a>
 <a name="76"><span class="lineNum">      76 </span>            : </a>
-<a name="77"><span class="lineNum">      77 </span><span class="lineCov">         17 :                 define(&quot;en-us&quot;, {</span></a>
-<a name="78"><span class="lineNum">      78 </span><span class="lineCov">          1 :                         pair(&quot;SystemSearch&quot;, &quot;Search&quot;),</span></a>
-<a name="79"><span class="lineNum">      79 </span><span class="lineCov">          1 :                         pair(&quot;SystemFontSize&quot;, &quot;Font size&quot;),</span></a>
-<a name="80"><span class="lineNum">      80 </span><span class="lineCov">          1 :                         pair(&quot;SystemTheme&quot;, &quot;Theme&quot;),</span></a>
-<a name="81"><span class="lineNum">      81 </span><span class="lineCov">          1 :                         pair(&quot;SystemThemeLight&quot;, &quot;Light theme&quot;),</span></a>
-<a name="82"><span class="lineNum">      82 </span><span class="lineCov">          1 :                         pair(&quot;SystemThemeNeutral&quot;, &quot;Neutral theme&quot;),</span></a>
-<a name="83"><span class="lineNum">      83 </span><span class="lineCov">          1 :                         pair(&quot;SystemThemeDark&quot;, &quot;Dark theme&quot;),</span></a>
-<a name="84"><span class="lineNum">      84 </span><span class="lineCov">          1 :                         pair(&quot;SystemMore&quot;, &quot;More&quot;),</span></a>
-<a name="85"><span class="lineNum">      85 </span><span class="lineCov">          1 :                         pair(&quot;SystemRestore&quot;, &quot;Restore&quot;),</span></a>
-<a name="86"><span class="lineNum">      86 </span><span class="lineCov">          1 :                         pair(&quot;SystemRemoved&quot;, &quot;Removed&quot;),</span></a>
-<a name="87"><span class="lineNum">      87 </span><span class="lineCov">          1 :                         pair(&quot;SystemCopy&quot;, &quot;Copy&quot;),</span></a>
-<a name="88"><span class="lineNum">      88 </span><span class="lineCov">          1 :                         pair(&quot;SystemCut&quot;, &quot;Cut&quot;),</span></a>
-<a name="89"><span class="lineNum">      89 </span><span class="lineCov">          1 :                         pair(&quot;SystemPaste&quot;, &quot;Paste&quot;),</span></a>
-<a name="90"><span class="lineNum">      90 </span><span class="lineCov">          1 :                         pair(&quot;SystemTapExit&quot;, &quot;Tap one more time to exit&quot;),</span></a>
+<a name="77"><span class="lineNum">      77 </span><span class="lineCov">        204 :                 define(&quot;en-us&quot;, {</span></a>
+<a name="78"><span class="lineNum">      78 </span><span class="lineCov">         12 :                         pair(&quot;SystemSearch&quot;, &quot;Search&quot;),</span></a>
+<a name="79"><span class="lineNum">      79 </span><span class="lineCov">         12 :                         pair(&quot;SystemFontSize&quot;, &quot;Font size&quot;),</span></a>
+<a name="80"><span class="lineNum">      80 </span><span class="lineCov">         12 :                         pair(&quot;SystemTheme&quot;, &quot;Theme&quot;),</span></a>
+<a name="81"><span class="lineNum">      81 </span><span class="lineCov">         12 :                         pair(&quot;SystemThemeLight&quot;, &quot;Light theme&quot;),</span></a>
+<a name="82"><span class="lineNum">      82 </span><span class="lineCov">         12 :                         pair(&quot;SystemThemeNeutral&quot;, &quot;Neutral theme&quot;),</span></a>
+<a name="83"><span class="lineNum">      83 </span><span class="lineCov">         12 :                         pair(&quot;SystemThemeDark&quot;, &quot;Dark theme&quot;),</span></a>
+<a name="84"><span class="lineNum">      84 </span><span class="lineCov">         12 :                         pair(&quot;SystemMore&quot;, &quot;More&quot;),</span></a>
+<a name="85"><span class="lineNum">      85 </span><span class="lineCov">         12 :                         pair(&quot;SystemRestore&quot;, &quot;Restore&quot;),</span></a>
+<a name="86"><span class="lineNum">      86 </span><span class="lineCov">         12 :                         pair(&quot;SystemRemoved&quot;, &quot;Removed&quot;),</span></a>
+<a name="87"><span class="lineNum">      87 </span><span class="lineCov">         12 :                         pair(&quot;SystemCopy&quot;, &quot;Copy&quot;),</span></a>
+<a name="88"><span class="lineNum">      88 </span><span class="lineCov">         12 :                         pair(&quot;SystemCut&quot;, &quot;Cut&quot;),</span></a>
+<a name="89"><span class="lineNum">      89 </span><span class="lineCov">         12 :                         pair(&quot;SystemPaste&quot;, &quot;Paste&quot;),</span></a>
+<a name="90"><span class="lineNum">      90 </span><span class="lineCov">         12 :                         pair(&quot;SystemTapExit&quot;, &quot;Tap one more time to exit&quot;),</span></a>
 <a name="91"><span class="lineNum">      91 </span>            : </a>
-<a name="92"><span class="lineNum">      92 </span><span class="lineCov">          1 :                         pair(&quot;SystemErrorOverflowChars&quot;, &quot;Too many characters&quot;),</span></a>
-<a name="93"><span class="lineNum">      93 </span><span class="lineCov">          1 :                         pair(&quot;SystemErrorInvalidChar&quot;, &quot;Invalid character&quot;),</span></a>
+<a name="92"><span class="lineNum">      92 </span><span class="lineCov">         12 :                         pair(&quot;SystemErrorOverflowChars&quot;, &quot;Too many characters&quot;),</span></a>
+<a name="93"><span class="lineNum">      93 </span><span class="lineCov">         12 :                         pair(&quot;SystemErrorInvalidChar&quot;, &quot;Invalid character&quot;),</span></a>
 <a name="94"><span class="lineNum">      94 </span>            : </a>
-<a name="95"><span class="lineNum">      95 </span><span class="lineCov">          1 :                         pair(&quot;Shortcut:Megabytes&quot;, &quot;Mb&quot;),</span></a>
-<a name="96"><span class="lineNum">      96 </span><span class="lineCov">          1 :                         pair(&quot;Shortcut:Pages&quot;, &quot;p&quot;),</span></a>
+<a name="95"><span class="lineNum">      95 </span><span class="lineCov">         12 :                         pair(&quot;Shortcut:Megabytes&quot;, &quot;Mb&quot;),</span></a>
+<a name="96"><span class="lineNum">      96 </span><span class="lineCov">         12 :                         pair(&quot;Shortcut:Pages&quot;, &quot;p&quot;),</span></a>
 <a name="97"><span class="lineNum">      97 </span>            :                 });</a>
-<a name="98"><span class="lineNum">      98 </span><span class="lineCov">          1 :         }</span></a>
+<a name="98"><span class="lineNum">      98 </span><span class="lineCov">         12 :         }</span></a>
 <a name="99"><span class="lineNum">      99 </span>            : </a>
-<a name="100"><span class="lineNum">     100 </span><span class="lineCov">          2 :         void define(const StringView &amp;locale, LocaleInitList &amp;&amp;init) {</span></a>
-<a name="101"><span class="lineNum">     101 </span><span class="lineCov">          2 :                 memory::pool::push(_pool);</span></a>
-<a name="102"><span class="lineNum">     102 </span><span class="lineCov">          2 :                 auto it = _strings.find(locale);</span></a>
-<a name="103"><span class="lineNum">     103 </span><span class="lineCov">          2 :                 if (it == _strings.end()) {</span></a>
-<a name="104"><span class="lineNum">     104 </span><span class="lineCov">          2 :                         it = _strings.emplace(locale.str&lt;Interface&gt;(), StringMap()).first;</span></a>
+<a name="100"><span class="lineNum">     100 </span><span class="lineCov">         48 :         void define(const StringView &amp;locale, LocaleInitList &amp;&amp;init) {</span></a>
+<a name="101"><span class="lineNum">     101 </span><span class="lineCov">         48 :                 memory::pool::push(_pool);</span></a>
+<a name="102"><span class="lineNum">     102 </span><span class="lineCov">         48 :                 auto it = _strings.find(locale);</span></a>
+<a name="103"><span class="lineNum">     103 </span><span class="lineCov">         48 :                 if (it == _strings.end()) {</span></a>
+<a name="104"><span class="lineNum">     104 </span><span class="lineCov">         24 :                         it = _strings.emplace(locale.str&lt;Interface&gt;(), StringMap()).first;</span></a>
 <a name="105"><span class="lineNum">     105 </span>            :                 }</a>
-<a name="106"><span class="lineNum">     106 </span><span class="lineCov">         36 :                 for (auto &amp;iit : init) {</span></a>
-<a name="107"><span class="lineNum">     107 </span><span class="lineCov">         34 :                         it-&gt;second.emplace(string::toUtf16&lt;Interface&gt;(iit.first), string::toUtf16&lt;Interface&gt;(iit.second));</span></a>
+<a name="106"><span class="lineNum">     106 </span><span class="lineCov">        768 :                 for (auto &amp;iit : init) {</span></a>
+<a name="107"><span class="lineNum">     107 </span><span class="lineCov">        720 :                         it-&gt;second.emplace(string::toUtf16&lt;Interface&gt;(iit.first), string::toUtf16&lt;Interface&gt;(iit.second));</span></a>
 <a name="108"><span class="lineNum">     108 </span>            :                 }</a>
-<a name="109"><span class="lineNum">     109 </span><span class="lineCov">          2 :                 memory::pool::pop();</span></a>
-<a name="110"><span class="lineNum">     110 </span><span class="lineCov">          2 :         }</span></a>
+<a name="109"><span class="lineNum">     109 </span><span class="lineCov">         48 :                 memory::pool::pop();</span></a>
+<a name="110"><span class="lineNum">     110 </span><span class="lineCov">         48 :         }</span></a>
 <a name="111"><span class="lineNum">     111 </span>            : </a>
-<a name="112"><span class="lineNum">     112 </span><span class="lineNoCov">          0 :         void define(const StringView &amp;locale, LocaleIndexList &amp;&amp;init) {</span></a>
-<a name="113"><span class="lineNum">     113 </span><span class="lineNoCov">          0 :                 memory::pool::push(_pool);</span></a>
-<a name="114"><span class="lineNum">     114 </span><span class="lineNoCov">          0 :                 auto it = _indexes.find(locale);</span></a>
-<a name="115"><span class="lineNum">     115 </span><span class="lineNoCov">          0 :                 if (it == _indexes.end()) {</span></a>
-<a name="116"><span class="lineNum">     116 </span><span class="lineNoCov">          0 :                         it = _indexes.emplace(locale.str&lt;Interface&gt;(), StringIndexMap()).first;</span></a>
+<a name="112"><span class="lineNum">     112 </span><span class="lineCov">         24 :         void define(const StringView &amp;locale, LocaleIndexList &amp;&amp;init) {</span></a>
+<a name="113"><span class="lineNum">     113 </span><span class="lineCov">         24 :                 memory::pool::push(_pool);</span></a>
+<a name="114"><span class="lineNum">     114 </span><span class="lineCov">         24 :                 auto it = _indexes.find(locale);</span></a>
+<a name="115"><span class="lineNum">     115 </span><span class="lineCov">         24 :                 if (it == _indexes.end()) {</span></a>
+<a name="116"><span class="lineNum">     116 </span><span class="lineCov">         24 :                         it = _indexes.emplace(locale.str&lt;Interface&gt;(), StringIndexMap()).first;</span></a>
 <a name="117"><span class="lineNum">     117 </span>            :                 }</a>
-<a name="118"><span class="lineNum">     118 </span><span class="lineNoCov">          0 :                 for (auto &amp;iit : init) {</span></a>
-<a name="119"><span class="lineNum">     119 </span><span class="lineNoCov">          0 :                         it-&gt;second.emplace(iit.first, string::toUtf16&lt;Interface&gt;(iit.second));</span></a>
+<a name="118"><span class="lineNum">     118 </span><span class="lineCov">        288 :                 for (auto &amp;iit : init) {</span></a>
+<a name="119"><span class="lineNum">     119 </span><span class="lineCov">        264 :                         it-&gt;second.emplace(iit.first, string::toUtf16&lt;Interface&gt;(iit.second));</span></a>
 <a name="120"><span class="lineNum">     120 </span>            :                 }</a>
-<a name="121"><span class="lineNum">     121 </span><span class="lineNoCov">          0 :                 memory::pool::pop();</span></a>
-<a name="122"><span class="lineNum">     122 </span><span class="lineNoCov">          0 :         }</span></a>
+<a name="121"><span class="lineNum">     121 </span><span class="lineCov">         24 :                 memory::pool::pop();</span></a>
+<a name="122"><span class="lineNum">     122 </span><span class="lineCov">         24 :         }</span></a>
 <a name="123"><span class="lineNum">     123 </span>            : </a>
-<a name="124"><span class="lineNum">     124 </span><span class="lineNoCov">          0 :         void define(const StringView &amp;locale, const std::array&lt;StringView, toInt(TimeTokens::Max)&gt; &amp;arr) {</span></a>
-<a name="125"><span class="lineNum">     125 </span><span class="lineNoCov">          0 :                 memory::pool::push(_pool);</span></a>
-<a name="126"><span class="lineNum">     126 </span><span class="lineNoCov">          0 :                 auto it = _timeTokens.find(locale);</span></a>
-<a name="127"><span class="lineNum">     127 </span><span class="lineNoCov">          0 :                 if (it == _timeTokens.end()) {</span></a>
-<a name="128"><span class="lineNum">     128 </span><span class="lineNoCov">          0 :                         it = _timeTokens.emplace(locale.str&lt;Interface&gt;(), std::array&lt;memory::string, toInt(TimeTokens::Max)&gt;()).first;</span></a>
+<a name="124"><span class="lineNum">     124 </span><span class="lineCov">         24 :         void define(const StringView &amp;locale, const std::array&lt;StringView, toInt(TimeTokens::Max)&gt; &amp;arr) {</span></a>
+<a name="125"><span class="lineNum">     125 </span><span class="lineCov">         24 :                 memory::pool::push(_pool);</span></a>
+<a name="126"><span class="lineNum">     126 </span><span class="lineCov">         24 :                 auto it = _timeTokens.find(locale);</span></a>
+<a name="127"><span class="lineNum">     127 </span><span class="lineCov">         24 :                 if (it == _timeTokens.end()) {</span></a>
+<a name="128"><span class="lineNum">     128 </span><span class="lineCov">         24 :                         it = _timeTokens.emplace(locale.str&lt;Interface&gt;(), std::array&lt;memory::string, toInt(TimeTokens::Max)&gt;()).first;</span></a>
 <a name="129"><span class="lineNum">     129 </span>            :                 }</a>
 <a name="130"><span class="lineNum">     130 </span>            : </a>
-<a name="131"><span class="lineNum">     131 </span><span class="lineNoCov">          0 :                 size_t i = 0;</span></a>
-<a name="132"><span class="lineNum">     132 </span><span class="lineNoCov">          0 :                 for (auto &amp;arr_it : arr) {</span></a>
-<a name="133"><span class="lineNum">     133 </span><span class="lineNoCov">          0 :                         it-&gt;second[i] = arr_it.str&lt;Interface&gt;();</span></a>
-<a name="134"><span class="lineNum">     134 </span><span class="lineNoCov">          0 :                         ++ i;</span></a>
+<a name="131"><span class="lineNum">     131 </span><span class="lineCov">         24 :                 size_t i = 0;</span></a>
+<a name="132"><span class="lineNum">     132 </span><span class="lineCov">        360 :                 for (auto &amp;arr_it : arr) {</span></a>
+<a name="133"><span class="lineNum">     133 </span><span class="lineCov">        336 :                         it-&gt;second[i] = arr_it.str&lt;Interface&gt;();</span></a>
+<a name="134"><span class="lineNum">     134 </span><span class="lineCov">        336 :                         ++ i;</span></a>
 <a name="135"><span class="lineNum">     135 </span>            :                 }</a>
-<a name="136"><span class="lineNum">     136 </span><span class="lineNoCov">          0 :                 memory::pool::pop();</span></a>
-<a name="137"><span class="lineNum">     137 </span><span class="lineNoCov">          0 :         }</span></a>
+<a name="136"><span class="lineNum">     136 </span><span class="lineCov">         24 :                 memory::pool::pop();</span></a>
+<a name="137"><span class="lineNum">     137 </span><span class="lineCov">         24 :         }</span></a>
 <a name="138"><span class="lineNum">     138 </span>            : </a>
-<a name="139"><span class="lineNum">     139 </span><span class="lineNoCov">          0 :         WideStringView string(const WideStringView &amp;str) {</span></a>
-<a name="140"><span class="lineNum">     140 </span><span class="lineNoCov">          0 :                 auto it = _strings.find(StringView(_locale));</span></a>
-<a name="141"><span class="lineNum">     141 </span><span class="lineNoCov">          0 :                 if (it == _strings.end()) {</span></a>
-<a name="142"><span class="lineNum">     142 </span><span class="lineNoCov">          0 :                         it = _strings.find(StringView(_default));</span></a>
+<a name="139"><span class="lineNum">     139 </span><span class="lineCov">       1021 :         WideStringView string(const WideStringView &amp;str) {</span></a>
+<a name="140"><span class="lineNum">     140 </span><span class="lineCov">       1021 :                 auto it = _strings.find(StringView(_locale));</span></a>
+<a name="141"><span class="lineNum">     141 </span><span class="lineCov">       1021 :                 if (it == _strings.end()) {</span></a>
+<a name="142"><span class="lineNum">     142 </span><span class="lineCov">        793 :                         it = _strings.find(StringView(_default));</span></a>
 <a name="143"><span class="lineNum">     143 </span>            :                 }</a>
-<a name="144"><span class="lineNum">     144 </span><span class="lineNoCov">          0 :                 if (it == _strings.end()) {</span></a>
-<a name="145"><span class="lineNum">     145 </span><span class="lineNoCov">          0 :                         it = _strings.begin();</span></a>
+<a name="144"><span class="lineNum">     144 </span><span class="lineCov">       1021 :                 if (it == _strings.end()) {</span></a>
+<a name="145"><span class="lineNum">     145 </span><span class="lineCov">        793 :                         it = _strings.begin();</span></a>
 <a name="146"><span class="lineNum">     146 </span>            :                 }</a>
 <a name="147"><span class="lineNum">     147 </span>            : </a>
-<a name="148"><span class="lineNum">     148 </span><span class="lineNoCov">          0 :                 if (it != _strings.end()) {</span></a>
-<a name="149"><span class="lineNum">     149 </span><span class="lineNoCov">          0 :                         auto sit = it-&gt;second.find(str);</span></a>
-<a name="150"><span class="lineNum">     150 </span><span class="lineNoCov">          0 :                         if (sit != it-&gt;second.end()) {</span></a>
-<a name="151"><span class="lineNum">     151 </span><span class="lineNoCov">          0 :                                 return sit-&gt;second;</span></a>
+<a name="148"><span class="lineNum">     148 </span><span class="lineCov">       1021 :                 if (it != _strings.end()) {</span></a>
+<a name="149"><span class="lineNum">     149 </span><span class="lineCov">       1021 :                         auto sit = it-&gt;second.find(str);</span></a>
+<a name="150"><span class="lineNum">     150 </span><span class="lineCov">       1021 :                         if (sit != it-&gt;second.end()) {</span></a>
+<a name="151"><span class="lineNum">     151 </span><span class="lineCov">        180 :                                 return sit-&gt;second;</span></a>
 <a name="152"><span class="lineNum">     152 </span>            :                         }</a>
 <a name="153"><span class="lineNum">     153 </span>            :                 }</a>
 <a name="154"><span class="lineNum">     154 </span>            : </a>
-<a name="155"><span class="lineNum">     155 </span><span class="lineNoCov">          0 :                 return WideStringView();</span></a>
+<a name="155"><span class="lineNum">     155 </span><span class="lineCov">        841 :                 return WideStringView();</span></a>
 <a name="156"><span class="lineNum">     156 </span>            :         }</a>
 <a name="157"><span class="lineNum">     157 </span>            : </a>
-<a name="158"><span class="lineNum">     158 </span><span class="lineNoCov">          0 :         WideStringView string(size_t index) {</span></a>
-<a name="159"><span class="lineNum">     159 </span><span class="lineNoCov">          0 :                 auto it = _indexes.find(StringView(_locale));</span></a>
-<a name="160"><span class="lineNum">     160 </span><span class="lineNoCov">          0 :                 if (it == _indexes.end()) {</span></a>
-<a name="161"><span class="lineNum">     161 </span><span class="lineNoCov">          0 :                         it = _indexes.find(StringView(_default));</span></a>
+<a name="158"><span class="lineNum">     158 </span><span class="lineCov">         55 :         WideStringView string(size_t index) {</span></a>
+<a name="159"><span class="lineNum">     159 </span><span class="lineCov">         55 :                 auto it = _indexes.find(StringView(_locale));</span></a>
+<a name="160"><span class="lineNum">     160 </span><span class="lineCov">         55 :                 if (it == _indexes.end()) {</span></a>
+<a name="161"><span class="lineNum">     161 </span><span class="lineCov">         19 :                         it = _indexes.find(StringView(_default));</span></a>
 <a name="162"><span class="lineNum">     162 </span>            :                 }</a>
-<a name="163"><span class="lineNum">     163 </span><span class="lineNoCov">          0 :                 if (it == _indexes.end()) {</span></a>
-<a name="164"><span class="lineNum">     164 </span><span class="lineNoCov">          0 :                         it = _indexes.begin();</span></a>
+<a name="163"><span class="lineNum">     163 </span><span class="lineCov">         55 :                 if (it == _indexes.end()) {</span></a>
+<a name="164"><span class="lineNum">     164 </span><span class="lineCov">         19 :                         it = _indexes.begin();</span></a>
 <a name="165"><span class="lineNum">     165 </span>            :                 }</a>
 <a name="166"><span class="lineNum">     166 </span>            : </a>
-<a name="167"><span class="lineNum">     167 </span><span class="lineNoCov">          0 :                 if (it != _indexes.end()) {</span></a>
-<a name="168"><span class="lineNum">     168 </span><span class="lineNoCov">          0 :                         auto sit = it-&gt;second.find(index);</span></a>
-<a name="169"><span class="lineNum">     169 </span><span class="lineNoCov">          0 :                         if (sit != it-&gt;second.end()) {</span></a>
-<a name="170"><span class="lineNum">     170 </span><span class="lineNoCov">          0 :                                 return sit-&gt;second;</span></a>
+<a name="167"><span class="lineNum">     167 </span><span class="lineCov">         55 :                 if (it != _indexes.end()) {</span></a>
+<a name="168"><span class="lineNum">     168 </span><span class="lineCov">         48 :                         auto sit = it-&gt;second.find(index);</span></a>
+<a name="169"><span class="lineNum">     169 </span><span class="lineCov">         48 :                         if (sit != it-&gt;second.end()) {</span></a>
+<a name="170"><span class="lineNum">     170 </span><span class="lineCov">         36 :                                 return sit-&gt;second;</span></a>
 <a name="171"><span class="lineNum">     171 </span>            :                         }</a>
 <a name="172"><span class="lineNum">     172 </span>            :                 }</a>
 <a name="173"><span class="lineNum">     173 </span>            : </a>
-<a name="174"><span class="lineNum">     174 </span><span class="lineNoCov">          0 :                 return WideStringView();</span></a>
+<a name="174"><span class="lineNum">     174 </span><span class="lineCov">         19 :                 return WideStringView();</span></a>
 <a name="175"><span class="lineNum">     175 </span>            :         }</a>
 <a name="176"><span class="lineNum">     176 </span>            : </a>
-<a name="177"><span class="lineNum">     177 </span><span class="lineNoCov">          0 :         WideStringView numeric(const WideStringView &amp;str, int64_t num) {</span></a>
-<a name="178"><span class="lineNum">     178 </span><span class="lineNoCov">          0 :                 auto ruleIt = _numRules.find(StringView(_locale));</span></a>
-<a name="179"><span class="lineNum">     179 </span><span class="lineNoCov">          0 :                 if (ruleIt == _numRules.end()) {</span></a>
-<a name="180"><span class="lineNum">     180 </span><span class="lineNoCov">          0 :                         return string(str);</span></a>
+<a name="177"><span class="lineNum">     177 </span><span class="lineCov">        144 :         WideStringView numeric(const WideStringView &amp;str, uint32_t num) {</span></a>
+<a name="178"><span class="lineNum">     178 </span><span class="lineCov">        144 :                 auto ruleIt = _numRules.find(StringView(_locale));</span></a>
+<a name="179"><span class="lineNum">     179 </span><span class="lineCov">        144 :                 if (ruleIt == _numRules.end()) {</span></a>
+<a name="180"><span class="lineNum">     180 </span><span class="lineCov">         48 :                         return string(str);</span></a>
 <a name="181"><span class="lineNum">     181 </span>            :                 } else {</a>
-<a name="182"><span class="lineNum">     182 </span><span class="lineNoCov">          0 :                         uint8_t numEq = ruleIt-&gt;second(num);</span></a>
-<a name="183"><span class="lineNum">     183 </span><span class="lineNoCov">          0 :                         auto fmt = string(str);</span></a>
-<a name="184"><span class="lineNum">     184 </span><span class="lineNoCov">          0 :                         WideStringView r(fmt);</span></a>
-<a name="185"><span class="lineNum">     185 </span><span class="lineNoCov">          0 :                         WideStringView def = r.readUntil&lt;WideStringView::Chars&lt;':'&gt;&gt;();</span></a>
-<a name="186"><span class="lineNum">     186 </span><span class="lineNoCov">          0 :                         if (r.empty() || numEq == 0) {</span></a>
-<a name="187"><span class="lineNum">     187 </span><span class="lineNoCov">          0 :                                 return def;</span></a>
+<a name="182"><span class="lineNum">     182 </span><span class="lineCov">         96 :                         uint8_t numEq = ruleIt-&gt;second(num);</span></a>
+<a name="183"><span class="lineNum">     183 </span><span class="lineCov">         96 :                         auto fmt = string(str);</span></a>
+<a name="184"><span class="lineNum">     184 </span><span class="lineCov">         96 :                         WideStringView r(fmt);</span></a>
+<a name="185"><span class="lineNum">     185 </span><span class="lineCov">         96 :                         WideStringView def = r.readUntil&lt;WideStringView::Chars&lt;':'&gt;&gt;();</span></a>
+<a name="186"><span class="lineNum">     186 </span><span class="lineCov">         96 :                         if (r.empty() || numEq == 0) {</span></a>
+<a name="187"><span class="lineNum">     187 </span><span class="lineCov">         60 :                                 return def;</span></a>
 <a name="188"><span class="lineNum">     188 </span>            :                         }</a>
 <a name="189"><span class="lineNum">     189 </span>            : </a>
-<a name="190"><span class="lineNum">     190 </span><span class="lineNoCov">          0 :                         while (!r.empty()) {</span></a>
-<a name="191"><span class="lineNum">     191 </span><span class="lineNoCov">          0 :                                 if (r.is(':')) {</span></a>
-<a name="192"><span class="lineNum">     192 </span><span class="lineNoCov">          0 :                                         ++ r;</span></a>
+<a name="190"><span class="lineNum">     190 </span><span class="lineCov">         72 :                         while (!r.empty()) {</span></a>
+<a name="191"><span class="lineNum">     191 </span><span class="lineCov">         60 :                                 if (r.is(':')) {</span></a>
+<a name="192"><span class="lineNum">     192 </span><span class="lineCov">         60 :                                         ++ r;</span></a>
 <a name="193"><span class="lineNum">     193 </span>            :                                 }</a>
 <a name="194"><span class="lineNum">     194 </span>            : </a>
-<a name="195"><span class="lineNum">     195 </span><span class="lineNoCov">          0 :                                 WideStringView res = r.readUntil&lt;WideStringView::Chars&lt;':'&gt;&gt;();</span></a>
-<a name="196"><span class="lineNum">     196 </span><span class="lineNoCov">          0 :                                 if (numEq == 1) {</span></a>
-<a name="197"><span class="lineNum">     197 </span><span class="lineNoCov">          0 :                                         return res;</span></a>
+<a name="195"><span class="lineNum">     195 </span><span class="lineCov">         60 :                                 WideStringView res = r.readUntil&lt;WideStringView::Chars&lt;':'&gt;&gt;();</span></a>
+<a name="196"><span class="lineNum">     196 </span><span class="lineCov">         60 :                                 if (numEq == 1) {</span></a>
+<a name="197"><span class="lineNum">     197 </span><span class="lineCov">         24 :                                         return res;</span></a>
 <a name="198"><span class="lineNum">     198 </span>            :                                 } else {</a>
-<a name="199"><span class="lineNum">     199 </span><span class="lineNoCov">          0 :                                         -- numEq;</span></a>
+<a name="199"><span class="lineNum">     199 </span><span class="lineCov">         36 :                                         -- numEq;</span></a>
 <a name="200"><span class="lineNum">     200 </span>            :                                 }</a>
 <a name="201"><span class="lineNum">     201 </span>            :                         }</a>
 <a name="202"><span class="lineNum">     202 </span>            : </a>
-<a name="203"><span class="lineNum">     203 </span><span class="lineNoCov">          0 :                         return def;</span></a>
+<a name="203"><span class="lineNum">     203 </span><span class="lineCov">         12 :                         return def;</span></a>
 <a name="204"><span class="lineNum">     204 </span>            :                 }</a>
 <a name="205"><span class="lineNum">     205 </span>            :         }</a>
 <a name="206"><span class="lineNum">     206 </span>            : </a>
-<a name="207"><span class="lineNum">     207 </span><span class="lineNoCov">          0 :         void setDefault(const String &amp;def) {</span></a>
-<a name="208"><span class="lineNum">     208 </span><span class="lineNoCov">          0 :                 _default = def;</span></a>
-<a name="209"><span class="lineNum">     209 </span><span class="lineNoCov">          0 :         }</span></a>
-<a name="210"><span class="lineNum">     210 </span><span class="lineNoCov">          0 :         const String &amp;getDefault() {</span></a>
-<a name="211"><span class="lineNum">     211 </span><span class="lineNoCov">          0 :                 return _default;</span></a>
+<a name="207"><span class="lineNum">     207 </span><span class="lineCov">         12 :         void setDefault(const String &amp;def) {</span></a>
+<a name="208"><span class="lineNum">     208 </span><span class="lineCov">         12 :                 _default = def;</span></a>
+<a name="209"><span class="lineNum">     209 </span><span class="lineCov">         12 :         }</span></a>
+<a name="210"><span class="lineNum">     210 </span><span class="lineCov">         12 :         const String &amp;getDefault() {</span></a>
+<a name="211"><span class="lineNum">     211 </span><span class="lineCov">         12 :                 return _default;</span></a>
 <a name="212"><span class="lineNum">     212 </span>            :         }</a>
 <a name="213"><span class="lineNum">     213 </span>            : </a>
-<a name="214"><span class="lineNum">     214 </span><span class="lineNoCov">          0 :         void setLocale(const String &amp;loc) {</span></a>
-<a name="215"><span class="lineNum">     215 </span><span class="lineNoCov">          0 :                 if (_locale != loc) {</span></a>
-<a name="216"><span class="lineNum">     216 </span><span class="lineNoCov">          0 :                         _locale = loc;</span></a>
-<a name="217"><span class="lineNum">     217 </span><span class="lineNoCov">          0 :                         onLocale(nullptr, loc);</span></a>
+<a name="214"><span class="lineNum">     214 </span><span class="lineCov">         12 :         void setLocale(const String &amp;loc) {</span></a>
+<a name="215"><span class="lineNum">     215 </span><span class="lineCov">         12 :                 if (_locale != loc) {</span></a>
+<a name="216"><span class="lineNum">     216 </span><span class="lineCov">         12 :                         _locale = loc;</span></a>
+<a name="217"><span class="lineNum">     217 </span><span class="lineCov">         12 :                         onLocale(nullptr, loc);</span></a>
 <a name="218"><span class="lineNum">     218 </span>            :                 }</a>
-<a name="219"><span class="lineNum">     219 </span><span class="lineNoCov">          0 :         }</span></a>
-<a name="220"><span class="lineNum">     220 </span><span class="lineNoCov">          0 :         const String &amp;getLocale() {</span></a>
-<a name="221"><span class="lineNum">     221 </span><span class="lineNoCov">          0 :                 return _locale;</span></a>
+<a name="219"><span class="lineNum">     219 </span><span class="lineCov">         12 :         }</span></a>
+<a name="220"><span class="lineNum">     220 </span><span class="lineCov">         12 :         const String &amp;getLocale() {</span></a>
+<a name="221"><span class="lineNum">     221 </span><span class="lineCov">         12 :                 return _locale;</span></a>
 <a name="222"><span class="lineNum">     222 </span>            :         }</a>
 <a name="223"><span class="lineNum">     223 </span>            : </a>
-<a name="224"><span class="lineNum">     224 </span><span class="lineNoCov">          0 :         void setNumRule(const StringView &amp;locale, const NumRule &amp;rule) {</span></a>
-<a name="225"><span class="lineNum">     225 </span><span class="lineNoCov">          0 :                 _numRules.emplace(locale.str&lt;Interface&gt;(), rule);</span></a>
-<a name="226"><span class="lineNum">     226 </span><span class="lineNoCov">          0 :         }</span></a>
+<a name="224"><span class="lineNum">     224 </span><span class="lineCov">         24 :         void setNumRule(const StringView &amp;locale, const NumRule &amp;rule) {</span></a>
+<a name="225"><span class="lineNum">     225 </span><span class="lineCov">         24 :                 _numRules.emplace(locale.str&lt;Interface&gt;(), rule);</span></a>
+<a name="226"><span class="lineNum">     226 </span><span class="lineCov">         24 :         }</span></a>
 <a name="227"><span class="lineNum">     227 </span>            : </a>
-<a name="228"><span class="lineNum">     228 </span><span class="lineCov">        228 :         bool hasLocaleTagsFast(WideStringView r) {</span></a>
-<a name="229"><span class="lineNum">     229 </span><span class="lineCov">        228 :                 if (r.empty()) {</span></a>
-<a name="230"><span class="lineNum">     230 </span><span class="lineNoCov">          0 :                         return false;</span></a>
+<a name="228"><span class="lineNum">     228 </span><span class="lineCov">       8834 :         bool hasLocaleTagsFast(WideStringView r) {</span></a>
+<a name="229"><span class="lineNum">     229 </span><span class="lineCov">       8834 :                 if (r.empty()) {</span></a>
+<a name="230"><span class="lineNum">     230 </span><span class="lineCov">         24 :                         return false;</span></a>
 <a name="231"><span class="lineNum">     231 </span>            :                 }</a>
 <a name="232"><span class="lineNum">     232 </span>            : </a>
-<a name="233"><span class="lineNum">     233 </span><span class="lineCov">        228 :                 if (r.is(u&quot;@Locale:&quot;)) { // raw locale string</span></a>
-<a name="234"><span class="lineNum">     234 </span><span class="lineNoCov">          0 :                         return true;</span></a>
-<a name="235"><span class="lineNum">     235 </span><span class="lineCov">        228 :                 } else if (r.is(u&quot;%=&quot;)) {</span></a>
-<a name="236"><span class="lineNum">     236 </span><span class="lineNoCov">          0 :                         r += 2;</span></a>
-<a name="237"><span class="lineNum">     237 </span><span class="lineNoCov">          0 :                         auto tmp = r.readChars&lt;WideStringView::CharGroup&lt;CharGroupId::Numbers&gt;&gt;();</span></a>
-<a name="238"><span class="lineNum">     238 </span><span class="lineNoCov">          0 :                         if (!tmp.empty() &amp;&amp; r.is('%')) {</span></a>
-<a name="239"><span class="lineNum">     239 </span><span class="lineNoCov">          0 :                                 return true;</span></a>
+<a name="233"><span class="lineNum">     233 </span><span class="lineCov">       8810 :                 if (r.is(u&quot;@Locale:&quot;)) { // raw locale string</span></a>
+<a name="234"><span class="lineNum">     234 </span><span class="lineCov">         12 :                         return true;</span></a>
+<a name="235"><span class="lineNum">     235 </span><span class="lineCov">       8798 :                 } else if (r.is(u&quot;%=&quot;)) {</span></a>
+<a name="236"><span class="lineNum">     236 </span><span class="lineCov">         12 :                         r += 2;</span></a>
+<a name="237"><span class="lineNum">     237 </span><span class="lineCov">         12 :                         auto tmp = r.readChars&lt;WideStringView::CharGroup&lt;CharGroupId::Numbers&gt;&gt;();</span></a>
+<a name="238"><span class="lineNum">     238 </span><span class="lineCov">         12 :                         if (!tmp.empty() &amp;&amp; r.is('%')) {</span></a>
+<a name="239"><span class="lineNum">     239 </span><span class="lineCov">         12 :                                 return true;</span></a>
 <a name="240"><span class="lineNum">     240 </span>            :                         }</a>
 <a name="241"><span class="lineNum">     241 </span>            :                 } else {</a>
-<a name="242"><span class="lineNum">     242 </span><span class="lineCov">        228 :                         constexpr size_t maxChars = config::MaxFastLocaleChars;</span></a>
-<a name="243"><span class="lineNum">     243 </span><span class="lineCov">        228 :                         WideStringView shortView(r.data(), std::min(r.size(), maxChars));</span></a>
-<a name="244"><span class="lineNum">     244 </span><span class="lineCov">        228 :                         shortView.skipUntil&lt;WideStringView::Chars&lt;'%'&gt;&gt;();</span></a>
-<a name="245"><span class="lineNum">     245 </span><span class="lineCov">        228 :                         if (shortView.is('%')) {</span></a>
-<a name="246"><span class="lineNum">     246 </span><span class="lineNoCov">          0 :                                 ++ shortView;</span></a>
-<a name="247"><span class="lineNum">     247 </span><span class="lineNoCov">          0 :                                 if (shortView.is('=')) {</span></a>
-<a name="248"><span class="lineNum">     248 </span><span class="lineNoCov">          0 :                                         ++ shortView;</span></a>
-<a name="249"><span class="lineNum">     249 </span><span class="lineNoCov">          0 :                                         shortView = WideStringView(shortView.data(), std::min(maxChars, r.size() - (shortView.data() - r.data())));</span></a>
-<a name="250"><span class="lineNum">     250 </span><span class="lineNoCov">          0 :                                         shortView.skipChars&lt;WideStringView::CharGroup&lt;CharGroupId::Numbers&gt;&gt;();</span></a>
-<a name="251"><span class="lineNum">     251 </span><span class="lineNoCov">          0 :                                         if (shortView.is('%')) {</span></a>
-<a name="252"><span class="lineNum">     252 </span><span class="lineNoCov">          0 :                                                 return true;</span></a>
+<a name="242"><span class="lineNum">     242 </span><span class="lineCov">       8786 :                         constexpr size_t maxChars = config::MaxFastLocaleChars;</span></a>
+<a name="243"><span class="lineNum">     243 </span><span class="lineCov">       8786 :                         WideStringView shortView(r.data(), std::min(r.size(), maxChars));</span></a>
+<a name="244"><span class="lineNum">     244 </span><span class="lineCov">       8786 :                         shortView.skipUntil&lt;WideStringView::Chars&lt;'%'&gt;&gt;();</span></a>
+<a name="245"><span class="lineNum">     245 </span><span class="lineCov">       8786 :                         if (shortView.is('%')) {</span></a>
+<a name="246"><span class="lineNum">     246 </span><span class="lineCov">         75 :                                 ++ shortView;</span></a>
+<a name="247"><span class="lineNum">     247 </span><span class="lineCov">         75 :                                 if (shortView.is('=')) {</span></a>
+<a name="248"><span class="lineNum">     248 </span><span class="lineCov">         24 :                                         ++ shortView;</span></a>
+<a name="249"><span class="lineNum">     249 </span><span class="lineCov">         24 :                                         shortView = WideStringView(shortView.data(), std::min(maxChars, r.size() - (shortView.data() - r.data())));</span></a>
+<a name="250"><span class="lineNum">     250 </span><span class="lineCov">         24 :                                         shortView.skipChars&lt;WideStringView::CharGroup&lt;CharGroupId::Numbers&gt;&gt;();</span></a>
+<a name="251"><span class="lineNum">     251 </span><span class="lineCov">         24 :                                         if (shortView.is('%')) {</span></a>
+<a name="252"><span class="lineNum">     252 </span><span class="lineCov">         39 :                                                 return true;</span></a>
 <a name="253"><span class="lineNum">     253 </span>            :                                         }</a>
 <a name="254"><span class="lineNum">     254 </span>            :                                 } else {</a>
-<a name="255"><span class="lineNum">     255 </span><span class="lineNoCov">          0 :                                         shortView = WideStringView(shortView.data(), std::min(maxChars, r.size() - (shortView.data() - r.data())));</span></a>
+<a name="255"><span class="lineNum">     255 </span><span class="lineCov">         51 :                                         shortView = WideStringView(shortView.data(), std::min(maxChars, r.size() - (shortView.data() - r.data())));</span></a>
 <a name="256"><span class="lineNum">     256 </span>            :                                         shortView.skipChars&lt;</a>
 <a name="257"><span class="lineNum">     257 </span>            :                                                 WideStringView::CharGroup&lt;CharGroupId::Alphanumeric&gt;,</a>
-<a name="258"><span class="lineNum">     258 </span><span class="lineNoCov">          0 :                                                 WideStringView::Chars&lt;':', '.', '-', '_', '[', ']', '+', '='&gt;&gt;();</span></a>
-<a name="259"><span class="lineNum">     259 </span><span class="lineNoCov">          0 :                                         if (shortView.is('%')) {</span></a>
-<a name="260"><span class="lineNum">     260 </span><span class="lineNoCov">          0 :                                                 return true;</span></a>
+<a name="258"><span class="lineNum">     258 </span><span class="lineCov">         51 :                                                 WideStringView::Chars&lt;':', '.', '-', '_', '[', ']', '+', '='&gt;&gt;();</span></a>
+<a name="259"><span class="lineNum">     259 </span><span class="lineCov">         51 :                                         if (shortView.is('%')) {</span></a>
+<a name="260"><span class="lineNum">     260 </span><span class="lineCov">         27 :                                                 return true;</span></a>
 <a name="261"><span class="lineNum">     261 </span>            :                                         }</a>
 <a name="262"><span class="lineNum">     262 </span>            :                                 }</a>
 <a name="263"><span class="lineNum">     263 </span>            :                         }</a>
 <a name="264"><span class="lineNum">     264 </span>            :                 }</a>
-<a name="265"><span class="lineNum">     265 </span><span class="lineCov">        228 :                 return false;</span></a>
+<a name="265"><span class="lineNum">     265 </span><span class="lineCov">       8747 :                 return false;</span></a>
 <a name="266"><span class="lineNum">     266 </span>            :         }</a>
 <a name="267"><span class="lineNum">     267 </span>            : </a>
-<a name="268"><span class="lineNum">     268 </span><span class="lineNoCov">          0 :         bool hasLocaleTags(WideStringView r) {</span></a>
-<a name="269"><span class="lineNum">     269 </span><span class="lineNoCov">          0 :                 if (r.empty()) {</span></a>
-<a name="270"><span class="lineNum">     270 </span><span class="lineNoCov">          0 :                         return false;</span></a>
+<a name="268"><span class="lineNum">     268 </span><span class="lineCov">       1908 :         bool hasLocaleTags(WideStringView r) {</span></a>
+<a name="269"><span class="lineNum">     269 </span><span class="lineCov">       1908 :                 if (r.empty()) {</span></a>
+<a name="270"><span class="lineNum">     270 </span><span class="lineCov">         12 :                         return false;</span></a>
 <a name="271"><span class="lineNum">     271 </span>            :                 }</a>
 <a name="272"><span class="lineNum">     272 </span>            : </a>
-<a name="273"><span class="lineNum">     273 </span><span class="lineNoCov">          0 :                 if (r.is(u&quot;@Locale:&quot;)) { // raw locale string</span></a>
-<a name="274"><span class="lineNum">     274 </span><span class="lineNoCov">          0 :                         return true;</span></a>
-<a name="275"><span class="lineNum">     275 </span><span class="lineNoCov">          0 :                 } else if (r.is(u&quot;%=&quot;)) {</span></a>
-<a name="276"><span class="lineNum">     276 </span><span class="lineNoCov">          0 :                         r += 2;</span></a>
-<a name="277"><span class="lineNum">     277 </span><span class="lineNoCov">          0 :                         auto tmp = r.readChars&lt;WideStringView::CharGroup&lt;CharGroupId::Numbers&gt;&gt;();</span></a>
-<a name="278"><span class="lineNum">     278 </span><span class="lineNoCov">          0 :                         if (!tmp.empty() &amp;&amp; r.is('%')) {</span></a>
-<a name="279"><span class="lineNum">     279 </span><span class="lineNoCov">          0 :                                 return true;</span></a>
+<a name="273"><span class="lineNum">     273 </span><span class="lineCov">       1896 :                 if (r.is(u&quot;@Locale:&quot;)) { // raw locale string</span></a>
+<a name="274"><span class="lineNum">     274 </span><span class="lineCov">         12 :                         return true;</span></a>
+<a name="275"><span class="lineNum">     275 </span><span class="lineCov">       1884 :                 } else if (r.is(u&quot;%=&quot;)) {</span></a>
+<a name="276"><span class="lineNum">     276 </span><span class="lineCov">         19 :                         r += 2;</span></a>
+<a name="277"><span class="lineNum">     277 </span><span class="lineCov">         19 :                         auto tmp = r.readChars&lt;WideStringView::CharGroup&lt;CharGroupId::Numbers&gt;&gt;();</span></a>
+<a name="278"><span class="lineNum">     278 </span><span class="lineCov">         19 :                         if (!tmp.empty() &amp;&amp; r.is('%')) {</span></a>
+<a name="279"><span class="lineNum">     279 </span><span class="lineCov">         19 :                                 return true;</span></a>
 <a name="280"><span class="lineNum">     280 </span>            :                         }</a>
 <a name="281"><span class="lineNum">     281 </span>            :                 } else {</a>
-<a name="282"><span class="lineNum">     282 </span><span class="lineNoCov">          0 :                         while (!r.empty()) {</span></a>
-<a name="283"><span class="lineNum">     283 </span><span class="lineNoCov">          0 :                                 r.skipUntil&lt;WideStringView::Chars&lt;'%'&gt;&gt;();</span></a>
-<a name="284"><span class="lineNum">     284 </span><span class="lineNoCov">          0 :                                 if (r.is('%')) {</span></a>
-<a name="285"><span class="lineNum">     285 </span><span class="lineNoCov">          0 :                                         ++ r;</span></a>
-<a name="286"><span class="lineNum">     286 </span><span class="lineNoCov">          0 :                                         if (r.is('=')) {</span></a>
-<a name="287"><span class="lineNum">     287 </span><span class="lineNoCov">          0 :                                                 ++ r;</span></a>
-<a name="288"><span class="lineNum">     288 </span><span class="lineNoCov">          0 :                                                 r.skipChars&lt;WideStringView::CharGroup&lt;CharGroupId::Numbers&gt;&gt;();</span></a>
-<a name="289"><span class="lineNum">     289 </span><span class="lineNoCov">          0 :                                                 if (r.is('%')) {</span></a>
-<a name="290"><span class="lineNum">     290 </span><span class="lineNoCov">          0 :                                                         return true;</span></a>
+<a name="282"><span class="lineNum">     282 </span><span class="lineCov">       3061 :                         while (!r.empty()) {</span></a>
+<a name="283"><span class="lineNum">     283 </span><span class="lineCov">       1865 :                                 r.skipUntil&lt;WideStringView::Chars&lt;'%'&gt;&gt;();</span></a>
+<a name="284"><span class="lineNum">     284 </span><span class="lineCov">       1865 :                                 if (r.is('%')) {</span></a>
+<a name="285"><span class="lineNum">     285 </span><span class="lineCov">        937 :                                         ++ r;</span></a>
+<a name="286"><span class="lineNum">     286 </span><span class="lineCov">        937 :                                         if (r.is('=')) {</span></a>
+<a name="287"><span class="lineNum">     287 </span><span class="lineCov">         24 :                                                 ++ r;</span></a>
+<a name="288"><span class="lineNum">     288 </span><span class="lineCov">         24 :                                                 r.skipChars&lt;WideStringView::CharGroup&lt;CharGroupId::Numbers&gt;&gt;();</span></a>
+<a name="289"><span class="lineNum">     289 </span><span class="lineCov">         24 :                                                 if (r.is('%')) {</span></a>
+<a name="290"><span class="lineNum">     290 </span><span class="lineCov">         12 :                                                         return true;</span></a>
 <a name="291"><span class="lineNum">     291 </span>            :                                                 }</a>
 <a name="292"><span class="lineNum">     292 </span>            :                                         } else {</a>
 <a name="293"><span class="lineNum">     293 </span>            :                                                 r.skipChars&lt;</a>
 <a name="294"><span class="lineNum">     294 </span>            :                                                         WideStringView::CharGroup&lt;CharGroupId::Alphanumeric&gt;,</a>
-<a name="295"><span class="lineNum">     295 </span><span class="lineNoCov">          0 :                                                         WideStringView::Chars&lt;':', '.', '-', '_', '[', ']', '+', '='&gt;&gt;();</span></a>
-<a name="296"><span class="lineNum">     296 </span><span class="lineNoCov">          0 :                                                 if (r.is('%')) {</span></a>
-<a name="297"><span class="lineNum">     297 </span><span class="lineNoCov">          0 :                                                         return true;</span></a>
+<a name="295"><span class="lineNum">     295 </span><span class="lineCov">        913 :                                                         WideStringView::Chars&lt;':', '.', '-', '_', '[', ']', '+', '='&gt;&gt;();</span></a>
+<a name="296"><span class="lineNum">     296 </span><span class="lineCov">        913 :                                                 if (r.is('%')) {</span></a>
+<a name="297"><span class="lineNum">     297 </span><span class="lineCov">        657 :                                                         return true;</span></a>
 <a name="298"><span class="lineNum">     298 </span>            :                                                 }</a>
 <a name="299"><span class="lineNum">     299 </span>            :                                         }</a>
 <a name="300"><span class="lineNum">     300 </span>            :                                 }</a>
 <a name="301"><span class="lineNum">     301 </span>            :                         }</a>
 <a name="302"><span class="lineNum">     302 </span>            :                 }</a>
 <a name="303"><span class="lineNum">     303 </span>            : </a>
-<a name="304"><span class="lineNum">     304 </span><span class="lineNoCov">          0 :                 return false;</span></a>
+<a name="304"><span class="lineNum">     304 </span><span class="lineCov">       1196 :                 return false;</span></a>
 <a name="305"><span class="lineNum">     305 </span>            :         }</a>
 <a name="306"><span class="lineNum">     306 </span>            : </a>
-<a name="307"><span class="lineNum">     307 </span><span class="lineNoCov">          0 :         WideString resolveLocaleTags(WideStringView r) {</span></a>
-<a name="308"><span class="lineNum">     308 </span><span class="lineNoCov">          0 :                 if (r.is(u&quot;@Locale:&quot;)) { // raw locale string</span></a>
-<a name="309"><span class="lineNum">     309 </span><span class="lineNoCov">          0 :                         r += &quot;@Locale:&quot;_len;</span></a>
-<a name="310"><span class="lineNum">     310 </span><span class="lineNoCov">          0 :                         return string(r).str&lt;memory::StandartInterface&gt;();</span></a>
+<a name="307"><span class="lineNum">     307 </span><span class="lineCov">        889 :         WideString resolveLocaleTags(WideStringView r) {</span></a>
+<a name="308"><span class="lineNum">     308 </span><span class="lineCov">        889 :                 if (r.is(u&quot;@Locale:&quot;)) { // raw locale string</span></a>
+<a name="309"><span class="lineNum">     309 </span><span class="lineCov">         12 :                         r += &quot;@Locale:&quot;_len;</span></a>
+<a name="310"><span class="lineNum">     310 </span><span class="lineCov">         24 :                         return string(r).str&lt;memory::StandartInterface&gt;();</span></a>
 <a name="311"><span class="lineNum">     311 </span>            :                 } else {</a>
-<a name="312"><span class="lineNum">     312 </span><span class="lineNoCov">          0 :                         WideString ret; ret.reserve(r.size());</span></a>
-<a name="313"><span class="lineNum">     313 </span><span class="lineNoCov">          0 :                         while (!r.empty()) {</span></a>
-<a name="314"><span class="lineNum">     314 </span><span class="lineNoCov">          0 :                                 auto tmp = r.readUntil&lt;WideStringView::Chars&lt;'%'&gt;&gt;();</span></a>
-<a name="315"><span class="lineNum">     315 </span><span class="lineNoCov">          0 :                                 ret.append(tmp.data(), tmp.size());</span></a>
-<a name="316"><span class="lineNum">     316 </span><span class="lineNoCov">          0 :                                 if (r.is('%')) {</span></a>
-<a name="317"><span class="lineNum">     317 </span><span class="lineNoCov">          0 :                                         ++ r;</span></a>
+<a name="312"><span class="lineNum">     312 </span><span class="lineCov">        877 :                         WideString ret; ret.reserve(r.size());</span></a>
+<a name="313"><span class="lineNum">     313 </span><span class="lineCov">       2595 :                         while (!r.empty()) {</span></a>
+<a name="314"><span class="lineNum">     314 </span><span class="lineCov">       1718 :                                 auto tmp = r.readUntil&lt;WideStringView::Chars&lt;'%'&gt;&gt;();</span></a>
+<a name="315"><span class="lineNum">     315 </span><span class="lineCov">       1718 :                                 ret.append(tmp.data(), tmp.size());</span></a>
+<a name="316"><span class="lineNum">     316 </span><span class="lineCov">       1718 :                                 if (r.is('%')) {</span></a>
+<a name="317"><span class="lineNum">     317 </span><span class="lineCov">        884 :                                         ++ r;</span></a>
 <a name="318"><span class="lineNum">     318 </span>            :                                         auto token = r.readChars&lt;</a>
 <a name="319"><span class="lineNum">     319 </span>            :                                                 WideStringView::CharGroup&lt;CharGroupId::Alphanumeric&gt;,</a>
-<a name="320"><span class="lineNum">     320 </span><span class="lineNoCov">          0 :                                                 WideStringView::Chars&lt;':', '.', '-', '_', '[', ']', '+', '='&gt;&gt;();</span></a>
-<a name="321"><span class="lineNum">     321 </span><span class="lineNoCov">          0 :                                         if (r.is('%')) {</span></a>
-<a name="322"><span class="lineNum">     322 </span><span class="lineNoCov">          0 :                                                 ++ r;</span></a>
-<a name="323"><span class="lineNum">     323 </span><span class="lineNoCov">          0 :                                                 WideStringView replacement;</span></a>
-<a name="324"><span class="lineNum">     324 </span><span class="lineNoCov">          0 :                                                 if (token.is('=')) {</span></a>
-<a name="325"><span class="lineNum">     325 </span><span class="lineNoCov">          0 :                                                         auto numToken = token;</span></a>
-<a name="326"><span class="lineNum">     326 </span><span class="lineNoCov">          0 :                                                         ++ numToken;</span></a>
-<a name="327"><span class="lineNum">     327 </span><span class="lineNoCov">          0 :                                                         if (numToken.is&lt;WideStringView::CharGroup&lt;CharGroupId::Numbers&gt;&gt;()) {</span></a>
-<a name="328"><span class="lineNum">     328 </span><span class="lineNoCov">          0 :                                                                 numToken.readInteger().unwrap([&amp;] (int64_t id) {</span></a>
-<a name="329"><span class="lineNum">     329 </span><span class="lineNoCov">          0 :                                                                         if (numToken.empty()) {</span></a>
-<a name="330"><span class="lineNum">     330 </span><span class="lineNoCov">          0 :                                                                                 replacement = string(size_t(id));</span></a>
+<a name="320"><span class="lineNum">     320 </span><span class="lineCov">        884 :                                                 WideStringView::Chars&lt;':', '.', '-', '_', '[', ']', '+', '='&gt;&gt;();</span></a>
+<a name="321"><span class="lineNum">     321 </span><span class="lineCov">        884 :                                         if (r.is('%')) {</span></a>
+<a name="322"><span class="lineNum">     322 </span><span class="lineCov">        860 :                                                 ++ r;</span></a>
+<a name="323"><span class="lineNum">     323 </span><span class="lineCov">        860 :                                                 WideStringView replacement;</span></a>
+<a name="324"><span class="lineNum">     324 </span><span class="lineCov">        860 :                                                 if (token.is('=')) {</span></a>
+<a name="325"><span class="lineNum">     325 </span><span class="lineCov">         31 :                                                         auto numToken = token;</span></a>
+<a name="326"><span class="lineNum">     326 </span><span class="lineCov">         31 :                                                         ++ numToken;</span></a>
+<a name="327"><span class="lineNum">     327 </span><span class="lineCov">         31 :                                                         if (numToken.is&lt;WideStringView::CharGroup&lt;CharGroupId::Numbers&gt;&gt;()) {</span></a>
+<a name="328"><span class="lineNum">     328 </span><span class="lineCov">         31 :                                                                 numToken.readInteger().unwrap([&amp;, this] (int64_t id) {</span></a>
+<a name="329"><span class="lineNum">     329 </span><span class="lineCov">         31 :                                                                         if (numToken.empty()) {</span></a>
+<a name="330"><span class="lineNum">     330 </span><span class="lineCov">         31 :                                                                                 replacement = string(size_t(id));</span></a>
 <a name="331"><span class="lineNum">     331 </span>            :                                                                         }</a>
-<a name="332"><span class="lineNum">     332 </span><span class="lineNoCov">          0 :                                                                 });</span></a>
+<a name="332"><span class="lineNum">     332 </span><span class="lineCov">         31 :                                                                 });</span></a>
 <a name="333"><span class="lineNum">     333 </span>            :                                                         }</a>
-<a name="334"><span class="lineNum">     334 </span><span class="lineNoCov">          0 :                                                 } else if (token.is(u&quot;Num:&quot;)) {</span></a>
-<a name="335"><span class="lineNum">     335 </span><span class="lineNoCov">          0 :                                                         WideStringView splitMaster(token);</span></a>
-<a name="336"><span class="lineNum">     336 </span><span class="lineNoCov">          0 :                                                         WideStringView num;</span></a>
-<a name="337"><span class="lineNum">     337 </span><span class="lineNoCov">          0 :                                                         while (!splitMaster.empty()) {</span></a>
-<a name="338"><span class="lineNum">     338 </span><span class="lineNoCov">          0 :                                                                 num = splitMaster.readUntil&lt;WideStringView::Chars&lt;':'&gt;&gt;();</span></a>
-<a name="339"><span class="lineNum">     339 </span><span class="lineNoCov">          0 :                                                                 if (splitMaster.is(':')) {</span></a>
-<a name="340"><span class="lineNum">     340 </span><span class="lineNoCov">          0 :                                                                         ++ splitMaster;</span></a>
+<a name="334"><span class="lineNum">     334 </span><span class="lineCov">        829 :                                                 } else if (token.is(u&quot;Num:&quot;)) {</span></a>
+<a name="335"><span class="lineNum">     335 </span><span class="lineCov">         36 :                                                         WideStringView splitMaster(token);</span></a>
+<a name="336"><span class="lineNum">     336 </span><span class="lineCov">         36 :                                                         WideStringView num;</span></a>
+<a name="337"><span class="lineNum">     337 </span><span class="lineCov">        144 :                                                         while (!splitMaster.empty()) {</span></a>
+<a name="338"><span class="lineNum">     338 </span><span class="lineCov">        108 :                                                                 num = splitMaster.readUntil&lt;WideStringView::Chars&lt;':'&gt;&gt;();</span></a>
+<a name="339"><span class="lineNum">     339 </span><span class="lineCov">        108 :                                                                 if (splitMaster.is(':')) {</span></a>
+<a name="340"><span class="lineNum">     340 </span><span class="lineCov">         72 :                                                                         ++ splitMaster;</span></a>
 <a name="341"><span class="lineNum">     341 </span>            :                                                                 }</a>
 <a name="342"><span class="lineNum">     342 </span>            :                                                         }</a>
 <a name="343"><span class="lineNum">     343 </span>            : </a>
-<a name="344"><span class="lineNum">     344 </span><span class="lineNoCov">          0 :                                                         if (!num.empty()) {</span></a>
-<a name="345"><span class="lineNum">     345 </span><span class="lineNoCov">          0 :                                                                 WideStringView validate(num);</span></a>
-<a name="346"><span class="lineNum">     346 </span><span class="lineNoCov">          0 :                                                                 if (validate.is('-')) {</span></a>
-<a name="347"><span class="lineNum">     347 </span><span class="lineNoCov">          0 :                                                                         ++ validate;</span></a>
+<a name="344"><span class="lineNum">     344 </span><span class="lineCov">         36 :                                                         if (!num.empty()) {</span></a>
+<a name="345"><span class="lineNum">     345 </span><span class="lineCov">         36 :                                                                 WideStringView validate(num);</span></a>
+<a name="346"><span class="lineNum">     346 </span><span class="lineCov">         36 :                                                                 if (validate.is('-')) {</span></a>
+<a name="347"><span class="lineNum">     347 </span><span class="lineCov">         12 :                                                                         ++ validate;</span></a>
 <a name="348"><span class="lineNum">     348 </span>            :                                                                 }</a>
-<a name="349"><span class="lineNum">     349 </span><span class="lineNoCov">          0 :                                                                 validate.skipChars&lt;WideStringView::CharGroup&lt;CharGroupId::Numbers&gt;&gt;();</span></a>
-<a name="350"><span class="lineNum">     350 </span><span class="lineNoCov">          0 :                                                                 if (validate.empty()) {</span></a>
-<a name="351"><span class="lineNum">     351 </span><span class="lineNoCov">          0 :                                                                         WideStringView vtoken(token.data(), token.size() - num.size() - 1);</span></a>
-<a name="352"><span class="lineNum">     352 </span><span class="lineNoCov">          0 :                                                                         num.readInteger().unwrap([&amp;] (int64_t id) {</span></a>
-<a name="353"><span class="lineNum">     353 </span><span class="lineNoCov">          0 :                                                                                 replacement = numeric(vtoken, id);</span></a>
-<a name="354"><span class="lineNum">     354 </span><span class="lineNoCov">          0 :                                                                         });</span></a>
+<a name="349"><span class="lineNum">     349 </span><span class="lineCov">         36 :                                                                 validate.skipChars&lt;WideStringView::CharGroup&lt;CharGroupId::Numbers&gt;&gt;();</span></a>
+<a name="350"><span class="lineNum">     350 </span><span class="lineCov">         36 :                                                                 if (validate.empty()) {</span></a>
+<a name="351"><span class="lineNum">     351 </span><span class="lineCov">         36 :                                                                         WideStringView vtoken(token.data(), token.size() - num.size() - 1);</span></a>
+<a name="352"><span class="lineNum">     352 </span><span class="lineCov">         36 :                                                                         num.readInteger().unwrap([&amp;, this] (int64_t id) {</span></a>
+<a name="353"><span class="lineNum">     353 </span><span class="lineCov">         36 :                                                                                 replacement = numeric(vtoken, id);</span></a>
+<a name="354"><span class="lineNum">     354 </span><span class="lineCov">         36 :                                                                         });</span></a>
 <a name="355"><span class="lineNum">     355 </span>            :                                                                 }</a>
 <a name="356"><span class="lineNum">     356 </span>            :                                                         }</a>
 <a name="357"><span class="lineNum">     357 </span>            :                                                 }</a>
 <a name="358"><span class="lineNum">     358 </span>            : </a>
-<a name="359"><span class="lineNum">     359 </span><span class="lineNoCov">          0 :                                                 if (replacement.empty() &amp;&amp; !token.is('=')) {</span></a>
-<a name="360"><span class="lineNum">     360 </span><span class="lineNoCov">          0 :                                                         replacement = string(token);</span></a>
+<a name="359"><span class="lineNum">     359 </span><span class="lineCov">        860 :                                                 if (replacement.empty() &amp;&amp; !token.is('=')) {</span></a>
+<a name="360"><span class="lineNum">     360 </span><span class="lineCov">        817 :                                                         replacement = string(token);</span></a>
 <a name="361"><span class="lineNum">     361 </span>            :                                                 }</a>
 <a name="362"><span class="lineNum">     362 </span>            : </a>
-<a name="363"><span class="lineNum">     363 </span><span class="lineNoCov">          0 :                                                 if (replacement.empty()) {</span></a>
-<a name="364"><span class="lineNum">     364 </span><span class="lineNoCov">          0 :                                                         ret.push_back(u'%');</span></a>
-<a name="365"><span class="lineNum">     365 </span><span class="lineNoCov">          0 :                                                         ret.append(token.data(), token.size());</span></a>
-<a name="366"><span class="lineNum">     366 </span><span class="lineNoCov">          0 :                                                         ret.push_back(u'%');</span></a>
+<a name="363"><span class="lineNum">     363 </span><span class="lineCov">        860 :                                                 if (replacement.empty()) {</span></a>
+<a name="364"><span class="lineNum">     364 </span><span class="lineCov">        812 :                                                         ret.push_back(u'%');</span></a>
+<a name="365"><span class="lineNum">     365 </span><span class="lineCov">        812 :                                                         ret.append(token.data(), token.size());</span></a>
+<a name="366"><span class="lineNum">     366 </span><span class="lineCov">        812 :                                                         ret.push_back(u'%');</span></a>
 <a name="367"><span class="lineNum">     367 </span>            :                                                 } else {</a>
-<a name="368"><span class="lineNum">     368 </span><span class="lineNoCov">          0 :                                                         ret.append(replacement.str&lt;memory::StandartInterface&gt;());</span></a>
+<a name="368"><span class="lineNum">     368 </span><span class="lineCov">         48 :                                                         ret.append(replacement.str&lt;memory::StandartInterface&gt;());</span></a>
 <a name="369"><span class="lineNum">     369 </span>            :                                                 }</a>
 <a name="370"><span class="lineNum">     370 </span>            :                                         } else {</a>
-<a name="371"><span class="lineNum">     371 </span><span class="lineNoCov">          0 :                                                 ret.push_back(u'%');</span></a>
-<a name="372"><span class="lineNum">     372 </span><span class="lineNoCov">          0 :                                                 ret.append(token.data(), token.size());</span></a>
+<a name="371"><span class="lineNum">     371 </span><span class="lineCov">         24 :                                                 ret.push_back(u'%');</span></a>
+<a name="372"><span class="lineNum">     372 </span><span class="lineCov">         24 :                                                 ret.append(token.data(), token.size());</span></a>
 <a name="373"><span class="lineNum">     373 </span>            :                                         }</a>
 <a name="374"><span class="lineNum">     374 </span>            :                                 }</a>
 <a name="375"><span class="lineNum">     375 </span>            :                         }</a>
-<a name="376"><span class="lineNum">     376 </span><span class="lineNoCov">          0 :                         return ret;</span></a>
-<a name="377"><span class="lineNum">     377 </span><span class="lineNoCov">          0 :                 }</span></a>
+<a name="376"><span class="lineNum">     376 </span><span class="lineCov">        877 :                         return ret;</span></a>
+<a name="377"><span class="lineNum">     377 </span><span class="lineCov">        877 :                 }</span></a>
 <a name="378"><span class="lineNum">     378 </span>            :                 return WideString();</a>
 <a name="379"><span class="lineNum">     379 </span>            :         }</a>
 <a name="380"><span class="lineNum">     380 </span>            : </a>
-<a name="381"><span class="lineNum">     381 </span><span class="lineNoCov">          0 :         String language(const String &amp;locale) {</span></a>
-<a name="382"><span class="lineNum">     382 </span><span class="lineNoCov">          0 :                 if (locale == &quot;ru-ru&quot;) {</span></a>
-<a name="383"><span class="lineNum">     383 </span><span class="lineNoCov">          0 :                         return &quot;Русский&quot;;</span></a>
-<a name="384"><span class="lineNum">     384 </span><span class="lineNoCov">          0 :                 } else if (locale.compare(0, 3, &quot;en-&quot;) == 0) {</span></a>
-<a name="385"><span class="lineNum">     385 </span><span class="lineNoCov">          0 :                         return &quot;English&quot;;</span></a>
+<a name="381"><span class="lineNum">     381 </span><span class="lineCov">         36 :         String language(const StringView &amp;locale) {</span></a>
+<a name="382"><span class="lineNum">     382 </span><span class="lineCov">         36 :                 if (locale == &quot;ru-ru&quot;) {</span></a>
+<a name="383"><span class="lineNum">     383 </span><span class="lineCov">         12 :                         return &quot;Русский&quot;;</span></a>
+<a name="384"><span class="lineNum">     384 </span><span class="lineCov">         24 :                 } else if (locale.starts_with(&quot;en-&quot;)) {</span></a>
+<a name="385"><span class="lineNum">     385 </span><span class="lineCov">         12 :                         return &quot;English&quot;;</span></a>
 <a name="386"><span class="lineNum">     386 </span>            :                 }</a>
-<a name="387"><span class="lineNum">     387 </span><span class="lineNoCov">          0 :                 return String();</span></a>
+<a name="387"><span class="lineNum">     387 </span><span class="lineCov">         12 :                 return String();</span></a>
 <a name="388"><span class="lineNum">     388 </span>            :         }</a>
 <a name="389"><span class="lineNum">     389 </span>            : </a>
-<a name="390"><span class="lineNum">     390 </span><span class="lineNoCov">          0 :         String common(const StringView &amp;locale) {</span></a>
-<a name="391"><span class="lineNum">     391 </span><span class="lineNoCov">          0 :                 String ret = string::StringTraits&lt;memory::StandartInterface&gt;::tolower(locale);</span></a>
-<a name="392"><span class="lineNum">     392 </span><span class="lineNoCov">          0 :                 if (ret.size() == 2) {</span></a>
-<a name="393"><span class="lineNum">     393 </span><span class="lineNoCov">          0 :                         if (ret == &quot;en&quot;) {</span></a>
-<a name="394"><span class="lineNum">     394 </span><span class="lineNoCov">          0 :                                 ret.reserve(5);</span></a>
-<a name="395"><span class="lineNum">     395 </span><span class="lineNoCov">          0 :                                 ret.append(&quot;-gb&quot;);</span></a>
+<a name="390"><span class="lineNum">     390 </span><span class="lineCov">         36 :         String common(const StringView &amp;locale) {</span></a>
+<a name="391"><span class="lineNum">     391 </span><span class="lineCov">         36 :                 String ret = string::StringTraits&lt;memory::StandartInterface&gt;::tolower(locale);</span></a>
+<a name="392"><span class="lineNum">     392 </span><span class="lineCov">         36 :                 if (ret.size() == 2) {</span></a>
+<a name="393"><span class="lineNum">     393 </span><span class="lineCov">         24 :                         if (ret == &quot;en&quot;) {</span></a>
+<a name="394"><span class="lineNum">     394 </span><span class="lineCov">         12 :                                 ret.reserve(5);</span></a>
+<a name="395"><span class="lineNum">     395 </span><span class="lineCov">         12 :                                 ret.append(&quot;-gb&quot;);</span></a>
 <a name="396"><span class="lineNum">     396 </span>            :                         } else {</a>
-<a name="397"><span class="lineNum">     397 </span><span class="lineNoCov">          0 :                                 ret.reserve(5);</span></a>
-<a name="398"><span class="lineNum">     398 </span><span class="lineNoCov">          0 :                                 ret.append(&quot;-&quot;).append(string::StringTraits&lt;memory::StandartInterface&gt;::tolower(locale));</span></a>
+<a name="397"><span class="lineNum">     397 </span><span class="lineCov">         12 :                                 ret.reserve(5);</span></a>
+<a name="398"><span class="lineNum">     398 </span><span class="lineCov">         12 :                                 ret.append(&quot;-&quot;).append(string::StringTraits&lt;memory::StandartInterface&gt;::tolower(locale));</span></a>
 <a name="399"><span class="lineNum">     399 </span>            :                         }</a>
 <a name="400"><span class="lineNum">     400 </span>            :                 }</a>
 <a name="401"><span class="lineNum">     401 </span>            : </a>
-<a name="402"><span class="lineNum">     402 </span><span class="lineNoCov">          0 :                 return ret;</span></a>
+<a name="402"><span class="lineNum">     402 </span><span class="lineCov">         36 :                 return ret;</span></a>
 <a name="403"><span class="lineNum">     403 </span><span class="lineNoCov">          0 :         }</span></a>
 <a name="404"><span class="lineNum">     404 </span>            : </a>
-<a name="405"><span class="lineNum">     405 </span><span class="lineNoCov">          0 :         StringView timeToken(TimeTokens tok) {</span></a>
-<a name="406"><span class="lineNum">     406 </span><span class="lineNoCov">          0 :                 auto it = _timeTokens.find(StringView(_locale));</span></a>
-<a name="407"><span class="lineNum">     407 </span><span class="lineNoCov">          0 :                 if (it == _timeTokens.end()) {</span></a>
-<a name="408"><span class="lineNum">     408 </span><span class="lineNoCov">          0 :                         it = _timeTokens.find(StringView(_default));</span></a>
+<a name="405"><span class="lineNum">     405 </span><span class="lineCov">         48 :         StringView timeToken(TimeTokens tok) {</span></a>
+<a name="406"><span class="lineNum">     406 </span><span class="lineCov">         48 :                 auto it = _timeTokens.find(StringView(_locale));</span></a>
+<a name="407"><span class="lineNum">     407 </span><span class="lineCov">         48 :                 if (it == _timeTokens.end()) {</span></a>
+<a name="408"><span class="lineNum">     408 </span><span class="lineCov">         24 :                         it = _timeTokens.find(StringView(_default));</span></a>
 <a name="409"><span class="lineNum">     409 </span>            :                 }</a>
 <a name="410"><span class="lineNum">     410 </span>            : </a>
-<a name="411"><span class="lineNum">     411 </span><span class="lineNoCov">          0 :                 auto &amp;table = it == _timeTokens.end()?_defaultTime:it-&gt;second;</span></a>
-<a name="412"><span class="lineNum">     412 </span><span class="lineNoCov">          0 :                 return table[toInt(tok)];</span></a>
+<a name="411"><span class="lineNum">     411 </span><span class="lineCov">         48 :                 auto &amp;table = it == _timeTokens.end()?_defaultTime:it-&gt;second;</span></a>
+<a name="412"><span class="lineNum">     412 </span><span class="lineCov">         48 :                 return table[toInt(tok)];</span></a>
 <a name="413"><span class="lineNum">     413 </span>            :         }</a>
 <a name="414"><span class="lineNum">     414 </span>            : </a>
-<a name="415"><span class="lineNum">     415 </span><span class="lineNoCov">          0 :         const std::array&lt;memory::string, toInt(TimeTokens::Max)&gt; &amp;timeTokenTable() {</span></a>
-<a name="416"><span class="lineNum">     416 </span><span class="lineNoCov">          0 :                 auto it = _timeTokens.find(StringView(_locale));</span></a>
-<a name="417"><span class="lineNum">     417 </span><span class="lineNoCov">          0 :                 if (it == _timeTokens.end()) {</span></a>
-<a name="418"><span class="lineNum">     418 </span><span class="lineNoCov">          0 :                         it = _timeTokens.find(StringView(_default));</span></a>
+<a name="415"><span class="lineNum">     415 </span><span class="lineCov">         96 :         const std::array&lt;memory::string, toInt(TimeTokens::Max)&gt; &amp;timeTokenTable() {</span></a>
+<a name="416"><span class="lineNum">     416 </span><span class="lineCov">         96 :                 auto it = _timeTokens.find(StringView(_locale));</span></a>
+<a name="417"><span class="lineNum">     417 </span><span class="lineCov">         96 :                 if (it == _timeTokens.end()) {</span></a>
+<a name="418"><span class="lineNum">     418 </span><span class="lineCov">         12 :                         it = _timeTokens.find(StringView(_default));</span></a>
 <a name="419"><span class="lineNum">     419 </span>            :                 }</a>
 <a name="420"><span class="lineNum">     420 </span>            : </a>
-<a name="421"><span class="lineNum">     421 </span><span class="lineNoCov">          0 :                 return it == _timeTokens.end()?_defaultTime:it-&gt;second;</span></a>
+<a name="421"><span class="lineNum">     421 </span><span class="lineCov">         96 :                 return it == _timeTokens.end()?_defaultTime:it-&gt;second;</span></a>
 <a name="422"><span class="lineNum">     422 </span>            :         }</a>
 <a name="423"><span class="lineNum">     423 </span>            : </a>
 <a name="424"><span class="lineNum">     424 </span>            : protected:</a>
@@ -500,132 +500,135 @@
 <a name="438"><span class="lineNum">     438 </span>            : </a>
 <a name="439"><span class="lineNum">     439 </span>            : EventHeader onLocale(&quot;Locale&quot;, &quot;onLocale&quot;);</a>
 <a name="440"><span class="lineNum">     440 </span>            : </a>
-<a name="441"><span class="lineNum">     441 </span><span class="lineNoCov">          0 : Initializer::Initializer(const String &amp;locale, LocaleInitList &amp;&amp; list) {</span></a>
-<a name="442"><span class="lineNum">     442 </span><span class="lineNoCov">          0 :         LocaleManager::getInstance()-&gt;define(locale, move(list));</span></a>
-<a name="443"><span class="lineNum">     443 </span><span class="lineNoCov">          0 : }</span></a>
+<a name="441"><span class="lineNum">     441 </span><span class="lineCov">         24 : void define(const StringView &amp;locale, LocaleInitList &amp;&amp;init) {</span></a>
+<a name="442"><span class="lineNum">     442 </span><span class="lineCov">         24 :         LocaleManager::getInstance()-&gt;define(locale, move(init));</span></a>
+<a name="443"><span class="lineNum">     443 </span><span class="lineCov">         24 : }</span></a>
 <a name="444"><span class="lineNum">     444 </span>            : </a>
-<a name="445"><span class="lineNum">     445 </span><span class="lineNoCov">          0 : void define(const StringView &amp;locale, LocaleInitList &amp;&amp;init) {</span></a>
-<a name="446"><span class="lineNum">     446 </span><span class="lineNoCov">          0 :         LocaleManager::getInstance()-&gt;define(locale, move(init));</span></a>
-<a name="447"><span class="lineNum">     447 </span><span class="lineNoCov">          0 : }</span></a>
+<a name="445"><span class="lineNum">     445 </span><span class="lineCov">         24 : void define(const StringView &amp;locale, LocaleIndexList &amp;&amp;init) {</span></a>
+<a name="446"><span class="lineNum">     446 </span><span class="lineCov">         24 :         LocaleManager::getInstance()-&gt;define(locale, move(init));</span></a>
+<a name="447"><span class="lineNum">     447 </span><span class="lineCov">         24 : }</span></a>
 <a name="448"><span class="lineNum">     448 </span>            : </a>
-<a name="449"><span class="lineNum">     449 </span><span class="lineNoCov">          0 : void define(const StringView &amp;locale, LocaleIndexList &amp;&amp;init) {</span></a>
-<a name="450"><span class="lineNum">     450 </span><span class="lineNoCov">          0 :         LocaleManager::getInstance()-&gt;define(locale, move(init));</span></a>
-<a name="451"><span class="lineNum">     451 </span><span class="lineNoCov">          0 : }</span></a>
+<a name="449"><span class="lineNum">     449 </span><span class="lineCov">         24 : void define(const StringView &amp;locale, const std::array&lt;StringView, toInt(TimeTokens::Max)&gt; &amp;arr) {</span></a>
+<a name="450"><span class="lineNum">     450 </span><span class="lineCov">         24 :         LocaleManager::getInstance()-&gt;define(locale, arr);</span></a>
+<a name="451"><span class="lineNum">     451 </span><span class="lineCov">         24 : }</span></a>
 <a name="452"><span class="lineNum">     452 </span>            : </a>
-<a name="453"><span class="lineNum">     453 </span><span class="lineNoCov">          0 : void define(const StringView &amp;locale, const std::array&lt;StringView, toInt(TimeTokens::Max)&gt; &amp;arr) {</span></a>
-<a name="454"><span class="lineNum">     454 </span><span class="lineNoCov">          0 :         LocaleManager::getInstance()-&gt;define(locale, arr);</span></a>
-<a name="455"><span class="lineNum">     455 </span><span class="lineNoCov">          0 : }</span></a>
+<a name="453"><span class="lineNum">     453 </span><span class="lineCov">         48 : WideStringView string(const WideStringView &amp;str) {</span></a>
+<a name="454"><span class="lineNum">     454 </span><span class="lineCov">         48 :         return LocaleManager::getInstance()-&gt;string(str);</span></a>
+<a name="455"><span class="lineNum">     455 </span>            : }</a>
 <a name="456"><span class="lineNum">     456 </span>            : </a>
-<a name="457"><span class="lineNum">     457 </span><span class="lineNoCov">          0 : WideStringView string(const WideStringView &amp;str) {</span></a>
-<a name="458"><span class="lineNum">     458 </span><span class="lineNoCov">          0 :         return LocaleManager::getInstance()-&gt;string(str);</span></a>
+<a name="457"><span class="lineNum">     457 </span><span class="lineCov">         24 : WideStringView string(size_t idx) {</span></a>
+<a name="458"><span class="lineNum">     458 </span><span class="lineCov">         24 :         return LocaleManager::getInstance()-&gt;string(idx);</span></a>
 <a name="459"><span class="lineNum">     459 </span>            : }</a>
 <a name="460"><span class="lineNum">     460 </span>            : </a>
-<a name="461"><span class="lineNum">     461 </span><span class="lineNoCov">          0 : WideStringView string(size_t idx) {</span></a>
-<a name="462"><span class="lineNum">     462 </span><span class="lineNoCov">          0 :         return LocaleManager::getInstance()-&gt;string(idx);</span></a>
+<a name="461"><span class="lineNum">     461 </span><span class="lineCov">        108 : WideStringView numeric(const WideStringView &amp;str, uint32_t num) {</span></a>
+<a name="462"><span class="lineNum">     462 </span><span class="lineCov">        108 :         return LocaleManager::getInstance()-&gt;numeric(str, num);</span></a>
 <a name="463"><span class="lineNum">     463 </span>            : }</a>
 <a name="464"><span class="lineNum">     464 </span>            : </a>
-<a name="465"><span class="lineNum">     465 </span><span class="lineNoCov">          0 : WideStringView numeric(const WideStringView &amp;str, int64_t num) {</span></a>
-<a name="466"><span class="lineNum">     466 </span><span class="lineNoCov">          0 :         return LocaleManager::getInstance()-&gt;numeric(str, num);</span></a>
-<a name="467"><span class="lineNum">     467 </span>            : }</a>
-<a name="468"><span class="lineNum">     468 </span>            : </a>
-<a name="469"><span class="lineNum">     469 </span><span class="lineNoCov">          0 : void setDefault(const String &amp;def) {</span></a>
-<a name="470"><span class="lineNum">     470 </span><span class="lineNoCov">          0 :         LocaleManager::getInstance()-&gt;setDefault(def);</span></a>
-<a name="471"><span class="lineNum">     471 </span><span class="lineNoCov">          0 : }</span></a>
-<a name="472"><span class="lineNum">     472 </span><span class="lineNoCov">          0 : const String &amp;getDefault() {</span></a>
-<a name="473"><span class="lineNum">     473 </span><span class="lineNoCov">          0 :         return LocaleManager::getInstance()-&gt;getDefault();</span></a>
-<a name="474"><span class="lineNum">     474 </span>            : }</a>
-<a name="475"><span class="lineNum">     475 </span>            : </a>
-<a name="476"><span class="lineNum">     476 </span><span class="lineNoCov">          0 : void setLocale(const String &amp;loc) {</span></a>
-<a name="477"><span class="lineNum">     477 </span><span class="lineNoCov">          0 :         LocaleManager::getInstance()-&gt;setLocale(loc);</span></a>
-<a name="478"><span class="lineNum">     478 </span><span class="lineNoCov">          0 : }</span></a>
-<a name="479"><span class="lineNum">     479 </span><span class="lineNoCov">          0 : const String &amp;getLocale() {</span></a>
-<a name="480"><span class="lineNum">     480 </span><span class="lineNoCov">          0 :         return LocaleManager::getInstance()-&gt;getLocale();</span></a>
-<a name="481"><span class="lineNum">     481 </span>            : }</a>
+<a name="465"><span class="lineNum">     465 </span><span class="lineCov">         12 : void setDefault(const String &amp;def) {</span></a>
+<a name="466"><span class="lineNum">     466 </span><span class="lineCov">         12 :         LocaleManager::getInstance()-&gt;setDefault(def);</span></a>
+<a name="467"><span class="lineNum">     467 </span><span class="lineCov">         12 : }</span></a>
+<a name="468"><span class="lineNum">     468 </span><span class="lineCov">         12 : const String &amp;getDefault() {</span></a>
+<a name="469"><span class="lineNum">     469 </span><span class="lineCov">         12 :         return LocaleManager::getInstance()-&gt;getDefault();</span></a>
+<a name="470"><span class="lineNum">     470 </span>            : }</a>
+<a name="471"><span class="lineNum">     471 </span>            : </a>
+<a name="472"><span class="lineNum">     472 </span><span class="lineCov">         12 : void setLocale(const String &amp;loc) {</span></a>
+<a name="473"><span class="lineNum">     473 </span><span class="lineCov">         12 :         LocaleManager::getInstance()-&gt;setLocale(loc);</span></a>
+<a name="474"><span class="lineNum">     474 </span><span class="lineCov">         12 : }</span></a>
+<a name="475"><span class="lineNum">     475 </span><span class="lineCov">         12 : const String &amp;getLocale() {</span></a>
+<a name="476"><span class="lineNum">     476 </span><span class="lineCov">         12 :         return LocaleManager::getInstance()-&gt;getLocale();</span></a>
+<a name="477"><span class="lineNum">     477 </span>            : }</a>
+<a name="478"><span class="lineNum">     478 </span>            : </a>
+<a name="479"><span class="lineNum">     479 </span><span class="lineCov">         24 : void setNumRule(const String &amp;locale, NumRule &amp;&amp;rule) {</span></a>
+<a name="480"><span class="lineNum">     480 </span><span class="lineCov">         24 :         LocaleManager::getInstance()-&gt;setNumRule(locale, rule);</span></a>
+<a name="481"><span class="lineNum">     481 </span><span class="lineCov">         24 : }</span></a>
 <a name="482"><span class="lineNum">     482 </span>            : </a>
-<a name="483"><span class="lineNum">     483 </span><span class="lineNoCov">          0 : void setNumRule(const String &amp;locale, const NumRule &amp;rule) {</span></a>
-<a name="484"><span class="lineNum">     484 </span><span class="lineNoCov">          0 :         LocaleManager::getInstance()-&gt;setNumRule(locale, rule);</span></a>
-<a name="485"><span class="lineNum">     485 </span><span class="lineNoCov">          0 : }</span></a>
+<a name="483"><span class="lineNum">     483 </span><span class="lineCov">       8834 : bool hasLocaleTagsFast(const WideStringView &amp;r) {</span></a>
+<a name="484"><span class="lineNum">     484 </span><span class="lineCov">       8834 :         return LocaleManager::getInstance()-&gt;hasLocaleTagsFast(r);</span></a>
+<a name="485"><span class="lineNum">     485 </span>            : }</a>
 <a name="486"><span class="lineNum">     486 </span>            : </a>
-<a name="487"><span class="lineNum">     487 </span><span class="lineCov">        228 : bool hasLocaleTagsFast(const WideStringView &amp;r) {</span></a>
-<a name="488"><span class="lineNum">     488 </span><span class="lineCov">        228 :         return LocaleManager::getInstance()-&gt;hasLocaleTagsFast(r);</span></a>
+<a name="487"><span class="lineNum">     487 </span><span class="lineCov">       1908 : bool hasLocaleTags(const WideStringView &amp;r) {</span></a>
+<a name="488"><span class="lineNum">     488 </span><span class="lineCov">       1908 :         return LocaleManager::getInstance()-&gt;hasLocaleTags(r);</span></a>
 <a name="489"><span class="lineNum">     489 </span>            : }</a>
 <a name="490"><span class="lineNum">     490 </span>            : </a>
-<a name="491"><span class="lineNum">     491 </span><span class="lineNoCov">          0 : bool hasLocaleTags(const WideStringView &amp;r) {</span></a>
-<a name="492"><span class="lineNum">     492 </span><span class="lineNoCov">          0 :         return LocaleManager::getInstance()-&gt;hasLocaleTags(r);</span></a>
+<a name="491"><span class="lineNum">     491 </span><span class="lineCov">        889 : WideString resolveLocaleTags(const WideStringView &amp;r) {</span></a>
+<a name="492"><span class="lineNum">     492 </span><span class="lineCov">        889 :         return LocaleManager::getInstance()-&gt;resolveLocaleTags(r);</span></a>
 <a name="493"><span class="lineNum">     493 </span>            : }</a>
 <a name="494"><span class="lineNum">     494 </span>            : </a>
-<a name="495"><span class="lineNum">     495 </span><span class="lineNoCov">          0 : WideString resolveLocaleTags(const WideStringView &amp;r) {</span></a>
-<a name="496"><span class="lineNum">     496 </span><span class="lineNoCov">          0 :         return LocaleManager::getInstance()-&gt;resolveLocaleTags(r);</span></a>
+<a name="495"><span class="lineNum">     495 </span><span class="lineCov">         36 : String language(const StringView &amp;locale) {</span></a>
+<a name="496"><span class="lineNum">     496 </span><span class="lineCov">         36 :         return LocaleManager::getInstance()-&gt;language(locale);</span></a>
 <a name="497"><span class="lineNum">     497 </span>            : }</a>
 <a name="498"><span class="lineNum">     498 </span>            : </a>
-<a name="499"><span class="lineNum">     499 </span><span class="lineNoCov">          0 : String language(const String &amp;locale) {</span></a>
-<a name="500"><span class="lineNum">     500 </span><span class="lineNoCov">          0 :         return LocaleManager::getInstance()-&gt;language(locale);</span></a>
+<a name="499"><span class="lineNum">     499 </span><span class="lineCov">         36 : String common(const StringView &amp;locale) {</span></a>
+<a name="500"><span class="lineNum">     500 </span><span class="lineCov">         36 :         return LocaleManager::getInstance()-&gt;common(locale);</span></a>
 <a name="501"><span class="lineNum">     501 </span>            : }</a>
 <a name="502"><span class="lineNum">     502 </span>            : </a>
-<a name="503"><span class="lineNum">     503 </span><span class="lineNoCov">          0 : String common(const String &amp;locale) {</span></a>
-<a name="504"><span class="lineNum">     504 </span><span class="lineNoCov">          0 :         return LocaleManager::getInstance()-&gt;common(locale);</span></a>
+<a name="503"><span class="lineNum">     503 </span><span class="lineCov">         48 : StringView timeToken(TimeTokens tok) {</span></a>
+<a name="504"><span class="lineNum">     504 </span><span class="lineCov">         48 :         return LocaleManager::getInstance()-&gt;timeToken(tok);</span></a>
 <a name="505"><span class="lineNum">     505 </span>            : }</a>
 <a name="506"><span class="lineNum">     506 </span>            : </a>
-<a name="507"><span class="lineNum">     507 </span><span class="lineNoCov">          0 : StringView timeToken(TimeTokens tok) {</span></a>
-<a name="508"><span class="lineNum">     508 </span><span class="lineNoCov">          0 :         return LocaleManager::getInstance()-&gt;timeToken(tok);</span></a>
+<a name="507"><span class="lineNum">     507 </span><span class="lineCov">         24 : const std::array&lt;memory::string, toInt(TimeTokens::Max)&gt; &amp;timeTokenTable() {</span></a>
+<a name="508"><span class="lineNum">     508 </span><span class="lineCov">         24 :         return LocaleManager::getInstance()-&gt;timeTokenTable();</span></a>
 <a name="509"><span class="lineNum">     509 </span>            : }</a>
 <a name="510"><span class="lineNum">     510 </span>            : </a>
-<a name="511"><span class="lineNum">     511 </span><span class="lineNoCov">          0 : static bool isToday(struct tm &amp;tm, struct tm &amp;now) {</span></a>
-<a name="512"><span class="lineNum">     512 </span><span class="lineNoCov">          0 :         return tm.tm_year == now.tm_year &amp;&amp; tm.tm_yday == now.tm_yday;</span></a>
+<a name="511"><span class="lineNum">     511 </span><span class="lineCov">        144 : static bool isToday(struct tm &amp;tm, struct tm &amp;now) {</span></a>
+<a name="512"><span class="lineNum">     512 </span><span class="lineCov">        144 :         return tm.tm_year == now.tm_year &amp;&amp; tm.tm_yday == now.tm_yday;</span></a>
 <a name="513"><span class="lineNum">     513 </span>            : }</a>
 <a name="514"><span class="lineNum">     514 </span>            : </a>
-<a name="515"><span class="lineNum">     515 </span><span class="lineNoCov">          0 : static bool isYesterday(struct tm &amp;tm, struct tm &amp;now) {</span></a>
-<a name="516"><span class="lineNum">     516 </span><span class="lineNoCov">          0 :         if (now.tm_yday &gt; 0) {</span></a>
-<a name="517"><span class="lineNum">     517 </span><span class="lineNoCov">          0 :                 return tm.tm_year == now.tm_year &amp;&amp; tm.tm_yday == now.tm_yday - 1;</span></a>
-<a name="518"><span class="lineNum">     518 </span><span class="lineNoCov">          0 :         } else if (now.tm_year &gt; 0) {</span></a>
-<a name="519"><span class="lineNum">     519 </span><span class="lineNoCov">          0 :                 if ((tm.tm_year &amp; 3) || (((tm.tm_year % 100) == 0) &amp;&amp; (((tm.tm_year % 400) != 100)))) {</span></a>
-<a name="520"><span class="lineNum">     520 </span><span class="lineNoCov">          0 :                         return tm.tm_year == now.tm_year - 1 &amp;&amp; tm.tm_yday == 354;</span></a>
-<a name="521"><span class="lineNum">     521 </span>            :                 } else {</a>
-<a name="522"><span class="lineNum">     522 </span><span class="lineNoCov">          0 :                         return tm.tm_year == now.tm_year - 1 &amp;&amp; tm.tm_yday == 355;</span></a>
-<a name="523"><span class="lineNum">     523 </span>            :                 }</a>
-<a name="524"><span class="lineNum">     524 </span>            :         }</a>
-<a name="525"><span class="lineNum">     525 </span><span class="lineNoCov">          0 :         return false;</span></a>
-<a name="526"><span class="lineNum">     526 </span>            : }</a>
+<a name="515"><span class="lineNum">     515 </span><span class="lineCov">        200 : static uint32_t getNumDaysInYear(int y) {</span></a>
+<a name="516"><span class="lineNum">     516 </span><span class="lineCov">        200 :         return ((y &amp; 3) || (((y % 100) == 0) &amp;&amp; (((y % 400) != 100)))) ? 355 : 356;</span></a>
+<a name="517"><span class="lineNum">     517 </span>            : }</a>
+<a name="518"><span class="lineNum">     518 </span>            : </a>
+<a name="519"><span class="lineNum">     519 </span><span class="lineCov">        200 : static uint32_t getYday(struct tm &amp;now, int y) {</span></a>
+<a name="520"><span class="lineNum">     520 </span><span class="lineCov">        200 :         auto ndays = getNumDaysInYear(y);</span></a>
+<a name="521"><span class="lineNum">     521 </span><span class="lineCov">        200 :         return ((now.tm_year == y) ? 0 : ndays) + now.tm_yday;</span></a>
+<a name="522"><span class="lineNum">     522 </span>            : }</a>
+<a name="523"><span class="lineNum">     523 </span>            : </a>
+<a name="524"><span class="lineNum">     524 </span><span class="lineCov">        100 : static bool isYesterday(struct tm &amp;tm, struct tm &amp;now) {</span></a>
+<a name="525"><span class="lineNum">     525 </span><span class="lineCov">        100 :         auto n1 = getYday(tm, now.tm_year);</span></a>
+<a name="526"><span class="lineNum">     526 </span><span class="lineCov">        100 :         auto n2 = getYday(now, now.tm_year);</span></a>
 <a name="527"><span class="lineNum">     527 </span>            : </a>
-<a name="528"><span class="lineNum">     528 </span><span class="lineNoCov">          0 : static void sp_localtime_r(time_t *sec_now, struct tm *tm_now) {</span></a>
-<a name="529"><span class="lineNum">     529 </span>            : #if WIN32</a>
-<a name="530"><span class="lineNum">     530 </span>            :         localtime_s(tm_now, sec_now);</a>
-<a name="531"><span class="lineNum">     531 </span>            : #else</a>
-<a name="532"><span class="lineNum">     532 </span><span class="lineNoCov">          0 :         localtime_r(sec_now, tm_now);</span></a>
-<a name="533"><span class="lineNum">     533 </span>            : #endif</a>
-<a name="534"><span class="lineNum">     534 </span><span class="lineNoCov">          0 : }</span></a>
-<a name="535"><span class="lineNum">     535 </span>            : </a>
-<a name="536"><span class="lineNum">     536 </span>            : template &lt;typename T&gt;</a>
-<a name="537"><span class="lineNum">     537 </span><span class="lineNoCov">          0 : static String localDate_impl(const std::array&lt;T, toInt(TimeTokens::Max)&gt; &amp;table, Time t) {</span></a>
-<a name="538"><span class="lineNum">     538 </span><span class="lineNoCov">          0 :         auto sec_now = time_t(Time::now().toSeconds());</span></a>
-<a name="539"><span class="lineNum">     539 </span>            :         struct tm tm_now;</a>
-<a name="540"><span class="lineNum">     540 </span><span class="lineNoCov">          0 :         sp_localtime_r(&amp;sec_now, &amp;tm_now);</span></a>
-<a name="541"><span class="lineNum">     541 </span>            : </a>
-<a name="542"><span class="lineNum">     542 </span><span class="lineNoCov">          0 :         auto sec_time = time_t(t.toSeconds());</span></a>
-<a name="543"><span class="lineNum">     543 </span>            :         struct tm tm_time;</a>
-<a name="544"><span class="lineNum">     544 </span><span class="lineNoCov">          0 :         sp_localtime_r(&amp;sec_time, &amp;tm_time);</span></a>
-<a name="545"><span class="lineNum">     545 </span>            : </a>
-<a name="546"><span class="lineNum">     546 </span><span class="lineNoCov">          0 :         if (isToday(tm_time, tm_now)) {</span></a>
-<a name="547"><span class="lineNum">     547 </span><span class="lineNoCov">          0 :                 return String(table[toInt(TimeTokens::Today)].data(), table[toInt(TimeTokens::Today)].size());</span></a>
-<a name="548"><span class="lineNum">     548 </span><span class="lineNoCov">          0 :         } else if (isYesterday(tm_time, tm_now)) {</span></a>
-<a name="549"><span class="lineNum">     549 </span><span class="lineNoCov">          0 :                 return String(table[toInt(TimeTokens::Yesterday)].data(), table[toInt(TimeTokens::Yesterday)].size());</span></a>
-<a name="550"><span class="lineNum">     550 </span>            :         }</a>
-<a name="551"><span class="lineNum">     551 </span><span class="lineNoCov">          0 :         if (tm_time.tm_year == tm_now.tm_year) {</span></a>
-<a name="552"><span class="lineNum">     552 </span><span class="lineNoCov">          0 :                 return toString(tm_time.tm_mday, &quot; &quot;, table[tm_time.tm_mon + 2]);</span></a>
-<a name="553"><span class="lineNum">     553 </span>            :         } else {</a>
-<a name="554"><span class="lineNum">     554 </span><span class="lineNoCov">          0 :                 return toString(tm_time.tm_mday, &quot; &quot;, table[tm_time.tm_mon + 2], &quot; &quot;, 1900 + tm_time.tm_year);</span></a>
-<a name="555"><span class="lineNum">     555 </span>            :         }</a>
-<a name="556"><span class="lineNum">     556 </span>            : }</a>
-<a name="557"><span class="lineNum">     557 </span>            : </a>
-<a name="558"><span class="lineNum">     558 </span><span class="lineNoCov">          0 : String localDate(Time t) {</span></a>
-<a name="559"><span class="lineNum">     559 </span><span class="lineNoCov">          0 :         return localDate_impl(LocaleManager::getInstance()-&gt;timeTokenTable(), t);</span></a>
-<a name="560"><span class="lineNum">     560 </span>            : }</a>
-<a name="561"><span class="lineNum">     561 </span>            : </a>
-<a name="562"><span class="lineNum">     562 </span><span class="lineNoCov">          0 : String localDate(const std::array&lt;StringView, toInt(TimeTokens::Max)&gt; &amp;table, Time t) {</span></a>
-<a name="563"><span class="lineNum">     563 </span><span class="lineNoCov">          0 :         return localDate_impl(table, t);</span></a>
-<a name="564"><span class="lineNum">     564 </span>            : }</a>
-<a name="565"><span class="lineNum">     565 </span>            : </a>
-<a name="566"><span class="lineNum">     566 </span>            : }</a>
+<a name="528"><span class="lineNum">     528 </span><span class="lineCov">        100 :         return n1 + 1 == n2;</span></a>
+<a name="529"><span class="lineNum">     529 </span>            : }</a>
+<a name="530"><span class="lineNum">     530 </span>            : </a>
+<a name="531"><span class="lineNum">     531 </span><span class="lineCov">        288 : static void sp_localtime_r(time_t *sec_now, struct tm *tm_now) {</span></a>
+<a name="532"><span class="lineNum">     532 </span>            : #if WIN32</a>
+<a name="533"><span class="lineNum">     533 </span>            :         localtime_s(tm_now, sec_now);</a>
+<a name="534"><span class="lineNum">     534 </span>            : #else</a>
+<a name="535"><span class="lineNum">     535 </span><span class="lineCov">        288 :         localtime_r(sec_now, tm_now);</span></a>
+<a name="536"><span class="lineNum">     536 </span>            : #endif</a>
+<a name="537"><span class="lineNum">     537 </span><span class="lineCov">        288 : }</span></a>
+<a name="538"><span class="lineNum">     538 </span>            : </a>
+<a name="539"><span class="lineNum">     539 </span>            : template &lt;typename T&gt;</a>
+<a name="540"><span class="lineNum">     540 </span><span class="lineCov">        144 : static String localDate_impl(const std::array&lt;T, toInt(TimeTokens::Max)&gt; &amp;table, Time t) {</span></a>
+<a name="541"><span class="lineNum">     541 </span><span class="lineCov">        144 :         auto sec_now = time_t(Time::now().toSeconds());</span></a>
+<a name="542"><span class="lineNum">     542 </span>            :         struct tm tm_now;</a>
+<a name="543"><span class="lineNum">     543 </span><span class="lineCov">        144 :         sp_localtime_r(&amp;sec_now, &amp;tm_now);</span></a>
+<a name="544"><span class="lineNum">     544 </span>            : </a>
+<a name="545"><span class="lineNum">     545 </span><span class="lineCov">        144 :         auto sec_time = time_t(t.toSeconds());</span></a>
+<a name="546"><span class="lineNum">     546 </span>            :         struct tm tm_time;</a>
+<a name="547"><span class="lineNum">     547 </span><span class="lineCov">        144 :         sp_localtime_r(&amp;sec_time, &amp;tm_time);</span></a>
+<a name="548"><span class="lineNum">     548 </span>            : </a>
+<a name="549"><span class="lineNum">     549 </span><span class="lineCov">        144 :         if (isToday(tm_time, tm_now)) {</span></a>
+<a name="550"><span class="lineNum">     550 </span><span class="lineCov">         88 :                 return String(table[toInt(TimeTokens::Today)].data(), table[toInt(TimeTokens::Today)].size());</span></a>
+<a name="551"><span class="lineNum">     551 </span><span class="lineCov">        100 :         } else if (isYesterday(tm_time, tm_now)) {</span></a>
+<a name="552"><span class="lineNum">     552 </span><span class="lineCov">         56 :                 return String(table[toInt(TimeTokens::Yesterday)].data(), table[toInt(TimeTokens::Yesterday)].size());</span></a>
+<a name="553"><span class="lineNum">     553 </span>            :         }</a>
+<a name="554"><span class="lineNum">     554 </span><span class="lineCov">         72 :         if (tm_time.tm_year == tm_now.tm_year) {</span></a>
+<a name="555"><span class="lineNum">     555 </span><span class="lineCov">         48 :                 return toString(tm_time.tm_mday, &quot; &quot;, table[tm_time.tm_mon + 2]);</span></a>
+<a name="556"><span class="lineNum">     556 </span>            :         } else {</a>
+<a name="557"><span class="lineNum">     557 </span><span class="lineCov">         48 :                 return toString(tm_time.tm_mday, &quot; &quot;, table[tm_time.tm_mon + 2], &quot; &quot;, 1900 + tm_time.tm_year);</span></a>
+<a name="558"><span class="lineNum">     558 </span>            :         }</a>
+<a name="559"><span class="lineNum">     559 </span>            : }</a>
+<a name="560"><span class="lineNum">     560 </span>            : </a>
+<a name="561"><span class="lineNum">     561 </span><span class="lineCov">         72 : String localDate(Time t) {</span></a>
+<a name="562"><span class="lineNum">     562 </span><span class="lineCov">         72 :         return localDate_impl(LocaleManager::getInstance()-&gt;timeTokenTable(), t);</span></a>
+<a name="563"><span class="lineNum">     563 </span>            : }</a>
+<a name="564"><span class="lineNum">     564 </span>            : </a>
+<a name="565"><span class="lineNum">     565 </span><span class="lineCov">         72 : String localDate(const std::array&lt;StringView, toInt(TimeTokens::Max)&gt; &amp;table, Time t) {</span></a>
+<a name="566"><span class="lineNum">     566 </span><span class="lineCov">         72 :         return localDate_impl(table, t);</span></a>
+<a name="567"><span class="lineNum">     567 </span>            : }</a>
+<a name="568"><span class="lineNum">     568 </span>            : </a>
+<a name="569"><span class="lineNum">     569 </span>            : }</a>
 </pre>
       </td>
     </tr>

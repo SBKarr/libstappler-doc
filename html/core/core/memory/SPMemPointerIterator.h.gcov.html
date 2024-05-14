@@ -31,18 +31,18 @@
             <td class="headerValue">coverage.info</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntry">21</td>
             <td class="headerCovTableEntry">23</td>
-            <td class="headerCovTableEntryHi">91.3 %</td>
+            <td class="headerCovTableEntry">23</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2023-12-03 02:10:58</td>
+            <td class="headerValue">2024-05-12 00:16:13</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntry">465</td>
-            <td class="headerCovTableEntry">765</td>
-            <td class="headerCovTableEntryLo">60.8 %</td>
+            <td class="headerCovTableEntry">872</td>
+            <td class="headerCovTableEntry">1029</td>
+            <td class="headerCovTableEntryMed">84.7 %</td>
           </tr>
           <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
         </table>
@@ -88,7 +88,7 @@
 <a name="26"><span class="lineNum">      26 </span>            : </a>
 <a name="27"><span class="lineNum">      27 </span>            : #include &quot;SPCore.h&quot;</a>
 <a name="28"><span class="lineNum">      28 </span>            : </a>
-<a name="29"><span class="lineNum">      29 </span>            : namespace stappler::memory {</a>
+<a name="29"><span class="lineNum">      29 </span>            : namespace STAPPLER_VERSIONIZED stappler::memory {</a>
 <a name="30"><span class="lineNum">      30 </span>            : </a>
 <a name="31"><span class="lineNum">      31 </span>            : template&lt;class Type, class Pointer, class Reference&gt;</a>
 <a name="32"><span class="lineNum">      32 </span>            : class pointer_iterator {</a>
@@ -101,35 +101,35 @@
 <a name="39"><span class="lineNum">      39 </span>            :         using difference_type = std::ptrdiff_t;</a>
 <a name="40"><span class="lineNum">      40 </span>            :         using value_type = typename std::remove_cv&lt;Type&gt;::type;</a>
 <a name="41"><span class="lineNum">      41 </span>            : </a>
-<a name="42"><span class="lineNum">      42 </span><span class="lineCov">          2 :         pointer_iterator() noexcept : current(nullptr) {}</span></a>
-<a name="43"><span class="lineNum">      43 </span><span class="lineCov">    1238868 :         pointer_iterator(const iterator &amp; other) noexcept : current(other.current) {}</span></a>
-<a name="44"><span class="lineNum">      44 </span><span class="lineCov">     514157 :         explicit pointer_iterator(pointer p) noexcept : current(p) {}</span></a>
+<a name="42"><span class="lineNum">      42 </span><span class="lineCov">       5274 :         pointer_iterator() noexcept : current(nullptr) {}</span></a>
+<a name="43"><span class="lineNum">      43 </span><span class="lineCov">  540093951 :         pointer_iterator(const iterator &amp; other) noexcept : current(other.current) {}</span></a>
+<a name="44"><span class="lineNum">      44 </span><span class="lineCov">  136809297 :         explicit pointer_iterator(pointer p) noexcept : current(p) {}</span></a>
 <a name="45"><span class="lineNum">      45 </span>            : </a>
-<a name="46"><span class="lineNum">      46 </span><span class="lineCov">       2096 :         iterator&amp; operator=(const iterator &amp;other) { current = other.current; return *this; }</span></a>
-<a name="47"><span class="lineNum">      47 </span><span class="lineCov">        389 :         bool operator==(const iterator &amp;other) const { return current == other.current; }</span></a>
-<a name="48"><span class="lineNum">      48 </span><span class="lineCov">    1058882 :         bool operator!=(const iterator &amp;other) const { return current != other.current; }</span></a>
-<a name="49"><span class="lineNum">      49 </span><span class="lineCov">          2 :         bool operator&lt;(const iterator &amp;other) const { return current &lt; other.current; }</span></a>
+<a name="46"><span class="lineNum">      46 </span><span class="lineCov">     501055 :         iterator&amp; operator=(const iterator &amp;other) { current = other.current; return *this; }</span></a>
+<a name="47"><span class="lineNum">      47 </span><span class="lineCov">     392991 :         bool operator==(const iterator &amp;other) const { return current == other.current; }</span></a>
+<a name="48"><span class="lineNum">      48 </span><span class="lineCov"> 1230310921 :         bool operator!=(const iterator &amp;other) const { return current != other.current; }</span></a>
+<a name="49"><span class="lineNum">      49 </span><span class="lineCov">       4825 :         bool operator&lt;(const iterator &amp;other) const { return current &lt; other.current; }</span></a>
 <a name="50"><span class="lineNum">      50 </span>            :         bool operator&gt;(const iterator &amp;other) const { return current &gt; other.current; }</a>
 <a name="51"><span class="lineNum">      51 </span>            :         bool operator&lt;=(const iterator &amp;other) const { return current &lt;= other.current; }</a>
 <a name="52"><span class="lineNum">      52 </span>            :         bool operator&gt;=(const iterator &amp;other) const { return current &gt;= other.current; }</a>
 <a name="53"><span class="lineNum">      53 </span>            : </a>
-<a name="54"><span class="lineNum">      54 </span><span class="lineCov">    1378622 :         iterator&amp; operator++() { ++current; return *this; }</span></a>
-<a name="55"><span class="lineNum">      55 </span><span class="lineNoCov">          0 :         iterator operator++(int) { auto tmp = *this; ++ current; return tmp; }</span></a>
-<a name="56"><span class="lineNum">      56 </span><span class="lineCov">        300 :         iterator&amp; operator--() { --current; return *this; }</span></a>
-<a name="57"><span class="lineNum">      57 </span><span class="lineNoCov">          0 :         iterator operator--(int) { auto tmp = *this; --current; return tmp; }</span></a>
-<a name="58"><span class="lineNum">      58 </span><span class="lineCov">       4249 :         iterator&amp; operator+= (size_type n) { current += n; return *this; }</span></a>
-<a name="59"><span class="lineNum">      59 </span><span class="lineCov">         98 :         iterator&amp; operator-=(size_type n) { current -= n; return *this; }</span></a>
-<a name="60"><span class="lineNum">      60 </span><span class="lineCov">     284079 :         difference_type operator-(const iterator &amp;other) const { return current - other.current; }</span></a>
+<a name="54"><span class="lineNum">      54 </span><span class="lineCov">  679325816 :         iterator&amp; operator++() { ++current; return *this; }</span></a>
+<a name="55"><span class="lineNum">      55 </span><span class="lineCov">  499001300 :         iterator operator++(int) { auto tmp = *this; ++ current; return tmp; }</span></a>
+<a name="56"><span class="lineNum">      56 </span><span class="lineCov">     275273 :         iterator&amp; operator--() { --current; return *this; }</span></a>
+<a name="57"><span class="lineNum">      57 </span><span class="lineCov">        125 :         iterator operator--(int) { auto tmp = *this; --current; return tmp; }</span></a>
+<a name="58"><span class="lineNum">      58 </span><span class="lineCov">     964337 :         iterator&amp; operator+= (size_type n) { current += n; return *this; }</span></a>
+<a name="59"><span class="lineNum">      59 </span><span class="lineCov">      33521 :         iterator&amp; operator-=(size_type n) { current -= n; return *this; }</span></a>
+<a name="60"><span class="lineNum">      60 </span><span class="lineCov">    9003714 :         difference_type operator-(const iterator &amp;other) const { return current - other.current; }</span></a>
 <a name="61"><span class="lineNum">      61 </span>            : </a>
-<a name="62"><span class="lineNum">      62 </span><span class="lineCov">    1394065 :         reference operator*() const { return *current; }</span></a>
-<a name="63"><span class="lineNum">      63 </span><span class="lineCov">        663 :         pointer operator-&gt;() const { return current; }</span></a>
+<a name="62"><span class="lineNum">      62 </span><span class="lineCov"> 1180089522 :         reference operator*() const { return *current; }</span></a>
+<a name="63"><span class="lineNum">      63 </span><span class="lineCov">     110634 :         pointer operator-&gt;() const { return current; }</span></a>
 <a name="64"><span class="lineNum">      64 </span>            :         reference operator[](size_type n) const { return *(current + n); }</a>
 <a name="65"><span class="lineNum">      65 </span>            : </a>
-<a name="66"><span class="lineNum">      66 </span><span class="lineCov">        766 :         size_type operator-(pointer p) const { return current - p; }</span></a>
+<a name="66"><span class="lineNum">      66 </span><span class="lineCov">     174555 :         size_type operator-(pointer p) const { return current - p; }</span></a>
 <a name="67"><span class="lineNum">      67 </span>            : </a>
 <a name="68"><span class="lineNum">      68 </span>            :         // const_iterator cast</a>
-<a name="69"><span class="lineNum">      69 </span><span class="lineCov">        772 :         operator pointer_iterator&lt;value_type, const value_type *, const value_type &amp;&gt; () const {</span></a>
-<a name="70"><span class="lineNum">      70 </span><span class="lineCov">        772 :                 return pointer_iterator&lt;value_type, const value_type *, const value_type &amp;&gt;(current);</span></a>
+<a name="69"><span class="lineNum">      69 </span><span class="lineCov">     174706 :         operator pointer_iterator&lt;value_type, const value_type *, const value_type &amp;&gt; () const {</span></a>
+<a name="70"><span class="lineNum">      70 </span><span class="lineCov">     174706 :                 return pointer_iterator&lt;value_type, const value_type *, const value_type &amp;&gt;(current);</span></a>
 <a name="71"><span class="lineNum">      71 </span>            :         }</a>
 <a name="72"><span class="lineNum">      72 </span>            : </a>
 <a name="73"><span class="lineNum">      73 </span>            :         //operator pointer () const { return current; }</a>
@@ -138,12 +138,12 @@
 <a name="76"><span class="lineNum">      76 </span>            :                 return iterator(it.current + n);</a>
 <a name="77"><span class="lineNum">      77 </span>            :         }</a>
 <a name="78"><span class="lineNum">      78 </span>            : </a>
-<a name="79"><span class="lineNum">      79 </span><span class="lineCov">         32 :         friend auto operator+(const iterator &amp;it, size_type n) -&gt; iterator {</span></a>
-<a name="80"><span class="lineNum">      80 </span><span class="lineCov">         32 :                 return iterator(it.current + n);</span></a>
+<a name="79"><span class="lineNum">      79 </span><span class="lineCov">       8412 :         friend auto operator+(const iterator &amp;it, size_type n) -&gt; iterator {</span></a>
+<a name="80"><span class="lineNum">      80 </span><span class="lineCov">       8412 :                 return iterator(it.current + n);</span></a>
 <a name="81"><span class="lineNum">      81 </span>            :         }</a>
 <a name="82"><span class="lineNum">      82 </span>            : </a>
-<a name="83"><span class="lineNum">      83 </span><span class="lineCov">          4 :         friend auto operator-(const iterator &amp;it, size_type n) -&gt; iterator {</span></a>
-<a name="84"><span class="lineNum">      84 </span><span class="lineCov">          4 :                 return iterator(it.current - n);</span></a>
+<a name="83"><span class="lineNum">      83 </span><span class="lineCov">        650 :         friend auto operator-(const iterator &amp;it, size_type n) -&gt; iterator {</span></a>
+<a name="84"><span class="lineNum">      84 </span><span class="lineCov">        650 :                 return iterator(it.current - n);</span></a>
 <a name="85"><span class="lineNum">      85 </span>            :         }</a>
 <a name="86"><span class="lineNum">      86 </span>            : </a>
 <a name="87"><span class="lineNum">      87 </span>            : protected:</a>

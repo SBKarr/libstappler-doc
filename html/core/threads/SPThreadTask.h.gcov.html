@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2023-12-03 02:10:58</td>
+            <td class="headerValue">2024-05-12 00:16:13</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">5</td>
@@ -89,7 +89,7 @@
 <a name="27"><span class="lineNum">      27 </span>            : #include &quot;SPMemPriorityQueue.h&quot;</a>
 <a name="28"><span class="lineNum">      28 </span>            : #include &quot;SPRef.h&quot;</a>
 <a name="29"><span class="lineNum">      29 </span>            : </a>
-<a name="30"><span class="lineNum">      30 </span>            : namespace stappler::thread {</a>
+<a name="30"><span class="lineNum">      30 </span>            : namespace STAPPLER_VERSIONIZED stappler::thread {</a>
 <a name="31"><span class="lineNum">      31 </span>            : </a>
 <a name="32"><span class="lineNum">      32 </span>            : class Task : public RefBase&lt;memory::StandartInterface&gt; {</a>
 <a name="33"><span class="lineNum">      33 </span>            : public: /* typedefs */</a>
@@ -143,19 +143,19 @@
 <a name="81"><span class="lineNum">      81 </span>            :         void setPriority(PriorityType::Type priority) { _priority = PriorityType(priority); }</a>
 <a name="82"><span class="lineNum">      82 </span>            : </a>
 <a name="83"><span class="lineNum">      83 </span>            :         /* get task priority */</a>
-<a name="84"><span class="lineNum">      84 </span><span class="lineCov">       1373 :         PriorityType getPriority() const { return _priority; }</span></a>
+<a name="84"><span class="lineNum">      84 </span><span class="lineCov">    1234559 :         PriorityType getPriority() const { return _priority; }</span></a>
 <a name="85"><span class="lineNum">      85 </span>            : </a>
-<a name="86"><span class="lineNum">      86 </span><span class="lineCov">       3452 :         void addRef(Ref *target) { _refs.emplace_back(target); }</span></a>
+<a name="86"><span class="lineNum">      86 </span><span class="lineCov">    2611341 :         void addRef(Ref *target) { _refs.emplace_back(target); }</span></a>
 <a name="87"><span class="lineNum">      87 </span>            : </a>
 <a name="88"><span class="lineNum">      88 </span>            :         /* used by task manager to set success state */</a>
-<a name="89"><span class="lineNum">      89 </span><span class="lineCov">       1372 :         void setSuccessful(bool value) { _isSuccessful = value; }</span></a>
+<a name="89"><span class="lineNum">      89 </span><span class="lineCov">    1232243 :         void setSuccessful(bool value) { _isSuccessful = value; }</span></a>
 <a name="90"><span class="lineNum">      90 </span>            : </a>
 <a name="91"><span class="lineNum">      91 </span>            :         /* if task execution was successful */</a>
-<a name="92"><span class="lineNum">      92 </span><span class="lineCov">       1461 :         bool isSuccessful() const { return _isSuccessful; }</span></a>
+<a name="92"><span class="lineNum">      92 </span><span class="lineCov">    1226577 :         bool isSuccessful() const { return _isSuccessful; }</span></a>
 <a name="93"><span class="lineNum">      93 </span>            : </a>
 <a name="94"><span class="lineNum">      94 </span>            :         const std::vector&lt;PrepareCallback&gt; &amp;getPrepareTasks() const { return _prepare; }</a>
 <a name="95"><span class="lineNum">      95 </span>            :         const std::vector&lt;ExecuteCallback&gt; &amp;getExecuteTasks() const { return _execute; }</a>
-<a name="96"><span class="lineNum">      96 </span><span class="lineCov">       1371 :         const std::vector&lt;CompleteCallback&gt; &amp;getCompleteTasks() const { return _complete; }</span></a>
+<a name="96"><span class="lineNum">      96 </span><span class="lineCov">    1032628 :         const std::vector&lt;CompleteCallback&gt; &amp;getCompleteTasks() const { return _complete; }</span></a>
 <a name="97"><span class="lineNum">      97 </span>            : </a>
 <a name="98"><span class="lineNum">      98 </span>            : public: /* overloads */</a>
 <a name="99"><span class="lineNum">      99 </span>            :         virtual bool prepare() const;</a>

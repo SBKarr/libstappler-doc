@@ -31,18 +31,18 @@
             <td class="headerValue">coverage.info</td>
             <td></td>
             <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">69</td>
             <td class="headerCovTableEntry">71</td>
-            <td class="headerCovTableEntry">71</td>
-            <td class="headerCovTableEntryHi">100.0 %</td>
+            <td class="headerCovTableEntryHi">97.2 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2023-12-03 02:10:58</td>
+            <td class="headerValue">2024-05-12 00:16:13</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntry">2156</td>
-            <td class="headerCovTableEntry">3187</td>
-            <td class="headerCovTableEntryLo">67.6 %</td>
+            <td class="headerCovTableEntry">3500</td>
+            <td class="headerCovTableEntry">4325</td>
+            <td class="headerCovTableEntryMed">80.9 %</td>
           </tr>
           <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
         </table>
@@ -93,14 +93,14 @@
 <a name="31"><span class="lineNum">      31 </span>            : #define SP_REF_DEBUG 0</a>
 <a name="32"><span class="lineNum">      32 </span>            : #endif</a>
 <a name="33"><span class="lineNum">      33 </span>            : </a>
-<a name="34"><span class="lineNum">      34 </span>            : namespace stappler {</a>
+<a name="34"><span class="lineNum">      34 </span>            : namespace STAPPLER_VERSIONIZED stappler {</a>
 <a name="35"><span class="lineNum">      35 </span>            : </a>
 <a name="36"><span class="lineNum">      36 </span>            : struct AtomicCounter {</a>
-<a name="37"><span class="lineNum">      37 </span><span class="lineCov">     184853 :         AtomicCounter() { _count.store(1); }</span></a>
+<a name="37"><span class="lineNum">      37 </span><span class="lineCov">   10051766 :         AtomicCounter() { _count.store(1); }</span></a>
 <a name="38"><span class="lineNum">      38 </span>            : </a>
-<a name="39"><span class="lineNum">      39 </span><span class="lineCov">     203760 :         void increment() { ++ _count; }</span></a>
-<a name="40"><span class="lineNum">      40 </span><span class="lineCov">     686624 :         bool decrement() { if (_count.fetch_sub(1) == 1) { return true; } return false; }</span></a>
-<a name="41"><span class="lineNum">      41 </span><span class="lineCov">        656 :         uint32_t get() const { return _count.load(); }</span></a>
+<a name="39"><span class="lineNum">      39 </span><span class="lineCov">   51565407 :         void increment() { ++ _count; }</span></a>
+<a name="40"><span class="lineNum">      40 </span><span class="lineCov">  120863898 :         bool decrement() { if (_count.fetch_sub(1) == 1) { return true; } return false; }</span></a>
+<a name="41"><span class="lineNum">      41 </span><span class="lineCov">     129068 :         uint32_t get() const { return _count.load(); }</span></a>
 <a name="42"><span class="lineNum">      42 </span>            : </a>
 <a name="43"><span class="lineNum">      43 </span>            :         std::atomic&lt;uint32_t&gt; _count;</a>
 <a name="44"><span class="lineNum">      44 </span>            : };</a>
@@ -117,16 +117,16 @@
 <a name="55"><span class="lineNum">      55 </span>            :         void foreachBacktrace(const Callback&lt;void(uint64_t, Time, const std::vector&lt;std::string&gt; &amp;)&gt; &amp;) const;</a>
 <a name="56"><span class="lineNum">      56 </span>            : </a>
 <a name="57"><span class="lineNum">      57 </span>            : #else</a>
-<a name="58"><span class="lineNum">      58 </span><span class="lineCov">     203912 :         uint64_t retain() { _counter.increment(); return 0; }</span></a>
-<a name="59"><span class="lineNum">      59 </span><span class="lineCov">     343416 :         void release(uint64_t id) { if (_counter.decrement()) { delete this; } }</span></a>
+<a name="58"><span class="lineNum">      58 </span><span class="lineCov">   51590277 :         uint64_t retain() { _counter.increment(); return 0; }</span></a>
+<a name="59"><span class="lineNum">      59 </span><span class="lineCov">   60471972 :         void release(uint64_t id) { if (_counter.decrement()) { delete this; } }</span></a>
 <a name="60"><span class="lineNum">      60 </span>            : #endif</a>
 <a name="61"><span class="lineNum">      61 </span>            : </a>
-<a name="62"><span class="lineNum">      62 </span><span class="lineCov">        328 :         uint32_t getReferenceCount() const { return _counter.get(); }</span></a>
+<a name="62"><span class="lineNum">      62 </span><span class="lineCov">      64534 :         uint32_t getReferenceCount() const { return _counter.get(); }</span></a>
 <a name="63"><span class="lineNum">      63 </span>            : </a>
-<a name="64"><span class="lineNum">      64 </span><span class="lineCov">     183351 :         virtual ~RefBase() { }</span></a>
+<a name="64"><span class="lineNum">      64 </span><span class="lineCov">   10052837 :         virtual ~RefBase() { }</span></a>
 <a name="65"><span class="lineNum">      65 </span>            : </a>
 <a name="66"><span class="lineNum">      66 </span>            : protected:</a>
-<a name="67"><span class="lineNum">      67 </span><span class="lineCov">     184856 :         RefBase() { }</span></a>
+<a name="67"><span class="lineNum">      67 </span><span class="lineCov">   10051936 :         RefBase() { }</span></a>
 <a name="68"><span class="lineNum">      68 </span>            : </a>
 <a name="69"><span class="lineNum">      69 </span>            : #if SP_REF_DEBUG</a>
 <a name="70"><span class="lineNum">      70 </span>            :         virtual bool isRetainTrackerEnabled() const {</a>
@@ -159,107 +159,107 @@
 <a name="97"><span class="lineNum">      97 </span>            :         using Pointer = Type *;</a>
 <a name="98"><span class="lineNum">      98 </span>            : </a>
 <a name="99"><span class="lineNum">      99 </span>            :         template &lt;class... Args&gt;</a>
-<a name="100"><span class="lineNum">     100 </span><span class="lineCov">      48900 :         static inline Self create(Args &amp;&amp; ... args) {</span></a>
-<a name="101"><span class="lineNum">     101 </span><span class="lineCov">      58077 :                 auto pRet = new Type();</span></a>
-<a name="102"><span class="lineNum">     102 </span><span class="lineCov">      48900 :             if (pRet-&gt;init(std::forward&lt;Args&gt;(args)...)) {</span></a>
-<a name="103"><span class="lineNum">     103 </span><span class="lineCov">      48899 :                 return Self(pRet, true); // unsafe assignment</span></a>
+<a name="100"><span class="lineNum">     100 </span><span class="lineCov">    4698985 :         static inline Self create(Args &amp;&amp; ... args) {</span></a>
+<a name="101"><span class="lineNum">     101 </span><span class="lineCov">    8302568 :                 auto pRet = new Type();</span></a>
+<a name="102"><span class="lineNum">     102 </span><span class="lineCov">    4699042 :             if (pRet-&gt;init(std::forward&lt;Args&gt;(args)...)) {</span></a>
+<a name="103"><span class="lineNum">     103 </span><span class="lineCov">    4699005 :                 return Self(pRet, true); // unsafe assignment</span></a>
 <a name="104"><span class="lineNum">     104 </span>            :                 } else {</a>
-<a name="105"><span class="lineNum">     105 </span><span class="lineCov">          1 :                         delete pRet;</span></a>
-<a name="106"><span class="lineNum">     106 </span><span class="lineCov">          1 :                         return Self(nullptr);</span></a>
+<a name="105"><span class="lineNum">     105 </span><span class="lineNoCov">          0 :                         delete pRet;</span></a>
+<a name="106"><span class="lineNum">     106 </span><span class="lineNoCov">          0 :                         return Self(nullptr);</span></a>
 <a name="107"><span class="lineNum">     107 </span>            :                 }</a>
 <a name="108"><span class="lineNum">     108 </span>            :         }</a>
 <a name="109"><span class="lineNum">     109 </span>            : </a>
-<a name="110"><span class="lineNum">     110 </span><span class="lineCov">      71734 :         static inline Self alloc() {</span></a>
-<a name="111"><span class="lineNum">     111 </span><span class="lineCov">     143468 :                 return Self(new Type(), true);</span></a>
+<a name="110"><span class="lineNum">     110 </span><span class="lineCov">     960860 :         static inline Self alloc() {</span></a>
+<a name="111"><span class="lineNum">     111 </span><span class="lineCov">    1921636 :                 return Self(new Type(), true);</span></a>
 <a name="112"><span class="lineNum">     112 </span>            :         }</a>
 <a name="113"><span class="lineNum">     113 </span>            : </a>
 <a name="114"><span class="lineNum">     114 </span>            :         template &lt;class... Args&gt;</a>
-<a name="115"><span class="lineNum">     115 </span><span class="lineCov">      20609 :         static inline Self alloc(Args &amp;&amp; ... args) {</span></a>
-<a name="116"><span class="lineNum">     116 </span><span class="lineCov">      20609 :                 return Self(new Type(std::forward&lt;Args&gt;(args)...), true);</span></a>
+<a name="115"><span class="lineNum">     115 </span><span class="lineCov">     600337 :         static inline Self alloc(Args &amp;&amp; ... args) {</span></a>
+<a name="116"><span class="lineNum">     116 </span><span class="lineCov">     600337 :                 return Self(new Type(std::forward&lt;Args&gt;(args)...), true);</span></a>
 <a name="117"><span class="lineNum">     117 </span>            :         }</a>
 <a name="118"><span class="lineNum">     118 </span>            : </a>
-<a name="119"><span class="lineNum">     119 </span><span class="lineCov">     102564 :         inline RcBase() : _ptr(nullptr) { }</span></a>
-<a name="120"><span class="lineNum">     120 </span><span class="lineCov">      21543 :         inline RcBase(const nullptr_t &amp;) : _ptr(nullptr) { }</span></a>
-<a name="121"><span class="lineNum">     121 </span><span class="lineCov">      30211 :         inline RcBase(const Pointer &amp;value) : _ptr(value) { doRetain(); }</span></a>
-<a name="122"><span class="lineNum">     122 </span><span class="lineCov">     147089 :         inline RcBase(const Self &amp;v) { _ptr = v._ptr; doRetain(); }</span></a>
-<a name="123"><span class="lineNum">     123 </span><span class="lineCov">     120604 :         inline RcBase(Self &amp;&amp;v) {</span></a>
-<a name="124"><span class="lineNum">     124 </span><span class="lineCov">     120604 :                 _ptr = v._ptr; v._ptr = nullptr;</span></a>
+<a name="119"><span class="lineNum">     119 </span><span class="lineCov">  438785095 :         inline RcBase() : _ptr(nullptr) { }</span></a>
+<a name="120"><span class="lineNum">     120 </span><span class="lineCov">    1056905 :         inline RcBase(const nullptr_t &amp;) : _ptr(nullptr) { }</span></a>
+<a name="121"><span class="lineNum">     121 </span><span class="lineCov">    9364507 :         inline RcBase(const Pointer &amp;value) : _ptr(value) { doRetain(); }</span></a>
+<a name="122"><span class="lineNum">     122 </span><span class="lineCov">   13573449 :         inline RcBase(const Self &amp;v) { _ptr = v._ptr; doRetain(); }</span></a>
+<a name="123"><span class="lineNum">     123 </span><span class="lineCov">   14826825 :         inline RcBase(Self &amp;&amp;v) {</span></a>
+<a name="124"><span class="lineNum">     124 </span><span class="lineCov">   14826825 :                 _ptr = v._ptr; v._ptr = nullptr;</span></a>
 <a name="125"><span class="lineNum">     125 </span>            : #if SP_REF_DEBUG</a>
 <a name="126"><span class="lineNum">     126 </span>            :                 _id = v._id; v._id = 0;</a>
 <a name="127"><span class="lineNum">     127 </span>            : #endif</a>
-<a name="128"><span class="lineNum">     128 </span><span class="lineCov">     120604 :         }</span></a>
+<a name="128"><span class="lineNum">     128 </span><span class="lineCov">   14826825 :         }</span></a>
 <a name="129"><span class="lineNum">     129 </span>            : </a>
-<a name="130"><span class="lineNum">     130 </span><span class="lineCov">      31329 :         inline RcBase &amp; operator = (const nullptr_t &amp;) {</span></a>
-<a name="131"><span class="lineNum">     131 </span><span class="lineCov">      31329 :                 doRelease();</span></a>
-<a name="132"><span class="lineNum">     132 </span><span class="lineCov">      31329 :                 _ptr = nullptr;</span></a>
+<a name="130"><span class="lineNum">     130 </span><span class="lineCov">    2413295 :         inline RcBase &amp; operator = (const nullptr_t &amp;) {</span></a>
+<a name="131"><span class="lineNum">     131 </span><span class="lineCov">    2413295 :                 doRelease();</span></a>
+<a name="132"><span class="lineNum">     132 </span><span class="lineCov">    2413381 :                 _ptr = nullptr;</span></a>
 <a name="133"><span class="lineNum">     133 </span>            : #if SP_REF_DEBUG</a>
 <a name="134"><span class="lineNum">     134 </span>            :                 _id = 0;</a>
 <a name="135"><span class="lineNum">     135 </span>            : #endif</a>
-<a name="136"><span class="lineNum">     136 </span><span class="lineCov">      31329 :                 return *this;</span></a>
+<a name="136"><span class="lineNum">     136 </span><span class="lineCov">    2413381 :                 return *this;</span></a>
 <a name="137"><span class="lineNum">     137 </span>            :         }</a>
 <a name="138"><span class="lineNum">     138 </span>            : </a>
 <a name="139"><span class="lineNum">     139 </span>            :         template &lt;typename B, typename std::enable_if&lt;std::is_convertible&lt;B*, Base *&gt;{}&gt;::type* = nullptr&gt;</a>
-<a name="140"><span class="lineNum">     140 </span><span class="lineCov">         15 :         inline RcBase &amp; operator = (const RcBase&lt;B&gt; &amp;value) { set(value); return *this; }</span></a>
+<a name="140"><span class="lineNum">     140 </span><span class="lineCov">       1887 :         inline RcBase &amp; operator = (const RcBase&lt;B&gt; &amp;value) { set(value); return *this; }</span></a>
 <a name="141"><span class="lineNum">     141 </span>            : </a>
-<a name="142"><span class="lineNum">     142 </span><span class="lineCov">       1686 :         inline RcBase &amp; operator = (const Pointer &amp;value) { set(value); return *this; }</span></a>
-<a name="143"><span class="lineNum">     143 </span><span class="lineCov">      36629 :         inline RcBase &amp; operator = (const Self &amp;v) { set(v._ptr); return *this; }</span></a>
-<a name="144"><span class="lineNum">     144 </span><span class="lineCov">      88741 :         inline RcBase &amp; operator = (Self &amp;&amp;v) {</span></a>
-<a name="145"><span class="lineNum">     145 </span><span class="lineCov">      88741 :                 doRelease();</span></a>
-<a name="146"><span class="lineNum">     146 </span><span class="lineCov">      88740 :                 _ptr = v._ptr; v._ptr = nullptr;</span></a>
+<a name="142"><span class="lineNum">     142 </span><span class="lineCov">     462043 :         inline RcBase &amp; operator = (const Pointer &amp;value) { set(value); return *this; }</span></a>
+<a name="143"><span class="lineNum">     143 </span><span class="lineCov">    3989720 :         inline RcBase &amp; operator = (const Self &amp;v) { set(v._ptr); return *this; }</span></a>
+<a name="144"><span class="lineNum">     144 </span><span class="lineCov">  224284901 :         inline RcBase &amp; operator = (Self &amp;&amp;v) {</span></a>
+<a name="145"><span class="lineNum">     145 </span><span class="lineCov">  224284901 :                 doRelease();</span></a>
+<a name="146"><span class="lineNum">     146 </span><span class="lineCov">  224279957 :                 _ptr = v._ptr; v._ptr = nullptr;</span></a>
 <a name="147"><span class="lineNum">     147 </span>            : #if SP_REF_DEBUG</a>
 <a name="148"><span class="lineNum">     148 </span>            :                 _id = v._id; v._id = 0;</a>
 <a name="149"><span class="lineNum">     149 </span>            : #endif</a>
-<a name="150"><span class="lineNum">     150 </span><span class="lineCov">      88740 :                 return *this;</span></a>
+<a name="150"><span class="lineNum">     150 </span><span class="lineCov">  224279957 :                 return *this;</span></a>
 <a name="151"><span class="lineNum">     151 </span>            :         }</a>
 <a name="152"><span class="lineNum">     152 </span>            : </a>
-<a name="153"><span class="lineNum">     153 </span><span class="lineCov">     553414 :         inline ~RcBase() { doRelease(); _ptr = nullptr; }</span></a>
+<a name="153"><span class="lineNum">     153 </span><span class="lineCov">  231328096 :         inline ~RcBase() { doRelease(); _ptr = nullptr; }</span></a>
 <a name="154"><span class="lineNum">     154 </span>            : </a>
-<a name="155"><span class="lineNum">     155 </span><span class="lineCov">      38330 :         inline void set(const Pointer &amp;value) {</span></a>
-<a name="156"><span class="lineNum">     156 </span><span class="lineCov">      38330 :                 _ptr = doSwap(value);</span></a>
-<a name="157"><span class="lineNum">     157 </span><span class="lineCov">      38331 :         }</span></a>
+<a name="155"><span class="lineNum">     155 </span><span class="lineCov">    4409906 :         inline void set(const Pointer &amp;value) {</span></a>
+<a name="156"><span class="lineNum">     156 </span><span class="lineCov">    4409906 :                 _ptr = doSwap(value);</span></a>
+<a name="157"><span class="lineNum">     157 </span><span class="lineCov">    4409907 :         }</span></a>
 <a name="158"><span class="lineNum">     158 </span>            : </a>
-<a name="159"><span class="lineNum">     159 </span><span class="lineCov">     175578 :         inline Base *get() const {</span></a>
+<a name="159"><span class="lineNum">     159 </span><span class="lineCov">   24979244 :         inline Base *get() const {</span></a>
 <a name="160"><span class="lineNum">     160 </span>            : #if SP_REF_DEBUG</a>
 <a name="161"><span class="lineNum">     161 </span>            :                 assert(_ptr);</a>
 <a name="162"><span class="lineNum">     162 </span>            : #endif</a>
-<a name="163"><span class="lineNum">     163 </span><span class="lineCov">     175578 :                 return _ptr;</span></a>
+<a name="163"><span class="lineNum">     163 </span><span class="lineCov">   24979244 :                 return _ptr;</span></a>
 <a name="164"><span class="lineNum">     164 </span>            :         }</a>
 <a name="165"><span class="lineNum">     165 </span>            : </a>
-<a name="166"><span class="lineNum">     166 </span><span class="lineCov">     112771 :         inline operator Base * () const { return get(); }</span></a>
-<a name="167"><span class="lineNum">     167 </span><span class="lineCov">     595155 :         inline operator bool () const { return _ptr != nullptr; }</span></a>
+<a name="166"><span class="lineNum">     166 </span><span class="lineCov">   16232322 :         inline operator Base * () const { return get(); }</span></a>
+<a name="167"><span class="lineNum">     167 </span><span class="lineCov">  468168195 :         inline explicit operator bool () const { return _ptr != nullptr; }</span></a>
 <a name="168"><span class="lineNum">     168 </span>            : </a>
 <a name="169"><span class="lineNum">     169 </span>            :         template &lt;typename B, typename std::enable_if&lt;std::is_convertible&lt;Base *, B*&gt;{}&gt;::type* = nullptr&gt;</a>
-<a name="170"><span class="lineNum">     170 </span><span class="lineCov">      14330 :         inline operator RcBase&lt;B&gt; () { return RcBase&lt;B&gt;(static_cast&lt;B *&gt;(get())); }</span></a>
+<a name="170"><span class="lineNum">     170 </span><span class="lineCov">    5096923 :         inline operator RcBase&lt;B&gt; () { return RcBase&lt;B&gt;(static_cast&lt;B *&gt;(get())); }</span></a>
 <a name="171"><span class="lineNum">     171 </span>            : </a>
 <a name="172"><span class="lineNum">     172 </span>            :         inline void swap(Self &amp; v) { auto ptr = _ptr; _ptr = v._ptr; v._ptr = ptr; }</a>
 <a name="173"><span class="lineNum">     173 </span>            : </a>
-<a name="174"><span class="lineNum">     174 </span><span class="lineCov">    1818664 :         inline Base * operator-&gt;() const { return _ptr; }</span></a>
+<a name="174"><span class="lineNum">     174 </span><span class="lineCov">  143875478 :         inline Base * operator-&gt;() const { return _ptr; }</span></a>
 <a name="175"><span class="lineNum">     175 </span>            : </a>
 <a name="176"><span class="lineNum">     176 </span>            :         template &lt;typename Target&gt;</a>
-<a name="177"><span class="lineNum">     177 </span><span class="lineCov">       2252 :         inline RcBase&lt;Target&gt; cast() const {</span></a>
-<a name="178"><span class="lineNum">     178 </span><span class="lineCov">       2252 :                 if (auto v = dynamic_cast&lt;Target *&gt;(_ptr)) {</span></a>
-<a name="179"><span class="lineNum">     179 </span><span class="lineCov">       2233 :                         return RcBase&lt;Target&gt;(v);</span></a>
+<a name="177"><span class="lineNum">     177 </span><span class="lineCov">     271059 :         inline RcBase&lt;Target&gt; cast() const {</span></a>
+<a name="178"><span class="lineNum">     178 </span><span class="lineCov">     271059 :                 if (auto v = dynamic_cast&lt;Target *&gt;(_ptr)) {</span></a>
+<a name="179"><span class="lineNum">     179 </span><span class="lineCov">     270274 :                         return RcBase&lt;Target&gt;(v);</span></a>
 <a name="180"><span class="lineNum">     180 </span>            :                 }</a>
-<a name="181"><span class="lineNum">     181 </span><span class="lineCov">         19 :                 return RcBase&lt;Target&gt;(nullptr);</span></a>
+<a name="181"><span class="lineNum">     181 </span><span class="lineCov">        787 :                 return RcBase&lt;Target&gt;(nullptr);</span></a>
 <a name="182"><span class="lineNum">     182 </span>            :         }</a>
 <a name="183"><span class="lineNum">     183 </span>            : </a>
-<a name="184"><span class="lineNum">     184 </span><span class="lineCov">        148 :         inline bool operator == (const Self &amp; other) const { return _ptr == other._ptr; }</span></a>
-<a name="185"><span class="lineNum">     185 </span><span class="lineCov">          2 :         inline bool operator == (const Base * &amp; other) const { return _ptr == other; }</span></a>
-<a name="186"><span class="lineNum">     186 </span><span class="lineCov">       1002 :         inline bool operator == (typename std::remove_const&lt;Base&gt;::type * other) const { return _ptr == other; }</span></a>
-<a name="187"><span class="lineNum">     187 </span><span class="lineCov">        111 :         inline bool operator == (const std::nullptr_t other) const { return _ptr == other; }</span></a>
+<a name="184"><span class="lineNum">     184 </span><span class="lineCov">      10439 :         inline bool operator == (const Self &amp; other) const { return _ptr == other._ptr; }</span></a>
+<a name="185"><span class="lineNum">     185 </span><span class="lineCov">       8038 :         inline bool operator == (const Base * &amp; other) const { return _ptr == other; }</span></a>
+<a name="186"><span class="lineNum">     186 </span><span class="lineCov">    2500376 :         inline bool operator == (typename std::remove_const&lt;Base&gt;::type * other) const { return _ptr == other; }</span></a>
+<a name="187"><span class="lineNum">     187 </span><span class="lineCov">      14638 :         inline bool operator == (const std::nullptr_t other) const { return _ptr == other; }</span></a>
 <a name="188"><span class="lineNum">     188 </span>            : </a>
-<a name="189"><span class="lineNum">     189 </span><span class="lineCov">        265 :         inline bool operator != (const Self &amp; other) const { return _ptr != other._ptr; }</span></a>
+<a name="189"><span class="lineNum">     189 </span><span class="lineCov">      69162 :         inline bool operator != (const Self &amp; other) const { return _ptr != other._ptr; }</span></a>
 <a name="190"><span class="lineNum">     190 </span>            :         inline bool operator != (const Base * &amp; other) const { return _ptr != other; }</a>
-<a name="191"><span class="lineNum">     191 </span><span class="lineCov">        275 :         inline bool operator != (typename std::remove_const&lt;Base&gt;::type * other) const { return _ptr != other; }</span></a>
-<a name="192"><span class="lineNum">     192 </span><span class="lineCov">          4 :         inline bool operator != (const std::nullptr_t other) const { return _ptr != other; }</span></a>
+<a name="191"><span class="lineNum">     191 </span><span class="lineCov">     226861 :         inline bool operator != (typename std::remove_const&lt;Base&gt;::type * other) const { return _ptr != other; }</span></a>
+<a name="192"><span class="lineNum">     192 </span><span class="lineCov">       1464 :         inline bool operator != (const std::nullptr_t other) const { return _ptr != other; }</span></a>
 <a name="193"><span class="lineNum">     193 </span>            : </a>
 <a name="194"><span class="lineNum">     194 </span>            :         inline bool operator &gt; (const Self &amp; other) const { return _ptr &gt; other._ptr; }</a>
 <a name="195"><span class="lineNum">     195 </span>            :         inline bool operator &gt; (const Base * other) const { return _ptr &gt; other; }</a>
 <a name="196"><span class="lineNum">     196 </span>            :         inline bool operator &gt; (typename std::remove_const&lt;Base&gt;::type * other) const { return _ptr &gt; other; }</a>
 <a name="197"><span class="lineNum">     197 </span>            :         inline bool operator &gt; (const std::nullptr_t other) const { return _ptr &gt; other; }</a>
 <a name="198"><span class="lineNum">     198 </span>            : </a>
-<a name="199"><span class="lineNum">     199 </span><span class="lineCov">        559 :         inline bool operator &lt; (const Self &amp; other) const { return _ptr &lt; other._ptr; }</span></a>
-<a name="200"><span class="lineNum">     200 </span><span class="lineCov">          7 :         inline bool operator &lt; (const Base * other) const { return _ptr &lt; other; }</span></a>
+<a name="199"><span class="lineNum">     199 </span><span class="lineCov">    9993800 :         inline bool operator &lt; (const Self &amp; other) const { return _ptr &lt; other._ptr; }</span></a>
+<a name="200"><span class="lineNum">     200 </span><span class="lineCov">        812 :         inline bool operator &lt; (const Base * other) const { return _ptr &lt; other; }</span></a>
 <a name="201"><span class="lineNum">     201 </span>            :         inline bool operator &lt; (typename std::remove_const&lt;Base&gt;::type * other) const { return _ptr &lt; other; }</a>
 <a name="202"><span class="lineNum">     202 </span>            :         inline bool operator &lt; (const std::nullptr_t other) const { return _ptr &lt; other; }</a>
 <a name="203"><span class="lineNum">     203 </span>            : </a>
@@ -277,23 +277,23 @@
 <a name="215"><span class="lineNum">     215 </span>            :         uint64_t getId() const { return _id; }</a>
 <a name="216"><span class="lineNum">     216 </span>            : #endif</a>
 <a name="217"><span class="lineNum">     217 </span>            : private:</a>
-<a name="218"><span class="lineNum">     218 </span><span class="lineCov">     177292 :         inline void doRetain() {</span></a>
+<a name="218"><span class="lineNum">     218 </span><span class="lineCov">   19899190 :         inline void doRetain() {</span></a>
 <a name="219"><span class="lineNum">     219 </span>            : #if SP_REF_DEBUG</a>
 <a name="220"><span class="lineNum">     220 </span>            :                 if (_ptr) { _id = _ptr-&gt;retain(); }</a>
 <a name="221"><span class="lineNum">     221 </span>            : #else</a>
-<a name="222"><span class="lineNum">     222 </span><span class="lineCov">     177292 :                 if (_ptr) { _ptr-&gt;retain(); }</span></a>
+<a name="222"><span class="lineNum">     222 </span><span class="lineCov">   19899190 :                 if (_ptr) { _ptr-&gt;retain(); }</span></a>
 <a name="223"><span class="lineNum">     223 </span>            : #endif</a>
-<a name="224"><span class="lineNum">     224 </span><span class="lineCov">     177302 :         }</span></a>
+<a name="224"><span class="lineNum">     224 </span><span class="lineCov">   19901775 :         }</span></a>
 <a name="225"><span class="lineNum">     225 </span>            : </a>
-<a name="226"><span class="lineNum">     226 </span><span class="lineCov">     673460 :         inline void doRelease() {</span></a>
+<a name="226"><span class="lineNum">     226 </span><span class="lineCov">  327312258 :         inline void doRelease() {</span></a>
 <a name="227"><span class="lineNum">     227 </span>            : #if SP_REF_DEBUG</a>
 <a name="228"><span class="lineNum">     228 </span>            :                 if (_ptr) { _ptr-&gt;release(_id); }</a>
 <a name="229"><span class="lineNum">     229 </span>            : #else</a>
-<a name="230"><span class="lineNum">     230 </span><span class="lineCov">     673460 :                 if (_ptr) { _ptr-&gt;release(0); }</span></a>
+<a name="230"><span class="lineNum">     230 </span><span class="lineCov">  327312258 :                 if (_ptr) { _ptr-&gt;release(0); }</span></a>
 <a name="231"><span class="lineNum">     231 </span>            : #endif</a>
-<a name="232"><span class="lineNum">     232 </span><span class="lineCov">     673465 :         }</span></a>
+<a name="232"><span class="lineNum">     232 </span><span class="lineCov">  327318149 :         }</span></a>
 <a name="233"><span class="lineNum">     233 </span>            : </a>
-<a name="234"><span class="lineNum">     234 </span><span class="lineCov">      38330 :         inline Pointer doSwap(Pointer value) {</span></a>
+<a name="234"><span class="lineNum">     234 </span><span class="lineCov">    4409905 :         inline Pointer doSwap(Pointer value) {</span></a>
 <a name="235"><span class="lineNum">     235 </span>            : #if SP_REF_DEBUG</a>
 <a name="236"><span class="lineNum">     236 </span>            :                 uint64_t id = 0;</a>
 <a name="237"><span class="lineNum">     237 </span>            :                 if (value) { id = value-&gt;retain(); }</a>
@@ -301,14 +301,14 @@
 <a name="239"><span class="lineNum">     239 </span>            :                 _id = id;</a>
 <a name="240"><span class="lineNum">     240 </span>            :                 return value;</a>
 <a name="241"><span class="lineNum">     241 </span>            : #else</a>
-<a name="242"><span class="lineNum">     242 </span><span class="lineCov">      38330 :                 if (value) { value-&gt;retain(); }</span></a>
-<a name="243"><span class="lineNum">     243 </span><span class="lineCov">      38331 :                 if (_ptr) { _ptr-&gt;release(0); }</span></a>
-<a name="244"><span class="lineNum">     244 </span><span class="lineCov">      38331 :                 return value;</span></a>
+<a name="242"><span class="lineNum">     242 </span><span class="lineCov">    4409905 :                 if (value) { value-&gt;retain(); }</span></a>
+<a name="243"><span class="lineNum">     243 </span><span class="lineCov">    4409914 :                 if (_ptr) { _ptr-&gt;release(0); }</span></a>
+<a name="244"><span class="lineNum">     244 </span><span class="lineCov">    4409910 :                 return value;</span></a>
 <a name="245"><span class="lineNum">     245 </span>            : #endif</a>
 <a name="246"><span class="lineNum">     246 </span>            :         }</a>
 <a name="247"><span class="lineNum">     247 </span>            : </a>
 <a name="248"><span class="lineNum">     248 </span>            :         // unsafe</a>
-<a name="249"><span class="lineNum">     249 </span><span class="lineCov">     141242 :         inline RcBase(Pointer value, bool v) : _ptr(value) { }</span></a>
+<a name="249"><span class="lineNum">     249 </span><span class="lineCov">    5761488 :         inline RcBase(Pointer value, bool v) : _ptr(value) { }</span></a>
 <a name="250"><span class="lineNum">     250 </span>            : </a>
 <a name="251"><span class="lineNum">     251 </span>            :         Pointer _ptr = nullptr;</a>
 <a name="252"><span class="lineNum">     252 </span>            : #if SP_REF_DEBUG</a>
@@ -349,13 +349,13 @@
 <a name="287"><span class="lineNum">     287 </span>            : </a>
 <a name="288"><span class="lineNum">     288 </span>            : }</a>
 <a name="289"><span class="lineNum">     289 </span>            : </a>
-<a name="290"><span class="lineNum">     290 </span>            : namespace stappler::mem_std {</a>
+<a name="290"><span class="lineNum">     290 </span>            : namespace STAPPLER_VERSIONIZED stappler::mem_std {</a>
 <a name="291"><span class="lineNum">     291 </span>            : </a>
 <a name="292"><span class="lineNum">     292 </span>            : using Ref = RefBase&lt;memory::StandartInterface&gt;;</a>
 <a name="293"><span class="lineNum">     293 </span>            : </a>
 <a name="294"><span class="lineNum">     294 </span>            : }</a>
 <a name="295"><span class="lineNum">     295 </span>            : </a>
-<a name="296"><span class="lineNum">     296 </span>            : namespace stappler::mem_pool {</a>
+<a name="296"><span class="lineNum">     296 </span>            : namespace STAPPLER_VERSIONIZED stappler::mem_pool {</a>
 <a name="297"><span class="lineNum">     297 </span>            : </a>
 <a name="298"><span class="lineNum">     298 </span>            : using Ref = RefBase&lt;memory::PoolInterface&gt;;</a>
 <a name="299"><span class="lineNum">     299 </span>            : </a>

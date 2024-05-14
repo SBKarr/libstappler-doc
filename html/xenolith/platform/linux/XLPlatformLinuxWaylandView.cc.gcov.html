@@ -32,16 +32,16 @@
             <td></td>
             <td class="headerItem">Lines:</td>
             <td class="headerCovTableEntry">0</td>
-            <td class="headerCovTableEntry">640</td>
+            <td class="headerCovTableEntry">644</td>
             <td class="headerCovTableEntryLo">0.0 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2023-12-03 02:10:58</td>
+            <td class="headerValue">2024-04-26 09:30:07</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">0</td>
-            <td class="headerCovTableEntry">44</td>
+            <td class="headerCovTableEntry">46</td>
             <td class="headerCovTableEntryLo">0.0 %</td>
           </tr>
           <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
@@ -94,7 +94,7 @@
 <a name="32"><span class="lineNum">      32 </span>            : #endif</a>
 <a name="33"><span class="lineNum">      33 </span>            : #endif</a>
 <a name="34"><span class="lineNum">      34 </span>            : </a>
-<a name="35"><span class="lineNum">      35 </span>            : namespace stappler::xenolith::platform {</a>
+<a name="35"><span class="lineNum">      35 </span>            : namespace STAPPLER_VERSIONIZED stappler::xenolith::platform {</a>
 <a name="36"><span class="lineNum">      36 </span>            : </a>
 <a name="37"><span class="lineNum">      37 </span>            : static struct wl_surface_listener s_WaylandSurfaceListener{</a>
 <a name="38"><span class="lineNum">      38 </span><span class="lineNoCov">          0 :         [] (void *data, wl_surface *surface, wl_output *output) {</span></a>
@@ -290,7 +290,7 @@
 <a name="228"><span class="lineNum">     228 </span>            :                 }</a>
 <a name="229"><span class="lineNum">     229 </span>            :         }</a>
 <a name="230"><span class="lineNum">     230 </span>            : </a>
-<a name="231"><span class="lineNum">     231 </span><span class="lineNoCov">          0 :         auto checkVisible = [&amp;] (WaylandDecorationName name) {</span></a>
+<a name="231"><span class="lineNum">     231 </span><span class="lineNoCov">          0 :         auto checkVisible = [&amp;, this] (WaylandDecorationName name) {</span></a>
 <a name="232"><span class="lineNum">     232 </span><span class="lineNoCov">          0 :                 switch (name) {</span></a>
 <a name="233"><span class="lineNum">     233 </span><span class="lineNoCov">          0 :                 case WaylandDecorationName::RightSide:</span></a>
 <a name="234"><span class="lineNum">     234 </span><span class="lineNoCov">          0 :                         if (_state.test(XDG_TOPLEVEL_STATE_MAXIMIZED)) { return false; }</span></a>
@@ -787,7 +787,7 @@
 <a name="725"><span class="lineNum">     725 </span>            : </a>
 <a name="726"><span class="lineNum">     726 </span><span class="lineNoCov">          0 : void WaylandView::handleKeyRepeat() {</span></a>
 <a name="727"><span class="lineNum">     727 </span><span class="lineNoCov">          0 :         Vector&lt;core::InputEventData&gt; events;</span></a>
-<a name="728"><span class="lineNum">     728 </span><span class="lineNoCov">          0 :         auto spawnRepeatEvent = [&amp;] (const KeyData &amp;it) {</span></a>
+<a name="728"><span class="lineNum">     728 </span><span class="lineNoCov">          0 :         auto spawnRepeatEvent = [&amp;, this] (const KeyData &amp;it) {</span></a>
 <a name="729"><span class="lineNum">     729 </span><span class="lineNoCov">          0 :                 core::InputEventData event({</span></a>
 <a name="730"><span class="lineNum">     730 </span><span class="lineNoCov">          0 :                         uint32_t(events.size() + 1),</span></a>
 <a name="731"><span class="lineNum">     731 </span>            :                         core::InputEventName::KeyRepeated,</a>
@@ -833,7 +833,7 @@
 <a name="771"><span class="lineNum">     771 </span><span class="lineNoCov">          0 : }</span></a>
 <a name="772"><span class="lineNum">     772 </span>            : </a>
 <a name="773"><span class="lineNum">     773 </span><span class="lineNoCov">          0 : void WaylandView::handleDecorationPress(WaylandDecoration *decor, uint32_t serial, bool released) {</span></a>
-<a name="774"><span class="lineNum">     774 </span><span class="lineNoCov">          0 :         auto switchMaximized = [&amp;] {</span></a>
+<a name="774"><span class="lineNum">     774 </span><span class="lineNoCov">          0 :         auto switchMaximized = [&amp;, this] {</span></a>
 <a name="775"><span class="lineNum">     775 </span><span class="lineNoCov">          0 :                 if (!_state.test(XDG_TOPLEVEL_STATE_MAXIMIZED)) {</span></a>
 <a name="776"><span class="lineNum">     776 </span><span class="lineNoCov">          0 :                         _display-&gt;wayland-&gt;xdg_toplevel_set_maximized(_toplevel);</span></a>
 <a name="777"><span class="lineNum">     777 </span><span class="lineNoCov">          0 :                         _iconMaximized-&gt;setAlternative(true);</span></a>
@@ -1021,7 +1021,15 @@
 <a name="959"><span class="lineNum">     959 </span>            :         XL_WAYLAND_LOG(stream.str());</a>
 <a name="960"><span class="lineNum">     960 </span><span class="lineNoCov">          0 : }</span></a>
 <a name="961"><span class="lineNum">     961 </span>            : </a>
-<a name="962"><span class="lineNum">     962 </span>            : }</a>
+<a name="962"><span class="lineNum">     962 </span><span class="lineNoCov">          0 : void WaylandView::readFromClipboard(Function&lt;void(BytesView, StringView)&gt; &amp;&amp;, Ref *) {</span></a>
+<a name="963"><span class="lineNum">     963 </span>            : </a>
+<a name="964"><span class="lineNum">     964 </span><span class="lineNoCov">          0 : }</span></a>
+<a name="965"><span class="lineNum">     965 </span>            : </a>
+<a name="966"><span class="lineNum">     966 </span><span class="lineNoCov">          0 : void WaylandView::writeToClipboard(BytesView, StringView contentType) {</span></a>
+<a name="967"><span class="lineNum">     967 </span>            : </a>
+<a name="968"><span class="lineNum">     968 </span><span class="lineNoCov">          0 : }</span></a>
+<a name="969"><span class="lineNum">     969 </span>            : </a>
+<a name="970"><span class="lineNum">     970 </span>            : }</a>
 </pre>
       </td>
     </tr>

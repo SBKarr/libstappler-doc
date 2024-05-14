@@ -31,18 +31,18 @@
             <td class="headerValue">coverage.info</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntry">104</td>
+            <td class="headerCovTableEntry">111</td>
             <td class="headerCovTableEntry">139</td>
-            <td class="headerCovTableEntryLo">74.8 %</td>
+            <td class="headerCovTableEntryMed">79.9 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2023-12-03 02:10:58</td>
+            <td class="headerValue">2024-05-12 00:16:13</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntry">29</td>
-            <td class="headerCovTableEntry">60</td>
-            <td class="headerCovTableEntryLo">48.3 %</td>
+            <td class="headerCovTableEntry">45</td>
+            <td class="headerCovTableEntry">75</td>
+            <td class="headerCovTableEntryLo">60.0 %</td>
           </tr>
           <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
         </table>
@@ -89,7 +89,7 @@
 <a name="27"><span class="lineNum">      27 </span>            : #include &quot;SPBytesView.h&quot;</a>
 <a name="28"><span class="lineNum">      28 </span>            : #include &quot;SPHalfFloat.h&quot;</a>
 <a name="29"><span class="lineNum">      29 </span>            : </a>
-<a name="30"><span class="lineNum">      30 </span>            : namespace stappler::data::cbor {</a>
+<a name="30"><span class="lineNum">      30 </span>            : namespace STAPPLER_VERSIONIZED stappler::data::cbor {</a>
 <a name="31"><span class="lineNum">      31 </span>            : </a>
 <a name="32"><span class="lineNum">      32 </span>            : enum class MajorType : uint8_t {</a>
 <a name="33"><span class="lineNum">      33 </span>            :         Unsigned        = 0,</a>
@@ -261,35 +261,35 @@
 <a name="199"><span class="lineNum">     199 </span>            : //  emplace(uint8_t *bytes, size_t nbytes)</a>
 <a name="200"><span class="lineNum">     200 </span>            : </a>
 <a name="201"><span class="lineNum">     201 </span>            : template &lt;class Writer&gt;</a>
-<a name="202"><span class="lineNum">     202 </span><span class="lineCov">         14 : inline void _writeId(Writer &amp;w) {</span></a>
+<a name="202"><span class="lineNum">     202 </span><span class="lineCov">      16600 : inline void _writeId(Writer &amp;w) {</span></a>
 <a name="203"><span class="lineNum">     203 </span>            :         // write CBOR id ( 0xd9d9f7 )</a>
-<a name="204"><span class="lineNum">     204 </span><span class="lineCov">         14 :         w.emplace(0xd9);</span></a>
-<a name="205"><span class="lineNum">     205 </span><span class="lineCov">         14 :         w.emplace(0xd9);</span></a>
-<a name="206"><span class="lineNum">     206 </span><span class="lineCov">         14 :         w.emplace(0xf7);</span></a>
-<a name="207"><span class="lineNum">     207 </span><span class="lineCov">         14 : }</span></a>
+<a name="204"><span class="lineNum">     204 </span><span class="lineCov">      16600 :         w.emplace(0xd9);</span></a>
+<a name="205"><span class="lineNum">     205 </span><span class="lineCov">      16600 :         w.emplace(0xd9);</span></a>
+<a name="206"><span class="lineNum">     206 </span><span class="lineCov">      16600 :         w.emplace(0xf7);</span></a>
+<a name="207"><span class="lineNum">     207 </span><span class="lineCov">      16600 : }</span></a>
 <a name="208"><span class="lineNum">     208 </span>            : </a>
 <a name="209"><span class="lineNum">     209 </span>            : template &lt;class Writer, class T&gt;</a>
-<a name="210"><span class="lineNum">     210 </span><span class="lineCov">     147929 : inline void _writeNumeric(Writer &amp;w, T value, MajorTypeEncoded m, Flags f) {</span></a>
-<a name="211"><span class="lineNum">     211 </span><span class="lineCov">     147929 :         value = byteorder::HostToNetwork(value);</span></a>
-<a name="212"><span class="lineNum">     212 </span><span class="lineCov">     147929 :         w.emplace(toInt(m) | toInt(f));</span></a>
-<a name="213"><span class="lineNum">     213 </span><span class="lineCov">     147929 :         w.emplace((uint8_t *)&amp;value, sizeof(T));</span></a>
-<a name="214"><span class="lineNum">     214 </span><span class="lineCov">     147929 : }</span></a>
+<a name="210"><span class="lineNum">     210 </span><span class="lineCov">    4959661 : inline void _writeNumeric(Writer &amp;w, T value, MajorTypeEncoded m, Flags f) {</span></a>
+<a name="211"><span class="lineNum">     211 </span><span class="lineCov">    4959661 :         value = byteorder::HostToNetwork(value);</span></a>
+<a name="212"><span class="lineNum">     212 </span><span class="lineCov">    4959661 :         w.emplace(toInt(m) | toInt(f));</span></a>
+<a name="213"><span class="lineNum">     213 </span><span class="lineCov">    4959661 :         w.emplace((uint8_t *)&amp;value, sizeof(T));</span></a>
+<a name="214"><span class="lineNum">     214 </span><span class="lineCov">    4959661 : }</span></a>
 <a name="215"><span class="lineNum">     215 </span>            : </a>
 <a name="216"><span class="lineNum">     216 </span>            : template &lt;class Writer&gt;</a>
-<a name="217"><span class="lineNum">     217 </span><span class="lineCov">     309481 : inline void _writeInt(Writer &amp;w, uint64_t value, MajorTypeEncoded type) {</span></a>
-<a name="218"><span class="lineNum">     218 </span><span class="lineCov">     309481 :         if (value &lt; toInt(Flags::MaxAdditionalNumber)) {</span></a>
-<a name="219"><span class="lineNum">     219 </span><span class="lineCov">     279257 :                 w.emplace(toInt(type) | (uint8_t)value);</span></a>
-<a name="220"><span class="lineNum">     220 </span><span class="lineCov">      30224 :         } else if (value &lt;= maxOf&lt;uint8_t&gt;()) {</span></a>
-<a name="221"><span class="lineNum">     221 </span><span class="lineCov">      13528 :                 w.emplace(toInt(type) | toInt(Flags::AdditionalNumber8Bit));</span></a>
-<a name="222"><span class="lineNum">     222 </span><span class="lineCov">      13528 :                 w.emplace((uint8_t)value);</span></a>
-<a name="223"><span class="lineNum">     223 </span><span class="lineCov">      16696 :         } else if (value &lt;= maxOf&lt;uint16_t&gt;()) {</span></a>
-<a name="224"><span class="lineNum">     224 </span><span class="lineCov">      16692 :                 _writeNumeric(w, (uint16_t)value, type, Flags::AdditionalNumber16Bit);</span></a>
-<a name="225"><span class="lineNum">     225 </span><span class="lineCov">          4 :         } else if (value &lt;= maxOf&lt;uint32_t&gt;()) {</span></a>
-<a name="226"><span class="lineNum">     226 </span><span class="lineNoCov">          0 :                 _writeNumeric(w, (uint32_t)value, type, Flags::AdditionalNumber32Bit);</span></a>
-<a name="227"><span class="lineNum">     227 </span><span class="lineCov">          4 :         } else if (value &lt;= maxOf&lt;uint64_t&gt;()) {</span></a>
-<a name="228"><span class="lineNum">     228 </span><span class="lineCov">          4 :                 _writeNumeric(w, (uint64_t)value, type, Flags::AdditionalNumber64Bit);</span></a>
+<a name="217"><span class="lineNum">     217 </span><span class="lineCov">   22549456 : inline void _writeInt(Writer &amp;w, uint64_t value, MajorTypeEncoded type) {</span></a>
+<a name="218"><span class="lineNum">     218 </span><span class="lineCov">   22549456 :         if (value &lt; toInt(Flags::MaxAdditionalNumber)) {</span></a>
+<a name="219"><span class="lineNum">     219 </span><span class="lineCov">   19335379 :                 w.emplace(toInt(type) | (uint8_t)value);</span></a>
+<a name="220"><span class="lineNum">     220 </span><span class="lineCov">    3214077 :         } else if (value &lt;= maxOf&lt;uint8_t&gt;()) {</span></a>
+<a name="221"><span class="lineNum">     221 </span><span class="lineCov">    1539684 :                 w.emplace(toInt(type) | toInt(Flags::AdditionalNumber8Bit));</span></a>
+<a name="222"><span class="lineNum">     222 </span><span class="lineCov">    1539684 :                 w.emplace((uint8_t)value);</span></a>
+<a name="223"><span class="lineNum">     223 </span><span class="lineCov">    1674393 :         } else if (value &lt;= maxOf&lt;uint16_t&gt;()) {</span></a>
+<a name="224"><span class="lineNum">     224 </span><span class="lineCov">    1177843 :                 _writeNumeric(w, (uint16_t)value, type, Flags::AdditionalNumber16Bit);</span></a>
+<a name="225"><span class="lineNum">     225 </span><span class="lineCov">     496550 :         } else if (value &lt;= maxOf&lt;uint32_t&gt;()) {</span></a>
+<a name="226"><span class="lineNum">     226 </span><span class="lineCov">     496325 :                 _writeNumeric(w, (uint32_t)value, type, Flags::AdditionalNumber32Bit);</span></a>
+<a name="227"><span class="lineNum">     227 </span><span class="lineCov">        225 :         } else if (value &lt;= maxOf&lt;uint64_t&gt;()) {</span></a>
+<a name="228"><span class="lineNum">     228 </span><span class="lineCov">        225 :                 _writeNumeric(w, (uint64_t)value, type, Flags::AdditionalNumber64Bit);</span></a>
 <a name="229"><span class="lineNum">     229 </span>            :         }</a>
-<a name="230"><span class="lineNum">     230 </span><span class="lineCov">     309481 : }</span></a>
+<a name="230"><span class="lineNum">     230 </span><span class="lineCov">   22549456 : }</span></a>
 <a name="231"><span class="lineNum">     231 </span>            : </a>
 <a name="232"><span class="lineNum">     232 </span>            : template &lt;class Writer&gt;</a>
 <a name="233"><span class="lineNum">     233 </span><span class="lineNoCov">          0 : inline void _writeFloatNaN(Writer &amp;w) {</span></a>
@@ -307,14 +307,14 @@
 <a name="245"><span class="lineNum">     245 </span><span class="lineNoCov">          0 : }</span></a>
 <a name="246"><span class="lineNum">     246 </span>            : </a>
 <a name="247"><span class="lineNum">     247 </span>            : template &lt;class Writer&gt;</a>
-<a name="248"><span class="lineNum">     248 </span><span class="lineCov">      34164 : inline void _writeFloat16(Writer &amp;w, uint16_t value) {</span></a>
-<a name="249"><span class="lineNum">     249 </span><span class="lineCov">      34164 :         _writeNumeric(w, value, MajorTypeEncoded::Simple, Flags::AdditionalFloat16Bit);</span></a>
-<a name="250"><span class="lineNum">     250 </span><span class="lineCov">      34164 : }</span></a>
+<a name="248"><span class="lineNum">     248 </span><span class="lineCov">     857168 : inline void _writeFloat16(Writer &amp;w, uint16_t value) {</span></a>
+<a name="249"><span class="lineNum">     249 </span><span class="lineCov">     857168 :         _writeNumeric(w, value, MajorTypeEncoded::Simple, Flags::AdditionalFloat16Bit);</span></a>
+<a name="250"><span class="lineNum">     250 </span><span class="lineCov">     857168 : }</span></a>
 <a name="251"><span class="lineNum">     251 </span>            : </a>
 <a name="252"><span class="lineNum">     252 </span>            : template &lt;class Writer&gt;</a>
-<a name="253"><span class="lineNum">     253 </span><span class="lineCov">      97069 : inline void _writeFloat32(Writer &amp;w, float value) {</span></a>
-<a name="254"><span class="lineNum">     254 </span><span class="lineCov">      97069 :         _writeNumeric(w, value, MajorTypeEncoded::Simple, Flags::AdditionalFloat32Bit);</span></a>
-<a name="255"><span class="lineNum">     255 </span><span class="lineCov">      97069 : }</span></a>
+<a name="253"><span class="lineNum">     253 </span><span class="lineCov">    2428100 : inline void _writeFloat32(Writer &amp;w, float value) {</span></a>
+<a name="254"><span class="lineNum">     254 </span><span class="lineCov">    2428100 :         _writeNumeric(w, value, MajorTypeEncoded::Simple, Flags::AdditionalFloat32Bit);</span></a>
+<a name="255"><span class="lineNum">     255 </span><span class="lineCov">    2428100 : }</span></a>
 <a name="256"><span class="lineNum">     256 </span>            : </a>
 <a name="257"><span class="lineNum">     257 </span>            : template &lt;class Writer&gt;</a>
 <a name="258"><span class="lineNum">     258 </span><span class="lineNoCov">          0 : inline void _writeFloat64(Writer &amp;w, double value) {</span></a>
@@ -322,64 +322,64 @@
 <a name="260"><span class="lineNum">     260 </span><span class="lineNoCov">          0 : }</span></a>
 <a name="261"><span class="lineNum">     261 </span>            : </a>
 <a name="262"><span class="lineNum">     262 </span>            : template &lt;class Writer&gt;</a>
-<a name="263"><span class="lineNum">     263 </span><span class="lineCov">         10 : inline void _writeArrayStart(Writer &amp;w, size_t len) {</span></a>
-<a name="264"><span class="lineNum">     264 </span><span class="lineCov">         10 :         _writeInt(w, len, MajorTypeEncoded::Array);</span></a>
-<a name="265"><span class="lineNum">     265 </span><span class="lineCov">         10 : }</span></a>
+<a name="263"><span class="lineNum">     263 </span><span class="lineCov">     497700 : inline void _writeArrayStart(Writer &amp;w, size_t len) {</span></a>
+<a name="264"><span class="lineNum">     264 </span><span class="lineCov">     497700 :         _writeInt(w, len, MajorTypeEncoded::Array);</span></a>
+<a name="265"><span class="lineNum">     265 </span><span class="lineCov">     497700 : }</span></a>
 <a name="266"><span class="lineNum">     266 </span>            : </a>
 <a name="267"><span class="lineNum">     267 </span>            : template &lt;class Writer&gt;</a>
-<a name="268"><span class="lineNum">     268 </span><span class="lineCov">       8512 : inline void _writeMapStart(Writer &amp;w, size_t len) {</span></a>
-<a name="269"><span class="lineNum">     269 </span><span class="lineCov">       8512 :         _writeInt(w, len, MajorTypeEncoded::Map);</span></a>
-<a name="270"><span class="lineNum">     270 </span><span class="lineCov">       8512 : }</span></a>
+<a name="268"><span class="lineNum">     268 </span><span class="lineCov">    1377209 : inline void _writeMapStart(Writer &amp;w, size_t len) {</span></a>
+<a name="269"><span class="lineNum">     269 </span><span class="lineCov">    1377209 :         _writeInt(w, len, MajorTypeEncoded::Map);</span></a>
+<a name="270"><span class="lineNum">     270 </span><span class="lineCov">    1377209 : }</span></a>
 <a name="271"><span class="lineNum">     271 </span>            : </a>
 <a name="272"><span class="lineNum">     272 </span>            : template &lt;class Writer&gt;</a>
-<a name="273"><span class="lineNum">     273 </span><span class="lineNoCov">          0 : inline void _writeNull(Writer &amp;w, nullptr_t = nullptr) {</span></a>
-<a name="274"><span class="lineNum">     274 </span><span class="lineNoCov">          0 :         w.emplace(toInt(MajorTypeEncoded::Simple) | toInt(SimpleValue::Null));</span></a>
-<a name="275"><span class="lineNum">     275 </span><span class="lineNoCov">          0 : }</span></a>
+<a name="273"><span class="lineNum">     273 </span><span class="lineCov">       3825 : inline void _writeNull(Writer &amp;w, nullptr_t = nullptr) {</span></a>
+<a name="274"><span class="lineNum">     274 </span><span class="lineCov">       3825 :         w.emplace(toInt(MajorTypeEncoded::Simple) | toInt(SimpleValue::Null));</span></a>
+<a name="275"><span class="lineNum">     275 </span><span class="lineCov">       3825 : }</span></a>
 <a name="276"><span class="lineNum">     276 </span>            : </a>
 <a name="277"><span class="lineNum">     277 </span>            : template &lt;class Writer&gt;</a>
-<a name="278"><span class="lineNum">     278 </span><span class="lineNoCov">          0 : inline void _writeBool(Writer &amp;w, bool value) {</span></a>
-<a name="279"><span class="lineNum">     279 </span><span class="lineNoCov">          0 :         w.emplace(toInt(MajorTypeEncoded::Simple) | toInt(value ? SimpleValue::True : SimpleValue::False));</span></a>
-<a name="280"><span class="lineNum">     280 </span><span class="lineNoCov">          0 : }</span></a>
+<a name="278"><span class="lineNum">     278 </span><span class="lineCov">     921250 : inline void _writeBool(Writer &amp;w, bool value) {</span></a>
+<a name="279"><span class="lineNum">     279 </span><span class="lineCov">     921250 :         w.emplace(toInt(MajorTypeEncoded::Simple) | toInt(value ? SimpleValue::True : SimpleValue::False));</span></a>
+<a name="280"><span class="lineNum">     280 </span><span class="lineCov">     921250 : }</span></a>
 <a name="281"><span class="lineNum">     281 </span>            : </a>
 <a name="282"><span class="lineNum">     282 </span>            : template &lt;class Writer&gt;</a>
-<a name="283"><span class="lineNum">     283 </span><span class="lineCov">     245587 : inline void _writeInt(Writer &amp;w, int64_t value) {</span></a>
-<a name="284"><span class="lineNum">     284 </span><span class="lineCov">     245587 :         if (value == 0) {</span></a>
-<a name="285"><span class="lineNum">     285 </span><span class="lineCov">      12646 :                 w.emplace(toInt(MajorTypeEncoded::Unsigned));</span></a>
+<a name="283"><span class="lineNum">     283 </span><span class="lineCov">    6755000 : inline void _writeInt(Writer &amp;w, int64_t value) {</span></a>
+<a name="284"><span class="lineNum">     284 </span><span class="lineCov">    6755000 :         if (value == 0) {</span></a>
+<a name="285"><span class="lineNum">     285 </span><span class="lineCov">     330575 :                 w.emplace(toInt(MajorTypeEncoded::Unsigned));</span></a>
 <a name="286"><span class="lineNum">     286 </span>            :         } else {</a>
-<a name="287"><span class="lineNum">     287 </span><span class="lineCov">     232941 :                 if (value &gt; 0) {</span></a>
-<a name="288"><span class="lineNum">     288 </span><span class="lineCov">     232859 :                         _writeInt(w, (uint64_t)value, MajorTypeEncoded::Unsigned);</span></a>
+<a name="287"><span class="lineNum">     287 </span><span class="lineCov">    6424425 :                 if (value &gt; 0) {</span></a>
+<a name="288"><span class="lineNum">     288 </span><span class="lineCov">    6418975 :                         _writeInt(w, (uint64_t)value, MajorTypeEncoded::Unsigned);</span></a>
 <a name="289"><span class="lineNum">     289 </span>            :                 } else {</a>
-<a name="290"><span class="lineNum">     290 </span><span class="lineCov">         82 :                         _writeInt(w, (uint64_t)std::abs(value + 1), MajorTypeEncoded::Negative);</span></a>
+<a name="290"><span class="lineNum">     290 </span><span class="lineCov">       5450 :                         _writeInt(w, (uint64_t)std::abs(value + 1), MajorTypeEncoded::Negative);</span></a>
 <a name="291"><span class="lineNum">     291 </span>            :                 }</a>
 <a name="292"><span class="lineNum">     292 </span>            :         }</a>
-<a name="293"><span class="lineNum">     293 </span><span class="lineCov">     245587 : }</span></a>
+<a name="293"><span class="lineNum">     293 </span><span class="lineCov">    6755000 : }</span></a>
 <a name="294"><span class="lineNum">     294 </span>            : </a>
 <a name="295"><span class="lineNum">     295 </span>            : template &lt;class Writer&gt;</a>
-<a name="296"><span class="lineNum">     296 </span><span class="lineCov">     131233 : inline void _writeFloat(Writer &amp;w, double value) {</span></a>
+<a name="296"><span class="lineNum">     296 </span><span class="lineCov">    3285268 : inline void _writeFloat(Writer &amp;w, double value) {</span></a>
 <a name="297"><span class="lineNum">     297 </span>            :         // calculate optimal size to store value</a>
 <a name="298"><span class="lineNum">     298 </span>            :         // some code from https://github.com/cabo/cn-cbor/blob/master/src/cn-encoder.c</a>
-<a name="299"><span class="lineNum">     299 </span><span class="lineCov">     131233 :         float fvalue = value;</span></a>
-<a name="300"><span class="lineNum">     300 </span><span class="lineCov">     131233 :         if (isnan(value)) { // NaN -- we always write a half NaN</span></a>
+<a name="299"><span class="lineNum">     299 </span><span class="lineCov">    3285268 :         float fvalue = value;</span></a>
+<a name="300"><span class="lineNum">     300 </span><span class="lineCov">    3285268 :         if (isnan(value)) { // NaN -- we always write a half NaN</span></a>
 <a name="301"><span class="lineNum">     301 </span><span class="lineNoCov">          0 :                 _writeFloatNaN(w);</span></a>
-<a name="302"><span class="lineNum">     302 </span><span class="lineCov">     131233 :         } else if (value == NumericLimits&lt;double&gt;::infinity()) {</span></a>
+<a name="302"><span class="lineNum">     302 </span><span class="lineCov">    3285268 :         } else if (value == NumericLimits&lt;double&gt;::infinity()) {</span></a>
 <a name="303"><span class="lineNum">     303 </span><span class="lineNoCov">          0 :                 _writeFloatPositiveInf(w);</span></a>
-<a name="304"><span class="lineNum">     304 </span><span class="lineCov">     131233 :         } else if (value == - NumericLimits&lt;double&gt;::infinity()) {</span></a>
+<a name="304"><span class="lineNum">     304 </span><span class="lineCov">    3285268 :         } else if (value == - NumericLimits&lt;double&gt;::infinity()) {</span></a>
 <a name="305"><span class="lineNum">     305 </span><span class="lineNoCov">          0 :                 _writeFloatNegativeInf(w);</span></a>
-<a name="306"><span class="lineNum">     306 </span><span class="lineCov">     131233 :         } else if (fvalue == value) { // 32 bits is enough and we aren't NaN</span></a>
+<a name="306"><span class="lineNum">     306 </span><span class="lineCov">    3285268 :         } else if (fvalue == value) { // 32 bits is enough and we aren't NaN</span></a>
 <a name="307"><span class="lineNum">     307 </span>            :                 union {</a>
 <a name="308"><span class="lineNum">     308 </span>            :                         float f;</a>
 <a name="309"><span class="lineNum">     309 </span>            :                         uint32_t u;</a>
 <a name="310"><span class="lineNum">     310 </span>            :                 } u32;</a>
 <a name="311"><span class="lineNum">     311 </span>            : </a>
-<a name="312"><span class="lineNum">     312 </span><span class="lineCov">     131233 :                 u32.f = fvalue;</span></a>
-<a name="313"><span class="lineNum">     313 </span><span class="lineCov">     131233 :                 if ((u32.u &amp; 0x1FFF) == 0) { // worth trying half</span></a>
-<a name="314"><span class="lineNum">     314 </span><span class="lineCov">      34164 :                         int s16 = (u32.u &gt;&gt; 16) &amp; 0x8000;</span></a>
-<a name="315"><span class="lineNum">     315 </span><span class="lineCov">      34164 :                         int exp = (u32.u &gt;&gt; 23) &amp; 0xff;</span></a>
-<a name="316"><span class="lineNum">     316 </span><span class="lineCov">      34164 :                         int mant = u32.u &amp; 0x7fffff;</span></a>
-<a name="317"><span class="lineNum">     317 </span><span class="lineCov">      34164 :                         if (exp == 0 &amp;&amp; mant == 0) {</span></a>
+<a name="312"><span class="lineNum">     312 </span><span class="lineCov">    3285268 :                 u32.f = fvalue;</span></a>
+<a name="313"><span class="lineNum">     313 </span><span class="lineCov">    3285268 :                 if ((u32.u &amp; 0x1FFF) == 0) { // worth trying half</span></a>
+<a name="314"><span class="lineNum">     314 </span><span class="lineCov">     857168 :                         int s16 = (u32.u &gt;&gt; 16) &amp; 0x8000;</span></a>
+<a name="315"><span class="lineNum">     315 </span><span class="lineCov">     857168 :                         int exp = (u32.u &gt;&gt; 23) &amp; 0xff;</span></a>
+<a name="316"><span class="lineNum">     316 </span><span class="lineCov">     857168 :                         int mant = u32.u &amp; 0x7fffff;</span></a>
+<a name="317"><span class="lineNum">     317 </span><span class="lineCov">     857168 :                         if (exp == 0 &amp;&amp; mant == 0) {</span></a>
 <a name="318"><span class="lineNum">     318 </span>            :                                 ; // 0.0, -0.0</a>
-<a name="319"><span class="lineNum">     319 </span><span class="lineCov">      34164 :                         } else if (exp &gt;= 113 &amp;&amp; exp &lt;= 142) { // normalized</span></a>
-<a name="320"><span class="lineNum">     320 </span><span class="lineCov">      34164 :                                 s16 += ((exp - 112) &lt;&lt; 10) + (mant &gt;&gt; 13);</span></a>
+<a name="319"><span class="lineNum">     319 </span><span class="lineCov">     857168 :                         } else if (exp &gt;= 113 &amp;&amp; exp &lt;= 142) { // normalized</span></a>
+<a name="320"><span class="lineNum">     320 </span><span class="lineCov">     857168 :                                 s16 += ((exp - 112) &lt;&lt; 10) + (mant &gt;&gt; 13);</span></a>
 <a name="321"><span class="lineNum">     321 </span><span class="lineNoCov">          0 :                         } else if (exp &gt;= 103 &amp;&amp; exp &lt; 113) { // denorm, exp16 = 0</span></a>
 <a name="322"><span class="lineNum">     322 </span><span class="lineNoCov">          0 :                                 if (mant &amp; ((1 &lt;&lt; (126 - exp)) - 1)) {</span></a>
 <a name="323"><span class="lineNum">     323 </span><span class="lineNoCov">          0 :                                         _writeFloat32(w, fvalue);</span></a>
@@ -393,9 +393,9 @@
 <a name="331"><span class="lineNum">     331 </span><span class="lineNoCov">          0 :                                 return;</span></a>
 <a name="332"><span class="lineNum">     332 </span>            :                         }</a>
 <a name="333"><span class="lineNum">     333 </span>            : </a>
-<a name="334"><span class="lineNum">     334 </span><span class="lineCov">      34164 :                         _writeFloat16(w, s16);</span></a>
+<a name="334"><span class="lineNum">     334 </span><span class="lineCov">     857168 :                         _writeFloat16(w, s16);</span></a>
 <a name="335"><span class="lineNum">     335 </span>            :                 } else {</a>
-<a name="336"><span class="lineNum">     336 </span><span class="lineCov">      97069 :                         _writeFloat32(w, fvalue);</span></a>
+<a name="336"><span class="lineNum">     336 </span><span class="lineCov">    2428100 :                         _writeFloat32(w, fvalue);</span></a>
 <a name="337"><span class="lineNum">     337 </span>            :                 }</a>
 <a name="338"><span class="lineNum">     338 </span>            :         } else  {</a>
 <a name="339"><span class="lineNum">     339 </span><span class="lineNoCov">          0 :                 _writeFloat64(w, value);</span></a>
@@ -403,74 +403,74 @@
 <a name="341"><span class="lineNum">     341 </span>            : }</a>
 <a name="342"><span class="lineNum">     342 </span>            : </a>
 <a name="343"><span class="lineNum">     343 </span>            : template &lt;class Writer&gt;</a>
-<a name="344"><span class="lineNum">     344 </span><span class="lineCov">      51029 : inline void _writeString(Writer &amp;w, const StringView &amp;str) {</span></a>
-<a name="345"><span class="lineNum">     345 </span><span class="lineCov">      51029 :         auto size = str.size();</span></a>
-<a name="346"><span class="lineNum">     346 </span><span class="lineCov">      51029 :         _writeInt(w, size, MajorTypeEncoded::CharString);</span></a>
-<a name="347"><span class="lineNum">     347 </span><span class="lineCov">      51029 :         w.emplace((uint8_t *)str.data(), size);</span></a>
-<a name="348"><span class="lineNum">     348 </span><span class="lineCov">      51029 : }</span></a>
+<a name="344"><span class="lineNum">     344 </span><span class="lineCov">   13824029 : inline void _writeString(Writer &amp;w, const StringView &amp;str) {</span></a>
+<a name="345"><span class="lineNum">     345 </span><span class="lineCov">   13824029 :         auto size = str.size();</span></a>
+<a name="346"><span class="lineNum">     346 </span><span class="lineCov">   13824029 :         _writeInt(w, size, MajorTypeEncoded::CharString);</span></a>
+<a name="347"><span class="lineNum">     347 </span><span class="lineCov">   13824029 :         w.emplace((uint8_t *)str.data(), size);</span></a>
+<a name="348"><span class="lineNum">     348 </span><span class="lineCov">   13824029 : }</span></a>
 <a name="349"><span class="lineNum">     349 </span>            : </a>
 <a name="350"><span class="lineNum">     350 </span>            : template &lt;class Writer&gt;</a>
-<a name="351"><span class="lineNum">     351 </span><span class="lineCov">      16989 : inline void _writeBytes(Writer &amp;w, const BytesViewTemplate&lt;Endian::Network&gt; &amp;data) {</span></a>
-<a name="352"><span class="lineNum">     352 </span><span class="lineCov">      16989 :         auto size = data.size();</span></a>
-<a name="353"><span class="lineNum">     353 </span><span class="lineCov">      16989 :         _writeInt(w, size, MajorTypeEncoded::ByteString);</span></a>
-<a name="354"><span class="lineNum">     354 </span><span class="lineCov">      16989 :         w.emplace(data.data(), size);</span></a>
-<a name="355"><span class="lineNum">     355 </span><span class="lineCov">      16989 : }</span></a>
+<a name="351"><span class="lineNum">     351 </span><span class="lineCov">     426093 : inline void _writeBytes(Writer &amp;w, const BytesViewTemplate&lt;Endian::Network&gt; &amp;data) {</span></a>
+<a name="352"><span class="lineNum">     352 </span><span class="lineCov">     426093 :         auto size = data.size();</span></a>
+<a name="353"><span class="lineNum">     353 </span><span class="lineCov">     426093 :         _writeInt(w, size, MajorTypeEncoded::ByteString);</span></a>
+<a name="354"><span class="lineNum">     354 </span><span class="lineCov">     426093 :         w.emplace(data.data(), size);</span></a>
+<a name="355"><span class="lineNum">     355 </span><span class="lineCov">     426093 : }</span></a>
 <a name="356"><span class="lineNum">     356 </span>            : </a>
 <a name="357"><span class="lineNum">     357 </span>            : template &lt;class Writer&gt;</a>
-<a name="358"><span class="lineNum">     358 </span><span class="lineCov">     258064 : inline void _writeNumber(Writer &amp;w, float n) {</span></a>
-<a name="359"><span class="lineNum">     359 </span><span class="lineCov">     258064 :         if (n == roundf(n)) {</span></a>
-<a name="360"><span class="lineNum">     360 </span><span class="lineCov">     143809 :                 _writeInt(w, int64_t(n));</span></a>
+<a name="358"><span class="lineNum">     358 </span><span class="lineCov">    6471200 : inline void _writeNumber(Writer &amp;w, float n) {</span></a>
+<a name="359"><span class="lineNum">     359 </span><span class="lineCov">    6471200 :         if (n == roundf(n)) {</span></a>
+<a name="360"><span class="lineNum">     360 </span><span class="lineCov">    3613350 :                 _writeInt(w, int64_t(n));</span></a>
 <a name="361"><span class="lineNum">     361 </span>            :         } else {</a>
-<a name="362"><span class="lineNum">     362 </span><span class="lineCov">     114255 :                 _writeFloat(w, n);</span></a>
+<a name="362"><span class="lineNum">     362 </span><span class="lineCov">    2857850 :                 _writeFloat(w, n);</span></a>
 <a name="363"><span class="lineNum">     363 </span>            :         }</a>
-<a name="364"><span class="lineNum">     364 </span><span class="lineCov">     258064 : };</span></a>
+<a name="364"><span class="lineNum">     364 </span><span class="lineCov">    6471200 : };</span></a>
 <a name="365"><span class="lineNum">     365 </span>            : </a>
-<a name="366"><span class="lineNum">     366 </span><span class="lineCov">    1842081 : inline uint64_t _readIntValue(BytesViewTemplate&lt;Endian::Network&gt; &amp;r, uint8_t type) {</span></a>
-<a name="367"><span class="lineNum">     367 </span><span class="lineCov">    1842081 :         if (type &lt; toInt(Flags::MaxAdditionalNumber)) {</span></a>
-<a name="368"><span class="lineNum">     368 </span><span class="lineCov">    1774909 :                 return type;</span></a>
-<a name="369"><span class="lineNum">     369 </span><span class="lineCov">      67172 :         } else if (type == toInt(Flags::AdditionalNumber8Bit)) {</span></a>
-<a name="370"><span class="lineNum">     370 </span><span class="lineCov">      44899 :                 return r.readUnsigned();</span></a>
-<a name="371"><span class="lineNum">     371 </span><span class="lineCov">      22273 :         } else if (type == toInt(Flags::AdditionalNumber16Bit)) {</span></a>
-<a name="372"><span class="lineNum">     372 </span><span class="lineCov">      22255 :                 return r.readUnsigned16();</span></a>
-<a name="373"><span class="lineNum">     373 </span><span class="lineCov">         18 :         } else if (type == toInt(Flags::AdditionalNumber32Bit)) {</span></a>
-<a name="374"><span class="lineNum">     374 </span><span class="lineCov">          6 :                 return r.readUnsigned32();</span></a>
-<a name="375"><span class="lineNum">     375 </span><span class="lineCov">         12 :         } else if (type == toInt(Flags::AdditionalNumber64Bit)) {</span></a>
-<a name="376"><span class="lineNum">     376 </span><span class="lineCov">          8 :                 return r.readUnsigned64();</span></a>
+<a name="366"><span class="lineNum">     366 </span><span class="lineCov">   56074458 : inline uint64_t _readIntValue(BytesViewTemplate&lt;Endian::Network&gt; &amp;r, uint8_t type) {</span></a>
+<a name="367"><span class="lineNum">     367 </span><span class="lineCov">   56074458 :         if (type &lt; toInt(Flags::MaxAdditionalNumber)) {</span></a>
+<a name="368"><span class="lineNum">     368 </span><span class="lineCov">   53323111 :                 return type;</span></a>
+<a name="369"><span class="lineNum">     369 </span><span class="lineCov">    2751345 :         } else if (type == toInt(Flags::AdditionalNumber8Bit)) {</span></a>
+<a name="370"><span class="lineNum">     370 </span><span class="lineCov">    1719790 :                 return r.readUnsigned();</span></a>
+<a name="371"><span class="lineNum">     371 </span><span class="lineCov">    1031574 :         } else if (type == toInt(Flags::AdditionalNumber16Bit)) {</span></a>
+<a name="372"><span class="lineNum">     372 </span><span class="lineCov">     790228 :                 return r.readUnsigned16();</span></a>
+<a name="373"><span class="lineNum">     373 </span><span class="lineCov">     241348 :         } else if (type == toInt(Flags::AdditionalNumber32Bit)) {</span></a>
+<a name="374"><span class="lineNum">     374 </span><span class="lineCov">     240475 :                 return r.readUnsigned32();</span></a>
+<a name="375"><span class="lineNum">     375 </span><span class="lineCov">        875 :         } else if (type == toInt(Flags::AdditionalNumber64Bit)) {</span></a>
+<a name="376"><span class="lineNum">     376 </span><span class="lineCov">        775 :                 return r.readUnsigned64();</span></a>
 <a name="377"><span class="lineNum">     377 </span>            :         } else {</a>
-<a name="378"><span class="lineNum">     378 </span><span class="lineCov">          4 :                 return 0;</span></a>
+<a name="378"><span class="lineNum">     378 </span><span class="lineCov">        100 :                 return 0;</span></a>
 <a name="379"><span class="lineNum">     379 </span>            :         }</a>
 <a name="380"><span class="lineNum">     380 </span>            : }</a>
 <a name="381"><span class="lineNum">     381 </span>            : </a>
-<a name="382"><span class="lineNum">     382 </span><span class="lineCov">     731927 : inline int64_t _readInt(BytesViewTemplate&lt;Endian::Network&gt; &amp;r) {</span></a>
-<a name="383"><span class="lineNum">     383 </span><span class="lineCov">     731927 :         uint8_t type = r.readUnsigned();</span></a>
-<a name="384"><span class="lineNum">     384 </span><span class="lineCov">     731927 :         MajorTypeEncoded majorType = (MajorTypeEncoded)(type &amp; toInt(Flags::MajorTypeMaskEncoded));;</span></a>
-<a name="385"><span class="lineNum">     385 </span><span class="lineCov">     731927 :         type = type &amp; toInt(Flags::AdditionalInfoMask);</span></a>
+<a name="382"><span class="lineNum">     382 </span><span class="lineCov">   19435932 : inline int64_t _readInt(BytesViewTemplate&lt;Endian::Network&gt; &amp;r) {</span></a>
+<a name="383"><span class="lineNum">     383 </span><span class="lineCov">   19435932 :         uint8_t type = r.readUnsigned();</span></a>
+<a name="384"><span class="lineNum">     384 </span><span class="lineCov">   19435932 :         MajorTypeEncoded majorType = (MajorTypeEncoded)(type &amp; toInt(Flags::MajorTypeMaskEncoded));;</span></a>
+<a name="385"><span class="lineNum">     385 </span><span class="lineCov">   19435932 :         type = type &amp; toInt(Flags::AdditionalInfoMask);</span></a>
 <a name="386"><span class="lineNum">     386 </span>            : </a>
-<a name="387"><span class="lineNum">     387 </span><span class="lineCov">     731927 :         switch(majorType) {</span></a>
-<a name="388"><span class="lineNum">     388 </span><span class="lineCov">     731927 :         case MajorTypeEncoded::Unsigned: return _readIntValue(r, type); break;</span></a>
+<a name="387"><span class="lineNum">     387 </span><span class="lineCov">   19435932 :         switch(majorType) {</span></a>
+<a name="388"><span class="lineNum">     388 </span><span class="lineCov">   19435932 :         case MajorTypeEncoded::Unsigned: return _readIntValue(r, type); break;</span></a>
 <a name="389"><span class="lineNum">     389 </span><span class="lineNoCov">          0 :         case MajorTypeEncoded::Negative: return (-1 - _readIntValue(r, type)); break;</span></a>
 <a name="390"><span class="lineNum">     390 </span>            :         default: break;</a>
 <a name="391"><span class="lineNum">     391 </span>            :         }</a>
 <a name="392"><span class="lineNum">     392 </span>            :         return 0;</a>
 <a name="393"><span class="lineNum">     393 </span>            : }</a>
 <a name="394"><span class="lineNum">     394 </span>            : </a>
-<a name="395"><span class="lineNum">     395 </span><span class="lineCov">    1806126 : inline double _readNumber(BytesViewTemplate&lt;Endian::Network&gt; &amp;r) {</span></a>
-<a name="396"><span class="lineNum">     396 </span><span class="lineCov">    1806126 :         uint8_t type = r.readUnsigned();</span></a>
-<a name="397"><span class="lineNum">     397 </span><span class="lineCov">    1806126 :         MajorTypeEncoded majorType = (MajorTypeEncoded)(type &amp; toInt(Flags::MajorTypeMaskEncoded));;</span></a>
-<a name="398"><span class="lineNum">     398 </span><span class="lineCov">    1806126 :         type = type &amp; toInt(Flags::AdditionalInfoMask);</span></a>
+<a name="395"><span class="lineNum">     395 </span><span class="lineCov">   49319739 : inline double _readNumber(BytesViewTemplate&lt;Endian::Network&gt; &amp;r) {</span></a>
+<a name="396"><span class="lineNum">     396 </span><span class="lineCov">   49319739 :         uint8_t type = r.readUnsigned();</span></a>
+<a name="397"><span class="lineNum">     397 </span><span class="lineCov">   49319739 :         MajorTypeEncoded majorType = (MajorTypeEncoded)(type &amp; toInt(Flags::MajorTypeMaskEncoded));;</span></a>
+<a name="398"><span class="lineNum">     398 </span><span class="lineCov">   49319739 :         type = type &amp; toInt(Flags::AdditionalInfoMask);</span></a>
 <a name="399"><span class="lineNum">     399 </span>            : </a>
-<a name="400"><span class="lineNum">     400 </span><span class="lineCov">    1806126 :         switch(majorType) {</span></a>
-<a name="401"><span class="lineNum">     401 </span><span class="lineCov">    1005809 :         case MajorTypeEncoded::Unsigned:</span></a>
-<a name="402"><span class="lineNum">     402 </span><span class="lineCov">    1005809 :                 return _readIntValue(r, type);</span></a>
+<a name="400"><span class="lineNum">     400 </span><span class="lineCov">   49319739 :         switch(majorType) {</span></a>
+<a name="401"><span class="lineNum">     401 </span><span class="lineCov">   27462952 :         case MajorTypeEncoded::Unsigned:</span></a>
+<a name="402"><span class="lineNum">     402 </span><span class="lineCov">   27462952 :                 return _readIntValue(r, type);</span></a>
 <a name="403"><span class="lineNum">     403 </span>            :                 break;</a>
-<a name="404"><span class="lineNum">     404 </span><span class="lineCov">        574 :         case MajorTypeEncoded::Negative:</span></a>
-<a name="405"><span class="lineNum">     405 </span><span class="lineCov">        574 :                 return (-1 - static_cast&lt;int64_t&gt;(_readIntValue(r, type)));</span></a>
+<a name="404"><span class="lineNum">     404 </span><span class="lineCov">      15990 :         case MajorTypeEncoded::Negative:</span></a>
+<a name="405"><span class="lineNum">     405 </span><span class="lineCov">      15990 :                 return (-1 - static_cast&lt;int64_t&gt;(_readIntValue(r, type)));</span></a>
 <a name="406"><span class="lineNum">     406 </span>            :                 break;</a>
-<a name="407"><span class="lineNum">     407 </span><span class="lineCov">     799743 :         case MajorTypeEncoded::Simple:</span></a>
-<a name="408"><span class="lineNum">     408 </span><span class="lineCov">     799743 :                 if (type == toInt(Flags::AdditionalFloat16Bit)) {</span></a>
-<a name="409"><span class="lineNum">     409 </span><span class="lineCov">     120302 :                         return r.readFloat16();</span></a>
-<a name="410"><span class="lineNum">     410 </span><span class="lineCov">     679441 :                 } else if (type == toInt(Flags::AdditionalFloat32Bit)) {</span></a>
-<a name="411"><span class="lineNum">     411 </span><span class="lineCov">     679441 :                         return r.readFloat32();</span></a>
+<a name="407"><span class="lineNum">     407 </span><span class="lineCov">   21840797 :         case MajorTypeEncoded::Simple:</span></a>
+<a name="408"><span class="lineNum">     408 </span><span class="lineCov">   21840797 :                 if (type == toInt(Flags::AdditionalFloat16Bit)) {</span></a>
+<a name="409"><span class="lineNum">     409 </span><span class="lineCov">    3288149 :                         return r.readFloat16();</span></a>
+<a name="410"><span class="lineNum">     410 </span><span class="lineCov">   18552648 :                 } else if (type == toInt(Flags::AdditionalFloat32Bit)) {</span></a>
+<a name="411"><span class="lineNum">     411 </span><span class="lineCov">   18552648 :                         return r.readFloat32();</span></a>
 <a name="412"><span class="lineNum">     412 </span><span class="lineNoCov">          0 :                 } else if (type == toInt(Flags::AdditionalFloat64Bit)) {</span></a>
 <a name="413"><span class="lineNum">     413 </span><span class="lineNoCov">          0 :                         return r.readFloat64();</span></a>
 <a name="414"><span class="lineNum">     414 </span>            :                 }</a>

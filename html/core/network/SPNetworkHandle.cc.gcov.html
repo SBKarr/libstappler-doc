@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2023-12-03 02:10:58</td>
+            <td class="headerValue">2024-05-12 00:16:13</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">2</td>
@@ -99,7 +99,7 @@
 <a name="37"><span class="lineNum">      37 </span>            : </a>
 <a name="38"><span class="lineNum">      38 </span>            : #include &quot;curl/curl.h&quot;</a>
 <a name="39"><span class="lineNum">      39 </span>            : </a>
-<a name="40"><span class="lineNum">      40 </span>            : namespace stappler::network {</a>
+<a name="40"><span class="lineNum">      40 </span>            : namespace STAPPLER_VERSIONIZED stappler::network {</a>
 <a name="41"><span class="lineNum">      41 </span>            : </a>
 <a name="42"><span class="lineNum">      42 </span>            : SPUNUSED static CURL *CurlHandle_alloc();</a>
 <a name="43"><span class="lineNum">      43 </span>            : SPUNUSED static void CurlHandle_release(CURL *curl);</a>
@@ -116,14 +116,14 @@
 <a name="54"><span class="lineNum">      54 </span>            : }</a>
 <a name="55"><span class="lineNum">      55 </span>            : </a>
 <a name="56"><span class="lineNum">      56 </span>            : template &lt;&gt;</a>
-<a name="57"><span class="lineNum">      57 </span><span class="lineCov">          1 : bool Handle&lt;memory::StandartInterface&gt;::init(Method method, StringView url) {</span></a>
-<a name="58"><span class="lineNum">      58 </span><span class="lineCov">          1 :         if (url.size() == 0 || method == Method::Unknown) {</span></a>
+<a name="57"><span class="lineNum">      57 </span><span class="lineCov">       3025 : bool Handle&lt;memory::StandartInterface&gt;::init(Method method, StringView url) {</span></a>
+<a name="58"><span class="lineNum">      58 </span><span class="lineCov">       3025 :         if (url.size() == 0 || method == Method::Unknown) {</span></a>
 <a name="59"><span class="lineNum">      59 </span><span class="lineNoCov">          0 :                 return false;</span></a>
 <a name="60"><span class="lineNum">      60 </span>            :         }</a>
 <a name="61"><span class="lineNum">      61 </span>            : </a>
-<a name="62"><span class="lineNum">      62 </span><span class="lineCov">          1 :         send.url = url.str&lt;memory::StandartInterface&gt;();</span></a>
-<a name="63"><span class="lineNum">      63 </span><span class="lineCov">          1 :         send.method = method;</span></a>
-<a name="64"><span class="lineNum">      64 </span><span class="lineCov">          1 :         return true;</span></a>
+<a name="62"><span class="lineNum">      62 </span><span class="lineCov">       3025 :         send.url = url.str&lt;memory::StandartInterface&gt;();</span></a>
+<a name="63"><span class="lineNum">      63 </span><span class="lineCov">       3025 :         send.method = method;</span></a>
+<a name="64"><span class="lineNum">      64 </span><span class="lineCov">       3025 :         return true;</span></a>
 <a name="65"><span class="lineNum">      65 </span>            : }</a>
 <a name="66"><span class="lineNum">      66 </span>            : </a>
 <a name="67"><span class="lineNum">      67 </span>            : template &lt;&gt;</a>
@@ -132,16 +132,16 @@
 <a name="70"><span class="lineNum">      70 </span>            : }</a>
 <a name="71"><span class="lineNum">      71 </span>            : </a>
 <a name="72"><span class="lineNum">      72 </span>            : template &lt;&gt;</a>
-<a name="73"><span class="lineNum">      73 </span><span class="lineCov">          1 : bool Handle&lt;memory::StandartInterface&gt;::perform() {</span></a>
-<a name="74"><span class="lineNum">      74 </span><span class="lineCov">          1 :         return network::perform(*this, nullptr, nullptr);</span></a>
+<a name="73"><span class="lineNum">      73 </span><span class="lineCov">       3000 : bool Handle&lt;memory::StandartInterface&gt;::perform() {</span></a>
+<a name="74"><span class="lineNum">      74 </span><span class="lineCov">       3000 :         return network::perform(*this, nullptr, nullptr);</span></a>
 <a name="75"><span class="lineNum">      75 </span>            : }</a>
 <a name="76"><span class="lineNum">      76 </span>            : </a>
 <a name="77"><span class="lineNum">      77 </span>            : template &lt;&gt;</a>
-<a name="78"><span class="lineNum">      78 </span><span class="lineNoCov">          0 : bool MultiHandle&lt;memory::PoolInterface&gt;::perform(const Callback&lt;bool(Handle&lt;memory::PoolInterface&gt; *, void *)&gt; &amp;cb) {</span></a>
+<a name="78"><span class="lineNum">      78 </span><span class="lineNoCov">          0 : bool MultiHandle&lt;memory::PoolInterface&gt;::perform(const Callback&lt;bool(Handle&lt;memory::PoolInterface&gt; *, RefBase&lt;memory::PoolInterface&gt; *)&gt; &amp;cb) {</span></a>
 <a name="79"><span class="lineNum">      79 </span><span class="lineNoCov">          0 :         auto m = curl_multi_init();</span></a>
 <a name="80"><span class="lineNum">      80 </span><span class="lineNoCov">          0 :         memory::PoolInterface::MapType&lt;CURL *, Context&lt;memory::PoolInterface&gt;&gt; handles;</span></a>
 <a name="81"><span class="lineNum">      81 </span>            : </a>
-<a name="82"><span class="lineNum">      82 </span><span class="lineNoCov">          0 :         auto initPending = [&amp;] {</span></a>
+<a name="82"><span class="lineNum">      82 </span><span class="lineNoCov">          0 :         auto initPending = [&amp;, this] {</span></a>
 <a name="83"><span class="lineNum">      83 </span><span class="lineNoCov">          0 :                 for (auto &amp;it : pending) {</span></a>
 <a name="84"><span class="lineNum">      84 </span><span class="lineNoCov">          0 :                         auto h = CurlHandle_alloc();</span></a>
 <a name="85"><span class="lineNum">      85 </span><span class="lineNoCov">          0 :                         auto i = handles.emplace(h, Context&lt;memory::PoolInterface&gt;()).first;</span></a>
@@ -220,11 +220,11 @@
 <a name="158"><span class="lineNum">     158 </span><span class="lineNoCov">          0 : }</span></a>
 <a name="159"><span class="lineNum">     159 </span>            : </a>
 <a name="160"><span class="lineNum">     160 </span>            : template &lt;&gt;</a>
-<a name="161"><span class="lineNum">     161 </span><span class="lineNoCov">          0 : bool MultiHandle&lt;memory::StandartInterface&gt;::perform(const Callback&lt;bool(Handle&lt;memory::StandartInterface&gt; *, void *)&gt; &amp;cb) {</span></a>
+<a name="161"><span class="lineNum">     161 </span><span class="lineNoCov">          0 : bool MultiHandle&lt;memory::StandartInterface&gt;::perform(const Callback&lt;bool(Handle&lt;memory::StandartInterface&gt; *, RefBase&lt;memory::StandartInterface&gt; *)&gt; &amp;cb) {</span></a>
 <a name="162"><span class="lineNum">     162 </span><span class="lineNoCov">          0 :         auto m = curl_multi_init();</span></a>
 <a name="163"><span class="lineNum">     163 </span><span class="lineNoCov">          0 :         memory::StandartInterface::MapType&lt;CURL *, Context&lt;memory::StandartInterface&gt;&gt; handles;</span></a>
 <a name="164"><span class="lineNum">     164 </span>            : </a>
-<a name="165"><span class="lineNum">     165 </span><span class="lineNoCov">          0 :         auto initPending = [&amp;] {</span></a>
+<a name="165"><span class="lineNum">     165 </span><span class="lineNoCov">          0 :         auto initPending = [&amp;, this] {</span></a>
 <a name="166"><span class="lineNum">     166 </span><span class="lineNoCov">          0 :                 for (auto &amp;it : pending) {</span></a>
 <a name="167"><span class="lineNum">     167 </span><span class="lineNoCov">          0 :                         auto h = CurlHandle_alloc();</span></a>
 <a name="168"><span class="lineNum">     168 </span><span class="lineNoCov">          0 :                         auto i = handles.emplace(h, Context&lt;memory::StandartInterface&gt;()).first;</span></a>
@@ -257,14 +257,14 @@
 <a name="195"><span class="lineNum">     195 </span>            :         do {</a>
 <a name="196"><span class="lineNum">     196 </span><span class="lineNoCov">          0 :                 auto err = curl_multi_perform(m, &amp;running);</span></a>
 <a name="197"><span class="lineNum">     197 </span><span class="lineNoCov">          0 :                 if (err != CURLM_OK) {</span></a>
-<a name="198"><span class="lineNum">     198 </span><span class="lineNoCov">          0 :                         log::error(&quot;CURL&quot;, string::ToStringTraits&lt;memory::StandartInterface&gt;::toString(&quot;Fail to perform multi: &quot;, err));</span></a>
+<a name="198"><span class="lineNum">     198 </span><span class="lineNoCov">          0 :                         log::error(&quot;CURL&quot;, string::toString&lt;memory::StandartInterface&gt;(&quot;Fail to perform multi: &quot;, err));</span></a>
 <a name="199"><span class="lineNum">     199 </span><span class="lineNoCov">          0 :                         return false;</span></a>
 <a name="200"><span class="lineNum">     200 </span>            :                 }</a>
 <a name="201"><span class="lineNum">     201 </span>            : </a>
 <a name="202"><span class="lineNum">     202 </span><span class="lineNoCov">          0 :                 if (running &gt; 0) {</span></a>
 <a name="203"><span class="lineNum">     203 </span><span class="lineNoCov">          0 :                         err = curl_multi_poll(m, NULL, 0, 1000, nullptr);</span></a>
 <a name="204"><span class="lineNum">     204 </span><span class="lineNoCov">          0 :                         if (err != CURLM_OK) {</span></a>
-<a name="205"><span class="lineNum">     205 </span><span class="lineNoCov">          0 :                                 log::error(&quot;CURL&quot;, string::ToStringTraits&lt;memory::StandartInterface&gt;::toString(&quot;Fail to poll multi: &quot;, err));</span></a>
+<a name="205"><span class="lineNum">     205 </span><span class="lineNoCov">          0 :                                 log::error(&quot;CURL&quot;, string::toString&lt;memory::StandartInterface&gt;(&quot;Fail to poll multi: &quot;, err));</span></a>
 <a name="206"><span class="lineNum">     206 </span><span class="lineNoCov">          0 :                                 return false;</span></a>
 <a name="207"><span class="lineNum">     207 </span>            :                         }</a>
 <a name="208"><span class="lineNum">     208 </span>            :                 }</a>

@@ -31,18 +31,18 @@
             <td class="headerValue">coverage.info</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntry">45</td>
-            <td class="headerCovTableEntry">50</td>
-            <td class="headerCovTableEntryHi">90.0 %</td>
+            <td class="headerCovTableEntry">46</td>
+            <td class="headerCovTableEntry">51</td>
+            <td class="headerCovTableEntryHi">90.2 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2023-12-03 02:10:58</td>
+            <td class="headerValue">2024-05-12 00:16:13</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntry">37</td>
-            <td class="headerCovTableEntry">61</td>
-            <td class="headerCovTableEntryLo">60.7 %</td>
+            <td class="headerCovTableEntry">90</td>
+            <td class="headerCovTableEntry">102</td>
+            <td class="headerCovTableEntryMed">88.2 %</td>
           </tr>
           <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
         </table>
@@ -89,7 +89,7 @@
 <a name="27"><span class="lineNum">      27 </span>            : #include &quot;SPMemString.h&quot;</a>
 <a name="28"><span class="lineNum">      28 </span>            : #include &quot;SPMemVector.h&quot;</a>
 <a name="29"><span class="lineNum">      29 </span>            : </a>
-<a name="30"><span class="lineNum">      30 </span>            : namespace stappler::memory {</a>
+<a name="30"><span class="lineNum">      30 </span>            : namespace STAPPLER_VERSIONIZED stappler::memory {</a>
 <a name="31"><span class="lineNum">      31 </span>            : </a>
 <a name="32"><span class="lineNum">      32 </span>            : template &lt;typename Key, typename Value, typename Comp = std::less&lt;&gt;&gt;</a>
 <a name="33"><span class="lineNum">      33 </span>            : class dict : public AllocPool {</a>
@@ -117,8 +117,8 @@
 <a name="55"><span class="lineNum">      55 </span>            : </a>
 <a name="56"><span class="lineNum">      56 </span>            :         template &lt;typename T&gt;</a>
 <a name="57"><span class="lineNum">      57 </span>            :         struct value_comparator {</a>
-<a name="58"><span class="lineNum">      58 </span><span class="lineCov">        156 :                 bool operator() (const value_type &amp;l, const T &amp;r) {</span></a>
-<a name="59"><span class="lineNum">      59 </span><span class="lineCov">        156 :                         return comp(l.first, r);</span></a>
+<a name="58"><span class="lineNum">      58 </span><span class="lineCov">      83738 :                 bool operator() (const value_type &amp;l, const T &amp;r) {</span></a>
+<a name="59"><span class="lineNum">      59 </span><span class="lineCov">      83738 :                         return comp(l.first, r);</span></a>
 <a name="60"><span class="lineNum">      60 </span>            :                 }</a>
 <a name="61"><span class="lineNum">      61 </span>            :                 bool operator() (const T &amp;l, const value_type &amp;r) {</a>
 <a name="62"><span class="lineNum">      62 </span>            :                         return comp(l, r.first);</a>
@@ -131,9 +131,9 @@
 <a name="69"><span class="lineNum">      69 </span>            :         };</a>
 <a name="70"><span class="lineNum">      70 </span>            : </a>
 <a name="71"><span class="lineNum">      71 </span>            : public:</a>
-<a name="72"><span class="lineNum">      72 </span><span class="lineCov">          6 :         dict() noexcept : dict( Comp() ) { }</span></a>
+<a name="72"><span class="lineNum">      72 </span><span class="lineCov">      15248 :         dict() noexcept : dict( Comp() ) { }</span></a>
 <a name="73"><span class="lineNum">      73 </span>            : </a>
-<a name="74"><span class="lineNum">      74 </span><span class="lineCov">          6 :         explicit dict(const Comp&amp; comp, const allocator_type&amp; alloc = allocator_type()) noexcept : _data(alloc), _comp(comp) { }</span></a>
+<a name="74"><span class="lineNum">      74 </span><span class="lineCov">      15248 :         explicit dict(const Comp&amp; comp, const allocator_type&amp; alloc = allocator_type()) noexcept : _data(alloc), _comp(comp) { }</span></a>
 <a name="75"><span class="lineNum">      75 </span>            :         explicit dict(const allocator_type&amp; alloc) noexcept : _data(alloc), _comp(key_compare()) { }</a>
 <a name="76"><span class="lineNum">      76 </span>            : </a>
 <a name="77"><span class="lineNum">      77 </span>            :         template&lt;class InputIterator&gt;</a>
@@ -151,10 +151,10 @@
 <a name="89"><span class="lineNum">      89 </span>            :                 }</a>
 <a name="90"><span class="lineNum">      90 </span>            :         }</a>
 <a name="91"><span class="lineNum">      91 </span>            : </a>
-<a name="92"><span class="lineNum">      92 </span><span class="lineCov">          2 :         dict(const dict&amp; x) noexcept : _data(x._data), _comp(x._comp)  { }</span></a>
+<a name="92"><span class="lineNum">      92 </span><span class="lineCov">         50 :         dict(const dict&amp; x) noexcept : _data(x._data), _comp(x._comp)  { }</span></a>
 <a name="93"><span class="lineNum">      93 </span>            :         dict(const dict&amp; x, const allocator_type&amp; alloc) noexcept : _data(x._data, alloc), _comp(x._comp) { }</a>
 <a name="94"><span class="lineNum">      94 </span>            : </a>
-<a name="95"><span class="lineNum">      95 </span><span class="lineCov">          2 :         dict(dict&amp;&amp; x) noexcept : _data(std::move(x._data)), _comp(std::move(x._comp)) { }</span></a>
+<a name="95"><span class="lineNum">      95 </span><span class="lineCov">         48 :         dict(dict&amp;&amp; x) noexcept : _data(std::move(x._data)), _comp(std::move(x._comp)) { }</span></a>
 <a name="96"><span class="lineNum">      96 </span>            :         dict(dict&amp;&amp; x, const allocator_type&amp; alloc) noexcept : _data(std::move(x._data), alloc), _comp(std::move(x._comp)) { }</a>
 <a name="97"><span class="lineNum">      97 </span>            : </a>
 <a name="98"><span class="lineNum">      98 </span>            :         dict(InitializerList&lt;value_type&gt; il,</a>
@@ -193,14 +193,14 @@
 <a name="131"><span class="lineNum">     131 </span>            : </a>
 <a name="132"><span class="lineNum">     132 </span>            :         allocator_type get_allocator() const noexcept { return _data.get_allocator(); }</a>
 <a name="133"><span class="lineNum">     133 </span>            :         bool empty() const noexcept { return _data.empty(); }</a>
-<a name="134"><span class="lineNum">     134 </span><span class="lineCov">          6 :         size_t size() const noexcept { return _data.size(); }</span></a>
-<a name="135"><span class="lineNum">     135 </span>            :         void clear() { _data.clear(); }</a>
+<a name="134"><span class="lineNum">     134 </span><span class="lineCov">        150 :         size_t size() const noexcept { return _data.size(); }</span></a>
+<a name="135"><span class="lineNum">     135 </span><span class="lineCov">       2325 :         void clear() { _data.clear(); }</span></a>
 <a name="136"><span class="lineNum">     136 </span>            : </a>
-<a name="137"><span class="lineNum">     137 </span><span class="lineCov">          3 :         iterator begin() noexcept { return _data.begin(); }</span></a>
-<a name="138"><span class="lineNum">     138 </span><span class="lineCov">          6 :         iterator end() noexcept { return _data.end(); }</span></a>
+<a name="137"><span class="lineNum">     137 </span><span class="lineCov">         75 :         iterator begin() noexcept { return _data.begin(); }</span></a>
+<a name="138"><span class="lineNum">     138 </span><span class="lineCov">      41869 :         iterator end() noexcept { return _data.end(); }</span></a>
 <a name="139"><span class="lineNum">     139 </span>            : </a>
-<a name="140"><span class="lineNum">     140 </span><span class="lineCov">          6 :         const_iterator begin() const noexcept { return _data.begin(); }</span></a>
-<a name="141"><span class="lineNum">     141 </span><span class="lineCov">          3 :         const_iterator end() const noexcept { return _data.end(); }</span></a>
+<a name="140"><span class="lineNum">     140 </span><span class="lineCov">        150 :         const_iterator begin() const noexcept { return _data.begin(); }</span></a>
+<a name="141"><span class="lineNum">     141 </span><span class="lineCov">         75 :         const_iterator end() const noexcept { return _data.end(); }</span></a>
 <a name="142"><span class="lineNum">     142 </span>            : </a>
 <a name="143"><span class="lineNum">     143 </span>            :         const_iterator cbegin() const noexcept { return _data.cbegin(); }</a>
 <a name="144"><span class="lineNum">     144 </span>            :         const_iterator cend() const noexcept { return _data.cend(); }</a>
@@ -260,21 +260,21 @@
 <a name="198"><span class="lineNum">     198 </span>            : </a>
 <a name="199"><span class="lineNum">     199 </span>            : </a>
 <a name="200"><span class="lineNum">     200 </span>            :         template&lt; class... Args &gt;</a>
-<a name="201"><span class="lineNum">     201 </span><span class="lineCov">         54 :         Pair&lt;iterator,bool&gt; emplace( Args&amp;&amp;... args ) {</span></a>
-<a name="202"><span class="lineNum">     202 </span><span class="lineCov">         54 :                 auto ret = do_try_emplace(std::forward&lt;Args&gt;(args)...);</span></a>
-<a name="203"><span class="lineNum">     203 </span><span class="lineCov">         54 :                 if (!ret.second) {</span></a>
-<a name="204"><span class="lineNum">     204 </span><span class="lineCov">          1 :                         do_assign(ret.first, std::forward&lt;Args&gt;(args)...);</span></a>
+<a name="201"><span class="lineNum">     201 </span><span class="lineCov">      10909 :         Pair&lt;iterator,bool&gt; emplace( Args&amp;&amp;... args ) {</span></a>
+<a name="202"><span class="lineNum">     202 </span><span class="lineCov">      10909 :                 auto ret = do_try_emplace(std::forward&lt;Args&gt;(args)...);</span></a>
+<a name="203"><span class="lineNum">     203 </span><span class="lineCov">      10909 :                 if (!ret.second) {</span></a>
+<a name="204"><span class="lineNum">     204 </span><span class="lineCov">         25 :                         do_assign(ret.first, std::forward&lt;Args&gt;(args)...);</span></a>
 <a name="205"><span class="lineNum">     205 </span>            :                 }</a>
-<a name="206"><span class="lineNum">     206 </span><span class="lineCov">         54 :                 return ret;</span></a>
+<a name="206"><span class="lineNum">     206 </span><span class="lineCov">      10909 :                 return ret;</span></a>
 <a name="207"><span class="lineNum">     207 </span>            :         }</a>
 <a name="208"><span class="lineNum">     208 </span>            : </a>
 <a name="209"><span class="lineNum">     209 </span>            :         template &lt;class... Args&gt;</a>
-<a name="210"><span class="lineNum">     210 </span><span class="lineCov">          4 :         iterator emplace_hint( const_iterator hint, Args&amp;&amp;... args ) {</span></a>
-<a name="211"><span class="lineNum">     211 </span><span class="lineCov">          4 :                 auto ret = do_try_emplace(hint, std::forward&lt;Args&gt;(args)...);</span></a>
-<a name="212"><span class="lineNum">     212 </span><span class="lineCov">          4 :                 if (!ret.second) {</span></a>
+<a name="210"><span class="lineNum">     210 </span><span class="lineCov">        100 :         iterator emplace_hint( const_iterator hint, Args&amp;&amp;... args ) {</span></a>
+<a name="211"><span class="lineNum">     211 </span><span class="lineCov">        100 :                 auto ret = do_try_emplace(hint, std::forward&lt;Args&gt;(args)...);</span></a>
+<a name="212"><span class="lineNum">     212 </span><span class="lineCov">        100 :                 if (!ret.second) {</span></a>
 <a name="213"><span class="lineNum">     213 </span><span class="lineNoCov">          0 :                         do_assign(ret.first, std::forward&lt;Args&gt;(args)...);</span></a>
 <a name="214"><span class="lineNum">     214 </span>            :                 }</a>
-<a name="215"><span class="lineNum">     215 </span><span class="lineCov">          8 :                 return ret.first;</span></a>
+<a name="215"><span class="lineNum">     215 </span><span class="lineCov">        200 :                 return ret.first;</span></a>
 <a name="216"><span class="lineNum">     216 </span>            :         }</a>
 <a name="217"><span class="lineNum">     217 </span>            : </a>
 <a name="218"><span class="lineNum">     218 </span>            :         template &lt;class... Args&gt;</a>
@@ -305,11 +305,11 @@
 <a name="243"><span class="lineNum">     243 </span>            :                 return do_erase(key);</a>
 <a name="244"><span class="lineNum">     244 </span>            :         }</a>
 <a name="245"><span class="lineNum">     245 </span>            : </a>
-<a name="246"><span class="lineNum">     246 </span><span class="lineCov">          6 :         template&lt; class K &gt; iterator find( const K&amp; x ) { return do_find(x); }</span></a>
+<a name="246"><span class="lineNum">     246 </span><span class="lineCov">      41869 :         template&lt; class K &gt; iterator find( const K&amp; x ) { return do_find(x); }</span></a>
 <a name="247"><span class="lineNum">     247 </span>            :         template&lt; class K &gt; const_iterator find( const K&amp; x ) const { return do_find(x); }</a>
 <a name="248"><span class="lineNum">     248 </span>            : </a>
-<a name="249"><span class="lineNum">     249 </span><span class="lineCov">         62 :         template&lt; class K &gt; iterator lower_bound(const K&amp; x) {</span></a>
-<a name="250"><span class="lineNum">     250 </span><span class="lineCov">         62 :                 return std::lower_bound(_data.begin(), _data.end(), x, value_comparator&lt;K&gt;{_comp});</span></a>
+<a name="249"><span class="lineNum">     249 </span><span class="lineCov">      52828 :         template&lt; class K &gt; iterator lower_bound(const K&amp; x) {</span></a>
+<a name="250"><span class="lineNum">     250 </span><span class="lineCov">      52828 :                 return std::lower_bound(_data.begin(), _data.end(), x, value_comparator&lt;K&gt;{_comp});</span></a>
 <a name="251"><span class="lineNum">     251 </span>            :         }</a>
 <a name="252"><span class="lineNum">     252 </span>            :         template&lt; class K &gt;       const_iterator lower_bound(const K&amp; x) const {</a>
 <a name="253"><span class="lineNum">     253 </span>            :                 return std::lower_bound(_data.begin(), _data.end(), x, value_comparator&lt;K&gt;{_comp});</a>
@@ -334,8 +334,8 @@
 <a name="272"><span class="lineNum">     272 </span>            : </a>
 <a name="273"><span class="lineNum">     273 </span>            : protected:</a>
 <a name="274"><span class="lineNum">     274 </span>            :         template &lt;typename L, typename R&gt;</a>
-<a name="275"><span class="lineNum">     275 </span><span class="lineCov">         38 :         bool do_equal_check(const L &amp;l, const R &amp;r) const {</span></a>
-<a name="276"><span class="lineNum">     276 </span><span class="lineCov">         38 :                 return !_comp(l, r) &amp;&amp; !_comp(r, l);</span></a>
+<a name="275"><span class="lineNum">     275 </span><span class="lineCov">      30406 :         bool do_equal_check(const L &amp;l, const R &amp;r) const {</span></a>
+<a name="276"><span class="lineNum">     276 </span><span class="lineCov">      30406 :                 return !_comp(l, r) &amp;&amp; !_comp(r, l);</span></a>
 <a name="277"><span class="lineNum">     277 </span>            :         }</a>
 <a name="278"><span class="lineNum">     278 </span>            : </a>
 <a name="279"><span class="lineNum">     279 </span>            :         template &lt;typename K, class M&gt;</a>
@@ -360,24 +360,24 @@
 <a name="298"><span class="lineNum">     298 </span>            :         }</a>
 <a name="299"><span class="lineNum">     299 </span>            : </a>
 <a name="300"><span class="lineNum">     300 </span>            :         template &lt;typename K, typename ... Args&gt;</a>
-<a name="301"><span class="lineNum">     301 </span><span class="lineCov">         56 :         Pair&lt;iterator,bool&gt; do_try_emplace(K &amp;&amp;k, Args &amp;&amp; ... args) {</span></a>
-<a name="302"><span class="lineNum">     302 </span><span class="lineCov">         56 :                 auto it = lower_bound(k);</span></a>
-<a name="303"><span class="lineNum">     303 </span><span class="lineCov">         56 :                 if (it == _data.end() || !do_equal_check(it-&gt;first, k)) {</span></a>
+<a name="301"><span class="lineNum">     301 </span><span class="lineCov">      10959 :         Pair&lt;iterator,bool&gt; do_try_emplace(K &amp;&amp;k, Args &amp;&amp; ... args) {</span></a>
+<a name="302"><span class="lineNum">     302 </span><span class="lineCov">      10959 :                 auto it = lower_bound(k);</span></a>
+<a name="303"><span class="lineNum">     303 </span><span class="lineCov">      10959 :                 if (it == _data.end() || !do_equal_check(it-&gt;first, k)) {</span></a>
 <a name="304"><span class="lineNum">     304 </span>            :                         return pair(_data.emplace_safe(it, std::piecewise_construct,</a>
-<a name="305"><span class="lineNum">     305 </span><span class="lineCov">         55 :                                         std::forward_as_tuple(std::forward&lt;K&gt;(k)), std::forward_as_tuple(std::forward&lt;Args&gt;(args)...)), true);</span></a>
+<a name="305"><span class="lineNum">     305 </span><span class="lineCov">      10934 :                                         std::forward_as_tuple(std::forward&lt;K&gt;(k)), std::forward_as_tuple(std::forward&lt;Args&gt;(args)...)), true);</span></a>
 <a name="306"><span class="lineNum">     306 </span>            :                 }</a>
-<a name="307"><span class="lineNum">     307 </span><span class="lineCov">          2 :                 return pair(it, false);</span></a>
+<a name="307"><span class="lineNum">     307 </span><span class="lineCov">         50 :                 return pair(it, false);</span></a>
 <a name="308"><span class="lineNum">     308 </span>            :         }</a>
 <a name="309"><span class="lineNum">     309 </span>            : </a>
 <a name="310"><span class="lineNum">     310 </span>            :         template &lt;typename K, typename ... Args&gt;</a>
-<a name="311"><span class="lineNum">     311 </span><span class="lineCov">          4 :         Pair&lt;iterator,bool&gt; do_try_emplace(const_iterator hint, K &amp;&amp;k, Args &amp;&amp; ... args) {</span></a>
-<a name="312"><span class="lineNum">     312 </span><span class="lineCov">          4 :                 if (hint != _data.begin()) {</span></a>
-<a name="313"><span class="lineNum">     313 </span><span class="lineCov">          4 :                         if (_comp((hint - 1)-&gt;first, k) &amp;&amp; (hint == _data.end() || !_comp(hint-&gt;first, k))) {</span></a>
+<a name="311"><span class="lineNum">     311 </span><span class="lineCov">        100 :         Pair&lt;iterator,bool&gt; do_try_emplace(const_iterator hint, K &amp;&amp;k, Args &amp;&amp; ... args) {</span></a>
+<a name="312"><span class="lineNum">     312 </span><span class="lineCov">        100 :                 if (hint != _data.begin()) {</span></a>
+<a name="313"><span class="lineNum">     313 </span><span class="lineCov">        100 :                         if (_comp((hint - 1)-&gt;first, k) &amp;&amp; (hint == _data.end() || !_comp(hint-&gt;first, k))) {</span></a>
 <a name="314"><span class="lineNum">     314 </span>            :                                 return pair(_data.emplace_safe(hint, std::piecewise_construct,</a>
-<a name="315"><span class="lineNum">     315 </span><span class="lineCov">          2 :                                                 std::forward_as_tuple(std::forward&lt;K&gt;(k)), std::forward_as_tuple(std::forward&lt;Args&gt;(args)...)), true);</span></a>
+<a name="315"><span class="lineNum">     315 </span><span class="lineCov">         50 :                                                 std::forward_as_tuple(std::forward&lt;K&gt;(k)), std::forward_as_tuple(std::forward&lt;Args&gt;(args)...)), true);</span></a>
 <a name="316"><span class="lineNum">     316 </span>            :                         }</a>
 <a name="317"><span class="lineNum">     317 </span>            :                 }</a>
-<a name="318"><span class="lineNum">     318 </span><span class="lineCov">          2 :                 return do_try_emplace(std::forward&lt;K&gt;(k), std::forward&lt;Args&gt;(args)...);</span></a>
+<a name="318"><span class="lineNum">     318 </span><span class="lineCov">         50 :                 return do_try_emplace(std::forward&lt;K&gt;(k), std::forward&lt;Args&gt;(args)...);</span></a>
 <a name="319"><span class="lineNum">     319 </span>            :         }</a>
 <a name="320"><span class="lineNum">     320 </span>            : </a>
 <a name="321"><span class="lineNum">     321 </span>            :         template &lt;class A, class B&gt;</a>
@@ -401,9 +401,9 @@
 <a name="339"><span class="lineNum">     339 </span>            :         }</a>
 <a name="340"><span class="lineNum">     340 </span>            : </a>
 <a name="341"><span class="lineNum">     341 </span>            :         template &lt;class T, class ... Args&gt;</a>
-<a name="342"><span class="lineNum">     342 </span><span class="lineCov">          1 :         void do_assign( iterator it, T &amp;&amp;, Args &amp;&amp; ... args) {</span></a>
-<a name="343"><span class="lineNum">     343 </span><span class="lineCov">          1 :                 it-&gt;second = Value(std::forward&lt;Args&gt;(args)...);</span></a>
-<a name="344"><span class="lineNum">     344 </span><span class="lineCov">          1 :         }</span></a>
+<a name="342"><span class="lineNum">     342 </span><span class="lineCov">         25 :         void do_assign( iterator it, T &amp;&amp;, Args &amp;&amp; ... args) {</span></a>
+<a name="343"><span class="lineNum">     343 </span><span class="lineCov">         25 :                 it-&gt;second = Value(std::forward&lt;Args&gt;(args)...);</span></a>
+<a name="344"><span class="lineNum">     344 </span><span class="lineCov">         25 :         }</span></a>
 <a name="345"><span class="lineNum">     345 </span>            : </a>
 <a name="346"><span class="lineNum">     346 </span>            :         template&lt; class K &gt; size_type do_erase( const K&amp; key ) {</a>
 <a name="347"><span class="lineNum">     347 </span>            :                 auto b = equal_range(key);</a>
@@ -412,12 +412,12 @@
 <a name="350"><span class="lineNum">     350 </span>            :         }</a>
 <a name="351"><span class="lineNum">     351 </span>            : </a>
 <a name="352"><span class="lineNum">     352 </span>            :         template&lt; class K &gt;</a>
-<a name="353"><span class="lineNum">     353 </span><span class="lineCov">          6 :         iterator do_find( const K&amp; k ) {</span></a>
-<a name="354"><span class="lineNum">     354 </span><span class="lineCov">          6 :                 auto it = lower_bound(k);</span></a>
-<a name="355"><span class="lineNum">     355 </span><span class="lineCov">          6 :                 if (it != _data.end() &amp;&amp; do_equal_check(it-&gt;first, k)) {</span></a>
-<a name="356"><span class="lineNum">     356 </span><span class="lineCov">          5 :                         return it;</span></a>
+<a name="353"><span class="lineNum">     353 </span><span class="lineCov">      41869 :         iterator do_find( const K&amp; k ) {</span></a>
+<a name="354"><span class="lineNum">     354 </span><span class="lineCov">      41869 :                 auto it = lower_bound(k);</span></a>
+<a name="355"><span class="lineNum">     355 </span><span class="lineCov">      41869 :                 if (it != _data.end() &amp;&amp; do_equal_check(it-&gt;first, k)) {</span></a>
+<a name="356"><span class="lineNum">     356 </span><span class="lineCov">      20241 :                         return it;</span></a>
 <a name="357"><span class="lineNum">     357 </span>            :                 }</a>
-<a name="358"><span class="lineNum">     358 </span><span class="lineCov">          1 :                 return _data.end();</span></a>
+<a name="358"><span class="lineNum">     358 </span><span class="lineCov">      21628 :                 return _data.end();</span></a>
 <a name="359"><span class="lineNum">     359 </span>            :         }</a>
 <a name="360"><span class="lineNum">     360 </span>            : </a>
 <a name="361"><span class="lineNum">     361 </span>            :         template&lt; class K &gt;</a>
@@ -440,8 +440,8 @@
 <a name="378"><span class="lineNum">     378 </span>            : };</a>
 <a name="379"><span class="lineNum">     379 </span>            : </a>
 <a name="380"><span class="lineNum">     380 </span>            : template&lt;typename Key, typename Value, typename Comp&gt; inline bool</a>
-<a name="381"><span class="lineNum">     381 </span><span class="lineCov">          3 : operator==(const dict&lt;Key, Value, Comp&gt;&amp; __x, const dict&lt;Key, Value, Comp&gt;&amp; __y) {</span></a>
-<a name="382"><span class="lineNum">     382 </span><span class="lineCov">          3 :         return (__x.size() == __y.size() &amp;&amp; std::equal(__x.begin(), __x.end(), __y.begin()));</span></a>
+<a name="381"><span class="lineNum">     381 </span><span class="lineCov">         75 : operator==(const dict&lt;Key, Value, Comp&gt;&amp; __x, const dict&lt;Key, Value, Comp&gt;&amp; __y) {</span></a>
+<a name="382"><span class="lineNum">     382 </span><span class="lineCov">         75 :         return (__x.size() == __y.size() &amp;&amp; std::equal(__x.begin(), __x.end(), __y.begin()));</span></a>
 <a name="383"><span class="lineNum">     383 </span>            : }</a>
 <a name="384"><span class="lineNum">     384 </span>            : </a>
 <a name="385"><span class="lineNum">     385 </span>            : template&lt;typename Key, typename Value, typename Comp&gt; inline bool</a>

@@ -31,18 +31,18 @@
             <td class="headerValue">coverage.info</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">16</td>
             <td class="headerCovTableEntry">37</td>
-            <td class="headerCovTableEntryLo">0.0 %</td>
+            <td class="headerCovTableEntryLo">43.2 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2023-12-03 02:10:58</td>
+            <td class="headerValue">2024-05-12 00:16:13</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">3</td>
             <td class="headerCovTableEntry">9</td>
-            <td class="headerCovTableEntryLo">0.0 %</td>
+            <td class="headerCovTableEntryLo">33.3 %</td>
           </tr>
           <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
         </table>
@@ -85,7 +85,7 @@
 <a name="23"><span class="lineNum">      23 </span>            : #include &quot;XL2dSceneLight.h&quot;</a>
 <a name="24"><span class="lineNum">      24 </span>            : #include &quot;XL2dScene.h&quot;</a>
 <a name="25"><span class="lineNum">      25 </span>            : </a>
-<a name="26"><span class="lineNum">      26 </span>            : namespace stappler::xenolith::basic2d {</a>
+<a name="26"><span class="lineNum">      26 </span>            : namespace STAPPLER_VERSIONIZED stappler::xenolith::basic2d {</a>
 <a name="27"><span class="lineNum">      27 </span>            : </a>
 <a name="28"><span class="lineNum">      28 </span><span class="lineNoCov">          0 : bool SceneLight::init(SceneLightType type, const Vec4 &amp;normal, const Color4F &amp;color, const Vec4 &amp;data) {</span></a>
 <a name="29"><span class="lineNum">      29 </span><span class="lineNoCov">          0 :         _type = type;</span></a>
@@ -95,27 +95,27 @@
 <a name="33"><span class="lineNum">      33 </span><span class="lineNoCov">          0 :         return true;</span></a>
 <a name="34"><span class="lineNum">      34 </span>            : }</a>
 <a name="35"><span class="lineNum">      35 </span>            : </a>
-<a name="36"><span class="lineNum">      36 </span><span class="lineNoCov">          0 : bool SceneLight::init(SceneLightType type, const Vec2 &amp;normal, float k, const Color4F &amp;color, const Vec4 &amp;data) {</span></a>
-<a name="37"><span class="lineNum">      37 </span><span class="lineNoCov">          0 :         _type = type;</span></a>
-<a name="38"><span class="lineNum">      38 </span><span class="lineNoCov">          0 :         _enable2dNormal = true;</span></a>
-<a name="39"><span class="lineNum">      39 </span><span class="lineNoCov">          0 :         _2dNormal = normal;</span></a>
-<a name="40"><span class="lineNum">      40 </span><span class="lineNoCov">          0 :         _k = k;</span></a>
-<a name="41"><span class="lineNum">      41 </span><span class="lineNoCov">          0 :         _color = color;</span></a>
-<a name="42"><span class="lineNum">      42 </span><span class="lineNoCov">          0 :         _data = data;</span></a>
-<a name="43"><span class="lineNum">      43 </span><span class="lineNoCov">          0 :         return true;</span></a>
+<a name="36"><span class="lineNum">      36 </span><span class="lineCov">         20 : bool SceneLight::init(SceneLightType type, const Vec2 &amp;normal, float k, const Color4F &amp;color, const Vec4 &amp;data) {</span></a>
+<a name="37"><span class="lineNum">      37 </span><span class="lineCov">         20 :         _type = type;</span></a>
+<a name="38"><span class="lineNum">      38 </span><span class="lineCov">         20 :         _enable2dNormal = true;</span></a>
+<a name="39"><span class="lineNum">      39 </span><span class="lineCov">         20 :         _2dNormal = normal;</span></a>
+<a name="40"><span class="lineNum">      40 </span><span class="lineCov">         20 :         _k = k;</span></a>
+<a name="41"><span class="lineNum">      41 </span><span class="lineCov">         20 :         _color = color;</span></a>
+<a name="42"><span class="lineNum">      42 </span><span class="lineCov">         20 :         _data = data;</span></a>
+<a name="43"><span class="lineNum">      43 </span><span class="lineCov">         20 :         return true;</span></a>
 <a name="44"><span class="lineNum">      44 </span>            : }</a>
 <a name="45"><span class="lineNum">      45 </span>            : </a>
-<a name="46"><span class="lineNum">      46 </span><span class="lineNoCov">          0 : void SceneLight::onEnter(Scene *scene) {</span></a>
-<a name="47"><span class="lineNum">      47 </span><span class="lineNoCov">          0 :         if (_enable2dNormal) {</span></a>
-<a name="48"><span class="lineNum">      48 </span><span class="lineNoCov">          0 :                 _normal = Vec4(Vec3(_2dNormal.x, _2dNormal.y, 1.0f).normalize(), _k);</span></a>
+<a name="46"><span class="lineNum">      46 </span><span class="lineCov">         20 : void SceneLight::onEnter(Scene *scene) {</span></a>
+<a name="47"><span class="lineNum">      47 </span><span class="lineCov">         20 :         if (_enable2dNormal) {</span></a>
+<a name="48"><span class="lineNum">      48 </span><span class="lineCov">         20 :                 _normal = Vec4(Vec3(_2dNormal.x, _2dNormal.y, 1.0f).normalize(), _k);</span></a>
 <a name="49"><span class="lineNum">      49 </span>            :         }</a>
 <a name="50"><span class="lineNum">      50 </span>            : </a>
-<a name="51"><span class="lineNum">      51 </span><span class="lineNoCov">          0 :         _running = true;</span></a>
-<a name="52"><span class="lineNum">      52 </span><span class="lineNoCov">          0 : }</span></a>
+<a name="51"><span class="lineNum">      51 </span><span class="lineCov">         20 :         _running = true;</span></a>
+<a name="52"><span class="lineNum">      52 </span><span class="lineCov">         20 : }</span></a>
 <a name="53"><span class="lineNum">      53 </span>            : </a>
-<a name="54"><span class="lineNum">      54 </span><span class="lineNoCov">          0 : void SceneLight::onExit() {</span></a>
-<a name="55"><span class="lineNum">      55 </span><span class="lineNoCov">          0 :         _running = false;</span></a>
-<a name="56"><span class="lineNum">      56 </span><span class="lineNoCov">          0 : }</span></a>
+<a name="54"><span class="lineNum">      54 </span><span class="lineCov">         20 : void SceneLight::onExit() {</span></a>
+<a name="55"><span class="lineNum">      55 </span><span class="lineCov">         20 :         _running = false;</span></a>
+<a name="56"><span class="lineNum">      56 </span><span class="lineCov">         20 : }</span></a>
 <a name="57"><span class="lineNum">      57 </span>            : </a>
 <a name="58"><span class="lineNum">      58 </span><span class="lineNoCov">          0 : void SceneLight::setNormal(const Vec4 &amp;vec) {</span></a>
 <a name="59"><span class="lineNum">      59 </span><span class="lineNoCov">          0 :         _normal = vec;</span></a>

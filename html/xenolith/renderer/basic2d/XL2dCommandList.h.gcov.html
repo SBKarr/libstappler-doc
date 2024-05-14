@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2023-12-03 02:10:58</td>
+            <td class="headerValue">2024-05-12 00:16:13</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">1</td>
@@ -89,7 +89,7 @@
 <a name="27"><span class="lineNum">      27 </span>            : #include &quot;XLNodeInfo.h&quot;</a>
 <a name="28"><span class="lineNum">      28 </span>            : #include &quot;XLFrameContext.h&quot;</a>
 <a name="29"><span class="lineNum">      29 </span>            : </a>
-<a name="30"><span class="lineNum">      30 </span>            : namespace stappler::xenolith::basic2d {</a>
+<a name="30"><span class="lineNum">      30 </span>            : namespace STAPPLER_VERSIONIZED stappler::xenolith::basic2d {</a>
 <a name="31"><span class="lineNum">      31 </span>            : </a>
 <a name="32"><span class="lineNum">      32 </span>            : enum class CommandType : uint16_t {</a>
 <a name="33"><span class="lineNum">      33 </span>            :         CommandGroup,</a>
@@ -105,7 +105,7 @@
 <a name="43"><span class="lineNum">      43 </span>            : struct CmdGeneral {</a>
 <a name="44"><span class="lineNum">      44 </span>            :         SpanView&lt;ZOrder&gt; zPath;</a>
 <a name="45"><span class="lineNum">      45 </span>            :         core::MaterialId material = 0;</a>
-<a name="46"><span class="lineNum">      46 </span>            :         StateId state = maxOf&lt;StateId&gt;();</a>
+<a name="46"><span class="lineNum">      46 </span>            :         StateId state = StateIdNone;</a>
 <a name="47"><span class="lineNum">      47 </span>            :         RenderingLevel renderingLevel = RenderingLevel::Solid;</a>
 <a name="48"><span class="lineNum">      48 </span>            :         float depthValue = 0.0f;</a>
 <a name="49"><span class="lineNum">      49 </span>            : };</a>
@@ -185,28 +185,31 @@
 <a name="123"><span class="lineNum">     123 </span>            : </a>
 <a name="124"><span class="lineNum">     124 </span>            :         void pushSdfGroup(const Mat4 &amp;model, StateId state, float value, const Callback&lt;void(CmdSdfGroup2D &amp;)&gt; &amp;cb);</a>
 <a name="125"><span class="lineNum">     125 </span>            : </a>
-<a name="126"><span class="lineNum">     126 </span><span class="lineCov">        216 :         const Command *getFirst() const { return _first; }</span></a>
+<a name="126"><span class="lineNum">     126 </span><span class="lineCov">       9280 :         const Command *getFirst() const { return _first; }</span></a>
 <a name="127"><span class="lineNum">     127 </span>            :         const Command *getLast() const { return _last; }</a>
 <a name="128"><span class="lineNum">     128 </span>            : </a>
 <a name="129"><span class="lineNum">     129 </span>            :         bool empty() const { return _first == nullptr; }</a>
 <a name="130"><span class="lineNum">     130 </span>            : </a>
-<a name="131"><span class="lineNum">     131 </span>            : protected:</a>
-<a name="132"><span class="lineNum">     132 </span>            :         void addCommand(Command *);</a>
-<a name="133"><span class="lineNum">     133 </span>            : </a>
-<a name="134"><span class="lineNum">     134 </span>            :         Rc&lt;PoolRef&gt; _pool;</a>
-<a name="135"><span class="lineNum">     135 </span>            :         Command *_first = nullptr;</a>
-<a name="136"><span class="lineNum">     136 </span>            :         Command *_last = nullptr;</a>
-<a name="137"><span class="lineNum">     137 </span>            : };</a>
-<a name="138"><span class="lineNum">     138 </span>            : </a>
-<a name="139"><span class="lineNum">     139 </span>            : struct FrameContextHandle2d : public FrameContextHandle {</a>
-<a name="140"><span class="lineNum">     140 </span>            :         ShadowLightInput lights;</a>
-<a name="141"><span class="lineNum">     141 </span>            :         Rc&lt;CommandList&gt; commands;</a>
-<a name="142"><span class="lineNum">     142 </span>            :         Rc&lt;CommandList&gt; shadows;</a>
-<a name="143"><span class="lineNum">     143 </span>            : };</a>
-<a name="144"><span class="lineNum">     144 </span>            : </a>
-<a name="145"><span class="lineNum">     145 </span>            : }</a>
-<a name="146"><span class="lineNum">     146 </span>            : </a>
-<a name="147"><span class="lineNum">     147 </span>            : #endif /* XENOLITH_RENDERER_BASIC2D_XL2DCOMMANDLIST_H_ */</a>
+<a name="131"><span class="lineNum">     131 </span>            :         size_t size() const { return _size; }</a>
+<a name="132"><span class="lineNum">     132 </span>            : </a>
+<a name="133"><span class="lineNum">     133 </span>            : protected:</a>
+<a name="134"><span class="lineNum">     134 </span>            :         void addCommand(Command *);</a>
+<a name="135"><span class="lineNum">     135 </span>            : </a>
+<a name="136"><span class="lineNum">     136 </span>            :         Rc&lt;PoolRef&gt; _pool;</a>
+<a name="137"><span class="lineNum">     137 </span>            :         Command *_first = nullptr;</a>
+<a name="138"><span class="lineNum">     138 </span>            :         Command *_last = nullptr;</a>
+<a name="139"><span class="lineNum">     139 </span>            :         size_t _size = 0;</a>
+<a name="140"><span class="lineNum">     140 </span>            : };</a>
+<a name="141"><span class="lineNum">     141 </span>            : </a>
+<a name="142"><span class="lineNum">     142 </span>            : struct FrameContextHandle2d : public FrameContextHandle {</a>
+<a name="143"><span class="lineNum">     143 </span>            :         ShadowLightInput lights;</a>
+<a name="144"><span class="lineNum">     144 </span>            :         Rc&lt;CommandList&gt; commands;</a>
+<a name="145"><span class="lineNum">     145 </span>            :         Rc&lt;CommandList&gt; shadows;</a>
+<a name="146"><span class="lineNum">     146 </span>            : };</a>
+<a name="147"><span class="lineNum">     147 </span>            : </a>
+<a name="148"><span class="lineNum">     148 </span>            : }</a>
+<a name="149"><span class="lineNum">     149 </span>            : </a>
+<a name="150"><span class="lineNum">     150 </span>            : #endif /* XENOLITH_RENDERER_BASIC2D_XL2DCOMMANDLIST_H_ */</a>
 </pre>
       </td>
     </tr>

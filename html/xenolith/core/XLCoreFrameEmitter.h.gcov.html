@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2023-12-03 02:10:58</td>
+            <td class="headerValue">2024-05-12 00:16:13</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">1</td>
@@ -89,7 +89,7 @@
 <a name="27"><span class="lineNum">      27 </span>            : #include &quot;XLCoreFrameHandle.h&quot;</a>
 <a name="28"><span class="lineNum">      28 </span>            : #include &quot;SPMovingAverage.h&quot;</a>
 <a name="29"><span class="lineNum">      29 </span>            : </a>
-<a name="30"><span class="lineNum">      30 </span>            : namespace stappler::xenolith::core {</a>
+<a name="30"><span class="lineNum">      30 </span>            : namespace STAPPLER_VERSIONIZED stappler::xenolith::core {</a>
 <a name="31"><span class="lineNum">      31 </span>            : </a>
 <a name="32"><span class="lineNum">      32 </span>            : // Frame emitter is an interface, that continuously spawns frames, and can control validity of a frame</a>
 <a name="33"><span class="lineNum">      33 </span>            : class FrameEmitter : public Ref {</a>
@@ -113,7 +113,7 @@
 <a name="51"><span class="lineNum">      51 </span>            :         void setFrameTime(uint64_t v) { _frame = v; }</a>
 <a name="52"><span class="lineNum">      52 </span>            :         uint64_t getFrameTime() const { return _frame; }</a>
 <a name="53"><span class="lineNum">      53 </span>            : </a>
-<a name="54"><span class="lineNum">      54 </span><span class="lineCov">          1 :         void setFrameInterval(uint64_t v) { _frameInterval = v; }</span></a>
+<a name="54"><span class="lineNum">      54 </span><span class="lineCov">         21 :         void setFrameInterval(uint64_t v) { _frameInterval = v; }</span></a>
 <a name="55"><span class="lineNum">      55 </span>            :         uint64_t getFrameInterval() const { return _frameInterval; }</a>
 <a name="56"><span class="lineNum">      56 </span>            : </a>
 <a name="57"><span class="lineNum">      57 </span>            :         const Rc&lt;Loop&gt; &amp;getLoop() const { return _loop; }</a>

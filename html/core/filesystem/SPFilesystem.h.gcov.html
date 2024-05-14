@@ -31,18 +31,18 @@
             <td class="headerValue">coverage.info</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntry">47</td>
+            <td class="headerCovTableEntry">57</td>
             <td class="headerCovTableEntry">95</td>
-            <td class="headerCovTableEntryLo">49.5 %</td>
+            <td class="headerCovTableEntryLo">60.0 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2023-12-03 02:10:58</td>
+            <td class="headerValue">2024-05-12 00:16:13</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntry">10</td>
-            <td class="headerCovTableEntry">22</td>
-            <td class="headerCovTableEntryLo">45.5 %</td>
+            <td class="headerCovTableEntry">15</td>
+            <td class="headerCovTableEntry">23</td>
+            <td class="headerCovTableEntryLo">65.2 %</td>
           </tr>
           <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
         </table>
@@ -90,7 +90,7 @@
 <a name="28"><span class="lineNum">      28 </span>            : #include &quot;SPTime.h&quot;</a>
 <a name="29"><span class="lineNum">      29 </span>            : #include &quot;SPFilepath.h&quot;</a>
 <a name="30"><span class="lineNum">      30 </span>            : </a>
-<a name="31"><span class="lineNum">      31 </span>            : namespace stappler::filesystem {</a>
+<a name="31"><span class="lineNum">      31 </span>            : namespace STAPPLER_VERSIONIZED stappler::filesystem {</a>
 <a name="32"><span class="lineNum">      32 </span>            : </a>
 <a name="33"><span class="lineNum">      33 </span>            : enum Access {</a>
 <a name="34"><span class="lineNum">      34 </span>            :         Exists,</a>
@@ -118,7 +118,7 @@
 <a name="56"><span class="lineNum">      56 </span>            :         using streamsize = std::streamsize;</a>
 <a name="57"><span class="lineNum">      57 </span>            :         using int_type = typename traits_type::int_type;</a>
 <a name="58"><span class="lineNum">      58 </span>            : </a>
-<a name="59"><span class="lineNum">      59 </span>            :         static File open_tmp(const char *prefix, bool delOnClose = true);</a>
+<a name="59"><span class="lineNum">      59 </span>            :         static File open_tmp(StringView prefix, bool delOnClose = true);</a>
 <a name="60"><span class="lineNum">      60 </span>            : </a>
 <a name="61"><span class="lineNum">      61 </span>            :         File();</a>
 <a name="62"><span class="lineNum">      62 </span>            :         explicit File(FILE *, Flags = Flags::None);</a>
@@ -152,7 +152,7 @@
 <a name="90"><span class="lineNum">      90 </span>            :         bool close_rename(StringView);</a>
 <a name="91"><span class="lineNum">      91 </span>            : </a>
 <a name="92"><span class="lineNum">      92 </span>            :         bool is_open() const;</a>
-<a name="93"><span class="lineNum">      93 </span><span class="lineCov">        352 :         operator bool() const { return is_open(); }</span></a>
+<a name="93"><span class="lineNum">      93 </span><span class="lineCov">      20465 :         explicit operator bool() const { return is_open(); }</span></a>
 <a name="94"><span class="lineNum">      94 </span>            : </a>
 <a name="95"><span class="lineNum">      95 </span>            :         const char *path() const;</a>
 <a name="96"><span class="lineNum">      96 </span>            : </a>
@@ -252,8 +252,8 @@
 <a name="190"><span class="lineNum">     190 </span>            : bool write(StringView path, const uint8_t *data, size_t len);</a>
 <a name="191"><span class="lineNum">     191 </span>            : </a>
 <a name="192"><span class="lineNum">     192 </span>            : template &lt;typename BytesView&gt;</a>
-<a name="193"><span class="lineNum">     193 </span><span class="lineNoCov">          0 : inline bool write(StringView path, const BytesView &amp;view) {</span></a>
-<a name="194"><span class="lineNum">     194 </span><span class="lineNoCov">          0 :         return write(path, reinterpret_cast&lt;const uint8_t *&gt;(view.data()), size_t(view.size()));</span></a>
+<a name="193"><span class="lineNum">     193 </span><span class="lineCov">        175 : inline bool write(StringView path, const BytesView &amp;view) {</span></a>
+<a name="194"><span class="lineNum">     194 </span><span class="lineCov">        175 :         return write(path, reinterpret_cast&lt;const uint8_t *&gt;(view.data()), size_t(view.size()));</span></a>
 <a name="195"><span class="lineNum">     195 </span>            : }</a>
 <a name="196"><span class="lineNum">     196 </span>            : </a>
 <a name="197"><span class="lineNum">     197 </span>            : File openForReading(StringView path);</a>
@@ -273,229 +273,231 @@
 <a name="211"><span class="lineNum">     211 </span>            : }</a>
 <a name="212"><span class="lineNum">     212 </span>            : </a>
 <a name="213"><span class="lineNum">     213 </span>            : template &lt;typename Interface&gt;</a>
-<a name="214"><span class="lineNum">     214 </span><span class="lineCov">        303 : auto readIntoMemory(StringView ipath, size_t off = 0, size_t size = maxOf&lt;size_t&gt;()) -&gt; typename Interface::BytesType {</span></a>
-<a name="215"><span class="lineNum">     215 </span><span class="lineCov">        303 :         auto f = openForReading(ipath);</span></a>
-<a name="216"><span class="lineNum">     216 </span><span class="lineCov">        303 :         if (f) {</span></a>
-<a name="217"><span class="lineNum">     217 </span><span class="lineCov">        299 :                 auto fsize = f.size();</span></a>
-<a name="218"><span class="lineNum">     218 </span><span class="lineCov">        299 :                 if (fsize &lt;= off) {</span></a>
+<a name="214"><span class="lineNum">     214 </span><span class="lineCov">      17815 : auto readIntoMemory(StringView ipath, size_t off = 0, size_t size = maxOf&lt;size_t&gt;()) -&gt; typename Interface::BytesType {</span></a>
+<a name="215"><span class="lineNum">     215 </span><span class="lineCov">      17815 :         auto f = openForReading(ipath);</span></a>
+<a name="216"><span class="lineNum">     216 </span><span class="lineCov">      17815 :         if (f) {</span></a>
+<a name="217"><span class="lineNum">     217 </span><span class="lineCov">      17715 :                 auto fsize = f.size();</span></a>
+<a name="218"><span class="lineNum">     218 </span><span class="lineCov">      17715 :                 if (fsize &lt;= off) {</span></a>
 <a name="219"><span class="lineNum">     219 </span><span class="lineNoCov">          0 :                         f.close();</span></a>
 <a name="220"><span class="lineNum">     220 </span><span class="lineNoCov">          0 :                         return typename Interface::BytesType();</span></a>
 <a name="221"><span class="lineNum">     221 </span>            :                 }</a>
-<a name="222"><span class="lineNum">     222 </span><span class="lineCov">        299 :                 if (fsize - off &lt; size) {</span></a>
-<a name="223"><span class="lineNum">     223 </span><span class="lineCov">        299 :                         size = fsize - off;</span></a>
+<a name="222"><span class="lineNum">     222 </span><span class="lineCov">      17715 :                 if (fsize - off &lt; size) {</span></a>
+<a name="223"><span class="lineNum">     223 </span><span class="lineCov">      17715 :                         size = fsize - off;</span></a>
 <a name="224"><span class="lineNum">     224 </span>            :                 }</a>
-<a name="225"><span class="lineNum">     225 </span><span class="lineCov">        299 :                 typename Interface::BytesType ret; ret.resize(size);</span></a>
-<a name="226"><span class="lineNum">     226 </span><span class="lineCov">        299 :                 f.seek(off, io::Seek::Set);</span></a>
-<a name="227"><span class="lineNum">     227 </span><span class="lineCov">        299 :                 f.read(ret.data(), size);</span></a>
-<a name="228"><span class="lineNum">     228 </span><span class="lineCov">        299 :                 f.close();</span></a>
-<a name="229"><span class="lineNum">     229 </span><span class="lineCov">        299 :                 return ret;</span></a>
-<a name="230"><span class="lineNum">     230 </span><span class="lineCov">        299 :         }</span></a>
-<a name="231"><span class="lineNum">     231 </span><span class="lineCov">          4 :         return typename Interface::BytesType();</span></a>
-<a name="232"><span class="lineNum">     232 </span><span class="lineCov">        303 : }</span></a>
+<a name="225"><span class="lineNum">     225 </span><span class="lineCov">      17715 :                 typename Interface::BytesType ret; ret.resize(size);</span></a>
+<a name="226"><span class="lineNum">     226 </span><span class="lineCov">      17715 :                 f.seek(off, io::Seek::Set);</span></a>
+<a name="227"><span class="lineNum">     227 </span><span class="lineCov">      17715 :                 f.read(ret.data(), size);</span></a>
+<a name="228"><span class="lineNum">     228 </span><span class="lineCov">      17715 :                 f.close();</span></a>
+<a name="229"><span class="lineNum">     229 </span><span class="lineCov">      17715 :                 return ret;</span></a>
+<a name="230"><span class="lineNum">     230 </span><span class="lineCov">      17715 :         }</span></a>
+<a name="231"><span class="lineNum">     231 </span><span class="lineCov">        100 :         return typename Interface::BytesType();</span></a>
+<a name="232"><span class="lineNum">     232 </span><span class="lineCov">      17815 : }</span></a>
 <a name="233"><span class="lineNum">     233 </span>            : </a>
-<a name="234"><span class="lineNum">     234 </span>            : }</a>
+<a name="234"><span class="lineNum">     234 </span>            : StringView detectMimeType(StringView path);</a>
 <a name="235"><span class="lineNum">     235 </span>            : </a>
-<a name="236"><span class="lineNum">     236 </span>            : </a>
-<a name="237"><span class="lineNum">     237 </span>            : namespace stappler::filesystem::platform {</a>
+<a name="236"><span class="lineNum">     236 </span>            : }</a>
+<a name="237"><span class="lineNum">     237 </span>            : </a>
 <a name="238"><span class="lineNum">     238 </span>            : </a>
-<a name="239"><span class="lineNum">     239 </span>            : #if ANDROID</a>
-<a name="240"><span class="lineNum">     240 </span>            : void Android_initializeFilesystem(void *assetManager, StringView filesDir, StringView cachesDir, StringView apkPath);</a>
-<a name="241"><span class="lineNum">     241 </span>            : void Android_terminateFilesystem();</a>
-<a name="242"><span class="lineNum">     242 </span>            : StringView Android_getApkPath();</a>
-<a name="243"><span class="lineNum">     243 </span>            : #endif</a>
-<a name="244"><span class="lineNum">     244 </span>            : </a>
-<a name="245"><span class="lineNum">     245 </span>            : template &lt;typename Interface&gt;</a>
-<a name="246"><span class="lineNum">     246 </span>            : auto _getApplicationPath() -&gt; typename Interface::StringType;</a>
-<a name="247"><span class="lineNum">     247 </span>            : </a>
-<a name="248"><span class="lineNum">     248 </span>            : template &lt;typename Interface&gt;</a>
-<a name="249"><span class="lineNum">     249 </span>            : auto _getWritablePath(bool readOnly) -&gt; typename Interface::StringType;</a>
-<a name="250"><span class="lineNum">     250 </span>            : </a>
-<a name="251"><span class="lineNum">     251 </span>            : template &lt;typename Interface&gt;</a>
-<a name="252"><span class="lineNum">     252 </span>            : auto _getDocumentsPath(bool readOnly) -&gt; typename Interface::StringType;</a>
-<a name="253"><span class="lineNum">     253 </span>            : </a>
-<a name="254"><span class="lineNum">     254 </span>            : template &lt;typename Interface&gt;</a>
-<a name="255"><span class="lineNum">     255 </span>            : auto _getCachesPath(bool readOnly) -&gt; typename Interface::StringType;</a>
-<a name="256"><span class="lineNum">     256 </span>            : </a>
-<a name="257"><span class="lineNum">     257 </span>            : bool _exists(StringView path, bool assetsRoot = true);</a>
-<a name="258"><span class="lineNum">     258 </span>            : bool _stat(StringView path, Stat &amp;, bool assetsRoot = true);</a>
-<a name="259"><span class="lineNum">     259 </span>            : </a>
-<a name="260"><span class="lineNum">     260 </span>            : File _openForReading(StringView);</a>
-<a name="261"><span class="lineNum">     261 </span>            : size_t _read(void *, uint8_t *buf, size_t nbytes);</a>
-<a name="262"><span class="lineNum">     262 </span>            : size_t _seek(void *, int64_t offset, io::Seek s);</a>
-<a name="263"><span class="lineNum">     263 </span>            : size_t _tell(void *);</a>
-<a name="264"><span class="lineNum">     264 </span>            : bool _eof(void *);</a>
-<a name="265"><span class="lineNum">     265 </span>            : void _close(void *);</a>
-<a name="266"><span class="lineNum">     266 </span>            : </a>
-<a name="267"><span class="lineNum">     267 </span>            : void _ftw(StringView path, const Callback&lt;void(StringView path, bool isFile)&gt; &amp;, int depth, bool dirFirst, bool assetsRoot = true);</a>
+<a name="239"><span class="lineNum">     239 </span>            : namespace STAPPLER_VERSIONIZED stappler::filesystem::platform {</a>
+<a name="240"><span class="lineNum">     240 </span>            : </a>
+<a name="241"><span class="lineNum">     241 </span>            : #if ANDROID</a>
+<a name="242"><span class="lineNum">     242 </span>            : void Android_initializeFilesystem(void *assetManager, StringView filesDir, StringView cachesDir, StringView apkPath);</a>
+<a name="243"><span class="lineNum">     243 </span>            : void Android_terminateFilesystem();</a>
+<a name="244"><span class="lineNum">     244 </span>            : StringView Android_getApkPath();</a>
+<a name="245"><span class="lineNum">     245 </span>            : #endif</a>
+<a name="246"><span class="lineNum">     246 </span>            : </a>
+<a name="247"><span class="lineNum">     247 </span>            : template &lt;typename Interface&gt;</a>
+<a name="248"><span class="lineNum">     248 </span>            : auto _getApplicationPath() -&gt; typename Interface::StringType;</a>
+<a name="249"><span class="lineNum">     249 </span>            : </a>
+<a name="250"><span class="lineNum">     250 </span>            : template &lt;typename Interface&gt;</a>
+<a name="251"><span class="lineNum">     251 </span>            : auto _getWritablePath(bool readOnly) -&gt; typename Interface::StringType;</a>
+<a name="252"><span class="lineNum">     252 </span>            : </a>
+<a name="253"><span class="lineNum">     253 </span>            : template &lt;typename Interface&gt;</a>
+<a name="254"><span class="lineNum">     254 </span>            : auto _getDocumentsPath(bool readOnly) -&gt; typename Interface::StringType;</a>
+<a name="255"><span class="lineNum">     255 </span>            : </a>
+<a name="256"><span class="lineNum">     256 </span>            : template &lt;typename Interface&gt;</a>
+<a name="257"><span class="lineNum">     257 </span>            : auto _getCachesPath(bool readOnly) -&gt; typename Interface::StringType;</a>
+<a name="258"><span class="lineNum">     258 </span>            : </a>
+<a name="259"><span class="lineNum">     259 </span>            : bool _exists(StringView path, bool assetsRoot = true);</a>
+<a name="260"><span class="lineNum">     260 </span>            : bool _stat(StringView path, Stat &amp;, bool assetsRoot = true);</a>
+<a name="261"><span class="lineNum">     261 </span>            : </a>
+<a name="262"><span class="lineNum">     262 </span>            : File _openForReading(StringView);</a>
+<a name="263"><span class="lineNum">     263 </span>            : size_t _read(void *, uint8_t *buf, size_t nbytes);</a>
+<a name="264"><span class="lineNum">     264 </span>            : size_t _seek(void *, int64_t offset, io::Seek s);</a>
+<a name="265"><span class="lineNum">     265 </span>            : size_t _tell(void *);</a>
+<a name="266"><span class="lineNum">     266 </span>            : bool _eof(void *);</a>
+<a name="267"><span class="lineNum">     267 </span>            : void _close(void *);</a>
 <a name="268"><span class="lineNum">     268 </span>            : </a>
-<a name="269"><span class="lineNum">     269 </span>            : bool _ftw_b(StringView path, const Callback&lt;bool(StringView path, bool isFile)&gt; &amp;, int depth, bool dirFirst, bool assetsRoot = true);</a>
+<a name="269"><span class="lineNum">     269 </span>            : void _ftw(StringView path, const Callback&lt;void(StringView path, bool isFile)&gt; &amp;, int depth, bool dirFirst, bool assetsRoot = true);</a>
 <a name="270"><span class="lineNum">     270 </span>            : </a>
-<a name="271"><span class="lineNum">     271 </span>            : }</a>
+<a name="271"><span class="lineNum">     271 </span>            : bool _ftw_b(StringView path, const Callback&lt;bool(StringView path, bool isFile)&gt; &amp;, int depth, bool dirFirst, bool assetsRoot = true);</a>
 <a name="272"><span class="lineNum">     272 </span>            : </a>
-<a name="273"><span class="lineNum">     273 </span>            : </a>
-<a name="274"><span class="lineNum">     274 </span>            : // functions to access native filesystem directly</a>
-<a name="275"><span class="lineNum">     275 </span>            : // libstappler uses posix path scheme, it should be transformed when transferred from/to other apps/libraries</a>
-<a name="276"><span class="lineNum">     276 </span>            : // no transformation required within libstappler itself</a>
-<a name="277"><span class="lineNum">     277 </span>            : namespace stappler::filesystem::native {</a>
-<a name="278"><span class="lineNum">     278 </span>            : </a>
-<a name="279"><span class="lineNum">     279 </span>            : // C:\dirname\filename -&gt; /c/dirname/filename</a>
-<a name="280"><span class="lineNum">     280 </span>            : template &lt;typename Interface&gt;</a>
-<a name="281"><span class="lineNum">     281 </span>            : auto nativeToPosix(StringView path) -&gt; typename Interface::StringType;</a>
-<a name="282"><span class="lineNum">     282 </span>            : </a>
-<a name="283"><span class="lineNum">     283 </span>            : // /c/dirname/filename -&gt; C:\dirname\filename</a>
-<a name="284"><span class="lineNum">     284 </span>            : // be sure that path is absolute</a>
-<a name="285"><span class="lineNum">     285 </span>            : template &lt;typename Interface&gt;</a>
-<a name="286"><span class="lineNum">     286 </span>            : auto posixToNative(StringView path) -&gt; typename Interface::StringType;</a>
-<a name="287"><span class="lineNum">     287 </span>            : </a>
-<a name="288"><span class="lineNum">     288 </span>            : template &lt;typename Interface&gt;</a>
-<a name="289"><span class="lineNum">     289 </span>            : auto getcwd_fn() -&gt; typename Interface::StringType;</a>
-<a name="290"><span class="lineNum">     290 </span>            : </a>
-<a name="291"><span class="lineNum">     291 </span>            : bool remove_fn(StringView path);</a>
-<a name="292"><span class="lineNum">     292 </span>            : bool unlink_fn(StringView path);</a>
-<a name="293"><span class="lineNum">     293 </span>            : bool mkdir_fn(StringView path);</a>
-<a name="294"><span class="lineNum">     294 </span>            : </a>
-<a name="295"><span class="lineNum">     295 </span>            : bool access_fn(StringView path, Access mode);</a>
+<a name="273"><span class="lineNum">     273 </span>            : }</a>
+<a name="274"><span class="lineNum">     274 </span>            : </a>
+<a name="275"><span class="lineNum">     275 </span>            : </a>
+<a name="276"><span class="lineNum">     276 </span>            : // functions to access native filesystem directly</a>
+<a name="277"><span class="lineNum">     277 </span>            : // libstappler uses posix path scheme, it should be transformed when transferred from/to other apps/libraries</a>
+<a name="278"><span class="lineNum">     278 </span>            : // no transformation required within libstappler itself</a>
+<a name="279"><span class="lineNum">     279 </span>            : namespace STAPPLER_VERSIONIZED stappler::filesystem::native {</a>
+<a name="280"><span class="lineNum">     280 </span>            : </a>
+<a name="281"><span class="lineNum">     281 </span>            : // C:\dirname\filename -&gt; /c/dirname/filename</a>
+<a name="282"><span class="lineNum">     282 </span>            : template &lt;typename Interface&gt;</a>
+<a name="283"><span class="lineNum">     283 </span>            : auto nativeToPosix(StringView path) -&gt; typename Interface::StringType;</a>
+<a name="284"><span class="lineNum">     284 </span>            : </a>
+<a name="285"><span class="lineNum">     285 </span>            : // /c/dirname/filename -&gt; C:\dirname\filename</a>
+<a name="286"><span class="lineNum">     286 </span>            : // be sure that path is absolute</a>
+<a name="287"><span class="lineNum">     287 </span>            : template &lt;typename Interface&gt;</a>
+<a name="288"><span class="lineNum">     288 </span>            : auto posixToNative(StringView path) -&gt; typename Interface::StringType;</a>
+<a name="289"><span class="lineNum">     289 </span>            : </a>
+<a name="290"><span class="lineNum">     290 </span>            : template &lt;typename Interface&gt;</a>
+<a name="291"><span class="lineNum">     291 </span>            : auto getcwd_fn() -&gt; typename Interface::StringType;</a>
+<a name="292"><span class="lineNum">     292 </span>            : </a>
+<a name="293"><span class="lineNum">     293 </span>            : bool remove_fn(StringView path);</a>
+<a name="294"><span class="lineNum">     294 </span>            : bool unlink_fn(StringView path);</a>
+<a name="295"><span class="lineNum">     295 </span>            : bool mkdir_fn(StringView path);</a>
 <a name="296"><span class="lineNum">     296 </span>            : </a>
-<a name="297"><span class="lineNum">     297 </span>            : bool stat_fn(StringView path, Stat &amp;);</a>
+<a name="297"><span class="lineNum">     297 </span>            : bool access_fn(StringView path, Access mode);</a>
 <a name="298"><span class="lineNum">     298 </span>            : </a>
-<a name="299"><span class="lineNum">     299 </span>            : bool touch_fn(StringView path);</a>
+<a name="299"><span class="lineNum">     299 </span>            : bool stat_fn(StringView path, Stat &amp;);</a>
 <a name="300"><span class="lineNum">     300 </span>            : </a>
-<a name="301"><span class="lineNum">     301 </span>            : void ftw_fn(StringView path, const Callback&lt;void(StringView path, bool isFile)&gt; &amp;, int depth, bool dirFirst);</a>
-<a name="302"><span class="lineNum">     302 </span>            : bool ftw_b_fn(StringView path, const Callback&lt;bool(StringView path, bool isFile)&gt; &amp;, int depth, bool dirFirst);</a>
-<a name="303"><span class="lineNum">     303 </span>            : </a>
-<a name="304"><span class="lineNum">     304 </span>            : bool rename_fn(StringView source, StringView dest);</a>
+<a name="301"><span class="lineNum">     301 </span>            : bool touch_fn(StringView path);</a>
+<a name="302"><span class="lineNum">     302 </span>            : </a>
+<a name="303"><span class="lineNum">     303 </span>            : void ftw_fn(StringView path, const Callback&lt;void(StringView path, bool isFile)&gt; &amp;, int depth, bool dirFirst);</a>
+<a name="304"><span class="lineNum">     304 </span>            : bool ftw_b_fn(StringView path, const Callback&lt;bool(StringView path, bool isFile)&gt; &amp;, int depth, bool dirFirst);</a>
 <a name="305"><span class="lineNum">     305 </span>            : </a>
-<a name="306"><span class="lineNum">     306 </span>            : FILE *fopen_fn(StringView, StringView mode);</a>
+<a name="306"><span class="lineNum">     306 </span>            : bool rename_fn(StringView source, StringView dest);</a>
 <a name="307"><span class="lineNum">     307 </span>            : </a>
-<a name="308"><span class="lineNum">     308 </span>            : bool write_fn(StringView, const unsigned char *data, size_t len);</a>
+<a name="308"><span class="lineNum">     308 </span>            : FILE *fopen_fn(StringView, StringView mode);</a>
 <a name="309"><span class="lineNum">     309 </span>            : </a>
-<a name="310"><span class="lineNum">     310 </span>            : }</a>
+<a name="310"><span class="lineNum">     310 </span>            : bool write_fn(StringView, const unsigned char *data, size_t len);</a>
 <a name="311"><span class="lineNum">     311 </span>            : </a>
-<a name="312"><span class="lineNum">     312 </span>            : namespace stappler::filesystem {</a>
+<a name="312"><span class="lineNum">     312 </span>            : }</a>
 <a name="313"><span class="lineNum">     313 </span>            : </a>
-<a name="314"><span class="lineNum">     314 </span>            : template &lt;typename Interface&gt;</a>
-<a name="315"><span class="lineNum">     315 </span><span class="lineCov">         16 : auto writablePath(StringView path, bool relative) -&gt; typename Interface::StringType {</span></a>
-<a name="316"><span class="lineNum">     316 </span><span class="lineCov">         16 :         if (!path.empty() &amp;&amp; !relative &amp;&amp; filepath::isAbsolute(path)) {</span></a>
-<a name="317"><span class="lineNum">     317 </span><span class="lineNoCov">          0 :                 return path.str&lt;Interface&gt;();</span></a>
-<a name="318"><span class="lineNum">     318 </span>            :         }</a>
-<a name="319"><span class="lineNum">     319 </span><span class="lineCov">         16 :         auto wpath =  filesystem::platform::_getWritablePath&lt;Interface&gt;(true);</span></a>
-<a name="320"><span class="lineNum">     320 </span><span class="lineCov">         16 :         if (path.empty()) {</span></a>
-<a name="321"><span class="lineNum">     321 </span><span class="lineCov">          1 :                 return wpath;</span></a>
-<a name="322"><span class="lineNum">     322 </span>            :         }</a>
-<a name="323"><span class="lineNum">     323 </span><span class="lineCov">         15 :         return filepath::merge&lt;Interface&gt;(wpath, path);</span></a>
-<a name="324"><span class="lineNum">     324 </span><span class="lineCov">         16 : }</span></a>
-<a name="325"><span class="lineNum">     325 </span>            : </a>
-<a name="326"><span class="lineNum">     326 </span>            : template &lt;typename Interface&gt;</a>
-<a name="327"><span class="lineNum">     327 </span><span class="lineNoCov">          0 : auto writablePathReadOnly(StringView path, bool relative) -&gt; typename Interface::StringType {</span></a>
-<a name="328"><span class="lineNum">     328 </span><span class="lineNoCov">          0 :         if (!path.empty() &amp;&amp; !relative &amp;&amp; filepath::isAbsolute(path)) {</span></a>
-<a name="329"><span class="lineNum">     329 </span><span class="lineNoCov">          0 :                 return path.str&lt;Interface&gt;();</span></a>
-<a name="330"><span class="lineNum">     330 </span>            :         }</a>
-<a name="331"><span class="lineNum">     331 </span><span class="lineNoCov">          0 :         auto wpath =  filesystem::platform::_getWritablePath&lt;Interface&gt;(false);</span></a>
-<a name="332"><span class="lineNum">     332 </span><span class="lineNoCov">          0 :         if (path.empty()) {</span></a>
-<a name="333"><span class="lineNum">     333 </span><span class="lineNoCov">          0 :                 return wpath;</span></a>
-<a name="334"><span class="lineNum">     334 </span>            :         }</a>
-<a name="335"><span class="lineNum">     335 </span><span class="lineNoCov">          0 :         return filepath::merge&lt;Interface&gt;(wpath, path);</span></a>
-<a name="336"><span class="lineNum">     336 </span><span class="lineNoCov">          0 : }</span></a>
-<a name="337"><span class="lineNum">     337 </span>            : </a>
-<a name="338"><span class="lineNum">     338 </span>            : template &lt;typename Interface&gt;</a>
-<a name="339"><span class="lineNum">     339 </span><span class="lineCov">          5 : auto cachesPath(StringView path, bool relative) -&gt; typename Interface::StringType {</span></a>
-<a name="340"><span class="lineNum">     340 </span><span class="lineCov">          5 :         if (!path.empty() &amp;&amp; !relative &amp;&amp; filepath::isAbsolute(path)) {</span></a>
-<a name="341"><span class="lineNum">     341 </span><span class="lineNoCov">          0 :                 return path.str&lt;Interface&gt;();</span></a>
-<a name="342"><span class="lineNum">     342 </span>            :         }</a>
-<a name="343"><span class="lineNum">     343 </span><span class="lineCov">          5 :         auto cpath =  filesystem::platform::_getCachesPath&lt;Interface&gt;(true);</span></a>
-<a name="344"><span class="lineNum">     344 </span><span class="lineCov">          5 :         if (path.empty()) {</span></a>
-<a name="345"><span class="lineNum">     345 </span><span class="lineCov">          2 :                 return cpath;</span></a>
-<a name="346"><span class="lineNum">     346 </span>            :         }</a>
-<a name="347"><span class="lineNum">     347 </span><span class="lineCov">          3 :         return filepath::merge&lt;Interface&gt;(cpath, path);</span></a>
-<a name="348"><span class="lineNum">     348 </span><span class="lineCov">          5 : }</span></a>
-<a name="349"><span class="lineNum">     349 </span>            : </a>
-<a name="350"><span class="lineNum">     350 </span>            : template &lt;typename Interface&gt;</a>
-<a name="351"><span class="lineNum">     351 </span><span class="lineNoCov">          0 : auto cachesPathReadOnly(StringView path, bool relative) -&gt; typename Interface::StringType {</span></a>
-<a name="352"><span class="lineNum">     352 </span><span class="lineNoCov">          0 :         if (!path.empty() &amp;&amp; !relative &amp;&amp; filepath::isAbsolute(path)) {</span></a>
-<a name="353"><span class="lineNum">     353 </span><span class="lineNoCov">          0 :                 return path.str&lt;Interface&gt;();</span></a>
-<a name="354"><span class="lineNum">     354 </span>            :         }</a>
-<a name="355"><span class="lineNum">     355 </span><span class="lineNoCov">          0 :         auto cpath =  filesystem::platform::_getCachesPath&lt;Interface&gt;(false);</span></a>
-<a name="356"><span class="lineNum">     356 </span><span class="lineNoCov">          0 :         if (path.empty()) {</span></a>
-<a name="357"><span class="lineNum">     357 </span><span class="lineNoCov">          0 :                 return cpath;</span></a>
-<a name="358"><span class="lineNum">     358 </span>            :         }</a>
-<a name="359"><span class="lineNum">     359 </span><span class="lineNoCov">          0 :         return filepath::merge&lt;Interface&gt;(cpath, path);</span></a>
-<a name="360"><span class="lineNum">     360 </span><span class="lineNoCov">          0 : }</span></a>
-<a name="361"><span class="lineNum">     361 </span>            : </a>
-<a name="362"><span class="lineNum">     362 </span>            : template &lt;typename Interface&gt;</a>
-<a name="363"><span class="lineNum">     363 </span><span class="lineNoCov">          0 : auto documentsPath(StringView path, bool relative) -&gt; typename Interface::StringType {</span></a>
-<a name="364"><span class="lineNum">     364 </span><span class="lineNoCov">          0 :         if (!path.empty() &amp;&amp; !relative &amp;&amp; filepath::isAbsolute(path)) {</span></a>
-<a name="365"><span class="lineNum">     365 </span><span class="lineNoCov">          0 :                 return path.str&lt;Interface&gt;();</span></a>
-<a name="366"><span class="lineNum">     366 </span>            :         }</a>
-<a name="367"><span class="lineNum">     367 </span><span class="lineNoCov">          0 :         auto dpath =  filesystem::platform::_getDocumentsPath&lt;Interface&gt;(true);</span></a>
-<a name="368"><span class="lineNum">     368 </span><span class="lineNoCov">          0 :         if (path.empty()) {</span></a>
-<a name="369"><span class="lineNum">     369 </span><span class="lineNoCov">          0 :                 return dpath;</span></a>
-<a name="370"><span class="lineNum">     370 </span>            :         }</a>
-<a name="371"><span class="lineNum">     371 </span><span class="lineNoCov">          0 :         return filepath::merge&lt;Interface&gt;(dpath, path);</span></a>
-<a name="372"><span class="lineNum">     372 </span><span class="lineNoCov">          0 : }</span></a>
-<a name="373"><span class="lineNum">     373 </span>            : </a>
-<a name="374"><span class="lineNum">     374 </span>            : template &lt;typename Interface&gt;</a>
-<a name="375"><span class="lineNum">     375 </span><span class="lineNoCov">          0 : auto documentsPathReadOnly(StringView path, bool relative) -&gt; typename Interface::StringType {</span></a>
-<a name="376"><span class="lineNum">     376 </span><span class="lineNoCov">          0 :         if (!path.empty() &amp;&amp; !relative &amp;&amp; filepath::isAbsolute(path)) {</span></a>
-<a name="377"><span class="lineNum">     377 </span><span class="lineNoCov">          0 :                 return path.str&lt;Interface&gt;();</span></a>
-<a name="378"><span class="lineNum">     378 </span>            :         }</a>
-<a name="379"><span class="lineNum">     379 </span><span class="lineNoCov">          0 :         auto dpath =  filesystem::platform::_getDocumentsPath&lt;Interface&gt;(false);</span></a>
-<a name="380"><span class="lineNum">     380 </span><span class="lineNoCov">          0 :         if (path.empty()) {</span></a>
-<a name="381"><span class="lineNum">     381 </span><span class="lineNoCov">          0 :                 return dpath;</span></a>
-<a name="382"><span class="lineNum">     382 </span>            :         }</a>
-<a name="383"><span class="lineNum">     383 </span><span class="lineNoCov">          0 :         return filepath::merge&lt;Interface&gt;(dpath, path);</span></a>
-<a name="384"><span class="lineNum">     384 </span><span class="lineNoCov">          0 : }</span></a>
-<a name="385"><span class="lineNum">     385 </span>            : </a>
-<a name="386"><span class="lineNum">     386 </span>            : template &lt;typename Interface&gt;</a>
-<a name="387"><span class="lineNum">     387 </span><span class="lineCov">         14 : auto currentDir(StringView path, bool relative) -&gt; typename Interface::StringType {</span></a>
-<a name="388"><span class="lineNum">     388 </span><span class="lineCov">         14 :         if (!path.empty() &amp;&amp; !relative &amp;&amp; filepath::isAbsolute(path)) {</span></a>
-<a name="389"><span class="lineNum">     389 </span><span class="lineNoCov">          0 :                 return path.str&lt;Interface&gt;();</span></a>
-<a name="390"><span class="lineNum">     390 </span>            :         }</a>
-<a name="391"><span class="lineNum">     391 </span><span class="lineCov">         14 :         auto cwd = filesystem::native::getcwd_fn&lt;Interface&gt;();</span></a>
-<a name="392"><span class="lineNum">     392 </span><span class="lineCov">         14 :         if (!cwd.empty()) {</span></a>
-<a name="393"><span class="lineNum">     393 </span><span class="lineCov">         14 :                 if (path.empty()) {</span></a>
-<a name="394"><span class="lineNum">     394 </span><span class="lineNoCov">          0 :                         return cwd;</span></a>
-<a name="395"><span class="lineNum">     395 </span>            :                 } else {</a>
-<a name="396"><span class="lineNum">     396 </span><span class="lineCov">         14 :                         return filepath::merge&lt;Interface&gt;(cwd, path);</span></a>
-<a name="397"><span class="lineNum">     397 </span>            :                 }</a>
-<a name="398"><span class="lineNum">     398 </span>            :         }</a>
-<a name="399"><span class="lineNum">     399 </span><span class="lineNoCov">          0 :         return typename Interface::StringType();</span></a>
-<a name="400"><span class="lineNum">     400 </span><span class="lineCov">         14 : }</span></a>
-<a name="401"><span class="lineNum">     401 </span>            : </a>
-<a name="402"><span class="lineNum">     402 </span>            : template &lt;typename Interface&gt;</a>
-<a name="403"><span class="lineNum">     403 </span><span class="lineCov">         49 : auto readTextFile(StringView ipath) -&gt; typename Interface::StringType {</span></a>
-<a name="404"><span class="lineNum">     404 </span><span class="lineCov">         49 :         auto f = openForReading(ipath);</span></a>
-<a name="405"><span class="lineNum">     405 </span><span class="lineCov">         49 :         if (f) {</span></a>
-<a name="406"><span class="lineNum">     406 </span><span class="lineCov">         49 :                 auto fsize = f.size();</span></a>
-<a name="407"><span class="lineNum">     407 </span><span class="lineCov">         49 :                 typename Interface::StringType ret; ret.resize(fsize);</span></a>
-<a name="408"><span class="lineNum">     408 </span><span class="lineCov">         49 :                 f.read((uint8_t *)ret.data(), fsize);</span></a>
-<a name="409"><span class="lineNum">     409 </span><span class="lineCov">         49 :                 f.close();</span></a>
-<a name="410"><span class="lineNum">     410 </span><span class="lineCov">         49 :                 return ret;</span></a>
-<a name="411"><span class="lineNum">     411 </span><span class="lineCov">         49 :         }</span></a>
-<a name="412"><span class="lineNum">     412 </span><span class="lineNoCov">          0 :         return typename Interface::StringType();</span></a>
-<a name="413"><span class="lineNum">     413 </span><span class="lineCov">         49 : }</span></a>
-<a name="414"><span class="lineNum">     414 </span>            : </a>
-<a name="415"><span class="lineNum">     415 </span>            : }</a>
+<a name="314"><span class="lineNum">     314 </span>            : namespace STAPPLER_VERSIONIZED stappler::filesystem {</a>
+<a name="315"><span class="lineNum">     315 </span>            : </a>
+<a name="316"><span class="lineNum">     316 </span>            : template &lt;typename Interface&gt;</a>
+<a name="317"><span class="lineNum">     317 </span><span class="lineCov">        272 : auto writablePath(StringView path, bool relative) -&gt; typename Interface::StringType {</span></a>
+<a name="318"><span class="lineNum">     318 </span><span class="lineCov">        272 :         if (!path.empty() &amp;&amp; !relative &amp;&amp; filepath::isAbsolute(path)) {</span></a>
+<a name="319"><span class="lineNum">     319 </span><span class="lineCov">         50 :                 return path.str&lt;Interface&gt;();</span></a>
+<a name="320"><span class="lineNum">     320 </span>            :         }</a>
+<a name="321"><span class="lineNum">     321 </span><span class="lineCov">        222 :         auto wpath =  filesystem::platform::_getWritablePath&lt;Interface&gt;(true);</span></a>
+<a name="322"><span class="lineNum">     322 </span><span class="lineCov">        222 :         if (path.empty()) {</span></a>
+<a name="323"><span class="lineNum">     323 </span><span class="lineCov">        100 :                 return wpath;</span></a>
+<a name="324"><span class="lineNum">     324 </span>            :         }</a>
+<a name="325"><span class="lineNum">     325 </span><span class="lineCov">        122 :         return filepath::merge&lt;Interface&gt;(wpath, path);</span></a>
+<a name="326"><span class="lineNum">     326 </span><span class="lineCov">        222 : }</span></a>
+<a name="327"><span class="lineNum">     327 </span>            : </a>
+<a name="328"><span class="lineNum">     328 </span>            : template &lt;typename Interface&gt;</a>
+<a name="329"><span class="lineNum">     329 </span><span class="lineNoCov">          0 : auto writablePathReadOnly(StringView path, bool relative) -&gt; typename Interface::StringType {</span></a>
+<a name="330"><span class="lineNum">     330 </span><span class="lineNoCov">          0 :         if (!path.empty() &amp;&amp; !relative &amp;&amp; filepath::isAbsolute(path)) {</span></a>
+<a name="331"><span class="lineNum">     331 </span><span class="lineNoCov">          0 :                 return path.str&lt;Interface&gt;();</span></a>
+<a name="332"><span class="lineNum">     332 </span>            :         }</a>
+<a name="333"><span class="lineNum">     333 </span><span class="lineNoCov">          0 :         auto wpath =  filesystem::platform::_getWritablePath&lt;Interface&gt;(false);</span></a>
+<a name="334"><span class="lineNum">     334 </span><span class="lineNoCov">          0 :         if (path.empty()) {</span></a>
+<a name="335"><span class="lineNum">     335 </span><span class="lineNoCov">          0 :                 return wpath;</span></a>
+<a name="336"><span class="lineNum">     336 </span>            :         }</a>
+<a name="337"><span class="lineNum">     337 </span><span class="lineNoCov">          0 :         return filepath::merge&lt;Interface&gt;(wpath, path);</span></a>
+<a name="338"><span class="lineNum">     338 </span><span class="lineNoCov">          0 : }</span></a>
+<a name="339"><span class="lineNum">     339 </span>            : </a>
+<a name="340"><span class="lineNum">     340 </span>            : template &lt;typename Interface&gt;</a>
+<a name="341"><span class="lineNum">     341 </span><span class="lineCov">        226 : auto cachesPath(StringView path, bool relative) -&gt; typename Interface::StringType {</span></a>
+<a name="342"><span class="lineNum">     342 </span><span class="lineCov">        226 :         if (!path.empty() &amp;&amp; !relative &amp;&amp; filepath::isAbsolute(path)) {</span></a>
+<a name="343"><span class="lineNum">     343 </span><span class="lineCov">        100 :                 return path.str&lt;Interface&gt;();</span></a>
+<a name="344"><span class="lineNum">     344 </span>            :         }</a>
+<a name="345"><span class="lineNum">     345 </span><span class="lineCov">        126 :         auto cpath =  filesystem::platform::_getCachesPath&lt;Interface&gt;(true);</span></a>
+<a name="346"><span class="lineNum">     346 </span><span class="lineCov">        126 :         if (path.empty()) {</span></a>
+<a name="347"><span class="lineNum">     347 </span><span class="lineCov">         42 :                 return cpath;</span></a>
+<a name="348"><span class="lineNum">     348 </span>            :         }</a>
+<a name="349"><span class="lineNum">     349 </span><span class="lineCov">         84 :         return filepath::merge&lt;Interface&gt;(cpath, path);</span></a>
+<a name="350"><span class="lineNum">     350 </span><span class="lineCov">        126 : }</span></a>
+<a name="351"><span class="lineNum">     351 </span>            : </a>
+<a name="352"><span class="lineNum">     352 </span>            : template &lt;typename Interface&gt;</a>
+<a name="353"><span class="lineNum">     353 </span><span class="lineNoCov">          0 : auto cachesPathReadOnly(StringView path, bool relative) -&gt; typename Interface::StringType {</span></a>
+<a name="354"><span class="lineNum">     354 </span><span class="lineNoCov">          0 :         if (!path.empty() &amp;&amp; !relative &amp;&amp; filepath::isAbsolute(path)) {</span></a>
+<a name="355"><span class="lineNum">     355 </span><span class="lineNoCov">          0 :                 return path.str&lt;Interface&gt;();</span></a>
+<a name="356"><span class="lineNum">     356 </span>            :         }</a>
+<a name="357"><span class="lineNum">     357 </span><span class="lineNoCov">          0 :         auto cpath =  filesystem::platform::_getCachesPath&lt;Interface&gt;(false);</span></a>
+<a name="358"><span class="lineNum">     358 </span><span class="lineNoCov">          0 :         if (path.empty()) {</span></a>
+<a name="359"><span class="lineNum">     359 </span><span class="lineNoCov">          0 :                 return cpath;</span></a>
+<a name="360"><span class="lineNum">     360 </span>            :         }</a>
+<a name="361"><span class="lineNum">     361 </span><span class="lineNoCov">          0 :         return filepath::merge&lt;Interface&gt;(cpath, path);</span></a>
+<a name="362"><span class="lineNum">     362 </span><span class="lineNoCov">          0 : }</span></a>
+<a name="363"><span class="lineNum">     363 </span>            : </a>
+<a name="364"><span class="lineNum">     364 </span>            : template &lt;typename Interface&gt;</a>
+<a name="365"><span class="lineNum">     365 </span><span class="lineNoCov">          0 : auto documentsPath(StringView path, bool relative) -&gt; typename Interface::StringType {</span></a>
+<a name="366"><span class="lineNum">     366 </span><span class="lineNoCov">          0 :         if (!path.empty() &amp;&amp; !relative &amp;&amp; filepath::isAbsolute(path)) {</span></a>
+<a name="367"><span class="lineNum">     367 </span><span class="lineNoCov">          0 :                 return path.str&lt;Interface&gt;();</span></a>
+<a name="368"><span class="lineNum">     368 </span>            :         }</a>
+<a name="369"><span class="lineNum">     369 </span><span class="lineNoCov">          0 :         auto dpath =  filesystem::platform::_getDocumentsPath&lt;Interface&gt;(true);</span></a>
+<a name="370"><span class="lineNum">     370 </span><span class="lineNoCov">          0 :         if (path.empty()) {</span></a>
+<a name="371"><span class="lineNum">     371 </span><span class="lineNoCov">          0 :                 return dpath;</span></a>
+<a name="372"><span class="lineNum">     372 </span>            :         }</a>
+<a name="373"><span class="lineNum">     373 </span><span class="lineNoCov">          0 :         return filepath::merge&lt;Interface&gt;(dpath, path);</span></a>
+<a name="374"><span class="lineNum">     374 </span><span class="lineNoCov">          0 : }</span></a>
+<a name="375"><span class="lineNum">     375 </span>            : </a>
+<a name="376"><span class="lineNum">     376 </span>            : template &lt;typename Interface&gt;</a>
+<a name="377"><span class="lineNum">     377 </span><span class="lineNoCov">          0 : auto documentsPathReadOnly(StringView path, bool relative) -&gt; typename Interface::StringType {</span></a>
+<a name="378"><span class="lineNum">     378 </span><span class="lineNoCov">          0 :         if (!path.empty() &amp;&amp; !relative &amp;&amp; filepath::isAbsolute(path)) {</span></a>
+<a name="379"><span class="lineNum">     379 </span><span class="lineNoCov">          0 :                 return path.str&lt;Interface&gt;();</span></a>
+<a name="380"><span class="lineNum">     380 </span>            :         }</a>
+<a name="381"><span class="lineNum">     381 </span><span class="lineNoCov">          0 :         auto dpath =  filesystem::platform::_getDocumentsPath&lt;Interface&gt;(false);</span></a>
+<a name="382"><span class="lineNum">     382 </span><span class="lineNoCov">          0 :         if (path.empty()) {</span></a>
+<a name="383"><span class="lineNum">     383 </span><span class="lineNoCov">          0 :                 return dpath;</span></a>
+<a name="384"><span class="lineNum">     384 </span>            :         }</a>
+<a name="385"><span class="lineNum">     385 </span><span class="lineNoCov">          0 :         return filepath::merge&lt;Interface&gt;(dpath, path);</span></a>
+<a name="386"><span class="lineNum">     386 </span><span class="lineNoCov">          0 : }</span></a>
+<a name="387"><span class="lineNum">     387 </span>            : </a>
+<a name="388"><span class="lineNum">     388 </span>            : template &lt;typename Interface&gt;</a>
+<a name="389"><span class="lineNum">     389 </span><span class="lineCov">       3409 : auto currentDir(StringView path, bool relative) -&gt; typename Interface::StringType {</span></a>
+<a name="390"><span class="lineNum">     390 </span><span class="lineCov">       3409 :         if (!path.empty() &amp;&amp; !relative &amp;&amp; filepath::isAbsolute(path)) {</span></a>
+<a name="391"><span class="lineNum">     391 </span><span class="lineNoCov">          0 :                 return path.str&lt;Interface&gt;();</span></a>
+<a name="392"><span class="lineNum">     392 </span>            :         }</a>
+<a name="393"><span class="lineNum">     393 </span><span class="lineCov">       3409 :         auto cwd = filesystem::native::getcwd_fn&lt;Interface&gt;();</span></a>
+<a name="394"><span class="lineNum">     394 </span><span class="lineCov">       3409 :         if (!cwd.empty()) {</span></a>
+<a name="395"><span class="lineNum">     395 </span><span class="lineCov">       3409 :                 if (path.empty()) {</span></a>
+<a name="396"><span class="lineNum">     396 </span><span class="lineCov">         75 :                         return cwd;</span></a>
+<a name="397"><span class="lineNum">     397 </span>            :                 } else {</a>
+<a name="398"><span class="lineNum">     398 </span><span class="lineCov">       3334 :                         return filepath::merge&lt;Interface&gt;(cwd, path);</span></a>
+<a name="399"><span class="lineNum">     399 </span>            :                 }</a>
+<a name="400"><span class="lineNum">     400 </span>            :         }</a>
+<a name="401"><span class="lineNum">     401 </span><span class="lineNoCov">          0 :         return typename Interface::StringType();</span></a>
+<a name="402"><span class="lineNum">     402 </span><span class="lineCov">       3409 : }</span></a>
+<a name="403"><span class="lineNum">     403 </span>            : </a>
+<a name="404"><span class="lineNum">     404 </span>            : template &lt;typename Interface&gt;</a>
+<a name="405"><span class="lineNum">     405 </span><span class="lineCov">       1450 : auto readTextFile(StringView ipath) -&gt; typename Interface::StringType {</span></a>
+<a name="406"><span class="lineNum">     406 </span><span class="lineCov">       1450 :         auto f = openForReading(ipath);</span></a>
+<a name="407"><span class="lineNum">     407 </span><span class="lineCov">       1450 :         if (f) {</span></a>
+<a name="408"><span class="lineNum">     408 </span><span class="lineCov">       1425 :                 auto fsize = f.size();</span></a>
+<a name="409"><span class="lineNum">     409 </span><span class="lineCov">       1425 :                 typename Interface::StringType ret; ret.resize(fsize);</span></a>
+<a name="410"><span class="lineNum">     410 </span><span class="lineCov">       1425 :                 f.read((uint8_t *)ret.data(), fsize);</span></a>
+<a name="411"><span class="lineNum">     411 </span><span class="lineCov">       1425 :                 f.close();</span></a>
+<a name="412"><span class="lineNum">     412 </span><span class="lineCov">       1425 :                 return ret;</span></a>
+<a name="413"><span class="lineNum">     413 </span><span class="lineCov">       1425 :         }</span></a>
+<a name="414"><span class="lineNum">     414 </span><span class="lineCov">         25 :         return typename Interface::StringType();</span></a>
+<a name="415"><span class="lineNum">     415 </span><span class="lineCov">       1450 : }</span></a>
 <a name="416"><span class="lineNum">     416 </span>            : </a>
-<a name="417"><span class="lineNum">     417 </span>            : namespace stappler::io {</a>
+<a name="417"><span class="lineNum">     417 </span>            : }</a>
 <a name="418"><span class="lineNum">     418 </span>            : </a>
-<a name="419"><span class="lineNum">     419 </span>            : template &lt;&gt;</a>
-<a name="420"><span class="lineNum">     420 </span>            : struct ProducerTraits&lt;filesystem::File&gt; {</a>
-<a name="421"><span class="lineNum">     421 </span>            :         using type = filesystem::File;</a>
-<a name="422"><span class="lineNum">     422 </span><span class="lineNoCov">          0 :         static size_t ReadFn(void *ptr, uint8_t *buf, size_t nbytes) {</span></a>
-<a name="423"><span class="lineNum">     423 </span><span class="lineNoCov">          0 :                 return ((type *)ptr)-&gt;read(buf, nbytes);</span></a>
-<a name="424"><span class="lineNum">     424 </span>            :         }</a>
-<a name="425"><span class="lineNum">     425 </span>            : </a>
-<a name="426"><span class="lineNum">     426 </span><span class="lineNoCov">          0 :         static size_t SeekFn(void *ptr, int64_t offset, Seek s) {</span></a>
-<a name="427"><span class="lineNum">     427 </span><span class="lineNoCov">          0 :                 return ((type *)ptr)-&gt;seek(offset, s);</span></a>
-<a name="428"><span class="lineNum">     428 </span>            :         }</a>
-<a name="429"><span class="lineNum">     429 </span><span class="lineNoCov">          0 :         static size_t TellFn(void *ptr) {</span></a>
-<a name="430"><span class="lineNum">     430 </span><span class="lineNoCov">          0 :                 return ((type *)ptr)-&gt;tell();</span></a>
-<a name="431"><span class="lineNum">     431 </span>            :         }</a>
-<a name="432"><span class="lineNum">     432 </span>            : };</a>
-<a name="433"><span class="lineNum">     433 </span>            : </a>
-<a name="434"><span class="lineNum">     434 </span>            : }</a>
+<a name="419"><span class="lineNum">     419 </span>            : namespace STAPPLER_VERSIONIZED stappler::io {</a>
+<a name="420"><span class="lineNum">     420 </span>            : </a>
+<a name="421"><span class="lineNum">     421 </span>            : template &lt;&gt;</a>
+<a name="422"><span class="lineNum">     422 </span>            : struct ProducerTraits&lt;filesystem::File&gt; {</a>
+<a name="423"><span class="lineNum">     423 </span>            :         using type = filesystem::File;</a>
+<a name="424"><span class="lineNum">     424 </span><span class="lineCov">     641269 :         static size_t ReadFn(void *ptr, uint8_t *buf, size_t nbytes) {</span></a>
+<a name="425"><span class="lineNum">     425 </span><span class="lineCov">     641269 :                 return ((type *)ptr)-&gt;read(buf, nbytes);</span></a>
+<a name="426"><span class="lineNum">     426 </span>            :         }</a>
+<a name="427"><span class="lineNum">     427 </span>            : </a>
+<a name="428"><span class="lineNum">     428 </span><span class="lineCov">       5844 :         static size_t SeekFn(void *ptr, int64_t offset, Seek s) {</span></a>
+<a name="429"><span class="lineNum">     429 </span><span class="lineCov">       5844 :                 return ((type *)ptr)-&gt;seek(offset, s);</span></a>
+<a name="430"><span class="lineNum">     430 </span>            :         }</a>
+<a name="431"><span class="lineNum">     431 </span><span class="lineNoCov">          0 :         static size_t TellFn(void *ptr) {</span></a>
+<a name="432"><span class="lineNum">     432 </span><span class="lineNoCov">          0 :                 return ((type *)ptr)-&gt;tell();</span></a>
+<a name="433"><span class="lineNum">     433 </span>            :         }</a>
+<a name="434"><span class="lineNum">     434 </span>            : };</a>
 <a name="435"><span class="lineNum">     435 </span>            : </a>
-<a name="436"><span class="lineNum">     436 </span>            : #endif /* STAPPLER_FILESYSTEM_SPFILESYSTEM_H_ */</a>
+<a name="436"><span class="lineNum">     436 </span>            : }</a>
+<a name="437"><span class="lineNum">     437 </span>            : </a>
+<a name="438"><span class="lineNum">     438 </span>            : #endif /* STAPPLER_FILESYSTEM_SPFILESYSTEM_H_ */</a>
 </pre>
       </td>
     </tr>

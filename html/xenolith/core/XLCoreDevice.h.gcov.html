@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2023-12-03 02:10:58</td>
+            <td class="headerValue">2024-05-12 00:16:13</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">4</td>
@@ -89,7 +89,7 @@
 <a name="27"><span class="lineNum">      27 </span>            : #include &quot;XLCoreObject.h&quot;</a>
 <a name="28"><span class="lineNum">      28 </span>            : #include &quot;XLCoreImageStorage.h&quot;</a>
 <a name="29"><span class="lineNum">      29 </span>            : </a>
-<a name="30"><span class="lineNum">      30 </span>            : namespace stappler::xenolith::core {</a>
+<a name="30"><span class="lineNum">      30 </span>            : namespace STAPPLER_VERSIONIZED stappler::xenolith::core {</a>
 <a name="31"><span class="lineNum">      31 </span>            : </a>
 <a name="32"><span class="lineNum">      32 </span>            : class Instance;</a>
 <a name="33"><span class="lineNum">      33 </span>            : class Object;</a>
@@ -115,10 +115,10 @@
 <a name="53"><span class="lineNum">      53 </span>            :         uint32_t getSamplersCount() const { return _samplersCount; }</a>
 <a name="54"><span class="lineNum">      54 </span>            :         bool isSamplersCompiled() const { return _samplersCompiled; }</a>
 <a name="55"><span class="lineNum">      55 </span>            : </a>
-<a name="56"><span class="lineNum">      56 </span><span class="lineCov">          1 :         uint32_t getTextureLayoutImagesCount() const { return _textureLayoutImagesCount; }</span></a>
-<a name="57"><span class="lineNum">      57 </span><span class="lineCov">          1 :         uint32_t getTextureLayoutBuffersCount() const { return _textureLayoutBuffersCount; }</span></a>
+<a name="56"><span class="lineNum">      56 </span><span class="lineCov">         16 :         uint32_t getTextureLayoutImagesCount() const { return _textureLayoutImagesCount; }</span></a>
+<a name="57"><span class="lineNum">      57 </span><span class="lineCov">         16 :         uint32_t getTextureLayoutBuffersCount() const { return _textureLayoutBuffersCount; }</span></a>
 <a name="58"><span class="lineNum">      58 </span>            : </a>
-<a name="59"><span class="lineNum">      59 </span><span class="lineCov">          1 :         const Vector&lt;ImageFormat&gt; &amp;getSupportedDepthStencilFormat() const { return _depthFormats; }</span></a>
+<a name="59"><span class="lineNum">      59 </span><span class="lineCov">         21 :         const Vector&lt;ImageFormat&gt; &amp;getSupportedDepthStencilFormat() const { return _depthFormats; }</span></a>
 <a name="60"><span class="lineNum">      60 </span>            :         const Vector&lt;ImageFormat&gt; &amp;getSupportedColorFormat() const { return _colorFormats; }</a>
 <a name="61"><span class="lineNum">      61 </span>            : </a>
 <a name="62"><span class="lineNum">      62 </span>            :         virtual void onLoopStarted(Loop &amp;);</a>
@@ -134,7 +134,7 @@
 <a name="72"><span class="lineNum">      72 </span>            :         virtual Rc&lt;Semaphore&gt; makeSemaphore();</a>
 <a name="73"><span class="lineNum">      73 </span>            :         virtual Rc&lt;ImageView&gt; makeImageView(const Rc&lt;ImageObject&gt; &amp;, const ImageViewInfo &amp;);</a>
 <a name="74"><span class="lineNum">      74 </span>            : </a>
-<a name="75"><span class="lineNum">      75 </span><span class="lineCov">          1 :         uint32_t getPresentatonMask() const { return _presentMask; }</span></a>
+<a name="75"><span class="lineNum">      75 </span><span class="lineCov">         10 :         uint32_t getPresentatonMask() const { return _presentMask; }</span></a>
 <a name="76"><span class="lineNum">      76 </span>            : </a>
 <a name="77"><span class="lineNum">      77 </span><span class="lineNoCov">          0 :         virtual void waitIdle() const { }</span></a>
 <a name="78"><span class="lineNum">      78 </span>            : </a>

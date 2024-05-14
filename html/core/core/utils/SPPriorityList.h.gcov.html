@@ -31,18 +31,18 @@
             <td class="headerValue">coverage.info</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntry">76</td>
-            <td class="headerCovTableEntry">132</td>
-            <td class="headerCovTableEntryLo">57.6 %</td>
+            <td class="headerCovTableEntry">127</td>
+            <td class="headerCovTableEntry">133</td>
+            <td class="headerCovTableEntryHi">95.5 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2023-12-03 02:10:58</td>
+            <td class="headerValue">2024-05-12 00:16:13</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntry">13</td>
-            <td class="headerCovTableEntry">17</td>
-            <td class="headerCovTableEntryMed">76.5 %</td>
+            <td class="headerCovTableEntry">33</td>
+            <td class="headerCovTableEntry">34</td>
+            <td class="headerCovTableEntryHi">97.1 %</td>
           </tr>
           <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
         </table>
@@ -89,7 +89,7 @@
 <a name="27"><span class="lineNum">      27 </span>            : #include &quot;SPHashTable.h&quot;</a>
 <a name="28"><span class="lineNum">      28 </span>            : #include &lt;bit&gt;</a>
 <a name="29"><span class="lineNum">      29 </span>            : </a>
-<a name="30"><span class="lineNum">      30 </span>            : namespace stappler {</a>
+<a name="30"><span class="lineNum">      30 </span>            : namespace STAPPLER_VERSIONIZED stappler {</a>
 <a name="31"><span class="lineNum">      31 </span>            : </a>
 <a name="32"><span class="lineNum">      32 </span>            : template &lt;typename Value&gt;</a>
 <a name="33"><span class="lineNum">      33 </span>            : struct PriorityListEntry : memory::AllocPool {</a>
@@ -106,20 +106,20 @@
 <a name="44"><span class="lineNum">      44 </span>            :         static constexpr auto ValueSize = sizeof(PriorityListEntry&lt;Value&gt;);</a>
 <a name="45"><span class="lineNum">      45 </span>            :         static constexpr auto ValueOffset = std::countr_zero(ValueSize);</a>
 <a name="46"><span class="lineNum">      46 </span>            : </a>
-<a name="47"><span class="lineNum">      47 </span><span class="lineCov">         11 :         static uint32_t hash(uint32_t salt, const Entry *value) {</span></a>
-<a name="48"><span class="lineNum">      48 </span><span class="lineCov">         11 :                 return uint32_t(reinterpret_cast&lt;uintptr_t&gt;(value-&gt;target) &gt;&gt; ValueOffset);</span></a>
+<a name="47"><span class="lineNum">      47 </span><span class="lineCov">       2760 :         static uint32_t hash(uint32_t salt, const Entry *value) {</span></a>
+<a name="48"><span class="lineNum">      48 </span><span class="lineCov">       2760 :                 return uint32_t(reinterpret_cast&lt;uintptr_t&gt;(value-&gt;target) &gt;&gt; ValueOffset);</span></a>
 <a name="49"><span class="lineNum">      49 </span>            :         }</a>
 <a name="50"><span class="lineNum">      50 </span>            : </a>
-<a name="51"><span class="lineNum">      51 </span><span class="lineCov">         26 :         static uint32_t hash(uint32_t salt, const void * value) {</span></a>
-<a name="52"><span class="lineNum">      52 </span><span class="lineCov">         26 :                 return uint32_t(reinterpret_cast&lt;uintptr_t&gt;(value) &gt;&gt; ValueOffset);</span></a>
+<a name="51"><span class="lineNum">      51 </span><span class="lineCov">      71894 :         static uint32_t hash(uint32_t salt, const void * value) {</span></a>
+<a name="52"><span class="lineNum">      52 </span><span class="lineCov">      71894 :                 return uint32_t(reinterpret_cast&lt;uintptr_t&gt;(value) &gt;&gt; ValueOffset);</span></a>
 <a name="53"><span class="lineNum">      53 </span>            :         }</a>
 <a name="54"><span class="lineNum">      54 </span>            : </a>
-<a name="55"><span class="lineNum">      55 </span><span class="lineNoCov">          0 :         static bool equal(const Entry *l, const Entry *r) {</span></a>
-<a name="56"><span class="lineNum">      56 </span><span class="lineNoCov">          0 :                 return l-&gt;target == r-&gt;target;</span></a>
+<a name="55"><span class="lineNum">      55 </span><span class="lineCov">         25 :         static bool equal(const Entry *l, const Entry *r) {</span></a>
+<a name="56"><span class="lineNum">      56 </span><span class="lineCov">         25 :                 return l-&gt;target == r-&gt;target;</span></a>
 <a name="57"><span class="lineNum">      57 </span>            :         }</a>
 <a name="58"><span class="lineNum">      58 </span>            : </a>
-<a name="59"><span class="lineNum">      59 </span><span class="lineCov">         15 :         static bool equal(const Entry *l, const void * value) {</span></a>
-<a name="60"><span class="lineNum">      60 </span><span class="lineCov">         15 :                 return l-&gt;target == value;</span></a>
+<a name="59"><span class="lineNum">      59 </span><span class="lineCov">      69159 :         static bool equal(const Entry *l, const void * value) {</span></a>
+<a name="60"><span class="lineNum">      60 </span><span class="lineCov">      69159 :                 return l-&gt;target == value;</span></a>
 <a name="61"><span class="lineNum">      61 </span>            :         }</a>
 <a name="62"><span class="lineNum">      62 </span>            : };</a>
 <a name="63"><span class="lineNum">      63 </span>            : </a>
@@ -129,17 +129,17 @@
 <a name="67"><span class="lineNum">      67 </span>            :         using Pool = memory::pool_t;</a>
 <a name="68"><span class="lineNum">      68 </span>            :         using Entry = PriorityListEntry&lt;Value&gt;;</a>
 <a name="69"><span class="lineNum">      69 </span>            : </a>
-<a name="70"><span class="lineNum">      70 </span><span class="lineCov">          1 :         PriorityList(Pool *p = nullptr)</span></a>
-<a name="71"><span class="lineNum">      71 </span><span class="lineCov">          1 :         : _pool(p ? p : memory::pool::acquire()), _hash(p ? p : memory::pool::acquire()) { }</span></a>
+<a name="70"><span class="lineNum">      70 </span><span class="lineCov">         46 :         PriorityList(Pool *p = nullptr)</span></a>
+<a name="71"><span class="lineNum">      71 </span><span class="lineCov">         46 :         : _pool(p ? p : memory::pool::acquire()), _hash(p ? p : memory::pool::acquire()) { }</span></a>
 <a name="72"><span class="lineNum">      72 </span>            : </a>
-<a name="73"><span class="lineNum">      73 </span><span class="lineNoCov">          0 :         ~PriorityList() {</span></a>
-<a name="74"><span class="lineNum">      74 </span><span class="lineNoCov">          0 :                 clear();</span></a>
-<a name="75"><span class="lineNum">      75 </span><span class="lineNoCov">          0 :         }</span></a>
+<a name="73"><span class="lineNum">      73 </span><span class="lineCov">         46 :         ~PriorityList() {</span></a>
+<a name="74"><span class="lineNum">      74 </span><span class="lineCov">         46 :                 clear();</span></a>
+<a name="75"><span class="lineNum">      75 </span><span class="lineCov">         46 :         }</span></a>
 <a name="76"><span class="lineNum">      76 </span>            : </a>
 <a name="77"><span class="lineNum">      77 </span>            :         template &lt;typename ... Args&gt;</a>
 <a name="78"><span class="lineNum">      78 </span>            :         Value * emplace(void *, int32_t p, Args &amp;&amp; ... args);</a>
 <a name="79"><span class="lineNum">      79 </span>            : </a>
-<a name="80"><span class="lineNum">      80 </span>            :         Value * find(void *);</a>
+<a name="80"><span class="lineNum">      80 </span>            :         Value * find(void *) const;</a>
 <a name="81"><span class="lineNum">      81 </span>            : </a>
 <a name="82"><span class="lineNum">      82 </span>            :         // callback returns true if Entry should be removed</a>
 <a name="83"><span class="lineNum">      83 </span>            :         void foreach(const Callback&lt;bool(void *target, int32_t priority, Value &amp;)&gt; &amp;);</a>
@@ -174,192 +174,194 @@
 <a name="112"><span class="lineNum">     112 </span>            : </a>
 <a name="113"><span class="lineNum">     113 </span>            : template &lt;typename Value&gt;</a>
 <a name="114"><span class="lineNum">     114 </span>            : template &lt;typename ... Args&gt;</a>
-<a name="115"><span class="lineNum">     115 </span><span class="lineCov">         11 : auto PriorityList&lt;Value&gt;::emplace(void *ptr, int32_t p, Args &amp;&amp; ... args) -&gt; Value * {</span></a>
-<a name="116"><span class="lineNum">     116 </span><span class="lineCov">         11 :         auto it = _hash.find(ptr);</span></a>
-<a name="117"><span class="lineNum">     117 </span><span class="lineCov">         11 :         if (it != _hash.end()) {</span></a>
-<a name="118"><span class="lineNum">     118 </span><span class="lineNoCov">          0 :                 auto entry = (Entry *)*it;</span></a>
-<a name="119"><span class="lineNum">     119 </span><span class="lineNoCov">          0 :                 if (entry-&gt;priority != p) {</span></a>
+<a name="115"><span class="lineNum">     115 </span><span class="lineCov">      67701 : auto PriorityList&lt;Value&gt;::emplace(void *ptr, int32_t p, Args &amp;&amp; ... args) -&gt; Value * {</span></a>
+<a name="116"><span class="lineNum">     116 </span><span class="lineCov">      67701 :         auto it = _hash.find(ptr);</span></a>
+<a name="117"><span class="lineNum">     117 </span><span class="lineCov">      67701 :         if (it != _hash.end()) {</span></a>
+<a name="118"><span class="lineNum">     118 </span><span class="lineCov">      64966 :                 auto entry = (Entry *)*it;</span></a>
+<a name="119"><span class="lineNum">     119 </span><span class="lineCov">      64966 :                 if (entry-&gt;priority != p) {</span></a>
 <a name="120"><span class="lineNum">     120 </span><span class="lineNoCov">          0 :                         _hash.erase(it);</span></a>
 <a name="121"><span class="lineNum">     121 </span>            :                 } else {</a>
-<a name="122"><span class="lineNum">     122 </span><span class="lineNoCov">          0 :                         return &amp;entry-&gt;value;</span></a>
+<a name="122"><span class="lineNum">     122 </span><span class="lineCov">      64966 :                         return &amp;entry-&gt;value;</span></a>
 <a name="123"><span class="lineNum">     123 </span>            :                 }</a>
 <a name="124"><span class="lineNum">     124 </span>            :         }</a>
 <a name="125"><span class="lineNum">     125 </span>            : </a>
-<a name="126"><span class="lineNum">     126 </span><span class="lineCov">         11 :         if (p == 0) {</span></a>
-<a name="127"><span class="lineNum">     127 </span><span class="lineCov">         11 :                 return emplace_list(false, &amp;_zeroList, ptr, p, std::forward&lt;Args&gt;(args)...);</span></a>
-<a name="128"><span class="lineNum">     128 </span><span class="lineNoCov">          0 :         } else if (p &lt; 0) {</span></a>
-<a name="129"><span class="lineNum">     129 </span><span class="lineNoCov">          0 :                 return emplace_list(true, &amp;_negList, ptr, p, std::forward&lt;Args&gt;(args)...);</span></a>
-<a name="130"><span class="lineNum">     130 </span><span class="lineNoCov">          0 :         } else if (p &gt; 0) {</span></a>
-<a name="131"><span class="lineNum">     131 </span><span class="lineNoCov">          0 :                 return emplace_list(true, &amp;_posList, ptr, p, std::forward&lt;Args&gt;(args)...);</span></a>
+<a name="126"><span class="lineNum">     126 </span><span class="lineCov">       2735 :         if (p == 0) {</span></a>
+<a name="127"><span class="lineNum">     127 </span><span class="lineCov">       2585 :                 return emplace_list(false, &amp;_zeroList, ptr, p, std::forward&lt;Args&gt;(args)...);</span></a>
+<a name="128"><span class="lineNum">     128 </span><span class="lineCov">        150 :         } else if (p &lt; 0) {</span></a>
+<a name="129"><span class="lineNum">     129 </span><span class="lineCov">         75 :                 return emplace_list(true, &amp;_negList, ptr, p, std::forward&lt;Args&gt;(args)...);</span></a>
+<a name="130"><span class="lineNum">     130 </span><span class="lineCov">         75 :         } else if (p &gt; 0) {</span></a>
+<a name="131"><span class="lineNum">     131 </span><span class="lineCov">         75 :                 return emplace_list(true, &amp;_posList, ptr, p, std::forward&lt;Args&gt;(args)...);</span></a>
 <a name="132"><span class="lineNum">     132 </span>            :         }</a>
 <a name="133"><span class="lineNum">     133 </span>            : </a>
 <a name="134"><span class="lineNum">     134 </span><span class="lineNoCov">          0 :         return nullptr;</span></a>
 <a name="135"><span class="lineNum">     135 </span>            : }</a>
 <a name="136"><span class="lineNum">     136 </span>            : </a>
 <a name="137"><span class="lineNum">     137 </span>            : template &lt;typename Value&gt;</a>
-<a name="138"><span class="lineNum">     138 </span><span class="lineCov">          4 : auto PriorityList&lt;Value&gt;::find(void *ptr) -&gt; Value * {</span></a>
-<a name="139"><span class="lineNum">     139 </span><span class="lineCov">          4 :         auto it = _hash.find(ptr);</span></a>
-<a name="140"><span class="lineNum">     140 </span><span class="lineCov">          4 :         if (it != _hash.end()) {</span></a>
-<a name="141"><span class="lineNum">     141 </span><span class="lineCov">          4 :                 auto entry = (Entry *)*it;</span></a>
-<a name="142"><span class="lineNum">     142 </span><span class="lineCov">          4 :                 return &amp;entry-&gt;value;</span></a>
+<a name="138"><span class="lineNum">     138 </span><span class="lineCov">       1734 : auto PriorityList&lt;Value&gt;::find(void *ptr) const -&gt; Value * {</span></a>
+<a name="139"><span class="lineNum">     139 </span><span class="lineCov">       1734 :         auto it = _hash.find(ptr);</span></a>
+<a name="140"><span class="lineNum">     140 </span><span class="lineCov">       1734 :         if (it != _hash.end()) {</span></a>
+<a name="141"><span class="lineNum">     141 </span><span class="lineCov">       1734 :                 auto entry = (Entry *)*it;</span></a>
+<a name="142"><span class="lineNum">     142 </span><span class="lineCov">       1734 :                 return &amp;entry-&gt;value;</span></a>
 <a name="143"><span class="lineNum">     143 </span>            :         }</a>
 <a name="144"><span class="lineNum">     144 </span><span class="lineNoCov">          0 :         return nullptr;</span></a>
 <a name="145"><span class="lineNum">     145 </span>            : }</a>
 <a name="146"><span class="lineNum">     146 </span>            : </a>
 <a name="147"><span class="lineNum">     147 </span>            : template &lt;typename Value&gt;</a>
-<a name="148"><span class="lineNum">     148 </span><span class="lineCov">        108 : void PriorityList&lt;Value&gt;::foreach(const Callback&lt;bool(void *target, int32_t priority, Value &amp;)&gt; &amp;cb) {</span></a>
-<a name="149"><span class="lineNum">     149 </span><span class="lineCov">        108 :         foreach_list(_negList, cb);</span></a>
-<a name="150"><span class="lineNum">     150 </span><span class="lineCov">        108 :         foreach_list(_zeroList, cb);</span></a>
-<a name="151"><span class="lineNum">     151 </span><span class="lineCov">        108 :         foreach_list(_posList, cb);</span></a>
-<a name="152"><span class="lineNum">     152 </span><span class="lineCov">        108 : }</span></a>
+<a name="148"><span class="lineNum">     148 </span><span class="lineCov">       9563 : void PriorityList&lt;Value&gt;::foreach(const Callback&lt;bool(void *target, int32_t priority, Value &amp;)&gt; &amp;cb) {</span></a>
+<a name="149"><span class="lineNum">     149 </span><span class="lineCov">       9563 :         foreach_list(_negList, cb);</span></a>
+<a name="150"><span class="lineNum">     150 </span><span class="lineCov">       9563 :         foreach_list(_zeroList, cb);</span></a>
+<a name="151"><span class="lineNum">     151 </span><span class="lineCov">       9563 :         foreach_list(_posList, cb);</span></a>
+<a name="152"><span class="lineNum">     152 </span><span class="lineCov">       9563 : }</span></a>
 <a name="153"><span class="lineNum">     153 </span>            : </a>
 <a name="154"><span class="lineNum">     154 </span>            : template &lt;typename Value&gt;</a>
-<a name="155"><span class="lineNum">     155 </span><span class="lineCov">         11 : bool PriorityList&lt;Value&gt;::erase(const void *ptr) {</span></a>
-<a name="156"><span class="lineNum">     156 </span><span class="lineCov">         11 :         auto it = _hash.find(ptr);</span></a>
-<a name="157"><span class="lineNum">     157 </span><span class="lineCov">         11 :         if (it != _hash.end()) {</span></a>
-<a name="158"><span class="lineNum">     158 </span><span class="lineCov">         11 :                 auto v = *it;</span></a>
-<a name="159"><span class="lineNum">     159 </span><span class="lineCov">         11 :                 erase_entry(v);</span></a>
-<a name="160"><span class="lineNum">     160 </span><span class="lineCov">         11 :                 _hash.erase(it);</span></a>
-<a name="161"><span class="lineNum">     161 </span><span class="lineCov">         11 :                 return true;</span></a>
+<a name="155"><span class="lineNum">     155 </span><span class="lineCov">       2459 : bool PriorityList&lt;Value&gt;::erase(const void *ptr) {</span></a>
+<a name="156"><span class="lineNum">     156 </span><span class="lineCov">       2459 :         auto it = _hash.find(ptr);</span></a>
+<a name="157"><span class="lineNum">     157 </span><span class="lineCov">       2459 :         if (it != _hash.end()) {</span></a>
+<a name="158"><span class="lineNum">     158 </span><span class="lineCov">       2459 :                 auto v = *it;</span></a>
+<a name="159"><span class="lineNum">     159 </span><span class="lineCov">       2459 :                 erase_entry(v);</span></a>
+<a name="160"><span class="lineNum">     160 </span><span class="lineCov">       2459 :                 _hash.erase(it);</span></a>
+<a name="161"><span class="lineNum">     161 </span><span class="lineCov">       2459 :                 return true;</span></a>
 <a name="162"><span class="lineNum">     162 </span>            :         }</a>
 <a name="163"><span class="lineNum">     163 </span><span class="lineNoCov">          0 :         return false;</span></a>
 <a name="164"><span class="lineNum">     164 </span>            : }</a>
 <a name="165"><span class="lineNum">     165 </span>            : </a>
 <a name="166"><span class="lineNum">     166 </span>            : template &lt;typename Value&gt;</a>
-<a name="167"><span class="lineNum">     167 </span><span class="lineNoCov">          0 : void PriorityList&lt;Value&gt;::clear() {</span></a>
-<a name="168"><span class="lineNum">     168 </span><span class="lineNoCov">          0 :         while (_zeroList) {</span></a>
-<a name="169"><span class="lineNum">     169 </span><span class="lineNoCov">          0 :                 auto v = _zeroList;</span></a>
-<a name="170"><span class="lineNum">     170 </span><span class="lineNoCov">          0 :                 _zeroList = _zeroList-&gt;next;</span></a>
-<a name="171"><span class="lineNum">     171 </span><span class="lineNoCov">          0 :                 free(v);</span></a>
+<a name="167"><span class="lineNum">     167 </span><span class="lineCov">        113 : void PriorityList&lt;Value&gt;::clear() {</span></a>
+<a name="168"><span class="lineNum">     168 </span><span class="lineCov">        289 :         while (_zeroList) {</span></a>
+<a name="169"><span class="lineNum">     169 </span><span class="lineCov">        176 :                 auto v = _zeroList;</span></a>
+<a name="170"><span class="lineNum">     170 </span><span class="lineCov">        176 :                 _zeroList = _zeroList-&gt;next;</span></a>
+<a name="171"><span class="lineNum">     171 </span><span class="lineCov">        176 :                 free(v);</span></a>
 <a name="172"><span class="lineNum">     172 </span>            :         }</a>
-<a name="173"><span class="lineNum">     173 </span><span class="lineNoCov">          0 :         while (_negList) {</span></a>
-<a name="174"><span class="lineNum">     174 </span><span class="lineNoCov">          0 :                 auto v = _negList;</span></a>
-<a name="175"><span class="lineNum">     175 </span><span class="lineNoCov">          0 :                 _negList = _negList-&gt;next;</span></a>
-<a name="176"><span class="lineNum">     176 </span><span class="lineNoCov">          0 :                 free(v);</span></a>
+<a name="173"><span class="lineNum">     173 </span><span class="lineCov">        163 :         while (_negList) {</span></a>
+<a name="174"><span class="lineNum">     174 </span><span class="lineCov">         50 :                 auto v = _negList;</span></a>
+<a name="175"><span class="lineNum">     175 </span><span class="lineCov">         50 :                 _negList = _negList-&gt;next;</span></a>
+<a name="176"><span class="lineNum">     176 </span><span class="lineCov">         50 :                 free(v);</span></a>
 <a name="177"><span class="lineNum">     177 </span>            :         }</a>
-<a name="178"><span class="lineNum">     178 </span><span class="lineNoCov">          0 :         while (_posList) {</span></a>
-<a name="179"><span class="lineNum">     179 </span><span class="lineNoCov">          0 :                 auto v = _posList;</span></a>
-<a name="180"><span class="lineNum">     180 </span><span class="lineNoCov">          0 :                 _posList = _posList-&gt;next;</span></a>
-<a name="181"><span class="lineNum">     181 </span><span class="lineNoCov">          0 :                 free(v);</span></a>
+<a name="178"><span class="lineNum">     178 </span><span class="lineCov">        138 :         while (_posList) {</span></a>
+<a name="179"><span class="lineNum">     179 </span><span class="lineCov">         25 :                 auto v = _posList;</span></a>
+<a name="180"><span class="lineNum">     180 </span><span class="lineCov">         25 :                 _posList = _posList-&gt;next;</span></a>
+<a name="181"><span class="lineNum">     181 </span><span class="lineCov">         25 :                 free(v);</span></a>
 <a name="182"><span class="lineNum">     182 </span>            :         }</a>
-<a name="183"><span class="lineNum">     183 </span><span class="lineNoCov">          0 :         _hash.clear();</span></a>
-<a name="184"><span class="lineNum">     184 </span><span class="lineNoCov">          0 : }</span></a>
+<a name="183"><span class="lineNum">     183 </span><span class="lineCov">        113 :         _hash.clear();</span></a>
+<a name="184"><span class="lineNum">     184 </span><span class="lineCov">        113 : }</span></a>
 <a name="185"><span class="lineNum">     185 </span>            : </a>
 <a name="186"><span class="lineNum">     186 </span>            : template &lt;typename Value&gt;</a>
-<a name="187"><span class="lineNum">     187 </span><span class="lineNoCov">          0 : bool PriorityList&lt;Value&gt;::empty() const {</span></a>
-<a name="188"><span class="lineNum">     188 </span><span class="lineNoCov">          0 :         return _hash.empty();</span></a>
+<a name="187"><span class="lineNum">     187 </span><span class="lineCov">         46 : bool PriorityList&lt;Value&gt;::empty() const {</span></a>
+<a name="188"><span class="lineNum">     188 </span><span class="lineCov">         46 :         return _hash.empty();</span></a>
 <a name="189"><span class="lineNum">     189 </span>            : }</a>
 <a name="190"><span class="lineNum">     190 </span>            : </a>
 <a name="191"><span class="lineNum">     191 </span>            : template &lt;typename Value&gt;</a>
 <a name="192"><span class="lineNum">     192 </span>            : template &lt;typename ... Args&gt;</a>
-<a name="193"><span class="lineNum">     193 </span><span class="lineCov">         11 : auto PriorityList&lt;Value&gt;::emplace_list(bool ordered, Entry **target, void *ptr, int32_t p, Args &amp;&amp; ... args) -&gt; Value * {</span></a>
-<a name="194"><span class="lineNum">     194 </span><span class="lineCov">         11 :         Entry *newVal = allocate(ptr, p, std::forward&lt;Args&gt;(args)...);</span></a>
+<a name="193"><span class="lineNum">     193 </span><span class="lineCov">       2735 : auto PriorityList&lt;Value&gt;::emplace_list(bool ordered, Entry **target, void *ptr, int32_t p, Args &amp;&amp; ... args) -&gt; Value * {</span></a>
+<a name="194"><span class="lineNum">     194 </span><span class="lineCov">       2735 :         Entry *newVal = allocate(ptr, p, std::forward&lt;Args&gt;(args)...);</span></a>
 <a name="195"><span class="lineNum">     195 </span>            : </a>
-<a name="196"><span class="lineNum">     196 </span><span class="lineCov">         11 :         if (ordered &amp;&amp; *target &amp;&amp; (*target)-&gt;priority &lt; p) {</span></a>
-<a name="197"><span class="lineNum">     197 </span><span class="lineNoCov">          0 :                 auto v = *target;</span></a>
-<a name="198"><span class="lineNum">     198 </span><span class="lineNoCov">          0 :                 while (v-&gt;next &amp;&amp; v-&gt;next-&gt;priority &lt; p) {</span></a>
+<a name="196"><span class="lineNum">     196 </span><span class="lineCov">       2735 :         if (ordered &amp;&amp; *target &amp;&amp; (*target)-&gt;priority &lt; p) {</span></a>
+<a name="197"><span class="lineNum">     197 </span><span class="lineCov">         75 :                 auto v = *target;</span></a>
+<a name="198"><span class="lineNum">     198 </span><span class="lineCov">         75 :                 while (v-&gt;next &amp;&amp; v-&gt;next-&gt;priority &lt; p) {</span></a>
 <a name="199"><span class="lineNum">     199 </span><span class="lineNoCov">          0 :                         target = &amp;v-&gt;next;</span></a>
 <a name="200"><span class="lineNum">     200 </span><span class="lineNoCov">          0 :                         v = v-&gt;next;</span></a>
 <a name="201"><span class="lineNum">     201 </span>            :                 }</a>
 <a name="202"><span class="lineNum">     202 </span>            : </a>
 <a name="203"><span class="lineNum">     203 </span>            :                 // insert between v and v-&gt;next</a>
-<a name="204"><span class="lineNum">     204 </span><span class="lineNoCov">          0 :                 newVal-&gt;prev = v;</span></a>
-<a name="205"><span class="lineNum">     205 </span><span class="lineNoCov">          0 :                 newVal-&gt;next = v-&gt;next;</span></a>
-<a name="206"><span class="lineNum">     206 </span><span class="lineNoCov">          0 :                 if (newVal-&gt;next) {</span></a>
-<a name="207"><span class="lineNum">     207 </span><span class="lineNoCov">          0 :                         newVal-&gt;next-&gt;prev = newVal;</span></a>
+<a name="204"><span class="lineNum">     204 </span><span class="lineCov">         75 :                 newVal-&gt;prev = v;</span></a>
+<a name="205"><span class="lineNum">     205 </span><span class="lineCov">         75 :                 newVal-&gt;next = v-&gt;next;</span></a>
+<a name="206"><span class="lineNum">     206 </span><span class="lineCov">         75 :                 if (newVal-&gt;next) {</span></a>
+<a name="207"><span class="lineNum">     207 </span><span class="lineCov">         50 :                         newVal-&gt;next-&gt;prev = newVal;</span></a>
 <a name="208"><span class="lineNum">     208 </span>            :                 }</a>
-<a name="209"><span class="lineNum">     209 </span><span class="lineNoCov">          0 :                 v-&gt;next = newVal;</span></a>
-<a name="210"><span class="lineNum">     210 </span><span class="lineNoCov">          0 :         } else {</span></a>
+<a name="209"><span class="lineNum">     209 </span><span class="lineCov">         75 :                 v-&gt;next = newVal;</span></a>
+<a name="210"><span class="lineNum">     210 </span><span class="lineCov">         75 :         } else {</span></a>
 <a name="211"><span class="lineNum">     211 </span>            :                 // insert first</a>
-<a name="212"><span class="lineNum">     212 </span><span class="lineCov">         11 :                 newVal-&gt;prev = nullptr;</span></a>
-<a name="213"><span class="lineNum">     213 </span><span class="lineCov">         11 :                 newVal-&gt;next = *target;</span></a>
-<a name="214"><span class="lineNum">     214 </span><span class="lineCov">         11 :                 if (newVal-&gt;next) {</span></a>
-<a name="215"><span class="lineNum">     215 </span><span class="lineCov">         10 :                         newVal-&gt;next-&gt;prev = newVal;</span></a>
+<a name="212"><span class="lineNum">     212 </span><span class="lineCov">       2660 :                 newVal-&gt;prev = nullptr;</span></a>
+<a name="213"><span class="lineNum">     213 </span><span class="lineCov">       2660 :                 newVal-&gt;next = *target;</span></a>
+<a name="214"><span class="lineNum">     214 </span><span class="lineCov">       2660 :                 if (newVal-&gt;next) {</span></a>
+<a name="215"><span class="lineNum">     215 </span><span class="lineCov">       2564 :                         newVal-&gt;next-&gt;prev = newVal;</span></a>
 <a name="216"><span class="lineNum">     216 </span>            :                 }</a>
-<a name="217"><span class="lineNum">     217 </span><span class="lineCov">         11 :                 *target = newVal;</span></a>
+<a name="217"><span class="lineNum">     217 </span><span class="lineCov">       2660 :                 *target = newVal;</span></a>
 <a name="218"><span class="lineNum">     218 </span>            :         }</a>
 <a name="219"><span class="lineNum">     219 </span>            : </a>
-<a name="220"><span class="lineNum">     220 </span><span class="lineCov">         11 :         _hash.emplace(newVal);</span></a>
+<a name="220"><span class="lineNum">     220 </span><span class="lineCov">       2735 :         _hash.emplace(newVal);</span></a>
 <a name="221"><span class="lineNum">     221 </span>            : </a>
-<a name="222"><span class="lineNum">     222 </span><span class="lineCov">         11 :         return &amp;newVal-&gt;value;</span></a>
+<a name="222"><span class="lineNum">     222 </span><span class="lineCov">       2735 :         return &amp;newVal-&gt;value;</span></a>
 <a name="223"><span class="lineNum">     223 </span>            : }</a>
 <a name="224"><span class="lineNum">     224 </span>            : </a>
 <a name="225"><span class="lineNum">     225 </span>            : template &lt;typename Value&gt;</a>
 <a name="226"><span class="lineNum">     226 </span>            : template &lt;typename ... Args&gt;</a>
-<a name="227"><span class="lineNum">     227 </span><span class="lineCov">         11 : auto PriorityList&lt;Value&gt;::allocate(void *ptr, int32_t p, Args &amp;&amp; ... args) -&gt; Entry * {</span></a>
-<a name="228"><span class="lineNum">     228 </span><span class="lineCov">         11 :         Entry *ret = nullptr;</span></a>
-<a name="229"><span class="lineNum">     229 </span><span class="lineCov">         11 :         if (_free) {</span></a>
-<a name="230"><span class="lineNum">     230 </span><span class="lineNoCov">          0 :                 ret = _free;</span></a>
-<a name="231"><span class="lineNum">     231 </span><span class="lineNoCov">          0 :                 _free = ret-&gt;next;</span></a>
-<a name="232"><span class="lineNum">     232 </span><span class="lineNoCov">          0 :                 ret-&gt;next = nullptr;</span></a>
+<a name="227"><span class="lineNum">     227 </span><span class="lineCov">       2735 : auto PriorityList&lt;Value&gt;::allocate(void *ptr, int32_t p, Args &amp;&amp; ... args) -&gt; Entry * {</span></a>
+<a name="228"><span class="lineNum">     228 </span><span class="lineCov">       2735 :         Entry *ret = nullptr;</span></a>
+<a name="229"><span class="lineNum">     229 </span><span class="lineCov">       2735 :         if (_free) {</span></a>
+<a name="230"><span class="lineNum">     230 </span><span class="lineCov">       1386 :                 ret = _free;</span></a>
+<a name="231"><span class="lineNum">     231 </span><span class="lineCov">       1386 :                 _free = ret-&gt;next;</span></a>
+<a name="232"><span class="lineNum">     232 </span><span class="lineCov">       1386 :                 ret-&gt;next = nullptr;</span></a>
 <a name="233"><span class="lineNum">     233 </span>            :         } else {</a>
-<a name="234"><span class="lineNum">     234 </span><span class="lineCov">         11 :                 ret = new (_pool) Entry;</span></a>
+<a name="234"><span class="lineNum">     234 </span><span class="lineCov">       1349 :                 ret = new (_pool) Entry;</span></a>
 <a name="235"><span class="lineNum">     235 </span>            :         }</a>
 <a name="236"><span class="lineNum">     236 </span>            : </a>
-<a name="237"><span class="lineNum">     237 </span><span class="lineCov">         11 :         ret-&gt;target = ptr;</span></a>
-<a name="238"><span class="lineNum">     238 </span><span class="lineCov">         11 :         ret-&gt;priority = p;</span></a>
-<a name="239"><span class="lineNum">     239 </span><span class="lineCov">         11 :         new (&amp;ret-&gt;value) Value(std::forward&lt;Args&gt;(args)...);</span></a>
+<a name="237"><span class="lineNum">     237 </span><span class="lineCov">       2735 :         ret-&gt;target = ptr;</span></a>
+<a name="238"><span class="lineNum">     238 </span><span class="lineCov">       2735 :         ret-&gt;priority = p;</span></a>
+<a name="239"><span class="lineNum">     239 </span><span class="lineCov">       2735 :         new (&amp;ret-&gt;value) Value(std::forward&lt;Args&gt;(args)...);</span></a>
 <a name="240"><span class="lineNum">     240 </span>            : </a>
-<a name="241"><span class="lineNum">     241 </span><span class="lineCov">         11 :         return ret;</span></a>
+<a name="241"><span class="lineNum">     241 </span><span class="lineCov">       2735 :         return ret;</span></a>
 <a name="242"><span class="lineNum">     242 </span>            : }</a>
 <a name="243"><span class="lineNum">     243 </span>            : </a>
 <a name="244"><span class="lineNum">     244 </span>            : template &lt;typename Value&gt;</a>
-<a name="245"><span class="lineNum">     245 </span><span class="lineCov">         11 : void PriorityList&lt;Value&gt;::erase_entry(Entry *v) {</span></a>
-<a name="246"><span class="lineNum">     246 </span><span class="lineCov">         11 :         if (v == _zeroList) {</span></a>
-<a name="247"><span class="lineNum">     247 </span><span class="lineCov">          9 :                 _zeroList = v-&gt;next;</span></a>
-<a name="248"><span class="lineNum">     248 </span><span class="lineCov">          9 :                 if (_zeroList) {</span></a>
-<a name="249"><span class="lineNum">     249 </span><span class="lineCov">          8 :                         _zeroList-&gt;prev = nullptr;</span></a>
+<a name="245"><span class="lineNum">     245 </span><span class="lineCov">       2484 : void PriorityList&lt;Value&gt;::erase_entry(Entry *v) {</span></a>
+<a name="246"><span class="lineNum">     246 </span><span class="lineCov">       2484 :         if (v == _zeroList) {</span></a>
+<a name="247"><span class="lineNum">     247 </span><span class="lineCov">        924 :                 _zeroList = v-&gt;next;</span></a>
+<a name="248"><span class="lineNum">     248 </span><span class="lineCov">        924 :                 if (_zeroList) {</span></a>
+<a name="249"><span class="lineNum">     249 </span><span class="lineCov">        924 :                         _zeroList-&gt;prev = nullptr;</span></a>
 <a name="250"><span class="lineNum">     250 </span>            :                 }</a>
-<a name="251"><span class="lineNum">     251 </span><span class="lineCov">          9 :                 free(v);</span></a>
-<a name="252"><span class="lineNum">     252 </span><span class="lineCov">          2 :         } else if (v == _negList) {</span></a>
-<a name="253"><span class="lineNum">     253 </span><span class="lineNoCov">          0 :                 _negList = v-&gt;next;</span></a>
-<a name="254"><span class="lineNum">     254 </span><span class="lineNoCov">          0 :                 if (_negList) {</span></a>
-<a name="255"><span class="lineNum">     255 </span><span class="lineNoCov">          0 :                         _negList-&gt;prev = nullptr;</span></a>
+<a name="251"><span class="lineNum">     251 </span><span class="lineCov">        924 :                 free(v);</span></a>
+<a name="252"><span class="lineNum">     252 </span><span class="lineCov">       1560 :         } else if (v == _negList) {</span></a>
+<a name="253"><span class="lineNum">     253 </span><span class="lineCov">         25 :                 _negList = v-&gt;next;</span></a>
+<a name="254"><span class="lineNum">     254 </span><span class="lineCov">         25 :                 if (_negList) {</span></a>
+<a name="255"><span class="lineNum">     255 </span><span class="lineCov">         25 :                         _negList-&gt;prev = nullptr;</span></a>
 <a name="256"><span class="lineNum">     256 </span>            :                 }</a>
-<a name="257"><span class="lineNum">     257 </span><span class="lineNoCov">          0 :                 free(v);</span></a>
-<a name="258"><span class="lineNum">     258 </span><span class="lineCov">          2 :         } else if (v == _posList) {</span></a>
-<a name="259"><span class="lineNum">     259 </span><span class="lineNoCov">          0 :                 _posList = v-&gt;next;</span></a>
-<a name="260"><span class="lineNum">     260 </span><span class="lineNoCov">          0 :                 if (_posList) {</span></a>
-<a name="261"><span class="lineNum">     261 </span><span class="lineNoCov">          0 :                         _posList-&gt;prev = nullptr;</span></a>
+<a name="257"><span class="lineNum">     257 </span><span class="lineCov">         25 :                 free(v);</span></a>
+<a name="258"><span class="lineNum">     258 </span><span class="lineCov">       1535 :         } else if (v == _posList) {</span></a>
+<a name="259"><span class="lineNum">     259 </span><span class="lineCov">         25 :                 _posList = v-&gt;next;</span></a>
+<a name="260"><span class="lineNum">     260 </span><span class="lineCov">         25 :                 if (_posList) {</span></a>
+<a name="261"><span class="lineNum">     261 </span><span class="lineCov">         25 :                         _posList-&gt;prev = nullptr;</span></a>
 <a name="262"><span class="lineNum">     262 </span>            :                 }</a>
-<a name="263"><span class="lineNum">     263 </span><span class="lineNoCov">          0 :                 free(v);</span></a>
+<a name="263"><span class="lineNum">     263 </span><span class="lineCov">         25 :                 free(v);</span></a>
 <a name="264"><span class="lineNum">     264 </span>            :         } else {</a>
-<a name="265"><span class="lineNum">     265 </span><span class="lineCov">          2 :                 if (v-&gt;prev) {</span></a>
-<a name="266"><span class="lineNum">     266 </span><span class="lineCov">          2 :                         v-&gt;prev-&gt;next = v-&gt;next;</span></a>
+<a name="265"><span class="lineNum">     265 </span><span class="lineCov">       1510 :                 if (v-&gt;prev) {</span></a>
+<a name="266"><span class="lineNum">     266 </span><span class="lineCov">       1510 :                         v-&gt;prev-&gt;next = v-&gt;next;</span></a>
 <a name="267"><span class="lineNum">     267 </span>            :                 }</a>
-<a name="268"><span class="lineNum">     268 </span><span class="lineCov">          2 :                 if (v-&gt;next) {</span></a>
-<a name="269"><span class="lineNum">     269 </span><span class="lineCov">          2 :                         v-&gt;next-&gt;prev = v-&gt;prev;</span></a>
+<a name="268"><span class="lineNum">     268 </span><span class="lineCov">       1510 :                 if (v-&gt;next) {</span></a>
+<a name="269"><span class="lineNum">     269 </span><span class="lineCov">       1443 :                         v-&gt;next-&gt;prev = v-&gt;prev;</span></a>
 <a name="270"><span class="lineNum">     270 </span>            :                 }</a>
-<a name="271"><span class="lineNum">     271 </span><span class="lineCov">          2 :                 free(v);</span></a>
+<a name="271"><span class="lineNum">     271 </span><span class="lineCov">       1510 :                 free(v);</span></a>
 <a name="272"><span class="lineNum">     272 </span>            :         }</a>
-<a name="273"><span class="lineNum">     273 </span><span class="lineCov">         11 : }</span></a>
+<a name="273"><span class="lineNum">     273 </span><span class="lineCov">       2484 : }</span></a>
 <a name="274"><span class="lineNum">     274 </span>            : </a>
 <a name="275"><span class="lineNum">     275 </span>            : template &lt;typename Value&gt;</a>
-<a name="276"><span class="lineNum">     276 </span><span class="lineCov">         11 : void PriorityList&lt;Value&gt;::free(Entry *v) {</span></a>
-<a name="277"><span class="lineNum">     277 </span><span class="lineCov">         11 :         v-&gt;value.~Value();</span></a>
-<a name="278"><span class="lineNum">     278 </span><span class="lineCov">         11 :         v-&gt;next = _free;</span></a>
-<a name="279"><span class="lineNum">     279 </span><span class="lineCov">         11 :         v-&gt;prev = nullptr;</span></a>
-<a name="280"><span class="lineNum">     280 </span><span class="lineCov">         11 :         if (_free) {</span></a>
-<a name="281"><span class="lineNum">     281 </span><span class="lineCov">         10 :                 _free-&gt;prev = v;</span></a>
+<a name="276"><span class="lineNum">     276 </span><span class="lineCov">       2735 : void PriorityList&lt;Value&gt;::free(Entry *v) {</span></a>
+<a name="277"><span class="lineNum">     277 </span><span class="lineCov">       2735 :         v-&gt;value.~Value();</span></a>
+<a name="278"><span class="lineNum">     278 </span><span class="lineCov">       2735 :         v-&gt;next = _free;</span></a>
+<a name="279"><span class="lineNum">     279 </span><span class="lineCov">       2735 :         v-&gt;prev = nullptr;</span></a>
+<a name="280"><span class="lineNum">     280 </span><span class="lineCov">       2735 :         if (_free) {</span></a>
+<a name="281"><span class="lineNum">     281 </span><span class="lineCov">       2542 :                 _free-&gt;prev = v;</span></a>
 <a name="282"><span class="lineNum">     282 </span>            :         }</a>
-<a name="283"><span class="lineNum">     283 </span><span class="lineCov">         11 :         _free = v;</span></a>
-<a name="284"><span class="lineNum">     284 </span><span class="lineCov">         11 : }</span></a>
+<a name="283"><span class="lineNum">     283 </span><span class="lineCov">       2735 :         _free = v;</span></a>
+<a name="284"><span class="lineNum">     284 </span><span class="lineCov">       2735 : }</span></a>
 <a name="285"><span class="lineNum">     285 </span>            : </a>
 <a name="286"><span class="lineNum">     286 </span>            : template &lt;typename Value&gt;</a>
-<a name="287"><span class="lineNum">     287 </span><span class="lineCov">        324 : void PriorityList&lt;Value&gt;::foreach_list(Entry *v, const Callback&lt;bool(void *target, int32_t priority, Value &amp;)&gt; &amp;cb) {</span></a>
-<a name="288"><span class="lineNum">     288 </span><span class="lineCov">       1230 :         while (v) {</span></a>
-<a name="289"><span class="lineNum">     289 </span><span class="lineCov">        906 :                 auto next = v-&gt;next;</span></a>
-<a name="290"><span class="lineNum">     290 </span><span class="lineCov">        906 :                 if (cb(v-&gt;target, v-&gt;priority, v-&gt;value)) {</span></a>
-<a name="291"><span class="lineNum">     291 </span><span class="lineNoCov">          0 :                         _hash.erase(v);</span></a>
-<a name="292"><span class="lineNum">     292 </span><span class="lineNoCov">          0 :                         erase_entry(v);</span></a>
-<a name="293"><span class="lineNum">     293 </span>            :                 }</a>
-<a name="294"><span class="lineNum">     294 </span><span class="lineCov">        906 :                 v = next;</span></a>
-<a name="295"><span class="lineNum">     295 </span>            :         }</a>
-<a name="296"><span class="lineNum">     296 </span><span class="lineCov">        324 : }</span></a>
-<a name="297"><span class="lineNum">     297 </span>            : </a>
-<a name="298"><span class="lineNum">     298 </span>            : }</a>
+<a name="287"><span class="lineNum">     287 </span><span class="lineCov">      28689 : void PriorityList&lt;Value&gt;::foreach_list(Entry *v, const Callback&lt;bool(void *target, int32_t priority, Value &amp;)&gt; &amp;cb) {</span></a>
+<a name="288"><span class="lineNum">     288 </span><span class="lineCov">     335117 :         while (v) {</span></a>
+<a name="289"><span class="lineNum">     289 </span><span class="lineCov">     306428 :                 if (cb(v-&gt;target, v-&gt;priority, v-&gt;value)) {</span></a>
+<a name="290"><span class="lineNum">     290 </span><span class="lineCov">         25 :                         auto next = v-&gt;next;</span></a>
+<a name="291"><span class="lineNum">     291 </span><span class="lineCov">         25 :                         _hash.erase(v);</span></a>
+<a name="292"><span class="lineNum">     292 </span><span class="lineCov">         25 :                         erase_entry(v);</span></a>
+<a name="293"><span class="lineNum">     293 </span><span class="lineCov">         25 :                         v = next;</span></a>
+<a name="294"><span class="lineNum">     294 </span>            :                 } else {</a>
+<a name="295"><span class="lineNum">     295 </span><span class="lineCov">     306403 :                         v = v-&gt;next;</span></a>
+<a name="296"><span class="lineNum">     296 </span>            :                 }</a>
+<a name="297"><span class="lineNum">     297 </span>            :         }</a>
+<a name="298"><span class="lineNum">     298 </span><span class="lineCov">      28689 : }</span></a>
 <a name="299"><span class="lineNum">     299 </span>            : </a>
-<a name="300"><span class="lineNum">     300 </span>            : #endif /* STAPPLER_CORE_UTILS_SPPRIORITYLIST_H_ */</a>
+<a name="300"><span class="lineNum">     300 </span>            : }</a>
+<a name="301"><span class="lineNum">     301 </span>            : </a>
+<a name="302"><span class="lineNum">     302 </span>            : #endif /* STAPPLER_CORE_UTILS_SPPRIORITYLIST_H_ */</a>
 </pre>
       </td>
     </tr>

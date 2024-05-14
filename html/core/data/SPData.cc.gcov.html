@@ -31,18 +31,18 @@
             <td class="headerValue">coverage.info</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntry">95</td>
+            <td class="headerCovTableEntry">142</td>
             <td class="headerCovTableEntry">259</td>
-            <td class="headerCovTableEntryLo">36.7 %</td>
+            <td class="headerCovTableEntryLo">54.8 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2023-12-03 02:10:58</td>
+            <td class="headerValue">2024-05-12 00:16:13</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntry">14</td>
+            <td class="headerCovTableEntry">18</td>
             <td class="headerCovTableEntry">25</td>
-            <td class="headerCovTableEntryLo">56.0 %</td>
+            <td class="headerCovTableEntryLo">72.0 %</td>
           </tr>
           <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
         </table>
@@ -98,10 +98,10 @@
 <a name="36"><span class="lineNum">      36 </span>            : #include &quot;brotli/encode.h&quot;</a>
 <a name="37"><span class="lineNum">      37 </span>            : #include &quot;brotli/decode.h&quot;</a>
 <a name="38"><span class="lineNum">      38 </span>            : #else</a>
-<a name="39"><span class="lineNum">      39 </span>            : #warning Module 'common_brotli_lib' is not enabled, data::Value built without Brotli compression support</a>
+<a name="39"><span class="lineNum">      39 </span>            : #warning Module 'stappler_brotli_lib' is not enabled, data::Value built without Brotli compression support</a>
 <a name="40"><span class="lineNum">      40 </span>            : #endif</a>
 <a name="41"><span class="lineNum">      41 </span>            : </a>
-<a name="42"><span class="lineNum">      42 </span>            : namespace stappler::data {</a>
+<a name="42"><span class="lineNum">      42 </span>            : namespace STAPPLER_VERSIONIZED stappler::data {</a>
 <a name="43"><span class="lineNum">      43 </span>            : </a>
 <a name="44"><span class="lineNum">      44 </span>            : EncodeFormat EncodeFormat::CborCompressed(EncodeFormat::Cbor, EncodeFormat::LZ4HCCompression);</a>
 <a name="45"><span class="lineNum">      45 </span>            : EncodeFormat EncodeFormat::JsonCompressed(EncodeFormat::Json, EncodeFormat::LZ4HCCompression);</a>
@@ -217,20 +217,20 @@
 <a name="155"><span class="lineNum">     155 </span><span class="lineNoCov">          0 :         return ValueTemplate&lt;memory::PoolInterface&gt;();</span></a>
 <a name="156"><span class="lineNum">     156 </span>            : }</a>
 <a name="157"><span class="lineNum">     157 </span>            : </a>
-<a name="158"><span class="lineNum">     158 </span><span class="lineCov">          4 : size_t getCompressBounds(size_t size, EncodeFormat::Compression c) {</span></a>
-<a name="159"><span class="lineNum">     159 </span><span class="lineCov">          4 :         switch (c) {</span></a>
-<a name="160"><span class="lineNum">     160 </span><span class="lineCov">          3 :         case EncodeFormat::LZ4Compression:</span></a>
+<a name="158"><span class="lineNum">     158 </span><span class="lineCov">       4575 : size_t getCompressBounds(size_t size, EncodeFormat::Compression c) {</span></a>
+<a name="159"><span class="lineNum">     159 </span><span class="lineCov">       4575 :         switch (c) {</span></a>
+<a name="160"><span class="lineNum">     160 </span><span class="lineCov">       3750 :         case EncodeFormat::LZ4Compression:</span></a>
 <a name="161"><span class="lineNum">     161 </span>            :         case EncodeFormat::LZ4HCCompression: {</a>
-<a name="162"><span class="lineNum">     162 </span><span class="lineCov">          3 :                 if (size &lt; LZ4_MAX_INPUT_SIZE) {</span></a>
-<a name="163"><span class="lineNum">     163 </span><span class="lineCov">          3 :                         return LZ4_compressBound(size) + ((size &lt;= 0xFFFF) ? 2 : 4);</span></a>
+<a name="162"><span class="lineNum">     162 </span><span class="lineCov">       3750 :                 if (size &lt; LZ4_MAX_INPUT_SIZE) {</span></a>
+<a name="163"><span class="lineNum">     163 </span><span class="lineCov">       3750 :                         return LZ4_compressBound(size) + ((size &lt;= 0xFFFF) ? 2 : 4);</span></a>
 <a name="164"><span class="lineNum">     164 </span>            :                 }</a>
 <a name="165"><span class="lineNum">     165 </span><span class="lineNoCov">          0 :                 return 0;</span></a>
 <a name="166"><span class="lineNum">     166 </span>            :                 break;</a>
 <a name="167"><span class="lineNum">     167 </span>            :         }</a>
 <a name="168"><span class="lineNum">     168 </span>            : #ifdef MODULE_STAPPLER_BROTLI_LIB</a>
-<a name="169"><span class="lineNum">     169 </span><span class="lineCov">          1 :         case EncodeFormat::Brotli:</span></a>
-<a name="170"><span class="lineNum">     170 </span><span class="lineCov">          1 :                 if (size &lt; LZ4_MAX_INPUT_SIZE) {</span></a>
-<a name="171"><span class="lineNum">     171 </span><span class="lineCov">          1 :                         return BrotliEncoderMaxCompressedSize(size) + ((size &lt;= 0xFFFF) ? 2 : 4);</span></a>
+<a name="169"><span class="lineNum">     169 </span><span class="lineCov">        825 :         case EncodeFormat::Brotli:</span></a>
+<a name="170"><span class="lineNum">     170 </span><span class="lineCov">        825 :                 if (size &lt; LZ4_MAX_INPUT_SIZE) {</span></a>
+<a name="171"><span class="lineNum">     171 </span><span class="lineCov">        825 :                         return BrotliEncoderMaxCompressedSize(size) + ((size &lt;= 0xFFFF) ? 2 : 4);</span></a>
 <a name="172"><span class="lineNum">     172 </span>            :                 }</a>
 <a name="173"><span class="lineNum">     173 </span><span class="lineNoCov">          0 :                 return 0;</span></a>
 <a name="174"><span class="lineNum">     174 </span>            :                 break;</a>
@@ -248,52 +248,52 @@
 <a name="186"><span class="lineNum">     186 </span><span class="lineNoCov">          0 :         return tl_lz4HCEncodeState;</span></a>
 <a name="187"><span class="lineNum">     187 </span>            : }</a>
 <a name="188"><span class="lineNum">     188 </span>            : </a>
-<a name="189"><span class="lineNum">     189 </span><span class="lineCov">          4 : size_t compressData(const uint8_t *src, size_t srcSize, uint8_t *dest, size_t destSize, EncodeFormat::Compression c) {</span></a>
-<a name="190"><span class="lineNum">     190 </span><span class="lineCov">          4 :         switch (c) {</span></a>
-<a name="191"><span class="lineNum">     191 </span><span class="lineNoCov">          0 :         case EncodeFormat::LZ4Compression: {</span></a>
-<a name="192"><span class="lineNum">     192 </span><span class="lineNoCov">          0 :                 const int offSize = ((srcSize &lt;= 0xFFFF) ? 2 : 4);</span></a>
-<a name="193"><span class="lineNum">     193 </span><span class="lineNoCov">          0 :                 const int ret = LZ4_compress_fast_extState(tl_lz4HCEncodeState, (const char *)src, (char *)dest + offSize, srcSize, destSize - offSize, 1);</span></a>
-<a name="194"><span class="lineNum">     194 </span><span class="lineNoCov">          0 :                 if (ret &gt; 0) {</span></a>
-<a name="195"><span class="lineNum">     195 </span><span class="lineNoCov">          0 :                         if (srcSize &lt;= 0xFFFF) {</span></a>
+<a name="189"><span class="lineNum">     189 </span><span class="lineCov">       4575 : size_t compressData(const uint8_t *src, size_t srcSize, uint8_t *dest, size_t destSize, EncodeFormat::Compression c) {</span></a>
+<a name="190"><span class="lineNum">     190 </span><span class="lineCov">       4575 :         switch (c) {</span></a>
+<a name="191"><span class="lineNum">     191 </span><span class="lineCov">        800 :         case EncodeFormat::LZ4Compression: {</span></a>
+<a name="192"><span class="lineNum">     192 </span><span class="lineCov">        800 :                 const int offSize = ((srcSize &lt;= 0xFFFF) ? 2 : 4);</span></a>
+<a name="193"><span class="lineNum">     193 </span><span class="lineCov">        800 :                 const int ret = LZ4_compress_fast_extState(tl_lz4HCEncodeState, (const char *)src, (char *)dest + offSize, srcSize, destSize - offSize, 1);</span></a>
+<a name="194"><span class="lineNum">     194 </span><span class="lineCov">        800 :                 if (ret &gt; 0) {</span></a>
+<a name="195"><span class="lineNum">     195 </span><span class="lineCov">        800 :                         if (srcSize &lt;= 0xFFFF) {</span></a>
 <a name="196"><span class="lineNum">     196 </span><span class="lineNoCov">          0 :                                 uint16_t sz = srcSize;</span></a>
 <a name="197"><span class="lineNum">     197 </span><span class="lineNoCov">          0 :                                 memcpy(dest, &amp;sz, sizeof(sz));</span></a>
 <a name="198"><span class="lineNum">     198 </span>            :                         } else {</a>
-<a name="199"><span class="lineNum">     199 </span><span class="lineNoCov">          0 :                                 uint32_t sz = srcSize;</span></a>
-<a name="200"><span class="lineNum">     200 </span><span class="lineNoCov">          0 :                                 memcpy(dest, &amp;sz, sizeof(sz));</span></a>
+<a name="199"><span class="lineNum">     199 </span><span class="lineCov">        800 :                                 uint32_t sz = srcSize;</span></a>
+<a name="200"><span class="lineNum">     200 </span><span class="lineCov">        800 :                                 memcpy(dest, &amp;sz, sizeof(sz));</span></a>
 <a name="201"><span class="lineNum">     201 </span>            :                         }</a>
-<a name="202"><span class="lineNum">     202 </span><span class="lineNoCov">          0 :                         return ret + offSize;</span></a>
+<a name="202"><span class="lineNum">     202 </span><span class="lineCov">        800 :                         return ret + offSize;</span></a>
 <a name="203"><span class="lineNum">     203 </span>            :                 }</a>
 <a name="204"><span class="lineNum">     204 </span><span class="lineNoCov">          0 :                 break;</span></a>
 <a name="205"><span class="lineNum">     205 </span>            :         }</a>
-<a name="206"><span class="lineNum">     206 </span><span class="lineCov">          3 :         case EncodeFormat::LZ4HCCompression: {</span></a>
-<a name="207"><span class="lineNum">     207 </span><span class="lineCov">          3 :                 const int offSize = ((srcSize &lt;= 0xFFFF) ? 2 : 4);</span></a>
-<a name="208"><span class="lineNum">     208 </span><span class="lineCov">          3 :                 const int ret = LZ4_compress_HC_extStateHC(tl_lz4HCEncodeState, (const char *)src, (char *)dest + offSize, srcSize, destSize - offSize, LZ4HC_CLEVEL_MAX);</span></a>
-<a name="209"><span class="lineNum">     209 </span><span class="lineCov">          3 :                 if (ret &gt; 0) {</span></a>
-<a name="210"><span class="lineNum">     210 </span><span class="lineCov">          3 :                         if (srcSize &lt;= 0xFFFF) {</span></a>
-<a name="211"><span class="lineNum">     211 </span><span class="lineCov">          3 :                                 uint16_t sz = srcSize;</span></a>
-<a name="212"><span class="lineNum">     212 </span><span class="lineCov">          3 :                                 memcpy(dest, &amp;sz, sizeof(sz));</span></a>
+<a name="206"><span class="lineNum">     206 </span><span class="lineCov">       2950 :         case EncodeFormat::LZ4HCCompression: {</span></a>
+<a name="207"><span class="lineNum">     207 </span><span class="lineCov">       2950 :                 const int offSize = ((srcSize &lt;= 0xFFFF) ? 2 : 4);</span></a>
+<a name="208"><span class="lineNum">     208 </span><span class="lineCov">       2950 :                 const int ret = LZ4_compress_HC_extStateHC(tl_lz4HCEncodeState, (const char *)src, (char *)dest + offSize, srcSize, destSize - offSize, LZ4HC_CLEVEL_MAX);</span></a>
+<a name="209"><span class="lineNum">     209 </span><span class="lineCov">       2950 :                 if (ret &gt; 0) {</span></a>
+<a name="210"><span class="lineNum">     210 </span><span class="lineCov">       2950 :                         if (srcSize &lt;= 0xFFFF) {</span></a>
+<a name="211"><span class="lineNum">     211 </span><span class="lineCov">       2150 :                                 uint16_t sz = srcSize;</span></a>
+<a name="212"><span class="lineNum">     212 </span><span class="lineCov">       2150 :                                 memcpy(dest, &amp;sz, sizeof(sz));</span></a>
 <a name="213"><span class="lineNum">     213 </span>            :                         } else {</a>
-<a name="214"><span class="lineNum">     214 </span><span class="lineNoCov">          0 :                                 uint32_t sz = srcSize;</span></a>
-<a name="215"><span class="lineNum">     215 </span><span class="lineNoCov">          0 :                                 memcpy(dest, &amp;sz, sizeof(sz));</span></a>
+<a name="214"><span class="lineNum">     214 </span><span class="lineCov">        800 :                                 uint32_t sz = srcSize;</span></a>
+<a name="215"><span class="lineNum">     215 </span><span class="lineCov">        800 :                                 memcpy(dest, &amp;sz, sizeof(sz));</span></a>
 <a name="216"><span class="lineNum">     216 </span>            :                         }</a>
-<a name="217"><span class="lineNum">     217 </span><span class="lineCov">          3 :                         return ret + offSize;</span></a>
+<a name="217"><span class="lineNum">     217 </span><span class="lineCov">       2950 :                         return ret + offSize;</span></a>
 <a name="218"><span class="lineNum">     218 </span>            :                 }</a>
 <a name="219"><span class="lineNum">     219 </span><span class="lineNoCov">          0 :                 break;</span></a>
 <a name="220"><span class="lineNum">     220 </span>            :         }</a>
 <a name="221"><span class="lineNum">     221 </span>            : #ifdef MODULE_STAPPLER_BROTLI_LIB</a>
-<a name="222"><span class="lineNum">     222 </span><span class="lineCov">          1 :         case EncodeFormat::Brotli: {</span></a>
-<a name="223"><span class="lineNum">     223 </span><span class="lineCov">          1 :                 const int offSize = ((srcSize &lt;= 0xFFFF) ? 2 : 4);</span></a>
-<a name="224"><span class="lineNum">     224 </span><span class="lineCov">          1 :                 size_t ret = destSize - offSize;</span></a>
-<a name="225"><span class="lineNum">     225 </span><span class="lineCov">          2 :                 if (BrotliEncoderCompress(10, BROTLI_MAX_WINDOW_BITS, BROTLI_DEFAULT_MODE,</span></a>
-<a name="226"><span class="lineNum">     226 </span><span class="lineCov">          1 :                                 srcSize, (const uint8_t *)src, &amp;ret,dest + offSize) == BROTLI_TRUE) {</span></a>
-<a name="227"><span class="lineNum">     227 </span><span class="lineCov">          1 :                         if (srcSize &lt;= 0xFFFF) {</span></a>
-<a name="228"><span class="lineNum">     228 </span><span class="lineCov">          1 :                                 uint16_t sz = srcSize;</span></a>
-<a name="229"><span class="lineNum">     229 </span><span class="lineCov">          1 :                                 memcpy(dest, &amp;sz, sizeof(sz));</span></a>
+<a name="222"><span class="lineNum">     222 </span><span class="lineCov">        825 :         case EncodeFormat::Brotli: {</span></a>
+<a name="223"><span class="lineNum">     223 </span><span class="lineCov">        825 :                 const int offSize = ((srcSize &lt;= 0xFFFF) ? 2 : 4);</span></a>
+<a name="224"><span class="lineNum">     224 </span><span class="lineCov">        825 :                 size_t ret = destSize - offSize;</span></a>
+<a name="225"><span class="lineNum">     225 </span><span class="lineCov">       1650 :                 if (BrotliEncoderCompress(10, BROTLI_MAX_WINDOW_BITS, BROTLI_DEFAULT_MODE,</span></a>
+<a name="226"><span class="lineNum">     226 </span><span class="lineCov">        825 :                                 srcSize, (const uint8_t *)src, &amp;ret,dest + offSize) == BROTLI_TRUE) {</span></a>
+<a name="227"><span class="lineNum">     227 </span><span class="lineCov">        825 :                         if (srcSize &lt;= 0xFFFF) {</span></a>
+<a name="228"><span class="lineNum">     228 </span><span class="lineCov">         25 :                                 uint16_t sz = srcSize;</span></a>
+<a name="229"><span class="lineNum">     229 </span><span class="lineCov">         25 :                                 memcpy(dest, &amp;sz, sizeof(sz));</span></a>
 <a name="230"><span class="lineNum">     230 </span>            :                         } else {</a>
-<a name="231"><span class="lineNum">     231 </span><span class="lineNoCov">          0 :                                 uint32_t sz = srcSize;</span></a>
-<a name="232"><span class="lineNum">     232 </span><span class="lineNoCov">          0 :                                 memcpy(dest, &amp;sz, sizeof(sz));</span></a>
+<a name="231"><span class="lineNum">     231 </span><span class="lineCov">        800 :                                 uint32_t sz = srcSize;</span></a>
+<a name="232"><span class="lineNum">     232 </span><span class="lineCov">        800 :                                 memcpy(dest, &amp;sz, sizeof(sz));</span></a>
 <a name="233"><span class="lineNum">     233 </span>            :                         }</a>
-<a name="234"><span class="lineNum">     234 </span><span class="lineCov">          1 :                         return ret + offSize;</span></a>
+<a name="234"><span class="lineNum">     234 </span><span class="lineCov">        825 :                         return ret + offSize;</span></a>
 <a name="235"><span class="lineNum">     235 </span>            :                 }</a>
 <a name="236"><span class="lineNum">     236 </span><span class="lineNoCov">          0 :                 break;</span></a>
 <a name="237"><span class="lineNum">     237 </span>            :         }</a>
@@ -304,165 +304,165 @@
 <a name="242"><span class="lineNum">     242 </span><span class="lineNoCov">          0 :         return 0;</span></a>
 <a name="243"><span class="lineNum">     243 </span>            : }</a>
 <a name="244"><span class="lineNum">     244 </span>            : </a>
-<a name="245"><span class="lineNum">     245 </span><span class="lineCov">          3 : void writeCompressionMark(uint8_t *data, size_t sourceSize, EncodeFormat::Compression c, uint8_t padding) {</span></a>
-<a name="246"><span class="lineNum">     246 </span><span class="lineCov">          3 :         switch (c) {</span></a>
-<a name="247"><span class="lineNum">     247 </span><span class="lineCov">          2 :         case EncodeFormat::LZ4Compression:</span></a>
+<a name="245"><span class="lineNum">     245 </span><span class="lineCov">       2525 : void writeCompressionMark(uint8_t *data, size_t sourceSize, EncodeFormat::Compression c, uint8_t padding) {</span></a>
+<a name="246"><span class="lineNum">     246 </span><span class="lineCov">       2525 :         switch (c) {</span></a>
+<a name="247"><span class="lineNum">     247 </span><span class="lineCov">       1700 :         case EncodeFormat::LZ4Compression:</span></a>
 <a name="248"><span class="lineNum">     248 </span>            :         case EncodeFormat::LZ4HCCompression:</a>
-<a name="249"><span class="lineNum">     249 </span><span class="lineCov">          2 :                 if (sourceSize &lt;= 0xFFFF) {</span></a>
-<a name="250"><span class="lineNum">     250 </span><span class="lineCov">          2 :                         switch (padding) {</span></a>
-<a name="251"><span class="lineNum">     251 </span><span class="lineCov">          2 :                         case 0: memcpy(data, &quot;LZ4S&quot;, 4); break;</span></a>
+<a name="249"><span class="lineNum">     249 </span><span class="lineCov">       1700 :                 if (sourceSize &lt;= 0xFFFF) {</span></a>
+<a name="250"><span class="lineNum">     250 </span><span class="lineCov">        100 :                         switch (padding) {</span></a>
+<a name="251"><span class="lineNum">     251 </span><span class="lineCov">         50 :                         case 0: memcpy(data, &quot;LZ4S&quot;, 4); break;</span></a>
 <a name="252"><span class="lineNum">     252 </span><span class="lineNoCov">          0 :                         case 1: memcpy(data, &quot;LZ4T&quot;, 4); break;</span></a>
-<a name="253"><span class="lineNum">     253 </span><span class="lineNoCov">          0 :                         case 2: memcpy(data, &quot;LZ4U&quot;, 4); break;</span></a>
-<a name="254"><span class="lineNum">     254 </span><span class="lineNoCov">          0 :                         case 3: memcpy(data, &quot;LZ4V&quot;, 4); break;</span></a>
+<a name="253"><span class="lineNum">     253 </span><span class="lineCov">         25 :                         case 2: memcpy(data, &quot;LZ4U&quot;, 4); break;</span></a>
+<a name="254"><span class="lineNum">     254 </span><span class="lineCov">         25 :                         case 3: memcpy(data, &quot;LZ4V&quot;, 4); break;</span></a>
 <a name="255"><span class="lineNum">     255 </span>            :                         }</a>
 <a name="256"><span class="lineNum">     256 </span>            :                 } else {</a>
-<a name="257"><span class="lineNum">     257 </span><span class="lineNoCov">          0 :                         switch (padding) {</span></a>
-<a name="258"><span class="lineNum">     258 </span><span class="lineNoCov">          0 :                         case 0: memcpy(data, &quot;LZ4W&quot;, 4); break;</span></a>
-<a name="259"><span class="lineNum">     259 </span><span class="lineNoCov">          0 :                         case 1: memcpy(data, &quot;LZ4X&quot;, 4); break;</span></a>
-<a name="260"><span class="lineNum">     260 </span><span class="lineNoCov">          0 :                         case 2: memcpy(data, &quot;LZ4Y&quot;, 4); break;</span></a>
-<a name="261"><span class="lineNum">     261 </span><span class="lineNoCov">          0 :                         case 3: memcpy(data, &quot;LZ4Z&quot;, 4); break;</span></a>
+<a name="257"><span class="lineNum">     257 </span><span class="lineCov">       1600 :                         switch (padding) {</span></a>
+<a name="258"><span class="lineNum">     258 </span><span class="lineCov">        500 :                         case 0: memcpy(data, &quot;LZ4W&quot;, 4); break;</span></a>
+<a name="259"><span class="lineNum">     259 </span><span class="lineCov">        400 :                         case 1: memcpy(data, &quot;LZ4X&quot;, 4); break;</span></a>
+<a name="260"><span class="lineNum">     260 </span><span class="lineCov">        500 :                         case 2: memcpy(data, &quot;LZ4Y&quot;, 4); break;</span></a>
+<a name="261"><span class="lineNum">     261 </span><span class="lineCov">        200 :                         case 3: memcpy(data, &quot;LZ4Z&quot;, 4); break;</span></a>
 <a name="262"><span class="lineNum">     262 </span>            :                         }</a>
 <a name="263"><span class="lineNum">     263 </span>            :                 }</a>
-<a name="264"><span class="lineNum">     264 </span><span class="lineCov">          2 :                 break;</span></a>
+<a name="264"><span class="lineNum">     264 </span><span class="lineCov">       1700 :                 break;</span></a>
 <a name="265"><span class="lineNum">     265 </span>            : #ifdef MODULE_STAPPLER_BROTLI_LIB</a>
-<a name="266"><span class="lineNum">     266 </span><span class="lineCov">          1 :         case EncodeFormat::Brotli:</span></a>
-<a name="267"><span class="lineNum">     267 </span><span class="lineCov">          1 :                 if (sourceSize &lt;= 0xFFFF) {</span></a>
-<a name="268"><span class="lineNum">     268 </span><span class="lineCov">          1 :                         switch (padding) {</span></a>
-<a name="269"><span class="lineNum">     269 </span><span class="lineCov">          1 :                         case 0: memcpy(data, &quot;SBrS&quot;, 4); break;</span></a>
+<a name="266"><span class="lineNum">     266 </span><span class="lineCov">        825 :         case EncodeFormat::Brotli:</span></a>
+<a name="267"><span class="lineNum">     267 </span><span class="lineCov">        825 :                 if (sourceSize &lt;= 0xFFFF) {</span></a>
+<a name="268"><span class="lineNum">     268 </span><span class="lineCov">         25 :                         switch (padding) {</span></a>
+<a name="269"><span class="lineNum">     269 </span><span class="lineCov">         25 :                         case 0: memcpy(data, &quot;SBrS&quot;, 4); break;</span></a>
 <a name="270"><span class="lineNum">     270 </span><span class="lineNoCov">          0 :                         case 1: memcpy(data, &quot;SBrT&quot;, 4); break;</span></a>
 <a name="271"><span class="lineNum">     271 </span><span class="lineNoCov">          0 :                         case 2: memcpy(data, &quot;SBrU&quot;, 4); break;</span></a>
 <a name="272"><span class="lineNum">     272 </span><span class="lineNoCov">          0 :                         case 3: memcpy(data, &quot;SBrV&quot;, 4); break;</span></a>
 <a name="273"><span class="lineNum">     273 </span>            :                         }</a>
 <a name="274"><span class="lineNum">     274 </span>            :                 } else {</a>
-<a name="275"><span class="lineNum">     275 </span><span class="lineNoCov">          0 :                         switch (padding) {</span></a>
-<a name="276"><span class="lineNum">     276 </span><span class="lineNoCov">          0 :                         case 0: memcpy(data, &quot;SBrW&quot;, 4); break;</span></a>
-<a name="277"><span class="lineNum">     277 </span><span class="lineNoCov">          0 :                         case 1: memcpy(data, &quot;SBrX&quot;, 4); break;</span></a>
-<a name="278"><span class="lineNum">     278 </span><span class="lineNoCov">          0 :                         case 2: memcpy(data, &quot;SBrY&quot;, 4); break;</span></a>
-<a name="279"><span class="lineNum">     279 </span><span class="lineNoCov">          0 :                         case 3: memcpy(data, &quot;SBrZ&quot;, 4); break;</span></a>
+<a name="275"><span class="lineNum">     275 </span><span class="lineCov">        800 :                         switch (padding) {</span></a>
+<a name="276"><span class="lineNum">     276 </span><span class="lineCov">        200 :                         case 0: memcpy(data, &quot;SBrW&quot;, 4); break;</span></a>
+<a name="277"><span class="lineNum">     277 </span><span class="lineCov">        200 :                         case 1: memcpy(data, &quot;SBrX&quot;, 4); break;</span></a>
+<a name="278"><span class="lineNum">     278 </span><span class="lineCov">        200 :                         case 2: memcpy(data, &quot;SBrY&quot;, 4); break;</span></a>
+<a name="279"><span class="lineNum">     279 </span><span class="lineCov">        200 :                         case 3: memcpy(data, &quot;SBrZ&quot;, 4); break;</span></a>
 <a name="280"><span class="lineNum">     280 </span>            :                         }</a>
 <a name="281"><span class="lineNum">     281 </span>            :                 }</a>
-<a name="282"><span class="lineNum">     282 </span><span class="lineCov">          1 :                 break;</span></a>
+<a name="282"><span class="lineNum">     282 </span><span class="lineCov">        825 :                 break;</span></a>
 <a name="283"><span class="lineNum">     283 </span>            : #endif</a>
 <a name="284"><span class="lineNum">     284 </span><span class="lineNoCov">          0 :         case EncodeFormat::NoCompression:</span></a>
 <a name="285"><span class="lineNum">     285 </span><span class="lineNoCov">          0 :                 break;</span></a>
 <a name="286"><span class="lineNum">     286 </span>            :         }</a>
-<a name="287"><span class="lineNum">     287 </span><span class="lineCov">          3 : }</span></a>
+<a name="287"><span class="lineNum">     287 </span><span class="lineCov">       2525 : }</span></a>
 <a name="288"><span class="lineNum">     288 </span>            : </a>
 <a name="289"><span class="lineNum">     289 </span>            : template &lt;typename Interface&gt;</a>
-<a name="290"><span class="lineNum">     290 </span><span class="lineCov">          4 : static inline auto doCompress(const uint8_t *src, size_t size, EncodeFormat::Compression c, bool conditional) -&gt; typename Interface::BytesType {</span></a>
-<a name="291"><span class="lineNum">     291 </span><span class="lineCov">          4 :         auto bufferSize = getCompressBounds(size, c);</span></a>
-<a name="292"><span class="lineNum">     292 </span><span class="lineCov">          4 :         if (bufferSize == 0) {</span></a>
+<a name="290"><span class="lineNum">     290 </span><span class="lineCov">       4575 : static inline auto doCompress(const uint8_t *src, size_t size, EncodeFormat::Compression c, bool conditional) -&gt; typename Interface::BytesType {</span></a>
+<a name="291"><span class="lineNum">     291 </span><span class="lineCov">       4575 :         auto bufferSize = getCompressBounds(size, c);</span></a>
+<a name="292"><span class="lineNum">     292 </span><span class="lineCov">       4575 :         if (bufferSize == 0) {</span></a>
 <a name="293"><span class="lineNum">     293 </span><span class="lineNoCov">          0 :                 return typename Interface::BytesType();</span></a>
-<a name="294"><span class="lineNum">     294 </span><span class="lineCov">          4 :         } else if (bufferSize &lt;= sizeof(tl_compressBuffer)) {</span></a>
-<a name="295"><span class="lineNum">     295 </span><span class="lineCov">          4 :                 auto encodeSize = compressData(src, size, tl_compressBuffer, sizeof(tl_compressBuffer), c);</span></a>
-<a name="296"><span class="lineNum">     296 </span><span class="lineCov">          4 :                 if (encodeSize == 0 || (conditional &amp;&amp; encodeSize + 4 &gt; size)) { return typename Interface::BytesType(); }</span></a>
-<a name="297"><span class="lineNum">     297 </span><span class="lineCov">          3 :                 auto targetSize = encodeSize + 4;</span></a>
-<a name="298"><span class="lineNum">     298 </span><span class="lineCov">          3 :                 auto targetExtra = 4 - (targetSize) % sizeof(uint32_t);</span></a>
-<a name="299"><span class="lineNum">     299 </span><span class="lineCov">          3 :                 targetSize += ((targetExtra == 4) ? 0 : targetExtra);</span></a>
-<a name="300"><span class="lineNum">     300 </span><span class="lineCov">          3 :                 typename Interface::BytesType ret; ret.resize(targetSize);</span></a>
-<a name="301"><span class="lineNum">     301 </span><span class="lineCov">          3 :                 writeCompressionMark(ret.data(), size, c, (targetExtra == 4) ? 0 : targetExtra);</span></a>
-<a name="302"><span class="lineNum">     302 </span><span class="lineCov">          3 :                 memcpy(ret.data() + 4, tl_compressBuffer, encodeSize);</span></a>
-<a name="303"><span class="lineNum">     303 </span><span class="lineCov">          3 :                 return ret;</span></a>
-<a name="304"><span class="lineNum">     304 </span><span class="lineCov">          3 :         } else {</span></a>
-<a name="305"><span class="lineNum">     305 </span><span class="lineNoCov">          0 :                 typename Interface::BytesType ret; ret.resize(bufferSize + 4);</span></a>
-<a name="306"><span class="lineNum">     306 </span><span class="lineNoCov">          0 :                 auto encodeSize = compressData(src, size, ret.data() + 4, bufferSize, c);</span></a>
-<a name="307"><span class="lineNum">     307 </span><span class="lineNoCov">          0 :                 if (encodeSize == 0 || (conditional &amp;&amp; encodeSize + 4 &gt; size)) { return typename Interface::BytesType(); }</span></a>
-<a name="308"><span class="lineNum">     308 </span><span class="lineNoCov">          0 :                 auto targetSize = encodeSize + 4;</span></a>
-<a name="309"><span class="lineNum">     309 </span><span class="lineNoCov">          0 :                 auto targetExtra = 4 - (targetSize) % sizeof(uint32_t);</span></a>
-<a name="310"><span class="lineNum">     310 </span><span class="lineNoCov">          0 :                 writeCompressionMark(ret.data(), size, c, (targetExtra == 4) ? 0 : targetExtra);</span></a>
-<a name="311"><span class="lineNum">     311 </span><span class="lineNoCov">          0 :                 targetSize += ((targetExtra == 4) ? 0 : targetExtra);</span></a>
-<a name="312"><span class="lineNum">     312 </span><span class="lineNoCov">          0 :                 ret.resize(targetSize);</span></a>
-<a name="313"><span class="lineNum">     313 </span><span class="lineNoCov">          0 :                 ret.shrink_to_fit();</span></a>
-<a name="314"><span class="lineNum">     314 </span><span class="lineNoCov">          0 :                 return ret;</span></a>
-<a name="315"><span class="lineNum">     315 </span><span class="lineNoCov">          0 :         }</span></a>
+<a name="294"><span class="lineNum">     294 </span><span class="lineCov">       4575 :         } else if (bufferSize &lt;= sizeof(tl_compressBuffer)) {</span></a>
+<a name="295"><span class="lineNum">     295 </span><span class="lineCov">       3075 :                 auto encodeSize = compressData(src, size, tl_compressBuffer, sizeof(tl_compressBuffer), c);</span></a>
+<a name="296"><span class="lineNum">     296 </span><span class="lineCov">       3075 :                 if (encodeSize == 0 || (conditional &amp;&amp; encodeSize + 4 &gt; size)) { return typename Interface::BytesType(); }</span></a>
+<a name="297"><span class="lineNum">     297 </span><span class="lineCov">       1025 :                 auto targetSize = encodeSize + 4;</span></a>
+<a name="298"><span class="lineNum">     298 </span><span class="lineCov">       1025 :                 auto targetExtra = 4 - (targetSize) % sizeof(uint32_t);</span></a>
+<a name="299"><span class="lineNum">     299 </span><span class="lineCov">       1025 :                 targetSize += ((targetExtra == 4) ? 0 : targetExtra);</span></a>
+<a name="300"><span class="lineNum">     300 </span><span class="lineCov">       1025 :                 typename Interface::BytesType ret; ret.resize(targetSize);</span></a>
+<a name="301"><span class="lineNum">     301 </span><span class="lineCov">       1025 :                 writeCompressionMark(ret.data(), size, c, (targetExtra == 4) ? 0 : targetExtra);</span></a>
+<a name="302"><span class="lineNum">     302 </span><span class="lineCov">       1025 :                 memcpy(ret.data() + 4, tl_compressBuffer, encodeSize);</span></a>
+<a name="303"><span class="lineNum">     303 </span><span class="lineCov">       1025 :                 return ret;</span></a>
+<a name="304"><span class="lineNum">     304 </span><span class="lineCov">       1025 :         } else {</span></a>
+<a name="305"><span class="lineNum">     305 </span><span class="lineCov">       1500 :                 typename Interface::BytesType ret; ret.resize(bufferSize + 4);</span></a>
+<a name="306"><span class="lineNum">     306 </span><span class="lineCov">       1500 :                 auto encodeSize = compressData(src, size, ret.data() + 4, bufferSize, c);</span></a>
+<a name="307"><span class="lineNum">     307 </span><span class="lineCov">       1500 :                 if (encodeSize == 0 || (conditional &amp;&amp; encodeSize + 4 &gt; size)) { return typename Interface::BytesType(); }</span></a>
+<a name="308"><span class="lineNum">     308 </span><span class="lineCov">       1500 :                 auto targetSize = encodeSize + 4;</span></a>
+<a name="309"><span class="lineNum">     309 </span><span class="lineCov">       1500 :                 auto targetExtra = 4 - (targetSize) % sizeof(uint32_t);</span></a>
+<a name="310"><span class="lineNum">     310 </span><span class="lineCov">       1500 :                 writeCompressionMark(ret.data(), size, c, (targetExtra == 4) ? 0 : targetExtra);</span></a>
+<a name="311"><span class="lineNum">     311 </span><span class="lineCov">       1500 :                 targetSize += ((targetExtra == 4) ? 0 : targetExtra);</span></a>
+<a name="312"><span class="lineNum">     312 </span><span class="lineCov">       1500 :                 ret.resize(targetSize);</span></a>
+<a name="313"><span class="lineNum">     313 </span><span class="lineCov">       1500 :                 ret.shrink_to_fit();</span></a>
+<a name="314"><span class="lineNum">     314 </span><span class="lineCov">       1500 :                 return ret;</span></a>
+<a name="315"><span class="lineNum">     315 </span><span class="lineCov">       1500 :         }</span></a>
 <a name="316"><span class="lineNum">     316 </span>            :         return typename Interface::BytesType();</a>
 <a name="317"><span class="lineNum">     317 </span>            : }</a>
 <a name="318"><span class="lineNum">     318 </span>            : </a>
 <a name="319"><span class="lineNum">     319 </span>            : template &lt;&gt;</a>
-<a name="320"><span class="lineNum">     320 </span><span class="lineCov">          1 : auto compress&lt;memory::PoolInterface&gt;(const uint8_t *src, size_t size, EncodeFormat::Compression c, bool conditional) -&gt; memory::PoolInterface::BytesType {</span></a>
-<a name="321"><span class="lineNum">     321 </span><span class="lineCov">          1 :         return doCompress&lt;memory::PoolInterface&gt;(src, size, c, conditional);</span></a>
+<a name="320"><span class="lineNum">     320 </span><span class="lineCov">       3050 : auto compress&lt;memory::PoolInterface&gt;(const uint8_t *src, size_t size, EncodeFormat::Compression c, bool conditional) -&gt; memory::PoolInterface::BytesType {</span></a>
+<a name="321"><span class="lineNum">     321 </span><span class="lineCov">       3050 :         return doCompress&lt;memory::PoolInterface&gt;(src, size, c, conditional);</span></a>
 <a name="322"><span class="lineNum">     322 </span>            : }</a>
 <a name="323"><span class="lineNum">     323 </span>            : </a>
 <a name="324"><span class="lineNum">     324 </span>            : template &lt;&gt;</a>
-<a name="325"><span class="lineNum">     325 </span><span class="lineCov">          3 : auto compress&lt;memory::StandartInterface&gt;(const uint8_t *src, size_t size, EncodeFormat::Compression c, bool conditional) -&gt; memory::StandartInterface::BytesType {</span></a>
-<a name="326"><span class="lineNum">     326 </span><span class="lineCov">          3 :         return doCompress&lt;memory::StandartInterface&gt;(src, size, c, conditional);</span></a>
+<a name="325"><span class="lineNum">     325 </span><span class="lineCov">       1525 : auto compress&lt;memory::StandartInterface&gt;(const uint8_t *src, size_t size, EncodeFormat::Compression c, bool conditional) -&gt; memory::StandartInterface::BytesType {</span></a>
+<a name="326"><span class="lineNum">     326 </span><span class="lineCov">       1525 :         return doCompress&lt;memory::StandartInterface&gt;(src, size, c, conditional);</span></a>
 <a name="327"><span class="lineNum">     327 </span>            : }</a>
 <a name="328"><span class="lineNum">     328 </span>            : </a>
 <a name="329"><span class="lineNum">     329 </span>            : using decompress_ptr = const uint8_t *;</a>
 <a name="330"><span class="lineNum">     330 </span>            : </a>
-<a name="331"><span class="lineNum">     331 </span><span class="lineCov">          7 : static bool doDecompressLZ4Frame(const uint8_t *src, size_t srcSize, uint8_t *dest, size_t destSize) {</span></a>
-<a name="332"><span class="lineNum">     332 </span><span class="lineCov">          7 :         return LZ4_decompress_safe((const char *)src, (char *)dest, srcSize, destSize) &gt; 0;</span></a>
+<a name="331"><span class="lineNum">     331 </span><span class="lineCov">       1425 : static bool doDecompressLZ4Frame(const uint8_t *src, size_t srcSize, uint8_t *dest, size_t destSize) {</span></a>
+<a name="332"><span class="lineNum">     332 </span><span class="lineCov">       1425 :         return LZ4_decompress_safe((const char *)src, (char *)dest, srcSize, destSize) &gt; 0;</span></a>
 <a name="333"><span class="lineNum">     333 </span>            : }</a>
 <a name="334"><span class="lineNum">     334 </span>            : </a>
 <a name="335"><span class="lineNum">     335 </span>            : template &lt;typename Interface&gt;</a>
-<a name="336"><span class="lineNum">     336 </span><span class="lineCov">          1 : static inline auto doDecompressLZ4(BytesView data, bool sh) -&gt; ValueTemplate&lt;Interface&gt; {</span></a>
-<a name="337"><span class="lineNum">     337 </span><span class="lineCov">          1 :         size_t size = sh ? data.readUnsigned16() : data.readUnsigned32();</span></a>
+<a name="336"><span class="lineNum">     336 </span><span class="lineCov">       1275 : static inline auto doDecompressLZ4(BytesView data, bool sh) -&gt; ValueTemplate&lt;Interface&gt; {</span></a>
+<a name="337"><span class="lineNum">     337 </span><span class="lineCov">       1275 :         size_t size = sh ? data.readUnsigned16() : data.readUnsigned32();</span></a>
 <a name="338"><span class="lineNum">     338 </span>            : </a>
-<a name="339"><span class="lineNum">     339 </span><span class="lineCov">          1 :         ValueTemplate&lt;Interface&gt; ret;</span></a>
-<a name="340"><span class="lineNum">     340 </span><span class="lineCov">          1 :         if (size &lt;= sizeof(tl_compressBuffer)) {</span></a>
-<a name="341"><span class="lineNum">     341 </span><span class="lineCov">          1 :                 if (doDecompressLZ4Frame(data.data(), data.size(), tl_compressBuffer, size)) {</span></a>
-<a name="342"><span class="lineNum">     342 </span><span class="lineCov">          1 :                         ret = data::read&lt;Interface&gt;(BytesView(tl_compressBuffer, size));</span></a>
+<a name="339"><span class="lineNum">     339 </span><span class="lineCov">       1275 :         ValueTemplate&lt;Interface&gt; ret;</span></a>
+<a name="340"><span class="lineNum">     340 </span><span class="lineCov">       1275 :         if (size &lt;= sizeof(tl_compressBuffer)) {</span></a>
+<a name="341"><span class="lineNum">     341 </span><span class="lineCov">        525 :                 if (doDecompressLZ4Frame(data.data(), data.size(), tl_compressBuffer, size)) {</span></a>
+<a name="342"><span class="lineNum">     342 </span><span class="lineCov">        525 :                         ret = data::read&lt;Interface&gt;(BytesView(tl_compressBuffer, size));</span></a>
 <a name="343"><span class="lineNum">     343 </span>            :                 }</a>
 <a name="344"><span class="lineNum">     344 </span>            :         } else {</a>
-<a name="345"><span class="lineNum">     345 </span><span class="lineNoCov">          0 :                 typename Interface::BytesType res; res.resize(size);</span></a>
-<a name="346"><span class="lineNum">     346 </span><span class="lineNoCov">          0 :                 if (doDecompressLZ4Frame(data.data(), data.size(), res.data(), size)) {</span></a>
-<a name="347"><span class="lineNum">     347 </span><span class="lineNoCov">          0 :                         ret = data::read&lt;Interface&gt;(res);</span></a>
+<a name="345"><span class="lineNum">     345 </span><span class="lineCov">        750 :                 typename Interface::BytesType res; res.resize(size);</span></a>
+<a name="346"><span class="lineNum">     346 </span><span class="lineCov">        750 :                 if (doDecompressLZ4Frame(data.data(), data.size(), res.data(), size)) {</span></a>
+<a name="347"><span class="lineNum">     347 </span><span class="lineCov">        750 :                         ret = data::read&lt;Interface&gt;(res);</span></a>
 <a name="348"><span class="lineNum">     348 </span>            :                 }</a>
-<a name="349"><span class="lineNum">     349 </span><span class="lineNoCov">          0 :         }</span></a>
-<a name="350"><span class="lineNum">     350 </span><span class="lineCov">          1 :         return ret;</span></a>
+<a name="349"><span class="lineNum">     349 </span><span class="lineCov">        750 :         }</span></a>
+<a name="350"><span class="lineNum">     350 </span><span class="lineCov">       1275 :         return ret;</span></a>
 <a name="351"><span class="lineNum">     351 </span><span class="lineNoCov">          0 : }</span></a>
 <a name="352"><span class="lineNum">     352 </span>            : </a>
 <a name="353"><span class="lineNum">     353 </span>            : template &lt;&gt;</a>
-<a name="354"><span class="lineNum">     354 </span><span class="lineNoCov">          0 : auto decompressLZ4(const uint8_t *srcPtr, size_t srcSize, bool sh) -&gt; ValueTemplate&lt;memory::PoolInterface&gt; {</span></a>
-<a name="355"><span class="lineNum">     355 </span><span class="lineNoCov">          0 :         return doDecompressLZ4&lt;memory::PoolInterface&gt;(BytesView(srcPtr, srcSize), sh);</span></a>
+<a name="354"><span class="lineNum">     354 </span><span class="lineCov">        850 : auto decompressLZ4(const uint8_t *srcPtr, size_t srcSize, bool sh) -&gt; ValueTemplate&lt;memory::PoolInterface&gt; {</span></a>
+<a name="355"><span class="lineNum">     355 </span><span class="lineCov">        850 :         return doDecompressLZ4&lt;memory::PoolInterface&gt;(BytesView(srcPtr, srcSize), sh);</span></a>
 <a name="356"><span class="lineNum">     356 </span>            : }</a>
 <a name="357"><span class="lineNum">     357 </span>            : </a>
 <a name="358"><span class="lineNum">     358 </span>            : template &lt;&gt;</a>
-<a name="359"><span class="lineNum">     359 </span><span class="lineCov">          1 : auto decompressLZ4(const uint8_t *srcPtr, size_t srcSize, bool sh) -&gt; ValueTemplate&lt;memory::StandartInterface&gt; {</span></a>
-<a name="360"><span class="lineNum">     360 </span><span class="lineCov">          1 :         return doDecompressLZ4&lt;memory::StandartInterface&gt;(BytesView(srcPtr, srcSize), sh);</span></a>
+<a name="359"><span class="lineNum">     359 </span><span class="lineCov">        425 : auto decompressLZ4(const uint8_t *srcPtr, size_t srcSize, bool sh) -&gt; ValueTemplate&lt;memory::StandartInterface&gt; {</span></a>
+<a name="360"><span class="lineNum">     360 </span><span class="lineCov">        425 :         return doDecompressLZ4&lt;memory::StandartInterface&gt;(BytesView(srcPtr, srcSize), sh);</span></a>
 <a name="361"><span class="lineNum">     361 </span>            : }</a>
 <a name="362"><span class="lineNum">     362 </span>            : </a>
 <a name="363"><span class="lineNum">     363 </span>            : #ifdef MODULE_STAPPLER_BROTLI_LIB</a>
-<a name="364"><span class="lineNum">     364 </span><span class="lineCov">          1 : static bool doDecompressBrotliFrame(const uint8_t *src, size_t srcSize, uint8_t *dest, size_t destSize) {</span></a>
-<a name="365"><span class="lineNum">     365 </span><span class="lineCov">          1 :         size_t ret = destSize;</span></a>
-<a name="366"><span class="lineNum">     366 </span><span class="lineCov">          1 :         return BrotliDecoderDecompress(srcSize, src, &amp;ret, dest) == BROTLI_DECODER_RESULT_SUCCESS;</span></a>
+<a name="364"><span class="lineNum">     364 </span><span class="lineCov">        625 : static bool doDecompressBrotliFrame(const uint8_t *src, size_t srcSize, uint8_t *dest, size_t destSize) {</span></a>
+<a name="365"><span class="lineNum">     365 </span><span class="lineCov">        625 :         size_t ret = destSize;</span></a>
+<a name="366"><span class="lineNum">     366 </span><span class="lineCov">        625 :         return BrotliDecoderDecompress(srcSize, src, &amp;ret, dest) == BROTLI_DECODER_RESULT_SUCCESS;</span></a>
 <a name="367"><span class="lineNum">     367 </span>            : }</a>
 <a name="368"><span class="lineNum">     368 </span>            : template &lt;typename Interface&gt;</a>
-<a name="369"><span class="lineNum">     369 </span><span class="lineCov">          1 : static inline auto doDecompressBrotli(BytesView data, bool sh) -&gt; ValueTemplate&lt;Interface&gt; {</span></a>
-<a name="370"><span class="lineNum">     370 </span><span class="lineCov">          1 :         size_t size = sh ? data.readUnsigned16() : data.readUnsigned32();</span></a>
+<a name="369"><span class="lineNum">     369 </span><span class="lineCov">        625 : static inline auto doDecompressBrotli(BytesView data, bool sh) -&gt; ValueTemplate&lt;Interface&gt; {</span></a>
+<a name="370"><span class="lineNum">     370 </span><span class="lineCov">        625 :         size_t size = sh ? data.readUnsigned16() : data.readUnsigned32();</span></a>
 <a name="371"><span class="lineNum">     371 </span>            : </a>
-<a name="372"><span class="lineNum">     372 </span><span class="lineCov">          1 :         ValueTemplate&lt;Interface&gt; ret;</span></a>
-<a name="373"><span class="lineNum">     373 </span><span class="lineCov">          1 :         if (size &lt;= sizeof(tl_compressBuffer)) {</span></a>
-<a name="374"><span class="lineNum">     374 </span><span class="lineCov">          1 :                 if (doDecompressBrotliFrame(data.data(), data.size(), tl_compressBuffer, size)) {</span></a>
-<a name="375"><span class="lineNum">     375 </span><span class="lineCov">          1 :                         ret = data::read&lt;Interface&gt;(BytesView(tl_compressBuffer, size));</span></a>
+<a name="372"><span class="lineNum">     372 </span><span class="lineCov">        625 :         ValueTemplate&lt;Interface&gt; ret;</span></a>
+<a name="373"><span class="lineNum">     373 </span><span class="lineCov">        625 :         if (size &lt;= sizeof(tl_compressBuffer)) {</span></a>
+<a name="374"><span class="lineNum">     374 </span><span class="lineCov">        250 :                 if (doDecompressBrotliFrame(data.data(), data.size(), tl_compressBuffer, size)) {</span></a>
+<a name="375"><span class="lineNum">     375 </span><span class="lineCov">        250 :                         ret = data::read&lt;Interface&gt;(BytesView(tl_compressBuffer, size));</span></a>
 <a name="376"><span class="lineNum">     376 </span>            :                 }</a>
 <a name="377"><span class="lineNum">     377 </span>            :         } else {</a>
-<a name="378"><span class="lineNum">     378 </span><span class="lineNoCov">          0 :                 typename Interface::BytesType res; res.resize(size);</span></a>
-<a name="379"><span class="lineNum">     379 </span><span class="lineNoCov">          0 :                 if (doDecompressBrotliFrame(data.data(), data.size(), res.data(), size)) {</span></a>
-<a name="380"><span class="lineNum">     380 </span><span class="lineNoCov">          0 :                         ret = data::read&lt;Interface&gt;(res);</span></a>
+<a name="378"><span class="lineNum">     378 </span><span class="lineCov">        375 :                 typename Interface::BytesType res; res.resize(size);</span></a>
+<a name="379"><span class="lineNum">     379 </span><span class="lineCov">        375 :                 if (doDecompressBrotliFrame(data.data(), data.size(), res.data(), size)) {</span></a>
+<a name="380"><span class="lineNum">     380 </span><span class="lineCov">        375 :                         ret = data::read&lt;Interface&gt;(res);</span></a>
 <a name="381"><span class="lineNum">     381 </span>            :                 }</a>
-<a name="382"><span class="lineNum">     382 </span><span class="lineNoCov">          0 :         }</span></a>
-<a name="383"><span class="lineNum">     383 </span><span class="lineCov">          1 :         return ret;</span></a>
+<a name="382"><span class="lineNum">     382 </span><span class="lineCov">        375 :         }</span></a>
+<a name="383"><span class="lineNum">     383 </span><span class="lineCov">        625 :         return ret;</span></a>
 <a name="384"><span class="lineNum">     384 </span><span class="lineNoCov">          0 : }</span></a>
 <a name="385"><span class="lineNum">     385 </span>            : </a>
 <a name="386"><span class="lineNum">     386 </span>            : template &lt;&gt;</a>
-<a name="387"><span class="lineNum">     387 </span><span class="lineNoCov">          0 : auto decompressBrotli(const uint8_t *srcPtr, size_t srcSize, bool sh) -&gt; ValueTemplate&lt;memory::PoolInterface&gt; {</span></a>
-<a name="388"><span class="lineNum">     388 </span><span class="lineNoCov">          0 :         return doDecompressBrotli&lt;memory::PoolInterface&gt;(BytesView(srcPtr, srcSize), sh);</span></a>
+<a name="387"><span class="lineNum">     387 </span><span class="lineCov">        400 : auto decompressBrotli(const uint8_t *srcPtr, size_t srcSize, bool sh) -&gt; ValueTemplate&lt;memory::PoolInterface&gt; {</span></a>
+<a name="388"><span class="lineNum">     388 </span><span class="lineCov">        400 :         return doDecompressBrotli&lt;memory::PoolInterface&gt;(BytesView(srcPtr, srcSize), sh);</span></a>
 <a name="389"><span class="lineNum">     389 </span>            : }</a>
 <a name="390"><span class="lineNum">     390 </span>            : </a>
 <a name="391"><span class="lineNum">     391 </span>            : template &lt;&gt;</a>
-<a name="392"><span class="lineNum">     392 </span><span class="lineCov">          1 : auto decompressBrotli(const uint8_t *srcPtr, size_t srcSize, bool sh) -&gt; ValueTemplate&lt;memory::StandartInterface&gt; {</span></a>
-<a name="393"><span class="lineNum">     393 </span><span class="lineCov">          1 :         return doDecompressBrotli&lt;memory::StandartInterface&gt;(BytesView(srcPtr, srcSize), sh);</span></a>
+<a name="392"><span class="lineNum">     392 </span><span class="lineCov">        225 : auto decompressBrotli(const uint8_t *srcPtr, size_t srcSize, bool sh) -&gt; ValueTemplate&lt;memory::StandartInterface&gt; {</span></a>
+<a name="393"><span class="lineNum">     393 </span><span class="lineCov">        225 :         return doDecompressBrotli&lt;memory::StandartInterface&gt;(BytesView(srcPtr, srcSize), sh);</span></a>
 <a name="394"><span class="lineNum">     394 </span>            : }</a>
 <a name="395"><span class="lineNum">     395 </span>            : </a>
 <a name="396"><span class="lineNum">     396 </span>            : #endif</a>
 <a name="397"><span class="lineNum">     397 </span>            : </a>
-<a name="398"><span class="lineNum">     398 </span><span class="lineCov">         12 : size_t decompress(const uint8_t *d, size_t size, uint8_t *dstData, size_t dstSize) {</span></a>
-<a name="399"><span class="lineNum">     399 </span><span class="lineCov">         12 :         size_t ret = 0;</span></a>
-<a name="400"><span class="lineNum">     400 </span><span class="lineCov">         12 :         BytesView data(d, size);</span></a>
-<a name="401"><span class="lineNum">     401 </span><span class="lineCov">         12 :         uint8_t padding = 0;</span></a>
-<a name="402"><span class="lineNum">     402 </span><span class="lineCov">         12 :         auto ff = detectDataFormat(data.data(), data.size(), padding);</span></a>
-<a name="403"><span class="lineNum">     403 </span><span class="lineCov">         12 :         switch (ff) {</span></a>
+<a name="398"><span class="lineNum">     398 </span><span class="lineCov">        296 : size_t decompress(const uint8_t *d, size_t size, uint8_t *dstData, size_t dstSize) {</span></a>
+<a name="399"><span class="lineNum">     399 </span><span class="lineCov">        296 :         size_t ret = 0;</span></a>
+<a name="400"><span class="lineNum">     400 </span><span class="lineCov">        296 :         BytesView data(d, size);</span></a>
+<a name="401"><span class="lineNum">     401 </span><span class="lineCov">        297 :         uint8_t padding = 0;</span></a>
+<a name="402"><span class="lineNum">     402 </span><span class="lineCov">        297 :         auto ff = detectDataFormat(data.data(), data.size(), padding);</span></a>
+<a name="403"><span class="lineNum">     403 </span><span class="lineCov">        297 :         switch (ff) {</span></a>
 <a name="404"><span class="lineNum">     404 </span><span class="lineNoCov">          0 :         case DataFormat::LZ4_Short: {</span></a>
 <a name="405"><span class="lineNum">     405 </span><span class="lineNoCov">          0 :                 data += 4;</span></a>
 <a name="406"><span class="lineNum">     406 </span><span class="lineNoCov">          0 :                 ret = data.readUnsigned16();</span></a>
@@ -477,19 +477,19 @@
 <a name="415"><span class="lineNum">     415 </span>            :                 }</a>
 <a name="416"><span class="lineNum">     416 </span><span class="lineNoCov">          0 :                 break;</span></a>
 <a name="417"><span class="lineNum">     417 </span>            :         }</a>
-<a name="418"><span class="lineNum">     418 </span><span class="lineCov">         12 :         case DataFormat::LZ4_Word: {</span></a>
-<a name="419"><span class="lineNum">     419 </span><span class="lineCov">         12 :                 data += 4;</span></a>
-<a name="420"><span class="lineNum">     420 </span><span class="lineCov">         12 :                 ret = data.readUnsigned32();</span></a>
-<a name="421"><span class="lineNum">     421 </span><span class="lineCov">         12 :                 if (dstData) {</span></a>
-<a name="422"><span class="lineNum">     422 </span><span class="lineCov">          6 :                         if (dstSize &gt;= ret) {</span></a>
-<a name="423"><span class="lineNum">     423 </span><span class="lineCov">          6 :                                 if (!doDecompressLZ4Frame(data.data(), data.size() - padding, dstData, ret)) {</span></a>
+<a name="418"><span class="lineNum">     418 </span><span class="lineCov">        297 :         case DataFormat::LZ4_Word: {</span></a>
+<a name="419"><span class="lineNum">     419 </span><span class="lineCov">        297 :                 data += 4;</span></a>
+<a name="420"><span class="lineNum">     420 </span><span class="lineCov">        298 :                 ret = data.readUnsigned32();</span></a>
+<a name="421"><span class="lineNum">     421 </span><span class="lineCov">        297 :                 if (dstData) {</span></a>
+<a name="422"><span class="lineNum">     422 </span><span class="lineCov">        150 :                         if (dstSize &gt;= ret) {</span></a>
+<a name="423"><span class="lineNum">     423 </span><span class="lineCov">        150 :                                 if (!doDecompressLZ4Frame(data.data(), data.size() - padding, dstData, ret)) {</span></a>
 <a name="424"><span class="lineNum">     424 </span><span class="lineNoCov">          0 :                                         ret = 0;</span></a>
 <a name="425"><span class="lineNum">     425 </span>            :                                 }</a>
 <a name="426"><span class="lineNum">     426 </span>            :                         } else {</a>
 <a name="427"><span class="lineNum">     427 </span><span class="lineNoCov">          0 :                                 ret = 0;</span></a>
 <a name="428"><span class="lineNum">     428 </span>            :                         }</a>
 <a name="429"><span class="lineNum">     429 </span>            :                 }</a>
-<a name="430"><span class="lineNum">     430 </span><span class="lineCov">         12 :                 break;</span></a>
+<a name="430"><span class="lineNum">     430 </span><span class="lineCov">        298 :                 break;</span></a>
 <a name="431"><span class="lineNum">     431 </span>            :         }</a>
 <a name="432"><span class="lineNum">     432 </span>            : #ifdef MODULE_STAPPLER_BROTLI_LIB</a>
 <a name="433"><span class="lineNum">     433 </span><span class="lineNoCov">          0 :         case DataFormat::Brotli_Short: {</span></a>
@@ -523,7 +523,7 @@
 <a name="461"><span class="lineNum">     461 </span>            : #endif</a>
 <a name="462"><span class="lineNum">     462 </span><span class="lineNoCov">          0 :         default: break;</span></a>
 <a name="463"><span class="lineNum">     463 </span>            :         }</a>
-<a name="464"><span class="lineNum">     464 </span><span class="lineCov">         12 :         return ret;</span></a>
+<a name="464"><span class="lineNum">     464 </span><span class="lineCov">        298 :         return ret;</span></a>
 <a name="465"><span class="lineNum">     465 </span>            : }</a>
 <a name="466"><span class="lineNum">     466 </span>            : </a>
 <a name="467"><span class="lineNum">     467 </span><span class="lineNoCov">          0 : size_t getDecompressedSize(const uint8_t *d, size_t size) {</span></a>

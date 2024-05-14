@@ -31,18 +31,18 @@
             <td class="headerValue">coverage.info</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntry">16</td>
-            <td class="headerCovTableEntry">126</td>
-            <td class="headerCovTableEntryLo">12.7 %</td>
+            <td class="headerCovTableEntry">181</td>
+            <td class="headerCovTableEntry">198</td>
+            <td class="headerCovTableEntryHi">91.4 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2023-12-03 02:10:58</td>
+            <td class="headerValue">2024-05-12 00:16:13</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntry">7</td>
-            <td class="headerCovTableEntry">35</td>
-            <td class="headerCovTableEntryLo">20.0 %</td>
+            <td class="headerCovTableEntry">43</td>
+            <td class="headerCovTableEntry">44</td>
+            <td class="headerCovTableEntryHi">97.7 %</td>
           </tr>
           <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
         </table>
@@ -62,7 +62,7 @@
 <pre class="source">
 <a name="1"><span class="lineNum">       1 </span>            : /**</a>
 <a name="2"><span class="lineNum">       2 </span>            : Copyright (c) 2016-2022 Roman Katuntsev &lt;sbkarr@stappler.org&gt;</a>
-<a name="3"><span class="lineNum">       3 </span>            : Copyright (c) 2023 Stappler LLC &lt;admin@stappler.dev&gt;</a>
+<a name="3"><span class="lineNum">       3 </span>            : Copyright (c) 2023-2024 Stappler LLC &lt;admin@stappler.dev&gt;</a>
 <a name="4"><span class="lineNum">       4 </span>            : </a>
 <a name="5"><span class="lineNum">       5 </span>            : Permission is hereby granted, free of charge, to any person obtaining a copy</a>
 <a name="6"><span class="lineNum">       6 </span>            : of this software and associated documentation files (the &quot;Software&quot;), to deal</a>
@@ -90,7 +90,7 @@
 <a name="28"><span class="lineNum">      28 </span>            : #include &quot;SPFilepath.h&quot;</a>
 <a name="29"><span class="lineNum">      29 </span>            : #include &quot;SPLog.h&quot; // for SPASSERT</a>
 <a name="30"><span class="lineNum">      30 </span>            : </a>
-<a name="31"><span class="lineNum">      31 </span>            : namespace stappler::bitmap {</a>
+<a name="31"><span class="lineNum">      31 </span>            : namespace STAPPLER_VERSIONIZED stappler::bitmap {</a>
 <a name="32"><span class="lineNum">      32 </span>            : </a>
 <a name="33"><span class="lineNum">      33 </span>            : enum class ResampleFilter {</a>
 <a name="34"><span class="lineNum">      34 </span>            :         Box, // &quot;box&quot;</a>
@@ -139,19 +139,19 @@
 <a name="77"><span class="lineNum">      77 </span>            :         BitmapTemplate(BitmapTemplate &amp;&amp;);</a>
 <a name="78"><span class="lineNum">      78 </span>            :         BitmapTemplate &amp;operator =(BitmapTemplate &amp;&amp;);</a>
 <a name="79"><span class="lineNum">      79 </span>            : </a>
-<a name="80"><span class="lineNum">      80 </span><span class="lineCov">          1 :         uint32_t width() const { return _width; }</span></a>
-<a name="81"><span class="lineNum">      81 </span><span class="lineCov">          1 :         uint32_t height() const { return _height; }</span></a>
-<a name="82"><span class="lineNum">      82 </span><span class="lineCov">          1 :         uint32_t stride() const { return _stride; }</span></a>
+<a name="80"><span class="lineNum">      80 </span><span class="lineCov">   88767247 :         uint32_t width() const { return _width; }</span></a>
+<a name="81"><span class="lineNum">      81 </span><span class="lineCov">     150622 :         uint32_t height() const { return _height; }</span></a>
+<a name="82"><span class="lineNum">      82 </span><span class="lineCov">       5303 :         uint32_t stride() const { return _stride; }</span></a>
 <a name="83"><span class="lineNum">      83 </span>            : </a>
 <a name="84"><span class="lineNum">      84 </span>            :         bool hasStrideOffset() const { return _width * getBytesPerPixel(_color) &lt; _stride; }</a>
 <a name="85"><span class="lineNum">      85 </span>            : </a>
-<a name="86"><span class="lineNum">      86 </span><span class="lineCov">          1 :         AlphaFormat alpha() const { return _alpha; }</span></a>
-<a name="87"><span class="lineNum">      87 </span><span class="lineCov">          1 :         PixelFormat format() const { return _color; }</span></a>
+<a name="86"><span class="lineNum">      86 </span><span class="lineCov">       3485 :         AlphaFormat alpha() const { return _alpha; }</span></a>
+<a name="87"><span class="lineNum">      87 </span><span class="lineCov">       4403 :         PixelFormat format() const { return _color; }</span></a>
 <a name="88"><span class="lineNum">      88 </span>            : </a>
-<a name="89"><span class="lineNum">      89 </span><span class="lineNoCov">          0 :         BytesView data() const { return _data; }</span></a>
+<a name="89"><span class="lineNum">      89 </span><span class="lineCov">        354 :         BytesView data() const { return _data; }</span></a>
 <a name="90"><span class="lineNum">      90 </span>            : </a>
-<a name="91"><span class="lineNum">      91 </span><span class="lineNoCov">          0 :         uint8_t *dataPtr() { return _data.data(); }</span></a>
-<a name="92"><span class="lineNum">      92 </span><span class="lineNoCov">          0 :         const uint8_t *dataPtr() const { return _data.data(); }</span></a>
+<a name="91"><span class="lineNum">      91 </span><span class="lineCov">       1271 :         uint8_t *dataPtr() { return _data.data(); }</span></a>
+<a name="92"><span class="lineNum">      92 </span><span class="lineCov">        975 :         const uint8_t *dataPtr() const { return _data.data(); }</span></a>
 <a name="93"><span class="lineNum">      93 </span>            : </a>
 <a name="94"><span class="lineNum">      94 </span>            :         bool updateStride(const StrideFn &amp;strideFn);</a>
 <a name="95"><span class="lineNum">      95 </span>            :         bool convert(PixelFormat, const StrideFn &amp;strideFn = nullptr);</a>
@@ -175,14 +175,14 @@
 <a name="113"><span class="lineNum">     113 </span>            :         void alloc(uint32_t w, uint32_t h,</a>
 <a name="114"><span class="lineNum">     114 </span>            :                         PixelFormat = PixelFormat::RGBA8888, AlphaFormat a = AlphaFormat::Unpremultiplied, uint32_t stride = 0);</a>
 <a name="115"><span class="lineNum">     115 </span>            : </a>
-<a name="116"><span class="lineNum">     116 </span><span class="lineNoCov">          0 :         operator bool () const { return _data.size() != 0; }</span></a>
+<a name="116"><span class="lineNum">     116 </span><span class="lineCov">        150 :         explicit operator bool () const { return _data.size() != 0; }</span></a>
 <a name="117"><span class="lineNum">     117 </span>            : </a>
 <a name="118"><span class="lineNum">     118 </span>            :         void clear() { _data.clear(); }</a>
-<a name="119"><span class="lineNum">     119 </span><span class="lineNoCov">          0 :         bool empty() const { return _data.empty(); }</span></a>
+<a name="119"><span class="lineNum">     119 </span><span class="lineCov">        975 :         bool empty() const { return _data.empty(); }</span></a>
 <a name="120"><span class="lineNum">     120 </span>            :         size_t size() const { return _data.size(); }</a>
 <a name="121"><span class="lineNum">     121 </span>            : </a>
-<a name="122"><span class="lineNum">     122 </span><span class="lineNoCov">          0 :         FileFormat getOriginalFormat() const { return _originalFormat; }</span></a>
-<a name="123"><span class="lineNum">     123 </span><span class="lineNoCov">          0 :         StringView getOriginalFormatName() const { return _originalFormatName; }</span></a>
+<a name="122"><span class="lineNum">     122 </span><span class="lineCov">        250 :         FileFormat getOriginalFormat() const { return _originalFormat; }</span></a>
+<a name="123"><span class="lineNum">     123 </span><span class="lineCov">         25 :         StringView getOriginalFormatName() const { return _originalFormatName; }</span></a>
 <a name="124"><span class="lineNum">     124 </span>            : </a>
 <a name="125"><span class="lineNum">     125 </span>            :         bool save(StringView, bool invert = false);</a>
 <a name="126"><span class="lineNum">     126 </span>            :         bool save(FileFormat, StringView, bool invert = false);</a>
@@ -213,27 +213,27 @@
 <a name="151"><span class="lineNum">     151 </span>            : </a>
 <a name="152"><span class="lineNum">     152 </span>            : </a>
 <a name="153"><span class="lineNum">     153 </span>            : template &lt;typename Interface&gt;</a>
-<a name="154"><span class="lineNum">     154 </span><span class="lineNoCov">          0 : BitmapTemplate&lt;Interface&gt;::BitmapTemplate() { }</span></a>
+<a name="154"><span class="lineNum">     154 </span><span class="lineCov">        967 : BitmapTemplate&lt;Interface&gt;::BitmapTemplate() { }</span></a>
 <a name="155"><span class="lineNum">     155 </span>            : </a>
 <a name="156"><span class="lineNum">     156 </span>            : template &lt;typename Interface&gt;</a>
-<a name="157"><span class="lineNum">     157 </span><span class="lineNoCov">          0 : BitmapTemplate&lt;Interface&gt;::BitmapTemplate(BytesView data, const StrideFn &amp;strideFn)</span></a>
-<a name="158"><span class="lineNum">     158 </span><span class="lineNoCov">          0 : : BitmapTemplate(data.data(), data.size(), strideFn) { }</span></a>
+<a name="157"><span class="lineNum">     157 </span><span class="lineCov">       1152 : BitmapTemplate&lt;Interface&gt;::BitmapTemplate(BytesView data, const StrideFn &amp;strideFn)</span></a>
+<a name="158"><span class="lineNum">     158 </span><span class="lineCov">       1152 : : BitmapTemplate(data.data(), data.size(), strideFn) { }</span></a>
 <a name="159"><span class="lineNum">     159 </span>            : </a>
 <a name="160"><span class="lineNum">     160 </span>            : </a>
 <a name="161"><span class="lineNum">     161 </span>            : template &lt;typename Interface&gt;</a>
-<a name="162"><span class="lineNum">     162 </span><span class="lineNoCov">          0 : BitmapTemplate&lt;Interface&gt;::BitmapTemplate(const uint8_t *data, size_t size, const StrideFn &amp;strideFn) {</span></a>
-<a name="163"><span class="lineNum">     163 </span><span class="lineNoCov">          0 :         if (!loadData(data, size, strideFn)) {</span></a>
+<a name="162"><span class="lineNum">     162 </span><span class="lineCov">       1177 : BitmapTemplate&lt;Interface&gt;::BitmapTemplate(const uint8_t *data, size_t size, const StrideFn &amp;strideFn) {</span></a>
+<a name="163"><span class="lineNum">     163 </span><span class="lineCov">       1177 :         if (!loadData(data, size, strideFn)) {</span></a>
 <a name="164"><span class="lineNum">     164 </span><span class="lineNoCov">          0 :                 _data.clear();</span></a>
 <a name="165"><span class="lineNum">     165 </span>            :         }</a>
-<a name="166"><span class="lineNum">     166 </span><span class="lineNoCov">          0 : }</span></a>
+<a name="166"><span class="lineNum">     166 </span><span class="lineCov">       1177 : }</span></a>
 <a name="167"><span class="lineNum">     167 </span>            : </a>
 <a name="168"><span class="lineNum">     168 </span>            : template &lt;typename Interface&gt;</a>
-<a name="169"><span class="lineNum">     169 </span><span class="lineCov">          1 : BitmapTemplate&lt;Interface&gt;::BitmapTemplate(const uint8_t *d, uint32_t width, uint32_t height,</span></a>
+<a name="169"><span class="lineNum">     169 </span><span class="lineCov">         16 : BitmapTemplate&lt;Interface&gt;::BitmapTemplate(const uint8_t *d, uint32_t width, uint32_t height,</span></a>
 <a name="170"><span class="lineNum">     170 </span>            :                 PixelFormat c, AlphaFormat a, uint32_t stride)</a>
-<a name="171"><span class="lineNum">     171 </span><span class="lineCov">          1 : : _color(c), _alpha(a), _width(width), _height(height)</span></a>
-<a name="172"><span class="lineNum">     172 </span><span class="lineCov">          1 : , _stride(max(stride, width * getBytesPerPixel(c))), _data(d, d + _stride * height) {</span></a>
-<a name="173"><span class="lineNum">     173 </span><span class="lineCov">          1 :         SPASSERT(c != PixelFormat::Auto, &quot;Bitmap: Format::Auto should not be used with Bitmap directly&quot;);</span></a>
-<a name="174"><span class="lineNum">     174 </span><span class="lineCov">          1 : }</span></a>
+<a name="171"><span class="lineNum">     171 </span><span class="lineCov">         16 : : _color(c), _alpha(a), _width(width), _height(height)</span></a>
+<a name="172"><span class="lineNum">     172 </span><span class="lineCov">         16 : , _stride(max(stride, width * getBytesPerPixel(c))), _data(d, d + _stride * height) {</span></a>
+<a name="173"><span class="lineNum">     173 </span><span class="lineCov">         16 :         SPASSERT(c != PixelFormat::Auto, &quot;Bitmap: Format::Auto should not be used with Bitmap directly&quot;);</span></a>
+<a name="174"><span class="lineNum">     174 </span><span class="lineCov">         16 : }</span></a>
 <a name="175"><span class="lineNum">     175 </span>            : </a>
 <a name="176"><span class="lineNum">     176 </span>            : template &lt;typename Interface&gt;</a>
 <a name="177"><span class="lineNum">     177 </span>            : BitmapTemplate&lt;Interface&gt;::BitmapTemplate(BytesView d, uint32_t width, uint32_t height,</a>
@@ -252,241 +252,241 @@
 <a name="190"><span class="lineNum">     190 </span>            : }</a>
 <a name="191"><span class="lineNum">     191 </span>            : </a>
 <a name="192"><span class="lineNum">     192 </span>            : template &lt;typename Interface&gt;</a>
-<a name="193"><span class="lineNum">     193 </span>            : BitmapTemplate&lt;Interface&gt;::BitmapTemplate(BitmapTemplate &amp;&amp;other)</a>
-<a name="194"><span class="lineNum">     194 </span>            : : _color(other._color), _alpha(other._alpha)</a>
-<a name="195"><span class="lineNum">     195 </span>            : , _width(other._width), _height(other._height), _stride(other._stride)</a>
-<a name="196"><span class="lineNum">     196 </span>            : , _data(std::move(other._data))</a>
-<a name="197"><span class="lineNum">     197 </span>            : , _originalFormat(other._originalFormat)</a>
-<a name="198"><span class="lineNum">     198 </span>            : , _originalFormatName(move(other._originalFormatName)) {</a>
-<a name="199"><span class="lineNum">     199 </span>            :         other._data.clear();</a>
-<a name="200"><span class="lineNum">     200 </span>            : }</a>
+<a name="193"><span class="lineNum">     193 </span><span class="lineCov">         25 : BitmapTemplate&lt;Interface&gt;::BitmapTemplate(BitmapTemplate &amp;&amp;other)</span></a>
+<a name="194"><span class="lineNum">     194 </span><span class="lineCov">         25 : : _color(other._color), _alpha(other._alpha)</span></a>
+<a name="195"><span class="lineNum">     195 </span><span class="lineCov">         25 : , _width(other._width), _height(other._height), _stride(other._stride)</span></a>
+<a name="196"><span class="lineNum">     196 </span><span class="lineCov">         25 : , _data(std::move(other._data))</span></a>
+<a name="197"><span class="lineNum">     197 </span><span class="lineCov">         25 : , _originalFormat(other._originalFormat)</span></a>
+<a name="198"><span class="lineNum">     198 </span><span class="lineCov">         25 : , _originalFormatName(move(other._originalFormatName)) {</span></a>
+<a name="199"><span class="lineNum">     199 </span><span class="lineCov">         25 :         other._data.clear();</span></a>
+<a name="200"><span class="lineNum">     200 </span><span class="lineCov">         25 : }</span></a>
 <a name="201"><span class="lineNum">     201 </span>            : </a>
 <a name="202"><span class="lineNum">     202 </span>            : template &lt;typename Interface&gt;</a>
-<a name="203"><span class="lineNum">     203 </span>            : auto BitmapTemplate&lt;Interface&gt;::operator =(BitmapTemplate &amp;&amp;other) -&gt; BitmapTemplate &amp; {</a>
-<a name="204"><span class="lineNum">     204 </span>            :         _alpha = other._alpha;</a>
-<a name="205"><span class="lineNum">     205 </span>            :         _color = other._color;</a>
-<a name="206"><span class="lineNum">     206 </span>            :         _width = other._width;</a>
-<a name="207"><span class="lineNum">     207 </span>            :         _height = other._height;</a>
-<a name="208"><span class="lineNum">     208 </span>            :         _stride = other._stride;</a>
-<a name="209"><span class="lineNum">     209 </span>            :         _data = std::move(other._data);</a>
-<a name="210"><span class="lineNum">     210 </span>            :         _originalFormat = other._originalFormat;</a>
-<a name="211"><span class="lineNum">     211 </span>            :         _originalFormatName = move(other._originalFormatName);</a>
-<a name="212"><span class="lineNum">     212 </span>            :         other._data.clear();</a>
-<a name="213"><span class="lineNum">     213 </span>            :         return *this;</a>
+<a name="203"><span class="lineNum">     203 </span><span class="lineCov">        350 : auto BitmapTemplate&lt;Interface&gt;::operator =(BitmapTemplate &amp;&amp;other) -&gt; BitmapTemplate &amp; {</span></a>
+<a name="204"><span class="lineNum">     204 </span><span class="lineCov">        350 :         _alpha = other._alpha;</span></a>
+<a name="205"><span class="lineNum">     205 </span><span class="lineCov">        350 :         _color = other._color;</span></a>
+<a name="206"><span class="lineNum">     206 </span><span class="lineCov">        350 :         _width = other._width;</span></a>
+<a name="207"><span class="lineNum">     207 </span><span class="lineCov">        350 :         _height = other._height;</span></a>
+<a name="208"><span class="lineNum">     208 </span><span class="lineCov">        350 :         _stride = other._stride;</span></a>
+<a name="209"><span class="lineNum">     209 </span><span class="lineCov">        350 :         _data = std::move(other._data);</span></a>
+<a name="210"><span class="lineNum">     210 </span><span class="lineCov">        350 :         _originalFormat = other._originalFormat;</span></a>
+<a name="211"><span class="lineNum">     211 </span><span class="lineCov">        350 :         _originalFormatName = move(other._originalFormatName);</span></a>
+<a name="212"><span class="lineNum">     212 </span><span class="lineCov">        350 :         other._data.clear();</span></a>
+<a name="213"><span class="lineNum">     213 </span><span class="lineCov">        350 :         return *this;</span></a>
 <a name="214"><span class="lineNum">     214 </span>            : }</a>
 <a name="215"><span class="lineNum">     215 </span>            : </a>
 <a name="216"><span class="lineNum">     216 </span>            : template &lt;typename Interface&gt;</a>
-<a name="217"><span class="lineNum">     217 </span>            : void BitmapTemplate&lt;Interface&gt;::loadBitmap(const uint8_t *d, uint32_t w, uint32_t h, PixelFormat c, AlphaFormat a, uint32_t stride) {</a>
-<a name="218"><span class="lineNum">     218 </span>            :         SPASSERT(c != PixelFormat::Auto, &quot;Bitmap: Format::Auto should not be used with Bitmap directly&quot;);</a>
-<a name="219"><span class="lineNum">     219 </span>            :         setInfo(w, h, c, a, stride);</a>
-<a name="220"><span class="lineNum">     220 </span>            :         _data.clear();</a>
-<a name="221"><span class="lineNum">     221 </span>            :         _data.resize(_stride * h);</a>
-<a name="222"><span class="lineNum">     222 </span>            :         memcpy(_data.data(), d, _data.size());</a>
-<a name="223"><span class="lineNum">     223 </span>            :         _originalFormat = FileFormat::Custom;</a>
-<a name="224"><span class="lineNum">     224 </span>            :         _originalFormatName.clear();</a>
-<a name="225"><span class="lineNum">     225 </span>            : }</a>
+<a name="217"><span class="lineNum">     217 </span><span class="lineCov">         25 : void BitmapTemplate&lt;Interface&gt;::loadBitmap(const uint8_t *d, uint32_t w, uint32_t h, PixelFormat c, AlphaFormat a, uint32_t stride) {</span></a>
+<a name="218"><span class="lineNum">     218 </span><span class="lineCov">         25 :         SPASSERT(c != PixelFormat::Auto, &quot;Bitmap: Format::Auto should not be used with Bitmap directly&quot;);</span></a>
+<a name="219"><span class="lineNum">     219 </span><span class="lineCov">         25 :         setInfo(w, h, c, a, stride);</span></a>
+<a name="220"><span class="lineNum">     220 </span><span class="lineCov">         25 :         _data.clear();</span></a>
+<a name="221"><span class="lineNum">     221 </span><span class="lineCov">         25 :         _data.resize(_stride * h);</span></a>
+<a name="222"><span class="lineNum">     222 </span><span class="lineCov">         25 :         memcpy(_data.data(), d, _data.size());</span></a>
+<a name="223"><span class="lineNum">     223 </span><span class="lineCov">         25 :         _originalFormat = FileFormat::Custom;</span></a>
+<a name="224"><span class="lineNum">     224 </span><span class="lineCov">         25 :         _originalFormatName.clear();</span></a>
+<a name="225"><span class="lineNum">     225 </span><span class="lineCov">         25 : }</span></a>
 <a name="226"><span class="lineNum">     226 </span>            : </a>
 <a name="227"><span class="lineNum">     227 </span>            : template &lt;typename Interface&gt;</a>
-<a name="228"><span class="lineNum">     228 </span>            : void BitmapTemplate&lt;Interface&gt;::loadBitmap(BytesView d, uint32_t w, uint32_t h, PixelFormat c, AlphaFormat a, uint32_t stride) {</a>
-<a name="229"><span class="lineNum">     229 </span>            :         SPASSERT(c != PixelFormat::Auto, &quot;Bitmap: Format::Auto should not be used with Bitmap directly&quot;);</a>
-<a name="230"><span class="lineNum">     230 </span>            :         setInfo(w, h, c, a, stride);</a>
-<a name="231"><span class="lineNum">     231 </span>            :         _data = d;</a>
-<a name="232"><span class="lineNum">     232 </span>            :         _originalFormat = FileFormat::Custom;</a>
-<a name="233"><span class="lineNum">     233 </span>            :         _originalFormatName.clear();</a>
-<a name="234"><span class="lineNum">     234 </span>            : }</a>
+<a name="228"><span class="lineNum">     228 </span><span class="lineCov">         25 : void BitmapTemplate&lt;Interface&gt;::loadBitmap(BytesView d, uint32_t w, uint32_t h, PixelFormat c, AlphaFormat a, uint32_t stride) {</span></a>
+<a name="229"><span class="lineNum">     229 </span><span class="lineCov">         25 :         SPASSERT(c != PixelFormat::Auto, &quot;Bitmap: Format::Auto should not be used with Bitmap directly&quot;);</span></a>
+<a name="230"><span class="lineNum">     230 </span><span class="lineCov">         25 :         setInfo(w, h, c, a, stride);</span></a>
+<a name="231"><span class="lineNum">     231 </span><span class="lineCov">         25 :         _data = d.bytes&lt;Interface&gt;();</span></a>
+<a name="232"><span class="lineNum">     232 </span><span class="lineCov">         25 :         _originalFormat = FileFormat::Custom;</span></a>
+<a name="233"><span class="lineNum">     233 </span><span class="lineCov">         25 :         _originalFormatName.clear();</span></a>
+<a name="234"><span class="lineNum">     234 </span><span class="lineCov">         25 : }</span></a>
 <a name="235"><span class="lineNum">     235 </span>            : </a>
 <a name="236"><span class="lineNum">     236 </span>            : template &lt;typename Interface&gt;</a>
-<a name="237"><span class="lineNum">     237 </span>            : void BitmapTemplate&lt;Interface&gt;::loadBitmap(typename Interface::BytesType &amp;&amp;d, uint32_t w, uint32_t h, PixelFormat c, AlphaFormat a, uint32_t stride) {</a>
-<a name="238"><span class="lineNum">     238 </span>            :         SPASSERT(c != PixelFormat::Auto, &quot;Bitmap: Format::Auto should not be used with Bitmap directly&quot;);</a>
-<a name="239"><span class="lineNum">     239 </span>            :         setInfo(w, h, c, a, stride);</a>
-<a name="240"><span class="lineNum">     240 </span>            :         _data = std::move(d);</a>
-<a name="241"><span class="lineNum">     241 </span>            :         _originalFormat = FileFormat::Custom;</a>
-<a name="242"><span class="lineNum">     242 </span>            :         _originalFormatName.clear();</a>
-<a name="243"><span class="lineNum">     243 </span>            : }</a>
+<a name="237"><span class="lineNum">     237 </span><span class="lineCov">         25 : void BitmapTemplate&lt;Interface&gt;::loadBitmap(typename Interface::BytesType &amp;&amp;d, uint32_t w, uint32_t h, PixelFormat c, AlphaFormat a, uint32_t stride) {</span></a>
+<a name="238"><span class="lineNum">     238 </span><span class="lineCov">         25 :         SPASSERT(c != PixelFormat::Auto, &quot;Bitmap: Format::Auto should not be used with Bitmap directly&quot;);</span></a>
+<a name="239"><span class="lineNum">     239 </span><span class="lineCov">         25 :         setInfo(w, h, c, a, stride);</span></a>
+<a name="240"><span class="lineNum">     240 </span><span class="lineCov">         25 :         _data = std::move(d);</span></a>
+<a name="241"><span class="lineNum">     241 </span><span class="lineCov">         25 :         _originalFormat = FileFormat::Custom;</span></a>
+<a name="242"><span class="lineNum">     242 </span><span class="lineCov">         25 :         _originalFormatName.clear();</span></a>
+<a name="243"><span class="lineNum">     243 </span><span class="lineCov">         25 : }</span></a>
 <a name="244"><span class="lineNum">     244 </span>            : </a>
 <a name="245"><span class="lineNum">     245 </span>            : template &lt;typename Interface&gt;</a>
-<a name="246"><span class="lineNum">     246 </span><span class="lineNoCov">          0 : void BitmapTemplate&lt;Interface&gt;::alloc(uint32_t w, uint32_t h, PixelFormat c, AlphaFormat a, uint32_t stride) {</span></a>
-<a name="247"><span class="lineNum">     247 </span><span class="lineNoCov">          0 :         SPASSERT(c != PixelFormat::Auto, &quot;Bitmap: Format::Auto should not be used with Bitmap directly&quot;);</span></a>
-<a name="248"><span class="lineNum">     248 </span><span class="lineNoCov">          0 :         setInfo(w, h, c, a, stride);</span></a>
-<a name="249"><span class="lineNum">     249 </span><span class="lineNoCov">          0 :         _data.clear();</span></a>
-<a name="250"><span class="lineNum">     250 </span><span class="lineNoCov">          0 :         _data.resize(_stride * h);</span></a>
-<a name="251"><span class="lineNum">     251 </span><span class="lineNoCov">          0 :         _originalFormat = FileFormat::Custom;</span></a>
-<a name="252"><span class="lineNum">     252 </span><span class="lineNoCov">          0 :         _originalFormatName.clear();</span></a>
-<a name="253"><span class="lineNum">     253 </span><span class="lineNoCov">          0 : }</span></a>
+<a name="246"><span class="lineNum">     246 </span><span class="lineCov">        967 : void BitmapTemplate&lt;Interface&gt;::alloc(uint32_t w, uint32_t h, PixelFormat c, AlphaFormat a, uint32_t stride) {</span></a>
+<a name="247"><span class="lineNum">     247 </span><span class="lineCov">        967 :         SPASSERT(c != PixelFormat::Auto, &quot;Bitmap: Format::Auto should not be used with Bitmap directly&quot;);</span></a>
+<a name="248"><span class="lineNum">     248 </span><span class="lineCov">        967 :         setInfo(w, h, c, a, stride);</span></a>
+<a name="249"><span class="lineNum">     249 </span><span class="lineCov">        967 :         _data.clear();</span></a>
+<a name="250"><span class="lineNum">     250 </span><span class="lineCov">        967 :         _data.resize(_stride * h);</span></a>
+<a name="251"><span class="lineNum">     251 </span><span class="lineCov">        967 :         _originalFormat = FileFormat::Custom;</span></a>
+<a name="252"><span class="lineNum">     252 </span><span class="lineCov">        967 :         _originalFormatName.clear();</span></a>
+<a name="253"><span class="lineNum">     253 </span><span class="lineCov">        967 : }</span></a>
 <a name="254"><span class="lineNum">     254 </span>            : </a>
 <a name="255"><span class="lineNum">     255 </span>            : template &lt;typename Interface&gt;</a>
-<a name="256"><span class="lineNum">     256 </span><span class="lineNoCov">          0 : void BitmapTemplate&lt;Interface&gt;::setInfo(uint32_t w, uint32_t h, PixelFormat c, AlphaFormat a, uint32_t stride) {</span></a>
-<a name="257"><span class="lineNum">     257 </span><span class="lineNoCov">          0 :         SPASSERT(c != PixelFormat::Auto, &quot;Bitmap: Format::Auto should not be used with Bitmap directly&quot;);</span></a>
-<a name="258"><span class="lineNum">     258 </span><span class="lineNoCov">          0 :         _width = w;</span></a>
-<a name="259"><span class="lineNum">     259 </span><span class="lineNoCov">          0 :         _height = h;</span></a>
-<a name="260"><span class="lineNum">     260 </span><span class="lineNoCov">          0 :         _stride = max(stride, w * getBytesPerPixel(c));</span></a>
-<a name="261"><span class="lineNum">     261 </span><span class="lineNoCov">          0 :         _color = c;</span></a>
-<a name="262"><span class="lineNum">     262 </span><span class="lineNoCov">          0 :         _alpha = a;</span></a>
-<a name="263"><span class="lineNum">     263 </span><span class="lineNoCov">          0 : }</span></a>
+<a name="256"><span class="lineNum">     256 </span><span class="lineCov">       1050 : void BitmapTemplate&lt;Interface&gt;::setInfo(uint32_t w, uint32_t h, PixelFormat c, AlphaFormat a, uint32_t stride) {</span></a>
+<a name="257"><span class="lineNum">     257 </span><span class="lineCov">       1050 :         SPASSERT(c != PixelFormat::Auto, &quot;Bitmap: Format::Auto should not be used with Bitmap directly&quot;);</span></a>
+<a name="258"><span class="lineNum">     258 </span><span class="lineCov">       1050 :         _width = w;</span></a>
+<a name="259"><span class="lineNum">     259 </span><span class="lineCov">       1050 :         _height = h;</span></a>
+<a name="260"><span class="lineNum">     260 </span><span class="lineCov">       1050 :         _stride = max(stride, w * getBytesPerPixel(c));</span></a>
+<a name="261"><span class="lineNum">     261 </span><span class="lineCov">       1050 :         _color = c;</span></a>
+<a name="262"><span class="lineNum">     262 </span><span class="lineCov">       1050 :         _alpha = a;</span></a>
+<a name="263"><span class="lineNum">     263 </span><span class="lineCov">       1050 : }</span></a>
 <a name="264"><span class="lineNum">     264 </span>            : </a>
 <a name="265"><span class="lineNum">     265 </span>            : template &lt;typename Interface&gt;</a>
-<a name="266"><span class="lineNum">     266 </span><span class="lineNoCov">          0 : bool BitmapTemplate&lt;Interface&gt;::updateStride(const StrideFn &amp;strideFn) {</span></a>
-<a name="267"><span class="lineNum">     267 </span><span class="lineNoCov">          0 :         uint32_t outStride = (strideFn) ? max(strideFn(_color, _width), _width * getBytesPerPixel(_color)):_width * getBytesPerPixel(_color);</span></a>
-<a name="268"><span class="lineNum">     268 </span><span class="lineNoCov">          0 :         if (outStride != _stride) {</span></a>
-<a name="269"><span class="lineNum">     269 </span><span class="lineNoCov">          0 :                 typename Interface::BytesType out;</span></a>
-<a name="270"><span class="lineNum">     270 </span><span class="lineNoCov">          0 :                 out.resize(_height * outStride);</span></a>
-<a name="271"><span class="lineNum">     271 </span><span class="lineNoCov">          0 :                 size_t minStride = _width * getBytesPerPixel(_color);</span></a>
-<a name="272"><span class="lineNum">     272 </span><span class="lineNoCov">          0 :                 for (size_t j = 0; j &lt; _height; j ++) {</span></a>
-<a name="273"><span class="lineNum">     273 </span><span class="lineNoCov">          0 :                         memcpy(out.data() + j * outStride, _data.data() + j * _stride, minStride);</span></a>
+<a name="266"><span class="lineNum">     266 </span><span class="lineCov">        274 : bool BitmapTemplate&lt;Interface&gt;::updateStride(const StrideFn &amp;strideFn) {</span></a>
+<a name="267"><span class="lineNum">     267 </span><span class="lineCov">        274 :         uint32_t outStride = (strideFn != nullptr) ? max(strideFn(_color, _width), _width * getBytesPerPixel(_color)):_width * getBytesPerPixel(_color);</span></a>
+<a name="268"><span class="lineNum">     268 </span><span class="lineCov">        274 :         if (outStride != _stride) {</span></a>
+<a name="269"><span class="lineNum">     269 </span><span class="lineCov">         25 :                 typename Interface::BytesType out;</span></a>
+<a name="270"><span class="lineNum">     270 </span><span class="lineCov">         25 :                 out.resize(_height * outStride);</span></a>
+<a name="271"><span class="lineNum">     271 </span><span class="lineCov">         25 :                 size_t minStride = _width * getBytesPerPixel(_color);</span></a>
+<a name="272"><span class="lineNum">     272 </span><span class="lineCov">       7550 :                 for (size_t j = 0; j &lt; _height; j ++) {</span></a>
+<a name="273"><span class="lineNum">     273 </span><span class="lineCov">       7525 :                         memcpy(out.data() + j * outStride, _data.data() + j * _stride, minStride);</span></a>
 <a name="274"><span class="lineNum">     274 </span>            :                 }</a>
-<a name="275"><span class="lineNum">     275 </span><span class="lineNoCov">          0 :                 _data = std::move(out);</span></a>
-<a name="276"><span class="lineNum">     276 </span><span class="lineNoCov">          0 :                 _stride = outStride;</span></a>
-<a name="277"><span class="lineNum">     277 </span><span class="lineNoCov">          0 :                 return true;</span></a>
-<a name="278"><span class="lineNum">     278 </span><span class="lineNoCov">          0 :         }</span></a>
-<a name="279"><span class="lineNum">     279 </span><span class="lineNoCov">          0 :         return true;</span></a>
+<a name="275"><span class="lineNum">     275 </span><span class="lineCov">         25 :                 _data = std::move(out);</span></a>
+<a name="276"><span class="lineNum">     276 </span><span class="lineCov">         25 :                 _stride = outStride;</span></a>
+<a name="277"><span class="lineNum">     277 </span><span class="lineCov">         25 :                 return true;</span></a>
+<a name="278"><span class="lineNum">     278 </span><span class="lineCov">         25 :         }</span></a>
+<a name="279"><span class="lineNum">     279 </span><span class="lineCov">        249 :         return true;</span></a>
 <a name="280"><span class="lineNum">     280 </span>            : }</a>
 <a name="281"><span class="lineNum">     281 </span>            : </a>
 <a name="282"><span class="lineNum">     282 </span>            : template &lt;typename Interface&gt;</a>
-<a name="283"><span class="lineNum">     283 </span><span class="lineNoCov">          0 : bool BitmapTemplate&lt;Interface&gt;::convert(PixelFormat color, const StrideFn &amp;strideFn) {</span></a>
-<a name="284"><span class="lineNum">     284 </span><span class="lineNoCov">          0 :         if (color == PixelFormat::Auto) {</span></a>
+<a name="283"><span class="lineNum">     283 </span><span class="lineCov">       1230 : bool BitmapTemplate&lt;Interface&gt;::convert(PixelFormat color, const StrideFn &amp;strideFn) {</span></a>
+<a name="284"><span class="lineNum">     284 </span><span class="lineCov">       1230 :         if (color == PixelFormat::Auto) {</span></a>
 <a name="285"><span class="lineNum">     285 </span><span class="lineNoCov">          0 :                 color = _color;</span></a>
 <a name="286"><span class="lineNum">     286 </span>            :         }</a>
-<a name="287"><span class="lineNum">     287 </span><span class="lineNoCov">          0 :         if (_color == color) {</span></a>
-<a name="288"><span class="lineNum">     288 </span><span class="lineNoCov">          0 :                 return updateStride(strideFn);</span></a>
+<a name="287"><span class="lineNum">     287 </span><span class="lineCov">       1230 :         if (_color == color) {</span></a>
+<a name="288"><span class="lineNum">     288 </span><span class="lineCov">        201 :                 return updateStride(strideFn);</span></a>
 <a name="289"><span class="lineNum">     289 </span>            :         }</a>
 <a name="290"><span class="lineNum">     290 </span>            : </a>
-<a name="291"><span class="lineNum">     291 </span><span class="lineNoCov">          0 :         bool ret = false;</span></a>
-<a name="292"><span class="lineNum">     292 </span><span class="lineNoCov">          0 :         typename Interface::BytesType out;</span></a>
-<a name="293"><span class="lineNum">     293 </span><span class="lineNoCov">          0 :         uint32_t outStride = (strideFn) ? max(strideFn(color, _width), _width * getBytesPerPixel(color)) : _width * getBytesPerPixel(color);</span></a>
-<a name="294"><span class="lineNum">     294 </span><span class="lineNoCov">          0 :         out.resize(_height * outStride);</span></a>
+<a name="291"><span class="lineNum">     291 </span><span class="lineCov">       1029 :         bool ret = false;</span></a>
+<a name="292"><span class="lineNum">     292 </span><span class="lineCov">       1029 :         typename Interface::BytesType out;</span></a>
+<a name="293"><span class="lineNum">     293 </span><span class="lineCov">       1029 :         uint32_t outStride = (strideFn != nullptr) ? max(strideFn(color, _width), _width * getBytesPerPixel(color)) : _width * getBytesPerPixel(color);</span></a>
+<a name="294"><span class="lineNum">     294 </span><span class="lineCov">       1029 :         out.resize(_height * outStride);</span></a>
 <a name="295"><span class="lineNum">     295 </span>            : </a>
-<a name="296"><span class="lineNum">     296 </span><span class="lineNoCov">          0 :         ret = convertWithTarget(out.data(), color, strideFn);</span></a>
+<a name="296"><span class="lineNum">     296 </span><span class="lineCov">       1029 :         ret = convertWithTarget(out.data(), color, strideFn);</span></a>
 <a name="297"><span class="lineNum">     297 </span>            : </a>
-<a name="298"><span class="lineNum">     298 </span><span class="lineNoCov">          0 :         if (ret) {</span></a>
-<a name="299"><span class="lineNum">     299 </span><span class="lineNoCov">          0 :                 _color = color;</span></a>
-<a name="300"><span class="lineNum">     300 </span><span class="lineNoCov">          0 :                 _data = std::move(out);</span></a>
-<a name="301"><span class="lineNum">     301 </span><span class="lineNoCov">          0 :                 _stride = outStride;</span></a>
+<a name="298"><span class="lineNum">     298 </span><span class="lineCov">       1029 :         if (ret) {</span></a>
+<a name="299"><span class="lineNum">     299 </span><span class="lineCov">       1029 :                 _color = color;</span></a>
+<a name="300"><span class="lineNum">     300 </span><span class="lineCov">       1029 :                 _data = std::move(out);</span></a>
+<a name="301"><span class="lineNum">     301 </span><span class="lineCov">       1029 :                 _stride = outStride;</span></a>
 <a name="302"><span class="lineNum">     302 </span>            :         }</a>
 <a name="303"><span class="lineNum">     303 </span>            : </a>
-<a name="304"><span class="lineNum">     304 </span><span class="lineNoCov">          0 :         return ret;</span></a>
-<a name="305"><span class="lineNum">     305 </span><span class="lineNoCov">          0 : }</span></a>
+<a name="304"><span class="lineNum">     304 </span><span class="lineCov">       1029 :         return ret;</span></a>
+<a name="305"><span class="lineNum">     305 </span><span class="lineCov">       1029 : }</span></a>
 <a name="306"><span class="lineNum">     306 </span>            : </a>
 <a name="307"><span class="lineNum">     307 </span>            : template &lt;typename Interface&gt;</a>
-<a name="308"><span class="lineNum">     308 </span>            : bool BitmapTemplate&lt;Interface&gt;::truncate(PixelFormat color, const StrideFn &amp;strideFn) {</a>
-<a name="309"><span class="lineNum">     309 </span>            :         if (color == PixelFormat::Auto) {</a>
-<a name="310"><span class="lineNum">     310 </span>            :                 color = _color;</a>
+<a name="308"><span class="lineNum">     308 </span><span class="lineCov">         96 : bool BitmapTemplate&lt;Interface&gt;::truncate(PixelFormat color, const StrideFn &amp;strideFn) {</span></a>
+<a name="309"><span class="lineNum">     309 </span><span class="lineCov">         96 :         if (color == PixelFormat::Auto) {</span></a>
+<a name="310"><span class="lineNum">     310 </span><span class="lineNoCov">          0 :                 color = _color;</span></a>
 <a name="311"><span class="lineNum">     311 </span>            :         }</a>
-<a name="312"><span class="lineNum">     312 </span>            :         if (_color == color) {</a>
-<a name="313"><span class="lineNum">     313 </span>            :                 return updateStride(strideFn);</a>
+<a name="312"><span class="lineNum">     312 </span><span class="lineCov">         96 :         if (_color == color) {</span></a>
+<a name="313"><span class="lineNum">     313 </span><span class="lineCov">         48 :                 return updateStride(strideFn);</span></a>
 <a name="314"><span class="lineNum">     314 </span>            :         }</a>
 <a name="315"><span class="lineNum">     315 </span>            : </a>
-<a name="316"><span class="lineNum">     316 </span>            :         if (getBytesPerPixel(color) == getBytesPerPixel(_color)) {</a>
-<a name="317"><span class="lineNum">     317 </span>            :                 _color = color;</a>
-<a name="318"><span class="lineNum">     318 </span>            :                 return true;</a>
+<a name="316"><span class="lineNum">     316 </span><span class="lineCov">         48 :         if (getBytesPerPixel(color) == getBytesPerPixel(_color)) {</span></a>
+<a name="317"><span class="lineNum">     317 </span><span class="lineNoCov">          0 :                 _color = color;</span></a>
+<a name="318"><span class="lineNum">     318 </span><span class="lineNoCov">          0 :                 return true;</span></a>
 <a name="319"><span class="lineNum">     319 </span>            :         }</a>
 <a name="320"><span class="lineNum">     320 </span>            : </a>
-<a name="321"><span class="lineNum">     321 </span>            :         auto height = _height;</a>
-<a name="322"><span class="lineNum">     322 </span>            :         auto data = _data.data();</a>
-<a name="323"><span class="lineNum">     323 </span>            :         auto bppIn = getBytesPerPixel(_color);</a>
+<a name="321"><span class="lineNum">     321 </span><span class="lineCov">         48 :         auto height = _height;</span></a>
+<a name="322"><span class="lineNum">     322 </span><span class="lineCov">         48 :         auto data = _data.data();</span></a>
+<a name="323"><span class="lineNum">     323 </span><span class="lineCov">         48 :         auto bppIn = getBytesPerPixel(_color);</span></a>
 <a name="324"><span class="lineNum">     324 </span>            : </a>
-<a name="325"><span class="lineNum">     325 </span>            :         typename Interface::BytesType out;</a>
-<a name="326"><span class="lineNum">     326 </span>            :         uint32_t outStride = (strideFn) ? max(strideFn(color, _width), _width * getBytesPerPixel(color)) : _width * getBytesPerPixel(color);</a>
-<a name="327"><span class="lineNum">     327 </span>            :         out.resize(height * outStride);</a>
-<a name="328"><span class="lineNum">     328 </span>            :         auto bppOut = getBytesPerPixel(color);</a>
+<a name="325"><span class="lineNum">     325 </span><span class="lineCov">         48 :         typename Interface::BytesType out;</span></a>
+<a name="326"><span class="lineNum">     326 </span><span class="lineCov">         48 :         uint32_t outStride = (strideFn != nullptr) ? max(strideFn(color, _width), _width * getBytesPerPixel(color)) : _width * getBytesPerPixel(color);</span></a>
+<a name="327"><span class="lineNum">     327 </span><span class="lineCov">         48 :         out.resize(height * outStride);</span></a>
+<a name="328"><span class="lineNum">     328 </span><span class="lineCov">         48 :         auto bppOut = getBytesPerPixel(color);</span></a>
 <a name="329"><span class="lineNum">     329 </span>            : </a>
-<a name="330"><span class="lineNum">     330 </span>            :         auto fillBytes = min(bppIn, bppOut);</a>
-<a name="331"><span class="lineNum">     331 </span>            :         auto clearBytes = bppOut - fillBytes;</a>
+<a name="330"><span class="lineNum">     330 </span><span class="lineCov">         48 :         auto fillBytes = min(bppIn, bppOut);</span></a>
+<a name="331"><span class="lineNum">     331 </span><span class="lineCov">         48 :         auto clearBytes = bppOut - fillBytes;</span></a>
 <a name="332"><span class="lineNum">     332 </span>            : </a>
-<a name="333"><span class="lineNum">     333 </span>            :         for (size_t j = 0; j &lt; height; j ++) {</a>
-<a name="334"><span class="lineNum">     334 </span>            :                 auto inData = data + _stride * j;</a>
-<a name="335"><span class="lineNum">     335 </span>            :                 auto outData = out.data() + outStride * j;</a>
-<a name="336"><span class="lineNum">     336 </span>            :             for (size_t i = 0; i &lt; _stride; i += bppIn) {</a>
-<a name="337"><span class="lineNum">     337 </span>            :                 for (uint8_t k = 0; k &lt; fillBytes; ++ k) {</a>
-<a name="338"><span class="lineNum">     338 </span>            :                         *outData++ = inData[i * bppIn + k];</a>
+<a name="333"><span class="lineNum">     333 </span><span class="lineCov">       4144 :         for (size_t j = 0; j &lt; height; j ++) {</span></a>
+<a name="334"><span class="lineNum">     334 </span><span class="lineCov">       4096 :                 auto inData = data + _stride * j;</span></a>
+<a name="335"><span class="lineNum">     335 </span><span class="lineCov">       4096 :                 auto outData = out.data() + outStride * j;</span></a>
+<a name="336"><span class="lineNum">     336 </span><span class="lineCov">     364544 :             for (size_t i = 0; i &lt; _stride; i += bppIn) {</span></a>
+<a name="337"><span class="lineNum">     337 </span><span class="lineCov">    1441792 :                 for (uint8_t k = 0; k &lt; fillBytes; ++ k) {</span></a>
+<a name="338"><span class="lineNum">     338 </span><span class="lineCov">    1081344 :                         *outData++ = inData[i * bppIn + k];</span></a>
 <a name="339"><span class="lineNum">     339 </span>            :                 }</a>
-<a name="340"><span class="lineNum">     340 </span>            :                 for (uint8_t k = 0; k &lt; clearBytes; ++ k) {</a>
-<a name="341"><span class="lineNum">     341 </span>            :                         *outData++ = 0;</a>
+<a name="340"><span class="lineNum">     340 </span><span class="lineCov">     360448 :                 for (uint8_t k = 0; k &lt; clearBytes; ++ k) {</span></a>
+<a name="341"><span class="lineNum">     341 </span><span class="lineNoCov">          0 :                         *outData++ = 0;</span></a>
 <a name="342"><span class="lineNum">     342 </span>            :                 }</a>
 <a name="343"><span class="lineNum">     343 </span>            :             }</a>
 <a name="344"><span class="lineNum">     344 </span>            :         }</a>
 <a name="345"><span class="lineNum">     345 </span>            : </a>
-<a name="346"><span class="lineNum">     346 </span>            :         _color = color;</a>
-<a name="347"><span class="lineNum">     347 </span>            :         _data = std::move(out);</a>
-<a name="348"><span class="lineNum">     348 </span>            :         _stride = outStride;</a>
+<a name="346"><span class="lineNum">     346 </span><span class="lineCov">         48 :         _color = color;</span></a>
+<a name="347"><span class="lineNum">     347 </span><span class="lineCov">         48 :         _data = std::move(out);</span></a>
+<a name="348"><span class="lineNum">     348 </span><span class="lineCov">         48 :         _stride = outStride;</span></a>
 <a name="349"><span class="lineNum">     349 </span>            : </a>
-<a name="350"><span class="lineNum">     350 </span>            :         return true;</a>
-<a name="351"><span class="lineNum">     351 </span>            : }</a>
+<a name="350"><span class="lineNum">     350 </span><span class="lineCov">         48 :         return true;</span></a>
+<a name="351"><span class="lineNum">     351 </span><span class="lineCov">         48 : }</span></a>
 <a name="352"><span class="lineNum">     352 </span>            : </a>
 <a name="353"><span class="lineNum">     353 </span>            : template &lt;typename Interface&gt;</a>
-<a name="354"><span class="lineNum">     354 </span><span class="lineNoCov">          0 : bool BitmapTemplate&lt;Interface&gt;::convertWithTarget(uint8_t *target, PixelFormat color, const StrideFn &amp;strideFn) const {</span></a>
-<a name="355"><span class="lineNum">     355 </span><span class="lineNoCov">          0 :         bool ret = false;</span></a>
-<a name="356"><span class="lineNum">     356 </span><span class="lineNoCov">          0 :         uint32_t outStride = (strideFn) ? max(strideFn(color, _width), _width * getBytesPerPixel(color)) : _width * getBytesPerPixel(color);</span></a>
-<a name="357"><span class="lineNum">     357 </span><span class="lineNoCov">          0 :         BytesView out(target, _height * outStride);</span></a>
+<a name="354"><span class="lineNum">     354 </span><span class="lineCov">       1257 : bool BitmapTemplate&lt;Interface&gt;::convertWithTarget(uint8_t *target, PixelFormat color, const StrideFn &amp;strideFn) const {</span></a>
+<a name="355"><span class="lineNum">     355 </span><span class="lineCov">       1257 :         bool ret = false;</span></a>
+<a name="356"><span class="lineNum">     356 </span><span class="lineCov">       1257 :         uint32_t outStride = (strideFn != nullptr) ? max(strideFn(color, _width), _width * getBytesPerPixel(color)) : _width * getBytesPerPixel(color);</span></a>
+<a name="357"><span class="lineNum">     357 </span><span class="lineCov">       1257 :         BytesView out(target, _height * outStride);</span></a>
 <a name="358"><span class="lineNum">     358 </span>            : </a>
-<a name="359"><span class="lineNum">     359 </span><span class="lineNoCov">          0 :         switch (_color) {</span></a>
-<a name="360"><span class="lineNum">     360 </span><span class="lineNoCov">          0 :         case PixelFormat::A8:</span></a>
+<a name="359"><span class="lineNum">     359 </span><span class="lineCov">       1257 :         switch (_color) {</span></a>
+<a name="360"><span class="lineNum">     360 </span><span class="lineCov">        100 :         case PixelFormat::A8:</span></a>
 <a name="361"><span class="lineNum">     361 </span>            :                 switch (color) {</a>
 <a name="362"><span class="lineNum">     362 </span><span class="lineNoCov">          0 :                 case PixelFormat::A8: return true; break;</span></a>
-<a name="363"><span class="lineNum">     363 </span><span class="lineNoCov">          0 :                 case PixelFormat::I8: return true; break;</span></a>
-<a name="364"><span class="lineNum">     364 </span><span class="lineNoCov">          0 :                 case PixelFormat::IA88: ret = convertData&lt;PixelFormat::A8, PixelFormat::IA88&gt;(_data, out, _stride, outStride); break;</span></a>
-<a name="365"><span class="lineNum">     365 </span><span class="lineNoCov">          0 :                 case PixelFormat::RGB888: ret = convertData&lt;PixelFormat::A8, PixelFormat::RGB888&gt;(_data, out, _stride, outStride); break;</span></a>
-<a name="366"><span class="lineNum">     366 </span><span class="lineNoCov">          0 :                 case PixelFormat::RGBA8888: ret = convertData&lt;PixelFormat::A8, PixelFormat::RGBA8888&gt;(_data, out, _stride, outStride); break;</span></a>
+<a name="363"><span class="lineNum">     363 </span><span class="lineCov">         25 :                 case PixelFormat::I8: return true; break;</span></a>
+<a name="364"><span class="lineNum">     364 </span><span class="lineCov">         25 :                 case PixelFormat::IA88: ret = convertData&lt;PixelFormat::A8, PixelFormat::IA88&gt;(_data, out, _stride, outStride); break;</span></a>
+<a name="365"><span class="lineNum">     365 </span><span class="lineCov">         25 :                 case PixelFormat::RGB888: ret = convertData&lt;PixelFormat::A8, PixelFormat::RGB888&gt;(_data, out, _stride, outStride); break;</span></a>
+<a name="366"><span class="lineNum">     366 </span><span class="lineCov">         25 :                 case PixelFormat::RGBA8888: ret = convertData&lt;PixelFormat::A8, PixelFormat::RGBA8888&gt;(_data, out, _stride, outStride); break;</span></a>
 <a name="367"><span class="lineNum">     367 </span><span class="lineNoCov">          0 :                 case PixelFormat::Auto: return false; break;</span></a>
 <a name="368"><span class="lineNum">     368 </span>            :                 }</a>
-<a name="369"><span class="lineNum">     369 </span><span class="lineNoCov">          0 :                 break;</span></a>
-<a name="370"><span class="lineNum">     370 </span><span class="lineNoCov">          0 :         case PixelFormat::I8:</span></a>
+<a name="369"><span class="lineNum">     369 </span><span class="lineCov">         75 :                 break;</span></a>
+<a name="370"><span class="lineNum">     370 </span><span class="lineCov">        208 :         case PixelFormat::I8:</span></a>
 <a name="371"><span class="lineNum">     371 </span>            :                 switch (color) {</a>
-<a name="372"><span class="lineNum">     372 </span><span class="lineNoCov">          0 :                 case PixelFormat::A8: return true; break;</span></a>
+<a name="372"><span class="lineNum">     372 </span><span class="lineCov">         19 :                 case PixelFormat::A8: return true; break;</span></a>
 <a name="373"><span class="lineNum">     373 </span><span class="lineNoCov">          0 :                 case PixelFormat::I8: return true; break;</span></a>
-<a name="374"><span class="lineNum">     374 </span><span class="lineNoCov">          0 :                 case PixelFormat::IA88: ret = convertData&lt;PixelFormat::I8, PixelFormat::IA88&gt;(_data, out, _stride, outStride); break;</span></a>
-<a name="375"><span class="lineNum">     375 </span><span class="lineNoCov">          0 :                 case PixelFormat::RGB888: ret = convertData&lt;PixelFormat::I8, PixelFormat::RGB888&gt;(_data, out, _stride, outStride); break;</span></a>
-<a name="376"><span class="lineNum">     376 </span><span class="lineNoCov">          0 :                 case PixelFormat::RGBA8888: ret = convertData&lt;PixelFormat::I8, PixelFormat::RGBA8888&gt;(_data, out, _stride, outStride); break;</span></a>
+<a name="374"><span class="lineNum">     374 </span><span class="lineCov">         63 :                 case PixelFormat::IA88: ret = convertData&lt;PixelFormat::I8, PixelFormat::IA88&gt;(_data, out, _stride, outStride); break;</span></a>
+<a name="375"><span class="lineNum">     375 </span><span class="lineCov">         63 :                 case PixelFormat::RGB888: ret = convertData&lt;PixelFormat::I8, PixelFormat::RGB888&gt;(_data, out, _stride, outStride); break;</span></a>
+<a name="376"><span class="lineNum">     376 </span><span class="lineCov">         63 :                 case PixelFormat::RGBA8888: ret = convertData&lt;PixelFormat::I8, PixelFormat::RGBA8888&gt;(_data, out, _stride, outStride); break;</span></a>
 <a name="377"><span class="lineNum">     377 </span><span class="lineNoCov">          0 :                 case PixelFormat::Auto: return false; break;</span></a>
 <a name="378"><span class="lineNum">     378 </span>            :                 }</a>
-<a name="379"><span class="lineNum">     379 </span><span class="lineNoCov">          0 :                 break;</span></a>
-<a name="380"><span class="lineNum">     380 </span><span class="lineNoCov">          0 :         case PixelFormat::IA88:</span></a>
+<a name="379"><span class="lineNum">     379 </span><span class="lineCov">        189 :                 break;</span></a>
+<a name="380"><span class="lineNum">     380 </span><span class="lineCov">        214 :         case PixelFormat::IA88:</span></a>
 <a name="381"><span class="lineNum">     381 </span>            :                 switch (color) {</a>
-<a name="382"><span class="lineNum">     382 </span><span class="lineNoCov">          0 :                 case PixelFormat::A8: ret = convertData&lt;PixelFormat::IA88, PixelFormat::A8&gt;(_data, out, _stride, outStride); break;</span></a>
-<a name="383"><span class="lineNum">     383 </span><span class="lineNoCov">          0 :                 case PixelFormat::I8: ret = convertData&lt;PixelFormat::IA88, PixelFormat::I8&gt;(_data, out, _stride, outStride); break;</span></a>
+<a name="382"><span class="lineNum">     382 </span><span class="lineCov">         63 :                 case PixelFormat::A8: ret = convertData&lt;PixelFormat::IA88, PixelFormat::A8&gt;(_data, out, _stride, outStride); break;</span></a>
+<a name="383"><span class="lineNum">     383 </span><span class="lineCov">         25 :                 case PixelFormat::I8: ret = convertData&lt;PixelFormat::IA88, PixelFormat::I8&gt;(_data, out, _stride, outStride); break;</span></a>
 <a name="384"><span class="lineNum">     384 </span><span class="lineNoCov">          0 :                 case PixelFormat::IA88: return true; break;</span></a>
-<a name="385"><span class="lineNum">     385 </span><span class="lineNoCov">          0 :                 case PixelFormat::RGB888: ret = convertData&lt;PixelFormat::IA88, PixelFormat::RGB888&gt;(_data, out, _stride, outStride); break;</span></a>
-<a name="386"><span class="lineNum">     386 </span><span class="lineNoCov">          0 :                 case PixelFormat::RGBA8888: ret = convertData&lt;PixelFormat::IA88, PixelFormat::RGBA8888&gt;(_data, out, _stride, outStride); break;</span></a>
+<a name="385"><span class="lineNum">     385 </span><span class="lineCov">         63 :                 case PixelFormat::RGB888: ret = convertData&lt;PixelFormat::IA88, PixelFormat::RGB888&gt;(_data, out, _stride, outStride); break;</span></a>
+<a name="386"><span class="lineNum">     386 </span><span class="lineCov">         63 :                 case PixelFormat::RGBA8888: ret = convertData&lt;PixelFormat::IA88, PixelFormat::RGBA8888&gt;(_data, out, _stride, outStride); break;</span></a>
 <a name="387"><span class="lineNum">     387 </span><span class="lineNoCov">          0 :                 case PixelFormat::Auto: return false; break;</span></a>
 <a name="388"><span class="lineNum">     388 </span>            :                 }</a>
-<a name="389"><span class="lineNum">     389 </span><span class="lineNoCov">          0 :                 break;</span></a>
-<a name="390"><span class="lineNum">     390 </span><span class="lineNoCov">          0 :         case PixelFormat::RGB888:</span></a>
+<a name="389"><span class="lineNum">     389 </span><span class="lineCov">        214 :                 break;</span></a>
+<a name="390"><span class="lineNum">     390 </span><span class="lineCov">        214 :         case PixelFormat::RGB888:</span></a>
 <a name="391"><span class="lineNum">     391 </span>            :                 switch (color) {</a>
-<a name="392"><span class="lineNum">     392 </span><span class="lineNoCov">          0 :                 case PixelFormat::A8: ret = convertData&lt;PixelFormat::RGB888, PixelFormat::A8&gt;(_data, out, _stride, outStride); break;</span></a>
-<a name="393"><span class="lineNum">     393 </span><span class="lineNoCov">          0 :                 case PixelFormat::I8: ret = convertData&lt;PixelFormat::RGB888, PixelFormat::I8&gt;(_data, out, _stride, outStride); break;</span></a>
-<a name="394"><span class="lineNum">     394 </span><span class="lineNoCov">          0 :                 case PixelFormat::IA88: ret = convertData&lt;PixelFormat::RGB888, PixelFormat::IA88&gt;(_data, out, _stride, outStride); break;</span></a>
+<a name="392"><span class="lineNum">     392 </span><span class="lineCov">         44 :                 case PixelFormat::A8: ret = convertData&lt;PixelFormat::RGB888, PixelFormat::A8&gt;(_data, out, _stride, outStride); break;</span></a>
+<a name="393"><span class="lineNum">     393 </span><span class="lineCov">         44 :                 case PixelFormat::I8: ret = convertData&lt;PixelFormat::RGB888, PixelFormat::I8&gt;(_data, out, _stride, outStride); break;</span></a>
+<a name="394"><span class="lineNum">     394 </span><span class="lineCov">         63 :                 case PixelFormat::IA88: ret = convertData&lt;PixelFormat::RGB888, PixelFormat::IA88&gt;(_data, out, _stride, outStride); break;</span></a>
 <a name="395"><span class="lineNum">     395 </span><span class="lineNoCov">          0 :                 case PixelFormat::RGB888: return true; break;</span></a>
-<a name="396"><span class="lineNum">     396 </span><span class="lineNoCov">          0 :                 case PixelFormat::RGBA8888: ret = convertData&lt;PixelFormat::RGB888, PixelFormat::RGBA8888&gt;(_data, out, _stride, outStride); break;</span></a>
+<a name="396"><span class="lineNum">     396 </span><span class="lineCov">         63 :                 case PixelFormat::RGBA8888: ret = convertData&lt;PixelFormat::RGB888, PixelFormat::RGBA8888&gt;(_data, out, _stride, outStride); break;</span></a>
 <a name="397"><span class="lineNum">     397 </span><span class="lineNoCov">          0 :                 case PixelFormat::Auto: return false; break;</span></a>
 <a name="398"><span class="lineNum">     398 </span>            :                 }</a>
-<a name="399"><span class="lineNum">     399 </span><span class="lineNoCov">          0 :                 break;</span></a>
-<a name="400"><span class="lineNum">     400 </span><span class="lineNoCov">          0 :         case PixelFormat::RGBA8888:</span></a>
+<a name="399"><span class="lineNum">     399 </span><span class="lineCov">        214 :                 break;</span></a>
+<a name="400"><span class="lineNum">     400 </span><span class="lineCov">        521 :         case PixelFormat::RGBA8888:</span></a>
 <a name="401"><span class="lineNum">     401 </span>            :                 switch (color) {</a>
-<a name="402"><span class="lineNum">     402 </span><span class="lineNoCov">          0 :                 case PixelFormat::A8: ret = convertData&lt;PixelFormat::RGBA8888, PixelFormat::A8&gt;(_data, out, _stride, outStride); break;</span></a>
-<a name="403"><span class="lineNum">     403 </span><span class="lineNoCov">          0 :                 case PixelFormat::I8: ret = convertData&lt;PixelFormat::RGBA8888, PixelFormat::I8&gt;(_data, out, _stride, outStride); break;</span></a>
-<a name="404"><span class="lineNum">     404 </span><span class="lineNoCov">          0 :                 case PixelFormat::IA88: ret = convertData&lt;PixelFormat::RGBA8888, PixelFormat::IA88&gt;(_data, out, _stride, outStride); break;</span></a>
-<a name="405"><span class="lineNum">     405 </span><span class="lineNoCov">          0 :                 case PixelFormat::RGB888: ret = convertData&lt;PixelFormat::RGBA8888, PixelFormat::RGB888&gt;(_data, out, _stride, outStride); break;</span></a>
+<a name="402"><span class="lineNum">     402 </span><span class="lineCov">        157 :                 case PixelFormat::A8: ret = convertData&lt;PixelFormat::RGBA8888, PixelFormat::A8&gt;(_data, out, _stride, outStride); break;</span></a>
+<a name="403"><span class="lineNum">     403 </span><span class="lineCov">         50 :                 case PixelFormat::I8: ret = convertData&lt;PixelFormat::RGBA8888, PixelFormat::I8&gt;(_data, out, _stride, outStride); break;</span></a>
+<a name="404"><span class="lineNum">     404 </span><span class="lineCov">        157 :                 case PixelFormat::IA88: ret = convertData&lt;PixelFormat::RGBA8888, PixelFormat::IA88&gt;(_data, out, _stride, outStride); break;</span></a>
+<a name="405"><span class="lineNum">     405 </span><span class="lineCov">        157 :                 case PixelFormat::RGB888: ret = convertData&lt;PixelFormat::RGBA8888, PixelFormat::RGB888&gt;(_data, out, _stride, outStride); break;</span></a>
 <a name="406"><span class="lineNum">     406 </span><span class="lineNoCov">          0 :                 case PixelFormat::RGBA8888: return true; break;</span></a>
 <a name="407"><span class="lineNum">     407 </span><span class="lineNoCov">          0 :                 case PixelFormat::Auto: return false; break;</span></a>
 <a name="408"><span class="lineNum">     408 </span>            :                 }</a>
-<a name="409"><span class="lineNum">     409 </span><span class="lineNoCov">          0 :                 break;</span></a>
+<a name="409"><span class="lineNum">     409 </span><span class="lineCov">        521 :                 break;</span></a>
 <a name="410"><span class="lineNum">     410 </span><span class="lineNoCov">          0 :         case PixelFormat::Auto: return false; break;</span></a>
 <a name="411"><span class="lineNum">     411 </span>            :         }</a>
 <a name="412"><span class="lineNum">     412 </span>            : </a>
-<a name="413"><span class="lineNum">     413 </span><span class="lineNoCov">          0 :         return ret;</span></a>
+<a name="413"><span class="lineNum">     413 </span><span class="lineCov">       1213 :         return ret;</span></a>
 <a name="414"><span class="lineNum">     414 </span>            : }</a>
 <a name="415"><span class="lineNum">     415 </span>            : </a>
 <a name="416"><span class="lineNum">     416 </span>            : template &lt;typename Interface&gt;</a>
-<a name="417"><span class="lineNum">     417 </span><span class="lineCov">          1 : bool BitmapTemplate&lt;Interface&gt;::save(StringView path, bool invert) {</span></a>
-<a name="418"><span class="lineNum">     418 </span><span class="lineCov">          1 :         FileFormat fmt = FileFormat::Png;</span></a>
-<a name="419"><span class="lineNum">     419 </span><span class="lineCov">          1 :         auto ext = filepath::lastExtension(path);</span></a>
-<a name="420"><span class="lineNum">     420 </span><span class="lineCov">          1 :         if (ext == &quot;png&quot;) {</span></a>
-<a name="421"><span class="lineNum">     421 </span><span class="lineCov">          1 :                 fmt = FileFormat::Png;</span></a>
-<a name="422"><span class="lineNum">     422 </span><span class="lineNoCov">          0 :         } else if (ext == &quot;jpeg&quot; || ext == &quot;jpg&quot;) {</span></a>
-<a name="423"><span class="lineNum">     423 </span><span class="lineNoCov">          0 :                 fmt = FileFormat::Jpeg;</span></a>
-<a name="424"><span class="lineNum">     424 </span><span class="lineNoCov">          0 :         } else if (ext == &quot;webp&quot;) {</span></a>
-<a name="425"><span class="lineNum">     425 </span><span class="lineNoCov">          0 :                 fmt = FileFormat::WebpLossless;</span></a>
+<a name="417"><span class="lineNum">     417 </span><span class="lineCov">         75 : bool BitmapTemplate&lt;Interface&gt;::save(StringView path, bool invert) {</span></a>
+<a name="418"><span class="lineNum">     418 </span><span class="lineCov">         75 :         FileFormat fmt = FileFormat::Png;</span></a>
+<a name="419"><span class="lineNum">     419 </span><span class="lineCov">         75 :         auto ext = filepath::lastExtension(path);</span></a>
+<a name="420"><span class="lineNum">     420 </span><span class="lineCov">         75 :         if (ext == &quot;png&quot;) {</span></a>
+<a name="421"><span class="lineNum">     421 </span><span class="lineCov">         25 :                 fmt = FileFormat::Png;</span></a>
+<a name="422"><span class="lineNum">     422 </span><span class="lineCov">         50 :         } else if (ext == &quot;jpeg&quot; || ext == &quot;jpg&quot;) {</span></a>
+<a name="423"><span class="lineNum">     423 </span><span class="lineCov">         25 :                 fmt = FileFormat::Jpeg;</span></a>
+<a name="424"><span class="lineNum">     424 </span><span class="lineCov">         25 :         } else if (ext == &quot;webp&quot;) {</span></a>
+<a name="425"><span class="lineNum">     425 </span><span class="lineCov">         25 :                 fmt = FileFormat::WebpLossless;</span></a>
 <a name="426"><span class="lineNum">     426 </span>            :         }</a>
-<a name="427"><span class="lineNum">     427 </span><span class="lineCov">          2 :         return save(fmt, path, invert);</span></a>
+<a name="427"><span class="lineNum">     427 </span><span class="lineCov">        150 :         return save(fmt, path, invert);</span></a>
 <a name="428"><span class="lineNum">     428 </span>            : }</a>
 <a name="429"><span class="lineNum">     429 </span>            : </a>
 <a name="430"><span class="lineNum">     430 </span>            : template &lt;typename Interface&gt;</a>
@@ -496,13 +496,13 @@
 <a name="434"><span class="lineNum">     434 </span>            : </a>
 <a name="435"><span class="lineNum">     435 </span>            : }</a>
 <a name="436"><span class="lineNum">     436 </span>            : </a>
-<a name="437"><span class="lineNum">     437 </span>            : namespace stappler::mem_std {</a>
+<a name="437"><span class="lineNum">     437 </span>            : namespace STAPPLER_VERSIONIZED stappler::mem_std {</a>
 <a name="438"><span class="lineNum">     438 </span>            : </a>
 <a name="439"><span class="lineNum">     439 </span>            : using Bitmap = bitmap::BitmapTemplate&lt;memory::StandartInterface&gt;;</a>
 <a name="440"><span class="lineNum">     440 </span>            : </a>
 <a name="441"><span class="lineNum">     441 </span>            : }</a>
 <a name="442"><span class="lineNum">     442 </span>            : </a>
-<a name="443"><span class="lineNum">     443 </span>            : namespace stappler::mem_pool {</a>
+<a name="443"><span class="lineNum">     443 </span>            : namespace STAPPLER_VERSIONIZED stappler::mem_pool {</a>
 <a name="444"><span class="lineNum">     444 </span>            : </a>
 <a name="445"><span class="lineNum">     445 </span>            : using Bitmap = bitmap::BitmapTemplate&lt;memory::PoolInterface&gt;;</a>
 <a name="446"><span class="lineNum">     446 </span>            : </a>

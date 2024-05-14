@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2023-12-03 02:10:58</td>
+            <td class="headerValue">2024-05-12 00:16:13</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">3</td>
@@ -93,7 +93,7 @@
 <a name="31"><span class="lineNum">      31 </span>            : #include &quot;XLCoreMaterial.h&quot;</a>
 <a name="32"><span class="lineNum">      32 </span>            : #include &quot;XLDynamicStateNode.h&quot;</a>
 <a name="33"><span class="lineNum">      33 </span>            : </a>
-<a name="34"><span class="lineNum">      34 </span>            : namespace stappler::xenolith {</a>
+<a name="34"><span class="lineNum">      34 </span>            : namespace STAPPLER_VERSIONIZED stappler::xenolith {</a>
 <a name="35"><span class="lineNum">      35 </span>            : </a>
 <a name="36"><span class="lineNum">      36 </span>            : class Application;</a>
 <a name="37"><span class="lineNum">      37 </span>            : class SceneContent;</a>
@@ -117,8 +117,8 @@
 <a name="55"><span class="lineNum">      55 </span>            : </a>
 <a name="56"><span class="lineNum">      56 </span>            :         virtual void onContentSizeDirty() override;</a>
 <a name="57"><span class="lineNum">      57 </span>            : </a>
-<a name="58"><span class="lineNum">      58 </span><span class="lineCov">        111 :         const Rc&lt;Queue&gt; &amp;getQueue() const { return _queue; }</span></a>
-<a name="59"><span class="lineNum">      59 </span><span class="lineCov">        265 :         Director *getDirector() const { return _director; }</span></a>
+<a name="58"><span class="lineNum">      58 </span><span class="lineCov">       9601 :         const Rc&lt;Queue&gt; &amp;getQueue() const { return _queue; }</span></a>
+<a name="59"><span class="lineNum">      59 </span><span class="lineCov">      88660 :         Director *getDirector() const { return _director; }</span></a>
 <a name="60"><span class="lineNum">      60 </span>            : </a>
 <a name="61"><span class="lineNum">      61 </span>            :         virtual void setContent(SceneContent *);</a>
 <a name="62"><span class="lineNum">      62 </span><span class="lineNoCov">          0 :         virtual SceneContent *getContent() const { return _content; }</span></a>
@@ -129,33 +129,42 @@
 <a name="67"><span class="lineNum">      67 </span>            :         virtual void onFrameStarted(FrameRequest &amp;);</a>
 <a name="68"><span class="lineNum">      68 </span>            :         virtual void onFrameEnded(FrameRequest &amp;);</a>
 <a name="69"><span class="lineNum">      69 </span>            : </a>
-<a name="70"><span class="lineNum">      70 </span>            :         virtual void setFrameConstraints(const core::FrameContraints &amp;);</a>
-<a name="71"><span class="lineNum">      71 </span><span class="lineCov">        108 :         const core::FrameContraints &amp; getFrameConstraints() const { return _constraints; }</span></a>
+<a name="70"><span class="lineNum">      70 </span>            :         virtual void onFrameAttached(const FrameHandle *);</a>
+<a name="71"><span class="lineNum">      71 </span>            :         virtual void onFrameDetached(const FrameHandle *);</a>
 <a name="72"><span class="lineNum">      72 </span>            : </a>
-<a name="73"><span class="lineNum">      73 </span>            :         virtual const Size2&amp; getContentSize() const override;</a>
-<a name="74"><span class="lineNum">      74 </span>            : </a>
-<a name="75"><span class="lineNum">      75 </span>            :         virtual void setClipContent(bool);</a>
-<a name="76"><span class="lineNum">      76 </span>            :         virtual bool isClipContent() const;</a>
+<a name="73"><span class="lineNum">      73 </span>            :         virtual void setFrameConstraints(const core::FrameContraints &amp;);</a>
+<a name="74"><span class="lineNum">      74 </span><span class="lineCov">       4650 :         const core::FrameContraints &amp; getFrameConstraints() const { return _constraints; }</span></a>
+<a name="75"><span class="lineNum">      75 </span>            : </a>
+<a name="76"><span class="lineNum">      76 </span>            :         virtual const Size2&amp; getContentSize() const override;</a>
 <a name="77"><span class="lineNum">      77 </span>            : </a>
-<a name="78"><span class="lineNum">      78 </span>            : protected:</a>
-<a name="79"><span class="lineNum">      79 </span>            :         using Node::init;</a>
-<a name="80"><span class="lineNum">      80 </span>            :         using Node::addChild; // запрет добавлять ноды напрямую на сцену</a>
-<a name="81"><span class="lineNum">      81 </span>            : </a>
-<a name="82"><span class="lineNum">      82 </span>            :         virtual Rc&lt;Queue&gt; makeQueue(Queue::Builder &amp;&amp;);</a>
-<a name="83"><span class="lineNum">      83 </span>            : </a>
-<a name="84"><span class="lineNum">      84 </span>            :         virtual void updateContentNode(SceneContent *);</a>
-<a name="85"><span class="lineNum">      85 </span>            : </a>
-<a name="86"><span class="lineNum">      86 </span>            :         Director *_director = nullptr;</a>
-<a name="87"><span class="lineNum">      87 </span>            :         SceneContent *_content = nullptr;</a>
+<a name="78"><span class="lineNum">      78 </span>            :         virtual void setClipContent(bool);</a>
+<a name="79"><span class="lineNum">      79 </span>            :         virtual bool isClipContent() const;</a>
+<a name="80"><span class="lineNum">      80 </span>            : </a>
+<a name="81"><span class="lineNum">      81 </span>            : protected:</a>
+<a name="82"><span class="lineNum">      82 </span>            :         using Node::init;</a>
+<a name="83"><span class="lineNum">      83 </span>            :         using Node::addChild; // запрет добавлять ноды напрямую на сцену</a>
+<a name="84"><span class="lineNum">      84 </span>            : </a>
+<a name="85"><span class="lineNum">      85 </span>            :         virtual Rc&lt;Queue&gt; makeQueue(Queue::Builder &amp;&amp;);</a>
+<a name="86"><span class="lineNum">      86 </span>            : </a>
+<a name="87"><span class="lineNum">      87 </span>            :         virtual void updateContentNode(SceneContent *);</a>
 <a name="88"><span class="lineNum">      88 </span>            : </a>
-<a name="89"><span class="lineNum">      89 </span>            :         Rc&lt;Queue&gt; _queue;</a>
-<a name="90"><span class="lineNum">      90 </span>            : </a>
-<a name="91"><span class="lineNum">      91 </span>            :         core::FrameContraints _constraints;</a>
-<a name="92"><span class="lineNum">      92 </span>            : };</a>
-<a name="93"><span class="lineNum">      93 </span>            : </a>
-<a name="94"><span class="lineNum">      94 </span>            : }</a>
-<a name="95"><span class="lineNum">      95 </span>            : </a>
-<a name="96"><span class="lineNum">      96 </span>            : #endif /* XENOLITH_SCENE_NODES_XLSCENE_H_ */</a>
+<a name="89"><span class="lineNum">      89 </span>            : #if SP_REF_DEBUG</a>
+<a name="90"><span class="lineNum">      90 </span>            :         virtual bool isRetainTrackerEnabled() const override {</a>
+<a name="91"><span class="lineNum">      91 </span>            :                 return true;</a>
+<a name="92"><span class="lineNum">      92 </span>            :         }</a>
+<a name="93"><span class="lineNum">      93 </span>            : #endif</a>
+<a name="94"><span class="lineNum">      94 </span>            : </a>
+<a name="95"><span class="lineNum">      95 </span>            :         Director *_director = nullptr;</a>
+<a name="96"><span class="lineNum">      96 </span>            :         SceneContent *_content = nullptr;</a>
+<a name="97"><span class="lineNum">      97 </span>            : </a>
+<a name="98"><span class="lineNum">      98 </span>            :         Rc&lt;Queue&gt; _queue;</a>
+<a name="99"><span class="lineNum">      99 </span>            : </a>
+<a name="100"><span class="lineNum">     100 </span>            :         core::FrameContraints _constraints;</a>
+<a name="101"><span class="lineNum">     101 </span>            : };</a>
+<a name="102"><span class="lineNum">     102 </span>            : </a>
+<a name="103"><span class="lineNum">     103 </span>            : }</a>
+<a name="104"><span class="lineNum">     104 </span>            : </a>
+<a name="105"><span class="lineNum">     105 </span>            : #endif /* XENOLITH_SCENE_NODES_XLSCENE_H_ */</a>
 </pre>
       </td>
     </tr>

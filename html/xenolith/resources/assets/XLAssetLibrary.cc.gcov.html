@@ -31,18 +31,18 @@
             <td class="headerValue">coverage.info</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntry">87</td>
+            <td class="headerCovTableEntry">172</td>
             <td class="headerCovTableEntry">307</td>
-            <td class="headerCovTableEntryLo">28.3 %</td>
+            <td class="headerCovTableEntryLo">56.0 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2023-12-03 02:10:58</td>
+            <td class="headerValue">2024-05-12 00:16:13</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntry">14</td>
+            <td class="headerCovTableEntry">34</td>
             <td class="headerCovTableEntry">46</td>
-            <td class="headerCovTableEntryLo">30.4 %</td>
+            <td class="headerCovTableEntryLo">73.9 %</td>
           </tr>
           <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
         </table>
@@ -88,20 +88,20 @@
 <a name="26"><span class="lineNum">      26 </span>            : #include &quot;XLStorageComponent.h&quot;</a>
 <a name="27"><span class="lineNum">      27 </span>            : #include &quot;XLStorageServer.h&quot;</a>
 <a name="28"><span class="lineNum">      28 </span>            : #include &quot;XLNetworkController.h&quot;</a>
-<a name="29"><span class="lineNum">      29 </span>            : #include &quot;STSqlHandle.h&quot;</a>
+<a name="29"><span class="lineNum">      29 </span>            : #include &quot;SPSqlHandle.h&quot;</a>
 <a name="30"><span class="lineNum">      30 </span>            : </a>
-<a name="31"><span class="lineNum">      31 </span>            : namespace stappler::xenolith::storage {</a>
+<a name="31"><span class="lineNum">      31 </span>            : namespace STAPPLER_VERSIONIZED stappler::xenolith::storage {</a>
 <a name="32"><span class="lineNum">      32 </span>            : </a>
 <a name="33"><span class="lineNum">      33 </span>            : class AssetComponent : public Component {</a>
 <a name="34"><span class="lineNum">      34 </span>            : public:</a>
 <a name="35"><span class="lineNum">      35 </span>            :         static constexpr auto DtKey = &quot;XL.AssetLibrary.dt&quot;;</a>
 <a name="36"><span class="lineNum">      36 </span>            : </a>
-<a name="37"><span class="lineNum">      37 </span><span class="lineCov">          1 :         virtual ~AssetComponent() { }</span></a>
+<a name="37"><span class="lineNum">      37 </span><span class="lineCov">         21 :         virtual ~AssetComponent() { }</span></a>
 <a name="38"><span class="lineNum">      38 </span>            : </a>
 <a name="39"><span class="lineNum">      39 </span>            :         AssetComponent(AssetComponentContainer *, ComponentLoader &amp;, StringView name);</a>
 <a name="40"><span class="lineNum">      40 </span>            : </a>
-<a name="41"><span class="lineNum">      41 </span><span class="lineNoCov">          0 :         const db::Scheme &amp;getAssets() const { return _assets; }</span></a>
-<a name="42"><span class="lineNum">      42 </span><span class="lineNoCov">          0 :         const db::Scheme &amp;getVersions() const { return _versions; }</span></a>
+<a name="41"><span class="lineNum">      41 </span><span class="lineCov">         42 :         const db::Scheme &amp;getAssets() const { return _assets; }</span></a>
+<a name="42"><span class="lineNum">      42 </span><span class="lineCov">         42 :         const db::Scheme &amp;getVersions() const { return _versions; }</span></a>
 <a name="43"><span class="lineNum">      43 </span>            : </a>
 <a name="44"><span class="lineNum">      44 </span>            :         virtual void handleChildInit(const Server &amp;, const db::Transaction &amp;) override;</a>
 <a name="45"><span class="lineNum">      45 </span>            : </a>
@@ -120,62 +120,62 @@
 <a name="58"><span class="lineNum">      58 </span>            : </a>
 <a name="59"><span class="lineNum">      59 </span>            : XL_DECLARE_EVENT_CLASS(AssetLibrary, onLoaded)</a>
 <a name="60"><span class="lineNum">      60 </span>            : </a>
-<a name="61"><span class="lineNum">      61 </span><span class="lineCov">          1 : bool AssetComponentContainer::init(StringView name, AssetLibrary *l) {</span></a>
-<a name="62"><span class="lineNum">      62 </span><span class="lineCov">          1 :         if (!ComponentContainer::init(name)) {</span></a>
+<a name="61"><span class="lineNum">      61 </span><span class="lineCov">         21 : bool AssetComponentContainer::init(StringView name, AssetLibrary *l) {</span></a>
+<a name="62"><span class="lineNum">      62 </span><span class="lineCov">         21 :         if (!ComponentContainer::init(name)) {</span></a>
 <a name="63"><span class="lineNum">      63 </span><span class="lineNoCov">          0 :                 return false;</span></a>
 <a name="64"><span class="lineNum">      64 </span>            :         }</a>
 <a name="65"><span class="lineNum">      65 </span>            : </a>
-<a name="66"><span class="lineNum">      66 </span><span class="lineCov">          1 :         _library = l;</span></a>
-<a name="67"><span class="lineNum">      67 </span><span class="lineCov">          1 :         return true;</span></a>
+<a name="66"><span class="lineNum">      66 </span><span class="lineCov">         21 :         _library = l;</span></a>
+<a name="67"><span class="lineNum">      67 </span><span class="lineCov">         21 :         return true;</span></a>
 <a name="68"><span class="lineNum">      68 </span>            : }</a>
 <a name="69"><span class="lineNum">      69 </span>            : </a>
-<a name="70"><span class="lineNum">      70 </span><span class="lineCov">          1 : void AssetComponentContainer::handleStorageInit(storage::ComponentLoader &amp;loader) {</span></a>
-<a name="71"><span class="lineNum">      71 </span><span class="lineCov">          1 :         ComponentContainer::handleStorageInit(loader);</span></a>
-<a name="72"><span class="lineNum">      72 </span><span class="lineCov">          1 :         _component = new AssetComponent(this, loader, &quot;AssetComponent&quot;);</span></a>
-<a name="73"><span class="lineNum">      73 </span><span class="lineCov">          1 : }</span></a>
+<a name="70"><span class="lineNum">      70 </span><span class="lineCov">         21 : void AssetComponentContainer::handleStorageInit(storage::ComponentLoader &amp;loader) {</span></a>
+<a name="71"><span class="lineNum">      71 </span><span class="lineCov">         21 :         ComponentContainer::handleStorageInit(loader);</span></a>
+<a name="72"><span class="lineNum">      72 </span><span class="lineCov">         21 :         _component = new AssetComponent(this, loader, &quot;AssetComponent&quot;);</span></a>
+<a name="73"><span class="lineNum">      73 </span><span class="lineCov">         21 : }</span></a>
 <a name="74"><span class="lineNum">      74 </span>            : </a>
-<a name="75"><span class="lineNum">      75 </span><span class="lineCov">          1 : void AssetComponentContainer::handleStorageDisposed(const db::Transaction &amp;t) {</span></a>
-<a name="76"><span class="lineNum">      76 </span><span class="lineCov">          1 :         _component = nullptr;</span></a>
-<a name="77"><span class="lineNum">      77 </span><span class="lineCov">          1 :         ComponentContainer::handleStorageDisposed(t);</span></a>
-<a name="78"><span class="lineNum">      78 </span><span class="lineCov">          1 : }</span></a>
+<a name="75"><span class="lineNum">      75 </span><span class="lineCov">         21 : void AssetComponentContainer::handleStorageDisposed(const db::Transaction &amp;t) {</span></a>
+<a name="76"><span class="lineNum">      76 </span><span class="lineCov">         21 :         _component = nullptr;</span></a>
+<a name="77"><span class="lineNum">      77 </span><span class="lineCov">         21 :         ComponentContainer::handleStorageDisposed(t);</span></a>
+<a name="78"><span class="lineNum">      78 </span><span class="lineCov">         21 : }</span></a>
 <a name="79"><span class="lineNum">      79 </span>            : </a>
 <a name="80"><span class="lineNum">      80 </span>            : </a>
-<a name="81"><span class="lineNum">      81 </span><span class="lineCov">          1 : AssetComponent::AssetComponent(AssetComponentContainer *c, ComponentLoader &amp;loader, StringView name)</span></a>
-<a name="82"><span class="lineNum">      82 </span><span class="lineCov">          1 : : Component(loader, name), _container(c) {</span></a>
+<a name="81"><span class="lineNum">      81 </span><span class="lineCov">         21 : AssetComponent::AssetComponent(AssetComponentContainer *c, ComponentLoader &amp;loader, StringView name)</span></a>
+<a name="82"><span class="lineNum">      82 </span><span class="lineCov">         21 : : Component(loader, name), _container(c) {</span></a>
 <a name="83"><span class="lineNum">      83 </span>            :         using namespace db;</a>
 <a name="84"><span class="lineNum">      84 </span>            : </a>
-<a name="85"><span class="lineNum">      85 </span><span class="lineCov">          1 :         loader.exportScheme(_assets.define({</span></a>
-<a name="86"><span class="lineNum">      86 </span><span class="lineCov">          1 :                 Field::Integer(&quot;mtime&quot;, Flags::AutoMTime),</span></a>
-<a name="87"><span class="lineNum">      87 </span><span class="lineCov">          2 :                 Field::Integer(&quot;touch&quot;, Flags::AutoCTime),</span></a>
-<a name="88"><span class="lineNum">      88 </span><span class="lineCov">          2 :                 Field::Integer(&quot;ttl&quot;),</span></a>
-<a name="89"><span class="lineNum">      89 </span><span class="lineCov">          2 :                 Field::Text(&quot;local&quot;),</span></a>
-<a name="90"><span class="lineNum">      90 </span><span class="lineCov">          2 :                 Field::Text(&quot;url&quot;, MaxLength(2_KiB), Transform::Url, Flags::Unique | Flags::Indexed),</span></a>
-<a name="91"><span class="lineNum">      91 </span><span class="lineCov">          2 :                 Field::Set(&quot;versions&quot;, _versions),</span></a>
-<a name="92"><span class="lineNum">      92 </span><span class="lineCov">          2 :                 Field::Boolean(&quot;download&quot;, db::Value(false), Flags::Indexed),</span></a>
-<a name="93"><span class="lineNum">      93 </span><span class="lineCov">          2 :                 Field::Data(&quot;data&quot;),</span></a>
+<a name="85"><span class="lineNum">      85 </span><span class="lineCov">         21 :         loader.exportScheme(_assets.define({</span></a>
+<a name="86"><span class="lineNum">      86 </span><span class="lineCov">         21 :                 Field::Integer(&quot;mtime&quot;, Flags::AutoMTime),</span></a>
+<a name="87"><span class="lineNum">      87 </span><span class="lineCov">         42 :                 Field::Integer(&quot;touch&quot;, Flags::AutoCTime),</span></a>
+<a name="88"><span class="lineNum">      88 </span><span class="lineCov">         42 :                 Field::Integer(&quot;ttl&quot;),</span></a>
+<a name="89"><span class="lineNum">      89 </span><span class="lineCov">         42 :                 Field::Text(&quot;local&quot;),</span></a>
+<a name="90"><span class="lineNum">      90 </span><span class="lineCov">         42 :                 Field::Text(&quot;url&quot;, MaxLength(2_KiB), Transform::Url, Flags::Unique | Flags::Indexed),</span></a>
+<a name="91"><span class="lineNum">      91 </span><span class="lineCov">         42 :                 Field::Set(&quot;versions&quot;, _versions),</span></a>
+<a name="92"><span class="lineNum">      92 </span><span class="lineCov">         42 :                 Field::Boolean(&quot;download&quot;, db::Value(false), Flags::Indexed),</span></a>
+<a name="93"><span class="lineNum">      93 </span><span class="lineCov">         42 :                 Field::Data(&quot;data&quot;),</span></a>
 <a name="94"><span class="lineNum">      94 </span>            :         }));</a>
 <a name="95"><span class="lineNum">      95 </span>            : </a>
-<a name="96"><span class="lineNum">      96 </span><span class="lineCov">          1 :         loader.exportScheme(_versions.define({</span></a>
-<a name="97"><span class="lineNum">      97 </span><span class="lineCov">          1 :                 Field::Text(&quot;etag&quot;, MaxLength(2_KiB)),</span></a>
-<a name="98"><span class="lineNum">      98 </span><span class="lineCov">          2 :                 Field::Integer(&quot;ctime&quot;, Flags::AutoCTime),</span></a>
-<a name="99"><span class="lineNum">      99 </span><span class="lineCov">          2 :                 Field::Integer(&quot;mtime&quot;, Flags::AutoMTime),</span></a>
-<a name="100"><span class="lineNum">     100 </span><span class="lineCov">          2 :                 Field::Integer(&quot;size&quot;),</span></a>
-<a name="101"><span class="lineNum">     101 </span><span class="lineCov">          2 :                 Field::Text(&quot;type&quot;),</span></a>
-<a name="102"><span class="lineNum">     102 </span><span class="lineCov">          2 :                 Field::Boolean(&quot;complete&quot;, db::Value(false)),</span></a>
-<a name="103"><span class="lineNum">     103 </span><span class="lineCov">          2 :                 Field::Object(&quot;asset&quot;, _assets, RemovePolicy::Cascade),</span></a>
+<a name="96"><span class="lineNum">      96 </span><span class="lineCov">         21 :         loader.exportScheme(_versions.define({</span></a>
+<a name="97"><span class="lineNum">      97 </span><span class="lineCov">         21 :                 Field::Text(&quot;etag&quot;, MaxLength(2_KiB)),</span></a>
+<a name="98"><span class="lineNum">      98 </span><span class="lineCov">         42 :                 Field::Integer(&quot;ctime&quot;, Flags::AutoCTime),</span></a>
+<a name="99"><span class="lineNum">      99 </span><span class="lineCov">         42 :                 Field::Integer(&quot;mtime&quot;, Flags::AutoMTime),</span></a>
+<a name="100"><span class="lineNum">     100 </span><span class="lineCov">         42 :                 Field::Integer(&quot;size&quot;),</span></a>
+<a name="101"><span class="lineNum">     101 </span><span class="lineCov">         42 :                 Field::Text(&quot;type&quot;),</span></a>
+<a name="102"><span class="lineNum">     102 </span><span class="lineCov">         42 :                 Field::Boolean(&quot;complete&quot;, db::Value(false)),</span></a>
+<a name="103"><span class="lineNum">     103 </span><span class="lineCov">         42 :                 Field::Object(&quot;asset&quot;, _assets, RemovePolicy::Cascade),</span></a>
 <a name="104"><span class="lineNum">     104 </span>            :         }));</a>
-<a name="105"><span class="lineNum">     105 </span><span class="lineCov">          1 : }</span></a>
+<a name="105"><span class="lineNum">     105 </span><span class="lineCov">         21 : }</span></a>
 <a name="106"><span class="lineNum">     106 </span>            : </a>
-<a name="107"><span class="lineNum">     107 </span><span class="lineCov">          1 : void AssetComponent::handleChildInit(const Server &amp;serv, const db::Transaction &amp;t) {</span></a>
-<a name="108"><span class="lineNum">     108 </span><span class="lineCov">          1 :         Component::handleChildInit(serv, t);</span></a>
+<a name="107"><span class="lineNum">     107 </span><span class="lineCov">         21 : void AssetComponent::handleChildInit(const Server &amp;serv, const db::Transaction &amp;t) {</span></a>
+<a name="108"><span class="lineNum">     108 </span><span class="lineCov">         21 :         Component::handleChildInit(serv, t);</span></a>
 <a name="109"><span class="lineNum">     109 </span>            : </a>
-<a name="110"><span class="lineNum">     110 </span><span class="lineCov">          1 :         filesystem::mkdir(filesystem::cachesPath&lt;Interface&gt;(&quot;assets&quot;));</span></a>
+<a name="110"><span class="lineNum">     110 </span><span class="lineCov">         21 :         filesystem::mkdir(filesystem::cachesPath&lt;Interface&gt;(&quot;assets&quot;));</span></a>
 <a name="111"><span class="lineNum">     111 </span>            : </a>
-<a name="112"><span class="lineNum">     112 </span><span class="lineCov">          1 :         Time time = Time::now();</span></a>
-<a name="113"><span class="lineNum">     113 </span><span class="lineCov">          1 :         Vector&lt;Rc&lt;Asset&gt;&gt; assetsVec;</span></a>
+<a name="112"><span class="lineNum">     112 </span><span class="lineCov">         21 :         Time time = Time::now();</span></a>
+<a name="113"><span class="lineNum">     113 </span><span class="lineCov">         21 :         Vector&lt;Rc&lt;Asset&gt;&gt; assetsVec;</span></a>
 <a name="114"><span class="lineNum">     114 </span>            : </a>
-<a name="115"><span class="lineNum">     115 </span><span class="lineCov">          1 :         auto assets = _assets.select(t, db::Query().select(&quot;download&quot;, db::Value(true)));</span></a>
-<a name="116"><span class="lineNum">     116 </span><span class="lineCov">          1 :         for (auto &amp;it : assets.asArray()) {</span></a>
+<a name="115"><span class="lineNum">     115 </span><span class="lineCov">         21 :         auto assets = _assets.select(t, db::Query().select(&quot;download&quot;, db::Value(true)));</span></a>
+<a name="116"><span class="lineNum">     116 </span><span class="lineCov">         21 :         for (auto &amp;it : assets.asArray()) {</span></a>
 <a name="117"><span class="lineNum">     117 </span><span class="lineNoCov">          0 :                 auto versions = _versions.select(t, db::Query().select(&quot;asset&quot;, it.getValue(&quot;__oid&quot;)));</span></a>
 <a name="118"><span class="lineNum">     118 </span><span class="lineNoCov">          0 :                 it.setValue(move(versions), &quot;versions&quot;);</span></a>
 <a name="119"><span class="lineNum">     119 </span>            : </a>
@@ -187,46 +187,46 @@
 <a name="125"><span class="lineNum">     125 </span><span class="lineNoCov">          0 :                 }));</span></a>
 <a name="126"><span class="lineNum">     126 </span><span class="lineNoCov">          0 :         }</span></a>
 <a name="127"><span class="lineNum">     127 </span>            : </a>
-<a name="128"><span class="lineNum">     128 </span><span class="lineCov">          1 :         cleanup(t);</span></a>
+<a name="128"><span class="lineNum">     128 </span><span class="lineCov">         21 :         cleanup(t);</span></a>
 <a name="129"><span class="lineNum">     129 </span>            : </a>
-<a name="130"><span class="lineNum">     130 </span><span class="lineCov">          2 :         _container-&gt;getLibrary()-&gt;getApplication()-&gt;performOnMainThread([assetsVec = move(assetsVec), lib = _container-&gt;getLibrary()] () mutable {</span></a>
-<a name="131"><span class="lineNum">     131 </span><span class="lineCov">          1 :                 lib-&gt;handleLibraryLoaded(move(assetsVec));</span></a>
-<a name="132"><span class="lineNum">     132 </span><span class="lineCov">          1 :         }, _container-&gt;getLibrary());</span></a>
-<a name="133"><span class="lineNum">     133 </span><span class="lineCov">          1 : }</span></a>
+<a name="130"><span class="lineNum">     130 </span><span class="lineCov">         42 :         _container-&gt;getLibrary()-&gt;getApplication()-&gt;performOnMainThread([assetsVec = move(assetsVec), lib = _container-&gt;getLibrary()] () mutable {</span></a>
+<a name="131"><span class="lineNum">     131 </span><span class="lineCov">         21 :                 lib-&gt;handleLibraryLoaded(move(assetsVec));</span></a>
+<a name="132"><span class="lineNum">     132 </span><span class="lineCov">         21 :         }, _container-&gt;getLibrary());</span></a>
+<a name="133"><span class="lineNum">     133 </span><span class="lineCov">         21 : }</span></a>
 <a name="134"><span class="lineNum">     134 </span>            : </a>
-<a name="135"><span class="lineNum">     135 </span><span class="lineCov">          1 : void AssetComponent::cleanup(const db::Transaction &amp;t) {</span></a>
-<a name="136"><span class="lineNum">     136 </span><span class="lineCov">          1 :         Time time = Time::now();</span></a>
-<a name="137"><span class="lineNum">     137 </span><span class="lineCov">          1 :         if (auto iface = dynamic_cast&lt;db::sql::SqlHandle *&gt;(t.getAdapter().interface())) {</span></a>
-<a name="138"><span class="lineNum">     138 </span><span class="lineCov">          1 :                 iface-&gt;performSimpleSelect(toString(&quot;SELECT __oid, url FROM &quot;, _assets.getName(),</span></a>
+<a name="135"><span class="lineNum">     135 </span><span class="lineCov">         21 : void AssetComponent::cleanup(const db::Transaction &amp;t) {</span></a>
+<a name="136"><span class="lineNum">     136 </span><span class="lineCov">         21 :         Time time = Time::now();</span></a>
+<a name="137"><span class="lineNum">     137 </span><span class="lineCov">         21 :         if (auto iface = dynamic_cast&lt;db::sql::SqlHandle *&gt;(t.getAdapter().getBackendInterface())) {</span></a>
+<a name="138"><span class="lineNum">     138 </span><span class="lineCov">         63 :                 iface-&gt;performSimpleSelect(toString(&quot;SELECT __oid, url FROM &quot;, _assets.getName(),</span></a>
 <a name="139"><span class="lineNum">     139 </span>            :                                 &quot; WHERE download == 0 AND ttl != 0 AND (touch + ttl) &lt; &quot;,</a>
-<a name="140"><span class="lineNum">     140 </span><span class="lineCov">          1 :                                 time, &quot;;&quot;), [&amp;] (db::Result &amp;res) {</span></a>
-<a name="141"><span class="lineNum">     141 </span><span class="lineCov">          1 :                         for (auto it : res) {</span></a>
+<a name="140"><span class="lineNum">     140 </span><span class="lineCov">         42 :                                 time.toMicros(), &quot;;&quot;), [&amp;] (db::Result &amp;res) {</span></a>
+<a name="141"><span class="lineNum">     141 </span><span class="lineCov">         21 :                         for (auto it : res) {</span></a>
 <a name="142"><span class="lineNum">     142 </span><span class="lineNoCov">          0 :                                 auto path = AssetLibrary::getAssetPath(it.toInteger(0));</span></a>
 <a name="143"><span class="lineNum">     143 </span><span class="lineNoCov">          0 :                                 filesystem::remove(path, true, true);</span></a>
 <a name="144"><span class="lineNum">     144 </span><span class="lineNoCov">          0 :                         }</span></a>
-<a name="145"><span class="lineNum">     145 </span><span class="lineCov">          1 :                 });</span></a>
+<a name="145"><span class="lineNum">     145 </span><span class="lineCov">         21 :                 });</span></a>
 <a name="146"><span class="lineNum">     146 </span>            : </a>
-<a name="147"><span class="lineNum">     147 </span><span class="lineCov">          3 :                 iface-&gt;performSimpleQuery(toString(&quot;DELETE FROM &quot;, _assets.getName(),</span></a>
+<a name="147"><span class="lineNum">     147 </span><span class="lineCov">         63 :                 iface-&gt;performSimpleQuery(toString(&quot;DELETE FROM &quot;, _assets.getName(),</span></a>
 <a name="148"><span class="lineNum">     148 </span>            :                                 &quot; WHERE download == 0 AND ttl != 0 AND touch + ttl * 2 &lt; &quot;,</a>
-<a name="149"><span class="lineNum">     149 </span><span class="lineCov">          2 :                                 + time, &quot;;&quot;));</span></a>
+<a name="149"><span class="lineNum">     149 </span><span class="lineCov">         42 :                                 time.toMicros(), &quot;;&quot;));</span></a>
 <a name="150"><span class="lineNum">     150 </span>            :         }</a>
-<a name="151"><span class="lineNum">     151 </span><span class="lineCov">          1 : }</span></a>
+<a name="151"><span class="lineNum">     151 </span><span class="lineCov">         21 : }</span></a>
 <a name="152"><span class="lineNum">     152 </span>            : </a>
-<a name="153"><span class="lineNum">     153 </span><span class="lineNoCov">          0 : db::Value AssetComponent::getAsset(const db::Transaction &amp;t, StringView url) const {</span></a>
-<a name="154"><span class="lineNum">     154 </span><span class="lineNoCov">          0 :         if (auto v = _assets.select(t, db::Query().select(&quot;url&quot;, db::Value(url))).getValue(0)) {</span></a>
+<a name="153"><span class="lineNum">     153 </span><span class="lineCov">         21 : db::Value AssetComponent::getAsset(const db::Transaction &amp;t, StringView url) const {</span></a>
+<a name="154"><span class="lineNum">     154 </span><span class="lineCov">         21 :         if (auto v = _assets.select(t, db::Query().select(&quot;url&quot;, db::Value(url))).getValue(0)) {</span></a>
 <a name="155"><span class="lineNum">     155 </span><span class="lineNoCov">          0 :                 if (auto versions = _versions.select(t, db::Query().select(&quot;asset&quot;, v.getValue(&quot;__oid&quot;)))) {</span></a>
 <a name="156"><span class="lineNum">     156 </span><span class="lineNoCov">          0 :                         v.setValue(move(versions), &quot;versions&quot;);</span></a>
 <a name="157"><span class="lineNum">     157 </span><span class="lineNoCov">          0 :                 }</span></a>
 <a name="158"><span class="lineNum">     158 </span><span class="lineNoCov">          0 :                 return db::Value(move(v));</span></a>
-<a name="159"><span class="lineNum">     159 </span><span class="lineNoCov">          0 :         }</span></a>
-<a name="160"><span class="lineNum">     160 </span><span class="lineNoCov">          0 :         return db::Value();</span></a>
+<a name="159"><span class="lineNum">     159 </span><span class="lineCov">         21 :         }</span></a>
+<a name="160"><span class="lineNum">     160 </span><span class="lineCov">         21 :         return db::Value();</span></a>
 <a name="161"><span class="lineNum">     161 </span>            : }</a>
 <a name="162"><span class="lineNum">     162 </span>            : </a>
-<a name="163"><span class="lineNum">     163 </span><span class="lineNoCov">          0 : db::Value AssetComponent::createAsset(const db::Transaction &amp;t, StringView url, TimeInterval ttl) const {</span></a>
-<a name="164"><span class="lineNum">     164 </span><span class="lineNoCov">          0 :         return _assets.create(t, db::Value({</span></a>
-<a name="165"><span class="lineNum">     165 </span><span class="lineNoCov">          0 :                 pair(&quot;url&quot;, db::Value(url)),</span></a>
-<a name="166"><span class="lineNum">     166 </span><span class="lineNoCov">          0 :                 pair(&quot;ttl&quot;, db::Value(ttl)),</span></a>
-<a name="167"><span class="lineNum">     167 </span><span class="lineNoCov">          0 :         }));</span></a>
+<a name="163"><span class="lineNum">     163 </span><span class="lineCov">         21 : db::Value AssetComponent::createAsset(const db::Transaction &amp;t, StringView url, TimeInterval ttl) const {</span></a>
+<a name="164"><span class="lineNum">     164 </span><span class="lineCov">        126 :         return _assets.create(t, db::Value({</span></a>
+<a name="165"><span class="lineNum">     165 </span><span class="lineCov">         42 :                 pair(&quot;url&quot;, db::Value(url)),</span></a>
+<a name="166"><span class="lineNum">     166 </span><span class="lineCov">         42 :                 pair(&quot;ttl&quot;, db::Value(ttl)),</span></a>
+<a name="167"><span class="lineNum">     167 </span><span class="lineCov">        126 :         }));</span></a>
 <a name="168"><span class="lineNum">     168 </span>            : }</a>
 <a name="169"><span class="lineNum">     169 </span>            : </a>
 <a name="170"><span class="lineNum">     170 </span><span class="lineNoCov">          0 : void AssetComponent::updateAssetTtl(const db::Transaction &amp;t, int64_t id, TimeInterval ttl) const {</span></a>
@@ -235,14 +235,14 @@
 <a name="173"><span class="lineNum">     173 </span><span class="lineNoCov">          0 :         }), db::UpdateFlags::NoReturn);</span></a>
 <a name="174"><span class="lineNum">     174 </span><span class="lineNoCov">          0 : }</span></a>
 <a name="175"><span class="lineNum">     175 </span>            : </a>
-<a name="176"><span class="lineNum">     176 </span><span class="lineNoCov">          0 : String AssetLibrary::getAssetPath(int64_t id) {</span></a>
-<a name="177"><span class="lineNum">     177 </span><span class="lineNoCov">          0 :         return toString(filesystem::cachesPath&lt;Interface&gt;(&quot;assets&quot;), &quot;/&quot;, id);</span></a>
+<a name="176"><span class="lineNum">     176 </span><span class="lineCov">         21 : String AssetLibrary::getAssetPath(int64_t id) {</span></a>
+<a name="177"><span class="lineNum">     177 </span><span class="lineCov">         42 :         return toString(filesystem::cachesPath&lt;Interface&gt;(&quot;assets&quot;), &quot;/&quot;, id);</span></a>
 <a name="178"><span class="lineNum">     178 </span>            : }</a>
 <a name="179"><span class="lineNum">     179 </span>            : </a>
-<a name="180"><span class="lineNum">     180 </span><span class="lineNoCov">          0 : String AssetLibrary::getAssetUrl(StringView url) {</span></a>
-<a name="181"><span class="lineNum">     181 </span><span class="lineNoCov">          0 :         if (url.starts_with(&quot;%&quot;) || url.starts_with(&quot;app://&quot;) || url.starts_with(&quot;http://&quot;) || url.starts_with(&quot;https://&quot;)</span></a>
-<a name="182"><span class="lineNum">     182 </span><span class="lineNoCov">          0 :                          || url.starts_with(&quot;ftp://&quot;) || url.starts_with(&quot;ftps://&quot;)) {</span></a>
-<a name="183"><span class="lineNum">     183 </span><span class="lineNoCov">          0 :                 return url.str&lt;Interface&gt;();</span></a>
+<a name="180"><span class="lineNum">     180 </span><span class="lineCov">         42 : String AssetLibrary::getAssetUrl(StringView url) {</span></a>
+<a name="181"><span class="lineNum">     181 </span><span class="lineCov">         84 :         if (url.starts_with(&quot;%&quot;) || url.starts_with(&quot;app://&quot;) || url.starts_with(&quot;http://&quot;) || url.starts_with(&quot;https://&quot;)</span></a>
+<a name="182"><span class="lineNum">     182 </span><span class="lineCov">         84 :                          || url.starts_with(&quot;ftp://&quot;) || url.starts_with(&quot;ftps://&quot;)) {</span></a>
+<a name="183"><span class="lineNum">     183 </span><span class="lineCov">         42 :                 return url.str&lt;Interface&gt;();</span></a>
 <a name="184"><span class="lineNum">     184 </span><span class="lineNoCov">          0 :         } else if (url.starts_with(&quot;/&quot;)) {</span></a>
 <a name="185"><span class="lineNum">     185 </span><span class="lineNoCov">          0 :                 return filepath::canonical&lt;Interface&gt;(url);</span></a>
 <a name="186"><span class="lineNum">     186 </span>            :         } else {</a>
@@ -250,38 +250,38 @@
 <a name="188"><span class="lineNum">     188 </span>            :         }</a>
 <a name="189"><span class="lineNum">     189 </span>            : }</a>
 <a name="190"><span class="lineNum">     190 </span>            : </a>
-<a name="191"><span class="lineNum">     191 </span><span class="lineNoCov">          0 : AssetLibrary::~AssetLibrary() {</span></a>
-<a name="192"><span class="lineNum">     192 </span><span class="lineNoCov">          0 :         _server = nullptr;</span></a>
-<a name="193"><span class="lineNum">     193 </span><span class="lineNoCov">          0 : }</span></a>
+<a name="191"><span class="lineNum">     191 </span><span class="lineCov">         42 : AssetLibrary::~AssetLibrary() {</span></a>
+<a name="192"><span class="lineNum">     192 </span><span class="lineCov">         21 :         _server = nullptr;</span></a>
+<a name="193"><span class="lineNum">     193 </span><span class="lineCov">         42 : }</span></a>
 <a name="194"><span class="lineNum">     194 </span>            : </a>
-<a name="195"><span class="lineNum">     195 </span><span class="lineCov">          1 : bool AssetLibrary::init(Application *app, network::Controller *c, const Value &amp;dbParams) {</span></a>
-<a name="196"><span class="lineNum">     196 </span><span class="lineCov">          1 :         _application = app; // always before server initialization</span></a>
-<a name="197"><span class="lineNum">     197 </span><span class="lineCov">          1 :         _controller = c;</span></a>
-<a name="198"><span class="lineNum">     198 </span><span class="lineCov">          1 :         _container = Rc&lt;AssetComponentContainer&gt;::create(&quot;AssetLibrary&quot;, this);</span></a>
-<a name="199"><span class="lineNum">     199 </span><span class="lineCov">          1 :         _server = Rc&lt;Server&gt;::create(app, dbParams);</span></a>
-<a name="200"><span class="lineNum">     200 </span><span class="lineCov">          1 :         _server-&gt;addComponentContainer(_container);</span></a>
-<a name="201"><span class="lineNum">     201 </span><span class="lineCov">          1 :         return true;</span></a>
+<a name="195"><span class="lineNum">     195 </span><span class="lineCov">         21 : bool AssetLibrary::init(Application *app, network::Controller *c, const Value &amp;dbParams) {</span></a>
+<a name="196"><span class="lineNum">     196 </span><span class="lineCov">         21 :         _application = app; // always before server initialization</span></a>
+<a name="197"><span class="lineNum">     197 </span><span class="lineCov">         21 :         _controller = c;</span></a>
+<a name="198"><span class="lineNum">     198 </span><span class="lineCov">         21 :         _container = Rc&lt;AssetComponentContainer&gt;::create(&quot;AssetLibrary&quot;, this);</span></a>
+<a name="199"><span class="lineNum">     199 </span><span class="lineCov">         21 :         _server = Rc&lt;Server&gt;::create(app, dbParams);</span></a>
+<a name="200"><span class="lineNum">     200 </span><span class="lineCov">         21 :         _server-&gt;addComponentContainer(_container);</span></a>
+<a name="201"><span class="lineNum">     201 </span><span class="lineCov">         21 :         return true;</span></a>
 <a name="202"><span class="lineNum">     202 </span>            : }</a>
 <a name="203"><span class="lineNum">     203 </span>            : </a>
-<a name="204"><span class="lineNum">     204 </span><span class="lineCov">          1 : void AssetLibrary::initialize(Application *) {</span></a>
+<a name="204"><span class="lineNum">     204 </span><span class="lineCov">         21 : void AssetLibrary::initialize(Application *) {</span></a>
 <a name="205"><span class="lineNum">     205 </span>            : </a>
-<a name="206"><span class="lineNum">     206 </span><span class="lineCov">          1 : }</span></a>
+<a name="206"><span class="lineNum">     206 </span><span class="lineCov">         21 : }</span></a>
 <a name="207"><span class="lineNum">     207 </span>            : </a>
-<a name="208"><span class="lineNum">     208 </span><span class="lineCov">          1 : void AssetLibrary::invalidate(Application *app) {</span></a>
-<a name="209"><span class="lineNum">     209 </span><span class="lineCov">          1 :         UpdateTime t;</span></a>
-<a name="210"><span class="lineNum">     210 </span><span class="lineCov">          1 :         update(app, t);</span></a>
-<a name="211"><span class="lineNum">     211 </span><span class="lineCov">          1 :         _liveAssets.clear();</span></a>
-<a name="212"><span class="lineNum">     212 </span><span class="lineCov">          1 :         _assetsByUrl.clear();</span></a>
-<a name="213"><span class="lineNum">     213 </span><span class="lineCov">          1 :         _assetsById.clear();</span></a>
-<a name="214"><span class="lineNum">     214 </span><span class="lineCov">          1 :         _callbacks.clear();</span></a>
+<a name="208"><span class="lineNum">     208 </span><span class="lineCov">         21 : void AssetLibrary::invalidate(Application *app) {</span></a>
+<a name="209"><span class="lineNum">     209 </span><span class="lineCov">         21 :         UpdateTime t;</span></a>
+<a name="210"><span class="lineNum">     210 </span><span class="lineCov">         21 :         update(app, t);</span></a>
+<a name="211"><span class="lineNum">     211 </span><span class="lineCov">         21 :         _liveAssets.clear();</span></a>
+<a name="212"><span class="lineNum">     212 </span><span class="lineCov">         21 :         _assetsByUrl.clear();</span></a>
+<a name="213"><span class="lineNum">     213 </span><span class="lineCov">         21 :         _assetsById.clear();</span></a>
+<a name="214"><span class="lineNum">     214 </span><span class="lineCov">         21 :         _callbacks.clear();</span></a>
 <a name="215"><span class="lineNum">     215 </span>            : </a>
-<a name="216"><span class="lineNum">     216 </span><span class="lineCov">          1 :         _server-&gt;removeComponentContainer(_container);</span></a>
-<a name="217"><span class="lineNum">     217 </span><span class="lineCov">          1 :         _server = nullptr;</span></a>
-<a name="218"><span class="lineNum">     218 </span><span class="lineCov">          1 : }</span></a>
+<a name="216"><span class="lineNum">     216 </span><span class="lineCov">         21 :         _server-&gt;removeComponentContainer(_container);</span></a>
+<a name="217"><span class="lineNum">     217 </span><span class="lineCov">         21 :         _server = nullptr;</span></a>
+<a name="218"><span class="lineNum">     218 </span><span class="lineCov">         21 : }</span></a>
 <a name="219"><span class="lineNum">     219 </span>            : </a>
-<a name="220"><span class="lineNum">     220 </span><span class="lineCov">         36 : void AssetLibrary::update(Application *, const UpdateTime &amp;t) {</span></a>
-<a name="221"><span class="lineNum">     221 </span><span class="lineCov">         36 :         auto it = _liveAssets.begin();</span></a>
-<a name="222"><span class="lineNum">     222 </span><span class="lineCov">         36 :         while (it != _liveAssets.end()) {</span></a>
+<a name="220"><span class="lineNum">     220 </span><span class="lineCov">       3867 : void AssetLibrary::update(Application *, const UpdateTime &amp;t) {</span></a>
+<a name="221"><span class="lineNum">     221 </span><span class="lineCov">       3867 :         auto it = _liveAssets.begin();</span></a>
+<a name="222"><span class="lineNum">     222 </span><span class="lineCov">       3867 :         while (it != _liveAssets.end()) {</span></a>
 <a name="223"><span class="lineNum">     223 </span><span class="lineNoCov">          0 :                 if ((*it)-&gt;isStorageDirty()) {</span></a>
 <a name="224"><span class="lineNum">     224 </span><span class="lineNoCov">          0 :                         _server-&gt;perform([this, value = (*it)-&gt;encode(), id = (*it)-&gt;getId()] (const Server &amp;, const db::Transaction &amp;t) {</span></a>
 <a name="225"><span class="lineNum">     225 </span><span class="lineNoCov">          0 :                                 _container-&gt;getComponent()-&gt;getAssets().update(t, id, db::Value(value), db::UpdateFlags::NoReturn);</span></a>
@@ -295,31 +295,31 @@
 <a name="233"><span class="lineNum">     233 </span><span class="lineNoCov">          0 :                         ++ it;</span></a>
 <a name="234"><span class="lineNum">     234 </span>            :                 }</a>
 <a name="235"><span class="lineNum">     235 </span>            :         }</a>
-<a name="236"><span class="lineNum">     236 </span><span class="lineCov">         36 : }</span></a>
+<a name="236"><span class="lineNum">     236 </span><span class="lineCov">       3867 : }</span></a>
 <a name="237"><span class="lineNum">     237 </span>            : </a>
-<a name="238"><span class="lineNum">     238 </span><span class="lineNoCov">          0 : bool AssetLibrary::acquireAsset(StringView iurl, AssetCallback &amp;&amp;cb, TimeInterval ttl, Rc&lt;Ref&gt; &amp;&amp;ref) {</span></a>
-<a name="239"><span class="lineNum">     239 </span><span class="lineNoCov">          0 :         if (!_loaded) {</span></a>
-<a name="240"><span class="lineNum">     240 </span><span class="lineNoCov">          0 :                 _tmpRequests.push_back(AssetRequest(iurl, move(cb), ttl, move(ref)));</span></a>
-<a name="241"><span class="lineNum">     241 </span><span class="lineNoCov">          0 :                 return true;</span></a>
+<a name="238"><span class="lineNum">     238 </span><span class="lineCov">         42 : bool AssetLibrary::acquireAsset(StringView iurl, AssetCallback &amp;&amp;cb, TimeInterval ttl, Rc&lt;Ref&gt; &amp;&amp;ref) {</span></a>
+<a name="239"><span class="lineNum">     239 </span><span class="lineCov">         42 :         if (!_loaded) {</span></a>
+<a name="240"><span class="lineNum">     240 </span><span class="lineCov">         21 :                 _tmpRequests.push_back(AssetRequest(iurl, move(cb), ttl, move(ref)));</span></a>
+<a name="241"><span class="lineNum">     241 </span><span class="lineCov">         21 :                 return true;</span></a>
 <a name="242"><span class="lineNum">     242 </span>            :         }</a>
 <a name="243"><span class="lineNum">     243 </span>            : </a>
-<a name="244"><span class="lineNum">     244 </span><span class="lineNoCov">          0 :         auto url = getAssetUrl(iurl);</span></a>
-<a name="245"><span class="lineNum">     245 </span><span class="lineNoCov">          0 :         if (auto a = getLiveAsset(url)) {</span></a>
+<a name="244"><span class="lineNum">     244 </span><span class="lineCov">         21 :         auto url = getAssetUrl(iurl);</span></a>
+<a name="245"><span class="lineNum">     245 </span><span class="lineCov">         21 :         if (auto a = getLiveAsset(url)) {</span></a>
 <a name="246"><span class="lineNum">     246 </span><span class="lineNoCov">          0 :                 if (cb) {</span></a>
 <a name="247"><span class="lineNum">     247 </span><span class="lineNoCov">          0 :                         cb(a);</span></a>
 <a name="248"><span class="lineNum">     248 </span>            :                 }</a>
 <a name="249"><span class="lineNum">     249 </span><span class="lineNoCov">          0 :                 return true;</span></a>
 <a name="250"><span class="lineNum">     250 </span>            :         }</a>
 <a name="251"><span class="lineNum">     251 </span>            : </a>
-<a name="252"><span class="lineNum">     252 </span><span class="lineNoCov">          0 :         auto it = _callbacks.find(url);</span></a>
-<a name="253"><span class="lineNum">     253 </span><span class="lineNoCov">          0 :         if (it != _callbacks.end()) {</span></a>
+<a name="252"><span class="lineNum">     252 </span><span class="lineCov">         21 :         auto it = _callbacks.find(url);</span></a>
+<a name="253"><span class="lineNum">     253 </span><span class="lineCov">         21 :         if (it != _callbacks.end()) {</span></a>
 <a name="254"><span class="lineNum">     254 </span><span class="lineNoCov">          0 :                 it-&gt;second.emplace_back(move(cb), move(ref));</span></a>
 <a name="255"><span class="lineNum">     255 </span>            :         } else {</a>
-<a name="256"><span class="lineNum">     256 </span><span class="lineNoCov">          0 :                 _callbacks.emplace(url, Vector&lt;Pair&lt;AssetCallback, Rc&lt;Ref&gt;&gt;&gt;({pair(move(cb), move(ref))}));</span></a>
+<a name="256"><span class="lineNum">     256 </span><span class="lineCov">         42 :                 _callbacks.emplace(url, Vector&lt;Pair&lt;AssetCallback, Rc&lt;Ref&gt;&gt;&gt;({pair(move(cb), move(ref))}));</span></a>
 <a name="257"><span class="lineNum">     257 </span>            : </a>
-<a name="258"><span class="lineNum">     258 </span><span class="lineNoCov">          0 :                 _server-&gt;perform([this, url = move(url), ttl] (const Server &amp;, const db::Transaction &amp;t) {</span></a>
-<a name="259"><span class="lineNum">     259 </span><span class="lineNoCov">          0 :                         Rc&lt;Asset&gt; asset;</span></a>
-<a name="260"><span class="lineNum">     260 </span><span class="lineNoCov">          0 :                         if (auto data = _container-&gt;getComponent()-&gt;getAsset(t, url)) {</span></a>
+<a name="258"><span class="lineNum">     258 </span><span class="lineCov">         21 :                 _server-&gt;perform([this, url = move(url), ttl] (const Server &amp;, const db::Transaction &amp;t) {</span></a>
+<a name="259"><span class="lineNum">     259 </span><span class="lineCov">         21 :                         Rc&lt;Asset&gt; asset;</span></a>
+<a name="260"><span class="lineNum">     260 </span><span class="lineCov">         21 :                         if (auto data = _container-&gt;getComponent()-&gt;getAsset(t, url)) {</span></a>
 <a name="261"><span class="lineNum">     261 </span><span class="lineNoCov">          0 :                                 if (data.getInteger(&quot;ttl&quot;) != int64_t(ttl.toMicros())) {</span></a>
 <a name="262"><span class="lineNum">     262 </span><span class="lineNoCov">          0 :                                         _container-&gt;getComponent()-&gt;updateAssetTtl(t, data.getInteger(&quot;__oid&quot;), ttl);</span></a>
 <a name="263"><span class="lineNum">     263 </span><span class="lineNoCov">          0 :                                         data.setInteger(ttl.toMicros(), &quot;ttl&quot;);</span></a>
@@ -327,16 +327,16 @@
 <a name="265"><span class="lineNum">     265 </span>            : </a>
 <a name="266"><span class="lineNum">     266 </span><span class="lineNoCov">          0 :                                 handleAssetLoaded(Rc&lt;Asset&gt;::alloc(this, data));</span></a>
 <a name="267"><span class="lineNum">     267 </span>            :                         } else {</a>
-<a name="268"><span class="lineNum">     268 </span><span class="lineNoCov">          0 :                                 if (auto data = _container-&gt;getComponent()-&gt;createAsset(t, url, ttl)) {</span></a>
-<a name="269"><span class="lineNum">     269 </span><span class="lineNoCov">          0 :                                         handleAssetLoaded(Rc&lt;Asset&gt;::alloc(this, data));</span></a>
-<a name="270"><span class="lineNum">     270 </span><span class="lineNoCov">          0 :                                 }</span></a>
-<a name="271"><span class="lineNum">     271 </span><span class="lineNoCov">          0 :                         }</span></a>
-<a name="272"><span class="lineNum">     272 </span><span class="lineNoCov">          0 :                         return true;</span></a>
-<a name="273"><span class="lineNum">     273 </span><span class="lineNoCov">          0 :                 });</span></a>
+<a name="268"><span class="lineNum">     268 </span><span class="lineCov">         21 :                                 if (auto data = _container-&gt;getComponent()-&gt;createAsset(t, url, ttl)) {</span></a>
+<a name="269"><span class="lineNum">     269 </span><span class="lineCov">         21 :                                         handleAssetLoaded(Rc&lt;Asset&gt;::alloc(this, data));</span></a>
+<a name="270"><span class="lineNum">     270 </span><span class="lineCov">         21 :                                 }</span></a>
+<a name="271"><span class="lineNum">     271 </span><span class="lineCov">         21 :                         }</span></a>
+<a name="272"><span class="lineNum">     272 </span><span class="lineCov">         21 :                         return true;</span></a>
+<a name="273"><span class="lineNum">     273 </span><span class="lineCov">         21 :                 });</span></a>
 <a name="274"><span class="lineNum">     274 </span>            :         }</a>
 <a name="275"><span class="lineNum">     275 </span>            : </a>
-<a name="276"><span class="lineNum">     276 </span><span class="lineNoCov">          0 :         return true;</span></a>
-<a name="277"><span class="lineNum">     277 </span><span class="lineNoCov">          0 : }</span></a>
+<a name="276"><span class="lineNum">     276 </span><span class="lineCov">         21 :         return true;</span></a>
+<a name="277"><span class="lineNum">     277 </span><span class="lineCov">         21 : }</span></a>
 <a name="278"><span class="lineNum">     278 </span>            : </a>
 <a name="279"><span class="lineNum">     279 </span><span class="lineNoCov">          0 : bool AssetLibrary::acquireAssets(SpanView&lt;AssetRequest&gt; vec, AssetVecCallback &amp;&amp;icb, Rc&lt;Ref&gt; &amp;&amp;ref) {</span></a>
 <a name="280"><span class="lineNum">     280 </span><span class="lineNoCov">          0 :         if (!_loaded) {</span></a>
@@ -439,16 +439,16 @@
 <a name="377"><span class="lineNum">     377 </span><span class="lineNoCov">          0 :         return true;</span></a>
 <a name="378"><span class="lineNum">     378 </span>            : }</a>
 <a name="379"><span class="lineNum">     379 </span>            : </a>
-<a name="380"><span class="lineNum">     380 </span><span class="lineNoCov">          0 : int64_t AssetLibrary::addVersion(const db::Transaction &amp;t, int64_t assetId, const Asset::VersionData &amp;data) {</span></a>
-<a name="381"><span class="lineNum">     381 </span><span class="lineNoCov">          0 :         auto version = _container-&gt;getComponent()-&gt;getVersions().create(t, db::Value({</span></a>
-<a name="382"><span class="lineNum">     382 </span><span class="lineNoCov">          0 :                 pair(&quot;asset&quot;, db::Value(assetId)),</span></a>
-<a name="383"><span class="lineNum">     383 </span><span class="lineNoCov">          0 :                 pair(&quot;etag&quot;, db::Value(data.etag)),</span></a>
-<a name="384"><span class="lineNum">     384 </span><span class="lineNoCov">          0 :                 pair(&quot;ctime&quot;, db::Value(data.ctime)),</span></a>
-<a name="385"><span class="lineNum">     385 </span><span class="lineNoCov">          0 :                 pair(&quot;size&quot;, db::Value(data.size)),</span></a>
-<a name="386"><span class="lineNum">     386 </span><span class="lineNoCov">          0 :                 pair(&quot;type&quot;, db::Value(data.contentType)),</span></a>
-<a name="387"><span class="lineNum">     387 </span><span class="lineNoCov">          0 :         }));</span></a>
-<a name="388"><span class="lineNum">     388 </span><span class="lineNoCov">          0 :         return version.getInteger(&quot;__oid&quot;);</span></a>
-<a name="389"><span class="lineNum">     389 </span><span class="lineNoCov">          0 : }</span></a>
+<a name="380"><span class="lineNum">     380 </span><span class="lineCov">         21 : int64_t AssetLibrary::addVersion(const db::Transaction &amp;t, int64_t assetId, const Asset::VersionData &amp;data) {</span></a>
+<a name="381"><span class="lineNum">     381 </span><span class="lineCov">        147 :         auto version = _container-&gt;getComponent()-&gt;getVersions().create(t, db::Value({</span></a>
+<a name="382"><span class="lineNum">     382 </span><span class="lineCov">         42 :                 pair(&quot;asset&quot;, db::Value(assetId)),</span></a>
+<a name="383"><span class="lineNum">     383 </span><span class="lineCov">         42 :                 pair(&quot;etag&quot;, db::Value(data.etag)),</span></a>
+<a name="384"><span class="lineNum">     384 </span><span class="lineCov">         42 :                 pair(&quot;ctime&quot;, db::Value(data.ctime)),</span></a>
+<a name="385"><span class="lineNum">     385 </span><span class="lineCov">         42 :                 pair(&quot;size&quot;, db::Value(data.size)),</span></a>
+<a name="386"><span class="lineNum">     386 </span><span class="lineCov">         42 :                 pair(&quot;type&quot;, db::Value(data.contentType)),</span></a>
+<a name="387"><span class="lineNum">     387 </span><span class="lineCov">        147 :         }));</span></a>
+<a name="388"><span class="lineNum">     388 </span><span class="lineCov">         42 :         return version.getInteger(&quot;__oid&quot;);</span></a>
+<a name="389"><span class="lineNum">     389 </span><span class="lineCov">         21 : }</span></a>
 <a name="390"><span class="lineNum">     390 </span>            : </a>
 <a name="391"><span class="lineNum">     391 </span><span class="lineNoCov">          0 : void AssetLibrary::eraseVersion(int64_t id) {</span></a>
 <a name="392"><span class="lineNum">     392 </span><span class="lineNoCov">          0 :         _server-&gt;perform([this, id] (const Server &amp;serv, const db::Transaction &amp;t) {</span></a>
@@ -456,21 +456,21 @@
 <a name="394"><span class="lineNum">     394 </span>            :         });</a>
 <a name="395"><span class="lineNum">     395 </span><span class="lineNoCov">          0 : }</span></a>
 <a name="396"><span class="lineNum">     396 </span>            : </a>
-<a name="397"><span class="lineNum">     397 </span><span class="lineNoCov">          0 : void AssetLibrary::setAssetDownload(int64_t id, bool value) {</span></a>
-<a name="398"><span class="lineNum">     398 </span><span class="lineNoCov">          0 :         _server-&gt;perform([this, id, value] (const Server &amp;serv, const db::Transaction &amp;t) {</span></a>
-<a name="399"><span class="lineNum">     399 </span><span class="lineNoCov">          0 :                 return _container-&gt;getComponent()-&gt;getAssets().update(t, id, db::Value({</span></a>
-<a name="400"><span class="lineNum">     400 </span><span class="lineNoCov">          0 :                         pair(&quot;download&quot;, db::Value(value))</span></a>
-<a name="401"><span class="lineNum">     401 </span><span class="lineNoCov">          0 :                 }));</span></a>
+<a name="397"><span class="lineNum">     397 </span><span class="lineCov">         42 : void AssetLibrary::setAssetDownload(int64_t id, bool value) {</span></a>
+<a name="398"><span class="lineNum">     398 </span><span class="lineCov">         42 :         _server-&gt;perform([this, id, value] (const Server &amp;serv, const db::Transaction &amp;t) -&gt; bool {</span></a>
+<a name="399"><span class="lineNum">     399 </span><span class="lineCov">        210 :                 return _container-&gt;getComponent()-&gt;getAssets().update(t, id, db::Value({</span></a>
+<a name="400"><span class="lineNum">     400 </span><span class="lineCov">         84 :                         pair(&quot;download&quot;, db::Value(value))</span></a>
+<a name="401"><span class="lineNum">     401 </span><span class="lineCov">        168 :                 })) ? true : false;</span></a>
 <a name="402"><span class="lineNum">     402 </span>            :         });</a>
-<a name="403"><span class="lineNum">     403 </span><span class="lineNoCov">          0 : }</span></a>
+<a name="403"><span class="lineNum">     403 </span><span class="lineCov">         42 : }</span></a>
 <a name="404"><span class="lineNum">     404 </span>            : </a>
-<a name="405"><span class="lineNum">     405 </span><span class="lineNoCov">          0 : void AssetLibrary::setVersionComplete(int64_t id, bool value) {</span></a>
-<a name="406"><span class="lineNum">     406 </span><span class="lineNoCov">          0 :         _server-&gt;perform([this, id, value] (const Server &amp;serv, const db::Transaction &amp;t) {</span></a>
-<a name="407"><span class="lineNum">     407 </span><span class="lineNoCov">          0 :                 return _container-&gt;getComponent()-&gt;getVersions().update(t, id, db::Value({</span></a>
-<a name="408"><span class="lineNum">     408 </span><span class="lineNoCov">          0 :                         pair(&quot;complete&quot;, db::Value(value))</span></a>
-<a name="409"><span class="lineNum">     409 </span><span class="lineNoCov">          0 :                 }));</span></a>
+<a name="405"><span class="lineNum">     405 </span><span class="lineCov">         21 : void AssetLibrary::setVersionComplete(int64_t id, bool value) {</span></a>
+<a name="406"><span class="lineNum">     406 </span><span class="lineCov">         21 :         _server-&gt;perform([this, id, value] (const Server &amp;serv, const db::Transaction &amp;t) -&gt; bool {</span></a>
+<a name="407"><span class="lineNum">     407 </span><span class="lineCov">        105 :                 return _container-&gt;getComponent()-&gt;getVersions().update(t, id, db::Value({</span></a>
+<a name="408"><span class="lineNum">     408 </span><span class="lineCov">         42 :                         pair(&quot;complete&quot;, db::Value(value))</span></a>
+<a name="409"><span class="lineNum">     409 </span><span class="lineCov">         84 :                 })) ? true : false;</span></a>
 <a name="410"><span class="lineNum">     410 </span>            :         });</a>
-<a name="411"><span class="lineNum">     411 </span><span class="lineNoCov">          0 : }</span></a>
+<a name="411"><span class="lineNum">     411 </span><span class="lineCov">         21 : }</span></a>
 <a name="412"><span class="lineNum">     412 </span>            : </a>
 <a name="413"><span class="lineNum">     413 </span><span class="lineNoCov">          0 : void AssetLibrary::cleanup() {</span></a>
 <a name="414"><span class="lineNum">     414 </span><span class="lineNoCov">          0 :         if (!_controller-&gt;isNetworkOnline()) {</span></a>
@@ -484,12 +484,12 @@
 <a name="422"><span class="lineNum">     422 </span>            :         }, this);</a>
 <a name="423"><span class="lineNum">     423 </span>            : }</a>
 <a name="424"><span class="lineNum">     424 </span>            : </a>
-<a name="425"><span class="lineNum">     425 </span><span class="lineNoCov">          0 : Asset *AssetLibrary::getLiveAsset(StringView url) const {</span></a>
-<a name="426"><span class="lineNum">     426 </span><span class="lineNoCov">          0 :         auto it = _assetsByUrl.find(url);</span></a>
-<a name="427"><span class="lineNum">     427 </span><span class="lineNoCov">          0 :         if (it != _assetsByUrl.end()) {</span></a>
+<a name="425"><span class="lineNum">     425 </span><span class="lineCov">         21 : Asset *AssetLibrary::getLiveAsset(StringView url) const {</span></a>
+<a name="426"><span class="lineNum">     426 </span><span class="lineCov">         21 :         auto it = _assetsByUrl.find(url);</span></a>
+<a name="427"><span class="lineNum">     427 </span><span class="lineCov">         21 :         if (it != _assetsByUrl.end()) {</span></a>
 <a name="428"><span class="lineNum">     428 </span><span class="lineNoCov">          0 :                 return it-&gt;second;</span></a>
 <a name="429"><span class="lineNum">     429 </span>            :         }</a>
-<a name="430"><span class="lineNum">     430 </span><span class="lineNoCov">          0 :         return nullptr;</span></a>
+<a name="430"><span class="lineNum">     430 </span><span class="lineCov">         21 :         return nullptr;</span></a>
 <a name="431"><span class="lineNum">     431 </span>            : }</a>
 <a name="432"><span class="lineNum">     432 </span>            : </a>
 <a name="433"><span class="lineNum">     433 </span><span class="lineNoCov">          0 : Asset *AssetLibrary::getLiveAsset(int64_t id) const {</span></a>
@@ -500,17 +500,17 @@
 <a name="438"><span class="lineNum">     438 </span><span class="lineNoCov">          0 :         return nullptr;</span></a>
 <a name="439"><span class="lineNum">     439 </span>            : }</a>
 <a name="440"><span class="lineNum">     440 </span>            : </a>
-<a name="441"><span class="lineNum">     441 </span><span class="lineNoCov">          0 : bool AssetLibrary::perform(TaskCallback &amp;&amp;cb, Ref *ref) const {</span></a>
-<a name="442"><span class="lineNum">     442 </span><span class="lineNoCov">          0 :         return _container-&gt;perform(move(cb), ref);</span></a>
+<a name="441"><span class="lineNum">     441 </span><span class="lineCov">         21 : bool AssetLibrary::perform(TaskCallback &amp;&amp;cb, Ref *ref) const {</span></a>
+<a name="442"><span class="lineNum">     442 </span><span class="lineCov">         21 :         return _container-&gt;perform(move(cb), ref);</span></a>
 <a name="443"><span class="lineNum">     443 </span>            : }</a>
 <a name="444"><span class="lineNum">     444 </span>            : </a>
-<a name="445"><span class="lineNum">     445 </span><span class="lineNoCov">          0 : void AssetLibrary::removeAsset(Asset *asset) {</span></a>
-<a name="446"><span class="lineNum">     446 </span><span class="lineNoCov">          0 :         _assetsById.erase(asset-&gt;getId());</span></a>
-<a name="447"><span class="lineNum">     447 </span><span class="lineNoCov">          0 :         _assetsByUrl.erase(asset-&gt;getUrl());</span></a>
-<a name="448"><span class="lineNum">     448 </span><span class="lineNoCov">          0 : }</span></a>
+<a name="445"><span class="lineNum">     445 </span><span class="lineCov">         21 : void AssetLibrary::removeAsset(Asset *asset) {</span></a>
+<a name="446"><span class="lineNum">     446 </span><span class="lineCov">         21 :         _assetsById.erase(asset-&gt;getId());</span></a>
+<a name="447"><span class="lineNum">     447 </span><span class="lineCov">         21 :         _assetsByUrl.erase(asset-&gt;getUrl());</span></a>
+<a name="448"><span class="lineNum">     448 </span><span class="lineCov">         21 : }</span></a>
 <a name="449"><span class="lineNum">     449 </span>            : </a>
-<a name="450"><span class="lineNum">     450 </span><span class="lineCov">          1 : void AssetLibrary::handleLibraryLoaded(Vector&lt;Rc&lt;Asset&gt;&gt; &amp;&amp;assets) {</span></a>
-<a name="451"><span class="lineNum">     451 </span><span class="lineCov">          1 :         for (auto &amp;it : assets) {</span></a>
+<a name="450"><span class="lineNum">     450 </span><span class="lineCov">         21 : void AssetLibrary::handleLibraryLoaded(Vector&lt;Rc&lt;Asset&gt;&gt; &amp;&amp;assets) {</span></a>
+<a name="451"><span class="lineNum">     451 </span><span class="lineCov">         21 :         for (auto &amp;it : assets) {</span></a>
 <a name="452"><span class="lineNum">     452 </span><span class="lineNoCov">          0 :                 StringView url = it-&gt;getUrl();</span></a>
 <a name="453"><span class="lineNum">     453 </span>            : </a>
 <a name="454"><span class="lineNum">     454 </span><span class="lineNoCov">          0 :                 _assetsByUrl.emplace(it-&gt;getUrl(), it.get());</span></a>
@@ -524,39 +524,39 @@
 <a name="462"><span class="lineNum">     462 </span>            :                 }</a>
 <a name="463"><span class="lineNum">     463 </span>            :         }</a>
 <a name="464"><span class="lineNum">     464 </span>            : </a>
-<a name="465"><span class="lineNum">     465 </span><span class="lineCov">          1 :         assets.clear();</span></a>
+<a name="465"><span class="lineNum">     465 </span><span class="lineCov">         21 :         assets.clear();</span></a>
 <a name="466"><span class="lineNum">     466 </span>            : </a>
-<a name="467"><span class="lineNum">     467 </span><span class="lineCov">          1 :         _loaded = true;</span></a>
+<a name="467"><span class="lineNum">     467 </span><span class="lineCov">         21 :         _loaded = true;</span></a>
 <a name="468"><span class="lineNum">     468 </span>            : </a>
-<a name="469"><span class="lineNum">     469 </span><span class="lineCov">          1 :         for (auto &amp;it : _tmpRequests) {</span></a>
-<a name="470"><span class="lineNum">     470 </span><span class="lineNoCov">          0 :                 acquireAsset(it.url, move(it.callback), it.ttl, move(it.ref));</span></a>
+<a name="469"><span class="lineNum">     469 </span><span class="lineCov">         42 :         for (auto &amp;it : _tmpRequests) {</span></a>
+<a name="470"><span class="lineNum">     470 </span><span class="lineCov">         21 :                 acquireAsset(it.url, move(it.callback), it.ttl, move(it.ref));</span></a>
 <a name="471"><span class="lineNum">     471 </span>            :         }</a>
 <a name="472"><span class="lineNum">     472 </span>            : </a>
-<a name="473"><span class="lineNum">     473 </span><span class="lineCov">          1 :         _tmpRequests.clear();</span></a>
+<a name="473"><span class="lineNum">     473 </span><span class="lineCov">         21 :         _tmpRequests.clear();</span></a>
 <a name="474"><span class="lineNum">     474 </span>            : </a>
-<a name="475"><span class="lineNum">     475 </span><span class="lineCov">          1 :         for (auto &amp;it : _tmpMultiRequest) {</span></a>
+<a name="475"><span class="lineNum">     475 </span><span class="lineCov">         21 :         for (auto &amp;it : _tmpMultiRequest) {</span></a>
 <a name="476"><span class="lineNum">     476 </span><span class="lineNoCov">          0 :                 acquireAssets(it.vec, move(it.callback), move(it.ref));</span></a>
 <a name="477"><span class="lineNum">     477 </span>            :         }</a>
 <a name="478"><span class="lineNum">     478 </span>            : </a>
-<a name="479"><span class="lineNum">     479 </span><span class="lineCov">          1 :         _tmpMultiRequest.clear();</span></a>
-<a name="480"><span class="lineNum">     480 </span><span class="lineCov">          1 : }</span></a>
+<a name="479"><span class="lineNum">     479 </span><span class="lineCov">         21 :         _tmpMultiRequest.clear();</span></a>
+<a name="480"><span class="lineNum">     480 </span><span class="lineCov">         21 : }</span></a>
 <a name="481"><span class="lineNum">     481 </span>            : </a>
-<a name="482"><span class="lineNum">     482 </span><span class="lineNoCov">          0 : void AssetLibrary::handleAssetLoaded(Rc&lt;Asset&gt; &amp;&amp;asset) {</span></a>
-<a name="483"><span class="lineNum">     483 </span><span class="lineNoCov">          0 :         _application-&gt;performOnMainThread([this, asset = move(asset)] {</span></a>
-<a name="484"><span class="lineNum">     484 </span><span class="lineNoCov">          0 :                 _assetsById.emplace(asset-&gt;getId(), asset);</span></a>
-<a name="485"><span class="lineNum">     485 </span><span class="lineNoCov">          0 :                 _assetsByUrl.emplace(asset-&gt;getUrl(), asset);</span></a>
+<a name="482"><span class="lineNum">     482 </span><span class="lineCov">         21 : void AssetLibrary::handleAssetLoaded(Rc&lt;Asset&gt; &amp;&amp;asset) {</span></a>
+<a name="483"><span class="lineNum">     483 </span><span class="lineCov">         21 :         _application-&gt;performOnMainThread([this, asset = move(asset)] {</span></a>
+<a name="484"><span class="lineNum">     484 </span><span class="lineCov">         21 :                 _assetsById.emplace(asset-&gt;getId(), asset);</span></a>
+<a name="485"><span class="lineNum">     485 </span><span class="lineCov">         21 :                 _assetsByUrl.emplace(asset-&gt;getUrl(), asset);</span></a>
 <a name="486"><span class="lineNum">     486 </span>            : </a>
-<a name="487"><span class="lineNum">     487 </span><span class="lineNoCov">          0 :                 auto it = _callbacks.find(asset-&gt;getUrl());</span></a>
-<a name="488"><span class="lineNum">     488 </span><span class="lineNoCov">          0 :                 if (it != _callbacks.end()) {</span></a>
-<a name="489"><span class="lineNum">     489 </span><span class="lineNoCov">          0 :                         for (auto &amp;cb : it-&gt;second) {</span></a>
-<a name="490"><span class="lineNum">     490 </span><span class="lineNoCov">          0 :                                 if (cb.first) {</span></a>
-<a name="491"><span class="lineNum">     491 </span><span class="lineNoCov">          0 :                                         cb.first(asset);</span></a>
+<a name="487"><span class="lineNum">     487 </span><span class="lineCov">         21 :                 auto it = _callbacks.find(asset-&gt;getUrl());</span></a>
+<a name="488"><span class="lineNum">     488 </span><span class="lineCov">         21 :                 if (it != _callbacks.end()) {</span></a>
+<a name="489"><span class="lineNum">     489 </span><span class="lineCov">         42 :                         for (auto &amp;cb : it-&gt;second) {</span></a>
+<a name="490"><span class="lineNum">     490 </span><span class="lineCov">         21 :                                 if (cb.first) {</span></a>
+<a name="491"><span class="lineNum">     491 </span><span class="lineCov">         21 :                                         cb.first(asset);</span></a>
 <a name="492"><span class="lineNum">     492 </span>            :                                 }</a>
 <a name="493"><span class="lineNum">     493 </span>            :                         }</a>
-<a name="494"><span class="lineNum">     494 </span><span class="lineNoCov">          0 :                         _callbacks.erase(it);</span></a>
+<a name="494"><span class="lineNum">     494 </span><span class="lineCov">         21 :                         _callbacks.erase(it);</span></a>
 <a name="495"><span class="lineNum">     495 </span>            :                 }</a>
-<a name="496"><span class="lineNum">     496 </span><span class="lineNoCov">          0 :         }, this);</span></a>
-<a name="497"><span class="lineNum">     497 </span><span class="lineNoCov">          0 : }</span></a>
+<a name="496"><span class="lineNum">     496 </span><span class="lineCov">         21 :         }, this);</span></a>
+<a name="497"><span class="lineNum">     497 </span><span class="lineCov">         21 : }</span></a>
 <a name="498"><span class="lineNum">     498 </span>            : </a>
 <a name="499"><span class="lineNum">     499 </span>            : }</a>
 </pre>

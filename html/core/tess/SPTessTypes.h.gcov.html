@@ -31,13 +31,13 @@
             <td class="headerValue">coverage.info</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntry">35</td>
+            <td class="headerCovTableEntry">36</td>
             <td class="headerCovTableEntry">39</td>
-            <td class="headerCovTableEntryMed">89.7 %</td>
+            <td class="headerCovTableEntryHi">92.3 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2023-12-03 02:10:58</td>
+            <td class="headerValue">2024-05-12 00:16:13</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">8</td>
@@ -89,7 +89,7 @@
 <a name="27"><span class="lineNum">      27 </span>            : #include &quot;SPVec4.h&quot;</a>
 <a name="28"><span class="lineNum">      28 </span>            : #include &quot;SPTess.h&quot;</a>
 <a name="29"><span class="lineNum">      29 </span>            : </a>
-<a name="30"><span class="lineNum">      30 </span>            : namespace stappler::geom {</a>
+<a name="30"><span class="lineNum">      30 </span>            : namespace STAPPLER_VERSIONIZED stappler::geom {</a>
 <a name="31"><span class="lineNum">      31 </span>            : </a>
 <a name="32"><span class="lineNum">      32 </span>            : struct Vertex;</a>
 <a name="33"><span class="lineNum">      33 </span>            : struct FaceEdge;</a>
@@ -130,8 +130,8 @@
 <a name="68"><span class="lineNum">      68 </span>            : </a>
 <a name="69"><span class="lineNum">      69 </span>            :         mutable Helper helper;</a>
 <a name="70"><span class="lineNum">      70 </span>            : </a>
-<a name="71"><span class="lineNum">      71 </span><span class="lineCov">    7136549 :         Vec2 current() const { return Vec2(value.x, value.y); }</span></a>
-<a name="72"><span class="lineNum">      72 </span><span class="lineCov">    7028158 :         Vec2 dst() const { return Vec2(value.z, value.w); }</span></a>
+<a name="71"><span class="lineNum">      71 </span><span class="lineCov">  209130958 :         Vec2 current() const { return Vec2(value.x, value.y); }</span></a>
+<a name="72"><span class="lineNum">      72 </span><span class="lineCov">  209165344 :         Vec2 dst() const { return Vec2(value.z, value.w); }</span></a>
 <a name="73"><span class="lineNum">      73 </span>            :         float dstX() const { return value.z; }</a>
 <a name="74"><span class="lineNum">      74 </span>            :         float dstY() const { return value.w; }</a>
 <a name="75"><span class="lineNum">      75 </span>            : </a>
@@ -205,7 +205,7 @@
 <a name="143"><span class="lineNum">     143 </span>            : </a>
 <a name="144"><span class="lineNum">     144 </span>            :         const Vec2 &amp;getOrgVec() const;</a>
 <a name="145"><span class="lineNum">     145 </span>            :         const Vec2 &amp;getDstVec() const;</a>
-<a name="146"><span class="lineNum">     146 </span><span class="lineCov">     481426 :         Vec2 getNormVec() const { return getDstVec() - getOrgVec(); }</span></a>
+<a name="146"><span class="lineNum">     146 </span><span class="lineCov">   12190757 :         Vec2 getNormVec() const { return getDstVec() - getOrgVec(); }</span></a>
 <a name="147"><span class="lineNum">     147 </span>            : </a>
 <a name="148"><span class="lineNum">     148 </span>            :         float getLength() const;</a>
 <a name="149"><span class="lineNum">     149 </span>            : </a>
@@ -249,10 +249,10 @@
 <a name="187"><span class="lineNum">     187 </span>            :         int16_t getRightWinding() const;</a>
 <a name="188"><span class="lineNum">     188 </span>            : </a>
 <a name="189"><span class="lineNum">     189 </span>            :         // halfedge in positive sweep direction</a>
-<a name="190"><span class="lineNum">     190 </span><span class="lineCov">         24 :         HalfEdge *getPostitive() { return (inverted) ? &amp;right : &amp;left; }</span></a>
+<a name="190"><span class="lineNum">     190 </span><span class="lineCov">       1449 :         HalfEdge *getPostitive() { return (inverted) ? &amp;right : &amp;left; }</span></a>
 <a name="191"><span class="lineNum">     191 </span>            : </a>
 <a name="192"><span class="lineNum">     192 </span>            :         // halfedge in negative sweep direction</a>
-<a name="193"><span class="lineNum">     193 </span><span class="lineCov">          4 :         HalfEdge *getNegative() { return (inverted) ? &amp;left : &amp;right; }</span></a>
+<a name="193"><span class="lineNum">     193 </span><span class="lineCov">        241 :         HalfEdge *getNegative() { return (inverted) ? &amp;left : &amp;right; }</span></a>
 <a name="194"><span class="lineNum">     194 </span>            : };</a>
 <a name="195"><span class="lineNum">     195 </span>            : </a>
 <a name="196"><span class="lineNum">     196 </span>            : struct ObjectAllocator : public memory::AllocPool {</a>
@@ -316,8 +316,8 @@
 <a name="254"><span class="lineNum">     254 </span>            :                 ~Heap();</a>
 <a name="255"><span class="lineNum">     255 </span>            : </a>
 <a name="256"><span class="lineNum">     256 </span>            :                 void init();</a>
-<a name="257"><span class="lineNum">     257 </span><span class="lineCov">     518755 :                 bool empty() const { return size == 0; }</span></a>
-<a name="258"><span class="lineNum">     258 </span><span class="lineCov">      20743 :                 Key getMin() const { return handles[nodes[1].handle].key; }</span></a>
+<a name="257"><span class="lineNum">     257 </span><span class="lineCov">   17996181 :                 bool empty() const { return size == 0; }</span></a>
+<a name="258"><span class="lineNum">     258 </span><span class="lineCov">     576760 :                 Key getMin() const { return handles[nodes[1].handle].key; }</span></a>
 <a name="259"><span class="lineNum">     259 </span>            : </a>
 <a name="260"><span class="lineNum">     260 </span>            :                 Handle insert(Key keyNew);</a>
 <a name="261"><span class="lineNum">     261 </span>            :                 Key extractMin();</a>
@@ -380,27 +380,27 @@
 <a name="318"><span class="lineNum">     318 </span>            : };</a>
 <a name="319"><span class="lineNum">     319 </span>            : </a>
 <a name="320"><span class="lineNum">     320 </span>            : SP_ATTR_OPTIMIZE_INLINE_FN static inline bool VertLeq(const Vec2 &amp;u, const Vec2 &amp;v) {</a>
-<a name="321"><span class="lineNum">     321 </span><span class="lineCov">    1031186 :         return ((u.x &lt; v.x) || (u.x == v.x &amp;&amp; u.y &lt;= v.y));</span></a>
+<a name="321"><span class="lineNum">     321 </span><span class="lineCov">   35843010 :         return ((u.x &lt; v.x) || (u.x == v.x &amp;&amp; u.y &lt;= v.y));</span></a>
 <a name="322"><span class="lineNum">     322 </span>            : }</a>
 <a name="323"><span class="lineNum">     323 </span>            : </a>
 <a name="324"><span class="lineNum">     324 </span>            : SP_ATTR_OPTIMIZE_INLINE_FN static inline bool VertLeq(const Vertex *u, const Vertex *v) {</a>
-<a name="325"><span class="lineNum">     325 </span><span class="lineCov">    2447836 :         return ((u-&gt;_origin.x &lt; v-&gt;_origin.x) || (u-&gt;_origin.x == v-&gt;_origin.x &amp;&amp; u-&gt;_origin.y &lt;= v-&gt;_origin.y));</span></a>
+<a name="325"><span class="lineNum">     325 </span><span class="lineCov">   82759688 :         return ((u-&gt;_origin.x &lt; v-&gt;_origin.x) || (u-&gt;_origin.x == v-&gt;_origin.x &amp;&amp; u-&gt;_origin.y &lt;= v-&gt;_origin.y));</span></a>
 <a name="326"><span class="lineNum">     326 </span>            : }</a>
 <a name="327"><span class="lineNum">     327 </span>            : </a>
 <a name="328"><span class="lineNum">     328 </span>            : SP_ATTR_OPTIMIZE_INLINE_FN static inline bool VertEq(const Vec2 &amp;u, const Vec2 &amp;v, float tolerance) {</a>
-<a name="329"><span class="lineNum">     329 </span><span class="lineCov">   13774403 :         return u.fuzzyEquals(v, tolerance);</span></a>
+<a name="329"><span class="lineNum">     329 </span><span class="lineCov">  414153811 :         return u.fuzzyEquals(v, tolerance);</span></a>
 <a name="330"><span class="lineNum">     330 </span>            : }</a>
 <a name="331"><span class="lineNum">     331 </span>            : </a>
 <a name="332"><span class="lineNum">     332 </span>            : SP_ATTR_OPTIMIZE_INLINE_FN static inline bool FloatEq(float u, float v, float tolerance) {</a>
-<a name="333"><span class="lineNum">     333 </span><span class="lineCov">    1344843 :         return u - tolerance &lt;= v &amp;&amp; v &lt;= u + tolerance;</span></a>
+<a name="333"><span class="lineNum">     333 </span><span class="lineCov">   46990303 :         return u - tolerance &lt;= v &amp;&amp; v &lt;= u + tolerance;</span></a>
 <a name="334"><span class="lineNum">     334 </span>            : }</a>
 <a name="335"><span class="lineNum">     335 </span>            : </a>
 <a name="336"><span class="lineNum">     336 </span>            : SP_ATTR_OPTIMIZE_INLINE_FN static inline bool VertEq(const Vertex *u, const Vertex *v, float tolerance) {</a>
-<a name="337"><span class="lineNum">     337 </span><span class="lineCov">     258066 :         return VertEq(u-&gt;_origin, v-&gt;_origin, tolerance);</span></a>
+<a name="337"><span class="lineNum">     337 </span><span class="lineCov">    9127899 :         return VertEq(u-&gt;_origin, v-&gt;_origin, tolerance);</span></a>
 <a name="338"><span class="lineNum">     338 </span>            : }</a>
 <a name="339"><span class="lineNum">     339 </span>            : </a>
 <a name="340"><span class="lineNum">     340 </span>            : SP_ATTR_OPTIMIZE_INLINE_FN static inline bool EdgeGoesRight(const HalfEdge *e) {</a>
-<a name="341"><span class="lineNum">     341 </span><span class="lineCov">     516230 :         return VertLeq(e-&gt;origin, e-&gt;sym()-&gt;origin);</span></a>
+<a name="341"><span class="lineNum">     341 </span><span class="lineCov">   18259756 :         return VertLeq(e-&gt;origin, e-&gt;sym()-&gt;origin);</span></a>
 <a name="342"><span class="lineNum">     342 </span>            : }</a>
 <a name="343"><span class="lineNum">     343 </span>            : </a>
 <a name="344"><span class="lineNum">     344 </span>            : SP_ATTR_OPTIMIZE_INLINE_FN static inline bool EdgeGoesLeft(const HalfEdge *e) {</a>
@@ -408,7 +408,7 @@
 <a name="346"><span class="lineNum">     346 </span>            : }</a>
 <a name="347"><span class="lineNum">     347 </span>            : </a>
 <a name="348"><span class="lineNum">     348 </span>            : SP_ATTR_OPTIMIZE_INLINE_FN static inline bool AngleIsConvex(const HalfEdge *a, const HalfEdge *b) {</a>
-<a name="349"><span class="lineNum">     349 </span><span class="lineCov">     247685 :         return a-&gt;getEdge()-&gt;direction &gt; b-&gt;getEdge()-&gt;direction;</span></a>
+<a name="349"><span class="lineNum">     349 </span><span class="lineCov">    8021042 :         return a-&gt;getEdge()-&gt;direction &gt; b-&gt;getEdge()-&gt;direction;</span></a>
 <a name="350"><span class="lineNum">     350 </span>            : }</a>
 <a name="351"><span class="lineNum">     351 </span>            : </a>
 <a name="352"><span class="lineNum">     352 </span>            : </a>
@@ -416,52 +416,52 @@
 <a name="354"><span class="lineNum">     354 </span>            : // which monotonically grows with angle between vec and 0x as argument;</a>
 <a name="355"><span class="lineNum">     355 </span>            : // norm.x assumed to be positive</a>
 <a name="356"><span class="lineNum">     356 </span>            : SP_ATTR_OPTIMIZE_INLINE_FN static inline float EdgeDirection(const Vec2 &amp;norm) {</a>
-<a name="357"><span class="lineNum">     357 </span><span class="lineCov">     516230 :         if (norm.y &gt;= 0) {</span></a>
-<a name="358"><span class="lineNum">     358 </span><span class="lineCov">     274412 :                 return (norm.x &gt; norm.y) ? (norm.y / norm.x) : (2.0f - norm.x / norm.y);</span></a>
+<a name="357"><span class="lineNum">     357 </span><span class="lineCov">   18332951 :         if (norm.y &gt;= 0) {</span></a>
+<a name="358"><span class="lineNum">     358 </span><span class="lineCov">    9966303 :                 return (norm.x &gt; norm.y) ? (norm.y / norm.x) : (2.0f - norm.x / norm.y);</span></a>
 <a name="359"><span class="lineNum">     359 </span>            :         } else {</a>
-<a name="360"><span class="lineNum">     360 </span><span class="lineCov">     241818 :                 return (norm.x &gt; -norm.y) ? (norm.y / norm.x) : (-2.0f - norm.x / norm.y);</span></a>
+<a name="360"><span class="lineNum">     360 </span><span class="lineCov">    8366648 :                 return (norm.x &gt; -norm.y) ? (norm.y / norm.x) : (-2.0f - norm.x / norm.y);</span></a>
 <a name="361"><span class="lineNum">     361 </span>            :         }</a>
 <a name="362"><span class="lineNum">     362 </span>            : }</a>
 <a name="363"><span class="lineNum">     363 </span>            : </a>
 <a name="364"><span class="lineNum">     364 </span>            : // same method, map full angle with positive x axis to [0.0f, 8.0f)</a>
 <a name="365"><span class="lineNum">     365 </span>            : SP_ATTR_OPTIMIZE_INLINE_FN static inline float EdgeAngle(const Vec2 &amp;norm) {</a>
-<a name="366"><span class="lineNum">     366 </span><span class="lineCov">     394676 :         if (norm.x &gt;= 0 &amp;&amp; norm.y &gt;= 0) {</span></a>
+<a name="366"><span class="lineNum">     366 </span><span class="lineCov">    9988472 :         if (norm.x &gt;= 0 &amp;&amp; norm.y &gt;= 0) {</span></a>
 <a name="367"><span class="lineNum">     367 </span>            :                 // [0.0, 2.0]</a>
-<a name="368"><span class="lineNum">     368 </span><span class="lineCov">     139314 :                 return (norm.x &gt; norm.y) ? (norm.y / norm.x) : (2.0f - norm.x / norm.y);</span></a>
-<a name="369"><span class="lineNum">     369 </span><span class="lineCov">     255362 :         } else if (norm.x &lt; 0 &amp;&amp; norm.y &gt;= 0) {</span></a>
+<a name="368"><span class="lineNum">     368 </span><span class="lineCov">    3531014 :                 return (norm.x &gt; norm.y) ? (norm.y / norm.x) : (2.0f - norm.x / norm.y);</span></a>
+<a name="369"><span class="lineNum">     369 </span><span class="lineCov">    6457458 :         } else if (norm.x &lt; 0 &amp;&amp; norm.y &gt;= 0) {</span></a>
 <a name="370"><span class="lineNum">     370 </span>            :                 // (2.0, 4.0]</a>
-<a name="371"><span class="lineNum">     371 </span><span class="lineCov">      80930 :                 return (-norm.x &gt; norm.y) ? (4.0 + norm.y / norm.x) : (2.0f - norm.x / norm.y);</span></a>
-<a name="372"><span class="lineNum">     372 </span><span class="lineCov">     174432 :         } else if (norm.x &lt; 0 &amp;&amp; norm.y &lt; 0) {</span></a>
+<a name="371"><span class="lineNum">     371 </span><span class="lineCov">    2049762 :                 return (-norm.x &gt; norm.y) ? (4.0 + norm.y / norm.x) : (2.0f - norm.x / norm.y);</span></a>
+<a name="372"><span class="lineNum">     372 </span><span class="lineCov">    4407696 :         } else if (norm.x &lt; 0 &amp;&amp; norm.y &lt; 0) {</span></a>
 <a name="373"><span class="lineNum">     373 </span>            :                 // (4.0, 6.0)</a>
-<a name="374"><span class="lineNum">     374 </span><span class="lineCov">      78857 :                 return (norm.x &lt; norm.y) ? (4.0 + norm.y / norm.x) : (6.0f - norm.x / norm.y);</span></a>
+<a name="374"><span class="lineNum">     374 </span><span class="lineCov">    1988392 :                 return (norm.x &lt; norm.y) ? (4.0 + norm.y / norm.x) : (6.0f - norm.x / norm.y);</span></a>
 <a name="375"><span class="lineNum">     375 </span>            :         } else {</a>
 <a name="376"><span class="lineNum">     376 </span>            :                 // [6.0, 8.0)</a>
-<a name="377"><span class="lineNum">     377 </span><span class="lineCov">      95575 :                 return (norm.x &gt; -norm.y) ? (8.0 + norm.y / norm.x) : (6.0f - norm.x / norm.y);</span></a>
+<a name="377"><span class="lineNum">     377 </span><span class="lineCov">    2419304 :                 return (norm.x &gt; -norm.y) ? (8.0 + norm.y / norm.x) : (6.0f - norm.x / norm.y);</span></a>
 <a name="378"><span class="lineNum">     378 </span>            :         }</a>
 <a name="379"><span class="lineNum">     379 </span>            : }</a>
 <a name="380"><span class="lineNum">     380 </span>            : </a>
 <a name="381"><span class="lineNum">     381 </span>            : SP_ATTR_OPTIMIZE_INLINE_FN static inline float EdgeAngle(const Vec2 &amp;from, const Vec2 &amp;to) {</a>
-<a name="382"><span class="lineNum">     382 </span><span class="lineCov">     240713 :         if (from == to) {</span></a>
+<a name="382"><span class="lineNum">     382 </span><span class="lineCov">    6095568 :         if (from == to) {</span></a>
 <a name="383"><span class="lineNum">     383 </span>            :                 return 8.0f;</a>
 <a name="384"><span class="lineNum">     384 </span>            :         }</a>
 <a name="385"><span class="lineNum">     385 </span>            : </a>
 <a name="386"><span class="lineNum">     386 </span>            :         auto fromA = EdgeAngle(from);</a>
 <a name="387"><span class="lineNum">     387 </span>            :         auto toA = EdgeAngle(to);</a>
 <a name="388"><span class="lineNum">     388 </span>            : </a>
-<a name="389"><span class="lineNum">     389 </span><span class="lineCov">     197338 :         if (std::isnan(fromA) || std::isnan(toA)) {</span></a>
-<a name="390"><span class="lineNum">     390 </span><span class="lineCov">         21 :                 std::cerr &lt;&lt; &quot;EdgeAngle (NaN): &quot; &lt;&lt; from &lt;&lt; &quot; &quot; &lt;&lt; to &lt;&lt; &quot;\n&quot;;</span></a>
-<a name="391"><span class="lineNum">     391 </span><span class="lineCov">         21 :                 return 0.0f;</span></a>
+<a name="389"><span class="lineNum">     389 </span><span class="lineCov">    4994236 :         if (std::isnan(fromA) || std::isnan(toA)) {</span></a>
+<a name="390"><span class="lineNum">     390 </span><span class="lineCov">        525 :                 std::cerr &lt;&lt; &quot;EdgeAngle (NaN): &quot; &lt;&lt; from &lt;&lt; &quot; &quot; &lt;&lt; to &lt;&lt; &quot;\n&quot;;</span></a>
+<a name="391"><span class="lineNum">     391 </span><span class="lineCov">        525 :                 return 0.0f;</span></a>
 <a name="392"><span class="lineNum">     392 </span>            :         }</a>
 <a name="393"><span class="lineNum">     393 </span>            : </a>
-<a name="394"><span class="lineNum">     394 </span><span class="lineCov">     197317 :         if (fromA &lt;= toA) {</span></a>
-<a name="395"><span class="lineNum">     395 </span><span class="lineCov">     116613 :                 return toA - fromA;</span></a>
+<a name="394"><span class="lineNum">     394 </span><span class="lineCov">    4993689 :         if (fromA &lt;= toA) {</span></a>
+<a name="395"><span class="lineNum">     395 </span><span class="lineCov">    2949672 :                 return toA - fromA;</span></a>
 <a name="396"><span class="lineNum">     396 </span>            :         } else {</a>
-<a name="397"><span class="lineNum">     397 </span><span class="lineCov">      80704 :                 return 8.0 - (fromA - toA);</span></a>
+<a name="397"><span class="lineNum">     397 </span><span class="lineCov">    2044017 :                 return 8.0 - (fromA - toA);</span></a>
 <a name="398"><span class="lineNum">     398 </span>            :         }</a>
 <a name="399"><span class="lineNum">     399 </span>            : }</a>
 <a name="400"><span class="lineNum">     400 </span>            : </a>
 <a name="401"><span class="lineNum">     401 </span>            : SP_ATTR_OPTIMIZE_INLINE_FN static inline bool EdgeAngleIsBelowTolerance(float A, float tolerance) {</a>
-<a name="402"><span class="lineNum">     402 </span><span class="lineCov">     147584 :         return A &lt; tolerance || 8.0f - A &lt; tolerance;</span></a>
+<a name="402"><span class="lineNum">     402 </span><span class="lineCov">    3738355 :         return A &lt; tolerance || 8.0f - A &lt; tolerance;</span></a>
 <a name="403"><span class="lineNum">     403 </span>            : }</a>
 <a name="404"><span class="lineNum">     404 </span>            : </a>
 <a name="405"><span class="lineNum">     405 </span>            : std::ostream &amp;operator&lt;&lt;(std::ostream &amp;out, const Vertex &amp;v);</a>
@@ -482,10 +482,10 @@
 <a name="420"><span class="lineNum">     420 </span>            :         return os;</a>
 <a name="421"><span class="lineNum">     421 </span>            : }</a>
 <a name="422"><span class="lineNum">     422 </span>            : </a>
-<a name="423"><span class="lineNum">     423 </span><span class="lineCov">     983120 : inline bool isWindingInside(Winding w, int16_t n) {</span></a>
-<a name="424"><span class="lineNum">     424 </span><span class="lineCov">     983120 :         switch (w) {</span></a>
-<a name="425"><span class="lineNum">     425 </span><span class="lineNoCov">          0 :         case Winding::EvenOdd: return (n &amp; 1); break;</span></a>
-<a name="426"><span class="lineNum">     426 </span><span class="lineCov">     983120 :         case Winding::NonZero: return (n != 0); break;</span></a>
+<a name="423"><span class="lineNum">     423 </span><span class="lineCov">   34070519 : inline bool isWindingInside(Winding w, int16_t n) {</span></a>
+<a name="424"><span class="lineNum">     424 </span><span class="lineCov">   34070519 :         switch (w) {</span></a>
+<a name="425"><span class="lineNum">     425 </span><span class="lineCov">    8897199 :         case Winding::EvenOdd: return (n &amp; 1); break;</span></a>
+<a name="426"><span class="lineNum">     426 </span><span class="lineCov">   25173320 :         case Winding::NonZero: return (n != 0); break;</span></a>
 <a name="427"><span class="lineNum">     427 </span><span class="lineNoCov">          0 :         case Winding::Positive: return (n &gt; 0); break;</span></a>
 <a name="428"><span class="lineNum">     428 </span><span class="lineNoCov">          0 :         case Winding::Negative: return (n &lt; 0); break;</span></a>
 <a name="429"><span class="lineNum">     429 </span><span class="lineNoCov">          0 :         case Winding::AbsGeqTwo: return (n &gt;= 2) || (n &lt;= -2); break;</span></a>
