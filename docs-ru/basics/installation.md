@@ -2,34 +2,73 @@ Title: Установка и запуск
 
 # Установка и запуск
 
+## Собранные библиотеки зависимостей
+
+Если по какой-то причине (например, серьёзное несоотвествие версий glibc) предсобранные зависимости не работают, необходимо [собрать их вручную](dependencies.md) для вашей системы.
+
+## Linux
+
+См. общую информацию о поддержке [Linux](../other/linux.md).
+
+Далее, установить пакеты дистрибутива
+* git
+* make
+* gcc
+* g++
+
+```
+sudo apt-get install git make gcc g++
+```
+
+## Android
+
+См. общую информацию о поддержке [Android](../other/android.md).
+
+Необходимо установить [Android NDK](https://developer.android.com/ndk/).
+
+Для запуска приложения потребуется [Android Studio](https://developer.android.com/studio)
+
+## Windows
+
+См. общую информацию о поддержке [Windows](../other/windows.md).
+
+Необходимо установить:
+* [Microsoft Visual Studio](https://visualstudio.microsoft.com/ru/downloads/) (только заголовки и библиотеки WinAPI, редакция Community)
+* [LLVM/Clang](https://releases.llvm.org/download.html)
+* [MSYS2](https://www.msys2.org/)
+* из состава msys2: make, xxd (`pacman -S make xxd`)
+* Добавить адрес установки приложений msys2 в `PATH`.
+
+В такой конфигурации можно работать из любого эмулятора терминала или открытой IDE.
+
 ## Зависимости
-
-### Сборка и компиляция
-
-* Make 4.0+ (gmake для MacOS)
-* GCC 11+ или Clang 14+ (16+ для Windows), lcc 1.26+ для e2k (рекомендуется 1.28+)
 
 ### Базы данных
 
-PostgreSQL или PostgresPro версии от 12. SQLite входит в поставку.
+[PostgreSQL](https://www.postgresql.org/download/) или [PostgresPro](https://postgrespro.com/products/download) версии от 12. [SQLite](https://www.sqlite.org/index.html) входит в поставку Stappler SDK.
 
-### Для Vulkan:
+### Для Vulkan (графические и вычислительные приложения):
 
-* Заголовки Vulkan в система или Vulkan SDK (Переменная `VULKAN_SDK_PREFIX`)
-* glslangValidator (входит в SDK, переменная `GLSLC`)
-* spirv-link (входит в SDK, переменная `SPIRV_LINK`)
+См. [Vulkan](../other/vulkan.md) для полной инструкции
+
+* Стандартная утилита xxd (если нет в стандартной поставке дистрибутива)
+* Заголовки Vulkan в системе или [Vulkan SDK](https://www.lunarg.com/vulkan-sdk/) (Переменная `VULKAN_SDK_PREFIX`)
+* glslangValidator (входит в Vulkan SDK или пакет glslang/glslang-tools, переменная `GLSLC`)
+* spirv-link (входит в Vulkan SDK или пакет spirv-tools, переменная `SPIRV_LINK`)
 
 ### Для WebAssembly
 
-* WASI SDK (`WASI_SDK ?= /opt/wasi-sdk`)
-* wit-bindgen (`WIT_BINDGEN ?= wit-bindgen`)
+См. [WebAssembly](../other/webassembly.md) для полной инструкции
+
+* [WASI SDK](https://github.com/WebAssembly/wasi-sdk/releases/tag/wasi-sdk-22) (`WASI_SDK ?= /opt/wasi-sdk`)
+* [wit-bindgen](https://github.com/bytecodealliance/wit-bindgen), возможна установка из cargo: `cargo install wit-bindgen-cli` (`WIT_BINDGEN ?= wit-bindgen`)
 
 ### Для вебсервера
 
-* Apache HTTPD
+* [Apache HTTPD](https://httpd.apache.org/download.cgi#apache24)
 * Заголовки в системе (`APACHE_HTTPD_INCLUDE ?= /usr/local/include/apache`)
 
-## Установка
+## Установка SDK
 
 ```sh
 git clone git@github.com:libstappler/libstappler-root.git
@@ -37,7 +76,7 @@ cd libstappler-root
 git submodule update --init
 ```
 
-Запуск первого примера
+Запуск первого [примера](https://github.com/libstappler/libstappler-root/tree/master/examples/commandline)
 
 ```sh
 cd examples/commandline
@@ -45,7 +84,19 @@ make && make install
 stappler-build/host/genpasswd
 ```
 
-Тесты
+Также, смотрите другие [примеры](https://github.com/libstappler/libstappler-root/tree/master/examples).
+
+
+Демонстрационно-тестовое приложение графического движка (требует полной установки [Vulkan](../other/vulkan.md)):
+
+```sh
+cd xenolith/utils/testapp
+make && make install
+stappler-build/host/testapp
+```
+
+
+Тесты покрытия (требует полной установки [Vulkan](../other/vulkan.md) и [WebAssembly](../other/webassembly.md), а также GnuTLS на Linux)
 
 ```sh
 cd tests/common
@@ -56,7 +107,7 @@ stappler-build/host/testapp
 ## Первое приложение
 
 Структура приложения:
-* Makefile - корневой Mekafile проекта
+* Makefile - корневой Makefile проекта
 * main.cpp - точка входа
 * src - директория с исходными кодами
 

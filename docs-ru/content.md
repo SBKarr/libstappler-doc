@@ -6,6 +6,8 @@ Title: Содержание
 ## [Система сборки](basics/buildsystem.md)
 ## [Стиль кода и внесение изменений](basics/contribution.md)
 ## [Поддержка устройств и ОС](basics/support.md)
+## [Сборка зависимостей](basics/dependencies.md)
+## [Примеры](basics/examples.md)
 
 # [Модули](modules/index.md)
 
@@ -36,3 +38,13 @@ Title: Содержание
 ## [Изображения](modules/bitmap.md)
 ## [Потоки](modules/threads.md)
 ## [Криптография](modules/crypto.md)
+
+# [Разное](other/index.md)
+
+## [Android](other/android.md)
+## [Linux](other/linux.md)
+## [Windows](other/windows.md)
+## [e2k/Эльбрус](other/e2k.md)
+## [Vulkan](other/vulkan.md)
+## [WebAssembly](other/webassembly.md)
+## [OpenSSL+gost](other/openssl_gost.md)
