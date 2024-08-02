@@ -11,13 +11,15 @@ Title: WebAssembly
 * [WASI SDK](https://github.com/WebAssembly/wasi-sdk) (переменная сборки `WASI_SDK=<путь к установке SDK>`)
 * [wit-bindgen](https://github.com/bytecodealliance/wit-bindgen) (переменная сборки `WIT_BINDGEN=<app>`)
 
-wit-bindgen ьщжно установить из [cargo](https://doc.rust-lang.org/cargo/getting-started/installation.html):
+wit-bindgen можно установить из [cargo](https://doc.rust-lang.org/cargo/getting-started/installation.html):
 
 ```
 sudo apt-get install curl
 # Следуйте инструкциям по установке в терминале, включая добавление в PATH для текущего терминала в конце
 curl https://sh.rustup.rs -sSf | sh
 cargo install wit-bindgen-cli
+# Для продолжения работы в текущем терминале рекомендуется:
+export PATH="$PATH:$HOME/.cargo/bin"
 ```
 
 Пример установки WASI SDK для Linux:
