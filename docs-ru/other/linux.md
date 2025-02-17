@@ -46,8 +46,7 @@ sudo apt-get install libgnutls28-dev
 
 Поддержка Wayland определяется при загрузке libwayland-client.so. Также, для работы необходимы libdbus-1.so и libxkbcommon.so.
 
-При запуске приложения, если Wayland поддерживает Vulkan, графическое приложение будет запущено на основе Wayland. В
-другом случае, будет использоваться X11 (в т.ч. через XWayland).
+При запуске приложения, если Wayland поддерживает Vulkan, графическое приложение будет запущено на основе Wayland. В другом случае, будет использоваться X11 (в т.ч. через XWayland).
 
 Переопределить поведение можно через установку функции `VulkanInstanceData::checkPresentationSupport` возвратом в качестве результата соотвествующих флагов `xenolith::platform::SurfaceType`.
 

@@ -14,8 +14,8 @@ Title: Сборочная система
 Пример Makefile для проекта:
 
 ```make
-# путь к корню фреймворка (libstappler-root)
-STAPPLER_ROOT ?= ../../..
+# путь к сборочной системе (внутри репозитория фреймворка или к общему корню при остановке в ОС)
+STAPPLER_BUILD_ROOT ?= ../libstappler-root/build/make
 
 # корневая директория проекта, обычно устанавливается в текущую ( . )
 LOCAL_ROOT = .
@@ -48,14 +48,14 @@ LOCAL_INCLUDES_OBJS :=
 LOCAL_MAIN := main.cpp 
 
 # инициализация универсального сборщика
-include $(STAPPLER_ROOT)/build/make/universal.mk
+include $(STAPPLER_BUILD_ROOT)/universal.mk
 ```
 
 # Документация
 
 ## Файлы и цели
 
-`$(STAPPLER_ROOT)/build/make/universal.mk` - основной файл для сборки кроссплатформенного проекта.
+`$(STAPPLER_BUILD_ROOT)/universal.mk` - основной файл для сборки кроссплатформенного проекта.
 Предоставляет цели для сборки на платформах android, ios и хоста (Linux, Darwin/MacOS или Windows):
 
 ### Host
@@ -219,8 +219,6 @@ include $(STAPPLER_ROOT)/build/make/universal.mk
 `LOCAL_WASM_CXXFLAGS`: дополнительные флаги сборки C++ WebAssembly
 
 ## Прочие
-
-`STAPPLER_ROOT`: Путь к библиотеке libstappler-common, содержащей систему сборки
 
 `STAPPLER_VERSION_PREFIX`: Защитный префикс для версионирования. Позволяет избежать дубликатов при линковке двух разных библиотек на основе SDK.
 
